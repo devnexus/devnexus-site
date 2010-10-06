@@ -1,0 +1,510 @@
+/** sprite: mysprite; sprite-image: url('../img/mysprite.png'); sprite-layout: vertical */
+
+img {
+    border-width: 0;
+}
+
+fieldset {
+    top: 1em;
+    left: 0em;
+    border: 1px solid #AAAAAA;
+    padding: 2em 1em 1em 1em;
+    margin-bottom: 1em;
+}
+
+fieldset legend {
+    margin-left: 1em;
+    font: bold 16px verdana, arial, helvetica, sans-serif;
+    color: #00528E;
+}
+
+a:active {
+    color: #6666EE;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6666EE;
+    text-decoration: none
+}
+
+a:link {
+    color: #6666EE;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6666EE;
+    text-decoration: underline;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+button span {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    padding: 0 3px 0 5px;
+}
+
+body {
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    background-color: #BED5D9;
+}
+
+.container {
+    width: 800px;
+    margin: 1em auto 1em auto;
+}
+
+/* Header *********************************************************************/
+.container .outer-header {
+
+    /* Do rounding (native in Safari, Firefox and Chrome) */
+        -webkit-border-top-left-radius:  6px;
+        -webkit-border-top-right-radius: 6px;
+        -moz-border-radius-topright: 6px;
+        -moz-border-radius-topleft: 6px;
+
+
+        background-repeat: no-repeat;
+        background-color: #90B5E6;
+        background-image: url(../images/musa_header.jpg); /** sprite-ref: mysprite; */
+}
+
+.container .header {
+    text-align: center;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    font-size: 25px;
+}
+
+.container .header span.ajug {
+    color: #00538F;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.container .header span.separator {
+    color: #FF0000;
+}
+
+.container .header_menu {
+
+    background: #0076CC;
+    clear:both;
+    float:left;
+    height:33px;
+    overflow:hidden;
+    padding:0 !important;
+    width:100%;
+    z-index:1200000;
+    border-top: 1px solid #FF3C00;
+}
+
+.container .header_menu ul {
+    background:url(../images/header_menu_background.png);
+    height:32px;
+    margin:1px 5px 0 0;
+    padding-left:8px;
+    color: White;
+    float: left;
+    width: 100%;
+}
+
+.container .header_menu ul li {
+    list-style:none outside none;
+    float:left;
+    margin:0;
+    padding:0;
+
+}
+
+.container .header_menu  a {
+    background-color: transparent;
+    border-left:1px solid #A5C476;
+    margin-left:0px;
+    padding-left:32px;
+    padding-right:16px;
+    line-height: 32px;
+    position: relative;
+    display:block;
+    float:left;
+}
+
+.container .header_menu a span {
+    line-height: 23px;
+    font-size: 12px;
+}
+
+.container .header_menu  a:active {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.container .header_menu  a:visited {
+    color: #CCCCCC;
+    text-decoration: none
+}
+
+.container .header_menu  a:link {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.container .header_menu  a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.container .header_menu  a.icon-home {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image: url(../images/icons/crystal/gohome.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-search {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image:url(../images/icons/crystal/viewmag.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-contact {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image:url(../images/icons/crystal/mail_generic.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-admin {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image:url(../images/icons/crystal/configure.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-rss {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image: url(../images/icons/feed-icon-14x14.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-twitter {
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    background-image: url(../images/icons/erenemre/twitter-03.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon-xml {
+    background-repeat: no-repeat;
+    background-position: 8px 10px;
+    background-image: url(../images/icons/xml.gif); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .header_menu  a.icon span {
+    left: -5000px;
+    width: 4000px;
+}
+
+.container .header_menu  a:hover {
+    background-color: #369;
+}
+
+/* Contents *******************************************************************/
+.container .content {
+    clear: both;
+    background-color: #F5F5FF;
+    border: 1px solid #00508a;
+    padding: 1em;
+    min-height: 300px;
+}
+
+.container .content h1 {
+    border-bottom: 1px solid #ccccef;
+    margin: 0 0 0 0;
+    font-size: 14px;
+    font-style: normal;
+    color: #00538F;
+}
+
+/* Common error/success messages styles */
+.container .errorMessages,.container .successMessages {
+    border-collapse: collapse;
+    margin: 1em 0 2em 0;
+    background-color: #FFFFFF;
+}
+
+.container .errorMessages td,.container .successMessages td {
+    vertical-align: middle;
+    min-height: 40px;
+}
+
+.container .errorMessages ul,.container .successMessages ul {
+    margin: 10px 0 10px 0;
+}
+
+.container .errorMessages li,.container .successMessages li {
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+/* Error Messages */
+.container .errorMessages {
+    border: 1px solid #FF0000;
+}
+
+.container .errorMessages td {
+    background: transparent
+        url(../images/icons/crystal/agt_update_critical.png) no-repeat 1em 50%
+        ;
+}
+
+/* Success Messages */
+.container .successMessages {
+    border: 1px solid #0076CC;
+}
+
+.container .successMessages td {
+    background: transparent
+        url(../images/icons/crystal/agt_action_success.png) no-repeat 1em 50%;
+}
+
+/* Footer *********************************************************************/
+.container .footer {
+    text-align: center;
+    height: 1.3em;
+    margin: 0px auto auto auto;
+    background: url(../images/header_menu_background.png);
+    padding-bottom: 3px;
+
+    /* Do rounding (native in Safari, Firefox and Chrome) */
+    -webkit-border-bottom-left-radius:  6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomleft: 6px;
+}
+
+a.footerLogo {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+a.footerLogo span {
+    color: #E07125;
+}
+
+/* ****************************************************************************/
+div.back {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.hover {
+    cursor: pointer;
+    background-color: #F0F0FF;
+}
+
+.headerFormSelected {
+    display: block;
+    text-align: left;
+    vertical-align: middle;
+    width: 120px;
+    height: 15px;
+    background-color: #ffffff;
+    padding: 2px;
+    float: left;
+}
+
+.welcomeMain {
+    position: relative;
+    float: right;
+    top: 0px;
+    margin-left: 0px;
+    margin-right: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333333;
+}
+
+.center {
+    padding-top: 10px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login {
+    margin: 0px auto 0px auto;
+    border: 1px solid #ccccef;
+    width: 300px;
+}
+
+#login td {
+    padding: 3px 10px 3px 10px;
+}
+
+#login td.top {
+    padding: 20px 10px 3px 10px;
+}
+
+table.default {
+    margin: 0px auto 0px auto;
+    border: 1px solid #ccccef;
+    padding: 3px 10px 3px 10px;
+    width: 400px;
+}
+
+.formError {
+    display: block;
+    margin: 0px auto 1em auto;
+    border: 1px solid red;
+    padding: 3px 10px 3px 10px;
+    width: 378px;
+}
+
+/* Info boxes */
+div.infoBox {
+    background: url(../images/icons/crystal/48px/info.png) no-repeat left
+        center;
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA;
+}
+
+div.infoBox ol {
+    margin-left: 4em;
+    margin-right: 1em;
+}
+
+/* Social bookmarks */
+small {
+    font-size: 10px;
+}
+
+#socialinks {
+    border: 1px solid #ccccef;
+    margin: 1em auto 1em auto;
+    width: 20%;
+}
+
+#socialinks td {
+    text-align: center;
+    vertical-align: middle;
+    width: 5%
+}
+
+.menuList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.menuList li {
+    margin: 0 0 3px 0;
+}
+
+.menuList a {
+    width: 170px;
+}
+
+/* Generic Hyperlink Button */
+a.button {
+    display: block;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #333;
+    background: url(../images/button_background.png) no-repeat left center;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #004880;
+}
+
+a.button:link,a.button:visited {
+    color: #004880;
+}
+
+a.button:hover {
+    background-image: url(../images/button_background_h.png);
+    text-decoration: none;
+}
+
+.button span {
+    display: block;
+    float: left;
+    width: 20px;
+    background-repeat: no-repeat;
+}
+
+.button span.showJobs {
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/crystal/viewmag.png); /** sprite-ref: mysprite; */
+}
+
+.button span.showJobsFlex {
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/flex-16x16.png); /** sprite-ref: mysprite; */
+}
+
+.button span.manageAccount {
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/crystal/configure.png); /** sprite-ref: mysprite; */
+}
+
+.button span.addUser {
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/crystal/add_user.png); /** sprite-ref: mysprite; */
+}
+
+a.close {
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.close span {
+    background-position: 2px 50%;
+    background-image: url(../images/icons/crystal/button_ok.png); /** sprite-ref: mysprite; */
+}
+
+a.cancel {
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.cancel span {
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/crystal/cancel.png); /** sprite-ref: mysprite; */
+}
+
+/* Form Buttons */
+input.searchBox {
+    background-repeat: no-repeat;
+    background-position: 2px 50%;
+    background-image: url(../images/icons/crystal/viewmag.png); /** sprite-ref: mysprite; */
+    padding-left: 20px !important;
+}
+
+#startPageMenuContainer {
+    text-align: right;
+}
+
+#startPageMenuContainer img {
+
+}
+
+.openIdLogo {
+    background-repeat: no-repeat;
+    background-position: 100% 0px;
+    background-image: url(../images/icons/openid-logo-small.png); /** sprite-ref: mysprite; */
+    padding: 1px;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd">
+
+	<classpath>
+		<dir name="/Users/hillert/Java/projects/ting/ting-web/target/classes">
+			<include name="ehcache.xml"/>
+			<include name="logback.xml"/>
+			<include name="messages.properties"/>
+			<include name="messages_de.properties"/>
+			<include name="messages_es.properties"/>
+			<include name="META-INF/persistence.xml"/>
+			<include name="spring/applicationContext-security.xml"/>
+			<include name="spring/mainApplicationContext.xml"/>
+			<include name="spring/spring-servlet.xml"/>
+			<include name="validators.xml"/>
+		</dir>
+		<dir name="/Users/hillert/Java/projects/ting/ting-web/target/classes">
+		</dir>
+	</classpath>
+
+	<web>
+		<link target="/">
+			<dir name="/Users/hillert/Java/projects/ting/ting-web/src/main/webapp">
+			</dir>
+		</link>
+	</web>
+
+</application>

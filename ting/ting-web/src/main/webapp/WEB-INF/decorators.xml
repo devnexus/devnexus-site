@@ -1,0 +1,8 @@
+<decorators defaultdir="/WEB-INF/jsp/decorators">
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <excludes>
+        <pattern>/fx/*</pattern>
+    </excludes>
+</decorators>

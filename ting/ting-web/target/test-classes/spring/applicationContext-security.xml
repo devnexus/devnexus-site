@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+  <security:global-method-security secured-annotations="enabled"/>
+
+  <security:http  auto-config="true" access-decision-manager-ref="accessDecisionManager" >
+    <security:intercept-url pattern="/s/admin/**"                 access="ADMIN"                          requires-channel="https"/>
+    <security:intercept-url pattern="/admin/*.html**"             access="MANAGER,ADMIN"                  requires-channel="https"/>
+
+    <security:intercept-url pattern="/login.html**"               access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="https" />
+    <security:intercept-url pattern="/fx/**"                      access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="http" />
+    <security:intercept-url pattern="/**"                         access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="any" />
+
+    <security:form-login login-page="/login.html" default-target-url="/admin/index.html"
+                         authentication-failure-url="/login.html?status=error" />
+    <security:logout logout-url="/logout.html" invalidate-session="true" logout-success-url="/show.jobs.html"/>
+    <security:session-management>
+       <security:concurrency-control max-sessions="1" error-if-maximum-exceeded="false"/>
+    </security:session-management>
+
+  </security:http>
+
+<!--  -->
+
+  <security:authentication-manager alias="authenticationManager">
+    <security:authentication-provider user-service-ref='userService' >
+       <security:password-encoder ref="passwordEncoder"/>
+    </security:authentication-provider>
+  </security:authentication-manager>
+
+  <bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter ">
+    <property name="rolePrefix" value=""/>
+  </bean>
+
+  <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+    <property name="decisionVoters">
+      <list>
+          <ref bean="roleVoter" />
+          <ref bean="authenticatedVoter" />
+      </list>
+    </property>
+  </bean>
+  <bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter">
+  </bean>
+
+  <bean id="securityEventListener" class="com.hillert.apptools.spring.SecurityEventListener"/>
+
+</beans>

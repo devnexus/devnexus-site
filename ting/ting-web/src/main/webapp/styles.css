@@ -1,0 +1,177 @@
+/* basic styles */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 12px/14px Arial, Helvetica, sans-serif;
+	color: #000;
+	width: 360px;
+	margin: 20px auto;
+	text-align: left;
+}
+
+h1 {
+	font: bold 20px/21px Helvetica, Arial, sans-serif;
+	margin: 10px 0px;
+}
+
+p {
+	width: 360px;
+	margin: 0px 0px 20px 0px;
+}
+
+ul {
+	margin: 5px 0px 15px 0px;
+	padding: 0px;
+}
+
+li {
+	margin-left: 20px;
+}
+
+
+/* form styles */
+
+form {
+	width: 360px;
+	text-align: left;
+}
+
+fieldset {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+legend {
+	display: none;
+}
+
+form h3 {
+	clear: both;
+	padding: 5px 0px 10px 0px;
+	font-size: 14px;
+}
+
+form label {
+	display: block;
+	width: 310px;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0px 0px 12px 0px;
+}
+
+form input {
+	display: block;
+	margin-top: 3px;
+}
+
+form select {
+	float: left;
+	display: block;
+}
+
+form label.field-first,
+form label.field-address,
+form label.field-city,
+form label.field-email {
+	clear: left;
+}
+
+
+form label.field-first,
+form label.field-last,
+form label.field-city,
+form label.field-email,
+form label.field-phone {
+	float: left;
+	margin: 0px 10px 0px 0px;
+	width: 150px;
+}
+
+form label.field-first input,
+form label.field-last input,
+form label.field-email input,
+form label.field-city input,
+form label.field-phone input {
+	float: left;
+	width: 150px;
+	padding: 0px;
+}
+
+form label.field-state {
+	float: left;
+	margin-right: 10px;
+	width: 60px;
+}
+
+form label.field-state select {
+	width: 60px;
+	float: left;
+	margin-top: 3px;
+}
+
+form label.field-zip {
+	float: left;
+	width: 80px;
+}
+
+form label.field-zip input {
+	float: left;
+	width: 80px;
+}
+
+form label.field-address {
+	float: left;
+	width: 310px;
+	margin: 0px 0px 0px 0px;
+}
+
+form label.field-address input {
+	float: left;
+	width: 310px;
+	padding: 0px;
+}
+
+form input#radiobutton_1,
+form input#radiobutton_2,
+form input#radiobutton_3,
+form input#radiobutton_4 {
+	clear: left;
+	float: left;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+form label.radioitem {
+	clear: none;
+	margin: 0px 0px 0px 25px;
+	padding: 0px 0px 15px 0px;
+}
+
+textarea {
+	display: block;
+}
+
+form input#checkbox_1,
+form input#checkbox_2,
+form input#checkbox_3 {
+	clear: both;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+
+form label.field-checkbox {
+	clear: none;
+	margin: 0px 0px 0px 25px;
+	padding: 0px 0px 15px 0px;
+}
+
+form textarea {
+	margin-top: 3px;
+}
+
