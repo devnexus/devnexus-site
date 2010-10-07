@@ -2,12 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Devnexus 2011</title>
-
-     <%= stylesheet_link_tag "main", "menu", :media => "all", :cache => true %>
-     <%= javascript_include_tag "jquery-1.3.2.min.js" %>
-     <%= javascript_include_tag "jquery.hoverIntent.minified.js" %>
-     <%= javascript_include_tag "devnexus.js" %>
+<title><decorator:title default="Welcome to the DevNexus 2011 conference in Atlanta" /></title>
 
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma"        content="no-cache" />
@@ -15,11 +10,23 @@
     <meta http-equiv="content-type"  content="text/html; charset=utf-8" />
 
     <meta name="author"      content="Gunnar Hillert" />
-    <meta name="keywords"    content="AJUG, Java, Conference, Atlanta, 2009, 2010, March" />
+    <meta name="keywords"    content="AJUG, Java, Conference, Atlanta, 2009, 2010, 2011, March" />
     <meta name="description" content="The professional developer conference of the Atlanta Java Users Group" />
 
-    <link rel="icon"          href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon"          href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
+    <link rel="shortcut icon" href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
+
+    <jwr:style src="/bundles/all.css" />
+    <jwr:style src="/bundles/all-IE.css" />
+
+    <!-- Java Script Imports -->
+    <jwr:script src="/bundles/lib.js"/>
+
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma"        content="no-cache" />
+    <meta http-equiv="Expires"       content="0" />
+    <meta http-equiv="content-type"  content="text/html; charset=utf-8" />
+
 </head>
 
 <body id="eventwax" class="ajug devcon-2009">
@@ -31,43 +38,44 @@
                     <div id="h2">
                     <div id="h3">
                     <div id="h4">
-                        <p><%= image_tag "logo_devnexus_600x150.png" %></p>
+                        <p><img src="${ctx}/images/logo_devnexus_600x150.png" alt="DevNexus Logo" /></p>
                     </div>
                     </div>
                     </div>
                 </div>
                 <div class="menubar">
                     <ul id="menu">
-                        <li><%= link_to "Home",          :controller => "site", :action => "index" %></li>
-                        <li><%= link_to "Speakers",      :controller => "site", :action => "speakers" %></li>
-                        <li><%= link_to "Presentations", :controller => "site", :action => "presentations" %></li>
-                        <li><%= link_to "Schedule",      :controller => "site", :action => "schedule" %></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Presentations</a></li>
+                        <li><a href="#">Schedule</a></li>
                         <li class="mega">
                             <h2>
                               <a href="#">Past Conferences...</a>
                             </h2>
                             <div>
-                                  <%= link_to "Devnexus 2009", "/2009/index.html"%><br/>
-                                  <%= link_to "Devcon 2006",   "/2006/index.html"%><br/>
-                                  <%= link_to "Devcon 2005",   "/2005/index.html"%><br/>
-                                  <%= link_to "Devcon 2004",   "/2004/index.html"%><br/>
+                            	  <a href="/2009/index.html">Devnexus 2010</a><br/>
+                                  <a href="/2009/index.html">Devnexus 2009</a><br/>
+                                  <a href="/2006/index.html">Devcon 2006</a><br/>
+                                  <a href="/2005/index.html">Devcon 2005</a><br/>
+                                  <a href="/2004/index.html">Devcon 2004</a><br/>
                             </div>
                         </li>
-                        <li><%= link_to "Your Organizers", :controller => "site", :action => "organizers" %></li>
-                        <li><a href="http://ajug.eventwax.com/devnexus-2010/register" style="color: #F7941E">SIGN UP!</a></li>
+                        <li><a href="#">Your Organizers</a></li>
+                        <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E">SIGN UP!</a></li>
                     </ul>
                 </div>
                 <div id="content">
                     <div id="c2">
                         <div id="c3">
                             <div id="c4">
-                                <% if current_user %>
+if logged in
                                   <div>
-                                    <%= link_to "Admin Area",          :controller => "admin",  :action => "index" %> |
-                                    <%= link_to "My Account", account_path %> |
-                                    <%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
+                                   <a href="#">Admin Area</a> |
+                                   <a href="#">My Account</a> |
+                                   <a href="#">Logout</a>
                                   </div>
-                                <% end %>
+end if
                                 <decorator:body />
                             </div>
                         </div>

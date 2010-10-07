@@ -10,10 +10,14 @@ response.setHeader("Expires","0");
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/page"    prefix="page"%>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
+
+<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
 
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 
