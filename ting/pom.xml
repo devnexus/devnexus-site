@@ -70,6 +70,7 @@
           <plugin>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>maven-jetty-plugin</artifactId>
+            <version>6.1.25</version>
             <configuration>
               <webApp>${basedir}/ting-web/target/ting.war</webApp>
               <contextPath>web</contextPath>
@@ -95,7 +96,7 @@
         <repository>
             <id>jrecruiter</id>
             <name>jRecruiter Maven repository</name>
-            <url>http://www.jrecruiter.org:9500/content/groups/public/</url>
+            <url>http://www.jrecruiter.org:8080/nexus/content/groups/public/</url>
         </repository>
         <repository>
             <id>flex</id>
@@ -165,7 +166,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search</artifactId>
-            <version>3.2.0.CR1</version>
+            <version>3.2.1.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>

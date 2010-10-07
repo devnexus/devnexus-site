@@ -127,14 +127,11 @@
 				<groupId>org.tuckey</groupId>
 				<artifactId>urlrewritefilter</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>com.adobe.flex</groupId>
-            <artifactId>flex-rds-server</artifactId>
-            <version>4.0.0.14931</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-		
+		<dependency>
+		  <groupId>com.adobe.flex</groupId>
+		  <artifactId>flex-rds-server</artifactId>
+		  <version>4.0.0.14931</version>
+		</dependency>		
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
