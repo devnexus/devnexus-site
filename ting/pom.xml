@@ -215,26 +215,31 @@
         </dependency>
 
         <!-- Logging -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>0.9.11</version>
-        </dependency>
-        <dependency>
-            <groupId>janino</groupId>
-            <artifactId>janino</artifactId>
-            <version>2.5.10</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.5.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <version>1.5.8</version>
-        </dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>0.9.24</version>
+			</dependency>
+			<dependency>
+				<groupId>janino</groupId>
+				<artifactId>janino</artifactId>
+				<version>2.5.10</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
 
         <!--  -->
 
@@ -244,7 +249,7 @@
             <version>1.1.2</version>
             <scope>runtime</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
@@ -665,14 +670,28 @@
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>8.1-407.jdbc3</version>
-        </dependency>  
+        </dependency>
         <dependency>
             <groupId>opensymphony</groupId>
             <artifactId>sitemesh</artifactId>
             <version>2.3</version>
-        </dependency>      
+        </dependency>
+        <dependency>
+        	<groupId>commons-fileupload</groupId>
+        	<artifactId>commons-fileupload</artifactId>
+        	<version>1.2.2</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.carrot2</groupId>
+			<artifactId>smartsprites</artifactId>
+			<version>0.2.6</version>
+		</dependency>
     </dependencies>
     </dependencyManagement>
+    <dependencies>
+    </dependencies>
     <reporting>
         <plugins>
             <plugin>
@@ -702,9 +721,7 @@
         <profile>
             <id>prod</id>
             <properties>
-                <struts.devMode>false</struts.devMode>
                 <jawr.debug.on>false</jawr.debug.on>
-                <web.xml.DwrServlet.debug>false</web.xml.DwrServlet.debug>
             </properties>
         </profile>
     </profiles>
@@ -718,10 +735,8 @@
         <commons.lang.version>2.3</commons.lang.version>
         <spring.security.version>2.0.4</spring.security.version>
 
-        --><struts.devMode>true</struts.devMode>
+        -->
         <jawr.debug.on>true</jawr.debug.on>
-        <web.xml.DwrServlet.debug>true</web.xml.DwrServlet.debug>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     </properties>
