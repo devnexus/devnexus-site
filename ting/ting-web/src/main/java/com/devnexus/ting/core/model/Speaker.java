@@ -3,11 +3,13 @@ package com.devnexus.ting.core.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
  * The persistent class for the speakers database table.
- * 
+ *
  */
 @Entity
 @Table(name="speakers")
@@ -35,6 +37,8 @@ public class Speaker implements Serializable {
 
 	@Column(name="updated_at")
 	private Timestamp updatedAt;
+
+	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
     public Speaker() {
     }
@@ -93,6 +97,14 @@ public class Speaker implements Serializable {
 
 	public void setUpdatedAt(Timestamp updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public Set<Presentation> getPresentations() {
+		return presentations;
+	}
+
+	public void setPresentations(Set<Presentation> presentations) {
+		this.presentations = presentations;
 	}
 
 }

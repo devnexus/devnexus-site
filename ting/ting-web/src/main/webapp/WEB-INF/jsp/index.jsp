@@ -1,4 +1,4 @@
-
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <div style="float: right; margin-top: 3em; margin-left: 1em;">
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 
@@ -35,12 +35,12 @@ new TWTR.Widget({
 <div class="first">
 	    <p>Welcome to the 2010 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
-	    
+
             <h2 style="margin-top: 0;">Thank you very much for attending DevNexus!!</h2>
 
-            <p>Thank you very much for attending DevNexus 2010. Over the next couple of days we will be adding the slides of the 
-            presentations to the site. Please check <%= link_to "'List of presentations'", :controller => "site", :action => "presentations" %>
-            periodically in order to see whether the disired slides have been already added, yet.
+            <p>Thank you very much for attending DevNexus 2010. Over the next couple of days we will be adding the slides of the
+            presentations to the site. Please check <a href="#">List of presentations</a>
+            periodically in order to see whether the desired slides have been already added, yet.
             </p><p>Within the next 2 weeks, we also hope to add the first audio recording as well. Stay tuned.</p>
             <p style="font-weight: bold;">We hope to see you at DevNexus 2011!!</p>
             <h2 style="">What?</h2>
@@ -58,19 +58,19 @@ new TWTR.Widget({
             conferences, presented by your fellow developers, right in the heart of
             the Southeast (and in your own backyard).</p>
 
-            <p>This conference is an incredible value. Not only do we provide 
-               exceptional speakers and presentations but we also provide book 
+            <p>This conference is an incredible value. Not only do we provide
+               exceptional speakers and presentations but we also provide book
                raffles, food, a cocktail hour for networking and mingling with the
                speakers and much more.</p>
 
             <p><strong>Make sure to sign up early to ensure you get a seat this year!</strong></p>
 
             <ul>
-                <li><%= link_to "List of speakers",      :controller => "site", :action => "speakers" %></li>
-                <li><%= link_to "List of presentations", :controller => "site", :action => "presentations" %></li>
-                <li><%= link_to "Schedule",      :controller => "site", :action => "schedule" %></li>
+                <li><a href="#">List of speakers</a></li>
+                <li><a href="#">List of presentations</a></li>
+                <li><a href="#">Schedule</a></li>
             </ul>
-            
+
             <p>*Please keep in mind that the exact schedule of presentations
             and/or speakers can still change between now and March.</p>
     </div>
@@ -78,8 +78,8 @@ new TWTR.Widget({
 <div class="flyers">
   <div class="header">Help us to promote DevNexus!</div>
   <div class="body">
-    <p class="item"><%= image_tag "adobe-reader.png" %><a href="/static/2010/files/promo/devnexus conference 2010 - press release.pdf">Initial Press Release</a></p>
-      <p class="item"><%= image_tag "adobe-reader.png" %><a href="/static/2010/files/promo/DevNexus_2010_Flyer_06.pdf">Flyer</a></p>
+    <p class="item"><img alt="Adobe Reader Icon" src="${ctx}/images/adobe-reader.png"/><a href="/static/2010/files/promo/devnexus conference 2010 - press release.pdf">Initial Press Release</a></p>
+    <p class="item"><img alt="Adobe Reader Icon" src="${ctx}/images/adobe-reader.png"/><a href="/static/2010/files/promo/DevNexus_2010_Flyer_06.pdf">Flyer</a></p>
   </div>
 </div>
     <h2>When?</h2>
@@ -104,12 +104,11 @@ new TWTR.Widget({
 	<p>Also, we have a group discount available: If you book 5 tickets
 	or more each ticket is <strong>$150</strong>.</p>
 
-        <p>Are you are student? We have a limited amount of student tickets. Please
-        <%=  mail_to "info@ajug.org", "contact us", :subject =>"Devnexus Student Ticket Request", :encode => "javascript" %> for details.</p>
+        <p>Are you are student? We have a limited amount of student tickets. Please contact us at: info AT ajug DOT org for details.</p>
 
 	<p><strong>Book your place now!</strong> You know you want to.</p>
 
-	<p>If you have any questions, please contact us at <%=  mail_to "info@ajug.org", "info@ajug.org",:encode => "javascript" %></p>
+	<p>If you have any questions, please contact us at info AT ajug DOT org</p>
 
 
                 <div id="signup">
@@ -120,24 +119,22 @@ new TWTR.Widget({
                         <h2>We also would like to thank all our sponsors for their support!</h2>
                         <table class="sponsors">
                             <tr>
-                                <td><a href="http://www.sun.com/"><%= image_tag "sponsors/Sun.png" %></a></td>
-                                <td><a href="http://www.anteogroup.com/"><%= image_tag "sponsors/Anteo.png" %></a></td>
-                                <td style="text-align: center;"><a href="http://www.4tnetworks.com/"><%= image_tag "sponsors/4t.png" %></a></td>
-                                <td colspan="1" rowspan="2"><a href="http://www.gca.net/"><%= image_tag "sponsors/gca-logo.jpg" %></a></td>
-                                
+                                <td><a href="http://www.sun.com/"><img alt="Sun" src="${ctx}/images/sponsors/Sun.png"/></a></td>
+                                <td><a href="http://www.anteogroup.com/"><img alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a></td>
+                                <td style="text-align: center;"><a href="http://www.4tnetworks.com/"><img alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a></td>
+                                <td colspan="1" rowspan="2"><a href="http://www.gca.net/"><img alt="GCA" src="${ctx}/images/sponsors/gca-logo.jpg"/></a></td>
+
                             </tr>
                             <tr>
-                            <td style="text-align: center;" rowspan="2"><a href="https://www.theice.com/careers.jhtml"><%= image_tag "sponsors/ICE.jpg" %></a></td>
-                            <td colspan="1"><a href="http://www.jboss.com/"><%= image_tag "sponsors/jboss.png" %></a></td>
-                            <td            ><a href="https://www.mymatrixjobs.com//"><%= image_tag "sponsors/MATRIX_150px.jpg" %></a></td>
+                            <td style="text-align: center;" rowspan="2"><a href="https://www.theice.com/careers.jhtml"><img alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a></td>
+                            <td colspan="1"><a href="http://www.jboss.com/"><img alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a></td>
+                            <td            ><a href="https://www.mymatrixjobs.com//"><img alt="Matrix" src="${ctx}/images/sponsors/MATRIX_150px.jpg"/></a></td>
                             </tr>
 
                             <tr>
-                                <td><a href="http://www.theintersectgroup.com/"><%= image_tag "sponsors/intersect-logo.png" %></a></td>
-                                
-                                <td style="text-align: center;" colspan="2"><a href="http://adorsysllc.com/"><%= image_tag "sponsors/adorsys.jpg" %></a></td>
+                                <td><a href="http://www.theintersectgroup.com/"><img alt="Intersect" src="${ctx}/images/sponsors/intersect-logo.png"/></a></td>
+                                <td style="text-align: center;" colspan="2"><a href="http://adorsysllc.com/"><img alt="Adorsys" src="${ctx}/images/sponsors/adorsys.jpg"/></a></td>
                             </tr>
                         </table>
                 </div>
 
-        

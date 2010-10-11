@@ -45,10 +45,17 @@
                 </div>
                 <div class="menubar">
                     <ul id="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Speakers</a></li>
-                        <li><a href="#">Presentations</a></li>
-                        <li><a href="#">Schedule</a></li>
+
+                        <c:url var="homeUrl"          value="/"/>
+                        <c:url var="speakersUrl"      value="/s/speakers"/>
+                        <c:url var="presentationsUrl" value="/s/presentations"/>
+                        <c:url var="scheduleUrl"      value="/s/schedule"/>
+                        <c:url var="organizersUrl"    value="/s/organizers"/>
+
+                        <li><a href="${homeUrl}">Home</a></li>
+                        <li><a href="${speakersUrl}">Speakers</a></li>
+                        <li><a href="${presentationsUrl}">Presentations</a></li>
+                        <li><a href="${scheduleUrl}">Schedule</a></li>
                         <li class="mega">
                             <h2>
                               <a href="#">Past Conferences...</a>
@@ -61,7 +68,7 @@
                                   <a href="/2004/index.html">Devcon 2004</a><br/>
                             </div>
                         </li>
-                        <li><a href="#">Your Organizers</a></li>
+                        <li><a href="${organizersUrl}">Your Organizers</a></li>
                         <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E">SIGN UP!</a></li>
                     </ul>
                 </div>
