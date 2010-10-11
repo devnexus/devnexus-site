@@ -1,35 +1,32 @@
-<div class="quote"><span>What the community says:</span> "Fantastic value, content vs expense is unmatched"</div>   
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<div class="quote"><span>What the community says:</span> "Fantastic value, content vs expense is unmatched"</div>
 <h2>Speakers</h2>
-    <%= image_tag "devnexus_2009/devnexus_2009_2.jpg", :class=> "page-image"  %>
+    <img src="${ctx}/images/devnexus_2009/devnexus_2009_2.jpg"/>
     <ul>
-        <% @speakers.each do |speaker| %>
-          <li><a href="#<%=h speaker.first_name %>_<%=h speaker.last_name %>"    ><%=h speaker.first_name %> <%=h speaker.last_name %></a></li>
-        <% end %>
+        <c:forEach items="${speakers}" var="speaker">
+            <li><a href="#${speaker.firstName}_${speaker.lastName}"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></a></li>
+        </c:forEach>
     </ul>
 
     <h2>Speaker Biographies</h2>
-    <% @speakers.each do |speaker| %>
-    <div class="speaker">
-        <h3 id="<%=h speaker.first_name %>_<%=h speaker.last_name %>"><%=h speaker.first_name %> <%=h speaker.last_name %></h3>
-        <% if !speaker.picture.nil? %>
-        <%= image_tag "/static/2010/images/speakers/" + speaker.picture %>
-        <% end %>
-        <p>
-          <%=h speaker.bio %>
-        </p>
-        <% if !speaker.presentations.nil?%>
-            <p class="presentation-header">
-            <% if speaker.presentations.size == 1 %>
-                Presentation:
-            <% else %>
-                Presentations:
-            <% end %></p>
-          <ul>
-          <% speaker.presentations.each do |presentation| %>
-             <li><%=h presentation.title %></li>
-          <% end %>
-          </ul>
-        <% end %>
-        <br style="clear: both;"/>
-    </div>
-    <% end %>
+    <c:forEach items="${speakers}" var="speaker">
+	    <div class="speaker">
+	        <h3 id="${speaker.firstName}_${speaker.lastName}"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h3>
+	        <c:if test="${speaker.picture != null}">
+	           <img src="${ctx}/static/2010/images/speakers/${speaker.picture}"/>
+	        </c:if>
+	        <p>
+	          <c:out value="${speaker.bio}"/>
+	        </p>
+	        <c:if test="${!speaker.presentations.length > 0}">
+	           <p class="presentation-header">Presentation:
+	           <ul>
+		           <c:forEach items="${speaker.presentations}" var="presentation">
+		               <li><c:out value="${presentation.title}"/></li>
+		           </c:forEach>
+	           </ul>
+	        </c:if>
+
+	        <br style="clear: both;"/>
+	    </div>
+    </c:forEach>

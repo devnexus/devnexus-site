@@ -1,3 +1,4 @@
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <div class="quote"><span>What the community says:</span> "Best Dev Education bargain in Atlanta"</div>
 <h2>Schedule</h2>
 <table style="border-collapse: collapse;" class="schedule ">

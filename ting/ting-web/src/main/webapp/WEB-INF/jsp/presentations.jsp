@@ -1,4 +1,5 @@
-<div class="quote"><span>What the community says:</span> "Great conference to share best practices"</div>  
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<div class="quote"><span>What the community says:</span> "Great conference to share best practices"</div>
 <h2>Presentations</h2>
 <%= image_tag "devnexus_2009/devnexus_2009_1.jpg", :class=> "page-image"  %>
 <% @presentations.each do |presentation| %>

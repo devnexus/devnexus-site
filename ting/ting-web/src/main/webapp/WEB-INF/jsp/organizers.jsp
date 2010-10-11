@@ -1,3 +1,4 @@
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <div class="quote"><span>What the community says:</span> "great networking opportunity, excellent technical knowledge transfer"</div>
 <h2>Speakers</h2>
     <ul>
@@ -10,7 +11,7 @@
     <h2>Organizers</h2>
     <div class="speaker">
         <h3 id="burr_sutter">Burr Sutter</h3>
-        <%= image_tag "/static/2010/images/organizers/burr_sutter.jpg" %>
+        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/burr_sutter.jpg"/>
         <p>
           Burr Sutter is a current Sun Java Champion with over 15 years of
           software design and development experience along with numerous published
@@ -21,7 +22,7 @@
     </div>
     <div class="speaker">
         <h3 id="gunnar_hillert">Gunnar Hillert</h3>
-        <%= image_tag "/static/2010/images/organizers/gunnar_hillert.jpg" %>
+        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/gunnar_hillert.jpg"/>
         <p>
           Gunnar Hillert is a senior software engineer at nuBridges, Inc. A
           native of Berlin, Germany, Gunnar has been living in Atlanta for the
@@ -41,7 +42,7 @@
     </div>
     <div class="speaker">
         <h3 id="vincent_mayers">Vincent Mayers</h3>
-        <%= image_tag "/static/2010/images/organizers/vincent_mayers.jpg" %>
+        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/vincent_mayers.jpg"/>
         <p>
           Vincent founded CRE8STAT in 2008. He has15 years HCM and technology
           consulting in multiple verticals and countries.
@@ -62,7 +63,7 @@
     </div>
      <div class="speaker">
         <h3 id="sudhir_kamatkar">Sudhir Kamatkar</h3>
-        <%= image_tag "/static/2010/images/organizers/sudhir_kamatkar.jpg" %>
+        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/sudhir_kamatkar.jpg"/>
         <p>
           Sudhir is a founder and CEO of Samarth Technologies an Information and
           Business Process Management consulting company. He has over 20 years of
