@@ -38,6 +38,7 @@ public class Speaker implements Serializable {
 	@Column(name="updated_at")
 	private Timestamp updatedAt;
 
+    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
 	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
     public Speaker() {
