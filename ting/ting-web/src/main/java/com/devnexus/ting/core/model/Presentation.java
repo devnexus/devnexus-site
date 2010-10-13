@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * The persistent class for the presentations database table.
- * 
+ *
  */
 @Entity
 @Table(name="presentations")
@@ -24,8 +24,9 @@ public class Presentation implements Serializable {
 	@Column(name="presentation_link", length=255)
 	private String presentationLink;
 
-	@Column(name="speaker_id")
-	private Integer speakerId;
+    @ManyToOne
+    @JoinColumn(name="speaker_id", unique=false, nullable=false, insertable=true, updatable=true)
+	private Speaker speaker;
 
 	@Column(length=255)
 	private String title;
@@ -59,14 +60,6 @@ public class Presentation implements Serializable {
 		this.presentationLink = presentationLink;
 	}
 
-	public Integer getSpeakerId() {
-		return this.speakerId;
-	}
-
-	public void setSpeakerId(Integer speakerId) {
-		this.speakerId = speakerId;
-	}
-
 	public String getTitle() {
 		return this.title;
 	}
@@ -81,6 +74,14 @@ public class Presentation implements Serializable {
 
 	public void setYear(Integer year) {
 		this.year = year;
+	}
+
+	public Speaker getSpeaker() {
+		return speaker;
+	}
+
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
 	}
 
 }

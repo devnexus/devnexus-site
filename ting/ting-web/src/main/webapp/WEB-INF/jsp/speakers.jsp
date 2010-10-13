@@ -18,8 +18,8 @@
 	        <p>
 	          <c:out value="${speaker.bio}"/>
 	        </p>
-	        <c:if test="${!speaker.presentations.length > 0}">
-	           <p class="presentation-header">Presentation:
+	        <c:if test="${!empty speaker.presentations}">
+	           <p class="presentation-header">Presentation:</p>
 	           <ul>
 		           <c:forEach items="${speaker.presentations}" var="presentation">
 		               <li><c:out value="${presentation.title}"/></li>
