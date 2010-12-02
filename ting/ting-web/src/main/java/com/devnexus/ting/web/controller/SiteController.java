@@ -1,12 +1,28 @@
 package com.devnexus.ting.web.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.mail.internet.ContentType;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -32,14 +48,60 @@ public class SiteController {
     }
 
     @RequestMapping("/speakers")
-    public String getSpeakers(ModelMap model) {
-    	model.addAttribute("speakers", businessService.getAllSpeakers());
+    public String getSpeakersForCurrentEvent(ModelMap model) {
+    	model.addAttribute("speakers", businessService.getSpeakersForCurrentEvent());
         return "speakers";
     }
 
+    @RequestMapping("/{eventKey}/speakers")
+    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
+    	final Event event = businessService.getEventByEventKey(eventKey);
+    	model.addAttribute("event", event);
+    	model.addAttribute("speakers", businessService.getSpeakersForEvent(event.getId()));
+        return "speakers";
+    }
+
+    @RequestMapping("/{eventKey}/presentations")
+    public String getPresentationsForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
+    	final Event event = businessService.getEventByEventKey(eventKey);
+    	model.addAttribute("event", event);
+    	model.addAttribute("presentations", businessService.getPresentationsForEvent(event.getId()));
+        return "presentations";
+    }
+
+    @RequestMapping(value="/speaker/{speakerId}.jpg", method=RequestMethod.GET)
+    public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
+
+    	final Speaker speaker = businessService.getSpeaker(speakerId);
+
+    	final InputStream speakerPicture;
+
+    	if (speaker==null) {
+    		speakerPicture = SystemInformationUtils.getSpeakerImage(null);
+    	} else {
+    		speakerPicture = SystemInformationUtils.getSpeakerImage(speaker.getPicture());
+    	}
+
+        try {
+			org.apache.commons.io.IOUtils.copy(speakerPicture, response.getOutputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+        response.setContentType("image/png");
+
+    }
+
     @RequestMapping("/presentations")
-    public String getPresentations(ModelMap model) {
-    	model.addAttribute("presentations", businessService.getAllPresentations());
+    public String getPresentationsForCurrentEvent(ModelMap model) {
+    	model.addAttribute("presentations", businessService.getPresentationsForCurrentEvent());
+        return "presentations";
+    }
+
+    @RequestMapping("/{eventId}/presentations")
+    public String getPresentationsForEvent(@PathVariable("eventId") Long eventId, ModelMap model) {
+    	model.addAttribute("presentations", businessService.getPresentationsForEvent(eventId));
         return "presentations";
     }
 

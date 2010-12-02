@@ -17,6 +17,7 @@ package com.devnexus.ting.core.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,6 +26,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.devnexus.ting.core.dao.UserDao;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.UserService;
 
@@ -54,7 +56,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 //    /**
 //     * User Dao.
 //     */
-//    //private @Autowired UserDao userDao;
+      private @Autowired UserDao userDao;
 //
 //    private @Autowired StringDigester stringDigester;
 //
@@ -180,18 +182,16 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     /** {@inheritDoc} */
     @Override
     @Transactional(readOnly = true, propagation=Propagation.SUPPORTS)
-    public UserDetails loadUserByUsername(final String emailOrUserName) throws UsernameNotFoundException, DataAccessException {
+    public UserDetails loadUserByUsername(final String userName) throws UsernameNotFoundException, DataAccessException {
 
-        //final User user = userDao.getUserByUsernameOrEmail(emailOrUserName.trim());
+        final User user = userDao.getUserByUsername(userName.trim());
 
-    	User user = new User();
-    	
         if (user==null){
-            LOGGER.warn("loadUserByUsername() - No user with id " + emailOrUserName + " found.");
-            throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + emailOrUserName + " found.");
+            LOGGER.warn("loadUserByUsername() - No user with id " + userName + " found.");
+            throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + userName + " found.");
         }
 
-        //LOGGER.info("User {} ({}) loaded.", new Object[] { user.getUsername(), user.getEmail()});
+        LOGGER.info("User {} ({}) loaded.", new Object[] { user.getUsername(), user.getEmail()});
 
         return user;
     }

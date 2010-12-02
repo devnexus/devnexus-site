@@ -169,6 +169,10 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
 
         <!-- Password Generator -->
 
@@ -378,20 +382,12 @@
         <!-- Other -->
 
         <dependency>
-            <groupId>de.sven-jacobs</groupId>
-            <artifactId>loremipsum</artifactId>
-        </dependency>
-        <dependency>
             <groupId>net.jawr</groupId>
             <artifactId>jawr</artifactId>
         </dependency>
         <dependency>
             <groupId>com.lowagie</groupId>
             <artifactId>itext</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>recaptcha4j</groupId>
-            <artifactId>recaptcha4j</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
@@ -450,6 +446,10 @@
             <artifactId>postgresql</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <dependency>
         	<groupId>commons-fileupload</groupId>
         	<artifactId>commons-fileupload</artifactId>
         </dependency>
@@ -457,8 +457,20 @@
 			<groupId>org.carrot2</groupId>
 			<artifactId>smartsprites</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.jmesa</groupId>
+            <artifactId>jmesa</artifactId>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>xwork</artifactId>
+            		<groupId>com.opensymphony</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>spring-webmvc-portlet</artifactId>
+            		<groupId>org.springframework</groupId>
+            	</exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
-
-
 </project>
 

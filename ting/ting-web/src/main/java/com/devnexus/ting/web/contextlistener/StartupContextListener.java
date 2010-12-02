@@ -128,7 +128,6 @@ public class StartupContextListener implements ServletContextListener {
         bootMessage.append("-----------------------------------------------").append("\n");
 
         LOGGER.info(bootMessage.toString());
-        System.getProperty("jRecruiterSpringContext");
     }
 
 }
