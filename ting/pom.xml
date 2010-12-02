@@ -187,6 +187,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- JSR 303 with Hibernate Validator -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.0.0.GA</version>
+        </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -327,7 +333,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -342,7 +348,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -357,7 +363,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -368,7 +374,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -379,7 +385,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -390,7 +396,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -401,7 +407,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -412,7 +418,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -423,7 +429,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -434,17 +440,17 @@
          <dependency>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-aspects</artifactId>
-                    <version>3.0.2.RELEASE</version>
+                    <version>3.0.4.RELEASE</version>
                 </dependency>
          <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -459,7 +465,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>3.0.2.RELEASE</version>
+            <version>3.0.4.RELEASE</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -561,13 +567,6 @@
         <!-- Other -->
 
         <dependency>
-            <groupId>de.sven-jacobs</groupId>
-            <artifactId>loremipsum</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
             <groupId>net.jawr</groupId>
             <artifactId>jawr</artifactId>
             <version>3.2.1</version>
@@ -590,11 +589,6 @@
             <version>2.1.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>recaptcha4j</groupId>
-            <artifactId>recaptcha4j</artifactId>
-            <version>0.0.7</version>
-        </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
@@ -672,6 +666,11 @@
             <version>8.1-407.jdbc3</version>
         </dependency>
         <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.2.143</version>
+        </dependency>
+        <dependency>
             <groupId>opensymphony</groupId>
             <artifactId>sitemesh</artifactId>
             <version>2.3</version>
@@ -688,6 +687,11 @@
 			<artifactId>smartsprites</artifactId>
 			<version>0.2.6</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jmesa</groupId>
+			<artifactId>jmesa</artifactId>
+			<version>3.0.1</version>
+        </dependency>
     </dependencies>
     </dependencyManagement>
     <dependencies>
