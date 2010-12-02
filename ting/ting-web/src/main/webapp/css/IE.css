@@ -1,9 +1,0 @@
-fieldset {
-    position: relative;
-}
-
-legend {
-    position: absolute;
-    top: -.5em;
-    left: .2em;
-}

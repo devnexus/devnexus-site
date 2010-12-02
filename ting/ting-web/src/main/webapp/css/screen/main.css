@@ -1,0 +1,307 @@
+body {
+    background: #000000;
+}
+
+
+.page-image {
+
+    float: right;
+    margin-left: 1em;
+    border: 1px solid orange;
+
+}
+
+.quote {
+
+    border: 1px solid #eeeeee;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+#sponsors {
+    margin: 1em;
+}
+
+#sponsors h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#sponsors table {
+    font-size: 0;
+    border-collapse: collapse;
+    width: auto !important;
+}
+#sponsors table td,table th {
+    padding: 0;
+    border: 1px solid #eee;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent !important;
+}
+#sponsors table td img {
+    margin: 3px;
+}
+#sponsors table th {
+    text-align: left;
+    background: #eee;
+}
+
+#footer {
+    border: 0;
+    margin: 0;
+    margin-top: 5em;
+    padding:0 0 10px 0;
+    text-align: center;
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+
+      margin-top:    20px;
+      margin-bottom: 20px;
+      background-color: #FFFFFF;
+        -webkit-border-top-left-radius:  6px;
+        -webkit-border-top-right-radius: 6px;
+        -webkit-border-bottom-left-radius:  6px;
+        -webkit-border-bottom-right-radius: 6px;
+        -moz-border-radius-topright: 6px;
+        -moz-border-radius-topleft: 6px;
+        -moz-border-radius-bottomright: 6px;
+        -moz-border-radius-bottomleft: 6px;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ul#menu {
+background: #302F91;
+color: #fff;
+margin: 0;
+padding: 0.3em 0em;
+}
+
+
+ul#menu li {
+display: inline;
+margin: 0.1em 1em;
+position: relative;
+}
+
+ul#menu h2, ul#menu h3 {
+font-size: 100%;
+font-weight: normal;
+display: inline;
+}
+
+
+ul#menu li a {
+color: #fff;
+text-decoration: none;
+padding: 0 0.4em;
+}
+
+ul#menu li a:hover {
+text-decoration: underline;
+}
+
+ul#menu li.mega a {
+padding: 0 1.2em;
+}
+
+ul#menu li.mega a:hover {
+text-decoration: underline;
+}
+
+ul#menu div {
+display: none;
+}
+
+ul#menu li.mega div {
+border: 1px solid #dda;
+width: 18em;
+position: absolute;
+top: 1.6em;
+left: 0em;
+padding: 1.3em;
+background: #ffc;
+color: #930;
+}
+
+ul#menu li.hovering div {
+display: block;
+}
+
+ul#menu li.mega div a {
+color: #300;
+padding: 0;
+background-image: none;
+text-decoration: underline;
+}
+
+ul#menu li div a.more {
+color: #390;
+font-weight: bold;
+}
+
+
+ul#menu div h3 {
+color: #f70;
+font-weight: bold;
+font-size: 1.1em;
+}
+ul#menu div p {
+margin: 0 0 0.8em 0;
+padding: 0;
+}
+
+.container .menubar  a.icon-twitter {
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-image: url(../../images/icons/icondock/twitter.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+.container .menubar  a.icon-facebook {
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-image: url(../../images/icons/icondock/facebook.png); /** sprite-ref: mysprite; sprite-margin-left: 10px; sprite-margin-top: 10px; */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.schedule .day {
+    background-color: #F7931E;
+    padding: 5px;
+    text-align: center;
+}
+
+.schedule .break {
+    background-color: #B7DB87;
+}
+
+.schedule .time {
+    background-color: #302F91;
+    color: #FFFFFF;
+    width: 20px;
+}
+.schedule .talk {
+    background-color: #B5CBDF;
+    font-weight: bold;
+}
+
+.schedule .speaker {
+    background-color: #B5CBDF;
+    font-weight: normal;
+}
+.schedule .topic {
+    background-color: #B5CBDF;
+    font-weight: bold;
+}
+
+.flyers {
+    background-color: #302F91;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+}
+
+.flyers .header {
+    margin: 3px;
+}
+
+.flyers .body {
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 2px;
+
+}
+
+.flyers .body .item {
+    margin: 0px 15 0px 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.flyers .body .item p {
+    margin: 0px 15 0px 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.flyers .body img {
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+
+
+
+div.speaker h3 {
+    border-bottom: 1px solid orange;
+ }
+div.speaker img {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-top: -1.5em;
+    border-right: 1px solid orange;
+    border-bottom: 1px solid orange;
+    border-left: 1px solid orange;
+}
+
+div.speaker p.presentation-header {
+     color: #555555;
+     font-weight: bold;
+}
+ .presentation h3.title   {
+    border-bottom: 1px solid orange;
+}
+
+/*~~~~Form Handling~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+form div.required label,
+form div.required input,
+form div.optional label,
+form div.optional input,
+form div.optional textarea
+form div.required textarea {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    padding:3px;
+}
+
+
+form div.required label,
+form div.optional label {
+    width: 150px;
+}
+
+form div.required label,
+form div.optional label {
+    text-align: right;
+    padding-right: 20px;
+}
+
+form div.required, form div.submit,
+form div.optional {
+  clear: left;
+}
+
+form div.submit {
+  width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
