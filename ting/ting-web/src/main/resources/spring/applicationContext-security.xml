@@ -11,15 +11,13 @@
 
   <security:http  auto-config="true" access-decision-manager-ref="accessDecisionManager" >
     <security:intercept-url pattern="/s/admin/**"                 access="ADMIN"                          requires-channel="https"/>
-    <security:intercept-url pattern="/admin/*.html**"             access="MANAGER,ADMIN"                  requires-channel="https"/>
-
-    <security:intercept-url pattern="/login.html**"               access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="https" />
+    <security:intercept-url pattern="/s/login**"                    access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="https" />
     <security:intercept-url pattern="/fx/**"                      access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="http" />
     <security:intercept-url pattern="/**"                         access="IS_AUTHENTICATED_ANONYMOUSLY"   requires-channel="any" />
 
-    <security:form-login login-page="/login.html" default-target-url="/admin/index.html"
-                         authentication-failure-url="/login.html?status=error" />
-    <security:logout logout-url="/logout.html" invalidate-session="true" logout-success-url="/show.jobs.html"/>
+    <security:form-login login-page="/s/login" default-target-url="/s/admin/index"
+                         authentication-failure-url="/s/login?status=error" />
+    <security:logout logout-url="/s/logout" invalidate-session="true" logout-success-url="/s/index"/>
     <security:session-management>
        <security:concurrency-control max-sessions="1" error-if-maximum-exceeded="false"/>
     </security:session-management>
@@ -50,5 +48,17 @@
   </bean>
 
   <bean id="securityEventListener" class="com.hillert.apptools.spring.SecurityEventListener"/>
+
+    <bean id="stringDigester" class="org.jasypt.digest.StandardStringDigester">
+        <property name="algorithm" value="SHA-512" />
+        <property name="iterations" value="100000" />
+        <property name="saltSizeBytes" value="16" />
+    </bean>
+
+    <bean id="passwordEncoder" class="org.jasypt.spring.security3.PasswordEncoder">
+        <property name="stringDigester">
+            <ref bean="stringDigester" />
+        </property>
+    </bean>
 
 </beans>

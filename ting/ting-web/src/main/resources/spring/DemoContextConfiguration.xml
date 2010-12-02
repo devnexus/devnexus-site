@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:flex="http://www.springframework.org/schema/flex"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+                           http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+                           http://www.springframework.org/schema/flex    http://www.springframework.org/schema/flex/spring-flex-1.0.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName"        value="org.h2.Driver"/>
+        <property name="url"                    value="jdbc:h2:ting_test?MVCC=TRUE"/>
+        <property name="username"               value="sa"/>
+        <property name="password"               value=""/>
+        <property name="maxActive"              value="100"/>
+        <property name="maxIdle"                value="30" />
+        <property name="maxWait"                value="1000"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="defaultAutoCommit"      value="true"/>
+    </bean>
+
+    <bean id="hibernateJpaVendorAdapter"
+          class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="showSql"     value="false" />
+        <property name="generateDdl" value="false" />
+    </bean>
+
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource"          ref="dataSource"/>
+        <property name="jpaVendorAdapter"    ref="hibernateJpaVendorAdapter"/>
+        <property name="persistenceUnitName" value="base"/>
+        <property name="jpaProperties">
+        <props>
+            <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+            <prop key="hibernate.query.substitutions">true '1', false '0'</prop>
+            <prop key="hibernate.cache.use_second_level_cache">true</prop>
+            <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+            <prop key="hibernate.show_sql">false</prop>
+            <prop key="hibernate.format_sql">true</prop>
+            <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+            <prop key="hibernate.search.default.directory_provider">org.hibernate.search.store.RAMDirectoryProvider</prop>
+        </props>
+        </property>
+    </bean><!--
+
+    <bean id="contextStartedEventListener" class="org.jrecruiter.spring.ContextStartedEventListener"/>
+    <bean id="seedDataEventListener"       class="org.jrecruiter.spring.ContextRefreshedEventListener"/>
+
+--></beans>

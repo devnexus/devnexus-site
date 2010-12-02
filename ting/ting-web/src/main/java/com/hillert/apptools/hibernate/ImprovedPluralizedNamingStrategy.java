@@ -88,17 +88,17 @@ public class ImprovedPluralizedNamingStrategy implements NamingStrategy, Seriali
                 }
             }
 
-            return buf2.toString();
+            return buf2.toString().toUpperCase();
         }
 
-        return buf.toString();
+        return buf.toString().toUpperCase();
     }
 
     public String collectionTableName(
             String ownerEntity, String ownerEntityTable, String associatedEntity, String associatedEntityTable,
             String propertyName
     ) {
-        return tableName( ownerEntityTable + '_' + propertyToColumnName(propertyName) );
+        return tableName( Noun.pluralOf(ownerEntityTable, Locale.ENGLISH) + '_' + propertyToColumnName(propertyName) );
     }
 
     /**
@@ -141,10 +141,11 @@ public class ImprovedPluralizedNamingStrategy implements NamingStrategy, Seriali
         }
         else {
             //use of a stringbuffer to workaround a JDK bug
-            return new StringBuffer(ownerEntityTable).append("_")
+            return new StringBuffer(Noun.pluralOf(
+            		ownerEntityTable, Locale.ENGLISH)).append("_")
                     .append(
                         associatedEntityTable != null ?
-                        associatedEntityTable :
+                        		Noun.pluralOf(associatedEntityTable, Locale.ENGLISH) :
                         StringHelper.unqualify( propertyName )
                     ).toString();
         }

@@ -3,41 +3,46 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
     xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
     xmlns:flex="http://www.springframework.org/schema/flex"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
     xsi:schemaLocation="http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                            http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
                            http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
                            http://www.springframework.org/schema/flex    http://www.springframework.org/schema/flex/spring-flex-1.0.xsd
+                           http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.devnexus.ting.web.converter.StringToEvent" />
+                <bean class="com.devnexus.ting.web.converter.StringToSpeaker" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- Configures the @Controller programming model -->
+    <mvc:annotation-driven conversion-service="conversionService"/>
 
     <!-- HANDLERS -->
     <context:component-scan base-package="com.devnexus.ting.web" />
 
-    <!-- VIEWS -->
     <bean id="viewNameTranslator"
         class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator" />
 
-    <bean id="beanNameViewResolver"
-        class="org.springframework.web.servlet.view.BeanNameViewResolver">
-        <property name="order" value="0"/>
-    </bean>
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    <!-- Configures Handler Interceptors -->
+    <mvc:interceptors>
+        <!-- Changes the locale when a 'locale' request parameter is sent; e.g. /?locale=de -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+    </mvc:interceptors>
+
+    <!-- Saves a locale change using a cookie -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+
+    <!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
         <property name="order" value="1"/>
-    </bean>
-
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
-
-    <bean
-        class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-        <property name="order" value="0" />
-    </bean>
-
-    <bean
-        class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
-        <property name="order" value="1" />
     </bean>
 
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
@@ -61,5 +66,36 @@
         <property name="maxUploadSize"><value>8194304</value> </property>
     </bean>
 
-</beans>
+    <mvc:view-controller  path="/admin" view-name="redirect:/s/admin/index" />
+
+	<mvc:interceptors>
+	   <mvc:interceptor>
+	       <mvc:mapping path="/**"/>
+	       <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
+	   </mvc:interceptor>
+	</mvc:interceptors>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- VIEWS --><!--
+
+
+    <bean id="beanNameViewResolver"
+        class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="0"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+
+    <bean
+        class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="order" value="0" />
+    </bean>
+
+    <bean
+        class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <property name="order" value="1" />
+    </bean>
+
+--></beans>
 
