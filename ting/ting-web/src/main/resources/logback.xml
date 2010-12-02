@@ -3,12 +3,12 @@
 <configuration>
   <appender name="LOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <append>true</append>
-    <File>${jrecruiter.home}/logs/jrecruiter.log</File>
+    <File>${TING_HOME}/logs/ting.log</File>
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%d %5p [%t][%X{sessionId}][%X{username}][%-55logger{55}] %m [%X{requestUrl}]%n</pattern>
     </layout>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-      <FileNamePattern>jrecruiter%i.log</FileNamePattern>
+      <FileNamePattern>ting%i.log</FileNamePattern>
       <maxIndex>50</maxIndex>
     </rollingPolicy>
     <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -18,12 +18,12 @@
 
   <appender name="LOGFILE-SECURITY" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <append>true</append>
-    <File>${jrecruiter.home}/logs/jrecruiter-security.log</File>
+    <File>${TING_HOME}/logs/ting-security.log</File>
     <layout class="ch.qos.logback.classic.PatternLayout">
       <pattern>%d %5p [%t][%X{sessionId}][%X{username}][%-55logger{55}] %m [%X{requestUrl}]%n</pattern>
     </layout>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-      <FileNamePattern>jrecruiter-security%i.log</FileNamePattern>
+      <FileNamePattern>ting-security%i.log</FileNamePattern>
       <maxIndex>50</maxIndex>
     </rollingPolicy>
     <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -57,7 +57,7 @@
     <level value="WARN"/>
   </logger>
     <logger name="org.springframework">
-    <level value="INFO"/>
+    <level value="WARN"/>
   </logger>
   <logger name="org.apache.struts">
     <level value="WARN"/>
@@ -90,7 +90,7 @@
     <level value="INFO"/>
   </logger>
   <logger name="ch.qos.logback">
-    <level value="DEBUG"/>
+    <level value="INFO"/>
   </logger>
   <logger name="org.jrecruiter.spring.SecurityEventListener">
     <level value="INFO"/>
