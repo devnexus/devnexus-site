@@ -23,8 +23,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.PresentationDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
+import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
@@ -41,6 +43,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Autowired private PresentationDao presentationDao;
 	@Autowired private SpeakerDao      speakerDao;
+	@Autowired private EventDao        eventDao;
 
     /**
      *   Initialize Logging.
@@ -54,7 +57,87 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	public List<Speaker> getAllSpeakers() {
-		return speakerDao.getAll();
+		return speakerDao.getAllSpeakersOrderedByName();
+	}
+
+	@Override
+	public void saveEvent(Event event) {
+		eventDao.save(event);
+	}
+
+	@Override
+	public List<Event> getAllEvents() {
+		return eventDao.getAll();
+	}
+
+	@Override
+	public void savePresentation(Presentation presentation) {
+		presentationDao.save(presentation);
+	}
+
+	@Override
+	public Speaker saveSpeaker(Speaker speaker) {
+		return speakerDao.save(speaker);
+	}
+
+	@Override
+	public Speaker getSpeaker(Long speakerId) {
+		return speakerDao.get(speakerId);
+	}
+
+	@Override
+	public void deleteEvent(Event event) {
+		eventDao.remove(event);
+	}
+
+	@Override
+	public Event getEvent(Long id) {
+		return eventDao.get(id);
+	}
+
+	@Override
+	public void deletePresentation(Presentation presentation) {
+		presentationDao.remove(presentation);
+	}
+
+	@Override
+	public void deleteSpeaker(Speaker speaker) {
+		speakerDao.remove(speaker);
+	}
+
+	@Override
+	public Presentation getPresentation(Long id) {
+		return presentationDao.get(id);
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForCurrentEvent() {
+		return presentationDao.getPresentationsForCurrentEvent();
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForEvent(Long eventId) {
+		return presentationDao.getPresentationsForEvent(eventId);
+	}
+
+	@Override
+	public List<Speaker> getSpeakersForCurrentEvent() {
+		return speakerDao.getSpeakersForCurrentEvent();
+	}
+
+	@Override
+	public List<Speaker> getSpeakersForEvent(Long eventId) {
+		return speakerDao.getSpeakersForEvent(eventId);
+	}
+
+	@Override
+	public Event getEventByEventKey(String eventKey) {
+		return eventDao.getByEventKey(eventKey);
+	}
+
+	@Override
+	public List<Event> getAllNonCurrentEvents() {
+		return eventDao.getAllNonCurrentEvents();
 	}
 
 }
