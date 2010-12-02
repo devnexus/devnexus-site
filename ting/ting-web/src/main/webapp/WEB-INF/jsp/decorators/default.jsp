@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title><decorator:title default="Welcome to the DevNexus 2011 conference in Atlanta" /></title>
+<title><decorator:title default="DevNexus 2011 Atlanta" /></title>
 
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma"        content="no-cache" />
@@ -16,10 +16,10 @@
     <link rel="icon"          href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
     <link rel="shortcut icon" href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
 
-    <jwr:style src="/bundles/all.css" />
-    <jwr:style src="/bundles/all-IE.css" />
+    <jwr:style src="/bundles/screen.css" media="screen, projection"/>
+    <jwr:style src="/bundles/print.css"  media="print"/>
+    <jwr:style src="/bundles/ie.css"     media="screen, projection"/>
 
-    <!-- Java Script Imports -->
     <jwr:script src="/bundles/lib.js"/>
 
     <meta http-equiv="Cache-Control" content="no-store" />
@@ -30,21 +30,13 @@
 </head>
 
 <body id="eventwax" class="ajug devcon-2009">
-    <div id="b2">
-        <div id="b3">
-            <div id="b4">
 
-                <div id="header">
-                    <div id="h2">
-                    <div id="h3">
-                    <div id="h4">
-                        <p><img src="${ctx}/images/logo_devnexus_600x150.png" alt="DevNexus Logo" /></p>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="menubar">
-                    <ul id="menu">
+<div class="container">
+    <div id="header" class="span-24 last">
+        <p style="margin-top: 5px; text-align: center;"><img src="${ctx}/images/logo_devnexus_600x150.png" alt="DevNexus Logo"/></p>
+    </div>
+    <div class="span-24 last menubar">
+        <ul id="menu">
 
                         <c:url var="homeUrl"          value="/"/>
                         <c:url var="speakersUrl"      value="/s/speakers"/>
@@ -52,56 +44,58 @@
                         <c:url var="scheduleUrl"      value="/s/schedule"/>
                         <c:url var="organizersUrl"    value="/s/organizers"/>
 
-                        <li><a href="${homeUrl}">Home</a></li>
-                        <li><a href="${speakersUrl}">Speakers</a></li>
-                        <li><a href="${presentationsUrl}">Presentations</a></li>
-                        <li><a href="${scheduleUrl}">Schedule</a></li>
+                        <li><a href="${homeUrl}"><span>Home</span></a></li>
+                        <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
+                        <li><a href="${presentationsUrl}"><span>Presentations</span></a></li>
+                        <li><a href="${scheduleUrl}"><span>Schedule</span></a></li>
                         <li class="mega">
                             <h2>
                               <a href="#">Past Conferences...</a>
                             </h2>
-                            <div>
-                            	  <a href="/2009/index.html">Devnexus 2010</a><br/>
-                                  <a href="/2009/index.html">Devnexus 2009</a><br/>
-                                  <a href="/2006/index.html">Devcon 2006</a><br/>
-                                  <a href="/2005/index.html">Devcon 2005</a><br/>
-                                  <a href="/2004/index.html">Devcon 2004</a><br/>
+                            <div style="width: 450px; z-index: 20000;">
+                                <table style="width: 400px;">
+                                    <c:forEach items="${eventsForMenu}" var="event">
+                                        <tr>
+	                                       <td><c:out value="${event.title}"/></td>
+	                                       <td><a href="<c:url value='/s/${event.eventKey}/speakers'/>">Speakers</a></td>
+	                                       <td><a href="<c:url value='/s/${event.eventKey}/presentations'/>">Presentations</a></td>
+	                                    </tr>
+	                                </c:forEach>
+                                </table>
                             </div>
                         </li>
-                        <li><a href="${organizersUrl}">Your Organizers</a></li>
-                        <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E">SIGN UP!</a></li>
+                        <li><a href="${organizersUrl}"><span>Your Organizers</span></a></li>
+                        <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E"><span>SIGN UP!</span></a></li>
+                        <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
+                        <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                     </ul>
-                </div>
-                <div id="content">
-                    <div id="c2">
-                        <div id="c3">
-                            <div id="c4">
-if logged in
-                                  <div>
-                                   <a href="#">Admin Area</a> |
-                                   <a href="#">My Account</a> |
-                                   <a href="#">Logout</a>
-                                  </div>
-end if
-                                <decorator:body />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="footer">&nbsp;<!--ads--></div>
-
-                <div id="extraDiv1"><span></span></div>
-                <div id="extraDiv2"><span></span></div>
-                <div id="extraDiv3"><span></span></div>
-                <div id="extraDiv4"><span></span></div>
-                <div id="extraDiv5"><span></span></div>
-                <div id="extraDiv6"><span></span></div>
-            </div>
-        </div>
     </div>
+    <div id="content" class="span-22 prepend-1 append-1 prepend-top last">
+								<security:authorize ifAnyGranted="ADMIN">
+									<div style="text-align: right" class="span-22 append-bottom last">You are logged in as
+									   <security:authentication property="principal.firstName"/> <security:authentication property="principal.lastName"/> (<security:authentication property="principal.email"/>) |
+									   <a href="<c:url value='/s/logout'/>" >Logout</a>
+									   <a href="<c:url value='/s/admin/index'/>">Admin Area</a>
+									</div>
+								</security:authorize>
+				                <c:if test="${not empty message}">
+				                    <div id="message" class="${message.type} span-22 last">${message.text}</div>
+				                </c:if>
+                                <decorator:body />
+    </div>
+    <div id="footer" class="span-24 last">
+        (c) 2008-2011 Atlanta Java Users Group (AJUG)
+    </div>
+</div>
+
+
 
     <script type="text/javascript">
+
+    $(function() {
+        $( "button, input:submit").button();
+    });
+
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
