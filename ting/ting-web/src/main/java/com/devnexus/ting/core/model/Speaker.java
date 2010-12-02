@@ -1,10 +1,25 @@
 package com.devnexus.ting.core.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 
 /**
@@ -12,43 +27,54 @@ import java.util.Set;
  *
  */
 @Entity
-@Table(name="speakers")
 public class Speaker implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
-	private Integer id;
+	private Long id;
 
+	@NotEmpty
+	@Size(max=10000)
 	private String bio;
 
-	@Column(name="created_at")
-	private Timestamp createdAt;
+	@Temporal(value=TemporalType.TIMESTAMP)
+	private Date createdAt;
 
-	@Column(name="first_name", length=255)
+	@NotEmpty
+	@Size(max=255)
 	private String firstName;
 
-	@Column(name="last_name", length=255)
+	@NotEmpty
+	@Size(max=255)
 	private String lastName;
 
-	@Column(length=255)
+	@Size(max=255)
 	private String picture;
 
-	@Column(name="updated_at")
-	private Timestamp updatedAt;
+	@Temporal(value=TemporalType.TIMESTAMP)
+	private Date updatedAt;
 
     @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
 	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
+    @ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
+	private Set<Event>events = new HashSet<Event>(0);
+
+
     public Speaker() {
     }
 
-	public Integer getId() {
+	public Speaker(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -60,7 +86,7 @@ public class Speaker implements Serializable {
 		this.bio = bio;
 	}
 
-	public Timestamp getCreatedAt() {
+	public Date getCreatedAt() {
 		return this.createdAt;
 	}
 
@@ -92,7 +118,7 @@ public class Speaker implements Serializable {
 		this.picture = picture;
 	}
 
-	public Timestamp getUpdatedAt() {
+	public Date getUpdatedAt() {
 		return this.updatedAt;
 	}
 
@@ -106,6 +132,26 @@ public class Speaker implements Serializable {
 
 	public void setPresentations(Set<Presentation> presentations) {
 		this.presentations = presentations;
+	}
+
+	@Override
+	public String toString() {
+		return "Speaker [firstName=" + firstName + ", id=" + id + ", lastName="
+				+ lastName + "]";
+	}
+
+	/**
+	 * @param events the events to set
+	 */
+	public void setEvents(Set<Event> events) {
+		this.events = events;
+	}
+
+	/**
+	 * @return the events
+	 */
+	public Set<Event> getEvents() {
+		return events;
 	}
 
 }
