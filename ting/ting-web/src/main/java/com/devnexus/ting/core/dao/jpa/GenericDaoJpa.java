@@ -27,7 +27,7 @@ import com.devnexus.ting.core.dao.GenericDao;
  */
 public class GenericDaoJpa<T, PK extends Serializable> implements GenericDao<T, PK> {
 
-
+    @PersistenceContext(unitName="base")
     protected EntityManager entityManager;
 
     private Class<T> persistentClass;
@@ -76,9 +76,11 @@ public class GenericDaoJpa<T, PK extends Serializable> implements GenericDao<T, 
     public void remove(PK id) {
         this.entityManager.remove(this.get(id));
     }
-    @PersistenceContext(unitName="base")
-    public void setEntityManager(EntityManager entityManager) {
-        this.entityManager = entityManager;
+
+    /** {@inheritDoc} */
+    @Override
+    public void remove(T object) {
+        this.entityManager.remove(object);
     }
 
 }
