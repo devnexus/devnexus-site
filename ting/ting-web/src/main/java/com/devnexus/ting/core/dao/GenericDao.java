@@ -59,4 +59,6 @@ public interface GenericDao < T, PK extends Serializable > {
      * @param object
      */
     void replicate(T object);
+
+	void remove(T object);
 }
