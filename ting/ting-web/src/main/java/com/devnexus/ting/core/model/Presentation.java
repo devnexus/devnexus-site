@@ -2,6 +2,10 @@ package com.devnexus.ting.core.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.Index;
 
 
 /**
@@ -9,38 +13,46 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name="presentations")
+@org.hibernate.annotations.Table(appliesTo="PRESENTATIONS", indexes = { @Index(name="PRESENTATION_IDX", columnNames = { "TITLE" } ) } )
 public class Presentation implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private Integer id;
+	private Long id;
 
-	@Column(name="abstract")
+	@Size(max=10000)
 	private String description;
 
-	@Column(name="presentation_link", length=255)
+	@Size(max=255)
 	private String presentationLink;
 
+	@Size(max=255)
+	private String audioLink;
+
     @ManyToOne
-    @JoinColumn(name="speaker_id", unique=false, nullable=false, insertable=true, updatable=true)
+    @JoinColumn(name="SPEAKER_ID")
 	private Speaker speaker;
 
-	@Column(length=255)
+	@Size(max=255)
 	private String title;
 
-	private Integer year;
+	@ManyToOne
+	@NotNull
+    private Event event;
+
+	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public Presentation() {
     }
 
-	public Integer getId() {
+    //~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -68,20 +80,28 @@ public class Presentation implements Serializable {
 		this.title = title;
 	}
 
-	public Integer getYear() {
-		return this.year;
-	}
-
-	public void setYear(Integer year) {
-		this.year = year;
-	}
-
 	public Speaker getSpeaker() {
 		return speaker;
 	}
 
 	public void setSpeaker(Speaker speaker) {
 		this.speaker = speaker;
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+	public String getAudioLink() {
+		return audioLink;
+	}
+
+	public void setAudioLink(String audioLink) {
+		this.audioLink = audioLink;
 	}
 
 }

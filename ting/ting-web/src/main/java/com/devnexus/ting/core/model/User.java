@@ -1,214 +1,225 @@
 package com.devnexus.ting.core.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlID;
+
+import org.hibernate.validator.constraints.Email;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.userdetails.UserDetails;
 
 
 /**
  * The persistent class for the users database table.
- * 
+ *
  */
 @Entity
-@Table(name="users")
 public class User implements Serializable, UserDetails {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private Integer id;
+    @XmlAttribute
+    @Id @GeneratedValue(generator="hibseq")
+    private Long id;
 
-	@Column(name="created_at")
-	private Timestamp createdAt;
+    @XmlID
+    @NotNull
+    @Size(min=5, max=50)
+    @Column(unique=true)
+    private String username;
 
-	@Column(name="crypted_password", nullable=false, length=255)
-	private String cryptedPassword;
+    @NotNull
+    @Size(max=120)
+    private String password;
 
-	@Column(name="current_login_at")
-	private Timestamp currentLoginAt;
+    @NotNull
+    @Size(max=50)
+    private String firstName;
 
-	@Column(name="current_login_ip", length=255)
-	private String currentLoginIp;
+    @NotNull
+    @Size(max=50)
+    private String lastName;
 
-	@Column(name="last_login_at")
-	private Timestamp lastLoginAt;
+    @Size(max=50)
+    @Email
+    private String email;
 
-	@Column(name="last_login_ip", length=255)
-	private String lastLoginIp;
+    @XmlAttribute
+    //FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
+    private Date registrationDate;
 
-	@Column(name="last_request_at")
-	private Timestamp lastRequestAt;
+    @XmlAttribute
+    //FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
+    private Date updateDate;
 
-	@Column(nullable=false, length=255)
-	private String login;
+    @XmlAttribute
+    //FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
+    private Date lastLoginDate;
 
-	@Column(name="login_count", nullable=false)
-	private Integer loginCount;
-
-	@Column(name="password_salt", nullable=false, length=255)
-	private String passwordSalt;
-
-	@Column(name="persistence_token", nullable=false, length=255)
-	private String persistenceToken;
-
-	@Column(name="updated_at")
-	private Timestamp updatedAt;
+    //~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public User() {
     }
 
-	public Integer getId() {
-		return this.id;
+	//~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
 	}
 
-	public void setId(Integer id) {
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Timestamp getCreatedAt() {
-		return this.createdAt;
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setCreatedAt(Timestamp createdAt) {
-		this.createdAt = createdAt;
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getCryptedPassword() {
-		return this.cryptedPassword;
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setCryptedPassword(String cryptedPassword) {
-		this.cryptedPassword = cryptedPassword;
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public Timestamp getCurrentLoginAt() {
-		return this.currentLoginAt;
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCurrentLoginAt(Timestamp currentLoginAt) {
-		this.currentLoginAt = currentLoginAt;
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getCurrentLoginIp() {
-		return this.currentLoginIp;
+	/**
+	 * @return the registrationDate
+	 */
+	public Date getRegistrationDate() {
+		return registrationDate;
 	}
 
-	public void setCurrentLoginIp(String currentLoginIp) {
-		this.currentLoginIp = currentLoginIp;
+	/**
+	 * @param registrationDate the registrationDate to set
+	 */
+	public void setRegistrationDate(Date registrationDate) {
+		this.registrationDate = registrationDate;
 	}
 
-	public Timestamp getLastLoginAt() {
-		return this.lastLoginAt;
+	/**
+	 * @return the updateDate
+	 */
+	public Date getUpdateDate() {
+		return updateDate;
 	}
 
-	public void setLastLoginAt(Timestamp lastLoginAt) {
-		this.lastLoginAt = lastLoginAt;
+	/**
+	 * @param updateDate the updateDate to set
+	 */
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 
-	public String getLastLoginIp() {
-		return this.lastLoginIp;
+	/**
+	 * @return the lastLoginDate
+	 */
+	public Date getLastLoginDate() {
+		return lastLoginDate;
 	}
 
-	public void setLastLoginIp(String lastLoginIp) {
-		this.lastLoginIp = lastLoginIp;
+	/**
+	 * @param lastLoginDate the lastLoginDate to set
+	 */
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
 	}
 
-	public Timestamp getLastRequestAt() {
-		return this.lastRequestAt;
+	/**
+	 * @param username the username to set
+	 */
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public void setLastRequestAt(Timestamp lastRequestAt) {
-		this.lastRequestAt = lastRequestAt;
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getLogin() {
-		return this.login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public Integer getLoginCount() {
-		return this.loginCount;
-	}
-
-	public void setLoginCount(Integer loginCount) {
-		this.loginCount = loginCount;
-	}
-
-	public String getPasswordSalt() {
-		return this.passwordSalt;
-	}
-
-	public void setPasswordSalt(String passwordSalt) {
-		this.passwordSalt = passwordSalt;
-	}
-
-	public String getPersistenceToken() {
-		return this.persistenceToken;
-	}
-
-	public void setPersistenceToken(String persistenceToken) {
-		this.persistenceToken = persistenceToken;
-	}
-
-	public Timestamp getUpdatedAt() {
-		return this.updatedAt;
-	}
-
-	public void setUpdatedAt(Timestamp updatedAt) {
-		this.updatedAt = updatedAt;
-	}
-	
-	//~~~~~Spring Security
-	
 	@Override
 	public Collection<GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		GrantedAuthority authority = new GrantedAuthorityImpl("ADMIN");
+		Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
+		authorities.add(authority);
+		return authorities;
 	}
 
 	@Override
 	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
+		return password;
 	}
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
+		return username;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }
