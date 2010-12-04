@@ -242,4 +242,28 @@ public final class SystemInformationUtils {
 					"Problem copying streams.", e);
 		}
 	}
+
+	public static InputStream getPresentation(String eventKey,
+			String presentationLink) {
+		final Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
+
+		final File presentationFile = new File(
+				appHome.getAppHomePath()
+						+ File.separator
+						+ "eventdata" + File.separator + eventKey
+						+ File.separator
+						+ SystemInformationUtils.AppHomeDirectories.PRESENTATION_SLIDES.folderName
+						+ File.separator +  presentationLink);
+
+		if (presentationFile.isFile() && presentationFile.exists()) {
+			try {
+				return new FileInputStream(presentationFile);
+			} catch (FileNotFoundException e) {
+               throw new IllegalStateException("Not a valid file.");
+			}
+		}
+
+		throw new IllegalStateException("Not a valid file.");
+
+	}
 }

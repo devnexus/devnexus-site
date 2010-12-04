@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -93,17 +94,31 @@ public class SiteController {
 
     }
 
+    @RequestMapping(value="/presentation/{presentationId}/slides", method=RequestMethod.GET)
+    public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
+
+    	final Presentation presentation = businessService.getPresentation(presentationId);
+
+    	final InputStream presentationFile = SystemInformationUtils.getPresentation(presentation.getEvent().getEventKey(), presentation.getPresentationLink());
+
+        try {
+            response.setContentType("application/octet-stream");
+            response.setHeader("Content-disposition",
+                    "attachment; filename=\"" + presentation.getPresentationLink() + "\"");
+			org.apache.commons.io.IOUtils.copy(presentationFile, response.getOutputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+    }
+
     @RequestMapping("/presentations")
     public String getPresentationsForCurrentEvent(ModelMap model) {
     	model.addAttribute("presentations", businessService.getPresentationsForCurrentEvent());
         return "presentations";
     }
 
-    @RequestMapping("/{eventId}/presentations")
-    public String getPresentationsForEvent(@PathVariable("eventId") Long eventId, ModelMap model) {
-    	model.addAttribute("presentations", businessService.getPresentationsForEvent(eventId));
-        return "presentations";
-    }
 
     @RequestMapping("/schedule")
     public String schedule(ModelMap model) {
