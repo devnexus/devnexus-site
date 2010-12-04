@@ -13,10 +13,10 @@
         </div>
         <div class="required">
             <label for="speaker">Speaker</label>
-            <form:select path="speaker" id="speaker" tabindex="1" cssStyle="width: 300px;">
+            <form:select path="speaker.id" id="speaker" tabindex="1" cssStyle="width: 300px;">
                 <form:option value="" label="Please Select Speaker"/>
                 <c:forEach items="${speakers}" var="s">
-				    <form:option value="${s.id}" label="${s.lastName}, ${s.firstName}"/>
+				    <form:option value="${s.id}" label="${s.lastName}, ${s.firstName}" />
 				</c:forEach>
             </form:select>
             <form:errors path="event" cssClass="fieldError"/>

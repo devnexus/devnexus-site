@@ -24,7 +24,7 @@
 	        </div>
 	        <c:choose>
 	            <c:when test="${not empty presentation.presentationLink}">
-	                <p class="download"><a href="${ctx}/static/2010/slides/${presentation.presentationLink}">Download Presentation</a></p>
+	                <p class="download"><a href="${ctx}/s/presentation/${presentation.id}/slides">Download Presentation</a></p>
 	            </c:when>
 	            <c:otherwise>
 	                <p class="download">Slides not available, yet.</p>
