@@ -19,10 +19,8 @@
         </div>
         <div class="required">
             <label for="speakers">Speakers</label>
-            <form:select multiple="multiple" path="event.speakers" id="speakers" tabindex="3" size="10" cssStyle="width: 200px;">
-                <c:forEach items="${speakers}" var="s">
-                    <form:option value="${s.id}" label="${s.lastName}, ${s.firstName}"/>
-                </c:forEach>
+            <form:select multiple="true" path="event.speakers" id="speakers" tabindex="3" size="10" cssStyle="width: 200px;">
+                <form:options items="${speakers}" itemValue="id" itemLabel="fullName"/>
             </form:select>
             <form:errors path="event.speakers" cssClass="fieldError"/>
         </div>
