@@ -19,6 +19,10 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.FilterDef;
+import org.hibernate.annotations.FilterDefs;
+import org.hibernate.annotations.Filters;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -27,6 +31,10 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
+@FilterDefs({
+		@FilterDef(name = "presentationFilter"),
+		@FilterDef(name = "presentationFilterEventId")}
+)
 public class Speaker implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -57,6 +65,10 @@ public class Speaker implements Serializable {
 	private Date updatedAt;
 
     @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
+    @Filters({
+	    @Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
+	    @Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
+    })
 	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
     @ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
@@ -104,6 +116,10 @@ public class Speaker implements Serializable {
 
 	public String getLastName() {
 		return this.lastName;
+	}
+
+	public String getFullName() {
+		return this.lastName + ", " + this.firstName;
 	}
 
 	public void setLastName(String lastName) {

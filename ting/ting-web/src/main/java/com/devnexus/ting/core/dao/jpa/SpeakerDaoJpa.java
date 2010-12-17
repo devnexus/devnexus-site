@@ -2,6 +2,8 @@ package com.devnexus.ting.core.dao.jpa;
 
 import java.util.List;
 
+import org.hibernate.Filter;
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.SpeakerDao;
@@ -24,19 +26,31 @@ public class SpeakerDaoJpa extends GenericDaoJpa< Speaker, Long>
 		.getResultList();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Speaker> getSpeakersForCurrentEvent() {
-		return super.entityManager
-		.createQuery("select s from Speaker s "
-				   + "    join s.events e "
-				   + "where e.current = :iscurrent "
-				   + "order by s.lastName ASC, s.firstName ASC", Speaker.class)
-		.setParameter("iscurrent", true)
-		.getResultList();
+
+		final Session session = (Session) super.entityManager.getDelegate();
+
+		Filter filter = session.enableFilter("presentationFilter");
+
+		final List<Speaker> speakers = (List<Speaker>) session.createQuery("select s from Speaker s "
+				   + "    join fetch s.events e "
+				   + "    where e.current = :iscurrent "
+				   + "    order by s.lastName ASC, s.firstName ASC")
+		.setParameter("iscurrent", Boolean.TRUE)
+		.list();
+		//session.disableFilter("presentationFilter");
+		return speakers;
 	}
 
 	@Override
 	public List<Speaker> getSpeakersForEvent(Long eventId) {
+
+		final Session session = (Session) super.entityManager.getDelegate();
+		Filter filter = session.enableFilter("presentationFilterEventId");
+		filter.setParameter("eventid", eventId);
+
 		return super.entityManager
 		.createQuery("select s from Speaker s "
 				   + "    join s.events e "

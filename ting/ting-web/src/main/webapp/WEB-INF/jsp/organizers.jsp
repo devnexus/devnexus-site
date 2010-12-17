@@ -17,7 +17,7 @@
 
 	    <div class="speaker">
 	        <h3 id="burr_sutter">Burr Sutter</h3>
-	        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/burr_sutter.jpg"/>
+	        <img alt="Burr Sutter" src="${ctx}/images/organizers/burr_sutter.jpg"/>
 	        <p>
 	          Burr Sutter is a current Sun Java Champion with over 15 years of
 	          software design and development experience along with numerous published
@@ -28,7 +28,7 @@
 	    </div>
 	    <div class="speaker">
 	        <h3 id="gunnar_hillert">Gunnar Hillert</h3>
-	        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/gunnar_hillert.jpg"/>
+	        <img alt="Burr Sutter" src="${ctx}/images/organizers/gunnar_hillert.jpg"/>
 	        <p>
 	          Gunnar Hillert is a senior software engineer at nuBridges, Inc. A
 	          native of Berlin, Germany, Gunnar has been living in Atlanta for the
@@ -40,15 +40,15 @@
 	          If not playing with and learning the latest and greatest technologies,
 	          Gunnar is an avid gardener specializing in anything sub-tropical such
 	          as bananas, palm trees and bamboo. Furthermore, Gunnar has been learning
-	          Spanish for the past three years. He and his wife Alysa have one daughter
-	          and are raising her tri-lingually (English, German, Spanish). As time
+	          Spanish for the past three years. He and his wife Alysa have one daughter and a son
+	          and are raising both tri-lingually (English, German, Spanish). As time
 	          permits, Gunnar blogs at: <a href="http://blog.hillert.com/">http://blog.hillert.com/</a>
 	        </p>
 	        <br style="clear: both;"/>
 	    </div>
 	    <div class="speaker">
 	        <h3 id="vincent_mayers">Vincent Mayers</h3>
-	        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/vincent_mayers.jpg"/>
+	        <img alt="Burr Sutter" src="${ctx}/images/organizers/vincent_mayers.jpg"/>
 	        <p>
 	Vincent has 15 years HCM and technology consulting experience in multiple verticals and countries. He is currently Director, Business Development for Volt Workforce Solutions (VOL) and is responsible for driving sales growth across all VWS businesses in the South East. Prior to that Vincent founded CRE8STAT, a boutique search business for digital media. Prior to that Vincent was Chief Technology Officer and a founding member of Anteo Group, an award winning Enterprise Java recruiting and solutions company.
 
@@ -59,7 +59,7 @@
 	    </div>
 	     <div class="speaker">
 	        <h3 id="sudhir_kamatkar">Sudhir Kamatkar</h3>
-	        <img alt="Burr Sutter" src="${ctx}/static/2010/images/organizers/sudhir_kamatkar.jpg"/>
+	        <img alt="Burr Sutter" src="${ctx}/images/organizers/sudhir_kamatkar.jpg"/>
 	        <p>
 	          Sudhir is a founder and CEO of Samarth Technologies an Information and
 	          Business Process Management consulting company. He has over 20 years of
@@ -76,6 +76,7 @@
 	    </div>
 	     <div class="speaker">
 	        <h3 id="bruce_petro">Bruce Petro</h3>
+	        <img alt="Burr Sutter" src="${ctx}/images/organizers/bruce_petro.jpg"/>
 	        <p>
 	          Bruce has over 19 years experience in numerous types of software design
 	          and development experience. His focus in object oriented design and

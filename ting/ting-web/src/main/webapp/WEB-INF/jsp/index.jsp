@@ -60,6 +60,10 @@
 
     <h2>Registration</h2>
 
+   <div id="signup">
+   <h2><a href="http://ajug.eventwax.com/devnexus-2011/register">SIGN UP</a></h2>
+   </div>
+
     <p>The Standard Ticket is <strong>$195.00</strong>.</p>
     <p>For a limited time (until Feb 1, 2010), we have an Early Bird Special of <strong>$175.00</strong>.</p>
     <p>Also, we have a group discount available: If you book 5 tickets
@@ -71,14 +75,9 @@
        report our attendee numbers to the Cobb Galeria. Also 2 weeks before the event only late tickets
        will be available for $220. Therefore, please book your tickets as early as possible!</p>
 
-    <p><strong>Book your place now!</strong> You know you want to.</p>
+    <p><strong><a href="http://ajug.eventwax.com/devnexus-2011/register">Book your place now!</a></strong> You know you want to.</p>
 
     <p>If you have any questions, please contact us at info AT ajug DOT org</p>
-
-
-                <div id="signup">
-                <h2>Registration will open soon!</h2>
-                </div>
 
 </div>
 <div class="prepend-1 span-7 last">
