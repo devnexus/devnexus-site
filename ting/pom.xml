@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devnexus</groupId>
   <artifactId>ting</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>pom</packaging>
 
     <modules>
@@ -28,7 +28,7 @@
     </distributionManagement>
     <ciManagement>
         <system>Hudson</system>
-        <url>http://74.207.227.71:9080/hudson/job/konferenz/</url>
+        <url>http://www.jrecruiter.org:8080/hudson/job/ting/</url>
     </ciManagement>
 
     <inceptionYear>2010</inceptionYear>
@@ -54,14 +54,14 @@
     </licenses>
 
     <scm>
-        <connection>scm:svn:http://jrecruiter.googlecode.com/svn/trunk/konferenz</connection>
-        <developerConnection>scm:svn:https://jrecruiter.googlecode.com/svn/trunk/konferenz</developerConnection>
-        <url>TBD</url>
+        <connection>scm:svn:http://devnexus.googlecode.com/svn/trunk/ting</connection>
+        <developerConnection>scm:svn:https://devnexus.googlecode.com/svn/trunk/ting</developerConnection>
+        <url>http://code.google.com/p/devnexus/source/browse/</url>
     </scm>
 
     <issueManagement>
-        <system>Sourceforge</system>
-        <url><![CDATA[http://code.google.com/p/jrecruiter/issues/list]]></url>
+        <system>Google Code</system>
+        <url>http://code.google.com/p/devnexus/issues/list</url>
     </issueManagement>
 
     <build>
@@ -107,7 +107,7 @@
         <pluginRepository>
             <id>jrecruiter</id>
             <name>jRecruiter Maven repository</name>
-            <url>http://www.jrecruiter.org:9500/content/groups/public/</url>
+            <url>http://www.jrecruiter.org:8080/nexus/content/groups/public/</url>
         </pluginRepository>
     </pluginRepositories>
 

@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 @ContextConfiguration(
         locations={
                 "classpath:spring/applicationContext-core-basic.xml",
-                "classpath:spring/mainApplicationContext.xml"
+                "classpath:spring/DemoContextConfiguration.xml"
                  })
 public abstract class BaseDaoIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests {
 
