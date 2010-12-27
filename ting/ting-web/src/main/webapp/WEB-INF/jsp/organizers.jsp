@@ -28,7 +28,7 @@
 	    </div>
 	    <div class="speaker">
 	        <h3 id="gunnar_hillert">Gunnar Hillert</h3>
-	        <img alt="Burr Sutter" src="${ctx}/images/organizers/gunnar_hillert.jpg"/>
+	        <img alt="Gunnar Hillert" src="${ctx}/images/organizers/gunnar_hillert.jpg"/>
 	        <p>
 	          Gunnar Hillert is a senior software engineer at nuBridges, Inc. A
 	          native of Berlin, Germany, Gunnar has been living in Atlanta for the
@@ -48,7 +48,7 @@
 	    </div>
 	    <div class="speaker">
 	        <h3 id="vincent_mayers">Vincent Mayers</h3>
-	        <img alt="Burr Sutter" src="${ctx}/images/organizers/vincent_mayers.jpg"/>
+	        <img alt="Vincent Mayers" src="${ctx}/images/organizers/vincent_mayers.jpg"/>
 	        <p>
 	Vincent has 15 years HCM and technology consulting experience in multiple verticals and countries. He is currently Director, Business Development for Volt Workforce Solutions (VOL) and is responsible for driving sales growth across all VWS businesses in the South East. Prior to that Vincent founded CRE8STAT, a boutique search business for digital media. Prior to that Vincent was Chief Technology Officer and a founding member of Anteo Group, an award winning Enterprise Java recruiting and solutions company.
 
@@ -59,7 +59,7 @@
 	    </div>
 	     <div class="speaker">
 	        <h3 id="sudhir_kamatkar">Sudhir Kamatkar</h3>
-	        <img alt="Burr Sutter" src="${ctx}/images/organizers/sudhir_kamatkar.jpg"/>
+	        <img alt="Sudhir Kamatkar" src="${ctx}/images/organizers/sudhir_kamatkar.jpg"/>
 	        <p>
 	          Sudhir is a founder and CEO of Samarth Technologies an Information and
 	          Business Process Management consulting company. He has over 20 years of
@@ -76,7 +76,7 @@
 	    </div>
 	     <div class="speaker">
 	        <h3 id="bruce_petro">Bruce Petro</h3>
-	        <img alt="Burr Sutter" src="${ctx}/images/organizers/bruce_petro.jpg"/>
+	        <img alt="Bruce Petro" src="${ctx}/images/organizers/bruce_petro.jpg"/>
 	        <p>
 	          Bruce has over 19 years experience in numerous types of software design
 	          and development experience. His focus in object oriented design and
@@ -98,19 +98,34 @@
 	    </div>
 	     <div class="speaker">
 	        <h3 id="summers_pittman">Summers Pittman</h3>
+	        <img alt="Summers Pittman" src="${ctx}/images/organizers/summers_pittman.jpg"/>
 	        <p>
 	            Summers is a Java developer at Engauge in Midtown Atlanta.  At Engauge
 	            he is responsible for development on several Java applications.
 	            Outside of work he has an interest in mobile and social development.
 	            He holds a BS in Computer Science and a MS in Human Computer Interaction
-	            from Georgia  Tech. Summers maintains a blog a blog.sagaoftherealms.net
+	            from Georgia  Tech. Summers maintains a blog a <a href="http://blog.sagaoftherealms.net/">blog.sagaoftherealms.net</a>
 	        </p>
 	        <br style="clear: both;"/>
 	    </div>
 	     <div class="speaker">
 	        <h3 id="vincent_stoessel">Vincent Stoessel</h3>
+	        <img alt="Vincent Stoessel" src="${ctx}/images/organizers/vincent_stoessel.jpg"/>
 	        <p>
-	            TBD
+	            Vincent Stoessel is a Java Developer that began building websites in
+				the early days of the dot-com era.
+				In 2000 he was hired to develop PHP web applications for the official
+				site of then Vice-President Al Gore's presidential bid.
+				It was also during this time that he made the transition to full time
+				Java server side development and began the journey
+				toward software mastery. Since then, he has successfully lead great
+				development teams to build enterprise software for his employers.
+				Vincent is a passionate about the concept that Information Technology
+				can enable people to reach a higher potential.
+				During his off hours, he finds peace of mind with his family.
+				photography and cycling.
+				He is currently employed by the Huron Consulting Group and lives in
+				South Metro Atlanta.
 	        </p>
 	        <br style="clear: both;"/>
 	    </div>
