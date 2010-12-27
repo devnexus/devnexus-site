@@ -84,7 +84,7 @@
                                 <decorator:body />
     </div>
     <div id="footer" class="span-24 last">
-        (c) 2008-2011 Atlanta Java Users Group (AJUG)
+        &copy; 2008-2011 Atlanta Java Users Group (AJUG), powered by <a href="http://code.google.com/p/devnexus/">Ting</a> <spring:message code="ting.build.version"/>.<spring:message code="ting.build.number"/>
     </div>
 </div>
 
