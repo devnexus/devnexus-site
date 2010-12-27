@@ -47,8 +47,7 @@
     </filter>
     <filter>
         <filter-name>lazyLoadingFilter</filter-name>
-        <filter-class>
-            org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+        <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
     </filter>
     <filter>
         <filter-name>sitemesh</filter-name>
@@ -71,8 +70,7 @@
         <filter-class>com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter</filter-class>
         <init-param>
             <param-name>secondsToCache</param-name>
-            <param-value>
-       172801</param-value>
+            <param-value>864000</param-value>
         </init-param>
     </filter>
     <filter>
@@ -119,50 +117,54 @@
     </filter-mapping>
     <filter-mapping>
         <filter-name>responseAddHttpHeadersFilter</filter-name>
-        <url-pattern>*.png</url-pattern>
         <url-pattern>*.css</url-pattern>
         <url-pattern>*.gif</url-pattern>
         <url-pattern>*.ico</url-pattern>
         <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
         <url-pattern>*.js</url-pattern>
     </filter-mapping>
-    <servlet>
-        <servlet-name>JavascriptServlet</servlet-name>
-        <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
-        <init-param>
-            <param-name>configLocation</param-name>
-            <param-value>/jawr.properties</param-value>
-        </init-param>
-        <load-on-startup>2</load-on-startup>
-    </servlet>
-    <servlet>
-        <servlet-name>CSSServlet</servlet-name>
-        <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
-        <init-param>
-            <param-name>configLocation</param-name>
-            <param-value>/jawr.properties</param-value>
-        </init-param>
-        <init-param>
-            <param-name>type</param-name>
-            <param-value>css</param-value>
-        </init-param>
-        <load-on-startup>2</load-on-startup>
-    </servlet>
-    <servlet>
-            <servlet-name>ImageServlet</servlet-name>
-            <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
 
-            <!-- Location in classpath of the config file -->
-            <init-param>
-                    <param-name>configLocation</param-name>
-                    <param-value>/jawr.properties</param-value>
-            </init-param>
-            <init-param>
-                    <param-name>type</param-name>
-                    <param-value>img</param-value>
-            </init-param>
-            <load-on-startup>2</load-on-startup>
-    </servlet>
+    <!-- JAWR specific servlets -->
+	<servlet>
+		<servlet-name>JavascriptServlet</servlet-name>
+		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+		<init-param>
+			<param-name>configLocation</param-name>
+			<param-value>/jawr.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>JawrImgServlet</servlet-name>
+		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+		<init-param>
+			<param-name>type</param-name>
+			<param-value>img</param-value>
+		</init-param>
+		<init-param>
+			<param-name>configLocation</param-name>
+			<param-value>/jawr.properties</param-value>
+		</init-param>
+		<!-- The Jawr Image servlet must start before the Jawr CSS Servlet -->
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>CssServlet</servlet-name>
+		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+		<init-param>
+			<param-name>configLocation</param-name>
+			<param-value>/jawr.properties</param-value>
+		</init-param>
+		<init-param>
+			<param-name>type</param-name>
+			<param-value>css</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+    <!-- Spring -->
+
     <servlet>
         <servlet-name>spring-mvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -201,6 +203,19 @@
         <servlet-name>RDSDispatchServlet</servlet-name>
         <url-pattern>/CFIDE/main/ide.cfm</url-pattern>
     </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JavascriptServlet</servlet-name>
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CssServlet</servlet-name>
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JawrImgServlet</servlet-name>
+		<url-pattern>*.png</url-pattern>
+		<url-pattern>*.gif</url-pattern>
+	</servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

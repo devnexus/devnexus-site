@@ -35,9 +35,9 @@
             <p><strong>Make sure to sign up early to ensure you get a seat this year!</strong></p>
 
             <ul>
-                <li><a href="#">List of speakers</a></li>
-                <li><a href="#">List of presentations</a></li>
-                <li><a href="#">Schedule</a></li>
+                <li><a href="${ctx}/s/speakers">List of speakers</a></li>
+                <li><a href="${ctx}/s/presentations">List of presentations</a></li>
+                <li><a href="${ctx}/s/schedule">Schedule</a></li>
             </ul>
 
             <p>*Please keep in mind that the exact schedule of presentations
@@ -72,7 +72,7 @@
     <p>Are you are student? We have a limited amount of student tickets priced at $130. Please contact us at: info AT ajug DOT org for details.</p>
 
     <p>Please be aware that we have to close registration on March 15 as we need to
-       report our attendee numbers to the Cobb Galeria. Also 2 weeks before the event only late tickets
+       report our attendee numbers to the Cobb Galleria. Also 2 weeks before the event only late tickets
        will be available for $220. Therefore, please book your tickets as early as possible!</p>
 
     <p><strong><a href="http://ajug.eventwax.com/devnexus-2011/register">Book your place now!</a></strong> You know you want to.</p>
