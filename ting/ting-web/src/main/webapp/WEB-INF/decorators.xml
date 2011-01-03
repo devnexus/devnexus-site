@@ -2,6 +2,7 @@
     <decorator name="default" page="default.jsp">
         <pattern>/*</pattern>
     </decorator>
+    <decorator name="mobile" page="mobile.jsp"/>
     <excludes>
         <pattern>/fx/*</pattern>
     </excludes>

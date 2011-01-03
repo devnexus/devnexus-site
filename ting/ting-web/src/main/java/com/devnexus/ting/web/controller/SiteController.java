@@ -13,6 +13,8 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mobile.device.Device;
+import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,7 +46,13 @@ public class SiteController {
     private final static Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
     @RequestMapping("/index")
-    public String execute(ModelMap model) {
+    public String execute(ModelMap model, Device device, SitePreference sitePreference) {
+
+        if (device.isMobile()) {
+            LOGGER.info("Hello mobile user!");
+            return "index-mobile";
+        }
+
         return "index";
     }
 
