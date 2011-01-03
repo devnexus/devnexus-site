@@ -69,6 +69,10 @@
     <mvc:view-controller  path="/admin" view-name="redirect:/s/admin/index" />
 
 	<mvc:interceptors>
+       <mvc:interceptor>
+           <mvc:mapping path="/**"/>
+           <bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor" />
+       </mvc:interceptor>
 	   <mvc:interceptor>
 	       <mvc:mapping path="/**"/>
 	       <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
