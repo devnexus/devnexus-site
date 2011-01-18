@@ -4,6 +4,10 @@ import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Index;
 
@@ -14,6 +18,8 @@ import org.hibernate.annotations.Index;
  */
 @Entity
 @org.hibernate.annotations.Table(appliesTo="PRESENTATIONS", indexes = { @Index(name="PRESENTATION_IDX", columnNames = { "TITLE" } ) } )
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Presentation implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -39,6 +45,7 @@ public class Presentation implements Serializable {
 
 	@ManyToOne
 	@NotNull
+	@XmlTransient
     private Event event;
 
 	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

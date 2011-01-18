@@ -18,11 +18,16 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.Filters;
+import org.hibernate.annotations.ParamDef;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -33,8 +38,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @FilterDefs({
 		@FilterDef(name = "presentationFilter"),
-		@FilterDef(name = "presentationFilterEventId")}
-)
+		@FilterDef(name = "presentationFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
+		})
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Speaker implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -48,6 +55,7 @@ public class Speaker implements Serializable {
 	private String bio;
 
 	@Temporal(value=TemporalType.TIMESTAMP)
+	@XmlTransient
 	private Date createdAt;
 
 	@NotEmpty
@@ -59,9 +67,11 @@ public class Speaker implements Serializable {
 	private String lastName;
 
 	@Size(max=255)
+	@XmlTransient
 	private String picture;
 
 	@Temporal(value=TemporalType.TIMESTAMP)
+	@XmlTransient
 	private Date updatedAt;
 
     @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
@@ -69,9 +79,11 @@ public class Speaker implements Serializable {
 	    @Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
 	    @Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
     })
+    @XmlTransient
 	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
     @ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
+    @XmlTransient
 	private Set<Event>events = new HashSet<Event>(0);
 
 

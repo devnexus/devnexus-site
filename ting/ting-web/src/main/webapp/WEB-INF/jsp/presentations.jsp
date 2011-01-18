@@ -7,7 +7,7 @@
 	<c:if test="${not empty event}">for ${event.title}</c:if></h2>
 	<img  src="${ctx}/devnexus_2009/devnexus_2009_1.jpg" class= "page-image"/>
 
-	<c:forEach items="${presentations}" var="presentation">
+	<c:forEach items="${presentationList.presentations}" var="presentation">
 	    <div class="presentation">
 	        <h3 class="title"><c:out value="${presentation.title}"/></h3>
 	        <c:choose>

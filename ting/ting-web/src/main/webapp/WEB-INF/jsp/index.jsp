@@ -85,7 +85,7 @@
     <img alt="" src="${ctx}/images/sponsors/intersect-logo.png"/>
     <h2 style="border-bottom:1px solid orange; margin-top: 20px;">Silver Sponsors</h2>
 
-    <a href="http://www.sun.com/"><img alt="Sun" src="${ctx}/images/sponsors/Sun.png"/></a>
+    <a href="http://www.rim.com/"><img alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
     <a href="http://www.anteogroup.com/"><img alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a>
     <a href="http://www.4tnetworks.com/"><img alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a>
     <a href="http://www.gca.net/"><img alt="GCA" src="${ctx}/images/sponsors/gca-logo.jpg"/></a>
