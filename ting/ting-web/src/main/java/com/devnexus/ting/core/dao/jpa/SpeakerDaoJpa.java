@@ -49,7 +49,8 @@ public class SpeakerDaoJpa extends GenericDaoJpa< Speaker, Long>
 
 		final Session session = (Session) super.entityManager.getDelegate();
 		Filter filter = session.enableFilter("presentationFilterEventId");
-		filter.setParameter("eventid", eventId);
+		filter.getFilterDefinition().getParameterNames();
+		filter.setParameter("eventId", eventId);
 
 		return super.entityManager
 		.createQuery("select s from Speaker s "

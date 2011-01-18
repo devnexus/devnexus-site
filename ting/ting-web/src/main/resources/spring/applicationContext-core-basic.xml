@@ -26,10 +26,8 @@
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
-    </bean><!--
+    </bean>
 
-    <oxm:jaxb2-marshaller id="marshaller">
-       <oxm:class-to-be-bound name="com.devnexus.model.export.Backup"/>
-    </oxm:jaxb2-marshaller>
 
---></beans>
+
+</beans>

@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.mail.internet.ContentType;
 import javax.servlet.http.HttpServletResponse;
@@ -55,78 +57,6 @@ public class SiteController {
 
         return "index";
     }
-
-    @RequestMapping("/speakers")
-    public String getSpeakersForCurrentEvent(ModelMap model) {
-    	model.addAttribute("speakers", businessService.getSpeakersForCurrentEvent());
-        return "speakers";
-    }
-
-    @RequestMapping("/{eventKey}/speakers")
-    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
-    	final Event event = businessService.getEventByEventKey(eventKey);
-    	model.addAttribute("event", event);
-    	model.addAttribute("speakers", businessService.getSpeakersForEvent(event.getId()));
-        return "speakers";
-    }
-
-    @RequestMapping("/{eventKey}/presentations")
-    public String getPresentationsForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
-    	final Event event = businessService.getEventByEventKey(eventKey);
-    	model.addAttribute("event", event);
-    	model.addAttribute("presentations", businessService.getPresentationsForEvent(event.getId()));
-        return "presentations";
-    }
-
-    @RequestMapping(value="/speaker/{speakerId}.jpg", method=RequestMethod.GET)
-    public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
-
-    	final Speaker speaker = businessService.getSpeaker(speakerId);
-
-    	final InputStream speakerPicture;
-
-    	if (speaker==null) {
-    		speakerPicture = SystemInformationUtils.getSpeakerImage(null);
-    	} else {
-    		speakerPicture = SystemInformationUtils.getSpeakerImage(speaker.getPicture());
-    	}
-
-        try {
-			org.apache.commons.io.IOUtils.copy(speakerPicture, response.getOutputStream());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-        response.setContentType("image/png");
-
-    }
-
-    @RequestMapping(value="/presentation/{presentationId}/slides", method=RequestMethod.GET)
-    public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
-
-    	final Presentation presentation = businessService.getPresentation(presentationId);
-
-    	final InputStream presentationFile = SystemInformationUtils.getPresentation(presentation.getEvent().getEventKey(), presentation.getPresentationLink());
-
-        try {
-            response.setContentType("application/octet-stream");
-            response.setHeader("Content-disposition",
-                    "attachment; filename=\"" + presentation.getPresentationLink() + "\"");
-			org.apache.commons.io.IOUtils.copy(presentationFile, response.getOutputStream());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-    }
-
-    @RequestMapping("/presentations")
-    public String getPresentationsForCurrentEvent(ModelMap model) {
-    	model.addAttribute("presentations", businessService.getPresentationsForCurrentEvent());
-        return "presentations";
-    }
-
 
     @RequestMapping("/schedule")
     public String schedule(ModelMap model) {

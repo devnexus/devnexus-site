@@ -4,12 +4,17 @@
     xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
     xmlns:flex="http://www.springframework.org/schema/flex"
     xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:oxm="http://www.springframework.org/schema/oxm"
     xsi:schemaLocation="http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                            http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
                            http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
                            http://www.springframework.org/schema/flex    http://www.springframework.org/schema/flex/spring-flex-1.0.xsd
                            http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
-                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://www.springframework.org/schema/oxm     http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd">
+
+    <!-- HANDLERS -->
+    <context:component-scan base-package="com.devnexus.ting.web" />
 
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
@@ -20,14 +25,59 @@
         </property>
     </bean>
 
-    <!-- Configures the @Controller programming model -->
-    <mvc:annotation-driven conversion-service="conversionService"/>
+     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="webBindingInitializer">
+            <bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+                <property name="conversionService" ref="conversionService"/>
+                <property name="validator" ref="validator"/>
+            </bean>
+        </property>
+       <property name="messageConverters">
+           <list>
+               <ref bean="jsonConverter" />
+               <ref bean="marshallingConverter" />
+               <ref bean="atomConverter" />
+           </list>
+       </property>
+    </bean>
 
-    <!-- HANDLERS -->
-    <context:component-scan base-package="com.devnexus.ting.web" />
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="mediaTypes">
+            <map>
+                <entry key="xml"  value="application/xml"/>
+                <entry key="json" value="application/json"/>
+                <entry key="atom" value="application/atom+xml"/>
+                <entry key="html" value="text/html"/>
+            </map>
+        </property>
+        <property name="order" value="0"/>
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+                    <property name="marshaller" ref="jaxbMarshaller"/>
+                </bean>
+                <bean
+                    class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+                    <property name="objectMapper" ref="jaxbJacksonObjectMapper"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
 
-    <bean id="viewNameTranslator"
-        class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator" />
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="1"/>
+    </bean>
+
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="order"  value="2"/>
+    </bean>
+
+    <!--  -->
+
+    <bean id="viewNameTranslator" class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator" />
 
     <!-- Configures Handler Interceptors -->
     <mvc:interceptors>
@@ -45,14 +95,39 @@
         <property name="order" value="1"/>
     </bean>
 
+    <!--  Documented out the following as we going to use ab
+          explicit AnnotationMethodHandlerAdapter -->
+    <!--  >mvc:annotation-driven conversion-service="conversionService"/ -->
+
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="order" value="2"/>
+        <property name="order" value="1"/>
         <property name="mappings">
         <value>
         /messagebroker/*=_messageBroker
         </value>
         </property>
     </bean>
+
+  <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+      <property name="order" value="2" />
+  </bean>
+
+    <bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="supportedMediaTypes" value="application/json" />
+    </bean>
+
+  <bean id="marshallingConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+      <constructor-arg ref="jaxbMarshaller" />
+      <property name="supportedMediaTypes" value="application/xml"/>
+  </bean>
+
+  <bean id="atomConverter"  class="org.springframework.http.converter.feed.AtomFeedHttpMessageConverter">
+      <property name="supportedMediaTypes" value="application/atom+xml" />
+  </bean>
+
+   <bean id="jaxbJacksonObjectMapper" class="com.devnexus.ting.web.JaxbJacksonObjectMapper"/>
+
+    <!--  -->
 
     <flex:message-broker>
         <flex:remoting-service default-channels="my-amf"/>
@@ -68,38 +143,23 @@
 
     <mvc:view-controller  path="/admin" view-name="redirect:/s/admin/index" />
 
-	<mvc:interceptors>
+  <mvc:interceptors>
        <mvc:interceptor>
            <mvc:mapping path="/**"/>
            <bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor" />
        </mvc:interceptor>
-	   <mvc:interceptor>
-	       <mvc:mapping path="/**"/>
-	       <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
-	   </mvc:interceptor>
-	</mvc:interceptors>
+     <mvc:interceptor>
+         <mvc:mapping path="/**"/>
+         <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
+     </mvc:interceptor>
+  </mvc:interceptors>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <oxm:jaxb2-marshaller id="jaxbMarshaller">
+       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.Presentation"/>
+       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.PresentationList"/>
+       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.Speaker"/>
+       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.SpeakerList"/>
+    </oxm:jaxb2-marshaller>
 
-    <!-- VIEWS --><!--
 
-
-    <bean id="beanNameViewResolver"
-        class="org.springframework.web.servlet.view.BeanNameViewResolver">
-        <property name="order" value="0"/>
-    </bean>
-
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
-
-    <bean
-        class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-        <property name="order" value="0" />
-    </bean>
-
-    <bean
-        class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
-        <property name="order" value="1" />
-    </bean>
-
---></beans>
-
+</beans>

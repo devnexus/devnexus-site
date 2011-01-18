@@ -39,7 +39,7 @@ import com.devnexus.ting.web.form.EventForm;
  * @author Gunnar Hillert
  * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
  */
-@Controller
+@Controller("adminSpeakerController")
 public class SpeakerController {
 
 	@Autowired private BusinessService businessService;
