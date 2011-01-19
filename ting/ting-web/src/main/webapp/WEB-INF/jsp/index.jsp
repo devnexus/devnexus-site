@@ -92,7 +92,7 @@
     <a href="https://www.theice.com/careers.jhtml"><img alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a>
     <a href="http://www.jboss.com/"><img alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
     <a href="https://www.mymatrixjobs.com//"><img alt="Matrix" src="${ctx}/images/sponsors/matrix.png"/></a>
-    <a href="http://adorsysllc.com/"><img alt="Adorsys" src="${ctx}/images/sponsors/adorsys.jpg"/></a>
+    <a href="http://www.adorsys.com/"><img alt="Adorsys" src="${ctx}/images/sponsors/adorsys.jpg"/></a>
 
 	<div style="margin-top: 3em;">
 	<script src="http://widgets.twimg.com/j/2/widget.js"></script>

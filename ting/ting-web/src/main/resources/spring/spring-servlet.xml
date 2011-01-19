@@ -42,15 +42,14 @@
     </bean>
 
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+        <property name="ignoreAcceptHeader" value="true" />
         <property name="mediaTypes">
             <map>
                 <entry key="xml"  value="application/xml"/>
                 <entry key="json" value="application/json"/>
-                <entry key="atom" value="application/atom+xml"/>
-                <entry key="html" value="text/html"/>
             </map>
         </property>
-        <property name="order" value="0"/>
         <property name="defaultViews">
             <list>
                 <bean class="org.springframework.web.servlet.view.xml.MarshallingView">
@@ -65,14 +64,13 @@
     </bean>
 
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
-        <property name="order" value="1"/>
+        <property name="order" value="2"/>
     </bean>
-
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
-        <property name="order"  value="2"/>
+        <property name="order"  value="3"/>
     </bean>
 
     <!--  -->
