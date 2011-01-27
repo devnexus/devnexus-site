@@ -1,4 +1,5 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<% pageContext.setAttribute("lf", "\n"); %>
 
 <title>DevNexus 2011 - Speakers</title>
 <div id="content" class="span-22 last">
@@ -21,13 +22,14 @@
 		           <img src="${ctx}/s/speakers/${speaker.id}.jpg"/>
 		        </c:if>
 		        <p>
-		          <c:out value="${speaker.bio}"/>
+		          <c:set var="speakerBio"><c:out value="${speaker.bio}" escapeXml="true"/></c:set>
+		          <c:out value="${fn:replace(speakerBio, lf, '<br/>')}" escapeXml="false"/>
 		        </p>
 		        <c:if test="${!empty speaker.presentations}">
 		           <p class="presentation-header">Presentation:</p>
 		           <ul>
 			           <c:forEach items="${speaker.presentations}" var="presentation">
-			               <li><c:out value="${presentation.title}"/></li>
+			               <li><a href="${ctx}/s/presentations#${presentation.id}"><c:out value="${presentation.title}"/></a></li>
 			           </c:forEach>
 		           </ul>
 		        </c:if>

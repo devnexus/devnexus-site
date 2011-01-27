@@ -82,7 +82,7 @@
 </div>
 <div class="prepend-1 span-7 last">
     <h2 style="border-bottom:1px solid orange;">Gold Sponsor</h2>
-    <img alt="" src="${ctx}/images/sponsors/intersect-logo.png"/>
+    <a href="http://www.theintersectgroup.com/"><img alt="The Intersect Group" src="${ctx}/images/sponsors/intersect-logo.png"/></a>
     <h2 style="border-bottom:1px solid orange; margin-top: 20px;">Silver Sponsors</h2>
 
     <a href="http://www.rim.com/"><img alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
