@@ -1,15 +1,23 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<% pageContext.setAttribute("lf", "\n"); %>
 
 <title>DevNexus 2011 - Presentations</title>
 <div id="content" class="span-22 last">
 	<div class="quote"><span>What the community says:</span> "Great conference to share best practices"</div>
+
+    <ul>
+        <c:forEach items="${presentationList.presentations}" var="presentation">
+            <li><a href="#${presentation.id}"><c:out value="${presentation.title}"/></a></li>
+        </c:forEach>
+    </ul>
+
 	<h2>Presentations
 	<c:if test="${not empty event}">for ${event.title}</c:if></h2>
 	<img  src="${ctx}/devnexus_2009/devnexus_2009_1.jpg" class= "page-image"/>
 
 	<c:forEach items="${presentationList.presentations}" var="presentation">
 	    <div class="presentation">
-	        <h3 class="title"><c:out value="${presentation.title}"/></h3>
+	        <h3 id="${presentation.id}" class="title"><c:out value="${presentation.title}"/></h3>
 	        <c:choose>
 		        <c:when test="${not empty presentation.speaker}">
 		            <p class="speaker"><c:out value="${presentation.speaker.firstName}"/>
@@ -20,15 +28,14 @@
 		        </c:otherwise>
 	        </c:choose>
 	        <div class="abstract">
-	            <c:out value="${presentation.description}"/>
+	            <c:out value=""/>
+                <c:set var="presentationDescription"><c:out value="${presentation.description}" escapeXml="true"/></c:set>
+                <c:out value="${fn:replace(presentationDescription, lf, '<br/>')}" escapeXml="false"/>
 	        </div>
 	        <c:choose>
 	            <c:when test="${not empty presentation.presentationLink}">
 	                <p class="download"><a href="${ctx}/s/presentation/${presentation.id}/slides">Download Presentation</a></p>
 	            </c:when>
-	            <c:otherwise>
-	                <p class="download">Slides not available, yet.</p>
-	            </c:otherwise>
 	        </c:choose>
 	    </div>
 	</c:forEach>
