@@ -183,7 +183,7 @@ padding: 0;
 }
 
 .schedule .break {
-    background-color: #B7DB87;
+    background-color: #E5ECF9;
 }
 
 .schedule .time {
@@ -194,6 +194,13 @@ padding: 0;
 .schedule .talk {
     background-color: #B5CBDF;
     font-weight: bold;
+}
+
+.schedule .keynote {
+    background-color: #F7941E;
+}
+.schedule .breakouts {
+    background-color: #6D9D31;
 }
 
 .schedule .speaker {
@@ -264,7 +271,12 @@ div.speaker p.presentation-header {
      color: #555555;
      font-weight: bold;
 }
- .presentation h3.title   {
+
+.presentation {
+    margin-top: 20px;
+}
+
+.presentation h3.title   {
     border-bottom: 1px solid orange;
 }
 
