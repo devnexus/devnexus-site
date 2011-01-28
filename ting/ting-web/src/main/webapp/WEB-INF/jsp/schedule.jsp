@@ -31,7 +31,7 @@
 	        <tr>
 	                <td class="time">09:15</td>
 	                <td class="time">10:30</td>
-	                <td>Keynote</td>
+	                <td class="keynote">Keynote</td>
 	                <td colspan="4" class="talk">
 	                         <p class="topic">Courage in Software Development</p>
 	                         <p class="speaker">Dick Wall</p>
@@ -45,22 +45,22 @@
 	        <tr>
 	                <td class="time">10:45</td>
 	                <td class="time">12:00</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">What's New in GWT 2.1</p>
+	                     <p class="speaker">David Chandler</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Applied Agility: Full-Blown Scrum in the Real World</p>
+	                     <p class="speaker">Barry Hawkins</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Git Foundations</p>
+	                     <p class="speaker">Matthew McCullough</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic">Git Foundations</p>
-                         <p class="speaker">Matthew McCullough</p>
+                         <p class="topic">An Introduction to NoSQL</p>
+                         <p class="speaker">Brad Anderson</p>
                     </td>
 	        </tr>
 	        <tr>
@@ -71,22 +71,22 @@
 	        <tr>
 	                <td class="time">01:00</td>
 	                <td class="time">02:15</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                            <p class="topic"></p>
-	                            <p class="speaker"></p>
+	                            <p class="topic">Next-gen JSF 2, today, with RichFaces 4.0</p>
+	                            <p class="speaker">Jay Balunas</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">When the Wheels Come off Agile</p>
+	                     <p class="speaker">Barry Hawkins</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Advanced Git Tricks</p>
+	                     <p class="speaker">Matthew McCullough</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic">Advanced Git Tricks</p>
-                         <p class="speaker">Matthew McCullough</p>
+                         <p class="topic">Spring Data + Integration</p>
+                         <p class="speaker">Mark Fisher</p>
                     </td>
 	        </tr>
 	        <tr>
@@ -97,18 +97,18 @@
 	        <tr>
 	                <td class="time">02:30</td>
 	                <td class="time">03:45</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Flex</p>
+	                     <p class="speaker">James Ward</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">The ROI of Refactoring: Lego vs. Play-Doh</p>
+	                     <p class="speaker">Neil Green</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Hans Dockter</p>
+	                     <p class="speaker">Enter The Gradle</p>
 	                </td>
                     <td class="talk">
                          <p class="topic">Simple MapReduce with Cascading on Hadoop</p>
@@ -123,22 +123,22 @@
 	        <tr>
 	                <td class="time">04:00</td>
 	                <td class="time">05:15</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
 	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="speaker">James Ward</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">How to Run a Successful open source project</p>
+	                     <p class="speaker">Martijn Verburg</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Beauty and the Beast: Design for Builds & Build Systems</p>
+	                     <p class="speaker">Hans Dockter</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic"></p>
-                         <p class="speaker"></p>
+                         <p class="topic">Introduction to Spring AMQP</p>
+                         <p class="speaker">Mark Fisher</p>
                     </td>
 	        </tr>
             <tr>
@@ -149,9 +149,9 @@
 	        <tr>
 	                <td class="time">05:30</td>
 	                <td class="time">06:45</td>
-	                <td>Keynote</td>
+	                <td class="keynote">Keynote</td>
 	                <td colspan="4" class="talk">
-	                     <p class="topic"></p>
+	                     <p class="topic">Building Web Applications in a Multi-Device World</p>
 	                     <p class="speaker">Yehuda Katz</p>
 	                </td>
 	        </tr>
@@ -172,7 +172,7 @@
 	        <tr>
 	                <td class="time">09:15</td>
 	                <td class="time">10:30</td>
-	                <td>Keynote</td>
+	                <td class="keynote">Keynote</td>
 	                <td colspan="4" class="talk">
 	                     <p class="topic">TBD</p>
 	                     <p class="speaker">Venkat Subramaniam</p>
@@ -186,22 +186,22 @@
 	        <tr>
 	                <td class="time">10:45</td>
 	                <td class="time">12:00</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">jQuery</p>
+	                     <p class="speaker">Yehuda Katz</p>
 	                </td>
 	                <td class="talk">
 	                     <p class="topic"></p>
 	                     <p class="speaker"></p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">The Future of Java</p>
+	                     <p class="speaker">Martijn Verburg + Ben Evans</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic"></p>
-                         <p class="speaker"></p>
+                         <p class="topic">What Riding the Apache Camel can do to make integration easier for you</p>
+                         <p class="speaker">Claus Ibsen</p>
                     </td>
 	        </tr>
 	        <tr>
@@ -212,22 +212,22 @@
 	        <tr>
 	                <td class="time">01:00</td>
 	                <td class="time">02:15</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Sproutcore</p>
+	                     <p class="speaker">Yehuda Katz</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Andrew Rubinger</p>
+	                     <p class="speaker">Testable Enterprise Development with Arquillian</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Do you really get class loaders?</p>
+	                     <p class="speaker">Jevgeni Kabanov</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic"></p>
-                         <p class="speaker"></p>
+                         <p class="topic">Programming Scala</p>
+                         <p class="speaker">Venkat Subramaniam</p>
                     </td>
 	        </tr>
 	        <tr>
@@ -238,22 +238,22 @@
 	        <tr>
 	                <td class="time">02:30</td>
 	                <td class="time">03:45</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Socializing Spring Applications</p>
+	                     <p class="speaker">Keith Donald</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Launching scalable apps with Google App Engine</p>
+	                     <p class="speaker">David Chandler</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Do you really get Memory?</p>
+	                     <p class="speaker">Jevgeni Kabanov</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic"></p>
-                         <p class="speaker"></p>
+                         <p class="topic">Tail Recursion, Trampolines and Continuations - taking functions to the max</p>
+                         <p class="speaker">Dick Wall</p>
                     </td>
 	        </tr>
             <tr>
@@ -264,22 +264,22 @@
 	        <tr>
 	                <td class="time">04:00</td>
 	                <td class="time">05:15</td>
-	                <td>Breakouts</td>
+	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Spring into Mobile Application Development</p>
+	                     <p class="speaker">Roy Clarkson + Keith Donald</p>
 	                </td>
 	                <td class="talk">
 	                     <p class="topic"></p>
 	                     <p class="speaker"></p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">Apache Shiro</p>
+	                     <p class="speaker">Les Hazlewood</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic"></p>
-                         <p class="speaker"></p>
+                         <p class="topic">TorqueBox: The beauty of Ruby with the power of JBoss</p>
+                         <p class="speaker">Bob McWhirter</p>
                     </td>
 	        </tr>
 	        <tr>
