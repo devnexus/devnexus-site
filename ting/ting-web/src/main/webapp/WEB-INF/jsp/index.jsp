@@ -5,10 +5,13 @@
         <p>Welcome to the 2011 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
 
-            <h2 style="margin-top: 0;">DevNexus 2011 - Coming March 21-22</h2>
+            <h2 style="margin-top: 0;">Welcome to DevNexus 2011 - March 21-22</h2>
 
-            <p>Call for papers! If you would like to present at DevNexus 2011, please
-               send a session abstract and bio to info at ajug dot org.</p>
+            <p>We have an incredible line-up of presenters covering a wide array of crucial topics. In addition to providing great
+			content for Java developers, DevNexus is a very valuable networking opportunity. This event attracts
+			Java/JVM talent from the South-East's largest corporations, software companies and consulting
+			organizations. You will have an opportunity to discover what other development teams are using as their
+			favorite tools and practices.</p>
 
             <p>Please check back periodically for speaker and session updates.</p>
             <p style="font-weight: bold;">We hope to see you at DevNexus 2011!!</p>
@@ -37,11 +40,11 @@
             <ul>
                 <li><a href="${ctx}/s/speakers">List of speakers</a></li>
                 <li><a href="${ctx}/s/presentations">List of presentations</a></li>
-                <li><a href="${ctx}/s/schedule">Schedule</a></li>
+                <li><a href="${ctx}/s/schedule">Schedule*</a></li>
             </ul>
 
             <p>*Please keep in mind that the exact schedule of presentations
-            and/or speakers can still change between now and March.</p>
+            may still change.</p>
     </div>
     <h2>When?</h2>
     <h3>Monday, <strong>March 21</strong> 2011 and Tuesday, <strong>March 22</strong> 2011</h3>
