@@ -73,8 +73,8 @@
 	                <td class="time">02:15</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                            <p class="topic">Next-gen JSF 2, today, with RichFaces 4.0</p>
-	                            <p class="speaker">Jay Balunas</p>
+	                            <p class="topic"></p>
+	                            <p class="speaker"></p>
 	                </td>
 	                <td class="talk">
 	                     <p class="topic">When the Wheels Come off Agile</p>
