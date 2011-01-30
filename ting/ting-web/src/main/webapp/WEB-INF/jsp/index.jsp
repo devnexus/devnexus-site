@@ -83,19 +83,20 @@
     <p>If you have any questions, please contact us at info AT ajug DOT org</p>
 
 </div>
-<div class="prepend-1 span-7 last">
-    <h2 style="border-bottom:1px solid orange;">Gold Sponsor</h2>
-    <a href="http://www.theintersectgroup.com/"><img alt="The Intersect Group" src="${ctx}/images/sponsors/intersect-logo.png"/></a>
-    <h2 style="border-bottom:1px solid orange; margin-top: 20px;">Silver Sponsors</h2>
+<div class="sponsors prepend-1 span-7 last">
+    <h2>Gold Sponsors</h2>
+    <a href="http://www.terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/images/sponsors/terracotta-logo.png"/></a>
+    <a href="http://www.theintersectgroup.com/"><img class="logo" alt="The Intersect Group" src="${ctx}/images/sponsors/intersect-logo.png"/></a>
+    <h2>Silver Sponsors</h2>
 
-    <a href="http://www.rim.com/"><img alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
-    <a href="http://www.anteogroup.com/"><img alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a>
-    <a href="http://www.4tnetworks.com/"><img alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a>
-    <a href="http://www.gca.net/"><img alt="GCA" src="${ctx}/images/sponsors/gca-logo.jpg"/></a>
-    <a href="https://www.theice.com/careers.jhtml"><img alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a>
-    <a href="http://www.jboss.com/"><img alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
-    <a href="https://www.mymatrixjobs.com//"><img alt="Matrix" src="${ctx}/images/sponsors/matrix.png"/></a>
-    <a href="http://www.adorsys.com/"><img alt="Adorsys" src="${ctx}/images/sponsors/adorsys.jpg"/></a>
+    <a href="http://www.rim.com/"><img class="logo" alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
+    <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a>
+    <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a>
+    <a href="http://www.gca.net/"><img class="logo" alt="GCA" src="${ctx}/images/sponsors/gca-logo.jpg"/></a>
+    <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a>
+    <a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
+    <a href="https://www.mymatrixjobs.com//"><img class="logo" alt="Matrix" src="${ctx}/images/sponsors/matrix.png"/></a>
+    <a href="http://www.adorsys.com/"><img class="logo" alt="Adorsys" src="${ctx}/images/sponsors/adorsys.png"/></a>
 
 	<div style="margin-top: 3em;">
 	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
