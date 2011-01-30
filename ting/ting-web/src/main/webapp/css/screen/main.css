@@ -18,7 +18,13 @@ body {
     margin-bottom: 1em;
 }
 
-
+.sponsors h2 {
+	border-bottom: 1px solid orange;
+}
+.sponsors img.logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 #sponsors {
     margin: 1em;
