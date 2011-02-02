@@ -99,7 +99,7 @@
 	                <td class="time">03:45</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic">Flex</p>
+	                     <p class="topic">Rapid Mobile & Tablet App Development with Spring and Flex</p>
 	                     <p class="speaker">James Ward</p>
 	                </td>
 	                <td class="talk">
@@ -107,8 +107,8 @@
 	                     <p class="speaker">Neil Green</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic">Hans Dockter</p>
-	                     <p class="speaker">Enter The Gradle</p>
+	                     <p class="topic">Enter The Gradle</p>
+	                     <p class="speaker">Hans Dockter</p>
 	                </td>
                     <td class="talk">
                          <p class="topic">Simple MapReduce with Cascading on Hadoop</p>
@@ -125,7 +125,7 @@
 	                <td class="time">05:15</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
+	                     <p class="topic">TBD</p>
 	                     <p class="speaker">James Ward</p>
 	                </td>
 	                <td class="talk">
@@ -218,8 +218,8 @@
 	                     <p class="speaker">Yehuda Katz</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic">Andrew Rubinger</p>
-	                     <p class="speaker">Testable Enterprise Development with Arquillian</p>
+	                     <p class="topic">Testable Enterprise Development with Arquillian</p>
+	                     <p class="speaker">Andrew Rubinger</p>
 	                </td>
 	                <td class="talk">
 	                     <p class="topic">Do you really get class loaders?</p>
