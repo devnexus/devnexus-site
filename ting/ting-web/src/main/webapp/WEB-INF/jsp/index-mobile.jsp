@@ -19,5 +19,5 @@
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/groupevent.png"/><a href="${ctx}/s/speakers">Speakers</a></li>
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/kchart.png"/><a href="${ctx}/s/presentations">Presentations</a></li>
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/identity.png"/><a href="${ctx}/s/organizers">Organizers</a></li>
-            <li><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/images/icons/crystal/globe.png"/><a href="${ctx}/s/index?site_preference=normal&shit=1" rel="external">Full Browser Version</a></li>
+            <li><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/images/icons/crystal/globe.png"/><a href="${ctx}/s/index?site_preference=normal" rel="external">Full Browser Version</a></li>
         </ul>
