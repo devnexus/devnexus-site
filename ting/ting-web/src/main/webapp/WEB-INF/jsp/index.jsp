@@ -1,5 +1,4 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
-
 <div id="content" class="span-14">
 <div class="first">
         <p>Welcome to the 2011 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
@@ -91,7 +90,6 @@
     <a href="http://www.rim.com/"><img class="logo" alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
     <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a>
     <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a>
-    <a href="http://www.gca.net/"><img class="logo" alt="GCA" src="${ctx}/images/sponsors/gca-logo.jpg"/></a>
     <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a>
     <a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
     <a href="http://www.adorsys.com/"><img class="logo" alt="Adorsys" src="${ctx}/images/sponsors/adorsys.png"/></a>

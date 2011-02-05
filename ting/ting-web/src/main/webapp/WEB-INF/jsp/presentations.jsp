@@ -20,8 +20,11 @@
 	        <h3 id="${presentation.id}" class="title"><c:out value="${presentation.title}"/></h3>
 	        <c:choose>
 		        <c:when test="${not empty presentation.speaker}">
-		            <p class="speaker"><c:out value="${presentation.speaker.firstName}"/>
-		                               <c:out value="${presentation.speaker.lastName}"/>
+		            <p class="speaker">
+		                <a href="${ctx}/s/speakers#${presentation.speaker.firstName}_${presentation.speaker.lastName}">
+		                    <c:out value="${presentation.speaker.firstName}"/>
+                            <c:out value="${presentation.speaker.lastName}"/></a>
+		            </p>
 		        </c:when>
 		        <c:otherwise>
 		            <p class="speaker">TBD</p>

@@ -26,12 +26,18 @@
     </bean>
 
      <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="webBindingInitializer">
+       <property name="webBindingInitializer">
             <bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
                 <property name="conversionService" ref="conversionService"/>
                 <property name="validator" ref="validator"/>
             </bean>
-        </property>
+       </property>
+       <property name="customArgumentResolvers">
+           <list>
+	           <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+	           <bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
+           </list>
+       </property>
        <property name="messageConverters">
            <list>
                <ref bean="jsonConverter" />
@@ -144,8 +150,9 @@
   <mvc:interceptors>
        <mvc:interceptor>
            <mvc:mapping path="/**"/>
-           <bean class="org.springframework.mobile.device.mvc.DeviceResolverHandlerInterceptor" />
+           <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
        </mvc:interceptor>
+       <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
      <mvc:interceptor>
          <mvc:mapping path="/**"/>
          <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
