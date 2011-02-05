@@ -1,8 +1,12 @@
-<%@include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<%@include file="/WEB-INF/jsp/includes/taglibs-decorators.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title><decorator:title default="DevNexus 2011 Atlanta" /></title>
+
+
+    <decorator:head/>
+
 
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma"        content="no-cache" />
@@ -68,6 +72,7 @@
                         <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E"><span>SIGN UP!</span></a></li>
                         <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                         <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
+                        <li><a href="${currentUrl}?site_preference=mobile">&nbsp;<span>Mobile</span></a></li>
                     </ul>
     </div>
     <div id="content" class="span-22 prepend-1 append-1 prepend-top last">

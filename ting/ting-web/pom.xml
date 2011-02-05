@@ -388,7 +388,7 @@
 		<dependency>
 		    <groupId>org.springframework.mobile</groupId>
 		    <artifactId>spring-mobile-device</artifactId>
-		    <version>1.0.0.M2</version>
+		    <version>M2.20110203</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>

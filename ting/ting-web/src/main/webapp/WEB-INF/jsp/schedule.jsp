@@ -125,7 +125,7 @@
 	                <td class="time">05:15</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic">TBD</p>
+	                     <p class="topic">AS34J - ActionScript for Java Developers</p>
 	                     <p class="speaker">James Ward</p>
 	                </td>
 	                <td class="talk">
@@ -174,7 +174,7 @@
 	                <td class="time">10:30</td>
 	                <td class="keynote">Keynote</td>
 	                <td colspan="4" class="talk">
-	                     <p class="topic">TBD</p>
+	                     <p class="topic">It could be heaven or it could be hell - on being a polyglot programmer</p>
 	                     <p class="speaker">Venkat Subramaniam</p>
 	                </td>
 	        </tr>
@@ -188,13 +188,13 @@
 	                <td class="time">12:00</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic">jQuery</p>
-	                     <p class="speaker">Yehuda Katz</p>
-	                </td>
-	                <td class="talk">
 	                     <p class="topic"></p>
 	                     <p class="speaker"></p>
 	                </td>
+                    <td class="talk">
+                         <p class="topic">TBD</p>
+                         <p class="speaker">Terracotta</p>
+                    </td>
 	                <td class="talk">
 	                     <p class="topic">The Future of Java</p>
 	                     <p class="speaker">Martijn Verburg + Ben Evans</p>
@@ -269,10 +269,10 @@
 	                     <p class="topic">Spring into Mobile Application Development</p>
 	                     <p class="speaker">Roy Clarkson + Keith Donald</p>
 	                </td>
-	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
-	                </td>
+                    <td class="talk">
+                         <p class="topic">Advanced Selenium RC Java</p>
+                         <p class="speaker">Patrick Wilson-Welsh</p>
+                    </td>
 	                <td class="talk">
 	                     <p class="topic">Apache Shiro</p>
 	                     <p class="speaker">Les Hazlewood</p>
