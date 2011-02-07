@@ -89,7 +89,7 @@ public class SpeakerController {
 			e.printStackTrace();
 		}
 
-        response.setContentType("image/png");
+        response.setContentType("image/jpg");
 
     }
 
