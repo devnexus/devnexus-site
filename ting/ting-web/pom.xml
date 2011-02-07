@@ -385,11 +385,12 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
         </dependency>
-		<dependency>
-		    <groupId>org.springframework.mobile</groupId>
-		    <artifactId>spring-mobile-device</artifactId>
-		    <version>M2.20110203</version>
-		</dependency>
+	    <dependency>
+	        <groupId>org.springframework.mobile</groupId>
+	        <artifactId>spring-mobile-device</artifactId>
+	        <version>1.0.0.M3</version>
+	    </dependency>
+
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>

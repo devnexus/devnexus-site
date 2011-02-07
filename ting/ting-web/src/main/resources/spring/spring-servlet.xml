@@ -148,10 +148,7 @@
     <mvc:view-controller  path="/admin" view-name="redirect:/s/admin/index" />
 
   <mvc:interceptors>
-       <mvc:interceptor>
-           <mvc:mapping path="/**"/>
-           <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
-       </mvc:interceptor>
+       <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
        <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
      <mvc:interceptor>
          <mvc:mapping path="/**"/>

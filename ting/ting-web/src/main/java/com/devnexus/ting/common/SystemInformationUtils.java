@@ -32,7 +32,9 @@ public final class SystemInformationUtils {
 
 	public enum AppHomeDirectories {
 
-		SPEAKER_IMAGES("/images"), PRESENTATION_SLIDES("/slides"), PRESENTATION_AUDIO(
+		ORGANIZER_IMAGES("/images/organizers"),
+		SPEAKER_IMAGES("/images"),
+		PRESENTATION_SLIDES("/slides"), PRESENTATION_AUDIO(
 				"/audio");
 
 		private String folderName;
@@ -156,14 +158,9 @@ public final class SystemInformationUtils {
 		return systemProperties.toString();
 	}
 
-	/**
-	 *
-	 * @return
-	 */
-	public static InputStream getSpeakerImage(String imageName) {
-
+	public static InputStream getImage(AppHomeDirectories folder, String imageName) {
 		final Apphome appHome = SystemInformationUtils
-				.retrieveBasicSystemInformation();
+		.retrieveBasicSystemInformation();
 
 		if (imageName == null) {
 			return SystemInformationUtils.class
@@ -173,7 +170,7 @@ public final class SystemInformationUtils {
 		final File image = new File(
 				appHome.getAppHomePath()
 						+ File.separator
-						+ SystemInformationUtils.AppHomeDirectories.SPEAKER_IMAGES.folderName
+						+ folder.folderName
 						+ File.separator + File.separator + imageName);
 
 		if (image.isFile() && image.exists()) {
@@ -191,6 +188,28 @@ public final class SystemInformationUtils {
 					.getResourceAsStream("/data/images/image_not_available.jpg");
 		}
 
+	}
+
+	/**
+	 *
+	 * @return
+	 */
+	public static InputStream getOrganizerImage(String imageName) {
+
+        final InputStream is = SystemInformationUtils.getImage(SystemInformationUtils.AppHomeDirectories.ORGANIZER_IMAGES, imageName);
+
+		return is;
+
+	}
+
+	/**
+	 *
+	 * @return
+	 */
+	public static InputStream getSpeakerImage(String imageName) {
+
+		final InputStream is = SystemInformationUtils.getImage(SystemInformationUtils.AppHomeDirectories.SPEAKER_IMAGES, imageName);
+		return is;
 	}
 
 	/**

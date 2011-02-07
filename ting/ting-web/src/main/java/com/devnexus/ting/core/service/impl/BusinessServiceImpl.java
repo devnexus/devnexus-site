@@ -24,9 +24,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.dao.EventDao;
+import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
@@ -44,6 +46,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private PresentationDao presentationDao;
 	@Autowired private SpeakerDao      speakerDao;
 	@Autowired private EventDao        eventDao;
+	@Autowired private OrganizerDao    organizerDao;
 
     /**
      *   Initialize Logging.
@@ -138,6 +141,16 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	public List<Event> getAllNonCurrentEvents() {
 		return eventDao.getAllNonCurrentEvents();
+	}
+
+	@Override
+	public List<Organizer> getAllOrganizers() {
+		return organizerDao.getAllOrganizers();
+	}
+
+	@Override
+	public Organizer getOrganizer(final Long organizerId) {
+		return organizerDao.get(organizerId);
 	}
 
 }

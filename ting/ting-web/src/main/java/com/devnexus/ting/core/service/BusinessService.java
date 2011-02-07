@@ -18,6 +18,7 @@ package com.devnexus.ting.core.service;
 import java.util.List;
 
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
 
@@ -67,5 +68,9 @@ public interface BusinessService {
 	public Event getEventByEventKey(String eventKey);
 
 	public List<Event> getAllNonCurrentEvents();
+
+	public List<Organizer> getAllOrganizers();
+
+	Organizer getOrganizer(Long organizerId);
 
 }
