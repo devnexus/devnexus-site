@@ -72,7 +72,7 @@
                         <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E"><span>SIGN UP!</span></a></li>
                         <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                         <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
-                        <li><a href="${currentUrl}?site_preference=mobile">&nbsp;<span>Mobile</span></a></li>
+                        <li style="margin-right: 0;"><a href="${currentUrl}?site_preference=mobile">&nbsp;<span>Mobile</span></a></li>
                     </ul>
     </div>
     <div id="content" class="span-22 prepend-1 append-1 prepend-top last">

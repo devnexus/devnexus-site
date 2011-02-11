@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,7 +50,9 @@ public class PresentationController {
     private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
     @RequestMapping("/{eventKey}/presentations")
-    public String getPresentationsForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
+    public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
+    		                               final Model model,
+    		                               final SitePreference sitePreference) {
     	final Event event = businessService.getEventByEventKey(eventKey);
     	model.addAttribute("event", event);
 
@@ -57,6 +60,11 @@ public class PresentationController {
     	presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
 
     	model.addAttribute("presentationList", presentationList);
+
+        if (sitePreference.isMobile()) {
+            return "presentations-mobile";
+        }
+
         return "presentations";
     }
 
@@ -80,12 +88,18 @@ public class PresentationController {
     }
 
     @RequestMapping("/presentations")
-    public String getPresentationsForCurrentEvent(ModelMap model) {
+    public String getPresentationsForCurrentEvent(final Model model,
+                                                  final SitePreference sitePreference) {
 
     	final PresentationList presentationList = new PresentationList();
     	presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
 
     	model.addAttribute("presentationList", presentationList);
+
+        if (sitePreference.isMobile()) {
+            return "presentations-mobile";
+        }
+
         return "presentations";
     }
 
