@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,21 +51,30 @@ public class SpeakerController {
 
 
     @RequestMapping(value="/speakers", method = RequestMethod.GET)
-    public String getSpeakersForCurrentEvent(ModelMap model) {
+    public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference) {
     	SpeakerList speakers = new SpeakerList();
     	speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
     	model.addAttribute("speakerList",speakers);
+
+        if (sitePreference.isMobile()) {
+            return "speakers-mobile";
+        }
+
         return "speakers";
     }
 
     @RequestMapping("/{eventKey}/speakers")
-    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, ModelMap model) {
+    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
     	final Event event = businessService.getEventByEventKey(eventKey);
     	model.addAttribute("event", event);
 
     	SpeakerList speakers = new SpeakerList();
     	speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
     	model.addAttribute("speakerList",speakers);
+
+        if (sitePreference.isMobile()) {
+            return "speakers-mobile";
+        }
 
         return "speakers";
     }

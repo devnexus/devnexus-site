@@ -73,8 +73,8 @@
 	                <td class="time">02:15</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                            <p class="topic"></p>
-	                            <p class="speaker"></p>
+	                            <p class="topic">Building mobile apps with Java on non-Java platforms using GWT and PhoneGap</p>
+	                            <p class="speaker">Josh Marinacci</p>
 	                </td>
 	                <td class="talk">
 	                     <p class="topic">When the Wheels Come off Agile</p>
@@ -133,7 +133,7 @@
 	                     <p class="speaker">Martijn Verburg</p>
 	                </td>
 	                <td class="talk">
-	                     <p class="topic">Beauty and the Beast: Design for Builds & Build Systems</p>
+	                     <p class="topic">Beauty and the Beast: Design for Builds &amp; Build Systems</p>
 	                     <p class="speaker">Hans Dockter</p>
 	                </td>
                     <td class="talk">
@@ -247,10 +247,10 @@
 	                     <p class="topic">Launching scalable apps with Google App Engine</p>
 	                     <p class="speaker">David Chandler</p>
 	                </td>
-	                <td class="talk">
-	                     <p class="topic">Do you really get Memory?</p>
-	                     <p class="speaker">Jevgeni Kabanov</p>
-	                </td>
+                    <td class="talk">
+                         <p class="topic">Apache Shiro</p>
+                         <p class="speaker">Les Hazlewood</p>
+                    </td>
                     <td class="talk">
                          <p class="topic">Tail Recursion, Trampolines and Continuations - taking functions to the max</p>
                          <p class="speaker">Dick Wall</p>
@@ -273,10 +273,10 @@
                          <p class="topic">Advanced Selenium RC Java</p>
                          <p class="speaker">Patrick Wilson-Welsh</p>
                     </td>
-	                <td class="talk">
-	                     <p class="topic">Apache Shiro</p>
-	                     <p class="speaker">Les Hazlewood</p>
-	                </td>
+                    <td class="talk">
+                         <p class="topic">Do you really get Memory?</p>
+                         <p class="speaker">Jevgeni Kabanov</p>
+                    </td>
                     <td class="talk">
                          <p class="topic">TorqueBox: The beauty of Ruby with the power of JBoss</p>
                          <p class="speaker">Bob McWhirter</p>
