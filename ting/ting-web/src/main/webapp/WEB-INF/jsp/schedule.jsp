@@ -188,8 +188,8 @@
 	                <td class="time">12:00</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic"></p>
-	                     <p class="speaker"></p>
+	                     <p class="topic">jQuery 1.5 jump-start</p>
+	                     <p class="speaker">Pratik Patel</p>
 	                </td>
                     <td class="talk">
                          <p class="topic">TBD</p>
