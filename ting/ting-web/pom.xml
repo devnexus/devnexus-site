@@ -512,6 +512,12 @@
             <artifactId>jackson-xc</artifactId>
             <version>1.6.4</version>
         </dependency>
+
+		  <dependency>
+		    <groupId>org.springframework.social</groupId>
+		    <artifactId>spring-social-core</artifactId>
+		    <version>1.0.0.M1</version>
+		  </dependency>
     </dependencies>
 </project>
 
