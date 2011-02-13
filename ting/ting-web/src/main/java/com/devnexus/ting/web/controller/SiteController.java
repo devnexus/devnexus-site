@@ -10,6 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.site.SitePreference;
+import org.springframework.social.twitter.SearchResults;
+import org.springframework.social.twitter.Tweet;
+import org.springframework.social.twitter.TwitterTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -100,6 +103,18 @@ public class SiteController {
 		}
 
         response.setContentType("image/jpg");
+
+    }
+
+    @RequestMapping(value="/twitter", method=RequestMethod.GET)
+    public String getTwitterFeed(Model model) {
+
+    	final TwitterTemplate twitterTemplate = new TwitterTemplate();
+    	SearchResults searchResults = twitterTemplate.search("from:devnexus");
+
+    	model.addAttribute("tweets", searchResults.getTweets());
+
+    	return "twitter-feed-mobile";
 
     }
 

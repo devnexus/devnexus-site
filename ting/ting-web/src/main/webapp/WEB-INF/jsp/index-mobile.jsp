@@ -11,6 +11,7 @@
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/groupevent.png"/><a href="${ctx}/s/speakers"  rel="external">Speakers</a></li>
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/kchart.png"/><a href="${ctx}/s/presentations" rel="external">Presentations</a></li>
             <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/images/mobile/crystal/identity.png"/><a href="${ctx}/s/organizers"  rel="external">Organizers</a></li>
+            <li><img class="ui-li-icon" alt="Twitter"  src="${ctx}/images/icons/erenemre/twitter-03.png"/><a href="${ctx}/s/twitter"  rel="external">Twitter</a></li>
             <li><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/images/icons/crystal/globe.png"/><a href="${ctx}/s/index?site_preference=normal" rel="external">Full Browser Version</a></li>
         </ul>
     </div>
