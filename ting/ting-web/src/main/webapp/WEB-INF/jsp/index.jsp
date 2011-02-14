@@ -67,8 +67,7 @@
    </div>
 
     <p>The Standard Ticket is <strong>$195.00</strong>.</p>
-    <p>For a limited time (until Feb 1, 2010), we have an Early Bird Special of <strong>$175.00</strong>.</p>
-    <p>Also, we have a group discount available: If you book 5 tickets
+    <p>Furthermore, we have a group discount available: If you book 5 tickets
     or more each ticket is <strong>$175</strong>.</p>
 
     <p>Are you are student? We have a limited amount of student tickets priced at $130. Please contact us at: info AT ajug DOT org for details.</p>
@@ -86,6 +85,7 @@
     <h2>Gold Sponsors</h2>
     <a href="http://www.terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/images/sponsors/terracotta-logo.png"/></a>
     <a href="http://www.theintersectgroup.com/"><img class="logo" alt="The Intersect Group" src="${ctx}/images/sponsors/intersect-logo.png"/></a>
+    <a href="http://www.automatedlogic.com/"><img class="logo" alt="Automated Logic Corporation" src="${ctx}/images/sponsors/ALC-Logo-250.png"/></a>
     <h2>Silver Sponsors</h2>
     <a href="http://www.rim.com/"><img class="logo" alt="Blackberry" src="${ctx}/images/sponsors/blackberry_logo.png"/></a>
     <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo" src="${ctx}/images/sponsors/Anteo.png"/></a>

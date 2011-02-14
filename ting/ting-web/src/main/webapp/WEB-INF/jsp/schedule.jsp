@@ -192,8 +192,8 @@
 	                     <p class="speaker">Pratik Patel</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic">TBD</p>
-                         <p class="speaker">Terracotta</p>
+                         <p class="topic">High-Performance Scalability for Enterprise Applications with Enterprise Ehcache</p>
+                         <p class="speaker">Eric Mizell</p>
                     </td>
 	                <td class="talk">
 	                     <p class="topic">The Future of Java</p>

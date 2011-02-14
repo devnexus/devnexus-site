@@ -110,7 +110,7 @@ public class SiteController {
     public String getTwitterFeed(Model model) {
 
     	final TwitterTemplate twitterTemplate = new TwitterTemplate();
-    	SearchResults searchResults = twitterTemplate.search("from:devnexus");
+    	SearchResults searchResults = twitterTemplate.search("devnexus");
 
     	model.addAttribute("tweets", searchResults.getTweets());
 
