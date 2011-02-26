@@ -4,16 +4,14 @@
 <title>DevNexus 2011 - Presentations</title>
 <div id="content" class="span-22 last">
 	<div class="quote"><span>What the community says:</span> "Great conference to share best practices"</div>
-
+    <h2>Presentations
+        <c:if test="${not empty event}">for ${event.title}</c:if></h2>
+    <img  src="${ctx}/images/devnexus_2009/devnexus_2009_1.jpg" class="page-image"/>
     <ul>
         <c:forEach items="${presentationList.presentations}" var="presentation">
             <li><a href="#${presentation.id}"><c:out value="${presentation.title}"/></a></li>
         </c:forEach>
     </ul>
-
-	<h2>Presentations
-	<c:if test="${not empty event}">for ${event.title}</c:if></h2>
-	<img  src="${ctx}/devnexus_2009/devnexus_2009_1.jpg" class= "page-image"/>
 
 	<c:forEach items="${presentationList.presentations}" var="presentation">
 	    <div class="presentation">

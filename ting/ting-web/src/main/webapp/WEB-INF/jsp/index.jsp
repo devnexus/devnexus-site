@@ -82,6 +82,14 @@
 
 </div>
 <div class="sponsors prepend-1 span-7 last">
+    <div class="flyers">
+        <div class="header">Help us spread the word!</div>
+        <div class="body">
+	        <ul>
+	            <li><a href="${ctx}/static/2011/files/promo/DevNexus-2011-flyer.pdf" >DevNexus 2011 Flyer</a></li>
+	        </ul>
+        </div>
+    </div>
     <h2>Gold Sponsors</h2>
     <a href="http://www.terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/images/sponsors/terracotta-logo.png"/></a>
     <a href="http://www.theintersectgroup.com/"><img class="logo" alt="The Intersect Group" src="${ctx}/images/sponsors/intersect-logo.png"/></a>
