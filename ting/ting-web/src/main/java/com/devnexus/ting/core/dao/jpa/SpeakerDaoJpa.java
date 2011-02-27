@@ -39,6 +39,7 @@ public class SpeakerDaoJpa extends GenericDaoJpa< Speaker, Long>
 				   + "    where e.current = :iscurrent "
 				   + "    order by s.lastName ASC, s.firstName ASC")
 		.setParameter("iscurrent", Boolean.TRUE)
+		.setCacheable(true)
 		.list();
 		//session.disableFilter("presentationFilter");
 		return speakers;

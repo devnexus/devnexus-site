@@ -3,9 +3,13 @@
  */
 package com.devnexus.ting.web.contextlistener;
 
+import java.io.File;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+
+import net.jawr.web.resource.FileNameUtils;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -108,6 +112,11 @@ public class StartupContextListener implements ServletContextListener {
         //FIXME: Do the context mode resolution
 
         System.setProperty("jRecruiterSpringContext", springContextMode.getCode());
+
+        if (System.getProperty("ehcache.disk.store.dir") == null) {
+            System.setProperty("ehcache.disk.store.dir", System.getProperty(Apphome.APP_HOME_DIRECTORY) + File.separator + "ehcache");
+        }
+
         final StringBuilder bootMessage = new StringBuilder();
 
         bootMessage.append("\n");

@@ -168,11 +168,13 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-annotations</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-ehcache</artifactId>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>ehcache</artifactId>
+            		<groupId>net.sf.ehcache</groupId>
+            	</exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -261,6 +263,10 @@
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-web</artifactId>
         </dependency>
 
         <!-- Used for Hashing passwords / enrypting data -->
