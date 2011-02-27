@@ -2,6 +2,7 @@ package com.devnexus.ting.core.dao.jpa;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.EventDao;
@@ -25,10 +26,15 @@ public class EventDaoJpa extends GenericDaoJpa< Event, Long>
 
 	@Override
 	public List<Event> getAllNonCurrentEvents() {
+
+
+//		System.out.println(this.entityManager.unwrap(Session.class).getSessionFactory().getStatistics());
+
 	return super.entityManager.createQuery("select event from Event event "
 			+ "where event.current = :current "
 			+ "order by event.title ASC", Event.class)
 			                  .setParameter("current", false)
+			                  .setHint("org.hibernate.cacheable", true)
 			                  .getResultList();
 	}
 
