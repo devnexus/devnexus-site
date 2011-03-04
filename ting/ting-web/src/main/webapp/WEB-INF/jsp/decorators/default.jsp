@@ -47,6 +47,7 @@
                         <c:url var="presentationsUrl" value="/s/presentations"/>
                         <c:url var="scheduleUrl"      value="/s/schedule"/>
                         <c:url var="organizersUrl"    value="/s/organizers"/>
+                        <c:url var="travelUrl"        value="/s/travel"/>
 
                         <li><a href="${homeUrl}"><span>Home</span></a></li>
                         <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
@@ -69,6 +70,7 @@
                             </div>
                         </li>
                         <li><a href="${organizersUrl}"><span>Your Organizers</span></a></li>
+                        <li><a href="${travelUrl}"><span>Travel</span></a></li>
                         <li><a href="http://ajug.eventwax.com/devnexus-2011/register" style="color: #F7941E"><span>SIGN UP!</span></a></li>
                         <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                         <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>

@@ -63,6 +63,11 @@ public class SiteController {
 
     }
 
+    @RequestMapping("/travel")
+    public String travel(final Model model, final SitePreference sitePreference) {
+        return "travel";
+    }
+
     @RequestMapping("/organizers")
     public String getOrganizers(final Model model, final SitePreference sitePreference) {
 

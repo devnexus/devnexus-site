@@ -96,9 +96,9 @@ padding: 0.3em 0em;
 
 
 ul#menu li {
-display: inline;
-margin: 0.1em 1em;
-position: relative;
+	display: inline;
+	margin: 0.1em 0.5em;
+	position: relative;
 }
 
 ul#menu h2, ul#menu h3 {
