@@ -100,7 +100,6 @@
     <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t networks" src="${ctx}/images/sponsors/4t.png"/></a>
     <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE" src="${ctx}/images/sponsors/ICE.jpg"/></a>
     <a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
-    <a href="http://www.adorsys.com/"><img class="logo" alt="Adorsys" src="${ctx}/images/sponsors/adorsys.png"/></a>
     <h2>Cocktail Hour Sponsor</h2>
     <a href="https://www.mymatrixjobs.com//"><img class="logo" alt="Matrix" src="${ctx}/images/sponsors/matrix.png"/></a>
 	<div style="margin-top: 3em;">
