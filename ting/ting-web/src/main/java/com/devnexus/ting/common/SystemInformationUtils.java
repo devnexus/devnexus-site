@@ -34,8 +34,8 @@ public final class SystemInformationUtils {
 
 		ORGANIZER_IMAGES("/images/organizers"),
 		SPEAKER_IMAGES("/images"),
-		PRESENTATION_SLIDES("/slides"), PRESENTATION_AUDIO(
-				"/audio");
+		PRESENTATION_SLIDES("slides"), PRESENTATION_AUDIO(
+				"audio");
 
 		private String folderName;
 
@@ -266,23 +266,24 @@ public final class SystemInformationUtils {
 			String presentationLink) {
 		final Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
 
-		final File presentationFile = new File(
-				appHome.getAppHomePath()
-						+ File.separator
-						+ "eventdata" + File.separator + eventKey
-						+ File.separator
-						+ SystemInformationUtils.AppHomeDirectories.PRESENTATION_SLIDES.folderName
-						+ File.separator +  presentationLink);
+		final String filePath = appHome.getAppHomePath()
+			+ File.separator
+			+ "eventdata" + File.separator + eventKey
+			+ File.separator
+			+ SystemInformationUtils.AppHomeDirectories.PRESENTATION_SLIDES.folderName
+			+ File.separator +  presentationLink;
+		
+		final File presentationFile = new File(filePath);
 
 		if (presentationFile.isFile() && presentationFile.exists()) {
 			try {
 				return new FileInputStream(presentationFile);
 			} catch (FileNotFoundException e) {
-               throw new IllegalStateException("Not a valid file.");
+               throw new IllegalStateException(String.format("Not a valid file at '%s'.", filePath));
 			}
 		}
 
-		throw new IllegalStateException("Not a valid file.");
+        throw new IllegalStateException(String.format("Not a valid file at '%s'.", filePath));
 
 	}
 }
