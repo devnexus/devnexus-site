@@ -275,7 +275,12 @@
             <artifactId>ehcache-core</artifactId>
             <version>2.2.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-web</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        
         <!-- Used for Hashing passwords / enrypting data -->
 
         <dependency>
