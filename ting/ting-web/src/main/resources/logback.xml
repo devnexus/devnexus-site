@@ -97,7 +97,7 @@
   <logger name="ch.qos.logback">
     <level value="WARN"/>
   </logger>
-  <logger name="org.jrecruiter.spring.SecurityEventListener">
+  <logger name="com.hillert.apptools.spring.SecurityEventListener">
     <level value="INFO"/>
     <appender-ref ref="LOGFILE-SECURITY"/>
   </logger>

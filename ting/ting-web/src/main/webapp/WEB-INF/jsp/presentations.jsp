@@ -35,7 +35,7 @@
 	        </div>
 	        <c:choose>
 	            <c:when test="${not empty presentation.presentationLink}">
-	                <p class="download"><a href="${ctx}/s/presentation/${presentation.id}/slides">Download Presentation</a></p>
+	                <p class="download"><a href="${ctx}/s/presentations/${presentation.id}/slides">Download Presentation</a></p>
 	            </c:when>
 	        </c:choose>
 	    </div>
