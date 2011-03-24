@@ -6,6 +6,8 @@
 
             <h2 style="margin-top: 0;">Welcome to DevNexus 2011 - March 21-22</h2>
 
+            <p><strong style="font-size: 18px">DEVNEXUS 2011 - <span style="color: #FF0000;">SOLD OUT!!</span></strong></p>
+
             <p>We have an incredible line-up of presenters covering a wide array of crucial topics. In addition to providing great
 			content for Java developers, DevNexus is a very valuable networking opportunity. This event attracts
 			Java/JVM talent from the South-East's largest corporations, software companies and consulting
@@ -102,6 +104,11 @@
     <a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/images/sponsors/jboss.png"/></a>
     <h2>Cocktail Hour Sponsor</h2>
     <a href="https://www.mymatrixjobs.com//"><img class="logo" alt="Matrix" src="${ctx}/images/sponsors/matrix.png"/></a>
+    <h2>Book Sponsors</h2>
+    <a href="http://www.apress.com/"><img   class="logo" alt="Apress"   src="${ctx}/images/sponsors/publishers/apresssupportedbanner_small.gif"/></a>
+    <a href="http://oreilly.com/"><img      class="logo" alt="O'Reilly" src="${ctx}/images/sponsors/publishers/oreilly.png"/></a>
+    <a href="http://www.informit.com/"><img class="logo" alt="Pearson"  src="${ctx}/images/sponsors/publishers/Pearson_Without_Strapline_Blue_RGB-280.jpg"/></a>
+    <a href="http://www.manning.com/"><img  class="logo" alt="Manning"  src="${ctx}/images/sponsors/publishers/manning.png"/></a>
 	<div style="margin-top: 3em;">
 	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 	<script type="text/javascript">
