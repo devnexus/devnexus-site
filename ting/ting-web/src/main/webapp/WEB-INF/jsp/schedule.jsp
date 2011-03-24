@@ -47,7 +47,7 @@
 	                <td class="time">12:00</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
-	                     <p class="topic">What's New in GWT 2.1</p>
+	                     <p class="topic">What's New in GWT</p>
 	                     <p class="speaker">David Chandler</p>
 	                </td>
 	                <td class="talk">
@@ -166,12 +166,12 @@
 	        </tr>
 	        <tr>
 	                <td class="time">08:00</td>
-	                <td class="time">09:15</td>
+	                <td class="time">09:00</td>
 	                <td colspan="5">Breakfast</td>
 	        </tr>
 	        <tr>
-	                <td class="time">09:15</td>
-	                <td class="time">10:30</td>
+	                <td class="time">09:00</td>
+	                <td class="time">10:15</td>
 	                <td class="keynote">Keynote</td>
 	                <td colspan="4" class="talk">
 	                     <p class="topic">It could be heaven or it could be hell - on being a polyglot programmer</p>
@@ -179,13 +179,13 @@
 	                </td>
 	        </tr>
             <tr>
+                    <td class="time">10:15</td>
                     <td class="time">10:30</td>
-                    <td class="time">10:45</td>
                     <td colspan="5" class="break">Break</td>
             </tr>
 	        <tr>
-	                <td class="time">10:45</td>
-	                <td class="time">12:00</td>
+	                <td class="time">10:30</td>
+	                <td class="time">11:45</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
 	                     <p class="topic">jQuery 1.5 jump-start</p>
@@ -205,13 +205,13 @@
                     </td>
 	        </tr>
 	        <tr>
-	                <td class="time">12:00</td>
-	                <td class="time">01:00</td>
+	                <td class="time">11:45</td>
+	                <td class="time">12:45</td>
 	                <td colspan="5" class="break">Break</td>
 	        </tr>
 	        <tr>
-	                <td class="time">01:00</td>
-	                <td class="time">02:15</td>
+	                <td class="time">12:45</td>
+	                <td class="time">02:00</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
 	                     <p class="topic">Sproutcore</p>
@@ -231,13 +231,13 @@
                     </td>
 	        </tr>
 	        <tr>
+	                <td class="time">02:00</td>
 	                <td class="time">02:15</td>
-	                <td class="time">02:30</td>
 	                <td colspan="5" class="break">Break</td>
 	        </tr>
 	        <tr>
-	                <td class="time">02:30</td>
-	                <td class="time">03:45</td>
+	                <td class="time">02:15</td>
+	                <td class="time">03:30</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
 	                     <p class="topic">Socializing Spring Applications</p>
@@ -248,7 +248,7 @@
 	                     <p class="speaker">David Chandler</p>
 	                </td>
                     <td class="talk">
-                         <p class="topic">Apache Shiro</p>
+                         <p class="topic">Application Security with Apache Shiro</p>
                          <p class="speaker">Les Hazlewood</p>
                     </td>
                     <td class="talk">
@@ -257,13 +257,13 @@
                     </td>
 	        </tr>
             <tr>
+                    <td class="time">03:30</td>
                     <td class="time">03:45</td>
-                    <td class="time">04:00</td>
                     <td colspan="5" class="break">Break</td>
             </tr>
 	        <tr>
-	                <td class="time">04:00</td>
-	                <td class="time">05:15</td>
+	                <td class="time">03:45</td>
+	                <td class="time">05:00</td>
 	                <td class="breakouts">Breakouts</td>
 	                <td class="talk">
 	                     <p class="topic">Spring into Mobile Application Development</p>
@@ -283,8 +283,8 @@
                     </td>
 	        </tr>
 	        <tr>
-	                <td class="time">05:15</td>
-	                <td class="time">05:45</td>
+	                <td class="time">05:00</td>
+	                <td class="time">05:30</td>
 	                <td colspan=5>Closing Ceremonies</td>
 	        </tr>
 
