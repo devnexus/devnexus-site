@@ -18,6 +18,19 @@
         <maven>2.0.9</maven>
     </prerequisites>
 
+    <properties>
+        <java-version>1.6</java-version>
+        <org.cloudfoundry-version>0.6.0</org.cloudfoundry-version>
+        <org.springframework-version>3.1.0.M1</org.springframework-version>
+        <org.aspectj-version>1.6.9</org.aspectj-version>
+        <org.slf4j-version>1.5.10</org.slf4j-version>
+        <!-- <rabbitmq.version>2.3.1</rabbitmq.version> -->
+        <!-- <spring.amqp.version>1.0.0.RC1</spring.amqp.version> -->
+
+        <jawr.debug.on>true</jawr.debug.on>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>  
+     
     <!-- Administrative Settings -->
 
     <distributionManagement>
@@ -83,8 +96,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
 	                <version>2.3.2</version>
 	                <configuration>
-	                    <source>1.6</source>
-	                    <target>1.6</target>
+	                    <source>${java-version}</source>
+	                    <target>${java-version}</target>
 	                </configuration>
                 </plugin>
             </plugins>
@@ -143,7 +156,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>3.5.1-Final</version>
+            <version>3.6.1.Final</version>
             <exclusions>
                 <exclusion>
               <groupId>cglib</groupId>
@@ -153,23 +166,18 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-annotations</artifactId>
-            <version>3.5.1-Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-ehcache</artifactId>
-            <version>3.5.1-Final</version>
+            <version>3.6.1.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search</artifactId>
-            <version>3.2.1.Final</version>
+            <version>3.3.0.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>3.5.1-Final</version>
+            <version>3.6.1.Final</version>
             <exclusions>
                 <exclusion>
                     <artifactId>asm</artifactId>
@@ -190,7 +198,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>4.0.2.GA</version>
+            <version>4.1.0.Final</version>
         </dependency>
 
         <!-- Password Generator -->
@@ -273,7 +281,12 @@
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-core</artifactId>
-            <version>2.2.0</version>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-web</artifactId>
+            <version>2.0.3</version>
         </dependency>
         <dependency>
             <groupId>net.sf.ehcache</groupId>
@@ -322,11 +335,17 @@
         </dependency>
 
         <!-- Spring -->
+		
+		<dependency> 
+			<groupId>org.cloudfoundry</groupId> 
+			<artifactId>cloudfoundry-runtime</artifactId> 
+			<version>${org.cloudfoundry-version}</version> 
+		</dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -341,7 +360,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -356,7 +375,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -367,7 +386,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -378,7 +397,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -389,7 +408,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -400,7 +419,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -411,7 +430,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -422,7 +441,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -433,17 +452,17 @@
          <dependency>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-aspects</artifactId>
-                    <version>3.0.4.RELEASE</version>
+                    <version>${org.springframework-version}</version>
                 </dependency>
          <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -458,7 +477,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>3.0.4.RELEASE</version>
+            <version>${org.springframework-version}</version>
                      <exclusions>
                 <exclusion>
                     <artifactId>com.springsource.org.apache.commons.logging</artifactId>
@@ -653,11 +672,6 @@
             <version>8.1-407.jdbc3</version>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.14</version>
-        </dependency>
-        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.2.143</version>
@@ -684,7 +698,6 @@
 			<artifactId>jmesa</artifactId>
 			<version>3.0.1</version>
         </dependency>
-        
     </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -722,19 +735,4 @@
             </properties>
         </profile>
     </profiles>
-
-    <properties>
-
-        <!-- Testing dependency versions --><!--
-        <jsp.version>2.0</jsp.version>
-        <servlet.version>2.5</servlet.version>
-        <wiser.version>1.2</wiser.version>
-        <commons.lang.version>2.3</commons.lang.version>
-        <spring.security.version>2.0.4</spring.security.version>
-
-        -->
-        <jawr.debug.on>true</jawr.debug.on>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-    </properties>
 </project>
