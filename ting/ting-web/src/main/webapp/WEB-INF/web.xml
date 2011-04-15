@@ -7,6 +7,10 @@
     <description>Conference Manager for the DevNexus Conference</description>
 
     <context-param>
+        <param-name>contextInitializerClasses</param-name>
+        <param-value>com.hillert.apptools.spring.CloudApplicationContextInitializer</param-value>
+    </context-param>
+    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring/mainApplicationContext.xml</param-value>
     </context-param>

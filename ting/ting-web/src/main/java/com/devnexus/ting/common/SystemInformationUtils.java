@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.commons.lang.StringUtils;
+import org.cloudfoundry.runtime.env.CloudEnvironment;
+
 import com.devnexus.ting.common.AppHomeSource;
 import com.devnexus.ting.common.SpringContextMode;
 import org.slf4j.Logger;
@@ -64,7 +66,13 @@ public final class SystemInformationUtils {
 
 		final Apphome apphome = new Apphome();
 
-		if (StringUtils.isNotBlank(System
+		CloudEnvironment env = new CloudEnvironment();
+		if (env.getInstanceInfo() != null) {
+
+			apphome.setAppHomePath(null);
+			apphome.setAppHomeSource(AppHomeSource.CLOUD);
+			
+		} else  if (StringUtils.isNotBlank(System
 				.getProperty(Apphome.APP_HOME_DIRECTORY))) {
 
 			apphome.setAppHomePath(System
