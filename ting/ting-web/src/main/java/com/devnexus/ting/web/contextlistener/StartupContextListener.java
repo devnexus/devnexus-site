@@ -99,6 +99,9 @@ public class StartupContextListener implements ServletContextListener {
                                       + "' not found. Please set '" + Apphome.APP_HOME_DIRECTORY
                                       + "' as a system property or as an environment variable. DEMO Mode, using embedded database.";
                 break;
+            case CLOUD:
+                jrecruiterHomeMessage = "You are running in the cloud (CloudFoundry). No file system access available.";
+                break;
             default: throw new IllegalStateException("Was expecting to resolve a home directory.");
 
         }

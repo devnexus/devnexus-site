@@ -3,12 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:flex="http://www.springframework.org/schema/flex" xmlns:oxm="http://www.springframework.org/schema/oxm"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-                           http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
-                           http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	xmlns:cloud="http://schema.cloudfoundry.org/spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+                           http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
                            http://www.springframework.org/schema/flex    http://www.springframework.org/schema/flex/spring-flex-1.0.xsd
-                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
-                           http://www.springframework.org/schema/oxm     http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd">
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+                           http://www.springframework.org/schema/oxm     http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd
+                           http://schema.cloudfoundry.org/spring         http://schema.cloudfoundry.org/spring/cloudfoundry-spring-0.6.xsd">
 
 	<import resource="classpath:spring/applicationContext-security.xml" />
 
@@ -27,80 +29,88 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="searchSystemEnvironment" value="true" />
-		<property name="locations">
-			<list>
-				<value>file:${TING_HOME}/ting.properties</value>
-			</list>
-		</property>
-	</bean>
+    <bean id="hibernateJpaVendorAdapter"
+        class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="showSql" value="false" />
+        <property name="generateDdl" value="false" />
+    </bean>
+    <bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>classpath:messages</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="cacheSeconds" value="0" />
+    </bean>
 
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
-		<property name="driverClassName" value="${database.jdbc.driverClassName}" />
-		<property name="url" value="${database.jdbc.url}" />
-		<property name="username" value="${database.jdbc.username}" />
-		<property name="password" value="${database.jdbc.password}" />
-		<property name="maxActive" value="100" />
-		<property name="maxIdle" value="30" />
-		<property name="maxWait" value="1000" />
-		<property name="poolPreparedStatements" value="true" />
-		<property name="defaultAutoCommit" value="true" />
-	</bean>
-
-	<bean id="hibernateJpaVendorAdapter"
-		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-		<property name="showSql" value="false" />
-		<property name="generateDdl" value="false" />
-	</bean>
-
-	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
-		<property name="persistenceUnitName" value="base" />
-		<property name="jpaProperties">
-			<props>
-				<prop key="hibernate.dialect">${database.hibernate.dialect}</prop>
-				<prop key="hibernate.query.substitutions">true '1', false '0'</prop>
-				<prop key="hibernate.generate_statistics">true</prop>
-				<prop key="hibernate.cache.use_second_level_cache">true</prop>
-                <prop key="hibernate.cache.use_query_cache">true</prop>
-				<prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
-				<prop key="hibernate.show_sql">${database.hibernate.show_sql}</prop>
-				<prop key="hibernate.format_sql">true</prop>
-				<prop key="hibernate.search.default.directory_provider">org.hibernate.search.store.FSDirectoryProvider</prop>
-				<prop key="hibernate.search.default.indexBase">${TING_HOME}/hibernate</prop>
-			</props>
-		</property>
-	</bean>
-
-	<!--
-
-		<import
-		resource="classpath:org/jrecruiter/server/spring/${jRecruiterSpringContext}.xml"/>
-		<import
-		resource="classpath:org/jrecruiter/server/spring/applicationContext-jpa.xml"/>
-		<import
-		resource="classpath:org/jrecruiter/server/spring/applicationContext-resources.xml"/>
-		<import
-		resource="classpath:org/jrecruiter/server/spring/applicationContext-server.xml"/>
-	-->
-
-	<bean id="messageSource"
-		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="basenames">
-			<list>
-				<value>classpath:messages</value>
-			</list>
-		</property>
-		<property name="defaultEncoding" value="utf-8" />
-		<property name="cacheSeconds" value="0" />
-	</bean>
-
-	<oxm:jaxb2-marshaller id="marshaller">
-		<oxm:class-to-be-bound name="com.devnexus.ting.core.model.Event" />
-	</oxm:jaxb2-marshaller>
+    <oxm:jaxb2-marshaller id="marshaller">
+        <oxm:class-to-be-bound name="com.devnexus.ting.core.model.Event" />
+    </oxm:jaxb2-marshaller>
+    
+    <beans profile="default">
+	    <bean id="propertyConfigurer"
+	        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	        <property name="searchSystemEnvironment" value="true" />
+	        <property name="locations">
+	            <list>
+	                <value>file:${TING_HOME}/ting.properties</value>
+	            </list>
+	        </property>
+	    </bean>
+	    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	        destroy-method="close">
+	        <property name="driverClassName" value="${database.jdbc.driverClassName}" />
+	        <property name="url" value="${database.jdbc.url}" />
+	        <property name="username" value="${database.jdbc.username}" />
+	        <property name="password" value="${database.jdbc.password}" />
+	        <property name="maxActive" value="100" />
+	        <property name="maxIdle" value="30" />
+	        <property name="maxWait" value="1000" />
+	        <property name="poolPreparedStatements" value="true" />
+	        <property name="defaultAutoCommit" value="true" />
+	    </bean>
+	    <bean id="entityManagerFactory"
+	        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	        <property name="dataSource" ref="dataSource" />
+	        <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
+	        <property name="persistenceUnitName" value="base" />
+	        <property name="jpaProperties">
+	            <props>
+	                <prop key="hibernate.dialect">${database.hibernate.dialect}</prop>
+	                <prop key="hibernate.query.substitutions">true '1', false '0'</prop>
+	                <prop key="hibernate.generate_statistics">true</prop>
+	                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+	                <prop key="hibernate.cache.use_query_cache">true</prop>
+	                <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+	                <prop key="hibernate.show_sql">${database.hibernate.show_sql}</prop>
+	                <prop key="hibernate.format_sql">true</prop>
+	            </props>
+	        </property>
+	    </bean>
+    </beans>
+    <beans profile="cloud">
+        <cloud:data-source id="devnexus-db"/>
+        <bean id="entityManagerFactory"
+            class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+            <property name="dataSource" ref="devnexus-db" />
+            <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
+            <property name="persistenceUnitName" value="base" />
+            <property name="jpaProperties">
+                <props>
+                    <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                    <prop key="hibernate.query.substitutions">true '1', false '0'</prop>
+                    <prop key="hibernate.generate_statistics">true</prop>
+                    <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                    <prop key="hibernate.cache.use_query_cache">true</prop>
+                    <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+                    <prop key="hibernate.show_sql">false</prop>
+                    <prop key="hibernate.format_sql">true</prop>
+                    <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+                    
+                </props>
+            </property>
+        </bean>
+    </beans>
 </beans>
