@@ -6,23 +6,22 @@ package com.devnexus.ting.common;
  */
 public enum SpringContextMode {
 
-    DemoContextConfiguration("DemoContextConfiguration"),
-    ProductionContextConfiguration("ProductionContextConfiguration");
+    DemoContextConfiguration("default"),
+    ProductionContextConfiguration("standalone");
 
-    String code;
+    String profile;
 
     /**
      * Constructor.
      *
-     * @param name The name for display puposes.
-     * @param descriptionKey Provides description from the resource bundle.
+     * @param code The Spring context profile identifier.
      */
-    SpringContextMode(final String code) {
-        this.code = code;
+    SpringContextMode(final String profile) {
+        this.profile = profile;
     }
 
     public String getCode() {
-        return code;
+        return profile;
     }
 
 }

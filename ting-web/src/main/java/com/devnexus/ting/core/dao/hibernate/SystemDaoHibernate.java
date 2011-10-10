@@ -22,9 +22,6 @@ public class SystemDaoHibernate implements SystemDao {
     private @Autowired DataSource dataSource;
     private @Autowired LocalContainerEntityManagerFactoryBean fb;
 
-    /* (non-Javadoc)
-     * @see org.jrecruiter.service.DemoService#createDatabase()
-     */
     @Override
     public void updateDatabase() {
 
@@ -36,7 +33,7 @@ public class SystemDaoHibernate implements SystemDao {
 
         Properties props = new Properties();
         props.put("hibernate.connection.provider_class",
-         "org.jrecruiter.service.impl.DemoServiceImpl.HibernateHack");
+         "com.devnexus.ting.core.dao.hibernate.SystemDaoHibernate.HibernateHack");
 
 
         final org.hibernate.tool.hbm2ddl.SchemaUpdate schemaUpdate;
@@ -51,9 +48,6 @@ public class SystemDaoHibernate implements SystemDao {
 
     }
 
-    /* (non-Javadoc)
-     * @see org.jrecruiter.service.DemoService#createDatabase()
-     */
     @Override
     public void createDatabase(boolean outputOnly, String dialect) {
 

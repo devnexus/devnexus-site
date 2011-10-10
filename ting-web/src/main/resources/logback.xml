@@ -38,9 +38,9 @@
   </appender>
 
   <appender name="SMTP" class="ch.qos.logback.classic.net.SMTPAppender">
-    <From>no_reply_errors@jrecruiter.org</From>
-    <Subject>jRecruiter - Error Log</Subject>
-    <To>errors@jrecruiter.org</To>
+    <From>no_reply_errors@devnexus.org</From>
+    <Subject>Ting - Error Log</Subject>
+    <To>errors@devnexus.org</To>
     <SMTPHost>localhost</SMTPHost>
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>ERROR</level>

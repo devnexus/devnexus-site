@@ -1,18 +1,3 @@
-/*
-*	http://www.jrecruiter.org
-*
-*	Disclaimer of Warranty.
-*
-*	Unless required by applicable law or agreed to in writing, Licensor provides
-*	the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS,
-*	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
-*	including, without limitation, any warranties or conditions of TITLE,
-*	NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are
-*	solely responsible for determining the appropriateness of using or
-*	redistributing the Work and assume any risks associated with Your exercise of
-*	permissions under this License.
-*
-*/
 package com.devnexus.ting.core.service.impl;
 
 import org.slf4j.Logger;
@@ -33,10 +18,9 @@ import com.devnexus.ting.core.service.UserService;
 /**
  * Provides user specific services.
  *
- * @author Dorota Puchala
  * @author Gunnar Hillert
  *
- * @version $Id: UserServiceImpl.java 564 2010-06-08 04:36:23Z ghillert $
+ * @since 1.0
  */
 @Service("userService")
 @Transactional

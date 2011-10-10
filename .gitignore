@@ -1,2 +1,6 @@
 .settings
 .project
+.classpath
+TING_HOME_IS_UNDEFINED
+target
+*.db

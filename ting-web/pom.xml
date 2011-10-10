@@ -100,12 +100,12 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>1.0-beta-4</version>
+                <version>1.0</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
                         <goals>
-                            <goal>create</goal>
+                            <goal>create-timestamp</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -128,26 +128,21 @@
                 <directory>src/test/resources</directory>
                 <filtering>true</filtering>
             </testResource>
-            <testResource>
+<!--             <testResource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
-            </testResource>
+            </testResource> -->
         </testResources>
 
     </build>
     <dependencies>
-        <dependency> 
-            <groupId>org.cloudfoundry</groupId> 
-            <artifactId>cloudfoundry-runtime</artifactId> 
+        <dependency>
+            <groupId>org.cloudfoundry</groupId>
+            <artifactId>cloudfoundry-runtime</artifactId>
         </dependency>
 		<dependency>
 				<groupId>org.tuckey</groupId>
 				<artifactId>urlrewritefilter</artifactId>
-		</dependency>
-		<dependency>
-		  <groupId>com.adobe.flex</groupId>
-		  <artifactId>flex-rds-server</artifactId>
-		  <version>4.0.0.14931</version>
 		</dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -358,10 +353,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.flex</groupId>
-            <artifactId>spring-flex</artifactId>
-        </dependency>
 
            <dependency>
              <groupId>antlr</groupId>
@@ -528,7 +519,7 @@
 		    <artifactId>spring-social-core</artifactId>
 		    <version>1.0.0.M1</version>
 		  </dependency>
-		  
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

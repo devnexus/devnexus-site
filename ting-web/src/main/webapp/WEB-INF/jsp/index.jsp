@@ -1,12 +1,12 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <div id="content" class="span-14">
 <div class="first">
-        <p>Welcome to the 2011 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
+        <p>Welcome to the 2012 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
 
-            <h2 style="margin-top: 0;">Welcome to DevNexus 2011 - March 21-22</h2>
+            <h2 style="margin-top: 0;">Welcome to DevNexus 2012 - March 21-22</h2>
 
-            <p><strong style="font-size: 18px">DEVNEXUS 2011 - <span style="color: #FF0000;">SOLD OUT!!</span></strong></p>
+            <p><strong style="font-size: 18px">DEVNEXUS 2012 - <span style="color: #FF0000;">Regsitration will open soon.</span></strong></p>
 
             <p>We have an incredible line-up of presenters covering a wide array of crucial topics. In addition to providing great
 			content for Java developers, DevNexus is a very valuable networking opportunity. This event attracts
@@ -15,11 +15,11 @@
 			favorite tools and practices.</p>
 
             <p>Please check back periodically for speaker and session updates.</p>
-            <p style="font-weight: bold;">We hope to see you at DevNexus 2011!!</p>
+            <p style="font-weight: bold;">We hope to see you at DevNexus 2012!!</p>
             <h2 style="">What?</h2>
 
             <p>Atlanta&#8217;s most exciting conference for professional
-            software developers is back in 2011! Come discover how the
+            software developers is back in 2012! Come discover how the
             industry&#8217;s best minds use the latest technologies to build
             solutions to business problems. Network with other Atlanta software
             developers, and study real life case studies in application design and
@@ -65,18 +65,18 @@
     <h2>Registration</h2>
 
    <div id="signup">
-   <h2><a href="http://ajug.eventwax.com/devnexus-2011/register">SIGN UP</a></h2>
+   <h2><a href="http://ajug.eventwax.com/devnexus-2012/register">SIGN UP</a></h2>
    </div>
 
-    <p>The Standard Ticket is <strong>$195.00</strong>.</p>
+    <p>The Standard Ticket is <strong>TBD</strong>.</p>
     <p>Furthermore, we have a group discount available: If you book 5 tickets
-    or more each ticket is <strong>$175</strong>.</p>
+    or more each ticket is <strong>TBD</strong>.</p>
 
-    <p>Are you are student? We have a limited amount of student tickets priced at $130. Please contact us at: info AT ajug DOT org for details.</p>
+    <p>Are you are student? We have a limited amount of student tickets priced at TBD. Please contact us at: info AT ajug DOT org for details.</p>
 
     <p>Please be aware that we have to close registration on March 15 as we need to
        report our attendee numbers to the Cobb Galleria. Also 2 weeks before the event only late tickets
-       will be available for $220. Therefore, please book your tickets as early as possible!</p>
+       will be available for TBD. Therefore, please book your tickets as early as possible!</p>
 
     <p><strong><a href="http://ajug.eventwax.com/devnexus-2011/register">Book your place now!</a></strong> You know you want to.</p>
 
@@ -88,7 +88,7 @@
         <div class="header">Help us spread the word!</div>
         <div class="body">
 	        <ul>
-	            <li><a href="${ctx}/static/2011/files/promo/DevNexus-2011-flyer.pdf" >DevNexus 2011 Flyer</a></li>
+	            <li><a href="${ctx}/static/2011/files/promo/DevNexus-2012-flyer.pdf" >DevNexus 2012 Flyer</a></li>
 	        </ul>
         </div>
     </div>
