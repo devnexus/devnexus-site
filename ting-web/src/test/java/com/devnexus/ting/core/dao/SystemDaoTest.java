@@ -27,8 +27,10 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
      */
     @Test
     public void testGenerateSchema() {
-    	systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
+    	//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
     	//systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
+    	systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
+
     }
 
 }

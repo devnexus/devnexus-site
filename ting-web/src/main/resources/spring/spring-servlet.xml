@@ -103,15 +103,6 @@
           explicit AnnotationMethodHandlerAdapter -->
     <!--  >mvc:annotation-driven conversion-service="conversionService"/ -->
 
-    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="order" value="1"/>
-        <property name="mappings">
-        <value>
-        /messagebroker/*=_messageBroker
-        </value>
-        </property>
-    </bean>
-
   <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
       <property name="order" value="2" />
   </bean>
@@ -131,14 +122,6 @@
 
    <bean id="jaxbJacksonObjectMapper" class="com.devnexus.ting.web.JaxbJacksonObjectMapper"/>
 
-    <!--  -->
-
-    <flex:message-broker>
-        <flex:remoting-service default-channels="my-amf"/>
-    </flex:message-broker>
-
-    <bean id="flexService" class="com.devnexus.ting.web.flex.FlexService" />
-
     <bean id="multipartResolver"
         class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- one of the properties available; the maximum file size in bytes -->
@@ -155,13 +138,5 @@
          <bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
      </mvc:interceptor>
   </mvc:interceptors>
-
-    <oxm:jaxb2-marshaller id="jaxbMarshaller">
-       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.Presentation"/>
-       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.PresentationList"/>
-       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.Speaker"/>
-       <oxm:class-to-be-bound name="com.devnexus.ting.core.model.SpeakerList"/>
-    </oxm:jaxb2-marshaller>
-
 
 </beans>

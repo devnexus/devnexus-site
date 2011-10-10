@@ -20,10 +20,6 @@ import org.springframework.test.context.ContextConfiguration;
  * @author Gunnar Hillert
  * @version $Id: IndustryDaoTest.java 605 2010-08-31 05:31:30Z ghillert $
  */
-@ContextConfiguration(
-        locations={
-                "classpath:spring/applicationContext-security.xml"
-                 })
 public class SecurityServicesTest extends BaseDaoIntegrationTest {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(SecurityServicesTest.class);

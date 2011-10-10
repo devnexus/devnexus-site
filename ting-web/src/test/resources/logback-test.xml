@@ -33,9 +33,6 @@
   <logger name="net.jawr">
     <level value="INFO"/>
   </logger>
-  <logger name="org.jrecruiter">
-    <level value="INFO"/>
-  </logger>
   <logger name="com.opensymphony.xwork2.ognl.OgnlValueStack">
     <level value="ERROR"/>
   </logger>
