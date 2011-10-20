@@ -5,7 +5,7 @@
 <div id="content" class="span-22 last">
 	<div class="quote"><span>What the community says:</span> "great networking opportunity, excellent technical knowledge transfer"</div>
 
-	    <h2>Organizers</h2>
+	    <h2>Your Organizers</h2>
         <ul>
             <c:forEach items="${organizerList.organizers}" var="organizer">
                 <li><a href="#${organizer.firstName}_${organizer.lastName}"><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></a></li>
