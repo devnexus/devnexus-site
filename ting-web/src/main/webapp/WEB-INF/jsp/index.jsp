@@ -47,7 +47,7 @@
             <p>*Please keep in mind that the exact schedule of presentations
             may still change.</p>
     </div>
-    <h2>When?</h2>
+    <h2>When is it?</h2>
     <h3>Monday, <strong>March 21</strong> 2011 and Tuesday, <strong>March 22</strong> 2011</h3>
 
     <h2>Where?</h2>
