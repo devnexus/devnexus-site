@@ -62,19 +62,8 @@
     <logger name="org.codehaus.jackson">
     <level value="WARN"/>
   </logger>
-
-
-  <logger name="org.apache.struts">
-    <level value="WARN"/>
-  </logger>
-  <logger name="org.apache.commons.validator">
-    <level value="WARN"/>
-  </logger>
-  <logger name="org.hibernate.cache">
-    <level value="WARN"/>
-  </logger>
   <logger name="org.hibernate.type">
-    <level value="INFO"/>
+    <level value="WARN"/>
   </logger>
   <logger name="org.apache">
     <level value="WARN"/>

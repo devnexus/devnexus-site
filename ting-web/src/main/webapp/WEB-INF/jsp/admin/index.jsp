@@ -8,5 +8,6 @@
           <li><a href="${ctx}/s/admin/events">Manage Events</a></li>
           <li><a href="${ctx}/s/admin/presentations">Manage Presentations</a></li>
           <li><a href="${ctx}/s/admin/speakers">Manage Speakers</a></li>
+          <li><a href="${ctx}/s/admin/organizers">Manage Organizers</a></li>
     </ul>
 </div>

@@ -1,3 +1,18 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.hillert.apptools.spring;
 
 import org.slf4j.Logger;
@@ -20,13 +35,13 @@ import com.devnexus.ting.core.service.SystemSetupService;
 public class ContextRefreshedEventListener implements
                                ApplicationListener < ContextRefreshedEvent > {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ContextRefreshedEventListener.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ContextRefreshedEventListener.class);
 
-	@Autowired
-	private SystemSetupService systemSetupService;
+    @Autowired
+    private SystemSetupService systemSetupService;
 
-	@Autowired
-	Environment environment;
+    @Autowired
+    Environment environment;
 
     /**
     *
@@ -53,9 +68,9 @@ public class ContextRefreshedEventListener implements
                //systemSetupService.loadAndRestoreSeedData();
 
                if (environment.acceptsProfiles(SpringContextMode.DemoContextConfiguration.getCode())) {
-            	   LOGGER.info("Ting Database is not setup, yet. Populating Demo Data...");
+                   LOGGER.info("Ting Database is not setup, yet. Populating Demo Data...");
 
-            	   //FIXME need to populate demo data.
+                   //FIXME need to populate demo data.
 
                }
 

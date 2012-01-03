@@ -1,3 +1,18 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.devnexus.ting.core.service.impl;
 
 import java.util.List;
@@ -7,7 +22,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
 
+import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
@@ -21,121 +38,209 @@ import com.devnexus.ting.core.service.BusinessService;
 /**
  *
  * @author Gunnar Hillert
- *
- * @version $Id: UserServiceImpl.java 564 2010-06-08 04:36:23Z ghillert $
+ * @since 1.0
  */
 @Service("businessService")
-@Transactional
 public class BusinessServiceImpl implements BusinessService {
-
-	@Autowired private PresentationDao presentationDao;
-	@Autowired private SpeakerDao      speakerDao;
-	@Autowired private EventDao        eventDao;
-	@Autowired private OrganizerDao    organizerDao;
 
     /**
      *   Initialize Logging.
      */
     private final static Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
-	@Override
-	public List<Presentation> getAllPresentations() {
-		return presentationDao.getAll();
-	}
+    @Autowired private EventDao        eventDao;
+    @Autowired private OrganizerDao    organizerDao;
+    @Autowired private PresentationDao presentationDao;
+    @Autowired private SpeakerDao      speakerDao;
 
-	@Override
-	public List<Speaker> getAllSpeakers() {
-		return speakerDao.getAllSpeakersOrderedByName();
-	}
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void deleteEvent(Event event) {
+        Assert.notNull(event, "The provided event must not be null.");
+        Assert.notNull(event.getId(), "Id must not be Null for event " + event);
 
-	@Override
-	public void saveEvent(Event event) {
-		eventDao.save(event);
-	}
+        LOGGER.debug("Deleting Event {}", event);
+        eventDao.remove(event);
+    }
 
-	@Override
-	public List<Event> getAllEvents() {
-		return eventDao.getAll();
-	}
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void deleteOrganizer(Organizer organizerFromDb) {
 
-	@Override
-	public void savePresentation(Presentation presentation) {
-		presentationDao.save(presentation);
-	}
+        Assert.notNull(organizerFromDb,         "The provided organizer must not be null.");
+        Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
 
-	@Override
-	public Speaker saveSpeaker(Speaker speaker) {
-		return speakerDao.save(speaker);
-	}
+        LOGGER.debug("Deleting Organizer {}", organizerFromDb);
+        organizerDao.remove(organizerFromDb);
+    }
 
-	@Override
-	public Speaker getSpeaker(Long speakerId) {
-		return speakerDao.get(speakerId);
-	}
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void deletePresentation(Presentation presentation) {
 
-	@Override
-	public void deleteEvent(Event event) {
-		eventDao.remove(event);
-	}
+        Assert.notNull(presentation,         "The provided presentation must not be null.");
+        Assert.notNull(presentation.getId(), "Id must not be Null for presentation " + presentation);
 
-	@Override
-	public Event getEvent(Long id) {
-		return eventDao.get(id);
-	}
+        LOGGER.debug("Deleting Presentation {}", presentation);
 
-	@Override
-	public void deletePresentation(Presentation presentation) {
-		presentationDao.remove(presentation);
-	}
+        presentationDao.remove(presentation);
 
-	@Override
-	public void deleteSpeaker(Speaker speaker) {
-		speakerDao.remove(speaker);
-	}
+    }
 
-	@Override
-	public Presentation getPresentation(Long id) {
-		return presentationDao.get(id);
-	}
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void deleteSpeaker(Speaker speaker) {
 
-	@Override
-	public List<Presentation> getPresentationsForCurrentEvent() {
-		return presentationDao.getPresentationsForCurrentEvent();
-	}
+        Assert.notNull(speaker,         "The provided speaker must not be null.");
+        Assert.notNull(speaker.getId(), "Id must not be Null for speaker " + speaker);
 
-	@Override
-	public List<Presentation> getPresentationsForEvent(Long eventId) {
-		return presentationDao.getPresentationsForEvent(eventId);
-	}
+        LOGGER.debug("Deleting Speaker {}", speaker);
 
-	@Override
-	public List<Speaker> getSpeakersForCurrentEvent() {
-		return speakerDao.getSpeakersForCurrentEvent();
-	}
+        speakerDao.remove(speaker);
+    }
 
-	@Override
-	public List<Speaker> getSpeakersForEvent(Long eventId) {
-		return speakerDao.getSpeakersForEvent(eventId);
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Event> getAllEventsOrderedByName() {
+        return eventDao.getAllEventsOrderedByName();
+    }
 
-	@Override
-	public Event getEventByEventKey(String eventKey) {
-		return eventDao.getByEventKey(eventKey);
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Event> getAllNonCurrentEvents() {
+        return eventDao.getAllNonCurrentEvents();
+    }
 
-	@Override
-	public List<Event> getAllNonCurrentEvents() {
-		return eventDao.getAllNonCurrentEvents();
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Organizer> getAllOrganizers() {
+        return organizerDao.getAllOrganizers();
+    }
 
-	@Override
-	public List<Organizer> getAllOrganizers() {
-		return organizerDao.getAllOrganizers();
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Presentation> getAllPresentations() {
+        return presentationDao.getAll();
+    }
 
-	@Override
-	public Organizer getOrganizer(final Long organizerId) {
-		return organizerDao.get(organizerId);
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Speaker> getAllSpeakersOrderedByName() {
+        return speakerDao.getAllSpeakersOrderedByName();
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public Event getEvent(Long id) {
+        return eventDao.get(id);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public Event getEventByEventKey(String eventKey) {
+        return eventDao.getByEventKey(eventKey);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public Organizer getOrganizer(final Long organizerId) {
+        return organizerDao.get(organizerId);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public Organizer getOrganizerWithPicture(Long organizerId) {
+        return organizerDao.getOrganizerWithPicture(organizerId);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public Presentation getPresentation(Long id) {
+        return presentationDao.get(id);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public List<Presentation> getPresentationsForCurrentEvent() {
+        return presentationDao.getPresentationsForCurrentEvent();
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public List<Presentation> getPresentationsForEvent(Long eventId) {
+        return presentationDao.getPresentationsForEvent(eventId);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public Speaker getSpeaker(Long speakerId) {
+        return speakerDao.get(speakerId);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional(readOnly=false)
+    public byte[] getSpeakerImage(Long speakerId) {
+
+        Assert.notNull(speakerId, "SpeakerId must not be null.");
+
+        final Speaker speaker = getSpeaker(speakerId);
+
+        final byte[] speakerPicture;
+
+        if (speaker==null || speaker.getPicture() == null) {
+            speakerPicture = SystemInformationUtils.getSpeakerImage(null);
+        } else {
+            speakerPicture = speaker.getPicture().getFileData();
+        }
+
+        return speakerPicture;
+
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public List<Speaker> getSpeakersForCurrentEvent() {
+        return speakerDao.getSpeakersForCurrentEvent();
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public List<Speaker> getSpeakersForEvent(Long eventId) {
+        return speakerDao.getSpeakersForEvent(eventId);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void saveEvent(Event event) {
+        eventDao.save(event);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public Organizer saveOrganizer(Organizer organizer) {
+        return organizerDao.save(organizer);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public void savePresentation(Presentation presentation) {
+        presentationDao.save(presentation);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public Speaker saveSpeaker(Speaker speaker) {
+        return speakerDao.save(speaker);
+    }
 
 }

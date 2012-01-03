@@ -11,7 +11,6 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.devnexus.ting.core.model.SchemaMigration;
-import com.devnexus.ting.core.model.Speaker;
 
 /**
  * @author Gunnar Hillert

@@ -3,14 +3,8 @@
  */
 package com.devnexus.ting.core.dao;
 
-import java.util.List;
-
-import junit.framework.Assert;
-
-import com.devnexus.ting.core.dao.BaseDaoIntegrationTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 /**
  * @author Gunnar Hillert
@@ -28,8 +22,8 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
     @Test
     public void testGenerateSchema() {
     	//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
-    	//systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
-    	systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
+    	systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
+    	//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
 
     }
 

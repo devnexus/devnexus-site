@@ -1,7 +1,21 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -10,9 +24,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.site.SitePreference;
-import org.springframework.social.twitter.SearchResults;
-import org.springframework.social.twitter.Tweet;
-import org.springframework.social.twitter.TwitterTemplate;
+import org.springframework.social.twitter.api.SearchResults;
+import org.springframework.social.twitter.api.impl.TwitterTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +35,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
-import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -35,7 +47,7 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller
 public class SiteController {
 
-	@Autowired private BusinessService businessService;
+    @Autowired private BusinessService businessService;
 
     /** serialVersionUID. */
     private static final long serialVersionUID = -3422780336408883930L;
@@ -71,13 +83,13 @@ public class SiteController {
     @RequestMapping("/organizers")
     public String getOrganizers(final Model model, final SitePreference sitePreference) {
 
-    	final List<Organizer>organizers = businessService.getAllOrganizers();
+        final List<Organizer>organizers = businessService.getAllOrganizers();
 
-    	final OrganizerList organizerList = new OrganizerList(organizers);
-    	model.addAttribute("organizerList", organizerList);
+        final OrganizerList organizerList = new OrganizerList(organizers);
+        model.addAttribute("organizerList", organizerList);
 
 
-    	model.addAttribute("organizers", organizers);
+        model.addAttribute("organizers", organizers);
 
         if (sitePreference.isMobile()) {
             return "organizers-mobile";
@@ -90,36 +102,38 @@ public class SiteController {
     @RequestMapping(value="/organizers/{organizerId}.jpg", method=RequestMethod.GET)
     public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
 
-    	final Organizer organizer = businessService.getOrganizer(organizerId);
+        final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
 
-    	final InputStream organizerPicture;
+        final byte[] organizerPicture;
 
-    	if (organizer==null) {
-    		organizerPicture = SystemInformationUtils.getOrganizerImage(null);
-    	} else {
-    		organizerPicture = SystemInformationUtils.getOrganizerImage(organizer.getPicture());
-    	}
+        if (organizer==null || organizer.getPicture() == null) {
+            organizerPicture = SystemInformationUtils.getOrganizerImage(null);
+            response.setContentType("image/jpg");
+        } else {
+            organizerPicture = organizer.getPicture().getFileData();
+            response.setContentType(organizer.getPicture().getType());
+        }
 
         try {
-			org.apache.commons.io.IOUtils.copy(organizerPicture, response.getOutputStream());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+            org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
+        } catch (IOException e) {
+            throw new IllegalStateException(e);
+        }
 
-        response.setContentType("image/jpg");
+
 
     }
 
     @RequestMapping(value="/twitter", method=RequestMethod.GET)
     public String getTwitterFeed(Model model) {
 
-    	final TwitterTemplate twitterTemplate = new TwitterTemplate();
-    	SearchResults searchResults = twitterTemplate.search("devnexus");
+        final TwitterTemplate twitterTemplate = new TwitterTemplate();
 
-    	model.addAttribute("tweets", searchResults.getTweets());
+        final SearchResults searchResults = twitterTemplate.searchOperations().search("devnexus");
 
-    	return "twitter-feed-mobile";
+        model.addAttribute("tweets", searchResults.getTweets());
+
+        return "twitter-feed-mobile";
 
     }
 

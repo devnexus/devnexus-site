@@ -3,18 +3,11 @@
  */
 package com.devnexus.ting.core.dao;
 
-import java.util.List;
-
-import junit.framework.Assert;
-
-import com.devnexus.ting.core.dao.BaseDaoIntegrationTest;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
-import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ContextConfiguration;
 
 /**
  * @author Gunnar Hillert
