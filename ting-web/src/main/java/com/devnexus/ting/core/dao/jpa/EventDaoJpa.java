@@ -1,13 +1,33 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.devnexus.ting.core.dao.jpa;
 
 import java.util.List;
 
-import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.model.Event;
 
+/**
+ *
+ * @author Gunnar Hillert
+ * @since  1.0
+ *
+ */
 @Repository("eventDao")
 public class EventDaoJpa extends GenericDaoJpa< Event, Long>
                            implements EventDao {
@@ -17,25 +37,32 @@ public class EventDaoJpa extends GenericDaoJpa< Event, Long>
         super(Event.class);
     };
 
-	@Override
-	public Event getByEventKey(String eventKey) {
-		return super.entityManager.createQuery("select event from Event event where event.eventKey = :eventKey", Event.class)
-		                          .setParameter("eventKey", eventKey)
-		                          .getSingleResult();
-	}
+    /** {@inheritDoc} */
+    @Override
+    public List<Event> getAllEventsOrderedByName() {
+        return super.entityManager.createQuery("select event from Event event "
+                                             + "order by event.title ASC", Event.class)
+                                  .getResultList();
+    }
 
-	@Override
-	public List<Event> getAllNonCurrentEvents() {
+    /** {@inheritDoc} */
+    @Override
+    public List<Event> getAllNonCurrentEvents() {
 
+        return super.entityManager.createQuery("select event from Event event "
+                + "where event.current = :current "
+                + "order by event.title ASC", Event.class)
+                                  .setParameter("current", false)
+                                  .setHint("org.hibernate.cacheable", true)
+                                  .getResultList();
+    }
 
-//		System.out.println(this.entityManager.unwrap(Session.class).getSessionFactory().getStatistics());
-
-	return super.entityManager.createQuery("select event from Event event "
-			+ "where event.current = :current "
-			+ "order by event.title ASC", Event.class)
-			                  .setParameter("current", false)
-			                  .setHint("org.hibernate.cacheable", true)
-			                  .getResultList();
-	}
+    /** {@inheritDoc} */
+    @Override
+    public Event getByEventKey(String eventKey) {
+        return super.entityManager.createQuery("select event from Event event where event.eventKey = :eventKey", Event.class)
+                                  .setParameter("eventKey", eventKey)
+                                  .getSingleResult();
+    }
 
 }

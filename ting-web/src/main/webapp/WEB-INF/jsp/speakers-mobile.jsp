@@ -37,8 +37,7 @@
                 <div data-role="content">
                     <img src="${ctx}/s/speakers/${speaker.id}.jpg"/>
                     <p>
-		                  <c:set var="speakerBio"><c:out value="${speaker.bio}" escapeXml="true"/></c:set>
-		                  <c:out value="${fn:replace(speakerBio, lf, '<br/>')}" escapeXml="false"/>
+                        <c:out value="${speaker.bioAsHtml}" escapeXml="false"/>
                     </p>
 
                     <c:if test="${!empty speaker.presentations}">

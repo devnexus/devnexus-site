@@ -31,10 +31,7 @@
     <level value="WARN"/>
   </logger>
   <logger name="net.jawr">
-    <level value="INFO"/>
-  </logger>
-  <logger name="com.opensymphony.xwork2.ognl.OgnlValueStack">
-    <level value="ERROR"/>
+    <level value="WARN"/>
   </logger>
   <root>
     <level value="INFO"/>

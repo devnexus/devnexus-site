@@ -1,3 +1,18 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.devnexus.ting.web.controller.admin;
 
 import java.util.HashSet;
@@ -34,9 +49,9 @@ import com.devnexus.ting.web.form.EventForm;
 @Controller
 public class EventController {
 
-	@Autowired private BusinessService businessService;
+    @Autowired private BusinessService businessService;
 
-	@Autowired private Validator validator;
+    @Autowired private Validator validator;
 
 
     /** serialVersionUID. */
@@ -49,11 +64,11 @@ public class EventController {
     @RequestMapping(value="/admin/event", method=RequestMethod.GET)
     public String prepareAddEvent(ModelMap model) {
 
-    	final EventForm eventForm = new EventForm();
-    	model.addAttribute(eventForm);
+        final EventForm eventForm = new EventForm();
+        model.addAttribute(eventForm);
 
-    	final List<Speaker>speakers = businessService.getAllSpeakers();
-    	model.addAttribute("speakers", speakers);
+        final List<Speaker>speakers = businessService.getAllSpeakersOrderedByName();
+        model.addAttribute("speakers", speakers);
 
         return "/admin/add-event";
     }
@@ -61,15 +76,15 @@ public class EventController {
     @RequestMapping(value="/admin/event/{id}", method=RequestMethod.GET)
     public String prepareEditEvent(@PathVariable("id") Long eventId, ModelMap model) {
 
-    	final EventForm eventForm = new EventForm();
+        final EventForm eventForm = new EventForm();
 
-		final Event event = businessService.getEvent(eventId);
-		eventForm.setEvent(event);
+        final Event event = businessService.getEvent(eventId);
+        eventForm.setEvent(event);
 
-    	model.addAttribute(eventForm);
+        model.addAttribute(eventForm);
 
-    	final List<Speaker>speakers = businessService.getAllSpeakers();
-    	model.addAttribute("speakers", speakers);
+        final List<Speaker>speakers = businessService.getAllSpeakersOrderedByName();
+        model.addAttribute("speakers", speakers);
 
         return "/admin/add-event";
     }
@@ -78,48 +93,55 @@ public class EventController {
     public String editEvent(@PathVariable("id") Long eventId, @Valid EventForm eventForm, BindingResult bindingResult, HttpServletRequest request) {
 
         if (request.getParameter("cancel") != null) {
-        	return "redirect:/s/admin/index";
+            return "redirect:/s/admin/index";
         }
 
         if (request.getParameter("delete") != null) {
 
-        	if (eventForm.getEvent().getId() != null) {
-        		final Event event = businessService.getEvent(eventForm.getEvent().getId());
+            if (eventForm.getEvent().getId() != null) {
+                final Event event = businessService.getEvent(eventForm.getEvent().getId());
 
-        		if (event == null) {
-        			throw new IllegalStateException("No event exists for id " + eventForm.getEvent().getId());
-        		}
+                if (event == null) {
+                    throw new IllegalStateException("No event exists for id " + eventForm.getEvent().getId());
+                }
 
-        		businessService.deleteEvent(event);
-        		FlashMap.setSuccessMessage("Event successfully deleted.");
-        		return "redirect:/s/admin/index";
-        	} else {
-        		throw new IllegalStateException("No event id provided. Cannot delete.");
-        	}
+                businessService.deleteEvent(event);
+                FlashMap.setSuccessMessage("Event successfully deleted.");
+                return "redirect:/s/admin/index";
+            } else {
+                throw new IllegalStateException("No event id provided. Cannot delete.");
+            }
 
         }
 
         if (bindingResult.hasErrors()) {
-        	return "/admin/add-event";
+            return "/admin/add-event";
         }
 
         final Event eventFromDb = businessService.getEvent(eventId);
 
         eventFromDb.setTitle(eventForm.getEvent().getTitle());
         eventFromDb.setEventKey(eventForm.getEvent().getEventKey());
+        eventFromDb.setCurrent(eventForm.getEvent().isCurrent());
 
         Set<Speaker> speakers = new HashSet<Speaker>();
-        for (Speaker speaker : eventForm.getEvent().getSpeakers()) {
-        	Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
-        	speakers.add(speakerFromDb);
+
+        if (eventForm.getEvent().getSpeakers() != null
+                && !eventForm.getEvent().getSpeakers().isEmpty()) {
+
+            for (Speaker speaker : eventForm.getEvent().getSpeakers()) {
+                Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
+                speakers.add(speakerFromDb);
+            }
+
+            eventFromDb.setSpeakers(speakers);
+
         }
 
-        eventFromDb.setSpeakers(speakers);
-
         validator.validate(eventForm);
-    	eventForm.getEvent().getEventKey();
+        eventForm.getEvent().getEventKey();
 
-    	businessService.saveEvent(eventFromDb);
+        businessService.saveEvent(eventFromDb);
 
         return "redirect:/s/admin/index";
     }
@@ -128,42 +150,42 @@ public class EventController {
     public String addEvent(@Valid EventForm eventForm, BindingResult bindingResult, HttpServletRequest request) {
 
         if (request.getParameter("cancel") != null) {
-        	return "redirect:/s/admin/index";
+            return "redirect:/s/admin/index";
         }
 
         if (request.getParameter("delete") != null) {
 
-        	if (eventForm.getEvent().getId() != null) {
-        		final Event event = businessService.getEvent(eventForm.getEvent().getId());
+            if (eventForm.getEvent().getId() != null) {
+                final Event event = businessService.getEvent(eventForm.getEvent().getId());
 
-        		if (event == null) {
-        			throw new IllegalStateException("No event exists for id " + eventForm.getEvent().getId());
-        		}
+                if (event == null) {
+                    throw new IllegalStateException("No event exists for id " + eventForm.getEvent().getId());
+                }
 
-        		businessService.deleteEvent(event);
-        		FlashMap.setSuccessMessage("Event successfully deleted.");
-        		return "redirect:/s/admin/index";
-        	} else {
-        		throw new IllegalStateException("No event id provided. Cannot delete.");
-        	}
+                businessService.deleteEvent(event);
+                FlashMap.setSuccessMessage("Event successfully deleted.");
+                return "redirect:/s/admin/index";
+            } else {
+                throw new IllegalStateException("No event id provided. Cannot delete.");
+            }
 
         }
 
         if (bindingResult.hasErrors()) {
-        	return "/admin/add-event";
+            return "/admin/add-event";
         }
 
         Set<Speaker> speakers = new HashSet<Speaker>();
         if (eventForm.getEvent().getSpeakers() != null) {
-	        for (Speaker speaker : eventForm.getEvent().getSpeakers()) {
-	        	Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
-	        	speakers.add(speakerFromDb);
-	        }
+            for (Speaker speaker : eventForm.getEvent().getSpeakers()) {
+                Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
+                speakers.add(speakerFromDb);
+            }
         }
 
         eventForm.getEvent().setSpeakers(speakers);
 
-    	businessService.saveEvent(eventForm.getEvent());
+        businessService.saveEvent(eventForm.getEvent());
 
         return "redirect:/s/admin/index";
     }
@@ -171,8 +193,8 @@ public class EventController {
     @RequestMapping(value="/admin/events", method=RequestMethod.GET)
     public String getEvents(ModelMap model, HttpServletRequest request) {
 
-    	final List<Event> events = businessService.getAllEvents();
-    	model.addAttribute("events", events);
+        final List<Event> events = businessService.getAllEventsOrderedByName();
+        model.addAttribute("events", events);
 
         return "/admin/manage-events";
     }

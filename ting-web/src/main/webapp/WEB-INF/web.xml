@@ -54,8 +54,8 @@
         <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
     </filter>
     <filter>
-        <filter-name>sitemesh</filter-name>
-        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+      <filter-name>sitemesh</filter-name>
+      <filter-class>com.hillert.apptools.spring.SpringMobileSiteMeshFilter</filter-class>
     </filter>
     <!-- Allows attributes to be accessed on the next request (typically success messages) -->
     <!-- Note: this is a sample-specific implementation of the FlashMap concept -->
@@ -81,10 +81,10 @@
         <filter-name>loggingFilter4Logback</filter-name>
         <filter-class>com.devnexus.ting.web.filter.LoggingFilter4Logback</filter-class>
     </filter>
-	  <filter-mapping>
-	     <filter-name>UrlRewriteFilter</filter-name>
-	     <url-pattern>/proxy/*</url-pattern>
-	  </filter-mapping>
+    <filter-mapping>
+       <filter-name>UrlRewriteFilter</filter-name>
+       <url-pattern>/proxy/*</url-pattern>
+    </filter-mapping>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -99,7 +99,6 @@
         <filter-name>lazyLoadingFilter</filter-name>
         <url-pattern>*.html</url-pattern>
         <url-pattern>/s/*</url-pattern>
-        <url-pattern>/flex/*</url-pattern>
         <url-pattern>/rss/*</url-pattern>
         <url-pattern>/j_spring_security_check</url-pattern>
     </filter-mapping>
@@ -117,7 +116,7 @@
     </filter-mapping>
     <filter-mapping>
         <filter-name>sitemesh</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/s/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>responseAddHttpHeadersFilter</filter-name>
@@ -130,42 +129,42 @@
     </filter-mapping>
 
     <!-- JAWR specific servlets -->
-	<servlet>
-		<servlet-name>JavascriptServlet</servlet-name>
-		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
-		<init-param>
-			<param-name>configLocation</param-name>
-			<param-value>/jawr.properties</param-value>
-		</init-param>
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-	<servlet>
-		<servlet-name>JawrImgServlet</servlet-name>
-		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
-		<init-param>
-			<param-name>type</param-name>
-			<param-value>img</param-value>
-		</init-param>
-		<init-param>
-			<param-name>configLocation</param-name>
-			<param-value>/jawr.properties</param-value>
-		</init-param>
-		<!-- The Jawr Image servlet must start before the Jawr CSS Servlet -->
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-	<servlet>
-		<servlet-name>CssServlet</servlet-name>
-		<servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
-		<init-param>
-			<param-name>configLocation</param-name>
-			<param-value>/jawr.properties</param-value>
-		</init-param>
-		<init-param>
-			<param-name>type</param-name>
-			<param-value>css</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+  <servlet>
+    <servlet-name>JavascriptServlet</servlet-name>
+    <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+    <init-param>
+      <param-name>configLocation</param-name>
+      <param-value>/jawr.properties</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>JawrImgServlet</servlet-name>
+    <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+    <init-param>
+      <param-name>type</param-name>
+      <param-value>img</param-value>
+    </init-param>
+    <init-param>
+      <param-name>configLocation</param-name>
+      <param-value>/jawr.properties</param-value>
+    </init-param>
+    <!-- The Jawr Image servlet must start before the Jawr CSS Servlet -->
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>CssServlet</servlet-name>
+    <servlet-class>net.jawr.web.servlet.JawrServlet</servlet-class>
+    <init-param>
+      <param-name>configLocation</param-name>
+      <param-value>/jawr.properties</param-value>
+    </init-param>
+    <init-param>
+      <param-name>type</param-name>
+      <param-value>css</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
 
     <!-- Spring -->
 
@@ -182,26 +181,21 @@
     <servlet-mapping>
         <servlet-name>spring-mvc</servlet-name>
         <url-pattern>/s/*</url-pattern>
-        <url-pattern>/flex/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>spring-mvc</servlet-name>
-        <url-pattern>/messagebroker/*</url-pattern>
     </servlet-mapping>
 
-	<servlet-mapping>
-		<servlet-name>JavascriptServlet</servlet-name>
-		<url-pattern>*.js</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>CssServlet</servlet-name>
-		<url-pattern>*.css</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>JawrImgServlet</servlet-name>
-		<url-pattern>*.png</url-pattern>
-		<url-pattern>*.gif</url-pattern>
-	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JavascriptServlet</servlet-name>
+    <url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CssServlet</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JawrImgServlet</servlet-name>
+    <url-pattern>*.png</url-pattern>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
@@ -225,4 +219,11 @@
     <session-config>
         <session-timeout>20</session-timeout>
     </session-config>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
 </web-app>

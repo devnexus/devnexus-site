@@ -1,6 +1,5 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-
 <title>Manage Speakers</title>
     <h2>Manage Speakers</h2>
 
@@ -15,7 +14,7 @@
                 <jmesa:htmlRow>
                      <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
                         <a title="Speaker Detail" href="${ctx}/s/admin/speaker/${speaker.id}">
-                            <img alt="Details" title="Details" src="${ctx}/images/icons/crystal/viewmag.png"/>
+                            <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
                         </a>
                     </jmesa:htmlColumn>
                     <jmesa:htmlColumn property="firstName" title="First Name"/>

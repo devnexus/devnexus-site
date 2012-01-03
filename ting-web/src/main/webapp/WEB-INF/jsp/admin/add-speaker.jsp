@@ -14,13 +14,8 @@
             <form:errors path="lastName" cssClass="fieldError"/>
         </div>
         <c:if test="${speaker.picture != null}">
-           <img src="${ctx}/s/speaker/${speaker.id}.jpg"/>
+           <img src="${ctx}/s/speakers/${speaker.id}.jpg"/>
         </c:if>
-        <div class="required">
-            <label for="picture">Picture</label>
-            <form:input  path="picture" id="picture" maxlength="255" tabindex="3" cssStyle="width: 300px;"/>
-            <form:errors path="picture" cssClass="fieldError"/>
-        </div>
         <div class="required">
             <label for="pictureFile">Picture</label>
             <input id="pictureFile" type="file" name="pictureFile" />
@@ -29,6 +24,11 @@
             <label for="bio">Bio</label>
             <form:textarea  path="bio" id="bio" tabindex="5" cssStyle="width: 300px;"/>
             <form:errors path="bio" cssClass="fieldError"/>
+        </div>
+        <div class="required">
+            <label for="twitterId">Twitter Id</label>
+            <form:input  path="twitterId" id="twitterId" maxlength="255" tabindex="6" cssStyle="width: 300px;"/>
+            <form:errors path="twitterId" cssClass="fieldError"/>
         </div>
         <div class="submit">
             <input type="submit" class="button" name="save"   value="Add"/>

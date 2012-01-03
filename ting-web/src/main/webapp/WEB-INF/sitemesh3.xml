@@ -1,0 +1,4 @@
+<sitemesh>
+  <mapping                 decorator="/WEB-INF/jsp/decorators/default.jsp"/>
+  <mapping path="/s/admin/*" decorator="/WEB-INF/jsp/decorators/admin.jsp"/>
+</sitemesh>

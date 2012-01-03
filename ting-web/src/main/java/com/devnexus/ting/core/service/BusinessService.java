@@ -1,3 +1,18 @@
+/*
+ * Copyright 2002-2011 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.devnexus.ting.core.service;
 
 import java.util.List;
@@ -8,54 +23,169 @@ import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
 
 /**
- * Provides user related methods.
+ * The central service layer of Ting.
  *
  * @author Gunnar Hillert
+ * @since 1.0
  *
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
  */
 public interface BusinessService {
 
-	/**
-	 *
-	 * @return
-	 */
-	public List<Speaker> getAllSpeakers();
+    /**
+     * Delete the provided {@link Event}. The Id of the {@link Event} must be set.
+     * @param event The {@link Event} to delete. Must not be null.
+     */
+    void deleteEvent(Event event);
 
-	/**
-	 *
-	 * @return
-	 */
-	public List<Presentation> getAllPresentations();
+    /**
+     * Delete the provided {@link Organizer}. The Id of the {@link Organizer} must be set.
+     * @param organizerFromDb The {@link Organizer} to delete. Must not be null.
+     */
+    void deleteOrganizer(Organizer organizerFromDb);
 
-	public void saveEvent(Event event);
+    /**
+     * Delete the provided {@link Presentation}. The Id of the {@link Presentation} must be set.
+     * @param presentation The {@link Presentation} to delete. Must not be null.
+     */
+    void deletePresentation(Presentation presentation);
 
-	public List<Event> getAllEvents();
+    /**
+     * Delete the provided {@link Speaker}. The Id of the {@link Speaker} must be set.
+     * @param presentation The {@link Speaker} to delete. Must not be null.
+     */
+    void deleteSpeaker(Speaker speaker);
 
-	public Speaker saveSpeaker(Speaker speaker);
+    /**
+     *
+     * @return
+     */
+    List<Event> getAllEventsOrderedByName();
 
-	public void savePresentation(Presentation presentation);
+    /**
+     *
+     * @return
+     */
+    List<Event> getAllNonCurrentEvents();
 
-	public Event getEvent(Long id);
-	public Speaker getSpeaker(Long id);
-	public Presentation getPresentation(Long id);
+    /**
+     *
+     * @return
+     */
+    List<Organizer> getAllOrganizers();
 
-	public void deleteEvent(Event event);
-	public void deleteSpeaker(Speaker speaker);
-	public void deletePresentation(Presentation presentation);
+    /**
+     *
+     * @return
+     */
+    List<Presentation> getAllPresentations();
+    /**
+     * Returns a list of all Speakers ordered by name.
+     *
+     * @return List of Speakers. Never returns null.
+     */
+    List<Speaker> getAllSpeakersOrderedByName();
 
-	public List<Speaker> getSpeakersForCurrentEvent();
-	public List<Presentation> getPresentationsForCurrentEvent();
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Event getEvent(Long id);
 
-	public List<Speaker> getSpeakersForEvent(Long eventId);
-	public List<Presentation> getPresentationsForEvent(Long eventId);
+    /**
+     *
+     * @param eventKey
+     * @return
+     */
+    Event getEventByEventKey(String eventKey);
 
-	public Event getEventByEventKey(String eventKey);
+    /**
+     *
+     * @param organizerId
+     * @return
+     */
+    Organizer getOrganizer(Long organizerId);
 
-	public List<Event> getAllNonCurrentEvents();
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Presentation getPresentation(Long id);
 
-	public List<Organizer> getAllOrganizers();
+    /**
+     *
+     * @return
+     */
+    List<Presentation> getPresentationsForCurrentEvent();
 
-	Organizer getOrganizer(Long organizerId);
+    /**
+     *
+     * @param eventId
+     * @return
+     */
+    List<Presentation> getPresentationsForEvent(Long eventId);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Speaker getSpeaker(Long id);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    byte[] getSpeakerImage(Long id);
+
+    /**
+     *
+     * @return
+     */
+    List<Speaker> getSpeakersForCurrentEvent();
+
+    /**
+     *
+     * @param eventId
+     * @return
+     */
+    List<Speaker> getSpeakersForEvent(Long eventId);
+
+    /**
+     *
+     * @param event
+     */
+    void saveEvent(Event event);
+
+    /**
+     *
+     * @param organizer
+     * @return
+     */
+    Organizer saveOrganizer(Organizer organizer);
+
+    /**
+     *
+     * @param presentation
+     */
+    void savePresentation(Presentation presentation);
+
+    /**
+     *
+     * @param speaker
+     * @return
+     */
+    Speaker saveSpeaker(Speaker speaker);
+
+    /**
+     * Retrieves an {@link Organizer} with pictures (eagerly) if the picture
+     * is available.
+     *
+     * @param organizerId
+     * @return
+     */
+    Organizer getOrganizerWithPicture(Long organizerId);
 
 }

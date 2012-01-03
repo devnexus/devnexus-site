@@ -14,7 +14,7 @@
 	            <jmesa:htmlRow>
 	                 <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
                         <a title="Event Detail" href="${ctx}/s/admin/event/${event.id}">
-                            <img alt="Details" title="Details" src="${ctx}/images/icons/crystal/viewmag.png"/>
+                            <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
                         </a>
 	                </jmesa:htmlColumn>
 	                <jmesa:htmlColumn property="current"  title="Current Event"/>

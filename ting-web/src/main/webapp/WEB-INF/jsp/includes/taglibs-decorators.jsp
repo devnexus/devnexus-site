@@ -11,8 +11,6 @@ response.setHeader("Expires","0");
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://code.google.com/p/jmesa" prefix="jmesa" %>
 
-<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
-<%@ taglib uri="http://www.opensymphony.com/sitemesh/page"    prefix="page"%>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>

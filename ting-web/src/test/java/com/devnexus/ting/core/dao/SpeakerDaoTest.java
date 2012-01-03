@@ -5,6 +5,8 @@ package com.devnexus.ting.core.dao;
 
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -33,4 +35,13 @@ public class SpeakerDaoTest extends BaseDaoIntegrationTest {
     	}
     }
 
+    @Test
+    public void testGetAllSpeakersNoSpeakersExist() {
+    	List<Speaker> speakers = speakerDao.getAllSpeakersOrderedByName();
+
+    	Assert.assertNotNull("List of speakers should not be null.", speakers);
+    	Assert.assertTrue("List of speakers should be empty.", speakers.isEmpty());
+    	
+    }
+    
 }
