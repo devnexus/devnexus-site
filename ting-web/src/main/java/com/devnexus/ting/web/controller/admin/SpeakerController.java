@@ -135,6 +135,7 @@ public class SpeakerController {
                 pictureData.setFileSize(pictureFile.getSize());
                 pictureData.setFileModified(new Date());
                 pictureData.setName(pictureFile.getOriginalFilename());
+                pictureData.setType(pictureFile.getContentType());
 
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -174,6 +175,7 @@ public class SpeakerController {
                  pictureData.setFileSize(pictureFile.getSize());
                  pictureData.setFileModified(new Date());
                  pictureData.setName(pictureFile.getOriginalFilename());
+                 pictureData.setType(pictureFile.getContentType());
 
              } catch (IOException e) {
                  // TODO Auto-generated catch block

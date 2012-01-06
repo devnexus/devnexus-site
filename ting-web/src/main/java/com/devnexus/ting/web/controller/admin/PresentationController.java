@@ -97,8 +97,12 @@ public class PresentationController {
             return "/admin/add-presentation";
         }
 
-        businessService.savePresentation(presentation);
+        if (presentation.getSpeaker() != null && presentation.getSpeaker().getId() != null) {
+            Speaker speakerFromDb = businessService.getSpeaker(presentation.getSpeaker().getId());
+            presentation.setSpeaker(speakerFromDb);
 
+        }
+        businessService.savePresentation(presentation);
         return "redirect:/s/admin/presentations";
     }
 
