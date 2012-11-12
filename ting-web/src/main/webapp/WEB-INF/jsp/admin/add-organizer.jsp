@@ -14,7 +14,7 @@
             <form:errors path="lastName" cssClass="fieldError"/>
         </div>
         <c:if test="${organizer.picture != null}">
-           <img src="${ctx}/s/organizers/${organizer.id}.jpg"/>
+           <img src="${ctx}${baseSiteUrl}/organizers/${organizer.id}.jpg"/>
         </c:if>
         <div class="required">
             <label for="pictureFile">Picture</label>

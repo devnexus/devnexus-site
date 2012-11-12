@@ -57,12 +57,6 @@ public class SpeakerController {
         SpeakerList speakers = new SpeakerList();
         speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
 
-//    	if (image) {
-//    		for (Speaker speaker : speakers.getSpeakers()) {
-//    			speaker.getPictureData(businessService.getSpeakerImage(speaker.getId()));
-//    		}
-//    	}
-
         model.addAttribute("speakerList",speakers);
 
         if (sitePreference.isMobile()) {

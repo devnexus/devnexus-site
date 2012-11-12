@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -74,16 +74,16 @@ public class PresentationController {
     @RequestMapping(value="/presentations/{presentationId}/slides", method=RequestMethod.GET)
     public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
 
-        final Presentation presentation = businessService.getPresentation(presentationId);
+        final FileData presentationFileData = businessService.getPresentationFileData(presentationId);
 
-        if (presentation.getPresentationFile() != null) {
+        if (presentationFileData != null) {
 
             response.setContentType("application/octet-stream");
             response.setHeader("Content-disposition",
-                    "attachment; filename=\"" + presentation.getPresentationFile().getName() + "\"");
-            response.setContentLength(presentation.getPresentationFile().getFileSize().intValue());
+                    "attachment; filename=\"" + presentationFileData.getName() + "\"");
+            response.setContentLength(presentationFileData.getFileSize().intValue());
             try {
-                IOUtils.write(presentation.getPresentationFile().getFileData(),response.getOutputStream());
+                IOUtils.write(presentationFileData.getFileData(),response.getOutputStream());
             } catch (IOException e) {
                 throw new IllegalStateException(e);
             }

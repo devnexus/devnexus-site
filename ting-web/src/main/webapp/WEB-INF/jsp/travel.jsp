@@ -1,13 +1,13 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2011 - Travel</title>
+<title>DevNexus 2012 - Travel</title>
 <div id="content" class="span-22 last">
-	<div class="quote"><span>What the community says:</span> "It is very cool that AJUG puts together a conference that is so inexpensive &amp; therefore accessible"</div>
+  <div class="quote"><span>What the community says:</span> "It is very cool that AJUG puts together a conference that is so inexpensive &amp; therefore accessible"</div>
 
-	    <h2>Travel Information</h2>
+      <h2>Travel Information</h2>
 
-	    <p>
+      <p>
         The Cobb Galleria (<a href="http://bit.ly/dQvqxq">http://bit.ly/dQvqxq</a>) is located at:</p>
 
         <p>
@@ -40,6 +40,11 @@
         <p><strong>Embassy Suites</strong> is the cheapest option and a short walk to the center.</p>
         <ul>
             <li>Directions: <a href="http://bit.ly/fKUADx">http://bit.ly/fKUADx</a></li>
-            <li>Site: <a href="http://bit.ly/gevrL5">http://bit.ly/gevrL5</a></li>
+            <li>Site: <a href="http://www.atlantagalleria.embassysuites.com">http://www.atlantagalleria.embassysuites.com</a></li>
+            <li>Group Code: DEV</li>
         </ul>
+        <p>
+            The Group Code 'DEV' bring up the group rate. If attendees call 800-EMBASSY
+            they will need to ask for the Devnexus group rate.
+        </p>
 </div>

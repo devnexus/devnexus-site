@@ -3,28 +3,28 @@
 <title>Manage Events</title>
     <h2>Manage Events</h2>
 
-	<form name="events" action="events">
+  <form name="events" action="events">
 
-	    <jmesa:tableModel
-	        id="eventsTable"
-	        items="${events}"
-	        var="event"
-	        >
-	        <jmesa:htmlTable>
-	            <jmesa:htmlRow>
-	                 <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
-                        <a title="Event Detail" href="${ctx}/s/admin/event/${event.id}">
+      <jmesa:tableModel
+          id="eventsTable"
+          items="${events}"
+          var="event"
+          >
+          <jmesa:htmlTable>
+              <jmesa:htmlRow>
+                   <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
+                        <a title="Event Detail" href="${ctx}${baseSiteUrl}/admin/event/${event.id}">
                             <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
                         </a>
-	                </jmesa:htmlColumn>
-	                <jmesa:htmlColumn property="current"  title="Current Event"/>
-	                <jmesa:htmlColumn property="eventKey" title="Key"/>
-	                <jmesa:htmlColumn property="title"    title="Title"/>
-	            </jmesa:htmlRow>
-	        </jmesa:htmlTable>
-	    </jmesa:tableModel>
-	</form>
-    <a href="${ctx}/s/admin/event">Add Event</a>
+                  </jmesa:htmlColumn>
+                  <jmesa:htmlColumn property="current"  title="Current Event"/>
+                  <jmesa:htmlColumn property="eventKey" title="Key"/>
+                  <jmesa:htmlColumn property="title"    title="Title"/>
+              </jmesa:htmlRow>
+          </jmesa:htmlTable>
+      </jmesa:tableModel>
+  </form>
+    <a href="${ctx}${baseSiteUrl}/admin/event">Add Event</a>
 
     <script type="text/javascript">
             function onInvokeAction(id) {
@@ -33,6 +33,6 @@
             }
             function onInvokeExportAction(id) {
                 var parameterString = $.jmesa.createParameterStringForLimit(id);
-                location.href = '${ctx}/s/admin/events?' + parameterString;
+                location.href = '${ctx}${baseSiteUrl}/admin/events?' + parameterString;
             }
    </script>

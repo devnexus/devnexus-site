@@ -1,6 +1,5 @@
 <%@ page language="java" isErrorPage="true" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 
 <!DOCTYPE html
@@ -24,11 +23,7 @@
     <link rel="icon"          href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
     <link rel="shortcut icon" href="<c:url value='/favicon.ico'/>"  type="image/x-icon" />
 
-    <jwr:style src="/bundles/all.css" />
-    <jwr:style src="/bundles/all-IE.css" />
 
-    <!-- Java Script Imports -->
-    <jwr:script src="/bundles/lib.js"/>
 
         <script type="text/javascript">
         jQuery(init());

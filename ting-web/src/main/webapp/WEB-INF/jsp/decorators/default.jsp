@@ -4,8 +4,8 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline manifest="${ctx}/s/appcache.manifest" -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -13,7 +13,7 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><sitemesh:write property='title' default="DevNexus 2012 Atlanta"/></title>
+  <title><sitemesh:write property='title' default="DevNexus 2013 Atlanta"/></title>
   <meta name="description" content="The professional developer conference of the Atlanta Java Users Group">
   <meta name="author" content="Gunnar Hillert">
 
@@ -22,15 +22,15 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <jwr:style src="/bundles/screen.css" media="screen, projection"/>
+  <link rel="stylesheet" href="${ctx}/css/screen.css" media="screen, projection" />
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
   <!-- JavaScript -->
-  <jwr:script src="/bundles/header.js"/>
-  
+  <script src="${ctx}/js/header.js"></script>
+
   <!-- For iPhone 4 -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${ctx}/apple-touch-icon.png">
   <!-- For iPad 1-->
@@ -58,15 +58,15 @@
 
     <div class="container devnexus-logo">
         <header>
-            <h1>2012</h1>
+            <h1>2013</h1>
           <nav>
               <ul id="menu">
-                <c:url var="homeUrl"          value="/"/>
-                <c:url var="speakersUrl"      value="/s/speakers"/>
-                <c:url var="presentationsUrl" value="/s/presentations"/>
-                <c:url var="scheduleUrl"      value="/s/schedule"/>
-                <c:url var="organizersUrl"    value="/s/organizers"/>
-                <c:url var="travelUrl"        value="/s/travel"/>
+                <c:url var="homeUrl"          value="${baseSiteUrl}/index"/>
+                <c:url var="speakersUrl"      value="${baseSiteUrl}/speakers"/>
+                <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+                <c:url var="scheduleUrl"      value="${baseSiteUrl}/schedule"/>
+                <c:url var="organizersUrl"    value="${baseSiteUrl}/organizers"/>
+                <c:url var="travelUrl"        value="${baseSiteUrl}/travel"/>
 
                 <li><a href="${homeUrl}"><span>Home</span></a></li>
                 <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
@@ -81,8 +81,8 @@
                             <c:forEach items="${eventsForMenu}" var="event">
                                 <tr>
                                  <td><c:out value="${event.title}"/></td>
-                                 <td><a href="<c:url value='/s/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                 <td><a href="<c:url value='/s/${event.eventKey}/presentations'/>">Presentations</a></td>
+                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
+                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
                               </tr>
                           </c:forEach>
                         </table>
@@ -90,17 +90,25 @@
                 </li>
                 <li><a href="${organizersUrl}"><span>Your Organizers</span></a></li>
                 <li><a href="${travelUrl}"><span>Travel</span></a></li>
-                <li><a href="https://ajug.eventwax.com/devnexus-2012/register" style="color: #F7941E"><span>Register Now!</span></a></li>
-                
+                <li><a href="#" style="color: #F7941E"><span>Sold Out!</span></a></li>
+
                 <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                 <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
-                <li style="margin-right: 0;"><a href="${currentUrl}?site_preference=mobile"><span>Mobile</span></a></li>
+
+                <c:choose>
+                  <c:when test="${currentDevice.mobile}">
+                      <li style="margin-right: 0;"><a href="${ctx}/s/index"><span>Mobile</span></a></li>
+                  </c:when>
+                  <c:otherwise>
+                      <li style="margin-right: 0;"><a href="${ctx}/mobile/index"><span>Mobile</span></a></li>
+                  </c:otherwise>
+                </c:choose>
               </ul>
             <security:authorize ifAnyGranted="ADMIN">
               <div style="text-align: right" class="span-22 append-bottom last">You are logged in as
                  <security:authentication property="principal.firstName"/> <security:authentication property="principal.lastName"/> (<security:authentication property="principal.email"/>) |
-                 <a href="<c:url value='/s/logout'/>" >Logout</a>
-                 <a href="<c:url value='/s/admin/index'/>">Admin Area</a>
+                 <a href="<c:url value='${baseSiteUrl}/logout'/>" >Logout</a>
+                 <a href="<c:url value='${baseSiteUrl}/admin/index'/>">Admin Area</a>
               </div>
             </security:authorize>
             <c:if test="${not empty message}">
@@ -112,14 +120,20 @@
             <sitemesh:write property='body'/>
       </div>
       <footer class="">
-         &copy; 2008-2012 Atlanta Java Users Group (AJUG), powered by <a href="https://github.com/devnexus/ting">Ting</a> <spring:message code="ting.build.version"/>.<spring:message code="ting.build.number"/>
+         &copy; 2008-2013 Atlanta Java Users Group (AJUG), powered by
+         <a href="https://github.com/devnexus/ting">Ting</a>
+         <spring:message code="ting.build.version"/>.<spring:message code="ting.build.number"/>
+         (<span id="network-status">Online</span>)
       </footer>
   </div>
 
-  <!-- JavaScript at the bottom for fast page loading -->
+<div id="dialog-confirm" title="New Version Available" style="display: none;">
+    <p>A new version of this site is available. Load it?</p>
+</div>
 
-  <jwr:script src="/bundles/lib.js"/>
-    
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="${ctx}/js/lib.js"></script>
+
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
@@ -135,6 +149,8 @@
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
+
+    <sitemesh:write property='page.foo'/>
 
 </body>
 </html>

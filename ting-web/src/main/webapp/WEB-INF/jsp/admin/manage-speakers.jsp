@@ -13,7 +13,7 @@
             <jmesa:htmlTable>
                 <jmesa:htmlRow>
                      <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
-                        <a title="Speaker Detail" href="${ctx}/s/admin/speaker/${speaker.id}">
+                        <a title="Speaker Detail" href="${ctx}${baseSiteUrl}/admin/speaker/${speaker.id}">
                             <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
                         </a>
                     </jmesa:htmlColumn>
@@ -23,7 +23,7 @@
             </jmesa:htmlTable>
         </jmesa:tableModel>
     </form>
-    <a href="${ctx}/s/admin/speaker">Add speaker</a>
+    <a href="${ctx}${baseSiteUrl}/admin/speaker">Add speaker</a>
 
     <script type="text/javascript">
             function onInvokeAction(id) {
@@ -32,6 +32,6 @@
             }
             function onInvokeExportAction(id) {
                 var parameterString = $.jmesa.createParameterStringForLimit(id);
-                location.href = '${ctx}/s/admin/speakers?' + parameterString;
+                location.href = '${ctx}${baseSiteUrl}/admin/speakers?' + parameterString;
             }
     </script>

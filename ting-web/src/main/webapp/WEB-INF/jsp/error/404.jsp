@@ -39,11 +39,11 @@
         <ul id="menu">
 
                         <c:url var="homeUrl"          value="/"/>
-                        <c:url var="speakersUrl"      value="/s/speakers"/>
-                        <c:url var="presentationsUrl" value="/s/presentations"/>
-                        <c:url var="scheduleUrl"      value="/s/schedule"/>
-                        <c:url var="organizersUrl"    value="/s/organizers"/>
-                        <c:url var="travelUrl"        value="/s/travel"/>
+                        <c:url var="speakersUrl"      value="${baseSiteUrl}/speakers"/>
+                        <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+                        <c:url var="scheduleUrl"      value="${baseSiteUrl}/schedule"/>
+                        <c:url var="organizersUrl"    value="${baseSiteUrl}/organizers"/>
+                        <c:url var="travelUrl"        value="${baseSiteUrl}/travel"/>
 
                         <li><a href="${homeUrl}"><span>Home</span></a></li>
                         <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
@@ -58,8 +58,8 @@
                                     <c:forEach items="${eventsForMenu}" var="event">
                                         <tr>
                                            <td><c:out value="${event.title}"/></td>
-                                           <td><a href="<c:url value='/s/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                           <td><a href="<c:url value='/s/${event.eventKey}/presentations'/>">Presentations</a></td>
+                                           <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
+                                           <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
                                         </tr>
                                     </c:forEach>
                                 </table>

@@ -22,17 +22,19 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <jwr:style src="/bundles/screen.css" media="screen, projection"/>
-  <jwr:style src="/bundles/jmesa.css"/>
+  <link rel="stylesheet" href="${ctx}/css/screen.css" media="screen, projection" />
+  <link rel="stylesheet" href="${ctx}/css/jmesa/jmesa.css" />
+ <link rel="stylesheet" href="${ctx}/css/jmesa/jmesa-pdf.css" />
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
   <!-- JavaScript -->
-  <jwr:script src="/bundles/header.js"/>
-  <jwr:script src="/bundles/lib.js"/>
-  <jwr:script src="/bundles/jmesa.js"/>
+  <script src="${ctx}/js/header.js"></script>
+  <script src="${ctx}/js/lib.js"></script>
+  <script src="${ctx}/js/jmesa/jmesa.min.js"></script>
+  <script src="${ctx}/js/jmesa/jquery.jmesa.min.js"></script>
 
   <!-- For iPhone 4 -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${ctx}/apple-touch-icon.png">
@@ -65,11 +67,11 @@
           <nav>
               <ul id="menu">
                 <c:url var="homeUrl"          value="/"/>
-                <c:url var="speakersUrl"      value="/s/speakers"/>
-                <c:url var="presentationsUrl" value="/s/presentations"/>
-                <c:url var="scheduleUrl"      value="/s/schedule"/>
-                <c:url var="organizersUrl"    value="/s/organizers"/>
-                <c:url var="travelUrl"        value="/s/travel"/>
+                <c:url var="speakersUrl"      value="${baseSiteUrl}/speakers"/>
+                <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+                <c:url var="scheduleUrl"      value="${baseSiteUrl}/schedule"/>
+                <c:url var="organizersUrl"    value="${baseSiteUrl}/organizers"/>
+                <c:url var="travelUrl"        value="${baseSiteUrl}/travel"/>
 
                 <li><a href="${homeUrl}"><span>Home</span></a></li>
                 <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
@@ -84,8 +86,8 @@
                             <c:forEach items="${eventsForMenu}" var="event">
                                 <tr>
                                  <td><c:out value="${event.title}"/></td>
-                                 <td><a href="<c:url value='/s/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                 <td><a href="<c:url value='/s/${event.eventKey}/presentations'/>">Presentations</a></td>
+                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
+                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
                               </tr>
                           </c:forEach>
                         </table>
@@ -102,8 +104,8 @@
             <security:authorize ifAnyGranted="ADMIN">
               <div style="text-align: right" class="span-22 append-bottom last">You are logged in as
                  <security:authentication property="principal.firstName"/> <security:authentication property="principal.lastName"/> (<security:authentication property="principal.email"/>) |
-                 <a href="<c:url value='/s/logout'/>" >Logout</a>
-                 <a href="<c:url value='/s/admin/index'/>">Admin Area</a>
+                 <a href="<c:url value='${baseSiteUrl}/logout'/>" >Logout</a>
+                 <a href="<c:url value='${baseSiteUrl}/admin/index'/>">Admin Area</a>
               </div>
             </security:authorize>
             <c:if test="${not empty message}">

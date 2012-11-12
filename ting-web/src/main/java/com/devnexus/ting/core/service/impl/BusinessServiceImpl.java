@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,9 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +27,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.dao.ApplicationCacheDao;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
+import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
@@ -52,6 +57,7 @@ public class BusinessServiceImpl implements BusinessService {
     @Autowired private OrganizerDao    organizerDao;
     @Autowired private PresentationDao presentationDao;
     @Autowired private SpeakerDao      speakerDao;
+    @Autowired private ApplicationCacheDao applicationCacheDao;
 
     /** {@inheritDoc} */
     @Override
@@ -160,6 +166,7 @@ public class BusinessServiceImpl implements BusinessService {
 
     /** {@inheritDoc} */
     @Override
+    @Transactional(readOnly=false)
     public Presentation getPresentation(Long id) {
         return presentationDao.get(id);
     }
@@ -241,6 +248,64 @@ public class BusinessServiceImpl implements BusinessService {
     @Transactional
     public Speaker saveSpeaker(Speaker speaker) {
         return speakerDao.save(speaker);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    @Transactional
+    public ApplicationCache updateApplicationCacheManifest() {
+
+        final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+
+        if (applicationCacheList.isEmpty()) {
+            ApplicationCache applicationCache = new ApplicationCache();
+            applicationCache.setUpdatedDate(new Date());
+            applicationCache.setUuid(UUID.randomUUID().toString());
+            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+            return savedApplicationCache;
+        } else if (applicationCacheList.size() >1) {
+            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+        } else {
+            ApplicationCache applicationCache = applicationCacheList.iterator().next();
+            applicationCache.setUpdatedDate(new Date());
+            applicationCache.setUuid(UUID.randomUUID().toString());
+            return applicationCacheDao.save(applicationCache);
+        }
+
+    }
+
+    @Override
+    @Transactional
+    public ApplicationCache getApplicationCacheManifest() {
+        final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+
+        if (applicationCacheList.isEmpty()) {
+            ApplicationCache applicationCache = new ApplicationCache();
+            applicationCache.setUpdatedDate(new Date());
+            applicationCache.setUuid(UUID.randomUUID().toString());
+            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+            return savedApplicationCache;
+        } else if (applicationCacheList.size() >1) {
+            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+        } else {
+            return applicationCacheList.iterator().next();
+        }
+    }
+
+    @Override
+    @Transactional
+    public FileData getPresentationFileData(Long presentationId) {
+
+        final Presentation presentation = this.getPresentation(presentationId);
+
+        if (presentation == null) {
+            return null;
+        }
+
+        FileData fileData = presentation.getPresentationFile();
+        fileData.getName();
+
+        return fileData;
     }
 
 }
