@@ -1,77 +1,52 @@
 <%@include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <div data-role="page" data-theme="b" id="main-page">
-            <header data-role="header">
-                <h1>DevNexus 2012</h1>
-            </header>
+    <div data-role="header">
+        <h1>DevNexus 2013</h1>
+    </div>
     <div data-role="content">
         <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-            <li data-role="list-divider">DevNexus 2012</li>
-            <li><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/globe.png"/><a href="https://ajug.eventwax.com/devnexus-2012/register" rel="external">Register</a></li>
-            <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/runit.png"/><a href="#">Registration Opens Dec 1, 2011</a></li>
-            <li><img class="ui-li-icon" alt="Call For Papers 2012" src="${ctx}/img/mobile/crystal/groupevent.png"/><a href="#call-for-papers">Call For Papers 2012</a></li>
-            <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/groupevent.png"/><a href="${ctx}/s/speakers"  rel="external">Speakers</a></li>
-            <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/kchart.png"/><a href="${ctx}/s/presentations" rel="external">Presentations</a></li>
-            <li><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/identity.png"/><a href="${ctx}/s/organizers"  rel="external">Organizers</a></li>
-            <li><img class="ui-li-icon" alt="Twitter"  src="${ctx}/img/icons/erenemre/twitter-03.png"/><a href="${ctx}/s/twitter"  rel="external">Twitter</a></li>
-            <li><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/img/icons/crystal/globe.png"/><a href="${ctx}/s/index?site_preference=normal" rel="external">Full Browser Version</a></li>
+            <li data-role="list-divider">DevNexus 2013</li>
+            <li><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Registration Opens Soon!</li>
+            <li><a href="${ctx}${baseSiteUrl}/speakers"      rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/groupevent.png"/>Speakers</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/presentations" rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/kchart.png"/>Presentations</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/schedule"      rel="external"><img class="ui-li-icon" alt="Schedule" src="${ctx}/img/icons/crystal/vcalendar.png"/>Schedule</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/organizers"    rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/identity.png"/>Organizers</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/twitter"       rel="external"><img class="ui-li-icon" alt="Twitter"  src="${ctx}/img/icons/erenemre/twitter-03.png"/>Twitter</a></li>
+            <li><a href="#sponsors"><img class="ui-li-icon" alt="Our Sponsors" src="${ctx}/img/icons/crystal/kwikdisk.png"/>Our Sponsors</a></li>
+            <c:choose>
+                <c:when test="${currentDevice.mobile}">
+                    <li><a href="${ctx}/desktop/index" rel="external"><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/img/icons/crystal/globe.png"/>Full Browser Version</a></li>
+                </c:when>
+                <c:otherwise>
+                    <li><a href="${ctx}/s/index" rel="external"><img class="ui-li-icon" alt="Full Browser Version" src="${ctx}/img/icons/crystal/globe.png"/>Full Browser Version</a></li>
+                </c:otherwise>
+            </c:choose>
         </ul>
     </div>
-            <footer data-role="footer">
-                <h4>&copy; 2012 AJUG</h4>
-            </footer>
+    <div data-role="footer">
+        <h4>&copy; 2011-2013 AJUG</h4>
+    </div>
 </div>
 
 <!-- Start of second page: #two -->
-<div data-role="page" id="call-for-papers" data-theme="b">
+<div data-role="page" id="sponsors" data-theme="b">
 
     <div data-role="header">
-        <h1>Call for Papers - 2012</h1>
+        <a href="#main-page">Back</a>
+        <h1>Our Sponsors</h1>
     </div><!-- /header -->
 
-    <div data-role="content">
+    <div data-role="content" style="background-color: white;">
 
-                <p>
-                    The <strong>DevNexus™ 2012</strong> developer conference is taking place
-                    <strong>March 21-22</strong>. We are delighted to announce the Call for Papers
-                    is now open. We are looking forward to receiving your amazing
-                    proposals covering one of the following topics:
-                </p>
-                <ul>
-                    <li>Java and JVM Languages</li>
-                    <li>Cloud</li>
-                    <li>NoSQL</li>
-                    <li>Web (incl. Mobile Development, HTML5, JavaScript)</li>
-                    <li>Methodologies and Tools</li>
-                </ul>
-                <p>
-                    We do not encourage overt marketing pitches. Sessions are 75
-                    minutes long and we encourage breakout sessions, work-shops
-                    and case studies. Please include the following information:
-                </p>
-                <ul>
-                  <li>Name</li>
-          <li>Job Title</li>
-          <li>Email</li>
-          <li>Twiter id</li>
-          <li>Company</li>
-          <li>Presentation Title</li>
-          <li>Audience Level (General, Beginner, Intermediate, Advanced)</li>
-          <li>Presentation Abstract</li>
-          <li>Your Bio</li>
-                </ul>
-                <p>
-                    Please submit your proposals as soon as possible to
-                    <a href="mailto:info@ajug.org">info@ajug.org</a>. The Call for Papers closes January 15, 2012.
-                </p>
-                <p>
-                  The planning committee will carefully review your proposals,
-                  and you will get a confirmation whether your talks are selected
-                  or not for the DevNexus™ conference.
-                </p>
-    </div><!-- /content -->
+    <h3>Gold Sponsors</h3>
+    <h3>Silver Sponsors</h3>
 
-            <footer data-role="footer">
-                <h4>&copy; 2012 AJUG</h4>
-            </footer>
+    <h3>Cocktail Hour Sponsor</h3>
+    </div>
+    <!-- /content -->
+
+   <div data-role="footer">
+       <h4>&copy; 2011-2013 AJUG</h4>
+   </div>
 </div><!-- /page two -->

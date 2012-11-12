@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.social.twitter.api.SearchResults;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
@@ -33,8 +34,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
+import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -54,7 +57,7 @@ public class SiteController {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
-    @RequestMapping("/index")
+    @RequestMapping({"/index", "/"})
     public String execute(final Model model, final SitePreference sitePreference) {
 
         if (sitePreference.isMobile()) {
@@ -78,6 +81,42 @@ public class SiteController {
     @RequestMapping("/travel")
     public String travel(final Model model, final SitePreference sitePreference) {
         return "travel";
+    }
+
+    @RequestMapping("/appcache.manifest")
+    public String appcache(final Model model, final SitePreference sitePreference) {
+
+        final List<Organizer>organizers = businessService.getAllOrganizers();
+
+        final OrganizerList organizerList = new OrganizerList(organizers);
+        model.addAttribute("organizerList", organizerList);
+
+        SpeakerList speakers = new SpeakerList();
+        speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+        model.addAttribute("speakerList",speakers);
+
+        ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+
+        model.addAttribute("applicationCache", applicationCache);
+        return "appcache";
+    }
+
+    @RequestMapping("/appcache-mobile.manifest")
+    public String appcacheMobile(final Model model, final SitePreference sitePreference) {
+
+        final List<Organizer>organizers = businessService.getAllOrganizers();
+
+        final OrganizerList organizerList = new OrganizerList(organizers);
+        model.addAttribute("organizerList", organizerList);
+
+        SpeakerList speakers = new SpeakerList();
+        speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+        model.addAttribute("speakerList",speakers);
+
+        ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+
+        model.addAttribute("applicationCache", applicationCache);
+        return "appcache-mobile";
     }
 
     @RequestMapping("/organizers")

@@ -30,9 +30,6 @@
   <logger name="org.hibernate.tool.hbm2ddl">
     <level value="WARN"/>
   </logger>
-  <logger name="net.jawr">
-    <level value="WARN"/>
-  </logger>
   <root>
     <level value="INFO"/>
     <appender-ref ref="CONSOLE"/>

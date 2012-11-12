@@ -1,72 +1,66 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-
 <div class="content">
-<p>Welcome to the 2012 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
+<p>Welcome to the 2013 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
 
-            <h2 style="margin-top: 0;">Welcome to DevNexus 2012 - March 21-22</h2>
+            <h2 style="margin-top: 0;">Welcome to DevNexus 2013 - February 18-19</h2>
+            <p>
+                We will be having an incredible line-up of presenters covering a
+                wide array of crucial topics. Also, this year we are expanding to
+                <strong>7 tracks</strong> with <strong>50+ sessions</strong> and
+                <strong>3 keynotes</strong>!
+                In addition to providing great content for Java developers,
+                DevNexus is a very valuable networking opportunity. This event
+                attracts Java/JVM talent from the South-East's largest corporations,
+                software companies and consulting organizations. You will have an
+                opportunity to discover what other development teams are using
+                as their favorite tools and practices.
+            </p>
+			<h2>DevNexus 2013 - Call For Papers Now Open</h2>
 
-            <p><strong style="font-size: 18px">DEVNEXUS 2012</strong></p>
-
-            <p>We plan on having an incredible line-up of presenters covering a wide array of crucial topics. Also, this year we are expanding to 5 tracks!
-            In addition to providing great content for Java developers, DevNexus is a very valuable networking opportunity. This event attracts
-      Java/JVM talent from the South-East's largest corporations, software companies and consulting
-      organizations. You will have an opportunity to discover what other development teams are using as their
-      favorite tools and practices.</p>
-
-                <h2 id="call-for-papers">Call for Papers - 2012</h2>
-                <p>
-                    The DevNexus™ 2012 developer conference is taking place
-                    March 21-22. We are delighted to announce the Call for Papers
-                    is now open. We are looking forward to receiving your amazing
-                    proposals covering one of the following topics:
-                </p>
-                <ul>
-                    <li>Java and JVM Languages</li>
-                    <li>Cloud</li>
-                    <li>NoSQL</li>
-                    <li>Web (incl. Mobile Development, HTML5, JavaScript)</li>
-                    <li>Methodologies and Tools</li>
-                </ul>
-                <p>
-                    We do not encourage overt marketing pitches. Sessions are 75
-                    minutes long and we encourage breakout sessions, work-shops
-                    and case studies. Please include the following information:
-                </p>
-                <ul>
-                  <li>Name</li>
-          <li>Job Title</li>
-          <li>Email</li>
-          <li>Twiter id</li>
-          <li>Company</li>
-          <li>Presentation Title</li>
-          <li>Audience Level (General, Beginner, Intermediate, Advanced)</li>
-          <li>Presentation Abstract</li>
-          <li>Your Bio</li>
-                </ul>
-                <p>
-                    Please submit your proposals as soon as possible to
-                    info@ajug.org. The Call for Papers closes January 15, 2012.
-                </p>
-                <p>
-                  The planning committee will carefully review your proposals,
-                  and you will get a confirmation whether your talks are selected
-                  or not for the DevNexus™ conference.
-                </p>
+			<p>
+				We are delighted to announce that the Call for Papers is now open.
+				Individuals are encouraged to submit proposals covering one of the
+				following topics:
+			</p>
+			<ul>
+				<li>Java and JVM Languages</li>
+				<li>Cloud</li>
+				<li>NoSQL and Big Data</li>
+				<li>Web (incl. Mobile Development, HTML5, JavaScript)</li>
+				<li>Methodologies and Tools</li>
+			</ul>
+			<p>
+				The Call for Papers closes December 31, 2012 and the planning
+				committee will carefully review submitted proposals, and will
+				provide confirmation whether talks were selected or not for the
+				DevNexus conference.
+			</p>
+			<p>
+				Please provide the following information to info AT ajug DOT org:
+			</p>
+			<ul>
+				<li>Abstract</li>
+				<li>Bio</li>
+				<li>Speaker Picture</li>
+				<li>Skill Level (Beginner, Intermediate, Advanced)</li>
+				<li>Email Address</li>
+				<li>Phone Number</li>
+			</ul>
 
             <h2 style="">What?</h2>
 
             <p>Atlanta&#8217;s most exciting conference for professional
-            software developers is back in 2012! Come discover how the
+            software developers is back in 2013! Come discover how the
             industry&#8217;s best minds use the latest technologies to build
             solutions to business problems. Network with other Atlanta software
             developers, and study real life case studies in application design and
             development.</p>
 
-            <p>Our first five conference events were tremendous successes. Skip
+            <p>Our first six conference events were tremendous successes. Skip
             the travel headaches, expense, and mobs of people at other conferences
-            and join us this March to experience one of the best developer
+            and join us this February to experience one of the best developer
             conferences, presented by your fellow developers, right in the heart of
             the Southeast (and in your own backyard).</p>
 
@@ -75,16 +69,18 @@
                raffles, food, a cocktail hour for networking and mingling with the
                speakers and much more.</p>
 
-            <p><strong>Make sure to sign up early to ensure you get a seat this year!</strong></p>
+            <p><strong>Make sure to sign up early to ensure you get a seat this year!
+            We sold out last year!
+            </strong></p>
 
             <ul>
-                <li><a href="${ctx}/s/speakers">List of speakers</a></li>
-                <li><a href="${ctx}/s/presentations">List of presentations</a></li>
-                <li><a href="${ctx}/s/schedule">Schedule</a></li>
+                <li><a href="${ctx}${baseSiteUrl}/speakers">List of speakers</a></li>
+                <li><a href="${ctx}${baseSiteUrl}/presentations">List of presentations</a></li>
+                <li><a href="${ctx}${baseSiteUrl}/schedule">Schedule</a></li>
             </ul>
 
     <h2>When?</h2>
-    <h3>Wednesday, <strong>March 21</strong> 2012 and Thursday, <strong>March 22</strong> 2012</h3>
+    <h3>Monday, <strong>February 18</strong> 2013 and Tuesday, <strong>February 19</strong> 2013</h3>
 
     <h2>Where?</h2>
 
@@ -101,28 +97,24 @@
     <h2>Registration</h2>
 
    <div id="signup">
-       <h2><a href="https://ajug.eventwax.com/devnexus-2012/register">Register</a></h2>
+       <h2 style="color: #FF0000;">Coming Soon!</h2>
    </div>
 
     <p>
-        The Standard Ticket is <strong>$200</strong>.
-    </p>
-    <p>
-        An early bird special ticket is available for <strong>$185</strong> if you
-        book before February 1, 2012.
+        The Standard Ticket is <strong>TBD</strong>.
     </p>
     <p>
         Furthermore, we have a group discount available: If you book 5 tickets
-        or more each ticket is <strong>$185</strong>.
+        or more each ticket is <strong>TBD</strong>.
     </p>
 
-    <p>Are you are student? We have a limited amount of student tickets priced at <strong>$140</strong>.
+    <p>Are you are student? We have a limited amount of student tickets priced at <strong>TBD</strong>.
        Please contact us at: info AT ajug DOT org for details.
     </p>
 
     <p>Please be aware that we have to close registration on March 15 as we need to
        report our attendee numbers to the Cobb Galleria. Also 2 weeks before the
-       event only late tickets will be available for $230. Therefore, please book
+       event only late tickets will be available for TBD. Therefore, please book
        your tickets as early as possible!
     </p>
 
@@ -140,7 +132,7 @@
 
      var addthis_share =  {
           templates: {
-                         twitter: 'DevNexus 2012 - March 21-22 - Details: http://www.devnexus.com/ (from @devnexus)'
+                         twitter: 'DevNexus 2013 - February 18-19 - Details: http://www.devnexus.com/ (from @devnexus)'
                      }
       };
   </script>
@@ -158,20 +150,17 @@
         <div class="header">Help us spread the word!</div>
         <div class="body">
           <ul>
-              <li><a href="${ctx}/static/2012/files/promo/devnexus-2012-call-for-papers.pdf"    >DevNexus 2012 Call for Papers (PDF)</a></li>
-              <li><a href="${ctx}/static/2012/files/promo/devnexus-2012-sponsorship-options.pdf">DevNexus Sponsorship Options (PDF)</a></li>
+              <li><a href="${ctx}/static/2013/files/promo/devnexus-2013-call-for-papers.pdf"    >DevNexus 2013 Call for Papers (PDF)</a></li>
+              <li><a href="${ctx}/static/2013/files/promo/devnexus-2013-sponsorship-options.pdf">DevNexus Sponsorship Options (PDF)</a></li>
           </ul>
         </div>
     </div>
     <h3>Gold Sponsors</h3>
-        <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE"       src="${ctx}/img/sponsors/ICE.jpg"/></a>
-        <a href="http://www.jboss.com/"><img                class="logo" alt="JBoss"     src="${ctx}/img/sponsors/jboss.png"/></a>
-        <a href="http://theintersectgroup.com/"><img        class="logo" alt="Intersect Group" src="${ctx}/img/sponsors/intersect-logo.png"/></a>
+
     <h3>Silver Sponsors</h3>
-        <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group" src="${ctx}/img/sponsors/Anteo.png"/></a>
-        <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems" src="${ctx}/img/sponsors/apex-systems.png"/></a>
+
     <h3>Cocktail Hour Sponsor</h3>
-    <p>TDB</p>
+
   <div style="margin-top: 3em;">
    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
    <script type="text/javascript">

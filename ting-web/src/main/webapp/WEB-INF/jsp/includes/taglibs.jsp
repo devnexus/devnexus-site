@@ -16,9 +16,9 @@ response.setHeader("Expires","0");
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
 
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
-
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
+<c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
+
 <head>
     <c:choose>
         <c:when test="${currentSitePreference.mobile}">

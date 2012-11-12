@@ -15,7 +15,7 @@
         <c:forEach items="${organizerList.organizers}" var="organizer">
             <div class="speaker">
                 <h3 id="${organizer.firstName}_${organizer.lastName}"><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></h3>
-                <img src="${ctx}/s/organizers/${organizer.id}.jpg"/>
+                <img src="${ctx}${baseSiteUrl}/organizers/${organizer.id}.jpg"/>
                 <p>
                   <c:set var="organizerBio"><c:out value="${organizer.bio}" escapeXml="true"/></c:set>
                   <c:out value="${fn:replace(organizerBio, lf, '<br/>')}" escapeXml="false"/>

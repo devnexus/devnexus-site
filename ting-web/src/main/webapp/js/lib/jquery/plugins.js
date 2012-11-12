@@ -18,3 +18,70 @@ window.log = function(){
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
+$(document).ready(function() {
+
+    function addMega(){
+      $(this).addClass("hovering");
+      }
+
+    function removeMega(){
+      $(this).removeClass("hovering");
+      }
+
+  var megaConfig = {
+       interval: 300,
+       sensitivity: 4,
+       over: addMega,
+       timeout: 300,
+       out: removeMega
+  };
+
+  $("li.mega").hoverIntent(megaConfig)
+
+  if (Modernizr.applicationcache){
+
+    // We have offline web app support
+      if (navigator.onLine) {
+
+      } else {
+        $.sticky('<b>You are offline.</b>');
+      }
+
+      window.addEventListener("offline", function(e) {
+        $.sticky('<b>You are offline.</b>');
+      }, false);
+
+      window.addEventListener("online", function(e) {
+        $.sticky('<b>You are back online.</b>');
+      }, false);
+
+      window.applicationCache.addEventListener('updateready', function(e) {
+        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+          window.applicationCache.swapCache();
+
+          $( "#dialog-confirm" ).dialog({
+          resizable: false,
+          height:140,
+          modal: true,
+          buttons: {
+            "Reload": function() {
+              $( this ).dialog( "close" );
+              window.location.reload();
+            },
+            Cancel: function() {
+              $( this ).dialog( "close" );
+            }
+          }
+        });
+
+        }
+      }, false);
+
+      window.applicationCache.addEventListener("error", function(e) {
+        $.sticky("<b>Error fetching manifest: a good chance we are offlinedddd</b>");
+        alert(e);
+      });
+
+  }
+
+});

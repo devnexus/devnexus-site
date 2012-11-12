@@ -77,9 +77,6 @@
   <logger name="org.hibernate.tool.hbm2ddl">
     <level value="WARN"/>
   </logger>
-  <logger name="net.jawr">
-    <level value="WARN"/>
-  </logger>
   <logger name="com.devnexus.ting">
     <level value="INFO"/>
   </logger>

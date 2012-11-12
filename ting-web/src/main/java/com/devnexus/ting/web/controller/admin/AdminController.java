@@ -25,6 +25,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -50,6 +51,13 @@ public class AdminController {
     public String execute(ModelMap model) {
         return "/admin/index";
     }
+
+    @RequestMapping({"/admin/update-application-cache"})
+    public String updateApplicationCache(ModelMap model) {
+        businessService.updateApplicationCacheManifest();
+        return "redirect:/s/admin/index";
+    }
+
 
     @RequestMapping("/logout")
     public String logout(ModelMap model) {

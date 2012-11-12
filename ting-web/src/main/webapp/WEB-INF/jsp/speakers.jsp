@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2011 - Speakers</title>
+<title>DevNexus 2012 - Speakers</title>
 <div id="content" class="span-22 last">
   <div class="quote"><span>What the community says:</span> "Fantastic value, content vs expense is unmatched"</div>
   <h2>Speakers
@@ -19,7 +19,7 @@
         <div class="speaker">
             <h3 id="${speaker.firstName}_${speaker.lastName}"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h3>
             <c:if test="${speaker.picture != null}">
-               <img src="${ctx}/s/speakers/${speaker.id}.jpg"/>
+               <img src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg"/>
             </c:if>
             <p>
               <c:out value="${speaker.bioAsHtml}" escapeXml="false"/>
@@ -28,7 +28,7 @@
                <p class="presentation-header">Presentation:</p>
                <ul>
                  <c:forEach items="${speaker.presentations}" var="presentation">
-                     <li><a href="${ctx}/s/presentations#${presentation.id}"><c:out value="${presentation.title}"/></a></li>
+                     <li><a href="${ctx}/s/presentations#id-${presentation.id}"><c:out value="${presentation.title}"/></a></li>
                  </c:forEach>
                </ul>
             </c:if>

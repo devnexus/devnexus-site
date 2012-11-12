@@ -133,7 +133,7 @@
     <dependency>
       <groupId>org.tuckey</groupId>
       <artifactId>urlrewritefilter</artifactId>
-      <version>3.1.0</version>
+      <version>3.2.0</version>
     </dependency>
 
     <dependency>
@@ -249,11 +249,11 @@
       <scope>compile</scope>
     </dependency>
 
-    <dependency>
-      <groupId>net.java.inflector</groupId>
-      <artifactId>inflector</artifactId>
-      <version>0.7.0</version>
-    </dependency>
+	<dependency>
+		<groupId>net.java.dev.inflector</groupId>
+		<artifactId>inflector</artifactId>
+		<version>0.7.0</version>
+	</dependency>
 
     <dependency>
       <groupId>net.sf.ehcache</groupId>
@@ -380,7 +380,7 @@
     <dependency>
       <groupId>org.springframework.mobile</groupId>
       <artifactId>spring-mobile-device</artifactId>
-      <version>1.0.0.M3</version>
+      <version>1.0.0.RELEASE</version>
     </dependency>
 
     <!-- Other -->
@@ -389,24 +389,6 @@
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
-    </dependency>
-
-
-
-    <dependency>
-      <groupId>net.jawr</groupId>
-      <artifactId>jawr</artifactId>
-      <version>3.3.3</version>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.servlet.jsp.jstl</groupId>
-          <artifactId>jstl</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>javax.servlet.jsp</groupId>
-          <artifactId>jsp-api</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.lowagie</groupId>
@@ -511,12 +493,6 @@
       <groupId>org.pegdown</groupId>
       <artifactId>pegdown</artifactId>
       <version>1.1.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.yahoo.platform.yui</groupId>
-      <artifactId>yuicompressor</artifactId>
-      <version>2.4.6</version>
     </dependency>
 
     <!-- Databases -->

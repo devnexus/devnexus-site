@@ -74,6 +74,11 @@ public class Presentation extends BaseModelObject {
     @JoinColumn(name="SPEAKER_ID")
     private Speaker speaker;
 
+    @ManyToOne
+    @NotNull
+    @XmlTransient
+    private Room room;
+
     @Size(max=255)
     private String title;
 

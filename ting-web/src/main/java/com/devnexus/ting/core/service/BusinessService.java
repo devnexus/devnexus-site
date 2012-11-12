@@ -17,7 +17,9 @@ package com.devnexus.ting.core.service;
 
 import java.util.List;
 
+import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Speaker;
@@ -188,4 +190,15 @@ public interface BusinessService {
      */
     Organizer getOrganizerWithPicture(Long organizerId);
 
+    /**
+     * Updates the application cache table which is used to set the version
+     * information for the HTML5 Application Cache Manifest
+     *
+     * @return The updated values of the {@link ApplicationCache}
+     */
+    ApplicationCache updateApplicationCacheManifest();
+
+    ApplicationCache getApplicationCacheManifest();
+
+    FileData getPresentationFileData(Long presentationId);
 }

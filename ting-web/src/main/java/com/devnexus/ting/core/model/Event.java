@@ -63,6 +63,10 @@ public class Event {
     @ManyToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
     private Set<Speaker>speakers = new HashSet<Speaker>(0);
 
+    @OneToMany(mappedBy="event", targetEntity=Room.class,
+    fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Room>rooms = new HashSet<Room>(0);
+
     @Override
     public String toString() {
         return String.valueOf(id);
@@ -163,5 +167,14 @@ public class Event {
     public boolean isCurrent() {
         return current;
     }
+
+	public Set<Room> getRooms() {
+		return rooms;
+	}
+
+
+	public void setRooms(Set<Room> rooms) {
+		this.rooms = rooms;
+	}
 
 }

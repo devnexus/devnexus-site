@@ -105,12 +105,28 @@
             </plugins>
         </pluginManagement>
     </build>
-    <repositories>
+	<repositories>
         <repository>
             <id>jrecruiter</id>
             <name>jRecruiter Maven repository</name>
             <url>http://www.jrecruiter.org:8080/nexus/content/groups/public/</url>
         </repository>
+<!-- 	    <repository>
+	        <id>repository.springframework.maven.milestone</id>
+	        <name>Spring Framework Maven Milestone Repository</name>
+	        <url>http://maven.springframework.org/milestone</url>
+	    </repository>
+        <repository>
+            <id>maven</id>
+            <name>Maven Central</name>
+            <url>http://repo1.maven.org/</url>
+        </repository>
+<repository>
+            <id>no-commons-logging</id>
+            <name>Version 99 Does Not Exist Maven repository</name>
+            <layout>default</layout>
+            <url>http://no-commons-logging.zapto.org/mvn2</url>
+        </repository> -->
     </repositories>
 
     <pluginRepositories>

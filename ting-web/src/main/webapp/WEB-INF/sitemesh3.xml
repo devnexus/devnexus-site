@@ -1,4 +1,9 @@
 <sitemesh>
-  <mapping                 decorator="/WEB-INF/jsp/decorators/default.jsp"/>
+  <mapping                   decorator="/WEB-INF/jsp/decorators/default.jsp"/>
   <mapping path="/s/admin/*" decorator="/WEB-INF/jsp/decorators/admin.jsp"/>
+
+  <content-processor>
+    <tag-rule-bundle class="org.sitemesh.content.tagrules.html.Sm2TagRuleBundle"/>
+  </content-processor>
+
 </sitemesh>
