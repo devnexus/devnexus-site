@@ -75,8 +75,7 @@ public class Presentation extends BaseModelObject {
     private Speaker speaker;
 
     @ManyToOne
-    @NotNull
-    @XmlTransient
+    @JoinColumn(name="ROOM_ID")
     private Room room;
 
     @Size(max=255)
@@ -149,6 +148,12 @@ public class Presentation extends BaseModelObject {
         this.title = title;
     }
 
+	public Room getRoom() {
+		return room;
+	}
 
+	public void setRoom(Room room) {
+		this.room = room;
+	}
 
 }

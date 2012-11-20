@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2012 - Travel</title>
+<title>DevNexus 2013 - Travel</title>
 <div id="content" class="span-22 last">
   <div class="quote"><span>What the community says:</span> "It is very cool that AJUG puts together a conference that is so inexpensive &amp; therefore accessible"</div>
 
@@ -41,7 +41,6 @@
         <ul>
             <li>Directions: <a href="http://bit.ly/fKUADx">http://bit.ly/fKUADx</a></li>
             <li>Site: <a href="http://www.atlantagalleria.embassysuites.com">http://www.atlantagalleria.embassysuites.com</a></li>
-            <li>Group Code: DEV</li>
         </ul>
         <p>
             The Group Code 'DEV' bring up the group rate. If attendees call 800-EMBASSY
