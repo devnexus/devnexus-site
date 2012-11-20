@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2012 - Speakers</title>
+<title>DevNexus 2013 - Speakers</title>
 <div id="content" class="span-22 last">
   <div class="quote"><span>What the community says:</span> "Fantastic value, content vs expense is unmatched"</div>
   <h2>Speakers

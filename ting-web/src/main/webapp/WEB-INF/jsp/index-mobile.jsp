@@ -7,7 +7,7 @@
     <div data-role="content">
         <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
             <li data-role="list-divider">DevNexus 2013</li>
-            <li><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Registration Opens Soon!</li>
+            <li><a href="https://ajug.eventwax.com/devnexus-2013/register" rel="external"><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Register Now!</a></li>
             <li><a href="${ctx}${baseSiteUrl}/speakers"      rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/groupevent.png"/>Speakers</a></li>
             <li><a href="${ctx}${baseSiteUrl}/presentations" rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/kchart.png"/>Presentations</a></li>
             <li><a href="${ctx}${baseSiteUrl}/schedule"      rel="external"><img class="ui-li-icon" alt="Schedule" src="${ctx}/img/icons/crystal/vcalendar.png"/>Schedule</a></li>
@@ -40,9 +40,11 @@
     <div data-role="content" style="background-color: white;">
 
     <h3>Gold Sponsors</h3>
-    <h3>Silver Sponsors</h3>
-
-    <h3>Cocktail Hour Sponsor</h3>
+	<h3>Silver Sponsors</h3>
+	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
+	<a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics" src="${ctx}/img/sponsors/app-dynamics.png"/></a>
+	<h3>Cocktail Hour Sponsor</h3>
+	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
     </div>
     <!-- /content -->
 

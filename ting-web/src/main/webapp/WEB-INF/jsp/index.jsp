@@ -97,25 +97,24 @@
     <h2>Registration</h2>
 
    <div id="signup">
-       <h2 style="color: #FF0000;">Coming Soon!</h2>
+       <h2 style="color: #FF0000;"><a href="https://ajug.eventwax.com/devnexus-2013/register">Register Now</a></h2>
    </div>
 
     <p>
-        The Standard Ticket is <strong>TBD</strong>.
+        The Standard Ticket is <strong>$230</strong>, however until February 15, 2013, we have
+        an early bird special of <strong>$195</strong>.
     </p>
     <p>
         Furthermore, we have a group discount available: If you book 5 tickets
-        or more each ticket is <strong>TBD</strong>.
+        or more, each ticket is <strong>$195</strong>.
     </p>
 
-    <p>Are you are student? We have a limited amount of student tickets priced at <strong>TBD</strong>.
+    <p>Are you are student? We have a limited amount of student tickets priced at <strong>$140</strong>.
        Please contact us at: info AT ajug DOT org for details.
     </p>
 
-    <p>Please be aware that we have to close registration on March 15 as we need to
-       report our attendee numbers to the Cobb Galleria. Also 2 weeks before the
-       event only late tickets will be available for TBD. Therefore, please book
-       your tickets as early as possible!
+    <p><strong>Please book your tickets as early as possible! We have completely sold out
+    in the past 3 years.</strong>
     </p>
 
     <p>If you have any questions, please contact us at info AT ajug DOT org</p>
@@ -157,10 +156,11 @@
     </div>
     <h3>Gold Sponsors</h3>
 
-    <h3>Silver Sponsors</h3>
-
-    <h3>Cocktail Hour Sponsor</h3>
-
+	<h3>Silver Sponsors</h3>
+	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
+	<a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics" src="${ctx}/img/sponsors/app-dynamics.png"/></a>
+	<h3>Cocktail Hour Sponsor</h3>
+	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
   <div style="margin-top: 3em;">
    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
    <script type="text/javascript">

@@ -77,7 +77,7 @@
                       <a href="#">Past Conferences...</a>
                     </h2>
                     <div style="width: 450px; z-index: 20000;">
-                        <table style="width: 400px;">
+                        <table style="width: 400px; margin-bottom: 1em;">
                             <c:forEach items="${eventsForMenu}" var="event">
                                 <tr>
                                  <td><c:out value="${event.title}"/></td>
@@ -86,11 +86,14 @@
                               </tr>
                           </c:forEach>
                         </table>
+                        <p>
+                        DevNexus 2012 - <a href="http://devnexus.com/static/2012/audio/">All Audio Recordings</a>
+                        </p>
                     </div>
                 </li>
                 <li><a href="${organizersUrl}"><span>Your Organizers</span></a></li>
                 <li><a href="${travelUrl}"><span>Travel</span></a></li>
-                <li><a href="#" style="color: #F7941E"><span>Sold Out!</span></a></li>
+                <li><a href="https://ajug.eventwax.com/devnexus-2013/register" style="color: #F7941E"><span>Register</span></a></li>
 
                 <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
                 <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>

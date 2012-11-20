@@ -6,7 +6,7 @@
 
             <div data-role="header">
                 <a rel="external" href="${ctx}${baseSiteUrl}/index">Back</a>
-                <h1>DevNexus 2012</h1>
+                <h1>DevNexus 2013</h1>
             </div><!-- /header -->
 
             <div data-role="content">
@@ -22,7 +22,7 @@
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>&copy; 2012 AJUG</h4>
+                <h4>&copy; 2013 AJUG</h4>
             </div><!-- /header -->
         </div><!-- /page -->
 
@@ -52,7 +52,7 @@
                 </div><!-- /content -->
 
                 <div data-role="footer">
-                    <h4>&copy; 2012 AJUG</h4>
+                    <h4>&copy; 2013 AJUG</h4>
                 </div><!-- /header -->
             </div><!-- /page -->
         </c:forEach>
