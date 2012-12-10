@@ -24,11 +24,11 @@
     </filter-mapping>
     <filter-mapping>
         <filter-name>gzipFilter</filter-name>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/s/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>lazyLoadingFilter</filter-name>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/s/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
