@@ -43,6 +43,9 @@
 	<h3>Silver Sponsors</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
 	<a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics" src="${ctx}/img/sponsors/app-dynamics.png"/></a>
+	<a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/img/sponsors/jboss.png"/></a>
+	<a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group" src="${ctx}/img/sponsors/Anteo.png"/></a>
+	<a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems" src="${ctx}/img/sponsors/apex-systems.png"/></a>
 	<h3>Cocktail Hour Sponsor</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
     </div>
