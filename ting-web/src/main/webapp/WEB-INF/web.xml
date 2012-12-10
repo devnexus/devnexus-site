@@ -11,10 +11,6 @@
         <param-value>classpath:spring/mainApplicationContext.xml</param-value>
     </context-param>
     <filter-mapping>
-        <filter-name>JSONPRequestFilter</filter-name>
-        <url-pattern>*.json</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
         <filter-name>UrlRewriteFilter</filter-name>
         <url-pattern>/proxy/*</url-pattern>
     </filter-mapping>
@@ -25,6 +21,10 @@
     <filter-mapping>
         <filter-name>gzipFilter</filter-name>
         <url-pattern>/s/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSONPRequestFilter</filter-name>
+        <url-pattern>*.json</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>lazyLoadingFilter</filter-name>
