@@ -80,10 +80,6 @@
 		<filter-class>com.devnexus.ting.web.filter.LoggingFilter4Logback</filter-class>
 	</filter>
 	<filter-mapping>
-		<filter-name>JSONPRequestFilter</filter-name>
-		<url-pattern>*.json</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
 		<filter-name>UrlRewriteFilter</filter-name>
 		<url-pattern>/proxy/*</url-pattern>
 	</filter-mapping>
@@ -98,6 +94,10 @@
 		<url-pattern>/desktop/*</url-pattern>
 		<url-pattern>/mobile/*</url-pattern>
 		<url-pattern>/rss/*</url-pattern>
+	</filter-mapping>
+        <filter-mapping>
+		<filter-name>JSONPRequestFilter</filter-name>
+		<url-pattern>*.json</url-pattern>
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>lazyLoadingFilter</filter-name>
