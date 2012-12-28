@@ -24,19 +24,19 @@ import com.devnexus.ting.core.model.FileData;
 
 @Repository("documentDao")
 public class DocumentDaoJpa extends GenericDaoJpa< FileData, Long>
-                           implements DocumentDao {
+						   implements DocumentDao {
 
-    /** Constructor. */
-    private DocumentDaoJpa() {
-        super(FileData.class);
-    }
+	/** Constructor. */
+	private DocumentDaoJpa() {
+		super(FileData.class);
+	}
 
-    @Override
-    public List<FileData> getAllDocuments() {
-        return super.entityManager
-        .createQuery("select doc from FileData doc "
-                   + "order by doc.name ASC", FileData.class)
-        .getResultList();
-    }
+	@Override
+	public List<FileData> getAllDocuments() {
+		return super.entityManager
+		.createQuery("select doc from FileData doc "
+				   + "order by doc.name ASC", FileData.class)
+		.getResultList();
+	}
 
 }

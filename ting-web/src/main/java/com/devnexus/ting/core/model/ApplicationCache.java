@@ -44,41 +44,41 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name="APPLICATION_CACHE")
 public class ApplicationCache {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(unique=true, nullable=false)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
+	private Long id;
 
-    @NotEmpty
-    @Size(max=255)
-    private String  uuid;
+	@NotEmpty
+	@Size(max=255)
+	private String  uuid;
 
-    @Temporal(value=TemporalType.TIMESTAMP)
-    @XmlAttribute
-    private Date    updatedDate;
+	@Temporal(value=TemporalType.TIMESTAMP)
+	@XmlAttribute
+	private Date    updatedDate;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getUuid() {
-        return uuid;
-    }
+	public String getUuid() {
+		return uuid;
+	}
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
 
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
 
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
 
 }

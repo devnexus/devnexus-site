@@ -35,67 +35,67 @@ import com.devnexus.ting.common.CollectionUtils;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Backup {
 
-    @XmlElementWrapper(name = "events")
-    @XmlElement(name = "event")
-    private List<Event> events = CollectionUtils.getArrayList();
+	@XmlElementWrapper(name = "events")
+	@XmlElement(name = "event")
+	private List<Event> events = CollectionUtils.getArrayList();
 
-    @XmlElementWrapper(name = "organizers")
-    @XmlElement(name = "organizer")
-    private List<Organizer>   organizers    = CollectionUtils.getArrayList();
+	@XmlElementWrapper(name = "organizers")
+	@XmlElement(name = "organizer")
+	private List<Organizer>   organizers    = CollectionUtils.getArrayList();
 
-    @XmlElementWrapper(name = "presentations")
-    @XmlElement(name = "presentation")
-    private List<Presentation>     presentations      = CollectionUtils.getArrayList();
+	@XmlElementWrapper(name = "presentations")
+	@XmlElement(name = "presentation")
+	private List<Presentation>     presentations      = CollectionUtils.getArrayList();
 
-    @XmlElementWrapper(name = "speakers")
-    @XmlElement(name = "speaker")
-    private List<Speaker>     speakers     = CollectionUtils.getArrayList();
+	@XmlElementWrapper(name = "speakers")
+	@XmlElement(name = "speaker")
+	private List<Speaker>     speakers     = CollectionUtils.getArrayList();
 
-    @XmlElementWrapper(name = "users")
-    @XmlElement(name = "user")
-    private List<User>      users       = CollectionUtils.getArrayList();
+	@XmlElementWrapper(name = "users")
+	@XmlElement(name = "user")
+	private List<User>      users       = CollectionUtils.getArrayList();
 
 
-    //~~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public List<Event> getEvents() {
-        return events;
-    }
+	public List<Event> getEvents() {
+		return events;
+	}
 
-    public void setEvents(List<Event> events) {
-        this.events = events;
-    }
+	public void setEvents(List<Event> events) {
+		this.events = events;
+	}
 
-    public List<Organizer> getOrganizers() {
-        return organizers;
-    }
+	public List<Organizer> getOrganizers() {
+		return organizers;
+	}
 
-    public void setOrganizers(List<Organizer> organizers) {
-        this.organizers = organizers;
-    }
+	public void setOrganizers(List<Organizer> organizers) {
+		this.organizers = organizers;
+	}
 
-    public List<Presentation> getPresentations() {
-        return presentations;
-    }
+	public List<Presentation> getPresentations() {
+		return presentations;
+	}
 
-    public void setPresentations(List<Presentation> presentations) {
-        this.presentations = presentations;
-    }
+	public void setPresentations(List<Presentation> presentations) {
+		this.presentations = presentations;
+	}
 
-    public List<Speaker> getSpeakers() {
-        return speakers;
-    }
+	public List<Speaker> getSpeakers() {
+		return speakers;
+	}
 
-    public void setSpeakers(List<Speaker> speakers) {
-        this.speakers = speakers;
-    }
+	public void setSpeakers(List<Speaker> speakers) {
+		this.speakers = speakers;
+	}
 
-    public List<User> getUsers() {
-        return users;
-    }
+	public List<User> getUsers() {
+		return users;
+	}
 
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
+	public void setUsers(List<User> users) {
+		this.users = users;
+	}
 
 }

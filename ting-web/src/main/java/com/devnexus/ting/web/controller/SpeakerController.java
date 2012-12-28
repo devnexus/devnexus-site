@@ -44,58 +44,58 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller
 public class SpeakerController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
 
-    @RequestMapping(value="/speakers", method = RequestMethod.GET)
-    public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference, @RequestParam(value="image", defaultValue="false") boolean image) {
-        SpeakerList speakers = new SpeakerList();
-        speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+	@RequestMapping(value="/speakers", method = RequestMethod.GET)
+	public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference, @RequestParam(value="image", defaultValue="false") boolean image) {
+		SpeakerList speakers = new SpeakerList();
+		speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
 
-        model.addAttribute("speakerList",speakers);
+		model.addAttribute("speakerList",speakers);
 
-        if (sitePreference.isMobile()) {
-            return "speakers-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "speakers-mobile";
+		}
 
-        return "speakers";
-    }
+		return "speakers";
+	}
 
-    @RequestMapping("/{eventKey}/speakers")
-    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
-        final Event event = businessService.getEventByEventKey(eventKey);
-        model.addAttribute("event", event);
+	@RequestMapping("/{eventKey}/speakers")
+	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("event", event);
 
-        SpeakerList speakers = new SpeakerList();
-        speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
-        model.addAttribute("speakerList",speakers);
+		SpeakerList speakers = new SpeakerList();
+		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
+		model.addAttribute("speakerList",speakers);
 
-        if (sitePreference.isMobile()) {
-            return "speakers-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "speakers-mobile";
+		}
 
-        return "speakers";
-    }
+		return "speakers";
+	}
 
-    @RequestMapping(value="/speakers/{speakerId}.jpg", method=RequestMethod.GET)
-    public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
+	@RequestMapping(value="/speakers/{speakerId}.jpg", method=RequestMethod.GET)
+	public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
 
-        final byte[] speakerImage = businessService.getSpeakerImage(speakerId);
+		final byte[] speakerImage = businessService.getSpeakerImage(speakerId);
 
-        try {
-            org.apache.commons.io.IOUtils.write(speakerImage, response.getOutputStream());
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+		try {
+			org.apache.commons.io.IOUtils.write(speakerImage, response.getOutputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-        response.setContentType("image/jpg");
+		response.setContentType("image/jpg");
 
-    }
+	}
 
 }

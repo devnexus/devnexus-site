@@ -24,28 +24,28 @@ import com.devnexus.ting.core.model.Organizer;
 
 @Repository("organizerDao")
 public class OrganizerDaoJpa extends GenericDaoJpa< Organizer, Long>
-                           implements OrganizerDao {
+						   implements OrganizerDao {
 
-    /** Constructor. */
-    private OrganizerDaoJpa() {
-        super(Organizer.class);
-    }
+	/** Constructor. */
+	private OrganizerDaoJpa() {
+		super(Organizer.class);
+	}
 
-    @Override
-    public List<Organizer> getAllOrganizers() {
+	@Override
+	public List<Organizer> getAllOrganizers() {
 
-        return super.entityManager
-        .createQuery("select o from Organizer o "
-                   + "order by o.sortOrder ASC", Organizer.class)
-        .getResultList();
-    }
+		return super.entityManager
+		.createQuery("select o from Organizer o "
+				   + "order by o.sortOrder ASC", Organizer.class)
+		.getResultList();
+	}
 
-    @Override
-    public Organizer getOrganizerWithPicture(Long organizerId) {
-        return super.entityManager
-        .createQuery("select o from Organizer o left outer join fetch o.picture where o.id = :id", Organizer.class)
-        .setParameter("id", organizerId)
-        .getSingleResult();
-    }
+	@Override
+	public Organizer getOrganizerWithPicture(Long organizerId) {
+		return super.entityManager
+		.createQuery("select o from Organizer o left outer join fetch o.picture where o.id = :id", Organizer.class)
+		.setParameter("id", organizerId)
+		.getSingleResult();
+	}
 
 }

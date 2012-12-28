@@ -36,31 +36,31 @@ import com.devnexus.ting.core.model.Backup;
 @Repository("backupDao")
 public class BackupDaoJaxb implements BackupDao {
 
-    /** Logger declaration */
-    private static final Logger LOGGER = LoggerFactory.getLogger(BackupDaoJaxb.class);
+	/** Logger declaration */
+	private static final Logger LOGGER = LoggerFactory.getLogger(BackupDaoJaxb.class);
 
-    private @Autowired Jaxb2Marshaller marshaller;
+	private @Autowired Jaxb2Marshaller marshaller;
 
-    /**
-     *
-     */
-    public BackupDaoJaxb() {
-    }
+	/**
+	 *
+	 */
+	public BackupDaoJaxb() {
+	}
 
-    @Override
-    public Backup convertToBackupData(final InputStream inputStream) {
+	@Override
+	public Backup convertToBackupData(final InputStream inputStream) {
 
-        final StreamSource source = new StreamSource(inputStream);
-        final Backup backup = (Backup) marshaller.unmarshal(source);
+		final StreamSource source = new StreamSource(inputStream);
+		final Backup backup = (Backup) marshaller.unmarshal(source);
 
-        LOGGER.info("Restoring: " + backup.getUsers().size()         + " users, "
-                                  + backup.getEvents().size()        + " events, "
-                                  + backup.getOrganizers().size()    + " organizers, "
-                                  + backup.getPresentations().size() + " presentations, and "
-                                  + backup.getSpeakers().size()      + " speakers.");
+		LOGGER.info("Restoring: " + backup.getUsers().size()         + " users, "
+								  + backup.getEvents().size()        + " events, "
+								  + backup.getOrganizers().size()    + " organizers, "
+								  + backup.getPresentations().size() + " presentations, and "
+								  + backup.getSpeakers().size()      + " speakers.");
 
-        return backup;
+		return backup;
 
-    }
+	}
 
 }

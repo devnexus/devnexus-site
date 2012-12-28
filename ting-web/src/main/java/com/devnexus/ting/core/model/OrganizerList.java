@@ -30,25 +30,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="organizers")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OrganizerList implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @XmlElement(name="organizer")
-    private List<Organizer> organizers;
+	@XmlElement(name="organizer")
+	private List<Organizer> organizers;
 
-    /**
-     * @param organizers
-     */
-    public OrganizerList(List<Organizer> organizers) {
-        super();
-        this.organizers = organizers;
-    }
+	/**
+	 * @param organizers
+	 */
+	public OrganizerList(List<Organizer> organizers) {
+		super();
+		this.organizers = organizers;
+	}
 
-    public List<Organizer> getOrganizers() {
-        return organizers;
-    }
+	public List<Organizer> getOrganizers() {
+		return organizers;
+	}
 
-    public void setOrganizers(List<Organizer> organizers) {
-        this.organizers = organizers;
-    }
+	public void setOrganizers(List<Organizer> organizers) {
+		this.organizers = organizers;
+	}
 
 }

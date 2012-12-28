@@ -22,21 +22,21 @@ import org.springframework.util.Assert;
 
 public class CloudApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-    @Override
-    public void initialize(ConfigurableApplicationContext applicationContext) {
-        CloudEnvironment env = new CloudEnvironment();
-        if (env.getInstanceInfo() != null) {
-            System.out.println("cloud API: " + env.getCloudApiUri());
-            applicationContext.getEnvironment().setActiveProfiles("cloud");
-        }
-        else {
+	@Override
+	public void initialize(ConfigurableApplicationContext applicationContext) {
+		CloudEnvironment env = new CloudEnvironment();
+		if (env.getInstanceInfo() != null) {
+			System.out.println("cloud API: " + env.getCloudApiUri());
+			applicationContext.getEnvironment().setActiveProfiles("cloud");
+		}
+		else {
 
-            final String profile = System.getProperty("ting-spring-profile");
+			final String profile = System.getProperty("ting-spring-profile");
 
-            Assert.hasText(profile, "No Profile retrieved from system property 'ting-spring-profile'");
+			Assert.hasText(profile, "No Profile retrieved from system property 'ting-spring-profile'");
 
-            applicationContext.getEnvironment().setActiveProfiles(profile);
-        }
-    }
+			applicationContext.getEnvironment().setActiveProfiles(profile);
+		}
+	}
 
 }

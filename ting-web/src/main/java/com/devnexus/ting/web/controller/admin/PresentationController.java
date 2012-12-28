@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,9 @@ package com.devnexus.ting.web.controller.admin;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -35,146 +37,163 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.PresentationType;
+import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.web.filter.FlashMap;
+
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
- *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ * @since 1.0
  */
 @Controller("adminPresentationController")
 public class PresentationController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    @Autowired private Validator validator;
+	@Autowired private Validator validator;
 
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
-    @RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
-    public String getPresentations(ModelMap model, HttpServletRequest request) {
+	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
+	public String getPresentations(ModelMap model, HttpServletRequest request) {
 
-        final List<Presentation> presentations = businessService.getAllPresentations();
-        model.addAttribute("presentations", presentations);
+		final List<Presentation> presentations = businessService.getAllPresentations();
+		model.addAttribute("presentations", presentations);
 
-        return "/admin/manage-presentations";
-    }
+		return "/admin/manage-presentations";
+	}
 
-    @RequestMapping(value="/admin/presentation", method=RequestMethod.GET)
-    public String prepareAddPresentation(ModelMap model) {
+	@RequestMapping(value="/admin/presentation", method=RequestMethod.GET)
+	public String prepareAddPresentation(ModelMap model) {
 
-        final List<Event> events = businessService.getAllEventsOrderedByName();
-        model.addAttribute("events", events);
+		final List<Event> events = businessService.getAllEventsOrderedByName();
+		model.addAttribute("events", events);
 
-        final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
-        model.addAttribute("speakers", speakers);
+		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
+		model.addAttribute("presentationTypes", presentationTypes);
 
-        final Presentation presentation = new Presentation();
-        model.addAttribute("presentation", presentation);
+		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
+		model.addAttribute("skillLevels", skillLevels);
 
-        return "/admin/add-presentation";
-    }
+		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
+		model.addAttribute("speakers", speakers);
 
-    @RequestMapping(value="/admin/presentation", method=RequestMethod.POST)
-    public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, HttpServletRequest request) {
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/presentations";
-        }
+		final Presentation presentation = new Presentation();
+		model.addAttribute("presentation", presentation);
 
-        if (bindingResult.hasErrors()) {
-            return "/admin/add-presentation";
-        }
+		return "/admin/add-presentation";
+	}
 
-        if (presentation.getSpeaker() != null && presentation.getSpeaker().getId() != null) {
-            Speaker speakerFromDb = businessService.getSpeaker(presentation.getSpeaker().getId());
-            presentation.setSpeaker(speakerFromDb);
+	@RequestMapping(value="/admin/presentation", method=RequestMethod.POST)
+	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, HttpServletRequest request) {
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/presentations";
+		}
 
-        }
-        businessService.savePresentation(presentation);
-        return "redirect:/s/admin/presentations";
-    }
+		if (bindingResult.hasErrors()) {
+			return "/admin/add-presentation";
+		}
 
-    @RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.GET)
-    public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
+		if (presentation.getSpeaker() != null && presentation.getSpeaker().getId() != null) {
+			Speaker speakerFromDb = businessService.getSpeaker(presentation.getSpeaker().getId());
+			presentation.setSpeaker(speakerFromDb);
 
-        final List<Event> events = businessService.getAllEventsOrderedByName();
-        model.addAttribute("events", events);
+		}
 
-        final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
-        model.addAttribute("speakers", speakers);
+		businessService.savePresentation(presentation);
+		return "redirect:/s/admin/presentations";
+	}
 
-        Presentation presentation = businessService.getPresentation(presentationId);
+	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.GET)
+	public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
 
-        model.addAttribute("presentation", presentation);
+		final List<Event> events = businessService.getAllEventsOrderedByName();
+		model.addAttribute("events", events);
 
-        return "/admin/add-presentation";
-    }
+		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
+		model.addAttribute("presentationTypes", presentationTypes);
 
-    @RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.POST)
-    public String editPresentation(@PathVariable("presentationId") Long presentationId,
-            @RequestParam MultipartFile uploadedFile,
-                                   @Valid Presentation presentation,
-                                   BindingResult result,
-                                   HttpServletRequest request) {
+		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
+		model.addAttribute("skillLevels", skillLevels);
 
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/presentations";
-        }
+		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
+		model.addAttribute("speakers", speakers);
 
-        if (result.hasErrors()) {
-            return "/admin/add-presentation";
-        }
+		Presentation presentation = businessService.getPresentation(presentationId);
 
-        final Presentation presentationFromDb = businessService.getPresentation(presentationId);
+		model.addAttribute("presentation", presentation);
 
-        presentationFromDb.setAudioLink(presentation.getAudioLink());
-        presentationFromDb.setDescription(presentation.getDescription());
-        presentationFromDb.setEvent(presentation.getEvent());
-        presentationFromDb.setPresentationLink(presentation.getPresentationLink());
-        presentationFromDb.setTitle(presentation.getTitle());
+		return "/admin/add-presentation";
+	}
 
-        if (uploadedFile != null && uploadedFile.getSize() > 0) {
+	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.POST)
+	public String editPresentation(@PathVariable("presentationId") Long presentationId,
+			@RequestParam MultipartFile uploadedFile,
+								@Valid Presentation presentation,
+								BindingResult result,
+								HttpServletRequest request,
+								RedirectAttributes redirectAttributes) {
 
-            final FileData presentationData;
-            if (presentationFromDb.getPresentationFile()==null) {
-                presentationData = new FileData();
-            } else {
-                presentationData = presentationFromDb.getPresentationFile();
-            }
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/presentations";
+		}
 
-            try {
+		if (result.hasErrors()) {
+			return "/admin/add-presentation";
+		}
 
-                presentationData.setFileData(IOUtils.toByteArray(uploadedFile.getInputStream()));
-                presentationData.setFileSize(uploadedFile.getSize());
-                presentationData.setFileModified(new Date());
-                presentationData.setName(uploadedFile.getOriginalFilename());
-                presentationData.setType(uploadedFile.getContentType());
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+		final Presentation presentationFromDb = businessService.getPresentation(presentationId);
 
-            presentationFromDb.setPresentationFile(presentationData);
+		presentationFromDb.setAudioLink(presentation.getAudioLink());
+		presentationFromDb.setDescription(presentation.getDescription());
+		presentationFromDb.setEvent(presentation.getEvent());
+		presentationFromDb.setPresentationLink(presentation.getPresentationLink());
+		presentationFromDb.setTitle(presentation.getTitle());
 
-            String message = "File '" + presentationData.getName() + "' uploaded successfully";
-            FlashMap.setSuccessMessage(message);
-        }
+		presentationFromDb.setSkillLevel(presentation.getSkillLevel());
+		presentationFromDb.setPresentationType(presentation.getPresentationType());
 
-        businessService.savePresentation(presentationFromDb);
+		if (uploadedFile != null && uploadedFile.getSize() > 0) {
 
-        FlashMap.setSuccessMessage("The presentation was edited successfully.");
-        return "redirect:/s/admin/presentations";
-    }
+			final FileData presentationData;
+			if (presentationFromDb.getPresentationFile()==null) {
+				presentationData = new FileData();
+			} else {
+				presentationData = presentationFromDb.getPresentationFile();
+			}
+
+			try {
+
+				presentationData.setFileData(IOUtils.toByteArray(uploadedFile.getInputStream()));
+				presentationData.setFileSize(uploadedFile.getSize());
+				presentationData.setFileModified(new Date());
+				presentationData.setName(uploadedFile.getOriginalFilename());
+				presentationData.setType(uploadedFile.getContentType());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			presentationFromDb.setPresentationFile(presentationData);
+
+			String message = "File '" + presentationData.getName() + "' uploaded successfully";
+			redirectAttributes.addFlashAttribute("successMessage", message);
+		}
+
+		businessService.savePresentation(presentationFromDb);
+
+		redirectAttributes.addFlashAttribute("successMessage", "The presentation was edited successfully.");
+		return "redirect:/s/admin/presentations";
+	}
 }

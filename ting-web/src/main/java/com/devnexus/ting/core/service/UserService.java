@@ -102,17 +102,17 @@ public interface UserService {
 //     */
 //    void resetPassword(User user);
 
-    /**
-     * This method is used by ACEGI security to load user details for authentication.
-     * @see org.acegisecurity.userdetails.UserDetailsService#loadUserByUsername(java.lang.String)
-     *
-     * @param username Username
-     * @return Details of the user
-     * @throws DataAccessException
-     * @throws UsernameNotFoundException Thrown if no user was found in persistence store.
-     */
-    UserDetails loadUserByUsername(String username)
-            throws UsernameNotFoundException, DataAccessException;
+	/**
+	 * This method is used by ACEGI security to load user details for authentication.
+	 * @see org.acegisecurity.userdetails.UserDetailsService#loadUserByUsername(java.lang.String)
+	 *
+	 * @param username Username
+	 * @return Details of the user
+	 * @throws DataAccessException
+	 * @throws UsernameNotFoundException Thrown if no user was found in persistence store.
+	 */
+	UserDetails loadUserByUsername(String username)
+			throws UsernameNotFoundException, DataAccessException;
 
 //    /**
 //     * Get a user by its verification key. This method is used to verify user

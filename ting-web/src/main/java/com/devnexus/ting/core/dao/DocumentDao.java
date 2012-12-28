@@ -21,6 +21,6 @@ import com.devnexus.ting.core.model.FileData;
 
 public interface DocumentDao  extends GenericDao < FileData, Long > {
 
-    List<FileData> getAllDocuments();
+	List<FileData> getAllDocuments();
 
 }

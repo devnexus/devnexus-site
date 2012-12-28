@@ -42,131 +42,139 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlAccessorType(value=XmlAccessType.FIELD)
 public class Event {
 
-    @XmlAttribute
-    @Id @GeneratedValue(generator="hibseq")
-    private Long id;
+	@XmlAttribute
+	@Id @GeneratedValue(generator="hibseq")
+	private Long id;
 
-    @Column(unique=true)
-    @NotEmpty
-    @Size(max=25)
-    private String eventKey;
+	@Column(unique=true)
+	@NotEmpty
+	@Size(max=25)
+	private String eventKey;
 
-    @NotEmpty
-    @Column(length=255)
-    private String title;
+	@NotEmpty
+	@Column(length=255)
+	private String title;
 
-    private boolean current;
+	private boolean current;
 
-    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="event")
-    private Set<Presentation>presentations = new HashSet<Presentation>(0);
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="event")
+	private Set<Presentation>presentations = new HashSet<Presentation>(0);
 
-    @ManyToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
-    private Set<Speaker>speakers = new HashSet<Speaker>(0);
+	@ManyToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
+	private Set<Speaker>speakers = new HashSet<Speaker>(0);
 
-    @OneToMany(mappedBy="event", targetEntity=Room.class,
-    fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Room>rooms = new HashSet<Room>(0);
+	@OneToMany(mappedBy="event", targetEntity=Room.class,
+	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	private Set<Room>rooms = new HashSet<Room>(0);
 
-    @Override
-    public String toString() {
-        return String.valueOf(id);
-    }
-
-
-    /**
-     * @param id
-     */
-    public Event() {
-        super();
-    }
-
-    /**
-     * @param id
-     */
-    public Event(Long id) {
-        super();
-        this.id = id;
-    }
-
-    /**
-     * @return the id
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    /**
-     * @return the eventKey
-     */
-    public String getEventKey() {
-        return eventKey;
-    }
-
-    /**
-     * @param eventKey the eventKey to set
-     */
-    public void setEventKey(String eventKey) {
-        this.eventKey = eventKey;
-    }
-
-    /**
-     * @return the presentations
-     */
-    public Set<Presentation> getPresentations() {
-        return presentations;
-    }
-
-    /**
-     * @param presentations the presentations to set
-     */
-    public void setPresentations(Set<Presentation> presentations) {
-        this.presentations = presentations;
-    }
-
-    /**
-     * @return the speakers
-     */
-    public Set<Speaker> getSpeakers() {
-        return speakers;
-    }
-
-    /**
-     * @param speakers the speakers to set
-     */
-    public void setSpeakers(Set<Speaker> speakers) {
-        this.speakers = speakers;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	@Override
+	public String toString() {
+		return String.valueOf(id);
+	}
 
 
-    /**
-     * @param current the current to set
-     */
-    public void setCurrent(boolean current) {
-        this.current = current;
-    }
+	/**
+	 * @param id
+	 */
+	public Event() {
+		super();
+	}
+
+	public Event(Long id, String eventKey, String title, boolean current) {
+		super();
+		this.id = id;
+		this.eventKey = eventKey;
+		this.title = title;
+		this.current = current;
+	}
+
+	/**
+	 * @param id
+	 */
+	public Event(Long id) {
+		super();
+		this.id = id;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the eventKey
+	 */
+	public String getEventKey() {
+		return eventKey;
+	}
+
+	/**
+	 * @param eventKey the eventKey to set
+	 */
+	public void setEventKey(String eventKey) {
+		this.eventKey = eventKey;
+	}
+
+	/**
+	 * @return the presentations
+	 */
+	public Set<Presentation> getPresentations() {
+		return presentations;
+	}
+
+	/**
+	 * @param presentations the presentations to set
+	 */
+	public void setPresentations(Set<Presentation> presentations) {
+		this.presentations = presentations;
+	}
+
+	/**
+	 * @return the speakers
+	 */
+	public Set<Speaker> getSpeakers() {
+		return speakers;
+	}
+
+	/**
+	 * @param speakers the speakers to set
+	 */
+	public void setSpeakers(Set<Speaker> speakers) {
+		this.speakers = speakers;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
 
-    /**
-     * @return the current
-     */
-    public boolean isCurrent() {
-        return current;
-    }
+	/**
+	 * @param current the current to set
+	 */
+	public void setCurrent(boolean current) {
+		this.current = current;
+	}
+
+
+	/**
+	 * @return the current
+	 */
+	public boolean isCurrent() {
+		return current;
+	}
 
 	public Set<Room> getRooms() {
 		return rooms;

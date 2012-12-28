@@ -46,6 +46,10 @@
 		</init-param>
 	</filter>
 	<filter>
+		<filter-name>JSONPRequestFilter</filter-name>
+		<filter-class>com.devnexus.ting.web.filter.JSONPRequestFilter</filter-class>
+	</filter>
+	<filter>
 		<filter-name>gzipFilter</filter-name>
 		<filter-class>net.sf.ehcache.constructs.web.filter.GzipFilter</filter-class>
 	</filter>
@@ -95,7 +99,7 @@
 		<url-pattern>/mobile/*</url-pattern>
 		<url-pattern>/rss/*</url-pattern>
 	</filter-mapping>
-        <filter-mapping>
+	<filter-mapping>
 		<filter-name>JSONPRequestFilter</filter-name>
 		<url-pattern>*.json</url-pattern>
 	</filter-mapping>
@@ -136,11 +140,6 @@
 		<url-pattern>*.png</url-pattern>
 		<url-pattern>*.js</url-pattern>
 	</filter-mapping>
-
-	<filter>
-		<filter-name>JSONPRequestFilter</filter-name>
-		<filter-class>com.devnexus.ting.web.filter.JSONPRequestFilter</filter-class>
-	</filter>
 
 	<!-- Spring -->
 

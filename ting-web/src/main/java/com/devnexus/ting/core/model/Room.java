@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -50,59 +49,73 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Cacheable()
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @FilterDefs({
-        @FilterDef(name = "roomFilter"),
-        @FilterDef(name = "roomFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
-        })
+		@FilterDef(name = "roomFilter"),
+		@FilterDef(name = "roomFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
+		})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Room extends BaseModelObject {
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = 1071633978769394025L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = 1071633978769394025L;
 
-    @Size(max=255)
-    @NotEmpty
-    private String name;
+	@Size(max=255)
+	@NotEmpty
+	private String name;
 
-    @Size(max=255)
-    @NotNull
-    private Integer capacity;
+	@Size(max=255)
+	private String cssStyleName;
 
-    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
-    @Filters({
-        @Filter(name = "roomFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
-        @Filter(name = "roomFilterEventId", condition = "EVENT = :eventId")
-    })
-    @XmlTransient
-    @BatchSize(size=20)
-    private Set<Presentation> presentations = new HashSet<Presentation>(0);
+	@NotNull
+	private Integer capacity;
 
-    @ManyToOne
-    //@JoinColumn(name="EVENT_ID")
-    @NotNull
-    @XmlTransient
-    private Event event;
+	@NotNull
+	private Integer roomOrder;
 
-    public Room() {
-    }
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
+	@Filters({
+		@Filter(name = "roomFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
+		@Filter(name = "roomFilterEventId", condition = "EVENT = :eventId")
+	})
+	@XmlTransient
+	@BatchSize(size=20)
+	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
-    public Room(Long id) {
-        this.id = id;
-    }
+	@ManyToOne
+	//@JoinColumn(name="EVENT_ID")
+	@NotNull
+	@XmlTransient
+	private Event event;
 
-    public Set<Presentation> getPresentations() {
-        return presentations;
-    }
+	public Room() {
+	}
 
-    public void setPresentations(Set<Presentation> presentations) {
-        this.presentations = presentations;
-    }
+	public Room(Long id) {
+		this.id = id;
+	}
 
-    @Override
-    public String toString() {
-        return "Room [name=" + name + ", id=" + id + ", capacity="
-                + capacity + "]";
-    }
+	public Room(Long id, String name, Integer capacity, Integer order, Event event) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.capacity = capacity;
+		this.roomOrder = order;
+		this.event = event;
+	}
+
+	public Set<Presentation> getPresentations() {
+		return presentations;
+	}
+
+	public void setPresentations(Set<Presentation> presentations) {
+		this.presentations = presentations;
+	}
+
+	@Override
+	public String toString() {
+		return "Room [name=" + name + ", id=" + id + ", capacity="
+				+ capacity + "]";
+	}
 
 	public Event getEvent() {
 		return event;
@@ -126,6 +139,22 @@ public class Room extends BaseModelObject {
 
 	public void setCapacity(Integer capacity) {
 		this.capacity = capacity;
+	}
+
+	public Integer getRoomOrder() {
+		return roomOrder;
+	}
+
+	public void setRoomOrder(Integer order) {
+		this.roomOrder = order;
+	}
+
+	public String getCssStyleName() {
+		return cssStyleName;
+	}
+
+	public void setCssStyleName(String cssStyleName) {
+		this.cssStyleName = cssStyleName;
 	}
 
 }

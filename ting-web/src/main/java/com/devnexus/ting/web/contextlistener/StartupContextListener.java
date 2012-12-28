@@ -36,98 +36,98 @@ import com.devnexus.ting.common.SystemInformationUtils;
  */
 public class StartupContextListener implements ServletContextListener {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(StartupContextListener.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(StartupContextListener.class);
 
-    /**
-     * Default constructor.
-     */
-    public StartupContextListener() {
-        super();
-    }
+	/**
+	 * Default constructor.
+	 */
+	public StartupContextListener() {
+		super();
+	}
 
-    /* (non-Javadoc)
-     * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
-     */
-    @Override
-    public void contextDestroyed(final ServletContextEvent servletContextEvent) {
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
+	 */
+	@Override
+	public void contextDestroyed(final ServletContextEvent servletContextEvent) {
 
-    }
+	}
 
-    /* (non-Javadoc)
-     * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
-     */
-    @Override
-    public void contextInitialized(final ServletContextEvent servletContextEvent) {
-        final ServletContext servletContext = servletContextEvent.getServletContext();
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
+	 */
+	@Override
+	public void contextInitialized(final ServletContextEvent servletContextEvent) {
+		final ServletContext servletContext = servletContextEvent.getServletContext();
 
-        final String         contextPath      = servletContext.getContextPath();
-        final String         server           = servletContext.getServerInfo();
+		final String         contextPath      = servletContext.getContextPath();
+		final String         server           = servletContext.getServerInfo();
 
-        final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
+		final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
 
-        final String outMessage;
-        SpringContextMode springContextMode = null;
+		final String outMessage;
+		SpringContextMode springContextMode = null;
 
-        switch (apphome.getAppHomeSource()) {
+		switch (apphome.getAppHomeSource()) {
 
-            case SYSTEM_PROPERTY:
-                outMessage = "System Property '" + Apphome.APP_HOME_DIRECTORY
-                                      + "' found: " + apphome.getAppHomePath();
-                break;
+			case SYSTEM_PROPERTY:
+				outMessage = "System Property '" + Apphome.APP_HOME_DIRECTORY
+									  + "' found: " + apphome.getAppHomePath();
+				break;
 
-            case ENVIRONMENT_VARIABLE:
-                System.setProperty(Apphome.APP_HOME_DIRECTORY, apphome.getAppHomePath());
+			case ENVIRONMENT_VARIABLE:
+				System.setProperty(Apphome.APP_HOME_DIRECTORY, apphome.getAppHomePath());
 
-                outMessage = "Environment Variable '" + Apphome.APP_HOME_DIRECTORY
-                                      + "' found: " + apphome.getAppHomePath()
-                                      + ". Using it to set system property.";
-                break;
+				outMessage = "Environment Variable '" + Apphome.APP_HOME_DIRECTORY
+									  + "' found: " + apphome.getAppHomePath()
+									  + ". Using it to set system property.";
+				break;
 
-            case USER_DIRECTORY:
+			case USER_DIRECTORY:
 
-                outMessage = "'" + Apphome.APP_HOME_DIRECTORY
-                                      + "' not found. Please set '" + Apphome.APP_HOME_DIRECTORY
-                                      + "' as a system property or as an environment variable. DEMO Mode, using embedded database.";
-                break;
-            case CLOUD:
-                outMessage = "You are running in the cloud (CloudFoundry). No file system access available.";
-                break;
-            default: throw new IllegalStateException("Was expecting to resolve a home directory.");
+				outMessage = "'" + Apphome.APP_HOME_DIRECTORY
+									  + "' not found. Please set '" + Apphome.APP_HOME_DIRECTORY
+									  + "' as a system property or as an environment variable. DEMO Mode, using embedded database.";
+				break;
+			case CLOUD:
+				outMessage = "You are running in the cloud (CloudFoundry). No file system access available.";
+				break;
+			default: throw new IllegalStateException("Was expecting to resolve a home directory.");
 
-        }
+		}
 
-        if (SystemInformationUtils.existsConfigFile(apphome.getAppHomePath())) {
-            springContextMode = SpringContextMode.ProductionContextConfiguration;
-        } else {
-            springContextMode = SpringContextMode.DemoContextConfiguration;
-        }
+		if (SystemInformationUtils.existsConfigFile(apphome.getAppHomePath())) {
+			springContextMode = SpringContextMode.ProductionContextConfiguration;
+		} else {
+			springContextMode = SpringContextMode.DemoContextConfiguration;
+		}
 
-        System.setProperty("ting-spring-profile", springContextMode.getCode());
+		System.setProperty("ting-spring-profile", springContextMode.getCode());
 
-        if (System.getProperty("ehcache.disk.store.dir") == null) {
-            System.setProperty("ehcache.disk.store.dir", System.getProperty(Apphome.APP_HOME_DIRECTORY) + File.separator + "ehcache");
-        }
+		if (System.getProperty("ehcache.disk.store.dir") == null) {
+			System.setProperty("ehcache.disk.store.dir", System.getProperty(Apphome.APP_HOME_DIRECTORY) + File.separator + "ehcache");
+		}
 
-        final StringBuilder bootMessage = new StringBuilder();
+		final StringBuilder bootMessage = new StringBuilder();
 
-        bootMessage.append("\n");
-        bootMessage.append(outMessage);
-        bootMessage.append("\n");
-        bootMessage.append("Using Spring Context: " + springContextMode);
-        bootMessage.append("\n");
-        bootMessage.append("Booting Ting...                          ").append("\n");
-        bootMessage.append("-----------------------------------------------").append("\n");
+		bootMessage.append("\n");
+		bootMessage.append(outMessage);
+		bootMessage.append("\n");
+		bootMessage.append("Using Spring Context: " + springContextMode);
+		bootMessage.append("\n");
+		bootMessage.append("Booting Ting...                          ").append("\n");
+		bootMessage.append("-----------------------------------------------").append("\n");
 
-        final String contextPathLabel = StringUtils.rightPad("Context Path", 40, '.');
-        final String serverLabel = StringUtils.rightPad("Server", 40, '.');
+		final String contextPathLabel = StringUtils.rightPad("Context Path", 40, '.');
+		final String serverLabel = StringUtils.rightPad("Server", 40, '.');
 
-        bootMessage.append(contextPathLabel + ": " + contextPath)     .append("\n");
-        bootMessage.append(serverLabel      + ": " + server)          .append("\n");
+		bootMessage.append(contextPathLabel + ": " + contextPath)     .append("\n");
+		bootMessage.append(serverLabel      + ": " + server)          .append("\n");
 
-        bootMessage.append(SystemInformationUtils.getAllSystemProperties());
-        bootMessage.append("-----------------------------------------------").append("\n");
+		bootMessage.append(SystemInformationUtils.getAllSystemProperties());
+		bootMessage.append("-----------------------------------------------").append("\n");
 
-        LOGGER.info(bootMessage.toString());
-    }
+		LOGGER.info(bootMessage.toString());
+	}
 
 }

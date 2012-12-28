@@ -40,68 +40,68 @@ import com.devnexus.ting.core.service.SystemSetupService;
 @Transactional
 public class SystemSetupServiceImpl implements SystemSetupService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
 
-    private @Autowired SchemaMigrationDao   schemaMigrationDao;
-    private @Autowired BackupDao            backupDao;
-    private @Autowired SystemDao            systemDao;
+	private @Autowired SchemaMigrationDao   schemaMigrationDao;
+	private @Autowired BackupDao            backupDao;
+	private @Autowired SystemDao            systemDao;
 
-    @Override
-    public void restore(final InputStream inputStream) {
+	@Override
+	public void restore(final InputStream inputStream) {
 
-        final Backup backup = backupDao.convertToBackupData(inputStream);
+		final Backup backup = backupDao.convertToBackupData(inputStream);
 
-        this.restore(backup);
+		this.restore(backup);
 
-    }
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public void loadAndRestoreSeedData() {
-        final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
-        restore(is);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public void loadAndRestoreSeedData() {
+		final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
+		restore(is);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public void restore(final Backup backup) {
+	/** {@inheritDoc} */
+	@Override
+	public void restore(final Backup backup) {
 
-       //TODO
+	   //TODO
 
-    }
+	}
 
-    @Override
-    public void createDatabase() {
-        systemDao.createDatabase(false, null);
-    }
+	@Override
+	public void createDatabase() {
+		systemDao.createDatabase(false, null);
+	}
 
-    @Override
-    public void updateDatabase() {
-        systemDao.updateDatabase();
-    }
+	@Override
+	public void updateDatabase() {
+		systemDao.updateDatabase();
+	}
 
-    @Override
-    public boolean isDatabaseSetup() {
+	@Override
+	public boolean isDatabaseSetup() {
 
-        //FIXME - Bad code...also need to check for versions etc.
+		//FIXME - Bad code...also need to check for versions etc.
 
-        try {
-            final List<SchemaMigration> migrations = schemaMigrationDao.getAll();
+		try {
+			final List<SchemaMigration> migrations = schemaMigrationDao.getAll();
 
-            if (migrations.isEmpty()) {
-                return false;
-            } else {
-                return true;
-            }
-        } catch (HibernateJdbcException e) {
-            return false;
-        }
+			if (migrations.isEmpty()) {
+				return false;
+			} else {
+				return true;
+			}
+		} catch (HibernateJdbcException e) {
+			return false;
+		}
 
-    }
+	}
 
-    @Override
-    public Backup convertToBackupData(InputStream inputStream) {
-        return backupDao.convertToBackupData(inputStream);
-    }
+	@Override
+	public Backup convertToBackupData(InputStream inputStream) {
+		return backupDao.convertToBackupData(inputStream);
+	}
 
 }

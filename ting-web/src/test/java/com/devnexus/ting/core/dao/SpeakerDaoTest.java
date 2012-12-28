@@ -20,28 +20,28 @@ public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SpeakerDao speakerDao;
 
-    /**
-     * Test to verify that the seed data is correctly populated. Typically there
-     * should be 10 industries in the system:
-     *
-     */
-    @Test
-    public void testGenerateSchema() {
-    	List<Speaker> speakers = speakerDao.getSpeakersForCurrentEvent();
-    	System.out.println("Numbers speakers: " + speakers.size());
+	/**
+	 * Test to verify that the seed data is correctly populated. Typically there
+	 * should be 10 industries in the system:
+	 *
+	 */
+	@Test
+	public void testGenerateSchema() {
+		List<Speaker> speakers = speakerDao.getSpeakersForCurrentEvent();
+		System.out.println("Numbers speakers: " + speakers.size());
 
-    	for (Speaker speaker : speakers) {
-    		System.out.println(speaker.getLastName() + ";" + speaker.getPresentations().size());
-    	}
-    }
+		for (Speaker speaker : speakers) {
+			System.out.println(speaker.getLastName() + ";" + speaker.getPresentations().size());
+		}
+	}
 
-    @Test
-    public void testGetAllSpeakersNoSpeakersExist() {
-    	List<Speaker> speakers = speakerDao.getAllSpeakersOrderedByName();
+	@Test
+	public void testGetAllSpeakersNoSpeakersExist() {
+		List<Speaker> speakers = speakerDao.getAllSpeakersOrderedByName();
 
-    	Assert.assertNotNull("List of speakers should not be null.", speakers);
-    	Assert.assertTrue("List of speakers should be empty.", speakers.isEmpty());
-    	
-    }
-    
+		Assert.assertNotNull("List of speakers should not be null.", speakers);
+		Assert.assertTrue("List of speakers should be empty.", speakers.isEmpty());
+
+	}
+
 }

@@ -19,16 +19,16 @@ public class SecurityServicesTest extends BaseDaoIntegrationTest {
 
 	@Autowired private PasswordEncoder passwordEncoder;
 
-    /**
-     * Test to verify that the seed data is correctly populated. Typically there
-     * should be 10 industries in the system:
-     *
-     */
-    @Test
-    public void testPasswordEncoder() {
-    	final String password = passwordEncoder.encodePassword("testing", null);
-    	LOGGER.info("Password: " + password);
+	/**
+	 * Test to verify that the seed data is correctly populated. Typically there
+	 * should be 10 industries in the system:
+	 *
+	 */
+	@Test
+	public void testPasswordEncoder() {
+		final String password = passwordEncoder.encodePassword("testing", null);
+		LOGGER.info("Password: " + password);
 
-    }
+	}
 
 }

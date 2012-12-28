@@ -28,29 +28,29 @@ import javax.servlet.http.HttpServletResponseWrapper;
  */
 public class ErrorAwareHttpServletResponseWrapper extends HttpServletResponseWrapper {
 
-     int errorCode;
+	 int errorCode;
 
-     public ErrorAwareHttpServletResponseWrapper(HttpServletResponse httpServletResponse) {
-            super(httpServletResponse);
-     }
+	 public ErrorAwareHttpServletResponseWrapper(HttpServletResponse httpServletResponse) {
+			super(httpServletResponse);
+	 }
 
-     @Override
-    public void sendError(int errorCode) throws IOException {
-        this.errorCode = errorCode;
-        super.sendError(errorCode);
-    }
+	 @Override
+	public void sendError(int errorCode) throws IOException {
+		this.errorCode = errorCode;
+		super.sendError(errorCode);
+	}
 
-    @Override
-    public void sendError(int errorCode, String msg) throws IOException {
-        this.errorCode = errorCode;
-        super.sendError(errorCode, msg);
-    }
+	@Override
+	public void sendError(int errorCode, String msg) throws IOException {
+		this.errorCode = errorCode;
+		super.sendError(errorCode, msg);
+	}
 
-    /**
-     * @return the errorCode
-     */
-    public int getErrorCode() {
-        return errorCode;
-    }
+	/**
+	 * @return the errorCode
+	 */
+	public int getErrorCode() {
+		return errorCode;
+	}
 
 }

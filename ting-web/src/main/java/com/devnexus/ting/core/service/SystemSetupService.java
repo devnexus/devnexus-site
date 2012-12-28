@@ -29,27 +29,27 @@ import com.devnexus.ting.core.model.Backup;
  */
 public interface SystemSetupService {
 
-    /**
-     * Restore a set of backed-up master data.
-     */
-    void restore(Backup backup);
+	/**
+	 * Restore a set of backed-up master data.
+	 */
+	void restore(Backup backup);
 
-    /**
-     * Restore a set of backed-up master data.
-     */
-    void restore(InputStream inputStream);
+	/**
+	 * Restore a set of backed-up master data.
+	 */
+	void restore(InputStream inputStream);
 
-    /** Create the database using Hibernate's SchemaExport functionality */
-    void createDatabase();
+	/** Create the database using Hibernate's SchemaExport functionality */
+	void createDatabase();
 
-    /** Update the database using Hibernate's SchemaUpdate functionality */
-    void updateDatabase();
+	/** Update the database using Hibernate's SchemaUpdate functionality */
+	void updateDatabase();
 
-    /** */
-    void loadAndRestoreSeedData();
+	/** */
+	void loadAndRestoreSeedData();
 
-    /** */
-    boolean isDatabaseSetup();
+	/** */
+	boolean isDatabaseSetup();
 
-    Backup convertToBackupData(InputStream inputStream);
+	Backup convertToBackupData(InputStream inputStream);
 }

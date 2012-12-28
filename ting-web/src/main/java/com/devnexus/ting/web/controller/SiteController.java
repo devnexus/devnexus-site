@@ -35,8 +35,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.ApplicationCache;
+import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
+import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -50,130 +52,164 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller
 public class SiteController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
-    @RequestMapping({"/index", "/"})
-    public String execute(final Model model, final SitePreference sitePreference) {
+	@RequestMapping({"/index", "/"})
+	public String execute(final Model model, final SitePreference sitePreference) {
 
-        if (sitePreference.isMobile()) {
-            return "index-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "index-mobile";
+		}
 
-        return "index";
-    }
+		return "index";
+	}
 
-    @RequestMapping("/schedule")
-    public String schedule(final Model model, final SitePreference sitePreference) {
+	@RequestMapping("/schedule-old")
+	public String schedule(final Model model, final SitePreference sitePreference) {
 
-        if (sitePreference.isMobile()) {
-            return "schedule-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "schedule-mobile-old";
+		}
 
-        return "schedule";
+		return "schedule-old";
 
-    }
+	}
 
-    @RequestMapping("/travel")
-    public String travel(final Model model, final SitePreference sitePreference) {
-        return "travel";
-    }
+	@RequestMapping("/schedule")
+	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 
-    @RequestMapping("/appcache.manifest")
-    public String appcache(final Model model, final SitePreference sitePreference) {
+		final Event event = businessService.getCurrentEvent();
 
-        final List<Organizer>organizers = businessService.getAllOrganizers();
+		List<ScheduleItem> scheduleItems = businessService.getScheduleForEvent(event.getId());
 
-        final OrganizerList organizerList = new OrganizerList(organizers);
-        model.addAttribute("organizerList", organizerList);
+		model.addAttribute("scheduleItems", scheduleItems);
 
-        SpeakerList speakers = new SpeakerList();
-        speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
-        model.addAttribute("speakerList",speakers);
+		if (sitePreference.isMobile()) {
+			return "schedule-mobile";
+		}
 
-        ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+		return "schedule";
 
-        model.addAttribute("applicationCache", applicationCache);
-        return "appcache";
-    }
+	}
 
-    @RequestMapping("/appcache-mobile.manifest")
-    public String appcacheMobile(final Model model, final SitePreference sitePreference) {
+	@RequestMapping("/{eventKey}/schedule")
+	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
 
-        final List<Organizer>organizers = businessService.getAllOrganizers();
+		final Event event = businessService.getEventByEventKey(eventKey);
 
-        final OrganizerList organizerList = new OrganizerList(organizers);
-        model.addAttribute("organizerList", organizerList);
+		List<ScheduleItem> scheduleItems = businessService.getScheduleForEvent(event.getId());
 
-        SpeakerList speakers = new SpeakerList();
-        speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
-        model.addAttribute("speakerList",speakers);
+		model.addAttribute("scheduleItems", scheduleItems);
 
-        ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+		if (sitePreference.isMobile()) {
+			return "schedule-mobile";
+		}
 
-        model.addAttribute("applicationCache", applicationCache);
-        return "appcache-mobile";
-    }
+		return "schedule";
 
-    @RequestMapping("/organizers")
-    public String getOrganizers(final Model model, final SitePreference sitePreference) {
+	}
 
-        final List<Organizer>organizers = businessService.getAllOrganizers();
+	@RequestMapping("/travel")
+	public String travel(final Model model, final SitePreference sitePreference) {
+		return "travel";
+	}
 
-        final OrganizerList organizerList = new OrganizerList(organizers);
-        model.addAttribute("organizerList", organizerList);
+	@RequestMapping("/appcache.manifest")
+	public String appcache(final Model model, final SitePreference sitePreference) {
+
+		final List<Organizer>organizers = businessService.getAllOrganizers();
+
+		final OrganizerList organizerList = new OrganizerList(organizers);
+		model.addAttribute("organizerList", organizerList);
+
+		SpeakerList speakers = new SpeakerList();
+		speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+		model.addAttribute("speakerList",speakers);
+
+		ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+
+		model.addAttribute("applicationCache", applicationCache);
+		return "appcache";
+	}
+
+	@RequestMapping("/appcache-mobile.manifest")
+	public String appcacheMobile(final Model model, final SitePreference sitePreference) {
+
+		final List<Organizer>organizers = businessService.getAllOrganizers();
+
+		final OrganizerList organizerList = new OrganizerList(organizers);
+		model.addAttribute("organizerList", organizerList);
+
+		SpeakerList speakers = new SpeakerList();
+		speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+		model.addAttribute("speakerList",speakers);
+
+		ApplicationCache applicationCache = businessService.getApplicationCacheManifest();
+
+		model.addAttribute("applicationCache", applicationCache);
+		return "appcache-mobile";
+	}
+
+	@RequestMapping("/organizers")
+	public String getOrganizers(final Model model, final SitePreference sitePreference) {
+
+		final List<Organizer>organizers = businessService.getAllOrganizers();
+
+		final OrganizerList organizerList = new OrganizerList(organizers);
+		model.addAttribute("organizerList", organizerList);
 
 
-        model.addAttribute("organizers", organizers);
+		model.addAttribute("organizers", organizers);
 
-        if (sitePreference.isMobile()) {
-            return "organizers-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "organizers-mobile";
+		}
 
-        return "organizers";
+		return "organizers";
 
-    }
+	}
 
-    @RequestMapping(value="/organizers/{organizerId}.jpg", method=RequestMethod.GET)
-    public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
+	@RequestMapping(value="/organizers/{organizerId}.jpg", method=RequestMethod.GET)
+	public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
 
-        final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
+		final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
 
-        final byte[] organizerPicture;
+		final byte[] organizerPicture;
 
-        if (organizer==null || organizer.getPicture() == null) {
-            organizerPicture = SystemInformationUtils.getOrganizerImage(null);
-            response.setContentType("image/jpg");
-        } else {
-            organizerPicture = organizer.getPicture().getFileData();
-            response.setContentType(organizer.getPicture().getType());
-        }
+		if (organizer==null || organizer.getPicture() == null) {
+			organizerPicture = SystemInformationUtils.getOrganizerImage(null);
+			response.setContentType("image/jpg");
+		} else {
+			organizerPicture = organizer.getPicture().getFileData();
+			response.setContentType(organizer.getPicture().getType());
+		}
 
-        try {
-            org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
+		try {
+			org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
 
 
 
-    }
+	}
 
-    @RequestMapping(value="/twitter", method=RequestMethod.GET)
-    public String getTwitterFeed(Model model) {
+	@RequestMapping(value="/twitter", method=RequestMethod.GET)
+	public String getTwitterFeed(Model model) {
 
-        final TwitterTemplate twitterTemplate = new TwitterTemplate();
+		final TwitterTemplate twitterTemplate = new TwitterTemplate();
 
-        final SearchResults searchResults = twitterTemplate.searchOperations().search("devnexus");
+		final SearchResults searchResults = twitterTemplate.searchOperations().search("devnexus");
 
-        model.addAttribute("tweets", searchResults.getTweets());
+		model.addAttribute("tweets", searchResults.getTweets());
 
-        return "twitter-feed-mobile";
+		return "twitter-feed-mobile";
 
-    }
+	}
 
 }

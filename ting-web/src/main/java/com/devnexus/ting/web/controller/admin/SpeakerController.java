@@ -40,7 +40,6 @@ import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.web.filter.FlashMap;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
@@ -52,147 +51,147 @@ import com.devnexus.ting.web.filter.FlashMap;
 @Controller("adminSpeakerController")
 public class SpeakerController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    @Autowired private Validator validator;
+	@Autowired private Validator validator;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
-    @RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
-    public String getSpeakers(ModelMap model, HttpServletRequest request) {
+	@RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
+	public String getSpeakers(ModelMap model, HttpServletRequest request) {
 
-        final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
-        model.addAttribute("speakers", speakers);
+		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
+		model.addAttribute("speakers", speakers);
 
-        return "/admin/manage-speakers";
-    }
+		return "/admin/manage-speakers";
+	}
 
-    @RequestMapping(value="/admin/speaker", method=RequestMethod.GET)
-    public String prepareAddSpeaker(ModelMap model) {
+	@RequestMapping(value="/admin/speaker", method=RequestMethod.GET)
+	public String prepareAddSpeaker(ModelMap model) {
 
-        final List<Event> events = businessService.getAllEventsOrderedByName();
+		final List<Event> events = businessService.getAllEventsOrderedByName();
 
-        model.addAttribute("events", events);
+		model.addAttribute("events", events);
 
-        Speaker speakerForm = new Speaker();
+		Speaker speakerForm = new Speaker();
 
-        model.addAttribute("speaker", speakerForm);
+		model.addAttribute("speaker", speakerForm);
 
-        return "/admin/add-speaker";
-    }
+		return "/admin/add-speaker";
+	}
 
-    @RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.GET)
-    public String prepareEditSpeaker(@PathVariable("speakerId") Long speakerId, ModelMap model) {
+	@RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.GET)
+	public String prepareEditSpeaker(@PathVariable("speakerId") Long speakerId, ModelMap model) {
 
-        final List<Event> events = businessService.getAllEventsOrderedByName();
+		final List<Event> events = businessService.getAllEventsOrderedByName();
 
-        model.addAttribute("events", events);
+		model.addAttribute("events", events);
 
-        Speaker speakerForm = businessService.getSpeaker(speakerId);
+		Speaker speakerForm = businessService.getSpeaker(speakerId);
 
-        model.addAttribute("speaker", speakerForm);
+		model.addAttribute("speaker", speakerForm);
 
-        return "/admin/add-speaker";
-    }
+		return "/admin/add-speaker";
+	}
 
-    @RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.POST)
-    public String editSpeaker(@PathVariable("speakerId") Long speakerId,
-                              @RequestParam MultipartFile pictureFile,
-                              @Valid Speaker speakerForm,
-                              BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.POST)
+	public String editSpeaker(@PathVariable("speakerId") Long speakerId,
+							  @RequestParam MultipartFile pictureFile,
+							  @Valid Speaker speakerForm,
+							  BindingResult result, HttpServletRequest request) {
 
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/index";
-        }
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/index";
+		}
 
-        if (result.hasErrors()) {
-            return "/admin/add-speaker";
-        }
+		if (result.hasErrors()) {
+			return "/admin/add-speaker";
+		}
 
-        final Speaker speakerFromDb = businessService.getSpeaker(speakerId);
+		final Speaker speakerFromDb = businessService.getSpeaker(speakerId);
 
-        speakerFromDb.setBio(speakerForm.getBio());
-        speakerFromDb.setTwitterId(speakerForm.getTwitterId());
-        speakerFromDb.setFirstName(speakerForm.getFirstName());
-        speakerFromDb.setLastName(speakerForm.getLastName());
+		speakerFromDb.setBio(speakerForm.getBio());
+		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
+		speakerFromDb.setFirstName(speakerForm.getFirstName());
+		speakerFromDb.setLastName(speakerForm.getLastName());
 
 
-        if (pictureFile != null && pictureFile.getSize() > 0) {
+		if (pictureFile != null && pictureFile.getSize() > 0) {
 
-            final FileData pictureData;
-            if (speakerFromDb.getPicture()==null) {
-                pictureData = new FileData();
-            } else {
-                pictureData = speakerFromDb.getPicture();
-            }
+			final FileData pictureData;
+			if (speakerFromDb.getPicture()==null) {
+				pictureData = new FileData();
+			} else {
+				pictureData = speakerFromDb.getPicture();
+			}
 
-            try {
+			try {
 
-                pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
-                pictureData.setFileSize(pictureFile.getSize());
-                pictureData.setFileModified(new Date());
-                pictureData.setName(pictureFile.getOriginalFilename());
-                pictureData.setType(pictureFile.getContentType());
+				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
+				pictureData.setFileSize(pictureFile.getSize());
+				pictureData.setFileModified(new Date());
+				pictureData.setName(pictureFile.getOriginalFilename());
+				pictureData.setType(pictureFile.getContentType());
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-            speakerFromDb.setPicture(pictureData);
+			speakerFromDb.setPicture(pictureData);
 
-            String message = "File '" + pictureData.getName() + "' uploaded successfully";
-            FlashMap.setSuccessMessage(message);
-        }
+			String message = "File '" + pictureData.getName() + "' uploaded successfully";
+			//FlashMap.setSuccessMessage(message);
+		}
 
-        businessService.saveSpeaker(speakerFromDb);
+		businessService.saveSpeaker(speakerFromDb);
 
-        FlashMap.setSuccessMessage("The speaker was edited successfully.");
-        return "redirect:/s/admin/speakers";
-    }
+		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
+		return "redirect:/s/admin/speakers";
+	}
 
-    @RequestMapping(value="/admin/speaker", method=RequestMethod.POST)
-    public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/speaker", method=RequestMethod.POST)
+	public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request) {
 
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/speakers";
-        }
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/speakers";
+		}
 
-        if (result.hasErrors()) {
-            return "/admin/add-speaker";
-        }
+		if (result.hasErrors()) {
+			return "/admin/add-speaker";
+		}
 
-        if (pictureFile != null && pictureFile.getSize() > 0) {
+		if (pictureFile != null && pictureFile.getSize() > 0) {
 
-             final FileData pictureData = new FileData();
+			 final FileData pictureData = new FileData();
 
-             try {
+			 try {
 
-                 pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
-                 pictureData.setFileSize(pictureFile.getSize());
-                 pictureData.setFileModified(new Date());
-                 pictureData.setName(pictureFile.getOriginalFilename());
-                 pictureData.setType(pictureFile.getContentType());
+				 pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
+				 pictureData.setFileSize(pictureFile.getSize());
+				 pictureData.setFileModified(new Date());
+				 pictureData.setName(pictureFile.getOriginalFilename());
+				 pictureData.setType(pictureFile.getContentType());
 
-             } catch (IOException e) {
-                 // TODO Auto-generated catch block
-                 e.printStackTrace();
-             }
+			 } catch (IOException e) {
+				 // TODO Auto-generated catch block
+				 e.printStackTrace();
+			 }
 
-             speakerForm.setPicture(pictureData);
+			 speakerForm.setPicture(pictureData);
 
-            String message = "File '" + speakerForm.getPicture().getName() + "' uploaded successfully";
-            FlashMap.setSuccessMessage(message);
+			String message = "File '" + speakerForm.getPicture().getName() + "' uploaded successfully";
+			//FlashMap.setSuccessMessage(message);
 
-        }
+		}
 
-        Speaker savedSpeaker = businessService.saveSpeaker(speakerForm);
+		Speaker savedSpeaker = businessService.saveSpeaker(speakerForm);
 
-        FlashMap.setSuccessMessage("The speaker was added successfully.");
-        return "redirect:/s/admin/speakers";
-    }
+		//FlashMap.setSuccessMessage("The speaker was added successfully.");
+		return "redirect:/s/admin/speakers";
+	}
 
 }

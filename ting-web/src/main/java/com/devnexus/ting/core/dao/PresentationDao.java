@@ -21,8 +21,8 @@ import com.devnexus.ting.core.model.Presentation;
 
 public interface PresentationDao  extends GenericDao < Presentation, Long > {
 
-    List<Presentation> getPresentationsForCurrentEvent();
+	List<Presentation> getPresentationsForCurrentEvent();
 
-    List<Presentation> getPresentationsForEvent(Long eventId);
+	List<Presentation> getPresentationsForEvent(Long eventId);
 
 }

@@ -20,9 +20,9 @@ import org.sitemesh.config.ConfigurableSiteMeshFilter;
 
 public class SpringMobileSiteMeshFilter extends ConfigurableSiteMeshFilter {
 
-    @Override
-    protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
-      builder.setCustomDecoratorSelector(
-        new SpringMobileDecoratorSelector(builder.getDecoratorSelector()));
-    }
+	@Override
+	protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
+	  builder.setCustomDecoratorSelector(
+		new SpringMobileDecoratorSelector(builder.getDecoratorSelector()));
+	}
 }

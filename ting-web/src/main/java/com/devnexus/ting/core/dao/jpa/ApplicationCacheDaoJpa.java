@@ -32,12 +32,12 @@ import com.devnexus.ting.core.model.Event;
  */
 @Repository("applicationCacheDao")
 public class ApplicationCacheDaoJpa extends GenericDaoJpa< ApplicationCache, Long>
-                           implements ApplicationCacheDao {
+						   implements ApplicationCacheDao {
 
-    /** Constructor. */
-    public ApplicationCacheDaoJpa() {
-        super(ApplicationCache.class);
-    };
+	/** Constructor. */
+	public ApplicationCacheDaoJpa() {
+		super(ApplicationCache.class);
+	};
 
 
 }

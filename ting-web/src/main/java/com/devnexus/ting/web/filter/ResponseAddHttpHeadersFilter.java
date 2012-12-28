@@ -47,59 +47,59 @@ import org.slf4j.LoggerFactory;
  */
 public class ResponseAddHttpHeadersFilter implements Filter {
 
-    /** Initialize Logging. */
-    private final static Logger LOGGER = LoggerFactory.getLogger(ResponseAddHttpHeadersFilter.class);
+	/** Initialize Logging. */
+	private final static Logger LOGGER = LoggerFactory.getLogger(ResponseAddHttpHeadersFilter.class);
 
-    FilterConfig config;
+	FilterConfig config;
 
-    public void doFilter(ServletRequest req, ServletResponse res,
-            FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest req, ServletResponse res,
+			FilterChain chain) throws IOException, ServletException {
 
-        final HttpServletResponse response;
-        final HttpServletRequest  request;
+		final HttpServletResponse response;
+		final HttpServletRequest  request;
 
-        if (res instanceof HttpServletResponse) {
-            response = (HttpServletResponse) res;
-        } else {
-            throw new IllegalStateException("Cannot cast ServletResponse to HttpServletResponse.");
-        }
+		if (res instanceof HttpServletResponse) {
+			response = (HttpServletResponse) res;
+		} else {
+			throw new IllegalStateException("Cannot cast ServletResponse to HttpServletResponse.");
+		}
 
-        if (req instanceof HttpServletRequest) {
-            request  = (HttpServletRequest) req;
-        } else {
-            throw new IllegalStateException("Cannot cast ServletRequest to HttpServletRequest.");
-        }
+		if (req instanceof HttpServletRequest) {
+			request  = (HttpServletRequest) req;
+		} else {
+			throw new IllegalStateException("Cannot cast ServletRequest to HttpServletRequest.");
+		}
 
-        LOGGER.debug("RequestURI = " + request.getRequestURI());
+		LOGGER.debug("RequestURI = " + request.getRequestURI());
 
-        final int secondsToCache = Integer.valueOf(config.getInitParameter("secondsToCache"));
+		final int secondsToCache = Integer.valueOf(config.getInitParameter("secondsToCache"));
 
-        setCacheExpireDate(response, secondsToCache);
-        // pass the request/response on
-        chain.doFilter(req, response);
-    }
+		setCacheExpireDate(response, secondsToCache);
+		// pass the request/response on
+		chain.doFilter(req, response);
+	}
 
-    public void init(FilterConfig filterConfig) {
-        this.config = filterConfig;
-    }
+	public void init(FilterConfig filterConfig) {
+		this.config = filterConfig;
+	}
 
-    public void destroy() {
-        this.config = null;
-    }
+	public void destroy() {
+		this.config = null;
+	}
 
-    public static void setCacheExpireDate(final HttpServletResponse response,
-            final int seconds) {
-        if (response != null) {
-            final Calendar cal = new GregorianCalendar();
-            cal.add(Calendar.SECOND, seconds);
-            response.setHeader("Cache-Control", "PUBLIC, max-age=" + seconds + ", must-revalidate");
-            response.setHeader("Expires", htmlExpiresDateFormat().format(cal.getTime()));
-        }
-    }
+	public static void setCacheExpireDate(final HttpServletResponse response,
+			final int seconds) {
+		if (response != null) {
+			final Calendar cal = new GregorianCalendar();
+			cal.add(Calendar.SECOND, seconds);
+			response.setHeader("Cache-Control", "PUBLIC, max-age=" + seconds + ", must-revalidate");
+			response.setHeader("Expires", htmlExpiresDateFormat().format(cal.getTime()));
+		}
+	}
 
-    public static DateFormat htmlExpiresDateFormat() {
-        final DateFormat httpDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
-        httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
-        return httpDateFormat;
-    }
+	public static DateFormat htmlExpiresDateFormat() {
+		final DateFormat httpDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
+		httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+		return httpDateFormat;
+	}
 }

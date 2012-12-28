@@ -19,6 +19,6 @@ import com.devnexus.ting.core.model.User;
 
 public interface UserDao  extends GenericDao < User, Long > {
 
-    User getUserByUsername(String trim);
+	User getUserByUsername(String trim);
 
 }

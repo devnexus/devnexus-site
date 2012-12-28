@@ -8,13 +8,13 @@ import com.devnexus.ting.common.SystemInformationUtils;
 
 public class CheckExistenceOfNAImageTest {
 
-    @Test
-    public void testExistenceOfNAImage() throws Exception {
+	@Test
+	public void testExistenceOfNAImage() throws Exception {
 
-        byte[] picture = SystemInformationUtils.getSpeakerImage(null);
+		byte[] picture = SystemInformationUtils.getSpeakerImage(null);
 
-        Assert.assertNotNull(picture);
+		Assert.assertNotNull(picture);
 
-    }
+	}
 
 }

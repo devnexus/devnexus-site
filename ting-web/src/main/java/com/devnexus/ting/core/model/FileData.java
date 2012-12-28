@@ -46,65 +46,65 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name="FILE_DATA")
 public class FileData {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(unique=true, nullable=false)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
+	private Long id;
 
-    @NotEmpty
-    @Size(max=255)
-    private String  name;
+	@NotEmpty
+	@Size(max=255)
+	private String  name;
 
-    @NotEmpty
-    @XmlAttribute
-    private String  type;
+	@NotEmpty
+	@XmlAttribute
+	private String  type;
 
-    @NotNull(message="Size must not be null.")
-    @XmlAttribute
-    private Long fileSize;
+	@NotNull(message="Size must not be null.")
+	@XmlAttribute
+	private Long fileSize;
 
-    @Temporal(value=TemporalType.TIMESTAMP)
-    @XmlAttribute
-    private Date    fileModified;
+	@Temporal(value=TemporalType.TIMESTAMP)
+	@XmlAttribute
+	private Date    fileModified;
 
-    @Lob
-    private byte[] fileData;
+	@Lob
+	private byte[] fileData;
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
-    }
-    public Long getFileSize() {
-        return fileSize;
-    }
-    public void setFileSize(Long fileSize) {
-        this.fileSize = fileSize;
-    }
-    public Date getFileModified() {
-        return fileModified;
-    }
-    public void setFileModified(Date fileModified) {
-        this.fileModified = fileModified;
-    }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public byte[] getFileData() {
-        return fileData;
-    }
-    public void setFileData(byte[] fileData) {
-        this.fileData = fileData;
-    }
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Long getFileSize() {
+		return fileSize;
+	}
+	public void setFileSize(Long fileSize) {
+		this.fileSize = fileSize;
+	}
+	public Date getFileModified() {
+		return fileModified;
+	}
+	public void setFileModified(Date fileModified) {
+		this.fileModified = fileModified;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public byte[] getFileData() {
+		return fileData;
+	}
+	public void setFileData(byte[] fileData) {
+		this.fileData = fileData;
+	}
 
 }

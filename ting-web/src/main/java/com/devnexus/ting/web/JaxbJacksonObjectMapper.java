@@ -21,10 +21,10 @@ import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
 
 public class JaxbJacksonObjectMapper extends ObjectMapper {
 
-    public JaxbJacksonObjectMapper() {
-        final AnnotationIntrospector introspector = new JaxbAnnotationIntrospector();
-        super.getDeserializationConfig().setAnnotationIntrospector(introspector);
-        super.getSerializationConfig().setAnnotationIntrospector(introspector);
-    }
+	public JaxbJacksonObjectMapper() {
+		final AnnotationIntrospector introspector = new JaxbAnnotationIntrospector();
+		super.getDeserializationConfig().setAnnotationIntrospector(introspector);
+		super.getSerializationConfig().setAnnotationIntrospector(introspector);
+	}
 
 }

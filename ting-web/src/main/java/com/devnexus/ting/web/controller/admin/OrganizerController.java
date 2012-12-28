@@ -35,11 +35,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.web.filter.FlashMap;
 
 /**
  *
@@ -49,139 +49,145 @@ import com.devnexus.ting.web.filter.FlashMap;
 @Controller("adminOrganizerController")
 public class OrganizerController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    @Autowired private Validator validator;
+	@Autowired private Validator validator;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(OrganizerController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(OrganizerController.class);
 
-    @RequestMapping(value="/admin/organizers", method=RequestMethod.GET)
-    public String getOrganizers(ModelMap model, HttpServletRequest request) {
+	@RequestMapping(value="/admin/organizers", method=RequestMethod.GET)
+	public String getOrganizers(ModelMap model, HttpServletRequest request) {
 
-        final List<Organizer> organizers = businessService.getAllOrganizers();
-        model.addAttribute("organizers", organizers);
+		final List<Organizer> organizers = businessService.getAllOrganizers();
+		model.addAttribute("organizers", organizers);
 
-        return "/admin/manage-organizers";
-    }
+		return "/admin/manage-organizers";
+	}
 
-    @RequestMapping(value="/admin/organizer", method=RequestMethod.GET)
-    public String prepareAddOrganizer(ModelMap model) {
+	@RequestMapping(value="/admin/organizer", method=RequestMethod.GET)
+	public String prepareAddOrganizer(ModelMap model) {
 
-        Organizer organizerForm = new Organizer();
+		Organizer organizerForm = new Organizer();
 
-        model.addAttribute("organizer", organizerForm);
+		model.addAttribute("organizer", organizerForm);
 
-        return "/admin/add-organizer";
-    }
+		return "/admin/add-organizer";
+	}
 
-    @RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.GET)
-    public String prepareEditOrganizer(@PathVariable("organizerId") Long organizerId, ModelMap model) {
+	@RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.GET)
+	public String prepareEditOrganizer(@PathVariable("organizerId") Long organizerId, ModelMap model) {
 
-        final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
+		final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
 
-        model.addAttribute("organizer", organizerFromDb);
+		model.addAttribute("organizer", organizerFromDb);
 
-        return "/admin/add-organizer";
-    }
+		return "/admin/add-organizer";
+	}
 
-    @RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.POST)
-    public String editOrganizer(@PathVariable("organizerId") Long organizerId, @RequestParam MultipartFile pictureFile, @Valid Organizer organizerForm, BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.POST)
+	public String editOrganizer(@PathVariable("organizerId") Long organizerId,
+			@RequestParam MultipartFile pictureFile,
+			@Valid Organizer organizerForm,
+			BindingResult result,
+			RedirectAttributes redirectAttributes,
+			HttpServletRequest request) {
 
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/index";
-        }
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/index";
+		}
 
-        if (result.hasErrors()) {
-            return "/admin/add-organizer";
-        }
+		if (result.hasErrors()) {
+			return "/admin/add-organizer";
+		}
 
-        final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
+		final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
 
-        if (request.getParameter("delete") != null) {
-            businessService.deleteOrganizer(organizerFromDb);
-            FlashMap.setSuccessMessage("The organizer was deleted successfully.");
-            return "redirect:/s/admin/organizers";
-        }
+		if (request.getParameter("delete") != null) {
+			businessService.deleteOrganizer(organizerFromDb);
+			//FlashMap.setSuccessMessage("The organizer was deleted successfully.");
+			return "redirect:/s/admin/organizers";
+		}
 
-        organizerFromDb.setBio(organizerForm.getBio());
-        organizerFromDb.setFirstName(organizerForm.getFirstName());
-        organizerFromDb.setLastName(organizerForm.getLastName());
+		organizerFromDb.setBio(organizerForm.getBio());
+		organizerFromDb.setFirstName(organizerForm.getFirstName());
+		organizerFromDb.setLastName(organizerForm.getLastName());
 
-        if (pictureFile != null && pictureFile.getSize() > 0) {
+		if (pictureFile != null && pictureFile.getSize() > 0) {
 
-            final FileData pictureData;
-            if (organizerFromDb.getPicture()==null) {
-                pictureData = new FileData();
-            } else {
-                pictureData = organizerFromDb.getPicture();
-            }
+			final FileData pictureData;
+			if (organizerFromDb.getPicture()==null) {
+				pictureData = new FileData();
+			} else {
+				pictureData = organizerFromDb.getPicture();
+			}
 
-            try {
+			try {
 
-                pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
-                pictureData.setFileSize(pictureFile.getSize());
-                pictureData.setFileModified(new Date());
-                pictureData.setType(pictureFile.getContentType());
-                pictureData.setName(pictureFile.getOriginalFilename());
+				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
+				pictureData.setFileSize(pictureFile.getSize());
+				pictureData.setFileModified(new Date());
+				pictureData.setType(pictureFile.getContentType());
+				pictureData.setName(pictureFile.getOriginalFilename());
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-            organizerFromDb.setPicture(pictureData);
+			organizerFromDb.setPicture(pictureData);
 
-            String message = "File '" + pictureData.getName() + "' uploaded successfully";
-            FlashMap.setSuccessMessage(message);
-        }
+			String message = "File '" + pictureData.getName() + "' uploaded successfully";
+			//FlashMap.setSuccessMessage(message);
+		}
 
-        businessService.saveOrganizer(organizerFromDb);
+		businessService.saveOrganizer(organizerFromDb);
 
-        FlashMap.setSuccessMessage("The organizer was edited successfully.");
-        return "redirect:/s/admin/organizers";
-    }
+		redirectAttributes.addFlashAttribute("successMessage", "The organizer was edited successfully.");
 
-    @RequestMapping(value="/admin/organizer", method=RequestMethod.POST)
-    public String addOrganizer(@RequestParam MultipartFile pictureFile, @Valid Organizer organizerForm, BindingResult result, HttpServletRequest request) {
+		return "redirect:/s/admin/organizers";
+	}
 
-        if (request.getParameter("cancel") != null) {
-            return "redirect:/s/admin/organizers";
-        }
+	@RequestMapping(value="/admin/organizer", method=RequestMethod.POST)
+	public String addOrganizer(@RequestParam MultipartFile pictureFile, @Valid Organizer organizerForm, BindingResult result, HttpServletRequest request) {
 
-        if (result.hasErrors()) {
-            return "/admin/add-organizer";
-        }
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/organizers";
+		}
 
-        if (pictureFile != null && pictureFile.getSize() > 0) {
+		if (result.hasErrors()) {
+			return "/admin/add-organizer";
+		}
 
-             final FileData pictureData = new FileData();
+		if (pictureFile != null && pictureFile.getSize() > 0) {
 
-             try {
+			 final FileData pictureData = new FileData();
 
-                 pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
-                 pictureData.setFileSize(pictureFile.getSize());
-                 pictureData.setFileModified(new Date());
-                 pictureData.setName(pictureFile.getOriginalFilename());
+			 try {
 
-             } catch (IOException e) {
-                 // TODO Auto-generated catch block
-                 e.printStackTrace();
-             }
+				 pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
+				 pictureData.setFileSize(pictureFile.getSize());
+				 pictureData.setFileModified(new Date());
+				 pictureData.setName(pictureFile.getOriginalFilename());
 
-             organizerForm.setPicture(pictureData);
+			 } catch (IOException e) {
+				 // TODO Auto-generated catch block
+				 e.printStackTrace();
+			 }
 
-            String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
-            FlashMap.setSuccessMessage(message);
+			 organizerForm.setPicture(pictureData);
 
-        }
+			String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
+			//FlashMap.setSuccessMessage(message);
 
-        Organizer savedOrganizer = businessService.saveOrganizer(organizerForm);
+		}
 
-        FlashMap.setSuccessMessage("The organizer was added successfully.");
-        return "redirect:/s/admin/organizers";
-    }
+		Organizer savedOrganizer = businessService.saveOrganizer(organizerForm);
+
+		//FlashMap.setSuccessMessage("The organizer was added successfully.");
+		return "redirect:/s/admin/organizers";
+	}
 
 }

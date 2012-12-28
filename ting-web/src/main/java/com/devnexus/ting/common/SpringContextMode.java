@@ -21,22 +21,22 @@ package com.devnexus.ting.common;
  */
 public enum SpringContextMode {
 
-    DemoContextConfiguration("default"),
-    ProductionContextConfiguration("standalone");
+	DemoContextConfiguration("default"),
+	ProductionContextConfiguration("standalone");
 
-    String profile;
+	String profile;
 
-    /**
-     * Constructor.
-     *
-     * @param code The Spring context profile identifier.
-     */
-    SpringContextMode(final String profile) {
-        this.profile = profile;
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param code The Spring context profile identifier.
+	 */
+	SpringContextMode(final String profile) {
+		this.profile = profile;
+	}
 
-    public String getCode() {
-        return profile;
-    }
+	public String getCode() {
+		return profile;
+	}
 
 }

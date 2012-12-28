@@ -26,60 +26,60 @@ import com.devnexus.ting.core.model.Speaker;
 
 @Repository("speakerDao")
 public class SpeakerDaoJpa extends GenericDaoJpa< Speaker, Long>
-                           implements SpeakerDao {
+						   implements SpeakerDao {
 
-    /** Constructor. */
-    private SpeakerDaoJpa() {
-        super(Speaker.class);
-    }
+	/** Constructor. */
+	private SpeakerDaoJpa() {
+		super(Speaker.class);
+	}
 
-    @Override
-    public List<Speaker> getAllSpeakersOrderedByName() {
-        return super.entityManager
-        .createQuery("select s from Speaker s "
-                   + "order by s.lastName ASC, s.firstName ASC", Speaker.class)
-        .getResultList();
-    }
+	@Override
+	public List<Speaker> getAllSpeakersOrderedByName() {
+		return super.entityManager
+		.createQuery("select s from Speaker s "
+				   + "order by s.lastName ASC, s.firstName ASC", Speaker.class)
+		.getResultList();
+	}
 
-    @SuppressWarnings("unchecked")
-    @Override
-    public List<Speaker> getSpeakersForCurrentEvent() {
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Speaker> getSpeakersForCurrentEvent() {
 
-        final Session session = (Session) super.entityManager.getDelegate();
+		final Session session = (Session) super.entityManager.getDelegate();
 
-        session.enableFilter("presentationFilter");
+		session.enableFilter("presentationFilter");
 
-        final List<Speaker> speakers = (List<Speaker>) session.createQuery("select s from Speaker s "
-                   + "    join fetch s.events e "
-                   + "    where e.current = :iscurrent "
-                   + "    order by s.lastName ASC, s.firstName ASC")
-        .setParameter("iscurrent", Boolean.TRUE)
-        .setCacheable(true)
-        .list();
+		final List<Speaker> speakers = (List<Speaker>) session.createQuery("select s from Speaker s "
+				   + "    join fetch s.events e "
+				   + "    where e.current = :iscurrent "
+				   + "    order by s.lastName ASC, s.firstName ASC")
+		.setParameter("iscurrent", Boolean.TRUE)
+		.setCacheable(true)
+		.list();
 
-        return speakers;
-    }
+		return speakers;
+	}
 
-    /**
-     * https://hibernate.onjira.com/browse/HHH-6902
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public List<Speaker> getSpeakersForEvent(Long eventId) {
+	/**
+	 * https://hibernate.onjira.com/browse/HHH-6902
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Speaker> getSpeakersForEvent(Long eventId) {
 
-        final Session session = (Session) super.entityManager.getDelegate();
-        Filter filter = session.enableFilter("presentationFilterEventId");
-        filter.setParameter("eventId", eventId);
+		final Session session = (Session) super.entityManager.getDelegate();
+		Filter filter = session.enableFilter("presentationFilterEventId");
+		filter.setParameter("eventId", eventId);
 
-        final List<Speaker> speakers = (List<Speaker>) super.entityManager
-                .createQuery("select s from Speaker s "
-                        + "    join s.events e "
-                        + "where e.id = :eventId "
-                        + "order by s.lastName ASC")
-             .setParameter("eventId", eventId)
-             .getResultList();
+		final List<Speaker> speakers = (List<Speaker>) super.entityManager
+				.createQuery("select s from Speaker s "
+						+ "    join s.events e "
+						+ "where e.id = :eventId "
+						+ "order by s.lastName ASC")
+			 .setParameter("eventId", eventId)
+			 .getResultList();
 
-        return speakers;
-    }
+		return speakers;
+	}
 
 }
