@@ -42,58 +42,58 @@ import org.hibernate.annotations.GenerationTime;
 @XmlAccessorType(XmlAccessType.FIELD)
 public abstract class BaseModelObject implements Serializable {
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = 1L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    protected Long id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	protected Long id;
 
-    @Generated(GenerationTime.ALWAYS)
-    @Temporal(TemporalType.TIMESTAMP)
-    @XmlAttribute
-    protected Date createdDate;
+	@Generated(GenerationTime.ALWAYS)
+	@Temporal(TemporalType.TIMESTAMP)
+	@XmlAttribute
+	protected Date createdDate;
 
-    @Generated(GenerationTime.INSERT)
-    @Temporal(TemporalType.TIMESTAMP)
-    protected Date updatedDate;
+	@Generated(GenerationTime.INSERT)
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date updatedDate;
 
-    @Version
-    @XmlAttribute
-    protected Integer version;
+	@Version
+	@XmlAttribute
+	protected Integer version;
 
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public Date getCreatedDate() {
-        return createdDate;
-    }
+	public Date getCreatedDate() {
+		return createdDate;
+	}
 
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
 
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
 
-    public Integer getVersion() {
-        return version;
-    }
+	public Integer getVersion() {
+		return version;
+	}
 
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
 
 }

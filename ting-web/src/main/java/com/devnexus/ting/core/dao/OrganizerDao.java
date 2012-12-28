@@ -21,8 +21,8 @@ import com.devnexus.ting.core.model.Organizer;
 
 public interface OrganizerDao  extends GenericDao < Organizer, Long > {
 
-    List<Organizer> getAllOrganizers();
+	List<Organizer> getAllOrganizers();
 
-    Organizer getOrganizerWithPicture(Long organizerId);
+	Organizer getOrganizerWithPicture(Long organizerId);
 
 }

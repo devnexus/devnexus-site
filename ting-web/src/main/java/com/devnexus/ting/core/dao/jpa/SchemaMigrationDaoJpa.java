@@ -28,13 +28,13 @@ import com.devnexus.ting.core.model.SchemaMigration;
  */
 @Repository("schemaMigrationDao")
 public final class SchemaMigrationDaoJpa extends GenericDaoJpa< SchemaMigration, Long>
-                                  implements SchemaMigrationDao {
+								  implements SchemaMigrationDao {
 
-    /**
-     * Constructor.
-     */
-    private SchemaMigrationDaoJpa() {
-        super(SchemaMigration.class);
-    }
+	/**
+	 * Constructor.
+	 */
+	private SchemaMigrationDaoJpa() {
+		super(SchemaMigration.class);
+	}
 
 }

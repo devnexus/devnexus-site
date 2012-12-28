@@ -15,9 +15,12 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+
+import javax.validation.constraints.Size;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,12 +34,16 @@ import com.devnexus.ting.core.dao.ApplicationCacheDao;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
+import com.devnexus.ting.core.dao.RoomDao;
+import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.Room;
+import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -48,264 +55,310 @@ import com.devnexus.ting.core.service.BusinessService;
 @Service("businessService")
 public class BusinessServiceImpl implements BusinessService {
 
-    /**
-     *   Initialize Logging.
-     */
-    private final static Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
+	/**
+	 *   Initialize Logging.
+	 */
+	private final static Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
-    @Autowired private EventDao        eventDao;
-    @Autowired private OrganizerDao    organizerDao;
-    @Autowired private PresentationDao presentationDao;
-    @Autowired private SpeakerDao      speakerDao;
-    @Autowired private ApplicationCacheDao applicationCacheDao;
+	@Autowired private EventDao        eventDao;
+	@Autowired private OrganizerDao    organizerDao;
+	@Autowired private PresentationDao presentationDao;
+	@Autowired private RoomDao         roomDao;
+	@Autowired private ScheduleItemDao scheduleItemDao;
+	@Autowired private SpeakerDao      speakerDao;
+	@Autowired private ApplicationCacheDao applicationCacheDao;
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void deleteEvent(Event event) {
-        Assert.notNull(event, "The provided event must not be null.");
-        Assert.notNull(event.getId(), "Id must not be Null for event " + event);
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void deleteEvent(Event event) {
+		Assert.notNull(event, "The provided event must not be null.");
+		Assert.notNull(event.getId(), "Id must not be Null for event " + event);
 
-        LOGGER.debug("Deleting Event {}", event);
-        eventDao.remove(event);
-    }
+		LOGGER.debug("Deleting Event {}", event);
+		eventDao.remove(event);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void deleteOrganizer(Organizer organizerFromDb) {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void deleteOrganizer(Organizer organizerFromDb) {
 
-        Assert.notNull(organizerFromDb,         "The provided organizer must not be null.");
-        Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
+		Assert.notNull(organizerFromDb,         "The provided organizer must not be null.");
+		Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
 
-        LOGGER.debug("Deleting Organizer {}", organizerFromDb);
-        organizerDao.remove(organizerFromDb);
-    }
+		LOGGER.debug("Deleting Organizer {}", organizerFromDb);
+		organizerDao.remove(organizerFromDb);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void deletePresentation(Presentation presentation) {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void deletePresentation(Presentation presentation) {
 
-        Assert.notNull(presentation,         "The provided presentation must not be null.");
-        Assert.notNull(presentation.getId(), "Id must not be Null for presentation " + presentation);
+		Assert.notNull(presentation,         "The provided presentation must not be null.");
+		Assert.notNull(presentation.getId(), "Id must not be Null for presentation " + presentation);
 
-        LOGGER.debug("Deleting Presentation {}", presentation);
+		LOGGER.debug("Deleting Presentation {}", presentation);
 
-        presentationDao.remove(presentation);
+		presentationDao.remove(presentation);
 
-    }
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void deleteSpeaker(Speaker speaker) {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void deleteSpeaker(Speaker speaker) {
 
-        Assert.notNull(speaker,         "The provided speaker must not be null.");
-        Assert.notNull(speaker.getId(), "Id must not be Null for speaker " + speaker);
+		Assert.notNull(speaker,         "The provided speaker must not be null.");
+		Assert.notNull(speaker.getId(), "Id must not be Null for speaker " + speaker);
 
-        LOGGER.debug("Deleting Speaker {}", speaker);
+		LOGGER.debug("Deleting Speaker {}", speaker);
 
-        speakerDao.remove(speaker);
-    }
+		speakerDao.remove(speaker);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Event> getAllEventsOrderedByName() {
-        return eventDao.getAllEventsOrderedByName();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Event> getAllEventsOrderedByName() {
+		return eventDao.getAllEventsOrderedByName();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Event> getAllNonCurrentEvents() {
-        return eventDao.getAllNonCurrentEvents();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Event> getAllNonCurrentEvents() {
+		return eventDao.getAllNonCurrentEvents();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Organizer> getAllOrganizers() {
-        return organizerDao.getAllOrganizers();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Organizer> getAllOrganizers() {
+		return organizerDao.getAllOrganizers();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Presentation> getAllPresentations() {
-        return presentationDao.getAll();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Presentation> getAllPresentations() {
+		return presentationDao.getAll();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Speaker> getAllSpeakersOrderedByName() {
-        return speakerDao.getAllSpeakersOrderedByName();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Speaker> getAllSpeakersOrderedByName() {
+		return speakerDao.getAllSpeakersOrderedByName();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public Event getEvent(Long id) {
-        return eventDao.get(id);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public Event getEvent(Long id) {
+		return eventDao.get(id);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public Event getEventByEventKey(String eventKey) {
-        return eventDao.getByEventKey(eventKey);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public Event getEventByEventKey(String eventKey) {
+		return eventDao.getByEventKey(eventKey);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public Organizer getOrganizer(final Long organizerId) {
-        return organizerDao.get(organizerId);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public Organizer getOrganizer(final Long organizerId) {
+		return organizerDao.get(organizerId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public Organizer getOrganizerWithPicture(Long organizerId) {
-        return organizerDao.getOrganizerWithPicture(organizerId);
-    }
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public Organizer getOrganizerWithPicture(Long organizerId) {
+		return organizerDao.getOrganizerWithPicture(organizerId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional(readOnly=false)
-    public Presentation getPresentation(Long id) {
-        return presentationDao.get(id);
-    }
+	/** {@inheritDoc} */
+	@Override
+	@Transactional(readOnly=false)
+	public Presentation getPresentation(Long id) {
+		return presentationDao.get(id);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Presentation> getPresentationsForCurrentEvent() {
-        return presentationDao.getPresentationsForCurrentEvent();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Presentation> getPresentationsForCurrentEvent() {
+		return presentationDao.getPresentationsForCurrentEvent();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Presentation> getPresentationsForEvent(Long eventId) {
-        return presentationDao.getPresentationsForEvent(eventId);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Presentation> getPresentationsForEvent(Long eventId) {
+		return presentationDao.getPresentationsForEvent(eventId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public Speaker getSpeaker(Long speakerId) {
-        return speakerDao.get(speakerId);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public Speaker getSpeaker(Long speakerId) {
+		return speakerDao.get(speakerId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional(readOnly=false)
-    public byte[] getSpeakerImage(Long speakerId) {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional(readOnly=false)
+	public byte[] getSpeakerImage(Long speakerId) {
 
-        Assert.notNull(speakerId, "SpeakerId must not be null.");
+		Assert.notNull(speakerId, "SpeakerId must not be null.");
 
-        final Speaker speaker = getSpeaker(speakerId);
+		final Speaker speaker = getSpeaker(speakerId);
 
-        final byte[] speakerPicture;
+		final byte[] speakerPicture;
 
-        if (speaker==null || speaker.getPicture() == null) {
-            speakerPicture = SystemInformationUtils.getSpeakerImage(null);
-        } else {
-            speakerPicture = speaker.getPicture().getFileData();
-        }
+		if (speaker==null || speaker.getPicture() == null) {
+			speakerPicture = SystemInformationUtils.getSpeakerImage(null);
+		} else {
+			speakerPicture = speaker.getPicture().getFileData();
+		}
 
-        return speakerPicture;
+		return speakerPicture;
 
-    }
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Speaker> getSpeakersForCurrentEvent() {
-        return speakerDao.getSpeakersForCurrentEvent();
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Speaker> getSpeakersForCurrentEvent() {
+		return speakerDao.getSpeakersForCurrentEvent();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public List<Speaker> getSpeakersForEvent(Long eventId) {
-        return speakerDao.getSpeakersForEvent(eventId);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public List<Speaker> getSpeakersForEvent(Long eventId) {
+		return speakerDao.getSpeakersForEvent(eventId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void saveEvent(Event event) {
-        eventDao.save(event);
-    }
+	@Override
+	public List<Room> getRoomsForEvent(Long eventId) {
+		return roomDao.getRoomsForEvent(eventId);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public Organizer saveOrganizer(Organizer organizer) {
-        return organizerDao.save(organizer);
-    }
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public void savePresentation(Presentation presentation) {
-        presentationDao.save(presentation);
-    }
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void saveEvent(Event event) {
+		eventDao.save(event);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public Speaker saveSpeaker(Speaker speaker) {
-        return speakerDao.save(speaker);
-    }
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public Organizer saveOrganizer(Organizer organizer) {
+		return organizerDao.save(organizer);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional
-    public ApplicationCache updateApplicationCacheManifest() {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public void savePresentation(Presentation presentation) {
+		presentationDao.save(presentation);
+	}
 
-        final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public Speaker saveSpeaker(Speaker speaker) {
+		return speakerDao.save(speaker);
+	}
 
-        if (applicationCacheList.isEmpty()) {
-            ApplicationCache applicationCache = new ApplicationCache();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
-            return savedApplicationCache;
-        } else if (applicationCacheList.size() >1) {
-            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
-        } else {
-            ApplicationCache applicationCache = applicationCacheList.iterator().next();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            return applicationCacheDao.save(applicationCache);
-        }
+	/** {@inheritDoc} */
+	@Override
+	@Transactional
+	public ApplicationCache updateApplicationCacheManifest() {
 
-    }
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
 
-    @Override
-    @Transactional
-    public ApplicationCache getApplicationCacheManifest() {
-        final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+		if (applicationCacheList.isEmpty()) {
+			ApplicationCache applicationCache = new ApplicationCache();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+			return savedApplicationCache;
+		} else if (applicationCacheList.size() >1) {
+			throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+		} else {
+			ApplicationCache applicationCache = applicationCacheList.iterator().next();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			return applicationCacheDao.save(applicationCache);
+		}
 
-        if (applicationCacheList.isEmpty()) {
-            ApplicationCache applicationCache = new ApplicationCache();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
-            return savedApplicationCache;
-        } else if (applicationCacheList.size() >1) {
-            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
-        } else {
-            return applicationCacheList.iterator().next();
-        }
-    }
+	}
 
-    @Override
-    @Transactional
-    public FileData getPresentationFileData(Long presentationId) {
+	@Override
+	@Transactional
+	public ApplicationCache getApplicationCacheManifest() {
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
 
-        final Presentation presentation = this.getPresentation(presentationId);
+		if (applicationCacheList.isEmpty()) {
+			ApplicationCache applicationCache = new ApplicationCache();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+			return savedApplicationCache;
+		} else if (applicationCacheList.size() >1) {
+			throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+		} else {
+			return applicationCacheList.iterator().next();
+		}
+	}
 
-        if (presentation == null) {
-            return null;
-        }
+	@Override
+	@Transactional
+	public FileData getPresentationFileData(Long presentationId) {
 
-        FileData fileData = presentation.getPresentationFile();
-        fileData.getName();
+		final Presentation presentation = this.getPresentation(presentationId);
 
-        return fileData;
-    }
+		if (presentation == null) {
+			return null;
+		}
+
+		FileData fileData = presentation.getPresentationFile();
+		fileData.getName();
+
+		return fileData;
+	}
+
+	@Override
+	public Event getCurrentEvent() {
+		return eventDao.getCurrentEvent();
+	}
+
+	@Override
+	public Room getRoom(Long id) {
+		return roomDao.get(id);
+	}
+
+	@Override
+	public List<ScheduleItem> getScheduleForEvent(Long eventId) {
+
+		final List<ScheduleItem> scheduleItems = scheduleItemDao.getScheduleForEvent(eventId);
+
+		ScheduleItem currentScheduleItem = null;
+
+		String hourOfDay = null;
+
+		for (ScheduleItem scheduleItem : scheduleItems) {
+
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(scheduleItem.getFromTime());
+
+			String loopHour = cal.get(Calendar.HOUR_OF_DAY) + "_" + cal.get(Calendar.MINUTE);
+
+			if (hourOfDay == null || !hourOfDay.equals(loopHour)) {
+				currentScheduleItem = scheduleItem;
+				hourOfDay = loopHour;
+			} else {
+				currentScheduleItem.setRowspan(currentScheduleItem.getRowspan() + 1);
+			}
+
+		}
+
+		return scheduleItems;
+	}
 
 }

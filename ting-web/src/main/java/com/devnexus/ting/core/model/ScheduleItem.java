@@ -23,6 +23,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -35,6 +36,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.ParamDef;
+import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -55,9 +58,14 @@ public class ScheduleItem extends BaseModelObject {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
 
+	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.ScheduleItemType"),
+			@Parameter(name = "identifierMethod", value = "getId"),
+			@Parameter(name = "valueOfMethod", value = "fromId") })
+	private ScheduleItemType scheduleItemType;
+
 	@Size(max=255)
-	@NotEmpty
-	private String type;
+	private String title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
@@ -67,19 +75,21 @@ public class ScheduleItem extends BaseModelObject {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date toTime;
 
-    @ManyToOne
-    @JoinColumn(name="ROOM_ID")
+	@ManyToOne
+	@JoinColumn(name="ROOM_ID")
 	private Room room;
 
-    @ManyToOne
-    @JoinColumn(name="PRESENTATION_ID")
-    private Presentation presentation;
+	@ManyToOne
+	@JoinColumn(name="PRESENTATION_ID")
+	private Presentation presentation;
 
-    @ManyToOne
-    @NotNull
-    @XmlTransient
-    private Event event;
+	@ManyToOne
+	@NotNull
+	@XmlTransient
+	private Event event;
 
+	@Transient
+	private int rowspan = 1;
 	public ScheduleItem() {
 	}
 
@@ -87,17 +97,12 @@ public class ScheduleItem extends BaseModelObject {
 		this.id = id;
 	}
 
-	@Override
-	public String toString() {
-		return "ScheduleItem [id=" + id + "]";
+	public ScheduleItemType getScheduleItemType() {
+		return scheduleItemType;
 	}
 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
+	public void setScheduleItemType(ScheduleItemType scheduleItemType) {
+		this.scheduleItemType = scheduleItemType;
 	}
 
 	public Date getFromTime() {
@@ -138,6 +143,28 @@ public class ScheduleItem extends BaseModelObject {
 
 	public void setEvent(Event event) {
 		this.event = event;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getRowspan() {
+		return rowspan;
+	}
+
+	public void setRowspan(int rowspan) {
+		this.rowspan = rowspan;
+	}
+
+	@Override
+	public String toString() {
+		return "ScheduleItem [scheduleItemType=" + scheduleItemType
+				+ ", title=" + title + ", id=" + id + "]";
 	}
 
 }

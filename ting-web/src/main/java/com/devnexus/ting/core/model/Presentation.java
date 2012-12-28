@@ -33,6 +33,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Index;
+import org.hibernate.annotations.Parameter;
+import org.hibernate.annotations.Type;
 
 import com.devnexus.ting.common.TingUtil;
 
@@ -48,112 +50,128 @@ import com.devnexus.ting.common.TingUtil;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Presentation extends BaseModelObject {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @Size(max=255)
-    private String audioLink;
+	@Size(max=255)
+	private String audioLink;
 
-    @Size(max=10000)
-    private String description;
+	@Size(max=10000)
+	private String description;
 
-    @ManyToOne
-    @NotNull
-    @XmlTransient
-    private Event event;
+	@ManyToOne
+	@NotNull
+	@XmlTransient
+	private Event event;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @XmlTransient
-    @Cascade(CascadeType.ALL)
-    @Valid
-    private FileData presentationFile;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@XmlTransient
+	@Cascade(CascadeType.ALL)
+	@Valid
+	private FileData presentationFile;
 
-    @Size(max=255)
-    private String presentationLink;
+	@Size(max=255)
+	private String presentationLink;
 
-    @ManyToOne
-    @JoinColumn(name="SPEAKER_ID")
-    private Speaker speaker;
+	@ManyToOne
+	@JoinColumn(name="SPEAKER_ID")
+	private Speaker speaker;
 
-    @ManyToOne
-    @JoinColumn(name="ROOM_ID")
-    private Room room;
+	@Size(max=255)
+	private String title;
 
-    @Size(max=255)
-    private String title;
+	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.PresentationType"),
+			@Parameter(name = "identifierMethod", value = "getId"),
+			@Parameter(name = "valueOfMethod", value = "fromId") })
+	private PresentationType presentationType;
 
-    //~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.SkillLevel"),
+			@Parameter(name = "identifierMethod", value = "getId"),
+			@Parameter(name = "valueOfMethod", value = "fromId") })
+	private SkillLevel skillLevel;
 
-    public Presentation() {
-    }
+	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    //~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    public String getAudioLink() {
-        return audioLink;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    public String getDescriptionAsHtml() {
-        return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
-    }
-
-    public Event getEvent() {
-        return event;
-    }
-
-    public FileData getPresentationFile() {
-        return presentationFile;
-    }
-
-    public String getPresentationLink() {
-        return this.presentationLink;
-    }
-
-    public Speaker getSpeaker() {
-        return speaker;
-    }
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    public void setAudioLink(String audioLink) {
-        this.audioLink = audioLink;
-    }
-
-    public void setDescription(String abstract_) {
-        this.description = abstract_;
-    }
-
-    public void setEvent(Event event) {
-        this.event = event;
-    }
-
-    public void setPresentationFile(FileData presentationFile) {
-        this.presentationFile = presentationFile;
-    }
-
-    public void setPresentationLink(String presentationLink) {
-        this.presentationLink = presentationLink;
-    }
-
-    public void setSpeaker(Speaker speaker) {
-        this.speaker = speaker;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-	public Room getRoom() {
-		return room;
+	public Presentation() {
 	}
 
-	public void setRoom(Room room) {
-		this.room = room;
+	//~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	public String getAudioLink() {
+		return audioLink;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public String getDescriptionAsHtml() {
+		return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public FileData getPresentationFile() {
+		return presentationFile;
+	}
+
+	public String getPresentationLink() {
+		return this.presentationLink;
+	}
+
+	public Speaker getSpeaker() {
+		return speaker;
+	}
+
+	public String getTitle() {
+		return this.title;
+	}
+
+	public void setAudioLink(String audioLink) {
+		this.audioLink = audioLink;
+	}
+
+	public void setDescription(String abstract_) {
+		this.description = abstract_;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+	public void setPresentationFile(FileData presentationFile) {
+		this.presentationFile = presentationFile;
+	}
+
+	public void setPresentationLink(String presentationLink) {
+		this.presentationLink = presentationLink;
+	}
+
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public PresentationType getPresentationType() {
+		return presentationType;
+	}
+
+	public void setPresentationType(PresentationType presentationType) {
+		this.presentationType = presentationType;
+	}
+
+	public SkillLevel getSkillLevel() {
+		return skillLevel;
+	}
+
+	public void setSkillLevel(SkillLevel skillLevel) {
+		this.skillLevel = skillLevel;
 	}
 
 }

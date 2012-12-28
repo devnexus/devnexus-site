@@ -43,60 +43,60 @@ import com.devnexus.ting.core.dao.GenericDao;
  */
 public class GenericDaoJpa<T, PK extends Serializable> implements GenericDao<T, PK> {
 
-    @PersistenceContext(unitName="base")
-    protected EntityManager entityManager;
+	@PersistenceContext(unitName="base")
+	protected EntityManager entityManager;
 
-    private Class<T> persistentClass;
+	private Class<T> persistentClass;
 
-    public GenericDaoJpa(Class<T> persistentClass) {
-        this.persistentClass = persistentClass;
-    }
+	public GenericDaoJpa(Class<T> persistentClass) {
+		this.persistentClass = persistentClass;
+	}
 
-    /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
-    @Override
-    public List<T> getAll() {
-        return this.entityManager.createQuery(
-                "select obj from " + this.persistentClass.getName() + " obj")
-                .getResultList();
-    }
+	/** {@inheritDoc} */
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> getAll() {
+		return this.entityManager.createQuery(
+				"select obj from " + this.persistentClass.getName() + " obj")
+				.getResultList();
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public T get(PK id) {
-        T entity = this.entityManager.find(this.persistentClass, id);
-        return entity;
-    }
+	/** {@inheritDoc} */
+	@Override
+	public T get(PK id) {
+		T entity = this.entityManager.find(this.persistentClass, id);
+		return entity;
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public boolean exists(PK id) {
-        T entity = this.entityManager.find(this.persistentClass, id);
-        return entity != null;
-    }
+	/** {@inheritDoc} */
+	@Override
+	public boolean exists(PK id) {
+		T entity = this.entityManager.find(this.persistentClass, id);
+		return entity != null;
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public T save(T object) {
-        return this.entityManager.merge(object);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public T save(T object) {
+		return this.entityManager.merge(object);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public void replicate(T object) {
-        this.entityManager.unwrap(Session.class).replicate(object, ReplicationMode.EXCEPTION);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public void replicate(T object) {
+		this.entityManager.unwrap(Session.class).replicate(object, ReplicationMode.EXCEPTION);
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public void remove(PK id) {
-        this.entityManager.remove(this.get(id));
-    }
+	/** {@inheritDoc} */
+	@Override
+	public void remove(PK id) {
+		this.entityManager.remove(this.get(id));
+	}
 
-    /** {@inheritDoc} */
-    @Override
-    public void remove(T object) {
-        this.entityManager.remove(object);
-    }
+	/** {@inheritDoc} */
+	@Override
+	public void remove(T object) {
+		this.entityManager.remove(object);
+	}
 
 }

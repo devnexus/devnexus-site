@@ -13,69 +13,69 @@ import org.springframework.mobile.device.site.SitePreferenceHandler;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 public class CustomDeviceResolverHandlerInterceptor extends
-        DeviceResolverHandlerInterceptor {
+		DeviceResolverHandlerInterceptor {
 
-    private final DeviceResolver deviceResolver;
+	private final DeviceResolver deviceResolver;
 
-    /**
-     * Create a device resolving {@link HandlerInterceptor} that defaults to a {@link LiteDeviceResolver} implementation.
-     */
-    public CustomDeviceResolverHandlerInterceptor() {
-        this(new LiteDeviceResolver());
-    }
+	/**
+	 * Create a device resolving {@link HandlerInterceptor} that defaults to a {@link LiteDeviceResolver} implementation.
+	 */
+	public CustomDeviceResolverHandlerInterceptor() {
+		this(new LiteDeviceResolver());
+	}
 
-    /**
-     * Create a device resolving {@link HandlerInterceptor}.
-     * @param deviceResolver the device resolver to delegate to in {@link #preHandle(HttpServletRequest, HttpServletResponse, Object)}.
-     */
-    public CustomDeviceResolverHandlerInterceptor(DeviceResolver deviceResolver) {
-        this.deviceResolver = deviceResolver;
-    }
+	/**
+	 * Create a device resolving {@link HandlerInterceptor}.
+	 * @param deviceResolver the device resolver to delegate to in {@link #preHandle(HttpServletRequest, HttpServletResponse, Object)}.
+	 */
+	public CustomDeviceResolverHandlerInterceptor(DeviceResolver deviceResolver) {
+		this.deviceResolver = deviceResolver;
+	}
 
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        final Device device = deviceResolver.resolveDevice(request);
-        request.setAttribute(DeviceUtils.CURRENT_DEVICE_ATTRIBUTE, device);
+		final Device device = deviceResolver.resolveDevice(request);
+		request.setAttribute(DeviceUtils.CURRENT_DEVICE_ATTRIBUTE, device);
 
 
-        if (request.getServletPath().startsWith("/mobile")) {
-            request.setAttribute("baseSiteUrl", "/mobile");
-            request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.MOBILE);
-        } else if (request.getServletPath().startsWith("/desktop")) {
-            request.setAttribute("baseSiteUrl", "/desktop");
-            request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.NORMAL);
-        } else {
+		if (request.getServletPath().startsWith("/mobile")) {
+			request.setAttribute("baseSiteUrl", "/mobile");
+			request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.MOBILE);
+		} else if (request.getServletPath().startsWith("/desktop")) {
+			request.setAttribute("baseSiteUrl", "/desktop");
+			request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.NORMAL);
+		} else {
 
-            request.setAttribute("baseSiteUrl", "/s");
+			request.setAttribute("baseSiteUrl", "/s");
 
-            if (device.isMobile()) {
-                request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.MOBILE);
-            } else {
-                request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.NORMAL);
-            }
+			if (device.isMobile()) {
+				request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.MOBILE);
+			} else {
+				request.setAttribute(SitePreferenceHandler.CURRENT_SITE_PREFERENCE_ATTRIBUTE, SitePreference.NORMAL);
+			}
 
-        }
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    private static class MyDevice implements Device {
+	private static class MyDevice implements Device {
 
-        public static final MyDevice MOBILE_INSTANCE = new MyDevice(true);
+		public static final MyDevice MOBILE_INSTANCE = new MyDevice(true);
 
-        public static final MyDevice NOT_MOBILE_INSTANCE = new MyDevice(false);
+		public static final MyDevice NOT_MOBILE_INSTANCE = new MyDevice(false);
 
-        private final boolean mobile;
+		private final boolean mobile;
 
-        @Override
-        public boolean isMobile() {
-            return this.mobile;
-        }
+		@Override
+		public boolean isMobile() {
+			return this.mobile;
+		}
 
-        private MyDevice(boolean mobile) {
-            this.mobile = mobile;
-        }
+		private MyDevice(boolean mobile) {
+			this.mobile = mobile;
+		}
 
 		@Override
 		public boolean isNormal() {
@@ -89,5 +89,5 @@ public class CustomDeviceResolverHandlerInterceptor extends
 			return false;
 		}
 
-    }
+	}
 }

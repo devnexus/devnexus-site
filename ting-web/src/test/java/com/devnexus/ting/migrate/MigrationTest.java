@@ -14,22 +14,22 @@ import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.service.BusinessService;
 
 @ContextConfiguration(
-        locations={ "classpath:spring/mainApplicationContext.xml"})
+		locations={ "classpath:spring/mainApplicationContext.xml"})
 @ActiveProfiles("default")
 public class MigrationTest extends AbstractTransactionalJUnit4SpringContextTests {
 
-    @Autowired
-    private SpeakerDao speakerDao;
-    @Autowired
-    private DocumentDao documentDao;
-    protected @PersistenceContext(unitName="base") EntityManager entityManager;
+	@Autowired
+	private SpeakerDao speakerDao;
+	@Autowired
+	private DocumentDao documentDao;
+	protected @PersistenceContext(unitName="base") EntityManager entityManager;
 
 
-    @Autowired BusinessService businessService;
+	@Autowired BusinessService businessService;
 
-    @Test
-    public void dummyTest() {
-    }
+	@Test
+	public void dummyTest() {
+	}
 
 //	//@Test
 //	@Rollback(value=false)

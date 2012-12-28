@@ -45,75 +45,75 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller
 public class PresentationController {
 
-    @Autowired private BusinessService businessService;
+	@Autowired private BusinessService businessService;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
-    @RequestMapping("/{eventKey}/presentations")
-    public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
-                                           final Model model,
-                                           final SitePreference sitePreference) {
-        final Event event = businessService.getEventByEventKey(eventKey);
-        model.addAttribute("event", event);
+	@RequestMapping("/{eventKey}/presentations")
+	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
+										   final Model model,
+										   final SitePreference sitePreference) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("event", event);
 
-        final PresentationList presentationList = new PresentationList();
-        presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
+		final PresentationList presentationList = new PresentationList();
+		presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
 
-        model.addAttribute("presentationList", presentationList);
+		model.addAttribute("presentationList", presentationList);
 
-        if (sitePreference.isMobile()) {
-            return "presentations-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "presentations-mobile";
+		}
 
-        return "presentations";
-    }
+		return "presentations";
+	}
 
-    @RequestMapping(value="/presentations/{presentationId}/slides", method=RequestMethod.GET)
-    public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
+	@RequestMapping(value="/presentations/{presentationId}/slides", method=RequestMethod.GET)
+	public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
 
-        final FileData presentationFileData = businessService.getPresentationFileData(presentationId);
+		final FileData presentationFileData = businessService.getPresentationFileData(presentationId);
 
-        if (presentationFileData != null) {
+		if (presentationFileData != null) {
 
-            response.setContentType("application/octet-stream");
-            response.setHeader("Content-disposition",
-                    "attachment; filename=\"" + presentationFileData.getName() + "\"");
-            response.setContentLength(presentationFileData.getFileSize().intValue());
-            try {
-                IOUtils.write(presentationFileData.getFileData(),response.getOutputStream());
-            } catch (IOException e) {
-                throw new IllegalStateException(e);
-            }
+			response.setContentType("application/octet-stream");
+			response.setHeader("Content-disposition",
+					"attachment; filename=\"" + presentationFileData.getName() + "\"");
+			response.setContentLength(presentationFileData.getFileSize().intValue());
+			try {
+				IOUtils.write(presentationFileData.getFileData(),response.getOutputStream());
+			} catch (IOException e) {
+				throw new IllegalStateException(e);
+			}
 
-        } else {
-            try {
-                response.sendError(HttpServletResponse.SC_NOT_FOUND);
-            } catch (IOException e) {
-                throw new IllegalStateException(e);
-            }
-        }
+		} else {
+			try {
+				response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			} catch (IOException e) {
+				throw new IllegalStateException(e);
+			}
+		}
 
-    }
+	}
 
-    @RequestMapping("/presentations")
-    public String getPresentationsForCurrentEvent(final Model model,
-                                                  final SitePreference sitePreference) {
+	@RequestMapping("/presentations")
+	public String getPresentationsForCurrentEvent(final Model model,
+												  final SitePreference sitePreference) {
 
-        final PresentationList presentationList = new PresentationList();
-        presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
+		final PresentationList presentationList = new PresentationList();
+		presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
 
 
 
-        model.addAttribute("presentationList", presentationList);
+		model.addAttribute("presentationList", presentationList);
 
-        if (sitePreference.isMobile()) {
-            return "presentations-mobile";
-        }
+		if (sitePreference.isMobile()) {
+			return "presentations-mobile";
+		}
 
-        return "presentations";
-    }
+		return "presentations";
+	}
 
 }

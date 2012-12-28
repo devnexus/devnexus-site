@@ -41,10 +41,10 @@ import com.devnexus.ting.core.service.UserService;
 @Transactional
 public class UserServiceImpl implements UserService, UserDetailsService {
 
-    /**
-     *   Initialize Logging.
-     */
-    private final static Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+	/**
+	 *   Initialize Logging.
+	 */
+	private final static Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
 //    //private @Autowired NotificationService notificationService;
 //
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 //    /**
 //     * User Dao.
 //     */
-      private @Autowired UserDao userDao;
+	  private @Autowired UserDao userDao;
 //
 //    private @Autowired StringDigester stringDigester;
 //
@@ -178,22 +178,22 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 //        LOGGER.info("resetPassword - Email sent to: " + user.getEmail() + "; id: " + user.getId());
 //    }
 
-    /** {@inheritDoc} */
-    @Override
-    @Transactional(readOnly = true, propagation=Propagation.SUPPORTS)
-    public UserDetails loadUserByUsername(final String userName) throws UsernameNotFoundException, DataAccessException {
+	/** {@inheritDoc} */
+	@Override
+	@Transactional(readOnly = true, propagation=Propagation.SUPPORTS)
+	public UserDetails loadUserByUsername(final String userName) throws UsernameNotFoundException, DataAccessException {
 
-        final User user = userDao.getUserByUsername(userName.trim());
+		final User user = userDao.getUserByUsername(userName.trim());
 
-        if (user==null){
-            LOGGER.warn("loadUserByUsername() - No user with id " + userName + " found.");
-            throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + userName + " found.");
-        }
+		if (user==null){
+			LOGGER.warn("loadUserByUsername() - No user with id " + userName + " found.");
+			throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + userName + " found.");
+		}
 
-        LOGGER.info("User {} ({}) loaded.", new Object[] { user.getUsername(), user.getEmail()});
+		LOGGER.info("User {} ({}) loaded.", new Object[] { user.getUsername(), user.getEmail()});
 
-        return user;
-    }
+		return user;
+	}
 
 //    /** {@inheritDoc} */
 //    @Transactional(readOnly = true, propagation=Propagation.SUPPORTS)

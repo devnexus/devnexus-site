@@ -22,15 +22,15 @@ import com.devnexus.ting.core.model.Event;
 
 public class StringToEvent implements Converter<String, Event>{
 
-    @Override
-    public Event convert(String source) {
+	@Override
+	public Event convert(String source) {
 
-        if (StringUtils.isEmpty(source) || !StringUtils.isNumeric(source)) {
-            return null;
-        } else {
-            return new Event(Long.valueOf(source));
-        }
+		if (StringUtils.isEmpty(source) || !StringUtils.isNumeric(source)) {
+			return null;
+		} else {
+			return new Event(Long.valueOf(source));
+		}
 
-    }
+	}
 
 }

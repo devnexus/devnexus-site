@@ -16,17 +16,17 @@ import org.pegdown.PegDownProcessor;
  */
 public class TingUtilTests {
 
-    @Test
-    public void test() {
+	@Test
+	public void test() {
 
-        String markdownSource = "I am **bold**.";
+		String markdownSource = "I am **bold**.";
 
-        PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
-        assertNotNull(markdownProcessor);
+		PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
+		assertNotNull(markdownProcessor);
 
-        String resultingHtml = markdownProcessor.markdownToHtml(markdownSource);
+		String resultingHtml = markdownProcessor.markdownToHtml(markdownSource);
 
-        assertEquals("Resulting HTML did not match.", "<p>I am <strong>bold</strong>.</p>", resultingHtml);
-    }
+		assertEquals("Resulting HTML did not match.", "<p>I am <strong>bold</strong>.</p>", resultingHtml);
+	}
 
 }

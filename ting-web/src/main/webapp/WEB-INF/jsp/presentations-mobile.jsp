@@ -1,5 +1,7 @@
+<%@page import="com.devnexus.ting.core.model.PresentationType"%>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
+<% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
         <!-- Start of first page -->
         <div data-role="page" id="presentations" data-theme="b">
@@ -14,8 +16,10 @@
                     <li data-role="list-divider">Presentations</li>
                         <c:forEach items="${presentationList.presentations}" var="presentation">
                             <li>
-                                <a href="#id-${presentation.id}"><c:out value="${presentation.title}"/></a>
-                            </li>
+                                <a href="#id-${presentation.id}"><c:out value="${presentation.title}"/>
+                            <c:if test="${presentation.presentationType == keynoteType}">
+							(Keynote)
+							</c:if></a></li>
                         </c:forEach>
                 </ul>
             </div><!-- /content -->
@@ -48,6 +52,9 @@
                     </c:otherwise>
                 </c:choose>
                     <c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/>
+                    <c:if test="${not empty presentation.skillLevel}">
+					Skill Level: <c:out value="${presentation.skillLevel.name}" />
+					</c:if>
                 </div><!-- /content -->
 
                 <div data-role="footer">

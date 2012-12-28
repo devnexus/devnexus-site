@@ -21,77 +21,77 @@ import com.devnexus.ting.common.TingUtil;
 @MappedSuperclass
 public abstract class Person extends BaseModelObject {
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -6456631481903155317L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -6456631481903155317L;
 
-    @NotEmpty
-    @Size(max=10000)
-    protected String bio;
+	@NotEmpty
+	@Size(max=10000)
+	protected String bio;
 
-    @NotEmpty
-    @Size(max=255)
-    protected String firstName;
+	@NotEmpty
+	@Size(max=255)
+	protected String firstName;
 
-    @NotEmpty
-    @Size(max=255)
-    protected String lastName;
+	@NotEmpty
+	@Size(max=255)
+	protected String lastName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @XmlTransient
-    @Cascade(CascadeType.ALL)
-    protected FileData picture;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@XmlTransient
+	@Cascade(CascadeType.ALL)
+	protected FileData picture;
 
-    @Size(max=255)
-    protected String twitterId;
+	@Size(max=255)
+	protected String twitterId;
 
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public String getBio() {
-        return bio;
-    }
+	public String getBio() {
+		return bio;
+	}
 
-    public String getBioAsHtml() {
-        return TingUtil.getMarkDownProcessor().markdownToHtml(this.bio);
-    }
+	public String getBioAsHtml() {
+		return TingUtil.getMarkDownProcessor().markdownToHtml(this.bio);
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getFullName() {
-        return this.lastName + ", " + this.firstName;
-    }
+	public String getFullName() {
+		return this.lastName + ", " + this.firstName;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public FileData getPicture() {
-        return picture;
-    }
+	public FileData getPicture() {
+		return picture;
+	}
 
-    public String getTwitterId() {
-        return twitterId;
-    }
+	public String getTwitterId() {
+		return twitterId;
+	}
 
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setPicture(FileData picture) {
-        this.picture = picture;
-    }
+	public void setPicture(FileData picture) {
+		this.picture = picture;
+	}
 
-    public void setTwitterId(String twitterId) {
-        this.twitterId = twitterId;
-    }
+	public void setTwitterId(String twitterId) {
+		this.twitterId = twitterId;
+	}
 
 }

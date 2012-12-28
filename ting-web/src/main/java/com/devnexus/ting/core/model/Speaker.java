@@ -46,62 +46,62 @@ import org.hibernate.annotations.ParamDef;
 @Cacheable()
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @FilterDefs({
-        @FilterDef(name = "presentationFilter"),
-        @FilterDef(name = "presentationFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
-        })
+		@FilterDef(name = "presentationFilter"),
+		@FilterDef(name = "presentationFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
+		})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Speaker extends Person {
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = 1071633978769394025L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = 1071633978769394025L;
 
-    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
-    @Filters({
-        @Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
-        @Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
-    })
-    @XmlTransient
-    @BatchSize(size=20)
-    private Set<Presentation> presentations = new HashSet<Presentation>(0);
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
+	@Filters({
+		@Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
+		@Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
+	})
+	@XmlTransient
+	@BatchSize(size=20)
+	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 
-    @ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
-    @XmlTransient
-    private Set<Event>events = new HashSet<Event>(0);
+	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
+	@XmlTransient
+	private Set<Event>events = new HashSet<Event>(0);
 
-    public Speaker() {
-    }
+	public Speaker() {
+	}
 
-    public Speaker(Long id) {
-        this.id = id;
-    }
+	public Speaker(Long id) {
+		this.id = id;
+	}
 
-    public Set<Presentation> getPresentations() {
-        return presentations;
-    }
+	public Set<Presentation> getPresentations() {
+		return presentations;
+	}
 
-    public void setPresentations(Set<Presentation> presentations) {
-        this.presentations = presentations;
-    }
+	public void setPresentations(Set<Presentation> presentations) {
+		this.presentations = presentations;
+	}
 
-    @Override
-    public String toString() {
-        return "Speaker [firstName=" + firstName + ", id=" + id + ", lastName="
-                + lastName + "]";
-    }
+	@Override
+	public String toString() {
+		return "Speaker [firstName=" + firstName + ", id=" + id + ", lastName="
+				+ lastName + "]";
+	}
 
-    /**
-     * @param events the events to set
-     */
-    public void setEvents(Set<Event> events) {
-        this.events = events;
-    }
+	/**
+	 * @param events the events to set
+	 */
+	public void setEvents(Set<Event> events) {
+		this.events = events;
+	}
 
-    /**
-     * @return the events
-     */
-    public Set<Event> getEvents() {
-        return events;
-    }
+	/**
+	 * @return the events
+	 */
+	public Set<Event> getEvents() {
+		return events;
+	}
 
 }

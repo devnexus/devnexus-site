@@ -14,20 +14,20 @@ public class SpeakerJacksonTest {
 	@Test
 	public void testJacksonSerialization() throws JsonGenerationException, JsonMappingException, IOException {
 
-	    ObjectMapper mapper = new ObjectMapper();
-	    AnnotationIntrospector introspector = new JaxbAnnotationIntrospector();
-	    // make deserializer use JAXB annotations (only)
-	    mapper.getDeserializationConfig().setAnnotationIntrospector(introspector);
-	    // make serializer use JAXB annotations (only)
-	    mapper.getSerializationConfig().setAnnotationIntrospector(introspector);
+		ObjectMapper mapper = new ObjectMapper();
+		AnnotationIntrospector introspector = new JaxbAnnotationIntrospector();
+		// make deserializer use JAXB annotations (only)
+		mapper.getDeserializationConfig().setAnnotationIntrospector(introspector);
+		// make serializer use JAXB annotations (only)
+		mapper.getSerializationConfig().setAnnotationIntrospector(introspector);
 
-	    Speaker speaker = new Speaker();
+		Speaker speaker = new Speaker();
 
-	    speaker.setBio("bio");
-	    speaker.setFirstName("firstName");
-	    speaker.setLastName("lastName");
+		speaker.setBio("bio");
+		speaker.setFirstName("firstName");
+		speaker.setLastName("lastName");
 
-	    mapper.writeValue(System.out, speaker);
+		mapper.writeValue(System.out, speaker);
 
 	}
 

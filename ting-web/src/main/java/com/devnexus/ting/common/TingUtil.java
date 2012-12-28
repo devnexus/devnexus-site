@@ -20,18 +20,18 @@ import org.pegdown.PegDownProcessor;
 
 public final class TingUtil {
 
-    /** PegDownProcessor is not thread-safe but can be reused per thread */
-    private static final ThreadLocal<PegDownProcessor> markdownProcessor = new ThreadLocal<PegDownProcessor>() {
+	/** PegDownProcessor is not thread-safe but can be reused per thread */
+	private static final ThreadLocal<PegDownProcessor> markdownProcessor = new ThreadLocal<PegDownProcessor>() {
 
-        @Override
-        protected PegDownProcessor initialValue() {
-            return new PegDownProcessor(Extensions.ALL);
-        }
+		@Override
+		protected PegDownProcessor initialValue() {
+			return new PegDownProcessor(Extensions.ALL);
+		}
 
-    };
+	};
 
-    public static PegDownProcessor getMarkDownProcessor() {
-        return markdownProcessor.get();
-    }
+	public static PegDownProcessor getMarkDownProcessor() {
+		return markdownProcessor.get();
+	}
 
 }

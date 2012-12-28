@@ -25,7 +25,7 @@ import com.devnexus.ting.core.model.Backup;
  */
 public interface BackupDao {
 
-    /**
-     */
-    Backup convertToBackupData(InputStream inputStream);
+	/**
+	 */
+	Backup convertToBackupData(InputStream inputStream);
 }

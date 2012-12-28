@@ -39,47 +39,47 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller
 public class AdminController {
 
-    @Autowired private BusinessService businessService;
-    @Autowired private Validator validator;
+	@Autowired private BusinessService businessService;
+	@Autowired private Validator validator;
 
-    /** serialVersionUID. */
-    private static final long serialVersionUID = -3422780336408883930L;
+	/** serialVersionUID. */
+	private static final long serialVersionUID = -3422780336408883930L;
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
-    @RequestMapping({"/admin/index"})
-    public String execute(ModelMap model) {
-        return "/admin/index";
-    }
+	@RequestMapping({"/admin/index"})
+	public String execute(ModelMap model) {
+		return "/admin/index";
+	}
 
-    @RequestMapping({"/admin/update-application-cache"})
-    public String updateApplicationCache(ModelMap model) {
-        businessService.updateApplicationCacheManifest();
-        return "redirect:/s/admin/index";
-    }
+	@RequestMapping({"/admin/update-application-cache"})
+	public String updateApplicationCache(ModelMap model) {
+		businessService.updateApplicationCacheManifest();
+		return "redirect:/s/admin/index";
+	}
 
 
-    @RequestMapping("/logout")
-    public String logout(ModelMap model) {
+	@RequestMapping("/logout")
+	public String logout(ModelMap model) {
 
-        final SecurityContext context = SecurityContextHolder.getContext();
+		final SecurityContext context = SecurityContextHolder.getContext();
 
-        if (context.getAuthentication() != null) {
-            LOGGER.info("Logging out user..." + context.getAuthentication().getName());
-        } else {
-            LOGGER.warn("User not logged in.");
-        }
+		if (context.getAuthentication() != null) {
+			LOGGER.info("Logging out user..." + context.getAuthentication().getName());
+		} else {
+			LOGGER.warn("User not logged in.");
+		}
 
-        context.setAuthentication(null);
+		context.setAuthentication(null);
 
-        //super.addActionMessage("You logged out successfully.");
+		//super.addActionMessage("You logged out successfully.");
 
-        return "/index";
-    }
+		return "/index";
+	}
 
-    @RequestMapping("/login")
-    public String login(ModelMap model) {
-        return "/login";
-    }
+	@RequestMapping("/login")
+	public String login(ModelMap model) {
+		return "/login";
+	}
 
 }

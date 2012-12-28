@@ -31,34 +31,34 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Organizer extends Person {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @XmlAnyAttribute
-    private Integer sortOrder;
+	@XmlAnyAttribute
+	private Integer sortOrder;
 
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public Organizer() {
-    }
+	public Organizer() {
+	}
 
-    public Organizer(Long id) {
-        this.id = id;
-    }
+	public Organizer(Long id) {
+		this.id = id;
+	}
 
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    @Override
-    public String toString() {
-        return "Organizer [firstName=" + firstName + ", id=" + id + ", lastName="
-                + lastName + "]";
-    }
+	@Override
+	public String toString() {
+		return "Organizer [firstName=" + firstName + ", id=" + id + ", lastName="
+				+ lastName + "]";
+	}
 
-    public Integer getSortOrder() {
-        return sortOrder;
-    }
+	public Integer getSortOrder() {
+		return sortOrder;
+	}
 
-    public void setSortOrder(Integer order) {
-        this.sortOrder = order;
-    }
+	public void setSortOrder(Integer order) {
+		this.sortOrder = order;
+	}
 
 }

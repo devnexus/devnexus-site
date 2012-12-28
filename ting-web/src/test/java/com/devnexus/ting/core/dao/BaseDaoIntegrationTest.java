@@ -14,9 +14,9 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
  * @version $Id: BaseTest.java 598 2010-08-22 20:18:58Z ghillert $
  */
 @ContextConfiguration(
-        locations={ "classpath:spring/mainApplicationContext.xml"})
-@ActiveProfiles("default")
+		locations={ "classpath:spring/mainApplicationContext.xml"})
+//@ActiveProfiles("standalone")
 public abstract class BaseDaoIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests {
 
-    protected @PersistenceContext(unitName="base") EntityManager entityManager;
+	protected @PersistenceContext(unitName="base") EntityManager entityManager;
 }

@@ -30,17 +30,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="speakers")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SpeakerList implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @XmlElement(name="speaker")
-    private List<Speaker> speakers;
+	@XmlElement(name="speaker")
+	private List<Speaker> speakers;
 
-    public List<Speaker> getSpeakers() {
-        return speakers;
-    }
+	public List<Speaker> getSpeakers() {
+		return speakers;
+	}
 
-    public void setSpeakers(List<Speaker> speakers) {
-        this.speakers = speakers;
-    }
+	public void setSpeakers(List<Speaker> speakers) {
+		this.speakers = speakers;
+	}
 
 }

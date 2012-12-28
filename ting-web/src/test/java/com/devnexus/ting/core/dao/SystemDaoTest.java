@@ -14,17 +14,17 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SystemDao systemDao;
 
-    /**
-     * Test to verify that the seed data is correctly populated. Typically there
-     * should be 10 industries in the system:
-     *
-     */
-    @Test
-    public void testGenerateSchema() {
-    	//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
-    	systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
-    	//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
+	/**
+	 * Test to verify that the seed data is correctly populated. Typically there
+	 * should be 10 industries in the system:
+	 *
+	 */
+	@Test
+	public void testGenerateSchema() {
+		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
+		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
+		//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
 
-    }
+	}
 
 }
