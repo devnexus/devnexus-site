@@ -146,7 +146,7 @@ public class JSONPRequestFilter implements Filter {
 
 		public byte[] wrap(byte[] content) throws IOException {
 			StringBuilder sb = new StringBuilder(preWrapper);
-			sb.append(new String(content, CHARACTER_ENCODING));
+                        sb.append(new String(content, CHARACTER_ENCODING).replace("\u2028","\\u2028").replace("\u2029","\\u2029"));
 			sb.append(POST_PADDING);
 			return sb.toString().getBytes(CHARACTER_ENCODING);
 		}
@@ -282,4 +282,5 @@ public class JSONPRequestFilter implements Filter {
 	@Override
 	public void init(FilterConfig fc) throws ServletException {
 	}
+
 }
