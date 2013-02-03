@@ -38,7 +38,6 @@ import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.ParamDef;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
-import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * The persistent class for the speakers database table.

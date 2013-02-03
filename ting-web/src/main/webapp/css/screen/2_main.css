@@ -81,6 +81,10 @@ header h1 {
      -moz-border-radius-topleft: 6px;
      -moz-border-radius-bottomright: 6px;
      -moz-border-radius-bottomleft: 6px;
+	border-top-left-radius:  6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius:  6px;
+	border-bottom-right-radius: 6px;
 }
 
 .container .main {

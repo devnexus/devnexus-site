@@ -41,6 +41,8 @@ import org.hibernate.annotations.Filters;
 import org.hibernate.annotations.ParamDef;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.devnexus.ting.common.TingUtil;
+
 /**
  * The persistent class for the speakers database table.
  *
@@ -64,10 +66,16 @@ public class Room extends BaseModelObject {
 	private String name;
 
 	@Size(max=255)
+	private String track;
+
+	@Size(max=255)
 	private String cssStyleName;
 
 	@NotNull
 	private Integer capacity;
+
+	@Size(max=10000)
+	private String description;
 
 	@NotNull
 	private Integer roomOrder;
@@ -157,4 +165,19 @@ public class Room extends BaseModelObject {
 		this.cssStyleName = cssStyleName;
 	}
 
+	public String getDescription() {
+		return this.description;
+	}
+
+	public String getDescriptionAsHtml() {
+		return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
+	}
+
+	public String getTrack() {
+		return track;
+	}
+
+	public void setTrack(String track) {
+		this.track = track;
+	}
 }

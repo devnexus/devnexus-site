@@ -30,7 +30,7 @@
 				<c:out value="${speaker.lastName}" />
 			</h3>
 			<c:if test="${speaker.picture != null}">
-				<img src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" />
+				<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" />
 			</c:if>
 			<p>
 				<c:out value="${speaker.bioAsHtml}" escapeXml="false" />
@@ -49,11 +49,15 @@
 				</ul>
 			</c:if>
 			<c:if test="${!empty speaker.twitterId}">
-				<p>
-					Twitter: <a
-						href="https://twitter.com/<c:out value="${speaker.twitterId}" />">@<c:out
+				<p><a href="https://twitter.com/<c:out value="${speaker.twitterId}" />"
+						><img class="social" alt="<c:out
+							value='${speaker.googlePlusId}' />" src="${ctx}/img/icons/icondock/24px/twitter.png"/>@<c:out
 							value="${speaker.twitterId}" /></a>
 				</p>
+			</c:if>
+			<c:if test="${!empty speaker.googlePlusId}">
+				<p><a href="https://plus.google.com/<c:out value="${speaker.googlePlusId}" />"><img class="social" alt="<c:out
+							value='${speaker.googlePlusId}' />" src="${ctx}/img/icons/icondock/24px/google-plus.png"/></a></p>
 			</c:if>
 			<br style="clear: both;" />
 		</div>

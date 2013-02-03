@@ -115,6 +115,7 @@ public class SpeakerController {
 
 		speakerFromDb.setBio(speakerForm.getBio());
 		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
+		speakerFromDb.setGooglePlusId(speakerForm.getGooglePlusId());
 		speakerFromDb.setFirstName(speakerForm.getFirstName());
 		speakerFromDb.setLastName(speakerForm.getLastName());
 

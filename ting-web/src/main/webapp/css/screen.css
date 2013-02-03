@@ -289,6 +289,10 @@ header h1 {
      -moz-border-radius-topleft: 6px;
      -moz-border-radius-bottomright: 6px;
      -moz-border-radius-bottomleft: 6px;
+	border-top-left-radius:  6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius:  6px;
+	border-bottom-right-radius: 6px;
 }
 
 .container .main {
@@ -564,7 +568,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008eb0', end
 div.speaker h3 {
     border-bottom: 1px solid orange;
  }
-div.speaker img {
+div.speaker img.speaker {
     float: right;
     margin-left: 10px;
     margin-right: 0px;
@@ -573,6 +577,9 @@ div.speaker img {
     border-right: 1px solid orange;
     border-bottom: 1px solid orange;
     border-left: 1px solid orange;
+}
+div.speaker img.social {
+	margin-right: 10px;
 }
 
 div.speaker p.presentation-header {

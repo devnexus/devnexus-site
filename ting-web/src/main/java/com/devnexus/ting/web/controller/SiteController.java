@@ -23,7 +23,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.Device;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.social.twitter.api.SearchResults;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
@@ -38,7 +37,7 @@ import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
-import com.devnexus.ting.core.model.ScheduleItem;
+import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -85,9 +84,9 @@ public class SiteController {
 
 		final Event event = businessService.getCurrentEvent();
 
-		List<ScheduleItem> scheduleItems = businessService.getScheduleForEvent(event.getId());
+		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
-		model.addAttribute("scheduleItems", scheduleItems);
+		model.addAttribute("scheduleItemList", scheduleItemList);
 
 		if (sitePreference.isMobile()) {
 			return "schedule-mobile";
@@ -102,20 +101,24 @@ public class SiteController {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
 
-		List<ScheduleItem> scheduleItems = businessService.getScheduleForEvent(event.getId());
+		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
-		model.addAttribute("scheduleItems", scheduleItems);
+		model.addAttribute("scheduleItemList", scheduleItemList);
 
 		if (sitePreference.isMobile()) {
 			return "schedule-mobile";
 		}
 
 		return "schedule";
-
 	}
 
 	@RequestMapping("/travel")
 	public String travel(final Model model, final SitePreference sitePreference) {
+
+		if (sitePreference.isMobile()) {
+			return "travel-mobile";
+		}
+
 		return "travel";
 	}
 

@@ -32,6 +32,27 @@ public final class CalendarUtils {
 
 	}
 
+	/** Returns the current date without time information. */
+	public static Calendar getCalendarWithoutTime(Date date) {
+		final Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		return getCalendarWithoutTime(calendar);
+	}
+
+	/** Returns the current date without time information. */
+	public static Calendar getCalendarWithoutTime(Calendar calendarParam) {
+
+		final Calendar calendar = Calendar.getInstance(calendarParam.getTimeZone());
+		calendar.setTime(calendarParam.getTime());
+
+		calendar.set(Calendar.MILLISECOND, 0);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.HOUR_OF_DAY, 0);
+		return calendar;
+
+	}
+
 	/**
 	 * Returns the current date without time information.
 	 *

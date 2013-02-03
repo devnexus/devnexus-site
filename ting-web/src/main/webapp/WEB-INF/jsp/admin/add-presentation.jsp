@@ -14,14 +14,6 @@
 			<form:errors path="event" cssClass="fieldError" />
 		</div>
 		<div class="required">
-			<label for="room">Room</label>
-			<form:select path="room" id="room" tabindex="2"
-				cssStyle="width: 300px;">
-				<form:option value="" label="Please Select a Room" />
-			</form:select>
-			<form:errors path="room" cssClass="fieldError" />
-		</div>
-		<div class="required">
 			<label for="speaker">Speaker</label>
 			<form:select path="speaker.id" id="speaker" tabindex="1"
 				cssStyle="width: 300px;">

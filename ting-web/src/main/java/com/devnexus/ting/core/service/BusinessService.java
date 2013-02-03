@@ -24,6 +24,7 @@ import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItem;
+import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
 
 /**
@@ -210,6 +211,6 @@ public interface BusinessService {
 
 	Room getRoom(Long id);
 
-	List<ScheduleItem> getScheduleForEvent(Long eventId);
+	ScheduleItemList getScheduleForEvent(Long eventId);
 
 }
