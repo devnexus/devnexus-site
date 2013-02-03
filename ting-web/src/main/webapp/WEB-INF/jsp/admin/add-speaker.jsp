@@ -30,6 +30,11 @@
             <form:input  path="twitterId" id="twitterId" maxlength="255" tabindex="6" cssStyle="width: 300px;"/>
             <form:errors path="twitterId" cssClass="fieldError"/>
         </div>
+        <div class="required">
+            <label for="twitterId">Google Plus Id</label>
+            <form:input  path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="6" cssStyle="width: 300px;"/>
+            <form:errors path="googlePlusId" cssClass="fieldError"/>
+        </div>
         <div class="submit">
             <input type="submit" class="button" name="save"   value="Add"/>
             <input type="submit" class="button" name="cancel" value="Cancel"/>

@@ -7,9 +7,9 @@
             <h2 style="margin-top: 0;">Welcome to DevNexus 2013 - February 18-19</h2>
             <p>
                 We will be having an incredible line-up of presenters covering a
-                wide array of crucial topics. Also, this year we are expanding to
-                <strong>7 tracks</strong> with <strong>50+ sessions</strong> and
-                <strong>3 keynotes</strong>!
+                wide array of crucial topics. This year we are expanding to
+                <strong>8 tracks</strong> with <strong>70 sessions</strong> and
+                <strong>2 keynotes</strong>!
                 In addition to providing great content for Java developers,
                 DevNexus is a very valuable networking opportunity. This event
                 attracts Java/JVM talent from the South-East's largest corporations,
@@ -17,37 +17,6 @@
                 opportunity to discover what other development teams are using
                 as their favorite tools and practices.
             </p>
-			<h2>DevNexus 2013 - Call For Papers Now Open</h2>
-
-			<p>
-				We are delighted to announce that the Call for Papers is now open.
-				Individuals are encouraged to submit proposals covering one of the
-				following topics:
-			</p>
-			<ul>
-				<li>Java and JVM Languages</li>
-				<li>Cloud</li>
-				<li>NoSQL and Big Data</li>
-				<li>Web (incl. Mobile Development, HTML5, JavaScript)</li>
-				<li>Methodologies and Tools</li>
-			</ul>
-			<p>
-				The Call for Papers closes December 31, 2012 and the planning
-				committee will carefully review submitted proposals, and will
-				provide confirmation whether talks were selected or not for the
-				DevNexus conference.
-			</p>
-			<p>
-				Please provide the following information to info AT ajug DOT org:
-			</p>
-			<ul>
-				<li>Abstract</li>
-				<li>Bio</li>
-				<li>Speaker Picture</li>
-				<li>Skill Level (Beginner, Intermediate, Advanced)</li>
-				<li>Email Address</li>
-				<li>Phone Number</li>
-			</ul>
 
             <h2 style="">What?</h2>
 
@@ -101,7 +70,7 @@
    </div>
 
     <p>
-        The Standard Ticket is <strong>$230</strong>, however until February 15, 2013, we have
+        The Standard Ticket is <strong>$220</strong>, however until January 15, 2013, we have
         an early bird special of <strong>$195</strong>.
     </p>
     <p>
@@ -156,6 +125,9 @@
     </div>
     <h3>Gold Sponsors</h3>
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
+	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
+	<a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE"        src="${ctx}/img/sponsors/ICE.jpg"/></a>
+	<a href="http://www.compuware.com/"><img class="logo" alt="Compuware Corporation"        src="${ctx}/img/sponsors/compuware.png"/></a>
 
 	<h3>Silver Sponsors</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
@@ -168,6 +140,10 @@
 	<a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
 	<a href="http://www.creative-mischief.com/"><img class="logo" alt="Creative Mischief" src="${ctx}/img/sponsors/creative-mischief.png"/></a>
 	<a href="http://www.google.com/"><img class="logo" alt="Google" src="${ctx}/img/sponsors/google.png"/></a>
+	<a href="http://www.dtglobalstaffing.com/"><img class="logo" alt="Dimensional Thinking" src="${ctx}/img/sponsors/DimensionalThinking_AJUG.png"/></a>
+	<a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge2 Solutions" src="${ctx}/img/sponsors/B2S.png"/></a>
+	<a href="http://www.actuate.com/"><img class="logo" alt="Actuate" src="${ctx}/img/sponsors/actuate.jpg"/></a>
+	<a href="http://www.lancope.com/"><img class="logo" alt="Lancope" src="${ctx}/img/sponsors/lancope.png"/></a>
 
 	<h3>Cocktail Hour Sponsor</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>

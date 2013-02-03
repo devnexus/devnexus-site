@@ -17,10 +17,12 @@ package com.devnexus.ting.core.service.impl;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.UUID;
-
-import javax.validation.constraints.Size;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +31,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
+import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.dao.ApplicationCacheDao;
 import com.devnexus.ting.core.dao.EventDao;
@@ -44,6 +47,8 @@ import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItem;
+import com.devnexus.ting.core.model.ScheduleItemList;
+import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -334,18 +339,62 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-	public List<ScheduleItem> getScheduleForEvent(Long eventId) {
+	public ScheduleItemList getScheduleForEvent(Long eventId) {
 
 		final List<ScheduleItem> scheduleItems = scheduleItemDao.getScheduleForEvent(eventId);
+
+		final ScheduleItemList scheduleItemList = new ScheduleItemList();
+		scheduleItemList.setScheduleItems(scheduleItems);
 
 		ScheduleItem currentScheduleItem = null;
 
 		String hourOfDay = null;
 
+		final SortedSet<Date> days = new TreeSet<Date>();
+
+		int numberOfSessions = 0;
+		int numberOfKeynoteSessions = 0;
+		int numberOfBreakoutSessions = 0;
+		int numberOfUnassignedSessions = 0;
+
+		int numberOfBreaks = 0;
+		int numberOfTracks = 0;
+
+		Set<Long> speakerIds = new HashSet<Long>();
+
 		for (ScheduleItem scheduleItem : scheduleItems) {
 
+			if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
+					|| ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
+
+				numberOfSessions++;
+
+				if (scheduleItem.getPresentation() != null) {
+					speakerIds.add(scheduleItem.getPresentation().getSpeaker().getId());
+				} else {
+					numberOfUnassignedSessions++;
+				}
+
+				if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())) {
+					numberOfKeynoteSessions++;
+
+				}
+
+				if (ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
+					numberOfBreakoutSessions++;
+				}
+
+			}
+
+			if (ScheduleItemType.BREAK.equals(scheduleItem.getScheduleItemType())) {
+				numberOfBreaks++;
+			}
+
+			final Date fromTime = scheduleItem.getFromTime();
+			days.add(CalendarUtils.getCalendarWithoutTime(fromTime).getTime());
+
 			Calendar cal = Calendar.getInstance();
-			cal.setTime(scheduleItem.getFromTime());
+			cal.setTime(fromTime);
 
 			String loopHour = cal.get(Calendar.HOUR_OF_DAY) + "_" + cal.get(Calendar.MINUTE);
 
@@ -358,7 +407,15 @@ public class BusinessServiceImpl implements BusinessService {
 
 		}
 
-		return scheduleItems;
+		scheduleItemList.setDays(days);
+		scheduleItemList.setNumberOfBreakoutSessions(numberOfBreakoutSessions);
+		scheduleItemList.setNumberOfBreaks(numberOfBreaks);
+		scheduleItemList.setNumberOfSessions(numberOfSessions);
+		scheduleItemList.setNumberOfKeynoteSessions(numberOfKeynoteSessions);
+		scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
+		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
+
+		return scheduleItemList;
 	}
 
 }

@@ -26,6 +26,8 @@
 				<value>com.devnexus.ting.core.model.PresentationList</value>
 				<value>com.devnexus.ting.core.model.Room</value>
 				<value>com.devnexus.ting.core.model.RoomList</value>
+				<value>com.devnexus.ting.core.model.ScheduleItem</value>
+				<value>com.devnexus.ting.core.model.ScheduleItemList</value>
 				<value>com.devnexus.ting.core.model.Speaker</value>
 				<value>com.devnexus.ting.core.model.SpeakerList</value>
 			</list>

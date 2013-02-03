@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlID;
 
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
@@ -201,8 +201,8 @@ public class User implements Serializable, UserDetails {
 
 	@Override
 	public Collection<GrantedAuthority> getAuthorities() {
-		GrantedAuthority authority = new GrantedAuthorityImpl("ADMIN");
-		Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
+		final GrantedAuthority authority = new SimpleGrantedAuthority("ADMIN");
+		final Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
 		authorities.add(authority);
 		return authorities;
 	}

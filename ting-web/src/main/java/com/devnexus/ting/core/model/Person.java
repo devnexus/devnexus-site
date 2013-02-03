@@ -44,6 +44,9 @@ public abstract class Person extends BaseModelObject {
 	@Size(max=255)
 	protected String twitterId;
 
+	@Size(max=255)
+	protected String googlePlusId;
+
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	public String getBio() {
@@ -60,6 +63,10 @@ public abstract class Person extends BaseModelObject {
 
 	public String getFullName() {
 		return this.lastName + ", " + this.firstName;
+	}
+
+	public String getFirstLastName() {
+		return this.firstName + " " + this.lastName;
 	}
 
 	public String getLastName() {
@@ -92,6 +99,14 @@ public abstract class Person extends BaseModelObject {
 
 	public void setTwitterId(String twitterId) {
 		this.twitterId = twitterId;
+	}
+
+	public String getGooglePlusId() {
+		return googlePlusId;
+	}
+
+	public void setGooglePlusId(String googlePlusId) {
+		this.googlePlusId = googlePlusId;
 	}
 
 }

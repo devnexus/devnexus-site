@@ -23,16 +23,22 @@
 				<c:out value="${organizer.firstName}" />
 				<c:out value="${organizer.lastName}" />
 			</h3>
-			<img src="${ctx}${baseSiteUrl}/organizers/${organizer.id}.jpg" />
+			<c:if test="${organizer.picture != null}">
+				<img class="speaker" src="${ctx}${baseSiteUrl}/organizers/${organizer.id}.jpg" />
+			</c:if>
 			<p>
 				<c:out value="${organizer.bioAsHtml}" escapeXml="false" />
 			</p>
 			<c:if test="${!empty organizer.twitterId}">
-				<p>
-					Twitter: <a
-						href="https://twitter.com/<c:out value="${organizer.twitterId}" />">@<c:out
+				<p><a href="https://twitter.com/<c:out value="${organizer.twitterId}" />"
+						><img class="social" alt="<c:out
+							value='${organizer.googlePlusId}' />" src="${ctx}/img/icons/icondock/24px/twitter.png"/>@<c:out
 							value="${organizer.twitterId}" /></a>
 				</p>
+			</c:if>
+			<c:if test="${!empty organizer.googlePlusId}">
+				<p><a href="https://plus.google.com/<c:out value="${organizer.googlePlusId}" />"><img class="social" alt="<c:out
+							value='${organizer.googlePlusId}' />" src="${ctx}/img/icons/icondock/24px/google-plus.png"/></a></p>
 			</c:if>
 			<br style="clear: both;" />
 		</div>

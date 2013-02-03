@@ -13,6 +13,7 @@
             <li><a href="${ctx}${baseSiteUrl}/schedule"      rel="external"><img class="ui-li-icon" alt="Schedule" src="${ctx}/img/icons/crystal/vcalendar.png"/>Schedule</a></li>
             <li><a href="${ctx}${baseSiteUrl}/organizers"    rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/identity.png"/>Organizers</a></li>
             <li><a href="${ctx}${baseSiteUrl}/twitter"       rel="external"><img class="ui-li-icon" alt="Twitter"  src="${ctx}/img/icons/erenemre/twitter-03.png"/>Twitter</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/travel"       rel="external"><img class="ui-li-icon" alt="Travel"  src="${ctx}/img/icons/crystal/kate.png"/>Travel</a></li>
             <li><a href="#sponsors"><img class="ui-li-icon" alt="Our Sponsors" src="${ctx}/img/icons/crystal/kwikdisk.png"/>Our Sponsors</a></li>
             <c:choose>
                 <c:when test="${currentDevice.mobile}">
@@ -41,6 +42,8 @@
 
     <h3>Gold Sponsors</h3>
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
+	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
+	<a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE"        src="${ctx}/img/sponsors/ICE.jpg"/></a>
 
 	<h3>Silver Sponsors</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
@@ -53,6 +56,9 @@
 	<a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
 	<a href="http://www.creative-mischief.com/"><img class="logo" alt="Creative Mischief" src="${ctx}/img/sponsors/creative-mischief.png"/></a>
 	<a href="http://www.google.com/"><img class="logo" alt="Google" src="${ctx}/img/sponsors/google.png"/></a>
+	<a href="http://www.dtglobalstaffing.com/"><img class="logo" alt="Dimensional Thinking" src="${ctx}/img/sponsors/DimensionalThinking_AJUG.png"/></a>
+	<a href="http://www.actuate.com/"><img class="logo" alt="Actuate" src="${ctx}/img/sponsors/actuate.jpg"/></a>
+	<a href="http://www.lancope.com/"><img class="logo" alt="Lancope" src="${ctx}/img/sponsors/lancope.png"/></a>
 
 	<h3>Cocktail Hour Sponsor</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>

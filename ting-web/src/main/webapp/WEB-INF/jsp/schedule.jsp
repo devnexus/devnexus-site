@@ -14,7 +14,7 @@
 	<c:set value="" var="loopStartTime"/>
 	<c:set value="" var="loopDay"/>
 
-	<c:forEach items="${scheduleItems}" var="scheduleItem">
+	<c:forEach items="${scheduleItemList.scheduleItems}" var="scheduleItem">
 
 		<fmt:formatDate pattern="H_m_s" value="${scheduleItem.fromTime}" var="currentStartTime"/>
 		<fmt:formatDate pattern="d"     value="${scheduleItem.fromTime}" var="currentDay"/>
@@ -32,7 +32,7 @@
 				<th>Start</th>
 				<th>End</th>
 				<th>Session</th>
-				<th>Room</th>
+				<th>Room/Track</th>
 				<th>Session</th>
 			</tr>
 		</c:if>
@@ -68,12 +68,18 @@
 						<td class="breakouts" rowspan="${scheduleItem.rowspan}">Breakouts</td>
 					</c:if>
 
-					<td class="${scheduleItem.room.cssStyleName}">${scheduleItem.room.name}</td>
+					<td class="${scheduleItem.room.cssStyleName}">
+						<p><strong>${scheduleItem.room.name}</strong></p>
+						<c:if test="${not empty scheduleItem.room.track}">
+							<p><c:out value="${scheduleItem.room.track}"/></p>
+						</c:if>
+					</td>
 					<td class="talk">
 						<p class="topic">
 							<c:choose>
 								<c:when test="${not empty scheduleItem.presentation}">
-									<c:out value="${scheduleItem.presentation.title}"/>
+									<c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+									<a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
 								</c:when>
 								<c:otherwise>
 									<c:out value="${scheduleItem.title}" default="N/A"/>
@@ -83,7 +89,8 @@
 						<p class="speaker">
 							<c:choose>
 								<c:when test="${not empty scheduleItem.presentation}">
-									<c:out value="${scheduleItem.presentation.speaker.fullName}"/>
+									<c:url var="speakerUrl" value="${baseSiteUrl}/speakers#${scheduleItem.presentation.speaker.firstName}_${scheduleItem.presentation.speaker.lastName}"/>
+									<a href="${speakerUrl}"><c:out value="${scheduleItem.presentation.speaker.firstLastName}"/></a>
 								</c:when>
 								<c:otherwise>
 									N/A
@@ -99,7 +106,8 @@
 						<p class="topic">
 							<c:choose>
 								<c:when test="${not empty scheduleItem.presentation}">
-									<c:out value="${scheduleItem.presentation.title}"/>
+									<c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+									<a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
 								</c:when>
 								<c:otherwise>
 									<c:out value="${scheduleItem.title}" default="N/A"/>
@@ -109,7 +117,8 @@
 						<p class="speaker">
 							<c:choose>
 								<c:when test="${not empty scheduleItem.presentation}">
-									<c:out value="${scheduleItem.presentation.speaker.fullName}"/>
+									<c:url var="speakerUrl" value="${baseSiteUrl}/speakers#${scheduleItem.presentation.speaker.firstName}_${scheduleItem.presentation.speaker.lastName}"/>
+									<a href="${speakerUrl}"><c:out value="${scheduleItem.presentation.speaker.firstLastName}"/></a>
 								</c:when>
 								<c:otherwise>
 									N/A
