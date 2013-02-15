@@ -5,6 +5,9 @@
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
 
             <h2 style="margin-top: 0;">Welcome to DevNexus 2013 - February 18-19</h2>
+            <p>We'd love to hear what you think about DevNexus!</p>
+            <p style="text-align: center;"><a href="${ctx}${baseSiteUrl}/evaluations/add" class="button" style="margin: 10px auto 10px auto;">Feedback</a>
+            </p>
             <p>
                 We will be having an incredible line-up of presenters covering a
                 wide array of crucial topics. This year we are expanding to
@@ -66,7 +69,7 @@
     <h2>Registration</h2>
 
    <div id="signup">
-       <h2 style="color: #FF0000;"><a href="https://ajug.eventwax.com/devnexus-2013/register">Register Now</a></h2>
+       <h2 style="color: #FF0000;">SOLD OUT!</h2>
    </div>
 
     <p>
@@ -127,7 +130,7 @@
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
 	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
 	<a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE"        src="${ctx}/img/sponsors/ICE.jpg"/></a>
-	<a href="http://www.compuware.com/"><img class="logo" alt="Compuware Corporation"        src="${ctx}/img/sponsors/compuware.png"/></a>
+	<a href="http://www.compuware.com/apm"><img class="logo" alt="Compuware Corporation"        src="${ctx}/img/sponsors/compuware.png"/></a>
 
 	<h3>Silver Sponsors</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
@@ -183,3 +186,11 @@
   </div>
 
 </div>
+
+	<content tag='bottom'>
+		<script type="text/javascript">
+		    $(function() {
+		        $( "a.button").button();
+		    });
+		</script>
+	</content>

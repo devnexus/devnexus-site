@@ -87,7 +87,7 @@
 				</li>
 			</c:when>
 			<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeBreak}">
-				<li data-theme="e">Break
+				<li data-theme="e"><c:out value="${scheduleItem.title}" default="Break"/>
 					<p class="ui-li-aside">
 						${scheduleItem.room.name}
 					</p>

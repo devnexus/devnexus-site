@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,33 +19,27 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.devnexus.ting.core.dao.RoomDao;
-import com.devnexus.ting.core.model.Room;
+import com.devnexus.ting.core.dao.EvaluationDao;
+import com.devnexus.ting.core.model.Evaluation;
 
-@Repository("roomDao")
-public class RoomDaoJpa extends GenericDaoJpa< Room, Long>
-						implements RoomDao {
+@Repository("evaluationDao")
+public class EvaluationDaoJpa extends GenericDaoJpa<Evaluation, Long>
+						implements EvaluationDao {
 
 	/** Constructor. */
-	private RoomDaoJpa() {
-		super(Room.class);
+	private EvaluationDaoJpa() {
+		super(Evaluation.class);
 	}
 
-	/**
-	 * https://hibernate.onjira.com/browse/HHH-6902
-	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public List<Room> getRoomsForEvent(Long eventId) {
-
-		final List<Room> rooms = (List<Room>) super.entityManager
-				.createQuery("select r from Room r "
-						+ "where r.event.id = :eventId "
-						+ "order by r.roomOrder ASC")
-			.setParameter("eventId", eventId)
-			.getResultList();
-
-		return rooms;
+	public List<Evaluation> getEvaluationsForCurrentEvent() {
+		return super.entityManager
+				.createQuery("select eval from Evaluation eval "
+						   + "left join eval.event e "
+						   + "where e.current = :iscurrent "
+						   + "order by eval.createdDate DESC", Evaluation.class)
+				.setParameter("iscurrent", true)
+				.getResultList();
 	}
 
 }

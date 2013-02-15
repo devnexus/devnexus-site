@@ -25,7 +25,7 @@
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>&copy; 2012 AJUG</h4>
+                <h4>&copy; 2013 AJUG</h4>
             </div><!-- /header -->
         </div><!-- /page -->
 

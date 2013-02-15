@@ -7,11 +7,12 @@
     <div data-role="content">
         <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
             <li data-role="list-divider">DevNexus 2013</li>
-            <li><a href="https://ajug.eventwax.com/devnexus-2013/register" rel="external"><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Register Now!</a></li>
+            <li><a href="#" rel="external"><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Sold OUT!</a></li>
             <li><a href="${ctx}${baseSiteUrl}/speakers"      rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/groupevent.png"/>Speakers</a></li>
             <li><a href="${ctx}${baseSiteUrl}/presentations" rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/kchart.png"/>Presentations</a></li>
             <li><a href="${ctx}${baseSiteUrl}/schedule"      rel="external"><img class="ui-li-icon" alt="Schedule" src="${ctx}/img/icons/crystal/vcalendar.png"/>Schedule</a></li>
             <li><a href="${ctx}${baseSiteUrl}/organizers"    rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/identity.png"/>Organizers</a></li>
+            <li><a href="${ctx}${baseSiteUrl}/evaluations/add" rel="external"><img class="ui-li-icon" alt="Feedback" src="${ctx}/img/icons/crystal/Action-bookmark-16px.png"/>Feedback</a></li>
             <li><a href="${ctx}${baseSiteUrl}/twitter"       rel="external"><img class="ui-li-icon" alt="Twitter"  src="${ctx}/img/icons/erenemre/twitter-03.png"/>Twitter</a></li>
             <li><a href="${ctx}${baseSiteUrl}/travel"       rel="external"><img class="ui-li-icon" alt="Travel"  src="${ctx}/img/icons/crystal/kate.png"/>Travel</a></li>
             <li><a href="#sponsors"><img class="ui-li-icon" alt="Our Sponsors" src="${ctx}/img/icons/crystal/kwikdisk.png"/>Our Sponsors</a></li>
@@ -44,6 +45,7 @@
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
 	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
 	<a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE"        src="${ctx}/img/sponsors/ICE.jpg"/></a>
+	<a href="http://www.compuware.com/apm"><img class="logo" alt="Compuware Corporation"        src="${ctx}/img/sponsors/compuware.png"/></a>
 
 	<h3>Silver Sponsors</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>

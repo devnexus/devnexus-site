@@ -2,14 +2,15 @@
 
 <title>Main Admin Area</title>
 <div id="content" class="span-22 prepend-top last ">
-    <h2>Administration</h2>
+	<h2>Administration</h2>
 
-    <ul>
-          <li><a href="${ctx}${baseSiteUrl}/admin/events">Manage Events</a></li>
-          <li><a href="${ctx}${baseSiteUrl}/admin/presentations">Manage Presentations</a></li>
-          <li><a href="${ctx}${baseSiteUrl}/admin/speakers">Manage Speakers</a></li>
-          <li><a href="${ctx}${baseSiteUrl}/admin/organizers">Manage Organizers</a></li>
-
-          <li><a href="${ctx}${baseSiteUrl}/admin/update-application-cache">Update HTML5 Application Cache Manifest</a></li>
-    </ul>
+	<ul>
+		<li><a href="${ctx}${baseSiteUrl}/admin/events">Manage Events</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/presentations">Manage Presentations</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/speakers">Manage Speakers</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/organizers">Manage Organizers</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/organizers">Manage Organizers</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/evaluations">Show Evaluations for Current Event</a></li>
+		<li><a href="${ctx}${baseSiteUrl}/admin/update-application-cache">Update HTML5 Application Cache Manifest</a></li>
+	</ul>
 </div>
