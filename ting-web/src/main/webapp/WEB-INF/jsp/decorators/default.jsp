@@ -23,7 +23,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <link rel="stylesheet" href="${ctx}/css/screen.css" media="screen, projection" />
-
+	<link rel="stylesheet" href="${ctx}/css/rateit/rateit.css" media="screen, projection" />
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -153,7 +153,7 @@
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
 
-    <sitemesh:write property='page.foo'/>
+	<sitemesh:write property='page.bottom'/>
 
 </body>
 </html>

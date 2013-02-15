@@ -29,10 +29,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <link rel="stylesheet" href="${ctx}/css/mobile-min.css" />
-    <script src="${ctx}/js/mobile-min.js"></script>
+    <link rel="stylesheet" href="${ctx}/css/rateit/rateit.css" media="screen, projection" />
+    <script src="${ctx}/js/lib/jquery-1.7.0.js"></script>
+    <script src="${ctx}/js/mobile.js"></script>
     <sitemesh:write property='head'/>
 </head>
 <body>
     <sitemesh:write property='body'/>
+    <sitemesh:write property='page.bottom'/>
 </body>
 </html>

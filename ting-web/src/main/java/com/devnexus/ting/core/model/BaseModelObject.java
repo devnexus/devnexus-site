@@ -22,6 +22,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
@@ -49,7 +51,6 @@ public abstract class BaseModelObject implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	protected Long id;
 
-	@Generated(GenerationTime.ALWAYS)
 	@Temporal(TemporalType.TIMESTAMP)
 	@XmlAttribute
 	protected Date createdDate;
@@ -61,6 +62,16 @@ public abstract class BaseModelObject implements Serializable {
 	@Version
 	@XmlAttribute
 	protected Integer version;
+
+	@PrePersist
+	protected void onCreate() {
+		this.createdDate = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedDate = new Date();
+	}
 
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

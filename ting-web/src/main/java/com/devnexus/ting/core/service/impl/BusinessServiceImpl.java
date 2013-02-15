@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,7 @@ import org.springframework.util.Assert;
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.dao.ApplicationCacheDao;
+import com.devnexus.ting.core.dao.EvaluationDao;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
@@ -41,6 +42,7 @@ import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.model.ApplicationCache;
+import com.devnexus.ting.core.model.Evaluation;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
@@ -65,6 +67,7 @@ public class BusinessServiceImpl implements BusinessService {
 	 */
 	private final static Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
+	@Autowired private EvaluationDao   evaluationDao;
 	@Autowired private EventDao        eventDao;
 	@Autowired private OrganizerDao    organizerDao;
 	@Autowired private PresentationDao presentationDao;
@@ -416,6 +419,17 @@ public class BusinessServiceImpl implements BusinessService {
 		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
 
 		return scheduleItemList;
+	}
+
+	@Override
+	@Transactional
+	public Evaluation saveEvaluation(Evaluation evaluation) {
+		return evaluationDao.save(evaluation);
+	}
+
+	@Override
+	public List<Evaluation> getEvaluationsForCurrentEvent() {
+		return evaluationDao.getEvaluationsForCurrentEvent();
 	}
 
 }

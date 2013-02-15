@@ -21,6 +21,8 @@
 	<bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
 		<property name="classesToBeBound">
 			<list>
+				<value>com.devnexus.ting.core.model.Evaluation</value>
+				<value>com.devnexus.ting.core.model.EvaluationList</value>
 				<value>com.devnexus.ting.core.model.Event</value>
 				<value>com.devnexus.ting.core.model.Presentation</value>
 				<value>com.devnexus.ting.core.model.PresentationList</value>

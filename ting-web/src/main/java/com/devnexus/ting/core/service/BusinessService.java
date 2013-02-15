@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,12 @@ package com.devnexus.ting.core.service;
 import java.util.List;
 
 import com.devnexus.ting.core.model.ApplicationCache;
+import com.devnexus.ting.core.model.Evaluation;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.Room;
-import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
 
@@ -35,6 +35,8 @@ import com.devnexus.ting.core.model.Speaker;
  *
  */
 public interface BusinessService {
+
+	Evaluation saveEvaluation(Evaluation evaluation);
 
 	/**
 	 * Delete the provided {@link Event}. The Id of the {@link Event} must be set.
@@ -212,5 +214,7 @@ public interface BusinessService {
 	Room getRoom(Long id);
 
 	ScheduleItemList getScheduleForEvent(Long eventId);
+
+	List<Evaluation> getEvaluationsForCurrentEvent();
 
 }

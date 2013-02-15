@@ -68,17 +68,6 @@ public class SiteController {
 		return "index";
 	}
 
-	@RequestMapping("/schedule-old")
-	public String schedule(final Model model, final SitePreference sitePreference) {
-
-		if (sitePreference.isMobile()) {
-			return "schedule-mobile-old";
-		}
-
-		return "schedule-old";
-
-	}
-
 	@RequestMapping("/schedule")
 	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 

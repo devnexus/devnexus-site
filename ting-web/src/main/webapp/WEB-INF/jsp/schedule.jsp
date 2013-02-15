@@ -61,7 +61,7 @@
 					<td colspan="3" class="keynote"><c:out value="${scheduleItem.title} [${scheduleItem.room.name}]"/></td>
 				</c:when>
 				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeBreak}">
-					<td colspan="3" class="break">Break [${scheduleItem.room.name}]</td>
+					<td colspan="3" class="break"><c:out value="${scheduleItem.title}" default="Break"/> [${scheduleItem.room.name}]</td>
 				</c:when>
 				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeSession}">
 					<c:if test="${scheduleItem.rowspan > 1}">
