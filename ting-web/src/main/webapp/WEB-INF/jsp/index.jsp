@@ -1,5 +1,28 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
+<style>
+	.twitterMessages {
+	    list-style: none;
+	    padding-left: 5px;
+	}
+
+	.twitterMessages img {
+		float: left;
+	    vertical-align: middle;
+	    margin-right: 10px;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	}
+
+	.twitterMessages li {
+		clear: left;
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+	    padding-right: 5px;
+	    border-top: 1px dotted #EEEEEE;
+	    margin-top: 5px;
+	}
+</style>
 <div class="content">
 <p>Welcome to the 2013 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
@@ -90,6 +113,26 @@
     </p>
 
     <p>If you have any questions, please contact us at info AT ajug DOT org</p>
+
+	<div style="margin: 40px 30px 20px 20px; border: 1px solid #EEEEEE;">
+		<div style="background-color: #302F91; color: #FFFFFF"><span style="margin-left: 10px;">DevNexus Tweets</span></div>
+		<ul class="twitterMessages">
+			<c:choose>
+				<c:when test="${not empty tweets}">
+					<c:forEach items="${tweets}" var="twitterMessage">
+						<li><img alt="${twitterMessage.fromUser}"
+							title="${twitterMessage.fromUser}"
+							src="${twitterMessage.profileImageUrl}" width="48" height="48">
+							<div style="font-weight: bold;"><c:out value="${twitterMessage.fromUser}" /></div>
+							<c:out value="${twitterMessage.text}" /><br/>
+							<div style="color: #AAAAAA; text-align: right; font-size: 80%;"><c:out value="${twitterMessage.prettyTime}" /></div></li>
+					</c:forEach>
+				</c:when>
+				<c:otherwise><li>No Twitter messages found.</li></c:otherwise>
+			</c:choose>
+			<li><a href="https://twitter.com/search?q=devnexus">More Tweets…</a></li>
+		</ul>
+	</div>
 </div>
 
 <div class="sidebar">
@@ -150,40 +193,6 @@
 
 	<h3>Cocktail Hour Sponsor</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
-  <div style="margin-top: 3em;">
-   <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-   <script type="text/javascript">
-
-   new TWTR.Widget({
-     version: 2,
-     type: 'profile',
-     rpp: 3,
-     interval: 6000,
-     width: 250,
-     height: 200,
-     theme: {
-       shell: {
-         background: '#312f91',
-         color: '#ffffff'
-       },
-       tweets: {
-         background: '#000000',
-         color: '#ffffff',
-         links: '#f7951e'
-       }
-     },
-     features: {
-       scrollbar: false,
-       loop: false,
-       live: true,
-       hashtags: true,
-       timestamp: true,
-       avatars: false,
-       behavior: 'all'
-     }
-   }).render().setUser('devnexus').start();
-   </script>
-  </div>
 
 </div>
 
