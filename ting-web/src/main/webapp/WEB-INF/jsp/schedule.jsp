@@ -89,8 +89,8 @@
 						<p class="speaker">
 							<c:choose>
 								<c:when test="${not empty scheduleItem.presentation}">
-									<c:url var="speakerUrl" value="${baseSiteUrl}/speakers#${scheduleItem.presentation.speaker.firstName}_${scheduleItem.presentation.speaker.lastName}"/>
-									<a href="${speakerUrl}"><c:out value="${scheduleItem.presentation.speaker.firstLastName}"/></a>
+									<c:url var="speakerUrl" value="${baseSiteUrl}/speakers"/>
+									<a href="${speakerUrl}#${scheduleItem.presentation.speaker.firstName}_${scheduleItem.presentation.speaker.lastName}"><c:out value="${scheduleItem.presentation.speaker.firstLastName}"/></a>
 								</c:when>
 								<c:otherwise>
 									N/A

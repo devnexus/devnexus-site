@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -24,8 +25,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.site.SitePreference;
-import org.springframework.social.twitter.api.SearchResults;
-import org.springframework.social.twitter.api.impl.TwitterTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +38,9 @@ import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.SpeakerList;
+import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.core.service.TwitterService;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
@@ -53,6 +54,8 @@ public class SiteController {
 
 	@Autowired private BusinessService businessService;
 
+	@Autowired private TwitterService twitterService;
+
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
@@ -64,8 +67,11 @@ public class SiteController {
 		if (sitePreference.isMobile()) {
 			return "index-mobile";
 		}
-
-		return "index";
+		else {
+			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
+			model.addAttribute("tweets", tweets);
+			return "index";
+		}
 	}
 
 	@RequestMapping("/schedule")
@@ -187,18 +193,13 @@ public class SiteController {
 			throw new IllegalStateException(e);
 		}
 
-
-
 	}
 
 	@RequestMapping(value="/twitter", method=RequestMethod.GET)
 	public String getTwitterFeed(Model model) {
 
-		final TwitterTemplate twitterTemplate = new TwitterTemplate();
-
-		final SearchResults searchResults = twitterTemplate.searchOperations().search("devnexus");
-
-		model.addAttribute("tweets", searchResults.getTweets());
+		final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
+		model.addAttribute("tweets", tweets);
 
 		return "twitter-feed-mobile";
 
