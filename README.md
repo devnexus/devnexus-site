@@ -1,5 +1,5 @@
-Welcome to Ting the project that powers the DevNexus conference website
-=======================================================================
+DevNexus Site
+=============
 
 ## Latest Changes
 
