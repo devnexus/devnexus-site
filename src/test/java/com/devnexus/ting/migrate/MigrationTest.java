@@ -3,6 +3,7 @@ package com.devnexus.ting.migrate;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
@@ -16,6 +17,7 @@ import com.devnexus.ting.core.service.BusinessService;
 @ContextConfiguration(
 		locations={ "classpath:spring/mainApplicationContext.xml"})
 @ActiveProfiles("default")
+@Ignore
 public class MigrationTest extends AbstractTransactionalJUnit4SpringContextTests {
 
 	@Autowired
