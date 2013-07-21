@@ -5,12 +5,11 @@ package com.devnexus.ting.core.dao;
 
 import java.util.Date;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.ActiveProfiles;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.core.model.Event;

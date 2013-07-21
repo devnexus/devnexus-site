@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateJdbcException;
+import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,7 +34,7 @@ import com.devnexus.ting.core.service.SystemSetupService;
 
 /**
  * @author Gunnar Hillert
- * @version $Id: SystemSetupServiceImpl.java 607 2010-09-08 13:20:36Z ghillert $
+ * @since 1.0
  */
 @Service("systemSetupService")
 @Transactional
@@ -82,9 +82,6 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 	@Override
 	public boolean isDatabaseSetup() {
-
-		//FIXME - Bad code...also need to check for versions etc.
-
 		try {
 			final List<SchemaMigration> migrations = schemaMigrationDao.getAll();
 
@@ -93,10 +90,10 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 			} else {
 				return true;
 			}
-		} catch (HibernateJdbcException e) {
+		} catch (InvalidDataAccessResourceUsageException e) {
+			LOGGER.warn("Looks like the database has not been set up, yet.", e.getMessage());
 			return false;
 		}
-
 	}
 
 	@Override
