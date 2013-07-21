@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
+import org.springframework.test.annotation.Rollback;
 
 /**
  * @author Gunnar Hillert
@@ -25,6 +26,7 @@ public class SecurityServicesTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
+	@Rollback(false)
 	public void testPasswordEncoder() {
 		final String password = passwordEncoder.encodePassword("testing", null);
 		LOGGER.info("Password: " + password);

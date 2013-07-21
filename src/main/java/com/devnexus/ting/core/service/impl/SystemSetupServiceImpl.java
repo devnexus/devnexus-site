@@ -21,6 +21,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,6 +46,9 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private @Autowired SchemaMigrationDao   schemaMigrationDao;
 	private @Autowired BackupDao            backupDao;
 	private @Autowired SystemDao            systemDao;
+
+	private @Value("${database.jdbc.driverClassName}") String jdbcDriverClassName;
+	private @Value("${database.jdbc.url}") String jdbcDatabaseUrl;
 
 	@Override
 	public void restore(final InputStream inputStream) {
@@ -72,6 +76,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 	@Override
 	public void createDatabase() {
+		LOGGER.warn("Create Database with Settings jdbcDriverClassName: '{}'; jdbcDatabaseUrl: '{}'", jdbcDriverClassName, jdbcDatabaseUrl);
 		systemDao.createDatabase(false, null);
 	}
 

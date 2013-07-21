@@ -21,8 +21,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -39,12 +37,8 @@ import org.springframework.security.core.userdetails.UserDetails;
  *
  */
 @Entity
-public class User implements Serializable, UserDetails {
+public class User extends BaseModelObject implements Serializable, UserDetails {
 	private static final long serialVersionUID = 1L;
-
-	@XmlAttribute
-	@Id @GeneratedValue(generator="hibseq")
-	private Long id;
 
 	@XmlID
 	@NotNull

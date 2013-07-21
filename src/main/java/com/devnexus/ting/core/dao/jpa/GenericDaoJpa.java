@@ -43,7 +43,7 @@ import com.devnexus.ting.core.dao.GenericDao;
  */
 public class GenericDaoJpa<T, PK extends Serializable> implements GenericDao<T, PK> {
 
-	@PersistenceContext(unitName="base")
+	@PersistenceContext
 	protected EntityManager entityManager;
 
 	private Class<T> persistentClass;
