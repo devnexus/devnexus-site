@@ -42,6 +42,17 @@ import org.hibernate.annotations.GenerationTime;
  */
 @MappedSuperclass
 @XmlAccessorType(XmlAccessType.FIELD)
+@org.hibernate.annotations.GenericGenerators(
+		{
+		@org.hibernate.annotations.GenericGenerator(
+			name="hibseq",
+			strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+			parameters = {
+					@org.hibernate.annotations.Parameter(name = "initial_value", value = "1000")
+			}
+		 )
+		 }
+	)
 public abstract class BaseModelObject implements Serializable {
 
 	/** serialVersionUID. */
@@ -49,6 +60,7 @@ public abstract class BaseModelObject implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(generator="hibseq")
 	protected Long id;
 
 	@Temporal(TemporalType.TIMESTAMP)

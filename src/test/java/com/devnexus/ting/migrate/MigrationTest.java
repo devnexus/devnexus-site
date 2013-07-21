@@ -24,7 +24,7 @@ public class MigrationTest extends AbstractTransactionalJUnit4SpringContextTests
 	private SpeakerDao speakerDao;
 	@Autowired
 	private DocumentDao documentDao;
-	protected @PersistenceContext(unitName="base") EntityManager entityManager;
+	protected @PersistenceContext EntityManager entityManager;
 
 
 	@Autowired BusinessService businessService;

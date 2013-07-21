@@ -5,6 +5,7 @@ package com.devnexus.ting.core.dao;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 
 /**
  * @author Gunnar Hillert
@@ -20,6 +21,7 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
+	@Rollback(false)
 	public void testGenerateSchema() {
 		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
 		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");

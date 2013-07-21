@@ -30,6 +30,9 @@
 	<logger name="org.hibernate.tool.hbm2ddl">
 		<level value="WARN"/>
 	</logger>
+	<logger name="com.hillert.apptools.spring">
+		<level value="INFO"/>
+	</logger>
 	<root>
 		<level value="WARN"/>
 		<appender-ref ref="CONSOLE"/>

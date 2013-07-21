@@ -18,5 +18,5 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 @DirtiesContext
 public abstract class BaseDaoIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests {
 
-	protected @PersistenceContext(unitName="base") EntityManager entityManager;
+	protected @PersistenceContext EntityManager entityManager;
 }

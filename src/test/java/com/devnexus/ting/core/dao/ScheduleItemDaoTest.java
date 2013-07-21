@@ -21,7 +21,6 @@ import com.devnexus.ting.core.model.ScheduleItemType;
  * @author Gunnar Hillert
  * @version $Id: IndustryDaoTest.java 605 2010-08-31 05:31:30Z ghillert $
  */
-//@ActiveProfiles({"standalone"})
 public class ScheduleItemDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SpeakerDao speakerDao;

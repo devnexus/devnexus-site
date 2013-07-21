@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 
 import com.devnexus.ting.core.model.SchemaMigration;
 
@@ -26,6 +27,7 @@ public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
+	@Rollback(false)
 	public void testCreateSchemaMigrationEntry() {
 
 		SchemaMigration schemaMigration = new SchemaMigration("2.0-Beta");

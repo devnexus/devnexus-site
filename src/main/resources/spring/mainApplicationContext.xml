@@ -37,11 +37,9 @@
 		</property>
 	</bean>
 
-	<bean
-		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
-	<bean
-		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 
@@ -93,7 +91,12 @@
 			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 			<property name="dataSource" ref="dataSource" />
 			<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
-			<property name="persistenceUnitName" value="base" />
+<!-- 			<property name="persistenceUnitName" value="base" /> -->
+			<property name="packagesToScan">
+				<list>
+					<value>com/devnexus/ting/core/model</value>
+				</list>
+			</property>
 			<property name="jpaProperties">
 				<props>
 					<prop key="hibernate.dialect">${database.hibernate.dialect}</prop>
@@ -105,6 +108,7 @@
 					</prop>
 					<prop key="hibernate.show_sql">${database.hibernate.show_sql}</prop>
 					<prop key="hibernate.format_sql">true</prop>
+					<prop key="hibernate.ejb.naming_strategy">com.hillert.apptools.hibernate.ImprovedPluralizedNamingStrategy</prop>
 				</props>
 			</property>
 		</bean>

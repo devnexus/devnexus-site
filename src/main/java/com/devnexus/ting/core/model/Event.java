@@ -40,11 +40,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Cacheable()
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlAccessorType(value=XmlAccessType.FIELD)
-public class Event {
+public class Event extends BaseModelObject {
 
-	@XmlAttribute
-	@Id @GeneratedValue(generator="hibseq")
-	private Long id;
+	private static final long serialVersionUID = -6321137845389122221L;
 
 	@Column(unique=true)
 	@NotEmpty
