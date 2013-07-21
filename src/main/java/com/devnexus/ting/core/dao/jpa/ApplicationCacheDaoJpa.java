@@ -15,14 +15,10 @@
  */
 package com.devnexus.ting.core.dao.jpa;
 
-import java.util.List;
-
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.ApplicationCacheDao;
-import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.model.ApplicationCache;
-import com.devnexus.ting.core.model.Event;
 
 /**
  *

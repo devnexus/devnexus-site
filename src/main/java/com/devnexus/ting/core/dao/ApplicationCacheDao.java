@@ -15,8 +15,6 @@
  */
 package com.devnexus.ting.core.dao;
 
-import java.util.List;
-
 import com.devnexus.ting.core.model.ApplicationCache;
 
 public interface ApplicationCacheDao  extends GenericDao < ApplicationCache, Long > {
