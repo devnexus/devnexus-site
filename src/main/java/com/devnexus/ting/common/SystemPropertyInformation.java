@@ -21,7 +21,7 @@ import java.util.List;
  * Provides access to the JVM System Properties in a type-safe manner.
  *
  * @author Gunnar Hillert
- * @version $Id: Constants.java 532 2009-08-28 03:50:24Z ghillert $
+ *
  */
 public enum SystemPropertyInformation {
 

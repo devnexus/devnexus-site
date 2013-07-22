@@ -23,7 +23,6 @@ import java.util.HashSet;
  * Contains utility methods, e.g. factory methods for creating list.
  *
  * @author Gunnar Hillert
- * @version $Id: CollectionUtils.java 378 2009-05-14 01:42:49Z ghillert $
  */
 public final class CollectionUtils {
 

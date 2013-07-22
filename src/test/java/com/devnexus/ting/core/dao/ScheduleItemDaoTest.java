@@ -6,10 +6,8 @@ package com.devnexus.ting.core.dao;
 import java.util.Date;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.core.model.Event;
@@ -19,7 +17,7 @@ import com.devnexus.ting.core.model.ScheduleItemType;
 
 /**
  * @author Gunnar Hillert
- * @version $Id: IndustryDaoTest.java 605 2010-08-31 05:31:30Z ghillert $
+ *
  */
 public class ScheduleItemDaoTest extends BaseDaoIntegrationTest {
 
@@ -31,7 +29,6 @@ public class ScheduleItemDaoTest extends BaseDaoIntegrationTest {
 	/**
 	 */
 	@Test
-	@Rollback(false)
 	public void testSetupSchedule() {
 
 		final Event event = eventDao.getByEventKey("devnexus2013");

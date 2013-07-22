@@ -40,8 +40,7 @@
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-	<bean id="validator"
-		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
@@ -63,17 +62,14 @@
 		<property name="cacheSeconds" value="0" />
 	</bean>
 
-	<bean id="seedDataEventListener"
-		class="com.hillert.apptools.spring.ContextRefreshedEventListener" />
-
-	<beans profile="default"><!-- Demo deployment, integration testing -->
+	<beans profile="default, demo"><!-- Demo deployment, integration testing -->
 		<context:property-placeholder location="classpath:ting-demo.properties" />
 	</beans>
 	<beans profile="standalone">
 		<context:property-placeholder location="file:${TING_HOME}/ting.properties" />
 	</beans>
 
-	<beans profile="standalone, default">
+	<beans profile="standalone, default, demo">
 		<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
 			<property name="driverClass" value="${database.jdbc.driverClassName}" />
 			<property name="jdbcUrl" value="${database.jdbc.url}" />
@@ -134,5 +130,8 @@
 				</props>
 			</property>
 		</bean>
+	</beans>
+	<beans profile="demo">
+		<bean id="seedDataEventListener" class="com.hillert.apptools.spring.ContextRefreshedEventListener" />
 	</beans>
 </beans>

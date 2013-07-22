@@ -43,12 +43,12 @@ import org.slf4j.LoggerFactory;
  * @see http://weblogs.java.net/blog/felipegaucho/archive/2007/08/expires_http_he.html
  *
  * @author Gunnar Hillert
- * @version $Id: ResponseAddHttpHeadersFilter.java 574 2010-06-29 12:20:36Z ghillert@gmail.com $
+ *
  */
 public class ResponseAddHttpHeadersFilter implements Filter {
 
 	/** Initialize Logging. */
-	private final static Logger LOGGER = LoggerFactory.getLogger(ResponseAddHttpHeadersFilter.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ResponseAddHttpHeadersFilter.class);
 
 	FilterConfig config;
 

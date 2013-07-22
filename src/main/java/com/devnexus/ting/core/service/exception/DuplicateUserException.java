@@ -17,7 +17,6 @@ package com.devnexus.ting.core.service.exception;
 
 /**
  * @author Gunnar Hillert
- * @version $Id:DuplicateUserException.java 128 2007-07-27 03:55:54Z ghillert $
  */
 public class DuplicateUserException extends Exception {
 

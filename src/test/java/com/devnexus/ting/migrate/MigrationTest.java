@@ -3,31 +3,31 @@ package com.devnexus.ting.migrate;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.core.dao.DocumentDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.service.BusinessService;
 
-@ContextConfiguration(
-		locations={ "classpath:spring/mainApplicationContext.xml"})
-@ActiveProfiles("default")
-@Ignore
-public class MigrationTest extends AbstractTransactionalJUnit4SpringContextTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={ "classpath:spring/mainApplicationContext.xml"})
+public class MigrationTest {
 
 	@Autowired
 	private SpeakerDao speakerDao;
+
 	@Autowired
 	private DocumentDao documentDao;
-	protected @PersistenceContext EntityManager entityManager;
 
+	@PersistenceContext
+	protected EntityManager entityManager;
 
-	@Autowired BusinessService businessService;
+	@Autowired
+	private BusinessService businessService;
 
 	@Test
 	public void dummyTest() {

@@ -44,7 +44,7 @@ public class EvaluationController {
 
 	@Autowired private BusinessService businessService;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(EvaluationController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(EvaluationController.class);
 
 	@RequestMapping(value="/admin/evaluations", method=RequestMethod.GET)
 	public String showEvaluations(final SitePreference sitePreference, ModelMap model) {

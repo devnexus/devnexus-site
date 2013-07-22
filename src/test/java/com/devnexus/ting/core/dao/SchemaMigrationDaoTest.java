@@ -6,16 +6,14 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 import com.devnexus.ting.core.model.SchemaMigration;
 
 /**
  * @author Gunnar Hillert
- * @version $Id: IndustryDaoTest.java 605 2010-08-31 05:31:30Z ghillert $
+ *
  */
 public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 
@@ -27,7 +25,6 @@ public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
-	@Rollback(false)
 	public void testCreateSchemaMigrationEntry() {
 
 		SchemaMigration schemaMigration = new SchemaMigration("2.0-Beta");
@@ -39,7 +36,6 @@ public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 
 		Assert.assertTrue(schemaMigrations.size() == 1);
 		Assert.assertEquals("2.0-Beta", schemaMigrations.get(0).getVersion());
-
 	}
 
 }

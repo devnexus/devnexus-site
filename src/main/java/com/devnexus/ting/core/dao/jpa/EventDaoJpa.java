@@ -17,6 +17,8 @@ package com.devnexus.ting.core.dao.jpa;
 
 import java.util.List;
 
+import javax.persistence.NoResultException;
+
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.EventDao;
@@ -60,12 +62,22 @@ public class EventDaoJpa extends GenericDaoJpa< Event, Long>
 	/** {@inheritDoc} */
 	@Override
 	public Event getCurrentEvent() {
-		return super.entityManager.createQuery("select event from Event event "
-				+ "where event.current = :current "
-				+ "order by event.title ASC", Event.class)
-								  .setParameter("current", true)
-								  .setHint("org.hibernate.cacheable", true)
-								  .getSingleResult();
+
+		final Event currentEvent;
+
+		try {
+			currentEvent = super.entityManager.createQuery("select event from Event event "
+					+ "where event.current = :current "
+					+ "order by event.title ASC", Event.class)
+									  .setParameter("current", true)
+									  .setHint("org.hibernate.cacheable", true)
+									  .getSingleResult();
+		}
+		catch (NoResultException e) {
+			return null;
+		}
+
+		return currentEvent;
 	}
 
 	/** {@inheritDoc} */

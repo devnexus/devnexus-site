@@ -32,11 +32,15 @@ import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.SystemDao;
 
+@SuppressWarnings("deprecation")
 @Repository("systemDao")
 public class SystemDaoHibernate implements SystemDao {
 
-	private @Autowired DataSource dataSource;
-	private @Autowired LocalContainerEntityManagerFactoryBean fb;
+	@Autowired
+	private DataSource dataSource;
+
+	@Autowired
+	private LocalContainerEntityManagerFactoryBean fb;
 
 	@Override
 	public void updateDatabase() {
@@ -69,7 +73,7 @@ public class SystemDaoHibernate implements SystemDao {
 
 		final Ejb3Configuration cfg = new Ejb3Configuration();
 
-		Map properties = fb.getJpaPropertyMap();
+		final Map<String, Object> properties = fb.getJpaPropertyMap();
 
 		if (dialect != null) {
 			properties.put("hibernate.dialect", dialect);
@@ -93,6 +97,7 @@ public class SystemDaoHibernate implements SystemDao {
 	}
 
 	private static class HibernateHack {
+		@SuppressWarnings("unused")
 		public static DataSource dataSource;
 	}
 

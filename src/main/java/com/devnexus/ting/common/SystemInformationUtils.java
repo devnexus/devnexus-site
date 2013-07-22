@@ -33,12 +33,11 @@ import org.slf4j.LoggerFactory;
 /**
  *
  * @author Gunnar Hillert
- * @version $Id$
  *
  */
 public final class SystemInformationUtils {
 
-	private final static Logger LOGGER = LoggerFactory
+	private static final Logger LOGGER = LoggerFactory
 			.getLogger(SystemInformationUtils.class);
 
 	public static int CONSOLE_SPACER_WIDTH = 40;

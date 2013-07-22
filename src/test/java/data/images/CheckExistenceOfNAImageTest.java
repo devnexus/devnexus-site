@@ -1,7 +1,6 @@
 package data.images;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 
 import com.devnexus.ting.common.SystemInformationUtils;

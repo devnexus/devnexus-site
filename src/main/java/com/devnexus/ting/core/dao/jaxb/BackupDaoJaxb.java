@@ -39,7 +39,8 @@ public class BackupDaoJaxb implements BackupDao {
 	/** Logger declaration */
 	private static final Logger LOGGER = LoggerFactory.getLogger(BackupDaoJaxb.class);
 
-	private @Autowired Jaxb2Marshaller marshaller;
+	@Autowired
+	private Jaxb2Marshaller marshaller;
 
 	/**
 	 *

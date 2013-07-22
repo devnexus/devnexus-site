@@ -35,12 +35,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
  * Servlet Filter implementation class LoggingFilter4Logback
  *
  * @author Gunnar Hillert
- * @version $Id$
+ *
  *
  */
 public class LoggingFilter4Logback implements Filter {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(LoggingFilter4Logback.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(LoggingFilter4Logback.class);
 
 	public void destroy() {
 	}

@@ -65,7 +65,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/**
 	 *   Initialize Logging.
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
 	@Autowired private EvaluationDao   evaluationDao;
 	@Autowired private EventDao        eventDao;

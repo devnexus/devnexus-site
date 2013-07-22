@@ -30,12 +30,13 @@ import com.devnexus.ting.core.service.UserService;
 public class SecurityEventListener implements
 									ApplicationListener < AbstractAuthenticationEvent > {
 
-	private @Autowired UserService userService;
+	@Autowired
+	private UserService userService;
 
 	/**
 	 *   Initialize Logging.
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(SecurityEventListener.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityEventListener.class);
 
 	@Override
 	public void onApplicationEvent(AbstractAuthenticationEvent event) {
