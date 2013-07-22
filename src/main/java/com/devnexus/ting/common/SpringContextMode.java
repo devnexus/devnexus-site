@@ -21,7 +21,7 @@ package com.devnexus.ting.common;
  */
 public enum SpringContextMode {
 
-	DemoContextConfiguration("default"),
+	DemoContextConfiguration("demo"),
 	ProductionContextConfiguration("standalone");
 
 	String profile;

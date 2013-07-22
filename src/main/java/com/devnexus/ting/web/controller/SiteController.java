@@ -41,13 +41,14 @@ import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
+import com.devnexus.ting.core.service.impl.BusinessServiceImpl;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
  * defined by Indeed.com
  *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ *
  */
 @Controller
 public class SiteController {
@@ -59,7 +60,7 @@ public class SiteController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
 	@RequestMapping({"/index", "/"})
 	public String execute(final Model model, final SitePreference sitePreference) {
@@ -79,10 +80,13 @@ public class SiteController {
 
 		final Event event = businessService.getCurrentEvent();
 
-		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-
-		model.addAttribute("scheduleItemList", scheduleItemList);
-
+		if (event != null) {
+			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+			model.addAttribute("scheduleItemList", scheduleItemList);
+		}
+		else {
+			LOGGER.warn("No current event available.");
+		}
 		if (sitePreference.isMobile()) {
 			return "schedule-mobile";
 		}

@@ -44,7 +44,7 @@ import com.devnexus.ting.core.service.BusinessService;
 /**
  *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ *
  */
 @Controller("adminOrganizerController")
 public class OrganizerController {
@@ -56,7 +56,7 @@ public class OrganizerController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(OrganizerController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrganizerController.class);
 
 	@RequestMapping(value="/admin/organizers", method=RequestMethod.GET)
 	public String getOrganizers(ModelMap model, HttpServletRequest request) {

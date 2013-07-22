@@ -31,12 +31,11 @@ import com.devnexus.ting.common.SystemInformationUtils;
 
 /**
  * @author Gunnar Hillert
- * @version $Id$
  *
  */
 public class StartupContextListener implements ServletContextListener {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(StartupContextListener.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupContextListener.class);
 
 	/**
 	 * Default constructor.

@@ -25,7 +25,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -34,7 +33,7 @@ import com.devnexus.ting.core.service.BusinessService;
  * defined by Indeed.com
  *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ *
  */
 @Controller
 public class AdminController {
@@ -45,7 +44,7 @@ public class AdminController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
 	@RequestMapping({"/admin/index"})
 	public String execute(ModelMap model) {

@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	/**
 	 *   Initialize Logging.
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
 //    //private @Autowired NotificationService notificationService;
 //

@@ -7,12 +7,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Date;
 
-import org.junit.Assert;
-
 import org.apache.commons.io.IOUtils;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 import com.devnexus.ting.core.model.FileData;
 
@@ -29,7 +27,6 @@ public class DocumentDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
-	@Rollback(false)
 	public void testInsertDocument() throws IOException {
 
 		FileData document = new FileData();

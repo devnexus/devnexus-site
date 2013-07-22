@@ -46,7 +46,7 @@ import com.devnexus.ting.core.service.BusinessService;
  * defined by Indeed.com
  *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ *
  */
 @Controller("adminSpeakerController")
 public class SpeakerController {
@@ -58,7 +58,7 @@ public class SpeakerController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
 	@RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
 	public String getSpeakers(ModelMap model, HttpServletRequest request) {

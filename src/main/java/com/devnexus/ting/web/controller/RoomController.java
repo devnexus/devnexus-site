@@ -15,11 +15,6 @@
  */
 package com.devnexus.ting.web.controller;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +23,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.model.RoomList;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -48,7 +40,7 @@ public class RoomController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(RoomController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(RoomController.class);
 
 	@RequestMapping("/{eventKey}/rooms")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,

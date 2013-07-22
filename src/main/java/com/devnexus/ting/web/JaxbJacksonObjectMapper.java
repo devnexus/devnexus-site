@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,16 +15,18 @@
  */
 package com.devnexus.ting.web;
 
-import org.codehaus.jackson.map.AnnotationIntrospector;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
+import com.fasterxml.jackson.databind.AnnotationIntrospector;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector;
 
 public class JaxbJacksonObjectMapper extends ObjectMapper {
 
+	private static final long serialVersionUID = 1024475918034049560L;
+
 	public JaxbJacksonObjectMapper() {
-		final AnnotationIntrospector introspector = new JaxbAnnotationIntrospector();
-		super.getDeserializationConfig().setAnnotationIntrospector(introspector);
-		super.getSerializationConfig().setAnnotationIntrospector(introspector);
+		final AnnotationIntrospector introspector = new JaxbAnnotationIntrospector(TypeFactory.defaultInstance());
+		super.setAnnotationIntrospector(introspector);
 	}
 
 }

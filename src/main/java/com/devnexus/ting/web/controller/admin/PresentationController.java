@@ -63,7 +63,7 @@ public class PresentationController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
 	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
 	public String getPresentations(ModelMap model, HttpServletRequest request) {

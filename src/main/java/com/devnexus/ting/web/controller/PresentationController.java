@@ -40,7 +40,7 @@ import com.devnexus.ting.core.service.BusinessService;
  * defined by Indeed.com
  *
  * @author Gunnar Hillert
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
+ *
  */
 @Controller
 public class PresentationController {
@@ -50,7 +50,7 @@ public class PresentationController {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = -3422780336408883930L;
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,

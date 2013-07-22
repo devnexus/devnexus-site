@@ -59,9 +59,6 @@
 		<logger name="org.springframework">
 		<level value="WARN"/>
 	</logger>
-		<logger name="org.codehaus.jackson">
-		<level value="WARN"/>
-	</logger>
 	<logger name="org.hibernate.type">
 		<level value="WARN"/>
 	</logger>

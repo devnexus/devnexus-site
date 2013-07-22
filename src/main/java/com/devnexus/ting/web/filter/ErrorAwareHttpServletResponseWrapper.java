@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
  *
  *
  * @author Gunnnar Hillert
- * @version $Id$
+ *
  */
 public class ErrorAwareHttpServletResponseWrapper extends HttpServletResponseWrapper {
 

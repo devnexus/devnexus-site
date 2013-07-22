@@ -24,7 +24,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  *
  * @author Gunnar Hillert
  *
- * @version $Id:UserService.java 128 2007-07-27 03:55:54Z ghillert $
  */
 public interface UserService {
 

@@ -6,16 +6,14 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 import com.devnexus.ting.core.model.Speaker;
 
 /**
  * @author Gunnar Hillert
- * @version $Id: IndustryDaoTest.java 605 2010-08-31 05:31:30Z ghillert $
+ *
  */
 public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 
@@ -27,8 +25,6 @@ public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
-	@Rollback(false)
-	@Ignore
 	public void testGenerateSchema() {
 		List<Speaker> speakers = speakerDao.getSpeakersForCurrentEvent();
 		System.out.println("Numbers speakers: " + speakers.size());
@@ -39,8 +35,6 @@ public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 	}
 
 	@Test
-	@Rollback(false)
-	@Ignore
 	public void testGetAllSpeakersNoSpeakersExist() {
 		List<Speaker> speakers = speakerDao.getAllSpeakersOrderedByName();
 

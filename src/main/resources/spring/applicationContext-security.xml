@@ -7,8 +7,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<security:global-method-security
-		secured-annotations="enabled" />
+	<security:global-method-security secured-annotations="enabled" />
 
 	<security:http auto-config="true"
 		access-decision-manager-ref="accessDecisionManager"

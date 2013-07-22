@@ -3,20 +3,32 @@ package com.devnexus.ting.core.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.springframework.test.annotation.DirtiesContext;
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.devnexus.ting.core.service.SystemSetupService;
 
 /**
  * Base class for Dao Test Cases.
  *
  * @author Gunnar Hillert
- * @version $Id: BaseTest.java 598 2010-08-22 20:18:58Z ghillert $
+ *
  */
-@ContextConfiguration(
-		locations={ "classpath:spring/mainApplicationContext.xml"})
-@DirtiesContext
-public abstract class BaseDaoIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration( locations={ "classpath:spring/mainApplicationContext.xml"})
+@Transactional
+public abstract class BaseDaoIntegrationTest {
 
 	protected @PersistenceContext EntityManager entityManager;
+
+	@Autowired private SystemSetupService systemSetupService;
+
+	@Before
+	public void setup() {
+		systemSetupService.setupDatabase();
+	}
 }
