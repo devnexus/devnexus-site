@@ -41,7 +41,6 @@ import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
-import com.devnexus.ting.core.service.impl.BusinessServiceImpl;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
