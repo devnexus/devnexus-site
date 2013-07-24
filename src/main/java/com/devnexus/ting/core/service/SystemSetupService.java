@@ -53,4 +53,6 @@ public interface SystemSetupService {
 	Backup convertToBackupData(InputStream inputStream);
 
 	void setupDatabase();
+
+	void setupDemoData();
 }

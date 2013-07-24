@@ -82,6 +82,7 @@
 			<property name="partitionCount" value="3"/>
 			<property name="acquireIncrement" value="5"/>
 			<property name="statementsCacheSize" value="100"/>
+			<property name="disableJMX" value="true"/>
 		</bean>
 		<bean id="entityManagerFactory"
 			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

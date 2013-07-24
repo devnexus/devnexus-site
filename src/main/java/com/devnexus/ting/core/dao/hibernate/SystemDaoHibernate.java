@@ -64,7 +64,7 @@ public class SystemDaoHibernate implements SystemDao {
 			throw new IllegalStateException(e);
 		}
 
-		schemaUpdate.execute(true, true);
+		schemaUpdate.execute(false, true);
 
 	}
 
@@ -92,7 +92,7 @@ public class SystemDaoHibernate implements SystemDao {
 			throw new IllegalStateException(e);
 		}
 
-		schemaExport.create(true, !outputOnly);
+		schemaExport.create(false, !outputOnly);
 
 	}
 
