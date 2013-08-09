@@ -42,7 +42,10 @@ import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.SchemaMigration;
+import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.SystemSetupService;
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.exception.DuplicateUserException;
 
 /**
  * @author Gunnar Hillert
@@ -73,6 +76,9 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private EventDao eventDao;
 
 	@Autowired
+	private UserService userService;
+
+	@Autowired
 	private ScheduleItemDao scheduleItemDao;
 
 	@Value("${database.jdbc.driverClassName}")
@@ -93,8 +99,22 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	/** {@inheritDoc} */
 	@Override
 	public void loadAndRestoreSeedData() {
-		final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
-		restore(is);
+
+		User user = new User();
+		user.setPassword("devnexus");
+		user.setUsername("admin");
+		user.setFirstName("admin");
+		user.setLastName("admin");
+		user.setEmail("notused@something.com");
+
+		try {
+			userService.addUser(user);
+		} catch (DuplicateUserException e) {
+			throw new IllegalStateException(e);
+		}
+
+//		final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
+//		restore(is);
 	}
 
 	/** {@inheritDoc} */
@@ -147,7 +167,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 			LOGGER.info("Ting Database is not setup, yet. Populating Seed Data...");
 
-			// systemSetupService.loadAndRestoreSeedData();
+			loadAndRestoreSeedData();
 
 			if (environment.acceptsProfiles(SpringContextMode.DemoContextConfiguration.getCode())) {
 				setupDemoData();
