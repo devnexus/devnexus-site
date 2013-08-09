@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,9 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.service.exception.DuplicateUserException;
+
 /**
  * Provides user related methods.
  *
@@ -27,15 +30,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  */
 public interface UserService {
 
-//    /**
-//     * Adds a brand new user to the system. If a user
-//     * with the username already exists a duplicate user exception
-//     * is thrown.
-//     *
-//     * @param user The user to add
-//     * @throws DuplicateUserException
-//     */
-//    User addUser(User user) throws DuplicateUserException;
+	/**
+	 * Adds a brand new user to the system. If a user
+	 * with the username already exists a {@link DuplicateUserException}
+	 * is thrown.
+	 *
+	 * @param user The user to add
+	 * @throws DuplicateUserException
+	 */
+	User addUser(User user) throws DuplicateUserException;
 //
 //    /**
 //     * Adds a brand new user to the system. If a user
@@ -74,20 +77,6 @@ public interface UserService {
 //     * @return List of users
 //     */
 //    List<User> getAllUsers();
-//
-//    /**
-//     * Method for returning a filtered list of available job postings.
-//     *
-//     * @return List of jobs.
-//     */
-//    List < User > getUsers(Integer pageSize, Integer pageNumber, Map<String, String> sortOrders, Map<String, String> userFilters);
-//
-//    /**
-//     * Returns the number of totally available jobs in the system.
-//     *
-//     * @return Total number of jobs
-//     */
-//    Long getUsersCount();
 //
 //    /**
 //     * Delete a user from the system.
