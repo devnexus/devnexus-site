@@ -95,7 +95,7 @@ public final class SystemInformationUtils {
 				.getenv(Apphome.APP_HOME_DIRECTORY))) {
 
 			apphome.setAppHomePath(System
-					.getProperty(Apphome.APP_HOME_DIRECTORY));
+					.getenv(Apphome.APP_HOME_DIRECTORY));
 			apphome.setAppHomeSource(AppHomeSource.ENVIRONMENT_VARIABLE);
 
 		} else {
