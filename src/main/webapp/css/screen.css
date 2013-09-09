@@ -353,51 +353,40 @@ display: inline;
 }
 
 
-ul#menu li a {
-color: #fff;
-text-decoration: none;
-padding: 0 0.4em;
-}
-
-ul#menu li a:hover {
-text-decoration: underline;
-}
-
-ul#menu li.mega a {
+div#topnav ul li.mega a {
 padding: 0 1.2em;
 }
 
-ul#menu li.mega a:hover {
+div#topnav ul li.mega a:hover {
 text-decoration: underline;
 }
 
-ul#menu div {
+div#topnav ul li.mega div {
 display: none;
 }
 
-ul#menu li.mega div {
+div#topnav ul li.mega div {
 border: 1px solid #dda;
 width: 18em;
 position: absolute;
-top: 1.6em;
-left: 0em;
+
 padding: 1.3em;
 background: #ffc;
 color: #930;
 }
 
-ul#menu li.hovering div {
+div#topnav ul li.hovering div {
 display: block;
 }
 
-ul#menu li.mega div a {
+div#topnav ul li.mega div a {
 color: #300;
 padding: 0;
 background-image: none;
 text-decoration: underline;
 }
 
-ul#menu li div a.more {
+div#topnav ul li div a.more {
 color: #390;
 font-weight: bold;
 }
