@@ -2,15 +2,15 @@
 <application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd">
 
 	<classpath>
-		<dir name="/Users/ghillert/dev/devnexus/ting/ting-web/target/classes">
+		<dir name="/home/summers/Projects/devnexus-site/target/classes">
 		</dir>
-		<dir name="/Users/ghillert/dev/devnexus/ting/ting-web/target/test-classes">
+		<dir name="/home/summers/Projects/devnexus-site/target/test-classes">
 		</dir>
 	</classpath>
 
 	<web>
 		<link target="/">
-			<dir name="/Users/ghillert/dev/devnexus/ting/ting-web/src/main/webapp">
+			<dir name="/home/summers/Projects/devnexus-site/src/main/webapp">
 			</dir>
 		</link>
 	</web>
