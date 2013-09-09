@@ -21172,6 +21172,8 @@ if(this.console) {
 
 $(document).ready(function() {
 
+
+
  function addMega(){
    $(this).addClass("hovering");
    }

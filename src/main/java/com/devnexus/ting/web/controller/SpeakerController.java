@@ -56,8 +56,10 @@ public class SpeakerController {
 	public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference, @RequestParam(value="image", defaultValue="false") boolean image) {
 		SpeakerList speakers = new SpeakerList();
 		speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
+        model.addAttribute("headerTitle", "Speakers");
+        model.addAttribute("tag", "Discover how the industry's best minds use the latest technologies to build solutions.");
 
-		model.addAttribute("speakerList",speakers);
+        model.addAttribute("speakerList",speakers);
 
 		if (sitePreference.isMobile()) {
 			return "speakers-mobile";
@@ -70,8 +72,11 @@ public class SpeakerController {
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		model.addAttribute("event", event);
+        model.addAttribute("headerTitle", "Speakers");
+        model.addAttribute("tag", "Discover how the industry's best minds use the latest technologies to build solutions.");
 
-		SpeakerList speakers = new SpeakerList();
+
+        SpeakerList speakers = new SpeakerList();
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
 		model.addAttribute("speakerList",speakers);
 

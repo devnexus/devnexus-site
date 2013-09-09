@@ -1,0 +1,10 @@
+#header {background: #0c1620; margin:0; padding:0;color: #fff}
+    #header #headerwrapper {padding: 20px 0;}
+    #logo{color: #fff; }
+        #logo h1 {color: #fff}
+    #topnav {color: #fff; }
+        #topnav ul, #footer ul  {list-style-type: none;}
+        #topnav ul li {}
+        #topnav ul li a{text-decoration: none; color: #fff}
+        #topnav ul li a:hover{text-decoration: underline; color: #fff}
+
