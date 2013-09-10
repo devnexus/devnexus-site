@@ -34,7 +34,6 @@
 	</properties>
 
 	<build>
-		<finalName>devnexus-${buildNumber}</finalName>
 		<defaultGoal>install</defaultGoal>
 
 		<plugins>
