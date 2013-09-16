@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="${ctx}/css/global.css"/>
@@ -59,42 +60,46 @@
 
 <body>
 
-<<<<<<< HEAD
-    <div class="container devnexus-logo">
-        <header>
-            <h1>2014</h1>
-          <nav>
-              <ul id="menu">
-                <c:url var="homeUrl"          value="${baseSiteUrl}/index"/>
-                <c:url var="speakersUrl"      value="${baseSiteUrl}/speakers"/>
-                <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
-                <c:url var="scheduleUrl"      value="${baseSiteUrl}/schedule"/>
-                <c:url var="organizersUrl"    value="${baseSiteUrl}/organizers"/>
-                <c:url var="travelUrl"        value="${baseSiteUrl}/travel"/>
+<div id="header" class="navbar navbar-inverse">
+    <div id="headerwrapper" >
 
-                <li><a href="${homeUrl}"><span>Home</span></a></li>
-                <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
-                <li><a href="${presentationsUrl}"><span>Presentations</span></a></li>
-                <li><a href="${scheduleUrl}"><span>Schedule</span></a></li>
+        <c:url var="homeUrl" value="${baseSiteUrl}/index"/>
+        <c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
+        <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+        <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
+        <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
+        <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+
+        <div id="logo" class="navbar-left">
+            <a href="${homeUrl}"><img src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
+        </div>
+        <!-- end logo -->
+        <div id="topnav" class="navbar-right navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="${speakersUrl}">Speakers</a></li>
+                <li><a href="${presentationsUrl}">Presentations</a></li>
+                <li><a href="${scheduleUrl}">Schedule</a></li>
                 <li class="mega">
-                    <a href="#">Past Conferences...</a>
-                    <div style="width: 450px; z-index: 20000;display: none">
-                        <table style="width: 400px; margin-bottom: 1em;">
-                            <c:forEach items="${eventsForMenu}" var="event">
-                                <tr>
-                                    <td><c:out value="${event.title}"/></td>
-                                    <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                    <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
-                                </tr>
-                            </c:forEach>
-                        </table>
-                        <p>
-                            DevNexus 2012 - <a href="http://devnexus.com/static/2012/audio/">All Audio Recordings</a>
-                        </p>
-                    </div>
+                    <a href="#" data-target="#past-conferences-collapse" class="accordion-toggle" data-toggle="collapse">Past Conferences...</a>
                 </li>
                 <li><a href="https://ajug.eventwax.com/devnexus-2013/register">Register</a></li>
             </ul>
+        </div>
+        <div style="clear: both"></div>
+        <div class="collapse" id="past-conferences-collapse">
+            <table style="width: 50%; margin: 0 25% 1em 25%">
+                <c:forEach items="${eventsForMenu}" var="event">
+                    <tr>
+                        <td><c:out value="${event.title}"/></td>
+                        <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
+                        <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
+                    </tr>
+                </c:forEach>
+            </table>
+            <p>
+                DevNexus 2012 - <a href="http://devnexus.com/static/2012/audio/">All Audio Recordings</a>
+            </p>
         </div>
         <!-- end top nav -->
         <div style="clear: both"></div>
