@@ -60,6 +60,7 @@ public class SpeakerController {
         model.addAttribute("tag", "Discover how the industry's best minds use the latest technologies to build solutions.");
 
         model.addAttribute("speakerList",speakers);
+        model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
 
 		if (sitePreference.isMobile()) {
 			return "speakers-mobile";
@@ -79,6 +80,7 @@ public class SpeakerController {
         SpeakerList speakers = new SpeakerList();
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
 		model.addAttribute("speakerList",speakers);
+        model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
 
 		if (sitePreference.isMobile()) {
 			return "speakers-mobile";
