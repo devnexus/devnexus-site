@@ -143,7 +143,7 @@ public class ScheduleItemList implements Serializable {
     public List<ScheduleItem> getBreakoutItems() {
         if (breakoutItems == null) {
             breakoutItems = new ArrayList<ScheduleItem>();
-            for (ScheduleItem item : breakoutItems) {
+            for (ScheduleItem item : scheduleItems) {
                 if (isBreakoutItem(item)) {
                     breakoutItems.add(item);
                 }
