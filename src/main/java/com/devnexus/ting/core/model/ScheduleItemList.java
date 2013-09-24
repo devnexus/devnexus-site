@@ -210,7 +210,7 @@ public class ScheduleItemList implements Serializable {
         return rooms;
     }
 
-    public List<ScheduleItem> findBreakoutItemsInRoomOnDate(Date date, Room room) {
+    public List<ScheduleItem> findBreakoutItemsOnDateInRoom(Date date, Room room) {
         ArrayList<ScheduleItem> items = new ArrayList<ScheduleItem>();
         for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
             if (item.getRoom().equals(room)) {
