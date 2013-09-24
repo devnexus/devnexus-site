@@ -56,7 +56,7 @@ import com.devnexus.ting.common.TingUtil;
 		})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Room extends BaseModelObject {
+public class Room extends BaseModelObject implements Comparable<Room> {
 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
@@ -180,4 +180,9 @@ public class Room extends BaseModelObject {
 	public void setTrack(String track) {
 		this.track = track;
 	}
+
+    @Override
+    public int compareTo(Room o) {
+        return roomOrder.compareTo(o.roomOrder);
+    }
 }
