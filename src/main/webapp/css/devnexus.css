@@ -66,6 +66,7 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 #schedule #one-fourth {width: 100%; margin-bottom: 24px;padding:5px 15px;text-align: left; color: #fff;}
 	#schedule #one-fourth h3, #schedule #one-fourth p {color: #fff; margin: 15px 0;}
 	#schedule #one-fourth h3 {font-size: 18px;}
+    #schedule .row #one-fourth p a {color: white; text-decoration: underline}
 	#schedule #one-fourth.track-1 {background-color:#630d1a}
 	#schedule #one-fourth.track-102 {background-color:#44b75c}
 	#schedule #one-fourth.track-2 {background-color:#fd8c2a}
