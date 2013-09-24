@@ -8,8 +8,6 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="${ctx}/assets/ico/favicon.png">
 
-        <title>Speakers - DevNexus</title>
-
         <!-- Bootstrap core CSS -->
         <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
 
