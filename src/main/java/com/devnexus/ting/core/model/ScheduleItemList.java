@@ -15,7 +15,9 @@
  */
 package com.devnexus.ting.core.model;
 
+import java.beans.Transient;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
@@ -46,6 +48,12 @@ public class ScheduleItemList implements Serializable {
 
 	@XmlElement(name="scheduleItems")
 	private List<ScheduleItem> scheduleItems;
+
+    @XmlElement(name="headerItems")
+    private List<ScheduleItem> headerItems;
+
+    @XmlElement(name="breakoutItems")
+    private List<ScheduleItem> breakoutItems;
 
 	public SortedSet<Date> getDays() {
 		return days;
@@ -119,4 +127,27 @@ public class ScheduleItemList implements Serializable {
 		this.scheduleItems = scheduleItems;
 	}
 
+    public List<ScheduleItem> getHeaderItems() {
+        if (headerItems == null) {
+            headerItems = new ArrayList<ScheduleItem>();
+            for (ScheduleItem item : scheduleItems) {
+                if (!item.getScheduleItemType().equals(ScheduleItemType.SESSION)) {
+                 headerItems.add(item);
+                }
+            }
+        }
+        return headerItems;
+    }
+
+    public List<ScheduleItem> getBreakoutItems() {
+        if (breakoutItems == null) {
+            breakoutItems = new ArrayList<ScheduleItem>();
+            for (ScheduleItem item : breakoutItems) {
+                if (item.getScheduleItemType().equals(ScheduleItemType.SESSION)) {
+                    breakoutItems.add(item);
+                }
+            }
+        }
+        return breakoutItems;
+    }
 }
