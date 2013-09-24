@@ -17,10 +17,7 @@ package com.devnexus.ting.core.model;
 
 import java.beans.Transient;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.SortedSet;
+import java.util.*;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -51,9 +48,11 @@ public class ScheduleItemList implements Serializable {
 
     @XmlElement(name="headerItems")
     private List<ScheduleItem> headerItems;
+    private Map<Date, List<ScheduleItem>> headerItemsByDate;
 
     @XmlElement(name="breakoutItems")
     private List<ScheduleItem> breakoutItems;
+    private Map<Date, List<ScheduleItem>> breakoutItemsByDate;
 
 	public SortedSet<Date> getDays() {
 		return days;
@@ -131,7 +130,7 @@ public class ScheduleItemList implements Serializable {
         if (headerItems == null) {
             headerItems = new ArrayList<ScheduleItem>();
             for (ScheduleItem item : scheduleItems) {
-                if (!item.getScheduleItemType().equals(ScheduleItemType.SESSION)) {
+                if (isHeaderItem(item)) {
                  headerItems.add(item);
                 }
             }
@@ -143,7 +142,7 @@ public class ScheduleItemList implements Serializable {
         if (breakoutItems == null) {
             breakoutItems = new ArrayList<ScheduleItem>();
             for (ScheduleItem item : breakoutItems) {
-                if (item.getScheduleItemType().equals(ScheduleItemType.SESSION)) {
+                if (isBreakoutItem(item)) {
                     breakoutItems.add(item);
                 }
             }
