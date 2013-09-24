@@ -78,7 +78,8 @@ public class SiteController {
 	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 
 		final Event event = businessService.getCurrentEvent();
-
+        model.addAttribute("headerTitle", "Schedule");
+        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -102,8 +103,10 @@ public class SiteController {
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
 		model.addAttribute("scheduleItemList", scheduleItemList);
+        model.addAttribute("headerTitle", "Schedule");
+        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
-		if (sitePreference.isMobile()) {
+        if (sitePreference.isMobile()) {
 			return "schedule-mobile";
 		}
 
