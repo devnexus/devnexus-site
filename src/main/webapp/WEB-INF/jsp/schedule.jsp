@@ -86,7 +86,7 @@
                 </c:if>
                 <div class="col-md-3">
                     <div id="one-fourth" class="${room.cssStyleName}">
-                        <h3>Web / Misc<br/>${room.name}</h3>
+                        <h3>${room.track}<br/>${room.name}</h3>
                         <c:forEach items="${scheduleItemList.findBreakoutItemsOnDateInRoom(date, room)}" var="session"
                                    varStatus="sessionStatus">
                             <p><strong><fmt:formatDate pattern="h:mm" value="${session.fromTime}"/>-<fmt:formatDate
