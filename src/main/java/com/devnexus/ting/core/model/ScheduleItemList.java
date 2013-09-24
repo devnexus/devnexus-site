@@ -48,11 +48,13 @@ public class ScheduleItemList implements Serializable {
 
     @XmlElement(name="headerItems")
     private List<ScheduleItem> headerItems;
-    private Map<Date, List<ScheduleItem>> headerItemsByDate;
+    private transient Map<Date, List<ScheduleItem>> headerItemsByDate;
 
     @XmlElement(name="breakoutItems")
     private List<ScheduleItem> breakoutItems;
-    private Map<Date, List<ScheduleItem>> breakoutItemsByDate;
+
+
+    private transient Map<Date, List<ScheduleItem>> breakoutItemsByDate;
 
 	public SortedSet<Date> getDays() {
 		return days;
@@ -151,10 +153,51 @@ public class ScheduleItemList implements Serializable {
     }
 
     public boolean isHeaderItem(ScheduleItem item) {
-        return !item.getScheduleItemType().equals(ScheduleItemType.SESSION);
+        return !item.getScheduleItemType().equals(ScheduleItemType.SESSION) && !item.getScheduleItemType().equals(ScheduleItemType.BREAK);
     }
 
     public boolean isBreakoutItem(ScheduleItem item) {
         return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
     }
+
+    public List<ScheduleItem> findHeaderItemsOnDate(Date search) {
+        if (headerItemsByDate == null) {
+            headerItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
+            for (Date date : days) {
+                for (ScheduleItem item : getHeaderItems()) {
+                    List<ScheduleItem> items = headerItemsByDate.get(date);
+                    if (items == null) {
+                        items = new ArrayList<ScheduleItem>(getHeaderItems().size());
+                        headerItemsByDate.put(date, items);
+                    }
+
+                    if (item.getFromTime().getDate() == date.getDate()) {
+                        items.add(item);
+                    }
+                }
+            }
+        }
+        return headerItemsByDate.get(search);
+    }
+
+    public List<ScheduleItem> findBreakoutItemsOnDate(Date search) {
+        if (breakoutItemsByDate == null) {
+            breakoutItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
+            for (Date date : days) {
+                for (ScheduleItem item : getBreakoutItems()) {
+                    List<ScheduleItem> items = breakoutItemsByDate.get(date);
+                    if (items == null) {
+                        items = new ArrayList<ScheduleItem>(getBreakoutItems().size());
+                        breakoutItemsByDate.put(date, items);
+                    }
+
+                    if (item.getFromTime().getDate() == date.getDate()) {
+                        items.add(item);
+                    }
+                }
+            }
+        }
+        return breakoutItemsByDate.get(search);
+    }
+
 }
