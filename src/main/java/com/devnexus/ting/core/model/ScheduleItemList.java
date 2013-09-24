@@ -43,7 +43,7 @@ public class ScheduleItemList implements Serializable {
 	private Integer numberOfTracks;
 	private SortedSet<Date> days;
 
-	@XmlElement(name="scheduleItems")
+    @XmlElement(name="scheduleItems")
 	private List<ScheduleItem> scheduleItems;
 
     @XmlElement(name="headerItems")
@@ -198,6 +198,26 @@ public class ScheduleItemList implements Serializable {
             }
         }
         return breakoutItemsByDate.get(search);
+    }
+
+    public SortedSet<Room> findRooms(Date date) {
+
+        SortedSet<Room>rooms = new TreeSet<Room>();
+        for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
+            rooms.add(item.getRoom());
+        }
+
+        return rooms;
+    }
+
+    public List<ScheduleItem> findBreakoutItemsInRoomOnDate(Date date, Room room) {
+        ArrayList<ScheduleItem> items = new ArrayList<ScheduleItem>();
+        for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
+            if (item.getRoom().equals(room)) {
+                items.add(item);
+            }
+        }
+        return items;
     }
 
 }
