@@ -150,4 +150,12 @@ public class ScheduleItemList implements Serializable {
         }
         return breakoutItems;
     }
+
+    public boolean isHeaderItem(ScheduleItem item) {
+        return !item.getScheduleItemType().equals(ScheduleItemType.SESSION);
+    }
+
+    public boolean isBreakoutItem(ScheduleItem item) {
+        return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
+    }
 }
