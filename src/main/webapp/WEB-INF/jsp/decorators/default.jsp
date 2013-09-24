@@ -24,6 +24,7 @@
         <sitemesh:write property='head'/>
     </head>
 
+
     <body>
 
         <c:url var="homeUrl" value="${baseSiteUrl}/index"/>
