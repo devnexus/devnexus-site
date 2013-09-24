@@ -62,10 +62,6 @@ public class SpeakerController {
         model.addAttribute("speakerList",speakers);
         model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
 
-		if (sitePreference.isMobile()) {
-			return "speakers-mobile";
-		}
-
 		return "speakers";
 	}
 
@@ -81,10 +77,6 @@ public class SpeakerController {
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
 		model.addAttribute("speakerList",speakers);
         model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
-
-		if (sitePreference.isMobile()) {
-			return "speakers-mobile";
-		}
 
 		return "speakers";
 	}
