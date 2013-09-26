@@ -55,10 +55,6 @@ public class RoomController {
 
 		model.addAttribute("roomList", roomList);
 
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
-
 		return "rooms";
 	}
 
@@ -82,9 +78,6 @@ public class RoomController {
 
 		model.addAttribute("roomList", roomList);
 
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
 
 		return "rooms";
 	}

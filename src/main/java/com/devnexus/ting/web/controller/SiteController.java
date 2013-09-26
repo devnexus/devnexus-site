@@ -64,14 +64,11 @@ public class SiteController {
 	@RequestMapping({"/index", "/"})
 	public String execute(final Model model, final SitePreference sitePreference) {
 
-		if (sitePreference.isMobile()) {
-			return "index-mobile";
-		}
-		else {
+
 			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
 			model.addAttribute("tweets", tweets);
 			return "index";
-		}
+
 	}
 
 	@RequestMapping("/schedule")
@@ -87,10 +84,6 @@ public class SiteController {
 		else {
 			LOGGER.warn("No current event available.");
 		}
-		if (sitePreference.isMobile()) {
-			return "schedule-mobile";
-		}
-
 		return "schedule";
 
 	}
@@ -106,19 +99,11 @@ public class SiteController {
         model.addAttribute("headerTitle", "Schedule");
         model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
-        if (sitePreference.isMobile()) {
-			return "schedule-mobile";
-		}
-
 		return "schedule";
 	}
 
 	@RequestMapping("/travel")
 	public String travel(final Model model, final SitePreference sitePreference) {
-
-		if (sitePreference.isMobile()) {
-			return "travel-mobile";
-		}
 
 		return "travel";
 	}
@@ -170,9 +155,6 @@ public class SiteController {
 
 		model.addAttribute("organizers", organizers);
 
-		if (sitePreference.isMobile()) {
-			return "organizers-mobile";
-		}
 
 		return "organizers";
 

@@ -64,10 +64,6 @@ public class PresentationController {
 
 		model.addAttribute("presentationList", presentationList);
 
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
-
 		return "presentations";
 	}
 
@@ -108,10 +104,6 @@ public class PresentationController {
 
 
 		model.addAttribute("presentationList", presentationList);
-
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
 
 		return "presentations";
 	}
