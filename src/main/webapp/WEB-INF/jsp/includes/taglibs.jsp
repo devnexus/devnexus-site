@@ -20,12 +20,5 @@ response.setHeader("Expires","0");
 <c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
 
 <head>
-    <c:choose>
-        <c:when test="${currentSitePreference.mobile}">
-            <meta name="decorator" content="mobile"/>
-        </c:when>
-        <c:otherwise>
-            <meta name="decorator" content="default"/>
-        </c:otherwise>
-    </c:choose>
+    <meta name="decorator" content="default"/>
 </head>
