@@ -1,27 +1,8 @@
-<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
-
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <style>
-	.twitterMessages {
-	    list-style: none;
-	    padding-left: 5px;
-	}
-
-	.twitterMessages img {
-		float: left;
-	    vertical-align: middle;
-	    margin-right: 10px;
-	    margin-top: 5px;
-	    margin-bottom: 5px;
-	}
-
-	.twitterMessages li {
-		clear: left;
-	    padding-top: 2px;
-	    padding-bottom: 2px;
-	    padding-right: 5px;
-	    border-top: 1px dotted #EEEEEE;
-	    margin-top: 5px;
-	}
+    .jumbotron {
+        margin-bottom: 0;
+    }
 </style>
 <div class="content">
 <p>Welcome to the 2014 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
@@ -111,31 +92,32 @@
 	</div>
 </div>
 
-<div class="sidebar">
+<div id="travel" class="container">
+    <!-- Example row of columns -->
 
-  <!-- AddThis Button BEGIN -->
+    <div class="row">
+        <div id="travelphoto" class="col-md-6">
+            <img src="${ctx}/images/photo1.jpg">
+            <img src="${ctx}/images/photo2.jpg">
+        </div>
+        <div class="col-md-6">
+            <h2>Travel Information</h2>
 
-  <script type="text/javascript">
-    var addthis_config = {
-         pubid: "ra-4ec9e6a478f688a2"
-    };
+            <p>The Cobb Galleria website includes directions to the conference center from several directions as well as
+                the airport.</p>
 
-     var addthis_share =  {
-          templates: {
-                         twitter: 'DevNexus 2013 - February 18-19 - Details: http://www.devnexus.com/ (from @devnexus)'
-                     }
-      };
-  </script>
+            <p>MARTA may be used to reach the center, but the nearest bus stop is a few blocks away.</p>
 
-  <a href="http://www.addthis.com/bookmark.php?v=250"
-          class="addthis_button"><img
-          src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif"
-          width="125" height="16" border="0" alt="Share" /></a>
+            <p>The Cobb Galleria is accessible from several nearby hotels:</p>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+            <p>Marriott Waverly is connected to the Center.</p>
 
-<!-- AddThis Button END -->
+            <p>We have reserved a block of rooms, providing a special rate of $149 to our attendees. Please use the
+                following link in order to make your hotel reservation:</p>
 
+            <h3>Make a Reservation</h3>
+
+<<<<<<< HEAD
     <h3>Gold Sponsors</h3>
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
 	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
@@ -160,13 +142,71 @@
 
 	<h3>Cocktail Hour Sponsor</h3>
 	<a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
+=======
+            <p>The group code is devdeva</p>
+            <blockquote>Directions: http://bit.ly/gDzY9N<br/>
+                Site: http://bit.ly/hlU1OO
+            </blockquote>
+            <p>Sheraton Suites is a short walk to the center.</p>
+            <blockquote>Directions: http://bit.ly/fNl2Ol<br/>
+                Site: http://bit.ly/fWkNVC
+            </blockquote>
+            <p>Embassy Suites is also a short walk to the center.</p>
+            <blockquote>Directions: http://bit.ly/fKUADx
+                Site: http://www.atlantagalleria.embassysuites.com
+            </blockquote>
+        </div>
+
+    </div>
+>>>>>>> Adding sponsors to the homepage, need CM input
+
 
 </div>
-
-	<content tag='bottom'>
-		<script type="text/javascript">
-		    $(function() {
-		        $( "a.button").button();
-		    });
-		</script>
-	</content>
+<!-- /container -->
+<style>
+    #gold a {
+        margin: 5px;
+    }
+    #silver a img{
+        margin: 5px;
+    }
+</style>
+<div id="devnex" class="jumbotron">
+    <div>
+        <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
+        <h3>Gold Sponsors</h3>
+            <a href="http://www.springsource.com/"><img class="logo" alt="SpringSource"
+                                                        src="${ctx}/img/sponsors/SpringSource_VMware.png"/></a>
+            <a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
+            <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE" src="${ctx}/img/sponsors/ICE.png"/></a>
+            <a href="http://www.compuware.com/apm"><img class="logo" alt="Compuware Corporation"
+                                                        src="${ctx}/img/sponsors/compuware.png"/></a>
+        </div>
+    </div>
+    <div id="silver" style="max-width: 768px;margin-left:auto;margin-right:auto;">
+    <h3>Silver Sponsors</h3>
+    <a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
+    <a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics"
+                                               src="${ctx}/img/sponsors/app-dynamics.png"/></a>
+    <a href="http://www.jboss.com/"><img class="logo" alt="JBoss" src="${ctx}/img/sponsors/jboss.png"/></a>
+    <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group" src="${ctx}/img/sponsors/Anteo.png"/></a>
+    <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
+                                                  src="${ctx}/img/sponsors/apex-systems.png"/></a>
+    <a href="http://www.github.com/"><img class="logo" alt="GitHub" src="${ctx}/img/sponsors/github_logo.png"/></a>
+    <a href="http://www.incomm.com/"><img class="logo" alt="InComm" src="${ctx}/img/sponsors/inComm.png"/></a>
+    <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
+    <a href="http://www.creative-mischief.com/"><img class="logo" alt="Creative Mischief"
+                                                     src="${ctx}/img/sponsors/creative-mischief.png"/></a>
+    <a href="http://www.google.com/"><img class="logo" alt="Google" src="${ctx}/img/sponsors/google.png"/></a>
+    <a href="http://www.dtglobalstaffing.com/"><img class="logo" alt="Dimensional Thinking"
+                                                    src="${ctx}/img/sponsors/DimensionalThinking_AJUG.png"/></a>
+    <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge2 Solutions"
+                                                    src="${ctx}/img/sponsors/B2S.png"/></a>
+    <a href="http://www.actuate.com/"><img class="logo" alt="Actuate" src="${ctx}/img/sponsors/actuate.png"/></a>
+    <a href="http://www.lancope.com/"><img class="logo" alt="Lancope" src="${ctx}/img/sponsors/lancope.png"/></a>
+    </div>
+    <div id="cocktail">
+    <h3>Cocktail Hour Sponsor</h3>
+    <a href="http://ehirelabs.com/"><img class="logo" alt="eHire Labs" src="${ctx}/img/sponsors/eHire.png"/></a>
+    </div>
+</div>
