@@ -31,17 +31,25 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 		height: 13px;
 		margin-bottom: 30px;
 		}
-	#h4wrap h4 {	text-transform: uppercase;text-align: center; font-weight:bold; font-size: 15px;height: 12px;	}	
-		
+	#h4wrap h4 {	text-transform: uppercase;text-align: center; font-weight:bold; font-size: 15px;height: 12px;	}
 
-	h1.web {color:#630d1a; text-align: center;} 
-	h1.dataint {color:#44b75c; text-align: center;} 
-	h1.javaeespr {color:#fd8c2a; text-align: center;}	
-	h1.altlang {color:#7bb7cd; text-align: center;}	
-	h1.htmljs {color:#dbaa2e; text-align: center;}	
-	h1.cloud {color:#297ca5; text-align: center;}
-	h1.agiletools {color:#d14928; text-align: center;}
-	h1.mobile {color:#455159; text-align: center;}
+#schedule #one-fourth.track-1 {background-color:#630d1a}
+#schedule #one-fourth.track-102 {background-color:#44b75c}
+#schedule #one-fourth.track-2 {background-color:#fd8c2a}
+#schedule #one-fourth.track-3 {background-color:#7bb7cd}
+#schedule #one-fourth.track-4 {background-color:#dbaa2e}
+#schedule #one-fourth.track-5 {background-color:#297ca5}
+#schedule #one-fourth.track-6 {background-color:#d14928}
+#schedule #one-fourth.track-7 {background-color:#455159}
+
+	h1.track-1 {color:#630d1a; text-align: center;}
+	h1.track-102 {color:#44b75c; text-align: center;}
+	h1.track-2 {color:#fd8c2a; text-align: center;}
+	h1.track-3 {color:#7bb7cd; text-align: center;}
+	h1.track-4 {color:#dbaa2e; text-align: center;}
+	h1.track-5 {color:#297ca5; text-align: center;}
+	h1.track-6 {color:#d14928; text-align: center;}
+	h1.track-7 {color:#455159; text-align: center;}
 	h1.center {text-align: center; font-size: 50px; font-weight: bold;}
 	
 #speakers {margin-bottom: 20px; clear: both;}
@@ -75,7 +83,20 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	#schedule #one-fourth.track-5 {background-color:#297ca5}
 	#schedule #one-fourth.track-6 {background-color:#d14928}
 	#schedule #one-fourth.track-7 {background-color:#455159}
-	
+
+#presentation h3, #container #presentation p {color: #fff; margin: 15px 0;}
+#presentation h3 {font-size: 18px;}
+#presentation .row a {color: white; text-decoration: underline}
+#presentation .track-1 {background-color:#630d1a}
+#presentation .track-102 {background-color:#44b75c}
+#presentation .track-2 {background-color:#fd8c2a}
+#presentation .track-3 {background-color:#7bb7cd}
+#presentation .track-4 {background-color:#dbaa2e}
+#presentation .track-5 {background-color:#297ca5}
+#presentation .track-6 {background-color:#d14928}
+#presentation .track-7 {background-color:#455159}
+
+
 #speaker2 {}
 	#speaker2 p{color: #fd8c2a; font-weight: bold; text-align: center;} 
 	
