@@ -196,7 +196,9 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForCurrentEvent() {
-		return presentationDao.getPresentationsForCurrentEvent();
+        List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
+        Collections.sort(list);
+		return list;
 	}
 
 	/** {@inheritDoc} */
