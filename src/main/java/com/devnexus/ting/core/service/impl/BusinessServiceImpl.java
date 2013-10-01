@@ -15,14 +15,7 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.UUID;
+import java.util.*;
 
 import net.tanesha.recaptcha.ReCaptcha;
 import net.tanesha.recaptcha.ReCaptchaFactory;
@@ -209,7 +202,9 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForEvent(Long eventId) {
-		return presentationDao.getPresentationsForEvent(eventId);
+        List<Presentation> list = presentationDao.getPresentationsForEvent(eventId);
+        Collections.sort(list);
+		return list;
 	}
 
 	/** {@inheritDoc} */

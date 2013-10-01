@@ -31,12 +31,14 @@
                     <c:if test="${status.index%3 == 0}">
                         <br style="clear: both;"/>
                     </c:if>
+                    <a style="padding-top: 100px" id="${speaker.firstName}_${speaker.lastName}" name="${speaker.firstName}_${speaker.lastName}"></a>
                     <div class="col-md-4">
                         <div id="one-third">
                             <c:if test="${speaker.picture != null}">
                                 <img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg"/>
                             </c:if>
-                            <h3 id="${speaker.firstName}_${speaker.lastName}">
+
+                            <h3 >
                                 <c:out value="${speaker.firstName}"/>
                                 <c:out value="${speaker.lastName}"/>
                             </h3>

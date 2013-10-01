@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.Collections;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -61,6 +62,7 @@ public class PresentationController {
 
 		final PresentationList presentationList = new PresentationList();
 		presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
+
 
 		model.addAttribute("presentationList", presentationList);
 
