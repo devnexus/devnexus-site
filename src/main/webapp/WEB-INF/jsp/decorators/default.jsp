@@ -72,17 +72,17 @@
                             <div class="col-md-3">
                                 <h3>Learn More</h3>
                                 <ul id="col">
-                                    <li><a href="#">About DN</a></li>
-                                    <li><a href="#">Organizers</a></li>
+                                    <li><a href="${ctx}/s/index">About DN</a></li>
+                                    <li><a href="${organizersUrl}">Organizers</a></li>
                                     <li><a href="#">Past Conferences</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3">
                                 <h3>DevNexus 2014</h3>
                                 <ul id="col">
-                                    <li><a href="#">Schedule</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li><a href="#">Presentations</a></li>
+                                    <li><a href="${scheduleUrl}">Schedule</a></li>
+                                    <li><a href="${speakersUrl}">Speakers</a></li>
+                                    <li><a href="${presentationsUrl}">Presentations</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3">
