@@ -152,7 +152,7 @@ public class SiteController {
 		final OrganizerList organizerList = new OrganizerList(organizers);
 		model.addAttribute("organizerList", organizerList);
 
-
+        model.addAttribute("columnLength",(int)(organizers.size() / 4));
 		model.addAttribute("organizers", organizers);
 
 
