@@ -71,7 +71,7 @@
                                     <c:if test="${presentation.presentationType == keynoteType}">
                                        (Keynote)
                                     </c:if>
-                                    <a href="${ctx}/s/presentations#id-${presentation.id}"><c:out
+                                    <a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
                                         value="${presentation.title}"/></a><br/>--</p>
                                 </c:forEach>
                             </c:if>

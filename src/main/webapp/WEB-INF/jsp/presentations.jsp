@@ -18,7 +18,7 @@
             <div id="speakers">
             <div class="row">
         </c:if>
-
+        <a style="padding-top: 100px" name ="id-${presentation.id}" id="id-${presentation.id}"></a>
         <div id="presentation" class="col-md-4">
             <div class="row ${presentation.room.cssStyleName}">
                 <div class="col-md-5  ">
@@ -31,7 +31,7 @@
                         <c:when test="${not empty presentation.speaker}">
                             <h4>
                                 <a
-                                        href="${ctx}/speakers#${presentation.speaker.firstName}_${presentation.speaker.lastName}">
+                                        href="${siteUrl}/speakers#${presentation.speaker.firstName}_${presentation.speaker.lastName}">
                                     <c:out value="${presentation.speaker.firstName}"/> <c:out
                                         value="${presentation.speaker.lastName}"/>
                                 </a>
@@ -41,7 +41,8 @@
                             <p class="speaker">TBD</p>
                         </c:otherwise>
                     </c:choose>
-                    <h3 id="id-${presentation.id}" class="title">
+                    <h3 class="title">
+
                         <c:out value="${presentation.title}"/>
                     </h3>
 
