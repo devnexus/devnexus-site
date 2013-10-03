@@ -8,14 +8,11 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="${ctx}/assets/ico/favicon.png">
 
-        <title>Speakers - DevNexus</title>
-
         <!-- Bootstrap core CSS -->
         <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="${ctx}/css/devnexus.css" rel="stylesheet">
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="${ctx}/js/html5shiv.js"></script>
@@ -51,29 +48,20 @@
                         <li><a href="${speakersUrl}">Speakers</a></li>
                         <li><a href="${presentationsUrl}">Presentations</a></li>
                         <li><a href="${scheduleUrl}">Schedule</a></li>
-                        <li class="mega">
-                            <a href="#" data-target="#past-conferences-collapse" class="accordion-toggle"
-                               data-toggle="collapse">Past Conferences...</a>
-                        </li>
                         <li><a href="https://ajug.eventwax.com/devnexus-2013/register">Register</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Past Conferences...<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                    <c:forEach items="${eventsForMenu}" var="event">
+                                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>"><c:out value="${event.title}"/> Speakers</a></li>
+                                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>"><c:out value="${event.title}"/> Presentations</a></li>
+                                    </c:forEach>
+                                <li>
+                                    <a href="http://devnexus.com/static/2012/audio/">DevNexus 2012 All Audio Recordings</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                </div>
-                <div style="clear: both"></div>
-                <div class="collapse" id="past-conferences-collapse">
-                    <table style="width: 50%; margin: 0 25% 1em 25%">
-                        <c:forEach items="${eventsForMenu}" var="event">
-                            <tr>
-                                <td><c:out value="${event.title}"/></td>
-                                <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                <td>
-                                    <a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-                    <p>
-                        DevNexus 2012 - <a href="http://devnexus.com/static/2012/audio/">All Audio Recordings</a>
-                    </p>
                 </div>
                     <!-- end top nav -->
 
@@ -105,17 +93,17 @@
                             <div class="col-md-3">
                                 <h3>Learn More</h3>
                                 <ul id="col">
-                                    <li><a href="#">About DN</a></li>
-                                    <li><a href="#">Organizers</a></li>
+                                    <li><a href="${ctx}/s/index">About DN</a></li>
+                                    <li><a href="${organizersUrl}">Organizers</a></li>
                                     <li><a href="#">Past Conferences</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3">
                                 <h3>DevNexus 2014</h3>
                                 <ul id="col">
-                                    <li><a href="#">Schedule</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li><a href="#">Presentations</a></li>
+                                    <li><a href="${scheduleUrl}">Schedule</a></li>
+                                    <li><a href="${speakersUrl}">Speakers</a></li>
+                                    <li><a href="${presentationsUrl}">Presentations</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3">

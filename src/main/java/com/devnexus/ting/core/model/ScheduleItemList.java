@@ -15,10 +15,9 @@
  */
 package com.devnexus.ting.core.model;
 
+import java.beans.Transient;
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-import java.util.SortedSet;
+import java.util.*;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -44,8 +43,18 @@ public class ScheduleItemList implements Serializable {
 	private Integer numberOfTracks;
 	private SortedSet<Date> days;
 
-	@XmlElement(name="scheduleItems")
+    @XmlElement(name="scheduleItems")
 	private List<ScheduleItem> scheduleItems;
+
+    @XmlElement(name="headerItems")
+    private List<ScheduleItem> headerItems;
+    private transient Map<Date, List<ScheduleItem>> headerItemsByDate;
+
+    @XmlElement(name="breakoutItems")
+    private List<ScheduleItem> breakoutItems;
+
+
+    private transient Map<Date, List<ScheduleItem>> breakoutItemsByDate;
 
 	public SortedSet<Date> getDays() {
 		return days;
@@ -118,5 +127,97 @@ public class ScheduleItemList implements Serializable {
 	public void setScheduleItems(List<ScheduleItem> scheduleItems) {
 		this.scheduleItems = scheduleItems;
 	}
+
+    public List<ScheduleItem> getHeaderItems() {
+        if (headerItems == null) {
+            headerItems = new ArrayList<ScheduleItem>();
+            for (ScheduleItem item : scheduleItems) {
+                if (isHeaderItem(item)) {
+                 headerItems.add(item);
+                }
+            }
+        }
+        return headerItems;
+    }
+
+    public List<ScheduleItem> getBreakoutItems() {
+        if (breakoutItems == null) {
+            breakoutItems = new ArrayList<ScheduleItem>();
+            for (ScheduleItem item : scheduleItems) {
+                if (isBreakoutItem(item)) {
+                    breakoutItems.add(item);
+                }
+            }
+        }
+        return breakoutItems;
+    }
+
+    public boolean isHeaderItem(ScheduleItem item) {
+        return !item.getScheduleItemType().equals(ScheduleItemType.SESSION) && !item.getScheduleItemType().equals(ScheduleItemType.BREAK);
+    }
+
+    public boolean isBreakoutItem(ScheduleItem item) {
+        return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
+    }
+
+    public List<ScheduleItem> findHeaderItemsOnDate(Date search) {
+        if (headerItemsByDate == null) {
+            headerItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
+            for (Date date : days) {
+                for (ScheduleItem item : getHeaderItems()) {
+                    List<ScheduleItem> items = headerItemsByDate.get(date);
+                    if (items == null) {
+                        items = new ArrayList<ScheduleItem>(getHeaderItems().size());
+                        headerItemsByDate.put(date, items);
+                    }
+
+                    if (item.getFromTime().getDate() == date.getDate()) {
+                        items.add(item);
+                    }
+                }
+            }
+        }
+        return headerItemsByDate.get(search);
+    }
+
+    public List<ScheduleItem> findBreakoutItemsOnDate(Date search) {
+        if (breakoutItemsByDate == null) {
+            breakoutItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
+            for (Date date : days) {
+                for (ScheduleItem item : getBreakoutItems()) {
+                    List<ScheduleItem> items = breakoutItemsByDate.get(date);
+                    if (items == null) {
+                        items = new ArrayList<ScheduleItem>(getBreakoutItems().size());
+                        breakoutItemsByDate.put(date, items);
+                    }
+
+                    if (item.getFromTime().getDate() == date.getDate()) {
+                        items.add(item);
+                    }
+                }
+            }
+        }
+        return breakoutItemsByDate.get(search);
+    }
+
+    public SortedSet<Room> findRooms(Date date) {
+
+        SortedSet<Room>rooms = new TreeSet<Room>();
+        for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
+            rooms.add(item.getRoom());
+        }
+
+        return rooms;
+    }
+
+    public List<ScheduleItem> findBreakoutItemsOnDateInRoom(Date date, Room room) {
+        ArrayList<ScheduleItem> items = new ArrayList<ScheduleItem>();
+        for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
+            if (item.getRoom().equals(room)) {
+                items.add(item);
+            }
+        }
+        return items;
+    }
 
 }

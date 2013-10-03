@@ -33,6 +33,7 @@
 				<value>com.devnexus.ting.core.model.ScheduleItemList</value>
 				<value>com.devnexus.ting.core.model.Speaker</value>
 				<value>com.devnexus.ting.core.model.SpeakerList</value>
+                <value>com.devnexus.ting.core.model.ScheduleItemType</value>
 			</list>
 		</property>
 	</bean>
