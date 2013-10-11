@@ -47,6 +47,9 @@ public abstract class Person extends BaseModelObject {
 	@Size(max=255)
 	protected String googlePlusId;
 
+	@Size(max=255)
+	protected String linkedInId;
+
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	public String getBio() {
@@ -109,4 +112,11 @@ public abstract class Person extends BaseModelObject {
 		this.googlePlusId = googlePlusId;
 	}
 
+	public String getLinkedInId() {
+		return linkedInId;
+	}
+
+	public void setLinkedInId(String linkedInId) {
+		this.linkedInId = linkedInId;
+	}
 }

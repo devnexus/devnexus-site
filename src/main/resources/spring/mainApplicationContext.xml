@@ -14,7 +14,7 @@
 	<context:component-scan base-package="com.devnexus.ting.core.dao" />
 
 	<import resource="classpath:spring/applicationContext-security.xml" />
-<!-- 	<import resource="classpath:spring/spring-integration-context.xml" /> -->
+	<import resource="classpath:spring/spring-integration-cfp-context.xml"/>
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<context:annotation-config />
@@ -62,12 +62,7 @@
 		<property name="cacheSeconds" value="0" />
 	</bean>
 
-	<beans profile="default, demo"><!-- Demo deployment, integration testing -->
-		<context:property-placeholder location="classpath:ting-demo.properties" />
-	</beans>
-	<beans profile="standalone">
-		<context:property-placeholder location="file:${TING_HOME}/ting.properties" />
-	</beans>
+	<context:property-placeholder />
 
 	<beans profile="standalone, default, demo">
 		<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
@@ -78,7 +73,7 @@
 			<property name="idleConnectionTestPeriodInMinutes" value="60"/>
 			<property name="idleMaxAgeInMinutes" value="240"/>
 			<property name="maxConnectionsPerPartition" value="30"/>
-			<property name="minConnectionsPerPartition" value="10"/>
+			<property name="minConnectionsPerPartition" value="1"/>
 			<property name="partitionCount" value="3"/>
 			<property name="acquireIncrement" value="5"/>
 			<property name="statementsCacheSize" value="100"/>
@@ -134,5 +129,9 @@
 	</beans>
 	<beans profile="demo">
 		<bean id="seedDataEventListener" class="com.hillert.apptools.spring.ContextRefreshedEventListener" />
+	</beans>
+
+	<beans profile="twitter-enabled">
+		<import resource="classpath:spring/spring-integration-twitter-context.xml" />
 	</beans>
 </beans>

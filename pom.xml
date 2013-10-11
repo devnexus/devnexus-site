@@ -14,7 +14,6 @@
 		The DevNexus conference manager
 	</description>
 
-
 	<prerequisites>
 		<maven>2.2.1</maven>
 	</prerequisites>
@@ -30,11 +29,11 @@
 		<spring.integration.version>2.2.4.RELEASE</spring.integration.version>
 		<spring.security.version>3.2.0.M2</spring.security.version>
 		<netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
-		<org.hibernate.version>4.2.3.Final</org.hibernate.version>
+		<org.hibernate.version>4.2.5.Final</org.hibernate.version>
 	</properties>
 
 	<build>
-		<finalName>devnexus-${buildNumber}</finalName>
+		<finalName>devnexus</finalName>
 		<defaultGoal>install</defaultGoal>
 
 		<plugins>
@@ -128,6 +127,19 @@
 				<artifactId>cf-maven-plugin</artifactId>
 				<version>1.0.0.M3</version>
 			</plugin>
+			<plugin>
+				<groupId>org.zeroturnaround</groupId>
+				<artifactId>jrebel-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-rebel-xml</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 
 		<resources>
@@ -163,7 +175,7 @@
 		<dependency>
 			<groupId>com.jolbox</groupId>
 			<artifactId>bonecp</artifactId>
-			<version>0.8.0-rc1</version>
+			<version>0.8.0-rc3</version>
 		</dependency>
 
 		<dependency>
@@ -235,7 +247,7 @@
 			<artifactId>commons-logging</artifactId>
 			<version>99.0-does-not-exist</version>
 		</dependency>
- -->
+-->
 		<!-- Others -->
 
 		<dependency>
@@ -439,26 +451,6 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.8.3</version>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>aopalliance</groupId>
-			<artifactId>aopalliance</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm</artifactId>
-			<version>3.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm-commons</artifactId>
-			<version>3.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.6.5</version>
-		</dependency> -->
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
 			<artifactId>xstream</artifactId>
@@ -518,7 +510,13 @@
 		<dependency>
 			<groupId>org.pegdown</groupId>
 			<artifactId>pegdown</artifactId>
-			<version>1.4.0</version>
+			<version>1.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.tanesha.recaptcha4j</groupId>
+			<artifactId>recaptcha4j</artifactId>
+			<version>0.0.7</version>
 		</dependency>
 
 		<!-- Databases -->
@@ -554,9 +552,21 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-mail</artifactId>
+			<version>${spring.integration.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.ocpsoft.prettytime</groupId>
 			<artifactId>prettytime</artifactId>
 			<version>3.0.2.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>stringtemplate</artifactId>
+			<version>4.0.2</version>
 		</dependency>
 
 	</dependencies>

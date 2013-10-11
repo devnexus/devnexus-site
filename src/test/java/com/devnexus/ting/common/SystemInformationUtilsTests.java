@@ -13,29 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.dao;
+package com.devnexus.ting.common;
 
-import org.junit.Ignore;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.pegdown.PegDownProcessor;
 
 /**
  * @author Gunnar Hillert
  *
+ *
  */
-public class SystemDaoTest extends BaseDaoIntegrationTest {
+public class SystemInformationUtilsTests {
 
-	@Autowired private SystemDao systemDao;
-
-	/**
-	 *
-	 */
 	@Test
-	//@Ignore
-	public void testGenerateSchema() {
-		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
-		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
-		//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
+	public void testGetCfpEmailTemplate() {
+
+		String template = SystemInformationUtils.getCfpEmailTemplate();
+		assertNotNull(template);
+
+		PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
+		assertNotNull(markdownProcessor);
+
+		String resultingHtml = markdownProcessor.markdownToHtml(template);
+
+		assertNotNull(resultingHtml);
+
 	}
 
 }

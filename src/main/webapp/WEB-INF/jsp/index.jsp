@@ -24,36 +24,25 @@
 	}
 </style>
 <div class="content">
-<p>Welcome to the 2013 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
+<p>Welcome to the 2014 developer conference brought to you by the <a href="http://www.ajug.org">Atlanta Java Users Group</a> (AJUG)</p>
             <div class="quote"><span>What the community says:</span> "First time, GREAT EXPERIENCE"</div>
 
-            <h2 style="margin-top: 0;">Welcome to DevNexus 2013 - February 18-19</h2>
-            <p>We'd love to hear what you think about DevNexus!</p>
-            <p style="text-align: center;"><a href="${ctx}${baseSiteUrl}/evaluations/add" class="button" style="margin: 10px auto 10px auto;">Feedback</a>
-            </p>
+            <h2 style="margin-top: 0;">Welcome to DevNexus 2014 - February 24-25</h2>
             <p>
-                We will be having an incredible line-up of presenters covering a
-                wide array of crucial topics. This year we are expanding to
-                <strong>8 tracks</strong> with <strong>70 sessions</strong> and
-                <strong>2 keynotes</strong>!
-                In addition to providing great content for Java developers,
-                DevNexus is a very valuable networking opportunity. This event
-                attracts Java/JVM talent from the South-East's largest corporations,
-                software companies and consulting organizations. You will have an
-                opportunity to discover what other development teams are using
-                as their favorite tools and practices.
+                We are going to rock again for 2014! The call for papers will be
+                open soon. So stay tuned for more updates.
             </p>
 
             <h2 style="">What?</h2>
 
             <p>Atlanta&#8217;s most exciting conference for professional
-            software developers is back in 2013! Come discover how the
+            software developers is back in 2014! Come discover how the
             industry&#8217;s best minds use the latest technologies to build
             solutions to business problems. Network with other Atlanta software
             developers, and study real life case studies in application design and
             development.</p>
 
-            <p>Our first six conference events were tremendous successes. Skip
+            <p>Our first seven conference events were tremendous successes. Skip
             the travel headaches, expense, and mobs of people at other conferences
             and join us this February to experience one of the best developer
             conferences, presented by your fellow developers, right in the heart of
@@ -65,7 +54,7 @@
                speakers and much more.</p>
 
             <p><strong>Make sure to sign up early to ensure you get a seat this year!
-            We sold out last year!
+            We sold out last year and the year before and the year before...
             </strong></p>
 
             <ul>
@@ -75,7 +64,7 @@
             </ul>
 
     <h2>When?</h2>
-    <h3>Monday, <strong>February 18</strong> 2013 and Tuesday, <strong>February 19</strong> 2013</h3>
+    <h3>Monday, <strong>February 24</strong> 2014 and Tuesday, <strong>February 25</strong> 2014</h3>
 
     <h2>Where?</h2>
 
@@ -92,21 +81,8 @@
     <h2>Registration</h2>
 
    <div id="signup">
-       <h2 style="color: #FF0000;">SOLD OUT!</h2>
+       <h2 style="color: #FF0000;">NOT OPEN YET!</h2>
    </div>
-
-    <p>
-        The Standard Ticket is <strong>$220</strong>, however until January 15, 2013, we have
-        an early bird special of <strong>$195</strong>.
-    </p>
-    <p>
-        Furthermore, we have a group discount available: If you book 5 tickets
-        or more, each ticket is <strong>$195</strong>.
-    </p>
-
-    <p>Are you are student? We have a limited amount of student tickets priced at <strong>$140</strong>.
-       Please contact us at: info AT ajug DOT org for details.
-    </p>
 
     <p><strong>Please book your tickets as early as possible! We have completely sold out
     in the past 3 years.</strong>
@@ -160,15 +136,6 @@
 
 <!-- AddThis Button END -->
 
-    <div class="flyers">
-        <div class="header">Help us spread the word!</div>
-        <div class="body">
-          <ul>
-              <li><a href="${ctx}/static/2013/files/promo/devnexus-2013-call-for-papers.pdf"    >DevNexus 2013 Call for Papers (PDF)</a></li>
-              <li><a href="${ctx}/static/2013/files/promo/devnexus-2013-sponsorship-options.pdf">DevNexus Sponsorship Options (PDF)</a></li>
-          </ul>
-        </div>
-    </div>
     <h3>Gold Sponsors</h3>
 	<a href="http://www.springsource.com/"><img         class="logo" alt="SpringSource" src="${ctx}/img/sponsors/SpringSource_VMware.jpg"/></a>
 	<a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>

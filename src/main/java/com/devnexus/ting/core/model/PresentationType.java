@@ -5,7 +5,8 @@ import org.springframework.util.Assert;
 public enum PresentationType {
 
 	BREAKOUT(100L, "Breakout"),
-	KEYNOTE( 200L, "Keynote");
+	KEYNOTE( 200L, "Keynote"),
+	WORKSHOP( 300L, "Workshop");
 
 	private Long id;
 	private String name;

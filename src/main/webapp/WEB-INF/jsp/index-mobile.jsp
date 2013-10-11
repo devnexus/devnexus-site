@@ -2,12 +2,12 @@
 
 <div data-role="page" data-theme="b" id="main-page">
     <div data-role="header">
-        <h1>DevNexus 2013</h1>
+        <h1>DevNexus 2014</h1>
     </div>
     <div data-role="content">
         <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-            <li data-role="list-divider">DevNexus 2013</li>
-            <li><a href="#" rel="external"><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Sold OUT!</a></li>
+            <li data-role="list-divider">DevNexus 2014</li>
+            <li><a href="#" rel="external"><img class="ui-li-icon" alt="Register" src="${ctx}/img/icons/crystal/kate.png"/>Registration not open yet</a></li>
             <li><a href="${ctx}${baseSiteUrl}/speakers"      rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/groupevent.png"/>Speakers</a></li>
             <li><a href="${ctx}${baseSiteUrl}/presentations" rel="external"><img class="ui-li-icon" alt="Speakers" src="${ctx}/img/mobile/crystal/kchart.png"/>Presentations</a></li>
             <li><a href="${ctx}${baseSiteUrl}/schedule"      rel="external"><img class="ui-li-icon" alt="Schedule" src="${ctx}/img/icons/crystal/vcalendar.png"/>Schedule</a></li>
