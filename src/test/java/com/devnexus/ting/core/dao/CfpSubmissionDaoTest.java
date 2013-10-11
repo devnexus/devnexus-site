@@ -15,27 +15,34 @@
  */
 package com.devnexus.ting.core.dao;
 
-import org.junit.Ignore;
+import java.util.List;
+
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.Event;
 
 /**
  * @author Gunnar Hillert
  *
  */
-public class SystemDaoTest extends BaseDaoIntegrationTest {
+public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private SystemDao systemDao;
+	@Autowired private CfpSubmissionDao cfpSubmissionDao;
+	@Autowired private EventDao eventDao;
 
-	/**
-	 *
-	 */
 	@Test
-	//@Ignore
-	public void testGenerateSchema() {
-		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
-		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
-		//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
+	public void testAllCfpSubmissions() {
+		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.getAll();
+		Assert.assertTrue(cfpSubmissions.size() == 0);
 	}
 
+	@Test
+	public void testGetCpsForEvent() {
+		Event event = eventDao.getCurrentEvent();
+		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.getCfpSubmissions(event.getId());
+		Assert.assertTrue(cfpSubmissions.size() == 0);
+	}
 }

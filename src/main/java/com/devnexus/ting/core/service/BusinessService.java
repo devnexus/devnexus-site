@@ -18,6 +18,7 @@ package com.devnexus.ting.core.service;
 import java.util.List;
 
 import com.devnexus.ting.core.model.ApplicationCache;
+import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.Evaluation;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
@@ -217,4 +218,9 @@ public interface BusinessService {
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 
+	List<CfpSubmission> getCfpSubmissions(Long eventId);
+
+	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);
+
+	CfpSubmission saveAndNotifyCfpSubmission(CfpSubmission cfpSubmission);
 }

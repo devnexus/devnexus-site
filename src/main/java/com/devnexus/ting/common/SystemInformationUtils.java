@@ -21,14 +21,19 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.cloudfoundry.runtime.env.CloudEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PropertiesLoaderUtils;
 
 /**
  *
@@ -118,10 +123,25 @@ public final class SystemInformationUtils {
 	 */
 	public static boolean existsConfigFile(final String filePath) {
 
-		final File configFile = new File(filePath + File.separator
-				+ TING_CONFIG_FILENAME);
+		final File configFile = getConfigFile(filePath);
 
 		return configFile.exists() && configFile.isFile();
+
+	}
+
+	private static File getConfigFile(final String filePath) {
+		return new File(filePath + File.separator
+				+ TING_CONFIG_FILENAME);
+	}
+
+	public static Properties getConfigProperties(final String filePath) {
+
+		Resource resource = new FileSystemResource(getConfigFile(filePath));
+		try {
+			return PropertiesLoaderUtils.loadProperties(resource);
+		} catch (IOException e) {
+			throw new IllegalStateException("Error loading properties.", e);
+		}
 
 	}
 
@@ -179,8 +199,7 @@ public final class SystemInformationUtils {
 	}
 
 	public static InputStream getImage(AppHomeDirectories folder, String imageName) {
-		final Apphome appHome = SystemInformationUtils
-		.retrieveBasicSystemInformation();
+		final Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
 
 		if (imageName == null) {
 			return SystemInformationUtils.class
@@ -238,14 +257,28 @@ public final class SystemInformationUtils {
 		}
 	}
 
+	public static String getCfpEmailTemplate() {
+
+		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-email-html.md");
+
+		final String template;
+
+		try {
+			template = IOUtils.toString(is, Charset.forName("UTF-8"));
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+		return template;
+	}
+
 	/**
 	 *
 	 * @return
 	 */
 	public static void setSpeakerImage(String imageName, InputStream is) {
 
-		final Apphome appHome = SystemInformationUtils
-				.retrieveBasicSystemInformation();
+		final Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
 
 		if (imageName == null) {
 			throw new IllegalStateException("Please provide an image name.");
@@ -263,14 +296,16 @@ public final class SystemInformationUtils {
 
 
 			if (!image.getParentFile().exists()) {
-				image.getParentFile().mkdir();
+				boolean created = image.getParentFile().mkdirs();
+				if (!created) {
+					throw new IllegalStateException("Unable to create directory: " + image.getParentFile().getAbsolutePath());
+				}
 			}
 
 			try {
 				image.createNewFile();
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				throw new IllegalStateException("Unable to create File: " + image.getName());
 			}
 		FileOutputStream out;
 		try {

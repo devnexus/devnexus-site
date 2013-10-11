@@ -15,27 +15,17 @@
  */
 package com.devnexus.ting.core.dao;
 
-import org.junit.Ignore;
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
+import com.devnexus.ting.core.model.CfpSubmission;
 
 /**
+ *
  * @author Gunnar Hillert
  *
  */
-public class SystemDaoTest extends BaseDaoIntegrationTest {
+public interface CfpSubmissionDao  extends GenericDao < CfpSubmission, Long > {
 
-	@Autowired private SystemDao systemDao;
-
-	/**
-	 *
-	 */
-	@Test
-	//@Ignore
-	public void testGenerateSchema() {
-		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
-		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
-		//systemDao.createDatabase(true, "org.hibernate.dialect.H2Dialect");
-	}
+	List<CfpSubmission> getCfpSubmissions(Long eventId);
 
 }

@@ -24,9 +24,15 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.UUID;
 
+import net.tanesha.recaptcha.ReCaptcha;
+import net.tanesha.recaptcha.ReCaptchaFactory;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.integration.MessageChannel;
+import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -34,6 +40,7 @@ import org.springframework.util.Assert;
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.dao.ApplicationCacheDao;
+import com.devnexus.ting.core.dao.CfpSubmissionDao;
 import com.devnexus.ting.core.dao.EvaluationDao;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
@@ -42,6 +49,7 @@ import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.model.ApplicationCache;
+import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.Evaluation;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
@@ -67,6 +75,7 @@ public class BusinessServiceImpl implements BusinessService {
 	 */
 	private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
+	@Autowired private CfpSubmissionDao cfpSubmissionDao;
 	@Autowired private EvaluationDao   evaluationDao;
 	@Autowired private EventDao        eventDao;
 	@Autowired private OrganizerDao    organizerDao;
@@ -75,6 +84,9 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private ScheduleItemDao scheduleItemDao;
 	@Autowired private SpeakerDao      speakerDao;
 	@Autowired private ApplicationCacheDao applicationCacheDao;
+	@Autowired private Environment environment;
+
+	@Autowired private MessageChannel mailChannel;
 
 	/** {@inheritDoc} */
 	@Override
@@ -333,6 +345,8 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	public Event getCurrentEvent() {
+		environment.getActiveProfiles();
+		environment.getProperty("database.jdbc.url");
 		return eventDao.getCurrentEvent();
 	}
 
@@ -430,6 +444,30 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	public List<Evaluation> getEvaluationsForCurrentEvent() {
 		return evaluationDao.getEvaluationsForCurrentEvent();
+	}
+
+	@Override
+	public List<CfpSubmission> getCfpSubmissions(Long eventId) {
+		return cfpSubmissionDao.getCfpSubmissions(eventId);
+	}
+
+	@Override
+	@Transactional
+	public CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission) {
+		return cfpSubmissionDao.save(cfpSubmission);
+	}
+
+	@Override
+	public CfpSubmission saveAndNotifyCfpSubmission(CfpSubmission cfpSubmission) {
+		final CfpSubmission savedCfpSubmission = this.saveCfpSubmission(cfpSubmission);
+
+		final String mailEnabled = environment.getProperty("mail.enabled");
+
+		if (Boolean.valueOf(mailEnabled)) {
+			mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
+		}
+
+		return savedCfpSubmission;
 	}
 
 }

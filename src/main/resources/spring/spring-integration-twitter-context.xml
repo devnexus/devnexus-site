@@ -12,9 +12,16 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean id="twitterTemplate" class="org.springframework.social.twitter.api.impl.TwitterTemplate">
+		<constructor-arg name="consumerKey"       value="${twitter.oauth.consumerKey}"/>
+		<constructor-arg name="consumerSecret"    value="${twitter.oauth.consumerSecret}"/>
+		<constructor-arg name="accessToken"       value="${twitter.oauth.accessToken}"/>
+		<constructor-arg name="accessTokenSecret" value="${twitter.oauth.accessTokenSecret}"/>
+	</bean>
+
 	<!-- See also: http://static.springsource.org/spring-integration/reference/htmlsingle/#twitter -->
 	<int-twitter:search-inbound-channel-adapter
-		id="twitter" query="devnexus"
+		id="twitter" query="devnexus" twitter-template="twitterTemplate"
 		channel="twitterChannel" auto-startup="true">
 		<int:poller fixed-rate="30000" max-messages-per-poll="10" />
 	</int-twitter:search-inbound-channel-adapter>

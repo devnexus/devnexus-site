@@ -5,6 +5,7 @@
 	<h2>Administration</h2>
 
 	<ul>
+		<li><a href="${ctx}${baseSiteUrl}/admin/cfps">Manage Call for Papers</a></li>
 		<li><a href="${ctx}${baseSiteUrl}/admin/events">Manage Events</a></li>
 		<li><a href="${ctx}${baseSiteUrl}/admin/presentations">Manage Presentations</a></li>
 		<li><a href="${ctx}${baseSiteUrl}/admin/speakers">Manage Speakers</a></li>

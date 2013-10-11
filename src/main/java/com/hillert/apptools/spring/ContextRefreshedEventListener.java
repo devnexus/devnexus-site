@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.Environment;
 
 import com.devnexus.ting.core.service.SystemSetupService;
 
@@ -38,11 +40,13 @@ public class ContextRefreshedEventListener implements
 	@Autowired
 	private SystemSetupService systemSetupService;
 
+	@Autowired Environment environment;
+
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 
 		// From: http://forum.springsource.org/showthread.php?t=84312&page=2
-
+		//configurer.toString();
 		if (event.getApplicationContext().getParent() == null) {
 			LOGGER.info("Setting up database...");
 			systemSetupService.setupDatabase();

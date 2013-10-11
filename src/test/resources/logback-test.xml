@@ -36,6 +36,10 @@
 	<logger name="com.devnexus.ting.core.service.impl">
 		<level value="INFO"/>
 	</logger>
+	<logger name="com.devnexus.ting.core.dao">
+		<level value="INFO"/>
+	</logger>
+
 	<root>
 		<level value="WARN"/>
 		<appender-ref ref="CONSOLE"/>
