@@ -30,22 +30,45 @@
         <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
         <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
         <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+		<c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 
-        <div id="logo" class="navbar-left">
-            <a href="${homeUrl}"><img src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
-        </div>
-        <!-- end logo -->
-        <div id="topnav" class="navbar-right navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="${speakersUrl}">Speakers</a></li>
-                <li><a href="${presentationsUrl}">Presentations</a></li>
-                <li><a href="${scheduleUrl}">Schedule</a></li>
-                <li class="mega">
-                    <a href="#" data-target="#past-conferences-collapse" class="accordion-toggle" data-toggle="collapse">Past Conferences...</a>
-                </li>
-                <li><a href="https://ajug.eventwax.com/devnexus-2013/register">Register</a></li>
-            </ul>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li  class="active"><a href="#">About</a></li>
+                        <li><a href="${speakersUrl}">Speakers</a></li>
+                        <li><a href="${presentationsUrl}">Presentations</a></li>
+                        <li><a href="${scheduleUrl}">Schedule</a></li>
+                        <li><a href="https://ajug.eventwax.com/devnexus-2013/register">Register</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Past Conferences...<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                    <c:forEach items="${eventsForMenu}" var="event">
+                                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>"><c:out value="${event.title}"/> Speakers</a></li>
+                                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>"><c:out value="${event.title}"/> Presentations</a></li>
+                                    </c:forEach>
+                                <li>
+                                    <a href="http://devnexus.com/static/2012/audio/">DevNexus 2012 All Audio Recordings</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- end top nav -->
+
+            </div>
+                <!-- end headerwrapper -->
         </div>
         <div style="clear: both"></div>
         <div id="devnex" class="jumbotron">
@@ -102,8 +125,8 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <img id="logo" src="images/devnexus-logo.jpg" border="0">
-                        <p id="copy">&copy; 2008-2013 Atlanta Java Users Group (AJUG)</p>
+                        <img id="logo" src="${devnexusLogoUrl}" border="0">
+                        <p id="copy">&copy; 2008-2014 Atlanta Java Users Group (AJUG)</p>
                     </div>
                 </div>
 
