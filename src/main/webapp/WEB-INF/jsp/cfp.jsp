@@ -1,8 +1,20 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<div id="content" class="span-22 prepend-top last ">
-
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
 	<h2>Call for Papers 2014!</h2>
+
+<spring:bind path="cfpSubmission.*">
+    <c:if test="${not empty status.errorMessages}">
+        <div class="alert alert-error fade in">
+            <a href="#" data-dismiss="alert" class="close">&times;</a>
+            <c:forEach var="error" items="${status.errorMessages}">
+                <c:out value="${error}" escapeXml="false"/><br/>
+            </c:forEach>
+        </div>
+    </c:if>
+</spring:bind>
+
 	<p>
 		Thank you for your interest in DevNexus 2014! We would love to review your
 		session proposals for the South-East's largest developer conference. We are
@@ -19,134 +31,275 @@
 		<li>Mobile</li>
 	</ul>
 
-	<form:form id="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data"
-		cssClass="cleanform">
-		<form:errors/>
-		<div class="required">
-			<label for="firstName">First Name</label>
-			<form:hidden path="event.id"/>
-			<form:input  path="firstName" id="firstName" maxlength="255" tabindex="1" cssStyle="width: 300px;"/>
-			<form:errors path="firstName" cssClass="fieldError"/>
+	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
+		<form:hidden path="event.id"/>
+err
+		<%-- Error Messages --%>
+		<c:if test="${not empty errors}">sadasdasd
+			<div class="alert alert-error fade in">
+				<a href="#" data-dismiss="alert" class="close">&times;</a>
+				<c:forEach var="error" items="${errors}">
+					<c:out value="${error}"/><br />
+				</c:forEach>
+			</div>
+			<c:remove var="errors" scope="session"/>
+		</c:if>
+
+		<spring:bind path="cfpSubmission.*">${status}
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+
+
+		<spring:bind path="cfpSubmission.firstName">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="firstName" class="col-lg-2 control-label">First Name*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="firstName" id="firstName" maxlength="255" tabindex="1"/>
+				<form:errors path="firstName" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="lastName">Last Name</label>
-			<form:input  path="lastName" id="lastName" maxlength="255" tabindex="2" cssStyle="width: 300px;"/>
-			<form:errors path="lastName" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.lastName">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="lastName" class="col-lg-2 control-label">Last Name*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="lastName" id="lastName" maxlength="255" tabindex="2"/>
+				<form:errors path="lastName" cssClass="fieldError"/>
+			</div>
 		</div>
-		<p style="clear: left;">Please provide contact some information. We will use primarily email between
-		now and the conference. However, on the days of the conference, it is important
-		that we can reach you via cell phone, just in case emergencies arise</p>
-		<div class="required">
-			<label for="email">Email</label>
-			<form:input path="email" id="email" tabindex="3" cssStyle="width: 300px;"/>
-			<form:errors path="email" cssClass="fieldError"/>
+		<p>
+			Please provide contact some information. We will use primarily email between
+			now and the conference. However, on the days of the conference, it is important
+			that we can reach you via cell phone, just in case emergencies arise
+		</p>
+
+		<spring:bind path="cfpSubmission.email">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="email" class="col-lg-2 control-label">Email*</label>
+			<div class="col-lg-10">
+				<form:input type="email" cssClass="form-control" path="email" id="email" tabindex="3"/>
+				<form:errors path="email" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="phone">Phone</label>
-			<form:input path="phone" id="phone" tabindex="4" cssStyle="width: 300px;"/>
-			<form:errors path="phone" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.phone">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="phone" class="col-lg-2 control-label">Phone*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="phone" id="phone" tabindex="4"/>
+				<form:errors path="phone" cssClass="fieldError"/>
+			</div>
 		</div>
-		<p style="clear: left;">Please submit a decent sized picture. We will add it to the conference site.</p>
-        <div class="required">
-            <label for="pictureFile">Picture</label>
-            <input id="pictureFile" type="file" name="pictureFile" tabindex="5"/>
-        </div>
-        <p style="clear: left;"><a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> is supported for the bio.</p>
-		<div class="required">
-			<label for="bio">Bio</label>
-			<form:textarea  path="bio" id="bio" tabindex="6" cssStyle="width: 300px;"/>
-			<form:errors path="bio" cssClass="fieldError"/>
+		<p>
+			Please submit a decent sized picture. We will add it to the conference site.
+		</p>
+
+		<div class="form-group">
+			<label for="pictureFile" class="col-lg-2 control-label">Picture*</label>
+			<div class="col-lg-10">
+				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="5"/>
+			</div>
 		</div>
-		<div class="required" style="margin-top: 1em;">
-			<label for="title">Presentation Title</label>
-			<form:input path="title" id="title" tabindex="7" cssStyle="width: 300px;"/>
-			<form:errors path="title" cssClass="fieldError"/>
+		<p><a href="http://daringfireball.net/projects/markdown/" target="_blank">
+			Markdown</a> is supported for the bio.
+		</p>
+
+		<spring:bind path="cfpSubmission.bio">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="bio" class="col-lg-2 control-label">Bio*</label>
+			<div class="col-lg-10">
+				<form:textarea cssClass="form-control" path="bio" id="bio" tabindex="6"/>
+				<form:errors path="bio" cssClass="fieldError"/>
+			</div>
 		</div>
-		<p style="clear: left;"><a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> is supported for the abstract.</p>
-		<div class="required" style="margin-bottom: 1em;">
-			<label for="bio">Abstract</label>
-			<form:textarea  path="description" id="description" tabindex="8" cssStyle="width: 300px;"/>
-			<form:errors path="description" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.title">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="title" class="col-lg-2 control-label">Presentation Title*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="title" id="title" tabindex="7"/>
+				<form:errors path="title" cssClass="fieldError"/>
+			</div>
 		</div>
-		<p style="clear: left;">For example: Java/JavaEE/Spring, Data, HTML5, Agile, Mobile, Cloud ...</p>
-		<div class="required">
-			<label for="topic">Topic</label>
-			<form:input path="topic" id="topic" tabindex="9" cssStyle="width: 300px;"/>
-			<form:errors path="topic" cssClass="fieldError"/>
+		<p><a href="http://daringfireball.net/projects/markdown/" target="_blank">
+			Markdown</a> is supported for the abstract.
+		</p>
+
+		<spring:bind path="cfpSubmission.description">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="description" class="col-lg-2 control-label">Abstract*</label>
+			<div class="col-lg-10">
+				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8"/>
+				<form:errors path="description" cssClass="fieldError"/>
+			</div>
+		</div>
+		<p>
+			For example: Java/JavaEE/Spring, Data, HTML5, Agile, Mobile, Cloud ...
+		</p>
+
+		<spring:bind path="cfpSubmission.topic">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="topic" class="col-lg-2 control-label">Topic*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="topic" id="topic" tabindex="9"/>
+				<form:errors path="topic" cssClass="fieldError"/>
+			</div>
 		</div>
 		<p style="clear: left;">Please help us classify your presentation</p>
-		<div class="required">
-			<label for="skill-level">Skill Level</label>
-			<form:select path="skillLevel" id="skill-level" tabindex="10"
-				cssStyle="width: 300px;">
-				<form:option value="" label="Please Select a Skill Level" />
-				<c:forEach items="${skillLevels}" var="s">
-					<form:option value="${s.id}" label="${s.name}" />
-				</c:forEach>
-			</form:select>
-			<form:errors path="skillLevel" cssClass="fieldError" />
+
+		<spring:bind path="cfpSubmission.skillLevel">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="skill-level" class="col-lg-2 control-label">Skill Level*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="skillLevel" id="skill-level" tabindex="10">
+					<form:option value="" label="Please Select a Skill Level" />
+					<c:forEach items="${skillLevels}" var="s">
+						<form:option value="${s.id}" label="${s.name}" />
+					</c:forEach>
+				</form:select>
+				<form:errors path="skillLevel" cssClass="fieldError" />
+			</div>
 		</div>
-		<div class="required">
-			<label for="skill-level">Presentation Type</label>
-			<form:select path="presentationType" id="presentation-type"
-				tabindex="11" cssStyle="width: 300px;">
-				<form:option value="" label="Please Select a Presentation Type" />
-				<c:forEach items="${presentationTypes}" var="s">
-					<form:option value="${s.id}" label="${s.name}" />
-				</c:forEach>
-			</form:select>
-			<form:errors path="presentationType" cssClass="fieldError" />
+
+		<spring:bind path="cfpSubmission.presentationType">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="skill-level" class="col-lg-2 control-label">Presentation Type*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="presentationType" id="presentation-type"
+					tabindex="11">
+					<form:option value="" label="Please Select a Presentation Type" />
+					<c:forEach items="${presentationTypes}" var="s">
+						<form:option value="${s.id}" label="${s.name}" />
+					</c:forEach>
+				</form:select>
+				<form:errors path="presentationType" cssClass="fieldError" />
+			</div>
 		</div>
 		<h3>Your social links</h3>
-		<div class="optional">
-			<label for="twitterId">Twitter Id</label>
-			<form:input  path="twitterId" id="twitterId" maxlength="255" tabindex="12" cssStyle="width: 300px;"/>
-			<form:errors path="twitterId" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.twitterId">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="twitterId" class="col-lg-2 control-label">Twitter Id</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="12"/>
+				<form:errors path="twitterId" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="optional">
-			<label for="googlePlusId">Google Plus Id</label>
-			<form:input  path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="13" cssStyle="width: 300px;"/>
-			<form:errors path="googlePlusId" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.googlePlusId">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="googlePlusId" class="col-lg-2 control-label">Google Plus Id</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="13"/>
+				<form:errors path="googlePlusId" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="optional">
-			<label for="linkedInId">LinkedIn Id</label>
-			<form:input  path="linkedInId" id="linkedInId" maxlength="255" tabindex="14" cssStyle="width: 300px;"/>
-			<form:errors path="linkedInId" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.linkedInId">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="linkedInId" class="col-lg-2 control-label">LinkedIn Id</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="14"/>
+				<form:errors path="linkedInId" cssClass="fieldError"/>
+			</div>
 		</div>
 		<h3 style="clear: left;">Miscellaneous</h3>
 		<p style="clear: left;">Please let us know your T-shirt size, you we can ensure we have the right size.</p>
- 		<div class="required">
-			<label for="tshirtSize">T-Shirt Size</label>
-			<form:input path="tshirtSize" id="tshirtSize" tabindex="15" cssStyle="width: 300px;"/>
-			<form:errors path="tshirtSize" cssClass="fieldError"/>
-		</div>
-		<div class="required">
-			<label for="sessionRecordingApproved">Can we record your session?</label>
-			<form:checkbox path="sessionRecordingApproved" id="sessionRecordingApproved" tabindex="16" cssStyle="width: 300px;"/>
-			<form:errors path="sessionRecordingApproved" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.tshirtSize">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+ 		<div class="form-group${errorClass}">
+			<label for="tshirtSize" class="col-lg-2 control-label">T-Shirt Size*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="tshirtSize" id="tshirtSize" tabindex="15"/>
+				<form:errors path="tshirtSize" cssClass="fieldError"/>
+			</div>
 		</div>
 
-		<p style="clear: left;">
+		<spring:bind path="cfpSubmission.sessionRecordingApproved">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<label>
+						<form:checkbox path="sessionRecordingApproved" id="sessionRecordingApproved" tabindex="16"/> Can we record your session?
+					</label>
+				</div>
+				<form:errors path="sessionRecordingApproved" cssClass="fieldError"/>
+			</div>
+		</div>
+		<p>
 			Please tell us if you have any preferences/requirements for your
 			presentation, e.g. if you can only speak on specific days, morning/afternoon
 			etc. Also, if you have any comments, please let us know.
 		</p>
-		<div class="required" style="margin-bottom: 1em;">
-			<label for="slotPreference">Slot Preference/Comments</label>
-			<form:textarea  path="slotPreference" id="bio" tabindex="17" cssStyle="width: 300px;"/>
-			<form:errors path="slotPreference" cssClass="fieldError"/>
+
+		<spring:bind path="cfpSubmission.slotPreference">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
+			<div class="col-lg-10">
+				<form:textarea cssClass="form-control" path="slotPreference" id="bio" tabindex="17"/>
+				<form:errors path="slotPreference" cssClass="fieldError"/>
+			</div>
 		</div>
 		<c:if test="${reCaptchaEnabled}">
-			<div class="required" style="width: 300px; margin-bottom: 1em; margin-left: auto; margin-right: auto;">
+			<label class="col-lg-2 control-label">Are you human?</label>
+			<div class="col-lg-10" style="margin-bottom: 1em;">
 				<c:out value="${reCaptchaHtml}" escapeXml="false"/>
 			</div>
 		</c:if>
-		<div class="submit">
-			<input type="submit" class="button" name="save"   value="Add" tabindex="19"/>
-			<input type="submit" class="button" name="cancel" value="Cancel"/>
+
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
+			</div>
 		</div>
 	</form:form>
-	<content tag='bottom'>
-
-	</content>
+	</div>
 </div>
+	<content tag='bottom'>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
+
+
+				$('#lastName').popover({
+					  placement: 'right',
+					  offset: 20,
+					  trigger: 'manual',
+						  content: 'asdasdasdasd'
+					});
+			});
+		</script>
+	</content>
