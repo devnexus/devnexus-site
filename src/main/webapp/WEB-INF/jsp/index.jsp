@@ -6,27 +6,27 @@
 </style>
 <div id="yellow" class="jumbotron" style="margin-bottom:0">
     <div class="container">
-        <h1>February 18-19, 2014</h1>
+        <h1>February 24-25, 2014</h1>
 
         <div class="row">
             <div class="col-md-6">
                 <h2>Registration Information</h2>
 
                 <div class="row">
-                    <div class="col-md-2">$220</div>
-                    <div class="col-md-10"><strong>Conference Pass</strong> (until February 19, 2014)</div>
+                    <div class="col-md-2">$240</div>
+                    <div class="col-md-10"><strong>Conference Pass</strong> (until February 14, 2014)</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">$195</div>
-                    <div class="col-md-10"><strong>Early Bird Pass</strong> (until January 14, 2014)</div>
+                    <div class="col-md-2">$210</div>
+                    <div class="col-md-10"><strong>Early Bird Pass</strong> (until January 10, 2014)</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">$195</div>
+                    <div class="col-md-2">$210</div>
                     <div class="col-md-10"><strong>Group Pass</strong> (for groups of 5 or more)</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">$140</div>
-                    <div class="col-md-10"><strong>Student Pass</strong> (limited amount)</div>
+                    <div class="col-md-2">$150</div>
+                    <div class="col-md-10"><strong>Student Pass</strong> (Contact us for the code)</div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -41,7 +41,7 @@
             </div>
         </div>
         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <center><a href="#" class="btn btn-primary btn-lg">Register Now!</a></center>
+        <center><a href="http://devnexus.eventzilla.net/" class="btn btn-primary btn-lg">Register Now!</a></center>
     </div>
 </div>
 <div id="devnex" class="jumbotron" style="margin-bottom:0">
