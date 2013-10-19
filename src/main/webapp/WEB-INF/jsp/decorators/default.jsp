@@ -151,5 +151,7 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${ctx}/js/jquery.js"></script>
         <script src="${ctx}/js/bootstrap.min.js"></script>
+
+        <sitemesh:write property='page.bottom'/>
     </body>
 </html>
