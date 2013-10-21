@@ -2,19 +2,6 @@
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-	<h2>Call for Papers 2014!</h2>
-
-<spring:bind path="cfpSubmission.*">
-    <c:if test="${not empty status.errorMessages}">
-        <div class="alert alert-error fade in">
-            <a href="#" data-dismiss="alert" class="close">&times;</a>
-            <c:forEach var="error" items="${status.errorMessages}">
-                <c:out value="${error}" escapeXml="false"/><br/>
-            </c:forEach>
-        </div>
-    </c:if>
-</spring:bind>
-
 	<p>
 		Thank you for your interest in DevNexus 2014! We would love to review your
 		session proposals for the South-East's largest developer conference. We are
@@ -31,24 +18,19 @@
 		<li>Mobile</li>
 	</ul>
 
+	<spring:bind path="cfpSubmission.*">
+	    <c:if test="${not empty status.errorMessages}">
+	        <div class="alert alert-error fade in">
+	            <a href="#" data-dismiss="alert" class="close">&times;</a>
+	            <c:forEach var="error" items="${status.errorMessages}">
+	                <c:out value="${error}" escapeXml="false"/><br/>
+	            </c:forEach>
+	        </div>
+	    </c:if>
+	</spring:bind>
+
 	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
 		<form:hidden path="event.id"/>
-err
-		<%-- Error Messages --%>
-		<c:if test="${not empty errors}">sadasdasd
-			<div class="alert alert-error fade in">
-				<a href="#" data-dismiss="alert" class="close">&times;</a>
-				<c:forEach var="error" items="${errors}">
-					<c:out value="${error}"/><br />
-				</c:forEach>
-			</div>
-			<c:remove var="errors" scope="session"/>
-		</c:if>
-
-		<spring:bind path="cfpSubmission.*">${status}
-			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-		</spring:bind>
-
 
 		<spring:bind path="cfpSubmission.firstName">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -118,7 +100,7 @@ err
 		<div class="form-group${errorClass}">
 			<label for="bio" class="col-lg-2 control-label">Bio*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="bio" id="bio" tabindex="6"/>
+				<form:textarea cssClass="form-control" path="bio" id="bio" tabindex="6" rows="10"/>
 				<form:errors path="bio" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -143,7 +125,7 @@ err
 		<div class="form-group${errorClass}">
 			<label for="description" class="col-lg-2 control-label">Abstract*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8"/>
+				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8" rows="10"/>
 				<form:errors path="description" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -268,7 +250,7 @@ err
 		<div class="form-group${errorClass}">
 			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="slotPreference" id="bio" tabindex="17"/>
+				<form:textarea cssClass="form-control" path="slotPreference" id="bio" tabindex="17" rows="5"/>
 				<form:errors path="slotPreference" cssClass="fieldError"/>
 			</div>
 		</div>
