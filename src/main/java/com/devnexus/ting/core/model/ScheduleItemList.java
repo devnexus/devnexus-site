@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.core.model;
 
-import java.beans.Transient;
 import java.io.Serializable;
 import java.util.*;
 

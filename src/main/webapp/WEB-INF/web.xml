@@ -14,6 +14,11 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/mainApplicationContext.xml</param-value>
 	</context-param>
+	<context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>messages</param-value>
+    </context-param>
+
 	<listener>
 		<listener-class>com.devnexus.ting.web.contextlistener.StartupContextListener</listener-class>
 	</listener>

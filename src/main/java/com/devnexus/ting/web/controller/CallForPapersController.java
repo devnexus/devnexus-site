@@ -33,6 +33,8 @@ import net.tanesha.recaptcha.ReCaptchaResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
@@ -66,6 +68,13 @@ public class CallForPapersController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
+    private MessageSourceAccessor messages;
+
+    @Autowired
+    public void setMessages(MessageSource messageSource) {
+        messages = new MessageSourceAccessor(messageSource);
+    }
+
 	private void prepareReferenceData(ModelMap model) {
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
 		final String recaptchaPublicKey = environment.getProperty("recaptcha.publicKey");
@@ -92,15 +101,14 @@ public class CallForPapersController {
 	@RequestMapping(value="/cfp", method=RequestMethod.GET)
 	public String openAddCfp(final SitePreference sitePreference, ModelMap model) {
 
+        model.addAttribute("headerTitle", "Call for Papers");
+        model.addAttribute("tag", "We would love to review your	session proposals!");
+
 		Event event = businessService.getCurrentEvent();
 		CfpSubmission cfpSubmission = new CfpSubmission();
 		cfpSubmission.setEvent(event);
 
 		model.addAttribute(cfpSubmission);
-//		if (sitePreference.isMobile()) {
-//			return "add-evaluation-mobile";
-//		}
-
 		prepareReferenceData(model);
 
 		return "cfp";
@@ -115,6 +123,8 @@ public class CallForPapersController {
 			RedirectAttributes redirectAttributes) {
 
 		String baseSiteUrl = (String) request.getAttribute("baseSiteUrl");
+
+		String s = messages.getMessage("errors.required");
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:" + baseSiteUrl + "/index";
