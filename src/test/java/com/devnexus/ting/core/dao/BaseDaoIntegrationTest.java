@@ -27,6 +27,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.service.SystemSetupService;
+import com.hillert.apptools.spring.CloudApplicationContextInitializer;
 
 /**
  * Base class for Dao Test Cases.
@@ -35,7 +36,8 @@ import com.devnexus.ting.core.service.SystemSetupService;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration( locations={ "classpath:spring/mainApplicationContext.xml"})
+@ContextConfiguration(initializers=CloudApplicationContextInitializer.class,
+					locations={ "classpath:spring/mainApplicationContext.xml"})
 @Transactional
 @ActiveProfiles({"default"})
 public abstract class BaseDaoIntegrationTest {
@@ -46,7 +48,7 @@ public abstract class BaseDaoIntegrationTest {
 
 	@Before
 	public void setup() {
-		systemSetupService.setupDatabase();
-		systemSetupService.setupDemoData();
+//		systemSetupService.setupDatabase();
+//		systemSetupService.setupDemoData();
 	}
 }
