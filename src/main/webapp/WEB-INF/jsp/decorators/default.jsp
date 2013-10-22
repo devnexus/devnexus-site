@@ -52,10 +52,10 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
 
-                <li><a href="${homeUrl}">About</a></li>
                 <li><a href="${speakersUrl}">Speakers</a></li>
                 <li><a href="${presentationsUrl}">Presentations</a></li>
                 <li><a href="${scheduleUrl}">Schedule</a></li>
+                <li><a href="${travelUrl}">Travel</a></li>
                 <li><a href="${registrationUrl}">Register</a></li>
 
             </ul>
