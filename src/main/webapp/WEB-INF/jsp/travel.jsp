@@ -2,47 +2,48 @@
 <% pageContext.setAttribute("lf", "\n"); %>
 
 <title>DevNexus 2013 - Travel</title>
-<div id="content" class="span-22 last">
-	<div class="quote"><span>What the community says:</span> "It is very cool that AJUG puts together a conference that is so inexpensive &amp; therefore accessible"</div>
 
-	<h2>Travel Information</h2>
+<div id="map" class="container">
+    <img id="map" src="${ctx}/images/map.jpg">
+</div>
 
-	<p>The <strong>Cobb Galleria</strong> (<a href="http://bit.ly/dQvqxq">http://bit.ly/dQvqxq</a>) is
-	located at:</p>
+<div id="travel" class="container">
+    <!-- Example row of columns -->
 
-	<p>
-		Two Galleria Parkway<br/>
-		Atlanta, Georgia 30339
-	</p>
-	<p>Their site (<a href="http://www.cobbgalleria.com/directions.aspx">http://www.cobbgalleria.com/directions.aspx</a>)
-	includes directions to the conference center from several directions as
-	well as the airport.
-	</p>
-	<p><a href="http://www.itsmarta.com/">MARTA</a> may be used to reach the
-	center, but the nearest bus stop is a few blocks away.</p>
-	<p>The Cobb Galleria is accessible from several nearby hotels:</p>
+    <div class="row">
+        <div id="travelphoto" class="col-md-6">
+            <img src="${ctx}/images/photo1.jpg">
+            <img src="${ctx}/images/photo2.jpg">
+        </div>
+        <div class="col-md-6">
+            <h2>Travel Information</h2>
 
-	<p><strong>Marriott Waverly</strong> is connected to the Center</p>
-	<p>For DevNexus 2013 we have reserved a block of rooms, providing a special rate of <strong>$149</strong>
-	to our attendees. Please use the following link in order to make your
-	hotel reservation:
-	</p>
-	<p><a href="http://www.marriott.com/hotels/travel/atlrb-renaissance-atlanta-waverly-hotel-and-convention-center/?toDate=2/19/13&groupCode=devdeva&fromDate=2/17/13&app=resvlink">Make Reservation</a>
-	<p>The group code is <strong>devdeva</strong></p>
-	<ul>
-		<li>Directions: <a href="http://bit.ly/gDzY9N">http://bit.ly/gDzY9N</a></li>
-		<li>Site: <a href="http://bit.ly/hlU1OO">http://bit.ly/hlU1OO</a></li>
-	</ul>
+            <p>The Cobb Galleria website includes directions to the conference center from several directions as well as
+                the airport.</p>
 
-	<p><strong>Sheraton Suites</strong> is a short walk to the center.</p>
-	<ul>
-		<li>Directions: <a href="http://bit.ly/fNl2Ol">http://bit.ly/fNl2Ol</a></li>
-		<li>Site: <a href="http://bit.ly/fWkNVC">http://bit.ly/fWkNVC</a></li>
-	</ul>
+            <p>MARTA may be used to reach the center, but the nearest bus stop is a few blocks away.</p>
 
-	<p><strong>Embassy Suites</strong> is also a short walk to the center.</p>
-	<ul>
-		<li>Directions: <a href="http://bit.ly/fKUADx">http://bit.ly/fKUADx</a></li>
-		<li>Site: <a href="http://www.atlantagalleria.embassysuites.com">http://www.atlantagalleria.embassysuites.com</a></li>
-	</ul>
+            <p>The Cobb Galleria is accessible from several nearby hotels:</p>
+
+            <p>Marriott Waverly is connected to the Center.</p>
+
+            <p>We have reserved a block of rooms, providing a special rate of $149 to our attendees. Please use the
+                following link in order to make your hotel reservation:</p>
+
+            <h3>Make a Reservation</h3>
+
+            <p>The group code is devdeva</p>
+            <blockquote>Directions: http://bit.ly/gDzY9N<br/>
+                Site: http://bit.ly/hlU1OO
+            </blockquote>
+            <p>Sheraton Suites is a short walk to the center.</p>
+            <blockquote>Directions: http://bit.ly/fNl2Ol<br/>
+                Site: http://bit.ly/fWkNVC
+            </blockquote>
+            <p>Embassy Suites is also a short walk to the center.</p>
+            <blockquote>Directions: http://bit.ly/fKUADx
+                Site: http://www.atlantagalleria.embassysuites.com
+            </blockquote>
+        </div>
+    </div>
 </div>
