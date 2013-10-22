@@ -18,8 +18,7 @@
             <div id="speakers">
             <div class="row">
         </c:if>
-        <a style="padding-top: 100px" name="id-${presentation.id}" id="id-${presentation.id}"></a>
-
+        <a style="padding-top: 100px" name ="id-${presentation.id}" id="id-${presentation.id}"></a>
         <div id="presentation" class="col-md-4">
             <div class="row ${presentation.room.cssStyleName}">
                 <div class="col-md-5  ">
