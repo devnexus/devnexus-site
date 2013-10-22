@@ -30,6 +30,7 @@
         <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
         <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
         <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+        <c:url var="registrationUrl" value="${baseSiteUrl}/register"/>
 		<c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -86,6 +87,11 @@
         <sitemesh:write property='body'/>
 
         <div style="clear:both;"></div>
+        <div id="devnex" class="jumbotron" style="margin-bottom:0">
+            <div class="container">
+                <h2>Questions? Contact us at info@ajug.org</h2>
+            </div>
+        </div>
 
         <div id="footer" class="footer-inverse">
             <div class="container">
@@ -111,8 +117,8 @@
                             <div class="col-md-3">
                                 <h3>Attend</h3>
                                 <ul id="col">
-                                    <li><a href="#">Registration Info</a></li>
-                                    <li><a href="#">Travel</a></li>
+                                    <li><a href="${registrationUrl}">Registration Info</a></li>
+                                    <li><a href="${travelUrl}">Travel</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3">
