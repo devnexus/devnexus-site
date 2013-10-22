@@ -88,6 +88,17 @@ public class SiteController {
 
 	}
 
+
+    @RequestMapping("/register")
+    public String register(final Model model, final SitePreference sitePreference) {
+
+        final Event event = businessService.getCurrentEvent();
+        model.addAttribute("headerTitle", "Registration Information");
+
+        return "registration";
+
+    }
+
 	@RequestMapping("/{eventKey}/schedule")
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
 
