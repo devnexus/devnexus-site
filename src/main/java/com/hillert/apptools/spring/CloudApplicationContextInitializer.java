@@ -67,13 +67,13 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			}
 			System.out.println("Properties for standalone mode loaded");
 
-			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class);
+			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class, Boolean.FALSE);
 
 			if (twitterEnabled) {
 				applicationContext.getEnvironment().addActiveProfile("twitter-enabled");
 			}
 
-			Boolean mailEnabled = environment.getProperty("mail.enabled", Boolean.class);
+			Boolean mailEnabled = environment.getProperty("mail.enabled", Boolean.class, Boolean.FALSE);
 
 			if (mailEnabled) {
 				applicationContext.getEnvironment().addActiveProfile("mail-enabled");
