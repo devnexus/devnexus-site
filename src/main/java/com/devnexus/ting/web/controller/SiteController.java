@@ -89,6 +89,16 @@ public class SiteController {
 	}
 
 
+    @RequestMapping("/past-conferences")
+    public String pastConferences(final Model model, final SitePreference sitePreference) {
+
+        final Event event = businessService.getCurrentEvent();
+        model.addAttribute("headerTitle", "Previous Conferences");
+
+        return "past-conferences";
+
+    }
+
     @RequestMapping("/register")
     public String register(final Model model, final SitePreference sitePreference) {
 
