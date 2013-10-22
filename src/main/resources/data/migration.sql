@@ -1,7 +1,7 @@
 alter table events add created_date timestamp without time zone;
 alter table events add updated_date timestamp without time zone;
 alter table events add version integer;
- 
+
 alter table users add created_date timestamp without time zone;
 alter table users add updated_date timestamp without time zone;
 alter table users add version integer;
@@ -49,3 +49,8 @@ ALTER TABLE organizers ADD COLUMN linked_in_id character varying(255);
 
 ALTER TABLE speakers ADD COLUMN linked_in_id character varying(255);
 
+-- 2013 -Oct 22
+ALTER TABLE users ADD COLUMN created_date timestamp without time zone;
+-- Change column name to 'updated_date'
+ALTER TABLE users ADD COLUMN updated_date timestamp without time zone;
+ALTER TABLE users ADD COLUMN version integer;
