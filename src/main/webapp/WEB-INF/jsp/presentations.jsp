@@ -16,7 +16,7 @@
 
             <div id="h4wrap"><h4>Presentations</h4></div>
             <div id="speakers">
-            <div class="row">
+            <div class="row ${presentation.room.name}">
         </c:if>
         <a style="padding-top: 100px" name ="id-${presentation.id}" id="id-${presentation.id}"></a>
         <div id="presentation" class="col-md-4">
@@ -90,3 +90,17 @@
 
 </div>
 
+	<content tag='bottom'>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var container = document.querySelector('#bio');
+				var msnry = new Masonry( container, {
+					columnWidth: 1,
+				  'margin-bottom': '10px',
+				  itemSelector: '.speakerContainer'
+				});
+
+			});
+		</script>
+	</content>
