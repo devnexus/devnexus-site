@@ -22,10 +22,10 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 
 #banner {margin: 20px auto;}
 		#banner h1 {font-size: 45px;margin:0;padding:0}
-		#banner h1#gray {color: #617784;  font-weight: bold;} 
+		#banner h1#gray {color: #617784;  font-weight: bold;}
 		#banner h1#white {color: #fff;}
 		#banner h3 {color: #fff;font-size: 22px; padding: 0 20%;}
-		
+
 	#h4wrap {
 		background: transparent url('../images/h2-bg.jpg') repeat-x center center;
 		height: 13px;
@@ -51,16 +51,16 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	h1.track-6 {color:#d14928; text-align: center;}
 	h1.track-7 {color:#455159; text-align: center;}
 	h1.center {text-align: center; font-size: 50px; font-weight: bold;}
-	
+
 #speakers {margin-bottom: 20px; clear: both;}
-#speakers .row  {margin: 12px;} 
+#speakers .row  {margin: 12px;}
 	#speakers .row div {padding-left:0; color: #fff;}
 	#speakers .row div p, #speakers .row div h4{margin-bottom:0;}
 	#speakers .row#dataint{background-color: #44b75c;}
-	#speakers .row#web {background-color:#630d1a} 
-	#speakers .row#javaeespr {background-color:#fd8c2a}	
+	#speakers .row#web {background-color:#630d1a}
+	#speakers .row#javaeespr {background-color:#fd8c2a}
 	#speakers .row#altlang {background-color:#7bb7cd}
-	#speakers .row#htmljs {background-color:#dbaa2e}	
+	#speakers .row#htmljs {background-color:#dbaa2e}
 	#speakers .row#cloud {background-color:#297ca5}
 	#speakers .row#agiletools {background-color:#d14928}
 	#speakers .row#mobile {background-color:#455159}
@@ -84,22 +84,22 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	#schedule #one-fourth.track-6 {background-color:#d14928}
 	#schedule #one-fourth.track-7 {background-color:#455159}
 
-#presentation h3, #container #presentation p {color: #fff; margin: 15px 0;}
-#presentation h3 {font-size: 18px;}
-#presentation .row a {color: white; text-decoration: underline}
-#presentation .track-1 {background-color:#630d1a}
-#presentation .track-102 {background-color:#44b75c}
-#presentation .track-2 {background-color:#fd8c2a}
-#presentation .track-3 {background-color:#7bb7cd}
-#presentation .track-4 {background-color:#dbaa2e}
-#presentation .track-5 {background-color:#297ca5}
-#presentation .track-6 {background-color:#d14928}
-#presentation .track-7 {background-color:#455159}
+.presentation h3, #container #presentation p {color: #fff; margin: 15px 0;}
+.presentation h3 {font-size: 18px;}
+.presentation .row a {color: white; text-decoration: underline}
+.presentation .track-1 {background-color:#630d1a}
+.presentation .track-102 {background-color:#44b75c}
+.presentation .track-2 {background-color:#fd8c2a}
+.presentation .track-3 {background-color:#7bb7cd}
+.presentation .track-4 {background-color:#dbaa2e}
+.presentation .track-5 {background-color:#297ca5}
+.presentation .track-6 {background-color:#d14928}
+.presentation .track-7 {background-color:#455159}
 
 
 #speaker2 {}
-	#speaker2 p{color: #fd8c2a; font-weight: bold; text-align: center;} 
-	
+	#speaker2 p{color: #fd8c2a; font-weight: bold; text-align: center;}
+
 #bio { border-top: 5px solid #e5e5e5; padding-top: 30px; margin-top: 30px; margin-bottom: 30px; }
 	#bio h3 {font-size: 28px; color: #455159}
 	#bio .col-md-4 {border-right: 1px solid #ccc; }
@@ -112,10 +112,10 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	#bio #one-third #social ul li#linkedin a{background:transparent url('../images/linkedin.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third #social ul li#google a{background:transparent url('../images/google.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third #social ul li#rss a{background:transparent url('../images/rss.jpg')no-repeat center center; height: 32px; width: 32px;}
-	#bio #one-third p {color: #455159}	
+	#bio #one-third p {color: #455159}
 
-#footer	{padding: 20px 0 30px}	
-	#footer.footer-inverse {	background-color: #0C1620;border-color: #080808}	
+#footer	{padding: 20px 0 30px}
+	#footer.footer-inverse {	background-color: #0C1620;border-color: #080808}
 	#footer h3 {color: #fff; margin: 10px 0; font-size: 17px}
 	#footer ul{margin: 0 0 25px 0; padding:0; list-style: none;}
 	#footer li, #footer li a {color: #617784; text-decoration: none; margin-bottom: 6px;}
