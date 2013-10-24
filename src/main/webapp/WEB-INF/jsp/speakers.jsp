@@ -32,7 +32,7 @@
                         <br style="clear: both;"/>
                     </c:if>
                     <a style="padding-top: 100px" id="${speaker.firstName}_${speaker.lastName}" name="${speaker.firstName}_${speaker.lastName}"></a>
-                    <div class="col-md-4">
+                    <div class="col-md-4 speakerContainer">
                         <div id="one-third">
                             <c:if test="${speaker.picture != null}">
                                 <img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg"/>
@@ -85,3 +85,18 @@
         </div>
     </div>
 </div>
+
+	<content tag='bottom'>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var container = document.querySelector('#bio');
+				var msnry = new Masonry( container, {
+					columnWidth: 1,
+				  'margin-bottom': '10px',
+				  itemSelector: '.speakerContainer'
+				});
+
+			});
+		</script>
+	</content>
