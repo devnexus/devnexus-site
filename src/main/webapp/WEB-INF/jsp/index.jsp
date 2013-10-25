@@ -55,9 +55,9 @@
 
                 <p>Are you interested in presenting at DevNexus 2014?  Our call for papers is now open.</p>
 
-                <p>Previous topics have included mobile technology, cloud systems, Java updates and programming, alternate JVM languages, agile best practices, web design, and project managment.</p>
+                <p>Previous topics have included mobile technology, cloud systems, Java updates and programming, alternate JVM languages, agile best practices, web design, and project management.</p>
 
-                <p>We are looking for managers, entrpreneurs, developers, and other technologists.  If you know someone who may be interested feel free to drop us a line at info@ajug.org or direct them to our cfp.</p>
+                <p>We are looking for managers, entrepreneurs, developers, and other technologists.  If you know someone who may be interested feel free to drop us a line at info@ajug.org or direct them to our cfp.</p>
                 <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
                 <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
