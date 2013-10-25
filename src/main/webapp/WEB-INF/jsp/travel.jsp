@@ -1,49 +1,40 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2013 - Travel</title>
+<title>DevNexus 2014 - Travel</title>
 
 <div id="map" class="container">
-    <img id="map" src="${ctx}/images/map.jpg">
+	<img id="map" src="${ctx}/images/map.jpg">
 </div>
 
 <div id="travel" class="container">
-    <!-- Example row of columns -->
+	<div class="row">
+		<div id="travelphoto" class="col-md-6">
+			<img src="${ctx}/images/photo1.jpg">
+			<img src="${ctx}/images/photo2.jpg">
+		</div>
+		<div class="col-md-6">
+			<h2>Travel Information</h2>
+			<p>The Cobb Galleria website includes <a href="http://cobbgalleria.com/destination/destinationDirections.aspx">directions to the conference center</a> from several directions as well as
+				the airport.</p>
 
-    <div class="row">
-        <div id="travelphoto" class="col-md-6">
-            <img src="${ctx}/images/photo1.jpg">
-            <img src="${ctx}/images/photo2.jpg">
-        </div>
-        <div class="col-md-6">
-            <h2>Travel Information</h2>
+			<p><a href="http://itsmarta.com/">MARTA</a>, Atlanta's public transportation system,
+				may be used to reach the center, but the nearest bus stop is a few blocks away.</p>
+			<p>The Cobb Galleria is accessible from several nearby hotels:</p>
 
-            <p>The Cobb Galleria website includes directions to the conference center from several directions as well as
-                the airport.</p>
+			<p><strong>Marriott Waverly</strong> is connected to the Center.</p>
 
-            <p>MARTA may be used to reach the center, but the nearest bus stop is a few blocks away.</p>
-
-            <p>The Cobb Galleria is accessible from several nearby hotels:</p>
-
-            <p>Marriott Waverly is connected to the Center.</p>
-
-            <p>We have reserved a block of rooms, providing a special rate of $149 to our attendees. Please use the
-                following link in order to make your hotel reservation:</p>
-
-            <h3>Make a Reservation</h3>
-
-            <p>The group code is devdeva</p>
-            <blockquote>Directions: http://bit.ly/gDzY9N<br/>
-                Site: http://bit.ly/hlU1OO
-            </blockquote>
-            <p>Sheraton Suites is a short walk to the center.</p>
-            <blockquote>Directions: http://bit.ly/fNl2Ol<br/>
-                Site: http://bit.ly/fWkNVC
-            </blockquote>
-            <p>Embassy Suites is also a short walk to the center.</p>
-            <blockquote>Directions: http://bit.ly/fKUADx
-                Site: http://www.atlantagalleria.embassysuites.com
-            </blockquote>
-        </div>
-    </div>
+			<blockquote>Directions: <a href="http://bit.ly/gDzY9N">http://bit.ly/gDzY9N</a><br/>
+				Site: <a href="http://bit.ly/hlU1OO">http://bit.ly/hlU1OO</a>
+			</blockquote>
+			<p><strong>Sheraton Suites</strong> is a short walk to the center.</p>
+			<blockquote>Directions: <a href="http://bit.ly/fNl2Ol">http://bit.ly/fNl2Ol</a><br/>
+				Site: <a href="http://bit.ly/fWkNVC">http://bit.ly/fWkNVC</a>
+			</blockquote>
+			<p><strong>Embassy Suites</strong> is also a short walk to the center.</p>
+			<blockquote>Directions: <a href="http://bit.ly/fKUADx">http://bit.ly/fKUADx</a><br/>
+				Site: <a href="http://www.atlantagalleria.embassysuites.com/">http://www.atlantagalleria.embassysuites.com/</a>
+			</blockquote>
+		</div>
+	</div>
 </div>
