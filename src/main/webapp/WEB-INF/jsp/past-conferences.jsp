@@ -1,5 +1,15 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
+<div id="devnex" class="jumbotron">
+    <div class="container">
+        <div id="banner">
+            <h1 id="gray">DevNexus 2014</h1>
 
+            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
+
+            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
+        </div>
+    </div>
+</div>
 <div class="container" style="margin-bottom:20px">
 <!-- Example row of columns -->
 <c:set var="trackName" value="nill"/>

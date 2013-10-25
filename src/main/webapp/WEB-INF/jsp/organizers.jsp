@@ -1,6 +1,13 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
-
+<div id="devnex" class="jumbotron">
+    <div class="container">
+        <div id="banner">
+            <h1 id="gray">DevNexus 2014</h1>
+            <h1 id="white">Organizers</h1>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div id="speaker2">
         <div id="row">

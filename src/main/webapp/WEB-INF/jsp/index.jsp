@@ -21,6 +21,17 @@
         margin-bottom: 0px;
     }
 </style>
+<div id="devnex" class="jumbotron">
+    <div class="container">
+        <div id="banner">
+            <h1 id="gray">DevNexus 2014</h1>
+
+            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
+
+            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
+        </div>
+    </div>
+</div>
 <div id="yellow" class="jumbotron" style="margin-bottom:0">
     <div class="container">
         <h1 class="center">February 24-25, 2014</h1>

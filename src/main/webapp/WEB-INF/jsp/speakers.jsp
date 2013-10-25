@@ -3,7 +3,19 @@
 <% pageContext.setAttribute("lf", "\n"); %>
 <% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
-<title>DevNexus 2013 - Speakers</title>
+<head>
+	<title><c:out value="${event.title}"/> - Speakers</title>
+</head>
+
+<div id="devnex" class="jumbotron">
+    <div class="container">
+        <div id="banner">
+            <h1 id="gray"><c:out value="${event.title}"/></h1>
+            <h1 id="white">Speakers</h1>
+            <h3>Discover how the industry's best minds use the latest technologies to build solutions.</h3>
+        </div>
+    </div>
+</div>
 
 <c:if test="${speakerList.speakers.size() eq 0}">
     <style>

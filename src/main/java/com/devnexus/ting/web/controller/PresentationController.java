@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,21 +55,21 @@ public class PresentationController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
+	private void preparePresentationsForEvent(Event event, Model model) {
+		model.addAttribute("event", event);
+		final PresentationList presentationList = new PresentationList();
+        List<Presentation> presentations;
+        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
+		presentationList.setPresentations(presentations);
+		model.addAttribute("presentationList", presentationList);
+	}
+
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
 										   final Model model,
 										   final SitePreference sitePreference) {
 		final Event event = businessService.getEventByEventKey(eventKey);
-		model.addAttribute("event", event);
-
-		final PresentationList presentationList = new PresentationList();
-        List<Presentation> presentations;
-        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
-		presentationList.setPresentations(presentations);
-
-
-		model.addAttribute("presentationList", presentationList);
-
+		this.preparePresentationsForEvent(event, model);
 		return "presentations";
 	}
 
@@ -103,14 +103,8 @@ public class PresentationController {
 	@RequestMapping("/presentations")
 	public String getPresentationsForCurrentEvent(final Model model,
 												  final SitePreference sitePreference) {
-
-		final PresentationList presentationList = new PresentationList();
-		presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
-
-
-
-		model.addAttribute("presentationList", presentationList);
-
+		final Event event = businessService.getCurrentEvent();
+		this.preparePresentationsForEvent(event, model);
 		return "presentations";
 	}
 

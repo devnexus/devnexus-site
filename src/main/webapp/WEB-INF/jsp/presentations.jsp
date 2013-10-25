@@ -1,6 +1,20 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
+<head>
+	<title><c:out value="${event.title}"/> - Presentations</title>
+</head>
+
+<div id="devnex" class="jumbotron">
+    <div class="container">
+        <div id="banner">
+            <h1 id="gray"><c:out value="${event.title}"/></h1>
+
+            <h1 id="white">Presentations</h1>
+            <h3>Data + Integration, Java/JavaEE/Spring, HTML5 + JavaScript, Alternative Languages, Cloud, Agile + Tools, Mobile</h3>
+        </div>
+    </div>
+</div>
 
 <c:if test="${presentationList.presentations.isEmpty()}">
     <style>
@@ -30,6 +44,7 @@
     </div>
 </c:if>
 <c:if test="${presentationList.presentations.isEmpty() eq false}">
+
 <div class="container">
 	<!-- Example row of columns -->
 	<c:set var="trackName" value="nill"/>

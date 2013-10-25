@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title><sitemesh:write property='title'/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -66,20 +67,7 @@
     <!-- end headerwrapper -->
 </div>
 <div style="clear: both"></div>
-<div id="devnex" class="jumbotron">
-    <div class="container">
-        <div id="banner">
-            <h1 id="gray">DevNexus 2014</h1>
-
-            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
-
-            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
-        </div>
-    </div>
-</div>
-<!-- end banner -->
 <sitemesh:write property='body'/>
-
 <div style="clear:both;"></div>
 <div id="devnex" class="jumbotron" style="margin-bottom:0">
     <div class="container">
