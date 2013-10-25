@@ -33,7 +33,7 @@
 <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
-<c:url var="registrationUrl" value="${baseSiteUrl}/register"/>
+<c:url var="registrationUrl" value="http://devnexus.eventzilla.net/"/>
 <c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 
