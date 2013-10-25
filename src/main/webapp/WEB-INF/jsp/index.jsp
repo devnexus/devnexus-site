@@ -100,7 +100,7 @@
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
         <h3>Gold Sponsors</h3>
             <a href="http://www.springsource.com/"><img class="logo" alt="SpringSource"
-                                                        src="${ctx}/img/sponsors/SpringSource_VMware.png"/></a>
+                                                        src="${ctx}/img/sponsors/SpringByPivotal_JUG.png"/></a>
             <a href="http://terracotta.org/"><img class="logo" alt="Terracotta" src="${ctx}/img/sponsors/terracotta-logo.png"/></a>
             <a href="https://www.theice.com/careers.jhtml"><img class="logo" alt="ICE" src="${ctx}/img/sponsors/ICE.png"/></a>
             <a href="http://www.compuware.com/apm"><img class="logo" alt="Compuware Corporation"
