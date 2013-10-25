@@ -1,32 +1,36 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
+<div class="jumbotron call" style="margin-bottom:50px">
+	<div class="container">
+		<div id="banner">
+			<h1><strong>Call for Papers 2014!</strong></h1>
+			<h3>Thank you for your interest in DevNexus 2014! We would love to review your session proposals for the South-East's
+				largest developer conference. We are planning to cover a wide variety of topics around: </h3>
+			<ul class="double">
+				<li>Java/JavaEE/Spring</li>
+				<li>HTML5 + JavaScript</li>
+				<li>Data + Integration</li>
+				<li>Alternative Languages on the JVM</li>
+				<li>User Experience</li>
+				<li>Cloud</li>
+				<li>Agile + Tools</li>
+				<li>Mobile</li>
+			</ul>
+		</div> <!-- end banner -->
+	</div>
+</div>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-	<p>
-		Thank you for your interest in DevNexus 2014! We would love to review your
-		session proposals for the South-East's largest developer conference. We are
-		planning to cover a wide variety of topics around:
-	</p>
-	<ul>
-		<li>Java/JavaEE/Spring</li>
-		<li>HTML5 + JavaScript</li>
-		<li>Data + Integration</li>
-		<li>User Experience</li>
-		<li>Alternative Languages on the JVM</li>
-		<li>Cloud</li>
-		<li>Agile + Tools</li>
-		<li>Mobile</li>
-	</ul>
 
 	<spring:bind path="cfpSubmission.*">
-	    <c:if test="${not empty status.errorMessages}">
-	        <div class="alert alert-error fade in">
-	            <a href="#" data-dismiss="alert" class="close">&times;</a>
-	            <c:forEach var="error" items="${status.errorMessages}">
-	                <c:out value="${error}" escapeXml="false"/><br/>
-	            </c:forEach>
-	        </div>
-	    </c:if>
+		<c:if test="${not empty status.errorMessages}">
+			<div class="alert alert-danger fade in"
+				><a href="#" data-dismiss="alert" class="close">&times;</a>
+				<c:forEach var="error" items="${status.errorMessages}"
+					><c:out value="${error}" escapeXml="false"/><br/>
+				</c:forEach>
+			</div>
+		</c:if>
 	</spring:bind>
 
 	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
@@ -98,9 +102,9 @@
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
 		<div class="form-group${errorClass}">
-			<label for="bio" class="col-lg-2 control-label">Bio*</label>
+			<label for="biotext" class="col-lg-2 control-label">Bio*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="bio" id="bio" tabindex="6" rows="10"/>
+				<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="6" rows="10"/>
 				<form:errors path="bio" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -250,7 +254,7 @@
 		<div class="form-group${errorClass}">
 			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="slotPreference" id="bio" tabindex="17" rows="5"/>
+				<form:textarea cssClass="form-control" path="slotPreference" id="slotPreference" tabindex="17" rows="5"/>
 				<form:errors path="slotPreference" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -267,6 +271,8 @@
 				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
 			</div>
 		</div>
+
+		<p>Fields denoted with * are mandatory.
 	</form:form>
 	</div>
 </div>
@@ -274,14 +280,6 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
-
-
-				$('#lastName').popover({
-					  placement: 'right',
-					  offset: 20,
-					  trigger: 'manual',
-						  content: 'asdasdasdasd'
-					});
 			});
 		</script>
 	</content>
