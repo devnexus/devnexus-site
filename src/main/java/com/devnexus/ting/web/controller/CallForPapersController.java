@@ -143,7 +143,7 @@ public class CallForPapersController {
 			ReCaptchaResponse reCaptchaResponse = reCaptcha.checkAnswer(remoteAddr, challenge, uresponse);
 
 			if (!reCaptchaResponse.isValid()) {
-				ObjectError error = new ObjectError("error","Please insert the correct CAPCHA.");
+				ObjectError error = new ObjectError("error","Please insert the correct CAPTCHA.");
 				bindingResult.addError(error);
 				prepareReferenceData(model);
 				return "/cfp";
