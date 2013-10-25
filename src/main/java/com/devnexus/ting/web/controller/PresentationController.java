@@ -16,9 +16,12 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.devnexus.ting.core.model.Presentation;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,7 +63,9 @@ public class PresentationController {
 		model.addAttribute("event", event);
 
 		final PresentationList presentationList = new PresentationList();
-		presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
+        List<Presentation> presentations;
+        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
+		presentationList.setPresentations(presentations);
 
 
 		model.addAttribute("presentationList", presentationList);
