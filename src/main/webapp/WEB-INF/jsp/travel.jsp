@@ -9,9 +9,9 @@
 
 <div id="travel" class="container">
 	<div class="row">
-		<div id="travelphoto" class="col-md-6">
-			<img src="${ctx}/images/photo1.jpg">
-			<img src="${ctx}/images/photo2.jpg">
+		<div id="travelphoto" class="col-md-6 hidden-xs hidden-sm">
+			<img src="${ctx}/images/photo3.jpg">
+			<img src="${ctx}/images/photo4.jpg">
 		</div>
 		<div class="col-md-6">
 			<h2>Travel Information</h2>
@@ -35,6 +35,10 @@
 			<blockquote>Directions: <a href="http://bit.ly/fKUADx">http://bit.ly/fKUADx</a><br/>
 				Site: <a href="http://www.atlantagalleria.embassysuites.com/">http://www.atlantagalleria.embassysuites.com/</a>
 			</blockquote>
+		</div>
+		<div id="travelphoto" class="col-md-6 visible-xs visible-sm">
+			<img src="${ctx}/images/photo3.jpg">
+			<img src="${ctx}/images/photo4.jpg">
 		</div>
 	</div>
 </div>
