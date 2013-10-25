@@ -14,6 +14,12 @@ div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	div#yellow.jumbotron h2 {font-size: 22px;font-weight: bold;}
 	div#yellow.jumbotron a.btn {margin: 25px auto 15px;}
 
+div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align: center}
+    div.red.jumbotron h1 {color: #fff;font-size: 50px;font-weight: bold;}
+    div.red.jumbotron h2 {font-size: 22px;font-weight: bold;}
+    div.red.jumbotron a.btn {margin: 25px auto 15px;}
+
+
 .navbar-nav li{font-size: 16px;}
 
 #map.container {text-align: center;}
