@@ -1,6 +1,35 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
+
+<c:if test="${presentationList.presentations.isEmpty()}">
+    <style>
+        .jumbotron {
+            margin-bottom: 0px;
+        }
+    </style>
+    <div class="red jumbotron" style="margin-bottom:0">
+        <div class="container">
+            <h1>Presentations are still coming in.</h1>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        We are currently accepting topics from leaders, builders, thinkers and doers in our field and will be updating our speakers list as soon as we have our initial lineup.
+                    </p>
+                    <p>
+                        Perhaps you have a technology you are passionate about or some bit of wisdom to share?  If so submit an abstract and our organizers will review it and let you know what we think.
+                    </p>
+                    <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
+
+                    <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</c:if>
+<c:if test="${presentationList.presentations.isEmpty() eq false}">
 <div class="container">
 	<!-- Example row of columns -->
 	<c:set var="trackName" value="nill"/>
@@ -9,7 +38,7 @@
 			<c:if test="${trackName ne presentation.room.name}">
 				<c:set var="trackName" value="${presentation.room.name}"/>
 				<c:if test="${!status.first}">
-						</div>
+				    </div>
 					</div>
 				</c:if>
 				<h1 class="${presentation.room.cssStyleName}"><strong>${presentation.room.name}</strong><br/>Workshop</h1>
@@ -92,3 +121,4 @@
 		});
 	</script>
 </content>
+</c:if>

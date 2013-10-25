@@ -153,6 +153,7 @@
 <script src="${ctx}/js/jquery.js"></script>
 <script src="${ctx}/js/bootstrap.min.js"></script>
 <script src="${ctx}/js/masonry.pkgd.js"></script>
+<script src="${ctx}/js/imagesloaded.pkgd.min.js"></script>
 
 <sitemesh:write property='page.bottom'/>
 </body>

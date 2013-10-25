@@ -5,6 +5,34 @@
 
 <title>DevNexus 2013 - Speakers</title>
 
+<c:if test="${speakerList.speakers.size() eq 0}">
+    <style>
+        .jumbotron {
+            margin-bottom: 0px;
+        }
+    </style>
+    <div class="red jumbotron" style="margin-bottom:0">
+        <div class="container">
+            <h1>Speakers are still coming in.</h1>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        We are currently accepting topics from leaders, builders, thinkers and doers in our field and will be updating our speakers list as soon as we have our initial lineup.
+                    </p>
+                    <p>
+                        Perhaps you have a technology you are passionate about or some bit of wisdom to share?  If so submit an abstract and our organizers will review it and let you know what we think.
+                    </p>
+                    <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
+
+                    <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</c:if>
+<c:if test="${speakerList.speakers.isEmpty() eq false}">
 <div class="container">
     <div id="speaker2">
         <div id="row">
@@ -31,8 +59,8 @@
                     <c:if test="${status.index%3 == 0}">
                         <br style="clear: both;"/>
                     </c:if>
-                    <a style="padding-top: 100px" id="${speaker.firstName}_${speaker.lastName}" name="${speaker.firstName}_${speaker.lastName}"></a>
                     <div class="col-md-4 speakerContainer">
+                        <a style="padding-top: 100px; margin-top:-100px" id="${speaker.firstName}_${speaker.lastName}" name="${speaker.firstName}_${speaker.lastName}"></a>
                         <div id="one-third">
                             <c:if test="${speaker.picture != null}">
                                 <img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg"/>
@@ -90,13 +118,30 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 
-				var container = document.querySelector('#bio');
-				var msnry = new Masonry( container, {
-					columnWidth: 1,
-				  'margin-bottom': '10px',
-				  itemSelector: '.speakerContainer'
-				});
+                // or with jQuery
+                var $container = $('#bio');
+                var msnry;
+                // initialize Masonry after all images have loaded
+                $container.imagesLoaded( function() {
+                    msnry = $container.masonry({
+                        columnWidth: 'div.speakerContainer',
+                        'margin-bottom': '10px',
+                        itemSelector: '.speakerContainer',
+                        isResizable: true
+                } );
+                });
 
+                $( window).resize(function() {
+                  window.setTimeout(function(){
+                      $container.masonry({
+                          columnWidth: 'div.speakerContainer',
+                          'margin-bottom': '10px',
+                          itemSelector: '.speakerContainer',
+                          isResizable: true
+                      } );
+                  }, 1000)
+                });
 			});
 		</script>
 	</content>
+</c:if>
