@@ -89,6 +89,10 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 	#schedule #one-fourth.track-5 {background-color:#297ca5}
 	#schedule #one-fourth.track-6 {background-color:#d14928}
 	#schedule #one-fourth.track-7 {background-color:#455159}
+    #schedule #one-fourth.track-8 {background-color:#A2285E}
+    #schedule #one-fourth.track-9 {background-color:#FF5D40}
+    #schedule #one-fourth.track-10 {background-color:#6A237E}
+    #schedule #one-fourth.track-11 {background-color:#589800}
 
 .presentation h3, #container #presentation p {color: #fff; margin: 15px 0;}
 .presentation h3 {font-size: 18px;}
@@ -101,6 +105,11 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 .presentation .track-5 {background-color:#297ca5}
 .presentation .track-6 {background-color:#d14928}
 .presentation .track-7 {background-color:#455159}
+.presentation .track-8 {background-color:#A2285E}
+.presentation .track-9 {background-color:#FF5D40}
+.presentation .track-10 {background-color:#6A237E}
+.presentation .track-11 {background-color:#589800}
+
 
 
 #speaker2 {}
