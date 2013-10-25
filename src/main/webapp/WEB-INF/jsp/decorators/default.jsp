@@ -127,7 +127,7 @@
             <div class="col-md-3">
                 <img id="logo" src="${devnexusLogoUrl}" border="0">
 
-                <p id="copy">&copy; 2008-2014 Atlanta Java Users Group (AJUG)</p>
+                <p id="copy">&copy; 2008-2014 <a href="http://ajug.org">Atlanta Java Users Group (AJUG)</a></p>
             </div>
         </div>
 
