@@ -176,16 +176,32 @@
 
 <content tag='bottom'>
 	<script type="text/javascript">
-		$(document).ready(function() {
+        $(document).ready(function() {
 
-			var container = document.querySelector('#bio');
-			var msnry = new Masonry( container, {
-				columnWidth: 1,
-				'margin-bottom': '10px',
-				itemSelector: '.speakerContainer'
-			});
+            // or with jQuery
+            var $container = $('#bio');
+            var msnry;
+            // initialize Masonry after all images have loaded
+            $container.imagesLoaded( function() {
+                msnry = $container.masonry({
+                    columnWidth: 'div.speakerContainer',
+                    'margin-bottom': '10px',
+                    itemSelector: '.speakerContainer',
+                    isResizable: true
+                } );
+            });
 
-		});
+            $( window).resize(function() {
+                window.setTimeout(function(){
+                    $container.masonry({
+                        columnWidth: 'div.speakerContainer',
+                        'margin-bottom': '10px',
+                        itemSelector: '.speakerContainer',
+                        isResizable: true
+                    } );
+                }, 1000)
+            });
+        });
 	</script>
 </content>
 </c:if>
