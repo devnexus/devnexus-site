@@ -257,9 +257,24 @@ public final class SystemInformationUtils {
 		}
 	}
 
-	public static String getCfpEmailTemplate() {
+	public static String getCfpTextEmailTemplate() {
 
-		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-email-html.md");
+		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-email.txt");
+
+		final String template;
+
+		try {
+			template = IOUtils.toString(is, Charset.forName("UTF-8"));
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+		return template;
+	}
+
+	public static String getCfpHtmlEmailTemplate() {
+
+		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-email.html");
 
 		final String template;
 

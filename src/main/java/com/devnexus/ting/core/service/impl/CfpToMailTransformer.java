@@ -3,15 +3,11 @@ package com.devnexus.ting.core.service.impl;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-import org.pegdown.PegDownProcessor;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.stringtemplate.v4.ST;
 
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.common.TingUtil;
 import com.devnexus.ting.core.model.CfpSubmission;
 
 public class CfpToMailTransformer {
@@ -25,23 +21,17 @@ public class CfpToMailTransformer {
 
 	public MimeMessage prepareMailToSpeaker(CfpSubmission cfpSubmission) {
 
-		String template = SystemInformationUtils.getCfpEmailTemplate();
-		String renderedTemplate = applyStringTemplate(cfpSubmission, template);
+		String templateHtml = SystemInformationUtils.getCfpHtmlEmailTemplate();
+		String templateText = SystemInformationUtils.getCfpTextEmailTemplate();
 
-		PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
-
-		String messageText = markdownProcessor.markdownToHtml(renderedTemplate);
-
-		StringBuilder sb = new StringBuilder();
-		sb.append("<html><body>");
-		sb.append(messageText);
-		sb.append("</body></html>");
+		String renderedHtmlTemplate = applyStringTemplate(cfpSubmission, templateHtml);
+		String renderedTextTemplate = applyStringTemplate(cfpSubmission, templateText);
 
 		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
 		MimeMessageHelper messageHelper;
 		try {
 			messageHelper = new MimeMessageHelper(mimeMessage, true);
-			messageHelper.setText(renderedTemplate, sb.toString());
+			messageHelper.setText(renderedTextTemplate, renderedHtmlTemplate);
 
 			messageHelper.setFrom(fromUser);
 			messageHelper.setTo(cfpSubmission.getEmail());
@@ -56,7 +46,7 @@ public class CfpToMailTransformer {
 	}
 
 	public String applyStringTemplate(CfpSubmission cfpSubmission, String template) {
-		ST stringTemplate = new ST(template);
+		ST stringTemplate = new ST(template, '~', '~');
 
 		stringTemplate.add("firstName", cfpSubmission.getFirstName());
 		stringTemplate.add("lastName", cfpSubmission.getLastName());

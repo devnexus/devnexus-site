@@ -15,25 +15,18 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.integration.MessageChannel;
-import org.springframework.integration.support.MessageBuilder;
+import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.core.service.SystemSetupService;
 
 /**
  * Base class for Dao Test Cases.
@@ -43,6 +36,7 @@ import com.devnexus.ting.core.service.SystemSetupService;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
+@ActiveProfiles({"mail-enabled"})
 public class CfpToMailTransformerTests {
 
 	@Autowired
@@ -52,7 +46,7 @@ public class CfpToMailTransformerTests {
 	public void transform() throws InterruptedException {
 
 		CfpSubmission cfpSubmission = new CfpSubmission();
-		String template = SystemInformationUtils.getCfpEmailTemplate();
+		String template = SystemInformationUtils.getCfpHtmlEmailTemplate();
 		cfpSubmission.setBio("This is my great **bio**.");
 		cfpSubmission.setDescription("My *abstract* rocks!");
 		cfpSubmission.setEmail("speaker@devnexus.com");
