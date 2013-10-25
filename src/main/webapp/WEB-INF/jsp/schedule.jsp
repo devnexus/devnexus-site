@@ -6,8 +6,18 @@
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 <head>
-    <title>DevNexus 2013 - Schedule</title>
+	<title>DevNexus 2014 - Schedule</title>
 </head>
+<div id="devnex" class="jumbotron">
+	<div class="container">
+			<div id="banner">
+			<h1 id="gray">DevNexus 2014</h1>
+			<h1 id="white">Schedule</h1>
+			<h3>1000+ Developers, 10 tracks, 100 Presentations, 2 Days</h3>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 
     <c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
@@ -110,11 +120,6 @@
                     </div>
                 </c:if>
             </c:forEach>
-
         </div>
-
-
     </c:forEach>
-
-
 </div>

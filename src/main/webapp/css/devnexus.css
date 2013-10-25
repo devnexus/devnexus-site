@@ -8,6 +8,13 @@ background-color: #0C1620;
 border-color: #080808;
 }
 
+
+ul.double {
+	margin: 0 auto 20px;
+	overflow: hidden;
+}
+ul.double li { width: 50%; float: left;}
+
 div#devnex.jumbotron {background-color: #0C1620; color: #fff; text-align: center;}
 div#yellow.jumbotron {background: #f7cb59; font-size: 16px;}
 	div#yellow.jumbotron h1 {color: #fff;font-size: 50px;font-weight: bold;}
@@ -19,6 +26,11 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
     div.red.jumbotron h2 {font-size: 22px;font-weight: bold;}
     div.red.jumbotron a.btn {margin: 25px auto 15px;}
 
+.jumbotron.call {background: transparent url('../images/call_bg.jpg') no-repeat top left; background-size:cover;}
+	.jumbotron.call #banner h1 {color: #000;text-align: center;}
+	.jumbotron.call #banner h3 {color: #455159; line-height: 180%; text-align: center; margin: 20px auto;}
+		.jumbotron.call #banner ul.double {width: 580px; list-style: disc inside none}
+		.jumbotron.call #banner ul.double li  {font-size: 12pt; color: #455159; padding-left: 15px; }
 
 .navbar-nav li{font-size: 16px;}
 
@@ -110,8 +122,6 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 .presentation .track-10 {background-color:#6A237E}
 .presentation .track-11 {background-color:#589800}
 
-
-
 #speaker2 {}
 	#speaker2 p{color: #fd8c2a; font-weight: bold; text-align: center;}
 
@@ -129,6 +139,17 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 	#bio #one-third #social ul li#rss a{background:transparent url('../images/rss.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third p {color: #455159}
 
+.subsuccess {padding: 50px 15%; text-align: center; color: #455159; min-height: 700px }
+		.subsuccess h3.green {color: #44b75c}
+		.subsuccess p {margin: 25px 0;}
+
+.container.eval {padding: 50px 15%; text-align: center; color: #455159; min-height: 700px}
+			.container.eval form {width: 70%; margin: 60px auto;}
+			.container.eval form .form-group {margin-bottom: 50px;}
+			.container.eval form h3 {font-weight: normal; margin-bottom: 15px;}
+				label.radio-inline2 {margin-right: 10px;font-weight: normal}
+				label.radio-inline3 {margin-left: 0px; font-weight: normal}
+					
 #footer	{padding: 20px 0 30px}
 	#footer.footer-inverse {	background-color: #0C1620;border-color: #080808}
 	#footer h3 {color: #fff; margin: 10px 0; font-size: 17px}

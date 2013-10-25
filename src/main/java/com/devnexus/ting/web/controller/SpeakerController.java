@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,34 +51,26 @@ public class SpeakerController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
-
 	@RequestMapping(value="/speakers", method = RequestMethod.GET)
 	public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference, @RequestParam(value="image", defaultValue="false") boolean image) {
-		SpeakerList speakers = new SpeakerList();
-		speakers.setSpeakers(businessService.getSpeakersForCurrentEvent());
-        model.addAttribute("headerTitle", "Speakers");
-        model.addAttribute("tag", "Discover how the industry's best minds use the latest technologies to build solutions.");
-
-        model.addAttribute("speakerList",speakers);
-        model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
-
+		Event currentEvent = businessService.getCurrentEvent();
+		prepareSpeakers(currentEvent, model);
 		return "speakers";
 	}
 
 	@RequestMapping("/{eventKey}/speakers")
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
 		final Event event = businessService.getEventByEventKey(eventKey);
+		prepareSpeakers(event, model);
+		return "speakers";
+	}
+
+	private void prepareSpeakers(Event event, Model model) {
 		model.addAttribute("event", event);
-        model.addAttribute("headerTitle", "Speakers");
-        model.addAttribute("tag", "Discover how the industry's best minds use the latest technologies to build solutions.");
-
-
-        SpeakerList speakers = new SpeakerList();
+		SpeakerList speakers = new SpeakerList();
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
 		model.addAttribute("speakerList",speakers);
-        model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
-
-		return "speakers";
+		model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
 	}
 
 	@RequestMapping(value="/speakers/{speakerId}.jpg", method=RequestMethod.GET)
