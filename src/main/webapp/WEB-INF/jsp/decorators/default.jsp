@@ -86,6 +86,7 @@
                             <li><a href="${ctx}/s/index">About DN</a></li>
                             <li><a href="${organizersUrl}">Organizers</a></li>
                             <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
+                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship (Pdf)</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -104,10 +105,13 @@
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h3>DevNexus 2014</h3>
+                        <h3>Stay Connected</h3>
                         <ul id="col">
-                            <li><a href="https://facebook.com/devnexus">Facebook</a></li>
-                            <li><a href="https://twitter.com/devnexus">Twitter</a></li>
+                            <li><a href="<c:url value="/s/social"/>">Social</a></li>
+                            <ul id="col">
+                                <li><a href="https://facebook.com/devnexus">Facebook</a></li>
+                                <li><a href="https://twitter.com/devnexus">Twitter</a></li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
