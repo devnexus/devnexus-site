@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.common;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -29,9 +28,24 @@ import org.pegdown.PegDownProcessor;
 public class SystemInformationUtilsTests {
 
 	@Test
-	public void testGetCfpEmailTemplate() {
+	public void testGetHtmlCfpEmailTemplate() {
 
-		String template = SystemInformationUtils.getCfpEmailTemplate();
+		String template = SystemInformationUtils.getCfpHtmlEmailTemplate();
+		assertNotNull(template);
+
+		PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
+		assertNotNull(markdownProcessor);
+
+		String resultingHtml = markdownProcessor.markdownToHtml(template);
+
+		assertNotNull(resultingHtml);
+
+	}
+
+	@Test
+	public void testGetTextCfpEmailTemplate() {
+
+		String template = SystemInformationUtils.getCfpTextEmailTemplate();
 		assertNotNull(template);
 
 		PegDownProcessor markdownProcessor = TingUtil.getMarkDownProcessor();
