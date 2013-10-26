@@ -65,6 +65,11 @@
                                             value='${organizer.googlePlusId}' />"
                                                 src="${ctx}/img/icons/icondock/24px/google-plus.png"/></a></li>
                                     </c:if>
+
+                                    <c:if test="${!empty organizer.linkedInId}">
+                                        <li id="linkedin"><a
+                                                href="http://www.linkedin.com/in/<c:out value="${organizer.linkedInId}" />">LinkedIn</a></li>
+                                    </c:if>
                                 </ul>
                             </div>
 
