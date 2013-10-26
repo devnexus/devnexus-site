@@ -204,13 +204,13 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/twitter", method=RequestMethod.GET)
+	@RequestMapping(value="/social", method=RequestMethod.GET)
 	public String getTwitterFeed(Model model) {
 
 		final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
 		model.addAttribute("tweets", tweets);
 
-		return "twitter-feed-mobile";
+		return "social";
 
 	}
 
