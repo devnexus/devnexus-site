@@ -96,6 +96,7 @@ public class CfpToMailTransformer {
 		stringTemplate.add("presentationType", cfpSubmission.getPresentationType().getName());
 		stringTemplate.add("skillLevel", cfpSubmission.getSkillLevel().getName());
 		stringTemplate.add("comments", cfpSubmission.getSlotPreference());
+		stringTemplate.add("topic", cfpSubmission.getTopic());
 		stringTemplate.add("title", cfpSubmission.getTitle());
 		stringTemplate.add("tshirtSize", cfpSubmission.getTshirtSize());
 		stringTemplate.add("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");

@@ -23,6 +23,7 @@ We received your information and will review your submission as soon as possible
 
 ~description~
 
+**Topic**: ~topic~
 **Skill Level**: ~skillLevel~
 **Presentation Type**: ~presentationType~
 
