@@ -58,9 +58,9 @@
 			</div>
 		</div>
 		<p>
-			Please provide contact some information. We will use primarily email between
+			Please provide some contact information. We will use primarily email between
 			now and the conference. However, on the days of the conference, it is important
-			that we can reach you via cell phone, just in case emergencies arise
+			that we can reach you via cell phone, just in case emergencies arise.
 		</p>
 
 		<spring:bind path="cfpSubmission.email">
@@ -78,25 +78,23 @@
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
 		<div class="form-group${errorClass}">
-			<label for="phone" class="col-lg-2 control-label">Phone*</label>
+			<label for="phone" class="col-lg-2 control-label">Cell Phone*</label>
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="phone" id="phone" tabindex="4"/>
 				<form:errors path="phone" cssClass="fieldError"/>
+				<span class="help-block">In case we need to urgently reach you during the conference.</span>
 			</div>
 		</div>
 		<p>
 			Please submit a decent sized picture. We will add it to the conference site.
 		</p>
-
 		<div class="form-group">
 			<label for="pictureFile" class="col-lg-2 control-label">Picture*</label>
 			<div class="col-lg-10">
 				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="5"/>
+				<span class="help-block">The absolute minimum size of the picture should be 100px x 133px.</span>
 			</div>
 		</div>
-		<p><a href="http://daringfireball.net/projects/markdown/" target="_blank">
-			Markdown</a> is supported for the bio.
-		</p>
 
 		<spring:bind path="cfpSubmission.bio">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -104,8 +102,10 @@
 		<div class="form-group${errorClass}">
 			<label for="biotext" class="col-lg-2 control-label">Bio*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="6" rows="10"/>
+				<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="6" rows="10" maxlength="10000"/>
 				<form:errors path="bio" cssClass="fieldError"/>
+				<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
+				Markdown</a> is supported for the bio.</span>
 			</div>
 		</div>
 
@@ -119,9 +119,6 @@
 				<form:errors path="title" cssClass="fieldError"/>
 			</div>
 		</div>
-		<p><a href="http://daringfireball.net/projects/markdown/" target="_blank">
-			Markdown</a> is supported for the abstract.
-		</p>
 
 		<spring:bind path="cfpSubmission.description">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -129,13 +126,12 @@
 		<div class="form-group${errorClass}">
 			<label for="description" class="col-lg-2 control-label">Abstract*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8" rows="10"/>
+				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8" rows="10" maxLength="10000"/>
 				<form:errors path="description" cssClass="fieldError"/>
+				<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
+				Markdown</a> is supported for the abstract.</span>
 			</div>
 		</div>
-		<p>
-			For example: Java/JavaEE/Spring, Data, HTML5, Agile, Mobile, Cloud ...
-		</p>
 
 		<spring:bind path="cfpSubmission.topic">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -145,9 +141,10 @@
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="topic" id="topic" tabindex="9"/>
 				<form:errors path="topic" cssClass="fieldError"/>
+				<span class="help-block">For example: Java/JavaEE/Spring, Data, HTML5, Agile, Mobile, Cloud ...</span>
 			</div>
 		</div>
-		<p style="clear: left;">Please help us classify your presentation</p>
+		<p style="clear: left;">Please help us classify your presentation.</p>
 
 		<spring:bind path="cfpSubmission.skillLevel">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -191,6 +188,7 @@
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="12"/>
 				<form:errors path="twitterId" cssClass="fieldError"/>
+				<span class="help-block">Please provide just the Twitter ID, not a URL.</span>
 			</div>
 		</div>
 
@@ -202,6 +200,7 @@
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="13"/>
 				<form:errors path="googlePlusId" cssClass="fieldError"/>
+				<span class="help-block">Please provide just the Google Plus ID, not a URL, e.g.: 104285850599215045327</span>
 			</div>
 		</div>
 
@@ -213,6 +212,7 @@
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="14"/>
 				<form:errors path="linkedInId" cssClass="fieldError"/>
+				<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
 			</div>
 		</div>
 		<h3 style="clear: left;">Miscellaneous</h3>
@@ -226,6 +226,7 @@
 			<div class="col-lg-10">
 				<form:input cssClass="form-control" path="tshirtSize" id="tshirtSize" tabindex="15"/>
 				<form:errors path="tshirtSize" cssClass="fieldError"/>
+				<span class="help-block">E.g. S, M, L etc.</span>
 			</div>
 		</div>
 
@@ -254,8 +255,9 @@
 		<div class="form-group${errorClass}">
 			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="slotPreference" id="slotPreference" tabindex="17" rows="5"/>
+				<form:textarea cssClass="form-control" path="slotPreference" id="slotPreference" tabindex="17" rows="5" maxLength="1000"/>
 				<form:errors path="slotPreference" cssClass="fieldError"/>
+				<span class="help-block">E.g. Can you only present on one day or have other time-contraints?...</span>
 			</div>
 		</div>
 		<c:if test="${reCaptchaEnabled}">
@@ -276,10 +278,18 @@
 	</form:form>
 	</div>
 </div>
-	<content tag='bottom'>
+<content tag='bottom'>
+
+		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
 		<script type="text/javascript">
+
 			$(document).ready(function() {
 				$("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
+
+				$('textarea').maxlength({
+					alwaysShow: true
+				});
+
 			});
 		</script>
-	</content>
+</content>
