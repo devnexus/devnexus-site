@@ -24,12 +24,13 @@
 		<bean id="cfpToMailTransformer" class="com.devnexus.ting.core.service.impl.CfpToMailTransformer">
 			<property name="mailSender" ref="mailSender"/>
 			<property name="fromUser" value="${mail.user.from}"/>
+			<property name="ccUser" value="${mail.user.cc}"/>
 		</bean>
 
 		<int:transformer id="prepareMailToSpeaker"
 			input-channel="mailChannel"
 			output-channel="sendMailChannel"
-			ref="cfpToMailTransformer">
+			ref="cfpToMailTransformer" method="prepareMailToSpeaker">
 			<int:poller fixed-rate="1000" error-channel="errorChannel"/>
 		</int:transformer>
 
