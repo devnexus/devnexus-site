@@ -110,6 +110,11 @@
     <div>
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
         <h3>Gold Sponsors</h3>
+            <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
+                                                   src="${ctx}/img/sponsors/inBloom.png"/></a>
+            <a href="http://www.compuware.com//"><img class="logo" alt="Compuware"
+                                                   src="${ctx}/img/sponsors/compuware.png"/></a>
+
         </div>
     </div>
     <div id="silver" style="max-width: 768px;margin-left:auto;margin-right:auto;">
@@ -122,8 +127,7 @@
 
         <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
                                                 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
-        <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
-                                                src="${ctx}/img/sponsors/inBloom.png"/></a>
+
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
         <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs" src="${ctx}/img/sponsors/altisource.png"/></a>
         <a href="http://www.aspose.com/"><img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/></a>
