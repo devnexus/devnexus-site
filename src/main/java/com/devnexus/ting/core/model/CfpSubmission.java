@@ -36,6 +36,8 @@ import com.devnexus.ting.common.TingUtil;
 /**
  * Represents a Call for Papers Submission.
  *
+ * @author Gunnar Hillert
+ *
  */
 @Entity
 @XmlRootElement

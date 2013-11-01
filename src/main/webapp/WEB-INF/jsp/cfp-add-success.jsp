@@ -1,18 +1,26 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<div id="content" class="span-22 prepend-top last ">
+<title>Submission Success - DevNexus 2014</title>
 
-	<h2>Call for Papers 2014!</h2>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
 
-	<p>Thank you for your interest in presenting at Devnexus!</p>
-	<p>Shortly you should receive and email confirming that we received your information.</p>
-	<p>We will review your submission as soon as possible and contact you once you
-	are accepted or not. If you have any questions or if you need to update some of your information, please don't hesitate to contact us at <strong>info at ajug dot org</strong></p>
-	<div class="submit">
-		<p style="text-align: center;"><a href="${ctx}${baseSiteUrl}/index" class="button" style="margin: 10px auto 10px auto;">Continue</a>
+	<div id="" class="container subsuccess">
+		<div class="row">
+		<img src="<c:url value="/images/check-mark.jpg"/>" border="0">
+
+		<h3 class="green">Your submission has been added successfully!</h3>
+		<h3><strong>Thank you for your interest in DevNexus 2014!</strong><br />
+			We look forward to reviewing your session proposals for the South-East's largest developer conference.</h3>
+		<p>Shortly you should receive and email confirming that we received your information.</p>
+		<p>We will review your submission as soon as possible and contact you once you
+		are accepted or not. If you have any questions or if you need to update some of
+		your information, please don't hesitate to contact us at:</p>
+		<p><strong>info at ajug dot org</strong></p>
+
+		<p><a href="${ctx}${baseSiteUrl}/index" class="btn btn-default">Continue</a></p>
+
+		</div>
 	</div>
-
-	<content tag='bottom'>
-
-	</content>
 </div>
+

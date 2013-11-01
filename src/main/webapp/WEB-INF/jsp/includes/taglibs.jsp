@@ -17,15 +17,13 @@ response.setHeader("Expires","0");
 <%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
 
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
-<c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
 
+<c:if test="${event ne null}">
+    <c:set var="siteUrl" value="${ctx}${baseSiteUrl}/${event.eventKey}"/>
+</c:if>
+<c:if test="${event eq null}">
+    <c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
+</c:if>
 <head>
-    <c:choose>
-        <c:when test="${currentSitePreference.mobile}">
-            <meta name="decorator" content="mobile"/>
-        </c:when>
-        <c:otherwise>
-            <meta name="decorator" content="default"/>
-        </c:otherwise>
-    </c:choose>
+    <meta name="decorator" content="default"/>
 </head>

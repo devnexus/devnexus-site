@@ -68,10 +68,6 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 
 	@XmlAttribute
 	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
-	private Date updateDate;
-
-	@XmlAttribute
-	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
 	private Date lastLoginDate;
 
 	//~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -149,20 +145,6 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 	 */
 	public void setRegistrationDate(Date registrationDate) {
 		this.registrationDate = registrationDate;
-	}
-
-	/**
-	 * @return the updateDate
-	 */
-	public Date getUpdateDate() {
-		return updateDate;
-	}
-
-	/**
-	 * @param updateDate the updateDate to set
-	 */
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
 	}
 
 	/**

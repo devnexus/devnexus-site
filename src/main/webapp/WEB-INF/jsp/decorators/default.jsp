@@ -1,159 +1,152 @@
-<%@include file="/WEB-INF/jsp/includes/taglibs-decorators.jsp"%>
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline manifest="${ctx}/s/appcache.manifest" -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<%@include file="/WEB-INF/jsp/includes/taglibs-decorators.jsp" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+	<title><sitemesh:write property='title'/></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="${ctx}/assets/ico/favicon.png">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Bootstrap core CSS -->
+    <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
 
-  <title><sitemesh:write property='title' default="DevNexus 2013 Atlanta"/></title>
-  <meta name="description" content="The professional developer conference of the Atlanta Java Users Group">
-  <meta name="author" content="Gunnar Hillert">
-
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <link rel="stylesheet" href="${ctx}/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" href="${ctx}/css/rateit/rateit.css" media="screen, projection" />
+    <!-- Custom styles for this template -->
+    <link href="${ctx}/css/devnexus.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="${ctx}/js/html5shiv.js"></script>
+    <script src="${ctx}/js/respond.min.js"></script>
     <![endif]-->
-
-  <!-- JavaScript -->
-  <script src="${ctx}/js/header.js"></script>
-
-  <!-- For iPhone 4 -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${ctx}/apple-touch-icon.png">
-  <!-- For iPad 1-->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${ctx}/apple-touch-icon.png">
-  <!-- For iPhone 3G, iPod Touch and Android -->
-  <link rel="apple-touch-icon-precomposed" href="${ctx}/apple-touch-icon-precomposed.png">
-  <!-- For Nokia -->
-  <link rel="shortcut icon" href="${ctx}/apple-touch-icon.png">
-  <!-- For everything else -->
-  <link rel="shortcut icon" href="${ctx}/favicon.ico">
-
-  <!--iOS. Delete if not required -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-startup-image" href="${ctx}/img/splash.png">
-
-  <!--Microsoft. Delete if not required -->
-  <meta http-equiv="cleartype" content="on">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <sitemesh:write property='head'/>
+    <sitemesh:write property='head'/>
 </head>
-
+<style>
+    div#banner {
+        padding-top: 20px;
+    }
+</style>
 <body>
 
-    <div class="container devnexus-logo">
-        <header>
-            <h1>2014</h1>
-          <nav>
-              <ul id="menu">
-                <c:url var="homeUrl"          value="${baseSiteUrl}/index"/>
-                <c:url var="speakersUrl"      value="${baseSiteUrl}/speakers"/>
-                <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
-                <c:url var="scheduleUrl"      value="${baseSiteUrl}/schedule"/>
-                <c:url var="organizersUrl"    value="${baseSiteUrl}/organizers"/>
-                <c:url var="travelUrl"        value="${baseSiteUrl}/travel"/>
+<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
+<c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
+<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
+<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
+<c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+<c:url var="registrationUrl" value="http://devnexus.eventzilla.net/"/>
+<c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
+<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 
-                <li><a href="${homeUrl}"><span>Home</span></a></li>
-                <li><a href="${speakersUrl}"><span>Speakers</span></a></li>
-                <li><a href="${presentationsUrl}"><span>Presentations</span></a></li>
-                <li><a href="${scheduleUrl}"><span>Schedule</span></a></li>
-                <li class="mega">
-                    <h2>
-                      <a href="#">Past Conferences...</a>
-                    </h2>
-                    <div style="width: 450px; z-index: 20000;">
-                        <table style="width: 400px; margin-bottom: 1em;">
-                            <c:forEach items="${eventsForMenu}" var="event">
-                                <tr>
-                                 <td><c:out value="${event.title}"/></td>
-                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>">Speakers</a></td>
-                                 <td><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>">Presentations</a></td>
-                              </tr>
-                          </c:forEach>
-                        </table>
-                        <p>
-                        DevNexus 2012 - <a href="http://devnexus.com/static/2012/audio/">All Audio Recordings</a>
-                        </p>
-                    </div>
-                </li>
-                <li><a href="${organizersUrl}"><span>Your Organizers</span></a></li>
-                <li><a href="${travelUrl}"><span>Travel</span></a></li>
-                <li><a href="https://ajug.eventwax.com/devnexus-2013/register" style="color: #F7941E"><span>Register</span></a></li>
+<div class="navbar navbar-inverse navbar-fixed-top" style="border:none">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg"
+                                                           border="0"></a>
+        </div>
 
-                <li><a class="icon-facebook" href="http://www.facebook.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
-                <li><a class="icon-twitter"  href="http://twitter.com/devnexus">&nbsp;<span>&nbsp;</span></a></li>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
 
-                <c:choose>
-                  <c:when test="${currentDevice.mobile}">
-                      <li style="margin-right: 0;"><a href="${ctx}/s/index"><span>Mobile</span></a></li>
-                  </c:when>
-                  <c:otherwise>
-                      <li style="margin-right: 0;"><a href="${ctx}/mobile/index"><span>Mobile</span></a></li>
-                  </c:otherwise>
-                </c:choose>
-              </ul>
-            <security:authorize ifAnyGranted="ADMIN">
-              <div style="text-align: right" class="span-22 append-bottom last">You are logged in as
-                 <security:authentication property="principal.firstName"/> <security:authentication property="principal.lastName"/> (<security:authentication property="principal.email"/>) |
-                 <a href="<c:url value='${baseSiteUrl}/logout'/>" >Logout</a>
-                 <a href="<c:url value='${baseSiteUrl}/admin/index'/>">Admin Area</a>
-              </div>
-            </security:authorize>
-            <c:if test="${not empty message}">
-                <div id="message" class="${message.type} span-22 last">${message.text}</div>
-            </c:if>
-          </nav>
-      </header>
-      <div class="main clearfix" role="main">
-            <sitemesh:write property='body'/>
-      </div>
-      <footer class="">
-         &copy; 2008-2013 Atlanta Java Users Group (AJUG), powered by
-         <a href="https://github.com/devnexus/ting">Ting</a>
-         <spring:message code="ting.build.version"/>.<spring:message code="ting.build.number"/>
-         (<span id="network-status">Online</span>)
-      </footer>
-  </div>
+                <li><a href="${speakersUrl}">Speakers</a></li>
+                <li><a href="${presentationsUrl}">Presentations</a></li>
+                <li><a href="${scheduleUrl}">Schedule</a></li>
+                <li><a href="${travelUrl}">Travel</a></li>
+                <li><a href="${registrationUrl}">Register</a></li>
 
-<div id="dialog-confirm" title="New Version Available" style="display: none;">
-    <p>A new version of this site is available. Load it?</p>
+            </ul>
+        </div>
+        <!-- end top nav -->
+
+    </div>
+    <!-- end headerwrapper -->
+</div>
+<div style="clear: both"></div>
+<sitemesh:write property='body'/>
+<div style="clear:both;"></div>
+<div id="devnex" class="jumbotron" style="margin-bottom:0">
+    <div class="container">
+        <h2>Questions? Contact us at info@ajug.org</h2>
+    </div>
 </div>
 
-  <!-- JavaScript at the bottom for fast page loading -->
-  <script src="${ctx}/js/lib.js"></script>
+<div id="footer" class="footer-inverse">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Learn More</h3>
+                        <ul id="col">
+                            <li><a href="${ctx}/s/index">About DN</a></li>
+                            <li><a href="${organizersUrl}">Organizers</a></li>
+                            <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
+                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship (Pdf)</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>DevNexus 2014</h3>
+                        <ul id="col">
+                            <li><a href="${scheduleUrl}">Schedule</a></li>
+                            <li><a href="${speakersUrl}">Speakers</a></li>
+                            <li><a href="${presentationsUrl}">Presentations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Attend</h3>
+                        <ul id="col">
+                            <li><a href="${registrationUrl}">Registration Info</a></li>
+                            <li><a href="${travelUrl}">Travel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Stay Connected</h3>
+                        <ul id="col">
+                            <li><a href="<c:url value="/s/social"/>">Social</a></li>
+                            <ul id="col">
+                                <li><a href="https://facebook.com/devnexus">Facebook</a></li>
+                                <li><a href="https://twitter.com/devnexus">Twitter</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img id="logo" src="${devnexusLogoUrl}" border="0">
 
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-177507-7'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+                <p id="copy">&copy; 2008-2014 <a href="http://ajug.org">Atlanta Java Users Group (AJUG)</a></p>
+            </div>
+        </div>
 
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
+    </div>
+</div>
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+     mathiasbynens.be/notes/async-analytics-snippet -->
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-177507-7'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
 
-	<sitemesh:write property='page.bottom'/>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="${ctx}/js/jquery.js"></script>
+<script src="${ctx}/js/bootstrap.min.js"></script>
+<script src="${ctx}/js/masonry.pkgd.js"></script>
+<script src="${ctx}/js/imagesloaded.pkgd.min.js"></script>
 
+<sitemesh:write property='page.bottom'/>
 </body>
 </html>

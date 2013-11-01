@@ -64,21 +64,19 @@ public class SiteController {
 	@RequestMapping({"/index", "/"})
 	public String execute(final Model model, final SitePreference sitePreference) {
 
-		if (sitePreference.isMobile()) {
-			return "index-mobile";
-		}
-		else {
+
 			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
 			model.addAttribute("tweets", tweets);
 			return "index";
-		}
+
 	}
 
 	@RequestMapping("/schedule")
 	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 
 		final Event event = businessService.getCurrentEvent();
-
+        model.addAttribute("headerTitle", "Schedule");
+        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -86,13 +84,30 @@ public class SiteController {
 		else {
 			LOGGER.warn("No current event available.");
 		}
-		if (sitePreference.isMobile()) {
-			return "schedule-mobile";
-		}
-
 		return "schedule";
 
 	}
+
+
+    @RequestMapping("/past-conferences")
+    public String pastConferences(final Model model, final SitePreference sitePreference) {
+
+        final Event event = businessService.getCurrentEvent();
+        model.addAttribute("headerTitle", "Previous Conferences");
+
+        return "past-conferences";
+
+    }
+
+    @RequestMapping("/register")
+    public String register(final Model model, final SitePreference sitePreference) {
+
+        final Event event = businessService.getCurrentEvent();
+        model.addAttribute("headerTitle", "Registration Information");
+
+        return "registration";
+
+    }
 
 	@RequestMapping("/{eventKey}/schedule")
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
@@ -102,20 +117,14 @@ public class SiteController {
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
 		model.addAttribute("scheduleItemList", scheduleItemList);
-
-		if (sitePreference.isMobile()) {
-			return "schedule-mobile";
-		}
+        model.addAttribute("headerTitle", "Schedule");
+        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
 		return "schedule";
 	}
 
 	@RequestMapping("/travel")
 	public String travel(final Model model, final SitePreference sitePreference) {
-
-		if (sitePreference.isMobile()) {
-			return "travel-mobile";
-		}
 
 		return "travel";
 	}
@@ -164,12 +173,9 @@ public class SiteController {
 		final OrganizerList organizerList = new OrganizerList(organizers);
 		model.addAttribute("organizerList", organizerList);
 
-
+        model.addAttribute("columnLength",(int)(organizers.size() / 4));
 		model.addAttribute("organizers", organizers);
 
-		if (sitePreference.isMobile()) {
-			return "organizers-mobile";
-		}
 
 		return "organizers";
 
@@ -198,13 +204,13 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/twitter", method=RequestMethod.GET)
+	@RequestMapping(value="/social", method=RequestMethod.GET)
 	public String getTwitterFeed(Model model) {
 
 		final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
 		model.addAttribute("tweets", tweets);
 
-		return "twitter-feed-mobile";
+		return "social";
 
 	}
 

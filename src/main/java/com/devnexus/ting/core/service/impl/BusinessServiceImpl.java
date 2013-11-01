@@ -16,6 +16,7 @@
 package com.devnexus.ting.core.service.impl;
 
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -24,9 +25,6 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.UUID;
 
-import net.tanesha.recaptcha.ReCaptcha;
-import net.tanesha.recaptcha.ReCaptchaFactory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +32,11 @@ import org.springframework.core.env.Environment;
 import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionCallback;
+import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.CalendarUtils;
@@ -87,6 +89,15 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private Environment environment;
 
 	@Autowired private MessageChannel mailChannel;
+
+	private final TransactionTemplate transactionTemplate;
+
+	@Autowired
+	public BusinessServiceImpl(PlatformTransactionManager transactionManager) {
+		super();
+		Assert.notNull(transactionManager, "The 'transactionManager' argument must not be null.");
+		this.transactionTemplate = new TransactionTemplate(transactionManager);
+	}
 
 	/** {@inheritDoc} */
 	@Override
@@ -203,13 +214,17 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForCurrentEvent() {
-		return presentationDao.getPresentationsForCurrentEvent();
+        List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
+        Collections.sort(list);
+		return list;
 	}
 
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForEvent(Long eventId) {
-		return presentationDao.getPresentationsForEvent(eventId);
+        List<Presentation> list = presentationDao.getPresentationsForEvent(eventId);
+        Collections.sort(list);
+		return list;
 	}
 
 	/** {@inheritDoc} */
@@ -458,8 +473,13 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-	public CfpSubmission saveAndNotifyCfpSubmission(CfpSubmission cfpSubmission) {
-		final CfpSubmission savedCfpSubmission = this.saveCfpSubmission(cfpSubmission);
+	public CfpSubmission saveAndNotifyCfpSubmission(final CfpSubmission cfpSubmission) {
+		final BusinessService businessService = this;
+		final CfpSubmission savedCfpSubmission = transactionTemplate.execute(new TransactionCallback<CfpSubmission>() {
+			public CfpSubmission doInTransaction(TransactionStatus status) {
+				return businessService.saveCfpSubmission(cfpSubmission);
+			}
+		});
 
 		final String mailEnabled = environment.getProperty("mail.enabled");
 

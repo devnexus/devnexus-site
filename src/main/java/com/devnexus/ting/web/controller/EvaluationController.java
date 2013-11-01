@@ -54,9 +54,6 @@ public class EvaluationController {
 		final EvaluationList evaluationList = new EvaluationList(evaluations);
 		model.addAttribute("evaluationList", evaluationList);
 
-		if (sitePreference.isMobile()) {
-			return "admin/evaluations-mobile";
-		}
 
 		return "admin/evaluations";
 	}
@@ -65,9 +62,6 @@ public class EvaluationController {
 	public String openAddEvaluations(final SitePreference sitePreference, ModelMap model) {
 
 		model.addAttribute("evaluation", new Evaluation());
-		if (sitePreference.isMobile()) {
-			return "add-evaluation-mobile";
-		}
 
 		return "add-evaluation";
 	}
@@ -102,10 +96,6 @@ public class EvaluationController {
 
 	@RequestMapping(value="/add-evaluation-success", method=RequestMethod.GET)
 	public String addEvaluationSuccess(final SitePreference sitePreference, ModelMap model) {
-
-		if (sitePreference.isMobile()) {
-			return "add-evaluation-success-mobile";
-		}
 
 		return "add-evaluation-success";
 	}

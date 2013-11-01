@@ -19,6 +19,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.cloudfoundry.runtime.env.CloudEnvironment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -26,10 +28,12 @@ import org.springframework.core.io.support.ResourcePropertySource;
 import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.Apphome;
+import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
 
 public class CloudApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(CloudApplicationContextInitializer.class);
 	@Override
 	public void initialize(ConfigurableApplicationContext applicationContext) {
 
@@ -40,8 +44,14 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 		}
 		else {
 			final String profile = System.getProperty("ting-spring-profile");
-			Assert.hasText(profile, "No Profile retrieved from system property 'ting-spring-profile'");
-			applicationContext.getEnvironment().setActiveProfiles(profile);
+
+			if (profile == null) {
+				LOGGER.info("System property 'ting-spring-profile' not set. Setting active profile to '{}'.", SpringContextMode.DemoContextConfiguration.getCode());
+				applicationContext.getEnvironment().setActiveProfiles(SpringContextMode.DemoContextConfiguration.getCode());
+			}
+			else {
+				applicationContext.getEnvironment().setActiveProfiles(profile);
+			}
 		}
 
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
@@ -50,7 +60,6 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			String tingHome = environment.getProperty(Apphome.APP_HOME_DIRECTORY);
 			try {
 				ResourcePropertySource source = new ResourcePropertySource("file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME);
-				source.getPropertyNames();
 				environment.getPropertySources().addFirst(source);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -58,11 +67,18 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			}
 			System.out.println("Properties for standalone mode loaded");
 
-			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class);
+			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class, Boolean.FALSE);
 
 			if (twitterEnabled) {
 				applicationContext.getEnvironment().addActiveProfile("twitter-enabled");
 			}
+
+			Boolean mailEnabled = environment.getProperty("mail.enabled", Boolean.class, Boolean.FALSE);
+
+			if (mailEnabled) {
+				applicationContext.getEnvironment().addActiveProfile("mail-enabled");
+			}
+
 		}
 		else {
 			try {

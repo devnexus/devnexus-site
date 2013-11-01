@@ -23,36 +23,29 @@ import org.sitemesh.webapp.WebAppContext;
 import org.springframework.mobile.device.site.SitePreference;
 
 public class SpringMobileDecoratorSelector implements
-		DecoratorSelector<WebAppContext> {
-	private final DecoratorSelector<WebAppContext> fallbackSelector;
+        DecoratorSelector<WebAppContext> {
+    private final DecoratorSelector<WebAppContext> fallbackSelector;
 
-	public SpringMobileDecoratorSelector(
-			DecoratorSelector<WebAppContext> fallbackSelector) {
-		this.fallbackSelector = fallbackSelector;
-	}
+    public SpringMobileDecoratorSelector(
+            DecoratorSelector<WebAppContext> fallbackSelector) {
+        this.fallbackSelector = fallbackSelector;
+    }
 
-	@Override
-	public String[] selectDecoratorPaths(Content content, WebAppContext context) {
+    @Override
+    public String[] selectDecoratorPaths(Content content, WebAppContext context) {
 
-		final SitePreference sitePreference = (SitePreference) context.getRequest().getAttribute("currentSitePreference");
+        final SitePreference sitePreference = (SitePreference) context.getRequest().getAttribute("currentSitePreference");
 
-		final String decorator;
+        final String decorator;
 
-		if (sitePreference.isMobile()) {
-			decorator = "/WEB-INF/jsp/decorators/mobile.jsp";
-		} else {
-			decorator = null;
-		}
+        decorator = null;
 
-		if (decorator != null) {
-			return decorator.split(",");
-		} else {
-			// Otherwise, fallback to the standard configuration.
-			try {
-				return fallbackSelector.selectDecoratorPaths(content, context);
-			} catch (IOException e) {
-				throw new IllegalStateException(e);
-			}
-		}
-	}
+        // Otherwise, fallback to the standard configuration.
+        try {
+            return fallbackSelector.selectDecoratorPaths(content, context);
+        } catch (IOException e) {
+            throw new IllegalStateException(e);
+        }
+
+    }
 }

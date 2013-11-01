@@ -54,5 +54,4 @@ public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 		Assert.assertTrue("List of speakers should be empty.", speakers.isEmpty());
 
 	}
-
 }
