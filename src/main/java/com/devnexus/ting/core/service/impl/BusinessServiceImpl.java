@@ -353,8 +353,6 @@ public class BusinessServiceImpl implements BusinessService {
 		}
 
 		FileData fileData = presentation.getPresentationFile();
-		fileData.getName();
-
 		return fileData;
 	}
 
