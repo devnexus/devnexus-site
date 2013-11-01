@@ -1,0 +1,4 @@
+#banner.jumbotron {background:none repeat scroll 0% 0% rgb(12, 22, 32);margin: 80px auto 20px; text-align: center; padding: 35px 0 25px;}
+    #banner h1#gray {color: #617784; font-family: helvetica, arial, sans-serif; font-size: 45px; font-weight: bold;margin-bottom: 0px; padding-bottom: 0px;}
+    #banner h1#white {color: white;font-size: 45px;margin:0 0 15px 0;padding:0;}
+    #banner h3 {color: white;font-size: 22px;margin:22px auto 12px;padding:0; width: 60%; line-height: 125%;}

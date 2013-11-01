@@ -33,6 +33,7 @@
 				<value>com.devnexus.ting.core.model.ScheduleItemList</value>
 				<value>com.devnexus.ting.core.model.Speaker</value>
 				<value>com.devnexus.ting.core.model.SpeakerList</value>
+                <value>com.devnexus.ting.core.model.ScheduleItemType</value>
 			</list>
 		</property>
 	</bean>
@@ -40,7 +41,10 @@
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource"/>
+	</bean>
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />

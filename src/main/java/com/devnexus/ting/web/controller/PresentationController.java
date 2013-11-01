@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,12 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.devnexus.ting.core.model.Presentation;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,22 +55,21 @@ public class PresentationController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
 
+	private void preparePresentationsForEvent(Event event, Model model) {
+		model.addAttribute("event", event);
+		final PresentationList presentationList = new PresentationList();
+        List<Presentation> presentations;
+        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
+		presentationList.setPresentations(presentations);
+		model.addAttribute("presentationList", presentationList);
+	}
+
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
 										   final Model model,
 										   final SitePreference sitePreference) {
 		final Event event = businessService.getEventByEventKey(eventKey);
-		model.addAttribute("event", event);
-
-		final PresentationList presentationList = new PresentationList();
-		presentationList.setPresentations(businessService.getPresentationsForEvent(event.getId()));
-
-		model.addAttribute("presentationList", presentationList);
-
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
-
+		this.preparePresentationsForEvent(event, model);
 		return "presentations";
 	}
 
@@ -101,18 +103,8 @@ public class PresentationController {
 	@RequestMapping("/presentations")
 	public String getPresentationsForCurrentEvent(final Model model,
 												  final SitePreference sitePreference) {
-
-		final PresentationList presentationList = new PresentationList();
-		presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
-
-
-
-		model.addAttribute("presentationList", presentationList);
-
-		if (sitePreference.isMobile()) {
-			return "presentations-mobile";
-		}
-
+		final Event event = businessService.getCurrentEvent();
+		this.preparePresentationsForEvent(event, model);
 		return "presentations";
 	}
 

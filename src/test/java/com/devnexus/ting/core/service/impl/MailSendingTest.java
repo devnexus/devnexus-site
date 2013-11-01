@@ -15,42 +15,34 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.core.service.SystemSetupService;
+import com.hillert.apptools.spring.CloudApplicationContextInitializer;
 
 /**
- * Base class for Dao Test Cases.
  *
  * @author Gunnar Hillert
  *
  */
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(
+		initializers=CloudApplicationContextInitializer.class,
+		locations={ "classpath:spring/mainApplicationContext.xml"})
 public class MailSendingTest {
 
 	@Autowired
 	private MessageChannel mailChannel;
 
-	//@Test
-	@Ignore
+	@Test
 	public void sendCfpEmail() throws InterruptedException {
 
 		CfpSubmission cfpSubmission = new CfpSubmission();
@@ -74,6 +66,6 @@ public class MailSendingTest {
 
 		mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
 
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 	}
 }

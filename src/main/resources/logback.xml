@@ -53,10 +53,13 @@
 	<logger name="org.springframework.security">
 		<level value="WARN"/>
 	</logger>
-		<logger name="org.springframework.web">
+	<logger name="org.springframework.web">
 		<level value="WARN"/>
 	</logger>
-		<logger name="org.springframework">
+	<logger name="org.springframework">
+		<level value="WARN"/>
+	</logger>
+	<logger name="org.springframework.integration">
 		<level value="WARN"/>
 	</logger>
 	<logger name="org.hibernate.type">
