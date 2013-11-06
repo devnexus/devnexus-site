@@ -124,7 +124,8 @@
                                                    src="${ctx}/img/sponsors/app-dynamics.png"/></a>
         <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
                                                       src="${ctx}/img/sponsors/apex-systems.png"/></a>
-
+        <a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
+                                                src="${ctx}/img/sponsors/coverity.png"/></a>
         <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
                                                 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
 
