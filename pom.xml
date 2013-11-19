@@ -28,6 +28,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.integration.version>4.0.0.M2</spring.integration.version>
         <spring.security.version>3.2.0.RELEASE</spring.security.version>
+        <org.springframework.social-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social-version>
+        <org.springframework.social.facebook-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social.facebook-version>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <org.hibernate.version>4.2.5.Final</org.hibernate.version>
     </properties>
@@ -35,6 +37,16 @@
     <build>
         <finalName>devnexus</finalName>
         <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.0</version>
+
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -338,6 +350,7 @@
             <artifactId>jsp-api</artifactId>
             <version>2.0</version>
             <scope>provided</scope>
+
             <exclusions>
                 <exclusion>
                     <artifactId>servlet-api</artifactId>
@@ -423,6 +436,7 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
@@ -447,6 +461,22 @@
             <version>${spring.security.version}</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-core</artifactId>
+            <version>${org.springframework.social-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-web</artifactId>
+            <version>${org.springframework.social-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.BUILD-SNAPSHOT</version>
+        </dependency>
 
         <!-- Other -->
 
@@ -589,11 +619,15 @@
             <artifactId>stringtemplate</artifactId>
             <version>4.0.2</version>
         </dependency>
-
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>15.0</version>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.1</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 

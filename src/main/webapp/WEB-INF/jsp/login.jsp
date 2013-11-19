@@ -25,6 +25,11 @@
                 <spring:message code="jsp.login.button.login"/></button>
         </div>
     </form>
+    <form action="<c:url value="/s/signin/google" />" method="POST">
+        <button type="submit">Sign in with Google</button>
+        <input type="hidden" name="scope"
+               value="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"/>
+    </form>
 </div>
 <script type="text/JavaScript" language="JavaScript">
     <!--
@@ -36,3 +41,5 @@
     });
     //-->
 </script>
+
+
