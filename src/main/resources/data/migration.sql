@@ -70,14 +70,14 @@ create table USER_AUTHORITIES (
 	AUTHORITY int8,
 	USER_ID int8,
 	primary key (ID)
-)
+);
 
 create index USER_AUTHORITIES_IDX on USER_AUTHORITIES (AUTHORITY)
 
 alter table USER_AUTHORITIES
 	add constraint FK_USER_AUTHORITIES_USERS
 	foreign key (USER_ID)
-	references USERS
+	references USERS;
 
 -- 2013 - Dec 04
 
