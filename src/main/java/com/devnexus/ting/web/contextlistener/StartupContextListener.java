@@ -59,7 +59,7 @@ public class StartupContextListener implements ServletContextListener {
 	public void contextInitialized(final ServletContextEvent servletContextEvent) {
 		final ServletContext servletContext = servletContextEvent.getServletContext();
 
-		final String         contextPath      = servletContext.getContextPath();
+		final String         contextPath      = "";
 		final String         server           = servletContext.getServerInfo();
 
 		final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();

@@ -21,7 +21,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import com.devnexus.ting.core.model.Presentation;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +34,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
+import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.service.BusinessService;
 

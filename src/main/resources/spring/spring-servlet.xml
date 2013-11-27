@@ -171,4 +171,8 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 
+<context:property-placeholder />
+	<beans profile="twitter-enabled">
+		<import resource="classpath:spring/spring-integration-twitter-context.xml" />
+	</beans>
 </beans>

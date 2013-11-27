@@ -17,16 +17,20 @@ package com.devnexus.ting.core.service.impl;
 
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.stereotype.Service;
 
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.TwitterService;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 
 /**
  * Implementation of the TwitterService interface.
@@ -39,43 +43,38 @@ import com.devnexus.ting.core.service.TwitterService;
 public class DefaultTwitterService implements TwitterService {
 
 	/** Holds a collection of polled Twitter messages */
-	private volatile Map<Long, TwitterMessage> twitterMessages;
+	private volatile LoadingCache<Long, TwitterMessage> twitterMessages;
+
+	@Autowired
+	private SimpMessageSendingOperations messagingTemplate;
 
 	/**
 	 * Constructor that initializes the 'twitterMessages' Map as a simple LRU
-	 * cache. @See http://blogs.oracle.com/swinger/entry/collections_trick_i_lru_cache
+	 * cache holding a maximum of 20 messages.
 	 */
 	public DefaultTwitterService() {
 
-		twitterMessages = new LinkedHashMap<Long, TwitterMessage>( 10, 0.75f, true ) {
-
-			private static final long serialVersionUID = 1L;
-
-			protected boolean removeEldestEntry( java.util.Map.Entry<Long, TwitterMessage> entry ) {
-				return size() > 10;
-			}
-
-		};
-
+		this.twitterMessages = CacheBuilder.newBuilder()
+			.maximumSize(20)
+			.build(new CacheLoader<Long, TwitterMessage>() {
+				public TwitterMessage load(Long key)  {
+					return null;
+				}
+			});
 	}
 
 	/** {@inheritDoc} */
 	@Override
 	public Collection<TwitterMessage> getTwitterMessages() {
 		SortedSet<TwitterMessage> twitterMessages = new TreeSet<TwitterMessage>(new Comparator<TwitterMessage>() {
-
 			@Override
 			public int compare(TwitterMessage twitterMessage1, TwitterMessage twitterMessage2) {
-
 				return twitterMessage2.getCreatedAt().compareTo(twitterMessage1.getCreatedAt());
-
 			}
-
 		});
 
-		twitterMessages.addAll(this.twitterMessages.values());
+		twitterMessages.addAll(this.twitterMessages.asMap().values());
 		return twitterMessages;
-
 	}
 
 	/**
@@ -84,10 +83,13 @@ public class DefaultTwitterService implements TwitterService {
 	 * @param tweet - The Spring Integration tweet object.
 	 */
 	public void addTwitterMessages(Tweet tweet) {
-		this.twitterMessages.put(tweet.getCreatedAt().getTime(), new TwitterMessage(tweet.getCreatedAt(),
-			tweet.getText(),
-			tweet.getFromUser(),
-			tweet.getProfileImageUrl()));
+
+		final TwitterMessage twitterMessage = new TwitterMessage(tweet.getCreatedAt(),
+				tweet.getText(),
+				tweet.getFromUser(),
+				tweet.getProfileImageUrl());
+		this.twitterMessages.put(tweet.getCreatedAt().getTime(), twitterMessage);
+		messagingTemplate.convertAndSend("/queue/tweets", twitterMessage);
 	}
 
 }

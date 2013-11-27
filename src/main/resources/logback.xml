@@ -57,11 +57,15 @@
 		<level value="WARN"/>
 	</logger>
 	<logger name="org.springframework">
-		<level value="WARN"/>
+		<level value="INFO"/>
 	</logger>
 	<logger name="org.springframework.integration">
 		<level value="WARN"/>
 	</logger>
+	<logger name="org.springframework.messaging">
+		<level value="WARN"/>
+	</logger>
+
 	<logger name="org.hibernate.type">
 		<level value="WARN"/>
 	</logger>

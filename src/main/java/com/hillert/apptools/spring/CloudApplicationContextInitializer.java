@@ -89,7 +89,7 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			}
 			System.out.println("Properties for demo mode loaded");
 		}
-
+ 
 	}
 
 }

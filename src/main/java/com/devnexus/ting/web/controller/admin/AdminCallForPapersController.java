@@ -15,16 +15,9 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
-import java.util.Date;
-import java.util.EnumSet;
 import java.util.List;
-import java.util.Set;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Validator;
-
-import net.tanesha.recaptcha.ReCaptcha;
-import net.tanesha.recaptcha.ReCaptchaFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,17 +25,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.EvaluationList;
 import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
