@@ -21,6 +21,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import org.springframework.social.connect.web.SignInAdapter;
 
 /**
  * Provides user related methods.
@@ -28,7 +29,7 @@ import com.devnexus.ting.core.service.exception.DuplicateUserException;
  * @author Gunnar Hillert
  *
  */
-public interface UserService {
+public interface UserService extends SignInAdapter {
 
 	/**
 	 * Adds a brand new user to the system. If a user

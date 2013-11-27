@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -76,13 +77,11 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
 	private Date lastLoginDate;
 
+
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER, mappedBy="user")
 	@XmlTransient
 	@BatchSize(size=20)
 	private Set<UserAuthority> userAuthorities = new HashSet<>(0);
-
-        private boolean isAdmin = false;
-
 
 	//~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -234,4 +233,9 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 		return true;
 	}
 
+    @Override
+    public String toString() {
+        return "User{" + "username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", registrationDate=" + registrationDate + ", lastLoginDate=" + lastLoginDate + '}';
+    }
+    
 }
