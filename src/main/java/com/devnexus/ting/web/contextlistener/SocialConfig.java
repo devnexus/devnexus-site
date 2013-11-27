@@ -16,17 +16,18 @@
 package com.devnexus.ting.web.contextlistener;
 
 import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.web.controller.admin.SimpleConnectionSignUp;
-import com.devnexus.ting.web.controller.admin.SimpleSignInAdapter;
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
+
 import javax.inject.Inject;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.core.env.Environment;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.social.connect.ConnectionFactory;
@@ -48,10 +49,15 @@ import org.springframework.social.google.connect.GoogleConnectionFactory;
 @Configuration
 public class SocialConfig {
 
-	@Inject
-	private Environment environment;
+    @Autowired
+    private Environment environment;
 
-	@Inject
+
+    @Autowired
+    private UserService userService;
+
+
+    @Autowired
 	private DataSource dataSource;
 
 	/**
@@ -102,7 +108,7 @@ public class SocialConfig {
 	@Bean
 	public ProviderSignInController providerSignInController() {
 		return new ProviderSignInController(connectionFactoryLocator(), usersConnectionRepository(),
-				new SimpleSignInAdapter());
+				userService);
 	}
 
 }
