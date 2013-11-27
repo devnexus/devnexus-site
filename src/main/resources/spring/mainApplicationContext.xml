@@ -15,6 +15,7 @@
 
 	<bean class="com.devnexus.ting.web.WebSocketConfig"/>
 
+	<import resource="classpath:spring/spring-servlet.xml" />
 	<import resource="classpath:spring/applicationContext-security.xml" />
 	<import resource="classpath:spring/spring-integration-cfp-context.xml"/>
 
