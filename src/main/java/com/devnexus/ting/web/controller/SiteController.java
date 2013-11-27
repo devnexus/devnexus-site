@@ -17,6 +17,7 @@ package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -24,12 +25,18 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
+import org.springframework.messaging.simp.annotation.SendToUser;
+import org.springframework.messaging.simp.annotation.SubscribeEvent;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.ApplicationCache;
@@ -41,6 +48,7 @@ import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
+import com.devnexus.ting.core.service.impl.TweetAddedApplicationEvent;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
@@ -75,8 +83,8 @@ public class SiteController {
 	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 
 		final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Schedule");
-        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+		model.addAttribute("headerTitle", "Schedule");
+		model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -89,25 +97,25 @@ public class SiteController {
 	}
 
 
-    @RequestMapping("/past-conferences")
-    public String pastConferences(final Model model, final SitePreference sitePreference) {
+	@RequestMapping("/past-conferences")
+	public String pastConferences(final Model model, final SitePreference sitePreference) {
 
-        final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Previous Conferences");
+		final Event event = businessService.getCurrentEvent();
+		model.addAttribute("headerTitle", "Previous Conferences");
 
-        return "past-conferences";
+		return "past-conferences";
 
-    }
+	}
 
-    @RequestMapping("/register")
-    public String register(final Model model, final SitePreference sitePreference) {
+	@RequestMapping("/register")
+	public String register(final Model model, final SitePreference sitePreference) {
 
-        final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Registration Information");
+		final Event event = businessService.getCurrentEvent();
+		model.addAttribute("headerTitle", "Registration Information");
 
-        return "registration";
+		return "registration";
 
-    }
+	}
 
 	@RequestMapping("/{eventKey}/schedule")
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
@@ -117,8 +125,8 @@ public class SiteController {
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
 		model.addAttribute("scheduleItemList", scheduleItemList);
-        model.addAttribute("headerTitle", "Schedule");
-        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+		model.addAttribute("headerTitle", "Schedule");
+		model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
 		return "schedule";
 	}
@@ -173,7 +181,7 @@ public class SiteController {
 		final OrganizerList organizerList = new OrganizerList(organizers);
 		model.addAttribute("organizerList", organizerList);
 
-        model.addAttribute("columnLength",(int)(organizers.size() / 4));
+		model.addAttribute("columnLength",(int)(organizers.size() / 4));
 		model.addAttribute("organizers", organizers);
 
 
@@ -214,4 +222,37 @@ public class SiteController {
 
 	}
 
+	@Autowired private SimpMessageSendingOperations messagingTemplate;
+	@Autowired
+	ApplicationEventPublisher applicationEventPublisher;
+
+	@RequestMapping(value="/crap", method=RequestMethod.GET)
+	@ResponseBody
+	public void getCrap(Model model) {
+
+		final TwitterMessage twitterMessage = new TwitterMessage(new Date(),
+				"123",
+				"qweqweqwe",
+				"sssss");
+		messagingTemplate.convertAndSend("/queue/tweets", twitterMessage);
+
+	}
+
+	@SubscribeEvent("/loadtweets")
+	public void onApplicationEvent() {
+		LOGGER.info("New user subscribing");
+		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
+	}
+
+//	@SubscribeEvent("/queue/errors")
+//	public void onErrors() {
+//		LOGGER.info("New user subscribing");
+//		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
+//	}
+
+	@MessageExceptionHandler
+	@SendToUser("/queue/errors")
+	public String handleException(Throwable exception) {
+		return exception.getMessage();
+	}
 }

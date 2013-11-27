@@ -13,6 +13,8 @@
 	<context:component-scan base-package="com.devnexus.ting.core.service" />
 	<context:component-scan base-package="com.devnexus.ting.core.dao" />
 
+	<bean class="com.devnexus.ting.web.WebSocketConfig"/>
+
 	<import resource="classpath:spring/applicationContext-security.xml" />
 	<import resource="classpath:spring/spring-integration-cfp-context.xml"/>
 
@@ -33,7 +35,7 @@
 				<value>com.devnexus.ting.core.model.ScheduleItemList</value>
 				<value>com.devnexus.ting.core.model.Speaker</value>
 				<value>com.devnexus.ting.core.model.SpeakerList</value>
-                <value>com.devnexus.ting.core.model.ScheduleItemType</value>
+				<value>com.devnexus.ting.core.model.ScheduleItemType</value>
 			</list>
 		</property>
 	</bean>
@@ -135,7 +137,4 @@
 		<bean id="seedDataEventListener" class="com.hillert.apptools.spring.ContextRefreshedEventListener" />
 	</beans>
 
-	<beans profile="twitter-enabled">
-		<import resource="classpath:spring/spring-integration-twitter-context.xml" />
-	</beans>
 </beans>

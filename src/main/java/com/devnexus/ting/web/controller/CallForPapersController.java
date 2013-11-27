@@ -68,12 +68,12 @@ public class CallForPapersController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
-    private MessageSourceAccessor messages;
+	private MessageSourceAccessor messages;
 
-    @Autowired
-    public void setMessages(MessageSource messageSource) {
-        messages = new MessageSourceAccessor(messageSource);
-    }
+	@Autowired
+	public void setMessages(MessageSource messageSource) {
+		messages = new MessageSourceAccessor(messageSource);
+	}
 
 	private void prepareReferenceData(ModelMap model) {
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
