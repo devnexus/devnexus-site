@@ -40,7 +40,7 @@ public interface UserService extends SignInAdapter {
 	 * @throws DuplicateUserException
 	 */
 	User addUser(User user) throws DuplicateUserException;
-
+        
 	//TODO
 //    /**
 //     * Adds a brand new user to the system. If a user
@@ -103,12 +103,14 @@ public interface UserService extends SignInAdapter {
 	UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException, DataAccessException;
 
-//    /**
-//     * Get a user by its verification key. This method is used to verify user
-//     * account creation.
-//     *
-//     * @param key Key for which the corresponding user supposedly exists
-//     * @return Return a user for the existing key
-//     */
-//    User getUserByVerificationKey(String key);
+
+        /**
+         * When a user first logs in for a new event, it will create the various 
+         * necessary templates to service the request.
+         * 
+         * @param user
+         * @param eventKey 
+         */
+        public void initializeUserforEvent(User user, String eventKey);
+        
 }
