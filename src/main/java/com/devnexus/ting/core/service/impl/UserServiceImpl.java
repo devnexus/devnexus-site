@@ -167,4 +167,9 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         return null;
     }
 
+    @Override
+    public void initializeUserforEvent(User user, String eventKey) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

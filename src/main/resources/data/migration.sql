@@ -31,8 +31,7 @@ CREATE TABLE cfp_submissions
   tshirt_size character varying(255),
   picture bigint,
   event bigint,
-  CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),
-  CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
+  CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
       REFERENCES events (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION,
   CONSTRAINT fk_srgk1qvqa9tx8hrnfa703bifc FOREIGN KEY (picture)
