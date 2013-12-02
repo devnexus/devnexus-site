@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title><sitemesh:write property='title'/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="${ctx}/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="${ctx}/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${ctx}/css/devnexus.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="${ctx}/js/html5shiv.js"></script>
@@ -21,7 +21,11 @@
     <![endif]-->
     <sitemesh:write property='head'/>
 </head>
-
+<style>
+    div#banner {
+        padding-top: 20px;
+    }
+</style>
 <body>
 
 <c:url var="homeUrl" value="${baseSiteUrl}/index"/>
@@ -31,69 +35,49 @@
 <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
-        </div>
-
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-
-                <li  class="active"><a href="#">About</a></li>
-                <li><a href="${speakersUrl}">Speakers</a></li>
-                <li><a href="${presentationsUrl}">Presentations</a></li>
-                <li><a href="${scheduleUrl}">Schedule</a></li>
-                <li><a href="https://ajug.eventwax.com/devnexus-2013/register">Register</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Past Conferences...<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <c:forEach items="${eventsForMenu}" var="event">
-                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>"><c:out value="${event.title}"/> Speakers</a></li>
-                            <li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>"><c:out value="${event.title}"/> Presentations</a></li>
-                        </c:forEach>
-                        <li>
-                            <a href="http://devnexus.com/static/2012/audio/">DevNexus 2012 All Audio Recordings</a>
-                        </li>
-                    </ul>
-                </li>
-                <security:authorize ifAnyGranted="ADMIN">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                                <li><a href="<c:url value='${baseSiteUrl}/logout'/>" >Logout</a></li>
-                                <li><a href="<c:url value='${baseSiteUrl}/admin/index'/>">Admin Area</a></li>
-                        </ul>
-                    </li>
-                </security:authorize>
-                <c:if test="${not empty message}">
-                    <div id="message" class="${message.type} span-22 last">${message.text}</div>
-                </c:if>
-            </ul>
-        </div>
-        <!-- end top nav -->
-
-    </div>
-    <!-- end headerwrapper -->
+<div class="navbar navbar-inverse navbar-fixed-top" style="border:none">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+ 				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="${speakersUrl}">Speakers</a></li>
+				<li><a href="${presentationsUrl}">Presentations</a></li>
+				<li><a href="${scheduleUrl}">Schedule</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Past Conferences...<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<c:forEach items="${eventsForMenu}" var="event">
+							<li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/speakers'/>"><c:out value="${event.title}"/> Speakers</a></li>
+							<li><a href="<c:url value='${baseSiteUrl}/${event.eventKey}/presentations'/>"><c:out value="${event.title}"/> Presentations</a></li>
+						</c:forEach>
+						<li>
+							<a href="http://devnexus.com/static/2012/audio/">DevNexus 2012 All Audio Recordings</a>
+						</li>
+					</ul>
+				</li>
+				<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="<c:url value='${baseSiteUrl}/logout'/>" >Logout</a></li>
+							<li><a href="<c:url value='${baseSiteUrl}/admin/index'/>">Admin Area</a></li>
+						</ul>
+					</li>
+				</sec:authorize>
+			</ul>
+		</div>
+		<!-- end top nav -->
+	</div>
+	<!-- end headerwrapper -->
 </div>
 <div style="clear: both"></div>
-<div id="devnex" class="jumbotron">
-    <div class="container">
-        <div id="banner">
-            <h1 id="gray">DevNexus 2014</h1>
-
-            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
-
-            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
-        </div>
-    </div>
-</div>
-<!-- end banner -->
 <sitemesh:write property='body'/>
 
 <div style="clear:both;"></div>

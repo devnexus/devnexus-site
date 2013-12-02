@@ -13,10 +13,11 @@
 	<context:component-scan base-package="com.devnexus.ting.core.service" />
 	<context:component-scan base-package="com.devnexus.ting.core.dao" />
 
-	<bean class="com.devnexus.ting.web.WebSocketConfig"/>
+	<bean class="com.devnexus.ting.web.config.WebSocketConfig"/>
+	<bean class="com.devnexus.ting.web.config.WebSecurityConfig"/>
 
 	<import resource="classpath:spring/spring-servlet.xml" />
-	<import resource="classpath:spring/applicationContext-security.xml" />
+	<!-- <import resource="classpath:spring/applicationContext-security.xml" /> -->
 	<import resource="classpath:spring/spring-integration-cfp-context.xml"/>
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
@@ -37,6 +38,8 @@
 				<value>com.devnexus.ting.core.model.Speaker</value>
 				<value>com.devnexus.ting.core.model.SpeakerList</value>
 				<value>com.devnexus.ting.core.model.ScheduleItemType</value>
+				<value>com.devnexus.ting.core.model.CfpSubmission</value>
+				<value>com.devnexus.ting.core.model.CfpSubmissionList</value>
 			</list>
 		</property>
 	</bean>

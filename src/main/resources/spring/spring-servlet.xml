@@ -128,9 +128,6 @@
 		<property name="order" value="1" />
 	</bean>
 
-	<!-- Documented out the following as we going to use ab explicit AnnotationMethodHandlerAdapter -->
-	<!-- >mvc:annotation-driven conversion-service="conversionService"/ -->
-
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
 		<property name="order" value="2" />
 	</bean>

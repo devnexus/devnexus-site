@@ -27,8 +27,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.CfpSubmissionList;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -62,9 +64,9 @@ public class AdminCallForPapersController {
 	public String viewCfps(final SitePreference sitePreference, ModelMap model) {
 
 		Event currentEvent = businessService.getCurrentEvent();
-		List<CfpSubmission> cfps = businessService.getCfpSubmissions(currentEvent.getId());
-		model.addAttribute("cfps", cfps);
+		List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(currentEvent.getId());
+		CfpSubmissionList cfpSubmissionList = new CfpSubmissionList(cfpSubmissions);
+		model.addAttribute("cfpSubmissionList", cfpSubmissionList);
 		return "admin/cfps";
 	}
-
 }
