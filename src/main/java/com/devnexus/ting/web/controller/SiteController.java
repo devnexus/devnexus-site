@@ -226,29 +226,11 @@ public class SiteController {
 	@Autowired
 	ApplicationEventPublisher applicationEventPublisher;
 
-	@RequestMapping(value="/crap", method=RequestMethod.GET)
-	@ResponseBody
-	public void getCrap(Model model) {
-
-		final TwitterMessage twitterMessage = new TwitterMessage(new Date(),
-				"123",
-				"qweqweqwe",
-				"sssss");
-		messagingTemplate.convertAndSend("/queue/tweets", twitterMessage);
-
-	}
-
 	@SubscribeEvent("/loadtweets")
 	public void onApplicationEvent() {
 		LOGGER.info("New user subscribing");
 		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
 	}
-
-//	@SubscribeEvent("/queue/errors")
-//	public void onErrors() {
-//		LOGGER.info("New user subscribing");
-//		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
-//	}
 
 	@MessageExceptionHandler
 	@SendToUser("/queue/errors")

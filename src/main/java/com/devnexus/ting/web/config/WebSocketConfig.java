@@ -1,4 +1,4 @@
-package com.devnexus.ting.web;
+package com.devnexus.ting.web.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.EnableWebSocketMessageBroker;

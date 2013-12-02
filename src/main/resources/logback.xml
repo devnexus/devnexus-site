@@ -51,13 +51,13 @@
 	</appender>
 
 	<logger name="org.springframework.security">
-		<level value="WARN"/>
+		<level value="INFO"/>
 	</logger>
 	<logger name="org.springframework.web">
 		<level value="WARN"/>
 	</logger>
 	<logger name="org.springframework">
-		<level value="INFO"/>
+		<level value="WARN"/>
 	</logger>
 	<logger name="org.springframework.integration">
 		<level value="WARN"/>
