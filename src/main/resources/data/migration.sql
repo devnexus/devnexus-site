@@ -78,8 +78,34 @@ alter table USER_AUTHORITIES
 	foreign key (USER_ID)
 	references USERS;
 
--- 2013 - Dec 04
+CREATE TABLE user_calendars
+(
+  id bigint NOT NULL,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  schedule_item_id integer,
+  event_key character varying(255),
+  username character varying(255),
+  from_time timestamp without time zone,
+  fixed boolean,
+  template boolean
+);
 
+
+ALTER TABLE user_calendar ADD CONSTRAINT user_calendar_pkey PRIMARY KEY (id);
+CREATE INDEX "user_calendar_lookup" ON user_calendar USING btree (username, event_key, from_time);
+
+ALTER TABLE user_calendars ADD CONSTRAINT user_calendars_pkey PRIMARY KEY (id);
+CREATE INDEX "user_calendars_lookup" ON user_calendars USING btree (username, event_key, from_time);
+
+ALTER TABLE user_calendars ADD CONSTRAINT calendar_item FOREIGN KEY (schedule_item_id)
+      REFERENCES schedule_items (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION;
+  
+
+insert into user_calendars (id, event_key, from_time, schedule_item_id, fixed, template) select row_number() OVER (ORDER BY from_time), 'devnexus2013', from_time,case when min(schedule_item_type)=400 then null else min(id) end, case when min(schedule_item_type)=400 then false else true end,true from "public".schedule_items where event = 1388  group by from_time order by from_time asc;
+-- 2013 - Dec 04
 update events set version = '1' where version is null
 
 -- 2013 - Dec 19
