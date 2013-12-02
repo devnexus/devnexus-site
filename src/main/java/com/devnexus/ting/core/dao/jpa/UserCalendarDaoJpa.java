@@ -25,12 +25,12 @@ public class UserCalendarDaoJpa extends GenericDaoJpa< UserCalendar, Long> imple
 
     @Override
     public List<UserCalendar> getUserCalendar(User user, String eventKey) {
-        return super.entityManager.createQuery("from UserCalendar where event_key = :eventKey and username = :username").setParameter("username", user.getUsername()).setParameter("eventKey", eventKey).getResultList();
+        return super.entityManager.createQuery("from UserCalendar where event_key = :eventKey and username = :username order by fromTime").setParameter("username", user.getUsername()).setParameter("eventKey", eventKey).getResultList();
     }
 
     @Override
     public List<UserCalendar> getTemplateCalendar(String eventKey) {
-        return super.entityManager.createQuery("from UserCalendar where event_key = :eventKey and template = true").setParameter("eventKey", eventKey).getResultList();
+        return super.entityManager.createQuery("from UserCalendar where event_key = :eventKey and template = true order by fromTime").setParameter("eventKey", eventKey).getResultList();
     }
     
 }

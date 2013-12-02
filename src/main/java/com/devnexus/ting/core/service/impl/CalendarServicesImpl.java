@@ -13,7 +13,9 @@ import com.devnexus.ting.core.service.CalendarServices;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CalendarServicesImpl implements CalendarServices{
 
     @Autowired
@@ -34,6 +36,7 @@ public class CalendarServicesImpl implements CalendarServices{
             for (UserCalendar entry : template) {
                 UserCalendar copy = entry.copy();
                 calendar.add(copy);
+                
                 copy.setUsername(user.getUsername());
                 calendarDao.save(copy);
             }
