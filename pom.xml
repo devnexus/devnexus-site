@@ -447,6 +447,7 @@
             <version>${spring.security.version}</version>
         </dependency>
 
+
         <!-- Other -->
 
         <dependency>
@@ -486,6 +487,26 @@
             <artifactId>commons-fileupload</artifactId>
             <version>1.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.jmesa</groupId>
+            <artifactId>jmesa</artifactId>
+            <version>3.0.4</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xwork</artifactId>
+                    <groupId>com.opensymphony</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-webmvc-portlet</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>itext</artifactId>
+                    <groupId>com.lowagie</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
 
         <dependency>
             <groupId>net.java.dev.rome</groupId>
