@@ -147,6 +147,8 @@
                                                 src="${ctx}/img/sponsors/coverity.png"/></a>
         <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
                                                 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
+        <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
+                                                  src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
 
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
         <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs"
