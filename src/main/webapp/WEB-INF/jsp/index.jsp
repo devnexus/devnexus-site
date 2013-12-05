@@ -158,6 +158,9 @@
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
 
+        <a href="http://www.incomm.com/"><img class="logo" alt="InComm"
+                                                  src="${ctx}/img/sponsors/inComm.png"/></a>                                                  
+                                                  
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
         <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs"
                                                           src="${ctx}/img/sponsors/altisource.png"/></a>
