@@ -13,7 +13,7 @@
 		<div class="col-md-3 tweet-box">
 			<div class="panel panel-default">
 				<div class="panel-heading" style="padding: 1px;"
-				><img style="margin-right: 4px;" alt="${tweet.fromUser}" title="${tweet.fromUser}" src="${tweet.profileImageUrl}"/><a href="http://www.twitter.com/"<c:out value="${tweet.fromUser}"/>"
+				><img style="margin-right: 4px;" alt="${tweet.fromUser}" title="${tweet.fromUser}" src="${tweet.profileImageUrl}"/><a href="http://www.twitter.com/<c:out value="${tweet.fromUser}"/>"<c:out value="${tweet.fromUser}"/>"
 				><c:out value="${tweet.fromUser}"/></a>
 					<div class="btn-group pull-right"
 					><a class="delete-tweet" href="#" class="btn btn-link btn-xs"

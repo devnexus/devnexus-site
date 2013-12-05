@@ -79,3 +79,6 @@ alter table USER_AUTHORITIES
 	foreign key (USER_ID)
 	references USERS
 
+-- 2013 - Dec 04
+
+update events set version = '1' where version is null
