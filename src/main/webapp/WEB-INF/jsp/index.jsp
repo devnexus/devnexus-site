@@ -127,7 +127,7 @@
 <div id="devnex" class="jumbotron">
 
     <div id="platinum" style="max-width: 768px;margin-left:auto;margin-right:auto;">
-        <h3>Platinum Sponsors</h3>
+        <h3>Platinum Sponsor</h3>
         <a href="http://www.thoughtworks.com/"><img class="logo" alt="Thoughtworks"
                                                     src="${ctx}/img/sponsors/thoughtworks.png"/></a>
 
