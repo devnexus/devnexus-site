@@ -13,6 +13,8 @@
     <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="${ctx}/css/jmesa/jmesa.css" rel="stylesheet">
+    <link href="${ctx}/css/jmesa/jmesa-pdf.css" rel="stylesheet">
     <link href="${ctx}/css/devnexus.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -20,6 +22,9 @@
     <script src="${ctx}/js/respond.min.js"></script>
     <![endif]-->
     <sitemesh:write property='head'/>
+    <script src="${ctx}/js/jquery.js"></script>
+    <script src="${ctx}/js/jmesa/jmesa.min.js"></script>
+    <script src="${ctx}/js/jmesa/jquery.jmesa.min.js"></script>
 </head>
 <style>
     div#banner {
@@ -144,7 +149,9 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="${ctx}/js/jquery.js"></script>
+
 <script src="${ctx}/js/bootstrap.min.js"></script>
+
+<sitemesh:write property='page.bottom'/>
 </body>
 </html>

@@ -70,7 +70,9 @@ public class SpeakerController {
 		SpeakerList speakers = new SpeakerList();
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
 		model.addAttribute("speakerList",speakers);
-		model.addAttribute("columnLength",(int)(speakers.getSpeakers().size() / 4));
+		int columnLength = (int)(speakers.getSpeakers().size() / 4);
+
+		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
 	}
 
 	@RequestMapping(value="/speakers/{speakerId}.jpg", method=RequestMethod.GET)

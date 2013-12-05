@@ -26,6 +26,7 @@
   </form>
     <a href="${ctx}${baseSiteUrl}/admin/event">Add Event</a>
 
+<content tag='bottom'>
     <script type="text/javascript">
             function onInvokeAction(id) {
                 $.jmesa.setExportToLimit(id, '');
@@ -36,3 +37,4 @@
                 location.href = '${ctx}${baseSiteUrl}/admin/events?' + parameterString;
             }
    </script>
+</content>
