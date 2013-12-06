@@ -15,25 +15,32 @@
  */
 package com.devnexus.ting.core.dao.jpa;
 
-import org.springframework.stereotype.Repository;
-
 import com.devnexus.ting.core.dao.UserDao;
 import com.devnexus.ting.core.model.User;
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.NoResultException;
 
 @Repository("userDao")
-public class UserDaoJpa extends GenericDaoJpa< User, Long>
-						   implements UserDao {
+public class UserDaoJpa extends GenericDaoJpa<User, Long>
+        implements UserDao {
 
-	/** Constructor. */
-	private UserDaoJpa() {
-		super(User.class);
-	}
+    /**
+     * Constructor.
+     */
+    private UserDaoJpa() {
+        super(User.class);
+    }
 
-	@Override
-	public User getUserByUsername(String username) {
-		return (User) super.entityManager.createQuery("select user from User user where user.username = :username")
-						   .setParameter("username", username)
-						   .getSingleResult();
-	}
+    @Override
+    public User getUserByUsername(String username) {
+        try {
+            return (User) super.entityManager.createQuery("select user from User user where user.username = :username")
+                    .setParameter("username", username)
+                    .getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
 
 }
