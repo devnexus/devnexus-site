@@ -138,8 +138,12 @@
             <h3>Gold Sponsors</h3>
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
                                                    src="${ctx}/img/sponsors/inBloom.png"/></a>
-            <a href="http://www.compuware.com//"><img class="logo" alt="Compuware"
+            <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                       src="${ctx}/img/sponsors/compuware.png"/></a>
+
+            <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
+                                                            src="${ctx}/img/sponsors/cc.png"/></a>
+
 
         </div>
     </div>
@@ -159,8 +163,8 @@
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
 
         <a href="http://www.incomm.com/"><img class="logo" alt="InComm"
-                                                  src="${ctx}/img/sponsors/inComm.png"/></a>                                                  
-                                                  
+                                              src="${ctx}/img/sponsors/inComm.png"/></a>
+
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
         <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs"
                                                           src="${ctx}/img/sponsors/altisource.png"/></a>
