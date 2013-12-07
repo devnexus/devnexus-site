@@ -192,6 +192,13 @@
         </dependency>
 
         <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-plus</artifactId>
+            <version>v1-rev111-1.17.0-rc</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>com.google.oauth-client</groupId>
             <artifactId>google-oauth-client</artifactId>
             <version>1.17.0-rc</version>
@@ -203,12 +210,6 @@
             <version>1.17.0-rc</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.google.api-client</groupId>
-            <artifactId>google-api-client-servlet</artifactId>
-            <version>1.17.0-rc</version>
-        </dependency>
 
         <dependency>
             <groupId>org.tuckey</groupId>
