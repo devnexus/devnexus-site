@@ -20,14 +20,19 @@ package com.devnexus.ting.web.controller;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.web.controller.googleauth.Checker;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
+import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.apache.ApacheHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.oauth2.Oauth2;
 import com.google.api.services.oauth2.model.Tokeninfo;
+import com.google.api.services.plus.Plus;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.stereotype.Controller;
@@ -36,23 +41,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * This class manages logins from the Android client using Google's services.
  */
+@Controller
 public class AndroidLoginController {
 
     private static final String CLIENT_ID;
     private static final String CLIENT_SECRET;
     private static final Gson GSON = new GsonBuilder().create();
-    
+
     static {
         Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
         Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
-        
-        
+
         CLIENT_ID = props.getProperty("TING_CLIENT_ID");
         CLIENT_SECRET = props.getProperty("TING_CLIENT_SECRET");
     }
@@ -61,7 +68,7 @@ public class AndroidLoginController {
             + "https://www.googleapis.com/auth/userinfo.email "
             + "https://www.googleapis.com/auth/userinfo.profile";
 
-    private static final ApacheHttpTransport TRANSPORT = new ApacheHttpTransport();
+    private static final HttpTransport TRANSPORT = new NetHttpTransport();
     private static final JacksonFactory FACTORY = JacksonFactory.getDefaultInstance();
 
     /**
@@ -73,24 +80,21 @@ public class AndroidLoginController {
     @RequestMapping(value = "/loginAndroid", method = RequestMethod.POST)
     public String login(HttpServletRequest request, HttpServletResponse response) {
 
-        
         JsonObjectParser json = FACTORY.createJsonObjectParser();
-        
 
         try {
-            
-            AndroidAuthentication auth = json.parseAndClose(request.getReader(), AndroidAuthentication.class);
+
+            AndroidAuthentication auth = GSON.fromJson(request.getReader(), AndroidAuthentication.class);
             String gPlusId = auth.gPlusId;
             String accessToken = auth.accessToken;
-            
-            GoogleTokenResponse tokenResponse = new GoogleAuthorizationCodeTokenRequest(
-                    TRANSPORT,
-                    FACTORY,
-                    CLIENT_ID,
-                    CLIENT_SECRET,
-                    accessToken,
-                    (String) null).execute();
 
+            GoogleIdToken.Payload payload = new Checker(new String[]{CLIENT_ID}, CLIENT_ID).check(accessToken);
+
+
+            // Upgrade the authorization code into an access and refresh token.
+            GoogleTokenResponse tokenResponse
+                    = new GoogleAuthorizationCodeTokenRequest(TRANSPORT, FACTORY,
+                            CLIENT_ID, CLIENT_SECRET, accessToken, "").execute();
             // Create a credential representation of the token data.
             GoogleCredential credential = new GoogleCredential.Builder()
                     .setJsonFactory(FACTORY)
@@ -105,17 +109,13 @@ public class AndroidLoginController {
                     .setAccessToken(credential.getAccessToken()).execute();
             // If there was an error in the token info, abort.
             if (tokenInfo.containsKey("error")) {
-                
+                Logger.getAnonymousLogger().log(Level.SEVERE, tokenInfo.get("error").toString());
                 return GSON.toJson(tokenInfo.get("error").toString());
-            }
-            // Make sure the token we got is for the intended user.
-            if (!tokenInfo.getUserId().equals(gPlusId)) {
-                response.setStatus(401);
-                return GSON.toJson("Token's user ID doesn't match given user ID.");
             }
             // Make sure the token we got is for our app.
             if (!tokenInfo.getIssuedTo().equals(CLIENT_ID)) {
                 response.setStatus(401);
+                Logger.getAnonymousLogger().log(Level.SEVERE, "Token's client ID does not match app's.");
                 return GSON.toJson("Token's client ID does not match app's.");
             }
             // Store the token in the session for later use.
@@ -123,6 +123,8 @@ public class AndroidLoginController {
             return GSON.toJson(tokenResponse.toString());
 
         } catch (IOException e) {
+            Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
+            
             throw new RuntimeException(e);
         }
 
@@ -183,7 +185,7 @@ public class AndroidLoginController {
     public static class AndroidAuthentication {
 
         String gPlusId, accessToken;
-        
+
         public AndroidAuthentication() {
         }
 
@@ -202,7 +204,6 @@ public class AndroidLoginController {
         public void setAccessToken(String accessToken) {
             this.accessToken = accessToken;
         }
-        
-        
+
     }
 }
