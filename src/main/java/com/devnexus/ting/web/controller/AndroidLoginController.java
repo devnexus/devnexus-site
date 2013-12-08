@@ -20,6 +20,12 @@ package com.devnexus.ting.web.controller;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.model.AuthorityType;
+import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.model.UserAuthority;
+import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.web.controller.googleauth.Checker;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
@@ -33,6 +39,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.oauth2.Oauth2;
 import com.google.api.services.oauth2.model.Tokeninfo;
 import com.google.api.services.plus.Plus;
+import com.google.api.services.plus.model.Person;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.stereotype.Controller;
@@ -40,11 +47,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
+import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * This class manages logins from the Android client using Google's services.
@@ -56,6 +70,12 @@ public class AndroidLoginController {
     private static final String CLIENT_SECRET;
     private static final Gson GSON = new GsonBuilder().create();
 
+    @Autowired
+    UserService userService;
+    
+    @Autowired
+    BusinessService businessService;
+    
     static {
         Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
         Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
@@ -85,42 +105,40 @@ public class AndroidLoginController {
         try {
 
             AndroidAuthentication auth = GSON.fromJson(request.getReader(), AndroidAuthentication.class);
-            String gPlusId = auth.gPlusId;
             String accessToken = auth.accessToken;
 
             GoogleIdToken.Payload payload = new Checker(new String[]{CLIENT_ID}, CLIENT_ID).check(accessToken);
-
-
-            // Upgrade the authorization code into an access and refresh token.
-            GoogleTokenResponse tokenResponse
-                    = new GoogleAuthorizationCodeTokenRequest(TRANSPORT, FACTORY,
-                            CLIENT_ID, CLIENT_SECRET, accessToken, "").execute();
-            // Create a credential representation of the token data.
-            GoogleCredential credential = new GoogleCredential.Builder()
-                    .setJsonFactory(FACTORY)
-                    .setTransport(TRANSPORT)
-                    .setClientSecrets(CLIENT_ID, CLIENT_SECRET).build()
-                    .setFromTokenResponse(tokenResponse);
-
-            // Check that the token is valid.
-            Oauth2 oauth2 = new Oauth2.Builder(
-                    TRANSPORT, FACTORY, credential).build();
-            Tokeninfo tokenInfo = oauth2.tokeninfo()
-                    .setAccessToken(credential.getAccessToken()).execute();
-            // If there was an error in the token info, abort.
-            if (tokenInfo.containsKey("error")) {
-                Logger.getAnonymousLogger().log(Level.SEVERE, tokenInfo.get("error").toString());
-                return GSON.toJson(tokenInfo.get("error").toString());
+            
+            User user;
+            try {
+                user = (User) userService.loadUserByUsername(payload.getSubject());
+            } catch (UsernameNotFoundException e) {
+                user = new User();
+                user.setEmail(payload.getEmail());
+                user.setUsername(payload.getSubject());
+                user.setUserAuthorities(new HashSet<UserAuthority>(1));
+                user.getUserAuthorities().add(new UserAuthority(user, AuthorityType.APP_USER));
+                user.setFirstName("");
+                user.setLastName("");
+                byte[] password = new byte[16];
+                new SecureRandom().nextBytes(password);
+                user.setPassword(Arrays.toString(password));
+        
+                try {
+                    userService.addUser(user);
+                    userService.initializeUserforEvent(user, businessService.getCurrentEvent().getEventKey());
+                } catch (DuplicateUserException ex) {
+                    Logger.getLogger(AndroidLoginController.class.getName()).log(Level.SEVERE, null, ex);
+                    throw new RuntimeException(ex);
+                }
+                
+                user = (User) userService.loadUserByUsername(user.getUsername());
+                
             }
-            // Make sure the token we got is for our app.
-            if (!tokenInfo.getIssuedTo().equals(CLIENT_ID)) {
-                response.setStatus(401);
-                Logger.getAnonymousLogger().log(Level.SEVERE, "Token's client ID does not match app's.");
-                return GSON.toJson("Token's client ID does not match app's.");
-            }
-            // Store the token in the session for later use.
-            request.getSession().setAttribute("token", tokenResponse.toString());
-            return GSON.toJson(tokenResponse.toString());
+            
+           SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities()));
+            
+            return "{}";
 
         } catch (IOException e) {
             Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);

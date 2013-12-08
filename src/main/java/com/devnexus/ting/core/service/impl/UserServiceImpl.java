@@ -41,9 +41,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import com.devnexus.ting.core.dao.UserDao;
+import com.devnexus.ting.core.model.AuthorityType;
 import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import java.util.HashSet;
 import org.springframework.web.context.request.NativeWebRequest;
 
 /**
@@ -147,7 +150,8 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         u.setFirstName(person.getGivenName());
         u.setLastName(person.getFamilyName());
         u.setUsername(info.getId());
-
+        u.setUserAuthorities(new HashSet<UserAuthority>(1));
+        u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
         u.setId((long) info.getId().hashCode());
 
         if (null == userDao.getUserByUsername(u.getUsername())) {

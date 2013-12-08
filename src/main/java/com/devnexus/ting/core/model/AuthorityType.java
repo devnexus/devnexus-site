@@ -5,7 +5,8 @@ import org.springframework.util.Assert;
 public enum AuthorityType {
 
 	ADMIN(100L, "ADMIN"),
-	CFP_REVIEWER( 200L, "CFP_REVIEWER");
+	CFP_REVIEWER( 200L, "CFP_REVIEWER"),
+        APP_USER(300L, "APP_USER");
 
 	private Long id;
 	private String name;
