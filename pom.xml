@@ -197,6 +197,11 @@
             <version>v1-rev111-1.17.0-rc</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jboss.aerogear.unifiedpush</groupId>
+            <artifactId>unified-push-java-client</artifactId>
+            <version>0.3.0</version>
+        </dependency>
 
         <dependency>
             <groupId>com.google.oauth-client</groupId>
