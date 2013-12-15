@@ -15,9 +15,12 @@
  */
 package com.devnexus.ting.web.contextlistener;
 
+import com.devnexus.ting.common.Apphome;
+import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
+import java.util.Properties;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
@@ -66,8 +69,14 @@ public class SocialConfig {
 	 */
 	@Bean
 	public ConnectionFactoryLocator connectionFactoryLocator() {
+
+            Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
+            Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
+            String clientId = props.getProperty("TING_CLIENT_ID");
+            String clientSecret = props.getProperty("TING_CLIENT_SECRET");
+            
 		ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
-		registry.addConnectionFactory(new GoogleConnectionFactory("598661048714-2qupb7ojac8v6hk57u3asd9gpqqd57af.apps.googleusercontent.com", "IdGbz0Yn9iI_anzQu3qOPlMC"));
+		registry.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
 		return registry;
 	}
 

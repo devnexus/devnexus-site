@@ -21,5 +21,6 @@ public interface CalendarServices {
     public List<UserCalendar> getCalendarTemplate(String eventKey);
     
     public List<UserCalendar> getUserCalendar(User user, String eventKey);
-    
+
+    UserCalendar updateEntry(Long id, User user, UserCalendar newCalendar);
 }

@@ -38,6 +38,16 @@ public class UserCalendar extends BaseModelObject {
     private boolean fixed = false;
     private boolean template = false;
 
+    private String eventKey;
+
+    public String getEventKey() {
+        return eventKey;
+    }
+
+    public void setEventKey(String eventKey) {
+        this.eventKey = eventKey;
+    }
+    
     public String getUsername() {
         return username;
     }
@@ -90,7 +100,7 @@ public class UserCalendar extends BaseModelObject {
         copy.setFixed(fixed);
         copy.setFromTime(fromTime);
         copy.setItem(item);
-        
+        copy.setEventKey(eventKey);
         return copy;
         
     }
