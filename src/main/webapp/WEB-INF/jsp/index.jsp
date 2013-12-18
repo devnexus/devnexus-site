@@ -146,8 +146,6 @@
             <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
                                                     src="${ctx}/img/sponsors/B2S.png"/></a>
 
-
-
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
                                                             src="${ctx}/img/sponsors/cc.png"/></a>
 
@@ -171,6 +169,8 @@
 
         <a href="http://www.incomm.com/"><img class="logo" alt="InComm"
                                               src="${ctx}/img/sponsors/inComm.png"/></a>
+        <a href="http://www.github.com/"><img class="logo" alt="GitHub"
+                                              src="${ctx}/img/sponsors/github_logo.png"/></a>
 
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
         <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs"
