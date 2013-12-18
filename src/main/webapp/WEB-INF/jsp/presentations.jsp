@@ -31,12 +31,23 @@
                     <p>
                         We are currently accepting topics from leaders, builders, thinkers and doers in our field and will be updating our speakers list as soon as we have our initial lineup.
                     </p>
+
+                    <p>
+                        In the meanwhile, why don't you check out last year's presentations.
+                    </p>
+                    <c:url var="oldUrl" value="${baseSiteUrl}/devnexus2013/presentations"/>
+
+                    <center><a href="${oldUrl}" class="btn btn-primary btn-lg">DevNexus 2013 Presentations</a></center>
+
                     <p>
                         Perhaps you have a technology you are passionate about or some bit of wisdom to share?  If so submit an abstract and our organizers will review it and let you know what we think.
                     </p>
                     <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
                     <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
+
+
+
                 </div>
 
             </div>
