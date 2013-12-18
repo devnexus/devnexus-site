@@ -141,7 +141,12 @@
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                       src="${ctx}/img/sponsors/compuware.png"/></a>
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
-                                                           src="${ctx}/img/sponsors/parasoft.png"/></a>
+                                                    src="${ctx}/img/sponsors/parasoft.png"/></a>
+
+            <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
+                                                    src="${ctx}/img/sponsors/B2S.png"/></a>
+
+
 
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
                                                             src="${ctx}/img/sponsors/cc.png"/></a>
