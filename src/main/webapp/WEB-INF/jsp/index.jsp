@@ -167,6 +167,11 @@
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
 
+        <a title="Actuate" href="http://www.actuate.com/" ><img class="logo" alt="Acruate"
+                                                                src="${ctx}/img/sponsors/actuate.png"/></a>
+
+        </a>
+
         <a href="http://www.incomm.com/"><img class="logo" alt="InComm"
                                               src="${ctx}/img/sponsors/inComm.png"/></a>
         <a href="http://www.github.com/"><img class="logo" alt="GitHub"
