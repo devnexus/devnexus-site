@@ -8,6 +8,7 @@ package com.devnexus.ting.web.controller;
 
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserCalendar;
+import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.CalendarServices;
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -56,6 +57,15 @@ public class CalendarController {
     @Autowired
     CalendarServices calendarService;
     
+    @Autowired
+    private BusinessService businessService;
+    
+    @RequestMapping(value={"/usercalendar"}, method=RequestMethod.GET)
+    @ResponseBody 
+    public ResponseEntity<List<UserCalendar>>  calendar() throws JsonProcessingException {
+        return calendar(businessService.getCurrentEvent().getEventKey());
+    }
+    
     @RequestMapping(value={"/{eventKey}/usercalendar"}, method=RequestMethod.GET)
     @ResponseBody 
     public ResponseEntity<List<UserCalendar>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
@@ -101,4 +111,11 @@ public class CalendarController {
 
     }
 
+    @RequestMapping(value="/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+    @ResponseBody 
+    public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("id") String id, HttpServletRequest request) {
+        return updateCalendar(businessService.getCurrentEvent().getEventKey(), id, request);
+
+    }
+    
 }
