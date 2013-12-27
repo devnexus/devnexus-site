@@ -2,8 +2,8 @@
 <% pageContext.setAttribute("lf", "\n"); %>
 
 <title>DevNexus 2013 - Organizers</title>
-<div id="content" class="span-22 last">
 
+<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
 	<h2>Evaluations</h2>
 
 	<c:forEach items="${evaluationList.evaluations}" var="evaluation">

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -61,9 +61,18 @@ public class SpeakerController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
 	@RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
-	public String getSpeakers(ModelMap model, HttpServletRequest request) {
+	public String getSpeakers(ModelMap model, HttpServletRequest request,
+			@RequestParam(value="eventId", required=false) Long eventId) {
 
-		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
+		final List<Speaker> speakers;
+
+		if (eventId != null) {
+			speakers = businessService.getSpeakersForEvent(eventId);
+		}
+		else {
+			speakers = businessService.getAllSpeakersOrderedByName();
+		}
+
 		model.addAttribute("speakers", speakers);
 
 		return "/admin/manage-speakers";
@@ -116,6 +125,8 @@ public class SpeakerController {
 		speakerFromDb.setBio(speakerForm.getBio());
 		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
 		speakerFromDb.setGooglePlusId(speakerForm.getGooglePlusId());
+		speakerFromDb.setLinkedInId(speakerForm.getLinkedInId());
+
 		speakerFromDb.setFirstName(speakerForm.getFirstName());
 		speakerFromDb.setLastName(speakerForm.getLastName());
 

@@ -25,7 +25,6 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.io.support.ResourcePropertySource;
-import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;

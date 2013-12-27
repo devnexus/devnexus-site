@@ -98,6 +98,12 @@ public class CfpSubmission extends Person {
 			@Parameter(name = "valueOfMethod", value = "fromId") })
 	private SkillLevel skillLevel;
 
+	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.CfpSubmissionStatusType"),
+			@Parameter(name = "identifierMethod", value = "getKey"),
+			@Parameter(name = "valueOfMethod", value = "fromKey") })
+	private CfpSubmissionStatusType status;
+
 	public CfpSubmission() {
 	}
 
@@ -209,6 +215,14 @@ public class CfpSubmission extends Person {
 
 	public void setTopic(String topic) {
 		this.topic = topic;
+	}
+
+	public CfpSubmissionStatusType getStatus() {
+		return status;
+	}
+
+	public void setStatus(CfpSubmissionStatusType status) {
+		this.status = status;
 	}
 
 }

@@ -17,14 +17,10 @@ package com.devnexus.ting.core.dao.jpa;
 
 import java.util.List;
 
-import org.hibernate.Filter;
-import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.CfpSubmissionDao;
-import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.Speaker;
 
 @Repository("cfpSubmissionDao")
 public class CfpSubmissionDaoJpa extends GenericDaoJpa< CfpSubmission, Long>

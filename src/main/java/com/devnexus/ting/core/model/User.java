@@ -33,8 +33,6 @@ import javax.xml.bind.annotation.XmlID;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.Filters;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

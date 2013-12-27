@@ -16,7 +16,13 @@
 package com.devnexus.ting.core.model;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,7 +45,7 @@ public class ScheduleItemList implements Serializable {
 	private Integer numberOfUnassignedSessions;
 
 	private Integer numberOfBreaks;
-	private Integer numberOfTracks;
+	private Integer numberOfRooms;
 	private SortedSet<Date> days;
 
     @XmlElement(name="scheduleItems")
@@ -111,12 +117,12 @@ public class ScheduleItemList implements Serializable {
 		this.numberOfBreaks = numberOfBreaks;
 	}
 
-	public Integer getNumberOfTracks() {
-		return numberOfTracks;
+	public Integer getNumberOfRooms() {
+		return numberOfRooms;
 	}
 
-	public void setNumberOfTracks(Integer numberOfTracks) {
-		this.numberOfTracks = numberOfTracks;
+	public void setNumberOfRooms(Integer numberOfRooms) {
+		this.numberOfRooms = numberOfRooms;
 	}
 
 	public List<ScheduleItem> getScheduleItems() {
@@ -170,7 +176,7 @@ public class ScheduleItemList implements Serializable {
                         headerItemsByDate.put(date, items);
                     }
 
-                    if (item.getFromTime().getDate() == date.getDate()) {
+                    if (item.getFromTime().getTime() == date.getTime()) {
                         items.add(item);
                     }
                 }
@@ -190,7 +196,7 @@ public class ScheduleItemList implements Serializable {
                         breakoutItemsByDate.put(date, items);
                     }
 
-                    if (item.getFromTime().getDate() == date.getDate()) {
+                    if (item.getFromTime().getTime() == date.getTime()) {
                         items.add(item);
                     }
                 }

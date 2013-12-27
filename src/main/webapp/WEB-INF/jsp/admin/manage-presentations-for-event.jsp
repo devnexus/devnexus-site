@@ -9,14 +9,13 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>Event</th><th>Title</th>
+					<th>Action</th><th>Title</th>
 				</tr>
 			</thead>
 
 			<c:forEach items="${presentations}" var="presentation">
 				<tr>
 					<td><a href="${ctx}${baseSiteUrl}/admin/presentation/${presentation.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-					<td><c:out value="${presentation.event.eventKey}"/></td>
 					<td><c:out value="${presentation.title}"/></td>
 				</tr>
 			</c:forEach>
@@ -25,4 +24,3 @@
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
 	</div>
 </div>
-

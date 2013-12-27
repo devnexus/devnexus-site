@@ -388,11 +388,13 @@ public class BusinessServiceImpl implements BusinessService {
 		int numberOfUnassignedSessions = 0;
 
 		int numberOfBreaks = 0;
-		int numberOfTracks = 0;
 
 		Set<Long> speakerIds = new HashSet<Long>();
+		Set<Long> roomIds = new HashSet<Long>();
 
 		for (ScheduleItem scheduleItem : scheduleItems) {
+
+			roomIds.add(scheduleItem.getRoom().getId());
 
 			if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
 					|| ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
@@ -444,6 +446,7 @@ public class BusinessServiceImpl implements BusinessService {
 		scheduleItemList.setNumberOfKeynoteSessions(numberOfKeynoteSessions);
 		scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
 		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
+		scheduleItemList.setNumberOfRooms(roomIds.size());
 
 		return scheduleItemList;
 	}
@@ -486,6 +489,11 @@ public class BusinessServiceImpl implements BusinessService {
 		}
 
 		return savedCfpSubmission;
+	}
+
+	@Override
+	public CfpSubmission getCfpSubmission(Long cfpId) {
+		return this.cfpSubmissionDao.get(cfpId);
 	}
 
 }
