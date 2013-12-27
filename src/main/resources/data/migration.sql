@@ -82,3 +82,6 @@ alter table USER_AUTHORITIES
 -- 2013 - Dec 04
 
 update events set version = '1' where version is null
+
+-- 2013 - Dec 19
+ALTER TABLE cfp_submissions ADD COLUMN status character varying(30);

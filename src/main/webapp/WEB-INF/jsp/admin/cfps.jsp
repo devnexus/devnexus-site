@@ -1,26 +1,50 @@
+<%@page import="com.devnexus.ting.core.model.CfpSubmissionStatusType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2014 - Call for Paper Submissions</title>
-	<h2>Call for Paper Submissions</h2>
+<% pageContext.setAttribute("acceptedCfpStatus", CfpSubmissionStatusType.ACCEPTED); %>
+<% pageContext.setAttribute("rejectedCfpStatus", CfpSubmissionStatusType.REJECTED); %>
 
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th>Name</th><th>Title</th><th>Topic</th><th>Type</th><th>Skill Level</th><th>Status</th>
-			</tr>
-		</thead>
+<title>Manage Call for Paper Submissions</title>
+<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
+	<h2>Manage Call for Paper Submissions</h2>
+</div>
 
-		<c:forEach items="${cfpSubmissionList.cfpSubmissions}" var="cfp">
-			<tr>
-				<td><c:out value="${cfp.lastName}"/>, <c:out value="${cfp.firstName}"/></td>
-				<td><c:out value="${cfp.title}"/></td>
-				<td><c:out value="${cfp.topic}"/></td>
-				<td><c:out value="${cfp.presentationType}"/></td>
-				<td><c:out value="${cfp.skillLevel}"/></td>
-				<td>STATUS TBD</td>
-			</tr>
-		</c:forEach>
-	</table>
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Action</th><th>Name</th><th>Title</th><th>Topic</th><th>Type</th><th>Skill Level</th><th>Status</th>
+				</tr>
+			</thead>
 
+			<c:forEach items="${cfpSubmissionList.cfpSubmissions}" var="cfp">
+
+				<c:choose>
+					<c:when test="${cfp.status == acceptedCfpStatus}">
+						<c:set var="cfpStatusClass" value="success"/>
+					</c:when>
+					<c:when test="${cfp.status == rejectedCfpStatus}">
+						<c:set var="cfpStatusClass" value="warning"/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="cfpStatusClass" value=""/>
+					</c:otherwise>
+				</c:choose>
+
+				<tr class="${cfpStatusClass}">
+					<td><a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><c:out value="${cfp.lastName}"/>, <c:out value="${cfp.firstName}"/></td>
+					<td><c:out value="${cfp.title}"/></td>
+					<td><c:out value="${cfp.topic}"/></td>
+					<td><c:out value="${cfp.presentationType}"/></td>
+					<td><c:out value="${cfp.skillLevel}"/></td>
+					<td><c:out value="${cfp.status}"/></td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+	</div>
+</div>
 

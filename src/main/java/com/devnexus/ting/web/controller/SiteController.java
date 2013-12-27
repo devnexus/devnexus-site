@@ -17,7 +17,6 @@ package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -29,14 +28,13 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.annotation.SendToUser;
-import org.springframework.messaging.simp.annotation.SubscribeEvent;
+import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.ApplicationCache;
@@ -48,7 +46,6 @@ import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
-import com.devnexus.ting.core.service.impl.TweetAddedApplicationEvent;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout
@@ -83,8 +80,8 @@ public class SiteController {
 	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
 
 		final Event event = businessService.getCurrentEvent();
-		model.addAttribute("headerTitle", "Schedule");
-		model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+		model.addAttribute("headerTitle", "Schedule222");
+		model.addAttribute("tag", "600+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -133,7 +130,7 @@ public class SiteController {
 
 	@RequestMapping("/travel")
 	public String travel(final Model model, final SitePreference sitePreference) {
-
+        LOGGER.warn("This is a log.");
 		return "travel";
 	}
 
@@ -228,7 +225,7 @@ public class SiteController {
 	@Autowired
 	ApplicationEventPublisher applicationEventPublisher;
 
-	@SubscribeEvent("/loadtweets")
+	@SubscribeMapping("/positions")
 	public void onApplicationEvent() {
 		LOGGER.info("New user subscribing");
 		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());

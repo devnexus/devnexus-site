@@ -223,4 +223,6 @@ public interface BusinessService {
 	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);
 
 	CfpSubmission saveAndNotifyCfpSubmission(CfpSubmission cfpSubmission);
+
+	CfpSubmission getCfpSubmission(Long cfpId);
 }

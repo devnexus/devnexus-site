@@ -48,7 +48,9 @@ public class GlobalDataInterceptor implements HandlerInterceptor {
 			Object object) throws Exception {
 
 		final List<Event>events = businessService.getAllNonCurrentEvents();
+		final Event currentEvent = businessService.getCurrentEvent();
 		request.setAttribute("eventsForMenu", events);
+		request.setAttribute("currentEvent", currentEvent);
 		return true;
 	}
 
