@@ -12,14 +12,5 @@
 
 	<import resource="classpath:spring/spring-integration-cfp-context.xml"/>
 	<context:property-placeholder location="classpath:ting-demo.properties" />
-	 <bean class="com.hillert.apptools.spring.EnvironmentEnhancingPropertySourcesPlaceholderConfigurer">
-	        <property name="propertySources">
-	            <list>
-	                <bean class="org.springframework.core.io.support.ResourcePropertySource">
-	                    <constructor-arg value="classpath:ting-demo.properties" />
-	                </bean>
-	            </list>
-	        </property>
-	</bean>
 
 </beans>

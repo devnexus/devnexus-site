@@ -85,20 +85,20 @@ public class CfpSubmission extends Person {
 	private boolean sessionRecordingApproved = true;
 
 	@NotNull
-	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
 			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.PresentationType"),
 			@Parameter(name = "identifierMethod", value = "getId"),
 			@Parameter(name = "valueOfMethod", value = "fromId") })
 	private PresentationType presentationType;
 
 	@NotNull
-	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
 			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.SkillLevel"),
 			@Parameter(name = "identifierMethod", value = "getId"),
 			@Parameter(name = "valueOfMethod", value = "fromId") })
 	private SkillLevel skillLevel;
 
-	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
 			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.CfpSubmissionStatusType"),
 			@Parameter(name = "identifierMethod", value = "getKey"),
 			@Parameter(name = "valueOfMethod", value = "fromKey") })
