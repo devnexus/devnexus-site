@@ -36,7 +36,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -99,7 +98,7 @@ public class CallForPapersController {
 	}
 
 	@RequestMapping(value="/cfp", method=RequestMethod.GET)
-	public String openAddCfp(final SitePreference sitePreference, ModelMap model) {
+	public String openAddCfp(ModelMap model) {
 
 		model.addAttribute("headerTitle", "Call for Papers");
 		model.addAttribute("tag", "We would love to review your	session proposals!");
@@ -198,14 +197,10 @@ public class CallForPapersController {
 	}
 
 	@RequestMapping(value="/add-cfp-success", method=RequestMethod.GET)
-	public String addCfpSuccess(final SitePreference sitePreference, ModelMap model) {
+	public String addCfpSuccess(ModelMap model) {
 
 		model.addAttribute("headerTitle", "Call for Papers");
 		model.addAttribute("tag", "Thank you for your interest in presenting at DevNexus!");
-
-		if (sitePreference.isMobile()) {
-			return "add-cfp-success-mobile";
-		}
 
 		return "cfp-add-success";
 	}

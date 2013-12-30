@@ -18,7 +18,6 @@ package com.devnexus.ting.web.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,8 +43,7 @@ public class RoomController {
 
 	@RequestMapping("/{eventKey}/rooms")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
-										final Model model,
-										final SitePreference sitePreference) {
+										final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
 		//model.addAttribute("event", event);
@@ -60,8 +58,7 @@ public class RoomController {
 
 	@RequestMapping("/rooms")
 	public String getPresentationsForEvent(@RequestParam(value="eventId", required=false) final Long eventId,
-										final Model model,
-										final SitePreference sitePreference) {
+										final Model model) {
 
 		final Event event;
 
@@ -81,21 +78,5 @@ public class RoomController {
 
 		return "rooms";
 	}
-
-//	@RequestMapping("/presentations")
-//	public String getPresentationsForCurrentEvent(final Model model,
-//												  final SitePreference sitePreference) {
-//
-//		final PresentationList presentationList = new PresentationList();
-//		presentationList.setPresentations(businessService.getPresentationsForCurrentEvent());
-//
-//		model.addAttribute("presentationList", presentationList);
-//
-//		if (sitePreference.isMobile()) {
-//			return "presentations-mobile";
-//		}
-//
-//		return "presentations";
-//	}
 
 }

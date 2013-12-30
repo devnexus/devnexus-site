@@ -463,6 +463,11 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
+	public void removeEvaluation(Long evaluationId) {
+		evaluationDao.remove(evaluationId);
+	}
+
+	@Override
 	public List<CfpSubmission> getCfpSubmissions(Long eventId) {
 		return cfpSubmissionDao.getCfpSubmissions(eventId);
 	}

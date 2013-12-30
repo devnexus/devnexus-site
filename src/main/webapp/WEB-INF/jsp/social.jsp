@@ -10,20 +10,20 @@
 </div>
 <div class="masonry">
 		<c:forEach items="${tweets}" var="tweet">
-		<div class="col-md-3 tweet-box">
-			<div class="panel panel-default">
-				<div class="panel-heading" style="padding: 1px;"
-				><img style="margin-right: 4px;" alt="${tweet.fromUser}" title="${tweet.fromUser}" src="${tweet.profileImageUrl}"/><a href="http://www.twitter.com/<c:out value="${tweet.fromUser}"/>"<c:out value="${tweet.fromUser}"/>"
-				><c:out value="${tweet.fromUser}"/></a>
-					<div class="btn-group pull-right"
-					><a class="delete-tweet" href="#" class="btn btn-link btn-xs"
-						><span class="glyphicon glyphicon-remove"></span></a>
-						</div>
+			<div class="col-md-3 tweet-box">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="padding: 1px;"
+					><img style="margin-right: 4px;" alt="${tweet.fromUser}" title="${tweet.fromUser}" src="${tweet.profileImageUrl}"/><a href="http://www.twitter.com/<c:out value="${tweet.fromUser}"/>"<c:out value="${tweet.fromUser}"/>"
+					><c:out value="${tweet.fromUser}"/></a>
+						<div class="btn-group pull-right"
+						><a class="delete-tweet" href="#" class="btn btn-link btn-xs"
+							><span class="glyphicon glyphicon-remove"></span></a>
+							</div>
+					</div>
+					<div class="panel-body"><c:out value="${tweet.html}" escapeXml="false"/></div>
+					<div class="panel-footer"><small><c:out value="${tweet.prettyTime}" /></small></div>
 				</div>
-				<div class="panel-body"><c:out value="${tweet.html}" escapeXml="false"/></div>
-				<div class="panel-footer"><small><c:out value="${tweet.prettyTime}" /></small></div>
 			</div>
-		</div>
 		</c:forEach>
 </div>
 

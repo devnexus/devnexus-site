@@ -26,7 +26,6 @@ import javax.validation.Validator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -70,7 +69,7 @@ public class AdminCallForPapersController {
 	}
 
 	@RequestMapping(value="/admin/cfps", method=RequestMethod.GET)
-	public String viewCfps(final SitePreference sitePreference, ModelMap model) {
+	public String viewCfps(ModelMap model) {
 
 		Event currentEvent = businessService.getCurrentEvent();
 		List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(currentEvent.getId());

@@ -36,12 +36,6 @@
 				<property name="validator" ref="validator" />
 			</bean>
 		</property>
-		<property name="customArgumentResolvers">
-			<list>
-				<bean class="org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver" />
-				<bean class="org.springframework.mobile.device.site.SitePreferenceHandlerMethodArgumentResolver" />
-			</list>
-		</property>
 		<property name="messageConverters">
 			<list>
 				<ref bean="jsonConverter" />
@@ -161,7 +155,6 @@
 	<mvc:view-controller path="/admin" view-name="redirect:/s/admin/index" />
 
 	<mvc:interceptors>
-		<bean class="com.devnexus.ting.web.CustomDeviceResolverHandlerInterceptor" />
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />

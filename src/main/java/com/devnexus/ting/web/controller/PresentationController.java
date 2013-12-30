@@ -25,7 +25,6 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,8 +38,6 @@ import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
  *
  * @author Gunnar Hillert
  *
@@ -66,8 +63,7 @@ public class PresentationController {
 
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
-										   final Model model,
-										   final SitePreference sitePreference) {
+										   final Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		this.preparePresentationsForEvent(event, model);
 		return "presentations";
@@ -101,8 +97,7 @@ public class PresentationController {
 	}
 
 	@RequestMapping("/presentations")
-	public String getPresentationsForCurrentEvent(final Model model,
-												  final SitePreference sitePreference) {
+	public String getPresentationsForCurrentEvent(final Model model) {
 		final Event event = businessService.getCurrentEvent();
 		this.preparePresentationsForEvent(event, model);
 		return "presentations";

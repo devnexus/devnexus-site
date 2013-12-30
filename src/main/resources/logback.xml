@@ -87,7 +87,7 @@
 	<logger name="ch.qos.logback">
 		<level value="WARN"/>
 	</logger>
-	<logger name="com.hillert.apptools.spring.SecurityEventListener">
+	<logger name="com.devnexus.ting.core.applicationlistener.SecurityEventListener">
 		<level value="INFO"/>
 		<appender-ref ref="LOGFILE-SECURITY"/>
 	</logger>
