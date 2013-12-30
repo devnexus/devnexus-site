@@ -48,7 +48,7 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 
 	@XmlID
 	@NotNull
-	@Size(min=5, max=50)
+	@Size(min=3, max=50)
 	@Column(unique=true)
 	private String username;
 

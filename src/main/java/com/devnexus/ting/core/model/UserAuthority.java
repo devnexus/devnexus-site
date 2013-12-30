@@ -82,4 +82,9 @@ public class UserAuthority extends BaseModelObject implements GrantedAuthority {
 		return this.authority.getName();
 	}
 
+	@Override
+	public String toString() {
+		return "UserAuthority [authority=" + authority + "]";
+	}
+
 }

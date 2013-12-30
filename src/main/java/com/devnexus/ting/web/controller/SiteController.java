@@ -47,8 +47,8 @@ import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
+ * Main DevNexus Site Controller - Contains various simple controllers for various
+ * sections of the site.
  *
  * @author Gunnar Hillert
  *
@@ -59,9 +59,6 @@ public class SiteController {
 	@Autowired private BusinessService businessService;
 
 	@Autowired private TwitterService twitterService;
-
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
@@ -96,21 +93,18 @@ public class SiteController {
 	@RequestMapping("/past-conferences")
 	public String pastConferences(final Model model) {
 
-		final Event event = businessService.getCurrentEvent();
+		//TODO
 		model.addAttribute("headerTitle", "Previous Conferences");
-
 		return "past-conferences";
 
 	}
 
 	@RequestMapping("/register")
 	public String register(final Model model) {
-
-		final Event event = businessService.getCurrentEvent();
+		//TODO
 		model.addAttribute("headerTitle", "Registration Information");
 
 		return "registration";
-
 	}
 
 	@RequestMapping("/{eventKey}/schedule")

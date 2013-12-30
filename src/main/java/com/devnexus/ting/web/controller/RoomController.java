@@ -15,14 +15,11 @@
  */
 package com.devnexus.ting.web.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.RoomList;
@@ -36,17 +33,11 @@ public class RoomController {
 
 	@Autowired private BusinessService businessService;
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(RoomController.class);
-
 	@RequestMapping("/{eventKey}/rooms")
-	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
+	public String getRoomsForEventKey(@PathVariable("eventKey") final String eventKey,
 										final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
-		//model.addAttribute("event", event);
 
 		final RoomList roomList = new RoomList();
 		roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
@@ -57,24 +48,13 @@ public class RoomController {
 	}
 
 	@RequestMapping("/rooms")
-	public String getPresentationsForEvent(@RequestParam(value="eventId", required=false) final Long eventId,
-										final Model model) {
+	public String getRoomsForCurrentEvent(final Model model) {
 
-		final Event event;
-
-		if (eventId == null) {
-			event = businessService.getCurrentEvent();
-		} else {
-			event = businessService.getEvent(eventId);
-		}
-
-		//model.addAttribute("event", event);
+		final Event event = businessService.getCurrentEvent();
 
 		final RoomList roomList = new RoomList();
 		roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
-
 		model.addAttribute("roomList", roomList);
-
 
 		return "rooms";
 	}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,6 @@ import javax.validation.Valid;
 import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -59,14 +57,12 @@ public class PresentationController {
 
 	@Autowired private Validator validator;
 
-
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
-
 	private void prepareReferenceData(ModelMap model) {
+		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
+		model.addAttribute("presentationTypes", presentationTypes);
 
+		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
+		model.addAttribute("skillLevels", skillLevels);
 	}
 
 	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
@@ -98,11 +94,7 @@ public class PresentationController {
 			event = businessService.getEvent(eventId);
 		}
 
-		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
-		model.addAttribute("presentationTypes", presentationTypes);
-
-		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
-		model.addAttribute("skillLevels", skillLevels);
+		prepareReferenceData(model);
 
 		final List<Speaker> speakers = businessService.getSpeakersForEvent(event.getId());
 		model.addAttribute("speakers", speakers);

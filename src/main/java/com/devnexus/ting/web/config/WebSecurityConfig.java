@@ -25,6 +25,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
+
 /**
  * @author Gunnar Hillert
  *
@@ -68,4 +70,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return passwordEncoder;
 	}
 
+	@Bean
+	public SecurityEventListener securityEventListener() {
+		return new SecurityEventListener();
+	}
 }

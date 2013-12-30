@@ -12,6 +12,11 @@
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-2">
+		<p>Welcome <sec:authentication property="principal.username"/> (Logged-in since: <sec:authentication property="principal.lastLoginDate"/>)</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4 col-md-offset-2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">Current Event - <c:out value="${currentEvent.title}"></c:out></h3>
@@ -59,7 +64,7 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="${ctx}${baseSiteUrl}/logout">Logout</a></li>
+					<li><a href="${ctx}${baseSiteUrl}/logout">Logout</a> (<sec:authentication property="principal.username"/>)</li>
 				</ul>
 			</div>
 		</div>
