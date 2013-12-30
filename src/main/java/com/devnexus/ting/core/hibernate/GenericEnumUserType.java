@@ -1,4 +1,4 @@
-package com.hillert.apptools.hibernate;
+package com.devnexus.ting.core.hibernate;
 
 import java.io.Serializable;
 import java.lang.reflect.Method;

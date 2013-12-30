@@ -1,4 +1,4 @@
-package com.hillert.apptools.hibernate;
+package com.devnexus.ting.core.hibernate;
 
 import org.hibernate.dialect.H2Dialect;
 

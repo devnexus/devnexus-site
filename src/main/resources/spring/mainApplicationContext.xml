@@ -110,7 +110,7 @@
 					</prop>
 					<prop key="hibernate.show_sql">${database.hibernate.show_sql}</prop>
 					<prop key="hibernate.format_sql">true</prop>
-					<prop key="hibernate.ejb.naming_strategy">com.hillert.apptools.hibernate.ImprovedPluralizedNamingStrategy</prop>
+					<prop key="hibernate.ejb.naming_strategy">com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy</prop>
 				</props>
 			</property>
 		</bean>
