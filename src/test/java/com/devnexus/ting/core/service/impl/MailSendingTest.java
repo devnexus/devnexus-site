@@ -26,7 +26,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.web.config.CloudApplicationContextInitializer;
+import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 
 /**
  *
@@ -35,7 +35,7 @@ import com.devnexus.ting.web.config.CloudApplicationContextInitializer;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-		initializers=CloudApplicationContextInitializer.class,
+		initializers=DefaultApplicationContextInitializer.class,
 		locations={ "classpath:spring/mainApplicationContext.xml"})
 public class MailSendingTest {
 

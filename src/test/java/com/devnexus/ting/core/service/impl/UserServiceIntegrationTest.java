@@ -34,7 +34,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.UserService;
-import com.devnexus.ting.web.config.CloudApplicationContextInitializer;
+import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 
 /**
  * Base class for Dao Test Cases.
@@ -43,7 +43,7 @@ import com.devnexus.ting.web.config.CloudApplicationContextInitializer;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers=CloudApplicationContextInitializer.class,
+@ContextConfiguration(initializers=DefaultApplicationContextInitializer.class,
 					locations={ "classpath:spring/mainApplicationContext.xml"})
 @Transactional
 @ActiveProfiles({"default"})

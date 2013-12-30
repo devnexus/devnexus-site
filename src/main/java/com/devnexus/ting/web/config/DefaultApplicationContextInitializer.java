@@ -30,9 +30,9 @@ import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
 
-public class CloudApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+public class DefaultApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(CloudApplicationContextInitializer.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(DefaultApplicationContextInitializer.class);
 	@Override
 	public void initialize(ConfigurableApplicationContext applicationContext) {
 
