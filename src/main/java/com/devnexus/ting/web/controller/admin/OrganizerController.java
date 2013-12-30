@@ -24,8 +24,6 @@ import javax.validation.Valid;
 import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -52,11 +50,6 @@ public class OrganizerController {
 	@Autowired private BusinessService businessService;
 
 	@Autowired private Validator validator;
-
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(OrganizerController.class);
 
 	@RequestMapping(value="/admin/organizers", method=RequestMethod.GET)
 	public String getOrganizers(ModelMap model, HttpServletRequest request) {
@@ -185,11 +178,13 @@ public class OrganizerController {
 
 			 organizerForm.setPicture(pictureData);
 
-			String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
+			//TODO
+			//String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
 			//FlashMap.setSuccessMessage(message);
 
 		}
 
+		//TODO
 		Organizer savedOrganizer = businessService.saveOrganizer(organizerForm);
 
 		//FlashMap.setSuccessMessage("The organizer was added successfully.");

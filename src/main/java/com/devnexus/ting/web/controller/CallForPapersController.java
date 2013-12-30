@@ -33,8 +33,6 @@ import net.tanesha.recaptcha.ReCaptchaResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -66,13 +64,6 @@ public class CallForPapersController {
 	@Autowired private ConfigurableEnvironment environment;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
-
-	private MessageSourceAccessor messages;
-
-	@Autowired
-	public void setMessages(MessageSource messageSource) {
-		messages = new MessageSourceAccessor(messageSource);
-	}
 
 	private void prepareReferenceData(ModelMap model) {
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
@@ -121,12 +112,8 @@ public class CallForPapersController {
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
-		String baseSiteUrl = (String) request.getAttribute("baseSiteUrl");
-
-		String s = messages.getMessage("errors.required");
-
 		if (request.getParameter("cancel") != null) {
-			return "redirect:" + baseSiteUrl + "/index";
+			return "redirect:/index";
 		}
 
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
@@ -193,7 +180,7 @@ public class CallForPapersController {
 		LOGGER.info(cfpSubmission.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);
 
-		return "redirect:" + baseSiteUrl + "/add-cfp-success";
+		return "redirect:/add-cfp-success";
 	}
 
 	@RequestMapping(value="/add-cfp-success", method=RequestMethod.GET)

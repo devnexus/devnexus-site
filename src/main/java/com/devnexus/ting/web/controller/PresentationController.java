@@ -22,8 +22,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,16 +45,11 @@ public class PresentationController {
 
 	@Autowired private BusinessService businessService;
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
-
 	private void preparePresentationsForEvent(Event event, Model model) {
 		model.addAttribute("event", event);
 		final PresentationList presentationList = new PresentationList();
-        List<Presentation> presentations;
-        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
+		List<Presentation> presentations;
+		Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
 		presentationList.setPresentations(presentations);
 		model.addAttribute("presentationList", presentationList);
 	}

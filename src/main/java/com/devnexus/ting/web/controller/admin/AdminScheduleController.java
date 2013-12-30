@@ -19,8 +19,6 @@ import java.util.List;
 
 import javax.validation.Validator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -42,10 +40,9 @@ public class AdminScheduleController {
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(AdminScheduleController.class);
-
 	private void prepareReferenceData(ModelMap model) {
 
+//TODO
 //		final Event currentEvent = businessService.getCurrentEvent();
 //		model.addAttribute("currentEvent", currentEvent);
 //
@@ -76,33 +73,4 @@ public class AdminScheduleController {
 		return "/admin/manage-schedule";
 	}
 
-//	@RequestMapping(value="/admin/cfps/{cfpId}", method=RequestMethod.POST)
-//	public String editCfp(@PathVariable("cfpId") Long cfpId,
-//							  @Valid CfpSubmission cfpSubmission,
-//							  BindingResult result, HttpServletRequest request) {
-//
-//		if (request.getParameter("cancel") != null) {
-//			return "redirect:/s/admin/index";
-//		}
-//
-//		if (result.hasErrors()) {
-//			return "/admin/edit-cfp";
-//		}
-//
-//		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
-//		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
-//
-////		final Speaker speakerFromDb = businessService.getSpeaker(speakerId);
-////
-////		speakerFromDb.setBio(speakerForm.getBio());
-////		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
-////		speakerFromDb.setGooglePlusId(speakerForm.getGooglePlusId());
-////		speakerFromDb.setFirstName(speakerForm.getFirstName());
-////		speakerFromDb.setLastName(speakerForm.getLastName());
-////
-//		businessService.saveCfpSubmission(cfpSubmissionFromDb);
-//
-//		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
-//		return "redirect:/s/admin/cfps";
-//	}
 }

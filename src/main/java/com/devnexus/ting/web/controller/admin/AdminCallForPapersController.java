@@ -23,8 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.Validator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -49,8 +47,6 @@ public class AdminCallForPapersController {
 
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AdminCallForPapersController.class);
 
 	private void prepareReferenceData(ModelMap model) {
 
@@ -105,14 +101,6 @@ public class AdminCallForPapersController {
 		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
 		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
 
-//		final Speaker speakerFromDb = businessService.getSpeaker(speakerId);
-//
-//		speakerFromDb.setBio(speakerForm.getBio());
-//		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
-//		speakerFromDb.setGooglePlusId(speakerForm.getGooglePlusId());
-//		speakerFromDb.setFirstName(speakerForm.getFirstName());
-//		speakerFromDb.setLastName(speakerForm.getLastName());
-//
 		businessService.saveCfpSubmission(cfpSubmissionFromDb);
 
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");

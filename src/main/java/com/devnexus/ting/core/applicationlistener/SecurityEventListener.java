@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 package com.devnexus.ting.core.applicationlistener;
+
+import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,17 +50,15 @@ public class SecurityEventListener implements
 			successEvent.getAuthentication();
 
 			final User user = (User)successEvent.getAuthentication().getPrincipal();
-//FIXME           user.setLastLoginDate(new Date());
-			//FIXME            userService.updateUser(user);
+
+			User userFromDb = userService.getUser(user.getId());
+			userFromDb.setLastLoginDate(new Date());
+			userService.updateUser(userFromDb);
 
 		} else if (event instanceof InteractiveAuthenticationSuccessEvent) {
 
 			final InteractiveAuthenticationSuccessEvent successEvent = (InteractiveAuthenticationSuccessEvent) event;
 			LOGGER.info("Successful Interactive Authentication of User: " + successEvent.getAuthentication().getName());
-
-			final User user = (User)successEvent.getAuthentication().getPrincipal();
-			//FIXME            user.setLastLoginDate(new Date());
-			//FIXME             userService.updateUser(user);
 
 		} else if (event instanceof AbstractAuthenticationFailureEvent) {
 
@@ -77,8 +77,5 @@ public class SecurityEventListener implements
 					+ event.getAuthentication().getPrincipal() + "':"
 					+ event.toString());
 		}
-
-
 	}
-
 }

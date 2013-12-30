@@ -39,7 +39,8 @@ public interface UserService {
 	 * @throws DuplicateUserException
 	 */
 	User addUser(User user) throws DuplicateUserException;
-//
+
+	//TODO
 //    /**
 //     * Adds a brand new user to the system. If a user
 //     * with the username already exists a duplicate user exception
@@ -58,19 +59,18 @@ public interface UserService {
 //     */
 //    User getUser(String username);
 //
-//    /**
-//     * Load a user by the provided user id.
-//     * @param userId
-//     * @return a single user
-//     */
-//    User getUser(Long userId);
+	/**
+	 * Load a {@link User} by the provided user id.
+	 * @param userId Must not be null
+	 * @return a single user
+	 */
+	User getUser(Long userId);
 //
-//    /**
-//     * Load a user by the provided user id.
-//     * @param userId
-//     * @return a single user
-//     */
-//    void updateUser(User user);
+	/**
+	 * Update {@link User}.
+	 * @param user Must not be null and must exist.
+	 */
+	void updateUser(User user);
 //
 //    /**
 //     * Get a list of all users.
