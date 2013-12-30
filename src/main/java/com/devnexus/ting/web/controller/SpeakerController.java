@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,14 +51,14 @@ public class SpeakerController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpeakerController.class);
 
 	@RequestMapping(value="/speakers", method = RequestMethod.GET)
-	public String getSpeakersForCurrentEvent(Model model, final SitePreference sitePreference, @RequestParam(value="image", defaultValue="false") boolean image) {
+	public String getSpeakersForCurrentEvent(Model model, @RequestParam(value="image", defaultValue="false") boolean image) {
 		Event currentEvent = businessService.getCurrentEvent();
 		prepareSpeakers(currentEvent, model);
 		return "speakers";
 	}
 
 	@RequestMapping("/{eventKey}/speakers")
-	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model, final SitePreference sitePreference) {
+	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		prepareSpeakers(event, model);
 		return "speakers";

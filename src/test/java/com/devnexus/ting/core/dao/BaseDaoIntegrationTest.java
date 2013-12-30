@@ -27,7 +27,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.service.SystemSetupService;
-import com.hillert.apptools.spring.CloudApplicationContextInitializer;
+import com.devnexus.ting.web.config.CloudApplicationContextInitializer;
 
 /**
  * Base class for Dao Test Cases.

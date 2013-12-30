@@ -22,6 +22,8 @@
 
 	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
 
+		<form:hidden path="event.id"/>
+
 		<spring:bind path="cfpSubmission.firstName">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>

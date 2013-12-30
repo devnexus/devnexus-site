@@ -29,7 +29,6 @@ import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -67,7 +66,7 @@ public class SiteController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
 	@RequestMapping({"/index", "/"})
-	public String execute(final Model model, final SitePreference sitePreference) {
+	public String execute(final Model model) {
 
 
 			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
@@ -77,7 +76,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/schedule")
-	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
+	public String scheduleForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
 		model.addAttribute("headerTitle", "Schedule222");
@@ -95,7 +94,7 @@ public class SiteController {
 
 
 	@RequestMapping("/past-conferences")
-	public String pastConferences(final Model model, final SitePreference sitePreference) {
+	public String pastConferences(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
 		model.addAttribute("headerTitle", "Previous Conferences");
@@ -105,7 +104,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/register")
-	public String register(final Model model, final SitePreference sitePreference) {
+	public String register(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
 		model.addAttribute("headerTitle", "Registration Information");
@@ -115,7 +114,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/{eventKey}/schedule")
-	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
+	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
 
@@ -129,13 +128,13 @@ public class SiteController {
 	}
 
 	@RequestMapping("/travel")
-	public String travel(final Model model, final SitePreference sitePreference) {
+	public String travel(final Model model) {
         LOGGER.warn("This is a log.");
 		return "travel";
 	}
 
 	@RequestMapping("/appcache.manifest")
-	public String appcache(final Model model, final SitePreference sitePreference) {
+	public String appcache(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 
@@ -153,7 +152,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/appcache-mobile.manifest")
-	public String appcacheMobile(final Model model, final SitePreference sitePreference) {
+	public String appcacheMobile(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 
@@ -171,7 +170,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/organizers")
-	public String getOrganizers(final Model model, final SitePreference sitePreference) {
+	public String getOrganizers(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 

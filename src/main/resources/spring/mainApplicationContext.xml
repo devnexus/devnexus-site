@@ -138,7 +138,7 @@
 		</bean>
 	</beans>
 	<beans profile="demo">
-		<bean id="seedDataEventListener" class="com.hillert.apptools.spring.ContextRefreshedEventListener" />
+		<bean id="seedDataEventListener" class="com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener" />
 	</beans>
 
 </beans>

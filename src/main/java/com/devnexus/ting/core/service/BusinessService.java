@@ -225,4 +225,6 @@ public interface BusinessService {
 	CfpSubmission saveAndNotifyCfpSubmission(CfpSubmission cfpSubmission);
 
 	CfpSubmission getCfpSubmission(Long cfpId);
+
+	void removeEvaluation(Long evaluationId);
 }
