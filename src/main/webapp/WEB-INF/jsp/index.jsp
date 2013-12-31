@@ -137,7 +137,7 @@
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
             <h3>Gold Sponsors</h3>
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
-                                                   src="${ctx}/img/sponsors/inbloom.png"/></a>
+                                                   src="${ctx}/img/sponsors/inBloom.png"/></a>
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                       src="${ctx}/img/sponsors/compuware.png"/></a>
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"

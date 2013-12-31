@@ -88,3 +88,11 @@ ALTER TABLE cfp_submissions ADD COLUMN status character varying(30);
 
 -- 2013 - Dec 30
 update users set version='1' where version is null
+
+-- 2013 - Dec 31
+ALTER TABLE organizers ADD COLUMN github_id character varying(255);
+ALTER TABLE speakers   ADD COLUMN github_id character varying(255);
+
+ALTER TABLE organizers ADD COLUMN lanyrd_id character varying(255);
+ALTER TABLE speakers   ADD COLUMN lanyrd_id character varying(255);
+
