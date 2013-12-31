@@ -111,7 +111,8 @@ public class OrganizerController {
 		organizerFromDb.setGooglePlusId(organizerForm.getGooglePlusId());
 		organizerFromDb.setLinkedInId(organizerForm.getLinkedInId());
 		organizerFromDb.setTwitterId(organizerForm.getTwitterId());
-
+		organizerFromDb.setLanyrdId(organizerForm.getLanyrdId());
+		organizerFromDb.setGithubId(organizerForm.getGithubId());
 		organizerFromDb.setSortOrder(organizerForm.getSortOrder());
 
 		if (pictureFile != null && pictureFile.getSize() > 0) {

@@ -106,10 +106,34 @@
 			</div>
 		</div>
 
+		<spring:bind path="speaker.lanyrdId">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="15"/>
+				<form:errors path="lanyrdId" cssClass="fieldError"/>
+				<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
+			</div>
+		</div>
+
+		<spring:bind path="speaker.githubId">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="githubId" class="col-lg-2 control-label">GitHub Id</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="16"/>
+				<form:errors path="githubId" cssClass="fieldError"/>
+				<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
+			</div>
+		</div>
+
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add/Save</button>
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
+				<button type="submit" class="btn btn-default" lang="save" tabindex="17">Add/Save</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="18">Cancel</button>
 			</div>
 		</div>
 

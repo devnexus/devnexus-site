@@ -22,7 +22,6 @@
 	</spring:bind>
 	<form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="organizer" enctype="multipart/form-data">
 
-
 		<spring:bind path="organizer.firstName">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
@@ -102,6 +101,30 @@
 					<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="14"/>
 					<form:errors path="linkedInId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
+				</div>
+			</div>
+
+			<spring:bind path="organizer.lanyrdId">
+				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+			</spring:bind>
+			<div class="form-group${errorClass}">
+				<label for="lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
+				<div class="col-lg-10">
+					<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="15"/>
+					<form:errors path="lanyrdId" cssClass="fieldError"/>
+					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
+				</div>
+			</div>
+
+			<spring:bind path="organizer.githubId">
+				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+			</spring:bind>
+			<div class="form-group${errorClass}">
+				<label for="githubId" class="col-lg-2 control-label">GitHub Id</label>
+				<div class="col-lg-10">
+					<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="16"/>
+					<form:errors path="githubId" cssClass="fieldError"/>
+					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
 				</div>
 			</div>
 
