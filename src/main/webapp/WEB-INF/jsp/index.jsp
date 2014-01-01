@@ -143,8 +143,6 @@
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
                                                     src="${ctx}/img/sponsors/parasoft.png"/></a>
 
-            <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
-                                                    src="${ctx}/img/sponsors/B2S.png"/></a>
 
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
                                                             src="${ctx}/img/sponsors/cc.png"/></a>
@@ -167,6 +165,8 @@
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
 
+            <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
+                                                    src="${ctx}/img/sponsors/B2S.png"/></a>
         <a title="Actuate" href="http://www.actuate.com/" ><img class="logo" alt="Acruate"
                                                                 src="${ctx}/img/sponsors/actuate.png"/></a>
 
