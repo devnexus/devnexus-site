@@ -164,7 +164,8 @@
                                                 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
-
+        <a href="http://www.lancope.com/"><img class="logo" alt="Lancope"
+                                                  src="${ctx}/img/sponsors/lancope.png"/></a>
             <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
                                                     src="${ctx}/img/sponsors/B2S.png"/></a>
         <a title="Actuate" href="http://www.actuate.com/" ><img class="logo" alt="Acruate"
