@@ -165,6 +165,7 @@ public class ScheduleItemList implements Serializable {
         return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
     }
 
+    
     public List<ScheduleItem> findHeaderItemsOnDate(Date search) {
         if (headerItemsByDate == null) {
             headerItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
@@ -176,7 +177,7 @@ public class ScheduleItemList implements Serializable {
                         headerItemsByDate.put(date, items);
                     }
 
-                    if (item.getFromTime().getTime() == date.getTime()) {
+                    if (item.getFromTime().getDate() == date.getDate()) {
                         items.add(item);
                     }
                 }
@@ -196,7 +197,7 @@ public class ScheduleItemList implements Serializable {
                         breakoutItemsByDate.put(date, items);
                     }
 
-                    if (item.getFromTime().getTime() == date.getTime()) {
+                    if (item.getFromTime().getDate() == date.getDate()) {
                         items.add(item);
                     }
                 }
