@@ -53,7 +53,6 @@ public class EvaluationController {
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
-		String baseSiteUrl = (String) request.getAttribute("baseSiteUrl");
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/index";
 		}
@@ -72,7 +71,7 @@ public class EvaluationController {
 
 		businessService.saveEvaluation(evaluationToSave);
 
-		return "redirect:" + baseSiteUrl + "/add-evaluation-success";
+		return "redirect:/s/add-evaluation-success";
 	}
 
 	@RequestMapping(value="/add-evaluation-success", method=RequestMethod.GET)
