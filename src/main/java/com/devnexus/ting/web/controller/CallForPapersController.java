@@ -113,7 +113,7 @@ public class CallForPapersController {
 			RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/index";
+			return "redirect:/s/index";
 		}
 
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
@@ -180,7 +180,7 @@ public class CallForPapersController {
 		LOGGER.info(cfpSubmission.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);
 
-		return "redirect:/add-cfp-success";
+		return "redirect:/s/add-cfp-success";
 	}
 
 	@RequestMapping(value="/add-cfp-success", method=RequestMethod.GET)
