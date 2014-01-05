@@ -1,115 +1,151 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<div id="content" class="span-22 prepend-top last ">
-	<h2>Add Presentation</h2>
-	<form:form id="form" method="post" modelAttribute="presentation"
-		cssClass="cleanform" enctype="multipart/form-data">
-		<div class="required">
-			<label for="event">Event</label>
-			<form:select path="event" id="event" tabindex="1"
-				cssStyle="width: 300px;">
-				<form:option value="" label="Please Select an Event" />
-				<form:options items="${events}" itemValue="id" itemLabel="eventKey" />
-			</form:select>
-			<form:errors path="event" cssClass="fieldError" />
+<div class="jumbotron call" style="margin-bottom:50px">
+	<div class="container">
+		<div id="banner">
+			<h1><strong>Add/Edit Presentation</strong></h1>
 		</div>
-		<div class="required">
-			<label for="speaker">Speaker</label>
-			<form:select path="speaker.id" id="speaker" tabindex="1"
-				cssStyle="width: 300px;">
-				<form:option value="" label="Please Select Speaker" />
-				<c:forEach items="${speakers}" var="s">
-					<form:option value="${s.id}" label="${s.lastName}, ${s.firstName}" />
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+
+	<spring:bind path="presentation.*">
+		<c:if test="${not empty status.errorMessages}">
+			<div class="alert alert-danger fade in"
+				><a href="#" data-dismiss="alert" class="close">&times;</a>
+				<c:forEach var="error" items="${status.errorMessages}"
+					><c:out value="${error}" escapeXml="false"/><br/>
 				</c:forEach>
-			</form:select>
-			<form:errors path="event" cssClass="fieldError" />
+			</div>
+		</c:if>
+	</spring:bind>
+
+	<form:form id="presentationForm" class="form-horizontal" role="form" method="post" modelAttribute="presentation" enctype="multipart/form-data">
+
+		<form:hidden path="event.id"/>
+
+		<div class="form-group">
+			<label class="col-lg-2 control-label">Event</label>
+			<div class="col-lg-10">
+				<p class="form-control-static"><c:out value="${presentation.event.eventKey}"/></p>
+			</div>
 		</div>
-		<div class="required">
-			<label for="lastName">Title</label>
-			<form:input path="title" id="title" maxlength="255" tabindex="2"
-				cssStyle="width: 300px;" />
-			<form:errors path="title" cssClass="fieldError" />
+
+		<spring:bind path="presentation.speaker.id">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="speaker" class="col-lg-2 control-label">Speaker*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="speaker.id" id="speaker" tabindex="1">
+					<form:option value="" label="Please Select a Speaker" />
+					<form:options items="${speakers}" itemLabel="fullName" itemValue="id"/>
+				</form:select>
+				<form:errors path="speaker.id" cssClass="fieldError" />
+			</div>
 		</div>
-		<div class="required">
-			<label for="bio">Description</label>
-			<form:textarea path="description" id="description" tabindex="3"
-				cssStyle="width: 300px;" />
-			<form:errors path="description" cssClass="fieldError" />
+
+		<spring:bind path="presentation.title">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="title" class="col-lg-2 control-label">Title*</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="title" id="title" maxlength="255" tabindex="2"/>
+				<form:errors path="title" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="firstName">Presentation Link</label>
-			<form:input path="presentationLink" id="presentationLink"
-				maxlength="255" tabindex="4" cssStyle="width: 300px;" />
-			<form:errors path="presentationLink" cssClass="fieldError" />
+
+		<spring:bind path="presentation.description">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="description" class="col-lg-2 control-label">Description*</label>
+			<div class="col-lg-10">
+				<form:textarea cssClass="form-control" path="description" id="description" tabindex="3" rows="10" maxlength="10000"/>
+				<form:errors path="description" cssClass="fieldError"/>
+				<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
+				Markdown</a> is supported for the description.</span>
+			</div>
 		</div>
-		<div class="required">
-			<label for="uploadedFile">Presentation</label> <input
-				id="uploadedFile" type="file" name="uploadedFile" />
+
+		<spring:bind path="presentation.presentationLink">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="presentationLink" class="col-lg-2 control-label">Presentation Link</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="presentationLink" id="presentationLink" maxlength="255" tabindex="4"/>
+				<form:errors path="presentationLink" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="picture">Audio Link</label>
-			<form:input path="audioLink" id="audioLink" maxlength="255"
-				tabindex="5" cssStyle="width: 300px;" />
-			<form:errors path="audioLink" cssClass="fieldError" />
+
+		<div class="form-group">
+			<label for="uploadedFile" class="col-lg-2 control-label">Presentation</label>
+			<div class="col-lg-10">
+				<input id="uploadedFile" type="file" cssClass="form-control" name="uploadedFile" tabindex="5"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="skill-level">Skill Level</label>
-			<form:select path="skillLevel" id="skill-level" tabindex="6"
-				cssStyle="width: 300px;">
-				<form:option value="" label="Please Select a Skill Level" />
-				<c:forEach items="${skillLevels}" var="s">
-					<form:option value="${s.id}" label="${s.name}" />
-				</c:forEach>
-			</form:select>
-			<form:errors path="skillLevel" cssClass="fieldError" />
+
+		<spring:bind path="presentation.audioLink">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="audioLink" class="col-lg-2 control-label">Audio Link</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="audioLink" id="audioLink" maxlength="255" tabindex="6"/>
+				<form:errors path="audioLink" cssClass="fieldError"/>
+			</div>
 		</div>
-		<div class="required">
-			<label for="skill-level">Presentation Type</label>
-			<form:select path="presentationType" id="presentation-type"
-				tabindex="7" cssStyle="width: 300px;">
-				<form:option value="" label="Please Select a Presentation Type" />
-				<c:forEach items="${presentationTypes}" var="s">
-					<form:option value="${s.id}" label="${s.name}" />
-				</c:forEach>
-			</form:select>
-			<form:errors path="presentationType" cssClass="fieldError" />
+
+		<spring:bind path="presentation.skillLevel">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="skill-level" class="col-lg-2 control-label">Skill Level*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="skillLevel" id="skill-level" tabindex="7">
+					<form:option value="" label="Please Select a Skill Level" />
+					<form:options items="${skillLevels}" itemLabel="name" itemValue="id"/>
+				</form:select>
+				<form:errors path="skillLevel" cssClass="fieldError" />
+			</div>
 		</div>
-		<div class="submit">
-			<input type="submit" class="button" name="save" value="Add" /> <input
-				type="submit" class="button" name="cancel" value="Cancel" />
+
+		<div class="form-group${errorClass}">
+			<label for="presentation-type" class="col-lg-2 control-label">Presentation Type*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="presentationType" id="presentation-type"
+					tabindex="8" itemValue="presentationType.id">
+					<form:option value="" label="Please Select a Presentation Type" />
+					<form:options items="${presentationTypes}" itemLabel="name" itemValue="id"/>
+				</form:select>
+				<form:errors path="presentationType" cssClass="fieldError" />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-default" lang="save" tabindex="9">Save</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="10">Cancel</button>
+			</div>
 		</div>
 	</form:form>
+	</div>
 </div>
 
-<script type="text/javascript">
+<content tag='bottom'>
+		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script type="text/javascript">
 
-	$(document).ready(function(){
-		var eventDropDown = $("#event option"); // the collection of initial options
+			$(document).ready(function() {
+				$("select:visible:enabled:first", document.forms['presentationForm']).focus();
 
-		$("#event").change(function(){
-				var eventId = parseInt(this.value); //get drop1 's selected value
-				console.log(eventId);
-			var url = "<c:url value='/s/rooms.json'/>?eventId=" + eventId;
+				$('textarea').maxlength({
+					alwaysShow: true
+				});
 
-			console.log(url);
-
-				var jqxhr = $.get(url, function() { })
-				.success(function(data) {
-					$("#room option").remove();
-					$.each(data.roomList.room, function(index, item) {
-						$("#room").append(
-							$("<option></option>").attr("value", item.id).text(item.name + ' (Capacity: ' + item.capacity + ')')
-						);
-					});
-				})
-				.error(function() { alert("error"); })
-
-/* 		    $("select[name=drop2]")
-												 .html(drop2) //reset dropdown list
-												 .find('option').filter(function(){
-														return parseInt(this.value) < drop1selected; //get all option with value < drop1's selected value
-													}).remove();  // remove */
-		});
-	});
-
-</script>
+			});
+		</script>
+</content>

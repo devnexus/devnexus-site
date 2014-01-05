@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,16 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hillert.apptools.spring;
+package com.devnexus.ting.core.dao.jpa;
 
-import org.sitemesh.builder.SiteMeshFilterBuilder;
-import org.sitemesh.config.ConfigurableSiteMeshFilter;
+import org.springframework.stereotype.Repository;
 
-public class SpringMobileSiteMeshFilter extends ConfigurableSiteMeshFilter {
+import com.devnexus.ting.core.dao.UserAuthorityDao;
+import com.devnexus.ting.core.model.UserAuthority;
 
-	@Override
-	protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
-	  builder.setCustomDecoratorSelector(
-		new SpringMobileDecoratorSelector(builder.getDecoratorSelector()));
+@Repository("userAurthorityDao")
+public class UserAuthorityDaoJpa extends GenericDaoJpa< UserAuthority, Long>
+						   implements UserAuthorityDao {
+
+	/** Constructor. */
+	private UserAuthorityDaoJpa() {
+		super(UserAuthority.class);
 	}
+
 }

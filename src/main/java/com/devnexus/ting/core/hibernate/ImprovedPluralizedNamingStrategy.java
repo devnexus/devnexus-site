@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hillert.apptools.hibernate;
+package com.devnexus.ting.core.hibernate;
 
 import java.io.Serializable;
 import java.util.Locale;

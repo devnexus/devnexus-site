@@ -36,6 +36,8 @@ import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SchemaMigrationDao;
 import com.devnexus.ting.core.dao.SystemDao;
+import com.devnexus.ting.core.dao.UserAuthorityDao;
+import com.devnexus.ting.core.model.AuthorityType;
 import com.devnexus.ting.core.model.Backup;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.Room;
@@ -43,6 +45,7 @@ import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.SchemaMigration;
 import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
@@ -65,6 +68,9 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 	@Autowired
 	private SystemDao            systemDao;
+
+	@Autowired
+	private UserAuthorityDao     userAuthorityDao;
 
 	@Autowired
 	private Environment environment;
@@ -107,11 +113,15 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		user.setLastName("admin");
 		user.setEmail("notused@something.com");
 
+		final User persistedUser;
+
 		try {
-			userService.addUser(user);
+			persistedUser = userService.addUser(user);
 		} catch (DuplicateUserException e) {
 			throw new IllegalStateException(e);
 		}
+
+		userAuthorityDao.save(new UserAuthority(persistedUser, AuthorityType.ADMIN));
 
 //		final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
 //		restore(is);

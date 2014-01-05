@@ -23,8 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.Validator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -50,16 +48,7 @@ import com.devnexus.ting.web.form.EventForm;
 public class EventController {
 
 	@Autowired private BusinessService businessService;
-
 	@Autowired private Validator validator;
-
-
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(EventController.class);
-
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	@RequestMapping(value="/admin/event", method=RequestMethod.GET)
 	public String prepareAddEvent(ModelMap model) {

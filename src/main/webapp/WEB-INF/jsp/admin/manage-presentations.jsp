@@ -1,45 +1,28 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <title>Manage Presentations</title>
+<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
+	<h2>Manage Presentations</h2>
+</div>
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Action</th><th>Event</th><th>Title</th>
+				</tr>
+			</thead>
 
-    <h2>Manage Presentations</h2>
+			<c:forEach items="${presentations}" var="presentation">
+				<tr>
+					<td><a href="${ctx}${baseSiteUrl}/admin/presentation/${presentation.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><c:out value="${presentation.event.eventKey}"/></td>
+					<td><c:out value="${presentation.title}"/></td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/presentation" role="button">Add Presentation</a>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+	</div>
+</div>
 
-    <form name="events" action="presentations">
-
-        <jmesa:tableModel
-            id="presentationsTable"
-            items="${presentations}"
-            var="presentation"
-            >
-            <jmesa:htmlTable>
-                <jmesa:htmlRow>
-                     <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
-                      <a title="Presentation Detail" href="${ctx}${baseSiteUrl}/admin/presentation/${presentation.id}">
-                          <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
-                      </a>
-                    </jmesa:htmlColumn>
-                    <jmesa:htmlColumn property="event.eventKey" title="Event"/>
-                    <jmesa:htmlColumn property="title"          title="Title"/>
-                     <jmesa:htmlColumn property="presentation.presentationFile" title="&nbsp;" filterable="false">
-                        <c:if test="${id != null}">
-                            X
-                        </c:if>
-                    </jmesa:htmlColumn>
-                </jmesa:htmlRow>
-            </jmesa:htmlTable>
-        </jmesa:tableModel>
-    </form>
-    <a href="${ctx}${baseSiteUrl}/admin/presentation">Add presentation</a>
-
-
-
-    <script type="text/javascript">
-            function onInvokeAction(id) {
-                $.jmesa.setExportToLimit(id, '');
-                $.jmesa.createHiddenInputFieldsForLimitAndSubmit(id);
-            }
-            function onInvokeExportAction(id) {
-                var parameterString = $.jmesa.createParameterStringForLimit(id);
-                location.href = '${ctx}${baseSiteUrl}/admin/presentations?' + parameterString;
-            }
-    </script>

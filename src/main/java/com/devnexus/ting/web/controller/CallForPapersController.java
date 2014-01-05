@@ -33,10 +33,7 @@ import net.tanesha.recaptcha.ReCaptchaResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -68,13 +65,6 @@ public class CallForPapersController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
-    private MessageSourceAccessor messages;
-
-    @Autowired
-    public void setMessages(MessageSource messageSource) {
-        messages = new MessageSourceAccessor(messageSource);
-    }
-
 	private void prepareReferenceData(ModelMap model) {
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
 		final String recaptchaPublicKey = environment.getProperty("recaptcha.publicKey");
@@ -99,7 +89,7 @@ public class CallForPapersController {
 	}
 
 	@RequestMapping(value="/cfp", method=RequestMethod.GET)
-	public String openAddCfp(final SitePreference sitePreference, ModelMap model) {
+	public String openAddCfp(ModelMap model) {
 
 		model.addAttribute("headerTitle", "Call for Papers");
 		model.addAttribute("tag", "We would love to review your	session proposals!");
@@ -122,12 +112,8 @@ public class CallForPapersController {
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
-		String baseSiteUrl = (String) request.getAttribute("baseSiteUrl");
-
-		String s = messages.getMessage("errors.required");
-
 		if (request.getParameter("cancel") != null) {
-			return "redirect:" + baseSiteUrl + "/index";
+			return "redirect:/s/index";
 		}
 
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
@@ -194,19 +180,16 @@ public class CallForPapersController {
 		LOGGER.info(cfpSubmission.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);
 
-		return "redirect:" + baseSiteUrl + "/add-cfp-success";
+		return "redirect:/s/add-cfp-success";
 	}
 
 	@RequestMapping(value="/add-cfp-success", method=RequestMethod.GET)
-	public String addCfpSuccess(final SitePreference sitePreference, ModelMap model) {
+	public String addCfpSuccess(ModelMap model) {
 
 		model.addAttribute("headerTitle", "Call for Papers");
 		model.addAttribute("tag", "Thank you for your interest in presenting at DevNexus!");
 
-		if (sitePreference.isMobile()) {
-			return "add-cfp-success-mobile";
-		}
-
 		return "cfp-add-success";
 	}
+
 }

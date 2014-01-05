@@ -19,6 +19,8 @@ import java.util.Date;
 
 import org.ocpsoft.prettytime.PrettyTime;
 
+import com.devnexus.ting.common.TingUtil;
+
 /**
  * Represents some common Twitter related fields.
  *
@@ -136,6 +138,10 @@ public class TwitterMessage {
 		return "Tweet [createdAt=" + createdAt + ", text=" + text
 				+ ", fromUser=" + fromUser + ", profileImageUrl="
 				+ profileImageUrl + "]";
+	}
+
+	public String getHtml() {
+		return TingUtil.convertTweetTextToHTML(this.text);
 	}
 
 }

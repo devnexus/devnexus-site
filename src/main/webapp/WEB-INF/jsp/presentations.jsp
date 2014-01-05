@@ -22,21 +22,21 @@
             margin-bottom: 0px;
         }
     </style>
-    <div class="red jumbotron" style="margin-bottom:0">
+    <div id="yellow" class="jumbotron" style="margin-bottom:0">
         <div class="container">
             <h1>Presentations are still coming in.</h1>
 
             <div class="row">
                 <div class="col-md-12">
-                    <p>
-                        We are currently accepting topics from leaders, builders, thinkers and doers in our field and will be updating our speakers list as soon as we have our initial lineup.
-                    </p>
-                    <p>
-                        Perhaps you have a technology you are passionate about or some bit of wisdom to share?  If so submit an abstract and our organizers will review it and let you know what we think.
-                    </p>
-                    <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
-                    <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
+                    <p>
+                        We will begin announcing topics in January; in the meanwhile, why don't you check out last year's presentations.
+                    </p>
+                    <c:url var="oldUrl" value="${baseSiteUrl}/devnexus2013/presentations"/>
+
+                    <center><a href="${oldUrl}" class="btn btn-primary btn-lg">DevNexus 2013 Presentations</a></center>
+
+
                 </div>
 
             </div>
@@ -69,7 +69,7 @@
 							<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg"/>
 						</c:if>
 					</div>
-					<div class="col-md=7">
+					<div class="col-md-7">
 						<c:choose>
 							<c:when test="${not empty presentation.speaker}">
 								<h4>
@@ -136,7 +136,7 @@
                             <img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg"/>
                         </c:if>
                     </div>
-                    <div class="col-md=7">
+                    <div class="col-md-7">
                         <c:choose>
                             <c:when test="${not empty presentation.speaker}">
                                 <h4>

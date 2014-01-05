@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hillert.apptools.spring;
+package com.devnexus.ting.web.config;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,15 +25,14 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.io.support.ResourcePropertySource;
-import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
 
-public class CloudApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+public class DefaultApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(CloudApplicationContextInitializer.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(DefaultApplicationContextInitializer.class);
 	@Override
 	public void initialize(ConfigurableApplicationContext applicationContext) {
 
@@ -89,7 +88,7 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			}
 			System.out.println("Properties for demo mode loaded");
 		}
-
+ 
 	}
 
 }

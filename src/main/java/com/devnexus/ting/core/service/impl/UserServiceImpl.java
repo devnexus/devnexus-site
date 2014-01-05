@@ -113,4 +113,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		return user;
 	}
 
+	@Override
+	public void updateUser(User user) {
+		userDao.save(user);
+	}
+
+	@Override
+	public User getUser(Long userId) {
+		return userDao.get(userId);
+	}
+
 }

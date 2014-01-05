@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,6 @@ import javax.validation.Valid;
 import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -59,37 +57,51 @@ public class PresentationController {
 
 	@Autowired private Validator validator;
 
+	private void prepareReferenceData(ModelMap model) {
+		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
+		model.addAttribute("presentationTypes", presentationTypes);
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
+		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
+		model.addAttribute("skillLevels", skillLevels);
+	}
 
 	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
-	public String getPresentations(ModelMap model, HttpServletRequest request) {
+	public String getPresentations(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model, HttpServletRequest request) {
 
-		final List<Presentation> presentations = businessService.getAllPresentations();
+		final List<Presentation> presentations;
+
+		if (eventId != null) {
+			presentations = businessService.getPresentationsForEvent(eventId);
+		}
+		else {
+			presentations = businessService.getAllPresentations();
+		}
+
 		model.addAttribute("presentations", presentations);
 
 		return "/admin/manage-presentations";
 	}
 
 	@RequestMapping(value="/admin/presentation", method=RequestMethod.GET)
-	public String prepareAddPresentation(ModelMap model) {
+	public String prepareAddPresentation(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model) {
 
-		final List<Event> events = businessService.getAllEventsOrderedByName();
-		model.addAttribute("events", events);
+		final Event event;
 
-		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
-		model.addAttribute("presentationTypes", presentationTypes);
+		if (eventId == null) {
+			event = businessService.getCurrentEvent();
+		}
+		else {
+			event = businessService.getEvent(eventId);
+		}
 
-		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
-		model.addAttribute("skillLevels", skillLevels);
+		prepareReferenceData(model);
 
-		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
+		final List<Speaker> speakers = businessService.getSpeakersForEvent(event.getId());
 		model.addAttribute("speakers", speakers);
 
 		final Presentation presentation = new Presentation();
+		presentation.setEvent(event);
+
 		model.addAttribute("presentation", presentation);
 
 		return "/admin/add-presentation";
@@ -111,6 +123,12 @@ public class PresentationController {
 
 		}
 
+		if (presentation.getEvent() != null && presentation.getEvent().getId() != null) {
+			Event eventFromDb = businessService.getEvent(presentation.getEvent().getId());
+			presentation.setEvent(eventFromDb);
+
+		}
+
 		businessService.savePresentation(presentation);
 		return "redirect:/s/admin/presentations";
 	}
@@ -118,21 +136,17 @@ public class PresentationController {
 	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.GET)
 	public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
 
-		final List<Event> events = businessService.getAllEventsOrderedByName();
-		model.addAttribute("events", events);
-
 		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
 		model.addAttribute("presentationTypes", presentationTypes);
 
 		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
 		model.addAttribute("skillLevels", skillLevels);
 
-		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
-		model.addAttribute("speakers", speakers);
-
-		Presentation presentation = businessService.getPresentation(presentationId);
-
+		final Presentation presentation = businessService.getPresentation(presentationId);
 		model.addAttribute("presentation", presentation);
+
+		final List<Speaker> speakers = businessService.getSpeakersForEvent(presentation.getEvent().getId());
+		model.addAttribute("speakers", speakers);
 
 		return "/admin/add-presentation";
 	}

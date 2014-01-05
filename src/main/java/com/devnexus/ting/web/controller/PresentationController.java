@@ -21,12 +21,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import com.devnexus.ting.core.model.Presentation;
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,12 +31,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
+import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
  *
  * @author Gunnar Hillert
  *
@@ -50,24 +45,18 @@ public class PresentationController {
 
 	@Autowired private BusinessService businessService;
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(PresentationController.class);
-
 	private void preparePresentationsForEvent(Event event, Model model) {
 		model.addAttribute("event", event);
 		final PresentationList presentationList = new PresentationList();
-        List<Presentation> presentations;
-        Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
+		List<Presentation> presentations;
+		Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
 		presentationList.setPresentations(presentations);
 		model.addAttribute("presentationList", presentationList);
 	}
 
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
-										   final Model model,
-										   final SitePreference sitePreference) {
+										   final Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		this.preparePresentationsForEvent(event, model);
 		return "presentations";
@@ -101,8 +90,7 @@ public class PresentationController {
 	}
 
 	@RequestMapping("/presentations")
-	public String getPresentationsForCurrentEvent(final Model model,
-												  final SitePreference sitePreference) {
+	public String getPresentationsForCurrentEvent(final Model model) {
 		final Event event = businessService.getCurrentEvent();
 		this.preparePresentationsForEvent(event, model);
 		return "presentations";

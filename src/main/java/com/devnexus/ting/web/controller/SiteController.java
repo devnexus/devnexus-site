@@ -24,7 +24,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
+import org.springframework.messaging.simp.annotation.SendToUser;
+import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,8 +47,8 @@ import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
+ * Main DevNexus Site Controller - Contains various simple controllers for various
+ * sections of the site.
  *
  * @author Gunnar Hillert
  *
@@ -56,13 +60,10 @@ public class SiteController {
 
 	@Autowired private TwitterService twitterService;
 
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
-
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
 	@RequestMapping({"/index", "/"})
-	public String execute(final Model model, final SitePreference sitePreference) {
+	public String execute(final Model model) {
 
 
 			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
@@ -72,11 +73,11 @@ public class SiteController {
 	}
 
 	@RequestMapping("/schedule")
-	public String scheduleForCurrentEvent(final Model model, final SitePreference sitePreference) {
+	public String scheduleForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Schedule");
-        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+		model.addAttribute("headerTitle", "Schedule222");
+		model.addAttribute("tag", "600+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -89,48 +90,45 @@ public class SiteController {
 	}
 
 
-    @RequestMapping("/past-conferences")
-    public String pastConferences(final Model model, final SitePreference sitePreference) {
+	@RequestMapping("/past-conferences")
+	public String pastConferences(final Model model) {
 
-        final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Previous Conferences");
+		//TODO
+		model.addAttribute("headerTitle", "Previous Conferences");
+		return "past-conferences";
 
-        return "past-conferences";
+	}
 
-    }
+	@RequestMapping("/register")
+	public String register(final Model model) {
+		//TODO
+		model.addAttribute("headerTitle", "Registration Information");
 
-    @RequestMapping("/register")
-    public String register(final Model model, final SitePreference sitePreference) {
-
-        final Event event = businessService.getCurrentEvent();
-        model.addAttribute("headerTitle", "Registration Information");
-
-        return "registration";
-
-    }
+		return "registration";
+	}
 
 	@RequestMapping("/{eventKey}/schedule")
-	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model, final SitePreference sitePreference) {
+	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
 
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
 		model.addAttribute("scheduleItemList", scheduleItemList);
-        model.addAttribute("headerTitle", "Schedule");
-        model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+		model.addAttribute("headerTitle", "Schedule");
+		model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
 		return "schedule";
 	}
 
 	@RequestMapping("/travel")
-	public String travel(final Model model, final SitePreference sitePreference) {
-
+	public String travel(final Model model) {
+        LOGGER.warn("This is a log.");
 		return "travel";
 	}
 
 	@RequestMapping("/appcache.manifest")
-	public String appcache(final Model model, final SitePreference sitePreference) {
+	public String appcache(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 
@@ -148,7 +146,7 @@ public class SiteController {
 	}
 
 	@RequestMapping("/appcache-mobile.manifest")
-	public String appcacheMobile(final Model model, final SitePreference sitePreference) {
+	public String appcacheMobile(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 
@@ -166,14 +164,16 @@ public class SiteController {
 	}
 
 	@RequestMapping("/organizers")
-	public String getOrganizers(final Model model, final SitePreference sitePreference) {
+	public String getOrganizers(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
 
 		final OrganizerList organizerList = new OrganizerList(organizers);
 		model.addAttribute("organizerList", organizerList);
 
-        model.addAttribute("columnLength",(int)(organizers.size() / 4));
+		int columnLength = (int)(organizers.size() / 4);
+
+		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
 		model.addAttribute("organizers", organizers);
 
 
@@ -214,4 +214,19 @@ public class SiteController {
 
 	}
 
+	@Autowired private SimpMessageSendingOperations messagingTemplate;
+	@Autowired
+	ApplicationEventPublisher applicationEventPublisher;
+
+	@SubscribeMapping("/positions")
+	public void onApplicationEvent() {
+		LOGGER.info("New user subscribing");
+		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
+	}
+
+	@MessageExceptionHandler
+	@SendToUser("/queue/errors")
+	public String handleException(Throwable exception) {
+		return exception.getMessage();
+	}
 }

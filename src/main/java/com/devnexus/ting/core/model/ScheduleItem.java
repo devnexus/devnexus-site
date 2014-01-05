@@ -57,7 +57,7 @@ public class ScheduleItem extends BaseModelObject {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
 
-	@Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
 			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.ScheduleItemType"),
 			@Parameter(name = "identifierMethod", value = "getId"),
 			@Parameter(name = "valueOfMethod", value = "fromId") })

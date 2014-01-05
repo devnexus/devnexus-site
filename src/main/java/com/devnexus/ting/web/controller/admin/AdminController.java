@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
- * Retrieves all jobs and returns an XML document. The structure conforms to the layout
- * defined by Indeed.com
+ * Main Admin Controller.
  *
  * @author Gunnar Hillert
  *
@@ -40,9 +39,6 @@ public class AdminController {
 
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
-
-	/** serialVersionUID. */
-	private static final long serialVersionUID = -3422780336408883930L;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
@@ -56,7 +52,6 @@ public class AdminController {
 		businessService.updateApplicationCacheManifest();
 		return "redirect:/s/admin/index";
 	}
-
 
 	@RequestMapping("/logout")
 	public String logout(ModelMap model) {

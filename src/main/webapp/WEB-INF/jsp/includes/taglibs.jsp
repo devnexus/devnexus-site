@@ -9,21 +9,19 @@ response.setHeader("Expires","0");
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="http://code.google.com/p/jmesa" prefix="jmesa" %>
 
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
-
+<%@ taglib prefix="sec"    uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
 
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
-
+<c:set var="baseSiteUrl" value="/s"/>
 <c:if test="${event ne null}">
-    <c:set var="siteUrl" value="${ctx}${baseSiteUrl}/${event.eventKey}"/>
+	<c:set var="siteUrl" value="${ctx}${baseSiteUrl}/${event.eventKey}"/>
 </c:if>
 <c:if test="${event eq null}">
-    <c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
+	<c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
 </c:if>
 <head>
-    <meta name="decorator" content="default"/>
+	<meta name="decorator" content="default"/>
 </head>
