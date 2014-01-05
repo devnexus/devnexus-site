@@ -69,7 +69,7 @@
 							<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg"/>
 						</c:if>
 					</div>
-					<div class="col-md=7">
+					<div class="col-md-7">
 						<c:choose>
 							<c:when test="${not empty presentation.speaker}">
 								<h4>
@@ -136,7 +136,7 @@
                             <img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg"/>
                         </c:if>
                     </div>
-                    <div class="col-md=7">
+                    <div class="col-md-7">
                         <c:choose>
                             <c:when test="${not empty presentation.speaker}">
                                 <h4>
