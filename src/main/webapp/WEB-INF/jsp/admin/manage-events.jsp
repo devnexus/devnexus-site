@@ -1,38 +1,45 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <title>Manage Events</title>
-    <h2>Manage Events</h2>
+<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
+	<h2>Manage Events</h2>
+</div>
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Action</th><th class="text-center">Current Event</th><th>Key</th><th>Title</th>
+				</tr>
+			</thead>
 
-  <form name="events" action="events">
+			<c:forEach items="${events}" var="event">
 
-      <jmesa:tableModel
-          id="eventsTable"
-          items="${events}"
-          var="event"
-          >
-          <jmesa:htmlTable>
-              <jmesa:htmlRow>
-                   <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
-                        <a title="Event Detail" href="${ctx}${baseSiteUrl}/admin/event/${event.id}">
-                            <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
-                        </a>
-                  </jmesa:htmlColumn>
-                  <jmesa:htmlColumn property="current"  title="Current Event"/>
-                  <jmesa:htmlColumn property="eventKey" title="Key"/>
-                  <jmesa:htmlColumn property="title"    title="Title"/>
-              </jmesa:htmlRow>
-          </jmesa:htmlTable>
-      </jmesa:tableModel>
-  </form>
-    <a href="${ctx}${baseSiteUrl}/admin/event">Add Event</a>
+				<c:choose>
+					<c:when test="${event.current}">
+						<c:set var="eventClass" value="success"/>
+					</c:when>
+				</c:choose>
 
-    <script type="text/javascript">
-            function onInvokeAction(id) {
-                $.jmesa.setExportToLimit(id, '');
-                $.jmesa.createHiddenInputFieldsForLimitAndSubmit(id);
-            }
-            function onInvokeExportAction(id) {
-                var parameterString = $.jmesa.createParameterStringForLimit(id);
-                location.href = '${ctx}${baseSiteUrl}/admin/events?' + parameterString;
-            }
-   </script>
+				<tr class="${eventClass}">
+					<td><a href="${ctx}${baseSiteUrl}/admin/event/${event.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td class="text-center">
+						<c:choose>
+							<c:when test="${event.current}">
+								<span class="glyphicon glyphicon-ok"></span>
+							</c:when>
+							<c:otherwise>
+								<span class="glyphicon glyphicon-remove"></span>
+							</c:otherwise>
+						</c:choose>
+					</td>
+					<td><c:out value="${event.eventKey}"/></td>
+					<td><c:out value="${event.title}"/></td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/event" role="button">Add Event</a>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+	</div>
+</div>
+

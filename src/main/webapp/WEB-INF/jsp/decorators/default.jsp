@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><sitemesh:write property='title'/></title>
+    <title><sitemesh:write property='title'/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="${ctx}/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="${ctx}/favicon.ico">
 
     <!-- Bootstrap core CSS -->
-    <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
+    <link href="${ctx}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${ctx}/css/devnexus.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="${ctx}/js/html5shiv.js"></script>
-    <script src="${ctx}/js/respond.min.js"></script>
+    <!--<script src="${ctx}/js/html5shiv.js"></script>-->
+    <!--<script src="${ctx}/js/respond.min.js"></script>-->
     <![endif]-->
     <sitemesh:write property='head'/>
 </head>
@@ -68,6 +68,7 @@
 </div>
 <div style="clear: both"></div>
 <sitemesh:write property='body'/>
+
 <div style="clear:both;"></div>
 <div id="devnex" class="jumbotron" style="margin-bottom:0">
     <div class="container">
@@ -83,10 +84,11 @@
                     <div class="col-md-3">
                         <h3>Learn More</h3>
                         <ul id="col">
-                            <li><a href="${ctx}/s/index">About DN</a></li>
+                            <li><a href="${ctx}${baseSiteUrl}/index">About DN</a></li>
                             <li><a href="${organizersUrl}">Organizers</a></li>
                             <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
-                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship (Pdf)</a></li>
+                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship
+                                (Pdf)</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -107,7 +109,7 @@
                     <div class="col-md-3">
                         <h3>Stay Connected</h3>
                         <ul id="col">
-                            <li><a href="<c:url value="/s/social"/>">Social</a></li>
+                            <li><a href="<c:url value="${baseSiteUrl}/social"/>">Social</a></li>
                             <ul id="col">
                                 <li><a href="https://facebook.com/devnexus">Facebook</a></li>
                                 <li><a href="https://twitter.com/devnexus">Twitter</a></li>
@@ -125,20 +127,23 @@
 
     </div>
 </div>
-<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-     mathiasbynens.be/notes/async-analytics-snippet -->
 <script>
-    var _gaq = [
-        ['_setAccount', 'UA-177507-7'],
-        ['_trackPageview']
-    ];
-    (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-    }(document, 'script'));
-</script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+    ga('create', 'UA-44984422-1', 'devnexus.com');
+    ga('send', 'pageview');
+
+</script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

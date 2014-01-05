@@ -79,13 +79,13 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
     @Size(max = 255)
     private String title;
 
-    @Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+    @Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
             @Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.PresentationType"),
             @Parameter(name = "identifierMethod", value = "getId"),
             @Parameter(name = "valueOfMethod", value = "fromId")})
     private PresentationType presentationType;
 
-    @Type(type = "com.hillert.apptools.hibernate.GenericEnumUserType", parameters = {
+    @Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
             @Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.SkillLevel"),
             @Parameter(name = "identifierMethod", value = "getId"),
             @Parameter(name = "valueOfMethod", value = "fromId")})

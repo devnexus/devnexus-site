@@ -51,7 +51,7 @@
 	</appender>
 
 	<logger name="org.springframework.security">
-		<level value="WARN"/>
+		<level value="INFO"/>
 	</logger>
 	<logger name="org.springframework.web">
 		<level value="WARN"/>
@@ -62,6 +62,10 @@
 	<logger name="org.springframework.integration">
 		<level value="WARN"/>
 	</logger>
+	<logger name="org.springframework.messaging">
+		<level value="WARN"/>
+	</logger>
+
 	<logger name="org.hibernate.type">
 		<level value="WARN"/>
 	</logger>
@@ -83,7 +87,7 @@
 	<logger name="ch.qos.logback">
 		<level value="WARN"/>
 	</logger>
-	<logger name="com.hillert.apptools.spring.SecurityEventListener">
+	<logger name="com.devnexus.ting.core.applicationlistener.SecurityEventListener">
 		<level value="INFO"/>
 		<appender-ref ref="LOGFILE-SECURITY"/>
 	</logger>

@@ -65,6 +65,12 @@ public abstract class Person extends BaseModelObject {
 	@Size(max=255)
 	protected String linkedInId;
 
+	@Size(max=255)
+	protected String lanyrdId;
+
+	@Size(max=255)
+	protected String githubId;
+
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	public String getBio() {
@@ -134,4 +140,21 @@ public abstract class Person extends BaseModelObject {
 	public void setLinkedInId(String linkedInId) {
 		this.linkedInId = linkedInId;
 	}
+
+	public String getLanyrdId() {
+		return lanyrdId;
+	}
+
+	public void setLanyrdId(String lanyrdId) {
+		this.lanyrdId = lanyrdId;
+	}
+
+	public String getGithubId() {
+		return githubId;
+	}
+
+	public void setGithubId(String githubId) {
+		this.githubId = githubId;
+	}
+
 }

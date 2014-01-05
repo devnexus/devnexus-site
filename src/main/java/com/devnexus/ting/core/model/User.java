@@ -18,17 +18,23 @@ package com.devnexus.ting.core.model;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlTransient;
 
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
@@ -42,7 +48,7 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 
 	@XmlID
 	@NotNull
-	@Size(min=5, max=50)
+	@Size(min=3, max=50)
 	@Column(unique=true)
 	private String username;
 
@@ -69,6 +75,11 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 	@XmlAttribute
 	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
 	private Date lastLoginDate;
+
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER, mappedBy="user")
+	@XmlTransient
+	@BatchSize(size=20)
+	private Set<UserAuthority> userAuthorities = new HashSet<>(0);
 
 	//~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -177,10 +188,17 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
 
 	@Override
 	public Collection<GrantedAuthority> getAuthorities() {
-		final GrantedAuthority authority = new SimpleGrantedAuthority("ADMIN");
 		final Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
-		authorities.add(authority);
+		authorities.addAll(this.getUserAuthorities());
 		return authorities;
+	}
+
+	public Set<UserAuthority> getUserAuthorities() {
+		return userAuthorities;
+	}
+
+	public void setUserAuthorities(Set<UserAuthority> userAuthorities) {
+		this.userAuthorities = userAuthorities;
 	}
 
 	@Override

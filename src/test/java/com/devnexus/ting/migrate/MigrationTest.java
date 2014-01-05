@@ -27,11 +27,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.devnexus.ting.core.dao.DocumentDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.service.BusinessService;
-import com.hillert.apptools.spring.CloudApplicationContextInitializer;
+import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-		initializers=CloudApplicationContextInitializer.class,
+		initializers=DefaultApplicationContextInitializer.class,
 		locations={ "classpath:spring/mainApplicationContext.xml"})
 public class MigrationTest {
 

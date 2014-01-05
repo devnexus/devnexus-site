@@ -101,9 +101,13 @@
                                                 class="social" alt="<c:out
                                             value='${speaker.googlePlusId}' />"
                                                 src="${ctx}/img/icons/icondock/24px/google-plus.png"/></a></li>
-                                    </c:if>
-                                </ul>
-                            </div>
+									</c:if>
+									<c:if test="${!empty speaker.linkedInId}">
+										<li id="linkedin"><a
+											href="http://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />">LinkedIn</a></li>
+									</c:if>
+								</ul>
+							</div>
 
                             <c:if test="${!empty speaker.presentations}">
                                 <c:forEach var="presentation" items="${speaker.presentations}">

@@ -60,7 +60,6 @@ public abstract class BaseModelObject implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	//@GeneratedValue(generator="hibseq")
 	protected Long id;
 
 	@Temporal(TemporalType.TIMESTAMP)

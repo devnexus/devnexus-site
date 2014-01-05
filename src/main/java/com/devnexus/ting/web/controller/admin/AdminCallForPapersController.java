@@ -15,31 +15,25 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
-import java.util.Date;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import javax.validation.Validator;
 
-import net.tanesha.recaptcha.ReCaptcha;
-import net.tanesha.recaptcha.ReCaptchaFactory;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.EvaluationList;
+import com.devnexus.ting.core.model.CfpSubmissionList;
+import com.devnexus.ting.core.model.CfpSubmissionStatusType;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
@@ -54,30 +48,62 @@ public class AdminCallForPapersController {
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(AdminCallForPapersController.class);
+	private void prepareReferenceData(ModelMap model) {
 
-//	@RequestMapping(value="/admin/evaluations", method=RequestMethod.GET)
-//	public String showEvaluations(final SitePreference sitePreference, ModelMap model) {
-//
-//		final List<Evaluation> evaluations = businessService.getEvaluationsForCurrentEvent();
-//
-//		final EvaluationList evaluationList = new EvaluationList(evaluations);
-//		model.addAttribute("evaluationList", evaluationList);
-//
-//		if (sitePreference.isMobile()) {
-//			return "admin/evaluations-mobile";
-//		}
-//
-//		return "admin/evaluations";
-//	}
+		final Event currentEvent = businessService.getCurrentEvent();
+		model.addAttribute("currentEvent", currentEvent);
+
+		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
+		model.addAttribute("presentationTypes", presentationTypes);
+
+		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
+		model.addAttribute("skillLevels", skillLevels);
+
+		final Set<CfpSubmissionStatusType> cfpSubmissionStatusTypes = EnumSet.allOf(CfpSubmissionStatusType.class);
+		model.addAttribute("cfpSubmissionStatusTypes", cfpSubmissionStatusTypes);
+
+	}
 
 	@RequestMapping(value="/admin/cfps", method=RequestMethod.GET)
-	public String viewCfps(final SitePreference sitePreference, ModelMap model) {
+	public String viewCfps(ModelMap model) {
 
 		Event currentEvent = businessService.getCurrentEvent();
-		List<CfpSubmission> cfps = businessService.getCfpSubmissions(currentEvent.getId());
-		model.addAttribute("cfps", cfps);
+		List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(currentEvent.getId());
+		CfpSubmissionList cfpSubmissionList = new CfpSubmissionList(cfpSubmissions);
+		model.addAttribute("cfpSubmissionList", cfpSubmissionList);
 		return "admin/cfps";
 	}
 
+	@RequestMapping(value="/admin/cfps/{cfpId}", method=RequestMethod.GET)
+	public String prepareEditCfp(@PathVariable("cfpId") Long cfpId, ModelMap model) {
+
+		prepareReferenceData(model);
+		final CfpSubmission cfpSubmission = businessService.getCfpSubmission(cfpId);
+
+		model.addAttribute("cfpSubmission", cfpSubmission);
+
+		return "/admin/edit-cfp";
+	}
+
+	@RequestMapping(value="/admin/cfps/{cfpId}", method=RequestMethod.POST)
+	public String editCfp(@PathVariable("cfpId") Long cfpId,
+							  @Valid CfpSubmission cfpSubmission,
+							  BindingResult result, HttpServletRequest request) {
+
+		if (request.getParameter("cancel") != null) {
+			return "redirect:/s/admin/index";
+		}
+
+		if (result.hasErrors()) {
+			return "/admin/edit-cfp";
+		}
+
+		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
+		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
+
+		businessService.saveCfpSubmission(cfpSubmissionFromDb);
+
+		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
+		return "redirect:/s/admin/cfps";
+	}
 }

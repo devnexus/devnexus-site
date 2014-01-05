@@ -18,15 +18,15 @@ package com.devnexus.ting.core.service.impl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
-import com.hillert.apptools.spring.CloudApplicationContextInitializer;
+import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 
 /**
  *
@@ -35,7 +35,7 @@ import com.hillert.apptools.spring.CloudApplicationContextInitializer;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-		initializers=CloudApplicationContextInitializer.class,
+		initializers=DefaultApplicationContextInitializer.class,
 		locations={ "classpath:spring/mainApplicationContext.xml"})
 public class MailSendingTest {
 

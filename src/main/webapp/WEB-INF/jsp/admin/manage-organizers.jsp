@@ -1,37 +1,28 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <title>Manage Organizers</title>
-    <h2>Manage Organizers</h2>
+<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
+	<h2>Manage Organizers</h2>
+</div>
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Action</th><th>First Name</th><th>Last Name</th><th>Order</th>
+				</tr>
+			</thead>
 
-    <form name="organizers" action="organizers">
-
-        <jmesa:tableModel
-            id="organizersTable"
-            items="${organizers}"
-            var="organizer"
-            >
-            <jmesa:htmlTable>
-                <jmesa:htmlRow>
-                     <jmesa:htmlColumn property="details" title="&nbsp;" filterable="false">
-                        <a title="Organizer Detail" href="${ctx}${baseSiteUrl}/admin/organizer/${organizer.id}">
-                            <img alt="Details" title="Details" src="${ctx}/img/icons/crystal/viewmag.png"/>
-                        </a>
-                    </jmesa:htmlColumn>
-                    <jmesa:htmlColumn property="firstName" title="First Name"/>
-                    <jmesa:htmlColumn property="lastName" title="Last Name"/>
-                </jmesa:htmlRow>
-            </jmesa:htmlTable>
-        </jmesa:tableModel>
-    </form>
-    <a href="${ctx}${baseSiteUrl}/admin/organizer">Add organizer</a>
-
-    <script type="text/javascript">
-            function onInvokeAction(id) {
-                $.jmesa.setExportToLimit(id, '');
-                $.jmesa.createHiddenInputFieldsForLimitAndSubmit(id);
-            }
-            function onInvokeExportAction(id) {
-                var parameterString = $.jmesa.createParameterStringForLimit(id);
-                location.href = '${ctx}${baseSiteUrl}/admin/organizers?' + parameterString;
-            }
-    </script>
+			<c:forEach items="${organizers}" var="organizer">
+				<tr>
+					<td><a href="${ctx}${baseSiteUrl}/admin/organizer/${organizer.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><c:out value="${organizer.firstName}"/></td>
+					<td><c:out value="${organizer.lastName}"/></td>
+					<td><c:out value="${organizer.sortOrder}"/></td>
+				</tr>
+			</c:forEach>
+		</table>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/organizer" role="button">Add Organizer</a>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+	</div>
+</div>

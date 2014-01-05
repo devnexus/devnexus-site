@@ -16,14 +16,10 @@
 package com.devnexus.ting.web.controller;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -32,7 +28,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.EvaluationList;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -44,22 +39,8 @@ public class EvaluationController {
 
 	@Autowired private BusinessService businessService;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(EvaluationController.class);
-
-	@RequestMapping(value="/admin/evaluations", method=RequestMethod.GET)
-	public String showEvaluations(final SitePreference sitePreference, ModelMap model) {
-
-		final List<Evaluation> evaluations = businessService.getEvaluationsForCurrentEvent();
-
-		final EvaluationList evaluationList = new EvaluationList(evaluations);
-		model.addAttribute("evaluationList", evaluationList);
-
-
-		return "admin/evaluations";
-	}
-
 	@RequestMapping(value="/evaluations/add", method=RequestMethod.GET)
-	public String openAddEvaluations(final SitePreference sitePreference, ModelMap model) {
+	public String openAddEvaluations(ModelMap model) {
 
 		model.addAttribute("evaluation", new Evaluation());
 
@@ -72,7 +53,6 @@ public class EvaluationController {
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
-		String baseSiteUrl = (String) request.getAttribute("baseSiteUrl");
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/index";
 		}
@@ -91,11 +71,11 @@ public class EvaluationController {
 
 		businessService.saveEvaluation(evaluationToSave);
 
-		return "redirect:" + baseSiteUrl + "/add-evaluation-success";
+		return "redirect:/s/add-evaluation-success";
 	}
 
 	@RequestMapping(value="/add-evaluation-success", method=RequestMethod.GET)
-	public String addEvaluationSuccess(final SitePreference sitePreference, ModelMap model) {
+	public String addEvaluationSuccess(ModelMap model) {
 
 		return "add-evaluation-success";
 	}

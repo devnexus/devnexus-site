@@ -36,12 +36,6 @@
 				<property name="validator" ref="validator" />
 			</bean>
 		</property>
-		<property name="customArgumentResolvers">
-			<list>
-				<bean class="org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver" />
-				<bean class="org.springframework.mobile.device.site.SitePreferenceHandlerMethodArgumentResolver" />
-			</list>
-		</property>
 		<property name="messageConverters">
 			<list>
 				<ref bean="jsonConverter" />
@@ -128,9 +122,6 @@
 		<property name="order" value="1" />
 	</bean>
 
-	<!-- Documented out the following as we going to use ab explicit AnnotationMethodHandlerAdapter -->
-	<!-- >mvc:annotation-driven conversion-service="conversionService"/ -->
-
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
 		<property name="order" value="2" />
 	</bean>
@@ -164,11 +155,14 @@
 	<mvc:view-controller path="/admin" view-name="redirect:/s/admin/index" />
 
 	<mvc:interceptors>
-		<bean class="com.devnexus.ting.web.CustomDeviceResolverHandlerInterceptor" />
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<bean class="com.devnexus.ting.web.interceptor.GlobalDataInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
+<context:property-placeholder />
+	<beans profile="twitter-enabled">
+		<import resource="classpath:spring/spring-integration-twitter-context.xml" />
+	</beans>
 </beans>

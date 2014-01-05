@@ -29,8 +29,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
@@ -353,8 +353,6 @@ public class BusinessServiceImpl implements BusinessService {
 		}
 
 		FileData fileData = presentation.getPresentationFile();
-		fileData.getName();
-
 		return fileData;
 	}
 
@@ -390,11 +388,13 @@ public class BusinessServiceImpl implements BusinessService {
 		int numberOfUnassignedSessions = 0;
 
 		int numberOfBreaks = 0;
-		int numberOfTracks = 0;
 
 		Set<Long> speakerIds = new HashSet<Long>();
+		Set<Long> roomIds = new HashSet<Long>();
 
 		for (ScheduleItem scheduleItem : scheduleItems) {
+
+			roomIds.add(scheduleItem.getRoom().getId());
 
 			if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
 					|| ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
@@ -446,6 +446,7 @@ public class BusinessServiceImpl implements BusinessService {
 		scheduleItemList.setNumberOfKeynoteSessions(numberOfKeynoteSessions);
 		scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
 		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
+		scheduleItemList.setNumberOfRooms(roomIds.size());
 
 		return scheduleItemList;
 	}
@@ -459,6 +460,11 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	public List<Evaluation> getEvaluationsForCurrentEvent() {
 		return evaluationDao.getEvaluationsForCurrentEvent();
+	}
+
+	@Override
+	public void removeEvaluation(Long evaluationId) {
+		evaluationDao.remove(evaluationId);
 	}
 
 	@Override
@@ -488,6 +494,11 @@ public class BusinessServiceImpl implements BusinessService {
 		}
 
 		return savedCfpSubmission;
+	}
+
+	@Override
+	public CfpSubmission getCfpSubmission(Long cfpId) {
+		return this.cfpSubmissionDao.get(cfpId);
 	}
 
 }
