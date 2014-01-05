@@ -96,3 +96,72 @@ ALTER TABLE speakers   ADD COLUMN github_id character varying(255);
 ALTER TABLE organizers ADD COLUMN lanyrd_id character varying(255);
 ALTER TABLE speakers   ADD COLUMN lanyrd_id character varying(255);
 
+-- 2014 - Jan 5
+
+create table TRACKS (
+	ID int8 not null,
+	CREATED_DATE timestamp,
+	UPDATED_DATE timestamp,
+	VERSION int4,
+	CSS_STYLE_NAME varchar(255),
+	DESCRIPTION varchar(255),
+	NAME varchar(255),
+	TRACK_ORDER int4,
+	EVENT int8,
+	primary key (ID)
+);
+
+ALTER TABLE tracks OWNER TO devnexus;
+
+alter table TRACKS
+	add constraint FK_TRACKS_EVENT
+	foreign key (EVENT)
+	references EVENTS;
+
+ALTER TABLE PRESENTATIONS ADD COLUMN TRACK_ID integer;
+
+alter table PRESENTATIONS
+	add constraint FK_PRESENTATIONS_TRACK_ID
+	foreign key (TRACK_ID)
+	references TRACKS;
+
+create table PRESENTATIONS_PRESENTATION_TAGS (
+	PRESENTATIONS int8 not null,
+	PRESENTATION_TAGS int8 not null,
+	EVENT int8,
+	primary key (PRESENTATIONS, PRESENTATION_TAGS)
+);
+
+ALTER TABLE presentations_presentation_tags OWNER TO devnexus;
+
+create table PRESENTATION_TAGS (
+	ID int8 not null,
+	CREATED_DATE timestamp,
+	UPDATED_DATE timestamp,
+	VERSION int4,
+	NAME varchar(255),
+	primary key (ID)
+);
+
+ALTER TABLE presentation_tags OWNER TO devnexus;
+
+alter table PRESENTATIONS_PRESENTATION_TAGS
+	add constraint FK_PPTAGS_PRESENTATION_TAGS
+	foreign key (PRESENTATION_TAGS)
+	references PRESENTATION_TAGS;
+
+alter table PRESENTATIONS_PRESENTATION_TAGS
+	add constraint FK_PPTAGS_PRESENTATIONS
+	foreign key (PRESENTATIONS)
+	references PRESENTATIONS;
+
+INSERT INTO tracks VALUES (1, NULL, NULL, 1, 'track-1', NULL, 'HTML5 + JavaScript', 1, ##1735);
+INSERT INTO tracks VALUES (2, NULL, NULL, 1, 'track-2', NULL, 'Alternative Languages', 2, ##1735);
+INSERT INTO tracks VALUES (3, NULL, NULL, 1, 'track-3', NULL, 'Cloud', 3, ##1735);
+INSERT INTO tracks VALUES (4, NULL, NULL, 1, 'track-4', NULL, 'Agile + Tools', 4, ##1735);
+INSERT INTO tracks VALUES (5, NULL, NULL, 1, 'track-5', NULL, 'Mobile', 5, 1735);
+INSERT INTO tracks VALUES (6, NULL, NULL, 1, 'track-6', NULL, 'Java/JavaEE/Spring', 6, ##1735);
+INSERT INTO tracks VALUES (7, NULL, NULL, 1, 'track-7', NULL, 'Web/Misc', 7, ##1735);
+INSERT INTO tracks VALUES (8, NULL, NULL, 1, 'track-8', NULL, 'Data + Integration', 8, ##1735);
+INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-9', NULL, 'User Experience', 9, ##1735);
+INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-10', NULL, 'Workshop', 10, ##1735);

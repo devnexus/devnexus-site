@@ -125,10 +125,36 @@
 			</div>
 		</div>
 
+		<spring:bind path="presentation.track.id">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="track" class="col-lg-2 control-label">Track</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="track.id" id="track" tabindex="9">
+					<form:option value="" label="Please Select a Track" />
+					<form:options items="${tracks}" itemLabel="name" itemValue="id"/>
+				</form:select>
+				<form:errors path="track" cssClass="fieldError" />
+			</div>
+		</div>
+
+		<spring:bind path="presentation.tagsAsText">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="tagsAsText" class="col-lg-2 control-label">Tags</label>
+			<div class="col-lg-10">
+				<form:textarea cssClass="form-control" path="tagsAsText" id="tagsAsText" tabindex="10" rows="3" maxlength="10000"/>
+				<form:errors path="tagsAsText" cssClass="fieldError"/>
+				<span class="help-block">Comma-separated list of tags</span>
+			</div>
+		</div>
+
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" lang="save" tabindex="9">Save</button>
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="10">Cancel</button>
+				<button type="submit" class="btn btn-default" lang="save" tabindex="11">Save</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="12">Cancel</button>
 			</div>
 		</div>
 	</form:form>

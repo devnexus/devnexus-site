@@ -115,8 +115,6 @@ public class SiteController {
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
 		model.addAttribute("scheduleItemList", scheduleItemList);
-		model.addAttribute("headerTitle", "Schedule");
-		model.addAttribute("tag", "500+ Developers, 57 Presentations, 48 Speakers, 2 Days");
 
 		return "schedule";
 	}

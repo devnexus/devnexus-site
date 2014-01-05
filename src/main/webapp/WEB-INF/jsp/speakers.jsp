@@ -109,19 +109,29 @@
 								</ul>
 							</div>
 
-                            <c:if test="${!empty speaker.presentations}">
-                                <c:forEach var="presentation" items="${speaker.presentations}">
-                                <p><strong>Presentation:</strong><br/>
-                                    <c:if test="${presentation.presentationType == keynoteType}">
-                                       (Keynote)
-                                    </c:if>
-                                    <a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
-                                        value="${presentation.title}"/></a><br/>--</p>
-                                </c:forEach>
-                            </c:if>
-                            <p class="detail">
-                                <c:out value="${speaker.bioAsHtml}" escapeXml="false"/>
-                            </p>
+							<c:if test="${!empty speaker.presentations}">
+								<c:choose>
+									<c:when test="${fn:length(speaker.presentations) gt 1}">
+										<p><strong>Presentations:</strong><br/>
+									</c:when>
+									<c:otherwise>
+										<p><strong>Presentation:</strong></p>
+									</c:otherwise>
+								</c:choose>
+								<c:forEach var="presentation" items="${speaker.presentations}" varStatus="loop">
+									<p>
+										<a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
+										value="${presentation.title}"/></a>
+										<c:if test="${presentation.presentationType == keynoteType}">
+											(Keynote)
+										</c:if>
+										<c:if test="${loop.last}"><br/>--</c:if>
+									</p>
+								</c:forEach>
+							</c:if>
+							<p class="detail">
+								<c:out value="${speaker.bioAsHtml}" escapeXml="false"/>
+							</p>
                         </div>
                     </div>
                 </c:forEach>

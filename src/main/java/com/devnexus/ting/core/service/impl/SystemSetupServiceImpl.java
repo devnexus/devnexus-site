@@ -32,18 +32,22 @@ import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.core.dao.BackupDao;
 import com.devnexus.ting.core.dao.EventDao;
+import com.devnexus.ting.core.dao.PresentationTagDao;
 import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SchemaMigrationDao;
 import com.devnexus.ting.core.dao.SystemDao;
+import com.devnexus.ting.core.dao.TrackDao;
 import com.devnexus.ting.core.dao.UserAuthorityDao;
 import com.devnexus.ting.core.model.AuthorityType;
 import com.devnexus.ting.core.model.Backup;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.SchemaMigration;
+import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.SystemSetupService;
@@ -80,6 +84,12 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 	@Autowired
 	private EventDao eventDao;
+
+	@Autowired
+	private PresentationTagDao presentationTagDao;
+
+	@Autowired
+	private TrackDao trackDao;
 
 	@Autowired
 	private UserService userService;
@@ -215,6 +225,24 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		roomDao.replicate(room105);
 		roomDao.replicate(atrium);
 		roomDao.replicate(hallA);
+
+		PresentationTag tag1 = new PresentationTag(1L, "Big Data");
+		PresentationTag tag2 = new PresentationTag(2L, "HTML5");
+		PresentationTag tag3 = new PresentationTag(3L, "PaaS");
+		PresentationTag tag4 = new PresentationTag(4L, "CSS");
+
+		presentationTagDao.replicate(tag1);
+		presentationTagDao.replicate(tag2);
+		presentationTagDao.replicate(tag3);
+		presentationTagDao.replicate(tag4);
+
+		Track track1 = new Track(1L, "Data", 3, devnexus2013);
+		Track track2 = new Track(2L, "Web", 1, devnexus2013);
+		Track track3 = new Track(3L, "Agile", 2, devnexus2013);
+
+		trackDao.replicate(track1);
+		trackDao.replicate(track2);
+		trackDao.replicate(track3);
 
 		setupDemoSchedule();
 	}
