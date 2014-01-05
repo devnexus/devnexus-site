@@ -13,40 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.dao.jpa;
+package com.devnexus.ting.core.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
-import com.devnexus.ting.core.dao.RoomDao;
-import com.devnexus.ting.core.model.Room;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
  * @author Gunnar Hillert
- *
  */
-@Repository("roomDao")
-public class RoomDaoJpa extends GenericDaoJpa< Room, Long>
-						implements RoomDao {
+@XmlRootElement(name="tracks")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class TrackList implements Serializable {
 
-	/** Constructor. */
-	private RoomDaoJpa() {
-		super(Room.class);
+	private static final long serialVersionUID = 1L;
+
+	@XmlElement(name="track")
+	private List<Track> tracks;
+
+	public List<Track> getTracks() {
+		return tracks;
 	}
 
-	@Override
-	public List<Room> getRoomsForEvent(Long eventId) {
-
-		final List<Room> rooms = super.entityManager
-				.createQuery("select r from Room r "
-						+ "where r.event.id = :eventId "
-						+ "order by r.roomOrder ASC", Room.class)
-			.setParameter("eventId", eventId)
-			.getResultList();
-
-		return rooms;
+	public void setTracks(List<Track> tracks) {
+		this.tracks = tracks;
 	}
 
 }

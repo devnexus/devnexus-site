@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 package com.devnexus.ting.core.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.CfpSubmission;
@@ -24,9 +25,11 @@ import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Track;
 
 /**
  * The central service layer of Ting.
@@ -227,4 +230,14 @@ public interface BusinessService {
 	CfpSubmission getCfpSubmission(Long cfpId);
 
 	void removeEvaluation(Long evaluationId);
+
+	List<Track> getTracksForEvent(Long id);
+
+	Track getTrack(Long id);
+
+	PresentationTag getPresentationTag(String tagName);
+
+	PresentationTag savePresentationTag(PresentationTag presentationTag);
+
+	Map<PresentationTag, Long> getTagCloud(Long eventId);
 }

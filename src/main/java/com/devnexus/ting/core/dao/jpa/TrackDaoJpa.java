@@ -19,34 +19,34 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.devnexus.ting.core.dao.RoomDao;
-import com.devnexus.ting.core.model.Room;
+import com.devnexus.ting.core.dao.TrackDao;
+import com.devnexus.ting.core.model.Track;
 
 /**
  *
  * @author Gunnar Hillert
  *
  */
-@Repository("roomDao")
-public class RoomDaoJpa extends GenericDaoJpa< Room, Long>
-						implements RoomDao {
+@Repository("trackDao")
+public class TrackDaoJpa extends GenericDaoJpa< Track, Long>
+						implements TrackDao {
 
 	/** Constructor. */
-	private RoomDaoJpa() {
-		super(Room.class);
+	private TrackDaoJpa() {
+		super(Track.class);
 	}
 
 	@Override
-	public List<Room> getRoomsForEvent(Long eventId) {
+	public List<Track> getTracksForEvent(Long eventId) {
 
-		final List<Room> rooms = super.entityManager
-				.createQuery("select r from Room r "
-						+ "where r.event.id = :eventId "
-						+ "order by r.roomOrder ASC", Room.class)
+		final List<Track> tracks = super.entityManager
+				.createQuery("select t from Track t "
+						+ "where t.event.id = :eventId "
+						+ "order by t.trackOrder ASC", Track.class)
 			.setParameter("eventId", eventId)
 			.getResultList();
 
-		return rooms;
+		return tracks;
 	}
 
 }

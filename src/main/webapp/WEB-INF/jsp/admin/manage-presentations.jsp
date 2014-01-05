@@ -9,7 +9,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>Event</th><th>Title</th>
+					<th>Action</th><th>Event</th><th>Title</th><th>Speaker</th><th>Track</th>
 				</tr>
 			</thead>
 
@@ -18,6 +18,10 @@
 					<td><a href="${ctx}${baseSiteUrl}/admin/presentation/${presentation.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
 					<td><c:out value="${presentation.event.eventKey}"/></td>
 					<td><c:out value="${presentation.title}"/></td>
+					<td><c:out value="${presentation.speaker.firstLastName}"/></td>
+					<td><c:if test="${not empty presentation.track}">
+						<c:out value="${presentation.track.name}"/>
+					</c:if></td>
 				</tr>
 			</c:forEach>
 		</table>
