@@ -9,7 +9,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>Event</th><th>Title</th><th>Speaker</th><th>Track</th>
+					<th>Action</th><th>Event</th><th>Title</th><th>Speaker</th><th>Track</th><th>Tags</th>
 				</tr>
 			</thead>
 
@@ -22,6 +22,7 @@
 					<td><c:if test="${not empty presentation.track}">
 						<c:out value="${presentation.track.name}"/>
 					</c:if></td>
+					<td><span class="badge"><c:out value="${presentation.presentationTags.size()}"/></span></td>
 				</tr>
 			</c:forEach>
 		</table>
