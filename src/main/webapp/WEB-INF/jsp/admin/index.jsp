@@ -25,7 +25,9 @@
 				<ul>
 					<sec:authorize access="hasRole('ADMIN')">
 						<li><a href="${ctx}${baseSiteUrl}/admin/speakers?eventId=${currentEvent.id}">Manage Speakers</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/speaker?eventId=${currentEvent.id}">Add Speaker</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/presentations?eventId=${currentEvent.id}">Manage Presentations</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/presentation?eventId=${currentEvent.id}">Add Presentation</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/manage-schedule?eventId=${currentEvent.id}">Manage Schedule</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/evaluations">Show Evaluations for Current Event</a></li>
 					</sec:authorize>

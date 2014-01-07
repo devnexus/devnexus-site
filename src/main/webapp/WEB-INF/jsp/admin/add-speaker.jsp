@@ -140,3 +140,19 @@
 	</form:form>
 	</div>
 </div>
+
+<content tag='bottom'>
+
+		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				$("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
+
+				$('textarea').maxlength({
+					alwaysShow: true
+				});
+
+			});
+		</script>
+</content>
