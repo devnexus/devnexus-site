@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -47,9 +48,11 @@ import com.devnexus.ting.core.dao.EvaluationDao;
 import com.devnexus.ting.core.dao.EventDao;
 import com.devnexus.ting.core.dao.OrganizerDao;
 import com.devnexus.ting.core.dao.PresentationDao;
+import com.devnexus.ting.core.dao.PresentationTagDao;
 import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
+import com.devnexus.ting.core.dao.TrackDao;
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.Evaluation;
@@ -57,11 +60,13 @@ import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -82,9 +87,11 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private EventDao        eventDao;
 	@Autowired private OrganizerDao    organizerDao;
 	@Autowired private PresentationDao presentationDao;
+	@Autowired private PresentationTagDao presentationTagDao;
 	@Autowired private RoomDao         roomDao;
 	@Autowired private ScheduleItemDao scheduleItemDao;
 	@Autowired private SpeakerDao      speakerDao;
+	@Autowired private TrackDao        trackDao;
 	@Autowired private ApplicationCacheDao applicationCacheDao;
 	@Autowired private Environment environment;
 
@@ -271,6 +278,10 @@ public class BusinessServiceImpl implements BusinessService {
 		return roomDao.getRoomsForEvent(eventId);
 	}
 
+	@Override
+	public List<Track> getTracksForEvent(Long eventId) {
+		return trackDao.getTracksForEvent(eventId);
+	}
 
 	/** {@inheritDoc} */
 	@Override
@@ -396,6 +407,10 @@ public class BusinessServiceImpl implements BusinessService {
 
 			roomIds.add(scheduleItem.getRoom().getId());
 
+			final Date fromTime = scheduleItem.getFromTime();
+			final Date dayOfConference = CalendarUtils.getCalendarWithoutTime(fromTime).getTime();
+			days.add(dayOfConference);
+
 			if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
 					|| ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
 
@@ -422,9 +437,6 @@ public class BusinessServiceImpl implements BusinessService {
 				numberOfBreaks++;
 			}
 
-			final Date fromTime = scheduleItem.getFromTime();
-			days.add(CalendarUtils.getCalendarWithoutTime(fromTime).getTime());
-
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(fromTime);
 
@@ -447,7 +459,6 @@ public class BusinessServiceImpl implements BusinessService {
 		scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
 		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
 		scheduleItemList.setNumberOfRooms(roomIds.size());
-
 		return scheduleItemList;
 	}
 
@@ -499,6 +510,26 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	public CfpSubmission getCfpSubmission(Long cfpId) {
 		return this.cfpSubmissionDao.get(cfpId);
+	}
+
+	@Override
+	public Track getTrack(Long id) {
+		return trackDao.get(id);
+	}
+
+	@Override
+	public PresentationTag getPresentationTag(String tagName) {
+		return presentationTagDao.getPresentationTag(tagName);
+	}
+
+	@Override
+	public PresentationTag savePresentationTag(PresentationTag presentationTag) {
+		return presentationTagDao.save(presentationTag);
+	}
+
+	@Override
+	public Map<PresentationTag, Long> getTagCloud(Long eventId) {
+		return presentationTagDao.getPresentationTagCountForEvent(eventId);
 	}
 
 }

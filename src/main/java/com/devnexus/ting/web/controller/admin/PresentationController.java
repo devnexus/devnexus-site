@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,9 @@ package com.devnexus.ting.web.controller.admin;
 import java.io.IOException;
 import java.util.Date;
 import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +31,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,9 +43,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.service.BusinessService;
 
 
@@ -57,12 +62,15 @@ public class PresentationController {
 
 	@Autowired private Validator validator;
 
-	private void prepareReferenceData(ModelMap model) {
+	private void prepareReferenceData(ModelMap model, Event event) {
 		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
 		model.addAttribute("presentationTypes", presentationTypes);
 
 		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
 		model.addAttribute("skillLevels", skillLevels);
+
+		final List<Track> tracks = businessService.getTracksForEvent(event.getId());
+		model.addAttribute("tracks", tracks);
 	}
 
 	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
@@ -94,7 +102,7 @@ public class PresentationController {
 			event = businessService.getEvent(eventId);
 		}
 
-		prepareReferenceData(model);
+		prepareReferenceData(model, event);
 
 		final List<Speaker> speakers = businessService.getSpeakersForEvent(event.getId());
 		model.addAttribute("speakers", speakers);
@@ -108,12 +116,13 @@ public class PresentationController {
 	}
 
 	@RequestMapping(value="/admin/presentation", method=RequestMethod.POST)
-	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, HttpServletRequest request) {
+	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, ModelMap model, HttpServletRequest request) {
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/presentations";
 		}
 
 		if (bindingResult.hasErrors()) {
+			this.prepareReferenceData(model, presentation.getEvent());
 			return "/admin/add-presentation";
 		}
 
@@ -136,17 +145,14 @@ public class PresentationController {
 	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.GET)
 	public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
 
-		final Set<PresentationType> presentationTypes = EnumSet.allOf(PresentationType.class);
-		model.addAttribute("presentationTypes", presentationTypes);
-
-		final Set<SkillLevel> skillLevels = EnumSet.allOf(SkillLevel.class);
-		model.addAttribute("skillLevels", skillLevels);
-
 		final Presentation presentation = businessService.getPresentation(presentationId);
+		presentation.convertPresentationTagsToText();
 		model.addAttribute("presentation", presentation);
 
 		final List<Speaker> speakers = businessService.getSpeakersForEvent(presentation.getEvent().getId());
 		model.addAttribute("speakers", speakers);
+
+		this.prepareReferenceData(model, presentation.getEvent());
 
 		return "/admin/add-presentation";
 	}
@@ -171,12 +177,42 @@ public class PresentationController {
 
 		presentationFromDb.setAudioLink(presentation.getAudioLink());
 		presentationFromDb.setDescription(presentation.getDescription());
-		presentationFromDb.setEvent(presentation.getEvent());
 		presentationFromDb.setPresentationLink(presentation.getPresentationLink());
 		presentationFromDb.setTitle(presentation.getTitle());
 
 		presentationFromDb.setSkillLevel(presentation.getSkillLevel());
+
+		if (presentation.getTrack().getId() != null) {
+			final Track trackFromDb = businessService.getTrack(presentation.getTrack().getId());
+			presentationFromDb.setTrack(trackFromDb);
+		}
+
 		presentationFromDb.setPresentationType(presentation.getPresentationType());
+
+		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
+
+		if (!presentation.getTagsAsText().trim().isEmpty()) {
+			Set<String> tags = StringUtils.commaDelimitedListToSet(presentation.getTagsAsText());
+
+			for (String tag : tags) {
+				if (tag != null) {
+
+					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
+					PresentationTag tagFromDb = businessService.getPresentationTag(massagedTagName);
+
+					if (tagFromDb == null) {
+						PresentationTag presentationTag = new PresentationTag();
+						presentationTag.setName(massagedTagName);
+						tagFromDb = businessService.savePresentationTag(presentationTag);
+					}
+
+					presentationTagsToSave.add(tagFromDb);
+				}
+			}
+		}
+
+		presentationFromDb.getPresentationTags().clear();
+		presentationFromDb.getPresentationTags().addAll(presentationTagsToSave);
 
 		if (uploadedFile != null && uploadedFile.getSize() > 0) {
 

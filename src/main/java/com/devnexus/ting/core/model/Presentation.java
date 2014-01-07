@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,16 @@
  */
 package com.devnexus.ting.core.model;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
@@ -36,12 +42,15 @@ import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Index;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
+import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.TingUtil;
 
 
 /**
  * The persistent class for the presentations database table.
+ *
+ * @author Gunnar Hillert
  */
 @Entity
 @Cacheable()
@@ -50,177 +59,214 @@ import com.devnexus.ting.common.TingUtil;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Presentation extends BaseModelObject implements Comparable<Presentation> {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @Size(max = 255)
-    private String audioLink;
+	@Size(max = 255)
+	private String audioLink;
 
-    @Size(max = 10000)
-    private String description;
+	@Size(max = 10000)
+	private String description;
 
-    @ManyToOne
-    @NotNull
-    @XmlTransient
-    private Event event;
+	@ManyToOne
+	@NotNull
+	@XmlTransient
+	private Event event;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @XmlTransient
-    @Cascade(CascadeType.ALL)
-    @Valid
-    private FileData presentationFile;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@XmlTransient
+	@Cascade(CascadeType.ALL)
+	@Valid
+	private FileData presentationFile;
 
-    @Size(max = 255)
-    private String presentationLink;
+	@Size(max = 255)
+	private String presentationLink;
 
-    @ManyToOne
-    @JoinColumn(name = "SPEAKER_ID")
-    private Speaker speaker;
+	@ManyToOne
+	@JoinColumn(name = "SPEAKER_ID")
+	private Speaker speaker;
 
-    @Size(max = 255)
-    private String title;
+	@Size(max = 255)
+	private String title;
 
-    @Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
-            @Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.PresentationType"),
-            @Parameter(name = "identifierMethod", value = "getId"),
-            @Parameter(name = "valueOfMethod", value = "fromId")})
-    private PresentationType presentationType;
+	private transient String tagsAsText;
 
-    @Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
-            @Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.SkillLevel"),
-            @Parameter(name = "identifierMethod", value = "getId"),
-            @Parameter(name = "valueOfMethod", value = "fromId")})
-    private SkillLevel skillLevel;
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.PresentationType"),
+			@Parameter(name = "identifierMethod", value = "getId"),
+			@Parameter(name = "valueOfMethod", value = "fromId")})
+	private PresentationType presentationType;
 
+	@Type(type = "com.devnexus.ting.core.hibernate.GenericEnumUserType", parameters = {
+			@Parameter(name = "enumClass", value = "com.devnexus.ting.core.model.SkillLevel"),
+			@Parameter(name = "identifierMethod", value = "getId"),
+			@Parameter(name = "valueOfMethod", value = "fromId")})
+	private SkillLevel skillLevel;
 
-    @OneToOne(mappedBy = "presentation")
-    @XmlTransient
-    private ScheduleItem scheduleItem;
+	@ManyToOne
+	@JoinColumn(name = "TRACK_ID")
+	private Track track;
 
-    //~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	@OneToOne(mappedBy = "presentation")
+	@XmlTransient
+	private ScheduleItem scheduleItem;
 
-    public Presentation() {
-    }
+	@ManyToMany(cascade={javax.persistence.CascadeType.ALL}, fetch=FetchType.LAZY)
+	private Set<PresentationTag>presentationTags = new HashSet<>(0);
 
-    //~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+	public Presentation() {
+	}
 
-    public ScheduleItem getScheduleItem() {
-        return scheduleItem;
-    }
+	//~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public void setScheduleItem(ScheduleItem scheduleItem) {
-        this.scheduleItem = scheduleItem;
-    }
+	public ScheduleItem getScheduleItem() {
+		return scheduleItem;
+	}
 
-    public String getAudioLink() {
-        return audioLink;
-    }
+	public void setScheduleItem(ScheduleItem scheduleItem) {
+		this.scheduleItem = scheduleItem;
+	}
 
-    public String getDescription() {
-        return this.description;
-    }
+	public String getAudioLink() {
+		return audioLink;
+	}
 
-    public String getDescriptionAsHtml() {
-        return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
-    }
+	public String getDescription() {
+		return this.description;
+	}
 
-    public Event getEvent() {
-        return event;
-    }
+	public String getDescriptionAsHtml() {
+		return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
+	}
 
-    public FileData getPresentationFile() {
-        return presentationFile;
-    }
+	public Event getEvent() {
+		return event;
+	}
 
-    public String getPresentationLink() {
-        return this.presentationLink;
-    }
+	public FileData getPresentationFile() {
+		return presentationFile;
+	}
 
-    public Speaker getSpeaker() {
-        return speaker;
-    }
+	public String getPresentationLink() {
+		return this.presentationLink;
+	}
 
-    public String getTitle() {
-        return this.title;
-    }
+	public Speaker getSpeaker() {
+		return speaker;
+	}
 
-    public void setAudioLink(String audioLink) {
-        this.audioLink = audioLink;
-    }
+	public String getTitle() {
+		return this.title;
+	}
 
-    public void setDescription(String abstract_) {
-        this.description = abstract_;
-    }
+	public void setAudioLink(String audioLink) {
+		this.audioLink = audioLink;
+	}
 
-    public void setEvent(Event event) {
-        this.event = event;
-    }
+	public void setDescription(String abstract_) {
+		this.description = abstract_;
+	}
 
-    public void setPresentationFile(FileData presentationFile) {
-        this.presentationFile = presentationFile;
-    }
+	public void setEvent(Event event) {
+		this.event = event;
+	}
 
-    public void setPresentationLink(String presentationLink) {
-        this.presentationLink = presentationLink;
-    }
+	public void setPresentationFile(FileData presentationFile) {
+		this.presentationFile = presentationFile;
+	}
 
-    public void setSpeaker(Speaker speaker) {
-        this.speaker = speaker;
-    }
+	public void setPresentationLink(String presentationLink) {
+		this.presentationLink = presentationLink;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
+	}
 
-    public PresentationType getPresentationType() {
-        return presentationType;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setPresentationType(PresentationType presentationType) {
-        this.presentationType = presentationType;
-    }
+	public PresentationType getPresentationType() {
+		return presentationType;
+	}
 
-    public SkillLevel getSkillLevel() {
-        return skillLevel;
-    }
+	public void setPresentationType(PresentationType presentationType) {
+		this.presentationType = presentationType;
+	}
 
-    public void setSkillLevel(SkillLevel skillLevel) {
-        this.skillLevel = skillLevel;
-    }
+	public SkillLevel getSkillLevel() {
+		return skillLevel;
+	}
 
-    public Room getRoom() {
-        if (scheduleItem != null) {
-            return scheduleItem.getRoom();
-        } else {
-            return null;
-        }
-    }
+	public void setSkillLevel(SkillLevel skillLevel) {
+		this.skillLevel = skillLevel;
+	}
 
+	public Room getRoom() {
+		if (scheduleItem != null) {
+			return scheduleItem.getRoom();
+		} else {
+			return null;
+		}
+	}
 
-    @Override
-    public int compareTo(Presentation o) {
-        if (presentationType == PresentationType.KEYNOTE && o.presentationType == PresentationType.BREAKOUT) {
-            return 1;
-        } else if (presentationType == PresentationType.BREAKOUT && o.presentationType == PresentationType.KEYNOTE) {
-            return -1;
-        }
+	public Track getTrack() {
+		return track;
+	}
 
-        if (getRoom() == null) {
-            if (o.getRoom() != null) {
-                return -1;
-            } else {
-                return title.compareTo(o.title);
-            }
-        } else if ((o.getRoom() == null)) {
-            return 1;
-        } else {
-            if (o.getRoom().compareTo(getRoom()) == 0) {
-                return title.compareTo(o.title);
-            } else {
-                return getRoom().compareTo(o.getRoom());
-            }
-        }
+	public void setTrack(Track track) {
+		this.track = track;
+	}
 
-    }
+	public Set<PresentationTag> getPresentationTags() {
+		return presentationTags;
+	}
+
+	public void setPresentationTags(Set<PresentationTag> presentationTags) {
+		this.presentationTags = presentationTags;
+	}
+
+	public String getTagsAsText() {
+		return tagsAsText;
+	}
+
+	public void setTagsAsText(String tagsAsText) {
+		this.tagsAsText = tagsAsText;
+	}
+
+	public void convertPresentationTagsToText() {
+		final List<String> tagAsString = new ArrayList<>();
+		for (PresentationTag presentationTag : this.presentationTags) {
+			tagAsString.add(presentationTag.getName());
+		}
+		this.tagsAsText = StringUtils.collectionToCommaDelimitedString(tagAsString);
+	}
+
+	@Override
+	public int compareTo(Presentation o) {
+		if (presentationType == PresentationType.KEYNOTE && o.presentationType == PresentationType.BREAKOUT) {
+			return 1;
+		} else if (presentationType == PresentationType.BREAKOUT && o.presentationType == PresentationType.KEYNOTE) {
+			return -1;
+		}
+
+		if (getRoom() == null) {
+			if (o.getRoom() != null) {
+				return -1;
+			} else {
+				return title.compareTo(o.title);
+			}
+		} else if ((o.getRoom() == null)) {
+			return 1;
+		} else {
+			if (o.getRoom().compareTo(getRoom()) == 0) {
+				return title.compareTo(o.title);
+			} else {
+				return getRoom().compareTo(o.getRoom());
+			}
+		}
+	}
 
 }

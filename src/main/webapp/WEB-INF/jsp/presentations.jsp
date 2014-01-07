@@ -64,7 +64,7 @@
 			</c:if>
 			<div id="id-${presentation.id}" class="col-md-4 presentation">
 				<div class="row ${presentation.room.cssStyleName}">
-					<div class="col-md-5  ">
+					<div class="col-md-5">
 						<c:if test="${presentation.speaker.picture != null}">
 							<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg"/>
 						</c:if>
@@ -191,32 +191,18 @@
 
 <content tag='bottom'>
 	<script type="text/javascript">
-        $(document).ready(function() {
+		$(document).ready(function() {
+			var $container = $('#bio');
 
-            // or with jQuery
-            var $container = $('#bio');
-            var msnry;
-            // initialize Masonry after all images have loaded
-            $container.imagesLoaded( function() {
-                msnry = $container.masonry({
-                    columnWidth: 'div.speakerContainer',
-                    'margin-bottom': '10px',
-                    itemSelector: '.speakerContainer',
-                    isResizable: true
-                } );
-            });
+			$container.imagesLoaded(function () {
+				$container.masonry({
+						itemSelector: '.speakerContainer',
+						columnWidth: '.speakerContainer',
+						isAnimated: true
+				});
+			});
 
-            $( window).resize(function() {
-                window.setTimeout(function(){
-                    $container.masonry({
-                        columnWidth: 'div.speakerContainer',
-                        'margin-bottom': '10px',
-                        itemSelector: '.speakerContainer',
-                        isResizable: true
-                    } );
-                }, 1000)
-            });
-        });
+		});
 	</script>
 </content>
 </c:if>
