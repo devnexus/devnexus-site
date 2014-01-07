@@ -21,7 +21,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Track;
 
 /**
