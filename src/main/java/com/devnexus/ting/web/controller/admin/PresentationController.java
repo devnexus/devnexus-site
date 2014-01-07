@@ -117,6 +117,7 @@ public class PresentationController {
 
 	@RequestMapping(value="/admin/presentation", method=RequestMethod.POST)
 	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, ModelMap model, HttpServletRequest request) {
+
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/presentations";
 		}
@@ -126,19 +127,37 @@ public class PresentationController {
 			return "/admin/add-presentation";
 		}
 
+		final Presentation presentationToSave = new Presentation();
+
 		if (presentation.getSpeaker() != null && presentation.getSpeaker().getId() != null) {
 			Speaker speakerFromDb = businessService.getSpeaker(presentation.getSpeaker().getId());
-			presentation.setSpeaker(speakerFromDb);
-
+			presentationToSave.setSpeaker(speakerFromDb);
 		}
 
 		if (presentation.getEvent() != null && presentation.getEvent().getId() != null) {
 			Event eventFromDb = businessService.getEvent(presentation.getEvent().getId());
-			presentation.setEvent(eventFromDb);
+			presentationToSave.setEvent(eventFromDb);
 
 		}
 
-		businessService.savePresentation(presentation);
+		presentationToSave.setAudioLink(presentation.getAudioLink());
+		presentationToSave.setDescription(presentation.getDescription());
+		presentationToSave.setPresentationLink(presentation.getPresentationLink());
+		presentationToSave.setTitle(presentation.getTitle());
+
+		presentationToSave.setSkillLevel(presentation.getSkillLevel());
+
+		if (presentation.getTrack().getId() != null) {
+			final Track trackFromDb = businessService.getTrack(presentation.getTrack().getId());
+			presentationToSave.setTrack(trackFromDb);
+		}
+
+		presentationToSave.setPresentationType(presentation.getPresentationType());
+
+		final Set<PresentationTag> presentationTagsToSave = processPresentationTags(presentation.getTagsAsText());
+		presentationToSave.getPresentationTags().addAll(presentationTagsToSave);
+
+		businessService.savePresentation(presentationToSave);
 		return "redirect:/s/admin/presentations";
 	}
 
@@ -189,28 +208,7 @@ public class PresentationController {
 
 		presentationFromDb.setPresentationType(presentation.getPresentationType());
 
-		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
-
-		if (!presentation.getTagsAsText().trim().isEmpty()) {
-			Set<String> tags = StringUtils.commaDelimitedListToSet(presentation.getTagsAsText());
-
-			for (String tag : tags) {
-				if (tag != null) {
-
-					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
-					PresentationTag tagFromDb = businessService.getPresentationTag(massagedTagName);
-
-					if (tagFromDb == null) {
-						PresentationTag presentationTag = new PresentationTag();
-						presentationTag.setName(massagedTagName);
-						tagFromDb = businessService.savePresentationTag(presentationTag);
-					}
-
-					presentationTagsToSave.add(tagFromDb);
-				}
-			}
-		}
-
+		final Set<PresentationTag> presentationTagsToSave = processPresentationTags(presentation.getTagsAsText());
 		presentationFromDb.getPresentationTags().clear();
 		presentationFromDb.getPresentationTags().addAll(presentationTagsToSave);
 
@@ -245,5 +243,32 @@ public class PresentationController {
 
 		redirectAttributes.addFlashAttribute("successMessage", "The presentation was edited successfully.");
 		return "redirect:/s/admin/presentations";
+	}
+
+	private Set<PresentationTag> processPresentationTags(String tagsAsText) {
+
+		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
+
+		if (!tagsAsText.trim().isEmpty()) {
+			Set<String> tags = StringUtils.commaDelimitedListToSet(tagsAsText);
+
+			for (String tag : tags) {
+				if (tag != null) {
+
+					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
+					PresentationTag tagFromDb = businessService.getPresentationTag(massagedTagName);
+
+					if (tagFromDb == null) {
+						PresentationTag presentationTag = new PresentationTag();
+						presentationTag.setName(massagedTagName);
+						tagFromDb = businessService.savePresentationTag(presentationTag);
+					}
+
+					presentationTagsToSave.add(tagFromDb);
+				}
+			}
+		}
+
+		return presentationTagsToSave;
 	}
 }
