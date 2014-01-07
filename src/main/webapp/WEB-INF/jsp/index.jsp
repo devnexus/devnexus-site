@@ -60,7 +60,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <center><a href="http://devnexus.eventzilla.net/" class="btn btn-primary btn-lg">Register
-                            Now!</a></center>
+                                Now!</a></center>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
 
                 <p>We are looking for managers, entrepreneurs, developers, and other technologists. If you know someone
                     who may be interested feel free to drop us a line at info@ajug.org or direct them to our cfp.</p>
-                <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
+                    <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
                 <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
             </div>
@@ -116,7 +116,7 @@
 
             <p>The conference will be hosted at the Cobb Galleria Center, just a few minutes north of downtown Atlanta
                 and easily accessible from I-75 and I-285.</p>
-            <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+                <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
             <p>The <a href="${travelUrl}">travel page</a> has more information including directions, maps, and nearby
                 hotels.</p>
         </div>
@@ -139,13 +139,16 @@
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
                                                    src="${ctx}/img/sponsors/inBloom.png"/></a>
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
-                                                      src="${ctx}/img/sponsors/compuware.png"/></a>
+                                                     src="${ctx}/img/sponsors/compuware.png"/></a>
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
                                                     src="${ctx}/img/sponsors/parasoft.png"/></a>
 
+            <a href="http://gopivotal.com/"><img class="logo" alt="Pivotal"
+                                                    src="${ctx}/img/sponsors/pivotal.png"/></a>
+
 
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
-                                                            src="${ctx}/img/sponsors/cc.png"/></a>
+                                                           src="${ctx}/img/sponsors/cc.png"/></a>
 
 
         </div>
@@ -165,9 +168,9 @@
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
         <a href="http://www.lancope.com/"><img class="logo" alt="Lancope"
-                                                  src="${ctx}/img/sponsors/lancope.png"/></a>
-            <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
-                                                    src="${ctx}/img/sponsors/B2S.png"/></a>
+                                               src="${ctx}/img/sponsors/lancope.png"/></a>
+        <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
+                                                        src="${ctx}/img/sponsors/B2S.png"/></a>
         <a title="Actuate" href="http://www.actuate.com/" ><img class="logo" alt="Acruate"
                                                                 src="${ctx}/img/sponsors/actuate.png"/></a>
 
