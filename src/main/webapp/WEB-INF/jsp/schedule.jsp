@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-md-2">
                     <div class="row">
-                        <div class="col-md-12"><h3 id="green">Desert</div>
+                        <div class="col-md-12"><h3 id="green">Dessert</div>
                     </div>
                     <div id="botttom" class="row">
                         <div class="col-md-12">
