@@ -138,6 +138,10 @@
             <h3>Gold Sponsors</h3>
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
                                                    src="${ctx}/img/sponsors/inBloom.png"/></a>
+
+            <a href="https://www.theice.com"><img class="logo" alt="ICE: IntercontinentalExchange, Inc."
+                                                   src="${ctx}/img/sponsors/logo_ice.png"/></a>
+
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                      src="${ctx}/img/sponsors/compuware.png"/></a>
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
