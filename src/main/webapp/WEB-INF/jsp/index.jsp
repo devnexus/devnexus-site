@@ -140,7 +140,7 @@
                                                    src="${ctx}/img/sponsors/inBloom.png"/></a>
 
             <a href="https://www.theice.com"><img class="logo" alt="ICE: IntercontinentalExchange, Inc."
-                                                   src="${ctx}/img/sponsors/logo_ice.png"/></a>
+                                                  src="${ctx}/img/sponsors/logo_ice.png"/></a>
 
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                      src="${ctx}/img/sponsors/compuware.png"/></a>
@@ -148,7 +148,7 @@
                                                     src="${ctx}/img/sponsors/parasoft.png"/></a>
 
             <a href="http://gopivotal.com/"><img class="logo" alt="Pivotal"
-                                                    src="${ctx}/img/sponsors/pivotal.png"/></a>
+                                                 src="${ctx}/img/sponsors/pivotal.png"/></a>
 
 
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
@@ -161,6 +161,8 @@
         <h3>Silver Sponsors</h3>
         <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
                                                   src="${ctx}/img/sponsors/Anteo.png"/></a>
+        <a href="http://www.jboss.org/"><img class="logo" alt="Jboss"
+                                                  src="${ctx}/img/sponsors/jboss.png"/></a>
         <a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics"
                                                    src="${ctx}/img/sponsors/app-dynamics.png"/></a>
         <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
