@@ -163,6 +163,8 @@
                                                   src="${ctx}/img/sponsors/Anteo.png"/></a>
         <a href="http://www.jboss.org/"><img class="logo" alt="Jboss"
                                                   src="${ctx}/img/sponsors/jboss.png"/></a>
+        <a href="http://bluefletch.com/"><img class="logo" alt="BlueFletch"
+                                                  src="${ctx}/img/sponsors/bluefletch.png"/></a>                                                     
         <a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics"
                                                    src="${ctx}/img/sponsors/app-dynamics.png"/></a>
         <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
