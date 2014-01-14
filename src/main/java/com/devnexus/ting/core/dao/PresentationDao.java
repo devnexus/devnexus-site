@@ -18,11 +18,19 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 
 public interface PresentationDao  extends GenericDao < Presentation, Long > {
 
 	List<Presentation> getPresentationsForCurrentEvent();
 
-	List<Presentation> getPresentationsForEvent(Long eventId);
+	List<Presentation> findPresentations(
+			PresentationSearchQuery presentationSearchQuery);
+
+	List<Presentation> getPresentationsForEventOrderedByName(Long eventId);
+
+	List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId);
+
+	List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId);
 
 }

@@ -18,6 +18,7 @@ package com.devnexus.ting.core.dao.jpa;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.persistence.NoResultException;
 
@@ -70,13 +71,13 @@ public class PresentationTagDaoJpa extends GenericDaoJpa< PresentationTag, Long>
 	public Map<PresentationTag, Long> getPresentationTagCountForEvent(Long eventId) {
 
 		List<Object[]> list = super.entityManager
-		.createQuery("select pt, count(p.id) from PresentationTag pt join pt.presentations p"
+		.createQuery("select pt, count(p.id) as cc from PresentationTag pt join pt.presentations p"
 				+ " join p.event e where e.id = :eventId"
-				+ " group by pt.id ", Object[].class)
+				+ " group by pt.id order by cc DESC", Object[].class)
 		.setParameter("eventId", eventId)
 		.getResultList();
 
-		Map<PresentationTag, Long> results = new HashMap<>();
+		Map<PresentationTag, Long> results = new TreeMap<>();
 
 		for (Object[] o : list) {
 			results.put((PresentationTag) o[0], (Long) o[1]);

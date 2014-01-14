@@ -63,7 +63,7 @@ public class AdminScheduleController {
 		prepareReferenceData(model);
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(eventId);
 
-		final List<Presentation> presentations = businessService.getPresentationsForEvent(eventId);
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(eventId);
 		final PresentationList presentationList = new PresentationList();
 		presentationList.setPresentations(presentations);
 

@@ -16,7 +16,10 @@
 			<tbody>
 				<c:forEach items="${trackList.tracks}" var="track">
 				<tr>
-					<td><c:out value="${track.name}" /></td>
+					<c:url value="/s/presentations" var="showPresosForTrack">
+						<c:param name="trackId" value="${track.id}"/>
+					</c:url>
+					<td><a href="${showPresosForTrack}"><c:out value="${track.name}" /></a></td>
 					<td><c:out value="${track.presentations.size()}" /></td>
 				</tr>
 				</c:forEach>

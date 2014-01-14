@@ -79,7 +79,7 @@ public class PresentationController {
 		final List<Presentation> presentations;
 
 		if (eventId != null) {
-			presentations = businessService.getPresentationsForEvent(eventId);
+			presentations = businessService.getPresentationsForEventOrderedByName(eventId);
 		}
 		else {
 			presentations = businessService.getAllPresentations();
