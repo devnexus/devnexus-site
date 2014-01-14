@@ -137,7 +137,7 @@
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
             <h3>Gold Sponsors</h3>
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
-                                                   src="${ctx}/img/sponsors/inBloom.png"/></a>
+                                                   src="${ctx}/img/sponsors/inbloom.png"/></a>
 
             <a href="https://www.theice.com"><img class="logo" alt="ICE: IntercontinentalExchange, Inc."
                                                   src="${ctx}/img/sponsors/logo_ice.png"/></a>
