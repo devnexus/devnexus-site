@@ -76,7 +76,7 @@ public class PresentationDaoJpa extends GenericDaoJpa< Presentation, Long>
 		return super.entityManager
 		.createQuery("select p from Presentation p "
 				   + "    join p.event e "
-				   + "    right join p.track t "
+				   + "    left join p.track t "
 				   + "where e.id = :eventId "
 				   + "order by t.trackOrder ASC", Presentation.class)
 		.setParameter("eventId", eventId)
