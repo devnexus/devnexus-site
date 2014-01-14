@@ -67,6 +67,7 @@ import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.model.Track;
+import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -228,9 +229,20 @@ public class BusinessServiceImpl implements BusinessService {
 
 	/** {@inheritDoc} */
 	@Override
-	public List<Presentation> getPresentationsForEvent(Long eventId) {
-        List<Presentation> list = presentationDao.getPresentationsForEvent(eventId);
-        Collections.sort(list);
+	public List<Presentation> getPresentationsForEventOrderedByName(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByName(eventId);
+		return list;
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByTrack(eventId);
+		return list;
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByRoom(eventId);
 		return list;
 	}
 
@@ -530,6 +542,12 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	public Map<PresentationTag, Long> getTagCloud(Long eventId) {
 		return presentationTagDao.getPresentationTagCountForEvent(eventId);
+	}
+
+	@Override
+	public List<Presentation> findPresentations(
+			PresentationSearchQuery presentationSearchQuery) {
+		return presentationDao.findPresentations(presentationSearchQuery);
 	}
 
 }

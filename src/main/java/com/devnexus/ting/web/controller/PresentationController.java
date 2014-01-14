@@ -16,7 +16,6 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -25,14 +24,17 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.PresentationList;
+import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -45,21 +47,58 @@ public class PresentationController {
 
 	@Autowired private BusinessService businessService;
 
-	private void preparePresentationsForEvent(Event event, Model model) {
+	private PresentationList preparePresentationsForEvent(Event event, Model model, String order, PresentationSearchQuery presentationSearchQuery) {
+
+		Assert.hasText(order);
+
 		model.addAttribute("event", event);
 		final PresentationList presentationList = new PresentationList();
 		List<Presentation> presentations;
-		Collections.sort(presentations = businessService.getPresentationsForEvent(event.getId()));
-		presentationList.setPresentations(presentations);
-		model.addAttribute("presentationList", presentationList);
+
+		if (presentationSearchQuery == null) {
+
+			if ("track".equalsIgnoreCase(order)) {
+				presentations = businessService.getPresentationsForEventOrderedByTrack(event.getId());
+			}
+			else if ("room".equalsIgnoreCase(order)) {
+				presentations = businessService.getPresentationsForEventOrderedByRoom(event.getId());
+			}
+			else if ("name".equalsIgnoreCase(order)) {
+				presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
+			}
+			else {
+				throw new IllegalArgumentException("Order " + order + " not supported.");
+			}
+			presentationList.setPresentations(presentations);
+			model.addAttribute("presentationList", presentationList);
+		}
+		else {
+			presentations = businessService.findPresentations(presentationSearchQuery);
+			presentationList.setPresentations(presentations);
+			model.addAttribute("presentationList", presentationList);
+		}
+
+		return presentationList;
 	}
 
 	@RequestMapping("/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
-										   final Model model) {
+											@RequestParam(value="order", defaultValue="track") String order,
+											@RequestParam(value="trackId", required=false) Long trackId,
+											@RequestParam(value="trackName", required=false) String trackName,
+											@RequestParam(value="type", required=false) String type,
+											@RequestParam(value="experience", required=false) String experience,
+											@RequestParam(value="tags", required=false)  String tags,
+											final Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
-		this.preparePresentationsForEvent(event, model);
-		return "presentations";
+
+		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, PresentationSearchQuery.create(event, trackId, trackName, type, experience, tags));
+
+		if (presentationList.getPresentations().isEmpty()) {
+			return "presentations-empty";
+		}
+
+		return "presentations-by-" + order;
 	}
 
 	@RequestMapping(value="/presentations/{presentationId}/slides", method=RequestMethod.GET)
@@ -90,10 +129,25 @@ public class PresentationController {
 	}
 
 	@RequestMapping("/presentations")
-	public String getPresentationsForCurrentEvent(final Model model) {
+	public String getPresentationsForCurrentEvent(
+			@RequestParam(value="order", defaultValue="track") String order,
+			@RequestParam(value="trackId", required=false) Long trackId,
+			@RequestParam(value="trackName", required=false) String trackName,
+			@RequestParam(value="type", required=false)  String type,
+			@RequestParam(value="experience", required=false) String experience,
+			@RequestParam(value="tags", required=false)  String tags,
+			final Model model) {
+
 		final Event event = businessService.getCurrentEvent();
-		this.preparePresentationsForEvent(event, model);
-		return "presentations";
+		PresentationSearchQuery presentationSearchQuery = PresentationSearchQuery.create(event, trackId, trackName, type, experience, tags);
+
+		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, presentationSearchQuery);
+
+		if ("room".equalsIgnoreCase("room") && presentationList.getPresentations().isEmpty()) {
+			return "presentations-empty";
+		}
+
+		return "presentations-by-" + order;
 	}
 
 }

@@ -62,12 +62,17 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 
 	h1.track-1 {color:#630d1a; text-align: center;}
 	h1.track-102 {color:#44b75c; text-align: center;}
-	h1.track-2 {color:#fd8c2a; text-align: center;}
-	h1.track-3 {color:#7bb7cd; text-align: center;}
-	h1.track-4 {color:#dbaa2e; text-align: center;}
-	h1.track-5 {color:#297ca5; text-align: center;}
-	h1.track-6 {color:#d14928; text-align: center;}
-	h1.track-7 {color:#455159; text-align: center;}
+	h1.track-2  {color:#fd8c2a; text-align: center;}
+	h1.track-3  {color:#7bb7cd; text-align: center;}
+	h1.track-4  {color:#dbaa2e; text-align: center;}
+	h1.track-5  {color:#297ca5; text-align: center;}
+	h1.track-6  {color:#d14928; text-align: center;}
+	h1.track-7  {color:#455159; text-align: center;}
+
+	h1.track-8  {color:#A2285E; text-align: center;}
+	h1.track-9  {color:#FF5D40; text-align: center;}
+	h1.track-10 {color:#6A237E; text-align: center;}
+	h1.track-11 {color:#589800; text-align: center;}
 	h1.center {text-align: center; font-size: 50px; font-weight: bold;}
 
 #speakers {margin-bottom: 20px; clear: both;}
@@ -83,6 +88,12 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 	#speakers .row#agiletools {background-color:#d14928}
 	#speakers .row#mobile {background-color:#455159}
 
+#speakers img {
+	-webkit-border-radius: 0px 0px 10px 0px;
+	-moz-border-radius: 0px 0px 10px 0px;
+	border-radius: 0px 0px 10px 0px;
+}
+
 #sessions {margin-bottom: 40px;}
 #sessions .row .col-md-2 .col-md-12 {background: #e5e5e5; padding: 3px; text-align: center;height: 105px;}
 #sessions .row {margin: 0 1px;}
@@ -92,9 +103,8 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 #schedule #one-fourth {width: 100%; margin-bottom: 24px;padding:5px 15px;text-align: left; color: #fff;}
 	#schedule #one-fourth h3, #schedule #one-fourth p {color: #fff; margin: 15px 0;}
 	#schedule #one-fourth h3 {font-size: 18px;}
-    #schedule .row #one-fourth p a {color: white; text-decoration: underline}
+	#schedule .row #one-fourth p a {color: white; text-decoration: underline}
 	#schedule #one-fourth.track-1 {background-color:#630d1a}
-	#schedule #one-fourth.track-102 {background-color:#44b75c}
 	#schedule #one-fourth.track-2 {background-color:#fd8c2a}
 	#schedule #one-fourth.track-3 {background-color:#7bb7cd}
 	#schedule #one-fourth.track-4 {background-color:#dbaa2e}
@@ -106,11 +116,13 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
     #schedule #one-fourth.track-10 {background-color:#6A237E}
     #schedule #one-fourth.track-11 {background-color:#589800}
 
+.presentation .wrapper { }
+
 .presentation h3, #container #presentation p {color: #fff; margin: 15px 0;}
 .presentation h3 {font-size: 18px;}
 .presentation .row a {color: white; text-decoration: underline}
+.presentation .defaultTrackStyle {background-color:#0C1620}
 .presentation .track-1 {background-color:#630d1a}
-.presentation .track-102 {background-color:#44b75c}
 .presentation .track-2 {background-color:#fd8c2a}
 .presentation .track-3 {background-color:#7bb7cd}
 .presentation .track-4 {background-color:#dbaa2e}
@@ -149,7 +161,7 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 			.container.eval form h3 {font-weight: normal; margin-bottom: 15px;}
 				label.radio-inline2 {margin-right: 10px;font-weight: normal}
 				label.radio-inline3 {margin-left: 0px; font-weight: normal}
-					
+
 #footer	{padding: 20px 0 30px}
 	#footer.footer-inverse {	background-color: #0C1620;border-color: #080808}
 	#footer h3 {color: #fff; margin: 10px 0; font-size: 17px}

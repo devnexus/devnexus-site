@@ -30,6 +30,7 @@ import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.model.Track;
+import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 
 /**
  * The central service layer of Ting.
@@ -129,13 +130,6 @@ public interface BusinessService {
 	 * @return
 	 */
 	List<Presentation> getPresentationsForCurrentEvent();
-
-	/**
-	 *
-	 * @param eventId
-	 * @return
-	 */
-	List<Presentation> getPresentationsForEvent(Long eventId);
 
 	List<Room> getRoomsForEvent(Long eventId);
 
@@ -240,4 +234,13 @@ public interface BusinessService {
 	PresentationTag savePresentationTag(PresentationTag presentationTag);
 
 	Map<PresentationTag, Long> getTagCloud(Long eventId);
+
+	List<Presentation> findPresentations(
+			PresentationSearchQuery presentationSearchQuery);
+
+	List<Presentation> getPresentationsForEventOrderedByName(Long eventId);
+
+	List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId);
+
+	List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId);
 }
