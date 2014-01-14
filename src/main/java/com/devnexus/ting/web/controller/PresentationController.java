@@ -94,7 +94,7 @@ public class PresentationController {
 
 		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, PresentationSearchQuery.create(event, trackId, trackName, type, experience, tags));
 
-		if (presentationList.getPresentations().isEmpty()) {
+		if ("room".equalsIgnoreCase(order) && presentationList.getPresentations().isEmpty()) {
 			return "presentations-empty";
 		}
 
@@ -143,7 +143,7 @@ public class PresentationController {
 
 		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, presentationSearchQuery);
 
-		if ("room".equalsIgnoreCase("room") && presentationList.getPresentations().isEmpty()) {
+		if ("room".equalsIgnoreCase(order) && presentationList.getPresentations().isEmpty()) {
 			return "presentations-empty";
 		}
 

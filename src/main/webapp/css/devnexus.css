@@ -60,6 +60,7 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 #schedule #one-fourth.track-6 {background-color:#d14928}
 #schedule #one-fourth.track-7 {background-color:#455159}
 
+	h1.defaultTrackStyle {color:#0C1620; text-align: center;}
 	h1.track-1 {color:#630d1a; text-align: center;}
 	h1.track-102 {color:#44b75c; text-align: center;}
 	h1.track-2  {color:#fd8c2a; text-align: center;}
@@ -105,6 +106,7 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 	#schedule #one-fourth h3 {font-size: 18px;}
 	#schedule .row #one-fourth p a {color: white; text-decoration: underline}
 	#schedule #one-fourth.track-1 {background-color:#630d1a}
+	#schedule #one-fourth.track-102 {background-color:#44b75c}
 	#schedule #one-fourth.track-2 {background-color:#fd8c2a}
 	#schedule #one-fourth.track-3 {background-color:#7bb7cd}
 	#schedule #one-fourth.track-4 {background-color:#dbaa2e}
@@ -123,6 +125,7 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 .presentation .row a {color: white; text-decoration: underline}
 .presentation .defaultTrackStyle {background-color:#0C1620}
 .presentation .track-1 {background-color:#630d1a}
+.presentation .track-102 {background-color:#44b75c}
 .presentation .track-2 {background-color:#fd8c2a}
 .presentation .track-3 {background-color:#7bb7cd}
 .presentation .track-4 {background-color:#dbaa2e}

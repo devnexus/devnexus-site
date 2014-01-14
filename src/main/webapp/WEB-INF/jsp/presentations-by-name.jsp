@@ -25,8 +25,15 @@
 	<div id="speakers">
 		<div class="row">
 			<c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
+				<c:choose>
+					<c:when test="${empty presentation.track}">
+						<c:set var="trackStyle" value="defaultTrackStyle"/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
+					</c:otherwise>
+				</c:choose>
 				<div id="id-${presentation.id}" class="col-md-4 presentation">
-					<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
 					<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
 				</div>
 			</c:forEach>
