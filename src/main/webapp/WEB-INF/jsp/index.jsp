@@ -1,4 +1,5 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
+
 <style>
     .jumbotron {
         margin-bottom: 0;
@@ -65,19 +66,15 @@
                 </div>
 
             </div>
-            <div class="col-md-6">
-                <h2><strong>Call for Papers</strong></h2>
+            <div class="col-md-6"
+                 style="background-image: url('${ctx}/images/home_bg.jpg');background-repeat: no-repeat">
 
-                <p>Are you interested in presenting at DevNexus 2014? Our call for papers is now open.</p>
 
-                <p>Previous topics have included mobile technology, cloud systems, Java updates and programming,
-                    alternate JVM languages, agile best practices, web design, and project management.</p>
+                <img src="${ctx}/images/home_bg.jpg" style="visibility: hidden"/>
+                <center style="margin-top:-80px;"><a href="${registrationUrl}" class="btn btn-primary btn-lg"
+                                                     style="background-color: #630d1a">${countdowntext}</a></center>
 
-                <p>We are looking for managers, entrepreneurs, developers, and other technologists. If you know someone
-                    who may be interested feel free to drop us a line at info@ajug.org or direct them to our cfp.</p>
-                <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
-                <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
             </div>
         </div>
         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->

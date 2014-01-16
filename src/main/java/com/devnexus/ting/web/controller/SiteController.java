@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 
@@ -61,16 +62,37 @@ public class SiteController {
 	@Autowired private TwitterService twitterService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
+    private static final long DAY_IN_MILLIS = 1000 * 60 * 60 * 24;
 
-	@RequestMapping({"/index", "/"})
+
+    @RequestMapping({"/index", "/"})
 	public String execute(final Model model) {
 
 
-			final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
-			model.addAttribute("tweets", tweets);
-			return "index";
 
-	}
+        int daysUntil;
+        final Calendar startDate = Calendar.getInstance();
+        String countdowntext;
+
+        startDate.set(Calendar.YEAR, 2014);
+        startDate.set(Calendar.DATE, 24);
+        startDate.set(Calendar.MONTH, Calendar.FEBRUARY);
+
+        daysUntil = (int) ((startDate.getTime().getTime() - Calendar.getInstance().getTime().getTime()) / DAY_IN_MILLIS);
+        countdowntext = "Too long...";
+        if (daysUntil > 0) {
+            countdowntext = String.format("%d days until DevNexus.", daysUntil);
+        } else if (daysUntil < -1) {
+            countdowntext = "DevNexus is right now!";
+        }
+
+        final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
+        model.addAttribute("tweets", tweets);
+        model.addAttribute("countdowntext", countdowntext);
+        return "index";
+
+
+    }
 
 	@RequestMapping("/schedule")
 	public String scheduleForCurrentEvent(final Model model) {
