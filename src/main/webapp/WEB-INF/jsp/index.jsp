@@ -59,8 +59,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <center><a href="http://devnexus.eventzilla.net/" class="btn btn-primary btn-lg">Register
-                                Now!</a></center>
+                        <center><a href="${registrationUrl}" class="btn btn-primary btn-lg">Register
+                            Now!</a></center>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
 
                 <p>We are looking for managers, entrepreneurs, developers, and other technologists. If you know someone
                     who may be interested feel free to drop us a line at info@ajug.org or direct them to our cfp.</p>
-                    <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
+                <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
 
                 <center><a href="${cfpUrl}" class="btn btn-primary btn-lg">Send us an abstract!</a></center>
             </div>
@@ -116,7 +116,7 @@
 
             <p>The conference will be hosted at the Cobb Galleria Center, just a few minutes north of downtown Atlanta
                 and easily accessible from I-75 and I-285.</p>
-                <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
+            <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
             <p>The <a href="${travelUrl}">travel page</a> has more information including directions, maps, and nearby
                 hotels.</p>
         </div>
@@ -162,9 +162,9 @@
         <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
                                                   src="${ctx}/img/sponsors/Anteo.png"/></a>
         <a href="http://www.jboss.org/"><img class="logo" alt="Jboss"
-                                                  src="${ctx}/img/sponsors/jboss.png"/></a>
+                                             src="${ctx}/img/sponsors/jboss.png"/></a>
         <a href="http://bluefletch.com/"><img class="logo" alt="BlueFletch"
-                                                  src="${ctx}/img/sponsors/bluefletch.png"/></a>                                                     
+                                              src="${ctx}/img/sponsors/bluefletch.png"/></a>
         <a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics"
                                                    src="${ctx}/img/sponsors/app-dynamics.png"/></a>
         <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
@@ -179,8 +179,8 @@
                                                src="${ctx}/img/sponsors/lancope.png"/></a>
         <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
                                                         src="${ctx}/img/sponsors/B2S.png"/></a>
-        <a title="Actuate" href="http://www.actuate.com/" ><img class="logo" alt="Acruate"
-                                                                src="${ctx}/img/sponsors/actuate.png"/></a>
+        <a title="Actuate" href="http://www.actuate.com/"><img class="logo" alt="Acruate"
+                                                               src="${ctx}/img/sponsors/actuate.png"/></a>
 
         </a>
 
