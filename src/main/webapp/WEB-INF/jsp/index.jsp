@@ -9,7 +9,7 @@
         padding-top: 20px;
     }
 
-    #gold a {
+    #gold a img {
         margin: 5px;
     }
 
