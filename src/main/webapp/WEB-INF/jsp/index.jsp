@@ -141,6 +141,8 @@
 
             <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
                                                      src="${ctx}/img/sponsors/compuware.png"/></a>
+            <a href="http://www.atlassian.com/"><img class="logo" alt="Atlassian"
+                                                     src="${ctx}/img/sponsors/atlassian.png"/></a>
             <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
                                                     src="${ctx}/img/sponsors/parasoft.png"/></a>
 
