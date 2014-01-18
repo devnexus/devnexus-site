@@ -23,7 +23,7 @@
 	<div class="col-md-10 col-md-offset-1">
 		<table class="table table-hover">
 			<thead>
-				<tr><th>Tag</th><th>Count</th></tr>
+				<tr><th>Tag</th><th class="text-center">Count</th></tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${tagCloud}" var="entry">
@@ -32,7 +32,7 @@
 						<c:param name="tags" value="${entry.key.name}"/>
 					</c:url>
 					<td><a href="${showPresosForTags}"><c:out value="${entry.key.name}" /></a></td>
-					<td><c:out value="${entry.value}" /></td>
+					<td class="text-center"><span class="badge"><c:out value="${entry.value}" /></span></td>
 				</tr>
 				</c:forEach>
 			</tbody>

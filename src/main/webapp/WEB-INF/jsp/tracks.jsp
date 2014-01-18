@@ -11,7 +11,7 @@
 	<div class="col-md-10 col-md-offset-1">
 		<table class="table table-hover">
 			<thead>
-				<tr><th>Track</th><th>Sessions</th></tr>
+				<tr><th>Track</th><th class="text-center">Sessions</th></tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${trackList.tracks}" var="track">
@@ -20,7 +20,7 @@
 						<c:param name="trackId" value="${track.id}"/>
 					</c:url>
 					<td><a href="${showPresosForTrack}"><c:out value="${track.name}" /></a></td>
-					<td><c:out value="${track.presentations.size()}" /></td>
+					<td class="text-center"><span class="badge"><c:out value="${track.presentations.size()}" /></span></td>
 				</tr>
 				</c:forEach>
 			</tbody>
