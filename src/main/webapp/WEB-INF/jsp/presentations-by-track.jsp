@@ -23,10 +23,12 @@
 			<c:when test="${empty presentation.track}">
 				<c:set var="localTrackName" value="Track Not Assigned"/>
 				<c:set var="trackStyle" value="defaultTrackStyle"/>
+				<c:set var="trackId" value="na"/>
 			</c:when>
 			<c:otherwise>
 				<c:set var="localTrackName" value="${presentation.track.name}"/>
 				<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
+				<c:set var="trackId" value="${presentation.track.id}"/>
 			</c:otherwise>
 		</c:choose>
 		<c:if test="${trackName ne localTrackName}">
@@ -38,9 +40,9 @@
 			<h1 class="${trackStyle}"><strong><c:out value="${trackName}"/></strong><br/></h1>
 			<div id="h4wrap"><h4>Presentations</h4></div>
 			<div id="speakers">
-				<div class="row" id="<c:out value="trackContainer${localTrackName}"/>">
+				<div class="row" id="<c:out value="trackContainer${trackId}"/>">
 		</c:if>
-		<div id="id-${presentation.id}" class="col-md-4 presentation track${localTrackName}">
+		<div id="id-${presentation.id}" class="col-md-4 presentation track${trackId}">
 			<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
 		</div>
 	</c:forEach>

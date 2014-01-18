@@ -28,6 +28,19 @@
 			<br/>
 			<strong>Skill Level: </strong><c:out value="${presentation.skillLevel.name}"/>
 		</c:if>
+		<c:if test="${not empty presentation.scheduleItem}">
+			<br/>
+			<strong>Slot:</strong>
+			<fmt:formatDate pattern="M/d, h:mm a" value="${presentation.scheduleItem.fromTime}"/><br/>
+			<strong>Room:</strong>
+			<c:choose>
+				<c:when test="${not empty presentation.scheduleItem.room}">
+					<c:out value="${presentation.scheduleItem.room.name}"/>
+				</c:when>
+				<c:otherwise>TBD</c:otherwise>
+			</c:choose>
+
+		</c:if>
 	</div>
 	<div class="clearfix"></div>
 	<div class="col-md-12" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
