@@ -10,7 +10,8 @@
 	<div class="col-md-10 col-md-offset-1">
 		<table class="table table-hover">
 			<thead>
-				<tr><th>Rooms</th><th>Capacity</th><th>Track</th></tr>
+				<tr><th></th><th class="text-center"></th><th></th><th class="text-center" colspan="2"># of Session Slots</th></tr>
+				<tr><th>Rooms</th><th class="text-center">Capacity</th><th>Track</th><th class="text-center">Assigned</th><th class="text-center">Total</th></tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${roomList.rooms}" var="room">
@@ -19,8 +20,10 @@
 						<c:param name="order" value="room"/>
 					</c:url>
 					<td><a href="${showRooms}"><c:out value="${room.name}" /></a></td>
-					<td><c:out value="${room.capacity}" /></td>
+					<td class="text-center"><c:out value="${room.capacity}" /></td>
 					<td><c:out value="${room.track}" /></td>
+					<td class="text-center"><span class="badge"><c:out value="${fn:length(room.scheduleItemsWithAssignedSessions)}" /></span></td>
+					<td class="text-center"><span class="badge"><c:out value="${fn:length(room.scheduleItems)}" /></span></td>
 				</tr>
 				</c:forEach>
 			</tbody>

@@ -15,9 +15,15 @@
  */
 package com.devnexus.ting.core.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -76,6 +82,10 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 	@NotNull
 	@XmlTransient
 	private Event event;
+
+	@OneToMany(mappedBy="room", targetEntity=ScheduleItem.class,
+	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	private Set<ScheduleItem>scheduleItems = new HashSet<>(0);
 
 	public Room() {
 	}
@@ -153,6 +163,29 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 
 	public void setTrack(String track) {
 		this.track = track;
+	}
+
+	public Set<ScheduleItem> getScheduleItems() {
+		return scheduleItems;
+	}
+
+	public Set<ScheduleItem> getScheduleItemsWithAssignedSessions() {
+		Set<ScheduleItem> scheduleItemsWithAssignedSessions = new HashSet<>(0);
+
+		for (ScheduleItem scheduleItem : this.getScheduleItems()) {
+			if (scheduleItem.getPresentation() != null) {
+				scheduleItemsWithAssignedSessions.add(scheduleItem);
+			}
+		}
+		return scheduleItemsWithAssignedSessions;
+	}
+
+	public void setScheduleItems(Set<ScheduleItem> scheduleItems) {
+		this.scheduleItems = scheduleItems;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override
