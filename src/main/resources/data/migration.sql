@@ -165,3 +165,14 @@ INSERT INTO tracks VALUES (7, NULL, NULL, 1, 'track-7', NULL, 'Web/Misc', 7, 173
 INSERT INTO tracks VALUES (8, NULL, NULL, 1, 'track-8', NULL, 'Data + Integration', 8, 1735);
 INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-9', NULL, 'User Experience', 9, 1735);
 INSERT INTO tracks VALUES (10, NULL, NULL, 1, 'track-10', NULL, 'Workshop', 10, 1735);
+
+CREATE SEQUENCE tracks_id_seq start with 11;
+ALTER SEQUENCE tracks_id_seq OWNED BY user.devnexus;
+
+nsert into tracks (id, version, css_style_name, name, event) 
+ select nextval('tracks_id_seq') as id, 1 as version, css_style_name, track, 1388 as event from "public".rooms where event = 1388 and description is not null;
+
+update presentations set track_id = up.track_id from 
+(select presentation_id, track_id from public.schedule_items sched inner join (select track.id as track_id, room.id as room_id from tracks as track inner join rooms as room on room.css_style_name = track.css_style_name where room.event = 1388) track_map on track_map.room_id = sched.room_id where event = 1388) up 
+where presentations.id = up.presentation_id;
+
