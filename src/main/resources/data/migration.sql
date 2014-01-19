@@ -155,13 +155,13 @@ alter table PRESENTATIONS_PRESENTATION_TAGS
 	foreign key (PRESENTATIONS)
 	references PRESENTATIONS;
 
-INSERT INTO tracks VALUES (1, NULL, NULL, 1, 'track-1', NULL, 'HTML5 + JavaScript', 1, ##1735);
-INSERT INTO tracks VALUES (2, NULL, NULL, 1, 'track-2', NULL, 'Alternative Languages', 2, ##1735);
-INSERT INTO tracks VALUES (3, NULL, NULL, 1, 'track-3', NULL, 'Cloud', 3, ##1735);
-INSERT INTO tracks VALUES (4, NULL, NULL, 1, 'track-4', NULL, 'Agile + Tools', 4, ##1735);
+INSERT INTO tracks VALUES (1, NULL, NULL, 1, 'track-1', NULL, 'HTML5 + JavaScript', 1, 1735);
+INSERT INTO tracks VALUES (2, NULL, NULL, 1, 'track-2', NULL, 'Alternative Languages', 2, 1735);
+INSERT INTO tracks VALUES (3, NULL, NULL, 1, 'track-3', NULL, 'Cloud', 3, 1735);
+INSERT INTO tracks VALUES (4, NULL, NULL, 1, 'track-4', NULL, 'Agile + Tools', 4, 1735);
 INSERT INTO tracks VALUES (5, NULL, NULL, 1, 'track-5', NULL, 'Mobile', 5, 1735);
-INSERT INTO tracks VALUES (6, NULL, NULL, 1, 'track-6', NULL, 'Java/JavaEE/Spring', 6, ##1735);
-INSERT INTO tracks VALUES (7, NULL, NULL, 1, 'track-7', NULL, 'Web/Misc', 7, ##1735);
-INSERT INTO tracks VALUES (8, NULL, NULL, 1, 'track-8', NULL, 'Data + Integration', 8, ##1735);
-INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-9', NULL, 'User Experience', 9, ##1735);
-INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-10', NULL, 'Workshop', 10, ##1735);
+INSERT INTO tracks VALUES (6, NULL, NULL, 1, 'track-6', NULL, 'Java/JavaEE/Spring', 6, 1735);
+INSERT INTO tracks VALUES (7, NULL, NULL, 1, 'track-7', NULL, 'Web/Misc', 7, 1735);
+INSERT INTO tracks VALUES (8, NULL, NULL, 1, 'track-8', NULL, 'Data + Integration', 8, 1735);
+INSERT INTO tracks VALUES (9, NULL, NULL, 1, 'track-9', NULL, 'User Experience', 9, 1735);
+INSERT INTO tracks VALUES (10, NULL, NULL, 1, 'track-10', NULL, 'Workshop', 10, 1735);
