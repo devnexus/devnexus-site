@@ -85,6 +85,7 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 
 	@OneToMany(mappedBy="room", targetEntity=ScheduleItem.class,
 	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	@XmlTransient
 	private Set<ScheduleItem>scheduleItems = new HashSet<>(0);
 
 	public Room() {
