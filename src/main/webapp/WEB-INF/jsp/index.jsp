@@ -148,6 +148,8 @@
 
             <a href="http://gopivotal.com/"><img class="logo" alt="Pivotal"
                                                  src="${ctx}/img/sponsors/pivotal.png"/></a>
+            <a href="http://apprenda.com/"><img class="logo" alt="apprenda"
+                                                 src="${ctx}/img/sponsors/apprenda.png"/></a>
 
 
             <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
@@ -174,6 +176,9 @@
                                                 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
+        <a href="http://www.twilio.com/"><img class="logo" alt="Twilio"
+                                                  src="${ctx}/img/sponsors/twilio.png"/></a>                                                  
+                                                  
         <a href="http://www.lancope.com/"><img class="logo" alt="Lancope"
                                                src="${ctx}/img/sponsors/lancope.png"/></a>
         <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
