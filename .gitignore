@@ -10,4 +10,4 @@ target
 .idea
 *.iml
 rebel.xml
-rc/main/webapp/META-INF/context.xml
+src/main/webapp/META-INF/context.xml
