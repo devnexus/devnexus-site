@@ -135,6 +135,8 @@
             <h3>Gold Sponsors</h3>
             <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
                                                    src="${ctx}/img/sponsors/inbloom.png"/></a>
+            <a href="http://www.daugherty.com/"><img class="logo" alt="Daugherty"
+                                                   src="${ctx}/img/sponsors/daugherty.png"/></a>
 
             <a href="https://www.theice.com"><img class="logo" alt="ICE: IntercontinentalExchange, Inc."
                                                   src="${ctx}/img/sponsors/logo_ice.png"/></a>
