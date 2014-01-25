@@ -22,6 +22,7 @@ import java.util.Set;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -73,6 +74,16 @@ public class PresentationList implements Serializable {
 		}
 
 		return roomIds;
+	}
+
+	@XmlAttribute
+	public Integer getNumberOfPresentations() {
+		if (this.presentations != null) {
+			return this.presentations.size();
+		}
+		else {
+			return 0;
+		}
 	}
 
 }
