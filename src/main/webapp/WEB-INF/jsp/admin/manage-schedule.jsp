@@ -275,9 +275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008eb0', end
 									<c:choose>
 										<c:when test="${not empty scheduleItem.presentation}">
 											<c:url var="speakerUrl" value="${baseSiteUrl}/speakers" />
-											<%-- <a
-												href="${speakerUrl}#${scheduleItem.presentation.speaker.firstName}_${scheduleItem.presentation.speaker.lastName}"><c:out
-													value="${scheduleItem.presentation.speaker.firstLastName}" /></a> --%>
+											<c:out value="${scheduleItem.presentation.speaker.firstLastName}" />
 										</c:when>
 										<c:otherwise>
 																																			N/A
