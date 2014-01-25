@@ -60,7 +60,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <center><a href="${registrationUrl}" class="btn btn-primary btn-lg">Register
+                        <center><a href="https://ajug.eventwax.com/devnexus-2014" class="btn btn-primary btn-lg">Register
                             Now!</a></center>
                     </div>
                 </div>
@@ -179,8 +179,8 @@
         <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
                                                   src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
         <a href="http://www.twilio.com/"><img class="logo" alt="Twilio"
-                                                  src="${ctx}/img/sponsors/twilio.png"/></a>                                                  
-                                                  
+                                                  src="${ctx}/img/sponsors/twilio.png"/></a>
+
         <a href="http://www.lancope.com/"><img class="logo" alt="Lancope"
                                                src="${ctx}/img/sponsors/lancope.png"/></a>
         <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
