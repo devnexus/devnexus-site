@@ -20,6 +20,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -43,4 +44,13 @@ public class SpeakerList implements Serializable {
 		this.speakers = speakers;
 	}
 
+	@XmlAttribute
+	public Integer getNumberOfSpeakers() {
+		if (this.speakers != null) {
+			return this.speakers.size();
+		}
+		else {
+			return 0;
+		}
+	}
 }
