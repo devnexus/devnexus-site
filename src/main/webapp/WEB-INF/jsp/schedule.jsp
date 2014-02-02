@@ -60,7 +60,7 @@
                         <div class="col-md-12">
                             <h4>11:45-12:30<span id="small">pm</span></h4>
 
-                            <p>Ballroom CDF</p>
+                            <p>Hall A</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         <div class="col-md-12">
                             <h4>12:30-1:00<span id="small">pm</span></h4>
 
-                            <p>Ballroom CDF</p>
+                            <p>Exhibit Area</p>
                         </div>
                     </div>
                 </div>
