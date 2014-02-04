@@ -154,7 +154,13 @@
                         'margin-bottom': '10px',
                         itemSelector: '.speakerContainer',
                         isResizable: true
-                } );
+                    });
+					var hash = window.location.hash;
+					console.log('Hash is: ' + hash);
+					if (!(hash === '')) {
+						console.log('Scroll: ' + hash);
+						$('html, body').animate({scrollTop: $(hash).offset().top - 100}, 'slow');
+					}
                 });
 
                 $( window).resize(function() {
