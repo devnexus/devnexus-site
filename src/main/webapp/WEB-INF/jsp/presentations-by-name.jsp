@@ -15,7 +15,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container" id="mainContainer">
 
 	<c:set var="trackName" value="Ordered By Name"/>
 	<h1 class="track-1"><strong><c:out value="${trackName}"/></strong><br/></h1>
@@ -52,6 +52,16 @@
 						columnWidth: '.presentation',
 						isAnimated: true
 				});
+			});
+
+			var container = $('#mainContainer');
+			container.imagesLoaded(function () {
+				var hash = window.location.hash;
+				console.log('Hash is: ' + hash);
+				if (!(hash === '')) {
+					console.log('Scroll: ' + hash);
+					$('html, body').animate({scrollTop: $(hash).offset().top - 100}, 'slow');
+				}
 			});
 
 		});

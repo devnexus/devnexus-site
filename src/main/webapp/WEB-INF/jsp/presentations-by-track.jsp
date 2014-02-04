@@ -16,7 +16,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container" id="mainContainer">
 	<c:set var="trackName" value="nill"/>
 	<c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
 		<c:choose>
@@ -69,6 +69,16 @@
 			});
 
 			</c:forEach>
+
+			var container = $('#mainContainer');
+			container.imagesLoaded(function () {
+				var hash = window.location.hash;
+				console.log('Hash is: ' + hash);
+				if (!(hash === '')) {
+					console.log('Scroll: ' + hash);
+					$('html, body').animate({scrollTop: $(hash).offset().top - 100}, 'slow');
+				}
+			});
 
 		});
 	</script>
