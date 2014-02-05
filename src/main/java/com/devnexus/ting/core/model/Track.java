@@ -63,6 +63,9 @@ public class Track extends BaseModelObject implements Comparable<Track> {
 	@Size(max=255)
 	private String cssStyleName;
 
+	@Size(max=255)
+	private String color;
+
 	@Size(max=10000)
 	private String description;
 
@@ -158,6 +161,14 @@ public class Track extends BaseModelObject implements Comparable<Track> {
 	@Override
 	public int compareTo(Track o) {
 		return trackOrder.compareTo(o.trackOrder);
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	@Override

@@ -169,10 +169,13 @@ INSERT INTO tracks VALUES (10, NULL, NULL, 1, 'track-10', NULL, 'Workshop', 10, 
 CREATE SEQUENCE tracks_id_seq start with 11;
 ALTER SEQUENCE tracks_id_seq OWNED BY user.devnexus;
 
-nsert into tracks (id, version, css_style_name, name, event) 
+nsert into tracks (id, version, css_style_name, name, event)
  select nextval('tracks_id_seq') as id, 1 as version, css_style_name, track, 1388 as event from "public".rooms where event = 1388 and description is not null;
 
-update presentations set track_id = up.track_id from 
-(select presentation_id, track_id from public.schedule_items sched inner join (select track.id as track_id, room.id as room_id from tracks as track inner join rooms as room on room.css_style_name = track.css_style_name where room.event = 1388) track_map on track_map.room_id = sched.room_id where event = 1388) up 
+update presentations set track_id = up.track_id from
+(select presentation_id, track_id from public.schedule_items sched inner join (select track.id as track_id, room.id as room_id from tracks as track inner join rooms as room on room.css_style_name = track.css_style_name where room.event = 1388) track_map on track_map.room_id = sched.room_id where event = 1388) up
 where presentations.id = up.presentation_id;
 
+-- 2014 - Feb 4
+ALTER TABLE rooms ADD COLUMN color character varying(255);
+ALTER TABLE tracks ADD COLUMN color character varying(255);
