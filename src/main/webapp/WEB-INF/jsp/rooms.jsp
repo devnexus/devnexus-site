@@ -11,7 +11,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr><th></th><th class="text-center"></th><th></th><th class="text-center" colspan="2"># of Session Slots</th></tr>
-				<tr><th>Rooms</th><th class="text-center">Capacity</th><th>Track</th><th class="text-center">Assigned</th><th class="text-center">Total</th></tr>
+				<tr><th>&nbsp;</th><th>Rooms</th><th class="text-center">Capacity</th><th>Track</th><th class="text-center">Assigned</th><th class="text-center">Total</th></tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${roomList.rooms}" var="room">
@@ -19,6 +19,7 @@
 					<c:url value="/s/presentations" var="showRooms">
 						<c:param name="order" value="room"/>
 					</c:url>
+					<td style="width: 30px; background-color: ${not empty room.color?room.color:'#FFFFFF' }">&nbsp;</td>
 					<td><a href="${showRooms}"><c:out value="${room.name}" /></a></td>
 					<td class="text-center"><c:out value="${room.capacity}" /></td>
 					<td><c:out value="${room.track}" /></td>

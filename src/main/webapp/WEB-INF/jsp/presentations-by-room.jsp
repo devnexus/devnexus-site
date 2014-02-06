@@ -23,11 +23,15 @@
 			<c:when test="${empty presentation.room}">
 				<c:set var="localRoomName" value="Room not Assigned"/>
 				<c:set var="trackStyle" value="defaultTrackStyle"/>
+				<c:set var="trackColor" value=""/>
+				<c:set var="trackFontColor" value=""/>
 				<c:set var="roomId" value="na"/>
 			</c:when>
 			<c:otherwise>
 				<c:set var="localRoomName" value="${presentation.room.name}"/>
 				<c:set var="trackStyle" value="${presentation.room.cssStyleName}"/>
+				<c:set var="trackColor" value="background-color: ${presentation.room.color};"/>
+				<c:set var="trackFontColor" value="color: ${presentation.room.color};"/>
 				<c:set var="roomId" value="${presentation.room.id}"/>
 			</c:otherwise>
 		</c:choose>
@@ -37,7 +41,7 @@
 					</div>
 					</div>
 			</c:if>
-			<h1 class="${trackStyle}"><strong>${roomName}</strong><br/></h1>
+			<h1 class="${trackStyle}" style="${trackFontColor}"><strong>${roomName}</strong><br/></h1>
 			<div id="h4wrap"><h4>Presentations</h4></div>
 			<div id="speakers">
 				<div class="row" id="roomContainer${roomId}">

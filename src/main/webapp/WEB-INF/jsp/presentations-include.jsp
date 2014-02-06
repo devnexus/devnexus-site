@@ -1,13 +1,13 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div class="row ${trackStyle}">
-	<div class="col-md-5">
+<div class="row ${trackStyle}" style="${trackColor}">
+	<div class="col-xs-5">
 		<c:if test="${presentation.speaker.picture != null}">
 			<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg" style="margin-right: 10px" alt="${presentation.speaker.firstLastName}"/>
 		</c:if>
 	</div>
-	<div class="col-md-7">
+	<div class="col-xs-7">
 		<c:choose>
 			<c:when test="${not empty presentation.speaker}">
 				<h4>
