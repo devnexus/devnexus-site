@@ -89,7 +89,7 @@
                             <h4>3:45 <span id="small">pm</span></h4>
                             <h4>5:15 <span id="small">pm</span></h4>
 
-                            <p>Galleria Atrium</p>
+                            <p>Exhibit Area</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,8 @@
                     <div class="row schedule-row">
                 </c:if>
                 <div class="col-md-3">
-                    <div id="one-fourth" class="${room.cssStyleName} schedule-item">
+                    <c:set var="backgroundStyle" value="background-color:  ${room.color}"/>
+                    <div id="one-fourth" class="${room.cssStyleName} schedule-item" style="${not empty room.color ? backgroundStyle : ''}">
                         <h3>${room.track}<br/>${room.name}</h3>
                         <c:forEach items="${scheduleItemList.findBreakoutItemsOnDateInRoom(date, room)}" var="session"
                                    varStatus="sessionStatus">

@@ -212,7 +212,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		final Room room104     = new Room(5L, "Room 104", 100, 70, devnexus2013);
 		final Room room105     = new Room(6L, "Room 105", 80, 80, devnexus2013);
 
-		final Room atrium     = new Room(10L, "Galleria Atrium", 800, 100, devnexus2013);
+		final Room atrium     = new Room(10L, "Exhibit Area", 800, 100, devnexus2013);
 		final Room hallA      = new Room(9L, "Hall A", 800, 90, devnexus2013);
 
 		roomDao.replicate(room102);

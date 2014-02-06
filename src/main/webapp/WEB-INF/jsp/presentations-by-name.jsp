@@ -28,9 +28,11 @@
 				<c:choose>
 					<c:when test="${empty presentation.track}">
 						<c:set var="trackStyle" value="defaultTrackStyle"/>
+						<c:set var="trackColor" value=""/>
 					</c:when>
 					<c:otherwise>
 						<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
+						<c:set var="trackColor" value="background-color: ${presentation.track.color};"/>
 					</c:otherwise>
 				</c:choose>
 				<div id="id-${presentation.id}" class="col-md-4 presentation">

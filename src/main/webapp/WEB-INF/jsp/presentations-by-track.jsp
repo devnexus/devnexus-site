@@ -23,11 +23,15 @@
 			<c:when test="${empty presentation.track}">
 				<c:set var="localTrackName" value="Track Not Assigned"/>
 				<c:set var="trackStyle" value="defaultTrackStyle"/>
+				<c:set var="trackColor" value=""/>
+				<c:set var="trackFontColor" value=""/>
 				<c:set var="trackId" value="na"/>
 			</c:when>
 			<c:otherwise>
 				<c:set var="localTrackName" value="${presentation.track.name}"/>
 				<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
+				<c:set var="trackColor" value="background-color: ${presentation.track.color};"/>
+				<c:set var="trackFontColor" value="color: ${presentation.track.color};"/>
 				<c:set var="trackId" value="${presentation.track.id}"/>
 			</c:otherwise>
 		</c:choose>
@@ -37,7 +41,7 @@
 					</div>
 					</div>
 			</c:if>
-			<h1 class="${trackStyle}"><strong><c:out value="${trackName}"/></strong><br/></h1>
+			<h1 class="${trackStyle}" style="${trackFontColor}"><strong><c:out value="${trackName}"/></strong><br/></h1>
 			<div id="h4wrap"><h4>Presentations</h4></div>
 			<div id="speakers">
 				<div class="row" id="<c:out value="trackContainer${trackId}"/>">
