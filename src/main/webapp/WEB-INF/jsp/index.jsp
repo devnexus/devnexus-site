@@ -196,7 +196,7 @@
                                               src="${ctx}/img/sponsors/github_logo.png"/></a>
 
         <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
-        <a href="http://www.alitsourcelabs.com.com/"><img class="logo" alt="Altisource Labs"
+        <a href="http://www.altisourcelabs.com/"><img class="logo" alt="Altisource Labs"
                                                           src="${ctx}/img/sponsors/altisource.png"/></a>
         <a href="http://www.aspose.com/"><img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/></a>
 
