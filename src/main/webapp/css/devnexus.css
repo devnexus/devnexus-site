@@ -3,6 +3,14 @@ body {
   padding-top: 50px;
 }
 
+.navbar {
+	line-height: 50px;
+}
+
+.navbar-brand {
+	float: none;
+}
+
 .navbar-inverse {
 background-color: #0C1620;
 border-color: #080808;
