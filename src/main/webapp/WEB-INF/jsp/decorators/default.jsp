@@ -109,7 +109,7 @@
                     <div class="col-md-3">
                         <h3>Attend</h3>
                         <ul id="col">
-                            <li><a href="${registrationUrl}">Registration Info</a></li>
+                            <li><a href="${registrationUrl}">Sold Out!</a></li>
                             <li><a href="${travelUrl}">Travel</a></li>
                         </ul>
                     </div>
