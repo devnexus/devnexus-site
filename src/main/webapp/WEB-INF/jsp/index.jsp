@@ -59,20 +59,24 @@
                     <div class="col-md-10"><strong>Student Pass</strong> (Contact us for the code)</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
-                        <center><a href="#" class="btn btn-primary btn-lg">Sold Out!</a></center>
+                    <div class="col-md-8 text-center">
+						<c:choose>
+							<c:when test="${registrationState eq 'closed'}">Registration Closed</c:when>
+							<c:when test="${registrationState eq 'soldout'}"><a class="btn btn-primary btn-lg disabled">Sold Out</a></c:when>
+							<c:when test="${registrationState eq 'hide'}"></c:when>
+							<c:otherwise>
+								<a href="https://ajug.eventwax.com/devnexus-2014" class="btn btn-primary btn-lg">Register Now!</a>
+							</c:otherwise>
+						</c:choose>
                     </div>
                 </div>
-
             </div>
-            <div class="col-md-6"
+            <div class="col-md-6 text-center"
                  style="background-image: url('${ctx}/images/home_bg.jpg');background-repeat: no-repeat">
 
-
                 <img src="${ctx}/images/home_bg.jpg" style="visibility: hidden"/>
-                <center style="margin-top:-80px;"><a href="${registrationUrl}" class="btn btn-primary btn-lg"
-                                                     style="background-color: #630d1a">${countdowntext}</a></center>
-
+                <a href="${registrationUrl}" class="btn btn-primary btn-lg"
+                                                     style="background-color: #630d1a; margin-top:-80px;">${countdowntext}</a>
 
             </div>
         </div>
@@ -118,7 +122,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="devnex" class="jumbotron">
 

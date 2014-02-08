@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -31,6 +33,8 @@ public class GlobalDataInterceptor implements HandlerInterceptor {
 
 	@Autowired
 	private BusinessService businessService;
+
+	@Autowired private Environment environment;
 
 	@Override
 	public void afterCompletion(HttpServletRequest request,
@@ -51,6 +55,13 @@ public class GlobalDataInterceptor implements HandlerInterceptor {
 		final Event currentEvent = businessService.getCurrentEvent();
 		request.setAttribute("eventsForMenu", events);
 		request.setAttribute("currentEvent", currentEvent);
+
+		final String cfpState = environment.getProperty("cfpState.state");
+		request.setAttribute("cfpState", cfpState);
+
+		final String registrationState = environment.getProperty("registration.state");
+		request.setAttribute("registrationState", registrationState);
+
 		return true;
 	}
 
