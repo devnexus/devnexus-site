@@ -46,8 +46,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg"
-                                                           border="0"></a>
+            <a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg"></a>
         </div>
 
 		<div class="navbar-collapse collapse">
@@ -66,7 +65,14 @@
 				</li>
 				<li><a href="${scheduleUrl}">Schedule</a></li>
 				<li><a href="${travelUrl}">Travel</a></li>
-				<li><a href="${registrationUrl}">Sold Out!</a></li>
+				<c:choose>
+					<c:when test="${registrationState eq 'closed'}">Registration Closed</c:when>
+					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Sold Out</strong></a></li></c:when>
+					<c:when test="${registrationState eq 'hide'}"></c:when>
+					<c:otherwise>
+						<li><a href="${registrationUrl}">Register</a></li>
+					</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
 	<!-- end top nav -->
