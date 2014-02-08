@@ -34,7 +34,7 @@
 <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
-<c:url var="registrationUrl" value="https://ajug.eventwax.com/devnexus-2014"/>
+<c:url var="registrationUrl" value="${baseSiteUrl}/index"/>
 <c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 
@@ -66,7 +66,7 @@
 				</li>
 				<li><a href="${scheduleUrl}">Schedule</a></li>
 				<li><a href="${travelUrl}">Travel</a></li>
-				<li><a href="${registrationUrl}">Register</a></li>
+				<li><a href="${registrationUrl}">Sold Out!</a></li>
 			</ul>
 		</div>
 	<!-- end top nav -->

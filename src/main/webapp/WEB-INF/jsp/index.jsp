@@ -60,8 +60,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <center><a href="https://ajug.eventwax.com/devnexus-2014" class="btn btn-primary btn-lg">Register
-                            Now!</a></center>
+                        <center><a href="#" class="btn btn-primary btn-lg">Sold Out!</a></center>
                     </div>
                 </div>
 
