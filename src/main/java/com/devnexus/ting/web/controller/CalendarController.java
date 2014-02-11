@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.util.ArrayList;
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -73,9 +74,16 @@ public class CalendarController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
+            
+            headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
+            
+            return new ResponseEntity<List<UserCalendar>>(new ArrayList<UserCalendar>(), headers, HttpStatus.UNAUTHORIZED);
+        }
+        
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         List<UserCalendar> calendar = calendarService.getUserCalendar(user, eventKey);
-        return new ResponseEntity<List<UserCalendar>>(calendar, headers, HttpStatus.OK);
+        return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
     }
 
     @RequestMapping(value="/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
@@ -83,6 +91,11 @@ public class CalendarController {
     public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("eventKey") String eventKey, @PathVariable("id") String id, HttpServletRequest request) {
                 
         HttpHeaders headers = new HttpHeaders();
+        
+        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
+            headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
+            return new ResponseEntity<>(new UserCalendar(), headers, HttpStatus.UNAUTHORIZED);
+        }
         
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
@@ -103,7 +116,7 @@ public class CalendarController {
             
             defaultJavaSender.send(unifiedMessage);
              
-            return new ResponseEntity<UserCalendar>(calendar, headers, HttpStatus.OK);
+            return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
         } catch (IOException e) {
             Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
             throw new RuntimeException(e);
