@@ -53,6 +53,9 @@
                 <version>2.0</version>
                 <configuration>
                     <path>/</path>
+                    <systemProperties>
+                        <JAVA_OPTS>-Xms256m -Xmx1024m -XX:MaxPermSize=512m</JAVA_OPTS>
+                    </systemProperties>
                 </configuration>
             </plugin>
             <plugin>
