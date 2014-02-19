@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.validator.constraints.Range;
 
 import com.devnexus.ting.common.TingUtil;
 
@@ -53,7 +54,8 @@ public class Evaluation extends BaseModelObject {
 	@Size(max=10000)
 	private String comment;
 
-	@NotNull
+	@NotNull(message="Please rate the event.")
+	@Range(min=1, max=10, message="Please rate the event.")
 	private Integer rating;
 
 	public Evaluation() {
