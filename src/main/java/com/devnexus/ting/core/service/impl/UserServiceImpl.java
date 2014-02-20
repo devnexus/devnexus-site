@@ -15,6 +15,8 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.security.SecureRandom;
+import java.util.Arrays;
 import java.util.Date;
 
 import org.jasypt.digest.StringDigester;
@@ -23,18 +25,29 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.social.connect.Connection;
+import org.springframework.social.connect.web.SignInAdapter;
+import org.springframework.social.google.api.Google;
+import org.springframework.social.google.api.plus.Person;
+import org.springframework.social.google.api.userinfo.GoogleUserInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import com.devnexus.ting.core.dao.UserDao;
+import com.devnexus.ting.core.model.AuthorityType;
 import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import java.util.HashSet;
+import org.springframework.web.context.request.NativeWebRequest;
 
 /**
  * Provides user specific services.
@@ -45,7 +58,7 @@ import com.devnexus.ting.core.service.exception.DuplicateUserException;
  */
 @Service("userService")
 @Transactional
-public class UserServiceImpl implements UserService, UserDetailsService {
+public class UserServiceImpl implements UserService, UserDetailsService, SignInAdapter {
 
 	/**
 	 *   Initialize Logging.
@@ -123,4 +136,44 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		return userDao.get(userId);
 	}
 
+
+    public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
+
+        assert userDao != null;
+
+        assert false;
+
+        Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
+        GoogleUserInfo info = ((Google) connection.getApi()).userOperations().getUserInfo();
+        User u = new User();
+        u.setEmail(info.getEmail());
+        u.setFirstName(person.getGivenName());
+        u.setLastName(person.getFamilyName());
+        u.setUsername(info.getId());
+        u.setUserAuthorities(new HashSet<UserAuthority>(1));
+        u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
+        u.setId((long) info.getId().hashCode());
+
+        if (null == userDao.getUserByUsername(u.getUsername())) {
+            byte[] password = new byte[16];
+            new SecureRandom().nextBytes(password);
+
+            LOGGER.info(Arrays.toString(password));
+
+            u.setPassword(Arrays.toString(password));
+            userDao.save(u);
+        }
+
+        u = userDao.getUserByUsername(u.getUsername());
+        
+        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
+
+        return null;
+    }
+
+    @Override
+    public void initializeUserforEvent(User user, String eventKey) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

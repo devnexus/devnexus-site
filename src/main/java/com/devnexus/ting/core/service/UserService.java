@@ -21,6 +21,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import org.springframework.social.connect.web.SignInAdapter;
 
 /**
  * Provides user related methods.
@@ -28,7 +29,7 @@ import com.devnexus.ting.core.service.exception.DuplicateUserException;
  * @author Gunnar Hillert
  *
  */
-public interface UserService {
+public interface UserService extends SignInAdapter {
 
 	/**
 	 * Adds a brand new user to the system. If a user
@@ -39,7 +40,7 @@ public interface UserService {
 	 * @throws DuplicateUserException
 	 */
 	User addUser(User user) throws DuplicateUserException;
-
+        
 	//TODO
 //    /**
 //     * Adds a brand new user to the system. If a user
@@ -102,12 +103,14 @@ public interface UserService {
 	UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException, DataAccessException;
 
-//    /**
-//     * Get a user by its verification key. This method is used to verify user
-//     * account creation.
-//     *
-//     * @param key Key for which the corresponding user supposedly exists
-//     * @return Return a user for the existing key
-//     */
-//    User getUserByVerificationKey(String key);
+
+        /**
+         * When a user first logs in for a new event, it will create the various 
+         * necessary templates to service the request.
+         * 
+         * @param user
+         * @param eventKey 
+         */
+        public void initializeUserforEvent(User user, String eventKey);
+        
 }

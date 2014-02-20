@@ -94,7 +94,8 @@ public class SiteController {
 
     }
 
-	@RequestMapping("/schedule")
+
+	@RequestMapping({"/schedule", "/api/schedule"})
 	public String scheduleForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
@@ -129,7 +130,7 @@ public class SiteController {
 		return "registration";
 	}
 
-	@RequestMapping("/{eventKey}/schedule")
+	@RequestMapping({"/{eventKey}/schedule", "/api/{eventKey}/schedule"})
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);

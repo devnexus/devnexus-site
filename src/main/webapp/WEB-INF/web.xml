@@ -107,6 +107,7 @@
 		<filter-name>gzipFilter</filter-name>
 		<url-pattern>*.html</url-pattern>
 		<url-pattern>/s/*</url-pattern>
+                <url-pattern>/api/*</url-pattern>                
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>JSONPRequestFilter</filter-name>
@@ -125,6 +126,7 @@
 	<filter-mapping>
 		<filter-name>loggingFilter4Logback</filter-name>
 		<url-pattern>/s/*</url-pattern>
+                <url-pattern>/api/*</url-pattern>                
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>etagFilter</filter-name>
@@ -166,6 +168,7 @@
 		<servlet-name>spring-mvc</servlet-name>
 		<url-pattern>/s/*</url-pattern>
 		<url-pattern>/ws/*</url-pattern>
+                <url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
