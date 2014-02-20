@@ -28,7 +28,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.integration.version>4.0.0.M2</spring.integration.version>
         <spring.security.version>3.2.0.RELEASE</spring.security.version>
-        <org.springframework.social-version>1.1.0.BUILD-SNAPSHOT</org.springframework.social-version>
+        <org.springframework.social-version>1.1.0.M4</org.springframework.social-version>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <org.hibernate.version>4.2.5.Final</org.hibernate.version>
     </properties>
