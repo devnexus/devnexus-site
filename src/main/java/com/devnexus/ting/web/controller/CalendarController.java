@@ -52,12 +52,16 @@ public class CalendarController {
 
     private static final Gson GSON = new GsonBuilder().create();
     private static final String PUSH_URL;
+    private static final String PUSH_APP_ID;
+    private static final String PUSH_APP_SECRET;
 
      static {
         Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
         Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
 
         PUSH_URL = props.getProperty("TING_PUSH_URL");
+        PUSH_APP_ID = props.getProperty("TING_PUSH_APP_ID");
+        PUSH_APP_SECRET = props.getProperty("TING_PUSH_MASTER_SECRET");
         
     }
 
@@ -121,8 +125,8 @@ public class CalendarController {
             calendar = calendarService.updateEntry(calendar.getId(), user, calendar);
 
              UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
-                .pushApplicationId("66ebc03c-55d7-428d-8dc5-95e800c03f1f")
-                .masterSecret("f9bd9ff9-0d62-4882-949e-6351815817d8")
+                .pushApplicationId(PUSH_APP_ID)
+                .masterSecret(PUSH_APP_SECRET)
                 .aliases(Arrays.asList(user.getEmail()))
                 .attribute("org.devnexus.sync.UserCalendar", "true")
                 .build();
