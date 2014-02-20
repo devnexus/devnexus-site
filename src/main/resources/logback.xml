@@ -87,6 +87,12 @@
 	<logger name="ch.qos.logback">
 		<level value="WARN"/>
 	</logger>
+        <logger name="org.jboss.aerogear.unifiedpush.SenderClient">
+		<level value="DEBUG"/>
+                <appender-ref ref="LOGFILE"/>
+                <appender-ref ref="CONSOLE"/>
+	</logger>
+        
 	<logger name="com.devnexus.ting.core.applicationlistener.SecurityEventListener">
 		<level value="INFO"/>
 		<appender-ref ref="LOGFILE-SECURITY"/>

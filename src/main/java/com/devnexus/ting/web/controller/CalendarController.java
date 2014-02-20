@@ -56,6 +56,9 @@ public class CalendarController {
     private static final String PUSH_APP_SECRET;
 
      static {
+         
+        System.setProperty("jsse.enableSNIExtension", "false");
+         
         Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
         Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
 
