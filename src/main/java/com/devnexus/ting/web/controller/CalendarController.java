@@ -6,6 +6,8 @@
 
 package com.devnexus.ting.web.controller;
 
+import com.devnexus.ting.common.Apphome;
+import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserCalendar;
 import com.devnexus.ting.core.service.BusinessService;
@@ -22,6 +24,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -48,12 +51,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CalendarController {
 
     private static final Gson GSON = new GsonBuilder().create();
+    private static final String PUSH_URL;
 
+     static {
+        Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
+        Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
+
+        PUSH_URL = props.getProperty("TING_PUSH_URL");
+        
+    }
+
+    
     @Autowired
     private JaxbJacksonObjectMapper mapper;
 
     JavaSender defaultJavaSender =
-            new SenderClient("http://localhost:8080/ag-push");
+            new SenderClient(PUSH_URL);
 
     @Autowired
     CalendarServices calendarService;
