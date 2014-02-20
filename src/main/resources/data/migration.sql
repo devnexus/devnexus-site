@@ -31,8 +31,7 @@ CREATE TABLE cfp_submissions
   tshirt_size character varying(255),
   picture bigint,
   event bigint,
-  CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),
-  CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
+  CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
       REFERENCES events (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION,
   CONSTRAINT fk_srgk1qvqa9tx8hrnfa703bifc FOREIGN KEY (picture)
@@ -70,24 +69,52 @@ create table USER_AUTHORITIES (
 	AUTHORITY int8,
 	USER_ID int8,
 	primary key (ID)
-)
+);
 
 create index USER_AUTHORITIES_IDX on USER_AUTHORITIES (AUTHORITY)
 
 alter table USER_AUTHORITIES
 	add constraint FK_USER_AUTHORITIES_USERS
 	foreign key (USER_ID)
-	references USERS
+	references USERS;
 
+CREATE TABLE user_calendars
+(
+  id bigint NOT NULL,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  schedule_item_id integer,
+  event_key character varying(255),
+  username character varying(255),
+  from_time timestamp without time zone,
+  fixed boolean,
+  template boolean
+);
+
+
+ALTER TABLE user_calendars ADD CONSTRAINT user_calendar_pkey PRIMARY KEY (id);
+CREATE INDEX "user_calendar_lookup" ON user_calendars USING btree (username, event_key, from_time);
+alter table user_calendars add constraint one_per_user unique (username, event_key, from_time);
+
+
+
+
+ALTER TABLE user_calendars ADD CONSTRAINT calendar_item FOREIGN KEY (schedule_item_id)
+      REFERENCES schedule_items (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION;
+  
+
+insert into user_calendars (id, event_key, from_time, schedule_item_id, fixed, template) select row_number() OVER (ORDER BY from_time), 'devnexus2013', from_time,case when min(schedule_item_type)=400 then null else min(id) end, case when min(schedule_item_type)=400 then false else true end,true from "public".schedule_items where event = 1388  group by from_time order by from_time asc;
+insert into user_calendars (id, event_key, from_time, schedule_item_id, fixed, template) select row_number() OVER (ORDER BY from_time), 'devnexus2014', from_time,case when min(schedule_item_type)=400 then null else min(id) end, case when min(schedule_item_type)=400 then false else true end,true from "public".schedule_items where event = 1735  group by from_time order by from_time asc;
 -- 2013 - Dec 04
-
 update events set version = '1' where version is null
 
 -- 2013 - Dec 19
 ALTER TABLE cfp_submissions ADD COLUMN status character varying(30);
 
 -- 2013 - Dec 30
-update users set version='1' where version is null
+update users set version='1' where version is null;
 
 -- 2013 - Dec 31
 ALTER TABLE organizers ADD COLUMN github_id character varying(255);
