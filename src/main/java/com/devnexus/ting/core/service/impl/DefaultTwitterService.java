@@ -54,7 +54,7 @@ public class DefaultTwitterService implements TwitterService {
 	public DefaultTwitterService() {
 
 		this.twitterMessages = CacheBuilder.newBuilder()
-			.maximumSize(20)
+			.maximumSize(40)
 			.build(new CacheLoader<Long, TwitterMessage>() {
 				public TwitterMessage load(Long key)  {
 					return null;

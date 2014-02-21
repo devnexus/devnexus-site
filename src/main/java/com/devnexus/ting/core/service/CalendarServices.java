@@ -6,9 +6,10 @@
 
 package com.devnexus.ting.core.service;
 
+import java.util.List;
+
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserCalendar;
-import java.util.List;
 
 /**
  *

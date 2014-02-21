@@ -15,11 +15,12 @@
  */
 package com.devnexus.ting.core.dao.jpa;
 
-import com.devnexus.ting.core.dao.UserDao;
-import com.devnexus.ting.core.model.User;
+import javax.persistence.NoResultException;
+
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.NoResultException;
+import com.devnexus.ting.core.dao.UserDao;
+import com.devnexus.ting.core.model.User;
 
 @Repository("userDao")
 public class UserDaoJpa extends GenericDaoJpa<User, Long>

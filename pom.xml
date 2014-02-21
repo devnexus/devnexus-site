@@ -21,13 +21,13 @@
     <properties>
         <java-version>1.7</java-version>
         <org.cloudfoundry-version>0.8.1</org.cloudfoundry-version>
-        <org.springframework-version>4.0.0.RELEASE</org.springframework-version>
+        <org.springframework-version>4.0.2.RELEASE</org.springframework-version>
         <org.aspectj-version>1.6.9</org.aspectj-version>
         <org.slf4j-version>1.5.10</org.slf4j-version>
         <jawr.debug.on>true</jawr.debug.on>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.integration.version>4.0.0.M2</spring.integration.version>
-        <spring.security.version>3.2.0.RELEASE</spring.security.version>
+        <spring.integration.version>4.0.0.BUILD-SNAPSHOT</spring.integration.version>
+        <spring.security.version>3.2.1.RELEASE</spring.security.version>
         <org.springframework.social-version>1.1.0.M4</org.springframework.social-version>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <org.hibernate.version>4.2.5.Final</org.hibernate.version>
@@ -287,12 +287,12 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>log4j-over-slf4j</artifactId>
-            <version>1.7.5</version>
+            <version>1.7.6</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.5</version>
+            <version>1.7.6</version>
         </dependency>
         <!--
                         <dependency>
@@ -704,26 +704,31 @@
         <url>http://code.google.com/p/devnexus/source/browse/</url>
     </scm>
     <issueManagement>
-        <system>Google Code</system>
-        <url>http://code.google.com/p/devnexus/issues/list</url>
+        <system>GitHub</system>
+        <url>https://github.com/devnexus/devnexus-site/issues?state=open</url>
     </issueManagement>
     <ciManagement>
-        <system>Hudson</system>
-        <url>http://www.jrecruiter.org:8080/hudson/job/ting/</url>
+        <system>Travis</system>
+        <url>https://travis-ci.org/devnexus/devnexus-site</url>
     </ciManagement>
     <repositories>
         <repository>
             <id>repo.springsource.org.milestone</id>
-            <name>SpringSource Maven Milestone Repository</name>
-            <url>https://repo.springsource.org/libs-milestone</url>
+            <name>Spring Maven Milestone Repository</name>
+            <url>https://repo.spring.io/libs-milestone</url>
         </repository>
         <repository>
             <id>repo.springsource.org.snapshots</id>
-            <name>repo.springsource.org-snapshots</name>
-            <url>https://repo.springsource.org/ext-snapshot-local</url>
+            <name>Spring Maven Snapshot Repository</name>
+            <url>https://repo.spring.io/ext-snapshot-local</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>repo.springsource.org.extrelease</id>
+            <name>Spring Maven Ext Release Repository</name>
+            <url>https://repo.spring.io/ext-release-local</url>
         </repository>
     </repositories>
 </project>

@@ -162,8 +162,14 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 
-<context:property-placeholder />
+	<context:property-placeholder />
+
+	<bean id="javaSender" class="org.jboss.aerogear.unifiedpush.SenderClient">
+		<constructor-arg name="rootServerURL" value="#{environment.TING_PUSH_URL}"/>
+	</bean>
+
 	<beans profile="twitter-enabled">
 		<import resource="classpath:spring/spring-integration-twitter-context.xml" />
 	</beans>
+
 </beans>

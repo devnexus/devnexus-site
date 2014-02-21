@@ -6,6 +6,7 @@
 package com.devnexus.ting.core.model;
 
 import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
