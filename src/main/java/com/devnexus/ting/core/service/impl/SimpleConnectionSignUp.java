@@ -15,11 +15,11 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.google.api.Google;
-
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Simple little {@link ConnectionSignUp} command that allocates new userIds in memory.

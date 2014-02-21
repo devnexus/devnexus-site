@@ -6,11 +6,13 @@
 
 package com.devnexus.ting.core.dao.jpa;
 
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.devnexus.ting.core.dao.UserCalendarDao;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserCalendar;
-import java.util.List;
-import org.springframework.stereotype.Repository;
 
 /**
  *

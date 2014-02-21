@@ -18,6 +18,7 @@ package com.devnexus.ting.core.service.impl;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashSet;
 
 import org.jasypt.digest.StringDigester;
 import org.slf4j.Logger;
@@ -39,6 +40,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
+import org.springframework.web.context.request.NativeWebRequest;
 
 import com.devnexus.ting.core.dao.UserDao;
 import com.devnexus.ting.core.model.AuthorityType;
@@ -46,8 +48,6 @@ import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
-import java.util.HashSet;
-import org.springframework.web.context.request.NativeWebRequest;
 
 /**
  * Provides user specific services.

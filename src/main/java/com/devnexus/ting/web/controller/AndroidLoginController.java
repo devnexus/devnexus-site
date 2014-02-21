@@ -18,8 +18,27 @@
  */
 package com.devnexus.ting.web.controller;
 
-import com.devnexus.ting.common.Apphome;
-import com.devnexus.ting.common.SystemInformationUtils;
+import java.io.IOException;
+import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import com.devnexus.ting.core.model.AuthorityType;
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserAuthority;
@@ -34,25 +53,6 @@ import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * This class manages logins from the Android client using Google's services.
@@ -60,8 +60,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 @Controller
 public class AndroidLoginController {
 
-    private static final String CLIENT_ID;
-    private static final String CLIENT_SECRET;
     private static final Gson GSON = new GsonBuilder().create();
 
     @Autowired
@@ -70,13 +68,11 @@ public class AndroidLoginController {
     @Autowired
     BusinessService businessService;
 
-    static {
-        Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
-        Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
+	@Value("#{environment.TING_CLIENT_ID}")
+    private String CLIENT_ID;
 
-        CLIENT_ID = props.getProperty("TING_CLIENT_ID");
-        CLIENT_SECRET = props.getProperty("TING_CLIENT_SECRET");
-    }
+	@Value("#{environment.TING_CLIENT_SECRET}")
+    private String TING_CLIENT_SECRET;
 
     private static final String SCOPES = "https://www.googleapis.com/auth/plus.login "
             + "https://www.googleapis.com/auth/userinfo.email "
@@ -130,20 +126,20 @@ public class AndroidLoginController {
 
             }
             SecurityContext securityContext = SecurityContextHolder.getContext();
-            
+
             securityContext.setAuthentication(new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities()));
 
             // Create a new session and add the security context.
             HttpSession session = request.getSession(false);
-            
+
             if (session!=null && !session.isNew()) {
                 session.invalidate();
             }
-            
+
             request.getSession(true);
-            
+
             session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
-            
+
             return "{}";
 
         } catch (IOException e) {

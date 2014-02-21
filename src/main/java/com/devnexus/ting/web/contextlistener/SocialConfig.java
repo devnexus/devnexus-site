@@ -15,22 +15,14 @@
  */
 package com.devnexus.ting.web.contextlistener;
 
-import com.devnexus.ting.common.Apphome;
-import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.service.UserService;
-import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
-import java.util.Properties;
-
-import javax.inject.Inject;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.core.env.Environment;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.social.connect.ConnectionFactory;
@@ -44,6 +36,10 @@ import org.springframework.social.connect.web.ProviderSignInController;
 import org.springframework.social.google.api.Google;
 import org.springframework.social.google.connect.GoogleConnectionFactory;
 
+import com.devnexus.ting.core.model.User;
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
+
 
 /**
  * Spring Social Configuration.
@@ -52,8 +48,11 @@ import org.springframework.social.google.connect.GoogleConnectionFactory;
 @Configuration
 public class SocialConfig {
 
-    @Autowired
-    private Environment environment;
+	@Value("#{environment.TING_CLIENT_ID}")
+	private String clientId;
+
+	@Value("#{environment.TING_CLIENT_SECRET}")
+	private String clientSecret;
 
 
     @Autowired
@@ -69,13 +68,7 @@ public class SocialConfig {
 	 */
 	@Bean
 	public ConnectionFactoryLocator connectionFactoryLocator() {
-
-            Apphome appHome = SystemInformationUtils.retrieveBasicSystemInformation();
-            Properties props = SystemInformationUtils.getConfigProperties(appHome.getAppHomePath());
-            String clientId = props.getProperty("TING_CLIENT_ID");
-            String clientSecret = props.getProperty("TING_CLIENT_SECRET");
-            
-		ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
+		final ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
 		registry.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
 		return registry;
 	}
@@ -106,11 +99,11 @@ public class SocialConfig {
 	 * @throws NotConnectedException if the user is not connected to facebook.
 	 */
 	@Bean
-	@Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)	
+	@Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)
 	public Google facebook() {
 	    return connectionRepository().getPrimaryConnection(Google.class).getApi();
 	}
-	
+
 	/**
 	 * The Spring MVC Controller that allows users to sign-in with their provider accounts.
 	 */

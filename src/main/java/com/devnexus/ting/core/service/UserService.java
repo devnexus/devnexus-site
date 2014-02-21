@@ -18,10 +18,10 @@ package com.devnexus.ting.core.service;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.social.connect.web.SignInAdapter;
 
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
-import org.springframework.social.connect.web.SignInAdapter;
 
 /**
  * Provides user related methods.

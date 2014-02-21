@@ -6,10 +6,10 @@
 
 package com.devnexus.ting.core.dao;
 
+import java.util.List;
+
 import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.model.UserCalendar;
-import java.io.Serializable;
-import java.util.List;
 
 /**
  *
