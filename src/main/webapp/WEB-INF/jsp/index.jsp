@@ -40,36 +40,25 @@
 
         <div class="row">
             <div class="col-md-6">
-                <h2>Registration Information</h2>
-
+                <h2>Wireless Access</h2>
                 <div class="row">
-                    <div class="col-md-2">$240</div>
-                    <div class="col-md-10"><strong>Conference Pass</strong> (until February 14, 2014)</div>
+                    <div class="col-xs-6 col-md-4">Network ID</div>
+                    <div class="col-xs-6 col-md-4"><strong>CGCPUBLIC</strong></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">$210</div>
-                    <div class="col-md-10"><strong>Early Bird Pass</strong> (until January 10, 2014)</div>
+                    <div class="col-xs-6 col-md-4">Username</div>
+                    <div class="col-xs-6 col-md-4"><strong>ajugatlanta</strong></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">$210</div>
-                    <div class="col-md-10"><strong>Group Pass</strong> (for groups of 5 or more)</div>
+                    <div class="col-xs-6 col-md-4">Password</div>
+                    <div class="col-xs-6 col-md-4"><strong>devnexus2014</strong></div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2">$150</div>
-                    <div class="col-md-10"><strong>Student Pass</strong> (Contact us for the code)</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 text-center">
-						<c:choose>
-							<c:when test="${registrationState eq 'closed'}">Registration Closed</c:when>
-							<c:when test="${registrationState eq 'soldout'}"><a class="btn btn-primary btn-lg disabled">Sold Out</a></c:when>
-							<c:when test="${registrationState eq 'hide'}"></c:when>
-							<c:otherwise>
-								<a href="https://ajug.eventwax.com/devnexus-2014" class="btn btn-primary btn-lg">Register Now!</a>
-							</c:otherwise>
-						</c:choose>
-                    </div>
-                </div>
+				<div class="row">
+					<div class="col-xs-12 col-md-8 text-center">
+						<a href="${ctx}/s/evaluations/add" class="btn btn-primary btn-lg">Send us Feedback</a>
+						<a href="${ctx}/s/social" class="btn btn-primary btn-lg">Twitter News</a>
+					</div>
+ 				</div>
             </div>
             <div class="col-md-6 text-center"
                  style="background-image: url('${ctx}/images/home_bg.jpg');background-repeat: no-repeat">
