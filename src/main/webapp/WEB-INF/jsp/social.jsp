@@ -107,8 +107,8 @@
 					var h = $(html);
 					$container.prepend(h);
 					$container.imagesLoaded(function() {
-						if (tweets.size() > 5) {
-							$container.masonry('remove', tweets.slice(5 - tweets.size()));
+						if (tweets.size() > 40) {
+							$container.masonry('remove', tweets.slice(40 - tweets.size()));
 						}
 							$container.masonry('prepended', h);
 					});
