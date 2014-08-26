@@ -22,7 +22,10 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.CfpSubmissionStatusType;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.PresentationType;
+import com.devnexus.ting.core.model.SkillLevel;
 
 /**
  * @author Gunnar Hillert
@@ -44,5 +47,39 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		Event event = eventDao.getCurrentEvent();
 		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.getCfpSubmissions(event.getId());
 		Assert.assertTrue(cfpSubmissions.size() == 0);
+	}
+
+	@Test
+	public void testCreateCfpForEvent() {
+		Event event = eventDao.getCurrentEvent();
+		final CfpSubmission cfpSubmission = new CfpSubmission();
+		cfpSubmission.setEvent(event);
+
+		cfpSubmission.setBio("myBio");
+		cfpSubmission.setDescription("myDescription");
+		cfpSubmission.setEmail("test@test.com");
+		cfpSubmission.setFirstName("Kenny");
+		cfpSubmission.setGithubId("kenny");
+		cfpSubmission.setGooglePlusId("123456789");
+		cfpSubmission.setLanyrdId("kenny123");
+		cfpSubmission.setLastName("cartman");
+		cfpSubmission.setLinkedInId("kc");
+		cfpSubmission.setLocation("Southpark");
+		cfpSubmission.setMustReimburseTravelCost(true);
+		cfpSubmission.setPhone("555-555-5555");
+		//cfpSubmission.setPicture(null);
+		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
+		cfpSubmission.setSessionRecordingApproved(true);
+		cfpSubmission.setSkillLevel(SkillLevel.BEGINNER);
+		cfpSubmission.setSlotPreference("Morning");
+		cfpSubmission.setStatus(CfpSubmissionStatusType.PENDING);
+		cfpSubmission.setTitle("my session title");
+		cfpSubmission.setTopic("java");
+		cfpSubmission.setTshirtSize("L");
+		cfpSubmission.setTwitterId("kctwitter");
+
+		final CfpSubmission savedCfpSubmission = cfpSubmissionDao.save(cfpSubmission);
+		Assert.assertNotNull(savedCfpSubmission);
+		Assert.assertNotNull(savedCfpSubmission.getId());
 	}
 }

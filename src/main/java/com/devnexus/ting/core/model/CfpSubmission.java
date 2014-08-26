@@ -68,6 +68,12 @@ public class CfpSubmission extends Person {
 
 	@NotEmpty
 	@Size(max=255)
+	private String location;
+
+	private boolean mustReimburseTravelCost;
+
+	@NotEmpty
+	@Size(max=255)
 	@Email
 	private String email;
 
@@ -223,6 +229,34 @@ public class CfpSubmission extends Person {
 
 	public void setStatus(CfpSubmissionStatusType status) {
 		this.status = status;
+	}
+
+	/**
+	 * @return the location
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * @param location the location to set
+	 */
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	/**
+	 * @return the mustReimburseTravelCost
+	 */
+	public boolean isMustReimburseTravelCost() {
+		return mustReimburseTravelCost;
+	}
+
+	/**
+	 * @param mustReimburseTravelCost the mustReimburseTravelCost to set
+	 */
+	public void setMustReimburseTravelCost(boolean mustReimburseTravelCost) {
+		this.mustReimburseTravelCost = mustReimburseTravelCost;
 	}
 
 }

@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<title>Submission Success - DevNexus 2014</title>
+<title>Submission Success - DevNexus 2015</title>
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
@@ -10,7 +10,7 @@
 		<img src="<c:url value="/images/check-mark.jpg"/>" border="0">
 
 		<h3 class="green">Your submission has been added successfully!</h3>
-		<h3><strong>Thank you for your interest in DevNexus 2014!</strong><br />
+		<h3><strong>Thank you for your interest in DevNexus 2015!</strong><br />
 			We look forward to reviewing your session proposals for the South-East's largest developer conference.</h3>
 		<p>Shortly you should receive and email confirming that we received your information.</p>
 		<p>We will review your submission as soon as possible and contact you once you

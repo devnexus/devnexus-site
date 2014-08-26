@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMessage;
 
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 import org.stringtemplate.v4.ST;
 
 import com.devnexus.ting.common.SystemInformationUtils;
@@ -43,7 +43,6 @@ public class CfpToMailTransformer {
 	}
 
 	public void setCcUser(String ccUser) {
-		Assert.hasText(ccUser, "The CC Email Address must not be empty or null.");
 		this.ccUser = ccUser;
 	}
 
@@ -68,11 +67,11 @@ public class CfpToMailTransformer {
 			messageHelper.setFrom(fromUser);
 			messageHelper.setTo(cfpSubmission.getEmail());
 
-			if (this.ccUser != null) {
+			if (StringUtils.hasText(this.ccUser)) {
 				messageHelper.setCc(this.ccUser);
 			}
 
-			messageHelper.setSubject("DevNexus 2014 - CFP - " + cfpSubmission.getFirstLastName());
+			messageHelper.setSubject("DevNexus 2015 - CFP - " + cfpSubmission.getFirstLastName());
 
 		} catch (MessagingException e) {
 			throw new IllegalStateException("Error creating mail message for CFP: " + cfpSubmission, e);
@@ -100,6 +99,8 @@ public class CfpToMailTransformer {
 		stringTemplate.add("title", cfpSubmission.getTitle());
 		stringTemplate.add("tshirtSize", cfpSubmission.getTshirtSize());
 		stringTemplate.add("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");
+		stringTemplate.add("location", cfpSubmission.getLocation());
+		stringTemplate.add("mustReimburseTravelCost", cfpSubmission.isMustReimburseTravelCost());
 
 		String renderedTemplate = stringTemplate.render();
 

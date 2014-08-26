@@ -206,3 +206,7 @@ where presentations.id = up.presentation_id;
 -- 2014 - Feb 4
 ALTER TABLE rooms ADD COLUMN color character varying(255);
 ALTER TABLE tracks ADD COLUMN color character varying(255);
+
+-- 2014 - Aug 26
+ALTER TABLE cfp_submissions ADD COLUMN "LOCATION" character varying(255);
+ALTER TABLE cfp_submissions ADD COLUMN "MUST_REIMBURSE_TRAVEL_COST" boolean;
