@@ -42,6 +42,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -65,13 +66,20 @@ public class CallForPapersController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
-	private void prepareReferenceData(ModelMap model) {
+	private void prepareReferenceData(ModelMap model, boolean isSecure) {
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
 		final String recaptchaPublicKey = environment.getProperty("recaptcha.publicKey");
 		final String recaptchaPrivateKey = environment.getProperty("recaptcha.privateKey");
 
 		if (Boolean.valueOf(reCaptchaEnabled)) {
-			ReCaptcha reCaptcha = ReCaptchaFactory.newReCaptcha(recaptchaPublicKey, recaptchaPrivateKey, false);
+			final ReCaptcha reCaptcha;
+			reCaptcha = ReCaptchaFactory.newSecureReCaptcha(recaptchaPublicKey, recaptchaPrivateKey, true);
+
+			if(isSecure) {
+				((ReCaptchaImpl) reCaptcha).setRecaptchaServer("https://www.google.com/recaptcha/api");
+			} else {
+				((ReCaptchaImpl) reCaptcha).setRecaptchaServer("http://www.google.com/recaptcha/api");
+			}
 			model.addAttribute("reCaptchaHtml", reCaptcha.createRecaptchaHtml(null, null));
 		}
 
@@ -89,7 +97,13 @@ public class CallForPapersController {
 	}
 
 	@RequestMapping(value="/cfp", method=RequestMethod.GET)
-	public String openAddCfp(ModelMap model) {
+	public String openAddCfp(ModelMap model, WebRequest request) {
+
+		final String cfpState = environment.getProperty("cfp.state");
+
+		if ("closed".equalsIgnoreCase(cfpState)) {
+			return "redirect:/s/index";
+		}
 
 		model.addAttribute("headerTitle", "Call for Papers");
 		model.addAttribute("tag", "We would love to review your	session proposals!");
@@ -99,9 +113,10 @@ public class CallForPapersController {
 		cfpSubmission.setEvent(event);
 
 		model.addAttribute(cfpSubmission);
-		prepareReferenceData(model);
+		prepareReferenceData(model, request.isSecure());
 
 		return "cfp";
+
 	}
 
 	@RequestMapping(value="/cfp", method=RequestMethod.POST)
@@ -131,7 +146,7 @@ public class CallForPapersController {
 			if (!reCaptchaResponse.isValid()) {
 				ObjectError error = new ObjectError("error","Please insert the correct CAPTCHA.");
 				bindingResult.addError(error);
-				prepareReferenceData(model);
+				prepareReferenceData(model, request.isSecure());
 				return "/cfp";
 			}
 		}
@@ -146,7 +161,7 @@ public class CallForPapersController {
 		}
 
 		if (bindingResult.hasErrors()) {
-			prepareReferenceData(model);
+			prepareReferenceData(model, request.isSecure());
 			return "/cfp";
 		}
 
@@ -176,6 +191,9 @@ public class CallForPapersController {
 		cfpSubmissionToSave.setTopic(cfpSubmission.getTopic());
 		cfpSubmissionToSave.setTshirtSize(cfpSubmission.getTshirtSize());
 		cfpSubmissionToSave.setTwitterId(cfpSubmission.getTwitterId());
+
+		cfpSubmissionToSave.setLocation(cfpSubmission.getLocation());
+		cfpSubmissionToSave.setMustReimburseTravelCost(cfpSubmission.isMustReimburseTravelCost());
 
 		LOGGER.info(cfpSubmission.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);

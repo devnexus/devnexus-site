@@ -3,8 +3,8 @@
 <div class="jumbotron call" style="margin-bottom:50px">
 	<div class="container">
 		<div id="banner">
-			<h1><strong>Call for Papers 2014!</strong></h1>
-			<h3>Thank you for your interest in DevNexus 2014! We would love to review your session proposals for the South-East's
+			<h1><strong>Call for Papers 2015!</strong></h1>
+			<h3>Thank you for your interest in DevNexus 2015! We would love to review your session proposals for the South-East's
 				largest developer conference. We are planning to cover a wide variety of topics around: </h3>
 			<ul class="double">
 				<li>Java/JavaEE/Spring</li>
@@ -71,6 +71,29 @@
 			<div class="col-lg-10">
 				<form:input type="email" cssClass="form-control" path="email" id="email" tabindex="3"/>
 				<form:errors path="email" cssClass="fieldError"/>
+			</div>
+		</div>
+
+		<spring:bind path="cfpSubmission.location">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="location" class="col-lg-2 control-label">Location*</label>
+			<div class="col-lg-10">
+				<form:input type="text" cssClass="form-control" path="location" id="location" tabindex="4"/>
+				<form:errors path="location" cssClass="fieldError"/>
+				<span class="help-block">Where do you live?</span>
+			</div>
+		</div>
+
+		<div class="form-group${errorClass}">
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<label>
+						<form:checkbox path="mustReimburseTravelCost" id="mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
+					</label>
+				</div>
+				<form:errors path="mustReimburseTravelCost" cssClass="fieldError"/>
 			</div>
 		</div>
 
