@@ -35,7 +35,11 @@
 
 				<tr class="${cfpStatusClass}">
 					<td><a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-					<td><c:out value="${cfp.lastName}"/>, <c:out value="${cfp.firstName}"/></td>
+					<td>
+						<c:forEach var="speaker" items="${cfp.speakers}">
+							<p><c:out value="${speaker.lastName}"/>, <c:out value="${speaker.firstName}"/><p>
+						</c:forEach>
+					</td>
 					<td><c:out value="${cfp.title}"/></td>
 					<td><c:out value="${cfp.topic}"/></td>
 					<td><c:out value="${cfp.presentationType}"/></td>

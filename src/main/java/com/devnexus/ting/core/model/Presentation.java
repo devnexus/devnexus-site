@@ -27,6 +27,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -83,7 +84,12 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 
 	@ManyToOne
 	@JoinColumn(name = "SPEAKER_ID")
+	@Deprecated
 	private Speaker speaker;
+
+	@ManyToMany(fetch=FetchType.LAZY)
+	@OrderBy("lastName ASC")
+	private List<Speaker>speakers = new ArrayList<Speaker>(0);
 
 	@Size(max = 255)
 	private String title;
@@ -152,6 +158,7 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 		return this.presentationLink;
 	}
 
+	@Deprecated
 	public Speaker getSpeaker() {
 		return speaker;
 	}
@@ -180,6 +187,7 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 		this.presentationLink = presentationLink;
 	}
 
+	@Deprecated
 	public void setSpeaker(Speaker speaker) {
 		this.speaker = speaker;
 	}
@@ -242,6 +250,20 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 			tagAsString.add(presentationTag.getName());
 		}
 		this.tagsAsText = StringUtils.collectionToCommaDelimitedString(tagAsString);
+	}
+
+	/**
+	 * @return the speakers
+	 */
+	public List<Speaker> getSpeakers() {
+		return speakers;
+	}
+
+	/**
+	 * @param speakers the speakers to set
+	 */
+	public void setSpeakers(List<Speaker> speakers) {
+		this.speakers = speakers;
 	}
 
 	@Override
