@@ -102,8 +102,8 @@
     </div>
     <div id="silver" style="max-width: 768px;margin-left:auto;margin-right:auto;">
         <h3>Silver Sponsors</h3>
-            <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
-               src="${ctx}/images/sponsorship-available.png"/></a>
+            <a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
+               src="${ctx}/img/sponsors/coverity.png"/></a>
             <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
                src="${ctx}/images/sponsorship-available.png"/></a>
             <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
