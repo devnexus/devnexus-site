@@ -15,6 +15,9 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
@@ -25,6 +28,7 @@ import org.stringtemplate.v4.ST;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
 
 /**
  * Converts a {@link CfpSubmission} and converts it to a {@link MimeMessage}.
@@ -65,13 +69,19 @@ public class CfpToMailTransformer {
 			messageHelper.setText(renderedTextTemplate, renderedHtmlTemplate);
 
 			messageHelper.setFrom(fromUser);
-			messageHelper.setTo(cfpSubmission.getEmail());
+
+			for (CfpSubmissionSpeaker submissionSpeaker : cfpSubmission.getSpeakers()) {
+				messageHelper.addTo(submissionSpeaker.getEmail());
+			}
 
 			if (StringUtils.hasText(this.ccUser)) {
 				messageHelper.setCc(this.ccUser);
 			}
-
-			messageHelper.setSubject("DevNexus 2015 - CFP - " + cfpSubmission.getFirstLastName());
+			List<String> speakers = new ArrayList<String>();
+			for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
+				speakers.add(speaker.getFirstLastName());
+			}
+			messageHelper.setSubject("DevNexus 2015 - CFP - " + StringUtils.collectionToCommaDelimitedString(speakers));
 
 		} catch (MessagingException e) {
 			throw new IllegalStateException("Error creating mail message for CFP: " + cfpSubmission, e);
@@ -83,24 +93,27 @@ public class CfpToMailTransformer {
 	public String applyStringTemplate(CfpSubmission cfpSubmission, String template) {
 		ST stringTemplate = new ST(template, '~', '~');
 
-		stringTemplate.add("firstName", cfpSubmission.getFirstName());
-		stringTemplate.add("lastName", cfpSubmission.getLastName());
-		stringTemplate.add("bio", cfpSubmission.getBio());
 		stringTemplate.add("description", cfpSubmission.getDescription());
-		stringTemplate.add("email", cfpSubmission.getEmail());
-		stringTemplate.add("googlePlusId", cfpSubmission.getGooglePlusId());
-		stringTemplate.add("linkedInId", cfpSubmission.getLinkedInId());
-		stringTemplate.add("twitterId", cfpSubmission.getTwitterId());
-		stringTemplate.add("phone", cfpSubmission.getPhone());
+
 		stringTemplate.add("presentationType", cfpSubmission.getPresentationType().getName());
 		stringTemplate.add("skillLevel", cfpSubmission.getSkillLevel().getName());
 		stringTemplate.add("comments", cfpSubmission.getSlotPreference());
 		stringTemplate.add("topic", cfpSubmission.getTopic());
 		stringTemplate.add("title", cfpSubmission.getTitle());
-		stringTemplate.add("tshirtSize", cfpSubmission.getTshirtSize());
 		stringTemplate.add("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");
+
+		//TODO
+		stringTemplate.add("firstName", cfpSubmission.getFirstName());
+		stringTemplate.add("lastName", cfpSubmission.getLastName());
+		stringTemplate.add("bio", cfpSubmission.getBio());
+		stringTemplate.add("tshirtSize", cfpSubmission.getTshirtSize());
 		stringTemplate.add("location", cfpSubmission.getLocation());
 		stringTemplate.add("mustReimburseTravelCost", cfpSubmission.isMustReimburseTravelCost());
+		stringTemplate.add("email", cfpSubmission.getEmail());
+		stringTemplate.add("googlePlusId", cfpSubmission.getGooglePlusId());
+		stringTemplate.add("linkedInId", cfpSubmission.getLinkedInId());
+		stringTemplate.add("twitterId", cfpSubmission.getTwitterId());
+		stringTemplate.add("phone", cfpSubmission.getPhone());
 
 		String renderedTemplate = stringTemplate.render();
 

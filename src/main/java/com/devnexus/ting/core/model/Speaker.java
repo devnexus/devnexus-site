@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,15 +15,15 @@
  */
 package com.devnexus.ting.core.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Cacheable;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -40,7 +40,8 @@ import org.hibernate.annotations.ParamDef;
 
 /**
  * The persistent class for the speakers database table.
- *
+ * 
+ * @author Gunnar Hillert
  */
 @Entity
 @Cacheable()
@@ -56,14 +57,15 @@ public class Speaker extends Person {
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
 
-	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
+	//@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
 	@Filters({
 		@Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
 		@Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
 	})
+	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
 	@BatchSize(size=20)
-	private Set<Presentation> presentations = new HashSet<Presentation>(0);
+	private List<Presentation>presentations = new ArrayList<Presentation>(0);
 
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
@@ -76,11 +78,11 @@ public class Speaker extends Person {
 		this.id = id;
 	}
 
-	public Set<Presentation> getPresentations() {
+	public List<Presentation> getPresentations() {
 		return presentations;
 	}
 
-	public void setPresentations(Set<Presentation> presentations) {
+	public void setPresentations(List<Presentation> presentations) {
 		this.presentations = presentations;
 	}
 

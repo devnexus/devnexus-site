@@ -429,7 +429,9 @@ public class BusinessServiceImpl implements BusinessService {
 				numberOfSessions++;
 
 				if (scheduleItem.getPresentation() != null) {
-					speakerIds.add(scheduleItem.getPresentation().getSpeaker().getId());
+					for (Speaker speaker : scheduleItem.getPresentation().getSpeakers()) {
+						speakerIds.add(speaker.getId());
+					}
 				} else {
 					numberOfUnassignedSessions++;
 				}

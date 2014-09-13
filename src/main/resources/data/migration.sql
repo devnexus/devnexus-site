@@ -8,41 +8,41 @@ alter table users add version integer;
 
 CREATE TABLE cfp_submissions
 (
-  id bigint NOT NULL,
-  created_date timestamp without time zone,
-  updated_date timestamp without time zone,
-  version integer,
-  bio character varying(255),
-  first_name character varying(255),
-  google_plus_id character varying(255),
-  last_name character varying(255),
-  linked_in_id character varying(255),
-  twitter_id character varying(255),
-  description character varying(255),
-  email character varying(255),
-  phone character varying(255),
-  picture_file2 bytea,
-  presentation_type bigint,
-  session_recording_approved boolean NOT NULL,
-  skill_level bigint,
-  slot_preference character varying(255),
-  title character varying(255),
-  topic character varying(255),
-  tshirt_size character varying(255),
-  picture bigint,
-  event bigint,
-  CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
-      REFERENCES events (id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT fk_srgk1qvqa9tx8hrnfa703bifc FOREIGN KEY (picture)
-      REFERENCES file_data (id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
+	id bigint NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+	bio character varying(255),
+	first_name character varying(255),
+	google_plus_id character varying(255),
+	last_name character varying(255),
+	linked_in_id character varying(255),
+	twitter_id character varying(255),
+	description character varying(255),
+	email character varying(255),
+	phone character varying(255),
+	picture_file2 bytea,
+	presentation_type bigint,
+	session_recording_approved boolean NOT NULL,
+	skill_level bigint,
+	slot_preference character varying(255),
+	title character varying(255),
+	topic character varying(255),
+	tshirt_size character varying(255),
+	picture bigint,
+	event bigint,
+	CONSTRAINT cfp_submissions_pkey PRIMARY KEY (id),CONSTRAINT fk_93jnud4hv6d4pykxfur3luak1 FOREIGN KEY (event)
+		REFERENCES events (id) MATCH SIMPLE
+		ON UPDATE NO ACTION ON DELETE NO ACTION,
+	CONSTRAINT fk_srgk1qvqa9tx8hrnfa703bifc FOREIGN KEY (picture)
+		REFERENCES file_data (id) MATCH SIMPLE
+		ON UPDATE NO ACTION ON DELETE NO ACTION
 )
 WITH (
-  OIDS=FALSE
+	OIDS=FALSE
 );
 ALTER TABLE cfp_submissions
-  OWNER TO devnexus;
+	OWNER TO devnexus;
 
 ALTER TABLE organizers ADD COLUMN linked_in_id character varying(255);
 
@@ -80,16 +80,16 @@ alter table USER_AUTHORITIES
 
 CREATE TABLE user_calendars
 (
-  id bigint NOT NULL,
-  created_date timestamp without time zone,
-  updated_date timestamp without time zone,
-  version integer,
-  schedule_item_id integer,
-  event_key character varying(255),
-  username character varying(255),
-  from_time timestamp without time zone,
-  fixed boolean,
-  template boolean
+	id bigint NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+	schedule_item_id integer,
+	event_key character varying(255),
+	username character varying(255),
+	from_time timestamp without time zone,
+	fixed boolean,
+	template boolean
 );
 
 
@@ -101,9 +101,9 @@ alter table user_calendars add constraint one_per_user unique (username, event_k
 
 
 ALTER TABLE user_calendars ADD CONSTRAINT calendar_item FOREIGN KEY (schedule_item_id)
-      REFERENCES schedule_items (id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION;
-  
+	REFERENCES schedule_items (id) MATCH SIMPLE
+	ON UPDATE NO ACTION ON DELETE NO ACTION;
+
 
 insert into user_calendars (id, event_key, from_time, schedule_item_id, fixed, template) select row_number() OVER (ORDER BY from_time), 'devnexus2013', from_time,case when min(schedule_item_type)=400 then null else min(id) end, case when min(schedule_item_type)=400 then false else true end,true from "public".schedule_items where event = 1388  group by from_time order by from_time asc;
 insert into user_calendars (id, event_key, from_time, schedule_item_id, fixed, template) select row_number() OVER (ORDER BY from_time), 'devnexus2014', from_time,case when min(schedule_item_type)=400 then null else min(id) end, case when min(schedule_item_type)=400 then false else true end,true from "public".schedule_items where event = 1735  group by from_time order by from_time asc;
@@ -197,7 +197,7 @@ CREATE SEQUENCE tracks_id_seq start with 11;
 ALTER SEQUENCE tracks_id_seq OWNED BY user.devnexus;
 
 nsert into tracks (id, version, css_style_name, name, event)
- select nextval('tracks_id_seq') as id, 1 as version, css_style_name, track, 1388 as event from "public".rooms where event = 1388 and description is not null;
+select nextval('tracks_id_seq') as id, 1 as version, css_style_name, track, 1388 as event from "public".rooms where event = 1388 and description is not null;
 
 update presentations set track_id = up.track_id from
 (select presentation_id, track_id from public.schedule_items sched inner join (select track.id as track_id, room.id as room_id from tracks as track inner join rooms as room on room.css_style_name = track.css_style_name where room.event = 1388) track_map on track_map.room_id = sched.room_id where event = 1388) up
@@ -208,5 +208,63 @@ ALTER TABLE rooms ADD COLUMN color character varying(255);
 ALTER TABLE tracks ADD COLUMN color character varying(255);
 
 -- 2014 - Aug 26
-ALTER TABLE cfp_submissions ADD COLUMN "LOCATION" character varying(255);
-ALTER TABLE cfp_submissions ADD COLUMN "MUST_REIMBURSE_TRAVEL_COST" boolean;
+ALTER TABLE cfp_submissions ADD COLUMN "location" character varying(255);
+ALTER TABLE cfp_submissions ADD COLUMN "must_reimburse_travel_cost" boolean;
+
+-- 2014 - Sep 14
+
+create table CFP_SUBMISSION_SPEAKERS (
+	ID int8 not null,
+	CREATED_DATE timestamp,
+	UPDATED_DATE timestamp,
+	VERSION int4,
+	BIO varchar(10000),
+	FIRST_NAME varchar(255),
+	GITHUB_ID varchar(255),
+	GOOGLE_PLUS_ID varchar(255),
+	LANYRD_ID varchar(255),
+	LAST_NAME varchar(255),
+	LINKED_IN_ID varchar(255),
+	TWITTER_ID varchar(255),
+	EMAIL varchar(255),
+	LOCATION varchar(255),
+	MUST_REIMBURSE_TRAVEL_COST boolean not null,
+	PHONE varchar(255),
+	TSHIRT_SIZE varchar(255),
+	PICTURE int8,
+	CFP_SUBMISSION int8,
+	primary key (ID)
+)
+
+alter table CFP_SUBMISSION_SPEAKERS
+	add constraint FK_CFPSPEAKER_FILE_DATA
+	foreign key (PICTURE)
+	references FILE_DATA
+
+alter table CFP_SUBMISSION_SPEAKERS
+	add constraint FK_CFPSPEAKER_CFPSUBMISSION
+	foreign key (CFP_SUBMISSION)
+	references CFP_SUBMISSIONS
+
+ALTER TABLE CFP_SUBMISSION_SPEAKERS
+	OWNER TO devnexus;
+
+update cfp_submissions set must_reimburse_travel_cost = 'f' where must_reimburse_travel_cost is NULL
+
+create table PRESENTATIONS_SPEAKERS (
+	PRESENTATIONS bigint not null,
+	SPEAKERS bigint not null
+)
+
+alter table PRESENTATIONS_SPEAKERS
+	add constraint FK_jjwxfd6e9dsteutbshuowubh9
+	foreign key (SPEAKERS)
+	references SPEAKERS
+
+alter table PRESENTATIONS_SPEAKERS
+	add constraint FK_frs77k5chaxecnix9803cbb25
+	foreign key (PRESENTATIONS)
+	references PRESENTATIONS
+
+ALTER TABLE presentations_speakers
+	OWNER TO devnexus;

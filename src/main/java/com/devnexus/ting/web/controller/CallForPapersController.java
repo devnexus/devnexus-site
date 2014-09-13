@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +17,11 @@ package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import javax.validation.Validator;
 
 import net.tanesha.recaptcha.ReCaptcha;
 import net.tanesha.recaptcha.ReCaptchaFactory;
@@ -39,19 +37,22 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.web.form.CfpSubmissionForm;
 
 /**
  * @author Gunnar Hillert
@@ -111,8 +112,11 @@ public class CallForPapersController {
 		Event event = businessService.getCurrentEvent();
 		CfpSubmission cfpSubmission = new CfpSubmission();
 		cfpSubmission.setEvent(event);
+		CfpSubmissionSpeaker speaker = new CfpSubmissionSpeaker();
+		speaker.setCfpSubmission(cfpSubmission);
+		cfpSubmission.getSpeakers().add(speaker);
 
-		model.addAttribute(cfpSubmission);
+		model.addAttribute("cfpSubmission", cfpSubmission);
 		prepareReferenceData(model, request.isSecure());
 
 		return "cfp";
@@ -120,15 +124,27 @@ public class CallForPapersController {
 	}
 
 	@RequestMapping(value="/cfp", method=RequestMethod.POST)
-	public String addCfp(@Valid CfpSubmission cfpSubmission,
+	public String addCfp(@Valid @ModelAttribute("cfpSubmission") CfpSubmissionForm cfpSubmission,
 			BindingResult bindingResult,
 			ModelMap model,
-			@RequestParam MultipartFile pictureFile,
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/index";
+		}
+		if (request.getParameter("addSpeaker") != null) {
+			prepareReferenceData(model, request.isSecure());
+			CfpSubmissionSpeaker speaker = new CfpSubmissionSpeaker();
+			speaker.setCfpSubmission(cfpSubmission);
+			cfpSubmission.getSpeakers().add(speaker);
+			return "/cfp";
+		}
+
+		if (request.getParameter("removeSpeaker") != null) {
+			prepareReferenceData(model, request.isSecure());
+			cfpSubmission.getSpeakers().remove(Integer.valueOf(request.getParameter("removeSpeaker")).intValue());
+			return "/cfp";
 		}
 
 		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
@@ -151,51 +167,79 @@ public class CallForPapersController {
 			}
 		}
 
-		InputStream pictureInputStream = null;
-
-		try {
-			pictureInputStream = pictureFile.getInputStream();
-		} catch (IOException e) {
-			LOGGER.error("Error processing Image.", e);
-			bindingResult.addError(new FieldError("cfpSubmission", "pictureFile", "Error processing Image."));
-		}
-
 		if (bindingResult.hasErrors()) {
 			prepareReferenceData(model, request.isSecure());
 			return "/cfp";
 		}
 
-		if (pictureInputStream != null && pictureFile.getSize() > 0) {
-			SystemInformationUtils.setSpeakerImage("CFP_" + cfpSubmission.getFirstName()
-					+ "_" + cfpSubmission.getLastName() + "_" + pictureFile.getOriginalFilename(), pictureInputStream);
+		final Event eventFromDb = businessService.getCurrentEvent();
+		final CfpSubmission cfpSubmissionToSave = new CfpSubmission();
+
+		if (cfpSubmission.getSpeakers().size() < 1) {
+			ObjectError error = new ObjectError("error","Please submit at least 1 speaker.");
+			bindingResult.addError(error);
+			prepareReferenceData(model, request.isSecure());
+			return "/cfp";
 		}
 
-		final Event eventFromDb = businessService.getCurrentEvent();
+		if (cfpSubmission.getPictureFiles().size() != cfpSubmission.getSpeakers().size()) {
+			ObjectError error = new ObjectError("error","Please submit a picture for each speaker.");
+			bindingResult.addError(error);
+			prepareReferenceData(model, request.isSecure());
+			return "/cfp";
+		}
 
-		final CfpSubmission cfpSubmissionToSave = new CfpSubmission();
-		cfpSubmissionToSave.setBio(cfpSubmission.getBio());
-		cfpSubmissionToSave.setCreatedDate(new Date());
 		cfpSubmissionToSave.setDescription(cfpSubmission.getDescription());
-		cfpSubmissionToSave.setEmail(cfpSubmission.getEmail());
 		cfpSubmissionToSave.setEvent(eventFromDb);
-		cfpSubmissionToSave.setFirstName(cfpSubmission.getFirstName());
-		cfpSubmissionToSave.setGooglePlusId(cfpSubmission.getGooglePlusId());
-		cfpSubmissionToSave.setLastName(cfpSubmission.getLastName());
-		cfpSubmissionToSave.setLinkedInId(cfpSubmission.getLinkedInId());
-		cfpSubmissionToSave.setPhone(cfpSubmission.getPhone());
+
 		cfpSubmissionToSave.setPresentationType(cfpSubmission.getPresentationType());
 		cfpSubmissionToSave.setSessionRecordingApproved(cfpSubmission.isSessionRecordingApproved());
 		cfpSubmissionToSave.setSkillLevel(cfpSubmission.getSkillLevel());
 		cfpSubmissionToSave.setSlotPreference(cfpSubmission.getSlotPreference());
 		cfpSubmissionToSave.setTitle(cfpSubmission.getTitle());
 		cfpSubmissionToSave.setTopic(cfpSubmission.getTopic());
-		cfpSubmissionToSave.setTshirtSize(cfpSubmission.getTshirtSize());
-		cfpSubmissionToSave.setTwitterId(cfpSubmission.getTwitterId());
 
-		cfpSubmissionToSave.setLocation(cfpSubmission.getLocation());
-		cfpSubmissionToSave.setMustReimburseTravelCost(cfpSubmission.isMustReimburseTravelCost());
+		int index = 0;
+		for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getSpeakers()) {
 
-		LOGGER.info(cfpSubmission.toString());
+			final MultipartFile picture = cfpSubmission.getPictureFiles().get(index);
+			InputStream pictureInputStream = null;
+
+			try {
+				pictureInputStream = picture.getInputStream();
+			} catch (IOException e) {
+				LOGGER.error("Error processing Image.", e);
+				bindingResult.addError(new FieldError("cfpSubmission", "pictureFile", "Error processing Image."));
+				prepareReferenceData(model, request.isSecure());
+				return "/cfp";
+			}
+
+			if (pictureInputStream != null && picture.getSize() > 0) {
+				SystemInformationUtils.setSpeakerImage("CFP_" + cfpSubmissionSpeaker.getFirstName()
+					+ "_" + cfpSubmissionSpeaker.getLastName() + "_" + picture.getOriginalFilename(), pictureInputStream);
+			}
+
+			index++;
+
+			final CfpSubmissionSpeaker cfpSubmissionSpeakerToSave = new CfpSubmissionSpeaker();
+
+			cfpSubmissionSpeakerToSave.setEmail(cfpSubmissionSpeaker.getEmail());
+			cfpSubmissionSpeakerToSave.setBio(cfpSubmissionSpeaker.getBio());
+			cfpSubmissionSpeakerToSave.setFirstName(cfpSubmissionSpeaker.getFirstName());
+			cfpSubmissionSpeakerToSave.setGooglePlusId(cfpSubmissionSpeaker.getGooglePlusId());
+			cfpSubmissionSpeakerToSave.setLastName(cfpSubmissionSpeaker.getLastName());
+			cfpSubmissionSpeakerToSave.setLinkedInId(cfpSubmissionSpeaker.getLinkedInId());
+			cfpSubmissionSpeakerToSave.setTwitterId(cfpSubmissionSpeaker.getTwitterId());
+			cfpSubmissionSpeakerToSave.setLocation(cfpSubmissionSpeaker.getLocation());
+			cfpSubmissionSpeakerToSave.setMustReimburseTravelCost(cfpSubmissionSpeaker.isMustReimburseTravelCost());
+			cfpSubmissionSpeakerToSave.setTshirtSize(cfpSubmissionSpeaker.getTshirtSize());
+			cfpSubmissionSpeakerToSave.setPhone(cfpSubmissionSpeaker.getPhone());
+			cfpSubmissionSpeakerToSave.setCfpSubmission(cfpSubmissionToSave);
+			cfpSubmissionToSave.getSpeakers().add(cfpSubmissionSpeakerToSave);
+
+		}
+
+		LOGGER.info(cfpSubmissionToSave.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);
 
 		return "redirect:/s/add-cfp-success";
