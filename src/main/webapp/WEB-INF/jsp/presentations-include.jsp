@@ -3,18 +3,22 @@
 
 <div class="row ${trackStyle}" style="${trackColor}">
 	<div class="col-xs-5">
-		<c:if test="${presentation.speaker.picture != null}">
-			<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${presentation.speaker.id}.jpg" style="margin-right: 10px" alt="${presentation.speaker.firstLastName}"/>
-		</c:if>
+		<c:forEach items="${presentation.speakers}" var="speaker">
+			<c:if test="${speaker.picture != null}">
+				<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" style="margin-right: 10px" alt="${speaker.firstLastName}"/>
+			</c:if>
+		</c:forEach>
 	</div>
 	<div class="col-xs-7">
 		<c:choose>
-			<c:when test="${not empty presentation.speaker}">
-				<h4>
-					<a href="${siteUrl}/speakers#${presentation.speaker.firstName}_${presentation.speaker.lastName}">
-						<c:out value="${presentation.speaker.firstName}"/> <c:out value="${presentation.speaker.lastName}"/>
-					</a>
-				</h4>
+			<c:when test="${not empty presentation.speakers}">
+				<c:forEach items="${presentation.speakers}" var="speaker">
+					<h4>
+						<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
+							<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
+						</a>
+					</h4>
+				</c:forEach>
 			</c:when>
 			<c:otherwise>
 				<p class="speaker">TBD</p>

@@ -85,6 +85,15 @@ public class PresentationController {
 			presentations = businessService.getAllPresentations();
 		}
 
+		for (Presentation presentation : presentations) {
+			if (presentation.getSpeakers().isEmpty()) {
+				Speaker speaker = presentation.getSpeaker();
+				presentation.getSpeakers().add(speaker);
+				presentation.setSpeaker(null);
+				businessService.savePresentation(presentation);
+			}
+ 		}
+
 		model.addAttribute("presentations", presentations);
 
 		return "/admin/manage-presentations";
@@ -129,9 +138,11 @@ public class PresentationController {
 
 		final Presentation presentationToSave = new Presentation();
 
-		if (presentation.getSpeaker() != null && presentation.getSpeaker().getId() != null) {
-			Speaker speakerFromDb = businessService.getSpeaker(presentation.getSpeaker().getId());
-			presentationToSave.setSpeaker(speakerFromDb);
+		for (Speaker speaker : presentation.getSpeakers()) {
+			if (speaker != null && speaker.getId() != null) {
+				Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
+				presentationToSave.getSpeakers().add(speakerFromDb);
+			}
 		}
 
 		if (presentation.getEvent() != null && presentation.getEvent().getId() != null) {

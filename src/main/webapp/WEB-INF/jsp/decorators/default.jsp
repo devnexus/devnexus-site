@@ -67,7 +67,7 @@
 				<li><a href="${travelUrl}">Travel</a></li>
 				<c:choose>
 					<c:when test="${registrationState eq 'closed'}">Registration Closed</c:when>
-					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Sold Out</strong></a></li></c:when>
+					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Soon!</strong></a></li></c:when>
 					<c:when test="${registrationState eq 'hide'}"></c:when>
 					<c:otherwise>
 						<li><a href="${registrationUrl}">Register</a></li>
@@ -100,12 +100,12 @@
                             <li><a href="${ctx}${baseSiteUrl}/index">About DN</a></li>
                             <li><a href="${organizersUrl}">Organizers</a></li>
                             <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
-                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship
+                            <li><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf">Sponsorship
                                 (Pdf)</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h3>DevNexus 2014</h3>
+                        <h3>DevNexus 2015</h3>
                         <ul id="col">
                             <li><a href="${scheduleUrl}">Schedule</a></li>
                             <li><a href="${speakersUrl}">Speakers</a></li>
@@ -134,7 +134,7 @@
             <div class="col-md-3">
                 <img id="logo" src="${devnexusLogoUrl}" border="0">
 
-                <p id="copy">&copy; 2008-2014 <a href="http://ajug.org">Atlanta Java Users Group (AJUG)</a></p>
+                <p id="copy">&copy; 2008-2015 <a href="http://ajug.org">Atlanta Java Users Group (AJUG)</a></p>
             </div>
         </div>
 

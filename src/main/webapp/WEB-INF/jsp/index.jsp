@@ -26,51 +26,24 @@
 <div id="devnex" class="jumbotron">
     <div class="container">
         <div id="banner">
-            <h1 id="gray">DevNexus 2014</h1>
-
-            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
-
-            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
+                    <h1 id="gray">DevNexus 2015</h1>
+                    <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
+                    <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
         </div>
     </div>
 </div>
 <div id="yellow" class="jumbotron" style="margin-bottom:0">
     <div class="container">
-        <h1 class="center">February 24-25, 2014</h1>
-
         <div class="row">
-            <div class="col-md-6">
-                <h2>Wireless Access</h2>
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">Network ID</div>
-                    <div class="col-xs-6 col-md-4"><strong>CGCPUBLIC</strong></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">Username</div>
-                    <div class="col-xs-6 col-md-4"><strong>ajugatlanta</strong></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">Password</div>
-                    <div class="col-xs-6 col-md-4"><strong>devnexus2014</strong></div>
-                </div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8 text-center">
-						<a href="${ctx}/s/evaluations/add" class="btn btn-primary btn-lg">Send us Feedback</a>
-						<a href="${ctx}/s/social" class="btn btn-primary btn-lg">Twitter News</a>
-					</div>
- 				</div>
+            <div id="travelphoto" class="col-md-4">
+                <iframe src="//player.vimeo.com/video/90063155?title=0&amp;byline=0&amp;portrait=0" width="382" height="215" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <div class="col-md-6 text-center"
-                 style="background-image: url('${ctx}/images/home_bg.jpg');background-repeat: no-repeat">
-
-                <img src="${ctx}/images/home_bg.jpg" style="visibility: hidden"/>
-                <a href="${registrationUrl}" class="btn btn-primary btn-lg"
-                                                     style="background-color: #630d1a; margin-top:-80px;">${countdowntext}</a>
-
+            <div class="col-md-8">
+                <h1 class="center">March 10-12, 2015</h1>
+                <h2 class="text-center">Call for Papers opening October 1st!</h2>
+                <h2 class="text-center"><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf">Would you like to sponsor us?</a></h2>
             </div>
         </div>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-
     </div>
 </div>
 
@@ -87,7 +60,7 @@
 
             <h1 class="center">What</h1>
 
-            <p>Atlanta’s most exciting conference for professional software developers is back in 2014! Come discover
+            <p>Atlanta’s most exciting conference for professional software developers is back in 2015! Come discover
                 how the industry’s best minds use the latest technologies to build solutions to business problems.
                 Network with other Atlanta software developers, and study real life case studies in application design
                 and development.</p>
@@ -116,87 +89,31 @@
 
     <div id="platinum" style="max-width: 768px;margin-left:auto;margin-right:auto;">
         <h3>Platinum Sponsor</h3>
-        <a href="http://www.thoughtworks.com/"><img class="logo" alt="Thoughtworks"
-                                                    src="${ctx}/img/sponsors/thoughtworks.png"/></a>
-
+            <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
+               src="${ctx}/images/sponsorship-available.png"/></a>
     </div>
 
     <div>
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
             <h3>Gold Sponsors</h3>
-            <a href="http://www.inbloom.org/"><img class="logo" alt="Inbloom"
-                                                   src="${ctx}/img/sponsors/inbloom.png"/></a>
-            <a href="http://www.daugherty.com/"><img class="logo" alt="Daugherty"
-                                                   src="${ctx}/img/sponsors/daugherty.png"/></a>
-
-            <a href="https://www.theice.com"><img class="logo" alt="ICE: IntercontinentalExchange, Inc."
-                                                  src="${ctx}/img/sponsors/logo_ice.png"/></a>
-
-            <a href="http://www.compuware.com/"><img class="logo" alt="Compuware"
-                                                     src="${ctx}/img/sponsors/compuware.png"/></a>
-            <a href="http://www.atlassian.com/"><img class="logo" alt="Atlassian"
-                                                     src="${ctx}/img/sponsors/atlassian.png"/></a>
-            <a href="http://www.parasoft.com/"><img class="logo" alt="Parasoft"
-                                                    src="${ctx}/img/sponsors/parasoft.png"/></a>
-
-            <a href="http://gopivotal.com/"><img class="logo" alt="Pivotal"
-                                                 src="${ctx}/img/sponsors/pivotal.png"/></a>
-            <a href="http://apprenda.com/"><img class="logo" alt="apprenda"
-                                                 src="${ctx}/img/sponsors/apprenda.png"/></a>
-
-
-            <a href="http://www.constantcontact.com/"><img class="logo" alt="Constant Contact"
-                                                           src="${ctx}/img/sponsors/cc.png"/></a>
-
-
+            <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
+               src="${ctx}/images/sponsorship-available.png"/></a>
         </div>
     </div>
     <div id="silver" style="max-width: 768px;margin-left:auto;margin-right:auto;">
         <h3>Silver Sponsors</h3>
-        <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
-                                                  src="${ctx}/img/sponsors/Anteo.png"/></a>
-        <a href="http://www.jboss.org/"><img class="logo" alt="Jboss"
-                                             src="${ctx}/img/sponsors/jboss.png"/></a>
-        <a href="http://bluefletch.com/"><img class="logo" alt="BlueFletch"
-                                              src="${ctx}/img/sponsors/bluefletch.png"/></a>
-        <a href="http://www.appdynamics.com/"><img class="logo" alt="AppDynamics"
-                                                   src="${ctx}/img/sponsors/app-dynamics.png"/></a>
-        <a href="http://www.apexsystemsinc.com/"><img class="logo" alt="Apex Systems"
-                                                      src="${ctx}/img/sponsors/apex-systems.png"/></a>
-        <a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
-                                                src="${ctx}/img/sponsors/coverity.png"/></a>
-        <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
-                                                src="${ctx}/img/sponsors/sonatype_key.png"/></a>
-        <a href="http://www.lexisnexis.com/"><img class="logo" alt="LexisNexis"
-                                                  src="${ctx}/img/sponsors/lexis_nexis.png"/></a>
-        <a href="http://www.twilio.com/"><img class="logo" alt="Twilio"
-                                                  src="${ctx}/img/sponsors/twilio.png"/></a>
-
-        <a href="http://www.lancope.com/"><img class="logo" alt="Lancope"
-                                               src="${ctx}/img/sponsors/lancope.png"/></a>
-        <a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge 2"
-                                                        src="${ctx}/img/sponsors/B2S.png"/></a>
-        <a title="Actuate" href="http://www.actuate.com/"><img class="logo" alt="Acruate"
-                                                               src="${ctx}/img/sponsors/actuate.png"/></a>
-
-        </a>
-
-        <a href="http://www.incomm.com/"><img class="logo" alt="InComm"
-                                              src="${ctx}/img/sponsors/inComm.png"/></a>
-        <a href="http://www.github.com/"><img class="logo" alt="GitHub"
-                                              src="${ctx}/img/sponsors/github_logo.png"/></a>
-
-        <a href="http://www.4tnetworks.com/"><img class="logo" alt="4t Networks" src="${ctx}/img/sponsors/4t.png"/></a>
-        <a href="http://www.altisourcelabs.com/"><img class="logo" alt="Altisource Labs"
-                                                          src="${ctx}/img/sponsors/altisource.png"/></a>
-        <a href="http://www.aspose.com/"><img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/></a>
-
-
+            <a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
+               src="${ctx}/img/sponsors/coverity.png"/></a>
+            <a href="http://www.vaadin.com/"><img class="logo" alt="Vaadin"
+               src="${ctx}/img/sponsors/vaadin.png"/></a>
+            <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
+               src="${ctx}/img/sponsors/sonatype_key.png"/></a>
+            <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
+               src="${ctx}/images/sponsorship-available.png"/></a>
     </div>
     <div id="cocktail">
         <h3>Cocktail Hour Sponsor</h3>
-        <a href="http://www.htrjobs.com/"><img class="logo" alt="Hunter"
-                                               src="${ctx}/img/sponsors/hunter.png"/></a>
-
+        <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
+               src="${ctx}/images/sponsorship-available.png"/></a>
     </div>
 </div>
