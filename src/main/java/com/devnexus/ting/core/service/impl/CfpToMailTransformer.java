@@ -15,8 +15,12 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -24,11 +28,13 @@ import javax.mail.internet.MimeMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.StringUtils;
-import org.stringtemplate.v4.ST;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
+import com.github.mustachejava.DefaultMustacheFactory;
+import com.github.mustachejava.Mustache;
+import com.github.mustachejava.MustacheFactory;
 
 /**
  * Converts a {@link CfpSubmission} and converts it to a {@link MimeMessage}.
@@ -59,8 +65,8 @@ public class CfpToMailTransformer {
 		String templateHtml = SystemInformationUtils.getCfpHtmlEmailTemplate();
 		String templateText = SystemInformationUtils.getCfpTextEmailTemplate();
 
-		String renderedHtmlTemplate = applyStringTemplate(cfpSubmission, templateHtml);
-		String renderedTextTemplate = applyStringTemplate(cfpSubmission, templateText);
+		String renderedHtmlTemplate = applyMustacheTemplate(cfpSubmission, templateHtml);
+		String renderedTextTemplate = applyMustacheTemplate(cfpSubmission, templateText);
 
 		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
 		MimeMessageHelper messageHelper;
@@ -77,11 +83,8 @@ public class CfpToMailTransformer {
 			if (StringUtils.hasText(this.ccUser)) {
 				messageHelper.setCc(this.ccUser);
 			}
-			List<String> speakers = new ArrayList<String>();
-			for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
-				speakers.add(speaker.getFirstLastName());
-			}
-			messageHelper.setSubject("DevNexus 2015 - CFP - " + StringUtils.collectionToCommaDelimitedString(speakers));
+
+			messageHelper.setSubject("DevNexus 2015 - CFP - " + cfpSubmission.getSpeakersAsString(false));
 
 		} catch (MessagingException e) {
 			throw new IllegalStateException("Error creating mail message for CFP: " + cfpSubmission, e);
@@ -90,33 +93,29 @@ public class CfpToMailTransformer {
 		return messageHelper.getMimeMessage();
 	}
 
-	public String applyStringTemplate(CfpSubmission cfpSubmission, String template) {
-		ST stringTemplate = new ST(template, '~', '~');
+	public String applyMustacheTemplate(CfpSubmission cfpSubmission, String template) {
+		Map<String, Object> context = new HashMap<String, Object>();
 
-		stringTemplate.add("description", cfpSubmission.getDescription());
+		context.put("salutation", cfpSubmission.getSpeakersAsString(true));
+		context.put("description", cfpSubmission.getDescription());
+		context.put("presentationType", cfpSubmission.getPresentationType().getName());
+		context.put("skillLevel", cfpSubmission.getSkillLevel().getName());
+		context.put("comments", cfpSubmission.getSlotPreference());
+		context.put("topic", cfpSubmission.getTopic());
+		context.put("title", cfpSubmission.getTitle());
+		context.put("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");
+		context.put("speakers", cfpSubmission.getSpeakers());
 
-		stringTemplate.add("presentationType", cfpSubmission.getPresentationType().getName());
-		stringTemplate.add("skillLevel", cfpSubmission.getSkillLevel().getName());
-		stringTemplate.add("comments", cfpSubmission.getSlotPreference());
-		stringTemplate.add("topic", cfpSubmission.getTopic());
-		stringTemplate.add("title", cfpSubmission.getTitle());
-		stringTemplate.add("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");
+		Writer writer = new StringWriter();
+		MustacheFactory mf = new DefaultMustacheFactory();
+		Mustache mustache = mf.compile(new StringReader(template), "email-notification");
 
-		//TODO
-		stringTemplate.add("firstName", cfpSubmission.getFirstName());
-		stringTemplate.add("lastName", cfpSubmission.getLastName());
-		stringTemplate.add("bio", cfpSubmission.getBio());
-		stringTemplate.add("tshirtSize", cfpSubmission.getTshirtSize());
-		stringTemplate.add("location", cfpSubmission.getLocation());
-		stringTemplate.add("mustReimburseTravelCost", cfpSubmission.isMustReimburseTravelCost());
-		stringTemplate.add("email", cfpSubmission.getEmail());
-		stringTemplate.add("googlePlusId", cfpSubmission.getGooglePlusId());
-		stringTemplate.add("linkedInId", cfpSubmission.getLinkedInId());
-		stringTemplate.add("twitterId", cfpSubmission.getTwitterId());
-		stringTemplate.add("phone", cfpSubmission.getPhone());
+		try {
+			mustache.execute(writer, context).flush();
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
 
-		String renderedTemplate = stringTemplate.render();
-
-		return renderedTemplate;
+		return writer.toString();
 	}
 }

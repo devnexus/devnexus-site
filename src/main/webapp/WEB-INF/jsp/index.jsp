@@ -40,7 +40,8 @@
             </div>
             <div class="col-md-8">
                 <h1 class="center">March 10-12, 2015</h1>
-                <h2 class="text-center">Call for Papers opening October 1st!</h2>
+                <h2 class="text-center">Would you like to present?</h2>
+                <div class="text-center"><a href="${ctx}/s/cfp" class="btn btn-primary btn-lg">Call for Papers is Open!</a></div>
                 <h2 class="text-center"><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf">Would you like to sponsor us?</a></h2>
             </div>
         </div>

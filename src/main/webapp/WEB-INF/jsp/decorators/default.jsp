@@ -66,7 +66,7 @@
 				<li><a href="${scheduleUrl}">Schedule</a></li>
 				<li><a href="${travelUrl}">Travel</a></li>
 				<c:choose>
-					<c:when test="${registrationState eq 'closed'}">Registration Closed</c:when>
+					<c:when test="${registrationState eq 'closed'}"><li><a>Registration Closed</a></li></c:when>
 					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Soon!</strong></a></li></c:when>
 					<c:when test="${registrationState eq 'hide'}"></c:when>
 					<c:otherwise>

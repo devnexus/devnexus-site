@@ -10,11 +10,12 @@
 				<li>Java/JavaEE/Spring</li>
 				<li>HTML5 + JavaScript</li>
 				<li>Data + Integration</li>
-				<li>Alternative Languages on the JVM</li>
+				<li>Alternative JVM Languages</li>
 				<li>User Experience</li>
 				<li>Cloud</li>
 				<li>Agile + Tools</li>
 				<li>Mobile</li>
+				<li>Security</li>
 			</ul>
 		</div> <!-- end banner -->
 	</div>

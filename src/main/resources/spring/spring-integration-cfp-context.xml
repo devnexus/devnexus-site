@@ -38,24 +38,20 @@
 
 		<bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
 			<property name="host" value="${mail.smtp.host}"/>
-			<property name="port" value="#{mailPort}"/>
+			<property name="port" value="${mail.smtp.port}"/>
 			<property name="username" value="${mail.user.id}"/>
 			<property name="password" value="${mail.user.password}"/>
 			<property name="javaMailProperties">
 				<props>
-						<prop key="mail.debug">true</prop>
-	<!--				<prop key="mail.smtp.auth">true</prop>
-						<prop key="mail.smtp.starttls.enable">true</prop> -->
+					<prop key="mail.debug">${mail.debugEnabled}</prop>
+					<prop key="mail.smtp.auth">${mail.authenticationEnabled}</prop>
+					<!-- <prop key="mail.smtp.starttls.enable">true</prop> -->
 				</props>
 			</property>
 		</bean>
 
 		<int-mail:outbound-channel-adapter id="mailAdapter" channel="sendMailChannel"
 			mail-sender="mailSender"/>
-
-		<util:properties id="javaMailProperties">
-
-		</util:properties>
 
 		<int:channel id="errorChannel"/>
 		<int:logging-channel-adapter id="loggit" log-full-message="true" level="ERROR" channel="errorChannel"/>
