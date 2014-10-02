@@ -17,6 +17,7 @@ package com.devnexus.ting.core.model;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -493,6 +494,35 @@ public class CfpSubmission extends BaseModelObject {
 	public void setGithubId(String githubId) {
 		this.githubId = githubId;
 	}
+
+	public String getSpeakersAsString(boolean firstNameOnly) {
+		final StringBuilder stringBuilder = new StringBuilder();
+		final Iterator<CfpSubmissionSpeaker> speakerIterator = this.getSpeakers().iterator();
+
+		boolean isFirst = true;
+
+		while(speakerIterator.hasNext()) {
+			CfpSubmissionSpeaker speaker = speakerIterator.next();
+
+			if (speakerIterator.hasNext() && !isFirst) {
+				stringBuilder.append(", ");
+			}
+			else if (!speakerIterator.hasNext() && !isFirst) {
+				stringBuilder.append(" & ");
+			}
+
+			if (firstNameOnly) {
+				stringBuilder.append(speaker.getFirstName());
+			}
+			else {
+				stringBuilder.append(speaker.getFirstLastName());
+			}
+
+			isFirst = false;
+		}
+		return stringBuilder.toString();
+	}
+
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()

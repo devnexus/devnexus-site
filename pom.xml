@@ -636,12 +636,6 @@
             <artifactId>prettytime</artifactId>
             <version>3.0.2.Final</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>stringtemplate</artifactId>
-            <version>4.0.2</version>
-        </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -665,7 +659,12 @@
             <version>2.2.2</version>
             <type>jar</type>
         </dependency>
-    </dependencies>
+        <dependency>
+          <groupId>com.github.spullara.mustache.java</groupId>
+          <artifactId>compiler</artifactId>
+          <version>0.8.16</version>
+        </dependency>
+      </dependencies>
 
     <inceptionYear>2010</inceptionYear>
     <developers>
@@ -758,11 +757,11 @@
 	</pluginRepositories>
     <profiles>
 		<profile>
-			<!-- When built in OpenShift the 'openshift' profile will be used when 
+			<!-- When built in OpenShift the 'openshift' profile will be used when
 			     				invoking mvn. -->
-			<!-- Use this profile for any OpenShift specific customization your app 
+			<!-- Use this profile for any OpenShift specific customization your app
 			     				will need. -->
-			<!-- By default that is to put the resulting archive into the 'webapps' 
+			<!-- By default that is to put the resulting archive into the 'webapps'
 			     				folder. -->
 			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 			<id>openshift</id>

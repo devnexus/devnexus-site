@@ -141,7 +141,7 @@
 			<td height="100" style="background-color: #0c1620;border-bottom: 5px solid #a3b6bf;" valign="middle">
 				<table width="600" cellpadding="0" cellspacing="0" border="0" align="center">
 					<tr>
-						<td valign="top"><a href="#"><img style="margin-left: 20px;outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://view-project.net/cm/devnex3/images/dn-logo.png" border="0"></a></td>
+						<td valign="top"><a href="#"><img style="margin-left: 20px;outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://devnexus.com/images/logos/logo_devnexus_440.png" border="0"></a></td>
 					</tr>
 				</table>
 		</td>
@@ -150,11 +150,7 @@
 		<td style="padding: 20px;" valign="top">
 		<table width="600" cellpadding="0" cellspacing="0" border="0" align="center">
 			<tr>
-				<td style="padding: 5px 0;" valign="top"><img style="margin-left: 20px;outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://view-project.net/cm/devnex3/images/check-icon.png" border="0"></td>
-			</tr>
-
-			<tr>
-				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top">Dear ~firstName~,</td>
+				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top">Dear {{salutation}},</td>
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0;font-size: 20px;" valign="top"><strong>Thank you for your submission!</strong><br/>We received your information and will review your submission as soon as possible. Please expect a confirmation over the coming weeks. If you have any questions, please don't hesitate to contact us at <strong>info@ajug.org</strong>.</td>
@@ -163,36 +159,43 @@
 				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top"><strong>Summary of your submitted information:</strong></td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
-					<strong>First Name</strong>: ~firstName~<br/>
-					<strong>Last Name</strong>: ~lastName~<br/>
-					<strong>Email</strong>: ~email~<br/>
-					<strong>Phone</strong>: ~phone~<br/>
-					<strong>Location</strong>: ~location~<br/>
-				</td>
-			</tr>
-			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Bio</strong></td>
-			</tr>
-			<tr>
-				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">~bio~</td>
+				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Title:</strong> {{title}}</td>
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Abstract</strong></td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Title:</strong> ~title~</td>
+				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top">{{description}}</td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top">~description~</td>
-			</tr>
-			<tr>
-				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top"><strong>Topic:</strong> ~topic~</td>
+				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top"><strong>Topic:</strong> {{topic}}</td>
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
-					<strong>Skill Level</strong>: ~skillLevel~<br/>
-					<strong>Presentation Type</strong>: ~presentationType~
+					<strong>Skill Level</strong>: {{skillLevel}}<br/>
+					<strong>Presentation Type</strong>: {{presentationType}}
+					<strong>Can we record your session</strong>? {{sessionRecordingApproved}}<br/>
+				</td>
+			</tr>
+			<tr>
+				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Comments</strong></td>
+			</tr>
+			<tr>
+					<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">{{comments}}</td>
+			</tr>
+{{#speakers}}
+			<tr>
+				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top"><strong>Speakers</strong></td>
+			</tr>
+			<tr>
+				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
+					<strong>First Name</strong>: {{firstName}}<br/>
+					<strong>Last Name</strong>: {{lastName}}<br/>
+					<strong>Email</strong>: {{email}}<br/>
+					<strong>Phone</strong>: {{phone}}<br/>
+					<strong>Location</strong>: {{location}}<br/>
+					<strong>Do you require travel cost reimbursement</strong>? {{mustReimburseTravelCost}}<br/>
+					<strong>T-Shirt Size</strong>: {{tshirtSize}}<br/>
 				</td>
 			</tr>
 			<tr>
@@ -200,35 +203,28 @@
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 40px;font-size: 16px;" valign="top">
-					<strong>Twitter Id</strong>: ~twitterId~<br/>
-					<strong>Google Plus Id</strong>: ~googlePlusId~<br/>
-					<strong>LinkedIn Id</strong>: ~linkedInId~<br/>
+					<strong>Twitter Id</strong>: {{twitterId}}{{^twitterId}}N/A{{/twitterId}}<br/>
+					<strong>Google Plus Id</strong>: {{googlePlusId}}{{^googlePlusId}}N/A{{/googlePlusId}}<br/>
+					<strong>LinkedIn Id</strong>: {{linkedInId}}{{^linkedInId}}N/A{{/linkedInId}}<br/>
+					<strong>Lanyrd Id</strong>: {{lanyrdId}}{{^lanyrdId}}N/A{{/lanyrdId}}<br/>
+					<strong>Github Id</strong>: {{githubId}}{{^githubId}}N/A{{/githubId}}<br/>
 				</td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Miscellaneous</strong></td>
+					<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Bio</strong></td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
-					<strong>T-Shirt Size</strong>: ~tshirtSize~<br/>
-					<strong>Can we record your session</strong>? ~sessionRecordingApproved~<br/>
-					<strong>Do you require travel cost reimbursement</strong>? ~mustReimburseTravelCost~<br/>
-				</td>
+					<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">{{bio}}</td>
 			</tr>
-			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Comments</strong></td>
-			</tr>
-			<tr>
-				<td style=" line-height: 150%; padding: 0 0 40px;font-size: 16px;" valign="top">~comments~</td>
-			</tr>
+{{/speakers}}
 			<tr>
 				<td style=" line-height: 150%; padding: 20px 0 40px;font-size: 16px;" valign="top">Cheers,<br/>
 
 				The DevNexus organizers</td>
 			</tr>
 			<tr>
-				<td style="padding: 30px 0;font-size: 14px; color: #a0acb2; border-top: 1px solid #fff;" valign="top"><img style="margin-bottom: 8px;outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://view-project.net/cm/devnex3/images/dn-logo-footer.png" border="0"><br />
-				&copy; 2013 Atlanta Java Users Group (AJUG)</td>
+				<td style="padding: 30px 0;font-size: 14px; color: #a0acb2; border-top: 1px solid #fff;" valign="top"><img style="margin-bottom: 8px;outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://devnexus.com/images/logos/logo_devnexus_260.png" border="0"><br />
+				&copy; 2015 Atlanta Java Users Group (AJUG)</td>
 			</tr>
 		</table>
 

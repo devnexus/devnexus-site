@@ -1,48 +1,63 @@
-Dear ~firstName~,
+Dear {{{salutation}}},
 
 THANK YOU for your submission to DevNexus 2015!
 
 We received your information and will review your submission as soon as possible. Please expect a confirmation over the coming weeks. If you have any questions, please don't hesitate to contact us at info@ajug.org.
 
-## Summary of your submitted information
+Summary of your submitted information
+=======================================
 
-### Personal Information
+========
+Abstract
+========
 
-**First Name**: ~firstName~
-**Last Name**: ~lastName~
-**Email**: ~email~
-**Phone**: ~phone~
-**Location**: ~location~
+Title: {{{title}}}
 
-### Bio
+{{{description}}}
 
-~bio~
+Topic:             {{topic}}
+Skill Level:       {{skillLevel}}
+Presentation Type: {{presentationType}}
 
-### Abstract
+Can we record your session? {{sessionRecordingApproved}}
 
-**Title**: ~title~
+Comments
+---------------------------------------
 
-~description~
+{{{comments}}}
 
-**Topic**: ~topic~
-**Skill Level**: ~skillLevel~
-**Presentation Type**: ~presentationType~
+{{#speakers}}
+=======================================
+Speaker
+=======================================
 
-### Social Links
+First Name:       {{{firstName}}}
+Last Name:        {{{lastName}}}
+Email:            {{{email}}}
+Phone:            {{{phone}}}
 
-**Twitter Id**: ~twitterId~
-**Google Plus Id**: ~googlePlusId~
-**LinkedIn Id**: ~linkedInId~
+Location:         {{{location}}}
+Do you require travel cost reimbursement?: {{{mustReimburseTravelCost}}}
 
-### Miscellaneous
+T-Shirt Size:     {{{tshirtSize}}}
 
-**T-Shirt Size**: ~tshirtSize~
-**Can we record your session**? ~sessionRecordingApproved~
-**Do you require travel cost reimbursement?**: ~mustReimburseTravelCost~
+Social Links
+---------------------------------------
 
-### Comments
+Twitter Id:       {{twitterId}}{{^twitterId}}N/A{{/twitterId}}
+Google Plus Id:   {{googlePlusId}}{{^googlePlusId}}N/A{{/googlePlusId}}
+LinkedIn Id:      {{linkedInId}}{{^linkedInId}}N/A{{/linkedInId}}
+Lanyrd Id:        {{lanyrdId}}{{^lanyrdId}}N/A{{/lanyrdId}}
+Github Id:        {{githubId}}{{^githubId}}N/A{{/githubId}}
 
-~comments~
+Bio
+---------------------------------------
+
+{{{bio}}}
+
+{{/speakers}}
+
+Thanks a million!
 
 Cheers,
 
