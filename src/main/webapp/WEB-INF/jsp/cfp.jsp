@@ -285,6 +285,28 @@
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
 				</div>
 			</div>
+			<spring:bind path="speakers[${status.index}].lanyrdId">
+				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+			</spring:bind>
+			<div class="form-group${errorClass}">
+				<label for="speakers[${status.index}].lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
+				<div class="col-lg-10">
+					<form:input cssClass="form-control" path="speakers[${status.index}].lanyrdId" id="speakers[${status.index}].lanyrdId" maxlength="255" tabindex="14"/>
+					<form:errors path="speakers[${status.index}].lanyrdId" cssClass="fieldError"/>
+					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
+				</div>
+			</div>
+			<spring:bind path="speakers[${status.index}].githubId">
+				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+			</spring:bind>
+			<div class="form-group${errorClass}">
+				<label for="speakers[${status.index}].githubId" class="col-lg-2 control-label">GithubId Username</label>
+				<div class="col-lg-10">
+					<form:input cssClass="form-control" path="speakers[${status.index}].githubId" id="speakers[${status.index}].githubId" maxlength="255" tabindex="14"/>
+					<form:errors path="speakers[${status.index}].githubId" cssClass="fieldError"/>
+					<span class="help-block">Please provide just the GitHub username, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
+				</div>
+			</div>
 			<h3 style="clear: left;">Miscellaneous</h3>
 			<p style="clear: left;">Please let us know your T-shirt size, you we can ensure we have the right size.</p>
 

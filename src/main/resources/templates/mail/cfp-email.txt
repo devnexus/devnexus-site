@@ -48,7 +48,7 @@ Twitter Id:       {{twitterId}}{{^twitterId}}N/A{{/twitterId}}
 Google Plus Id:   {{googlePlusId}}{{^googlePlusId}}N/A{{/googlePlusId}}
 LinkedIn Id:      {{linkedInId}}{{^linkedInId}}N/A{{/linkedInId}}
 Lanyrd Id:        {{lanyrdId}}{{^lanyrdId}}N/A{{/lanyrdId}}
-Github Id:        {{githubId}}{{^githubId}}N/A{{/githubId}}
+Github Username:  {{githubId}}{{^githubId}}N/A{{/githubId}}
 
 Bio
 ---------------------------------------

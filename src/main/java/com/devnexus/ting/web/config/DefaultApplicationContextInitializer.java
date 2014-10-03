@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,11 @@ import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
 
+/**
+ *
+ * @author Gunnar Hillert
+ *
+ */
 public class DefaultApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(DefaultApplicationContextInitializer.class);
@@ -38,7 +43,7 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 
 		final CloudEnvironment env = new CloudEnvironment();
 		if (env.getInstanceInfo() != null) {
-			System.out.println("cloud API: " + env.getCloudApiUri());
+			LOGGER.info("cloud API: " + env.getCloudApiUri());
 			applicationContext.getEnvironment().setActiveProfiles("cloud");
 		}
 		else {
@@ -56,15 +61,16 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
 
 		if (environment.acceptsProfiles("standalone")) {
-			String tingHome = environment.getProperty(Apphome.APP_HOME_DIRECTORY);
+			final String tingHome = environment.getProperty(Apphome.APP_HOME_DIRECTORY);
+			final ResourcePropertySource propertySource;
+			final String productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
 			try {
-				ResourcePropertySource source = new ResourcePropertySource("file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME);
-				environment.getPropertySources().addFirst(source);
+				propertySource = new ResourcePropertySource(productionPropertySourceLocation);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new IllegalStateException("Unable to get ResourcePropertySource '" + productionPropertySourceLocation + "'", e);
 			}
-			System.out.println("Properties for standalone mode loaded");
+			environment.getPropertySources().addFirst(propertySource);
+			LOGGER.info("Properties for standalone mode loaded [" + productionPropertySourceLocation + "]");
 
 			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class, Boolean.FALSE);
 
@@ -80,15 +86,17 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 
 		}
 		else {
+			final String demoPropertySourceLocation = "classpath:ting-demo.properties";
+			final ResourcePropertySource propertySource;
 			try {
-				environment.getPropertySources().addFirst(new ResourcePropertySource("classpath:ting-demo.properties"));
+				propertySource = new ResourcePropertySource(demoPropertySourceLocation);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new IllegalStateException("Unable to get ResourcePropertySource '" + demoPropertySourceLocation + "'", e);
 			}
-			System.out.println("Properties for demo mode loaded");
+			environment.getPropertySources().addFirst(propertySource);
+			LOGGER.info("Properties for demo mode loaded [" + demoPropertySourceLocation + "]");
 		}
- 
+
 	}
 
 }

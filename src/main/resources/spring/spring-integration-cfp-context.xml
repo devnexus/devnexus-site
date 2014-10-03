@@ -39,8 +39,8 @@
 		<bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
 			<property name="host" value="${mail.smtp.host}"/>
 			<property name="port" value="${mail.smtp.port}"/>
-			<property name="username" value="${mail.user.id}"/>
-			<property name="password" value="${mail.user.password}"/>
+<!-- 			<property name="username" value="${mail.user.id}"/>
+			<property name="password" value="${mail.user.password}"/> -->
 			<property name="javaMailProperties">
 				<props>
 					<prop key="mail.debug">${mail.debugEnabled}</prop>
