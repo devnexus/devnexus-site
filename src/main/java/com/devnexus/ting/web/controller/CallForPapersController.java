@@ -226,7 +226,9 @@ public class CallForPapersController {
 			cfpSubmissionSpeakerToSave.setEmail(cfpSubmissionSpeaker.getEmail());
 			cfpSubmissionSpeakerToSave.setBio(cfpSubmissionSpeaker.getBio());
 			cfpSubmissionSpeakerToSave.setFirstName(cfpSubmissionSpeaker.getFirstName());
+			cfpSubmissionSpeakerToSave.setGithubId(cfpSubmissionSpeaker.getGithubId());
 			cfpSubmissionSpeakerToSave.setGooglePlusId(cfpSubmissionSpeaker.getGooglePlusId());
+			cfpSubmissionSpeakerToSave.setLanyrdId(cfpSubmissionSpeaker.getLanyrdId());
 			cfpSubmissionSpeakerToSave.setLastName(cfpSubmissionSpeaker.getLastName());
 			cfpSubmissionSpeakerToSave.setLinkedInId(cfpSubmissionSpeaker.getLinkedInId());
 			cfpSubmissionSpeakerToSave.setTwitterId(cfpSubmissionSpeaker.getTwitterId());
