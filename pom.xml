@@ -707,6 +707,11 @@
             <url>https://repo.spring.io/libs-milestone</url>
         </repository>
         <repository>
+            <id>repo.spring.io.snapshot</id>
+            <name>Spring Maven Ext Release Repository</name>
+            <url>https://repo.spring.io/ext-snapshot-local</url>
+        </repository>
+        <repository>
             <id>repo.spring.io.extrelease</id>
             <name>Spring Maven Ext Release Repository</name>
             <url>https://repo.spring.io/ext-release-local</url>
