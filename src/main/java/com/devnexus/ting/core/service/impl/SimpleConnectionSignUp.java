@@ -32,7 +32,7 @@ public final class SimpleConnectionSignUp implements ConnectionSignUp {
     private final AtomicLong userIdSequence = new AtomicLong();
 
     public String execute(Connection<?> connection) {
-        ((Google) connection.getApi()).userOperations();
+        //FIXME ((Google) connection.getApi()).userOperations();
         return Long.toString(userIdSequence.incrementAndGet());
     }
 
