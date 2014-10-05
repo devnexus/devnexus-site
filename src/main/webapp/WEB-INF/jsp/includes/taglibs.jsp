@@ -22,6 +22,3 @@ response.setHeader("Expires","0");
 <c:if test="${event eq null}">
 	<c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
 </c:if>
-<head>
-	<meta name="decorator" content="default"/>
-</head>

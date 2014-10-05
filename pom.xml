@@ -28,7 +28,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.integration.version>4.0.4.RELEASE</spring.integration.version>
         <spring.security.version>3.2.1.RELEASE</spring.security.version>
-        <org.springframework.social-version>1.1.0.M4</org.springframework.social-version>
+        <org.springframework.social-version>1.1.0.RELEASE</org.springframework.social-version>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <org.hibernate.version>4.2.5.Final</org.hibernate.version>
     </properties>
@@ -199,13 +199,13 @@
         <dependency>
             <groupId>com.google.oauth-client</groupId>
             <artifactId>google-oauth-client</artifactId>
-            <version>1.17.0-rc</version>
+            <version>1.19.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client-jackson2</artifactId>
-            <version>1.17.0-rc</version>
+            <version>1.19.0</version>
         </dependency>
 
 
@@ -296,7 +296,7 @@
         <dependency>
             <groupId>org.sitemesh</groupId>
             <artifactId>sitemesh</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
+            <version>3.0.0</version>
         </dependency>
 
         <dependency>
@@ -498,7 +498,7 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-google</artifactId>
-            <version>1.0.0.BUILD-SNAPSHOT</version>
+            <version>1.0.0.RELEASE</version>
         </dependency>
 
         <!-- Other -->
@@ -572,7 +572,22 @@
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <version>2.2.2</version>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.3</version>
         </dependency>
 
         <dependency>
@@ -746,31 +761,31 @@
                                 <enabled>true</enabled>
                         </snapshots>
                 </pluginRepository>
-	</pluginRepositories>
+  </pluginRepositories>
     <profiles>
-		<profile>
-			<!-- When built in OpenShift the 'openshift' profile will be used when
-			     				invoking mvn. -->
-			<!-- Use this profile for any OpenShift specific customization your app
-			     				will need. -->
-			<!-- By default that is to put the resulting archive into the 'webapps'
-			     				folder. -->
-			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-			<id>openshift</id>
-			<build>
-				<finalName>devnexus</finalName>
-				<plugins>
-					<plugin>
-						<artifactId>maven-war-plugin</artifactId>
-						<version>2.1.1</version>
-						<configuration>
-							<outputDirectory>webapps</outputDirectory>
-							<warName>ROOT</warName>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+    <profile>
+      <!-- When built in OpenShift the 'openshift' profile will be used when
+                   invoking mvn. -->
+      <!-- Use this profile for any OpenShift specific customization your app
+                   will need. -->
+      <!-- By default that is to put the resulting archive into the 'webapps'
+                   folder. -->
+      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+      <id>openshift</id>
+      <build>
+        <finalName>devnexus</finalName>
+        <plugins>
+          <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.1.1</version>
+            <configuration>
+              <outputDirectory>webapps</outputDirectory>
+              <warName>ROOT</warName>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
 

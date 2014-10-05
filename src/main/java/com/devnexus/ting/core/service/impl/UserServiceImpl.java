@@ -35,7 +35,6 @@ import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.web.SignInAdapter;
 import org.springframework.social.google.api.Google;
 import org.springframework.social.google.api.plus.Person;
-import org.springframework.social.google.api.userinfo.GoogleUserInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -144,15 +143,15 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         assert false;
 
         Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
-        GoogleUserInfo info = ((Google) connection.getApi()).userOperations().getUserInfo();
+        //FIXME GoogleUserInfo info = ((Google) connection.getApi()).userOperations().getUserInfo();
         User u = new User();
-        u.setEmail(info.getEmail());
+      //FIXME u.setEmail(info.getEmail());
         u.setFirstName(person.getGivenName());
         u.setLastName(person.getFamilyName());
-        u.setUsername(info.getId());
+      //FIXME u.setUsername(info.getId());
         u.setUserAuthorities(new HashSet<UserAuthority>(1));
         u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
-        u.setId((long) info.getId().hashCode());
+      //FIXME  u.setId((long) info.getId().hashCode());
 
         if (null == userDao.getUserByUsername(u.getUsername())) {
             byte[] password = new byte[16];
@@ -165,7 +164,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         }
 
         u = userDao.getUserByUsername(u.getUsername());
-        
+
         SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
 
         return null;
@@ -175,5 +174,5 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
     public void initializeUserforEvent(User user, String eventKey) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
