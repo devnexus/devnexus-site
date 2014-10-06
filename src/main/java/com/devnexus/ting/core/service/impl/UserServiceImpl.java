@@ -143,15 +143,16 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         assert false;
 
         Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
-        //FIXME GoogleUserInfo info = ((Google) connection.getApi()).userOperations().getUserInfo();
+
         User u = new User();
-      //FIXME u.setEmail(info.getEmail());
+
+        u.setEmail(person.getAccountEmail());
         u.setFirstName(person.getGivenName());
         u.setLastName(person.getFamilyName());
-      //FIXME u.setUsername(info.getId());
+        u.setUsername(person.getId());
         u.setUserAuthorities(new HashSet<UserAuthority>(1));
         u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
-      //FIXME  u.setId((long) info.getId().hashCode());
+        u.setId((long) person.getId().hashCode());
 
         if (null == userDao.getUserByUsername(u.getUsername())) {
             byte[] password = new byte[16];
@@ -175,4 +176,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private String getFirstEmailAddress(Person person) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
