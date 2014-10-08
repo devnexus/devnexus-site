@@ -111,6 +111,12 @@
                src="${ctx}/img/sponsors/sonatype_key.png"/></a>
             <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
                src="${ctx}/images/sponsorship-available.png"/></a>
+            <a href="http://www.altisourcelabs.com/">
+                <img class="logo" alt="Altisource Labs" src="${ctx}/img/sponsors/altisource.png"/>
+            </a>
+            <a href="http://www.aspose.com/">
+                <img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/>
+            </a>
     </div>
     <div id="cocktail">
         <h3>Cocktail Hour Sponsor</h3>
