@@ -21,13 +21,15 @@ import javax.persistence.PersistenceContext;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
+import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.web.config.PersistenceConfig;
 
 /**
  * Base class for Dao Test Cases.
@@ -36,19 +38,21 @@ import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers=DefaultApplicationContextInitializer.class,
-					locations={ "classpath:spring/mainApplicationContext.xml"})
+@ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
+					classes=PersistenceConfig.class)
 @Transactional
-@ActiveProfiles({"default"})
+@ActiveProfiles({SpringProfile.DEFAULT})
+@Configuration
 public abstract class BaseDaoIntegrationTest {
 
 	protected @PersistenceContext EntityManager entityManager;
 
-	@Autowired private SystemSetupService systemSetupService;
+	@Autowired private SystemDao systemDao;
 
 	@Before
 	public void setup() {
 //		systemSetupService.setupDatabase();
 //		systemSetupService.setupDemoData();
 	}
+
 }

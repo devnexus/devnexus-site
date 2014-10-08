@@ -28,6 +28,7 @@ import org.springframework.core.io.support.ResourcePropertySource;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
+import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
 
 /**
@@ -60,7 +61,7 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
 
-		if (environment.acceptsProfiles("standalone")) {
+		if (environment.acceptsProfiles(SpringProfile.STANDALONE)) {
 			final String tingHome = environment.getProperty(Apphome.APP_HOME_DIRECTORY);
 			final ResourcePropertySource propertySource;
 			final String productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
@@ -71,19 +72,6 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			}
 			environment.getPropertySources().addFirst(propertySource);
 			LOGGER.info("Properties for standalone mode loaded [" + productionPropertySourceLocation + "]");
-
-			Boolean twitterEnabled = environment.getProperty("twitter.enabled", Boolean.class, Boolean.FALSE);
-
-			if (twitterEnabled) {
-				applicationContext.getEnvironment().addActiveProfile("twitter-enabled");
-			}
-
-			Boolean mailEnabled = environment.getProperty("mail.enabled", Boolean.class, Boolean.FALSE);
-
-			if (mailEnabled) {
-				applicationContext.getEnvironment().addActiveProfile("mail-enabled");
-			}
-
 		}
 		else {
 			final String demoPropertySourceLocation = "classpath:ting-demo.properties";
@@ -95,6 +83,20 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			}
 			environment.getPropertySources().addFirst(propertySource);
 			LOGGER.info("Properties for demo mode loaded [" + demoPropertySourceLocation + "]");
+		}
+
+		final boolean mailEnabled      = environment.getProperty("mail.enabled",      Boolean.class, Boolean.FALSE);
+		final boolean twitterEnabled   = environment.getProperty("twitter.enabled",   Boolean.class, Boolean.FALSE);
+		final boolean websocketEnabled = environment.getProperty("websocket.enabled", Boolean.class, Boolean.FALSE);
+
+		if (mailEnabled) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.MAIL_ENABLED);
+		}
+		if (twitterEnabled) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.TWITTER_ENABLED);
+		}
+		if (websocketEnabled) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.WEBSOCKET_ENABLED);
 		}
 
 	}

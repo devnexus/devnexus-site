@@ -16,12 +16,15 @@
 package com.devnexus.ting.web.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.simp.config.ChannelRegistration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+
+import com.devnexus.ting.common.SpringProfile;
 
 /**
  *
@@ -31,6 +34,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 @Configuration
 @EnableWebSocketMessageBroker
 @EnableScheduling
+@Profile(SpringProfile.WEBSOCKET_ENABLED)
 public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
 	@Override
@@ -46,7 +50,6 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry registry) {
 		registry.enableSimpleBroker("/queue", "/topic");
-//		configurer.enableStompBrokerRelay("/queue/", "/topic/");
 		registry.setApplicationDestinationPrefixes("/app");
 	}
 

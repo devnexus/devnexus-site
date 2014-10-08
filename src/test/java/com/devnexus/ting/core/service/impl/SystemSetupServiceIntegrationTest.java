@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,26 +15,21 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import java.util.Collection;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.SpringProfile;
-import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.SystemSetupService;
+import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
@@ -44,15 +39,16 @@ import com.devnexus.ting.web.config.ServicesConfig;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
+@ContextConfiguration(initializers=DefaultApplicationContextInitializer.class,
 					classes=ServicesConfig.class)
 @Transactional
 @ActiveProfiles({SpringProfile.DEFAULT})
-public class UserServiceIntegrationTest {
+@Ignore
+public class SystemSetupServiceIntegrationTest {
 
 	protected @PersistenceContext EntityManager entityManager;
 
-	@Autowired private UserService userService;
+	@Autowired private SystemSetupService systemSetupService;
 
 	@Before
 	public void setup() {
@@ -60,17 +56,4 @@ public class UserServiceIntegrationTest {
 //		systemSetupService.setupDemoData();
 	}
 
-	@Test
-	public void checkRoles() {
-
-		entityManager.flush();
-		final UserDetails userDetails = userService.loadUserByUsername("admin");
-
-		Assert.assertNotNull(userDetails);
-
-		final Collection<? extends GrantedAuthority> authorities = userDetails.getAuthorities();
-
-		Assert.assertTrue("Was expecting 1 authority but got: " + authorities.size(), authorities.size() == 1);
-
-	}
 }

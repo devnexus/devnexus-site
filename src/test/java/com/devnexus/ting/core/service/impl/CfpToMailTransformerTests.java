@@ -22,6 +22,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
@@ -36,7 +37,7 @@ import com.devnexus.ting.core.model.SkillLevel;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-@ActiveProfiles({"mail-enabled"})
+@ActiveProfiles({SpringProfile.MAIL_ENABLED})
 public class CfpToMailTransformerTests {
 
 	@Autowired
