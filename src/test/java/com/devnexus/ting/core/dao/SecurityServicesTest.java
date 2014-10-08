@@ -16,16 +16,25 @@
 package com.devnexus.ting.core.dao;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
  * @author Gunnar Hillert
  */
 @SuppressWarnings("deprecation")
-public class SecurityServicesTest extends BaseDaoIntegrationTest {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
+classes=ServicesConfig.class)
+public class SecurityServicesTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityServicesTest.class);
 

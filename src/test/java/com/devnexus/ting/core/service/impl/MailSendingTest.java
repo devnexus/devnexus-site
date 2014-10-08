@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,10 +23,11 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
+import com.devnexus.ting.web.config.MainConfig;
 
 /**
  *
@@ -35,8 +36,8 @@ import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-		initializers=DefaultApplicationContextInitializer.class,
-		locations={ "classpath:spring/mainApplicationContext.xml"})
+		initializers=IntegrationTestApplicationContextInitializer.class,
+				classes=MainConfig.class)
 public class MailSendingTest {
 
 	@Autowired

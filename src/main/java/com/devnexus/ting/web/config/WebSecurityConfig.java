@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.web.config;
 
-import org.jasypt.digest.StandardStringDigester;
 import org.jasypt.springsecurity3.authentication.encoding.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -34,7 +33,11 @@ import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired UserDetailsService userDetailsService;
+	@Autowired
+	private UserDetailsService userDetailsService;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -51,23 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-	}
-
-	@Bean
-	public StandardStringDigester stringDigester() {
-		StandardStringDigester standardStringDigester = new StandardStringDigester();
-		standardStringDigester.setAlgorithm("SHA-512");
-		standardStringDigester.setIterations(100000);
-		standardStringDigester.setSaltSizeBytes(16);
-		return standardStringDigester;
-	}
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		PasswordEncoder passwordEncoder = new PasswordEncoder();
-		passwordEncoder.setStringDigester(stringDigester());
-		return passwordEncoder;
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
 	}
 
 	@Bean
