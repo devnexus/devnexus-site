@@ -67,7 +67,7 @@
 				<li><a href="${travelUrl}">Travel</a></li>
 				<c:choose>
 					<c:when test="${registrationState eq 'closed'}"><li><a>Registration Closed</a></li></c:when>
-					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Soon!</strong></a></li></c:when>
+					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Tickets on-sale 11/1/14!</strong></a></li></c:when>
 					<c:when test="${registrationState eq 'hide'}"></c:when>
 					<c:otherwise>
 						<li><a href="${registrationUrl}">Register</a></li>
@@ -115,7 +115,7 @@
                     <div class="col-md-3">
                         <h3>Attend</h3>
                         <ul id="col">
-                            <li><a href="${registrationUrl}">Sold Out!</a></li>
+                            <li><a href="${registrationUrl}">Tickets on-sale 11/1/14!</a></li>
                             <li><a href="${travelUrl}">Travel</a></li>
                         </ul>
                     </div>
