@@ -20,8 +20,8 @@
 
     <properties>
         <java-version>1.7</java-version>
-        <org.cloudfoundry-version>0.8.1</org.cloudfoundry-version>
-        <org.springframework-version>4.0.7.RELEASE</org.springframework-version>
+        <org.cloudfoundry-version>0.8.6</org.cloudfoundry-version>
+        <org.springframework-version>4.1.1.RELEASE</org.springframework-version>
         <org.aspectj-version>1.6.9</org.aspectj-version>
         <org.slf4j-version>1.5.10</org.slf4j-version>
         <jawr.debug.on>true</jawr.debug.on>
@@ -302,7 +302,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.1.2</version>
+            <version>1.2</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -400,7 +400,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>1.10.4</version>
+            <version>1.10.8</version>
             <scope>test</scope>
         </dependency>
 
@@ -540,31 +540,11 @@
             <artifactId>commons-fileupload</artifactId>
             <version>1.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.jmesa</groupId>
-            <artifactId>jmesa</artifactId>
-            <version>3.0.4</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>xwork</artifactId>
-                    <groupId>com.opensymphony</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-webmvc-portlet</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>itext</artifactId>
-                    <groupId>com.lowagie</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
 
         <dependency>
-            <groupId>net.java.dev.rome</groupId>
+            <groupId>com.rometools</groupId>
             <artifactId>rome</artifactId>
-            <version>1.0.0</version>
+            <version>1.5.0</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -610,11 +590,6 @@
 
         <!-- Databases -->
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.25</version>
-        </dependency>
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -677,7 +652,7 @@
         <dependency>
           <groupId>com.github.spullara.mustache.java</groupId>
           <artifactId>compiler</artifactId>
-          <version>0.8.16</version>
+          <version>0.8.17</version>
         </dependency>
       </dependencies>
 
