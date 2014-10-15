@@ -105,6 +105,8 @@
         <h3>Silver Sponsors</h3>
             <a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
                src="${ctx}/img/sponsors/coverity.png"/></a>
+            <a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
+               src="${ctx}/img/sponsors/Anteo.png"/></a>
             <a href="http://www.vaadin.com/"><img class="logo" alt="Vaadin"
                src="${ctx}/img/sponsors/vaadin.png"/></a>
             <a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
@@ -120,7 +122,7 @@
     </div>
     <div id="cocktail">
         <h3>Cocktail Hour Sponsor</h3>
-        <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
-               src="${ctx}/images/sponsorship-available.png"/></a>
+        <a href="http://mandrill.com/"><img class="logo" alt="Mandrill by MailChimp"
+               src="${ctx}/img/sponsors/mandrill.png"/></a>
     </div>
 </div>
