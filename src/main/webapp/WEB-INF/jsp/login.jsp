@@ -7,7 +7,7 @@
     </c:if>
 
     <form class="form-group" name="j_spring_security_check" id="j_acegi_security_check" method="POST"
-          action="${ctx}/login" role="form" style="margin: 15px">
+          action="${ctx}/s/login" role="form" style="margin: 15px">
         <div class="form-group">
             <h2>Login</h2>
 

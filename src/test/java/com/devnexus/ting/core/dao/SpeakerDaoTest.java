@@ -20,6 +20,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.model.Speaker;
 
@@ -27,6 +28,7 @@ import com.devnexus.ting.core.model.Speaker;
  * @author Gunnar Hillert
  *
  */
+@Transactional
 public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SpeakerDao speakerDao;

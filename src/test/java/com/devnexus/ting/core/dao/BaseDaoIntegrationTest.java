@@ -29,7 +29,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.web.config.PersistenceConfig;
+import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
  * Base class for Dao Test Cases.
@@ -39,20 +41,20 @@ import com.devnexus.ting.web.config.PersistenceConfig;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
-					classes=PersistenceConfig.class)
-@Transactional
+					classes=ServicesConfig.class)
 @ActiveProfiles({SpringProfile.DEFAULT})
 @Configuration
 public abstract class BaseDaoIntegrationTest {
 
 	protected @PersistenceContext EntityManager entityManager;
 
+	@Autowired private SystemSetupService systemSetupService;
+
 	@Autowired private SystemDao systemDao;
 
 	@Before
 	public void setup() {
-//		systemSetupService.setupDatabase();
-//		systemSetupService.setupDemoData();
+		systemSetupService.setupDatabase();
 	}
 
 }

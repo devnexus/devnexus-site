@@ -23,12 +23,14 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.model.FileData;
 
 /**
  * @author Gunnar Hillert
  */
+@Transactional
 public class DocumentDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private DocumentDao documentDao;

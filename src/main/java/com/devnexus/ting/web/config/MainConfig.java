@@ -18,9 +18,7 @@ package com.devnexus.ting.web.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Profile;
 
-import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 
 
@@ -37,7 +35,6 @@ import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 })
 public class MainConfig {
 
-	@Profile(SpringProfile.DEMO)
 	@Bean
 	ContextRefreshedEventListener seedDataEventListener() {
 		return new ContextRefreshedEventListener();

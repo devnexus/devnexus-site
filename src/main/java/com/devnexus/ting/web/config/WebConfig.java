@@ -27,7 +27,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.convert.ConversionService;
+import org.springframework.core.convert.support.ConfigurableConversionService;
 import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.MediaType;
@@ -85,10 +85,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	private Jaxb2Marshaller jaxbMarshaller;
 
 	@Autowired
-	private ConversionService conversionService;
+	private ConfigurableConversionService conversionService;
 
 	@Autowired
 	private MessageSource messageSource;
+
 
 //	@Autowired
 //	private Validator validator;
@@ -109,7 +110,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToRoom());
 		registry.addConverter(new StringToSkillLevel());
 		registry.addConverter(new StringToPresentationType());
-		super.addFormatters(registry);
 	}
 
 	/* (non-Javadoc)
@@ -170,6 +170,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
 
 		final ConfigurableWebBindingInitializer bindingInitializer = new ConfigurableWebBindingInitializer();
+
+		conversionService.addConverter(new StringToEvent());
+		conversionService.addConverter(new StringToRoom());
+		conversionService.addConverter(new StringToSkillLevel());
+		conversionService.addConverter(new StringToPresentationType());
+
 		bindingInitializer.setConversionService(conversionService);
 		bindingInitializer.setValidator(validator());
 

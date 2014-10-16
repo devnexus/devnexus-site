@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,6 @@ import com.devnexus.ting.core.service.SystemSetupService;
 /**
  *
  * @author Gunnar Hillert
- * @since 2.0
  *
  */
 public class ContextRefreshedEventListener implements
@@ -39,18 +38,19 @@ public class ContextRefreshedEventListener implements
 	@Autowired
 	private SystemSetupService systemSetupService;
 
-	@Autowired Environment environment;
+	@Autowired
+	private Environment environment;
 
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 
-		// From: http://forum.springsource.org/showthread.php?t=84312&page=2
-		//configurer.toString();
-		if (event.getApplicationContext().getParent() == null) {
-			LOGGER.info("Setting up database...");
-			systemSetupService.setupDatabase();
+		if (environment.acceptsProfiles("demo")) {
+			// From: http://forum.springsource.org/showthread.php?t=84312&page=2
+			//configurer.toString();
+			if (event.getApplicationContext().getParent() == null) {
+				LOGGER.info("Setting up database...");
+				systemSetupService.setupDatabase();
+			}
 		}
-
 	}
-
 }

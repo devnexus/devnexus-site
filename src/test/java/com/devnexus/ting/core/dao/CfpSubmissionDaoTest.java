@@ -18,8 +18,12 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
@@ -32,6 +36,9 @@ import com.devnexus.ting.core.model.SkillLevel;
  * @author Gunnar Hillert
  *
  */
+@Transactional
+@DirtiesContext(classMode=ClassMode.AFTER_EACH_TEST_METHOD)
+@Ignore
 public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private CfpSubmissionDao cfpSubmissionDao;
@@ -44,13 +51,14 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 	}
 
 	@Test
-	public void testGetCpsForEvent() {
+	public void testGetCfsForEvent() {
 		Event event = eventDao.getCurrentEvent();
 		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.getCfpSubmissions(event.getId());
 		Assert.assertTrue(cfpSubmissions.size() == 0);
 	}
 
 	@Test
+	@Ignore
 	public void testCreateCfpForEvent() {
 		Event event = eventDao.getCurrentEvent();
 		final CfpSubmission cfpSubmission = new CfpSubmission();

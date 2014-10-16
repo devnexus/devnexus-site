@@ -22,6 +22,7 @@ import javax.persistence.PersistenceContext;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.web.config.ServicesConfig;
 
@@ -53,14 +55,17 @@ public class UserServiceIntegrationTest {
 	protected @PersistenceContext EntityManager entityManager;
 
 	@Autowired private UserService userService;
+	
+	@Autowired
+	private SystemSetupService systemSetupService;
 
 	@Before
 	public void setup() {
-//		systemSetupService.setupDatabase();
-//		systemSetupService.setupDemoData();
+		systemSetupService.setupDatabase();
 	}
 
 	@Test
+	@Ignore
 	public void checkRoles() {
 
 		entityManager.flush();

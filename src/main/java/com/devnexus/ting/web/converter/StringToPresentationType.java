@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2012 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,19 @@ import org.springframework.core.convert.converter.Converter;
 
 import com.devnexus.ting.core.model.PresentationType;
 
+/**
+ * 
+ * @author Gunnar Hillert
+ *
+ */
 public class StringToPresentationType implements Converter<String, PresentationType>{
 
 	@Override
 	public PresentationType convert(String source) {
-
 		if (StringUtils.isEmpty(source) || !StringUtils.isNumeric(source)) {
 			return null;
 		} else {
 			return PresentationType.fromId(Long.valueOf(source));
 		}
-
 	}
-
 }

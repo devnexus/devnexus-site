@@ -15,9 +15,9 @@
  */
 package com.devnexus.ting.web.config;
 
-import org.jasypt.springsecurity3.authentication.encoding.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -30,6 +30,7 @@ import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
  * @author Gunnar Hillert
  *
  */
+@SuppressWarnings("deprecation")
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -49,7 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
 		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and()
 		//.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and()
-		.formLogin().loginProcessingUrl("/login").defaultSuccessUrl("/s/admin/index").loginPage("/s/login").failureUrl("/s/login?status=error").permitAll();
+		.formLogin().loginProcessingUrl("/s/login").defaultSuccessUrl("/s/admin/index").loginPage("/s/login").failureUrl("/s/login?status=error").permitAll();
 	}
 
 	@Override

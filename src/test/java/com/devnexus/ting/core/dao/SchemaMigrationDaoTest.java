@@ -18,8 +18,10 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.model.SchemaMigration;
 
@@ -27,6 +29,8 @@ import com.devnexus.ting.core.model.SchemaMigration;
  * @author Gunnar Hillert
  *
  */
+@Transactional
+@Ignore
 public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SchemaMigrationDao schemaMigrationDao;
