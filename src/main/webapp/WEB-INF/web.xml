@@ -174,7 +174,7 @@
 		<servlet-name>spring-mvc</servlet-name>
 		<url-pattern>/s/*</url-pattern>
 		<url-pattern>/ws/*</url-pattern>
-								<url-pattern>/api/*</url-pattern>
+		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
