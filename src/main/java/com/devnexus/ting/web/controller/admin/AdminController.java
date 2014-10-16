@@ -42,6 +42,11 @@ public class AdminController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
+	@RequestMapping({"/admin", "/admin/"})
+	public String redirectToAdmin(ModelMap model) {
+		return "redirect:/s/admin/index";
+	}
+
 	@RequestMapping({"/admin/index"})
 	public String execute(ModelMap model) {
 		return "/admin/index";

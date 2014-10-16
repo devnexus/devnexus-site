@@ -28,6 +28,7 @@ import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.web.config.MainConfig;
+import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
  *
@@ -37,7 +38,7 @@ import com.devnexus.ting.web.config.MainConfig;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
 		initializers=IntegrationTestApplicationContextInitializer.class,
-				classes=MainConfig.class)
+				classes=ServicesConfig.class)
 public class MailSendingTest {
 
 	@Autowired

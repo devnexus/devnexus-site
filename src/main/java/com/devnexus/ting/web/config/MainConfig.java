@@ -18,7 +18,6 @@ package com.devnexus.ting.web.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 
 import com.devnexus.ting.common.SpringProfile;
@@ -30,13 +29,11 @@ import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
  *
  */
 @Configuration
-@ImportResource({
-	"classpath:spring/spring-servlet.xml"
-})
 @Import({
 	ServicesConfig.class,
 	WebSocketConfig.class,
-	WebSecurityConfig.class
+	WebSecurityConfig.class,
+	WebConfig.class
 })
 public class MainConfig {
 
