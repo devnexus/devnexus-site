@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,10 +72,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 
 	@Autowired
 	private StringDigester stringDigester;
-//
-//    //~~~~~Business Methods~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-//
+
 	/** {@inheritDoc} */
 	public User addUser(final User user) throws DuplicateUserException {
 
@@ -135,48 +132,44 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 		return userDao.get(userId);
 	}
 
+	public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
 
-    public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
+		assert userDao != null;
 
-        assert userDao != null;
+		assert false;
 
-        assert false;
+		Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
 
-        Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
+		User u = new User();
 
-        User u = new User();
+		u.setEmail(person.getAccountEmail());
+		u.setFirstName(person.getGivenName());
+		u.setLastName(person.getFamilyName());
+		u.setUsername(person.getId());
+		u.setUserAuthorities(new HashSet<UserAuthority>(1));
+		u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
+		u.setId((long) person.getId().hashCode());
 
-        u.setEmail(person.getAccountEmail());
-        u.setFirstName(person.getGivenName());
-        u.setLastName(person.getFamilyName());
-        u.setUsername(person.getId());
-        u.setUserAuthorities(new HashSet<UserAuthority>(1));
-        u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
-        u.setId((long) person.getId().hashCode());
+		if (null == userDao.getUserByUsername(u.getUsername())) {
+			byte[] password = new byte[16];
+			new SecureRandom().nextBytes(password);
 
-        if (null == userDao.getUserByUsername(u.getUsername())) {
-            byte[] password = new byte[16];
-            new SecureRandom().nextBytes(password);
+			LOGGER.info(Arrays.toString(password));
 
-            LOGGER.info(Arrays.toString(password));
+			u.setPassword(Arrays.toString(password));
+			userDao.save(u);
+		}
 
-            u.setPassword(Arrays.toString(password));
-            userDao.save(u);
-        }
+		u = userDao.getUserByUsername(u.getUsername());
 
-        u = userDao.getUserByUsername(u.getUsername());
+		SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
 
-        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
+		return null;
+	}
 
-        return null;
-    }
+	@Override
+	public void initializeUserforEvent(User user, String eventKey) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
 
-    @Override
-    public void initializeUserforEvent(User user, String eventKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private String getFirstEmailAddress(Person person) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
