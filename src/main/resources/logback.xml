@@ -50,6 +50,9 @@
 		</layout>
 	</appender>
 
+	<logger name="com.devnexus.ting.web.contextlistener">
+		<level value="INFO"/>
+	</logger>
 	<logger name="com.devnexus.ting.web.config">
 		<level value="INFO"/>
 	</logger>
