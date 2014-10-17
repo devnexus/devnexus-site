@@ -163,12 +163,12 @@ public class PersistenceConfig {
 		return new PersistenceExceptionTranslationPostProcessor();
 	}
 
-	@Bean
-	LocalValidatorFactoryBean validator() {
-		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
-		localValidatorFactoryBean.setValidationMessageSource(messageSource());
-		return localValidatorFactoryBean;
-	}
+//	@Bean
+//	LocalValidatorFactoryBean validator() {
+//		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+//		localValidatorFactoryBean.setValidationMessageSource(messageSource());
+//		return localValidatorFactoryBean;
+//	}
 
 	@Bean
 	ReloadableResourceBundleMessageSource messageSource() {

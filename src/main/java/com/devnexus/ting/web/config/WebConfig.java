@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.jboss.aerogear.unifiedpush.SenderClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +37,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.http.converter.xml.MarshallingHttpMessageConverter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.support.ConfigurableWebBindingInitializer;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
@@ -86,7 +88,17 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	private ConversionService conversionService;
 
 	@Autowired
-	private Validator validator;
+	private MessageSource messageSource;
+
+//	@Autowired
+//	private Validator validator;
+
+	@Bean
+	LocalValidatorFactoryBean validator() {
+		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+		localValidatorFactoryBean.setValidationMessageSource(this.messageSource);
+		return localValidatorFactoryBean;
+	}
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter#addFormatters(org.springframework.format.FormatterRegistry)
@@ -98,6 +110,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToSkillLevel());
 		registry.addConverter(new StringToPresentationType());
 		super.addFormatters(registry);
+	}
+
+	/* (non-Javadoc)
+	 * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter#getValidator()
+	 */
+	@Override
+	public Validator getValidator() {
+		return validator();
 	}
 
 	/* (non-Javadoc)
@@ -151,7 +171,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 		final ConfigurableWebBindingInitializer bindingInitializer = new ConfigurableWebBindingInitializer();
 		bindingInitializer.setConversionService(conversionService);
-		bindingInitializer.setValidator(validator);
+		bindingInitializer.setValidator(validator());
 
 		requestMappingHandlerAdapter.setWebBindingInitializer(bindingInitializer);
 
