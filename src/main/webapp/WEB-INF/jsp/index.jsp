@@ -97,6 +97,8 @@
     <div>
         <div id="gold" style="max-width: 768px;margin-left:auto;margin-right:auto;">
             <h3>Gold Sponsors</h3>
+            <a href="http://www.pivotal.io/"><img class="logo" alt="Pivotal"
+               src="${ctx}/img/sponsors/pivotal.png"/></a>
             <a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
                src="${ctx}/images/sponsorship-available.png"/></a>
         </div>
