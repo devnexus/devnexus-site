@@ -68,8 +68,6 @@ public class SiteController {
     @RequestMapping({"/index", "/"})
 	public String execute(final Model model) {
 
-
-
         int daysUntil;
         final Calendar startDate = Calendar.getInstance();
         String countdowntext;
@@ -112,6 +110,15 @@ public class SiteController {
 
 	}
 
+	@RequestMapping("/privacy-policy")
+	public String privacyPolicy() {
+		return "privacy-policy";
+	}
+
+	@RequestMapping("/code-of-conduct")
+	public String codeOfConduct() {
+		return "code-of-conduct";
+	}
 
 	@RequestMapping("/past-conferences")
 	public String pastConferences(final Model model) {

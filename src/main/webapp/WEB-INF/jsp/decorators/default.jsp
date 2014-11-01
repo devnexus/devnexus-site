@@ -37,6 +37,8 @@
 <c:url var="registrationUrl" value="${baseSiteUrl}/index"/>
 <c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
+<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
+<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
 
 <div class="navbar navbar-inverse navbar-fixed-top" style="border:none">
     <div class="container">
@@ -102,6 +104,8 @@
                             <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
                             <li><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf">Sponsorship
                                 (Pdf)</a></li>
+                            <li><a href="${privacyPolicyUrl}">Privacy Policy</a></li>
+                            <li><a href="${codeOfConductUrl}">Code of Conduct</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -115,7 +119,7 @@
                     <div class="col-md-3">
                         <h3>Attend</h3>
                         <ul id="col">
-                            <li><a href="${registrationUrl}">Tickets on-sale 11/1/14!</a></li>
+                            <li><a href="${registrationUrl}">Tickets on-sale 11/10/14!</a></li>
                             <li><a href="${travelUrl}">Travel</a></li>
                         </ul>
                     </div>
