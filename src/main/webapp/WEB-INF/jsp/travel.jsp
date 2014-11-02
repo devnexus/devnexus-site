@@ -1,13 +1,13 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>DevNexus 2014 - Travel</title>
+<title>DevNexus 2015 &ndash; Travel</title>
 
 <div id="map" class="container">
 	<img id="map" src="${ctx}/images/map.jpg">
 </div>
 
-<div id="travel" class="container">
+<div class="container contents-container">
 	<div class="row">
 		<div id="travelphoto" class="col-md-6 hidden-xs hidden-sm">
 			<img src="${ctx}/images/photo3.jpg">

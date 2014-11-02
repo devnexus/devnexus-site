@@ -1,9 +1,9 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div id="privacy-notice" class="container">
+<div class="container contents-container">
 	<div class="row">
-		<div class="col-md-7 col-md-push-2">
-			<h1 class="center">Devnexus Privacy Policy</h1>
+		<div class="col-md-8 col-md-offset-2">
+			<h1>Devnexus Privacy Policy</h1>
 			<p>
 				The Atlanta Java Users Group (AJUG) is committed to protecting the privacy of your
 				personal information. This Policy explains how we gather and use the information
@@ -21,6 +21,7 @@
 				personal information about you name, email address company and t-shirt size. This
 				information will be used for Devnexus registration
 			</p>
+
 			<h2>Communications</h2>
 
 			<p>

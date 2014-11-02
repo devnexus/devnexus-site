@@ -1,9 +1,9 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div id="privacy-notice" class="container">
+<div class="container contents-container">
 	<div class="row">
-		<div class="col-md-7 col-md-push-2">
-			<h1 class="center">Devnexus Code of Conduct</h1>
+		<div class="col-md-8 col-md-offset-2">
+			<h1>Devnexus Code of Conduct</h1>
 			<p>
 				The Atlanta Java Users Group (AJUG) dedicated to providing an outstanding
 				conference experience for all attendees, speakers, sponsors, volunteers and
