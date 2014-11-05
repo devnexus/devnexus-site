@@ -168,6 +168,8 @@
 						<a href="http://www.altisourcelabs.com/">
 								<img class="logo" alt="Altisource Labs" src="${ctx}/img/sponsors/altisource.png"/>
 						</a>
+						 <a href="http://www.thompsontechnologies.com/"><img class="logo" alt="Thompson Technologies"
+                                                         src="${ctx}/img/sponsors/thompson.png"/></a>
 						<a href="http://www.aspose.com/">
 								<img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/>
 						</a>
