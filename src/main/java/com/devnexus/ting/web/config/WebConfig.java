@@ -51,7 +51,6 @@ import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
-import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 import org.springframework.web.servlet.view.BeanNameViewResolver;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 import org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator;
@@ -127,7 +126,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(globalDataInterceptor()).addPathPatterns("/**");
 		registry.addInterceptor(localeChangeInterceptor());
-		super.addInterceptors(registry);
 	}
 
 	@Override
@@ -247,11 +245,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public DefaultRequestToViewNameTranslator viewNameTranslator() {
 		return new DefaultRequestToViewNameTranslator();
-	}
-
-	@Bean
-	public RequestMappingHandlerMapping requestMappingHandlerMapping() {
-		return new RequestMappingHandlerMapping();
 	}
 
 	@Bean
