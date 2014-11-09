@@ -56,6 +56,10 @@
 	<logger name="com.devnexus.ting.web.config">
 		<level value="INFO"/>
 	</logger>
+	<logger name="com.devnexus.ting.web.controller.admin">
+		<level value="INFO"/>
+	</logger>
+
 	<logger name="org.springframework.security">
 		<level value="INFO"/>
 	</logger>

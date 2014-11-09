@@ -34,7 +34,10 @@
 				</c:choose>
 
 				<tr class="${cfpStatusClass}">
-					<td><a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td>
+						<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+						<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
+					</td>
 					<td>
 						<c:forEach var="speaker" items="${cfp.speakers}">
 							<p><c:out value="${speaker.lastName}"/>, <c:out value="${speaker.firstName}"/><p>

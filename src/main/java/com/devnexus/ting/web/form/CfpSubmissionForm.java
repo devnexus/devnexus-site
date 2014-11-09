@@ -38,4 +38,6 @@ public class CfpSubmissionForm extends CfpSubmission {
 	public List<MultipartFile> getPictureFiles() {
 		return pictureFiles;
 	}
+	
+	
 }

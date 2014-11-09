@@ -60,22 +60,29 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 	@Test
 	@Ignore
 	public void testCreateCfpForEvent() {
-		Event event = eventDao.getCurrentEvent();
-		final CfpSubmission cfpSubmission = new CfpSubmission();
-		cfpSubmission.setEvent(event);
 
-		cfpSubmission.setBio("myBio");
+		final Event event = eventDao.getCurrentEvent();
+		final CfpSubmissionSpeaker cfpSubmissionSpeaker = new CfpSubmissionSpeaker();
+		final CfpSubmission cfpSubmission = new CfpSubmission();
+
+		cfpSubmissionSpeaker.setBio("myBio");
+		cfpSubmissionSpeaker.setEmail("test@test.com");
+		cfpSubmissionSpeaker.setFirstName("Kenny");
+		cfpSubmissionSpeaker.setGithubId("kenny");
+		cfpSubmissionSpeaker.setGooglePlusId("123456789");
+		cfpSubmissionSpeaker.setLanyrdId("kenny123");
+		cfpSubmissionSpeaker.setLastName("cartman");
+		cfpSubmissionSpeaker.setLinkedInId("kc");
+		cfpSubmissionSpeaker.setLocation("Southpark");
+		cfpSubmissionSpeaker.setMustReimburseTravelCost(true);
+		cfpSubmissionSpeaker.setPhone("555-555-5555");
+		cfpSubmissionSpeaker.setTshirtSize("L");
+		cfpSubmissionSpeaker.setTwitterId("kctwitter");
+		cfpSubmissionSpeaker.setCfpSubmission(cfpSubmission);
+
+		cfpSubmission.setEvent(event);
 		cfpSubmission.setDescription("myDescription");
-		cfpSubmission.setEmail("test@test.com");
-		cfpSubmission.setFirstName("Kenny");
-		cfpSubmission.setGithubId("kenny");
-		cfpSubmission.setGooglePlusId("123456789");
-		cfpSubmission.setLanyrdId("kenny123");
-		cfpSubmission.setLastName("cartman");
-		cfpSubmission.setLinkedInId("kc");
-		cfpSubmission.setLocation("Southpark");
-		cfpSubmission.setMustReimburseTravelCost(true);
-		cfpSubmission.setPhone("555-555-5555");
+
 		//cfpSubmission.setPicture(null);
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
 		cfpSubmission.setSessionRecordingApproved(true);
@@ -84,12 +91,11 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmission.setStatus(CfpSubmissionStatusType.PENDING);
 		cfpSubmission.setTitle("my session title");
 		cfpSubmission.setTopic("java");
-		cfpSubmission.setTshirtSize("L");
-		cfpSubmission.setTwitterId("kctwitter");
-
+		cfpSubmission.getSpeakers().add(cfpSubmissionSpeaker);
 		final CfpSubmission savedCfpSubmission = cfpSubmissionDao.save(cfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission.getId());
+		Assert.assertTrue(savedCfpSubmission.getSpeakers().size() == 1);
 	}
 
 	@Test

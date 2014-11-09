@@ -25,6 +25,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.web.config.MainConfig;
@@ -47,24 +48,29 @@ public class MailSendingTest {
 	@Test
 	public void sendCfpEmail() throws InterruptedException {
 
-		CfpSubmission cfpSubmission = new CfpSubmission();
-		cfpSubmission.setBio("This is my great **bio**.");
+		final CfpSubmissionSpeaker cfpSubmissionSpeaker = new CfpSubmissionSpeaker();
+		final CfpSubmission cfpSubmission = new CfpSubmission();
+
+		cfpSubmissionSpeaker.setCfpSubmission(cfpSubmission);
+
+		cfpSubmissionSpeaker.setBio("This is my great **bio**.");
+		cfpSubmissionSpeaker.setEmail("speaker@devnexus.com");
+		cfpSubmissionSpeaker.setFirstName("firstName");
+		cfpSubmissionSpeaker.setGooglePlusId("googlePlusId");
+		cfpSubmissionSpeaker.setLastName("Cartman");
+		cfpSubmissionSpeaker.setLinkedInId("linkedInId");
+		cfpSubmissionSpeaker.setPhone("555-555-5555");
+		cfpSubmissionSpeaker.setTshirtSize("XXXXL");
+		cfpSubmissionSpeaker.setTwitterId("twitterId");
+		cfpSubmissionSpeaker.setEmail("test@hillert.com");
+
+		cfpSubmission.getSpeakers().add(cfpSubmissionSpeaker);
 		cfpSubmission.setDescription("My *abstract* rocks!");
-		cfpSubmission.setEmail("speaker@devnexus.com");
-		cfpSubmission.setFirstName("firstName");
-		cfpSubmission.setGooglePlusId("googlePlusId");
-		cfpSubmission.setLastName("Cartman");
-		cfpSubmission.setLinkedInId("linkedInId");
-		cfpSubmission.setPhone("555-555-5555");
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
 		cfpSubmission.setSessionRecordingApproved(true);
 		cfpSubmission.setSkillLevel(SkillLevel.INTERMEDIATE);
 		cfpSubmission.setSlotPreference("Second day only");
 		cfpSubmission.setTitle("My title");
-		cfpSubmission.setTshirtSize("XXXXL");
-		cfpSubmission.setTwitterId("twitterId");
-
-		cfpSubmission.setEmail("test@hillert.com");
 
 		mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
 

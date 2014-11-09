@@ -269,10 +269,29 @@
 			</div>
 		</c:forEach>
 
+		<h3>Accept CFP</h3>
+
+		<spring:bind path="cfpSubmission.presentationType">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="skill-level" class="col-lg-2 control-label">Use Existing Speaker*</label>
+			<div class="col-lg-10">
+				<form:select cssClass="form-control" path="presentationType" id="presentation-type"
+					itemValue="presentationType.id">
+					<form:option value="-1" label="Create as New Speaker" />
+					<form:options items="${allSpeakers}" itemLabel="fullName" itemValue="id"/>
+				</form:select>
+				<form:errors path="presentationType" cssClass="fieldError" />
+			</div>
+		</div>
+
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" lang="save">Save</button>
 				<button type="submit" class="btn btn-default" name="cancel">Cancel</button>
+				<button type="submit" class="btn btn-default" name="delete">Delete</button>
+				<button type="submit" class="btn btn-default" lang="save">Save</button>
+
 			</div>
 		</div>
 
@@ -281,7 +300,33 @@
 	</div>
 </div>
 
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				Are you sure?
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+				<button type="button" data-dismiss="modal" class="btn">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript">
+
+	$('button[name="delete"]').on('click', function(e){
+		var form=$(this).closest('form');
+		e.preventDefault();
+		$('#confirm').modal({
+			backdrop: 'static', keyboard: false
+		})
+		.one('click', '#delete', function() {
+			form.trigger('submit');
+		});
+	});
+
 <!--
 	$(function(){
 		var tabindex = 1;
