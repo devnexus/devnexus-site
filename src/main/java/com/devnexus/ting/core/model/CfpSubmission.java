@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.core.model;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -36,8 +35,8 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.util.Assert;
 
 import com.devnexus.ting.common.TingUtil;
 
@@ -54,8 +53,6 @@ public class CfpSubmission extends BaseModelObject {
 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
-
-	private File pictureFile2;
 
 	@ManyToOne
 	@NotNull
@@ -74,59 +71,6 @@ public class CfpSubmission extends BaseModelObject {
 	@Deprecated
 	@Size(max=10000)
 	protected String bio;
-
-	@Deprecated
-	@Size(max=255)
-	protected String firstName;
-
-	@Deprecated
-	@Size(max=255)
-	protected String lastName;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@XmlTransient
-	@Deprecated
-	protected FileData picture;
-
-	@Deprecated
-	@Size(max=255)
-	protected String twitterId;
-
-	@Deprecated
-	@Size(max=255)
-	protected String googlePlusId;
-
-	@Deprecated
-	@Size(max=255)
-	protected String linkedInId;
-
-	@Deprecated
-	@Size(max=255)
-	protected String lanyrdId;
-
-	@Deprecated
-	@Size(max=255)
-	protected String githubId;
-
-	@Deprecated
-	@Size(max=255)
-	private String tshirtSize;
-
-	@Deprecated
-	@Size(max=255)
-	private String phone;
-
-	@Deprecated
-	@Size(max=255)
-	private String location;
-
-	@Deprecated
-	private boolean mustReimburseTravelCost;
-
-	@Deprecated
-	@Size(max=255)
-	@Email
-	private String email;
 
 	@Size(max=1000)
 	private String slotPreference;
@@ -232,52 +176,12 @@ public class CfpSubmission extends BaseModelObject {
 		this.sessionRecordingApproved = sessionRecordingApproved;
 	}
 
-	@Deprecated
-	public String getTshirtSize() {
-		return tshirtSize;
-	}
-
-	@Deprecated
-	public void setTshirtSize(String tshirtSize) {
-		this.tshirtSize = tshirtSize;
-	}
-
-	@Deprecated
-	public String getPhone() {
-		return phone;
-	}
-
-	@Deprecated
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	@Deprecated
-	public String getEmail() {
-		return email;
-	}
-
-	@Deprecated
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getSlotPreference() {
 		return slotPreference;
 	}
 
 	public void setSlotPreference(String slotPreference) {
 		this.slotPreference = slotPreference;
-	}
-
-	@Deprecated
-	public File getPictureFile2() {
-		return pictureFile2;
-	}
-
-	@Deprecated
-	public void setPictureFile2(File pictureFile) {
-		this.pictureFile2 = pictureFile;
 	}
 
 	public String getTopic() {
@@ -294,38 +198,6 @@ public class CfpSubmission extends BaseModelObject {
 
 	public void setStatus(CfpSubmissionStatusType status) {
 		this.status = status;
-	}
-
-	/**
-	 * @return the location
-	 */
-	@Deprecated
-	public String getLocation() {
-		return location;
-	}
-
-	/**
-	 * @param location the location to set
-	 */
-	@Deprecated
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	/**
-	 * @return the mustReimburseTravelCost
-	 */
-	@Deprecated
-	public boolean isMustReimburseTravelCost() {
-		return mustReimburseTravelCost;
-	}
-
-	/**
-	 * @param mustReimburseTravelCost the mustReimburseTravelCost to set
-	 */
-	@Deprecated
-	public void setMustReimburseTravelCost(boolean mustReimburseTravelCost) {
-		this.mustReimburseTravelCost = mustReimburseTravelCost;
 	}
 
 	/**
@@ -349,150 +221,6 @@ public class CfpSubmission extends BaseModelObject {
 	 */
 	public void setSpeakers(List<CfpSubmissionSpeaker> speakers) {
 		this.speakers = speakers;
-	}
-
-	/**
-	 * @return the bio
-	 */
-	@Deprecated
-	public String getBio() {
-		return bio;
-	}
-
-	/**
-	 * @param bio the bio to set
-	 */
-	@Deprecated
-	public void setBio(String bio) {
-		this.bio = bio;
-	}
-
-	/**
-	 * @return the firstName
-	 */
-	@Deprecated
-	public String getFirstName() {
-		return firstName;
-	}
-
-	/**
-	 * @param firstName the firstName to set
-	 */
-	@Deprecated
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	/**
-	 * @return the lastName
-	 */
-	@Deprecated
-	public String getLastName() {
-		return lastName;
-	}
-
-	/**
-	 * @param lastName the lastName to set
-	 */
-	@Deprecated
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	/**
-	 * @return the picture
-	 */
-	@Deprecated
-	public FileData getPicture() {
-		return picture;
-	}
-
-	/**
-	 * @param picture the picture to set
-	 */
-	@Deprecated
-	public void setPicture(FileData picture) {
-		this.picture = picture;
-	}
-
-	/**
-	 * @return the twitterId
-	 */
-	@Deprecated
-	public String getTwitterId() {
-		return twitterId;
-	}
-
-	/**
-	 * @param twitterId the twitterId to set
-	 */
-	@Deprecated
-	public void setTwitterId(String twitterId) {
-		this.twitterId = twitterId;
-	}
-
-	/**
-	 * @return the googlePlusId
-	 */
-	@Deprecated
-	public String getGooglePlusId() {
-		return googlePlusId;
-	}
-
-	/**
-	 * @param googlePlusId the googlePlusId to set
-	 */
-	@Deprecated
-	public void setGooglePlusId(String googlePlusId) {
-		this.googlePlusId = googlePlusId;
-	}
-
-	/**
-	 * @return the linkedInId
-	 */
-	@Deprecated
-	public String getLinkedInId() {
-		return linkedInId;
-	}
-
-	/**
-	 * @param linkedInId the linkedInId to set
-	 */
-	@Deprecated
-	public void setLinkedInId(String linkedInId) {
-		this.linkedInId = linkedInId;
-	}
-
-	/**
-	 * @return the lanyrdId
-	 */
-	@Deprecated
-	public String getLanyrdId() {
-		return lanyrdId;
-	}
-
-	/**
-	 * @param lanyrdId the lanyrdId to set
-	 */
-	@Deprecated
-	public void setLanyrdId(String lanyrdId) {
-		this.lanyrdId = lanyrdId;
-	}
-
-	/**
-	 * @return the githubId
-	 */
-	@Deprecated
-	public String getGithubId() {
-		return githubId;
-	}
-
-	/**
-	 * @param githubId the githubId to set
-	 */
-	@Deprecated
-	public void setGithubId(String githubId) {
-		this.githubId = githubId;
 	}
 
 	public String getSpeakersAsString(boolean firstNameOnly) {
@@ -600,6 +328,18 @@ public class CfpSubmission extends BaseModelObject {
 		} else if (!topic.equals(other.topic))
 			return false;
 		return true;
+	}
+
+	public Long getSpeakerIdForCfpSpeakerId(Long cfpSubmissionSpeakerId) {
+		Assert.notNull(cfpSubmissionSpeakerId, "cfpSubmissionSpeakerId must not be null.");
+
+		for (CfpSubmissionSpeaker speaker : this.getSpeakers()) {
+			if (cfpSubmissionSpeakerId.equals(speaker.getId())) {
+				return speaker.getSpeaker().getId();
+			}
+		}
+
+		throw new IllegalStateException("Could not find CFP Submission Speaker for id " + cfpSubmissionSpeakerId);
 	}
 
 }

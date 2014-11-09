@@ -40,7 +40,7 @@ import org.hibernate.annotations.ParamDef;
 
 /**
  * The persistent class for the speakers database table.
- * 
+ *
  * @author Gunnar Hillert
  */
 @Entity
@@ -70,6 +70,9 @@ public class Speaker extends Person {
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
 	private Set<Event>events = new HashSet<Event>(0);
+
+	@XmlTransient
+	private Long cfpSpeakerId;
 
 	public Speaker() {
 	}
@@ -104,6 +107,14 @@ public class Speaker extends Person {
 	 */
 	public Set<Event> getEvents() {
 		return events;
+	}
+
+	public Long getCfpSpeakerId() {
+		return cfpSpeakerId;
+	}
+
+	public void setCfpSpeakerId(Long cfpSpeakerId) {
+		this.cfpSpeakerId = cfpSpeakerId;
 	}
 
 }

@@ -85,15 +85,6 @@ public class PresentationController {
 			presentations = businessService.getAllPresentations();
 		}
 
-		for (Presentation presentation : presentations) {
-			if (presentation.getSpeakers().isEmpty()) {
-				Speaker speaker = presentation.getSpeaker();
-				presentation.getSpeakers().add(speaker);
-				presentation.setSpeaker(null);
-				businessService.savePresentation(presentation);
-			}
- 		}
-
 		model.addAttribute("presentations", presentations);
 
 		return "/admin/manage-presentations";
@@ -165,7 +156,7 @@ public class PresentationController {
 
 		presentationToSave.setPresentationType(presentation.getPresentationType());
 
-		final Set<PresentationTag> presentationTagsToSave = processPresentationTags(presentation.getTagsAsText());
+		final Set<PresentationTag> presentationTagsToSave = businessService.processPresentationTags(presentation.getTagsAsText());
 		presentationToSave.getPresentationTags().addAll(presentationTagsToSave);
 
 		businessService.savePresentation(presentationToSave);
@@ -219,7 +210,7 @@ public class PresentationController {
 
 		presentationFromDb.setPresentationType(presentation.getPresentationType());
 
-		final Set<PresentationTag> presentationTagsToSave = processPresentationTags(presentation.getTagsAsText());
+		final Set<PresentationTag> presentationTagsToSave = businessService.processPresentationTags(presentation.getTagsAsText());
 		presentationFromDb.getPresentationTags().clear();
 		presentationFromDb.getPresentationTags().addAll(presentationTagsToSave);
 
@@ -256,30 +247,4 @@ public class PresentationController {
 		return "redirect:/s/admin/presentations";
 	}
 
-	private Set<PresentationTag> processPresentationTags(String tagsAsText) {
-
-		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
-
-		if (!tagsAsText.trim().isEmpty()) {
-			Set<String> tags = StringUtils.commaDelimitedListToSet(tagsAsText);
-
-			for (String tag : tags) {
-				if (tag != null) {
-
-					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
-					PresentationTag tagFromDb = businessService.getPresentationTag(massagedTagName);
-
-					if (tagFromDb == null) {
-						PresentationTag presentationTag = new PresentationTag();
-						presentationTag.setName(massagedTagName);
-						tagFromDb = businessService.savePresentationTag(presentationTag);
-					}
-
-					presentationTagsToSave.add(tagFromDb);
-				}
-			}
-		}
-
-		return presentationTagsToSave;
-	}
 }

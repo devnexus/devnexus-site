@@ -82,11 +82,6 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 	@Size(max = 255)
 	private String presentationLink;
 
-	@ManyToOne
-	@JoinColumn(name = "SPEAKER_ID")
-	@Deprecated
-	private Speaker speaker;
-
 	@ManyToMany(fetch=FetchType.LAZY)
 	@OrderBy("lastName ASC")
 	private List<Speaker>speakers = new ArrayList<Speaker>(0);
@@ -118,6 +113,9 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 
 	@ManyToMany(cascade={javax.persistence.CascadeType.ALL}, fetch=FetchType.LAZY)
 	private Set<PresentationTag>presentationTags = new HashSet<>(0);
+
+	@XmlTransient
+	private Long cfpId;
 
 	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -158,11 +156,6 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 		return this.presentationLink;
 	}
 
-	@Deprecated
-	public Speaker getSpeaker() {
-		return speaker;
-	}
-
 	public String getTitle() {
 		return this.title;
 	}
@@ -185,11 +178,6 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 
 	public void setPresentationLink(String presentationLink) {
 		this.presentationLink = presentationLink;
-	}
-
-	@Deprecated
-	public void setSpeaker(Speaker speaker) {
-		this.speaker = speaker;
 	}
 
 	public void setTitle(String title) {
@@ -264,6 +252,14 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 	 */
 	public void setSpeakers(List<Speaker> speakers) {
 		this.speakers = speakers;
+	}
+
+	public Long getCfpId() {
+		return cfpId;
+	}
+
+	public void setCfpId(Long cfpId) {
+		this.cfpId = cfpId;
 	}
 
 	@Override

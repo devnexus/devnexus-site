@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
@@ -39,6 +40,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
@@ -312,8 +314,8 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
-	public void savePresentation(Presentation presentation) {
-		presentationDao.save(presentation);
+	public Presentation savePresentation(Presentation presentation) {
+		return presentationDao.save(presentation);
 	}
 
 	/** {@inheritDoc} */
@@ -552,4 +554,38 @@ public class BusinessServiceImpl implements BusinessService {
 		return presentationDao.findPresentations(presentationSearchQuery);
 	}
 
+	@Transactional
+	@Override
+	public void deleteCfpSubmission(Long id) {
+		cfpSubmissionDao.remove(id);
+	}
+
+	@Transactional
+	@Override
+	public Set<PresentationTag> processPresentationTags(String tagsAsText) {
+
+		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
+
+		if (!tagsAsText.trim().isEmpty()) {
+			Set<String> tags = StringUtils.commaDelimitedListToSet(tagsAsText);
+
+			for (String tag : tags) {
+				if (tag != null) {
+
+					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
+					PresentationTag tagFromDb = this.getPresentationTag(massagedTagName);
+
+					if (tagFromDb == null) {
+						PresentationTag presentationTag = new PresentationTag();
+						presentationTag.setName(massagedTagName);
+						tagFromDb = this.savePresentationTag(presentationTag);
+					}
+
+					presentationTagsToSave.add(tagFromDb);
+				}
+			}
+		}
+
+		return presentationTagsToSave;
+	}
 }

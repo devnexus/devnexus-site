@@ -18,6 +18,7 @@ package com.devnexus.ting.core.model;
 import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -50,6 +51,9 @@ public class CfpSubmissionSpeaker extends Person {
 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1071633978769394025L;
+
+	@Transient
+	private Speaker speaker;
 
 	@ManyToOne
 	@NotNull
@@ -164,6 +168,14 @@ public class CfpSubmissionSpeaker extends Person {
 	 */
 	public void setTshirtSize(String tshirtSize) {
 		this.tshirtSize = tshirtSize;
+	}
+
+	public Speaker getSpeaker() {
+		return speaker;
+	}
+
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
 	}
 
 	/* (non-Javadoc)

@@ -17,6 +17,7 @@ package com.devnexus.ting.core.service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.CfpSubmission;
@@ -176,8 +177,9 @@ public interface BusinessService {
 	/**
 	 *
 	 * @param presentation
+	 * @return
 	 */
-	void savePresentation(Presentation presentation);
+	Presentation savePresentation(Presentation presentation);
 
 	/**
 	 *
@@ -243,4 +245,8 @@ public interface BusinessService {
 	List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId);
 
 	List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId);
+
+	void deleteCfpSubmission(Long id);
+
+	Set<PresentationTag> processPresentationTags(String tagsAsText);
 }

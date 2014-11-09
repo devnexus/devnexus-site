@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.util.Assert;
 
+/**
+ *
+ * @author Gunnar Hillert
+ *
+ */
 @Entity
 @Cacheable()
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
@@ -180,4 +186,13 @@ public class Event extends BaseModelObject {
 		this.rooms = rooms;
 	}
 
+	public boolean hasSpeaker(Long speakerId) {
+		Assert.notNull(speakerId, "The speakerId must not be null.");
+		for (Speaker speaker : this.getSpeakers()) {
+			if (speakerId.equals(speaker.getId())) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
