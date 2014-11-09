@@ -268,3 +268,7 @@ alter table PRESENTATIONS_SPEAKERS
 
 ALTER TABLE presentations_speakers
 	OWNER TO devnexus;
+
+-- 2014 - Nov 9
+ALTER TABLE speakers ADD COLUMN cfp_speaker_id bigint;
+ALTER TABLE presentations ADD COLUMN cfp_id bigint;
