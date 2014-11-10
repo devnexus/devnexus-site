@@ -34,7 +34,7 @@
 <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
-<c:url var="registrationUrl" value="${baseSiteUrl}/index"/>
+<c:url var="registrationUrl" value="https://devnexus2015.eventbrite.com"/>
 <c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
@@ -72,7 +72,7 @@
 					<c:when test="${registrationState eq 'soldout'}"><li><a><strong style="color: #f7cb59;">Tickets on-sale 11/1/14!</strong></a></li></c:when>
 					<c:when test="${registrationState eq 'hide'}"></c:when>
 					<c:otherwise>
-						<li><a href="${registrationUrl}">Register</a></li>
+						<li><a href="${registrationUrl}"><strong style="color: #f7cb59;">Register</strong></a></li>
 					</c:otherwise>
 				</c:choose>
 			</ul>
@@ -119,7 +119,7 @@
 										<div class="col-md-3">
 												<h3>Attend</h3>
 												<ul id="col">
-														<li><a href="${registrationUrl}">Tickets on-sale 11/10/14!</a></li>
+														<li><a href="${registrationUrl}">Register!</a></li>
 														<li><a href="${travelUrl}">Travel</a></li>
 												</ul>
 										</div>

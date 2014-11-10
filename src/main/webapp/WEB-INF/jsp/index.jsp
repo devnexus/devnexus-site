@@ -37,9 +37,9 @@
 		<div class="row">
 			<div class="col-md-7 col-md-push-5">
 				<h1 class="center">March 10-12, 2015</h1>
-				<h2 class="text-center">Would you like to present?</h2>
-				<div class="text-center"><a href="${ctx}/s/cfp" class="btn btn-primary btn-lg">Call for Papers is Open!</a></div>
-				<h2 class="text-center"><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf">Would you like to sponsor us?</a></h2>
+				<div class="text-center"><a href="${ctx}/s/cfp" class="btn btn-primary btn-lg">Call for Papers</a>
+					<a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf" class="btn btn-primary btn-lg">Sponsor us</a>
+					<a href="https://devnexus2015.eventbrite.com" class="btn btn-success btn-lg">Register Now!</a></div>
 			</div>
 			<div id="travelphoto" class="col-md-5 col-md-pull-7">
 				<div class="embed-responsive embed-responsive-16by9">
@@ -115,12 +115,12 @@
 										<tr><th>Topic</th><th>Instructor</th></tr>
 								</thead>
 								<tbody>
-										<tr><td>TBD</td><td>TBD</td></tr>
-										<tr><td>TBD</td><td>TBD</td></tr>
-										<tr><td>TBD</td><td>TBD</td></tr>
-										<tr><td>TBD</td><td>TBD</td></tr>
-										<tr><td>TBD</td><td>TBD</td></tr>
-										<tr><td>TBD</td><td>TBD</td></tr>
+									<tr><td>Functional Design By Example</td><td>Josh Backfield</td></tr>
+									<tr><td>Android Workshop </td><td>Ken Kousen</td></tr>
+									<tr><td>Hacking Web Components and Polymer</td><td>Kito Mann</td></tr>
+									<tr><td>Down and Dirty with Java EE 7</td><td>Reza Rahman</td></tr>
+									<tr><td>Spring XD: Big Data Integration</td><td>Glenn Renfro</td></tr>
+									<tr><td>Scala/Play/Akka</td><td>Daniel Hinosoa</td></tr>
 								</tbody>
 						</table>
 						<p>If you have any questions, please contact us at info AT ajug DOT org</p>

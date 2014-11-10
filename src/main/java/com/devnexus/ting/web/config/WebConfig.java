@@ -64,6 +64,7 @@ import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
+import com.devnexus.ting.web.converter.StringToSpeaker;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
 
 /**
@@ -171,6 +172,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 		conversionService.addConverter(new StringToEvent());
 		conversionService.addConverter(new StringToRoom());
+		conversionService.addConverter(new StringToSpeaker());
 		conversionService.addConverter(new StringToSkillLevel());
 		conversionService.addConverter(new StringToPresentationType());
 
