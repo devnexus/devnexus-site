@@ -27,7 +27,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class PurchaseItem extends BaseModelObject {
 
     @ManyToOne
-    @NotNull
     @XmlTransient
     private PurchaseGroup purchaseGroup;
     
@@ -44,7 +43,7 @@ public class PurchaseItem extends BaseModelObject {
     @Size(max = 255)
     private String value;
     
-    @NotEmpty
+    @NotNull
     private BigDecimal price;
     
     @Temporal(TemporalType.DATE)

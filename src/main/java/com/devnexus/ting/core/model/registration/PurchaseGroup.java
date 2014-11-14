@@ -5,6 +5,7 @@ import com.devnexus.ting.core.model.Event;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -16,6 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -30,7 +32,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PurchaseGroup extends BaseModelObject {
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<PurchaseItem> items = new HashSet<>();
 
     @ManyToOne
@@ -44,7 +46,6 @@ public class PurchaseGroup extends BaseModelObject {
     protected String label;
 
     @ManyToOne
-    @NotNull
     @XmlTransient
     protected EventSignup eventSignup;
     

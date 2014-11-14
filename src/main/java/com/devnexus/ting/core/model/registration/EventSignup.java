@@ -5,6 +5,7 @@ import com.devnexus.ting.core.model.Event;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -23,7 +24,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventSignup extends BaseModelObject {
     
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<PurchaseGroup> groups = new HashSet<>();
 
     @ManyToOne

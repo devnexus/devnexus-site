@@ -1,10 +1,11 @@
 package com.devnexus.ting.core.dao;
 
 import com.devnexus.ting.core.model.registration.EventSignup;
+import org.springframework.stereotype.Repository;
 
-public interface EventSignupDao {
+public interface EventSignupDao extends GenericDao<EventSignup, Long>{
     
-    EventSignup getByEventKey(Long eventId);
+    EventSignup getByEventKey(String eventKey);
     
     
 }

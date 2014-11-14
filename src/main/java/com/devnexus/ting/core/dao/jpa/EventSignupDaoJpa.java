@@ -17,20 +17,22 @@ package com.devnexus.ting.core.dao.jpa;
 
 import com.devnexus.ting.core.dao.EventSignupDao;
 import com.devnexus.ting.core.model.registration.EventSignup;
+import org.springframework.stereotype.Repository;
 
+@Repository("eventSignupDao")
 public class EventSignupDaoJpa extends GenericDaoJpa< EventSignup, Long>
         implements EventSignupDao {
 
-    public EventSignupDaoJpa(Class<EventSignup> persistentClass) {
+    public EventSignupDaoJpa() {
         super(EventSignup.class);
     }
 
     @Override
-    public EventSignup getByEventKey(Long eventId) {
+    public EventSignup getByEventKey(String eventKey) {
         return super.entityManager.createQuery("select es from EventSignup es "
                 + "    join es.event e "
-                + "where e.id = :eventKey", EventSignup.class)
-                .setParameter("eventKey", eventId)
+                + "where e.eventKey = :eventKey", EventSignup.class)
+                .setParameter("eventKey", eventKey)
                 .getSingleResult();
     }
 
