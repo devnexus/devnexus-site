@@ -57,6 +57,7 @@ public class PersistenceConfig {
 	public Jaxb2Marshaller jaxbMarshaller() {
 		Jaxb2Marshaller jaxbMarshaller = new Jaxb2Marshaller();
 		jaxbMarshaller.setClassesToBeBound(
+
 			com.devnexus.ting.model.Evaluation.class,
 			com.devnexus.ting.model.EvaluationList.class,
 			com.devnexus.ting.model.Event.class,
@@ -71,7 +72,9 @@ public class PersistenceConfig {
 			com.devnexus.ting.model.SpeakerList.class,
 			com.devnexus.ting.model.ScheduleItemType.class,
 			com.devnexus.ting.model.CfpSubmission.class,
-			com.devnexus.ting.model.CfpSubmissionList.class
+			com.devnexus.ting.model.CfpSubmissionList.class,
+                        com.devnexus.ting.core.model.registration.PurchaseGroup.class,
+                        com.devnexus.ting.core.model.registration.PurchaseItem.class
 		);
 		return jaxbMarshaller;
 	}
