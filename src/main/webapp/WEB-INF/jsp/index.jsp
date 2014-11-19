@@ -159,6 +159,8 @@
 							 src="${ctx}/img/sponsors/coverity.png"/></a>
 						<a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
 							 src="${ctx}/img/sponsors/Anteo.png"/></a>
+						<a href="http://www.statefarm.com/"><img class="logo" alt="State Farm"
+                                                         src="${ctx}/img/sponsors/state_farm.png"/></a>
 						<a href="http://www.vaadin.com/"><img class="logo" alt="Vaadin"
 							 src="${ctx}/img/sponsors/vaadin.png"/></a>
 						<a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
