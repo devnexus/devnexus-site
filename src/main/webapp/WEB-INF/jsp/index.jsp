@@ -147,6 +147,8 @@
 						<h3>Gold Sponsors</h3>
 						<a href="http://www.pivotal.io/"><img class="logo" alt="Pivotal"
 							 src="${ctx}/img/sponsors/pivotal.png"/></a>
+						<a href="http://www.jfrog.com/"><img class="logo" alt="JFrog"
+							 src="${ctx}/img/sponsors/jfrog.png"/></a>							 
 						<a href="http://www.thoughtworks.com/"><img class="logo" alt="Thoughtworks"
 							 src="${ctx}/img/sponsors/thoughtworks.png"/></a>
 						<a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
