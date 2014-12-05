@@ -106,9 +106,12 @@
 										<li id="linkedin"><a
 											href="http://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />">LinkedIn</a></li>
 									</c:if>
+									<c:if test="${!empty speaker.lanyrdId}">
+										<li id="lanyrd"><a
+											href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />">Lanyrd</a></li>
+									</c:if>
 								</ul>
 							</div>
-
 							<c:if test="${!empty speaker.presentations}">
 								<c:choose>
 									<c:when test="${fn:length(speaker.presentations) gt 1}">

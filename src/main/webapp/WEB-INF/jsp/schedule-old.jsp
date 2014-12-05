@@ -1,504 +1,146 @@
+<%@page import="com.devnexus.ting.core.model.ScheduleItemType"%>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
+<% pageContext.setAttribute("scheduleItemTypeAdminsitrative", ScheduleItemType.ADMINISTRATIVE); %>
+<% pageContext.setAttribute("scheduleItemTypeBreak", ScheduleItemType.BREAK); %>
+<% pageContext.setAttribute("scheduleItemTypeKeynote", ScheduleItemType.KEYNOTE); %>
+<% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
+<% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 
 <title>DevNexus 2013 - Schedule</title>
 <div id="content" class="span-22 last">
   <div class="quote"><span>What the community says:</span> "Best Dev Education bargain in Atlanta"</div>
   <h2>Schedule</h2>
-  <ul>
-      <c:forEach items="${organizerList.organizers}" var="organizer">
-          <li><a href="#${organizer.firstName}_${organizer.lastName}"><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></a></li>
-      </c:forEach>
-  </ul>
 
+	<c:set value="" var="loopStartTime"/>
+	<c:set value="" var="loopDay"/>
 
-  <table style="border-collapse: collapse;" class="schedule ">
-          <tr>
-                  <th colspan="5" class="day">Monday February 18, 2013</th>
-          </tr>
-          <tr>
-                  <th>Start</th>
-                  <th>End</th>
-                  <th>Session</th>
-                  <th>Room</th>
-                  <th>Session</th>
-          </tr>
+	<c:forEach items="${scheduleItemList.scheduleItems}" var="scheduleItem">
 
-          <tr>
-                  <td class="time">08:00</td>
-                  <td class="time">09:00</td>
-                  <td colspan="3" class="registration">Breakfast &amp; Registration [Galleria Attrium]</td>
-          </tr>
-          <tr>
-                  <td class="time">09:00</td>
-                  <td class="time">09:15</td>
-                  <td colspan="3" class="keynote">Welcome [Salon C/D]</td>
-          </tr>
-          <tr>
-                  <td class="time">09:15</td>
-                  <td class="time">10:15</td>
-                  <td class="keynote">Keynote</td>
-                  <td class="keynote">Salon C/D</td>
-                  <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-                  </td>
-          </tr>
-          <tr>
-                  <td class="time">10:15</td>
-                  <td class="time">10:30</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">10:30</td>
-               <td class="time"      rowspan="6">11:45</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">11:45</td>
-                  <td class="time">12:30</td>
-                  <td colspan="3" class="break">Lunch [Salon C/D]</td>
-          </tr>
-          <tr>
-                  <td class="time">12:30</td>
-                  <td class="time">01:00</td>
-                  <td colspan="3" class="break">Dessert [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">01:00</td>
-               <td class="time"      rowspan="6">02:15</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">02:15</td>
-                  <td class="time">02:30</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">02:30</td>
-               <td class="time"      rowspan="6">03:45</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">03:45</td>
-                  <td class="time">04:00</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">04:00</td>
-               <td class="time"      rowspan="6">05:15</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-            <tr>
-                    <td class="time">05:15</td>
-                    <td class="time">05:30</td>
-                    <td colspan="3" class="break">Break [Galleria Attrium]</td>
-            </tr>
-          <tr>
-                  <td class="time">05:30</td>
-                  <td class="time">06:45</td>
-                  <td class="keynote">Keynote</td>
-                  <td class="keynote">Salon C/D</td>
-                  <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-                  </td>
-          </tr>
-          <tr>
-                  <td class="time">06:45</td>
-                  <td class="time">08:00</td>
-                  <td colspan="6">Cocktail Reception [Jocks and Jills Sports Bar]</td>
-          </tr>
+		<fmt:formatDate pattern="H_m_s" value="${scheduleItem.fromTime}" var="currentStartTime"/>
+		<fmt:formatDate pattern="d"     value="${scheduleItem.fromTime}" var="currentDay"/>
 
-          <tr>
-                  <th colspan="5" class="day">Tuesday February 19, 2013</th>
-          </tr>
-          <tr>
-                  <td class="time">08:00</td>
-                  <td class="time">09:00</td>
-                  <td colspan="3" class="registration">Breakfast [Galleria Attrium]</td>
-          </tr>
-          <tr>
-                  <td class="time">09:00</td>
-                  <td class="time">10:15</td>
-                  <td class="keynote">Keynote</td>
-                  <td class="keynote">Salon C/D</td>
-                  <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-                  </td>
-          </tr>
-          <tr>
-                  <td class="time">10:15</td>
-                  <td class="time">10:30</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">10:30</td>
-               <td class="time"      rowspan="6">11:45</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">11:45</td>
-                  <td class="time">12:30</td>
-                  <td colspan="3" class="break">Lunch [Salon C/D]</td>
-          </tr>
-          <tr>
-                  <td class="time">12:30</td>
-                  <td class="time">01:00</td>
-                  <td colspan="3" class="break">Dessert [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">01:00</td>
-               <td class="time"      rowspan="6">02:15</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">02:15</td>
-                  <td class="time">02:30</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">02:30</td>
-               <td class="time"      rowspan="6">03:45</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">03:45</td>
-                  <td class="time">04:00</td>
-                  <td colspan="3" class="break">Break [Galleria Attrium]</td>
-          </tr>
-          <tr>
-               <td class="time"      rowspan="6">04:00</td>
-               <td class="time"      rowspan="6">05:15</td>
-               <td class="breakouts" rowspan="6">Breakouts</td>
-               <td class="track-1">Salon A</td>
-               <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-               </td>
-          </tr>
-          <tr>
-              <td class="track-2">Salon B</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-3">Salon C/D</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-4">Room 104</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-5">Room 105</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-              <td class="track-6">Room 113/114</td>
-              <td class="talk">
-                           <p class="topic">TBD</p>
-                           <p class="speaker">TBD</p>
-              </td>
-          </tr>
-          <tr>
-                  <td class="time">05:15</td>
-                  <td class="time">05:45</td>
-                  <td colspan=3 class="keynote">Closing Ceremonies [Salon C/D]</td>
-          </tr>
+		<c:if test="${empty loopDay or (currentDay != loopDay)}">
 
-  </table>
+			<c:if test="${not empty loopDay}">
+				</table>
+			</c:if>
+			<table class="table" style="border-collapse: collapse; margin-bottom: 1em;" class="schedule ">
+			<tr>
+				<th colspan="5" class="day"><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${scheduleItem.fromTime}"/></th>
+			</tr>
+			<tr>
+				<th>Start</th>
+				<th>End</th>
+				<th>Session</th>
+				<th>Room/Track</th>
+				<th>Session</th>
+			</tr>
+		</c:if>
+
+		<tr>
+			<c:choose>
+				<c:when test="${currentStartTime ne loopStartTime}">
+					<c:set value="${currentStartTime}" var="loopStartTime"/>
+					<c:choose>
+						<c:when test="${scheduleItem.rowspan > 1}">
+							<td class="time" rowspan="${scheduleItem.rowspan}"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></td>
+							<td class="time" rowspan="${scheduleItem.rowspan}"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></td>
+						</c:when>
+						<c:otherwise>
+							<td class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></td>
+							<td class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></td>
+						</c:otherwise>
+					</c:choose>
+				</c:when>
+			</c:choose>
+			<c:choose>
+				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeRegistration}">
+					<td colspan="3" class="registration"><c:out value="${scheduleItem.title} [${scheduleItem.room.name}]"/></td>
+				</c:when>
+				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeAdminsitrative}">
+					<td colspan="3" class="keynote"><c:out value="${scheduleItem.title} [${scheduleItem.room.name}]"/></td>
+				</c:when>
+				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeBreak}">
+					<td colspan="3" class="break"><c:out value="${scheduleItem.title}" default="Break"/> [${scheduleItem.room.name}]</td>
+				</c:when>
+				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeSession}">
+					<c:if test="${scheduleItem.rowspan > 1}">
+						<td class="breakouts" rowspan="${scheduleItem.rowspan}">Breakouts</td>
+					</c:if>
+
+					<td class="${scheduleItem.room.cssStyleName}">
+						<p><strong>${scheduleItem.room.name}</strong></p>
+						<c:if test="${not empty scheduleItem.room.track}">
+							<p><c:out value="${scheduleItem.room.track}"/></p>
+						</c:if>
+					</td>
+					<td class="talk">
+						<p class="topic">
+							<c:choose>
+								<c:when test="${not empty scheduleItem.presentation}">
+									<c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+									<a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
+								</c:when>
+								<c:otherwise>
+									<c:out value="${scheduleItem.title}" default="N/A"/>
+								</c:otherwise>
+							</c:choose>
+						</p>
+						<p class="speaker">
+							<c:choose>
+								<c:when test="${not empty scheduleItem.presentation.speakers}">
+									<c:forEach var="speaker" items="${scheduleItem.presentation.speakers}">
+										<br/>${speaker.firstName} ${speaker.lastName}
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									N/A
+								</c:otherwise>
+							</c:choose>
+						</p>
+					</td>
+				</c:when>
+				<c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeKeynote}">
+					<td class="keynote">Keynote</td>
+					<td class="keynote">${scheduleItem.room.name}</td>
+					<td class="talk">
+						<p class="topic">
+							<c:choose>
+								<c:when test="${not empty scheduleItem.presentation}">
+									<c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+									<a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
+								</c:when>
+								<c:otherwise>
+									<c:out value="${scheduleItem.title}" default="N/A"/>
+								</c:otherwise>
+							</c:choose>
+						</p>
+
+						<p class="speaker">
+							<c:choose>
+								<c:when test="${not empty scheduleItem.presentation.speakers}">
+									<c:forEach var="speaker" items="${scheduleItem.presentation.speakers}">
+										<br/>${speaker.firstName} ${speaker.lastName}
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									N/A
+								</c:otherwise>
+							</c:choose>
+						</p>
+					</td>
+				</c:when>
+			</c:choose>
+		</tr>
+
+		<c:set var="loopDay" value="${currentDay}" />
+
+	</c:forEach>
+
+	<c:if test="${not empty loopDay}">
+			</table>
+	</c:if>
+
 </div>
 
 <content tag='foo'>

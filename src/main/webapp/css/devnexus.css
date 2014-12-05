@@ -171,6 +171,7 @@ div.red.jumbotron {background: #630d1a; font-size: 16px; color:#fff; text-align:
 	#bio #one-third #social  ul li a{display:block;text-indent: -9999px;overflow: hidden; height:33px;}
 	#bio #one-third #social ul li#twitter a{background:transparent url('../images/twitter.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third #social ul li#linkedin a{background:transparent url('../images/linkedin.jpg')no-repeat center center; height: 32px; width: 32px;}
+	#bio #one-third #social ul li#lanyrd a{background:transparent url('../images/lanyrd.png')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third #social ul li#google a{background:transparent url('../images/google.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third #social ul li#rss a{background:transparent url('../images/rss.jpg')no-repeat center center; height: 32px; width: 32px;}
 	#bio #one-third p {color: #455159}

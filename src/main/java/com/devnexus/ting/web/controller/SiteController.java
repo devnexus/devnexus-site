@@ -35,6 +35,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.ApplicationCache;
@@ -94,7 +95,8 @@ public class SiteController {
 
 
 	@RequestMapping({"/schedule", "/api/schedule"})
-	public String scheduleForCurrentEvent(final Model model) {
+	public String scheduleForCurrentEvent(final Model model,
+			@RequestParam(required=false, value="old") boolean old) {
 
 		final Event event = businessService.getCurrentEvent();
 		model.addAttribute("headerTitle", "Schedule222");
@@ -105,6 +107,10 @@ public class SiteController {
 		}
 		else {
 			LOGGER.warn("No current event available.");
+		}
+
+		if (old) {
+			return "schedule-old";
 		}
 		return "schedule";
 

@@ -148,7 +148,7 @@
 						<a href="http://www.pivotal.io/"><img class="logo" alt="Pivotal"
 							 src="${ctx}/img/sponsors/pivotal.png"/></a>
 						<a href="http://www.jfrog.com/"><img class="logo" alt="JFrog"
-							 src="${ctx}/img/sponsors/jfrog.png"/></a>							 
+							 src="${ctx}/img/sponsors/jfrog.png"/></a>
 						<a href="http://www.thoughtworks.com/"><img class="logo" alt="Thoughtworks"
 							 src="${ctx}/img/sponsors/thoughtworks.png"/></a>
 						<a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
@@ -158,24 +158,32 @@
 		<div id="silver" style="max-width: 768px;margin-left:auto;margin-right:auto;">
 				<h3>Silver Sponsors</h3>
 						<a href="http://www.coverity.com/"><img class="logo" alt="Coverity"
-							 src="${ctx}/img/sponsors/coverity.png"/></a>
+							src="${ctx}/img/sponsors/coverity.png"/></a>
 						<a href="http://www.anteogroup.com/"><img class="logo" alt="Anteo Group"
-							 src="${ctx}/img/sponsors/Anteo.png"/></a>
+							src="${ctx}/img/sponsors/Anteo.png"/></a>
 						<a href="http://www.statefarm.com/"><img class="logo" alt="State Farm"
-                                                         src="${ctx}/img/sponsors/state_farm.png"/></a>
+							src="${ctx}/img/sponsors/state_farm.png"/></a>
 						<a href="http://www.vaadin.com/"><img class="logo" alt="Vaadin"
-							 src="${ctx}/img/sponsors/vaadin.png"/></a>
+							src="${ctx}/img/sponsors/vaadin.png"/></a>
 						<a href="http://www.sonatype.com/"><img class="logo" alt="Sonatype"
-							 src="${ctx}/img/sponsors/sonatype_key.png"/></a>
+							src="${ctx}/img/sponsors/sonatype_key.png"/></a>
 						<a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"><img class="logo" alt="See Sponsorship Options"
-							 src="${ctx}/images/sponsorship-available.png"/></a>
-						<a href="http://www.altisourcelabs.com/">
-								<img class="logo" alt="Altisource Labs" src="${ctx}/img/sponsors/altisource.png"/>
+							src="${ctx}/images/sponsorship-available.png"/></a>
+						<a href="http://www.altisourcelabs.com/"><img class="logo" alt="Altisource Labs"
+							src="${ctx}/img/sponsors/altisource.png"/></a>
+						<a href="http://www.thompsontechnologies.com/"><img class="logo" alt="Thompson Technologies"
+							src="${ctx}/img/sponsors/thompson.png"/></a>
+						<a href="http://www.aspose.com/"><img class="logo" alt="Aspose"
+							src="${ctx}/img/sponsors/aspose-key.png"/>
 						</a>
-						 <a href="http://www.thompsontechnologies.com/"><img class="logo" alt="Thompson Technologies"
-                                                         src="${ctx}/img/sponsors/thompson.png"/></a>
-						<a href="http://www.aspose.com/">
-								<img class="logo" alt="Aspose" src="${ctx}/img/sponsors/aspose-key.png"/>
+						<a href="http://www.oracle.com/"><img class="logo" alt="Oracle"
+							src="${ctx}/img/sponsors/oracle.png"/>
+						</a>
+						<a href="http://www.github.com/"><img class="logo" alt="GitHub"
+							src="${ctx}/img/sponsors/github_logo.png"/>
+						</a>
+						<a href="http://www.bridge2solutions.com/"><img class="logo" alt="Bridge2 Solutions"
+							src="${ctx}/img/sponsors/B2S.png"/>
 						</a>
 		</div>
 		<div id="cocktail">
