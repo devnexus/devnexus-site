@@ -147,6 +147,28 @@ public class PresentationController {
 			return "presentations-empty";
 		}
 
+		return "new-presentations-by-" + order;
+	}
+
+	@RequestMapping("/old-presentations")
+	public String getOldPresentationsForCurrentEvent(
+			@RequestParam(value="order", defaultValue="track") String order,
+			@RequestParam(value="trackId", required=false) Long trackId,
+			@RequestParam(value="trackName", required=false) String trackName,
+			@RequestParam(value="type", required=false)  String type,
+			@RequestParam(value="experience", required=false) String experience,
+			@RequestParam(value="tags", required=false)  String tags,
+			final Model model) {
+
+		final Event event = businessService.getCurrentEvent();
+		PresentationSearchQuery presentationSearchQuery = PresentationSearchQuery.create(event, trackId, trackName, type, experience, tags);
+
+		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, presentationSearchQuery);
+
+		if ("room".equalsIgnoreCase(order) && presentationList.getPresentations().isEmpty()) {
+			return "presentations-empty";
+		}
+
 		return "presentations-by-" + order;
 	}
 

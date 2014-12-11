@@ -54,6 +54,7 @@ import com.devnexus.ting.core.dao.PresentationTagDao;
 import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
+import com.devnexus.ting.core.dao.SponsorDao;
 import com.devnexus.ting.core.dao.TrackDao;
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.CfpSubmission;
@@ -68,6 +69,7 @@ import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Sponsor;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
@@ -94,6 +96,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private RoomDao         roomDao;
 	@Autowired private ScheduleItemDao scheduleItemDao;
 	@Autowired private SpeakerDao      speakerDao;
+	@Autowired private SponsorDao      sponsorDao;
 	@Autowired private TrackDao        trackDao;
 	@Autowired private ApplicationCacheDao applicationCacheDao;
 	@Autowired private Environment environment;
@@ -130,6 +133,15 @@ public class BusinessServiceImpl implements BusinessService {
 
 		LOGGER.debug("Deleting Organizer {}", organizerFromDb);
 		organizerDao.remove(organizerFromDb);
+	}
+
+	@Override
+	public void deleteSponsor(Sponsor sponsorFromDb) {
+		Assert.notNull(sponsorFromDb,         "The provided sponsor must not be null.");
+		Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
+
+		LOGGER.debug("Deleting Sponsor {}", sponsorFromDb);
+		sponsorDao.remove(sponsorFromDb);
 	}
 
 	/** {@inheritDoc} */
@@ -207,11 +219,28 @@ public class BusinessServiceImpl implements BusinessService {
 		return organizerDao.get(organizerId);
 	}
 
+	@Override
+	public Sponsor getSponsor(Long sponsorId) {
+		return sponsorDao.get(sponsorId);
+	}
+
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
 	public Organizer getOrganizerWithPicture(Long organizerId) {
 		return organizerDao.getOrganizerWithPicture(organizerId);
+	}
+
+	@Override
+	@Transactional
+	public Sponsor getSponsorWithPicture(Long sponsorId) {
+		return sponsorDao.getSponsorWithPicture(sponsorId);
+	}
+
+	@Override
+	@Transactional
+	public List<Organizer> getAllOrganizersWithPicture() {
+		return organizerDao.getOrganizersWithPicture();
 	}
 
 	/** {@inheritDoc} */
@@ -309,6 +338,12 @@ public class BusinessServiceImpl implements BusinessService {
 	@Transactional
 	public Organizer saveOrganizer(Organizer organizer) {
 		return organizerDao.save(organizer);
+	}
+
+	@Override
+	@Transactional
+	public Sponsor saveSponsor(Sponsor sponsor) {
+		return sponsorDao.save(sponsor);
 	}
 
 	/** {@inheritDoc} */
@@ -588,4 +623,12 @@ public class BusinessServiceImpl implements BusinessService {
 
 		return presentationTagsToSave;
 	}
+
+	@Override
+	public List<Sponsor> getSponsorsForEvent(Long id) {
+		return sponsorDao.getSponsorsForEvent(id);
+	}
+
+
+
 }

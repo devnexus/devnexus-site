@@ -63,6 +63,7 @@ public class PersistenceConfig {
 			com.devnexus.ting.core.model.RoomList.class,
 			com.devnexus.ting.core.model.ScheduleItem.class,
 			com.devnexus.ting.core.model.ScheduleItemList.class,
+			com.devnexus.ting.core.model.Sponsor.class,
 			com.devnexus.ting.core.model.Speaker.class,
 			com.devnexus.ting.core.model.SpeakerList.class,
 			com.devnexus.ting.core.model.ScheduleItemType.class,

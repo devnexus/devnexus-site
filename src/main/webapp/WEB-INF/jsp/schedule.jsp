@@ -5,25 +5,32 @@
 <% pageContext.setAttribute("scheduleItemTypeKeynote", ScheduleItemType.KEYNOTE); %>
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
+
 <head>
 	<title>DevNexus 2015 - Schedule</title>
 </head>
-<div id="devnex" class="jumbotron">
-	<div class="container">
-			<div id="banner">
-			<h1 id="gray">DevNexus 2015</h1>
-			<h1 id="white">Schedule</h1>
-			<h3>1300+ Developers, 11 tracks, 100 Presentations, 3 Days</h3>
+
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Schedule</span></h4>
+					<h5 class="intro-white-lead">1500 Developers, 12 tracks, 120 Presentations, 3 Days.</h5>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+<!-- /intro -->
 
 <div class="container">
 
     <c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
 
         <!-- Example row of columns -->
-        <h1 class="center">Day ${dateStatus.index + 1}</h1>
+        <h1 class="text-center">Day ${dateStatus.index + 1}</h1>
 
         <div id="h4wrap"><h4><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${date}"/></h4></div>
         <div id="sessions">

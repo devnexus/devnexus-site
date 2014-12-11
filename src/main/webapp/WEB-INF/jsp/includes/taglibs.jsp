@@ -16,6 +16,7 @@ response.setHeader("Expires","0");
 
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 <c:set var="baseSiteUrl" value="/s"/>
+<c:set var="assetsUrl" value="${ctx}/assets"/>
 <c:if test="${event ne null}">
 	<c:set var="siteUrl" value="${ctx}${baseSiteUrl}/${event.eventKey}"/>
 </c:if>

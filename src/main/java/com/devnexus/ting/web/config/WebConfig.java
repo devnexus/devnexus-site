@@ -65,6 +65,7 @@ import com.devnexus.ting.web.converter.StringToPresentationType;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSpeaker;
+import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
 
 /**
@@ -110,6 +111,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToRoom());
 		registry.addConverter(new StringToSkillLevel());
 		registry.addConverter(new StringToPresentationType());
+		registry.addConverter(new StringToSponsorLevel());
 	}
 
 	/* (non-Javadoc)
@@ -175,6 +177,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		conversionService.addConverter(new StringToSpeaker());
 		conversionService.addConverter(new StringToSkillLevel());
 		conversionService.addConverter(new StringToPresentationType());
+		conversionService.addConverter(new StringToSponsorLevel());
 
 		bindingInitializer.setConversionService(conversionService);
 		bindingInitializer.setValidator(validator());

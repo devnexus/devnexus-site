@@ -25,4 +25,6 @@ public interface OrganizerDao  extends GenericDao < Organizer, Long > {
 
 	Organizer getOrganizerWithPicture(Long organizerId);
 
+	List<Organizer> getOrganizersWithPicture();
+
 }

@@ -30,6 +30,7 @@ import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Sponsor;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 
@@ -249,4 +250,16 @@ public interface BusinessService {
 	void deleteCfpSubmission(Long id);
 
 	Set<PresentationTag> processPresentationTags(String tagsAsText);
+
+	List<Sponsor> getSponsorsForEvent(Long id);
+
+	Sponsor saveSponsor(Sponsor sponsorForm);
+
+	Sponsor getSponsor(Long sponsorId);
+
+	void deleteSponsor(Sponsor sponsorFromDb);
+
+	Sponsor getSponsorWithPicture(Long sponsorId);
+
+	List<Organizer> getAllOrganizersWithPicture();
 }

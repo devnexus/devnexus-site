@@ -18,3 +18,4 @@ response.setHeader("Expires","0");
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 <c:set var="baseSiteUrl" value="/s"/>
 <c:set var="siteUrl" value="${ctx}${baseSiteUrl}"/>
+<c:set var="assetsUrl" value="${ctx}/assets"/>
