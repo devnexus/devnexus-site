@@ -264,20 +264,26 @@ public class SiteController {
 		for (Organizer organizer : organizers) {
 			final FileData imageData = organizer.getPicture();
 			if (imageData != null) {
-				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
-				BufferedImage image;
+				final ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
 				try {
+					final BufferedImage image;
+					final BufferedImage imageToReturn;
 					image = ImageIO.read(bais);
-					BufferedImage scaled = Scalr.resize(image, Scalr.Mode.FIT_EXACT, 140, 140);
 
-					ByteArrayOutputStream out = new ByteArrayOutputStream();
-					ImageIO.write(scaled, "JPG", out);
+					if (image.getWidth() != 140 && image.getHeight() != 140) {
+						imageToReturn =  Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, Scalr.Mode.FIT_EXACT, 140, 140);
+					}
+					else {
+						imageToReturn = image;
+					}
+
+					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+					ImageIO.write(imageToReturn, "JPG", out);
 
 					byte[] bytes = out.toByteArray();
 
-					String base64bytes = Base64.encodeBase64String(bytes);
-					String src = "data:image/jpg;base64," + base64bytes;
-					System.out.println("Image: " + base64bytes.length() + "; base64: " + src.length());
+					final String base64bytes = Base64.encodeBase64String(bytes);
+					final String src = "data:image/jpg;base64," + base64bytes;
 					organizerPictures.put(organizer.getId(), src);
 				} catch (IOException e) {
 					e.printStackTrace();

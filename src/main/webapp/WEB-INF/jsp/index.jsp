@@ -163,7 +163,7 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
 					<img src="${assetsUrl}/img/chart.png">
-						<h3 class="lead">DATA + INTERGRATION</h3>
+						<h3 class="lead">DATA + INTEGRATION</h3>
 						<p>
 						Whether your data is big or small you need to make it play nicely
 						with everything else. Whether you SQL or you NoSQL you will find it

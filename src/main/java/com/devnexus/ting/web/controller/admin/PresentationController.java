@@ -196,6 +196,12 @@ public class PresentationController {
 
 		final Presentation presentationFromDb = businessService.getPresentation(presentationId);
 
+		if (request.getParameter("delete") != null) {
+			businessService.deletePresentation(presentationFromDb);
+			//FlashMap.setSuccessMessage("The organizer was deleted successfully.");
+			return "redirect:/s/admin/presentations";
+		}
+
 		presentationFromDb.setAudioLink(presentation.getAudioLink());
 		presentationFromDb.setDescription(presentation.getDescription());
 		presentationFromDb.setPresentationLink(presentation.getPresentationLink());

@@ -11,7 +11,7 @@
 					<h4 class="section-white-title decorated"><span>Presentations</span></h4>
 					<h5 class="intro-white-lead">Discover how the industry's best minds use the latest technologies to build solutions.</h5>
 					<ul class="list-inline">
-						<li>Data + Intergration</li>
+						<li>Data + Integration</li>
 						<li>Java/JavaEE/Spring</li>
 						<li>HTML5 + Javascript</li>
 						<li>Alternative Languages</li>
