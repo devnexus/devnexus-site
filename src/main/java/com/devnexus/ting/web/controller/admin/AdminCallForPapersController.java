@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.CfpSubmissionList;
+import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.core.model.CfpSubmissionStatusType;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.PresentationType;
@@ -102,7 +103,7 @@ public class AdminCallForPapersController {
 		}
 		if (request.getParameter("delete") != null) {
 			businessService.deleteCfpSubmission(cfpSubmission.getId());
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/cfps";
 		}
 
 		if (result.hasErrors()) {
@@ -110,26 +111,34 @@ public class AdminCallForPapersController {
 		}
 
 		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
+		cfpSubmissionFromDb.setDescription(cfpSubmission.getDescription());
 		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
+		cfpSubmissionFromDb.setPresentationType(cfpSubmission.getPresentationType());
+		cfpSubmissionFromDb.setSessionRecordingApproved(cfpSubmission.isSessionRecordingApproved());
+		cfpSubmissionFromDb.setSkillLevel(cfpSubmission.getSkillLevel());
+		cfpSubmissionFromDb.setSlotPreference(cfpSubmission.getSlotPreference());
+		cfpSubmissionFromDb.setTitle(cfpSubmission.getTitle());
+		cfpSubmissionFromDb.setTopic(cfpSubmission.getTopic());
 
-//		for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
-//			CfpSubmissionSpeaker speakerFromDb = cfpSubmissionFromDb.getSpeakerById(speaker.getId());
-//			if (speakerFromDb != null) {
-//				speakerFromDb.setBio(speaker.getBio());
-//				speakerFromDb.setEmail(speaker.getEmail());
-//				speakerFromDb.setFirstName(speaker.getFirstName());
-//				speakerFromDb.setGithubId(speaker.getGithubId());
-//				speakerFromDb.setGooglePlusId(speaker.getGooglePlusId());
-//				speakerFromDb.setLanyrdId(speaker.getLanyrdId());
-//				speakerFromDb.setLastName(speaker.getLastName());
-//				speakerFromDb.setLinkedInId(speaker.getLinkedInId());
-//				speakerFromDb.setLocation(speaker.getLocation());
-//				speakerFromDb.setMustReimburseTravelCost(speaker.isMustReimburseTravelCost());
-//				speakerFromDb.setPhone(speaker.getPhone());
-//				speakerFromDb.setTshirtSize(speaker.getTshirtSize());
-//				speakerFromDb.setTwitterId(speaker.getTwitterId());
-//			}
-//		}
+
+		for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
+			CfpSubmissionSpeaker speakerFromDb = cfpSubmissionFromDb.getSpeakerById(speaker.getId());
+			if (speakerFromDb != null) {
+				speakerFromDb.setBio(speaker.getBio());
+				speakerFromDb.setEmail(speaker.getEmail());
+				speakerFromDb.setFirstName(speaker.getFirstName());
+				speakerFromDb.setGithubId(speaker.getGithubId());
+				speakerFromDb.setGooglePlusId(speaker.getGooglePlusId());
+				speakerFromDb.setLanyrdId(speaker.getLanyrdId());
+				speakerFromDb.setLastName(speaker.getLastName());
+				speakerFromDb.setLinkedInId(speaker.getLinkedInId());
+				speakerFromDb.setLocation(speaker.getLocation());
+				speakerFromDb.setMustReimburseTravelCost(speaker.isMustReimburseTravelCost());
+				speakerFromDb.setPhone(speaker.getPhone());
+				speakerFromDb.setTshirtSize(speaker.getTshirtSize());
+				speakerFromDb.setTwitterId(speaker.getTwitterId());
+			}
+		}
 
 		businessService.saveCfpSubmission(cfpSubmissionFromDb);
 

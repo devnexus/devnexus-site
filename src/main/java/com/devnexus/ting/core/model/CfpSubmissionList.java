@@ -32,6 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class CfpSubmissionList implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private Integer numberOfCfps;
+
 	@XmlElement(name="cfp-submission")
 	private List<CfpSubmission> cfpSubmissions;
 
@@ -41,6 +43,8 @@ public class CfpSubmissionList implements Serializable {
 	public CfpSubmissionList(List<CfpSubmission> cfpSubmissions) {
 		super();
 		this.cfpSubmissions = cfpSubmissions;
+		this.numberOfCfps = cfpSubmissions.size();
+
 	}
 
 	public CfpSubmissionList() {
@@ -54,6 +58,14 @@ public class CfpSubmissionList implements Serializable {
 
 	public void setCfpSubmissions(List<CfpSubmission> cfpSubmissions) {
 		this.cfpSubmissions = cfpSubmissions;
+	}
+
+	public Integer getNumberOfCfps() {
+		return numberOfCfps;
+	}
+
+	public void setNumberOfCfps(Integer numberOfCfps) {
+		this.numberOfCfps = numberOfCfps;
 	}
 
 }
