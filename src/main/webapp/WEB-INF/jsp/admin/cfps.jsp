@@ -4,11 +4,24 @@
 
 <% pageContext.setAttribute("acceptedCfpStatus", CfpSubmissionStatusType.ACCEPTED); %>
 <% pageContext.setAttribute("rejectedCfpStatus", CfpSubmissionStatusType.REJECTED); %>
+<% pageContext.setAttribute("pendingCfpStatus", CfpSubmissionStatusType.PENDING); %>
 
 <title>Manage Call for Paper Submissions</title>
-<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
-	<h2>Manage Call for Paper Submissions</h2>
-</div>
+
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Manage Call for Paper Submissions</span></h4>
+					<h5 class="intro-white-lead">There are ${cfpSubmissionList.numberOfCfps} CFPs.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
@@ -34,9 +47,11 @@
 				</c:choose>
 
 				<tr class="${cfpStatusClass}">
-					<td>
+					<td style="width: 150px;">
 						<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
-						<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
+						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
+							<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
+						</c:if>
 					</td>
 					<td>
 						<c:forEach var="speaker" items="${cfp.speakers}">

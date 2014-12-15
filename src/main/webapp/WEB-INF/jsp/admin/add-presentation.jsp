@@ -162,7 +162,7 @@
 </div>
 
 <content tag='bottom'>
-		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function() {

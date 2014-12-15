@@ -2,9 +2,20 @@
 <% pageContext.setAttribute("lf", "\n"); %>
 
 <title>Rooms</title>
-<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
-	<h2>Rooms</h2>
-</div>
+
+<!-- intro -->
+<section id="rooms" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Rooms</span></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">

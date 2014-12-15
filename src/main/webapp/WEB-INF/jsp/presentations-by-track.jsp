@@ -1,81 +1,98 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType"%>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
+<% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
-<head>
-	<title><c:out value="${event.title}"/> - Presentations</title>
-</head>
-
-<div id="devnex" class="jumbotron">
-	<div class="container">
-		<div id="banner">
-			<h1 id="gray"><c:out value="${event.title}"/></h1>
-
-			<h1 id="white">Presentations</h1>
-			<h3>Data + Integration, Java/JavaEE/Spring, HTML5 + JavaScript, Alternative Languages, Cloud, Agile + Tools, Mobile</h3>
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				 <div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Presentations</span></h4>
+					<h5 class="intro-white-lead">Discover how the industry's best minds use the latest technologies to build solutions.</h5>
+					<ul class="list-inline">
+						<li>Data + Integration</li>
+						<li>Java/JavaEE/Spring</li>
+						<li>HTML5 + Javascript</li>
+						<li>Alternative Languages</li>
+						<li>Cloud</li>
+						<li>Agile + Tools</li>
+						<li>Mobile</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+<!-- /intro -->
+<section id="speaker" class="bg-light-gray">
+	<div id="trackContainer" class="container">
+		<c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
+				<c:choose>
+					<c:when test="${status.first && status.index%3 == 0}">
 
-<div class="container" id="mainContainer">
-	<c:set var="trackName" value="nill"/>
-	<c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
-		<c:choose>
-			<c:when test="${empty presentation.track}">
-				<c:set var="localTrackName" value="Track Not Assigned"/>
-				<c:set var="trackStyle" value="defaultTrackStyle"/>
-				<c:set var="trackColor" value=""/>
-				<c:set var="trackFontColor" value=""/>
-				<c:set var="trackId" value="na"/>
-			</c:when>
-			<c:otherwise>
-				<c:set var="localTrackName" value="${presentation.track.name}"/>
-				<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
-				<c:set var="trackColor" value="background-color: ${presentation.track.color};"/>
-				<c:set var="trackFontColor" value="color: ${presentation.track.color};"/>
-				<c:set var="trackId" value="${presentation.track.id}"/>
-			</c:otherwise>
-		</c:choose>
-		<c:if test="${trackName ne localTrackName}">
-			<c:set var="trackName" value="${localTrackName}"/>
-			<c:if test="${!status.first}">
+					</c:when>
+					<c:when test="${not status.first && not status.last && status.index%3 == 0}">
+
+					</c:when>
+				</c:choose>
+				<div class="col-sm-4 masonryitem">
+					<div id="id-${presentation.id}" class="speaker-member">
+						<c:choose>
+							<c:when test="${not empty presentation.speakers}">
+								<c:forEach items="${presentation.speakers}" var="speaker">
+									<c:if test="${speaker.picture != null}">
+										<img class="img-responsive img-circle" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" alt="${speaker.firstLastName}"/>
+									</c:if>
+									<h4>
+										<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
+											<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
+										</a>
+									</h4>
+								</c:forEach>
+							</c:when>
+							<c:otherwise>
+								<h4>
+									TBD
+								</h4>
+							</c:otherwise>
+						</c:choose>
+						<p class="text-muted"><c:out value="${presentation.title}"/></p>
+						<p><c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/></p>
 					</div>
-					</div>
+				</div>
+			<c:if test="${status.last}">
+
 			</c:if>
-			<h1 class="${trackStyle}" style="${trackFontColor}"><strong><c:out value="${trackName}"/></strong><br/></h1>
-			<div id="h4wrap"><h4>Presentations</h4></div>
-			<div id="speakers">
-				<div class="row" id="<c:out value="trackContainer${trackId}"/>">
-		</c:if>
-		<div id="id-${presentation.id}" class="col-md-4 presentation track${trackId}">
-			<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
-		</div>
-	</c:forEach>
+		</c:forEach>
 	</div>
+</section>
+
+<!-- questions -->
+<section class="white">
+	<div class="top-intro questions">
+		<h4 class="section-title">Questions?</h4>
+		<h3>Contact us at info@ajug.org</h3>
 	</div>
-</div>
+</section>
 
 <content tag='bottom'>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
-			<c:forEach items="${presentationList.trackIdsAsString}" var="trackId">
+			var $container = $('#speaker');
 
-			var $container${trackId} = $('#trackContainer${trackId}');
+			console.log($container);
 
-			console.log($container${trackId});
-
-			$container${trackId}.imagesLoaded(function () {
-				$container${trackId}.masonry({
-						itemSelector: '.track${trackId}',
-						columnWidth: '.track${trackId}',
+			$container.imagesLoaded(function () {
+				$container.masonry({
+						itemSelector: '.masonryitem',
+						columnWidth: '.masonryitem',
 						isAnimated: true
 				});
 			});
 
-			</c:forEach>
-
-			var container = $('#mainContainer');
-			container.imagesLoaded(function () {
+			$container.imagesLoaded(function () {
 				var hash = window.location.hash;
 				console.log('Hash is: ' + hash);
 				if (!(hash === '')) {

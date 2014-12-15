@@ -6,8 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width" />
 
-	<title>DevNexus 2015</title>
-
 	<meta property="og:title" content="DevNexus 2015">
 	<meta property="og:type" content="company">
 	<meta property="og:site_name" content="DevNexus">
@@ -145,8 +143,8 @@
 	<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
 	<script src="${assetsUrl}/js/bootstrap.min.js"></script>
 
-	<script src="${ctx}/js/masonry.pkgd.js"></script>
-	<script src="${ctx}/js/imagesloaded.pkgd.min.js"></script>
+	<script src="${assetsUrl}/js/other/masonry.pkgd.js"></script>
+	<script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script>
 
 	<sitemesh:write property='page.bottom'/>
 	<script>

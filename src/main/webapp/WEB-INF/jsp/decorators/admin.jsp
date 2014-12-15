@@ -2,25 +2,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width" />
+
 	<title><sitemesh:write property='title'/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="${ctx}/favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="${ctx}/css/bootstrap.css" rel="stylesheet">
+	<title><sitemesh:write property='title'/></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="${ctx}/favicon.ico">
 
-    <!-- Custom styles for this template -->
-    <link href="${ctx}/css/devnexus.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="${ctx}/js/html5shiv.js"></script>
-    <script src="${ctx}/js/respond.min.js"></script>
-    <![endif]-->
-    <sitemesh:write property='head'/>
-    <script src="${ctx}/js/jquery.js"></script>
+	<!-- vendor CSS -->
+	<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
+	<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
+
+	<!-- custom CSS -->
+	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet">
+
+	<!-- fonts: external links -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<sitemesh:write property='head'/>
+	<sitemesh:write property='page.top'/>
 </head>
 <style>
     div#banner {
@@ -36,18 +50,19 @@
 <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 <c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
 
-<div class="navbar navbar-inverse navbar-fixed-top" style="border:none">
-	<div class="container">
+	<!-- navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
- 				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${homeUrl}"><img id="logo" src="${ctx}/images/devnexus-logo.jpg" border="0"></a>
+			<a class="navbar-brand" href="#"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
 		</div>
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
+		<div class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Web-site&hellip;<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -75,75 +90,76 @@
 						</ul>
 					</li></security:authorize>
 			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+
+	<sitemesh:write property='body'/>
+
+	<!-- footer -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="footer-wrapper container">
+			<div class="row">
+				<div class="sidebar footer-sidebar clearfix">
+					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget first footer-widget">
+						<div id="meta" class="footer-widget">
+							<img src="${assetsUrl}/img/DevNexus_logo_small.png">
+							<ul class="footer-social">
+								<li class=""><a href="https://twitter.com/devnexus" target="_blank"><i class="fa fa-twitter"></i>#devnexus</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
+						<div id="tweet" class="footer-widget">
+							<h3 class="footer-title">Learn More</h3>
+							<ul class="footer-social">
+								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
+								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
+								<li class=""><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"" target="_blank">Sponsorship (PDF)</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
+						<div id="tweet" class="footer-widget">
+							<h3 class="footer-title">DEVNEXUS 2015</h3>
+							<ul class="footer-social">
+								<li class=""><a href="${scheduleUrl}" target="_blank">Schedule</a></li>
+								<li class=""><a href="${speakersUrl}" target="_blank">Speakers</a></li>
+								<li class=""><a href="${presentationsUrl}" target="_blank">Presentations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
+						<div id="get_touch" class="widget widget_get_touch">
+							<a href="${registrationUrl}" class="btn btn-primary registerButton">Register Now!</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<!-- end top nav -->
-	</div>
-	<!-- end headerwrapper -->
-</div>
-<div style="clear: both;"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10-offset-1 legal">
+					<p>&copy; 2004-2015 <a href="http://www.ajug.org/">Atlanta Java Users Group</a> (AJUG)
+						<a href="${privacyPolicyUrl}"><span class="label">Privacy Policy</span></a>
+						<a href="${codeOfConductUrl}"><span class="label">Code of Conduct</span></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
 
-<sitemesh:write property='body'/>
+	<!-- javascipt -->
+	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
+	<script src="${assetsUrl}/js/jquery.modernizr.js"></script>
+	<script src="${assetsUrl}/js/jquery.scrollTo.js"></script>
+	<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
+	<script src="${assetsUrl}/js/bootstrap.min.js"></script>
 
-<div style="clear:both;"></div>
+	<script src="${assetsUrl}/js/other/masonry.pkgd.js"></script>
+	<script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script>
 
-<div id="footer" class="footer-inverse" style="margin-top: 20px">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3>Learn More</h3>
-                        <ul id="col">
-                            <li><a href="${ctx}${baseSiteUrl}/index">About DN</a></li>
-                            <li><a href="${organizersUrl}">Organizers</a></li>
-                            <li><a href="${pastConferencesUrl}">Past Conferences</a></li>
-                            <li><a href="${ctx}/static/2014/files/promo/devnexus-2014-sponsorship-options.pdf">Sponsorship
-                                (Pdf)</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>DevNexus 2014</h3>
-                        <ul id="col">
-                            <li><a href="${scheduleUrl}">Schedule</a></li>
-                            <li><a href="${speakersUrl}">Speakers</a></li>
-                            <li><a href="${presentationsUrl}">Presentations</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Attend</h3>
-                        <ul id="col">
-                            <li><a href="${registrationUrl}">Registration Info</a></li>
-                            <li><a href="${travelUrl}">Travel</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Stay Connected</h3>
-                        <ul id="col">
-                            <li><a href="<c:url value="${baseSiteUrl}/social"/>">Social</a></li>
-                            <ul id="col">
-                                <li><a href="https://facebook.com/devnexus">Facebook</a></li>
-                                <li><a href="https://twitter.com/devnexus">Twitter</a></li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <img id="logo" src="${devnexusLogoUrl}" border="0">
-
-                <p id="copy">&copy; 2008-2014 <a href="http://ajug.org">Atlanta Java Users Group (AJUG)</a></p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<script src="${ctx}/js/bootstrap.min.js"></script>
-
-<sitemesh:write property='page.bottom'/>
+	<sitemesh:write property='page.bottom'/>
 </body>
 </html>

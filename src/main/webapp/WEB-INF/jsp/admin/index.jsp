@@ -1,14 +1,21 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<title>Main Admin Area</title>
+<title>Administration</title>
 
-<div id="devnex" class="jumbotron">
-	<div class="container">
-		<div id="banner">
-			<h1><strong>Administration</strong></h1>
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Administration</span></h4>
+					<h5 class="intro-white-lead">File your TPS report on time.</h5>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+<!-- /intro -->
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-2">
@@ -26,13 +33,8 @@
 					<sec:authorize access="hasRole('ADMIN')">
 						<li><a href="${ctx}${baseSiteUrl}/admin/speakers?eventId=${currentEvent.id}">Manage Speakers</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/cfps">Manage Call for Papers</a></li>
-						<li><a href="${ctx}${baseSiteUrl}/admin/speaker?eventId=${currentEvent.id}">Add Speaker</a></li>
-
 						<li><a href="${ctx}${baseSiteUrl}/admin/sponsors">Manage Sponsors</a></li>
-						<li><a href="${ctx}${baseSiteUrl}/admin/sponsor?eventId=${currentEvent.id}">Add Sponsor</a></li>
-
 						<li><a href="${ctx}${baseSiteUrl}/admin/presentations?eventId=${currentEvent.id}">Manage Presentations</a></li>
-						<li><a href="${ctx}${baseSiteUrl}/admin/presentation?eventId=${currentEvent.id}">Add Presentation</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/manage-schedule?eventId=${currentEvent.id}">Manage Schedule</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/evaluations">Show Evaluations for Current Event</a></li>
 					</sec:authorize>

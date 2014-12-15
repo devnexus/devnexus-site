@@ -55,25 +55,23 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="${ctx}/s/index"></a>
-			</div>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${ctx}/s/index"></a>
+		</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a class="" href="${presentationsUrl}">Presentations</a></li>
-					<li><a class="" href="${speakersUrl}">Speakers</a></li>
-					<li><a class="" href="${scheduleUrl}">Schedule</a></li>
-					<li><a class="page-scroll" href="#travel">Travel</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+		<div class="collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a class="" href="${presentationsUrl}">Presentations</a></li>
+				<li><a class="" href="${speakersUrl}">Speakers</a></li>
+				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
+				<li><a class="page-scroll" href="#travel">Travel</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
 	</nav>
 
 	<!-- Intro Header -->
@@ -82,10 +80,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png">
+						<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
 						<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - MARCH 10-12, 2015</p>
 						<div class="icon">
-							<i class="fa fa fa-twitter"></i></a>
+							<i class="fa fa fa-twitter"></i>
 						</div><!--//icon-->
 						<p class="intro-text"><a href="https://twitter.com/devnexus">#devnexus</a></p>
 					</div>
@@ -99,7 +97,7 @@
 			<div class="container">
 					<div class="row centered">
 							<div class="col-md-10 col-md-offset-1">
-									<img src="${assetsUrl}/img/DN_TAGLINE_JOINTHEDEVOLUTION_NOBACKGROUND.png">
+									<img src="${assetsUrl}/img/DN_TAGLINE_JOINTHEDEVOLUTION_NOBACKGROUND.png" alt="Join the 'Dev'olution">
 									<p class="lead">Atlanta's most exciting conference for professional developers. Come discover how the industry's best minds use the latest technologies to build solutions to business problems. Network with other top software developers, and study real life case studies in application design and development.</p>
 									<a href="${registrationUrl}" class="btn btn-primary registerButton">Register Now!</a>
 									<a href="${ctx}/s/cfp" class="btn btn-primary callButton">Call For Papers</a>
@@ -162,7 +160,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/chart.png">
+					<img src="${assetsUrl}/img/chart.png" alt="Cart">
 						<h3 class="lead">DATA + INTEGRATION</h3>
 						<p>
 						Whether your data is big or small you need to make it play nicely
@@ -173,7 +171,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/java.png">
+					<img src="${assetsUrl}/img/java.png" alt="Cup of Java">
 						<h3 class="lead">JAVA/JAVAEE/SPRING</h3>
 						<p>
 						We like the language but we love the platform more. Whatever your
@@ -184,7 +182,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/code.png">
+					<img src="${assetsUrl}/img/code.png" alt="Code">
 						<h3 class="lead">HTML5 + JAVASCRIPT</h3>
 						<p>
 						Ah yes, the soup du jour of modern web development. Feeling overwhelmed
@@ -197,7 +195,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/chat.png">
+					<img src="${assetsUrl}/img/chat.png" alt="Chat">
 						<h3 class="lead">ATLERNATIVE LANGUAGES</h3>
 						<p>
 						Guess what! Java is not the only language to run on the JVM, shocker
@@ -207,7 +205,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/network.png">
+					<img src="${assetsUrl}/img/network.png" alt="Network">
 						<h3 class="lead">AGILE + TOOLS</h3>
 						<p>
 						How far down the Agile rabbit hole have you gone? Whether you are
@@ -217,7 +215,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/phone.png">
+					<img src="${assetsUrl}/img/phone.png" alt="Phone">
 						<h3 class="lead">MOBILE</h3>
 						<p>
 						The hottest ticket in town… designing for mobile first is even the
@@ -232,7 +230,7 @@
 	</section>
 
 	<!-- video -->
-	 <section id="featured" class="bkgDarkGrey">
+	 <section id="video" class="bkgDarkGrey">
 		<div class="container">
 			<div class="row video">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
@@ -303,19 +301,19 @@
 			<div class="row travel-row-spacing">
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://bit.ly/fWkNVC" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/sheraton.png"></a>
+						<a href="http://bit.ly/fWkNVC" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/sheraton.png" alt="Sheraton Hotel"></a>
 						<div class="text-center"><a class="travel-directions-link" href="http://bit.ly/fNl2Ol">Get Directions</a></div>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://bit.ly/hlU1OO" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/renaissance.png"></a>
+						<a href="http://bit.ly/hlU1OO" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/renaissance.png" alt="Renaissance Atlanta Waverly Hotel"></a>
 						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://www.atlantagalleria.embassysuites.com/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/embassy-suites.png"></a>
+						<a href="http://www.atlantagalleria.embassysuites.com/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/embassy-suites.png" alt="Embassy Suites"></a>
 						<div><a class="travel-directions-link" href="http://bit.ly/fKUADx">Get Directions</a></div>
 					</div>
 				</div>
@@ -370,7 +368,7 @@
 				<div class="sidebar footer-sidebar clearfix">
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget first footer-widget">
 						<div id="meta" class="footer-widget">
-							<img src="${assetsUrl}/img/DevNexus_logo_small.png">
+							<img src="${assetsUrl}/img/DevNexus_logo_small.png" alt="DevNexus logo small">
 			<ul class="footer-social">
 				<li class=""><a href="https://twitter.com/devnexus" target="_blank"><i class="fa fa-twitter"></i>#devnexus</a></li>
 			</ul>
@@ -382,12 +380,12 @@
 							<ul class="footer-social">
 								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
 								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf"" target="_blank">Sponsorship (PDF)</a></li>
+								<li class=""><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet" class="footer-widget">
+						<div id="tweet2" class="footer-widget">
 							<h3 class="footer-title">DEVNEXUS 2015</h3>
 							<ul class="footer-social">
 								<li class=""><a href="${scheduleUrl}">Schedule</a></li>

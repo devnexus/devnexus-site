@@ -3,9 +3,21 @@
 
 <title>Tags</title>
 
-<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
-	<h2>Tags</h2>
-</div>
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Tag Cloud</span></h4>
+					<h5 class="intro-white-lead">The topics we cover.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
+
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
@@ -41,7 +53,7 @@
 </div>
 <content tag='bottom'>
 
-		<script src="${ctx}/js/jquery.tagcloud.js"></script>
+		<script src="${ctx}/assets/js/jquery-plugins/jquery.tagcloud.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function() {

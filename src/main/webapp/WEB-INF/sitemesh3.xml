@@ -1,14 +1,5 @@
 <sitemesh>
-	<mapping                   decorator="/WEB-INF/jsp/decorators/default.jsp"/>
-	<mapping path="/s/speakers*" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/organizers" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/past-conferences" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/cfp*" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/add-cfp*" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/presentations*" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/new-schedule*" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/code-of-conduct" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
-	<mapping path="/s/schedule" decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
+	<mapping                   decorator="/WEB-INF/jsp/decorators/default-v2.jsp"/>
 	<mapping path="/s/"    exclude="true"/>
 	<mapping path="/s/index*"    exclude="true"/>
 	<mapping path="/s/admin/*" decorator="/WEB-INF/jsp/decorators/admin.jsp"/>
