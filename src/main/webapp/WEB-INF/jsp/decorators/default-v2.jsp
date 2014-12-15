@@ -22,16 +22,17 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="${ctx}/favicon.ico">
 
-	<!-- vendor CSS -->
+	<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
+
+<%-- 	<!-- vendor CSS -->
 	<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
 
 	<!-- custom CSS -->
-	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet">
+	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet"> --%>
 
 	<!-- fonts: external links -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -137,14 +138,15 @@
 	<!-- /footer -->
 
 	<!-- javascipt -->
-	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
+	<script src="${ctx}/wro/all.js"></script>
+<%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
 	<script src="${assetsUrl}/js/jquery.modernizr.js"></script>
 	<script src="${assetsUrl}/js/jquery.scrollTo.js"></script>
 	<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
 	<script src="${assetsUrl}/js/bootstrap.min.js"></script>
 
 	<script src="${assetsUrl}/js/other/masonry.pkgd.js"></script>
-	<script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script>
+	<script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script> --%>
 
 	<sitemesh:write property='page.bottom'/>
 	<script>

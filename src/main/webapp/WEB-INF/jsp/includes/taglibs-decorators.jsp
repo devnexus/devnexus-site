@@ -1,5 +1,5 @@
 <%@page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"
-        trimDirectiveWhitespaces="true" deferredSyntaxAllowedAsLiteral="true"%>
+        trimDirectiveWhitespaces="false" deferredSyntaxAllowedAsLiteral="true"%>
 
 <%
 response.setHeader("Cache-Control","no-cache");

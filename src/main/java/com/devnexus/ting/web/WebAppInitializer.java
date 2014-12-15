@@ -37,6 +37,8 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
+import ro.isdc.wro.http.WroFilter;
+
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
@@ -51,9 +53,9 @@ import com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter;
  * @author Gunnar Hillert
  */
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(WebAppInitializer.class);
-	
+
 	@Override
 	protected WebApplicationContext createRootApplicationContext() {
 		final AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
@@ -62,7 +64,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		context.register(MainConfig.class);
 		return context;
 	}
-	
+
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		return new Class[] {MainConfig.class};
@@ -83,26 +85,26 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	protected String[] getServletMappings() {
 		return new String[] { "/s/*", "/ws/*", "/api/*" };
 	}
-	
+
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		servletContext.setInitParameter("javax.servlet.jsp.jstl.fmt.localizationContext", "messages");
-		
+
 		//UrlRewriteFilter
 		final FilterRegistration.Dynamic urlRewriteFilterRegistration = servletContext.addFilter("UrlRewriteFilter", new UrlRewriteFilter());
 		urlRewriteFilterRegistration.setAsyncSupported(true);
 		urlRewriteFilterRegistration.addMappingForUrlPatterns(null, true, "/proxy/*");
-		
+
 		// UTF-8 Encoding
 		FilterRegistration.Dynamic encodingFilterRegistration = servletContext.addFilter("encodingFilter", new CharacterEncodingFilter());
 		encodingFilterRegistration.setInitParameter("encoding", "UTF-8");
 		encodingFilterRegistration.setInitParameter("forceEncoding", "true");
 		encodingFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*");
-		
+
 		// gzipFilter
 		FilterRegistration.Dynamic gzipFilterRegistration = servletContext.addFilter("gzipFilter", GzipFilter.class);
 		gzipFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*", "*.html", "/api/*");
-		
+
 		// jsonPRequestFilter
 		FilterRegistration.Dynamic jsonPRequestFilterRegistration = servletContext.addFilter("JSONPRequestFilter", JSONPRequestFilter.class);
 		jsonPRequestFilterRegistration.addMappingForUrlPatterns(null, true, "*.json");
@@ -110,7 +112,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		// lazyLoadingFilter
 		FilterRegistration.Dynamic lazyLoadingFilterRegistration = servletContext.addFilter("lazyLoadingFilter", OpenEntityManagerInViewFilter.class);
 		lazyLoadingFilterRegistration.addMappingForUrlPatterns(null, true, "*.html", "/s/*");
-		
+
 		// springSecurityFilterChain
 		FilterRegistration.Dynamic springSecurityFilterChainRegistration = servletContext.addFilter("springSecurityFilterChain", DelegatingFilterProxy.class);
 		springSecurityFilterChainRegistration.addMappingForUrlPatterns(null, true, "/*");
@@ -122,7 +124,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		// etagFilter
 		FilterRegistration.Dynamic etagFilterRegistration = servletContext.addFilter("etagFilter", ShallowEtagHeaderFilter.class);
 		etagFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*");
-		
+
 		// sitemeshFilter
 		FilterRegistration.Dynamic sitemeshRegistration = servletContext.addFilter("sitemesh", ConfigurableSiteMeshFilter.class);
 		sitemeshRegistration.addMappingForUrlPatterns(null, true, "/s/*", "/index.jsp");
@@ -131,7 +133,11 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		FilterRegistration.Dynamic responseAddHttpHeadersFilterRegistration = servletContext.addFilter("responseAddHttpHeadersFilter", ResponseAddHttpHeadersFilter.class);
 		responseAddHttpHeadersFilterRegistration.setInitParameter("secondsToCache", "2592000");
 		responseAddHttpHeadersFilterRegistration.addMappingForUrlPatterns(null, true, "*.css", "*.gif", "*.ico", "*.jpg", "*.png", "*.js");
-	
+
+		//Wro4j filter
+		FilterRegistration.Dynamic wro4jFilterRegistration = servletContext.addFilter("wro4jFilter", WroFilter.class);
+		wro4jFilterRegistration.addMappingForUrlPatterns(null, true, "/wro/*");
+
 		setupContext(servletContext);
 		super.onStartup(servletContext);
 	}
@@ -207,5 +213,5 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
 		LOGGER.info(bootMessage.toString());
 	}
-	
+
 }
