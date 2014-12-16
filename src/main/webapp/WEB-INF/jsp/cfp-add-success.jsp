@@ -6,7 +6,7 @@
 	<div class="container subsuccess">
 		<div class="row">
 			<div class="col-md-2">
-				<img src="<c:url value="/images/check-mark.jpg"/>" border="0" style="margin-top: 50px;">
+				<img src="<c:url value="/assets/img/other/check-mark.jpg"/>" border="0" style="margin-top: 50px;">
 			</div>
 			<div class="col-md-10">
 				<h3>Your submission has been added successfully!</h3>

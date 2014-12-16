@@ -24,7 +24,12 @@
     </section>
     <!-- /intro -->
 
-    <section id="speaker" class="bg-light-gray">
+	<div class="row" style="margin-top: 2em;">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="alert alert-info text-center" role="alert">Please be aware that more speakers are still being added!</div>
+		</div>
+	</div>
+    <section id="speaker" class="bg-light-gray" style="margin-top: 0">
         <div class="container">
             <c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
                 <c:choose>

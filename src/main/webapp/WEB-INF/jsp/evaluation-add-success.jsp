@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-2 subsuccess">
-		<img src="<c:url value="/images/check-mark.jpg"/>" border="0">
+		<img src="<c:url value="/assets/img/other/check-mark.jpg"/>" border="0">
 
 		<h3 class="green">Your evaluation has been added successfully!</h3>
 		<h3><strong>Thank you for attending DevNexus 2014!</strong></h3>

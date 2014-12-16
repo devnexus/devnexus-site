@@ -53,7 +53,6 @@
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 	<c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
 	<c:url var="registrationUrl" value="https://devnexus2015.eventbrite.com"/>
-	<c:url var="devnexusLogoUrl" value="/images/devnexus-logo.jpg"/>
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>

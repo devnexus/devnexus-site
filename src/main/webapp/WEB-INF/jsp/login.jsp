@@ -14,7 +14,7 @@
             <div class="required form-group">
                 <label for="j_username"><spring:message code="class.user.email"/></label>
                 <input class="title form-control" type="text" id="j_username" name="username" maxlength="50"
-                       tabindex="1"/>
+                       tabindex="1" autofocus/>
             </div>
             <div class="required form-group">
                 <label for="j_password"><spring:message code="class.user.password"/></label>
@@ -35,7 +35,6 @@
     <!--
     $(function () {
 
-    $('#j_username').focus();
     $('table.errorMessages').width($('.content').width());
 
     });
