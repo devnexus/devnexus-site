@@ -3,8 +3,8 @@
 		<css>/assets/css/vendor/bootstrap.min.css</css>
 		<css>/assets/css/vendor/animate.css</css>
 		<css>/assets/css/vendor/font-awesome.css</css>
-		<css>/assets/css/otherpages.css</css>
-		
+		<css>/assets/css/devnexus-common.css</css>
+
 		<js>/assets/js/jquery1.11.1.min.js</js>
 		<js>/assets/js/jquery.modernizr.js</js>
 		<js>/assets/js/jquery.scrollTo.js</js>

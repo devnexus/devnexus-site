@@ -24,9 +24,10 @@
 	<link rel="shortcut icon" href="${ctx}/favicon.png">
 
 		<!-- vendor CSS -->
-		<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
+<%-- 		<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 		<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
-		<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
+		<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet"> --%>
 
 		<!-- custom CSS -->
 		<link href="${assetsUrl}/css/style.css" rel="stylesheet">
@@ -42,7 +43,7 @@
 		<![endif]-->
 	</head>
 <body>
-
+	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
 	<c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
 	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
@@ -53,18 +54,18 @@
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-custom navbar-fixed-top">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${ctx}/s/index"></a>
+			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
 		</div>
 
-		<div class="collapse" id="bs-example-navbar-collapse-1">
+		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li><a class="" href="${presentationsUrl}">Presentations</a></li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
@@ -416,10 +417,27 @@
 	<!-- /footer -->
 
 	<!-- javascipt -->
-	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
+	<script src="${ctx}/wro/all.js"></script>
+<%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
 	<script src="${assetsUrl}/js/jquery.modernizr.js"></script>
 	<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
-	<script src="${assetsUrl}/js/bootstrap.min.js"></script>
+	<script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
+	<script>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+									m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+			ga('create', 'UA-44984422-1', 'devnexus.com');
+			ga('send', 'pageview');
+
+	</script>
 </body>
 </html>

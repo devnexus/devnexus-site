@@ -24,13 +24,14 @@
 
 	<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
+	<!-- custom CSS -->
+	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet">
+
 <%-- 	<!-- vendor CSS -->
 	<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
-
-	<!-- custom CSS -->
-	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet"> --%>
+ --%>
 
 	<!-- fonts: external links -->
 	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -66,12 +67,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
+			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
 		</div>
 
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a class="" href="${homeUrl}">Home</a></li>
 				<li><a class="" href="${presentationsUrl}">Presentations</a></li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>

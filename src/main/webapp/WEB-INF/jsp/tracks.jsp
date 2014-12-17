@@ -34,6 +34,13 @@
 					<td class="text-center"><span class="badge"><c:out value="${track.presentations.size()}" /></span></td>
 				</tr>
 				</c:forEach>
+				<c:if test="${unassignedSessions > 0}">
+					<tr>
+						<td style="width: 30px;">&nbsp;</td>
+						<td>Unassigned Presentations</td>
+						<td class="text-center"><span class="badge"><c:out value="${unassignedSessions}" /></span></td>
+					</tr>
+				</c:if>
 			</tbody>
 		</table>
 	</div>
