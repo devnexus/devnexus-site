@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="${ctx}/favicon.ico">
+	<link rel="shortcut icon" href="${ctx}/favicon.png">
 
 	<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
