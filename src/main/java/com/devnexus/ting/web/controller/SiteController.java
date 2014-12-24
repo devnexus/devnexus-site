@@ -95,22 +95,22 @@ public class SiteController {
 
 			final int size;
 
-			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
-				size = 180;
-			}
-			else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
-				size = 140;
-			}
-			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
-				size = 110;
-			}
-			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
-				size = 180;
-			}
-			else {
-				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
-			}
-
+                        switch (sponsor.getSponsorLevel()) {
+                            case COCKTAIL_HOUR:
+                            case PLATINUM:
+                            case MEDIA_PARTNER:
+                                size = 180;
+                                break;
+                            case GOLD:
+                                size = 140;
+                                break;
+                            case SILVER:
+                                size = 110;
+                                break;
+                            default:
+                                    throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
+                        }
+                        
 			if (imageData != null) {
 				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
 				BufferedImage image;
