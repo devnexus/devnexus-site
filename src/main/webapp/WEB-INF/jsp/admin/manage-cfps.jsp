@@ -46,11 +46,11 @@
 					</c:otherwise>
 				</c:choose>
 
-				<tr class="${cfpStatusClass}">
+				<tr id="cfp_${cfp.id}" class="${cfpStatusClass}">
 					<td style="width: 150px;">
-						<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
 						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
-							<a href="${ctx}${baseSiteUrl}/admin/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
+							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
 						</c:if>
 					</td>
 					<td>
@@ -66,7 +66,7 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
 	</div>
 </div>
 

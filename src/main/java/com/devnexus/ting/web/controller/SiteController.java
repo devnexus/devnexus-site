@@ -107,6 +107,9 @@ public class SiteController {
 			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
 				size = 180;
 			}
+			else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
+				size = 460;
+			}
 			else {
 				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
 			}

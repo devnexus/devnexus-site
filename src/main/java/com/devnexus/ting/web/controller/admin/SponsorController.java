@@ -52,30 +52,31 @@ public class SponsorController {
 
 	@Autowired private Validator validator;
 
-	@RequestMapping(value="/admin/sponsors", method=RequestMethod.GET)
-	public String getSponsorsForCurrentEvent(ModelMap model, HttpServletRequest request) {
-		final Event currentEvent = businessService.getCurrentEvent();
-		final List<Sponsor> sponsors = businessService.getSponsorsForEvent(currentEvent.getId());
+	@RequestMapping(value="/admin/{eventKey}/sponsors", method=RequestMethod.GET)
+	public String getSponsorsForCurrentEvent(@PathVariable("eventKey") String eventKey,
+			ModelMap model, HttpServletRequest request) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final List<Sponsor> sponsors = businessService.getSponsorsForEvent(event.getId());
 		model.addAttribute("sponsors", sponsors);
-
+		model.addAttribute("event", event);
 		return "/admin/manage-sponsors";
 	}
 
-	@RequestMapping(value="/admin/sponsor", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/sponsor", method=RequestMethod.GET)
 	public String prepareAddSponsor(ModelMap model) {
 		final Sponsor sponsorForm = new Sponsor();
 		model.addAttribute("sponsor", sponsorForm);
 		return "/admin/add-sponsor";
 	}
 
-	@RequestMapping(value="/admin/sponsor/{sponsorId}", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.GET)
 	public String prepareEditSponsor(@PathVariable("sponsorId") Long sponsorId, ModelMap model) {
 		final Sponsor sponsorFromDb = businessService.getSponsor(sponsorId);
 		model.addAttribute("sponsor", sponsorFromDb);
 		return "/admin/add-sponsor";
 	}
 
-	@RequestMapping(value="/admin/sponsor/{sponsorId}", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.POST)
 	public String editSponsor(@PathVariable("sponsorId") Long sponsorId,
 			@RequestParam MultipartFile pictureFile,
 			@Valid Sponsor sponsorForm,
@@ -84,7 +85,7 @@ public class SponsorController {
 			HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/{eventKey}/sponsors";
 		}
 
 		if (result.hasErrors()) {
@@ -96,7 +97,7 @@ public class SponsorController {
 		if (request.getParameter("delete") != null) {
 			businessService.deleteSponsor(sponsorFromDb);
 			//FlashMap.setSuccessMessage("The sponsor was deleted successfully.");
-			return "redirect:/s/admin/sponsors";
+			return "redirect:/s/admin/{eventKey}/sponsors";
 		}
 
 		sponsorFromDb.setLink(sponsorForm.getLink());
@@ -136,14 +137,14 @@ public class SponsorController {
 
 		redirectAttributes.addFlashAttribute("successMessage", "The sponsnor was edited successfully.");
 
-		return "redirect:/s/admin/sponsors";
+		return "redirect:/s/admin/{eventKey}/sponsors";
 	}
 
 	@RequestMapping(value="/admin/sponsor", method=RequestMethod.POST)
 	public String addSponsor(@RequestParam MultipartFile pictureFile, @Valid Sponsor sponsorForm, BindingResult result, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/sponsors";
+			return "redirect:/s/admin/{eventKey}/sponsors";
 		}
 
 		if (result.hasErrors()) {
@@ -181,7 +182,7 @@ public class SponsorController {
 		Sponsor savedSponsor = businessService.saveSponsor(sponsorForm);
 
 		//FlashMap.setSuccessMessage("The sponsor was added successfully.");
-		return "redirect:/s/admin/sponsors";
+		return "redirect:/s/admin/{eventKey}/sponsors";
 	}
 
 }

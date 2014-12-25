@@ -20,7 +20,8 @@
 		</c:if>
 	</spring:bind>
 
-	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
+	<form:form id="cfpForm" class="form-horizontal" role="form" method="post"
+		modelAttribute="cfpSubmission" enctype="multipart/form-data">
 
 		<form:hidden path="event.id"/>
 		<form:hidden path="id"/>

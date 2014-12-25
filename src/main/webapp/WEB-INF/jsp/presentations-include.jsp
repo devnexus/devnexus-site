@@ -1,18 +1,13 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div class="row ${trackStyle}" style="${trackColor}">
-	<div class="col-xs-5">
-		<c:forEach items="${presentation.speakers}" var="speaker">
-			<c:if test="${speaker.picture != null}">
-				<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" style="margin-right: 10px" alt="${speaker.firstLastName}"/>
-			</c:if>
-		</c:forEach>
-	</div>
-	<div class="col-xs-7">
+	<div id="id-${presentation.id}" class="speaker-member">
 		<c:choose>
 			<c:when test="${not empty presentation.speakers}">
 				<c:forEach items="${presentation.speakers}" var="speaker">
+					<c:if test="${speaker.picture != null}">
+						<img class="img-responsive img-circle" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" alt="${speaker.firstLastName}"/>
+					</c:if>
 					<h4>
 						<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
 							<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
@@ -21,19 +16,26 @@
 				</c:forEach>
 			</c:when>
 			<c:otherwise>
-				<p class="speaker">TBD</p>
+				<h4>
+					TBD
+				</h4>
 			</c:otherwise>
 		</c:choose>
+		<p class="text-muted"><c:out value="${presentation.title}"/></p>
+		<p><c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/></p>
+		<hr style="border-style: dotted;"/>
 		<c:if test="${not empty presentation.track}">
-			<br/>
+			<p>
 			<strong>Track: </strong><c:out value="${presentation.track.name}"/>
+			</p>
 		</c:if>
 		<c:if test="${not empty presentation.skillLevel}">
-			<br/>
+			<p>
 			<strong>Skill Level: </strong><c:out value="${presentation.skillLevel.name}"/>
+			</p>
 		</c:if>
 		<c:if test="${not empty presentation.scheduleItem}">
-			<br/>
+			<p>
 			<strong>Slot:</strong>
 			<fmt:formatDate pattern="M/d, h:mm a" value="${presentation.scheduleItem.fromTime}"/><br/>
 			<strong>Room:</strong>
@@ -43,19 +45,14 @@
 				</c:when>
 				<c:otherwise>TBD</c:otherwise>
 			</c:choose>
-
+			</p>
 		</c:if>
-	</div>
-	<div class="clearfix"></div>
-	<div class="col-md-12" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-		<h3 class="title"><c:out value="${presentation.title}"/></h3>
-		<c:out value=""/>
-		<c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/>
 		<c:if test="${not empty presentation.presentationTags}">
-			<hr style="border-style: dotted;"/>
+			<p>
 			<strong>Tags: </strong>
 			<c:forEach items="${presentation.presentationTags}" var="tag" varStatus="status"><c:out value="${tag.name}"/><c:if test="${not status.last}">,
 			</c:if></c:forEach>
+			</p>
 		</c:if>
 		<c:if test="${not empty presentation.presentationLink}">
 			<hr/>
@@ -76,4 +73,3 @@
 			</p>
 		</c:if>
 	</div>
-</div>

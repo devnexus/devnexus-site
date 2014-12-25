@@ -68,7 +68,7 @@ public class AcceptCfpController {
 		model.addAttribute("allSpeakers", allSpeakers);
 	}
 
-	@RequestMapping(value="/admin/cfps/{cfpId}/accept", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.GET)
 	public String prepareAcceptCfp(@PathVariable("cfpId") Long cfpId, ModelMap model) {
 		prepareReferenceData(model);
 		final CfpSubmission cfpSubmission = businessService.getCfpSubmission(cfpId);
@@ -76,13 +76,14 @@ public class AcceptCfpController {
 		return "/admin/accept-cfp";
 	}
 
-	@RequestMapping(value="/admin/cfps/{cfpId}/accept", method=RequestMethod.POST)
-	public String acceptCfp(@PathVariable("cfpId") Long cfpId,
-							  CfpSubmission cfpSubmission,
-							  BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.POST)
+	public String acceptCfp(@PathVariable("eventKey") String eventKey,
+	                        @PathVariable("cfpId") Long cfpId,
+	                        CfpSubmission cfpSubmission,
+	                        BindingResult result, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/{eventKey}/cfps#cfp_{cfpId}";
 		}
 
 		if (result.hasErrors()) {
@@ -171,6 +172,6 @@ public class AcceptCfpController {
 		businessService.saveCfpSubmission(cfpSubmissionFromDb);
 
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
-		return "redirect:/s/admin/cfps";
+		return "redirect:/s/admin/{eventKey}/cfps";
 	}
 }

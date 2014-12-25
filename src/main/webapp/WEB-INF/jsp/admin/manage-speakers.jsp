@@ -1,9 +1,21 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <title>Manage Speakers</title>
-<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
-	<h2>Manage Speakers</h2>
-</div>
+
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Manage Speakers</span></h4>
+					<h5 class="intro-white-lead">There are ${speakerList.numberOfSpeakers} speakers.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
 		<table class="table table-hover">
@@ -13,15 +25,15 @@
 				</tr>
 			</thead>
 
-			<c:forEach items="${speakers}" var="speaker">
+			<c:forEach items="${speakerList.speakers}" var="speaker">
 				<tr>
-					<td><a href="${ctx}${baseSiteUrl}/admin/speaker/${speaker.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+					<td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/speaker/${speaker.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
 					<td><c:out value="${speaker.firstName}"/></td>
 					<td><c:out value="${speaker.lastName}"/></td>
 				</tr>
 			</c:forEach>
 		</table>
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/speaker" role="button">Add Speaker</a>
-		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index" role="button">Main Menu</a>
+		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
 	</div>
 </div>

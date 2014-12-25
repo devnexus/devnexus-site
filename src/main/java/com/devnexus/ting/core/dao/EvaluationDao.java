@@ -23,4 +23,6 @@ public interface EvaluationDao  extends GenericDao < Evaluation, Long > {
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 
+	List<Evaluation> getEvaluationsForEvent(Long eventId);
+
 }

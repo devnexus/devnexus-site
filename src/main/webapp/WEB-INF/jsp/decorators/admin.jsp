@@ -59,7 +59,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
+			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">

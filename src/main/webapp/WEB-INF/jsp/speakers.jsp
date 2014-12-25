@@ -48,15 +48,17 @@
 	                    </c:if>
                       <h4><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
                       <c:if test="${!empty speaker.presentations}">
+                        <ul>
                         <c:forEach var="presentation" items="${speaker.presentations}" varStatus="loop">
-                          <p class="text-muted">
+                          <li>
                             <a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
                                value="${presentation.title}"/></a>
                             <c:if test="${presentation.presentationType == keynoteType}">
                               (Keynote)
                             </c:if>
-                          </p>
+                          </li>
                         </c:forEach>
+                        </ul>
                       </c:if>
                       <p>
                         <c:if test="${!empty speaker.googlePlusId}">

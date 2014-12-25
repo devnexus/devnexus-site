@@ -525,6 +525,11 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
+	public List<Evaluation> getEvaluationsForEvent(Long eventId) {
+		return evaluationDao.getEvaluationsForEvent(eventId);
+	}
+
+	@Override
 	public void removeEvaluation(Long evaluationId) {
 		evaluationDao.remove(evaluationId);
 	}

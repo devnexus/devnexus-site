@@ -33,7 +33,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.jolbox.bonecp.BoneCPDataSource;

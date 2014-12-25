@@ -29,13 +29,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.core.model.Evaluation;
 import com.devnexus.ting.core.model.EvaluationList;
+import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
  * @author Gunnar Hillert
  */
 @Controller
-@RequestMapping("/admin/evaluations")
+@RequestMapping("/admin/{eventKey}/evaluations")
 public class ManageEvaluationsController {
 
 	@Autowired private BusinessService businessService;
@@ -43,12 +44,12 @@ public class ManageEvaluationsController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ManageEvaluationsController.class);
 
 	@RequestMapping(method=RequestMethod.GET)
-	public String showEvaluationsForCurrentEvent(ModelMap model) {
-
-		final List<Evaluation> evaluations = businessService.getEvaluationsForCurrentEvent();
+	public String showEvaluationsForEvent(ModelMap model, @PathVariable("eventKey") String eventKey) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final List<Evaluation> evaluations = businessService.getEvaluationsForEvent(event.getId());
 		final EvaluationList evaluationList = new EvaluationList(evaluations);
 		model.addAttribute("evaluationList", evaluationList);
-		return "admin/evaluations";
+		return "admin/manage-evaluations";
 	}
 
 	@RequestMapping(value="/admin/evaluations/{evaluationId}", method=RequestMethod.POST)

@@ -43,30 +43,8 @@
 
 					</c:when>
 				</c:choose>
-				<div class="col-sm-4 masonryitem">
-					<div id="id-${presentation.id}" class="speaker-member">
-						<c:choose>
-							<c:when test="${not empty presentation.speakers}">
-								<c:forEach items="${presentation.speakers}" var="speaker">
-									<c:if test="${speaker.picture != null}">
-										<img class="img-responsive img-circle" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" alt="${speaker.firstLastName}"/>
-									</c:if>
-									<h4>
-										<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
-											<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
-										</a>
-									</h4>
-								</c:forEach>
-							</c:when>
-							<c:otherwise>
-								<h4>
-									TBD
-								</h4>
-							</c:otherwise>
-						</c:choose>
-						<p class="text-muted"><c:out value="${presentation.title}"/></p>
-						<p><c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/></p>
-					</div>
+				<div id="id-${presentation.id}" class="col-sm-6 col-md-4 presentation masonryitem">
+					<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
 				</div>
 			<c:if test="${status.last}">
 
@@ -88,8 +66,6 @@
 		$(document).ready(function() {
 
 			var $container = $('#speaker');
-
-			console.log($container);
 
 			$container.imagesLoaded(function () {
 				$container.masonry({

@@ -218,6 +218,8 @@ public interface BusinessService {
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 
+	List<Evaluation> getEvaluationsForEvent(Long eventId);
+
 	List<CfpSubmission> getCfpSubmissions(Long eventId);
 
 	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);

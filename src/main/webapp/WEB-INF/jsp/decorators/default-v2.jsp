@@ -72,7 +72,17 @@
 
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a class="" href="${presentationsUrl}">Presentations</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Presentations <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="${presentationsUrl}?order=track">Presentations by Track</a></li>
+						<li><a href="${presentationsUrl}?order=room">Presentations by Room</a></li>
+						<li><a href="${presentationsUrl}?order=name">Presentations by Name</a></li>
+						<li><a href="${ctx}/s/tracks">Show Tracks</a></li>
+						<li><a href="${ctx}/s/tags">Show Presentation Tags</a></li>
+						<li><a href="${ctx}/s/rooms">Show Rooms</a></li>
+					</ul>
+				</li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
 				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>

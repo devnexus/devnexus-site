@@ -23,9 +23,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -49,7 +55,25 @@ public class AdminController {
 
 	@RequestMapping({"/admin/index"})
 	public String execute(ModelMap model) {
+		final Event currentEvent = businessService.getCurrentEvent();
+		model.addAttribute("eventKey", currentEvent.getEventKey());
+		return "redirect:/s/admin/{eventKey}/index";
+	}
+
+	@RequestMapping("/admin/{eventKey}/index")
+	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("event", event);
+		model.addAttribute("events", businessService.getAllEventsOrderedByName());
 		return "/admin/index";
+	}
+
+	@RequestMapping(value="/admin/index", method=RequestMethod.POST)
+	public String changeEvent(@ModelAttribute("event") Event event,
+			BindingResult bindingResult,
+			ModelMap model) {
+		model.addAttribute("eventKey", businessService.getEvent(event.getId()).getEventKey());
+		return "redirect:/s/admin/{eventKey}/index";
 	}
 
 	@RequestMapping({"/admin/update-application-cache"})

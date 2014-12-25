@@ -20,7 +20,6 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.SponsorDao;
-import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.Sponsor;
 
 /**
