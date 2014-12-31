@@ -167,11 +167,17 @@ th {
 
 /* buttons */
 .btn-primary.callButton {
-	margin-left: 20px;
 	background: #ededed;
 	border-color: #ededed;
 	color: #7bad34;
 }
+
+@media (max-width: 992px) {
+	.btn-primary.callButton {
+		margin-top: 1em;
+	}
+}
+
 .btn-primary.callButton:hover{
 	color: #7bad34;
 	background-color: rgba(237,237,237,0.8);
@@ -538,6 +544,29 @@ input.email {
 	font-size: 1em;
 }
 
+.travel-row-spacing img{
+	border-color: rgba(123,173,52,0);
+	border-style: solid;
+	border-width: 2px;
+
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+}
+
+.travel-row-spacing img:hover, .travel-row-spacing img:focus, .travel-row-spacing img:active {
+	border-color: rgba(123,173,52,1);
+
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+}
+
+
 /* sponsors */
 .sponsorsPlatium img,
 .sponsorsGold img,
@@ -545,14 +574,6 @@ input.email {
 .sponsorsMediaPartner img,
 .sponsorsCocktail img {
 	background-color: #ffffff;
-}
-
-.sponsorsPlatium img, .sponsorsCocktail img {
-	border: 3px solid #7bad34;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
 }
 
 .sponsors h4 {
@@ -565,7 +586,28 @@ input.email {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	-o-border-radius: 8px;
+
+	border-color: rgba(123,173,52,0);;
+	border-style: solid;
+	border-width: 2px;
+
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
 }
+
+.sponsors img:HOVER, .sponsors img:FOCUS {
+	border-color: rgba(123,173,52,1);
+
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+}
+
 .sponsors-row-spacing {
 	margin: 15px 0 15px 0;
 }

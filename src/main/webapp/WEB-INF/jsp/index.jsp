@@ -97,12 +97,18 @@
 	<section id="about" class="white">
 			<div class="container">
 					<div class="row centered">
-							<div class="col-md-10 col-md-offset-1">
-									<img src="${assetsUrl}/img/DN_TAGLINE_JOINTHEDEVOLUTION_NOBACKGROUND.png" alt="Join the 'Dev'olution">
-									<p class="lead">Atlanta's most exciting conference for professional developers. Come discover how the industry's best minds use the latest technologies to build solutions to business problems. Network with other top software developers, and study real life case studies in application design and development.</p>
-									<a href="${registrationUrl}" class="btn btn-primary registerButton">Register Now!</a>
-									<a href="${ctx}/s/cfp" class="btn btn-primary callButton">Call For Papers</a>
-							</div>
+						<div class="col-md-10 col-md-offset-1">
+							<img src="${assetsUrl}/img/DN_TAGLINE_JOINTHEDEVOLUTION_NOBACKGROUND.png" alt="Join the 'Dev'olution">
+							<p class="lead">Atlanta's most exciting conference for professional developers. Come discover how the industry's best minds use the latest technologies to build solutions to business problems. Network with other top software developers, and study real life case studies in application design and development.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5 col-md-offset-1">
+							<a href="${registrationUrl}" class="btn btn-primary btn-block registerButton">Register Now!</a>
+						</div>
+						<div class="col-md-5">
+							<a href="${ctx}/s/cfp" class="btn btn-primary btn-block callButton">Call For Papers</a>
+						</div>
 					</div>
 			</div>
 	</section>
