@@ -16,8 +16,10 @@
 package com.devnexus.ting.core.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -37,6 +39,7 @@ import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.TingUtil;
 
@@ -67,10 +70,6 @@ public class CfpSubmission extends BaseModelObject {
 	@NotEmpty
 	@Size(max=255)
 	private String title;
-
-	@Deprecated
-	@Size(max=10000)
-	protected String bio;
 
 	@Size(max=1000)
 	private String slotPreference;
@@ -217,6 +216,28 @@ public class CfpSubmission extends BaseModelObject {
 	}
 
 	/**
+	 * @return the speakers
+	 */
+	public boolean speakerRequiresTravelCostReimburment() {
+		for (CfpSubmissionSpeaker speaker : this.speakers) {
+			if (speaker.isMustReimburseTravelCost()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public String getSpeakerLocation() {
+		final Set<String> speakerLocations = new HashSet<String>();
+
+		for (CfpSubmissionSpeaker speaker : this.speakers) {
+			speakerLocations.add(speaker.getLocation());
+		}
+
+		return StringUtils.collectionToCommaDelimitedString(speakerLocations);
+	}
+
+	/**
 	 * @param speakers the speakers to set
 	 */
 	public void setSpeakers(List<CfpSubmissionSpeaker> speakers) {
@@ -259,7 +280,6 @@ public class CfpSubmission extends BaseModelObject {
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + ((bio == null) ? 0 : bio.hashCode());
 		result = prime * result
 				+ ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((event == null) ? 0 : event.hashCode());
@@ -289,11 +309,7 @@ public class CfpSubmission extends BaseModelObject {
 		if (getClass() != obj.getClass())
 			return false;
 		CfpSubmission other = (CfpSubmission) obj;
-		if (bio == null) {
-			if (other.bio != null)
-				return false;
-		} else if (!bio.equals(other.bio))
-			return false;
+
 		if (description == null) {
 			if (other.description != null)
 				return false;

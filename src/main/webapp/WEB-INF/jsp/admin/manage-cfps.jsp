@@ -24,11 +24,11 @@
 <!-- /intro -->
 
 <div class="row">
-	<div class="col-md-10 col-md-offset-1">
+	<div class="col-md-12">
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>Name</th><th>Title</th><th>Topic</th><th>Type</th><th>Skill Level</th><th>Status</th>
+					<th>Action</th><th>Name</th><th>Title</th><th>Topic</th><th>Type</th><th>Skill Level</th><th>Status</th><th>Cost</th><th>Location(s)</th>
 				</tr>
 			</thead>
 
@@ -48,9 +48,9 @@
 
 				<tr id="cfp_${cfp.id}" class="${cfpStatusClass}">
 					<td style="width: 150px;">
-						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-default" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
 						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
-							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-default">Accept</a>
+							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-default" title="Accept"><span class="glyphicon glyphicon-ok"></span></a>
 						</c:if>
 					</td>
 					<td>
@@ -59,10 +59,14 @@
 						</c:forEach>
 					</td>
 					<td><c:out value="${cfp.title}"/></td>
-					<td><c:out value="${cfp.topic}"/></td>
+					<td><small><c:out value="${cfp.topic}"/></small></td>
 					<td><c:out value="${cfp.presentationType}"/></td>
 					<td><c:out value="${cfp.skillLevel}"/></td>
 					<td><c:out value="${cfp.status}"/></td>
+					<td>
+						<c:if test="${cfp.speakerRequiresTravelCostReimburment()}"><span class="glyphicon glyphicon-usd text-danger"></span></c:if>
+					</td>
+					<td><c:out value="${cfp.speakerLocation}"/></td>
 				</tr>
 			</c:forEach>
 		</table>

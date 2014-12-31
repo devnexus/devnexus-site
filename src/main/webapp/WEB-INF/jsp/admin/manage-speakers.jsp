@@ -21,7 +21,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>First Name</th><th>Last Name</th>
+					<th>Action</th><th>First Name</th><th>Last Name</th><th class="text-center">Has Picture?</th>
 				</tr>
 			</thead>
 
@@ -30,6 +30,9 @@
 					<td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/speaker/${speaker.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
 					<td><c:out value="${speaker.firstName}"/></td>
 					<td><c:out value="${speaker.lastName}"/></td>
+					<td class="text-center">
+						<c:if test="${not empty speaker.picture}"><span class="glyphicon glyphicon-user text-success"></span></c:if>
+					</td>
 				</tr>
 			</c:forEach>
 		</table>
