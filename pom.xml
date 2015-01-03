@@ -11,8 +11,8 @@
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
 	<description>
-				The DevNexus conference manager
-		</description>
+		The DevNexus conference manager
+	</description>
 
 	<prerequisites>
 		<maven>2.2.1</maven>
@@ -344,6 +344,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<!-- Used for Hashing passwords / enrypting data -->
 
 		<dependency>
@@ -368,7 +369,6 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.0</version>
 			<scope>provided</scope>
-
 			<exclusions>
 				<exclusion>
 					<artifactId>servlet-api</artifactId>
@@ -454,7 +454,6 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -478,7 +477,6 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.social</groupId>
@@ -690,10 +688,6 @@
 					<groupId>org.webjars</groupId>
 				</exclusion>
 				<exclusion>
-					<artifactId>json2</artifactId>
-					<groupId>org.webjars</groupId>
-				</exclusion>
-				<exclusion>
 					<artifactId>emberjs</artifactId>
 					<groupId>org.webjars</groupId>
 				</exclusion>
@@ -709,11 +703,12 @@
 					<artifactId>coffee-script</artifactId>
 					<groupId>org.webjars</groupId>
 				</exclusion>
-				<exclusion>
-					<artifactId>rhino</artifactId>
-					<groupId>ro.isdc.wro4j</groupId>
-				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.github.sommeri</groupId>
+			<artifactId>less4j</artifactId>
+			<version>1.8.0</version>
 		</dependency>
 	</dependencies>
 

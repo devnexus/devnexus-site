@@ -41,13 +41,15 @@
 				<c:when test="${empty presentation.track}">
 					<c:set var="trackStyle" value="defaultTrackStyle"/>
 					<c:set var="trackColor" value=""/>
+					<c:set var="trackColorFont" value=""/>
 				</c:when>
 				<c:otherwise>
 					<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
-					<c:set var="trackColor" value="background-color: ${presentation.track.color};"/>
+					<c:set var="trackColor" value="border-color: ${presentation.track.color};"/>
+					<c:set var="trackFontColor" value="color: ${presentation.track.color};"/>
 				</c:otherwise>
 			</c:choose>
-			<div id="id-${presentation.id}" class="col-sm-6 col-md-4 presentation masonryitem" style="${trackColor}">
+			<div id="id-${presentation.id}" class="col-sm-6 col-md-4 presentation masonryitem">
 				<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
 			</div>
 		</c:forEach>

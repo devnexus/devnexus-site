@@ -59,6 +59,9 @@
 	<logger name="com.devnexus.ting.web.controller.admin">
 		<level value="INFO"/>
 	</logger>
+	<logger name="ro.isdc.wro">
+		<level value="INFO"/>
+	</logger>
 
 	<logger name="org.springframework.security">
 		<level value="INFO"/>

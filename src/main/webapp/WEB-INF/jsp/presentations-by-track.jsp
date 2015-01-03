@@ -36,12 +36,16 @@
 <div id="trackContainer" class="container">
 		<c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
 				<c:choose>
-					<c:when test="${status.first && status.index%3 == 0}">
-
+					<c:when test="${empty presentation.track}">
+						<c:set var="trackStyle" value="defaultTrackStyle"/>
+						<c:set var="trackColor" value=""/>
+						<c:set var="trackColorFont" value=""/>
 					</c:when>
-					<c:when test="${not status.first && not status.last && status.index%3 == 0}">
-
-					</c:when>
+					<c:otherwise>
+						<c:set var="trackStyle" value="${presentation.track.cssStyleName}"/>
+						<c:set var="trackColor" value="border-color: ${presentation.track.color};"/>
+						<c:set var="trackFontColor" value="color: ${presentation.track.color};"/>
+					</c:otherwise>
 				</c:choose>
 				<div id="id-${presentation.id}" class="col-sm-6 col-md-4 presentation masonryitem">
 					<%@ include file="/WEB-INF/jsp/presentations-include.jsp" %>
@@ -73,17 +77,15 @@
 						columnWidth: '.masonryitem',
 						isAnimated: true
 				});
-			});
 
-			$container.imagesLoaded(function () {
 				var hash = window.location.hash;
 				console.log('Hash is: ' + hash);
 				if (!(hash === '')) {
-					console.log('Scroll: ' + hash);
-					$('html, body').animate({scrollTop: $(hash).offset().top - 100}, 'slow');
+					var el = $(hash);
+					console.log('Scroll: ', el);
+					$('html, body').animate({scrollTop: el.offset().top - 100}, 'slow');
 				}
 			});
-
 		});
 	</script>
 </content>

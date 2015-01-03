@@ -37,8 +37,6 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
-import ro.isdc.wro.http.WroFilter;
-
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
@@ -134,9 +132,9 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		responseAddHttpHeadersFilterRegistration.setInitParameter("secondsToCache", "2592000");
 		responseAddHttpHeadersFilterRegistration.addMappingForUrlPatterns(null, true, "*.css", "*.gif", "*.ico", "*.jpg", "*.png", "*.js");
 
-		//Wro4j filter
-		FilterRegistration.Dynamic wro4jFilterRegistration = servletContext.addFilter("wro4jFilter", WroFilter.class);
+		FilterRegistration.Dynamic wro4jFilterRegistration = servletContext.addFilter("wro4jFilter", DelegatingFilterProxy.class);
 		wro4jFilterRegistration.addMappingForUrlPatterns(null, true, "/wro/*");
+		wro4jFilterRegistration.setInitParameter("targetFilterLifecycle", "true");
 
 		setupContext(servletContext);
 		super.onStartup(servletContext);

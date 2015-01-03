@@ -33,7 +33,6 @@
 		<link href="${assetsUrl}/css/style.css" rel="stylesheet">
 
 		<!-- fonts: external links -->
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -265,9 +264,9 @@
 				<div class="col-md-10 col-sm-10 col-md-push-1">
 					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 					<div style="overflow:hidden;height:300px;width:980px;">
-					<div id="gmap_canvas" style="height:300px;width:980px;"></div>
-					<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-					<a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">wordpress-themes.org</a></div>
+						<div id="gmap_canvas" style="height:300px;width:980px;"></div>
+						<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+					</div>
 					<script type="text/javascript">
 						function init_map(){
 							var myOptions = {
@@ -291,7 +290,7 @@
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<img class="img-feature img-responsive" src="${assetsUrl}/img/cobbgalleria.jpg" alt="Sample image">
+					<a href="http://cobbgalleria.com/" target="_blank"><img class="img-feature img-responsive" src="${assetsUrl}/img/cobbgalleria.jpg" alt="Cobb Galleria Centre"></a>
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<p>

@@ -50,7 +50,7 @@
 				<c:otherwise>
 					<c:set var="localRoomName" value="${presentation.room.name}"/>
 					<c:set var="trackStyle" value="${presentation.room.cssStyleName}"/>
-					<c:set var="trackColor" value="background-color: ${presentation.room.color};"/>
+					<c:set var="trackColor" value="border-color: ${presentation.room.color};"/>
 					<c:set var="trackFontColor" value="color: ${presentation.room.color};"/>
 					<c:set var="roomId" value="${presentation.room.id}"/>
 				</c:otherwise>

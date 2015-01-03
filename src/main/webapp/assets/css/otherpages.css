@@ -191,7 +191,7 @@ th {
 }
 .speaker-member {
     margin-bottom: 50px;
-    text-align: center;
+    border-bottom: 4px solid #eeeeee;
 }
 
 .speaker-member img {
