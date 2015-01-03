@@ -83,14 +83,14 @@
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.githubId}">
-								<a href="http://github.com/<c:out value="${speaker.githubId}" />" target="_blank">
+								<a href="https://github.com/<c:out value="${speaker.githubId}" />" target="_blank">
 									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
 										<span class="fa fa-github"></span>
 									</button>
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.lanyrdId}">
-								<a href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />" target="_blank">
+								<a href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />/" target="_blank">
 									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
 										<span>L</span>
 									</button>
