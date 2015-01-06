@@ -76,7 +76,7 @@
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.linkedInId}">
-								<a href="http://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />" target="_blank">
+								<a href="https://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />" target="_blank">
 									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
 										<span class="fa fa-linkedin"></span>
 									</button>

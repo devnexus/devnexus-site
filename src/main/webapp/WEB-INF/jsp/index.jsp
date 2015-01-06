@@ -40,6 +40,7 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
+
 	</head>
 <body>
 	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
@@ -236,13 +237,14 @@
 	</section>
 
 	<!-- video -->
-	 <section id="video" class="bkgDarkGrey">
+	<section id="video" class="bkgDarkGrey">
 		<div class="container">
-			<div class="row video">
+			<div class="row">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-				<div class="video-wrap" style="width: 100%; position: relative; padding-top: 56.2%;">
-					<iframe src="http://www.youtube.com/embed/goiXzB0rMEQ" width="100%" height="100%" allowfullscreen="" style="position: absolute; top: 0px; left: 0px;">
-					</iframe></div>
+					<div id="goiXzB0rMEQ" class="video-container">
+						<img src="${ctx}/assets/img/video_thumb.jpg"/>
+					</div>
+					<div id="video-play-button" class="play"></div>
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
@@ -262,30 +264,8 @@
 			<div class="row travel-row-spacing">
 			<h4 class="travel-address">Cobb Galleria Centre | Two Galleria Parkway, Atlanta, GA 30339 | 770-989-5095</h4>
 				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-					<div style="overflow:hidden;height:300px;width:980px;">
-						<div id="gmap_canvas" style="height:300px;width:980px;"></div>
-						<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-					</div>
-					<script type="text/javascript">
-						function init_map(){
-							var myOptions = {
-								zoom:15,
-								scrollwheel: false,
-								center:new google.maps.LatLng(33.8835141,-84.4655017),
-								mapTypeId: google.maps.MapTypeId.ROADMAP};
-							map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-							marker = new google.maps.Marker({
-								map: map,
-								position: new google.maps.LatLng(33.8835141, -84.4655017)});
-							infowindow = new google.maps.InfoWindow({content:"<b>Cobb Galleria Centre</b><br/>Two Galleria Parkway<br/>30339 Atlanta" });
-							google.maps.event.addListener(marker, "click", function(){
-								infowindow.open(map,marker);
-							});
-							infowindow.open(map,marker);
-						}
-						google.maps.event.addDomListener(window, 'load', init_map);
-					</script>
+					<a href="https://www.google.com/maps/d/viewer?mid=zMoKxZbA6hII.kNm6qtm2mnkk"
+						target="_blank"><div class="devnexus-map block-link" style="height:300px;"></div></a>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
@@ -351,7 +331,7 @@
 							<c:if test="${status.last}"></div></c:if>
 						</c:when>
 						<c:otherwise>
-							 <a href="${sponsor.link}"><img src="${logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
+							<a href="${sponsor.link}"><img src="${logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
@@ -428,20 +408,33 @@
 	<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
 	<script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
 	<script>
-			(function (i, s, o, g, r, a, m) {
-					i['GoogleAnalyticsObject'] = r;
-					i[r] = i[r] || function () {
-							(i[r].q = i[r].q || []).push(arguments)
-					}, i[r].l = 1 * new Date();
-					a = s.createElement(o),
-									m = s.getElementsByTagName(o)[0];
-					a.async = 1;
-					a.src = g;
-					m.parentNode.insertBefore(a, m)
-			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		"use strict";
+		(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+						(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+								m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-			ga('create', 'UA-44984422-1', 'devnexus.com');
-			ga('send', 'pageview');
+		ga('create', 'UA-44984422-1', 'devnexus.com');
+		ga('send', 'pageview');
+
+		$(function() {
+			$(".video-container").each(function() {
+				var videoId = this.id;
+				$(document).delegate('#video-play-button', 'click', function() {
+					var iframe_url = 'https://www.youtube.com/embed/'+ videoId + '?autoplay=1&autohide=1';
+					var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url})
+					$('#' + videoId).html(iframe).addClass('loaded');
+					$('#video-play-button').hide();
+				});
+			});
+		});
 
 	</script>
 </body>

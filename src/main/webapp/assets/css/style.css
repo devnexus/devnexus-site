@@ -544,7 +544,7 @@ input.email {
 	font-size: 1em;
 }
 
-.travel-row-spacing img{
+.travel-row-spacing img, .block-link{
 	border-color: rgba(123,173,52,0);
 	border-style: solid;
 	border-width: 2px;
@@ -556,7 +556,9 @@ input.email {
 	-ms-transition: all 0.2s;
 }
 
-.travel-row-spacing img:hover, .travel-row-spacing img:focus, .travel-row-spacing img:active {
+.travel-row-spacing img:hover, .travel-row-spacing img:focus, .travel-row-spacing img:active,
+.block-link:hover, .block-link:focus, .block-link:active {
+
 	border-color: rgba(123,173,52,1);
 
 	transition: all 0.2s;
