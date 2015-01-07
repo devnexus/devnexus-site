@@ -98,7 +98,9 @@
 			<div class="container">
 					<div class="row centered">
 						<div class="col-md-10 col-md-offset-1">
-							<img src="${assetsUrl}/img/DN_TAGLINE_JOINTHEDEVOLUTION_NOBACKGROUND.png" alt="Join the 'Dev'olution">
+							<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
+						</div>
+						<div class="col-md-10 col-md-offset-1">
 							<p class="lead">Atlanta's most exciting conference for professional developers. Come discover how the industry's best minds use the latest technologies to build solutions to business problems. Network with other top software developers, and study real life case studies in application design and development.</p>
 						</div>
 					</div>
@@ -434,6 +436,8 @@
 					$('#video-play-button').hide();
 				});
 			});
+
+			$("#tagline").fitText().fitText(1.03);
 		});
 
 	</script>
