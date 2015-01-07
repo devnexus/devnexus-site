@@ -105,11 +105,8 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-5 col-md-offset-1">
+						<div class="col-sm-6 col-sm-offset-3">
 							<a href="${registrationUrl}" class="btn btn-primary btn-block registerButton">Register Now!</a>
-						</div>
-						<div class="col-md-5">
-							<a href="${ctx}/s/cfp" class="btn btn-primary btn-block callButton">Call For Papers</a>
 						</div>
 					</div>
 			</div>
