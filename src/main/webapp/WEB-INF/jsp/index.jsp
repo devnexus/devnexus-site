@@ -101,7 +101,7 @@
 							<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 						</div>
 						<div class="col-md-10 col-md-offset-1">
-							<p class="lead">Atlanta's most exciting conference for professional developers. Come discover how the industry's best minds use the latest technologies to build solutions to business problems. Network with other top software developers, and study real life case studies in application design and development.</p>
+							<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While you’re here, you’ll also connect with like-minded developers who are mastering their craft in a wide range of today’s most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you can’t afford to miss it!</p>
 						</div>
 					</div>
 					<div class="row">
@@ -166,13 +166,14 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/chart.png" alt="Cart">
+					<img src="${assetsUrl}/img/chart.png" alt="Chart">
 						<h3 class="lead">DATA + INTEGRATION</h3>
 						<p>
-						Whether your data is big or small you need to make it play nicely
-						with everything else. Whether you SQL or you NoSQL you will find it
-						here as well as the techniques and tools to make your data welcome
-						wherever it goes.</p>
+						Whether your data is big or small, you need to make it
+						‘play nicely’ with everything else. Whether you SQL or you
+						NoSQL, you’ll find what you need here, along with the
+						techniques and tools to make your data welcome wherever
+						it goes!</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -180,21 +181,20 @@
 					<img src="${assetsUrl}/img/java.png" alt="Cup of Java">
 						<h3 class="lead">JAVA/JAVAEE/SPRING</h3>
 						<p>
-						We like the language but we love the platform more. Whatever your
-						flavor of Java (SE, EE, Spring), whether you need to refactor or build
-						new, you will find out about new features, tools and techniques to
-						elevate your skills.</p>
+						We like the language, but we love the platform. Whatever
+						your flavor of Java (SE, EE, Spring), whether you need to
+						refactor or build new, we’ll deliver the new features,
+						tools and techniques you need to elevate your skills!</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
 					<img src="${assetsUrl}/img/code.png" alt="Code">
 						<h3 class="lead">HTML5 + JAVASCRIPT</h3>
-						<p>
-						Ah yes, the soup du jour of modern web development. Feeling overwhelmed
-						by the ever increasing number of .js frameworks? Need to understand
-						how HTML5 has brought native capabilities to the browser? You will
-						find it here.</p>
+						<p>Overwhelmed by the exploding numbers of .js frameworks
+						in this soup du jour of modern web development? Need to
+						understand how HTML5 brings native capabilities to the
+						browser? Whatever you need, we’ve got it here!</p>
 					</div>
 				</div>
 			</div>
@@ -204,9 +204,10 @@
 					<img src="${assetsUrl}/img/chat.png" alt="Chat">
 						<h3 class="lead">ATLERNATIVE LANGUAGES</h3>
 						<p>
-						Guess what! Java is not the only language to run on the JVM, shocker
-						right? Scala, Kotlin, Ceylon, Xtend, Groovy, Clojure, Fantom and about
-						a gazillion more. Find out what all the cool kids are into and why.</p>
+						Guess what? Java isn’t the only language to run on the
+						JVM—shocker, right? Meet Scala, Kotlin, Ceylon, Xtend,
+						Groovy, Clojure, Fantom and about a gazillion more. Find
+						out what all the cool kids are into and why!</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -214,9 +215,10 @@
 					<img src="${assetsUrl}/img/network.png" alt="Network">
 						<h3 class="lead">AGILE + TOOLS</h3>
 						<p>
-						How far down the Agile rabbit hole have you gone? Whether you are
-						Agile"ish" or full on Scrum with pair programming and bells and whistles,
-						come learn from the best about how to open up a can of worms…</p>
+						How far down the Agile rabbit hole have you gone? Whether
+						you’re ‘Agile-ish’ or ‘full-on Scrum’ with pair programming
+						and bells and whistles, come learn from the best about
+						how to open up a can of worms!</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -224,6 +226,12 @@
 					<img src="${assetsUrl}/img/phone.png" alt="Phone">
 						<h3 class="lead">MOBILE</h3>
 						<p>
+						Designing for mobile first is the hottest ticket in
+						town—even in web development. So whether you roll with
+						hardcore Objective C, Java with Android SDK, or a dev
+						framework like PhoneGap, Titanium or Xamarin—we’ve got
+						you covered!
+
 						The hottest ticket in town… designing for mobile first is even the
 						hottest trend in web development. How do you roll? Hardcore Objective
 						C or Java with Android SDK? Or rock one of the dev frameworks like
