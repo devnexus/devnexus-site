@@ -31,6 +31,7 @@ import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.model.Sponsor;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 
@@ -264,4 +265,6 @@ public interface BusinessService {
 	Sponsor getSponsorWithPicture(Long sponsorId);
 
 	List<Organizer> getAllOrganizersWithPicture();
+
+	SponsorList getSponsorListForEvent(Long id);
 }

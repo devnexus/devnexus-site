@@ -53,7 +53,7 @@ import com.devnexus.ting.core.model.OrganizerList;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.model.Sponsor;
-import com.devnexus.ting.core.model.SponsorLevel;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
@@ -77,66 +77,8 @@ public class SiteController {
 	@RequestMapping({"/index", "/"})
 	public String index(final Model model) {
 		final Event event = businessService.getCurrentEvent();
-		final List<Sponsor> sponsors = businessService.getSponsorsForEvent(event.getId());
-
-		final Map<Long, String> logos = new HashMap<>();
-
-		Map<SponsorLevel, Integer> sponsorLevelCount = new HashMap<SponsorLevel, Integer>();
-
-		for (SponsorLevel level : SponsorLevel.values()) {
-			sponsorLevelCount.put(level, Integer.valueOf(0));
-		}
-
-		for (Sponsor sponsor : sponsors) {
-
-			sponsorLevelCount.put(sponsor.getSponsorLevel(), Integer.valueOf(sponsorLevelCount.get(sponsor.getSponsorLevel()).intValue() + 1));
-
-			FileData imageData = businessService.getSponsorWithPicture(sponsor.getId()).getLogo();
-
-			final int size;
-
-			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
-				size = 180;
-			}
-			else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
-				size = 140;
-			}
-			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
-				size = 110;
-			}
-			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
-				size = 180;
-			}
-			else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
-				size = 460;
-			}
-			else {
-				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
-			}
-
-			if (imageData != null) {
-				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
-				BufferedImage image;
-				try {
-					image = ImageIO.read(bais);
-					final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
-					final ByteArrayOutputStream out = new ByteArrayOutputStream();
-					ImageIO.write(scaled, "PNG", out);
-
-					byte[] bytes = out.toByteArray();
-
-					final String base64bytes = Base64.encodeBase64String(bytes);
-					final String src = "data:image/png;base64," + base64bytes;
-					logos.put(sponsor.getId(), src);
-				} catch (IOException e) {
-					LOGGER.error("Error while processing logo for sponsor " + sponsor.getName(), e);
-				}
-			}
-		}
-
-		model.addAttribute("sponsors", sponsors);
-		model.addAttribute("logos", logos);
-		model.addAttribute("sponsorLevelCount", sponsorLevelCount);
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId());
+		model.addAttribute("sponsorList", sponsorList);
 		return "index";
 	}
 

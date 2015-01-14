@@ -198,36 +198,53 @@ th {
 }
 
 
-
 /* logo */
 img.logo {
 	margin: 0 0 20px 0;
 }
 
-/* intro */
-#intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background: url(../img/devnexusBackgroundTop.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+/* parallax */
+section.module.content {
+  padding: 40px 0;
 }
-#intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
+section.module.parallax {
+  height: 460px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+section.module.parallax.content {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  background-image: url(../img/devnexusBackground2.jpg)
+}
+section.module.parallax-2 {
+  height: 100%;
+  background-image: url(../img/devnexusBackgroundMiddle.jpg)
+}
+
+.header {
+	padding-top: 120px;
+}
+
 #intro .intro-body .brand-heading {
     font-size: 40px;
 }
-#intro .intro-body .intro-text {
+p.intro-text {
     font-size: 18px;
+    text-align: center;
+    color: #fff;
 }
 #intro .fa {
 	color: #222;
@@ -618,6 +635,12 @@ input.email {
 /* stats */
 p.lead.counter-commits {
 	font-size: 1.4em;
+	color: #fff;
+}
+p.lead.counter-stat {
+	color: #fff;
+	font-size: 2.5em;
+	line-height: 14px;
 }
 .stats-section {
 	padding-bottom: 80px;
@@ -634,7 +657,6 @@ p.lead.counter-commits {
 #stats {
 	background-repeat: no-repeat;
   	background-size: cover;
-	background-image: url('../img/devnexusBackgroundMiddle.jpg');
 }
 #stats .fa {
 	color: #fff;
@@ -657,12 +679,11 @@ p.lead.counter-commits {
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
 	display: table;
-	margin: 20px auto;
+	margin: 40px auto;
 	-webkit-transition: -webkit-transform ease-out 0.2s, background 0.3s;
 	-moz-transition: -moz-transform ease-out 0.2s, background 0.3s;
 	transition: transform ease-out 0.2s, background 0.3s;
 }
-
 /* footer */
 footer.site-footer {
 	background: #333333;

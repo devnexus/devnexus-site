@@ -15,6 +15,10 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -27,9 +31,14 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.UUID;
 
+import javax.imageio.ImageIO;
+
+import org.apache.commons.codec.binary.Base64;
+import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.env.Environment;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
@@ -70,6 +79,8 @@ import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.model.Sponsor;
+import com.devnexus.ting.core.model.SponsorLevel;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
@@ -232,9 +243,15 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-	@Transactional
-	public Sponsor getSponsorWithPicture(Long sponsorId) {
-		return sponsorDao.getSponsorWithPicture(sponsorId);
+	public Sponsor getSponsorWithPicture(final Long sponsorId) {
+
+		final Sponsor sponsor = transactionTemplate.execute(new TransactionCallback<Sponsor>() {
+			public Sponsor doInTransaction(TransactionStatus status) {
+				return sponsorDao.getSponsorWithPicture(sponsorId);
+			}
+		});
+
+		return sponsor;
 	}
 
 	@Override
@@ -253,8 +270,8 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForCurrentEvent() {
-        List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
-        Collections.sort(list);
+		List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
+		Collections.sort(list);
 		return list;
 	}
 
@@ -634,6 +651,60 @@ public class BusinessServiceImpl implements BusinessService {
 		return sponsorDao.getSponsorsForEvent(id);
 	}
 
+	@Cacheable("default")
+	@Override
+	public SponsorList getSponsorListForEvent(Long id) {
 
+		final List<Sponsor> sponsors = this.getSponsorsForEvent(id);
+
+		final SponsorList sponsorList = new SponsorList();
+
+		for (Sponsor sponsor : sponsors) {
+
+			FileData imageData = this.getSponsorWithPicture(sponsor.getId()).getLogo();
+
+			final int size;
+
+			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
+				size = 180;
+			}
+			else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
+				size = 140;
+			}
+			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
+				size = 110;
+			}
+			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
+				size = 180;
+			}
+			else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
+				size = 460;
+			}
+			else {
+				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
+			}
+
+			if (imageData != null) {
+				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
+				BufferedImage image;
+				try {
+					image = ImageIO.read(bais);
+					final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
+					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+					ImageIO.write(scaled, "PNG", out);
+
+					byte[] bytes = out.toByteArray();
+
+					final String base64bytes = Base64.encodeBase64String(bytes);
+					final String src = "data:image/png;base64," + base64bytes;
+					sponsorList.addSponsor(sponsor, src);
+				} catch (IOException e) {
+					LOGGER.error("Error while processing logo for sponsor " + sponsor.getName(), e);
+				}
+			}
+		}
+
+		return sponsorList;
+	}
 
 }

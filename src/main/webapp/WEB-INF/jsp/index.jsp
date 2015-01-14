@@ -72,49 +72,47 @@
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
 				<li><a class="page-scroll" href="#travel">Travel</a></li>
 			</ul>
-		</div><!-- /.navbar-collapse -->
+		</div>
 	</nav>
 
 	<!-- Intro Header -->
-	<header id="intro">
-		<div class="intro-body">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
-						<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - MARCH 10-12, 2015</p>
-						<div class="icon">
-							<i class="fa fa fa-twitter"></i>
-						</div><!--//icon-->
-						<p class="intro-text"><a href="https://twitter.com/devnexus">#devnexus</a></p>
-					</div>
+	<section id="intro" class="module parallax parallax-1">
+		<div class="container header">
+			<div class="row intro-body">
+				<div class="col-md-8 col-md-offset-2">
+					<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
+					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - MARCH 10-12, 2015</p>
+					<div class="icon">
+						<i class="fa fa fa-twitter"></i>
+					</div><!--//icon-->
+					<p class="intro-text"><a href="https://twitter.com/devnexus">#devnexus</a></p>
 				</div>
 			</div>
 		</div>
-	</header>
+	</section>
 
 	<!-- intro -->
 	<section id="about" class="white">
-			<div class="container">
-					<div class="row centered">
-						<div class="col-md-10 col-md-offset-1">
-							<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
-						</div>
-						<div class="col-md-10 col-md-offset-1">
-							<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While you’re here, you’ll also connect with like-minded developers who are mastering their craft in a wide range of today’s most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you can’t afford to miss it!</p>
-						</div>
+		<div class="container">
+				<div class="row centered">
+					<div class="col-md-10 col-md-offset-1">
+						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3">
-							<a href="${registrationUrl}" class="btn btn-primary btn-block registerButton">Register Now!</a>
-						</div>
+					<div class="col-md-10 col-md-offset-1">
+						<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While you’re here, you’ll also connect with like-minded developers who are mastering their craft in a wide range of today’s most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you can’t afford to miss it!</p>
 					</div>
-			</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<a href="${registrationUrl}" class="btn btn-primary btn-block registerButton">Register Now!</a>
+					</div>
+				</div>
+		</div>
 	</section>
 	<!-- /intro -->
 
 	<!-- stats -->
-	<section id="stats" class="grey stats-section">
+	<section id="stats" class="module parallax parallax-2">
 		<div class="container">
 			<div class="row scrollpoint sp-effect3">
 				<div class="item col-md-3 text-center">
@@ -230,12 +228,7 @@
 						town—even in web development. So whether you roll with
 						hardcore Objective C, Java with Android SDK, or a dev
 						framework like PhoneGap, Titanium or Xamarin—we’ve got
-						you covered!
-
-						The hottest ticket in town… designing for mobile first is even the
-						hottest trend in web development. How do you roll? Hardcore Objective
-						C or Java with Android SDK? Or rock one of the dev frameworks like
-						PhoneGap, Titanium or Xamarin?</p>
+						you covered!</p>
 					</div>
 				</div>
 			</div>
@@ -318,7 +311,7 @@
 	<section>
 		<div class="row">
 			<div class="col-md-8 col-md-push-2">
-				<c:forEach items="${sponsors}" var="sponsor" varStatus="status">
+				<c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
 					<c:choose>
 						<c:when test="${sponsor.sponsorLevel.name ne sponsorLevel}">
 							<c:if test="${not status.first}"></div></c:if>
@@ -326,7 +319,7 @@
 							<div class="top-intro sponsors ${sponsor.sponsorLevel.cssStyleClass}">
 								<h4 class="decorated"><span>
 									<c:choose>
-										<c:when test="${sponsorLevelCount.get(sponsor.sponsorLevel) > 1}">
+										<c:when test="${sponsorList.sponsorLevelCount.get(sponsor.sponsorLevel) > 1}">
 											${sponsorLevel}s
 										</c:when>
 										<c:otherwise>
@@ -334,11 +327,11 @@
 										</c:otherwise>
 									</c:choose>
 								</span></h4>
-								<a href="${sponsor.link}"><img src="${logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
+								<a href="${sponsor.link}"><img src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
 							<c:if test="${status.last}"></div></c:if>
 						</c:when>
 						<c:otherwise>
-							<a href="${sponsor.link}"><img src="${logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
+							<a href="${sponsor.link}"><img src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
