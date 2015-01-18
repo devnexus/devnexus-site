@@ -77,8 +77,8 @@
 
 			<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add/Save</button>
-					<button type="submit" class="btn btn-default" lang="delete" tabindex="20">Delete</button>
+					<button type="submit" class="btn btn-default" name="save" tabindex="19">Add/Save</button>
+					<button type="submit" class="btn btn-default" name="delete" tabindex="20">Delete</button>
 					<button type="submit" class="btn btn-default" name="cancel" tabindex="21">Cancel</button>
 				</div>
 			</div>

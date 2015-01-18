@@ -15,17 +15,14 @@
  */
 package com.devnexus.ting.web.config;
 
-import java.util.Arrays;
-
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.cache.concurrent.ConcurrentMapCache;
-import org.springframework.cache.support.SimpleCacheManager;
+import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
+import com.google.common.cache.CacheBuilder;
 
 
 /**
@@ -43,9 +40,11 @@ import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 public class MainConfig {
 
 	@Bean
-	public CacheManager cacheManager() {
-		SimpleCacheManager cacheManager = new SimpleCacheManager();
-		cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("default")));
+	public GuavaCacheManager cacheManager() {
+		final CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
+		.recordStats();
+		final GuavaCacheManager cacheManager = new GuavaCacheManager();
+		cacheManager.setCacheBuilder(cacheBuilder);
 		return cacheManager;
 	}
 

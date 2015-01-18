@@ -38,6 +38,7 @@ import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.env.Environment;
 import org.springframework.integration.support.MessageBuilder;
@@ -146,7 +147,9 @@ public class BusinessServiceImpl implements BusinessService {
 		organizerDao.remove(organizerFromDb);
 	}
 
+	@CacheEvict(value="sponsors", allEntries=true)
 	@Override
+	@Transactional
 	public void deleteSponsor(Sponsor sponsorFromDb) {
 		Assert.notNull(sponsorFromDb,         "The provided sponsor must not be null.");
 		Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
@@ -359,6 +362,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	@Transactional
+	@CacheEvict(value="sponsors", allEntries=true)
 	public Sponsor saveSponsor(Sponsor sponsor) {
 		return sponsorDao.save(sponsor);
 	}
@@ -651,7 +655,7 @@ public class BusinessServiceImpl implements BusinessService {
 		return sponsorDao.getSponsorsForEvent(id);
 	}
 
-	@Cacheable("default")
+	@Cacheable("sponsors")
 	@Override
 	public SponsorList getSponsorListForEvent(Long id) {
 

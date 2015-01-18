@@ -96,7 +96,7 @@ public class SponsorController {
 
 		if (request.getParameter("delete") != null) {
 			businessService.deleteSponsor(sponsorFromDb);
-			//FlashMap.setSuccessMessage("The sponsor was deleted successfully.");
+			redirectAttributes.addFlashAttribute("successMessage", "The sponsor was deleted successfully.");
 			return "redirect:/s/admin/{eventKey}/sponsors";
 		}
 
@@ -128,20 +128,19 @@ public class SponsorController {
 			}
 
 			sponsorFromDb.setLogo(pictureData);
-
-			String message = "File '" + pictureData.getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
 		}
 
-		Sponsor savedSponsor = businessService.saveSponsor(sponsorFromDb);
-
-		redirectAttributes.addFlashAttribute("successMessage", "The sponsnor was edited successfully.");
+		businessService.saveSponsor(sponsorFromDb);
+		redirectAttributes.addFlashAttribute("successMessage",
+			String.format("The sponsor '%s' was edited successfully.", sponsorFromDb.getName()));
 
 		return "redirect:/s/admin/{eventKey}/sponsors";
 	}
 
-	@RequestMapping(value="/admin/sponsor", method=RequestMethod.POST)
-	public String addSponsor(@RequestParam MultipartFile pictureFile, @Valid Sponsor sponsorForm, BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/{eventKey}/sponsor", method=RequestMethod.POST)
+	public String addSponsor(@RequestParam MultipartFile pictureFile,
+			@Valid Sponsor sponsorForm, BindingResult result, HttpServletRequest request,
+			@PathVariable("eventKey") String eventKey) {
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/{eventKey}/sponsors";
@@ -151,7 +150,7 @@ public class SponsorController {
 			return "/admin/add-sponsor";
 		}
 
-		final Event currentEvent = businessService.getCurrentEvent();
+		final Event currentEvent = businessService.getEventByEventKey(eventKey);
 		sponsorForm.setEvent(currentEvent);
 
 		if (pictureFile != null && pictureFile.getSize() > 0) {

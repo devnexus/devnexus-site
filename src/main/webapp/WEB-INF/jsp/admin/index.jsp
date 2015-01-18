@@ -109,8 +109,30 @@
 			<div class="panel-body">
 				<ul>
 					<li><a href="${ctx}${baseSiteUrl}/admin/update-application-cache">Update HTML5 Application Cache Manifest</a></li>
+					<li><a href="${ctx}${baseSiteUrl}/admin/reset-spring-cache">Reset Spring Cache</a></li>
 				</ul>
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h4>Cache Status</h4>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Cachename</th><th>Hit Count</th><th>Hit Rate</th><th>Eviction Count</th><th>Miss Count</th>
+					</tr>
+				</thead>
+				<c:forEach items="${cacheStats}" var="cacheStat">
+					<tr>
+						<td>${cacheStat.key}</td>
+						<td>${cacheStat.value.hitCount()}</td>
+						<td>${cacheStat.value.hitRate()}</td>
+						<td>${cacheStat.value.evictionCount()}</td>
+						<td>${cacheStat.value.missCount()}</td>
+					</tr>
+				</c:forEach>
+			</table>
 		</div>
 	</div>
 </div>

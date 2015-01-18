@@ -65,6 +65,7 @@
 					<td><c:out value="${cfp.status}"/></td>
 					<td>
 						<c:if test="${cfp.speakerRequiresTravelCostReimburment()}"><span class="glyphicon glyphicon-usd text-danger"></span></c:if>
+						<c:if test="${not empty cfp.slotPreference}"><span class="glyphicon glyphicon-info-sign text-success"></span></c:if>
 					</td>
 					<td><c:out value="${cfp.speakerLocation}"/></td>
 				</tr>
