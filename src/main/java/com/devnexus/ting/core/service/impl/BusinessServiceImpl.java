@@ -657,7 +657,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Cacheable("sponsors")
 	@Override
-	public SponsorList getSponsorListForEvent(Long id) {
+	public SponsorList getSponsorListForEvent(Long id, boolean large) {
 
 		final List<Sponsor> sponsors = this.getSponsorsForEvent(id);
 
@@ -670,19 +670,19 @@ public class BusinessServiceImpl implements BusinessService {
 			final int size;
 
 			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
-				size = 180;
+				size = large ? 360 : 180;
 			}
 			else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
-				size = 140;
+				size = large ? 360 : 140;
 			}
 			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
-				size = 110;
+				size = large ? 360 : 110;
 			}
 			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
-				size = 180;
+				size = large ? 360 : 180;
 			}
 			else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
-				size = 460;
+				size = large ? 920 : 460;
 			}
 			else {
 				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());

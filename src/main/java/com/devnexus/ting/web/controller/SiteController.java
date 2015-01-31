@@ -77,7 +77,7 @@ public class SiteController {
 	@RequestMapping({"/index", "/"})
 	public String index(final Model model) {
 		final Event event = businessService.getCurrentEvent();
-		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId());
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
 		model.addAttribute("sponsorList", sponsorList);
 		return "index";
 	}
@@ -284,6 +284,17 @@ public class SiteController {
 		} catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
+
+	}
+
+	@RequestMapping(value="/sponsors", method=RequestMethod.GET)
+	public String getSponsors(Model model) {
+
+		final Event event = businessService.getCurrentEvent();
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), true);
+		model.addAttribute("sponsorList", sponsorList);
+
+		return "sponsors";
 
 	}
 

@@ -266,5 +266,5 @@ public interface BusinessService {
 
 	List<Organizer> getAllOrganizersWithPicture();
 
-	SponsorList getSponsorListForEvent(Long id);
+	SponsorList getSponsorListForEvent(Long id, boolean large);
 }
