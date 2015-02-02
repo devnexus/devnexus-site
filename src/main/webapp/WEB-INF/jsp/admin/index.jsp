@@ -3,7 +3,7 @@
 <title>Administration</title>
 
 <!-- intro -->
-<section id="about" class="module parallax parallax-3">
+<section id="about" class="module parallax parallax-3 index--parallax">
 	<div class="container header">
 		<div class="row centered">
 			<div class="col-md-10 col-md-offset-1">

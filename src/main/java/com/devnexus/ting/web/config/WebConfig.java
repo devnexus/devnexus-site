@@ -294,7 +294,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		final ConfigurableWroFilter wroFilter = new ConfigurableWroFilter();
 
 		wroFilter.setDebug(false);
-		wroFilter.setDisableCache(false);
+//		wroFilter.setDebug(true);
+//		wroFilter.setCacheUpdatePeriod(1);
+//		wroFilter.setModelUpdatePeriod(1);
 
 		final ConfigurableWroManagerFactory wroManagerFactory = new ConfigurableWroManagerFactory();
 		final SimpleProcessorsFactory simpleProcessorsFactory = new SimpleProcessorsFactory();
@@ -315,7 +317,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 			return new WroModel().addGroup(new Group("all")
 				.addResource(Resource.create("classpath:less/main.less", ResourceType.CSS))
 				.addResource(Resource.create("/assets/css/vendor/animate.css", ResourceType.CSS))
-				.addResource(Resource.create("/assets/css/devnexus-common.css", ResourceType.CSS))
 				.addResource(Resource.create("/assets/js/jquery1.11.1.min.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery.modernizr.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery.scrollTo.js", ResourceType.JS))

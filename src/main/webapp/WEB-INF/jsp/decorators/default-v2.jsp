@@ -24,9 +24,6 @@
 
 	<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
-	<!-- custom CSS -->
-	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet">
-
 <%-- 	<!-- vendor CSS -->
 	<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">

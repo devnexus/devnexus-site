@@ -25,7 +25,7 @@
 				</h4>
 			</c:otherwise>
 		</c:choose>
-		<div class="row text-muted">
+		<div class="row presentation-title">
 			<div class="col-xs-12 text-center">
 				<c:out value="${presentation.title}"/>
 			</div>

@@ -6,7 +6,17 @@
 
 @fa-font-path: "../assets/fonts";
 
-@import "devnexus-common.css";
+@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, sans-serif;
+@font-family-base:        @font-family-sans-serif;
+@font-size-base:          14px;
+
+@body-bg: #ffffff;
+
+@import "devnexus-common.less";
+
+.icon-bar {
+	background-color: #ffffff;
+}
 
 .video-container {
 	position: relative;
@@ -63,3 +73,5 @@
 #tagline span {
 	color: rgba(123,173,52,1);
 }
+
+@import "responsive.less";

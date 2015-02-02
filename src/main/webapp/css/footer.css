@@ -1,9 +1,0 @@
-#footer {background: #0c1620; margin: 0; padding:0;color: #fff; text-align: left;}
-#footer #footerwrapper {width: 1050px; margin:20px auto 0; padding-bottom: 40px;}
-#footer h3 {color: #fff; margin: 10px 0; font-size: 17px}
-#footer li, #footer li a {color: #617784; text-decoration: none; margin-bottom: 6px;}
-#footer li a:hover {text-decoration: underline; }
-#footer .cols {width: 200px; float: left; display: inline; margin: 20px 0;}
-#footer .cols ul{margin: 0; padding:0;}
-#footer #flogo{padding: 30px; float: right; margin-top: -115px}
-#footer #copy {text-align: right; margin-top: 20px; color: #617784; font-size: 85%;}

@@ -20,9 +20,6 @@
 	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
 
-	<!-- custom CSS -->
-	<link href="${assetsUrl}/css/otherpages.css" rel="stylesheet">
-
 	<!-- fonts: external links -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>

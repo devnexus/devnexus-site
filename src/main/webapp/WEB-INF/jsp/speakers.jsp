@@ -2,6 +2,16 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
+<head>
+	<title><c:out value="${event.title}"/> - Speakers</title>
+
+	<style type="text/css">
+		#speaker {
+			opacity: 0.0;
+		}
+	</style>
+</head>
+
 	<!-- intro -->
 	<section id="about" class="module parallax parallax-3">
 		<div class="container header">
@@ -24,13 +34,7 @@
 	</section>
 	<!-- /intro -->
 
-	<div class="row" style="margin-top: 2em;">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="alert alert-info text-center" role="alert">Please be aware that more speakers are still being added!</div>
-		</div>
-	</div>
 	<section id="speaker" class="bg-light-gray" style="margin-top: 0">
-		<div class="container">
 			<c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
 				<c:choose>
 					<c:when test="${status.first && status.index%3 == 0}">
@@ -107,17 +111,19 @@
 		</div>
 	</section>
 
-	<!-- questions -->
-	<section class="white">
-		<div class="top-intro questions">
-			<h4 class="section-title">Questions?</h4>
-			<h3>Contact us at info@ajug.org</h3>
-		</div>
-	</section>
+	<jsp:include page="includes/questions.jsp"/>
 
 <content tag='bottom'>
 	<script type="text/javascript">
+
 		$(document).ready(function() {
+
+
+			if (location.hash) {
+				setTimeout(function() {
+					window.scrollTo(0, 0);
+				}, 1);
+			}
 
 			var $container = $('#speaker');
 
@@ -135,8 +141,10 @@
 				if (!(hash === '')) {
 					var el = $(hash);
 					console.log('Scroll: ', el);
-					$('html, body').animate({scrollTop: el.offset().top - 100}, 'slow');
+					$('html, body').animate({scrollTop: el.offset().top - 100}, 'fast');
 				}
+
+				$('#speaker').css('opacity', '1');
 			});
 		});
 	</script>

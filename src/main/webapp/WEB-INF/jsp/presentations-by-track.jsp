@@ -26,11 +26,6 @@
 </section>
 <!-- /intro -->
 
-<div class="row" style="margin-top: 2em;">
-	<div class="col-md-10 col-md-offset-1">
-		<div class="alert alert-info text-center" role="alert">Please be aware that more sessions are still being added!</div>
-	</div>
-</div>
 <section id="speaker" class="bg-light-gray" style="margin-top: 0">
 
 <div id="trackContainer" class="container">
@@ -57,13 +52,7 @@
 	</div>
 </section>
 
-<!-- questions -->
-<section class="white">
-	<div class="top-intro questions">
-		<h4 class="section-title">Questions?</h4>
-		<h3>Contact us at info@ajug.org</h3>
-	</div>
-</section>
+<jsp:include page="includes/questions.jsp"/>
 
 <content tag='bottom'>
 	<script type="text/javascript">

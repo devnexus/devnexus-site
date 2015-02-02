@@ -42,7 +42,7 @@
 					</div>
 			</c:if>
 			<h1 class="${trackStyle}" style="${trackFontColor}"><strong><c:out value="${trackName}"/></strong><br/></h1>
-			<div id="h4wrap"><h4>Presentations</h4></div>
+			<h4>Presentations</h4>
 			<div id="speakers">
 				<div class="row" id="<c:out value="trackContainer${trackId}"/>">
 		</c:if>

@@ -47,13 +47,7 @@
 	</div>
 </section>
 
-<!-- questions -->
-<section class="white">
-	<div class="top-intro questions">
-		<h4 class="section-title">Questions?</h4>
-		<h3>Contact us at info@ajug.org</h3>
-	</div>
-</section>
+<jsp:include page="includes/questions.jsp"/>
 
 <content tag='bottom'>
 	<script type="text/javascript">

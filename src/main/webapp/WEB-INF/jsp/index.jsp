@@ -17,20 +17,17 @@
 		<meta content='devnexus, conference, tech conference, southeast, 2015, atlanta conference' name='keywords' />
 		<meta property="og:description" content="">
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="${ctx}/favicon.png">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="${ctx}/favicon.png">
 
 		<!-- vendor CSS -->
 		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 <%-- 		<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 		<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
 		<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet"> --%>
-
-		<!-- custom CSS -->
-		<link href="${assetsUrl}/css/style.css" rel="stylesheet">
 
 		<!-- fonts: external links -->
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -76,7 +73,7 @@
 	</nav>
 
 	<!-- Intro Header -->
-	<section id="intro" class="module parallax parallax-1">
+	<section id="index--intro" class="module parallax index--parallax-1">
 		<div class="container header">
 			<div class="row intro-body">
 				<div class="col-md-8 col-md-offset-2">
@@ -112,7 +109,7 @@
 	<!-- /intro -->
 
 	<!-- stats -->
-	<section id="stats" class="module parallax parallax-2">
+	<section id="stats" class="module parallax index--parallax-2">
 		<div class="container">
 			<div class="row scrollpoint sp-effect3">
 				<div class="item col-md-3 text-center">
@@ -158,7 +155,7 @@
 	<!-- featured -->
 	<section id="featured" class="white">
 		<div class="top-intro scissors">
-		<h4 class="section-title decorated"><span>Featured Tracks</span></h4>
+			<h4 class="section-title decorated"><span>Featured Tracks</span></h4>
 		</div>
 		<div class="container">
 			<div class="row">
@@ -235,8 +232,7 @@
 		<!-- ./row -->
 		</div><!-- /.container -->
 	</section>
-
-	<!-- video -->
+=
 	<section id="video" class="bkgDarkGrey">
 		<div class="container">
 			<div class="row">
@@ -255,7 +251,6 @@
 		</div>
 	</section>
 
-	<!-- travel -->
 	<section id="travel" class="white">
 		<div class="top-intro travel">
 		<h4 class="section-title decorated"><span>Travel</span></h4>
@@ -307,8 +302,7 @@
 		</div>
 	</section>
 
-	<!-- sponsors -->
-	<section>
+	<section id="sponsors">
 		<div class="row">
 			<div class="col-md-8 col-md-push-2">
 				<c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
@@ -342,7 +336,7 @@
 	<!-- questions -->
 	<section class="white">
 		<div class="top-intro questions">
-			<h4 class="section-title">Questions?</h4>
+			<h4>Questions?</h4>
 			<h3>Contact us at info@ajug.org</h3>
 		</div>
 	</section>
