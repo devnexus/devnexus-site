@@ -3,9 +3,19 @@
 
 <title>Tracks</title>
 
-<div style="margin-top: 20px" class="col-md-10 col-md-offset-1">
-	<h2>Tracks</h2>
-</div>
+<!-- intro -->
+<section id="tracks" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Tracks</span></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
@@ -24,6 +34,13 @@
 					<td class="text-center"><span class="badge"><c:out value="${track.presentations.size()}" /></span></td>
 				</tr>
 				</c:forEach>
+				<c:if test="${unassignedSessions > 0}">
+					<tr>
+						<td style="width: 30px;">&nbsp;</td>
+						<td>Unassigned Presentations</td>
+						<td class="text-center"><span class="badge"><c:out value="${unassignedSessions}" /></span></td>
+					</tr>
+				</c:if>
 			</tbody>
 		</table>
 	</div>

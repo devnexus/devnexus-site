@@ -68,11 +68,13 @@ public class Event extends BaseModelObject {
 	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Room>rooms = new HashSet<Room>(0);
 
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="event")
+	private Set<Sponsor>sponsors = new HashSet<Sponsor>(0);
+
 	@Override
 	public String toString() {
 		return String.valueOf(id);
 	}
-
 
 	/**
 	 * @param id
@@ -184,6 +186,14 @@ public class Event extends BaseModelObject {
 
 	public void setRooms(Set<Room> rooms) {
 		this.rooms = rooms;
+	}
+
+	public Set<Sponsor> getSponsors() {
+		return sponsors;
+	}
+
+	public void setSponsors(Set<Sponsor> sponsors) {
+		this.sponsors = sponsors;
 	}
 
 	public boolean hasSpeaker(Long speakerId) {

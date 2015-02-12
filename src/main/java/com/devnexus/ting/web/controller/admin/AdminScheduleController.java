@@ -22,10 +22,11 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.model.ScheduleItemList;
@@ -57,13 +58,14 @@ public class AdminScheduleController {
 
 	}
 
-	@RequestMapping(value="/admin/manage-schedule", method=RequestMethod.GET)
-	public String prepareEditCfp(@RequestParam("eventId") Long eventId, ModelMap model) {
+	@RequestMapping(value="/admin/{eventKey}/manage-schedule", method=RequestMethod.GET)
+	public String prepareEditCfp(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
 		prepareReferenceData(model);
-		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(eventId);
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
-		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(eventId);
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
 		final PresentationList presentationList = new PresentationList();
 		presentationList.setPresentations(presentations);
 

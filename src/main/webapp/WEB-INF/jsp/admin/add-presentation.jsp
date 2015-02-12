@@ -32,17 +32,16 @@
 			</div>
 		</div>
 
-		<spring:bind path="presentation.speaker.id">
+		<spring:bind path="presentation.speakers">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
 		<div class="form-group${errorClass}">
 			<label for="speaker" class="col-lg-2 control-label">Speaker*</label>
 			<div class="col-lg-10">
-				<form:select cssClass="form-control" path="speaker.id" id="speaker" tabindex="1">
+				<form:select path="speakers" multiple="true" items="${speakers}" itemLabel="fullName" itemValue="id" tabindex="1" style="width: 300px;" size="10">
 					<form:option value="" label="Please Select a Speaker" />
-					<form:options items="${speakers}" itemLabel="fullName" itemValue="id"/>
 				</form:select>
-				<form:errors path="speaker.id" cssClass="fieldError" />
+				<form:errors path="speakers" cssClass="fieldError" />
 			</div>
 		</div>
 
@@ -153,8 +152,9 @@
 
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" lang="save" tabindex="11">Save</button>
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="12">Cancel</button>
+				<button type="submit" class="btn btn-default" name="delete" tabindex="11">Delete</button>
+				<button type="submit" class="btn btn-default" lang="save" tabindex="12">Save</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="13">Cancel</button>
 			</div>
 		</div>
 	</form:form>
@@ -162,7 +162,7 @@
 </div>
 
 <content tag='bottom'>
-		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function() {

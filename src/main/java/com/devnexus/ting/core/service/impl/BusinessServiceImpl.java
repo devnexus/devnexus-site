@@ -15,6 +15,10 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -27,9 +31,15 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.UUID;
 
+import javax.imageio.ImageIO;
+
+import org.apache.commons.codec.binary.Base64;
+import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.env.Environment;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
@@ -54,6 +64,7 @@ import com.devnexus.ting.core.dao.PresentationTagDao;
 import com.devnexus.ting.core.dao.RoomDao;
 import com.devnexus.ting.core.dao.ScheduleItemDao;
 import com.devnexus.ting.core.dao.SpeakerDao;
+import com.devnexus.ting.core.dao.SponsorDao;
 import com.devnexus.ting.core.dao.TrackDao;
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.CfpSubmission;
@@ -68,6 +79,9 @@ import com.devnexus.ting.core.model.ScheduleItem;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.ScheduleItemType;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Sponsor;
+import com.devnexus.ting.core.model.SponsorLevel;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
@@ -94,6 +108,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private RoomDao         roomDao;
 	@Autowired private ScheduleItemDao scheduleItemDao;
 	@Autowired private SpeakerDao      speakerDao;
+	@Autowired private SponsorDao      sponsorDao;
 	@Autowired private TrackDao        trackDao;
 	@Autowired private ApplicationCacheDao applicationCacheDao;
 	@Autowired private Environment environment;
@@ -130,6 +145,17 @@ public class BusinessServiceImpl implements BusinessService {
 
 		LOGGER.debug("Deleting Organizer {}", organizerFromDb);
 		organizerDao.remove(organizerFromDb);
+	}
+
+	@CacheEvict(value="sponsors", allEntries=true)
+	@Override
+	@Transactional
+	public void deleteSponsor(Sponsor sponsorFromDb) {
+		Assert.notNull(sponsorFromDb,         "The provided sponsor must not be null.");
+		Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
+
+		LOGGER.debug("Deleting Sponsor {}", sponsorFromDb);
+		sponsorDao.remove(sponsorFromDb);
 	}
 
 	/** {@inheritDoc} */
@@ -207,11 +233,34 @@ public class BusinessServiceImpl implements BusinessService {
 		return organizerDao.get(organizerId);
 	}
 
+	@Override
+	public Sponsor getSponsor(Long sponsorId) {
+		return sponsorDao.get(sponsorId);
+	}
+
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
 	public Organizer getOrganizerWithPicture(Long organizerId) {
 		return organizerDao.getOrganizerWithPicture(organizerId);
+	}
+
+	@Override
+	public Sponsor getSponsorWithPicture(final Long sponsorId) {
+
+		final Sponsor sponsor = transactionTemplate.execute(new TransactionCallback<Sponsor>() {
+			public Sponsor doInTransaction(TransactionStatus status) {
+				return sponsorDao.getSponsorWithPicture(sponsorId);
+			}
+		});
+
+		return sponsor;
+	}
+
+	@Override
+	@Transactional
+	public List<Organizer> getAllOrganizersWithPicture() {
+		return organizerDao.getOrganizersWithPicture();
 	}
 
 	/** {@inheritDoc} */
@@ -224,8 +273,8 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getPresentationsForCurrentEvent() {
-        List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
-        Collections.sort(list);
+		List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
+		Collections.sort(list);
 		return list;
 	}
 
@@ -309,6 +358,13 @@ public class BusinessServiceImpl implements BusinessService {
 	@Transactional
 	public Organizer saveOrganizer(Organizer organizer) {
 		return organizerDao.save(organizer);
+	}
+
+	@Override
+	@Transactional
+	@CacheEvict(value="sponsors", allEntries=true)
+	public Sponsor saveSponsor(Sponsor sponsor) {
+		return sponsorDao.save(sponsor);
 	}
 
 	/** {@inheritDoc} */
@@ -490,6 +546,11 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
+	public List<Evaluation> getEvaluationsForEvent(Long eventId) {
+		return evaluationDao.getEvaluationsForEvent(eventId);
+	}
+
+	@Override
 	public void removeEvaluation(Long evaluationId) {
 		evaluationDao.remove(evaluationId);
 	}
@@ -588,4 +649,66 @@ public class BusinessServiceImpl implements BusinessService {
 
 		return presentationTagsToSave;
 	}
+
+	@Override
+	public List<Sponsor> getSponsorsForEvent(Long id) {
+		return sponsorDao.getSponsorsForEvent(id);
+	}
+
+	@Cacheable("sponsors")
+	@Override
+	public SponsorList getSponsorListForEvent(Long id, boolean large) {
+
+		final List<Sponsor> sponsors = this.getSponsorsForEvent(id);
+
+		final SponsorList sponsorList = new SponsorList();
+
+		for (Sponsor sponsor : sponsors) {
+
+			FileData imageData = this.getSponsorWithPicture(sponsor.getId()).getLogo();
+
+			final int size;
+
+			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 180;
+			}
+			else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 140;
+			}
+			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			}
+			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 180;
+			}
+			else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
+				size = large ? 920 : 460;
+			}
+			else {
+				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
+			}
+
+			if (imageData != null) {
+				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
+				BufferedImage image;
+				try {
+					image = ImageIO.read(bais);
+					final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
+					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+					ImageIO.write(scaled, "PNG", out);
+
+					byte[] bytes = out.toByteArray();
+
+					final String base64bytes = Base64.encodeBase64String(bytes);
+					final String src = "data:image/png;base64," + base64bytes;
+					sponsorList.addSponsor(sponsor, src);
+				} catch (IOException e) {
+					LOGGER.error("Error while processing logo for sponsor " + sponsor.getName(), e);
+				}
+			}
+		}
+
+		return sponsorList;
+	}
+
 }

@@ -59,12 +59,26 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.xml.MarshallingView;
 
+import ro.isdc.wro.extensions.processor.css.Less4jProcessor;
+import ro.isdc.wro.extensions.processor.css.YUICssCompressorProcessor;
+import ro.isdc.wro.extensions.processor.js.UglifyJsProcessor;
+import ro.isdc.wro.http.ConfigurableWroFilter;
+import ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory;
+import ro.isdc.wro.model.WroModel;
+import ro.isdc.wro.model.factory.WroModelFactory;
+import ro.isdc.wro.model.group.Group;
+import ro.isdc.wro.model.resource.Resource;
+import ro.isdc.wro.model.resource.ResourceType;
+import ro.isdc.wro.model.resource.processor.factory.SimpleProcessorsFactory;
+import ro.isdc.wro.model.resource.processor.impl.css.CssImportPreProcessor;
+
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSpeaker;
+import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
 
 /**
@@ -110,6 +124,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToRoom());
 		registry.addConverter(new StringToSkillLevel());
 		registry.addConverter(new StringToPresentationType());
+		registry.addConverter(new StringToSponsorLevel());
 	}
 
 	/* (non-Javadoc)
@@ -175,6 +190,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		conversionService.addConverter(new StringToSpeaker());
 		conversionService.addConverter(new StringToSkillLevel());
 		conversionService.addConverter(new StringToPresentationType());
+		conversionService.addConverter(new StringToSponsorLevel());
 
 		bindingInitializer.setConversionService(conversionService);
 		bindingInitializer.setValidator(validator());
@@ -273,4 +289,46 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return simpleMappingExceptionResolver;
 	}
 
+	@Bean
+	public ConfigurableWroFilter wro4jFilter() {
+		final ConfigurableWroFilter wroFilter = new ConfigurableWroFilter();
+
+		wroFilter.setDebug(false);
+//		wroFilter.setDebug(true);
+//		wroFilter.setCacheUpdatePeriod(1);
+//		wroFilter.setModelUpdatePeriod(1);
+
+		final ConfigurableWroManagerFactory wroManagerFactory = new ConfigurableWroManagerFactory();
+		final SimpleProcessorsFactory simpleProcessorsFactory = new SimpleProcessorsFactory();
+
+		simpleProcessorsFactory.addPreProcessor(new CssImportPreProcessor());
+		simpleProcessorsFactory.addPostProcessor(new Less4jProcessor());
+		simpleProcessorsFactory.addPostProcessor(new YUICssCompressorProcessor());
+		simpleProcessorsFactory.addPostProcessor(new UglifyJsProcessor());
+
+		wroManagerFactory.setProcessorsFactory(simpleProcessorsFactory);
+		wroManagerFactory.setModelFactory(new DevNexusWroModelFactory());
+		wroFilter.setWroManagerFactory(wroManagerFactory);
+		return wroFilter;
+	}
+
+	public class DevNexusWroModelFactory implements WroModelFactory {
+		public WroModel create() {
+			return new WroModel().addGroup(new Group("all")
+				.addResource(Resource.create("classpath:less/main.less", ResourceType.CSS))
+				.addResource(Resource.create("/assets/css/vendor/animate.css", ResourceType.CSS))
+				.addResource(Resource.create("/assets/js/jquery1.11.1.min.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/jquery.modernizr.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/jquery.scrollTo.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/jquery.easing.min.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/bootstrap.min.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/other/masonry.pkgd.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/jquery-plugins/jquery.fittext.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/other/imagesloaded.pkgd.min.js", ResourceType.JS)));
+		}
+
+		public void destroy() {
+			//do some clean-up if required.
+		}
+	}
 }

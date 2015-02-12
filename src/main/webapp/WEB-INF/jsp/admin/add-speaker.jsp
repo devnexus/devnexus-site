@@ -21,6 +21,8 @@
 		</c:if>
 	</spring:bind>
 	<form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="speaker" enctype="multipart/form-data">
+${eventId}ddd
+		<input type="hidden" value="${eventId}"/>
 
 		<spring:bind path="speaker.firstName">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -143,7 +145,7 @@
 
 <content tag='bottom'>
 
-		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function() {

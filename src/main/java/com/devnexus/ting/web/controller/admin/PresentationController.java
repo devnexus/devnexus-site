@@ -18,9 +18,7 @@ package com.devnexus.ting.web.controller.admin;
 import java.io.IOException;
 import java.util.Date;
 import java.util.EnumSet;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +29,6 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +40,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Presentation;
+import com.devnexus.ting.core.model.PresentationList;
 import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.PresentationType;
 import com.devnexus.ting.core.model.SkillLevel;
@@ -73,24 +71,22 @@ public class PresentationController {
 		model.addAttribute("tracks", tracks);
 	}
 
-	@RequestMapping(value="/admin/presentations", method=RequestMethod.GET)
-	public String getPresentations(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model, HttpServletRequest request) {
+	@RequestMapping(value="/admin/{eventKey}/presentations", method=RequestMethod.GET)
+	public String getPresentations(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
-		final List<Presentation> presentations;
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
 
-		if (eventId != null) {
-			presentations = businessService.getPresentationsForEventOrderedByName(eventId);
-		}
-		else {
-			presentations = businessService.getAllPresentations();
-		}
+		final PresentationList presentationList = new PresentationList();
+		presentationList.setPresentations(presentations);
 
-		model.addAttribute("presentations", presentations);
+		model.addAttribute("presentationList", presentationList);
+		model.addAttribute("event", event);
 
 		return "/admin/manage-presentations";
 	}
 
-	@RequestMapping(value="/admin/presentation", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/presentation", method=RequestMethod.GET)
 	public String prepareAddPresentation(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model) {
 
 		final Event event;
@@ -115,7 +111,7 @@ public class PresentationController {
 		return "/admin/add-presentation";
 	}
 
-	@RequestMapping(value="/admin/presentation", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/{eventKey}/presentation", method=RequestMethod.POST)
 	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, ModelMap model, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
@@ -163,7 +159,7 @@ public class PresentationController {
 		return "redirect:/s/admin/presentations";
 	}
 
-	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.GET)
 	public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
 
 		final Presentation presentation = businessService.getPresentation(presentationId);
@@ -178,7 +174,7 @@ public class PresentationController {
 		return "/admin/add-presentation";
 	}
 
-	@RequestMapping(value="/admin/presentation/{presentationId}", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.POST)
 	public String editPresentation(@PathVariable("presentationId") Long presentationId,
 			@RequestParam MultipartFile uploadedFile,
 								@Valid Presentation presentation,
@@ -187,7 +183,7 @@ public class PresentationController {
 								RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/presentations";
+			return "redirect:/s/admin/{eventKey}/presentations";
 		}
 
 		if (result.hasErrors()) {
@@ -195,6 +191,12 @@ public class PresentationController {
 		}
 
 		final Presentation presentationFromDb = businessService.getPresentation(presentationId);
+
+		if (request.getParameter("delete") != null) {
+			businessService.deletePresentation(presentationFromDb);
+			//FlashMap.setSuccessMessage("The organizer was deleted successfully.");
+			return "redirect:/s/admin/{eventKey}/presentations";
+		}
 
 		presentationFromDb.setAudioLink(presentation.getAudioLink());
 		presentationFromDb.setDescription(presentation.getDescription());
@@ -244,7 +246,7 @@ public class PresentationController {
 		businessService.savePresentation(presentationFromDb);
 
 		redirectAttributes.addFlashAttribute("successMessage", "The presentation was edited successfully.");
-		return "redirect:/s/admin/presentations";
+		return "redirect:/s/admin/{eventKey}/presentations";
 	}
 
 }

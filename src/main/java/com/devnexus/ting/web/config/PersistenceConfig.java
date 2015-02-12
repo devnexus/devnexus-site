@@ -33,7 +33,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.jolbox.bonecp.BoneCPDataSource;
@@ -63,6 +62,7 @@ public class PersistenceConfig {
 			com.devnexus.ting.core.model.RoomList.class,
 			com.devnexus.ting.core.model.ScheduleItem.class,
 			com.devnexus.ting.core.model.ScheduleItemList.class,
+			com.devnexus.ting.core.model.Sponsor.class,
 			com.devnexus.ting.core.model.Speaker.class,
 			com.devnexus.ting.core.model.SpeakerList.class,
 			com.devnexus.ting.core.model.ScheduleItemType.class,

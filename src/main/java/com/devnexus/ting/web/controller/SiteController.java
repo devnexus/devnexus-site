@@ -15,13 +15,20 @@
  */
 package com.devnexus.ting.web.controller;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.codec.binary.Base64;
+import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,10 +47,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.model.ApplicationCache;
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.model.OrganizerList;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.SpeakerList;
+import com.devnexus.ting.core.model.Sponsor;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
@@ -63,44 +73,21 @@ public class SiteController {
 	@Autowired private TwitterService twitterService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
-    private static final long DAY_IN_MILLIS = 1000 * 60 * 60 * 24;
 
-
-    @RequestMapping({"/index", "/"})
-	public String execute(final Model model) {
-
-        int daysUntil;
-        final Calendar startDate = Calendar.getInstance();
-        String countdowntext;
-
-        startDate.set(Calendar.YEAR, 2014);
-        startDate.set(Calendar.DATE, 24);
-        startDate.set(Calendar.MONTH, Calendar.FEBRUARY);
-
-        daysUntil = (int) ((startDate.getTime().getTime() - Calendar.getInstance().getTime().getTime()) / DAY_IN_MILLIS);
-        countdowntext = "Too long...";
-        if (daysUntil > 0) {
-            countdowntext = String.format("%d days until DevNexus.", daysUntil);
-        } else if (daysUntil < -1) {
-            countdowntext = "DevNexus is right now!";
-        }
-
-        final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();
-        model.addAttribute("tweets", tweets);
-        model.addAttribute("countdowntext", countdowntext);
-        return "index";
-
-
-    }
-
+	@RequestMapping({"/index", "/"})
+	public String index(final Model model) {
+		final Event event = businessService.getCurrentEvent();
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
+		model.addAttribute("sponsorList", sponsorList);
+		return "index";
+	}
 
 	@RequestMapping({"/schedule", "/api/schedule"})
 	public String scheduleForCurrentEvent(final Model model,
 			@RequestParam(required=false, value="old") boolean old) {
 
 		final Event event = businessService.getCurrentEvent();
-		model.addAttribute("headerTitle", "Schedule222");
-		model.addAttribute("tag", "600+ Developers, 57 Presentations, 48 Speakers, 2 Days");
+
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 			model.addAttribute("scheduleItemList", scheduleItemList);
@@ -113,7 +100,22 @@ public class SiteController {
 			return "schedule-old";
 		}
 		return "schedule";
+	}
 
+	@RequestMapping({"/new-schedule", "/api/schedule"})
+	public String newscheduleForCurrentEvent(final Model model) {
+
+		final Event event = businessService.getCurrentEvent();
+
+		if (event != null) {
+			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+			model.addAttribute("scheduleItemList", scheduleItemList);
+		}
+		else {
+			LOGGER.warn("No current event available.");
+		}
+
+		return "new-schedule";
 	}
 
 	@RequestMapping("/privacy-policy")
@@ -135,14 +137,6 @@ public class SiteController {
 
 	}
 
-	@RequestMapping("/register")
-	public String register(final Model model) {
-		//TODO
-		model.addAttribute("headerTitle", "Registration Information");
-
-		return "registration";
-	}
-
 	@RequestMapping({"/{eventKey}/schedule", "/api/{eventKey}/schedule"})
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
@@ -157,7 +151,7 @@ public class SiteController {
 
 	@RequestMapping("/travel")
 	public String travel(final Model model) {
-        LOGGER.warn("This is a log.");
+		LOGGER.warn("This is a log.");
 		return "travel";
 	}
 
@@ -200,7 +194,7 @@ public class SiteController {
 	@RequestMapping("/organizers")
 	public String getOrganizers(final Model model) {
 
-		final List<Organizer>organizers = businessService.getAllOrganizers();
+		final List<Organizer>organizers = businessService.getAllOrganizersWithPicture();
 
 		final OrganizerList organizerList = new OrganizerList(organizers);
 		model.addAttribute("organizerList", organizerList);
@@ -210,7 +204,39 @@ public class SiteController {
 		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
 		model.addAttribute("organizers", organizers);
 
+		final Map<Long, String> organizerPictures = new HashMap<>();
 
+		for (Organizer organizer : organizers) {
+			final FileData imageData = organizer.getPicture();
+			if (imageData != null) {
+				final ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
+				try {
+					final BufferedImage image;
+					final BufferedImage imageToReturn;
+					image = ImageIO.read(bais);
+
+					if (image.getWidth() != 140 && image.getHeight() != 140) {
+						imageToReturn =  Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, Scalr.Mode.FIT_EXACT, 140, 140);
+					}
+					else {
+						imageToReturn = image;
+					}
+
+					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+					ImageIO.write(imageToReturn, "JPG", out);
+
+					byte[] bytes = out.toByteArray();
+
+					final String base64bytes = Base64.encodeBase64String(bytes);
+					final String src = "data:image/jpg;base64," + base64bytes;
+					organizerPictures.put(organizer.getId(), src);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		model.addAttribute("organizerPictures", organizerPictures);
 		return "organizers";
 
 	}
@@ -235,6 +261,40 @@ public class SiteController {
 		} catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
+
+	}
+
+	@RequestMapping(value="/sponsors/{sponsorId}.jpg", method=RequestMethod.GET)
+	public void getSponsorPicture(@PathVariable("sponsorId") Long sponsorId, HttpServletResponse response) {
+
+		final Sponsor sponsor = businessService.getSponsorWithPicture(sponsorId);
+
+		final byte[] sponsorPicture;
+
+		if (sponsor==null || sponsor.getLogo() == null) {
+			sponsorPicture = SystemInformationUtils.getOrganizerImage(null);
+			response.setContentType("image/jpg");
+		} else {
+			sponsorPicture = sponsor.getLogo().getFileData();
+			response.setContentType(sponsor.getLogo().getType());
+		}
+
+		try {
+			org.apache.commons.io.IOUtils.write(sponsorPicture, response.getOutputStream());
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+	}
+
+	@RequestMapping(value="/sponsors", method=RequestMethod.GET)
+	public String getSponsors(Model model) {
+
+		final Event event = businessService.getCurrentEvent();
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), true);
+		model.addAttribute("sponsorList", sponsorList);
+
+		return "sponsors";
 
 	}
 

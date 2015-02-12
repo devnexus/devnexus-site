@@ -59,8 +59,8 @@
 </div>
 
 <content tag='bottom'>
-	<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
-	<script src="${ctx}/js/jquery.raty.js"></script>
+	<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
+	<script src="${ctx}/assets/js/jquery-plugins/jquery.raty.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -77,8 +77,8 @@
 				targetKeep  : true,
 				hints: ['lousy', 'pretty bad', 'poor', 'meh' , 'average', 'ok', 'good', 'very good', 'awesome'],
 				targetType: 'score',
-				starOff : '${ctx}/images/staroff.png',
-				starOn  : '${ctx}/images/staron.png'
+				starOff : '${ctx}/assets/img/evaluations/staroff.png',
+				starOn  : '${ctx}/assets/img/evaluations/staron.png'
 				});
 
 		});

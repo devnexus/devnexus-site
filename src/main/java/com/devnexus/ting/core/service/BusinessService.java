@@ -30,6 +30,8 @@ import com.devnexus.ting.core.model.PresentationTag;
 import com.devnexus.ting.core.model.Room;
 import com.devnexus.ting.core.model.ScheduleItemList;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.Sponsor;
+import com.devnexus.ting.core.model.SponsorList;
 import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 
@@ -217,6 +219,8 @@ public interface BusinessService {
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 
+	List<Evaluation> getEvaluationsForEvent(Long eventId);
+
 	List<CfpSubmission> getCfpSubmissions(Long eventId);
 
 	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);
@@ -249,4 +253,18 @@ public interface BusinessService {
 	void deleteCfpSubmission(Long id);
 
 	Set<PresentationTag> processPresentationTags(String tagsAsText);
+
+	List<Sponsor> getSponsorsForEvent(Long id);
+
+	Sponsor saveSponsor(Sponsor sponsorForm);
+
+	Sponsor getSponsor(Long sponsorId);
+
+	void deleteSponsor(Sponsor sponsorFromDb);
+
+	Sponsor getSponsorWithPicture(Long sponsorId);
+
+	List<Organizer> getAllOrganizersWithPicture();
+
+	SponsorList getSponsorListForEvent(Long id, boolean large);
 }

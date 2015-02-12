@@ -275,7 +275,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008eb0', end
 									<c:choose>
 										<c:when test="${not empty scheduleItem.presentation}">
 											<c:url var="speakerUrl" value="${baseSiteUrl}/speakers" />
-											<c:out value="${scheduleItem.presentation.speaker.firstLastName}" />
+											<c:forEach var="speaker" items="${scheduleItem.presentation.speakers}">
+												<br/>${speaker.firstName} ${speaker.lastName}
+											</c:forEach>
 										</c:when>
 										<c:otherwise>
 																																			N/A
@@ -327,9 +329,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008eb0', end
 				</table>
 			</c:if>
 
-			<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/event"
-				role="button">Add Event</a>
-			<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/index"
+			<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${eventKey}/index"
 				role="button">Main Menu</a>
 	</div>
 </div>

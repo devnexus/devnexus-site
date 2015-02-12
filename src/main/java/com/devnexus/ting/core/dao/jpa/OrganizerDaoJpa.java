@@ -48,4 +48,11 @@ public class OrganizerDaoJpa extends GenericDaoJpa< Organizer, Long>
 		.getSingleResult();
 	}
 
+	@Override
+	public List<Organizer> getOrganizersWithPicture() {
+		return super.entityManager
+				.createQuery("select o from Organizer o left outer join fetch o.picture order by o.sortOrder ASC", Organizer.class)
+				.getResultList();
+	}
+
 }

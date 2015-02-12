@@ -1,61 +1,93 @@
 <%@page import="com.devnexus.ting.core.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div class="row ${trackStyle}" style="${trackColor}">
-	<div class="col-xs-5">
-		<c:forEach items="${presentation.speakers}" var="speaker">
-			<c:if test="${speaker.picture != null}">
-				<img class="speaker" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" style="margin-right: 10px" alt="${speaker.firstLastName}"/>
-			</c:if>
-		</c:forEach>
-	</div>
-	<div class="col-xs-7">
+	<div class="speaker-member" style="${trackColor}">
 		<c:choose>
 			<c:when test="${not empty presentation.speakers}">
-				<c:forEach items="${presentation.speakers}" var="speaker">
-					<h4>
-						<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
-							<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
-						</a>
-					</h4>
-				</c:forEach>
+				<div class="row text-center">
+						<c:forEach items="${presentation.speakers}" var="speaker">
+							<div style="width: 150px; display: inline-block;">
+								<c:if test="${speaker.picture != null}">
+									<img class="img-responsive img-circle" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" alt="${speaker.firstLastName}"/>
+								</c:if>
+								<h4>
+									<a href="${siteUrl}/speakers#${speaker.firstName}_${speaker.lastName}">
+										<c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/>
+									</a>
+								</h4>
+							</div>
+						</c:forEach>
+				</div>
 			</c:when>
 			<c:otherwise>
-				<p class="speaker">TBD</p>
+				<h4>
+					TBD
+				</h4>
 			</c:otherwise>
 		</c:choose>
+		<div class="row presentation-title">
+			<div class="col-xs-12 text-center">
+				<c:out value="${presentation.title}"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/>
+			</div>
+		</div>
+
 		<c:if test="${not empty presentation.track}">
-			<br/>
-			<strong>Track: </strong><c:out value="${presentation.track.name}"/>
+			<div class="row">
+				<div class="col-xs-3">
+					<strong>Track:</strong>
+				</div>
+				<div class="col-xs-9" style="${trackFontColor}">
+					<c:out value="${presentation.track.name}"/>
+				</div>
+			</div>
 		</c:if>
 		<c:if test="${not empty presentation.skillLevel}">
-			<br/>
-			<strong>Skill Level: </strong><c:out value="${presentation.skillLevel.name}"/>
+			<div class="row">
+				<div class="col-xs-3" style="padding-right: 0;">
+					<strong>Skill Level:</strong>
+				</div>
+				<div class="col-xs-9">
+					<c:out value="${presentation.skillLevel.name}"/>
+				</div>
+			</div>
 		</c:if>
 		<c:if test="${not empty presentation.scheduleItem}">
-			<br/>
-			<strong>Slot:</strong>
-			<fmt:formatDate pattern="M/d, h:mm a" value="${presentation.scheduleItem.fromTime}"/><br/>
-			<strong>Room:</strong>
-			<c:choose>
-				<c:when test="${not empty presentation.scheduleItem.room}">
-					<c:out value="${presentation.scheduleItem.room.name}"/>
-				</c:when>
-				<c:otherwise>TBD</c:otherwise>
-			</c:choose>
-
+			<div class="row">
+				<div class="col-xs-3">
+					<strong>Slot:</strong>
+				</div>
+				<div class="col-xs-9">
+					<fmt:formatDate pattern="M/d, h:mm a" value="${presentation.scheduleItem.fromTime}"/>
+					<c:choose>
+						<c:when test="${not empty presentation.scheduleItem.room}">
+							| <c:out value="${presentation.scheduleItem.room.name}"/>
+						</c:when>
+						<c:otherwise>Room TBD</c:otherwise>
+					</c:choose>
+				</div>
+			</div>
 		</c:if>
-	</div>
-	<div class="clearfix"></div>
-	<div class="col-md-12" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-		<h3 class="title"><c:out value="${presentation.title}"/></h3>
-		<c:out value=""/>
-		<c:out value="${presentation.descriptionAsHtml}" escapeXml="false"/>
 		<c:if test="${not empty presentation.presentationTags}">
-			<hr style="border-style: dotted;"/>
-			<strong>Tags: </strong>
-			<c:forEach items="${presentation.presentationTags}" var="tag" varStatus="status"><c:out value="${tag.name}"/><c:if test="${not status.last}">,
-			</c:if></c:forEach>
+			<div class="row small">
+				<div class="col-xs-3">
+					<strong>Tags: </strong>
+				</div>
+				<div class="col-xs-9">
+					<c:forEach items="${presentation.presentationTags}" var="tag" varStatus="status">
+						<c:url value="/s/presentations" var="showPresosForTags">
+							<c:param name="tags" value="${tag.name}"/>
+						</c:url>
+						<a href="${showPresosForTags}"><c:out value="${tag.name}"
+						/></a><c:if test="${not status.last}">,
+						</c:if>
+					</c:forEach>
+				</div>
+			</div>
 		</c:if>
 		<c:if test="${not empty presentation.presentationLink}">
 			<hr/>
@@ -76,4 +108,3 @@
 			</p>
 		</c:if>
 	</div>
-</div>

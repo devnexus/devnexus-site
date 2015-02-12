@@ -15,11 +15,14 @@
  */
 package com.devnexus.ting.web.config;
 
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
+import com.google.common.cache.CacheBuilder;
 
 
 /**
@@ -33,7 +36,17 @@ import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 	WebSecurityConfig.class,
 	WebConfig.class
 })
+@EnableCaching
 public class MainConfig {
+
+	@Bean
+	public GuavaCacheManager cacheManager() {
+		final CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
+		.recordStats();
+		final GuavaCacheManager cacheManager = new GuavaCacheManager();
+		cacheManager.setCacheBuilder(cacheBuilder);
+		return cacheManager;
+	}
 
 	@Bean
 	ContextRefreshedEventListener seedDataEventListener() {

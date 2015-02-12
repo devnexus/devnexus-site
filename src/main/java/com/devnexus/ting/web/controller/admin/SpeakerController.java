@@ -26,6 +26,7 @@ import javax.validation.Validator;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,6 +38,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.FileData;
 import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
 
 /**
@@ -54,20 +56,20 @@ public class SpeakerController {
 	@Autowired private Validator validator;
 
 	@RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
-	public String getSpeakers(ModelMap model, HttpServletRequest request,
-			@RequestParam(value="eventId", required=false) Long eventId) {
-
-		final List<Speaker> speakers;
-
-		if (eventId != null) {
-			speakers = businessService.getSpeakersForEvent(eventId);
-		}
-		else {
-			speakers = businessService.getAllSpeakersOrderedByName();
-		}
-
+	public String getAllSpeakers(ModelMap model, HttpServletRequest request) {
+		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
 		model.addAttribute("speakers", speakers);
+		return "speakers";
+	}
 
+	@RequestMapping("/admin/{eventKey}/speakers")
+	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final SpeakerList speakerList = new SpeakerList();
+		final List<Speaker> speakers = businessService.getSpeakersForEvent(event.getId());
+		speakerList.setSpeakers(speakers);
+		model.addAttribute("speakerList", speakerList);
+		model.addAttribute("event", event);
 		return "/admin/manage-speakers";
 	}
 
@@ -75,17 +77,23 @@ public class SpeakerController {
 	public String prepareAddSpeaker(ModelMap model) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
-
 		model.addAttribute("events", events);
-
-		Speaker speakerForm = new Speaker();
-
+		final Speaker speakerForm = new Speaker();
 		model.addAttribute("speaker", speakerForm);
-
 		return "/admin/add-speaker";
 	}
 
-	@RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/{eventKey}/speaker", method=RequestMethod.GET)
+	public String prepareAddSpeakerForEvent(ModelMap model) {
+
+		final List<Event> events = businessService.getAllEventsOrderedByName();
+		model.addAttribute("events", events);
+		final Speaker speakerForm = new Speaker();
+		model.addAttribute("speaker", speakerForm);
+		return "/admin/add-speaker";
+	}
+
+	@RequestMapping(value="/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.GET)
 	public String prepareEditSpeaker(@PathVariable("speakerId") Long speakerId, ModelMap model) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
@@ -99,14 +107,14 @@ public class SpeakerController {
 		return "/admin/add-speaker";
 	}
 
-	@RequestMapping(value="/admin/speaker/{speakerId}", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.POST)
 	public String editSpeaker(@PathVariable("speakerId") Long speakerId,
 							  @RequestParam MultipartFile pictureFile,
 							  @Valid Speaker speakerForm,
-							  BindingResult result, HttpServletRequest request) {
+							  BindingResult result, HttpServletRequest request, ModelMap model) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/{eventKey}/speakers";
 		}
 
 		if (result.hasErrors()) {
@@ -158,7 +166,7 @@ public class SpeakerController {
 		businessService.saveSpeaker(speakerFromDb);
 
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
-		return "redirect:/s/admin/speakers";
+		return "redirect:/s/admin/{eventKey}/speakers";
 	}
 
 	@RequestMapping(value="/admin/speaker", method=RequestMethod.POST)

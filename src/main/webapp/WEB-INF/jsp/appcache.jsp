@@ -25,7 +25,6 @@ ${ctx}/img/sponsors/jboss.png
 ${ctx}/img/sponsors/matrix.png
 ${ctx}/img/sponsors/terracotta-logo.png
 
-${ctx}/css/screen.css
 ${ctx}/js/header.js
 ${ctx}/js/lib.js
 

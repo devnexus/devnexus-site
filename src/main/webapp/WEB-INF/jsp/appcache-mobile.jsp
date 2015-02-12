@@ -28,7 +28,6 @@ ${ctx}/img/sponsors/jboss.png
 ${ctx}/img/sponsors/matrix.png
 ${ctx}/img/sponsors/terracotta-logo.png
 
-${ctx}/css/mobile-min.css
 ${ctx}/js/mobile-min.js
 
 <c:forEach items="${speakerList.speakers}" var="speaker">

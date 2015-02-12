@@ -42,4 +42,15 @@ public class EvaluationDaoJpa extends GenericDaoJpa<Evaluation, Long>
 				.getResultList();
 	}
 
+	@Override
+	public List<Evaluation> getEvaluationsForEvent(Long eventId) {
+		return super.entityManager
+				.createQuery("select eval from Evaluation eval "
+						   + "left join eval.event e "
+						   + "where e.id = :eventId "
+						   + "order by eval.createdDate DESC", Evaluation.class)
+				.setParameter("eventId", eventId)
+				.getResultList();
+	}
+
 }

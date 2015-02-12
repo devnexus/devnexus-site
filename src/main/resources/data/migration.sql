@@ -272,3 +272,33 @@ ALTER TABLE presentations_speakers
 -- 2014 - Nov 9
 ALTER TABLE speakers ADD COLUMN cfp_speaker_id bigint;
 ALTER TABLE presentations ADD COLUMN cfp_id bigint;
+
+-- 2014 - Dec 7
+
+-- Table: sponsors
+
+-- DROP TABLE sponsors;
+
+CREATE TABLE sponsors
+(
+  id bigint NOT NULL,
+  event bigint,
+  name character varying(255),
+  sponsor_level integer,
+  sort_order integer,
+  logo integer,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  link character varying(255),
+  CONSTRAINT sponsors_pkey PRIMARY KEY (id),
+  CONSTRAINT "SPONSOR_LOGO_DATA" FOREIGN KEY (logo)
+      REFERENCES file_data (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE sponsors
+  OWNER TO devnexus;
+

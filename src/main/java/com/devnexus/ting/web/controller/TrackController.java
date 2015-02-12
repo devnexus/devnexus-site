@@ -15,6 +15,8 @@
  */
 package com.devnexus.ting.web.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.core.model.Presentation;
 import com.devnexus.ting.core.model.TrackList;
 import com.devnexus.ting.core.service.BusinessService;
 
@@ -36,27 +39,28 @@ public class TrackController {
 	@RequestMapping("/{eventKey}/tracks")
 	public String getTracksForEventKey(@PathVariable("eventKey") final String eventKey,
 										final Model model) {
-
-		final Event event = businessService.getEventByEventKey(eventKey);
-
-		final TrackList trackList = new TrackList();
-		trackList.setTracks(businessService.getTracksForEvent(event.getId()));
-
-		model.addAttribute("trackList", trackList);
-
+		prepareData(businessService.getEventByEventKey(eventKey), model);
 		return "tracks";
 	}
 
 	@RequestMapping("/tracks")
 	public String getTracksForCurrentEvent(final Model model) {
+		prepareData(businessService.getCurrentEvent(), model);
+		return "tracks";
+	}
 
-		final Event event = businessService.getCurrentEvent();
-
+	public void prepareData(Event event, final Model model) {
 		final TrackList trackList = new TrackList();
 		trackList.setTracks(businessService.getTracksForEvent(event.getId()));
 		model.addAttribute("trackList", trackList);
-
-		return "tracks";
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
+		int unassigned = 0;
+		for (Presentation presentation : presentations) {
+			if (presentation.getTrack() == null) {
+				unassigned++;
+			}
+		}
+		model.addAttribute("unassignedSessions", unassigned);
 	}
 
 }

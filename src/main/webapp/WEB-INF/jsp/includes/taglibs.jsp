@@ -1,5 +1,5 @@
-<%@page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" deferredSyntaxAllowedAsLiteral="true"%>
-
+<%@page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"
+        trimDirectiveWhitespaces="false" deferredSyntaxAllowedAsLiteral="true"%>
 <%
 response.setHeader("Cache-Control","no-cache");
 response.setHeader("Pragma","no-cache");
@@ -16,6 +16,7 @@ response.setHeader("Expires","0");
 
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 <c:set var="baseSiteUrl" value="/s"/>
+<c:set var="assetsUrl" value="${ctx}/assets"/>
 <c:if test="${event ne null}">
 	<c:set var="siteUrl" value="${ctx}${baseSiteUrl}/${event.eventKey}"/>
 </c:if>

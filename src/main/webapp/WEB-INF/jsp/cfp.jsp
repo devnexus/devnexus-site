@@ -1,31 +1,44 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<div class="jumbotron call" style="margin-bottom:50px">
-	<div class="container">
-		<div id="banner">
-			<h1><strong>Call for Papers 2015!</strong></h1>
-			<h3>Thank you for your interest in DevNexus 2015! We would love to review your session proposals for the South-East's
-				largest developer conference. We are planning to cover a wide variety of topics around: </h3>
-			<ul class="double">
-				<li>Java/JavaEE/Spring</li>
-				<li>HTML5 + JavaScript</li>
-				<li>Data + Integration</li>
-				<li>Alternative JVM Languages</li>
-				<li>User Experience</li>
-				<li>Cloud</li>
-				<li>Agile + Tools</li>
-				<li>Mobile</li>
-				<li>Security</li>
-			</ul>
-			<div class="text-center">
-			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cfpFAQ">
-				FAQ
-			</button></div>
-		</div> <!-- end banner -->
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				 <div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Call for Papers 2015!</span></h4>
+					<h5 class="intro-white-lead">
+						Thank you for your interest in DevNexus 2015!
+					</h5>
+					<p>
+						We would love to review your session proposals for the South-East's
+						largest developer conference. We are planning to cover a wide variety of topics around:
+					</p>
+					<ul class="list-inline">
+						<li>Java/JavaEE/Spring</li>
+						<li>HTML5 + JavaScript</li>
+						<li>Data + Integration</li>
+						<li>Alternative JVM Languages</li>
+						<li>User Experience</li>
+						<li>Cloud</li>
+						<li>Agile + Tools</li>
+						<li>Mobile</li>
+						<li>Security</li>
+					</ul>
+					<div class="text-center">
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cfpFAQ">
+						FAQ
+					</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
+</section>
+<!-- /intro -->
+
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
+	<div class="col-md-8 col-md-offset-2" style="padding-top: 4em;">
 
 	<spring:bind path="cfpSubmission.*">
 		<c:if test="${not empty status.errorMessages}">
@@ -392,7 +405,7 @@
 
 <content tag='bottom'>
 
-		<script src="${ctx}/js/bootstrap-maxlength.min.js"></script>
+		<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function() {

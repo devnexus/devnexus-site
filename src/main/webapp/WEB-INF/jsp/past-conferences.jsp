@@ -1,15 +1,25 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
-<div id="devnex" class="jumbotron">
-    <div class="container">
-        <div id="banner">
-            <h1 id="gray">DevNexus 2014</h1>
-
-            <h1 id="white"><c:out default="Atlanta, GA" value="${headerTitle}"/></h1>
-
-            <h3><c:out default="The professional developer conference." value="${tag}"/></h3>
-        </div>
-    </div>
-</div>
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Past Conferences</span></h4>
+					<h5 class="intro-white-lead">See our track record.</h5>
+					<br>
+					<ul class="list-inline">
+						<c:forEach items="${organizerList.organizers}" var="organizer" varStatus="status">
+							<li><a class="speaker-link" href="#${organizer.firstName}_${organizer.lastName}"><c:out
+								value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></a></li>
+						</c:forEach>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
 <div class="container" style="margin-bottom:20px">
 <!-- Example row of columns -->
 <c:set var="trackName" value="nill"/>

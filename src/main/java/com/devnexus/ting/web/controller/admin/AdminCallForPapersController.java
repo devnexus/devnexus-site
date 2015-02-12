@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.model.CfpSubmission;
 import com.devnexus.ting.core.model.CfpSubmissionList;
+import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.core.model.CfpSubmissionStatusType;
 import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.model.PresentationType;
@@ -70,39 +71,43 @@ public class AdminCallForPapersController {
 		model.addAttribute("allSpeakers", allSpeakers);
 	}
 
-	@RequestMapping(value="/admin/cfps", method=RequestMethod.GET)
-	public String viewCfps(ModelMap model) {
+	@RequestMapping(value="/admin/{eventKey}/cfps", method=RequestMethod.GET)
+	public String viewCfps(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
-		Event currentEvent = businessService.getCurrentEvent();
-		List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(currentEvent.getId());
+		Event event = businessService.getEventByEventKey(eventKey);
+		List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(event.getId());
 
 		CfpSubmissionList cfpSubmissionList = new CfpSubmissionList(cfpSubmissions);
 		model.addAttribute("cfpSubmissionList", cfpSubmissionList);
-		return "admin/cfps";
+		model.addAttribute("event", event);
+		return "admin/manage-cfps";
 	}
 
-	@RequestMapping(value="/admin/cfps/{cfpId}", method=RequestMethod.GET)
-	public String prepareEditCfp(@PathVariable("cfpId") Long cfpId, ModelMap model) {
-
+	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.GET)
+	public String prepareEditCfp(@PathVariable("eventKey") String eventKey,
+	                             @PathVariable("cfpId") Long cfpId, ModelMap model) {
+		Event event = businessService.getEventByEventKey(eventKey);
 		prepareReferenceData(model);
 		final CfpSubmission cfpSubmission = businessService.getCfpSubmission(cfpId);
 
 		model.addAttribute("cfpSubmission", cfpSubmission);
+		model.addAttribute("event", event);
 
 		return "/admin/edit-cfp";
 	}
 
-	@RequestMapping(value="/admin/cfps/{cfpId}", method=RequestMethod.POST)
-	public String editCfp(@PathVariable("cfpId") Long cfpId,
-							  CfpSubmission cfpSubmission,
-							  BindingResult result, HttpServletRequest request) {
+	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.POST)
+	public String editCfp(@PathVariable("eventKey") String eventKey,
+	                      @PathVariable("cfpId") Long cfpId,
+	                      CfpSubmission cfpSubmission,
+	                      BindingResult result, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/{eventKey}/cfps#cfp_{cfpId}";
 		}
 		if (request.getParameter("delete") != null) {
 			businessService.deleteCfpSubmission(cfpSubmission.getId());
-			return "redirect:/s/admin/index";
+			return "redirect:/s/admin/{eventKey}/cfps";
 		}
 
 		if (result.hasErrors()) {
@@ -110,30 +115,38 @@ public class AdminCallForPapersController {
 		}
 
 		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
+		cfpSubmissionFromDb.setDescription(cfpSubmission.getDescription());
 		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
+		cfpSubmissionFromDb.setPresentationType(cfpSubmission.getPresentationType());
+		cfpSubmissionFromDb.setSessionRecordingApproved(cfpSubmission.isSessionRecordingApproved());
+		cfpSubmissionFromDb.setSkillLevel(cfpSubmission.getSkillLevel());
+		cfpSubmissionFromDb.setSlotPreference(cfpSubmission.getSlotPreference());
+		cfpSubmissionFromDb.setTitle(cfpSubmission.getTitle());
+		cfpSubmissionFromDb.setTopic(cfpSubmission.getTopic());
 
-//		for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
-//			CfpSubmissionSpeaker speakerFromDb = cfpSubmissionFromDb.getSpeakerById(speaker.getId());
-//			if (speakerFromDb != null) {
-//				speakerFromDb.setBio(speaker.getBio());
-//				speakerFromDb.setEmail(speaker.getEmail());
-//				speakerFromDb.setFirstName(speaker.getFirstName());
-//				speakerFromDb.setGithubId(speaker.getGithubId());
-//				speakerFromDb.setGooglePlusId(speaker.getGooglePlusId());
-//				speakerFromDb.setLanyrdId(speaker.getLanyrdId());
-//				speakerFromDb.setLastName(speaker.getLastName());
-//				speakerFromDb.setLinkedInId(speaker.getLinkedInId());
-//				speakerFromDb.setLocation(speaker.getLocation());
-//				speakerFromDb.setMustReimburseTravelCost(speaker.isMustReimburseTravelCost());
-//				speakerFromDb.setPhone(speaker.getPhone());
-//				speakerFromDb.setTshirtSize(speaker.getTshirtSize());
-//				speakerFromDb.setTwitterId(speaker.getTwitterId());
-//			}
-//		}
+
+		for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
+			CfpSubmissionSpeaker speakerFromDb = cfpSubmissionFromDb.getSpeakerById(speaker.getId());
+			if (speakerFromDb != null) {
+				speakerFromDb.setBio(speaker.getBio());
+				speakerFromDb.setEmail(speaker.getEmail());
+				speakerFromDb.setFirstName(speaker.getFirstName());
+				speakerFromDb.setGithubId(speaker.getGithubId());
+				speakerFromDb.setGooglePlusId(speaker.getGooglePlusId());
+				speakerFromDb.setLanyrdId(speaker.getLanyrdId());
+				speakerFromDb.setLastName(speaker.getLastName());
+				speakerFromDb.setLinkedInId(speaker.getLinkedInId());
+				speakerFromDb.setLocation(speaker.getLocation());
+				speakerFromDb.setMustReimburseTravelCost(speaker.isMustReimburseTravelCost());
+				speakerFromDb.setPhone(speaker.getPhone());
+				speakerFromDb.setTshirtSize(speaker.getTshirtSize());
+				speakerFromDb.setTwitterId(speaker.getTwitterId());
+			}
+		}
 
 		businessService.saveCfpSubmission(cfpSubmissionFromDb);
 
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
-		return "redirect:/s/admin/cfps";
+		return "redirect:/s/admin/{eventKey}/cfps";
 	}
 }

@@ -1,13 +1,21 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
-<div id="devnex" class="jumbotron">
-	<div class="container">
-		<div id="banner">
-			<h1 id="gray">DevNexus 2014</h1>
-			<h1 id="white">Social</h1>
+
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Social</span></h4>
+					<h5 class="intro-white-lead">Stay social my friends.</h5>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+<!-- /intro -->
+
 <div class="masonry">
 		<c:forEach items="${tweets}" var="tweet">
 			<div class="col-md-3 tweet-box">
@@ -29,9 +37,9 @@
 
 <content tag='bottom'>
 
-	<script src="${ctx}/js/websocket/sockjs.js"></script>
-	<script src="${ctx}/js/websocket/stomp.js"></script>
-	<script src="${ctx}/js/handlebars-v1.1.2.js"></script>
+	<script src="${ctx}/assets/js/websocket/sockjs.js"></script>
+	<script src="${ctx}/assets/js/websocket/stomp.js"></script>
+	<script src="${ctx}/assets/js/other/handlebars-v1.1.2.js"></script>
 
 	<script type="text/javascript">
 		var startStopUrl = '<c:url value="/adapter/"/>';

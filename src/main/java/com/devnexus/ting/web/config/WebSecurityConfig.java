@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -40,17 +41,28 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	@Value("#{environment['https.enabled']}")
+	private boolean httpsEnabled;
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
+		HttpSecurity httpSecurity = http
 		.csrf().disable() //TODO Refactor login form
 		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ADMIN", "CFP_REVIEWER").and()
 		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ADMIN", "CFP_REVIEWER").and()
 		.authorizeRequests().antMatchers("/s/admin/**").hasAuthority("ADMIN").and()
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
-		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and()
-		//.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and()
-		.formLogin().loginProcessingUrl("/s/login").defaultSuccessUrl("/s/admin/index").loginPage("/s/login").failureUrl("/s/login?status=error").permitAll();
+		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and();
+
+		if (httpsEnabled) {
+			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
+		}
+
+		httpSecurity.formLogin().loginProcessingUrl("/s/login")
+			.defaultSuccessUrl("/s/admin/index")
+			.loginPage("/s/login")
+			.failureUrl("/s/login?status=error")
+			.permitAll();
 	}
 
 	@Override
