@@ -295,10 +295,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public ConfigurableWroFilter wro4jFilter() {
 		final ConfigurableWroFilter wroFilter = new ConfigurableWroFilter();
 
-//		wroFilter.setDebug(false);
-		wroFilter.setDebug(true);
-		wroFilter.setCacheUpdatePeriod(1);
-		wroFilter.setModelUpdatePeriod(1);
+		wroFilter.setDebug(false);
+//		wroFilter.setDebug(true);
+//		wroFilter.setCacheUpdatePeriod(1);
+//		wroFilter.setModelUpdatePeriod(1);
 
 		final ConfigurableWroManagerFactory wroManagerFactory = new ConfigurableWroManagerFactory();
 		final SimpleProcessorsFactory simpleProcessorsFactory = new SimpleProcessorsFactory();
@@ -306,7 +306,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		simpleProcessorsFactory.addPreProcessor(new CssImportPreProcessor());
 		simpleProcessorsFactory.addPostProcessor(new Less4jProcessor());
 		simpleProcessorsFactory.addPostProcessor(new YUICssCompressorProcessor());
-		//simpleProcessorsFactory.addPostProcessor(new UglifyJsProcessor());
+		simpleProcessorsFactory.addPostProcessor(new UglifyJsProcessor());
 
 		wroManagerFactory.setProcessorsFactory(simpleProcessorsFactory);
 		wroManagerFactory.setModelFactory(new DevNexusWroModelFactory());
