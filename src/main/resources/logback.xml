@@ -67,7 +67,7 @@
 		<level value="INFO"/>
 	</logger>
 	<logger name="org.springframework.web">
-		<level value="WARN"/>
+		<level value="INFO"/>
 	</logger>
 	<logger name="org.springframework">
 		<level value="WARN"/>

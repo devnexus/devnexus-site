@@ -87,6 +87,7 @@ public class SiteController {
 			@RequestParam(required=false, value="old") boolean old) {
 
 		final Event event = businessService.getCurrentEvent();
+		model.addAttribute("event", event);
 
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
@@ -106,6 +107,7 @@ public class SiteController {
 	public String newscheduleForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
+		model.addAttribute("event", event);
 
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
@@ -141,6 +143,7 @@ public class SiteController {
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("event", event);
 
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 

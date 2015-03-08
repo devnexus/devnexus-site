@@ -61,20 +61,10 @@
 
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Presentations <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="${presentationsUrl}?order=track">Presentations by Track</a></li>
-						<li><a href="${presentationsUrl}?order=room">Presentations by Room</a></li>
-						<li><a href="${presentationsUrl}?order=name">Presentations by Name</a></li>
-						<li><a href="${ctx}/s/tracks">Show Tracks</a></li>
-						<li><a href="${ctx}/s/tags">Show Presentation Tags</a></li>
-						<li><a href="${ctx}/s/rooms">Show Rooms</a></li>
-					</ul>
-				</li>
+				<li><a class="" href="${presentationsUrl}">Presentations</a></li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
-				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
+				<li><a class="page-scroll" href="#travel">Travel</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -102,31 +92,13 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
-					<div class="col-md-6 col-md-offset-3">
-						<p class="lead">Welcome to the premier conference for professional software developers!
-										It&rsquo;s show-time! Let&rsquo;s rock and have some fun!</p>
-						<p class="lead text-center"><strong>The Wifi credentials are:</strong></p>
-						<p class="lead text-center">Network: <strong>devnexus2015</strong> | Password: <strong>awesome</strong></p>
-					</div>
-				</div>
-				<div class="row" style="margin-bottom: 20px;">
-					<div class="col-sm-2 col-sm-offset-4 text-center">
-						<a href="https://play.google.com/store/apps/details?id=org.devnexus" target="_blank">
-							<img alt="Get the DevNexus app for your Android phone"
-								src="${ctx}/assets/img/appstore-logos/google-play_en_app_rgb_wo_60.png">
-						</a>
-					</div>
-					<div class="col-sm-2 text-center">
-						<a href="https://itunes.apple.com/de/app/devnexus/id963526236?l=en&mt=8" target="_blank">
-							<img alt="Get the DevNexus app for your iPhone or iPad"
-								style="margin-top: 10px; margin-bottom: 10px;"
-										src="${ctx}/assets/img/appstore-logos/Download_on_the_App_Store_Badge_US-UK_135x40.svg">
-						</a>
+					<div class="col-md-10 col-md-offset-1">
+						<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While you’re here, you’ll also connect with like-minded developers who are mastering their craft in a wide range of today’s most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you can’t afford to miss it!</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-sm-offset-3 text-center">
-						<a href="${ctx}/s/evaluations/add" class="btn btn-primary registerButton">Send us Evaluations</a>
+						<button disabled="disabled" class="btn btn-primary registerButton">Sold Out</button>
 					</div>
 				</div>
 		</div>

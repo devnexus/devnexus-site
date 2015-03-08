@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.jboss.aerogear.unifiedpush.SenderClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -99,6 +100,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	private Jaxb2Marshaller jaxbMarshaller;
 
 	@Autowired
+	@Qualifier("mvcConversionService")
 	private ConfigurableConversionService conversionService;
 
 	@Autowired
@@ -293,10 +295,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public ConfigurableWroFilter wro4jFilter() {
 		final ConfigurableWroFilter wroFilter = new ConfigurableWroFilter();
 
-		wroFilter.setDebug(false);
-//		wroFilter.setDebug(true);
-//		wroFilter.setCacheUpdatePeriod(1);
-//		wroFilter.setModelUpdatePeriod(1);
+//		wroFilter.setDebug(false);
+		wroFilter.setDebug(true);
+		wroFilter.setCacheUpdatePeriod(1);
+		wroFilter.setModelUpdatePeriod(1);
 
 		final ConfigurableWroManagerFactory wroManagerFactory = new ConfigurableWroManagerFactory();
 		final SimpleProcessorsFactory simpleProcessorsFactory = new SimpleProcessorsFactory();
@@ -304,7 +306,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		simpleProcessorsFactory.addPreProcessor(new CssImportPreProcessor());
 		simpleProcessorsFactory.addPostProcessor(new Less4jProcessor());
 		simpleProcessorsFactory.addPostProcessor(new YUICssCompressorProcessor());
-		simpleProcessorsFactory.addPostProcessor(new UglifyJsProcessor());
+		//simpleProcessorsFactory.addPostProcessor(new UglifyJsProcessor());
 
 		wroManagerFactory.setProcessorsFactory(simpleProcessorsFactory);
 		wroManagerFactory.setModelFactory(new DevNexusWroModelFactory());
@@ -321,9 +323,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 				.addResource(Resource.create("/assets/js/jquery.modernizr.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery.scrollTo.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery.easing.min.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/jquery-plugins/jquery.succinct.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/bootstrap.min.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/other/masonry.pkgd.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery-plugins/jquery.fittext.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/other/scrollr.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/other/imagesloaded.pkgd.min.js", ResourceType.JS)));
 		}
 

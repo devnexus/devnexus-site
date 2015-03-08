@@ -35,7 +35,7 @@
 						</div>
 				</div>
 				<div class="panel-body">
-					<c:out value="${evaluation.commentAsHtml}"/>
+					<c:out escapeXml="false" value="${evaluation.commentAsHtml}"/>
 				</div>
 				<div class="panel-footer"><small>Added <fmt:formatDate pattern="yyyy-MM-dd'T'HH:mm:ssz" value="${evaluation.createdDate}"/></small></div>
 			</div>

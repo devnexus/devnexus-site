@@ -1,13 +1,30 @@
-<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
-<div class="jumbotron eval" style="margin-bottom:50px">
-	<div class="container">
-		<div id="banner">
-			<h1><strong>We'd love to hear what you think about DevNexus!</strong></h1>
-		</div> <!-- end banner -->
-	</div>
-</div>
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<div class="row">
+<!-- intro -->
+<section id="about" class="module parallax parallax-3">
+	<div class="container header">
+		<div class="row centered">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="top-intro travel">
+					<h4 class="section-white-title decorated"><span>Evaluations</span></h4>
+					<h5 class="intro-white-lead">We'd love to hear what you think about DevNexus!</h5>
+					<br>
+					<ul class="list-inline">
+						<c:forEach items="${organizerList.organizers}" var="organizer" varStatus="status">
+							<li><a class="speaker-link" href="#${organizer.firstName}_${organizer.lastName}"><c:out
+								value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></a></li>
+						</c:forEach>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /intro -->
+
+<section id="speaker" class="bg-light-gray">
+	<div class="container">
+
 	<div class="col-md-6 col-md-offset-3">
 
 
@@ -26,9 +43,9 @@
 			<form:hidden path="event.id"/>
 			<div class="form-group text-center">
 				<h3>How likely are you to recommend DevNexus to a friend or colleague?</h3>
-				<div class="stars">
+				<div class="stars text-center">
 					<input type="hidden" id="rating" name="rating"/>
-					<div id="raty"></div>
+					<div id="raty" style="font-size: 1.0rem; margin-left: auto; margin-right: auto;"></div>
 					<form:errors path="rating" cssClass="fieldError"/>
 				</div>
 			</div>
@@ -47,16 +64,18 @@
 				</div>
 			</c:if>
 
-			<div class="form-group text-center">
-				<div class="col-lg-12">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
-				<input type="submit" class="btn btn-primary form" name="save" value="Submit"/>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10 text-center">
+					<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
+					<button type="submit" class="btn btn-primary" lang="save" tabindex="19">Submit</button>
 				</div>
 			</div>
 
 		</form:form>
 	</div>
-</div>
+
+	</div>
+</section>
 
 <content tag='bottom'>
 	<script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
@@ -75,7 +94,7 @@
 				size: 27,
 				target : '#rating',
 				targetKeep  : true,
-				hints: ['lousy', 'pretty bad', 'poor', 'meh' , 'average', 'ok', 'good', 'very good', 'awesome'],
+				hints: ['lousy', 'pretty bad', 'poor', 'meh' , 'average', 'ok', 'good', 'very good', 'awesome', 'it rocks'],
 				targetType: 'score',
 				starOff : '${ctx}/assets/img/evaluations/staroff.png',
 				starOn  : '${ctx}/assets/img/evaluations/staron.png'
