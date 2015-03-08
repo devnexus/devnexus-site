@@ -21,16 +21,17 @@
 	<properties>
 		<java-version>1.7</java-version>
 		<org.cloudfoundry-version>0.8.6</org.cloudfoundry-version>
-		<org.springframework-version>4.1.1.RELEASE</org.springframework-version>
+		<org.springframework-version>4.1.4.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
-		<org.slf4j-version>1.5.10</org.slf4j-version>
+		<org.slf4j-version>1.7.10</org.slf4j-version>
 		<jawr.debug.on>true</jawr.debug.on>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.integration.version>4.0.4.RELEASE</spring.integration.version>
+		<spring.integration.version>4.1.2.RELEASE</spring.integration.version>
 		<spring.security.version>3.2.1.RELEASE</spring.security.version>
 		<org.springframework.social-version>1.1.0.RELEASE</org.springframework.social-version>
 		<netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
 		<org.hibernate.version>4.2.5.Final</org.hibernate.version>
+		<jackson.version>2.5.1</jackson.version>
 	</properties>
 
 	<build>
@@ -277,12 +278,12 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
-			<version>1.7.7</version>
+			<version>${org.slf4j-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
-			<version>1.7.7</version>
+			<version>${org.slf4j-version}</version>
 		</dependency>
 		<!-- <dependency> <groupId>commons-logging</groupId> <artifactId>commons-logging</artifactId>
 			<version>99.0-does-not-exist</version> </dependency> -->
@@ -388,7 +389,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -515,7 +516,7 @@
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
-			<version>1.8.3</version>
+			<version>1.9.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
@@ -525,9 +526,8 @@
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.8</version>
+			<version>1.10</version>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
@@ -545,22 +545,22 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.module</groupId>
 			<artifactId>jackson-module-jaxb-annotations</artifactId>
-			<version>2.4.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.4.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>2.4.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.4.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
@@ -617,12 +617,12 @@
 		<dependency>
 			<groupId>org.ocpsoft.prettytime</groupId>
 			<artifactId>prettytime</artifactId>
-			<version>3.2.5.Final</version>
+			<version>3.2.7.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>15.0</version>
+			<version>18.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -708,7 +708,7 @@
 		<dependency>
 			<groupId>com.github.sommeri</groupId>
 			<artifactId>less4j</artifactId>
-			<version>1.8.0</version>
+			<version>1.8.5</version>
 		</dependency>
 	</dependencies>
 
