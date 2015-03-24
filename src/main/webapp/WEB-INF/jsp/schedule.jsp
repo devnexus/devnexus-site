@@ -216,7 +216,12 @@
 				resizeScheduleItems();
 			}
 
-			var s = skrollr.init({forceHeight: false});
+			var s = skrollr.init({
+				forceHeight: false,
+				mobileCheck: function() {
+					return false;
+				}
+			});
 		});
 	</script>
 </content>

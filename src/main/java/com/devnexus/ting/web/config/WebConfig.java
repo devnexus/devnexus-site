@@ -325,6 +325,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 				.addResource(Resource.create("/assets/js/jquery.easing.min.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery-plugins/jquery.succinct.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/bootstrap.min.js", ResourceType.JS))
+				.addResource(Resource.create("/assets/js/d3.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/other/masonry.pkgd.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/jquery-plugins/jquery.fittext.js", ResourceType.JS))
 				.addResource(Resource.create("/assets/js/other/scrollr.js", ResourceType.JS))

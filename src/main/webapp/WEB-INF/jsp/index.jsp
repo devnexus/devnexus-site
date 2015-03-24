@@ -34,7 +34,34 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
+		<style type="text/css">
+			#chart-tooltip {
+				position: absolute;
+				width: 400px;
+				height: auto;
+				padding: 5px;
+				z-index: 9999999;
+				background-color: #ffffff;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+				pointer-events: none;
+			}
 
+			#chart-tooltip.hidden {
+				display: none;
+			}
+
+			#chart-tooltip p {
+				margin: 0;
+				font-family: sans-serif;
+				font-size: 16px;
+				line-height: 20px;
+			}
+		</style>
 	</head>
 <body>
 	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
@@ -78,7 +105,11 @@
 			</ul>
 		</div>
 	</nav>
-
+<div id="chart-tooltip" class="hidden">
+	<p><strong><span id="value">123</span> Attendees</strong></p>
+	<p><span id="session-title">title</span></p>
+	<p><span id="session-speaker">speaker</span></p>
+</div>
 	<!-- Intro Header -->
 	<section id="index--intro" class="module parallax index--parallax-1">
 		<div class="container header">
@@ -102,11 +133,11 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
-					<div class="col-md-6 col-md-offset-3">
-						<p class="lead">Welcome to the premier conference for professional software developers!
-										It&rsquo;s show-time! Let&rsquo;s rock and have some fun!</p>
-						<p class="lead text-center"><strong>The Wifi credentials are:</strong></p>
-						<p class="lead text-center">Network: <strong>devnexus2015</strong> | Password: <strong>awesome</strong></p>
+					<div class="col-md-8 col-md-offset-2">
+						<p class="lead">THANK YOU ALL for attending the show!!
+						Grab the <a href="https://github.com/devnexus/devnexus2015" target="_blank">presentation slides</a>
+						from GitHub or check out the download links under <a href="${ctx}/s/presentations" target="_blank">presentations</a>.
+						The videos of the sessions will be posted via <a href="http://www.dzone.com/" target="_blank">DZone</a> within a couple of weeks.</p>
 					</div>
 				</div>
 				<div class="row" style="margin-bottom: 20px;">
@@ -125,8 +156,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3 text-center">
-						<a href="${ctx}/s/evaluations/add" class="btn btn-primary registerButton">Send us Evaluations</a>
+					<div id="d3chart" class="col-md-10 col-md-offset-1">
 					</div>
 				</div>
 		</div>
@@ -455,6 +485,87 @@
 			});
 
 			$("#tagline").fitText().fitText(1.05);
+
+			var container = d3.select("#d3chart")
+
+			var width  = $("#d3chart").width();
+			var height = 120
+
+			var svg = container.append("svg");
+			svg.attr("height", height);
+			svg.attr("width", width);
+			svg.attr("viewBox", "0 0 " + width + " " + height);
+			svg.attr("perserveAspectRatio", "xMinYMid");
+
+			$(window).on("resize", function() {
+				svg.attr("width", $("#d3chart").width());
+				svg.attr("height", 120);
+			});
+
+			var barWidth = 4;
+
+			function processData(data) {
+
+				var maxValue = d3.max(data, function(el) {
+					return parseInt(el.attendees)
+				});
+				var minValue = d3.min(data, function(el) {
+					return parseInt(el.attendees)
+				});
+				var meanValue = d3.mean(data, function(el) {
+					return parseInt(el.attendees)
+				});
+
+				var xScale = d3.scale.linear().domain([0, data.length]).range([0, width]);
+				var yScale = d3.scale.linear().domain([0, maxValue]).range([0, height]);
+
+				svg.selectAll('rect').data(data).enter()
+				.append('rect')
+				.attr('width', barWidth)
+				.attr('height', function(d) {
+					return yScale(d.attendees);
+				})
+				.attr("x", function(d,i) {return xScale(i)})
+				.attr("y", function(d,i) {return height-yScale(d.attendees)})
+				.style("fill", function(d,i) {return d.color})
+
+				.on("mouseover", function(d) {
+					d3.select(this).style("fill", "orange");
+					d3.select("#chart-tooltip")
+					.style("left", $('#d3chart').offset().left + ($('#d3chart').width() / 2) - ($('#chart-tooltip').width() / 2)+ "px")
+					.style("top", $('#d3chart').offset().top  + "px")
+
+					d3.select("#value").text(d.attendees);
+					d3.select("#session-title").text(d.session_title);
+					d3.select("#session-speaker").text(d.speaker);
+					d3.select("#chart-tooltip")
+					.style("opacity", 0)
+					.classed("hidden", false)
+					.transition()
+					.duration(250)
+					.style("opacity", 1);
+				})
+				.on("mouseout", function(d) {
+					d3.select("#chart-tooltip")
+					.transition()
+					.duration(250)
+					.style("opacity", 0)
+					d3.select(this)
+					.transition()
+					.duration(250)
+					.style("fill", function(d,i) {return d.color});
+				})
+				.style("opacity", 1)
+				.append("title").text(function(d) {
+					return d.session_title + ': ' + d.attendees + ' attendees.';
+				});
+
+			}
+
+			d3.csv('${ctx}/static/2015/devnexus-stats.csv', function(data) {
+				processData(data);
+			});
+
 		});
 
 	</script>
