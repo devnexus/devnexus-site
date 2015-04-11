@@ -1,0 +1,19 @@
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="all">
+        
+        <css>classpath:less/main.less</css>
+        <css>/assets/css/vendor/animate.css</css>
+        <js>/assets/js/jquery1.11.1.min.js</js>
+        <js>/assets/js/jquery.modernizr.js</js>
+        <js>/assets/js/jquery.scrollTo.js</js>
+        <js>/assets/js/jquery.easing.min.js</js>
+        <js>/assets/js/jquery-plugins/jquery.succinct.js</js>
+        <js>/assets/js/bootstrap.min.js</js>
+        <js>/assets/js/d3.js</js>
+        <js>/assets/js/other/masonry.pkgd.js</js>
+        <js>/assets/js/jquery-plugins/jquery.fittext.js</js>
+        <js>/assets/js/other/scrollr.js</js>
+        <js>/assets/js/other/imagesloaded.pkgd.min.js</js>
+        
+    </group>
+</groups>     
