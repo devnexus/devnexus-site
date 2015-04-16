@@ -30,12 +30,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.PresentationList;
-import com.devnexus.ting.core.model.support.PresentationSearchQuery;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.PresentationList;
+import com.devnexus.ting.model.support.PresentationSearchQuery;
 
 /**
  *

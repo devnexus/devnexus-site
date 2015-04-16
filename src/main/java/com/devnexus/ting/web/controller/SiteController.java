@@ -45,18 +45,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.model.ApplicationCache;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Organizer;
-import com.devnexus.ting.core.model.OrganizerList;
-import com.devnexus.ting.core.model.ScheduleItemList;
-import com.devnexus.ting.core.model.SpeakerList;
-import com.devnexus.ting.core.model.Sponsor;
-import com.devnexus.ting.core.model.SponsorList;
-import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.TwitterService;
+import com.devnexus.ting.model.ApplicationCache;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.OrganizerList;
+import com.devnexus.ting.model.ScheduleItemList;
+import com.devnexus.ting.model.SpeakerList;
+import com.devnexus.ting.model.Sponsor;
+import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TwitterMessage;
 
 /**
  * Main DevNexus Site Controller - Contains various simple controllers for various

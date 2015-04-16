@@ -54,37 +54,37 @@ import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.dao.ApplicationCacheDao;
-import com.devnexus.ting.core.dao.CfpSubmissionDao;
-import com.devnexus.ting.core.dao.EvaluationDao;
-import com.devnexus.ting.core.dao.EventDao;
-import com.devnexus.ting.core.dao.OrganizerDao;
-import com.devnexus.ting.core.dao.PresentationDao;
-import com.devnexus.ting.core.dao.PresentationTagDao;
-import com.devnexus.ting.core.dao.RoomDao;
-import com.devnexus.ting.core.dao.ScheduleItemDao;
-import com.devnexus.ting.core.dao.SpeakerDao;
-import com.devnexus.ting.core.dao.SponsorDao;
-import com.devnexus.ting.core.dao.TrackDao;
-import com.devnexus.ting.core.model.ApplicationCache;
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Organizer;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.PresentationTag;
-import com.devnexus.ting.core.model.Room;
-import com.devnexus.ting.core.model.ScheduleItem;
-import com.devnexus.ting.core.model.ScheduleItemList;
-import com.devnexus.ting.core.model.ScheduleItemType;
-import com.devnexus.ting.core.model.Speaker;
-import com.devnexus.ting.core.model.Sponsor;
-import com.devnexus.ting.core.model.SponsorLevel;
-import com.devnexus.ting.core.model.SponsorList;
-import com.devnexus.ting.core.model.Track;
-import com.devnexus.ting.core.model.support.PresentationSearchQuery;
+import com.devnexus.ting.repository.ApplicationCacheRepository;
+import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.EvaluationRepository;
+import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.OrganizerRepository;
+import com.devnexus.ting.repository.PresentationRepository;
+import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RoomRepository;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.SpeakerRepository;
+import com.devnexus.ting.repository.SponsorRepository;
+import com.devnexus.ting.repository.TrackRepository;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.ApplicationCache;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.Evaluation;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.Room;
+import com.devnexus.ting.model.ScheduleItem;
+import com.devnexus.ting.model.ScheduleItemList;
+import com.devnexus.ting.model.ScheduleItemType;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.model.Sponsor;
+import com.devnexus.ting.model.SponsorLevel;
+import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.Track;
+import com.devnexus.ting.model.support.PresentationSearchQuery;
 
 /**
  *
@@ -99,18 +99,18 @@ public class BusinessServiceImpl implements BusinessService {
 	 */
 	private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
-	@Autowired private CfpSubmissionDao cfpSubmissionDao;
-	@Autowired private EvaluationDao   evaluationDao;
-	@Autowired private EventDao        eventDao;
-	@Autowired private OrganizerDao    organizerDao;
-	@Autowired private PresentationDao presentationDao;
-	@Autowired private PresentationTagDao presentationTagDao;
-	@Autowired private RoomDao         roomDao;
-	@Autowired private ScheduleItemDao scheduleItemDao;
-	@Autowired private SpeakerDao      speakerDao;
-	@Autowired private SponsorDao      sponsorDao;
-	@Autowired private TrackDao        trackDao;
-	@Autowired private ApplicationCacheDao applicationCacheDao;
+	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
+	@Autowired private EvaluationRepository   evaluationDao;
+	@Autowired private EventRepository        eventDao;
+	@Autowired private OrganizerRepository    organizerDao;
+	@Autowired private PresentationRepository presentationDao;
+	@Autowired private PresentationTagRepository presentationTagDao;
+	@Autowired private RoomRepository         roomDao;
+	@Autowired private ScheduleItemRepository scheduleItemDao;
+	@Autowired private SpeakerRepository      speakerDao;
+	@Autowired private SponsorRepository      sponsorDao;
+	@Autowired private TrackRepository        trackDao;
+	@Autowired private ApplicationCacheRepository applicationCacheDao;
 	@Autowired private Environment environment;
 
 	@Autowired private MessageChannel mailChannel;
@@ -132,7 +132,7 @@ public class BusinessServiceImpl implements BusinessService {
 		Assert.notNull(event.getId(), "Id must not be Null for event " + event);
 
 		LOGGER.debug("Deleting Event {}", event);
-		eventDao.remove(event);
+		eventDao.delete(event);
 	}
 
 	/** {@inheritDoc} */
@@ -144,7 +144,7 @@ public class BusinessServiceImpl implements BusinessService {
 		Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
 
 		LOGGER.debug("Deleting Organizer {}", organizerFromDb);
-		organizerDao.remove(organizerFromDb);
+		organizerDao.delete(organizerFromDb);
 	}
 
 	@CacheEvict(value="sponsors", allEntries=true)
@@ -155,7 +155,7 @@ public class BusinessServiceImpl implements BusinessService {
 		Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
 
 		LOGGER.debug("Deleting Sponsor {}", sponsorFromDb);
-		sponsorDao.remove(sponsorFromDb);
+		sponsorDao.delete(sponsorFromDb);
 	}
 
 	/** {@inheritDoc} */
@@ -168,7 +168,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 		LOGGER.debug("Deleting Presentation {}", presentation);
 
-		presentationDao.remove(presentation);
+		presentationDao.delete(presentation);
 
 	}
 
@@ -182,7 +182,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 		LOGGER.debug("Deleting Speaker {}", speaker);
 
-		speakerDao.remove(speaker);
+		speakerDao.delete(speaker);
 	}
 
 	/** {@inheritDoc} */
@@ -206,7 +206,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Presentation> getAllPresentations() {
-		return presentationDao.getAll();
+		return presentationDao.findAll();
 	}
 
 	/** {@inheritDoc} */
@@ -218,7 +218,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public Event getEvent(Long id) {
-		return eventDao.get(id);
+		return eventDao.findOne(id);
 	}
 
 	/** {@inheritDoc} */
@@ -230,12 +230,12 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public Organizer getOrganizer(final Long organizerId) {
-		return organizerDao.get(organizerId);
+		return organizerDao.getOne(organizerId);
 	}
 
 	@Override
 	public Sponsor getSponsor(Long sponsorId) {
-		return sponsorDao.get(sponsorId);
+		return sponsorDao.getOne(sponsorId);
 	}
 
 	/** {@inheritDoc} */
@@ -267,7 +267,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	@Transactional(readOnly=false)
 	public Presentation getPresentation(Long id) {
-		return presentationDao.get(id);
+		return presentationDao.getOne(id);
 	}
 
 	/** {@inheritDoc} */
@@ -300,7 +300,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public Speaker getSpeaker(Long speakerId) {
-		return speakerDao.get(speakerId);
+		return speakerDao.getOne(speakerId);
 	}
 
 	/** {@inheritDoc} */
@@ -386,7 +386,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Transactional
 	public ApplicationCache updateApplicationCacheManifest() {
 
-		final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
 
 		if (applicationCacheList.isEmpty()) {
 			ApplicationCache applicationCache = new ApplicationCache();
@@ -408,7 +408,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Override
 	@Transactional
 	public ApplicationCache getApplicationCacheManifest() {
-		final List<ApplicationCache> applicationCacheList = applicationCacheDao.getAll();
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
 
 		if (applicationCacheList.isEmpty()) {
 			ApplicationCache applicationCache = new ApplicationCache();
@@ -446,7 +446,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	public Room getRoom(Long id) {
-		return roomDao.get(id);
+		return roomDao.getOne(id);
 	}
 
 	@Override
@@ -552,18 +552,18 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	public void removeEvaluation(Long evaluationId) {
-		evaluationDao.remove(evaluationId);
+		evaluationDao.delete(evaluationId);
 	}
 
 	@Override
 	public List<CfpSubmission> getCfpSubmissions(Long eventId) {
-		return cfpSubmissionDao.getCfpSubmissions(eventId);
+		return cfpSubmissionRepository.getCfpSubmissions(eventId);
 	}
 
 	@Override
 	@Transactional
 	public CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission) {
-		return cfpSubmissionDao.save(cfpSubmission);
+		return cfpSubmissionRepository.save(cfpSubmission);
 	}
 
 	@Override
@@ -586,12 +586,12 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	public CfpSubmission getCfpSubmission(Long cfpId) {
-		return this.cfpSubmissionDao.get(cfpId);
+		return this.cfpSubmissionRepository.getOne(cfpId);
 	}
 
 	@Override
 	public Track getTrack(Long id) {
-		return trackDao.get(id);
+		return trackDao.getOne(id);
 	}
 
 	@Override
@@ -618,7 +618,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Transactional
 	@Override
 	public void deleteCfpSubmission(Long id) {
-		cfpSubmissionDao.remove(id);
+		cfpSubmissionRepository.delete(id);
 	}
 
 	@Transactional

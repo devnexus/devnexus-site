@@ -35,9 +35,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Organizer;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Organizer;
 
 /**
  *

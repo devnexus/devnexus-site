@@ -39,12 +39,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.devnexus.ting.core.model.AuthorityType;
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.model.UserAuthority;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.AuthorityType;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserAuthority;
 import com.devnexus.ting.web.controller.googleauth.Checker;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.http.HttpTransport;

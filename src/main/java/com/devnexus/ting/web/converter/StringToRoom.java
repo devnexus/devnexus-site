@@ -22,7 +22,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.Formatter;
 
-import com.devnexus.ting.core.model.Room;
+import com.devnexus.ting.model.Room;
 
 public class StringToRoom implements Converter<String, Room>, Formatter<Room> {
 

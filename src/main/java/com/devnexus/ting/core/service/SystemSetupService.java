@@ -17,7 +17,7 @@ package com.devnexus.ting.core.service;
 
 import java.io.InputStream;
 
-import com.devnexus.ting.core.model.Backup;
+import com.devnexus.ting.model.Backup;
 
 /**
  * Special services allowing the administrator to populate the sytem with

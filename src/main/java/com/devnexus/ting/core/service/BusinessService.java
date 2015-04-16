@@ -19,21 +19,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.devnexus.ting.core.model.ApplicationCache;
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Organizer;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.PresentationTag;
-import com.devnexus.ting.core.model.Room;
-import com.devnexus.ting.core.model.ScheduleItemList;
-import com.devnexus.ting.core.model.Speaker;
-import com.devnexus.ting.core.model.Sponsor;
-import com.devnexus.ting.core.model.SponsorList;
-import com.devnexus.ting.core.model.Track;
-import com.devnexus.ting.core.model.support.PresentationSearchQuery;
+import com.devnexus.ting.model.ApplicationCache;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.Evaluation;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.Room;
+import com.devnexus.ting.model.ScheduleItemList;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.model.Sponsor;
+import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.Track;
+import com.devnexus.ting.model.support.PresentationSearchQuery;
 
 /**
  * The central service layer of Ting.

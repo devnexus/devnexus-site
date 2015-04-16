@@ -21,7 +21,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.devnexus.ting.core.model.PresentationTag;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.repository.PresentationTagRepository;
 
 /**
  * @author Gunnar Hillert
@@ -29,12 +30,12 @@ import com.devnexus.ting.core.model.PresentationTag;
  */
 public class PresentationTagDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private PresentationTagDao presentationTagDao;
+	@Autowired private PresentationTagRepository presentationTagDao;
 
 	@Test
 	public void testGetAllPresentationTags() {
 
-		final List<PresentationTag> tags = presentationTagDao.getAll();
+		final List<PresentationTag> tags = presentationTagDao.findAll();
 
 		Assert.assertNotNull("List of tags should not be null.", tags);
 		Assert.assertEquals("There should be 4 tags.", Integer.valueOf(4), Integer.valueOf(tags.size()));

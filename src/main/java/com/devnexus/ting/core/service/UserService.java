@@ -20,8 +20,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.social.connect.web.SignInAdapter;
 
-import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.User;
 
 /**
  * Provides user related methods.

@@ -34,14 +34,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.core.model.CfpSubmissionStatusType;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.PresentationTag;
-import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionStatusType;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.Speaker;
 
 /**
  * Migrate a CFP into the system

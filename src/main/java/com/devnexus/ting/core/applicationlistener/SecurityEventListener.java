@@ -26,8 +26,8 @@ import org.springframework.security.authentication.event.AbstractAuthenticationF
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;
 import org.springframework.security.authentication.event.InteractiveAuthenticationSuccessEvent;
 
-import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.model.User;
 
 public class SecurityEventListener implements
 									ApplicationListener < AbstractAuthenticationEvent > {

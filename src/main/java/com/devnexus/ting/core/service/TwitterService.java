@@ -17,7 +17,7 @@ package com.devnexus.ting.core.service;
 
 import java.util.Collection;
 
-import com.devnexus.ting.core.model.TwitterMessage;
+import com.devnexus.ting.model.TwitterMessage;
 
 /**
  * Provides some basic methods for controlling the flow of Twitter messages.

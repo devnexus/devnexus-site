@@ -23,7 +23,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.model.SchemaMigration;
+import com.devnexus.ting.model.SchemaMigration;
+import com.devnexus.ting.repository.SchemaMigrationRepository;
 
 /**
  * @author Gunnar Hillert
@@ -33,7 +34,7 @@ import com.devnexus.ting.core.model.SchemaMigration;
 @Ignore
 public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private SchemaMigrationDao schemaMigrationDao;
+	@Autowired private SchemaMigrationRepository schemaMigrationDao;
 
 	/**
 	 * Test to verify that the seed data is correctly populated. Typically there
@@ -48,7 +49,7 @@ public class SchemaMigrationDaoTest extends BaseDaoIntegrationTest {
 		schemaMigrationDao.save(schemaMigration);
 		super.entityManager.flush();
 
-		List<SchemaMigration> schemaMigrations = schemaMigrationDao.getAll();
+		List<SchemaMigration> schemaMigrations = schemaMigrationDao.findAll();
 
 		Assert.assertTrue(schemaMigrations.size() == 1);
 		Assert.assertEquals("2.0-Beta", schemaMigrations.get(0).getVersion());

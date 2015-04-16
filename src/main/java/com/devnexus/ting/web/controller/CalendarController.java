@@ -29,10 +29,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.model.UserCalendar;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.CalendarServices;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserCalendar;
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;

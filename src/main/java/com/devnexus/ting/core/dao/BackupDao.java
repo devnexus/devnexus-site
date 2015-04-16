@@ -17,7 +17,7 @@ package com.devnexus.ting.core.dao;
 
 import java.io.InputStream;
 
-import com.devnexus.ting.core.model.Backup;
+import com.devnexus.ting.model.Backup;
 
 /**
  * @author Gunnar Hillert

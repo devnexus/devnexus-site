@@ -41,12 +41,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import org.springframework.web.context.request.NativeWebRequest;
 
-import com.devnexus.ting.core.dao.UserDao;
-import com.devnexus.ting.core.model.AuthorityType;
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.model.UserAuthority;
+import com.devnexus.ting.repository.UserRepository;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.AuthorityType;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserAuthority;
 
 /**
  * Provides user specific services.
@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 	 * User Dao.
 	 */
 	@Autowired
-	private UserDao userDao;
+	private UserRepository userDao;
 
 	@Autowired
 	private StringDigester stringDigester;
@@ -129,7 +129,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 
 	@Override
 	public User getUser(Long userId) {
-		return userDao.get(userId);
+		return userDao.getOne(userId);
 	}
 
 	public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {

@@ -22,8 +22,12 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.ScheduleItem;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.ScheduleItem;
+import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.RoomRepository;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.SpeakerRepository;
 
 /**
  * @author Gunnar Hillert
@@ -31,10 +35,10 @@ import com.devnexus.ting.core.model.ScheduleItem;
  */
 public class ScheduleItemDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private SpeakerDao speakerDao;
-	@Autowired private ScheduleItemDao scheduleItemDao;
-	@Autowired private EventDao eventDao;
-	@Autowired private RoomDao roomDao;
+	@Autowired private SpeakerRepository speakerDao;
+	@Autowired private ScheduleItemRepository scheduleItemDao;
+	@Autowired private EventRepository eventDao;
+	@Autowired private RoomRepository roomDao;
 
 	/**
 	 */

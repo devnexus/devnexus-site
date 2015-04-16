@@ -21,7 +21,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.devnexus.ting.core.model.Track;
+import com.devnexus.ting.model.Track;
+import com.devnexus.ting.repository.TrackRepository;
 
 /**
  * @author Gunnar Hillert
@@ -29,12 +30,12 @@ import com.devnexus.ting.core.model.Track;
  */
 public class TrackDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private TrackDao trackDao;
+	@Autowired private TrackRepository trackDao;
 
 	@Test
 	public void testGetAllTracks() {
 
-		final List<Track> tracks = trackDao.getAll();
+		final List<Track> tracks = trackDao.findAll();
 
 		Assert.assertNotNull("List of tracks should not be null.", tracks);
 		Assert.assertEquals("There should be 3 tracks.", Integer.valueOf(3), Integer.valueOf(tracks.size()));

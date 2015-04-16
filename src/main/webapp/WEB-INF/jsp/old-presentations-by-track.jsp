@@ -1,4 +1,4 @@
-<%@page import="com.devnexus.ting.core.model.PresentationType"%>
+<%@page import="com.devnexus.ting.model.PresentationType"%>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 <head>

@@ -27,10 +27,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.devnexus.ting.core.model.Evaluation;
-import com.devnexus.ting.core.model.EvaluationList;
-import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Evaluation;
+import com.devnexus.ting.model.EvaluationList;
+import com.devnexus.ting.model.Event;
 
 /**
  * @author Gunnar Hillert

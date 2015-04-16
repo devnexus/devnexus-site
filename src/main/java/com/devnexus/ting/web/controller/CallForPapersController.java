@@ -46,12 +46,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.PresentationType;
+import com.devnexus.ting.model.SkillLevel;
 import com.devnexus.ting.web.form.CfpSubmissionForm;
 
 /**

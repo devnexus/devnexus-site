@@ -17,7 +17,7 @@ package com.devnexus.ting.web.converter;
 
 import org.springframework.core.convert.converter.Converter;
 
-import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.model.Speaker;
 
 public class SpeakerToString implements Converter<Speaker, String> {
 

@@ -25,8 +25,8 @@ import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.stereotype.Service;
 
-import com.devnexus.ting.core.model.TwitterMessage;
 import com.devnexus.ting.core.service.TwitterService;
+import com.devnexus.ting.model.TwitterMessage;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;

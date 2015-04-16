@@ -19,7 +19,7 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.devnexus.ting.core.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmission;
 
 /**
  * 

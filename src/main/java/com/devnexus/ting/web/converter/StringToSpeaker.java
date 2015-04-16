@@ -22,7 +22,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.Formatter;
 
-import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.model.Speaker;
 
 public class StringToSpeaker implements Converter<String, Speaker>, Formatter<Speaker>{
 

@@ -25,9 +25,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.core.dao.DocumentDao;
-import com.devnexus.ting.core.dao.SpeakerDao;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.repository.FileDataRepository;
+import com.devnexus.ting.repository.SpeakerRepository;
 import com.devnexus.ting.web.config.ServicesConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -37,10 +37,10 @@ import com.devnexus.ting.web.config.ServicesConfig;
 public class MigrationTest {
 
 	@Autowired
-	private SpeakerDao speakerDao;
+	private SpeakerRepository speakerDao;
 
 	@Autowired
-	private DocumentDao documentDao;
+	private FileDataRepository documentDao;
 
 	@PersistenceContext
 	protected EntityManager entityManager;

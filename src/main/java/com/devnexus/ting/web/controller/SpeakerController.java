@@ -27,9 +27,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.SpeakerList;
 
 /**
  * Display speakers.

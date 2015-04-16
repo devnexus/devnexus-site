@@ -24,10 +24,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.PresentationType;
+import com.devnexus.ting.model.SkillLevel;
 
 /**
  * Testing the rendering of Email templates.

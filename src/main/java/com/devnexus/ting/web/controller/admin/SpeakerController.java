@@ -35,11 +35,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Speaker;
-import com.devnexus.ting.core.model.SpeakerList;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.model.SpeakerList;
 
 /**
  * Retrieves all jobs and returns an XML document. The structure conforms to the layout

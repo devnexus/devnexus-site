@@ -1,4 +1,4 @@
-<%@page import="com.devnexus.ting.core.model.CfpSubmissionStatusType" %>
+<%@page import="com.devnexus.ting.model.CfpSubmissionStatusType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 

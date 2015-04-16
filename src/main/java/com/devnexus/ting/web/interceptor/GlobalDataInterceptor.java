@@ -25,8 +25,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
 
 public class GlobalDataInterceptor implements HandlerInterceptor {
 

@@ -36,9 +36,9 @@ import org.springframework.social.connect.web.ProviderSignInController;
 import org.springframework.social.google.api.Google;
 import org.springframework.social.google.connect.GoogleConnectionFactory;
 
-import com.devnexus.ting.core.model.User;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
+import com.devnexus.ting.model.User;
 
 
 /**

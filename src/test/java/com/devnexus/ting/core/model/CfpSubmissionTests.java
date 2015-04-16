@@ -3,6 +3,9 @@ package com.devnexus.ting.core.model;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+
 public class CfpSubmissionTests {
 
 	@Test

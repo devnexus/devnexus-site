@@ -20,6 +20,7 @@ import java.io.IOException;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.devnexus.ting.model.Speaker;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.JsonMappingException;

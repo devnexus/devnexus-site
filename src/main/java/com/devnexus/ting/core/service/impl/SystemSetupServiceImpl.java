@@ -31,28 +31,28 @@ import org.springframework.transaction.annotation.Transactional;
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.core.dao.BackupDao;
-import com.devnexus.ting.core.dao.EventDao;
-import com.devnexus.ting.core.dao.PresentationTagDao;
-import com.devnexus.ting.core.dao.RoomDao;
-import com.devnexus.ting.core.dao.ScheduleItemDao;
-import com.devnexus.ting.core.dao.SchemaMigrationDao;
+import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RoomRepository;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.SchemaMigrationRepository;
 import com.devnexus.ting.core.dao.SystemDao;
-import com.devnexus.ting.core.dao.TrackDao;
-import com.devnexus.ting.core.dao.UserAuthorityDao;
-import com.devnexus.ting.core.model.AuthorityType;
-import com.devnexus.ting.core.model.Backup;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.PresentationTag;
-import com.devnexus.ting.core.model.Room;
-import com.devnexus.ting.core.model.ScheduleItem;
-import com.devnexus.ting.core.model.ScheduleItemType;
-import com.devnexus.ting.core.model.SchemaMigration;
-import com.devnexus.ting.core.model.Track;
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.model.UserAuthority;
+import com.devnexus.ting.repository.TrackRepository;
+import com.devnexus.ting.repository.UserAuthorityRepository;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.AuthorityType;
+import com.devnexus.ting.model.Backup;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.Room;
+import com.devnexus.ting.model.ScheduleItem;
+import com.devnexus.ting.model.ScheduleItemType;
+import com.devnexus.ting.model.SchemaMigration;
+import com.devnexus.ting.model.Track;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserAuthority;
 
 /**
  * @author Gunnar Hillert
@@ -65,7 +65,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
 
 	@Autowired
-	private SchemaMigrationDao   schemaMigrationDao;
+	private SchemaMigrationRepository   schemaMigrationRepository;
 
 	@Autowired
 	private BackupDao            backupDao;
@@ -74,28 +74,28 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private SystemDao            systemDao;
 
 	@Autowired
-	private UserAuthorityDao     userAuthorityDao;
+	private UserAuthorityRepository     userAuthorityDao;
 
 	@Autowired
 	private Environment environment;
 
 	@Autowired
-	private RoomDao roomDao;
+	private RoomRepository roomDao;
 
 	@Autowired
-	private EventDao eventDao;
+	private EventRepository eventDao;
 
 	@Autowired
-	private PresentationTagDao presentationTagDao;
+	private PresentationTagRepository presentationTagDao;
 
 	@Autowired
-	private TrackDao trackDao;
+	private TrackRepository trackDao;
 
 	@Autowired
 	private UserService userService;
 
 	@Autowired
-	private ScheduleItemDao scheduleItemDao;
+	private ScheduleItemRepository scheduleItemDao;
 
 	@Value("${database.jdbc.driverClassName}")
 	private String jdbcDriverClassName;
@@ -159,7 +159,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	@Override
 	public boolean isDatabaseSetup() {
 		try {
-			final List<SchemaMigration> migrations = schemaMigrationDao.getAll();
+			final List<SchemaMigration> migrations = schemaMigrationRepository.findAll();
 
 			if (migrations.isEmpty()) {
 				return false;
@@ -251,17 +251,17 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		final Event event = eventDao.getByEventKey("devnexus2013");
 
-		final Room room102     = roomDao.get(8L);
-		final Room ballroomA   = roomDao.get(1L);
-		final Room ballroomB   = roomDao.get(7L);
-		final Room ballroomCDF = roomDao.get(3L);
-		final Room ballroomE   = roomDao.get(2L);
-		final Room room103     = roomDao.get(4L);
-		final Room room104     = roomDao.get(5L);
-		final Room room105     = roomDao.get(6L);
+		final Room room102     = roomDao.getOne(8L);
+		final Room ballroomA   = roomDao.getOne(1L);
+		final Room ballroomB   = roomDao.getOne(7L);
+		final Room ballroomCDF = roomDao.getOne(3L);
+		final Room ballroomE   = roomDao.getOne(2L);
+		final Room room103     = roomDao.getOne(4L);
+		final Room room104     = roomDao.getOne(5L);
+		final Room room105     = roomDao.getOne(6L);
 
-		final Room atrium     = roomDao.get(10L);
-		final Room hallA      = roomDao.get(9L);
+		final Room atrium     = roomDao.getOne(10L);
+		final Room hallA      = roomDao.getOne(9L);
 
 		ScheduleItem scheduleItem1 = new ScheduleItem();
 		scheduleItem1.setScheduleItemType(ScheduleItemType.REGISTRATION);

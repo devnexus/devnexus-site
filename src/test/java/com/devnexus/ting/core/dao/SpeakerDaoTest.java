@@ -22,7 +22,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.model.Speaker;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.repository.SpeakerRepository;
 
 /**
  * @author Gunnar Hillert
@@ -31,7 +32,7 @@ import com.devnexus.ting.core.model.Speaker;
 @Transactional
 public class SpeakerDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private SpeakerDao speakerDao;
+	@Autowired private SpeakerRepository speakerDao;
 
 	/**
 	 * Test to verify that the seed data is correctly populated. Typically there

@@ -23,10 +23,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.TrackList;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.TrackList;
 
 /**
  * @author Gunnar Hillert

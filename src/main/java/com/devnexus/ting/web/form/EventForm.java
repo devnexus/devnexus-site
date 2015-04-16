@@ -18,7 +18,7 @@ package com.devnexus.ting.web.form;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.devnexus.ting.core.model.Event;
+import com.devnexus.ting.model.Event;
 
 public class EventForm {
 

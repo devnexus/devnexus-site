@@ -32,15 +32,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionList;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.core.model.CfpSubmissionStatusType;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.core.model.Speaker;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionList;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionStatusType;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.PresentationType;
+import com.devnexus.ting.model.SkillLevel;
+import com.devnexus.ting.model.Speaker;
 
 /**
  * @author Gunnar Hillert

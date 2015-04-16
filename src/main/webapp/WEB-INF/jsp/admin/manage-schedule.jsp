@@ -1,4 +1,4 @@
-<%@page import="com.devnexus.ting.core.model.ScheduleItemType"%>
+<%@page import="com.devnexus.ting.model.ScheduleItemType"%>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("scheduleItemTypeAdminsitrative", ScheduleItemType.ADMINISTRATIVE); %>
 <% pageContext.setAttribute("scheduleItemTypeBreak", ScheduleItemType.BREAK); %>

@@ -25,12 +25,14 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.core.model.CfpSubmissionStatusType;
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionStatusType;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.PresentationType;
+import com.devnexus.ting.model.SkillLevel;
+import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.EventRepository;
 
 /**
  * @author Gunnar Hillert
@@ -41,12 +43,12 @@ import com.devnexus.ting.core.model.SkillLevel;
 @Ignore
 public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private CfpSubmissionDao cfpSubmissionDao;
-	@Autowired private EventDao eventDao;
+	@Autowired private CfpSubmissionRepository cfpSubmissionDao;
+	@Autowired private EventRepository eventDao;
 
 	@Test
 	public void testAllCfpSubmissions() {
-		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.getAll();
+		List<CfpSubmission> cfpSubmissions = cfpSubmissionDao.findAll();
 		Assert.assertTrue(cfpSubmissions.size() == 0);
 	}
 

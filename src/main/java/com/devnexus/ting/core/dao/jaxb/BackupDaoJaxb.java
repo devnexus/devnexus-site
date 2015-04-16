@@ -26,7 +26,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.core.dao.BackupDao;
-import com.devnexus.ting.core.model.Backup;
+import com.devnexus.ting.model.Backup;
 
 /**
  * @author Gunnar Hillert

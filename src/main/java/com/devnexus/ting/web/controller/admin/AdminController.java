@@ -37,8 +37,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.devnexus.ting.core.model.Event;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheStats;
 

@@ -30,8 +30,8 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.core.model.CfpSubmission;
-import com.devnexus.ting.core.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;

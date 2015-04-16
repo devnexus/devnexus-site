@@ -28,6 +28,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -35,6 +36,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.repository.jpa.support.BaseRepositoryFactoryBean;
 import com.jolbox.bonecp.BoneCPDataSource;
 
 
@@ -44,6 +46,9 @@ import com.jolbox.bonecp.BoneCPDataSource;
  */
 @Configuration
 @ComponentScan("com.devnexus.ting.core.dao")
+@EnableJpaRepositories(
+		repositoryFactoryBeanClass=BaseRepositoryFactoryBean.class,
+		entityManagerFactoryRef="entityManagerFactory", basePackages="com.devnexus.ting.repository")
 public class PersistenceConfig {
 
 	@Autowired
@@ -53,21 +58,21 @@ public class PersistenceConfig {
 	public Jaxb2Marshaller jaxbMarshaller() {
 		Jaxb2Marshaller jaxbMarshaller = new Jaxb2Marshaller();
 		jaxbMarshaller.setClassesToBeBound(
-			com.devnexus.ting.core.model.Evaluation.class,
-			com.devnexus.ting.core.model.EvaluationList.class,
-			com.devnexus.ting.core.model.Event.class,
-			com.devnexus.ting.core.model.Presentation.class,
-			com.devnexus.ting.core.model.PresentationList.class,
-			com.devnexus.ting.core.model.Room.class,
-			com.devnexus.ting.core.model.RoomList.class,
-			com.devnexus.ting.core.model.ScheduleItem.class,
-			com.devnexus.ting.core.model.ScheduleItemList.class,
-			com.devnexus.ting.core.model.Sponsor.class,
-			com.devnexus.ting.core.model.Speaker.class,
-			com.devnexus.ting.core.model.SpeakerList.class,
-			com.devnexus.ting.core.model.ScheduleItemType.class,
-			com.devnexus.ting.core.model.CfpSubmission.class,
-			com.devnexus.ting.core.model.CfpSubmissionList.class
+			com.devnexus.ting.model.Evaluation.class,
+			com.devnexus.ting.model.EvaluationList.class,
+			com.devnexus.ting.model.Event.class,
+			com.devnexus.ting.model.Presentation.class,
+			com.devnexus.ting.model.PresentationList.class,
+			com.devnexus.ting.model.Room.class,
+			com.devnexus.ting.model.RoomList.class,
+			com.devnexus.ting.model.ScheduleItem.class,
+			com.devnexus.ting.model.ScheduleItemList.class,
+			com.devnexus.ting.model.Sponsor.class,
+			com.devnexus.ting.model.Speaker.class,
+			com.devnexus.ting.model.SpeakerList.class,
+			com.devnexus.ting.model.ScheduleItemType.class,
+			com.devnexus.ting.model.CfpSubmission.class,
+			com.devnexus.ting.model.CfpSubmissionList.class
 		);
 		return jaxbMarshaller;
 	}
@@ -86,7 +91,7 @@ public class PersistenceConfig {
 		final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
 		entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-		entityManagerFactory.setPackagesToScan("com/devnexus/ting/core/model");
+		entityManagerFactory.setPackagesToScan("com/devnexus/ting/model");
 
 		final Map<String, Object> jpaProperties = new HashMap<>();
 
@@ -119,6 +124,7 @@ public class PersistenceConfig {
 		return txManager;
 	}
 
+	@Profile("!cloud")
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 		BoneCPDataSource dataSource = new BoneCPDataSource();
@@ -179,28 +185,4 @@ public class PersistenceConfig {
 		return messageSource;
 	}
 
-	/*
-	<beans profile="cloud">
-		<cloud:data-source id="devnexus-db" />
-		<bean id="entityManagerFactory"
-			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-			<property name="dataSource" ref="devnexus-db" />
-			<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
-			<property name="persistenceUnitName" value="base" />
-			<property name="jpaProperties">
-				<props>
-					<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-					<prop key="hibernate.query.substitutions">true '1', false '0'</prop>
-					<prop key="hibernate.generate_statistics">true</prop>
-					<prop key="hibernate.cache.use_second_level_cache">true</prop>
-					<prop key="hibernate.cache.use_query_cache">true</prop>
-					<prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
-					<prop key="hibernate.show_sql">false</prop>
-					<prop key="hibernate.format_sql">true</prop>
-					<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
-				</props>
-			</property>
-		</bean>
-	</beans>
-	 */
 }

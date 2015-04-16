@@ -13,52 +13,52 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.dao.ScheduleItemDao;
-import com.devnexus.ting.core.dao.UserCalendarDao;
-import com.devnexus.ting.core.model.User;
-import com.devnexus.ting.core.model.UserCalendar;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.UserCalendarRepository;
 import com.devnexus.ting.core.service.CalendarServices;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserCalendar;
 
 @Service
 public class CalendarServicesImpl implements CalendarServices{
 
     @Autowired
-    UserCalendarDao calendarDao;
+    UserCalendarRepository calendarRepository;
 
     @Autowired
-    ScheduleItemDao scheduleDao;
+    ScheduleItemRepository scheduleRepository;
 
 
     @Override
     public List<UserCalendar> getCalendarTemplate(String eventKey) {
-        return calendarDao.getTemplateCalendar(eventKey);
+        return calendarRepository.getTemplateCalendar(eventKey);
     }
-    
-    
+
+
     @Override
     @Transactional
     public List<UserCalendar> getUserCalendar(User user, String eventKey) {
-        List<UserCalendar> calendar = calendarDao.getUserCalendar(user, eventKey);
+        List<UserCalendar> calendar = calendarRepository.getUserCalendar(user, eventKey);
         if (calendar == null || calendar.isEmpty()) {
             List<UserCalendar> template = getCalendarTemplate(eventKey);
             calendar = new ArrayList<UserCalendar>();
             for (UserCalendar entry : template) {
                 UserCalendar copy = entry.copy();
-                
+
                 copy.setUsername(user.getUsername());
-                calendar.add(calendarDao.save(copy));
+                calendar.add(calendarRepository.save(copy));
             }
-            
+
         }
-        
+
         return calendar;
     }
 
     @Override
-    @Transactional    
+    @Transactional
     public UserCalendar updateEntry(Long id, User user, UserCalendar newCalendar) {
 
-        UserCalendar storedCalendar = calendarDao.get(id);
+        UserCalendar storedCalendar = calendarRepository.getOne(id);
 
         if (!storedCalendar.getUsername().equals(user.getUsername())) {
             throw new IllegalAccessError("User " + user.getUsername() + " does not have access to this calendar.");
@@ -67,14 +67,14 @@ public class CalendarServicesImpl implements CalendarServices{
         if (storedCalendar.isFixed()) {
             return storedCalendar;
         }
-        
+
         if (newCalendar.getItem() != null) {
-            storedCalendar.setItem(scheduleDao.get(newCalendar.getItem().getId()));
+            storedCalendar.setItem(scheduleRepository.getOne(newCalendar.getItem().getId()));
         } else {
             storedCalendar.setItem(null);
         }
 
-        calendarDao.save(storedCalendar);
+        calendarRepository.save(storedCalendar);
 
         return storedCalendar;
 

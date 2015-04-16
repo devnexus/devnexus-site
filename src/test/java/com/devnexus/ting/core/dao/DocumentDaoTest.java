@@ -25,7 +25,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.core.model.FileData;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.repository.FileDataRepository;
 
 /**
  * @author Gunnar Hillert
@@ -33,7 +34,7 @@ import com.devnexus.ting.core.model.FileData;
 @Transactional
 public class DocumentDaoTest extends BaseDaoIntegrationTest {
 
-	@Autowired private DocumentDao documentDao;
+	@Autowired private FileDataRepository documentDao;
 
 	/**
 	 * Test to verify that the seed data is correctly populated. Typically there
@@ -57,7 +58,7 @@ public class DocumentDaoTest extends BaseDaoIntegrationTest {
 		FileData savedDocument = documentDao.save(document);
 		super.entityManager.flush();
 
-		FileData docFromDb = documentDao.get(savedDocument.getId());
+		FileData docFromDb = documentDao.getOne(savedDocument.getId());
 
 		Assert.assertEquals("cartman.jpg", docFromDb.getName());
 

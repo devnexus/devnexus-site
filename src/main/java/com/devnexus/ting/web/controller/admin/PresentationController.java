@@ -37,16 +37,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.FileData;
-import com.devnexus.ting.core.model.Presentation;
-import com.devnexus.ting.core.model.PresentationList;
-import com.devnexus.ting.core.model.PresentationTag;
-import com.devnexus.ting.core.model.PresentationType;
-import com.devnexus.ting.core.model.SkillLevel;
-import com.devnexus.ting.core.model.Speaker;
-import com.devnexus.ting.core.model.Track;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.FileData;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.PresentationList;
+import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.PresentationType;
+import com.devnexus.ting.model.SkillLevel;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.model.Track;
 
 
 /**
