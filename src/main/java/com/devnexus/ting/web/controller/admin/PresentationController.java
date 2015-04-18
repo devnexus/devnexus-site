@@ -167,7 +167,7 @@ public class PresentationController {
 		model.addAttribute("presentation", presentation);
 
 		final List<Speaker> speakers = businessService.getSpeakersForEvent(presentation.getEvent().getId());
-		model.addAttribute("speakers", speakers);
+		model.addAttribute("sp2", speakers);
 
 		this.prepareReferenceData(model, presentation.getEvent());
 

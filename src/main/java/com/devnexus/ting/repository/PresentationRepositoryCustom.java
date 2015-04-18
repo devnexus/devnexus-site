@@ -33,4 +33,5 @@ public interface PresentationRepositoryCustom {
 
 	List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId);
 
+	Presentation getOneWithSlide(Long presentationId);
 }

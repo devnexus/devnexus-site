@@ -33,11 +33,6 @@ public class CfpSubmissionRepositoryImpl implements CfpSubmissionRepositoryCusto
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public CfpSubmissionRepositoryImpl() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public List<CfpSubmission> getCfpSubmissions(Long eventId) {
 

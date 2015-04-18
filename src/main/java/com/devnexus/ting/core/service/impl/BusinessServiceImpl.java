@@ -424,10 +424,13 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-	@Transactional
-	public FileData getPresentationFileData(Long presentationId) {
+	public FileData getPresentationFileData(final Long presentationId) {
 
-		final Presentation presentation = this.getPresentation(presentationId);
+		final Presentation presentation = transactionTemplate.execute(new TransactionCallback<Presentation>() {
+			public Presentation doInTransaction(TransactionStatus status) {
+				return presentationDao.getOneWithSlide(presentationId);
+			}
+		});
 
 		if (presentation == null) {
 			return null;

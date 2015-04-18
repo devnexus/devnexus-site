@@ -44,7 +44,7 @@
     <defaultCache
         maxElementsInMemory="10000"
         eternal="false"
-        overflowToDisk="true"
+        overflowToDisk="false"
         timeToIdleSeconds="500"
         timeToLiveSeconds="500"
         diskPersistent="false"
@@ -55,7 +55,7 @@
 	    maxElementsInMemory="500"
 	    eternal="false"
 	    timeToLiveSeconds="220"
-	    overflowToDisk="true"
+	    overflowToDisk="false"
 	    diskPersistent="false"/>
 
     <!-- See http://ehcache.sourceforge.net/documentation/#mozTocId258426 for how to configure caching for your objects -->

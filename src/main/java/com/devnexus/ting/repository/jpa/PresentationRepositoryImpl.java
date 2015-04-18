@@ -116,4 +116,14 @@ public class PresentationRepositoryImpl implements PresentationRepositoryCustom 
 		return rootCriteria.list();
 	}
 
+	@Override
+	public Presentation getOneWithSlide(Long presentationId) {
+		return this.entityManager
+		.createQuery("select p from Presentation p "
+				   + "join fetch p.presentationFile e "
+				   + "where p.id = :presentationId ", Presentation.class)
+		.setParameter("presentationId", presentationId)
+		.getSingleResult();
+	}
+
 }

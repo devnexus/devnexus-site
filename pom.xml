@@ -21,7 +21,7 @@
 	<properties>
 		<java-version>1.7</java-version>
 		<org.cloudfoundry-version>0.8.6</org.cloudfoundry-version>
-		<org.springframework-version>4.1.4.RELEASE</org.springframework-version>
+		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.7.10</org.slf4j-version>
 		<jawr.debug.on>true</jawr.debug.on>
