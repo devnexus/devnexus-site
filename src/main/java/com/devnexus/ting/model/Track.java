@@ -47,8 +47,6 @@ import com.devnexus.ting.common.TingUtil;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Track extends BaseModelObject implements Comparable<Track> {

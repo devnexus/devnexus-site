@@ -186,10 +186,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
 		System.setProperty("ting-spring-profile", springContextMode.getCode());
 
-		if (System.getProperty("ehcache.disk.store.dir") == null) {
-			System.setProperty("ehcache.disk.store.dir", System.getProperty(Apphome.APP_HOME_DIRECTORY) + File.separator + "ehcache");
-		}
-
 		final StringBuilder bootMessage = new StringBuilder();
 
 		bootMessage.append("\n");

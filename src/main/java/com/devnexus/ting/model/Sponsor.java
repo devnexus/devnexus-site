@@ -40,8 +40,6 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Sponsor extends BaseModelObject {

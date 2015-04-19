@@ -137,7 +137,24 @@
 			<plugin>
 				<groupId>org.cloudfoundry</groupId>
 				<artifactId>cf-maven-plugin</artifactId>
-				<version>1.0.0.M3</version>
+				<version>1.1.1</version>
+				<configuration>
+					<server>mycloudfoundry-instance</server>
+					<target>http://api.run.pivotal.io</target>
+					<org>FrameworksAndRuntimes</org>
+					<space>ghillert</space>
+					<appname>devnexus</appname>
+					<url>devnexus.cfapps.io</url>
+					<memory>512</memory>
+					<diskQuota>1024</diskQuota>
+					<healthCheckTimeout>180</healthCheckTimeout>
+					<mergeEnv>true</mergeEnv>
+					<services>
+						<service>
+							<name>devnexus-mail</name>
+						</service>
+					</services>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.zeroturnaround</groupId>
@@ -234,11 +251,6 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>${org.hibernate.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-ehcache</artifactId>
 			<version>${org.hibernate.version}</version>
 		</dependency>
 		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-search</artifactId>
@@ -719,6 +731,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-spring-service-connector</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-cloudfoundry-connector</artifactId>
 			<version>1.1.1.RELEASE</version>
 		</dependency>
 	</dependencies>

@@ -31,8 +31,9 @@ import com.google.common.cache.CacheBuilder;
  */
 @Configuration
 @Import({
+	CloudConfig.class,
 	ServicesConfig.class,
-	WebSocketConfig.class,
+	//WebSocketConfig.class,
 	WebSecurityConfig.class,
 	WebConfig.class
 })

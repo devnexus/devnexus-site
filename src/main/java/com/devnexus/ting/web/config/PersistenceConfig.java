@@ -46,8 +46,7 @@ import com.jolbox.bonecp.BoneCPDataSource;
  */
 @Configuration
 @ComponentScan("com.devnexus.ting.core.dao")
-@EnableJpaRepositories(
-		repositoryFactoryBeanClass=BaseRepositoryFactoryBean.class,
+@EnableJpaRepositories(repositoryFactoryBeanClass=BaseRepositoryFactoryBean.class,
 		entityManagerFactoryRef="entityManagerFactory", basePackages="com.devnexus.ting.repository")
 public class PersistenceConfig {
 
@@ -86,7 +85,7 @@ public class PersistenceConfig {
 	}
 
 	@Bean
-	@Profile({SpringProfile.STANDALONE, SpringProfile.DEFAULT, SpringProfile.DEMO})
+	@Profile({SpringProfile.STANDALONE, SpringProfile.DEFAULT, SpringProfile.DEMO, "cloud"})
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
@@ -97,9 +96,9 @@ public class PersistenceConfig {
 
 		jpaProperties.put("hibernate.dialect", getHibernateDialect());
 		jpaProperties.put("hibernate.generate_statistics", true);
-		jpaProperties.put("hibernate.cache.use_second_level_cache", true);
-		jpaProperties.put("hibernate.cache.use_query_cache", true);
-		jpaProperties.put("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");
+		//jpaProperties.put("hibernate.cache.use_second_level_cache", false);
+		//jpaProperties.put("hibernate.cache.use_query_cache", true);
+		//jpaProperties.put("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");
 		jpaProperties.put("hibernate.show_sql", isShowHibernateSql());
 		jpaProperties.put("hibernate.format_sql", true);
 		jpaProperties.put("hibernate.ejb.naming_strategy", "com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy");
@@ -124,7 +123,7 @@ public class PersistenceConfig {
 		return txManager;
 	}
 
-	@Profile("!cloud")
+	//@Profile({"cloud", "default"})
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 		BoneCPDataSource dataSource = new BoneCPDataSource();

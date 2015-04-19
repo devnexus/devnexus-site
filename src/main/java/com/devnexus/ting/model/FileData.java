@@ -39,8 +39,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Table(name="FILE_DATA")

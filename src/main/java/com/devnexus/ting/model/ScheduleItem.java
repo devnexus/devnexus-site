@@ -44,8 +44,6 @@ import org.hibernate.annotations.Type;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @FilterDefs({
 		@FilterDef(name = "scheduleItemFilter"),
 		@FilterDef(name = "scheduleItemFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )

@@ -39,8 +39,6 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PresentationTag extends BaseModelObject implements Comparable<PresentationTag> {

@@ -37,8 +37,6 @@ import com.devnexus.ting.common.TingUtil;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Evaluation extends BaseModelObject {

@@ -45,8 +45,6 @@ import com.devnexus.ting.common.TingUtil;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @FilterDefs({
 		@FilterDef(name = "roomFilter"),
 		@FilterDef(name = "roomFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )

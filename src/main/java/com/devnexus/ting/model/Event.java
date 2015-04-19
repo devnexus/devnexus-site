@@ -40,8 +40,6 @@ import org.springframework.util.Assert;
  *
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlAccessorType(value=XmlAccessType.FIELD)
 public class Event extends BaseModelObject {
 

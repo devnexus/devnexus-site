@@ -44,8 +44,6 @@ import org.hibernate.annotations.ParamDef;
  * @author Gunnar Hillert
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @FilterDefs({
 		@FilterDef(name = "presentationFilter"),
 		@FilterDef(name = "presentationFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )

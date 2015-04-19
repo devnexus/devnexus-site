@@ -54,8 +54,6 @@ import com.devnexus.ting.common.TingUtil;
  * @author Gunnar Hillert
  */
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @org.hibernate.annotations.Table(appliesTo = "PRESENTATIONS", indexes = {@Index(name = "PRESENTATION_IDX", columnNames = {"TITLE"})})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
