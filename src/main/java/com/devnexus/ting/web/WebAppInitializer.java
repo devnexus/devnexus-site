@@ -132,10 +132,6 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		responseAddHttpHeadersFilterRegistration.setInitParameter("secondsToCache", "2592000");
 		responseAddHttpHeadersFilterRegistration.addMappingForUrlPatterns(null, true, "*.css", "*.gif", "*.ico", "*.jpg", "*.png", "*.js");
 
-		FilterRegistration.Dynamic wro4jFilterRegistration = servletContext.addFilter("wro4jFilter", DelegatingFilterProxy.class);
-		wro4jFilterRegistration.addMappingForUrlPatterns(null, true, "/wro/*");
-		wro4jFilterRegistration.setInitParameter("targetFilterLifecycle", "true");
-
 		setupContext(servletContext);
 		super.onStartup(servletContext);
 	}
