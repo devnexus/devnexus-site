@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,13 +15,9 @@
  */
 package com.devnexus.ting.web;
 
-import java.io.File;
-
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-
-import net.sf.ehcache.constructs.web.filter.GzipFilter;
 
 import org.apache.commons.lang.StringUtils;
 import org.sitemesh.config.ConfigurableSiteMeshFilter;
@@ -45,6 +41,7 @@ import com.devnexus.ting.web.config.MainConfig;
 import com.devnexus.ting.web.filter.JSONPRequestFilter;
 import com.devnexus.ting.web.filter.LoggingFilter4Logback;
 import com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter;
+import com.github.ziplet.filter.compression.CompressingFilter;
 
 
 /**
@@ -99,8 +96,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 		encodingFilterRegistration.setInitParameter("forceEncoding", "true");
 		encodingFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*");
 
-		// gzipFilter
-		FilterRegistration.Dynamic gzipFilterRegistration = servletContext.addFilter("gzipFilter", GzipFilter.class);
+		FilterRegistration.Dynamic gzipFilterRegistration = servletContext.addFilter("gzipFilter", CompressingFilter.class);
 		gzipFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*", "*.html", "/api/*");
 
 		// jsonPRequestFilter
