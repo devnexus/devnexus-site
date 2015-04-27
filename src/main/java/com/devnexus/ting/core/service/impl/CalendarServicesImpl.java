@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devnexus.ting.repository.ScheduleItemRepository;
-import com.devnexus.ting.repository.UserCalendarRepository;
 import com.devnexus.ting.core.service.CalendarServices;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserCalendar;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.UserCalendarRepository;
 
 @Service
 public class CalendarServicesImpl implements CalendarServices{

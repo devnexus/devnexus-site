@@ -41,12 +41,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import org.springframework.web.context.request.NativeWebRequest;
 
-import com.devnexus.ting.repository.UserRepository;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.AuthorityType;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserAuthority;
+import com.devnexus.ting.repository.UserRepository;
 
 /**
  * Provides user specific services.

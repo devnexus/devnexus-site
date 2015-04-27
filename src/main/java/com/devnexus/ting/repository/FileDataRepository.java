@@ -15,10 +15,7 @@
  */
 package com.devnexus.ting.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.devnexus.ting.model.FileData;
-import com.devnexus.ting.model.Organizer;
 
 public interface FileDataRepository extends BaseRepository<FileData, Long>, FileDataRepositoryCustom {
 

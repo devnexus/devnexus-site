@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.repository;
 
-import com.devnexus.ting.model.Sponsor;
 
 /**
  * @author Gunnar Hillert

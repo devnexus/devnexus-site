@@ -38,14 +38,8 @@ public interface SystemSetupService {
 	 */
 	void restore(InputStream inputStream);
 
-	/** Create the database using Hibernate's SchemaExport functionality */
-	void createDatabase();
-
 	/** Update the database using Hibernate's SchemaUpdate functionality */
 	void updateDatabase();
-
-	/** */
-	void loadAndRestoreSeedData();
 
 	/** */
 	boolean isDatabaseSetup();

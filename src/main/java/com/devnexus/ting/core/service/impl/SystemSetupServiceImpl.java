@@ -16,7 +16,9 @@
 package com.devnexus.ting.core.service.impl;
 
 import java.io.InputStream;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -31,14 +33,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.core.dao.BackupDao;
-import com.devnexus.ting.repository.EventRepository;
-import com.devnexus.ting.repository.PresentationTagRepository;
-import com.devnexus.ting.repository.RoomRepository;
-import com.devnexus.ting.repository.ScheduleItemRepository;
-import com.devnexus.ting.repository.SchemaMigrationRepository;
 import com.devnexus.ting.core.dao.SystemDao;
-import com.devnexus.ting.repository.TrackRepository;
-import com.devnexus.ting.repository.UserAuthorityRepository;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
@@ -53,6 +48,13 @@ import com.devnexus.ting.model.SchemaMigration;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserAuthority;
+import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RoomRepository;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.SchemaMigrationRepository;
+import com.devnexus.ting.repository.TrackRepository;
+import com.devnexus.ting.repository.UserAuthorityRepository;
 
 /**
  * @author Gunnar Hillert
@@ -113,8 +115,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	}
 
 	/** {@inheritDoc} */
-	@Override
-	public void loadAndRestoreSeedData() {
+	private void loadAndRestoreSeedData() {
 
 		User user = new User();
 		user.setPassword("devnexus");
@@ -133,20 +134,17 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		userAuthorityDao.save(new UserAuthority(persistedUser, AuthorityType.ADMIN));
 
-//		final InputStream is = SystemSetupServiceImpl.class.getResourceAsStream("/data/seeddata.xml");
-//		restore(is);
 	}
 
 	/** {@inheritDoc} */
 	@Override
 	public void restore(final Backup backup) {
 
-	   //TODO
+		//TODO
 
 	}
 
-	@Override
-	public void createDatabase() {
+	private void createDatabase() {
 		LOGGER.warn("Create Database with Settings jdbcDriverClassName: '{}'; jdbcDatabaseUrl: '{}'", jdbcDriverClassName, jdbcDatabaseUrl);
 		systemDao.createDatabase(false, null);
 	}
@@ -178,8 +176,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	}
 
 	@Override
+	@Transactional
 	public void setupDatabase() {
-		if (!this.isDatabaseSetup()) {
 
 			LOGGER.info("Ting Database is not setup, yet. Initializing DB...");
 
@@ -192,28 +190,29 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 			if (environment.acceptsProfiles(SpringContextMode.DemoContextConfiguration.getCode())) {
 				setupDemoData();
 			}
-		}
 	}
 
 	@Override
 	public void setupDemoData() {
 		LOGGER.info("Ting Database is not setup, yet. Populating Demo Data...");
 
-		Event devnexus2013 = new Event(1388L, "devnexus2013", "DevNexus 2013", true);
+		final int currentYear = new GregorianCalendar().get(Calendar.YEAR);
 
-		eventDao.replicate(devnexus2013);
+		Event devnexusEvent= new Event(1388L, "devnexus" + currentYear, "DevNexus " + currentYear, true);
 
-		final Room room102     = new Room(8L, "Room 102", 144, 12, devnexus2013);
-		final Room ballroomA   = new Room(1L, "Ballroom A", 111, 10, devnexus2013);
-		final Room ballroomB   = new Room(7L, "Ballroom B", 111, 20, devnexus2013);
-		final Room ballroomCDF = new Room(3L, "Ballroom CDF", 800, 30, devnexus2013);
-		final Room ballroomE   = new Room(2L, "Ballroom E", 133, 40, devnexus2013);
-		final Room room103     = new Room(4L, "Room 103", 100, 60, devnexus2013);
-		final Room room104     = new Room(5L, "Room 104", 100, 70, devnexus2013);
-		final Room room105     = new Room(6L, "Room 105", 80, 80, devnexus2013);
+		eventDao.replicate(devnexusEvent);
 
-		final Room atrium     = new Room(10L, "Exhibit Area", 800, 100, devnexus2013);
-		final Room hallA      = new Room(9L, "Hall A", 800, 90, devnexus2013);
+		final Room room102     = new Room(8L, "Room 102", 144, 12, devnexusEvent, "#e77ea5");
+		final Room ballroomA   = new Room(1L, "Ballroom A", 111, 10, devnexusEvent, "#8ec741");
+		final Room ballroomB   = new Room(7L, "Ballroom B", 111, 20, devnexusEvent, "#faa21b");
+		final Room ballroomCDF = new Room(3L, "Ballroom CDF", 800, 30, devnexusEvent, "#2a2d7c");
+		final Room ballroomE   = new Room(2L, "Ballroom E", 133, 40, devnexusEvent, "#5b903f");
+		final Room room103     = new Room(4L, "Room 103", 100, 60, devnexusEvent, "#6ec7e8");
+		final Room room104     = new Room(5L, "Room 104", 100, 70, devnexusEvent, "#a6c4e7");
+		final Room room105     = new Room(6L, "Room 105", 80, 80, devnexusEvent, "#015351");
+
+		final Room atrium     = new Room(10L, "Exhibit Area", 800, 100, devnexusEvent, "#ed1e24");
+		final Room hallA      = new Room(9L, "Hall A", 800, 90, devnexusEvent, "#edce1e");
 
 		roomDao.replicate(room102);
 		roomDao.replicate(ballroomA);
@@ -236,20 +235,20 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		presentationTagDao.replicate(tag3);
 		presentationTagDao.replicate(tag4);
 
-		Track track1 = new Track(1L, "Data", 3, devnexus2013);
-		Track track2 = new Track(2L, "Web", 1, devnexus2013);
-		Track track3 = new Track(3L, "Agile", 2, devnexus2013);
+		Track track1 = new Track(1L, "Data", 3, devnexusEvent);
+		Track track2 = new Track(2L, "Web", 1, devnexusEvent);
+		Track track3 = new Track(3L, "Agile", 2, devnexusEvent);
 
 		trackDao.replicate(track1);
 		trackDao.replicate(track2);
 		trackDao.replicate(track3);
 
-		setupDemoSchedule();
+		setupDemoSchedule(currentYear);
 	}
 
-	private void setupDemoSchedule() {
+	private void setupDemoSchedule(int currentYear) {
 
-		final Event event = eventDao.getByEventKey("devnexus2013");
+		final Event event = eventDao.getByEventKey("devnexus" + currentYear);
 
 		final Room room102     = roomDao.getOne(8L);
 		final Room ballroomA   = roomDao.getOne(1L);
@@ -265,8 +264,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem scheduleItem1 = new ScheduleItem();
 		scheduleItem1.setScheduleItemType(ScheduleItemType.REGISTRATION);
-		scheduleItem1.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 8, 0, 0).getTime());
-		scheduleItem1.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 9, 0, 0).getTime());
+		scheduleItem1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 8, 0, 0).getTime());
+		scheduleItem1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 9, 0, 0).getTime());
 		scheduleItem1.setCreatedDate(new Date());
 		scheduleItem1.setRoom(atrium);
 		scheduleItem1.setEvent(event);
@@ -275,8 +274,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem scheduleItem2 = new ScheduleItem();
 		scheduleItem2.setScheduleItemType(ScheduleItemType.ADMINISTRATIVE);
-		scheduleItem2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 9,  0, 0).getTime());
-		scheduleItem2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 9, 15, 0).getTime());
+		scheduleItem2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 9,  0, 0).getTime());
+		scheduleItem2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 9, 15, 0).getTime());
 		scheduleItem2.setCreatedDate(new Date());
 		scheduleItem2.setTitle("Welcome");
 		scheduleItem2.setRoom(ballroomCDF);
@@ -286,8 +285,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem scheduleItem3 = new ScheduleItem();
 		scheduleItem3.setScheduleItemType(ScheduleItemType.KEYNOTE);
-		scheduleItem3.setFromTime(CalendarUtils.getCalendar(2013, 1, 18,  9, 15, 0).getTime());
-		scheduleItem3.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 10, 15, 0).getTime());
+		scheduleItem3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18,  9, 15, 0).getTime());
+		scheduleItem3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 10, 15, 0).getTime());
 		scheduleItem3.setCreatedDate(new Date());
 		scheduleItem3.setTitle("TBD");
 		scheduleItem3.setRoom(ballroomCDF);
@@ -297,8 +296,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem scheduleItem4 = new ScheduleItem();
 		scheduleItem4.setScheduleItemType(ScheduleItemType.BREAK);
-		scheduleItem4.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 15, 0).getTime());
-		scheduleItem4.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 10, 30, 0).getTime());
+		scheduleItem4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 15, 0).getTime());
+		scheduleItem4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 10, 30, 0).getTime());
 		scheduleItem4.setCreatedDate(new Date());
 		scheduleItem4.setTitle("Break");
 		scheduleItem4.setRoom(atrium);
@@ -312,8 +311,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session1 = new ScheduleItem();
 		block1Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session1.setCreatedDate(new Date());
 		block1Session1.setRoom(room102);
 		block1Session1.setTitle("TBD");
@@ -321,8 +320,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session2 = new ScheduleItem();
 		block1Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session2.setCreatedDate(new Date());
 		block1Session2.setRoom(ballroomB);
 		block1Session2.setTitle("TBD");
@@ -330,8 +329,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session3 = new ScheduleItem();
 		block1Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session3.setCreatedDate(new Date());
 		block1Session3.setRoom(ballroomCDF);
 		block1Session3.setTitle("TBD");
@@ -339,8 +338,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session4 = new ScheduleItem();
 		block1Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session4.setCreatedDate(new Date());
 		block1Session4.setRoom(ballroomE);
 		block1Session4.setTitle("TBD");
@@ -348,8 +347,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session5 = new ScheduleItem();
 		block1Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session5.setCreatedDate(new Date());
 		block1Session5.setRoom(room103);
 		block1Session5.setTitle("TBD");
@@ -357,8 +356,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session6 = new ScheduleItem();
 		block1Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session6.setCreatedDate(new Date());
 		block1Session6.setRoom(room104);
 		block1Session6.setTitle("TBD");
@@ -366,8 +365,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Session7 = new ScheduleItem();
 		block1Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		block1Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 10, 30, 0).getTime());
-		block1Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 11, 45, 0).getTime());
+		block1Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 10, 30, 0).getTime());
+		block1Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 11, 45, 0).getTime());
 		block1Session7.setCreatedDate(new Date());
 		block1Session7.setRoom(room105);
 		block1Session7.setTitle("TBD");
@@ -383,8 +382,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Lunch = new ScheduleItem();
 		block1Lunch.setScheduleItemType(ScheduleItemType.BREAK);
-		block1Lunch.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 11, 45, 0).getTime());
-		block1Lunch.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 12, 30, 0).getTime());
+		block1Lunch.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 11, 45, 0).getTime());
+		block1Lunch.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 12, 30, 0).getTime());
 		block1Lunch.setCreatedDate(new Date());
 		block1Lunch.setTitle("Lunch");
 		block1Lunch.setRoom(hallA);
@@ -394,8 +393,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block1Dessert = new ScheduleItem();
 		block1Dessert.setScheduleItemType(ScheduleItemType.BREAK);
-		block1Dessert.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 12, 30, 0).getTime());
-		block1Dessert.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 13, 00, 0).getTime());
+		block1Dessert.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 12, 30, 0).getTime());
+		block1Dessert.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 13, 00, 0).getTime());
 		block1Dessert.setCreatedDate(new Date());
 		block1Dessert.setTitle("Dessert");
 		block1Dessert.setRoom(atrium);
@@ -407,8 +406,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session1 = new ScheduleItem();
 		block2Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session1.setCreatedDate(new Date());
 		block2Session1.setRoom(room102);
 		block2Session1.setTitle("TBD");
@@ -416,8 +415,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session2 = new ScheduleItem();
 		block2Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session2.setCreatedDate(new Date());
 		block2Session2.setRoom(ballroomB);
 		block2Session2.setTitle("TBD");
@@ -425,8 +424,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session3 = new ScheduleItem();
 		block2Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session3.setCreatedDate(new Date());
 		block2Session3.setRoom(ballroomCDF);
 		block2Session3.setTitle("TBD");
@@ -434,8 +433,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session4 = new ScheduleItem();
 		block2Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session4.setCreatedDate(new Date());
 		block2Session4.setRoom(ballroomE);
 		block2Session4.setTitle("TBD");
@@ -443,8 +442,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session5 = new ScheduleItem();
 		block2Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session5.setCreatedDate(new Date());
 		block2Session5.setRoom(room103);
 		block2Session5.setTitle("TBD");
@@ -452,8 +451,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session6 = new ScheduleItem();
 		block2Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session6.setCreatedDate(new Date());
 		block2Session6.setRoom(room104);
 		block2Session6.setTitle("TBD");
@@ -461,8 +460,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Session7 = new ScheduleItem();
 		block2Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		block2Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 13, 00, 0).getTime());
-		block2Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 15, 0).getTime());
+		block2Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 13, 00, 0).getTime());
+		block2Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 15, 0).getTime());
 		block2Session7.setCreatedDate(new Date());
 		block2Session7.setRoom(room105);
 		block2Session7.setTitle("TBD");
@@ -478,8 +477,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block2Break = new ScheduleItem();
 		block2Break.setScheduleItemType(ScheduleItemType.BREAK);
-		block2Break.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 15, 0).getTime());
-		block2Break.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 14, 30, 0).getTime());
+		block2Break.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 15, 0).getTime());
+		block2Break.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 14, 30, 0).getTime());
 		block2Break.setCreatedDate(new Date());
 		block2Break.setTitle("Break");
 		block2Break.setRoom(atrium);
@@ -491,8 +490,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session1 = new ScheduleItem();
 		block3Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session1.setCreatedDate(new Date());
 		block3Session1.setRoom(ballroomA);
 		block3Session1.setTitle("TBD");
@@ -500,8 +499,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session2 = new ScheduleItem();
 		block3Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session2.setCreatedDate(new Date());
 		block3Session2.setRoom(ballroomB);
 		block3Session2.setTitle("TBD");
@@ -509,8 +508,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session3 = new ScheduleItem();
 		block3Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session3.setCreatedDate(new Date());
 		block3Session3.setRoom(ballroomCDF);
 		block3Session3.setTitle("TBD");
@@ -518,8 +517,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session4 = new ScheduleItem();
 		block3Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session4.setCreatedDate(new Date());
 		block3Session4.setRoom(ballroomE);
 		block3Session4.setTitle("TBD");
@@ -527,8 +526,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session5 = new ScheduleItem();
 		block3Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session5.setCreatedDate(new Date());
 		block3Session5.setRoom(room103);
 		block3Session5.setTitle("TBD");
@@ -536,8 +535,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session6 = new ScheduleItem();
 		block3Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session6.setCreatedDate(new Date());
 		block3Session6.setRoom(room104);
 		block3Session6.setTitle("TBD");
@@ -545,8 +544,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block3Session7 = new ScheduleItem();
 		block3Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		block3Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 14, 30, 0).getTime());
-		block3Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 15, 45, 0).getTime());
+		block3Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 14, 30, 0).getTime());
+		block3Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 15, 45, 0).getTime());
 		block3Session7.setCreatedDate(new Date());
 		block3Session7.setRoom(room105);
 		block3Session7.setTitle("TBD");
@@ -562,8 +561,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		final ScheduleItem block3Break = new ScheduleItem();
 		block3Break.setScheduleItemType(ScheduleItemType.BREAK);
-		block3Break.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 15, 45, 0).getTime());
-		block3Break.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 16, 00, 0).getTime());
+		block3Break.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 15, 45, 0).getTime());
+		block3Break.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 16, 00, 0).getTime());
 		block3Break.setCreatedDate(new Date());
 		block3Break.setTitle("Break");
 		block3Break.setRoom(atrium);
@@ -575,8 +574,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session1 = new ScheduleItem();
 		block4Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session1.setCreatedDate(new Date());
 		block4Session1.setRoom(ballroomA);
 		block4Session1.setTitle("TBD");
@@ -584,8 +583,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session2 = new ScheduleItem();
 		block4Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session2.setCreatedDate(new Date());
 		block4Session2.setRoom(ballroomB);
 		block4Session2.setTitle("TBD");
@@ -593,8 +592,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session3 = new ScheduleItem();
 		block4Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session3.setCreatedDate(new Date());
 		block4Session3.setRoom(ballroomCDF);
 		block4Session3.setTitle("TBD");
@@ -602,8 +601,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session4 = new ScheduleItem();
 		block4Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session4.setCreatedDate(new Date());
 		block4Session4.setRoom(ballroomE);
 		block4Session4.setTitle("TBD");
@@ -611,8 +610,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session5 = new ScheduleItem();
 		block4Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session5.setCreatedDate(new Date());
 		block4Session5.setRoom(room103);
 		block4Session5.setTitle("TBD");
@@ -620,8 +619,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session6 = new ScheduleItem();
 		block4Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session6.setCreatedDate(new Date());
 		block4Session6.setRoom(room104);
 		block4Session6.setTitle("TBD");
@@ -629,8 +628,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem block4Session7 = new ScheduleItem();
 		block4Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		block4Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 16, 00, 0).getTime());
-		block4Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 15, 0).getTime());
+		block4Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 16, 00, 0).getTime());
+		block4Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 15, 0).getTime());
 		block4Session7.setCreatedDate(new Date());
 		block4Session7.setRoom(room105);
 		block4Session7.setTitle("TBD");
@@ -646,8 +645,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		final ScheduleItem block4Break = new ScheduleItem();
 		block4Break.setScheduleItemType(ScheduleItemType.BREAK);
-		block4Break.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 17, 15, 0).getTime());
-		block4Break.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 17, 30, 0).getTime());
+		block4Break.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 17, 15, 0).getTime());
+		block4Break.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 17, 30, 0).getTime());
 		block4Break.setCreatedDate(new Date());
 		block4Break.setTitle("Break");
 		block4Break.setRoom(atrium);
@@ -657,8 +656,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem keynote2 = new ScheduleItem();
 		keynote2.setScheduleItemType(ScheduleItemType.KEYNOTE);
-		keynote2.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 17, 30, 0).getTime());
-		keynote2.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 18, 45, 0).getTime());
+		keynote2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 17, 30, 0).getTime());
+		keynote2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 18, 45, 0).getTime());
 		keynote2.setCreatedDate(new Date());
 		keynote2.setTitle("TBD");
 		keynote2.setRoom(ballroomCDF);
@@ -668,8 +667,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem reception = new ScheduleItem();
 		reception.setScheduleItemType(ScheduleItemType.ADMINISTRATIVE);
-		reception.setFromTime(CalendarUtils.getCalendar(2013, 1, 18, 18, 45, 0).getTime());
-		reception.setToTime(CalendarUtils.getCalendar(  2013, 1, 18, 20, 00, 0).getTime());
+		reception.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 18, 18, 45, 0).getTime());
+		reception.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 18, 20, 00, 0).getTime());
 		reception.setCreatedDate(new Date());
 		reception.setTitle("Cocktail Reception [Jocks and Jills Sports Bar]");
 		//reception.setRoom(ballroomCDF);
@@ -681,8 +680,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1ScheduleItem3 = new ScheduleItem();
 		day1ScheduleItem3.setScheduleItemType(ScheduleItemType.KEYNOTE);
-		day1ScheduleItem3.setFromTime(CalendarUtils.getCalendar(2013, 1, 19,  9, 15, 0).getTime());
-		day1ScheduleItem3.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 10, 15, 0).getTime());
+		day1ScheduleItem3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19,  9, 15, 0).getTime());
+		day1ScheduleItem3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 10, 15, 0).getTime());
 		day1ScheduleItem3.setCreatedDate(new Date());
 		day1ScheduleItem3.setTitle("TBD");
 		day1ScheduleItem3.setRoom(ballroomCDF);
@@ -692,8 +691,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1ScheduleItem4 = new ScheduleItem();
 		day1ScheduleItem4.setScheduleItemType(ScheduleItemType.BREAK);
-		day1ScheduleItem4.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 15, 0).getTime());
-		day1ScheduleItem4.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 10, 30, 0).getTime());
+		day1ScheduleItem4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 15, 0).getTime());
+		day1ScheduleItem4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 10, 30, 0).getTime());
 		day1ScheduleItem4.setCreatedDate(new Date());
 		day1ScheduleItem4.setTitle("Break");
 		day1ScheduleItem4.setRoom(atrium);
@@ -707,8 +706,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session1 = new ScheduleItem();
 		day1Block1Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session1.setCreatedDate(new Date());
 		day1Block1Session1.setRoom(ballroomA);
 		day1Block1Session1.setTitle("TBD");
@@ -716,8 +715,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session2 = new ScheduleItem();
 		day1Block1Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session2.setCreatedDate(new Date());
 		day1Block1Session2.setRoom(ballroomB);
 		day1Block1Session2.setTitle("TBD");
@@ -725,8 +724,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session3 = new ScheduleItem();
 		day1Block1Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session3.setCreatedDate(new Date());
 		day1Block1Session3.setRoom(ballroomCDF);
 		day1Block1Session3.setTitle("TBD");
@@ -734,8 +733,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session4 = new ScheduleItem();
 		day1Block1Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session4.setCreatedDate(new Date());
 		day1Block1Session4.setRoom(ballroomE);
 		day1Block1Session4.setTitle("TBD");
@@ -743,8 +742,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session5 = new ScheduleItem();
 		day1Block1Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 189, 11, 45, 0).getTime());
+		day1Block1Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 189, 11, 45, 0).getTime());
 		day1Block1Session5.setCreatedDate(new Date());
 		day1Block1Session5.setRoom(room103);
 		day1Block1Session5.setTitle("TBD");
@@ -752,8 +751,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session6 = new ScheduleItem();
 		day1Block1Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session6.setCreatedDate(new Date());
 		day1Block1Session6.setRoom(room104);
 		day1Block1Session6.setTitle("TBD");
@@ -761,8 +760,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Session7 = new ScheduleItem();
 		day1Block1Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block1Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 10, 30, 0).getTime());
-		day1Block1Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 11, 45, 0).getTime());
+		day1Block1Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 10, 30, 0).getTime());
+		day1Block1Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 11, 45, 0).getTime());
 		day1Block1Session7.setCreatedDate(new Date());
 		day1Block1Session7.setRoom(room105);
 		day1Block1Session7.setTitle("TBD");
@@ -778,8 +777,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Lunch = new ScheduleItem();
 		day1Block1Lunch.setScheduleItemType(ScheduleItemType.BREAK);
-		day1Block1Lunch.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 11, 45, 0).getTime());
-		day1Block1Lunch.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 12, 30, 0).getTime());
+		day1Block1Lunch.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 11, 45, 0).getTime());
+		day1Block1Lunch.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 12, 30, 0).getTime());
 		day1Block1Lunch.setCreatedDate(new Date());
 		day1Block1Lunch.setTitle("Lunch");
 		day1Block1Lunch.setRoom(hallA);
@@ -789,8 +788,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block1Dessert = new ScheduleItem();
 		day1Block1Dessert.setScheduleItemType(ScheduleItemType.BREAK);
-		day1Block1Dessert.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 12, 30, 0).getTime());
-		day1Block1Dessert.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 13, 00, 0).getTime());
+		day1Block1Dessert.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 12, 30, 0).getTime());
+		day1Block1Dessert.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 13, 00, 0).getTime());
 		day1Block1Dessert.setCreatedDate(new Date());
 		day1Block1Dessert.setTitle("Dessert");
 		day1Block1Dessert.setRoom(atrium);
@@ -802,8 +801,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session1 = new ScheduleItem();
 		day1Block2Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session1.setCreatedDate(new Date());
 		day1Block2Session1.setRoom(ballroomA);
 		day1Block2Session1.setTitle("TBD");
@@ -811,8 +810,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session2 = new ScheduleItem();
 		day1Block2Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session2.setCreatedDate(new Date());
 		day1Block2Session2.setRoom(ballroomB);
 		day1Block2Session2.setTitle("TBD");
@@ -820,8 +819,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session3 = new ScheduleItem();
 		day1Block2Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session3.setCreatedDate(new Date());
 		day1Block2Session3.setRoom(ballroomCDF);
 		day1Block2Session3.setTitle("TBD");
@@ -829,8 +828,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session4 = new ScheduleItem();
 		day1Block2Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session4.setCreatedDate(new Date());
 		day1Block2Session4.setRoom(ballroomE);
 		day1Block2Session4.setTitle("TBD");
@@ -838,8 +837,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session5 = new ScheduleItem();
 		day1Block2Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session5.setCreatedDate(new Date());
 		day1Block2Session5.setRoom(room103);
 		day1Block2Session5.setTitle("TBD");
@@ -847,8 +846,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session6 = new ScheduleItem();
 		day1Block2Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session6.setCreatedDate(new Date());
 		day1Block2Session6.setRoom(room104);
 		day1Block2Session6.setTitle("TBD");
@@ -856,8 +855,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Session7 = new ScheduleItem();
 		day1Block2Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block2Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 13, 00, 0).getTime());
-		day1Block2Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 15, 0).getTime());
+		day1Block2Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 13, 00, 0).getTime());
+		day1Block2Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 15, 0).getTime());
 		day1Block2Session7.setCreatedDate(new Date());
 		day1Block2Session7.setRoom(room105);
 		day1Block2Session7.setTitle("TBD");
@@ -873,8 +872,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block2Break = new ScheduleItem();
 		day1Block2Break.setScheduleItemType(ScheduleItemType.BREAK);
-		day1Block2Break.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 15, 0).getTime());
-		day1Block2Break.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 14, 30, 0).getTime());
+		day1Block2Break.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 15, 0).getTime());
+		day1Block2Break.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 14, 30, 0).getTime());
 		day1Block2Break.setCreatedDate(new Date());
 		day1Block2Break.setTitle("Break");
 		day1Block2Break.setRoom(atrium);
@@ -886,8 +885,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session1 = new ScheduleItem();
 		day1Block3Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session1.setCreatedDate(new Date());
 		day1Block3Session1.setRoom(ballroomA);
 		day1Block3Session1.setTitle("TBD");
@@ -895,8 +894,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session2 = new ScheduleItem();
 		day1Block3Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session2.setCreatedDate(new Date());
 		day1Block3Session2.setRoom(ballroomB);
 		day1Block3Session2.setTitle("TBD");
@@ -904,8 +903,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session3 = new ScheduleItem();
 		day1Block3Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session3.setCreatedDate(new Date());
 		day1Block3Session3.setRoom(ballroomCDF);
 		day1Block3Session3.setTitle("TBD");
@@ -913,8 +912,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session4 = new ScheduleItem();
 		day1Block3Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session4.setCreatedDate(new Date());
 		day1Block3Session4.setRoom(ballroomE);
 		day1Block3Session4.setTitle("TBD");
@@ -922,8 +921,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session5 = new ScheduleItem();
 		day1Block3Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session5.setCreatedDate(new Date());
 		day1Block3Session5.setRoom(room103);
 		day1Block3Session5.setTitle("TBD");
@@ -931,8 +930,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session6 = new ScheduleItem();
 		day1Block3Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session6.setCreatedDate(new Date());
 		day1Block3Session6.setRoom(room104);
 		day1Block3Session6.setTitle("TBD");
@@ -940,8 +939,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block3Session7 = new ScheduleItem();
 		day1Block3Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block3Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 14, 30, 0).getTime());
-		day1Block3Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 15, 45, 0).getTime());
+		day1Block3Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 14, 30, 0).getTime());
+		day1Block3Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 15, 45, 0).getTime());
 		day1Block3Session7.setCreatedDate(new Date());
 		day1Block3Session7.setRoom(room105);
 		day1Block3Session7.setTitle("TBD");
@@ -957,8 +956,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		final ScheduleItem day1Block3Break = new ScheduleItem();
 		day1Block3Break.setScheduleItemType(ScheduleItemType.BREAK);
-		day1Block3Break.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 15, 45, 0).getTime());
-		day1Block3Break.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 16, 00, 0).getTime());
+		day1Block3Break.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 15, 45, 0).getTime());
+		day1Block3Break.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 16, 00, 0).getTime());
 		day1Block3Break.setCreatedDate(new Date());
 		day1Block3Break.setTitle("Break");
 		day1Block3Break.setRoom(atrium);
@@ -970,8 +969,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session1 = new ScheduleItem();
 		day1Block4Session1.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session1.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session1.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session1.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session1.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session1.setCreatedDate(new Date());
 		day1Block4Session1.setRoom(ballroomA);
 		day1Block4Session1.setTitle("TBD");
@@ -979,8 +978,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session2 = new ScheduleItem();
 		day1Block4Session2.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session2.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session2.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session2.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session2.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session2.setCreatedDate(new Date());
 		day1Block4Session2.setRoom(ballroomB);
 		day1Block4Session2.setTitle("TBD");
@@ -988,8 +987,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Bblock4Session3 = new ScheduleItem();
 		day1Bblock4Session3.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Bblock4Session3.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Bblock4Session3.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Bblock4Session3.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Bblock4Session3.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Bblock4Session3.setCreatedDate(new Date());
 		day1Bblock4Session3.setRoom(ballroomCDF);
 		day1Bblock4Session3.setTitle("TBD");
@@ -997,8 +996,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session4 = new ScheduleItem();
 		day1Block4Session4.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session4.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session4.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session4.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session4.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session4.setCreatedDate(new Date());
 		day1Block4Session4.setRoom(ballroomE);
 		day1Block4Session4.setTitle("TBD");
@@ -1006,8 +1005,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session5 = new ScheduleItem();
 		day1Block4Session5.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session5.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session5.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session5.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session5.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session5.setCreatedDate(new Date());
 		day1Block4Session5.setRoom(room103);
 		day1Block4Session5.setTitle("TBD");
@@ -1015,8 +1014,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session6 = new ScheduleItem();
 		day1Block4Session6.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session6.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session6.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session6.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session6.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session6.setCreatedDate(new Date());
 		day1Block4Session6.setRoom(room104);
 		day1Block4Session6.setTitle("TBD");
@@ -1024,8 +1023,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem day1Block4Session7 = new ScheduleItem();
 		day1Block4Session7.setScheduleItemType(ScheduleItemType.SESSION);
-		day1Block4Session7.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 16, 00, 0).getTime());
-		day1Block4Session7.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 15, 0).getTime());
+		day1Block4Session7.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 16, 00, 0).getTime());
+		day1Block4Session7.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 15, 0).getTime());
 		day1Block4Session7.setCreatedDate(new Date());
 		day1Block4Session7.setRoom(room105);
 		day1Block4Session7.setTitle("TBD");
@@ -1041,8 +1040,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 		ScheduleItem scheduleItemClosing = new ScheduleItem();
 		scheduleItemClosing.setScheduleItemType(ScheduleItemType.ADMINISTRATIVE);
-		scheduleItemClosing.setFromTime(CalendarUtils.getCalendar(2013, 1, 19, 17, 15, 0).getTime());
-		scheduleItemClosing.setToTime(CalendarUtils.getCalendar(  2013, 1, 19, 17, 45, 0).getTime());
+		scheduleItemClosing.setFromTime(CalendarUtils.getCalendar(currentYear, 1, 19, 17, 15, 0).getTime());
+		scheduleItemClosing.setToTime(CalendarUtils.getCalendar(  currentYear, 1, 19, 17, 45, 0).getTime());
 		scheduleItemClosing.setCreatedDate(new Date());
 		scheduleItemClosing.setTitle("Closing Ceremonies");
 		scheduleItemClosing.setRoom(ballroomCDF);

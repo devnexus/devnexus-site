@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.repository;
 
-import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
 
 /**

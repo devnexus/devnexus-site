@@ -18,7 +18,6 @@ package com.devnexus.ting.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -31,8 +30,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.ParamDef;
@@ -96,13 +93,14 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 		this.id = id;
 	}
 
-	public Room(Long id, String name, Integer capacity, Integer order, Event event) {
+	public Room(Long id, String name, Integer capacity, Integer order, Event event, String color) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.capacity = capacity;
 		this.roomOrder = order;
 		this.event = event;
+		this.color = color;
 	}
 
 	@Override

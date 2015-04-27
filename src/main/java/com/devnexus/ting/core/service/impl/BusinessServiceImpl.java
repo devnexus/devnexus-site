@@ -54,18 +54,6 @@ import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.repository.ApplicationCacheRepository;
-import com.devnexus.ting.repository.CfpSubmissionRepository;
-import com.devnexus.ting.repository.EvaluationRepository;
-import com.devnexus.ting.repository.EventRepository;
-import com.devnexus.ting.repository.OrganizerRepository;
-import com.devnexus.ting.repository.PresentationRepository;
-import com.devnexus.ting.repository.PresentationTagRepository;
-import com.devnexus.ting.repository.RoomRepository;
-import com.devnexus.ting.repository.ScheduleItemRepository;
-import com.devnexus.ting.repository.SpeakerRepository;
-import com.devnexus.ting.repository.SponsorRepository;
-import com.devnexus.ting.repository.TrackRepository;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
@@ -85,6 +73,18 @@ import com.devnexus.ting.model.SponsorLevel;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
+import com.devnexus.ting.repository.ApplicationCacheRepository;
+import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.EvaluationRepository;
+import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.OrganizerRepository;
+import com.devnexus.ting.repository.PresentationRepository;
+import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RoomRepository;
+import com.devnexus.ting.repository.ScheduleItemRepository;
+import com.devnexus.ting.repository.SpeakerRepository;
+import com.devnexus.ting.repository.SponsorRepository;
+import com.devnexus.ting.repository.TrackRepository;
 
 /**
  *
