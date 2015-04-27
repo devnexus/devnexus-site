@@ -25,7 +25,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessagingException;
 import org.springframework.messaging.core.MessagePostProcessor;

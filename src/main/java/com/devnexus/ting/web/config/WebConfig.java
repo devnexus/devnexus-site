@@ -60,7 +60,6 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.xml.MarshallingView;
 
-
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;

@@ -45,7 +45,7 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 		final CloudEnvironment env = new CloudEnvironment();
 		if (env.getInstanceInfo() != null) {
 			LOGGER.info("cloud API: " + env.getCloudApiUri());
-			applicationContext.getEnvironment().setActiveProfiles("cloud");
+			applicationContext.getEnvironment().setActiveProfiles("cloud", SpringContextMode.DemoContextConfiguration.getCode());
 		}
 		else {
 			final String profile = System.getProperty("ting-spring-profile");

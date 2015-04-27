@@ -9,6 +9,13 @@ Build Status:
 
 [![Build Status](https://travis-ci.org/devnexus/devnexus-site.png?branch=master)](https://travis-ci.org/devnexus/devnexus-site)
 
+#### Running on Cloud Foundry
+
+https://github.com/cloudfoundry/java-buildpack/issues/174
+
+cf set-env my_app JBP_CONFIG_OPEN_JDK_JRE ‘[memory_heuristics: {metaspace: 128}, memory_sizes: {metaspace: 96m..}]’
+cf restage my_app
+
 #### Running Postgres on Mac
 
 You may run into issues such as the following:

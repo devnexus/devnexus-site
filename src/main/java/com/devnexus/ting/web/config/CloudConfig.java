@@ -1,7 +1,5 @@
 package com.devnexus.ting.web.config;
 
-import javax.sql.DataSource;
-
 import org.springframework.cloud.Cloud;
 import org.springframework.cloud.CloudFactory;
 import org.springframework.cloud.service.ServiceInfo;

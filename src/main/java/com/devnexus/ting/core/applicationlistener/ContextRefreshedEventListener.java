@@ -44,12 +44,14 @@ public class ContextRefreshedEventListener implements
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 
-		if (environment.acceptsProfiles("demo")) {
+		if (environment.acceptsProfiles("demo", "cloud")) {
 			// From: http://forum.springsource.org/showthread.php?t=84312&page=2
 			//configurer.toString();
 			if (event.getApplicationContext().getParent() == null) {
-				LOGGER.info("Setting up database...");
-				systemSetupService.setupDatabase();
+				if (!systemSetupService.isDatabaseSetup()) {
+					LOGGER.info("Setting up database...");
+					systemSetupService.setupDatabase();
+				}
 			}
 		}
 	}
