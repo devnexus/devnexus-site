@@ -28,7 +28,6 @@ import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.PresentationType;
 import com.devnexus.ting.model.SkillLevel;
-import com.devnexus.ting.web.config.MainConfig;
 import com.devnexus.ting.web.config.ServicesConfig;
 
 /**

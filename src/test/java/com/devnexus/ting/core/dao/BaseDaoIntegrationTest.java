@@ -25,12 +25,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.web.config.PersistenceConfig;
 import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
@@ -54,7 +52,9 @@ public abstract class BaseDaoIntegrationTest {
 
 	@Before
 	public void setup() {
-		systemSetupService.setupDatabase();
+		if (!systemSetupService.isDatabaseSetup()) {
+			systemSetupService.setupDatabase();
+		}
 	}
 
 }

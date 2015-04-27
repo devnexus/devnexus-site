@@ -150,7 +150,7 @@
 					<space>ghillert</space>
 					<appname>devnexus</appname>
 					<url>devnexus.cfapps.io</url>
-					<memory>512</memory>
+					<memory>1024</memory>
 					<diskQuota>1024</diskQuota>
 					<healthCheckTimeout>180</healthCheckTimeout>
 					<mergeEnv>true</mergeEnv>
@@ -368,13 +368,13 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache-web</artifactId>
-			<version>2.0.4</version>
+			<groupId>com.github.ziplet</groupId>
+			<artifactId>ziplet</artifactId>
+			<version>2.0.0</version>
 			<exclusions>
 				<exclusion>
-					<artifactId>ehcache-core</artifactId>
-					<groupId>net.sf.ehcache</groupId>
+				<artifactId>servlet-api</artifactId>
+				<groupId>javax.servlet</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -633,6 +633,12 @@
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-core</artifactId>
 			<version>${spring.integration.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>reactor-core</artifactId>
+					<groupId>org.projectreactor</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>

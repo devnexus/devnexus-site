@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.core.dao;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,7 +31,7 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
-	//@Ignore
+	@Ignore
 	public void testGenerateSchema() {
 		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
 		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");

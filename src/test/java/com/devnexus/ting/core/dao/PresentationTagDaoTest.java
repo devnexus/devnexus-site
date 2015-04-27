@@ -20,6 +20,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.repository.PresentationTagRepository;
@@ -28,6 +29,7 @@ import com.devnexus.ting.repository.PresentationTagRepository;
  * @author Gunnar Hillert
  *
  */
+@Transactional
 public class PresentationTagDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private PresentationTagRepository presentationTagDao;

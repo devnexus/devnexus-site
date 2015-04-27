@@ -19,7 +19,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.common.SystemInformationUtilsTests;
 
 public class CheckExistenceOfNAImageTest {
 

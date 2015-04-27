@@ -50,7 +50,10 @@ public class SecurityServicesTest {
 
 	@Before
 	public void setup() {
-		systemSetupService.setupDatabase();
+		if (!systemSetupService.isDatabaseSetup()) {
+			LOGGER.info("Setting up database...");
+			systemSetupService.setupDatabase();
+		}
 	}
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SecurityServicesTest.class);
