@@ -11,10 +11,12 @@ Build Status:
 
 #### Running on Cloud Foundry
 
-https://github.com/cloudfoundry/java-buildpack/issues/174
+**Demo Deployment**: http://devnexus.cfapps.io/
 
-cf set-env my_app JBP_CONFIG_OPEN_JDK_JRE ‘[memory_heuristics: {metaspace: 128}, memory_sizes: {metaspace: 96m..}]’
-cf restage my_app
+Mind the Java 8 meta space: https://github.com/cloudfoundry/java-buildpack/issues/174
+
+	$ cf set-env my_app JBP_CONFIG_OPEN_JDK_JRE ‘[memory_heuristics: {metaspace: 128}, memory_sizes: {metaspace: 96m..}]’
+	$ cf restage my_app
 
 #### Running Postgres on Mac
 
