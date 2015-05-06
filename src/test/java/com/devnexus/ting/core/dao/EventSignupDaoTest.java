@@ -15,10 +15,12 @@
  */
 package com.devnexus.ting.core.dao;
 
-import com.devnexus.ting.core.model.Event;
-import com.devnexus.ting.core.model.registration.EventSignup;
-import com.devnexus.ting.core.model.registration.PurchaseGroup;
-import com.devnexus.ting.core.model.registration.PurchaseItem;
+import com.devnexus.ting.repository.EventSignupRepository;
+import com.devnexus.ting.model.EventSignup;
+import com.devnexus.ting.model.PurchaseGroup;
+import com.devnexus.ting.model.PurchaseItem;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.repository.EventRepository;
 import java.math.BigDecimal;
 import java.util.Date;
 import org.apache.commons.lang.time.DateUtils;
@@ -30,8 +32,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class EventSignupDaoTest extends BaseDaoIntegrationTest {
     
-    @Autowired EventSignupDao signupDao;
-    @Autowired EventDao eventDao;
+    @Autowired EventSignupRepository signupDao;
+    @Autowired EventRepository eventDao;
     
     @Test
     public void save() {

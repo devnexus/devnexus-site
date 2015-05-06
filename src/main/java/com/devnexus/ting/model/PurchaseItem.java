@@ -1,7 +1,8 @@
-package com.devnexus.ting.core.model.registration;
+package com.devnexus.ting.model;
 
-import com.devnexus.ting.core.model.BaseModelObject;
-import com.devnexus.ting.core.model.Event;
+
+import com.devnexus.ting.model.BaseModelObject;
+import com.devnexus.ting.model.Event;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Cacheable;
@@ -20,8 +21,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Cacheable()
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE) //, include="non-lazy"
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PurchaseItem extends BaseModelObject {

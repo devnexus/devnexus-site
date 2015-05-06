@@ -13,23 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.dao.jpa;
+package com.devnexus.ting.repository.jpa;
 
-import com.devnexus.ting.core.dao.EventSignupDao;
-import com.devnexus.ting.core.model.registration.EventSignup;
+import com.devnexus.ting.repository.EventSignupRepositoryCustom;
+import com.devnexus.ting.model.EventSignup;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 @Repository("eventSignupDao")
-public class EventSignupDaoJpa extends GenericDaoJpa< EventSignup, Long>
-        implements EventSignupDao {
+public class EventSignupRepositoryImpl
+        implements EventSignupRepositoryCustom {
 
-    public EventSignupDaoJpa() {
-        super(EventSignup.class);
-    }
+    
+	@PersistenceContext
+	private EntityManager entityManager;
+
 
     @Override
     public EventSignup getByEventKey(String eventKey) {
-        return super.entityManager.createQuery("select es from EventSignup es "
+        return entityManager.createQuery("select es from EventSignup es "
                 + "    join es.event e "
                 + "where e.eventKey = :eventKey", EventSignup.class)
                 .setParameter("eventKey", eventKey)
