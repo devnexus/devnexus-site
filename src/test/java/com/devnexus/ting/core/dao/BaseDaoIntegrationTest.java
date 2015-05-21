@@ -30,6 +30,9 @@ import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.web.config.ServicesConfig;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
 /**
  * Base class for Dao Test Cases.
@@ -38,17 +41,21 @@ import com.devnexus.ting.web.config.ServicesConfig;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
-					classes=ServicesConfig.class)
+@ContextConfiguration(initializers = IntegrationTestApplicationContextInitializer.class,
+        classes = ServicesConfig.class)
 @ActiveProfiles({SpringProfile.DEFAULT})
+@TestExecutionListeners({DependencyInjectionTestExecutionListener.class, TransactionalTestExecutionListener.class})
 @Configuration
 public abstract class BaseDaoIntegrationTest {
 
-	protected @PersistenceContext EntityManager entityManager;
+    protected @PersistenceContext
+    EntityManager entityManager;
 
-	@Autowired private SystemSetupService systemSetupService;
+    @Autowired
+    private SystemSetupService systemSetupService;
 
-	@Autowired private SystemDao systemDao;
+    @Autowired
+    private SystemDao systemDao;
 
 	@Before
 	public void setup() {
