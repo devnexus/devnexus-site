@@ -60,7 +60,7 @@
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/sponsors">Manage Sponsors</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/presentations">Manage Presentations</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/manage-schedule">Manage Schedule</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/manage-registration?eventId=${currentEvent.id}">Manage Registration</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Registration</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/evaluations">Show Evaluations</a></li>
 					</sec:authorize>
 					<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">

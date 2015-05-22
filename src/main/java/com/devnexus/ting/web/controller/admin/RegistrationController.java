@@ -17,15 +17,11 @@ package com.devnexus.ting.web.controller.admin;
 
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Validator;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import com.devnexus.ting.core.service.BusinessService;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * 
@@ -37,13 +33,10 @@ import com.devnexus.ting.core.service.BusinessService;
 @Controller("adminRegistrationController")
 public class RegistrationController {
 
-	@Autowired private BusinessService businessService;
-
-	@Autowired private Validator validator;
-
-	@RequestMapping(value="/admin/registration", method=RequestMethod.GET)
-	public String getSpeakers(ModelMap model, HttpServletRequest request,
-			@RequestParam(value="eventId", required=false) Long eventId) {
+	@RequestMapping(value="/admin/{eventKey}/registration", method=RequestMethod.GET)
+	public String loadRegistration(ModelMap model, HttpServletRequest request,
+			@PathVariable(value = "eventKey") String eventKey) {
+		
 
 		return "/admin/manage-registration";
 	}
