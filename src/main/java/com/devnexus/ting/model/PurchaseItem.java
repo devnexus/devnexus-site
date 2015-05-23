@@ -1,11 +1,8 @@
 package com.devnexus.ting.model;
 
 
-import com.devnexus.ting.model.BaseModelObject;
-import com.devnexus.ting.model.Event;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -16,8 +13,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
