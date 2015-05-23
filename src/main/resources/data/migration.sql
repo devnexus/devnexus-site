@@ -47,7 +47,7 @@ create table PURCHASE_ITEMS (
         event integer,
         value varchar(255),
 	price numeric (10,2),
-        
+        label varchar(255),
         purchase_group integer,
         open_date timestamp without time zone,
 	close_date timestamp without time zone

@@ -4,69 +4,57 @@
 
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">
-	<div class="container header">
-		<div class="row centered">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Manage ${event.eventKey} Registration</span></h4>
-					
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container header">
+        <div class="row centered">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="top-intro travel">
+                    <h4 class="section-white-title decorated"><span>Manage ${event.eventKey} Registration</span></h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- /intro -->
 
 <div class="row">
-	<div class="col-md-10 col-md-offset-1">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>Name</th><th>Start Date</th><th>End Date</th><th>Price</th>
-				</tr>
-			</thead>
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th><th>Start Date</th><th>End Date</th><th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <c:if test="${empty eventSignup.groups}">
+                    <tr>
+                        <td colspan="4">Nothing to see here</td>
+                    </tr>
+                </c:if>
+                <c:if test="${not empty eventSignup.groups}">
+                    <c:forEach items="${eventSignup.groups}" var="purchaseGroup" >
+                        <tr>
+                            <td colspan="4"><c:out value="${purchaseGroup.label}"/></td>
+                        </tr>
+                        <c:forEach items="${purchaseGroup.items}" var="purchaseItem">
+                            <tr>
+                                <td><c:out value="${purchaseItem.label}"/></td>
+                                <td><c:out value="${purchaseItem.openDate}"/></td>
+                                <td><c:out value="${purchaseItem.closeDate}"/></td>
+                                <td><c:out value="${purchaseItem.value}"/></td>
+                            </tr>
+                        </c:forEach>
+                    </c:forEach>    
+                </c:if>
 
-			
-				<tr>
-					<td>Early Bird</td>
-					<td>Sept. 1 2015</td>
-					<td>
-						Jan. 1 2016
-					</td>
-					<td>$300</td>
-					
-				</tr>
-                                <tr>
-					<td>Normal Price</td>
-					<td>Jan. 1 2016</td>
-					<td>
-						Feb. 15 2016
-					</td>
-					<td>$400</td>
-					
-				</tr>
-                                <tr>
-					<td>Late Price</td>
-					<td>Feb. 15 2016</td>
-					<td>
-						March 16 2016
-					</td>
-					<td>$900</td>
-					
-				</tr>
-                                <tr>
-					<td>T-shirt size</td>
-					<td>Sept. 1 2015</td>
-					<td>
-						Jan. 1 2016
-					</td>
-					<td>$30</td>
-					
-				</tr>
-			
-		</table>
-		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration" role="button">Add Registration</a>
-		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
-	</div>
+            </tbody>
+
+            
+        </table>
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseItem" role="button">Add Event Signup Item</a>
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseGroup" role="button">Add Event Signup Item Group</a>
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
+    </div>
 </div>
 

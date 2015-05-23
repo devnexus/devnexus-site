@@ -1,22 +1,18 @@
 package com.devnexus.ting.model;
 
-import com.devnexus.ting.model.BaseModelObject;
-import com.devnexus.ting.model.Event;
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -29,7 +25,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PurchaseGroup extends BaseModelObject {
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "purchaseGroup", targetEntity = PurchaseItem.class)
     private Set<PurchaseItem> items = new HashSet<>();
 
     @ManyToOne
