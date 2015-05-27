@@ -1,6 +1,8 @@
 package com.devnexus.ting.model;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -41,6 +43,15 @@ public class EventSignup extends BaseModelObject {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+
+    public Optional<PurchaseGroup> getGroup(PurchaseGroup purchaseGroup) {
+        for (PurchaseGroup group : groups) {
+            if (group.getId().equals(purchaseGroup.getId())) {
+                return Optional.of(group);
+            }
+        }
+        return Optional.empty();
     }
     
     

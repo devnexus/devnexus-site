@@ -23,27 +23,31 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Name</th><th>Start Date</th><th>End Date</th><th>Price</th>
+                    <th ></th><th>Name</th><th/><th>Start Date</th><th>End Date</th><th>Price</th>
                 </tr>
             </thead>
             <tbody>
                 
                 <c:if test="${empty eventSignup.groups}">
                     <tr>
-                        <td colspan="4">Nothing to see here</td>
+                        
+                        <td colspan="6">Nothing to see here</td>
                     </tr>
                 </c:if>
                 <c:if test="${not empty eventSignup.groups}">
                     <c:forEach items="${eventSignup.groups}" var="purchaseGroup" >
                         <tr>
-                            <td colspan="4"><c:out value="${purchaseGroup.label}"/></td>
+                            <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseGroup/${purchaseGroup.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+                            <td colspan="5"><c:out value="${purchaseGroup.label}"/></td>
                         </tr>
                         <c:forEach items="${purchaseGroup.items}" var="purchaseItem">
                             <tr>
-                                <td><c:out value="${purchaseItem.label}"/></td>
+                                <td></td>
+                                <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseItem/${purchaseItem.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                <td class="text-right"><c:out value="${purchaseItem.label}"/></td>
                                 <td><c:out value="${purchaseItem.openDate}"/></td>
                                 <td><c:out value="${purchaseItem.closeDate}"/></td>
-                                <td><c:out value="${purchaseItem.value}"/></td>
+                                <td><c:out value="${purchaseItem.price}"/></td>
                             </tr>
                         </c:forEach>
                     </c:forEach>    
