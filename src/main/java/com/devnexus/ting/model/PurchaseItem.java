@@ -34,9 +34,6 @@ public class PurchaseItem extends BaseModelObject {
     @Size(max = 255)
     protected String label;
 
-    @Size(max = 255)
-    private String value;
-    
     @NotNull
     private BigDecimal price;
     

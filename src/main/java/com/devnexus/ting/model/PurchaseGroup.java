@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -24,6 +23,12 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PurchaseGroup extends BaseModelObject {
+
+    public static PurchaseGroup fromId(Long valueOf) {
+        PurchaseGroup group = new PurchaseGroup();
+        group.setId(valueOf);
+        return group;
+    }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "purchaseGroup", targetEntity = PurchaseItem.class)
     private Set<PurchaseItem> items = new HashSet<>();
@@ -74,6 +79,12 @@ public class PurchaseGroup extends BaseModelObject {
         this.eventSignup = eventSignup;
     }
 
+    @Override
+    public String toString() {
+        return getLabel();
+    }
+
+    
     
     
 }

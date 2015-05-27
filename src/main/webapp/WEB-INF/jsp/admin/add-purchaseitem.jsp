@@ -3,7 +3,7 @@
 <div class="jumbotron call" style="margin-bottom:50px">
     <div class="container">
         <div id="banner">
-            <h1><strong>Add/Edit Purchase Group</strong></h1>
+            <h1><strong>Add/Edit Purchase Item</strong></h1>
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@
             <div class="form-group${errorClass}">
                 <label for="purchaseGroup" class="col-lg-2 control-label">Purchase Group*</label>
                 <div class="col-lg-10">
-                    <form:select cssClass="form-control" path="purchaseGroup" id="purchaseGroup" tabindex="2" items="${eventSignup.groups}"/>
+                    <form:select cssClass="form-control" path="purchaseGroup" id="purchaseGroup" tabindex="2" items="${eventSignUp.groups}" itemValue="id"/>
                     <form:errors path="purchaseGroup" cssClass="fieldError"/>
                 </div>
             </div>

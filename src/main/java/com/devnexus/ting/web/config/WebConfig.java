@@ -63,6 +63,7 @@ import org.springframework.web.servlet.view.xml.MarshallingView;
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
+import com.devnexus.ting.web.converter.StringToPurchaseGroup;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSpeaker;
@@ -180,6 +181,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		conversionService.addConverter(new StringToSkillLevel());
 		conversionService.addConverter(new StringToPresentationType());
 		conversionService.addConverter(new StringToSponsorLevel());
+                conversionService.addConverter(new StringToPurchaseGroup());
 
 		bindingInitializer.setConversionService(conversionService);
 		bindingInitializer.setValidator(validator());
