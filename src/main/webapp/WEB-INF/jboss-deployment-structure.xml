@@ -1,0 +1,7 @@
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+            <module name="org.apache.httpcomponents" />
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>
