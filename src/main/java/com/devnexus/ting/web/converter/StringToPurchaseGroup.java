@@ -15,7 +15,7 @@
  */
 package com.devnexus.ting.web.converter;
 
-import com.devnexus.ting.model.PurchaseGroup;
+import com.devnexus.ting.model.TicketGroup;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.core.convert.converter.Converter;
 
@@ -26,14 +26,14 @@ import org.springframework.core.convert.converter.Converter;
  * @author Summers Pittman
  *
  */
-public class StringToPurchaseGroup implements Converter<String, PurchaseGroup>{
+public class StringToPurchaseGroup implements Converter<String, TicketGroup>{
 
 	@Override
-	public PurchaseGroup convert(String source) {
+	public TicketGroup convert(String source) {
 		if (StringUtils.isEmpty(source) || !StringUtils.isNumeric(source)) {
 			return null;
 		} else {
-			return PurchaseGroup.fromId(Long.valueOf(source));
+			return TicketGroup.fromId(Long.valueOf(source));
 		}
 	}
 }

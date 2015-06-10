@@ -16,78 +16,37 @@ alter table EVENT_SIGNUPS
 	foreign key (event)
 	references events;
 
-create table PURCHASE_GROUPS (
+
+create table TICKET_GROUPS (
 	id bigint primary key NOT NULL,
 	created_date timestamp without time zone,
 	updated_date timestamp without time zone,
 	version integer,
         event integer,
 	event_signup integer,
-        label varchar(255)
+        label varchar(255),
+        register_form_url varchar(255),
+        coupon_code varchar(255),
+        price numeric (10,2),
+        min_purchase integer,
+        description text,
+        open_date timestamp without time zone,
+	close_date timestamp without time zone
 );
 
-alter table PURCHASE_GROUPS
+alter table TICKET_GROUPS
 	add constraint GROUPS_EVENTS
 	foreign key (event)
 	references events;
 
-alter table PURCHASE_GROUPS
+alter table TICKET_GROUPS
 	add constraint GROUPS_SIGNUPS
 	foreign key (event_signup)
 	references event_signups;
 
-ALTER TABLE PURCHASE_GROUPS
+ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;
 
-create table COUPON_ITEMS (
-	id bigint primary key NOT NULL,
-	created_date timestamp without time zone,
-	updated_date timestamp without time zone,
-	version integer,
-        event integer,
-	event_signup integer,
-        label varchar(255),
-        coupon_code varchar(255),
-        price numeric (10,2),
-        open_date timestamp without time zone,
-	close_date timestamp without time zone
-);
-
-alter table COUPON_ITEMS
-	add constraint COUPON_EVENTS
-	foreign key (event)
-	references events;
-
-alter table COUPON_ITEMS
-	add constraint COUPON_SIGNUPS
-	foreign key (event_signup)
-	references event_signups;
-
-ALTER TABLE COUPON_ITEMS
-	OWNER TO devnexus;
-
-
-create table PURCHASE_ITEMS (
-	id bigint primary key NOT NULL,
-	created_date timestamp without time zone,
-	updated_date timestamp without time zone,
-	version integer,
-        event integer,
-        value varchar(255),
-	price numeric (10,2),
-        label varchar(255),
-        purchase_group integer,
-        open_date timestamp without time zone,
-	close_date timestamp without time zone
-);
-
-alter table PURCHASE_ITEMS
-	add constraint ITEM_GROUP
-	foreign key (purchase_group)
-	references purchase_groups;
-
-ALTER TABLE PURCHASE_ITEMS
-	OWNER TO devnexus;
 -- 2014 - Nov 9
 ALTER TABLE speakers ADD COLUMN cfp_speaker_id bigint;
 ALTER TABLE presentations ADD COLUMN cfp_id bigint;

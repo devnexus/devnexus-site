@@ -23,6 +23,7 @@ import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
@@ -267,4 +268,7 @@ public interface BusinessService {
 	List<Organizer> getAllOrganizersWithPicture();
 
 	SponsorList getSponsorListForEvent(Long id, boolean large);
+        
+        EventSignup getEventSignup();
+        
 }

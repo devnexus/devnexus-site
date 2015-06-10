@@ -2,7 +2,6 @@ package com.devnexus.ting.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -23,11 +22,13 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CouponItem extends BaseModelObject {
+public class TicketGroup extends BaseModelObject {
 
-    @NotEmpty
-    @Size(max = 255)
-    private String couponCode;
+    public static TicketGroup fromId(Long valueOf) {
+        TicketGroup group = new TicketGroup();
+        group.setId(valueOf);
+        return group;
+    }
 
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
@@ -43,14 +44,27 @@ public class CouponItem extends BaseModelObject {
     @XmlTransient
     protected EventSignup eventSignup;
 
+    @Size(max = 10000)
+    private String description;
+    
     @NotNull
     private BigDecimal price;
 
+    @NotNull
+    private Integer minPurchase = 1;
+    
     @Temporal(TemporalType.DATE)
     private Date openDate;
 
     @Temporal(TemporalType.DATE)
     private Date closeDate;
+
+    @NotEmpty
+    @Size(max = 255)
+    protected String registerFormUrl;
+
+    @Size(max = 255)
+    protected String couponCode;
 
     public Event getEvent() {
         return event;
@@ -74,19 +88,6 @@ public class CouponItem extends BaseModelObject {
 
     public void setEventSignup(EventSignup eventSignup) {
         this.eventSignup = eventSignup;
-    }
-
-    @Override
-    public String toString() {
-        return getLabel();
-    }
-
-    public String getCouponCode() {
-        return couponCode;
-    }
-
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
     }
 
     public BigDecimal getPrice() {
@@ -113,56 +114,38 @@ public class CouponItem extends BaseModelObject {
         this.closeDate = closeDate;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.couponCode);
-        hash = 37 * hash + Objects.hashCode(this.label);
-        hash = 37 * hash + Objects.hashCode(this.price);
-        hash = 37 * hash + Objects.hashCode(this.openDate);
-        hash = 37 * hash + Objects.hashCode(this.closeDate);
-        if (eventSignup != null) {
-            hash = 37 * hash + Objects.hashCode(this.eventSignup.id);
-        }
-        return hash;
+    public String getRegisterFormUrl() {
+        return registerFormUrl;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final CouponItem other = (CouponItem) obj;
-        if (!Objects.equals(this.couponCode, other.couponCode)) {
-            return false;
-        }
-        if (!Objects.equals(this.label, other.label)) {
-            return false;
-        }
-        if (!Objects.equals(this.price, other.price)) {
-            return false;
-        }
-        if (!Objects.equals(this.openDate, other.openDate)) {
-            return false;
-        }
-        if (!Objects.equals(this.closeDate, other.closeDate)) {
-            return false;
-        }
-
-        if (this.eventSignup != null) {
-            if (other.eventSignup == null) {
-                return false;
-            } else {
-                if (!Objects.equals(this.eventSignup.id, other.eventSignup.id)) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
+    public void setRegisterFormUrl(String registerFormUrl) {
+        this.registerFormUrl = registerFormUrl;
     }
 
+    public String getCouponCode() {
+        return couponCode;
+    }
+
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getMinPurchase() {
+        return minPurchase;
+    }
+
+    public void setMinPurchase(Integer minPurchase) {
+        this.minPurchase = minPurchase;
+    }
+
+    
+    
 }

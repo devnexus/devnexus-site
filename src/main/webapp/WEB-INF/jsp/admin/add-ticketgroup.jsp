@@ -3,14 +3,14 @@
 <div class="jumbotron call" style="margin-bottom:50px">
     <div class="container">
         <div id="banner">
-            <h1><strong>Add/Edit Coupon Item</strong></h1>
+            <h1><strong>Add/Edit Ticket Group</strong></h1>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
 
-        <spring:bind path="couponItem.*">
+        <spring:bind path="ticketGroup.*">
             <c:if test="${not empty status.errorMessages}">
                 <div class="alert alert-danger fade in"
                      ><a href="#" data-dismiss="alert" class="close">&times;</a>
@@ -20,33 +20,32 @@
                 </div>
             </c:if>
         </spring:bind>
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="couponItem" enctype="multipart/form-data">
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="ticketGroup" enctype="multipart/form-data">
             <form:hidden path="event.id"/>
 
-            <spring:bind path="couponItem.label">
+            <spring:bind path="ticketGroup.label">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
-                <label for="firstName" class="col-lg-2 control-label">Label*</label>
+                <label for="label" class="col-lg-2 control-label">Label*</label>
                 <div class="col-lg-10">
                     <form:input cssClass="form-control" path="label" id="label" maxlength="255" tabindex="1"/>
                     <form:errors path="label" cssClass="fieldError"/>
                 </div>
             </div>
 
-
-            <spring:bind path="couponItem.couponCode">
+            <spring:bind path="ticketGroup.description">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
-                <label for="couponCode" class="col-lg-2 control-label">Coupon Code*</label>
+                <label for="label" class="col-lg-2 control-label">Description *</label>
                 <div class="col-lg-10">
-                    <form:input cssClass="form-control" path="couponCode" id="couponCode" maxlength="255" tabindex="1"/>
-                    <form:errors path="couponCode" cssClass="fieldError"/>
+                    <form:input cssClass="form-control" path="description" id="description" maxlength="10000" tabindex="1"/>
+                    <form:errors path="description" cssClass="fieldError"/>
                 </div>
             </div>
 
-            <spring:bind path="couponItem.openDate">
+            <spring:bind path="ticketGroup.openDate">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
@@ -57,7 +56,7 @@
                 </div>
             </div>
 
-            <spring:bind path="couponItem.closeDate">
+            <spring:bind path="ticketGroup.closeDate">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
@@ -68,7 +67,7 @@
                 </div>
             </div>
 
-            <spring:bind path="couponItem.price">
+            <spring:bind path="ticketGroup.price">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
@@ -76,6 +75,43 @@
                 <div class="col-lg-10">
                     <form:input cssClass="form-control" path="price" id="price" tabindex="5" maxlength="255"/>
                     <form:errors path="price" cssClass="fieldError"/>
+                </div>
+            </div>
+
+
+            <spring:bind path="ticketGroup.registerFormUrl">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="registerFormUrl" class="col-lg-2 control-label">Register Form URL*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="registerFormUrl" id="registerFormUrl" tabindex="5" maxlength="255"/>
+                    <form:errors path="registerFormUrl" cssClass="fieldError"/>
+                </div>
+            </div>
+                
+                
+            <spring:bind path="ticketGroup.couponCode">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="couponCode" class="col-lg-2 control-label">Coupon Code</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="couponCode" id="couponCode" tabindex="5" maxlength="255"/>
+                    <form:errors path="couponCode" cssClass="fieldError"/>
+                </div>
+            </div>
+
+                
+                
+            <spring:bind path="ticketGroup.minPurchase">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="minPurchase" class="col-lg-2 control-label">Min Purchase*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="minPurchase" id="minPurchase" tabindex="5" maxlength="255" />
+                    <form:errors path="minPurchase" cssClass="fieldError"/>
                 </div>
             </div>
 
@@ -91,20 +127,22 @@
 </div>
 
 <content tag='bottom'>
-
+   
     <script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function () {
             $("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
 
+
+-            $("#openDate").datepicker();
+-
+-            $("#closeDate").datepicker();
+-
+
             $('textarea').maxlength({
                 alwaysShow: true
             });
-
-            $("#openDate").datepicker();
-
-            $("#closeDate").datepicker();
 
         });
     </script>
