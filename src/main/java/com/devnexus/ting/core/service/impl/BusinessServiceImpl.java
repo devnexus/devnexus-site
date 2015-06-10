@@ -59,6 +59,7 @@ import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
@@ -77,6 +78,7 @@ import com.devnexus.ting.repository.ApplicationCacheRepository;
 import com.devnexus.ting.repository.CfpSubmissionRepository;
 import com.devnexus.ting.repository.EvaluationRepository;
 import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.OrganizerRepository;
 import com.devnexus.ting.repository.PresentationRepository;
 import com.devnexus.ting.repository.PresentationTagRepository;
@@ -102,6 +104,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
+        @Autowired private EventSignupRepository        eventSignupDao;
 	@Autowired private OrganizerRepository    organizerDao;
 	@Autowired private PresentationRepository presentationDao;
 	@Autowired private PresentationTagRepository presentationTagDao;
@@ -715,5 +718,10 @@ public class BusinessServiceImpl implements BusinessService {
 
 		return sponsorList;
 	}
+
+    @Override
+    public EventSignup getEventSignup() {
+        return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
+    }
 
 }

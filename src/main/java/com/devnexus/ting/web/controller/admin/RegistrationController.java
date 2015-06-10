@@ -15,12 +15,9 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
-import com.devnexus.ting.model.CouponItem;
 import com.devnexus.ting.model.EventSignup;
-import com.devnexus.ting.model.PurchaseGroup;
-import com.devnexus.ting.model.PurchaseItem;
+import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.repository.EventSignupRepository;
-import java.util.Optional;
 import java.util.function.BinaryOperator;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -57,61 +54,34 @@ public class RegistrationController {
         return "/admin/manage-registration";
     }
 
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseGroup", method = RequestMethod.GET)
-    public String showAddPurchaseGroupForm(ModelMap model, HttpServletRequest request,
+    @RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.GET)
+    public String showAddTicketGroupForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
         EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("purchaseGroup", new PurchaseGroup());
+        model.addAttribute("ticketGroup", new TicketGroup());
 
-        return "/admin/add-purchasegroup";
+        return "/admin/add-ticketgroup";
     }
 
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseGroup/{groupId}", method = RequestMethod.GET)
-    public String prepareEditPurchaseGroupForm(ModelMap model, HttpServletRequest request,
+    @RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.GET)
+    public String prepareEditTicketGroupForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId) {
 
         EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("purchaseGroup", signUp.getGroups().stream().reduce(new PurchaseGroup(), purchaseGroupReducer(groupId)));
+        model.addAttribute("ticketGroup", signUp.getGroups().stream().reduce(new TicketGroup(), ticketGroupReducer(groupId)));
 
-        return "/admin/add-purchasegroup";
+        return "/admin/add-ticketgroup";
     }
 
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseItem", method = RequestMethod.GET)
-    public String prepareAddPurchaseItem(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("purchaseItem", new PurchaseItem());
-
-        return "/admin/add-purchaseitem";
-    }
-
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseItem/{itemId}", method = RequestMethod.GET)
-    public String prepareEditPurchaseItem(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-        PurchaseItem item = findPurchaseItem(signUp, itemId);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("purchaseItem", item);
-
-        return "/admin/add-purchaseitem";
-    }
-
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseItem", method = RequestMethod.POST)
-    public String addPurchaseItem(@PathVariable(value = "eventKey") String eventKey, @Valid PurchaseItem purchaseItemForm, BindingResult result, HttpServletRequest request) {
+    @RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.POST)
+    public String addTicketGroup(@PathVariable(value = "eventKey") String eventKey, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
         EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
@@ -120,46 +90,19 @@ public class RegistrationController {
         }
 
         if (result.hasErrors()) {
-            return String.format("/admin/add-purchaseitem", eventKey);
+            return String.format("/admin/add-ticketgroup", eventKey);
         }
 
-        Optional entityGroupOptional = signUp.getGroup(purchaseItemForm.getPurchaseGroup());
-        if (entityGroupOptional.isPresent()) {
-            PurchaseGroup group = (PurchaseGroup) entityGroupOptional.get();
-            group.getItems().add(purchaseItemForm);
-            purchaseItemForm.setPurchaseGroup(group);
-            purchaseItemForm.setEvent(signUp.getEvent());
-            eventSignupController.saveAndFlush(signUp);
-
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        } else {
-            return String.format("/admin/add-purchaseitem", eventKey);
-        }
-    }
-
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseGroup", method = RequestMethod.POST)
-    public String addPurchaseGroup(@PathVariable(value = "eventKey") String eventKey, @Valid PurchaseGroup purchaseGroupForm, BindingResult result, HttpServletRequest request) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-purchasegroup", eventKey);
-        }
-
-        signUp.getGroups().add(purchaseGroupForm);
-        purchaseGroupForm.setEventSignup(signUp);
-        purchaseGroupForm.setEvent(signUp.getEvent());
+        signUp.getGroups().add(ticketGroupForm);
+        ticketGroupForm.setEventSignup(signUp);
+        ticketGroupForm.setEvent(signUp.getEvent());
         eventSignupController.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
 
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseGroup/{groupId}", method = RequestMethod.POST)
-    public String editPurchaseGroup(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId, @Valid PurchaseGroup purchaseGroupForm, BindingResult result, HttpServletRequest request) {
+    @RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.POST)
+    public String editTicketGroup(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
         EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
@@ -168,155 +111,20 @@ public class RegistrationController {
         }
 
         if (result.hasErrors()) {
-            return String.format("/admin/add-purchasegroup", eventKey);
+            return String.format("/admin/add-ticketgroup", eventKey);
         }
 
-        PurchaseGroup group = signUp.getGroups().stream().reduce(new PurchaseGroup(), purchaseGroupReducer(groupId));
-        group.setLabel(purchaseGroupForm.getLabel());
+        TicketGroup group = signUp.getGroups().stream().reduce(new TicketGroup(), ticketGroupReducer(groupId));
+        group.setLabel(ticketGroupForm.getLabel());
         eventSignupController.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
 
-    @RequestMapping(value = "/admin/{eventKey}/registration/purchaseItem/{itemId}", method = RequestMethod.POST)
-    public String editPurchaseItem(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId, @Valid PurchaseItem purchaseItemForm, BindingResult result, HttpServletRequest request) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-purchaseitem", eventKey);
-        }
-
-        Optional entityGroupOptional = signUp.getGroup(purchaseItemForm.getPurchaseGroup());
-        if (entityGroupOptional.isPresent()) {
-            PurchaseGroup group = (PurchaseGroup) entityGroupOptional.get();
-            PurchaseItem entityItem = findPurchaseItem(signUp, itemId);
-            
-            entityItem.setPurchaseGroup(group);
-            entityItem.setCloseDate(purchaseItemForm.getCloseDate());
-            entityItem.setLabel(purchaseItemForm.getLabel());
-            entityItem.setOpenDate(purchaseItemForm.getOpenDate());
-            entityItem.setPrice(purchaseItemForm.getPrice());
-            eventSignupController.saveAndFlush(signUp);
-
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        } else {
-            return String.format("/admin/add-purchaseitem", eventKey);
-        }
-    }
-
-    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem", method = RequestMethod.GET)
-    public String prepareAddCouponItem(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("couponItem", new CouponItem());
-
-        return "/admin/add-couponitem";
-    }
-
-    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem/{itemId}", method = RequestMethod.GET)
-    public String prepareEditCouponItem(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-        CouponItem item = findCouponItem(signUp, itemId);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("couponItem", item);
-
-        return "/admin/add-couponitem";
-    }
     
-    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem", method = RequestMethod.POST)
-    public String addCouponItem(@PathVariable(value = "eventKey") String eventKey, @Valid CouponItem couponItemForm, BindingResult result, HttpServletRequest request) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-couponitem", eventKey);
-        }
-
-        signUp.getCoupons().add(couponItemForm);
-        couponItemForm.setEventSignup(signUp);
-        couponItemForm.setEvent(signUp.getEvent());
-        
-        eventSignupController.saveAndFlush(signUp);
-
-        return String.format("redirect:/s/admin/%s/registration/", eventKey);
-
-    }
-    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem/{itemId}", method = RequestMethod.POST)
-    public String editCouponItem(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId, @Valid CouponItem couponItemForm, BindingResult result, HttpServletRequest request) {
-
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-couponitem", eventKey);
-        }
-
-        CouponItem entityItem = findCouponItem(signUp, itemId);
-
-        
-        entityItem.setCloseDate(couponItemForm.getCloseDate());
-        entityItem.setCouponCode(couponItemForm.getCouponCode());
-        entityItem.setLabel(couponItemForm.getLabel());
-        entityItem.setOpenDate(couponItemForm.getOpenDate());
-        entityItem.setPrice(couponItemForm.getPrice());
-        eventSignupController.saveAndFlush(signUp);
-
-        return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        
-    }
-    
-    private BinaryOperator<PurchaseGroup> purchaseGroupReducer(String groupId) {
+    private BinaryOperator<TicketGroup> ticketGroupReducer(String groupId) {
         return (left, right) -> {
             return Long.parseLong(groupId) == right.getId() ? right : left;
         };
     }
-
-    private PurchaseItem findPurchaseItem(EventSignup signUp, String itemId) {
-        PurchaseItem item = new PurchaseItem();
-
-        group:
-        for (PurchaseGroup group : signUp.getGroups()) {
-            for (PurchaseItem itemItem : group.getItems()) {
-                if (itemItem.getId().toString().equals(itemId)) {
-                    item = itemItem;
-                    break group;
-                }
-            }
-        }
-        return item;
-    }
-
-    private CouponItem findCouponItem(EventSignup signUp, String itemId) {
-        CouponItem item = new CouponItem();
-
-        for (CouponItem itemItem : signUp.getCoupons()) {
-            if (itemItem.getId().toString().equals(itemId)) {
-                item = itemItem;
-                break;
-            }
-        }
-        
-        return item;
-    }
-    
 }

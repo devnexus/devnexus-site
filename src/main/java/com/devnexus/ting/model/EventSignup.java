@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -18,11 +19,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventSignup extends BaseModelObject {
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = PurchaseGroup.class)
-    private Set<PurchaseGroup> groups = new HashSet<>();
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = CouponItem.class)
-    private Set<CouponItem> coupons = new HashSet<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketGroup.class, fetch = FetchType.EAGER)
+    private Set<TicketGroup> groups = new HashSet<>();
 
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
@@ -30,11 +28,11 @@ public class EventSignup extends BaseModelObject {
     @XmlTransient
     private Event event;
 
-    public Set<PurchaseGroup> getGroups() {
+    public Set<TicketGroup> getGroups() {
         return groups;
     }
 
-    public void setGroups(Set<PurchaseGroup> groups) {
+    public void setGroups(Set<TicketGroup> groups) {
         this.groups = groups;
     }
 
@@ -45,17 +43,8 @@ public class EventSignup extends BaseModelObject {
     public void setEvent(Event event) {
         this.event = event;
     }
-
-    public Set<CouponItem> getCoupons() {
-        return coupons;
-    }
-
-    public void setCoupons(Set<CouponItem> coupons) {
-        this.coupons = coupons;
-    }
-
-    public Optional<PurchaseGroup> getGroup(PurchaseGroup purchaseGroup) {
-        for (PurchaseGroup group : groups) {
+    public Optional<TicketGroup> getGroup(TicketGroup purchaseGroup) {
+        for (TicketGroup group : groups) {
             if (group.getId().equals(purchaseGroup.getId())) {
                 return Optional.of(group);
             }

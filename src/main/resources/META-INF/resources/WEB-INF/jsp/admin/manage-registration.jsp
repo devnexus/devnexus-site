@@ -35,25 +35,21 @@
                     </tr>
                 </c:if>
                 <c:if test="${not empty eventSignup.groups}">
-                    <c:forEach items="${eventSignup.groups}" var="purchaseGroup" >
+                    <c:forEach items="${eventSignup.groups}" var="ticketGroup" >
                         <tr>
-                            <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseGroup/${purchaseGroup.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-                            <td colspan="5"><c:out value="${purchaseGroup.label}"/></td>
+                            <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketGroup/${ticketGroup.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+                            <td colspan="5"><c:out value="${ticketGroup.label}"/></td>
+
+                            <td><c:out value="${ticketGroup.openDate}"/></td>
+                            <td><c:out value="${ticketGroup.closeDate}"/></td>
+                            <td><c:out value="${ticketGroup.price}"/></td>
                         </tr>
-                        <c:forEach items="${purchaseGroup.items}" var="purchaseItem">
-                            <tr>
-                                <td></td>
-                                <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseItem/${purchaseItem.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-                                <td class="text-right"><c:out value="${purchaseItem.label}"/></td>
-                                <td><c:out value="${purchaseItem.openDate}"/></td>
-                                <td><c:out value="${purchaseItem.closeDate}"/></td>
-                                <td><c:out value="${purchaseItem.price}"/></td>
-                            </tr>
-                        </c:forEach>
+
                     </c:forEach>    
                 </c:if>
             </tbody>
         </table>
+<<<<<<< HEAD:src/main/resources/META-INF/resources/WEB-INF/jsp/admin/manage-registration.jsp
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -89,6 +85,11 @@
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseItem" role="button">Add Event Signup Item</a>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/couponItem" role="button">Add Event Coupon Item</a>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseGroup" role="button">Add Event Signup Item Group</a>
+=======
+       
+        
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketGroup" role="button">Add Event Ticket Type</a>
+>>>>>>> Massively changing how registraiton is done.  Much simpler now:src/main/webapp/WEB-INF/jsp/admin/manage-registration.jsp
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
     </div>
 </div>
