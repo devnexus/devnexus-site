@@ -38,8 +38,9 @@
                     <tr>
                         <td><c:out value="${group.label}"></c:out></td>
                         <td><c:out value="${group.description}"></c:out></td>
-                        <td><c:out value="${group.startDate}"></c:out></td>
-                        <td><c:out value="${group.endDate}"></c:out></td>
+                        <td><c:out value="${group.openDate}"></c:out></td>
+                        <td><c:out value="${group.closeDate}"></c:out></td>
+                        <td><c:out value="${group.price}"></c:out></td>
                         <td><form:select path="ticketCount">
                                 <form:option value="0" >0</form:option>
                                 <form:option value="1" >1</form:option>
@@ -64,77 +65,9 @@
             </table>
         </form:form>
 
-        <div class="col-md-10 col-md-offset-1" style="padding-top: 4em;">
-            <h2>Tell us about you.</h2>
-            <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerForm" enctype="multipart/form-data">
-                <spring:bind path="registerForm.firstName">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}">
-                    <label for="firstName" class="col-lg-2 control-label">First Name *</label>
-                    <div class="col-lg-10">
-                        <form:input cssClass="form-control" path="firstName" id="firstName" maxlength="255" tabindex="1"/>
-                        <form:errors path="firstName" cssClass="fieldError"/>
-                    </div>
-                </div>
-                <spring:bind path="registerForm.lastName">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}">
-                    <label for="lastName" class="col-lg-2 control-label">Last Name *</label>
-                    <div class="col-lg-10">
-                        <form:input cssClass="form-control" path="lastName" id="lastName" maxlength="255" tabindex="1"/>
-                        <form:errors path="lastName" cssClass="fieldError"/>
-                    </div>
-                </div>
-                <spring:bind path="registerForm.emailAddress">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}">
-                    <label for="emailAddress" class="col-lg-2 control-label">Email Address *</label>
-                    <div class="col-lg-10">
-                        <form:input cssClass="form-control" path="emailAddress" id="emailAddress" maxlength="255" tabindex="1"/>
-                        <form:errors path="emailAddress" cssClass="fieldError"/>
-                    </div>
-                </div>
-                <spring:bind path="registerForm.phoneNumber">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}">
-                    <label for="phoneNumber" class="col-lg-2 control-label">Phone Number *</label>
-                    <div class="col-lg-10">
-                        <form:input cssClass="form-control" path="phoneNumber" id="phoneNumber" maxlength="255" tabindex="1"/>
-                        <form:errors path="phoneNumber" cssClass="fieldError"/>
-                    </div>
-                </div>
 
-                <div class="row">
-
-                    <div class="col-md-12 text-right">
-
-                        <button type="button" class="btn btn-info" name="addTicket" id="addTicket" tabindex="20" title="Add Ticket">
-                            Add A Ticket <span class="glyphicon glyphicon-plus"></span>
-                        </button>
-                    </div>
-                </div>
-
-                <a name="ticketStart"></a>    
-                <c:forEach items="${tickets}" var="ticket" varStatus="status">
-                    <spring:bind path="tickets[${status.index}].firstName">
-                        <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                    </spring:bind>
-                    <div class="form-group${errorClass}">
-                        <label for="tickets[${status.index}].firstName" class="col-lg-2 control-label">First Name*</label>
-                        <div class="col-lg-10">
-                            <form:input cssClass="form-control" path="tickets[${status.index}].firstName" id="speakers[${status.index}].firstName" maxlength="255"/>
-                            <form:errors path="tickets[${status.index}].firstName" cssClass="fieldError"/>
-                        </div>
-                    </div>
-                </c:forEach>
-            </form:form>
-
-        </div>
     </div>
+
 </div>
 <jsp:include page="includes/questions.jsp"/>
 
