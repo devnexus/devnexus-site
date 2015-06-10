@@ -39,6 +39,34 @@ alter table PURCHASE_GROUPS
 ALTER TABLE PURCHASE_GROUPS
 	OWNER TO devnexus;
 
+create table COUPON_ITEMS (
+	id bigint primary key NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+        event integer,
+	event_signup integer,
+        label varchar(255),
+        coupon_code varchar(255),
+        price numeric (10,2),
+        open_date timestamp without time zone,
+	close_date timestamp without time zone
+);
+
+alter table COUPON_ITEMS
+	add constraint COUPON_EVENTS
+	foreign key (event)
+	references events;
+
+alter table COUPON_ITEMS
+	add constraint COUPON_SIGNUPS
+	foreign key (event_signup)
+	references event_signups;
+
+ALTER TABLE COUPON_ITEMS
+	OWNER TO devnexus;
+
+
 create table PURCHASE_ITEMS (
 	id bigint primary key NOT NULL,
 	created_date timestamp without time zone,
