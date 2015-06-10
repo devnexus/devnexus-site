@@ -26,10 +26,10 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 <c:if test="${empty eventSignup.groups}">
                     <tr>
-                        
+
                         <td colspan="6">Nothing to see here</td>
                     </tr>
                 </c:if>
@@ -51,12 +51,46 @@
                         </c:forEach>
                     </c:forEach>    
                 </c:if>
-
             </tbody>
 
-            
+
+        </table>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th ></th><th>Name</th><th>Coupon Code</th><th>Start Date</th><th>End Date</th><th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <c:if test="${empty eventSignup.coupons}">
+                    <tr>
+
+                        <td colspan="6">Nothing to see here</td>
+                    </tr>
+                </c:if>
+        <c:if test="${not empty eventSignup.coupons}">
+            <c:forEach items="${eventSignup.coupons}" var="coupon" >
+
+
+                <tr>
+                    <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/couponItem/${coupon.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td ><c:out value="${coupon.label}"/></td>
+                    <td><c:out value="${coupon.couponCode}"/></td>
+                    <td><c:out value="${coupon.openDate}"/></td>
+                    <td><c:out value="${coupon.closeDate}"/></td>
+                    <td><c:out value="${coupon.price}"/></td>
+                </tr>
+
+            </c:forEach>    
+        </c:if>
+
+        </tbody>
+
+
         </table>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseItem" role="button">Add Event Signup Item</a>
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/couponItem" role="button">Add Event Coupon Item</a>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/purchaseGroup" role="button">Add Event Signup Item Group</a>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
     </div>

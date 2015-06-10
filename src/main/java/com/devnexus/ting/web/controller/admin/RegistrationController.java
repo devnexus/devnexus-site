@@ -15,15 +15,13 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import com.devnexus.ting.model.CouponItem;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.PurchaseGroup;
 import com.devnexus.ting.model.PurchaseItem;
 import com.devnexus.ting.repository.EventSignupRepository;
-import java.math.BigDecimal;
 import java.util.Optional;
 import java.util.function.BinaryOperator;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -211,6 +209,82 @@ public class RegistrationController {
         }
     }
 
+    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem", method = RequestMethod.GET)
+    public String prepareAddCouponItem(ModelMap model, HttpServletRequest request,
+            @PathVariable(value = "eventKey") String eventKey) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+        model.addAttribute("event", signUp.getEvent());
+        model.addAttribute("eventSignUp", signUp);
+        model.addAttribute("couponItem", new CouponItem());
+
+        return "/admin/add-couponitem";
+    }
+
+    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem/{itemId}", method = RequestMethod.GET)
+    public String prepareEditCouponItem(ModelMap model, HttpServletRequest request,
+            @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        CouponItem item = findCouponItem(signUp, itemId);
+
+        model.addAttribute("event", signUp.getEvent());
+        model.addAttribute("eventSignUp", signUp);
+        model.addAttribute("couponItem", item);
+
+        return "/admin/add-couponitem";
+    }
+    
+    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem", method = RequestMethod.POST)
+    public String addCouponItem(@PathVariable(value = "eventKey") String eventKey, @Valid CouponItem couponItemForm, BindingResult result, HttpServletRequest request) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+        if (request.getParameter("cancel") != null) {
+            return String.format("redirect:/s/admin/%s/registration/", eventKey);
+        }
+
+        if (result.hasErrors()) {
+            return String.format("/admin/add-couponitem", eventKey);
+        }
+
+        signUp.getCoupons().add(couponItemForm);
+        couponItemForm.setEventSignup(signUp);
+        couponItemForm.setEvent(signUp.getEvent());
+        
+        eventSignupController.saveAndFlush(signUp);
+
+        return String.format("redirect:/s/admin/%s/registration/", eventKey);
+
+    }
+    @RequestMapping(value = "/admin/{eventKey}/registration/couponItem/{itemId}", method = RequestMethod.POST)
+    public String editCouponItem(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "itemId") String itemId, @Valid CouponItem couponItemForm, BindingResult result, HttpServletRequest request) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+        if (request.getParameter("cancel") != null) {
+            return String.format("redirect:/s/admin/%s/registration/", eventKey);
+        }
+
+        if (result.hasErrors()) {
+            return String.format("/admin/add-couponitem", eventKey);
+        }
+
+        CouponItem entityItem = findCouponItem(signUp, itemId);
+
+        
+        entityItem.setCloseDate(couponItemForm.getCloseDate());
+        entityItem.setCouponCode(couponItemForm.getCouponCode());
+        entityItem.setLabel(couponItemForm.getLabel());
+        entityItem.setOpenDate(couponItemForm.getOpenDate());
+        entityItem.setPrice(couponItemForm.getPrice());
+        eventSignupController.saveAndFlush(signUp);
+
+        return String.format("redirect:/s/admin/%s/registration/", eventKey);
+        
+    }
+    
     private BinaryOperator<PurchaseGroup> purchaseGroupReducer(String groupId) {
         return (left, right) -> {
             return Long.parseLong(groupId) == right.getId() ? right : left;
@@ -232,4 +306,17 @@ public class RegistrationController {
         return item;
     }
 
+    private CouponItem findCouponItem(EventSignup signUp, String itemId) {
+        CouponItem item = new CouponItem();
+
+        for (CouponItem itemItem : signUp.getCoupons()) {
+            if (itemItem.getId().toString().equals(itemId)) {
+                item = itemItem;
+                break;
+            }
+        }
+        
+        return item;
+    }
+    
 }

@@ -21,6 +21,9 @@ public class EventSignup extends BaseModelObject {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = PurchaseGroup.class)
     private Set<PurchaseGroup> groups = new HashSet<>();
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = CouponItem.class)
+    private Set<CouponItem> coupons = new HashSet<>();
+
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
     @NotNull
@@ -41,6 +44,14 @@ public class EventSignup extends BaseModelObject {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+
+    public Set<CouponItem> getCoupons() {
+        return coupons;
+    }
+
+    public void setCoupons(Set<CouponItem> coupons) {
+        this.coupons = coupons;
     }
 
     public Optional<PurchaseGroup> getGroup(PurchaseGroup purchaseGroup) {
