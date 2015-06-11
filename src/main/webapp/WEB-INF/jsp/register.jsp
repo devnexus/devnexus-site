@@ -106,13 +106,9 @@
                     return false;
                 }
             });
-
             $('#ticket-group').change(function () {
                 updateInfo()
             });
-
-
-
             function updateInfo() {
                 var signupId = $('#ticket-group option:selected').val();
                 if (signupId) {
@@ -122,10 +118,9 @@
                     } else {
                         $('#coupon-code-group').hide();
                     }
-                    
+
                     $('#ticket-cost').val(signupData.price);
-                    
-                    $('#ticket-count option').each(function(index, option){
+                    $('#ticket-count option').each(function (index, option) {
                         option = $(option);
                         if (option.val() >= signupData.minPurchase) {
                             option.show();
@@ -133,6 +128,13 @@
                             option.hide();
                         }
                     });
+                    $('#ticket-count option:selected').prop('selected', false);
+                    $('#ticket-count option').filter(function () {
+                        return $(this).val() == signupData.minPurchase;
+                    }).prop('selected', true);
+
+
+
                     $('#signup_details').show();
                 } else {
                     $('#signup_details').hide();
@@ -140,18 +142,15 @@
             }
 
             var data = {
-                <c:forEach items="${eventSignup.groups}" var="group">
-                        group_<c:out value="${group.id}"/> : {
-                            hasCoupon : <c:choose><c:when test="${empty group.couponCode}">false</c:when><c:otherwise>true</c:otherwise></c:choose>,
-                            price : <c:out value="${group.price}"/>,
-                            minPurchase : <c:out value="${group.minPurchase}"/>
-                        }
-                </c:forEach>
-                };
-               
-            updateInfo();
-
-                
-    });
+        <c:forEach items="${eventSignup.groups}" var="group">
+                group_<c:out value="${group.id}"/>: {
+                    hasCoupon : <c:choose><c:when test="${empty group.couponCode}">false</c:when><c:otherwise>true</c:otherwise></c:choose>,
+                                            price: <c:out value="${group.price}"/>,
+                                    minPurchase: <c:out value="${group.minPurchase}"/>
+                                },
+        </c:forEach>
+                            };
+                            updateInfo();
+                        });
     </script>
 </content>

@@ -18,6 +18,7 @@ package com.devnexus.ting.web.controller.admin;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.repository.EventSignupRepository;
+import java.math.BigDecimal;
 import java.util.function.BinaryOperator;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -116,6 +117,14 @@ public class RegistrationController {
 
         TicketGroup group = signUp.getGroups().stream().reduce(new TicketGroup(), ticketGroupReducer(groupId));
         group.setLabel(ticketGroupForm.getLabel());
+        group.setCloseDate(ticketGroupForm.getCloseDate());
+        group.setOpenDate(ticketGroupForm.getOpenDate());
+        group.setCouponCode(ticketGroupForm.getCouponCode());
+        group.setDescription(ticketGroupForm.getDescription());
+        group.setMinPurchase(ticketGroupForm.getMinPurchase());
+        group.setPrice(ticketGroupForm.getPrice());
+        group.setRegisterFormUrl(ticketGroupForm.getRegisterFormUrl());
+        
         eventSignupController.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
