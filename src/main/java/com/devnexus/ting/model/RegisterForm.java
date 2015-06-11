@@ -65,9 +65,10 @@ public class RegisterForm extends BaseModelObject {
     private Integer ticketCount;
 
     @NotNull
-    private TicketGroup purchaseGroup;
+    private TicketGroup ticketGroup;
 
-    
+    private String couponCode;
+
     
     public Event getEvent() {
         return event;
@@ -116,14 +117,23 @@ public class RegisterForm extends BaseModelObject {
         this.ticketCount = ticketCount;
     }
 
-    public TicketGroup getPurchaseGroup() {
-        return purchaseGroup;
+    public TicketGroup getTicketGroup() {
+        return ticketGroup;
     }
 
-    public void setPurchaseGroup(TicketGroup purchaseGroup) {
-        this.purchaseGroup = purchaseGroup;
+    public void setTicketGroup(TicketGroup ticketGroup) {
+        this.ticketGroup = ticketGroup;
     }
 
+    public String getCouponCode() {
+        return couponCode;
+    }
+
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
+    }
+
+    
     
     
 }
