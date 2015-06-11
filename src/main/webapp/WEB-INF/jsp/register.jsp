@@ -22,47 +22,72 @@
 
 <div class="container">
 
+    <h1>Register for <c:out value="${event.title}"/></h1>
+
     <div class="row">
         <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerForm" enctype="multipart/form-data">
-            <table>
-                <thead>
-                <td>Label</td>
-                <td>Description</td>
-                <td>Start Date</td>
-                <td>End Date</td>
-                <td>Cost per Ticket</td>
-                <td>Ticket Quantity</td>
-                </thead>
+            <spring:bind path="ticketGroup">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="skill-level" class="col-lg-2 control-label">Registration Type*</label>
+                <div class="col-lg-10">
+                    <form:select cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10">
+                        <form:option value="" label="Please Select a Registration Type" />
+                        <form:options items="${eventSignup.groups}" itemLabel="label" itemValue="id"/>
+                    </form:select>
+                    <form:errors path="ticketGroup" cssClass="fieldError" />
+                </div>
+            </div>
+            <span id="signup_details" >
+                <div class="form-group">
+                    <label for="ticket-cost" class="col-lg-2 control-label">Price per Ticket: </label>
+                    <div class="col-lg-10">
+                        <input class="form-control" id="ticket-cost" name="ticket-cost"  disabled="disabled" value="$0.00"/>
+                    </div>
+                </div>
+                <spring:bind path="ticketCount">
+                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                </spring:bind>
+                <div class="form-group${errorClass}">
+                    <label for="ticketCount" class="col-lg-2 control-label">Number of Tickets: *</label>
+                    <div class="col-lg-10">
+                        <form:select cssClass="form-control" path="ticketCount" id="ticket-count" tabindex="10">
+                            <form:option value="1" label="1" />
+                            <form:option value="2" label="2" />
+                            <form:option value="3" label="3" />
+                            <form:option value="4" label="4" />
+                            <form:option value="5" label="5" />
+                            <form:option value="6" label="6" />
+                            <form:option value="7" label="7" />
+                            <form:option value="8" label="8" />
+                            <form:option value="9" label="9" />
+                            <form:option value="10" label="10" />
+                            <form:option value="11" label="11" />
+                            <form:option value="12" label="12" />
+                            <form:option value="13" label="13" />
+                            <form:option value="14" label="14" />
+                            <form:option value="15" label="15" />
+                            <form:option value="16" label="16" />
+                            <form:option value="-1" label="Need more? Email info@ajug.org" />
+                        </form:select>
+                        <form:errors path="ticketCount" cssClass="fieldError" />
+                    </div>
+                </div>
 
-                <c:forEach items="${eventSignup.groups}" var="group" varStatus="status">
-                    <tr>
-                        <td><c:out value="${group.label}"></c:out></td>
-                        <td><c:out value="${group.description}"></c:out></td>
-                        <td><c:out value="${group.openDate}"></c:out></td>
-                        <td><c:out value="${group.closeDate}"></c:out></td>
-                        <td><c:out value="${group.price}"></c:out></td>
-                        <td><form:select path="ticketCount">
-                                <form:option value="0" >0</form:option>
-                                <form:option value="1" >1</form:option>
-                                <form:option value="2" >2</form:option>
-                                <form:option value="3" >3</form:option>
-                                <form:option value="4" >4</form:option>
-                                <form:option value="5" >5</form:option>
-                                <form:option value="6" >6</form:option>
-                                <form:option value="7" >7</form:option>
-                                <form:option value="8" >8</form:option>
-                                <form:option value="9" >9</form:option>
-                                <form:option value="10" >10</form:option>
-                                <form:option value="11" >11</form:option>
-                                <form:option value="12" >12</form:option>
-                                <form:option value="13" >13</form:option>
-                                <form:option value="14" >14</form:option>
-                                <form:option value="15" >15</form:option>
-                                <form:option value="16" >16</form:option>
-                            </form:select></td>
-                    </tr>
-                </c:forEach>
-            </table>
+                <spring:bind path="couponCode">
+                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                </spring:bind>
+                <div class="form-group${errorClass}" id="coupon-code-group">
+                    <label for="coupon-code" class="col-lg-2 control-label">Coupon Code: </label>
+                    <div class="col-lg-10">
+                        <form:input cssClass="form-control" path="couponCode" id="coupon-code" tabindex="10"/>
+                        <form:errors path="couponCode" cssClass="fieldError" />
+                    </div>
+                </div>
+
+            </span>
+
         </form:form>
 
 
@@ -81,6 +106,52 @@
                     return false;
                 }
             });
-        });
+
+            $('#ticket-group').change(function () {
+                updateInfo()
+            });
+
+
+
+            function updateInfo() {
+                var signupId = $('#ticket-group option:selected').val();
+                if (signupId) {
+                    var signupData = data['group_' + signupId];
+                    if (signupData.hasCoupon) {
+                        $('#coupon-code-group').show();
+                    } else {
+                        $('#coupon-code-group').hide();
+                    }
+                    
+                    $('#ticket-cost').val(signupData.price);
+                    
+                    $('#ticket-count option').each(function(index, option){
+                        option = $(option);
+                        if (option.val() >= signupData.minPurchase) {
+                            option.show();
+                        } else {
+                            option.hide();
+                        }
+                    });
+                    $('#signup_details').show();
+                } else {
+                    $('#signup_details').hide();
+                }
+            }
+
+            var data = {
+                <c:forEach items="${eventSignup.groups}" var="group">
+                        group_<c:out value="${group.id}"/> : {
+                            hasCoupon : <c:choose><c:when test="${empty group.couponCode}">false</c:when><c:otherwise>true</c:otherwise></c:choose>,
+                            price : <c:out value="${group.price}"/>,
+                            minPurchase : <c:out value="${group.minPurchase}"/>
+                        }
+                </c:forEach>
+                };
+               
+            updateInfo();
+
+                
+    });
     </script>
 </content>
