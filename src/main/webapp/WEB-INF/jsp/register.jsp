@@ -34,7 +34,7 @@
                 <div class="col-lg-10">
                     <form:select cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10">
                         <form:option value="" label="Please Select a Registration Type" />
-                        <form:options items="${eventSignup.groups}" itemLabel="label" itemValue="id"/>
+                        <form:options items="${signupRegisterView.groups}" itemLabel="label" itemValue="id"/>
                     </form:select>
                     <form:errors path="ticketGroup" cssClass="fieldError" />
                 </div>
@@ -86,6 +86,18 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="total-cost" class="col-lg-2 control-label">Final Price: </label>
+                    <div class="col-lg-10">
+                        <input class="form-control" id="total-cost" name="total-cost"  disabled="disabled" value="$0.00"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-4 col-lg-10">
+                        <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Complete Registration</button>
+                    </div>
+                </div>
             </span>
 
         </form:form>
@@ -106,9 +118,16 @@
                     return false;
                 }
             });
+            $('#ticket-count').change(function () {
+                var signupId = $('#ticket-group option:selected').val();
+                var signupData = data['group_' + signupId];
+                $('#total-cost').val($('#ticket-count option:selected').val() * signupData.price);
+            });
+
             $('#ticket-group').change(function () {
                 updateInfo()
             });
+
             function updateInfo() {
                 var signupId = $('#ticket-group option:selected').val();
                 if (signupId) {
@@ -133,7 +152,7 @@
                         return $(this).val() == signupData.minPurchase;
                     }).prop('selected', true);
 
-
+                    $('#total-cost').val($('#ticket-count option:selected').val() * signupData.price);
 
                     $('#signup_details').show();
                 } else {
@@ -142,7 +161,7 @@
             }
 
             var data = {
-        <c:forEach items="${eventSignup.groups}" var="group">
+        <c:forEach items="${signupRegisterView.groups}" var="group">
                 group_<c:out value="${group.id}"/>: {
                     hasCoupon : <c:choose><c:when test="${empty group.couponCode}">false</c:when><c:otherwise>true</c:otherwise></c:choose>,
                                             price: <c:out value="${group.price}"/>,

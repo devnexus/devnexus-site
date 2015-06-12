@@ -72,6 +72,7 @@ import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorLevel;
 import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.repository.ApplicationCacheRepository;
@@ -86,6 +87,7 @@ import com.devnexus.ting.repository.RoomRepository;
 import com.devnexus.ting.repository.ScheduleItemRepository;
 import com.devnexus.ting.repository.SpeakerRepository;
 import com.devnexus.ting.repository.SponsorRepository;
+import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
 
 /**
@@ -105,6 +107,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
         @Autowired private EventSignupRepository        eventSignupDao;
+        @Autowired private TicketGroupRepository        ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
 	@Autowired private PresentationRepository presentationDao;
 	@Autowired private PresentationTagRepository presentationTagDao;
@@ -720,6 +723,11 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public EventSignup getEventSignup() {
         return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
+    }
+
+    @Override
+    public TicketGroup getTicketGroup(Long ticketGroup) {
+        return ticketGroupDao.findOne(ticketGroup);
     }
 
 }

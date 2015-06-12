@@ -33,6 +33,7 @@ import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 
@@ -270,5 +271,7 @@ public interface BusinessService {
 	SponsorList getSponsorListForEvent(Long id, boolean large);
         
         EventSignup getEventSignup();
+
+        TicketGroup getTicketGroup(Long id);
         
 }
