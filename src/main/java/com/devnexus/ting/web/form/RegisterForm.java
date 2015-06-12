@@ -13,24 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.model;
+package com.devnexus.ting.web.form;
 
-import java.util.Objects;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import com.devnexus.ting.model.BaseModelObject;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  *
  * @author summers
  */
-@Entity
+
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegisterForm extends BaseModelObject {
@@ -40,75 +35,14 @@ public class RegisterForm extends BaseModelObject {
      */
     private static final long serialVersionUID = 1071233976549394025L;
 
-    @ManyToOne
-    @NotNull
-    @XmlTransient
-    private Event event;
-
-    @NotEmpty
-    @Size(max = 255)
-    protected String firstName;
-
-    @NotEmpty
-    @Size(max = 255)
-    protected String lastName;
-
-    @NotEmpty
-    @Size(max = 255)
-    protected String emailAddress;
-
-    @NotEmpty
-    @Size(max = 255)
-    protected String phoneNumber;
-
     @NotNull
     private Integer ticketCount;
 
     @NotNull
-    private TicketGroup ticketGroup;
+    private Long ticketGroup;
 
     private String couponCode;
 
-    
-    public Event getEvent() {
-        return event;
-    }
-
-    public void setEvent(Event event) {
-        this.event = event;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
     public Integer getTicketCount() {
         return ticketCount;
     }
@@ -117,11 +51,11 @@ public class RegisterForm extends BaseModelObject {
         this.ticketCount = ticketCount;
     }
 
-    public TicketGroup getTicketGroup() {
+    public Long getTicketGroup() {
         return ticketGroup;
     }
 
-    public void setTicketGroup(TicketGroup ticketGroup) {
+    public void setTicketGroup(Long ticketGroup) {
         this.ticketGroup = ticketGroup;
     }
 
