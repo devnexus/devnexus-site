@@ -95,7 +95,7 @@
 
                 <div class="form-group">
                     <div class="col-lg-offset-4 col-lg-10">
-                        <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Complete Registration</button>
+                        <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Enter Ticket Information</button>
                     </div>
                 </div>
             </span>
