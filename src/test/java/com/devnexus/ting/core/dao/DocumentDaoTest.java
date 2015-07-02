@@ -23,6 +23,8 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.FileData;
@@ -32,6 +34,7 @@ import com.devnexus.ting.repository.FileDataRepository;
  * @author Gunnar Hillert
  */
 @Transactional
+@DirtiesContext(classMode=ClassMode.AFTER_EACH_TEST_METHOD)
 public class DocumentDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private FileDataRepository documentDao;

@@ -20,6 +20,8 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.PresentationTag;
@@ -30,6 +32,7 @@ import com.devnexus.ting.repository.PresentationTagRepository;
  *
  */
 @Transactional
+@DirtiesContext(classMode=ClassMode.AFTER_EACH_TEST_METHOD)
 public class PresentationTagDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private PresentationTagRepository presentationTagDao;

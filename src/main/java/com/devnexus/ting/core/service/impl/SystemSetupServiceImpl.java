@@ -61,7 +61,6 @@ import com.devnexus.ting.repository.UserAuthorityRepository;
  * @since 1.0
  */
 @Service("systemSetupService")
-@Transactional
 public class SystemSetupServiceImpl implements SystemSetupService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
@@ -149,6 +148,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		systemDao.createDatabase(false, null);
 	}
 
+	@Transactional
 	@Override
 	public void updateDatabase() {
 		systemDao.updateDatabase();
@@ -192,6 +192,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 			}
 	}
 
+	@Transactional
 	@Override
 	public void setupDemoData() {
 		LOGGER.info("Ting Database is not setup, yet. Populating Demo Data...");

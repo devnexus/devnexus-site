@@ -20,6 +20,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.Track;
@@ -30,6 +31,7 @@ import com.devnexus.ting.repository.TrackRepository;
  *
  */
 @Transactional
+@DirtiesContext
 public class TrackDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private TrackRepository trackDao;

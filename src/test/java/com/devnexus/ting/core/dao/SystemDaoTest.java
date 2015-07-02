@@ -15,14 +15,16 @@
  */
 package com.devnexus.ting.core.dao;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
 /**
  * @author Gunnar Hillert
  *
  */
+@DirtiesContext(classMode=ClassMode.AFTER_EACH_TEST_METHOD)
 public class SystemDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private SystemDao systemDao;
@@ -31,7 +33,6 @@ public class SystemDaoTest extends BaseDaoIntegrationTest {
 	 *
 	 */
 	@Test
-	@Ignore
 	public void testGenerateSchema() {
 		//systemDao.createDatabase(true, "org.hibernate.dialect.MySQLDialect");
 		systemDao.createDatabase(true, "org.hibernate.dialect.PostgreSQLDialect");
