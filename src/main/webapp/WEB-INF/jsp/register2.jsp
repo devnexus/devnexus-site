@@ -25,10 +25,10 @@
     <h1>Register for <c:out value="${event.title}"/></h1>
 
     <div class="row">
-        
-        
+
+
         <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="registerPageTwo">
-            
+
             <form:hidden path="couponCode"/>
             <form:hidden path="ticketGroup"/>
             <form:hidden path="ticketCount"/>
@@ -175,19 +175,16 @@
                 </div>
             </c:forEach>
 
-            <div class="form-group">
-                <div class="col-lg-offset-4 col-lg-10">
-                    <button type="submit" class="btn btn-lg btn-warning" lang="save" tabindex="19">Purchase on Amazon</button>
-                </div>
-            </div>
+            <script async type='text/javascript' src = 'https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'>
+                </script>
 
-        </form:form>
+            </form:form>
 
+
+        </div>
 
     </div>
+    <jsp:include page="includes/questions.jsp"/>
 
-</div>
-<jsp:include page="includes/questions.jsp"/>
-
-<content tag='bottom'>
-</content>
+    <content tag='bottom'>
+    </content>
