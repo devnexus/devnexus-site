@@ -116,7 +116,7 @@
 			<div class="row intro-body">
 				<div class="col-md-8 col-md-offset-2">
 					<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
-					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - MARCH 10-12, 2015</p>
+					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - FEBRUARY 15-17, 2016</p>
 					<div class="icon">
 						<i class="fa fa fa-twitter"></i>
 					</div><!--//icon-->
@@ -134,10 +134,8 @@
 						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
 					<div class="col-md-8 col-md-offset-2">
-						<p class="lead">THANK YOU ALL for attending the show!!
-						Grab the <a href="https://github.com/devnexus/devnexus2015" target="_blank">presentation slides</a>
-						from GitHub or check out the download links under <a href="${ctx}/s/presentations" target="_blank">presentations</a>.
-						The videos of the sessions will be posted via <a href="http://www.dzone.com/" target="_blank">DZone</a> within a couple of weeks.</p>
+						<p class="lead">MARK YOUR CALENDARS FEBRUARY 15-17 2016!
+                                                    Our ninth DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.  We are looking forward to hosting our largest event yet and can't wait for you to join.  Check out out <a href="past-conferences">previous years'</a> content, bookmark this site to stay up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
 					</div>
 				</div>
 				<div class="row" style="margin-bottom: 20px;">
@@ -299,8 +297,8 @@
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
-					<p class="info">Our first seven conference events were tremendous successes. Skip the travel headaches, expense, and mobs of people at other conferences and join us this March to experience one of the best developer conferences, presented by your fellow developers, right in the heart of the Southeast</p>
-					<button disabled="disabled" class="btn btn-primary btn-block registerButton">Sold Out</button>
+					<p class="info"> MARK YOUR CALENDARS FEBRUARY 15-17 2016</p>
+					
 				</div>
 			</div>
 		</div>
@@ -312,45 +310,65 @@
 		</div>
 		<div class="container">
 			<div class="row travel-row-spacing">
-			<h4 class="travel-address">Cobb Galleria Centre | Two Galleria Parkway, Atlanta, GA 30339 | 770-989-5095</h4>
-				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<a href="https://www.google.com/maps/d/viewer?mid=zMoKxZbA6hII.kNm6qtm2mnkk"
-						target="_blank"><div class="devnexus-map block-link" style="height:300px;"></div></a>
-				</div>
+                            <h4 class="travel-address"><a href="https://www.google.com/maps/place/Georgia+World+Congress+Center/@33.76042,-84.3980223,17z/data=!4m2!3m1!1s0x0000000000000000:0x0072f65a339b8777">Georgia World Congress Center | 285 Andrew Young International Blvd NW, Atlanta, GA 30303
+                                    | 404-223-4000</a></h4>
+				
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<a href="http://cobbgalleria.com/" target="_blank"><img class="img-feature img-responsive" src="${assetsUrl}/img/cobbgalleria.jpg" alt="Cobb Galleria Centre"></a>
+					<a href="http://www.gwcc.com/" target="_blank"><img class="img-feature img-responsive" src="${assetsUrl}/img/gwcc.jpg" alt="Georgia World Congress Center"></a>
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<p>
-					The Cobb Galleria website includes <a href="http://cobbgalleria.com/attendees/the-destination/directions-parking/" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
+					The Georgia World Conress Center website includes <a href="http://www.gwcc.com/directions/Default.aspx" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
 					<p>
-					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta's public transportation  system, may be used to reach the center, but the nearest bus stop is a few blocks away.</p>
+					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta's public transportation  system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.</p>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<h4 class="travel-address">Cobb Galleria is accessible from several nearby hotels</h4>
+					<h4 class="travel-address">Georgia World Conress Center is accessible from several nearby hotels</h4>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://bit.ly/fWkNVC" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/sheraton.png" alt="Sheraton Hotel"></a>
-						<div class="text-center"><a class="travel-directions-link" href="http://bit.ly/fNl2Ol">Get Directions</a></div>
+						<a class="travel-directions-link" href="http://www.omnihotels.com/hotels/atlanta-cnn-center" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/omni.jpg" alt="Omni Hotel"><div>Omni Hotel</div></a>
+						
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://bit.ly/hlU1OO" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/renaissance.png" alt="Renaissance Atlanta Waverly Hotel"></a>
-						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>
+						<a class="travel-directions-link" href="http://embassysuites3.hilton.com/en/hotels/georgia/embassy-suites-atlanta-at-centennial-olympic-park-ATLESES/index.html" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/embassy.jpg" alt="Embassy Suites"><div>Embassy Suites</div></a>
+<!--						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>-->
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
-						<a href="http://www.atlantagalleria.embassysuites.com/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/embassy-suites.png" alt="Embassy Suites"></a>
-						<div><a class="travel-directions-link" href="http://bit.ly/fKUADx">Get Directions</a></div>
+                                            <a class="travel-directions-link" href="http://hiltongardeninn3.hilton.com/en/hotels/georgia/hilton-garden-inn-atlanta-downtown-ATLDOGI/index.html" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/hilton.jpg" alt="Hilton Garden Inn"><div>Hilton Garden Inn</div></a>
+					</div>
+				</div>
+			</div><div class="row travel-row-spacing">
+				<div class="col-md-10 col-sm-10 col-md-push-1">
+					<h4 class="travel-address">Downtown Atlanta features many attractions if you plan to extend your stay</h4>
+				</div>
+			</div>
+			<div class="row travel-row-spacing">
+				<div class="col-md-4 col-sm-4">
+					<div class="text-center">
+						<a class="travel-directions-link" href="https://www.civilandhumanrights.org/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/civilrights.jpg" alt="Center for Civil and Human Rights"><div>Center for Civil and Human Rights</div></a>
+						
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="text-center">
+						<a class="travel-directions-link" href="http://www.cfbhall.com/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/college_fhof.jpg" alt="College Football Hall of Fame"><div>College Football Hall of Fame</div></a>
+<!--						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>-->
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="text-center">
+                                            <a class="travel-directions-link" href="http://www.georgiaaquarium.org/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/aquarium.jpg" alt="Georgia Aquarium"><div>Georgia Aquarium</div></a>
 					</div>
 				</div>
 			</div>

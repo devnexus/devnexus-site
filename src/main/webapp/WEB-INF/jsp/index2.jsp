@@ -75,7 +75,7 @@
 			<div class="row intro-body">
 				<div class="col-md-8 col-md-offset-2">
 					<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
-					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - MARCH 10-12, 2015</p>
+					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - FEBRUARY 15-17, 2016</p>
 					<div class="icon">
 						<i class="fa fa fa-twitter"></i>
 					</div><!--//icon-->
@@ -241,8 +241,8 @@
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
-					<p class="info">Our first seven conference events were tremendous successes. Skip the travel headaches, expense, and mobs of people at other conferences and join us this March to experience one of the best developer conferences, presented by your fellow developers, right in the heart of the Southeast</p>
-					<button disabled="disabled" class="btn btn-primary btn-block registerButton">Sold Out</button>
+					<p class="info">MARK YOUR CALENDARS FEBRUARY 15-17 2016</p>
+					
 				</div>
 			</div>
 		</div>

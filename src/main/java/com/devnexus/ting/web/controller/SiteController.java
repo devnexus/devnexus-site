@@ -82,6 +82,14 @@ public class SiteController {
 		return "index";
 	}
 
+	@RequestMapping({"/manager", "/"})
+	public String manager(final Model model) {
+		final Event event = businessService.getCurrentEvent();
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
+		model.addAttribute("sponsorList", sponsorList);
+		return "manager";
+	}
+
 	@RequestMapping({"/schedule", "/api/schedule"})
 	public String scheduleForCurrentEvent(final Model model,
 			@RequestParam(required=false, value="old") boolean old) {
