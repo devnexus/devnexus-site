@@ -12,3 +12,5 @@ target
 rebel.xml
 src/main/webapp/META-INF/context.xml
 .springBeans
+nb-configuration.xml
+src/main/webapp/wro/
