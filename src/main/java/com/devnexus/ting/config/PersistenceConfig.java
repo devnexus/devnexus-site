@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,13 @@ package com.devnexus.ting.config;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import javax.sql.DataSource;
 
+import org.reflections.Reflections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -32,12 +36,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.repository.jpa.support.BaseRepositoryFactoryBean;
-import com.jolbox.bonecp.BoneCPDataSource;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 
 /**
@@ -50,34 +54,10 @@ import com.jolbox.bonecp.BoneCPDataSource;
 		entityManagerFactoryRef="entityManagerFactory", basePackages="com.devnexus.ting.repository")
 public class PersistenceConfig {
 
+	private static final String PERSISTENCE_BASE_PACKAGE = "com/devnexus/ting/model";
+
 	@Autowired
 	Environment environment;
-
-	@Bean
-	public Jaxb2Marshaller jaxbMarshaller() {
-		Jaxb2Marshaller jaxbMarshaller = new Jaxb2Marshaller();
-		jaxbMarshaller.setClassesToBeBound(
-
-			com.devnexus.ting.model.Evaluation.class,
-			com.devnexus.ting.model.EvaluationList.class,
-			com.devnexus.ting.model.Event.class,
-			com.devnexus.ting.model.Presentation.class,
-			com.devnexus.ting.model.PresentationList.class,
-			com.devnexus.ting.model.Room.class,
-			com.devnexus.ting.model.RoomList.class,
-			com.devnexus.ting.model.ScheduleItem.class,
-			com.devnexus.ting.model.ScheduleItemList.class,
-			com.devnexus.ting.model.Sponsor.class,
-			com.devnexus.ting.model.Speaker.class,
-			com.devnexus.ting.model.SpeakerList.class,
-			com.devnexus.ting.model.ScheduleItemType.class,
-			com.devnexus.ting.model.CfpSubmission.class,
-			com.devnexus.ting.model.CfpSubmissionList.class,
-                        com.devnexus.ting.model.PurchaseGroup.class,
-                        com.devnexus.ting.model.PurchaseItem.class
-		);
-		return jaxbMarshaller;
-	}
 
 	@Bean
 	public HibernateJpaVendorAdapter hibernateJpaVendorAdapter() {
@@ -93,15 +73,12 @@ public class PersistenceConfig {
 		final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
 		entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-		entityManagerFactory.setPackagesToScan("com/devnexus/ting/model");
+		entityManagerFactory.setPackagesToScan(PERSISTENCE_BASE_PACKAGE);
 
 		final Map<String, Object> jpaProperties = new HashMap<>();
 
 		jpaProperties.put("hibernate.dialect", getHibernateDialect());
-		jpaProperties.put("hibernate.generate_statistics", true);
-		//jpaProperties.put("hibernate.cache.use_second_level_cache", false);
-		//jpaProperties.put("hibernate.cache.use_query_cache", true);
-		//jpaProperties.put("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");
+		jpaProperties.put("hibernate.generate_statistics", false);
 		jpaProperties.put("hibernate.show_sql", isShowHibernateSql());
 		jpaProperties.put("hibernate.format_sql", true);
 		jpaProperties.put("hibernate.ejb.naming_strategy", "com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy");
@@ -129,54 +106,47 @@ public class PersistenceConfig {
 	//@Profile({"cloud", "default"})
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
-		BoneCPDataSource dataSource = new BoneCPDataSource();
 
-		dataSource.setDriverClass(getDriverClassName());
-		dataSource.setJdbcUrl(getUrl());
-		dataSource.setUsername(getUser());
-		dataSource.setPassword(getPassword());
+		HikariConfig config = new HikariConfig();
+		config.setDriverClassName(getDriverClassName());
+		config.setJdbcUrl(getUrl());
+		config.setUsername(getUser());
+		config.setPassword(getPassword());
+		config.setConnectionTestQuery("select 1");
+		config.setInitializationFailFast(true);
 
-		//dataSource.setValidationQuery(getDatabaseValidationQuery());
-
-		dataSource.setIdleConnectionTestPeriodInMinutes(60);
-		dataSource.setIdleMaxAgeInMinutes(240);
-		dataSource.setMaxConnectionsPerPartition(10);
-		dataSource.setMinConnectionsPerPartition(1);
-		dataSource.setPartitionCount(3);
-		dataSource.setAcquireIncrement(5);
-		dataSource.setStatementsCacheSize(100);
-		dataSource.setDisableJMX(true);
+		HikariDataSource dataSource = new HikariDataSource(config);
 
 		return dataSource;
 	}
 
 	private String getPassword() {
-		return environment.getRequiredProperty("database.jdbc.password");
+		return environment.getRequiredProperty("spring.datasource.password");
 	}
 
 	private String getUser() {
-		return environment.getRequiredProperty("database.jdbc.username");
+		return environment.getRequiredProperty("spring.datasource.username");
 	}
 
 	private String getUrl() {
-		return environment.getRequiredProperty("database.jdbc.url");
+		return environment.getRequiredProperty("spring.datasource.url");
 	}
 
 	private String getDriverClassName() {
-		return environment.getRequiredProperty("database.jdbc.driverClassName");
+		return environment.getRequiredProperty("spring.datasource.driverClassName");
+	}
+
+	public static Class<?>[] getAnnotatedPersistenceClasses() {
+		Reflections reflections = new Reflections(PERSISTENCE_BASE_PACKAGE);
+		Set<Class<?>> entityClasses = reflections.getTypesAnnotatedWith(Entity.class);
+		entityClasses.addAll(reflections.getTypesAnnotatedWith(MappedSuperclass.class));
+		return entityClasses.toArray(new Class<?>[0]);
 	}
 
 	@Bean
 	PersistenceExceptionTranslationPostProcessor persistenceExceptionTranslationPostProcessor() {
 		return new PersistenceExceptionTranslationPostProcessor();
 	}
-
-//	@Bean
-//	LocalValidatorFactoryBean validator() {
-//		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
-//		localValidatorFactoryBean.setValidationMessageSource(messageSource());
-//		return localValidatorFactoryBean;
-//	}
 
 	@Bean
 	ReloadableResourceBundleMessageSource messageSource() {
@@ -186,5 +156,4 @@ public class PersistenceConfig {
 		messageSource.setCacheSeconds(0);
 		return messageSource;
 	}
-
 }

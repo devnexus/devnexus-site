@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,7 +50,7 @@ public class ResponseAddHttpHeadersFilter implements Filter {
 	/** Initialize Logging. */
 	private static final Logger LOGGER = LoggerFactory.getLogger(ResponseAddHttpHeadersFilter.class);
 
-	FilterConfig config;
+	private int secondsToCache;
 
 	public void doFilter(ServletRequest req, ServletResponse res,
 			FilterChain chain) throws IOException, ServletException {
@@ -72,19 +72,19 @@ public class ResponseAddHttpHeadersFilter implements Filter {
 
 		LOGGER.debug("RequestURI = " + request.getRequestURI());
 
-		final int secondsToCache = Integer.valueOf(config.getInitParameter("secondsToCache"));
-
 		setCacheExpireDate(response, secondsToCache);
 		// pass the request/response on
 		chain.doFilter(req, response);
 	}
 
 	public void init(FilterConfig filterConfig) {
-		this.config = filterConfig;
+		if(filterConfig.getInitParameter("secondsToCache") != null) {
+			this.secondsToCache = Integer.valueOf(filterConfig.getInitParameter("secondsToCache"));
+		}
 	}
 
 	public void destroy() {
-		this.config = null;
+
 	}
 
 	public static void setCacheExpireDate(final HttpServletResponse response,
@@ -102,4 +102,9 @@ public class ResponseAddHttpHeadersFilter implements Filter {
 		httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 		return httpDateFormat;
 	}
+
+	public void setSecondsToCache(int secondsToCache) {
+		this.secondsToCache = secondsToCache;
+	}
+
 }

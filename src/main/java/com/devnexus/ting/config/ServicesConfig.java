@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import org.jasypt.springsecurity3.authentication.encoding.PasswordEncoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.Message;
@@ -40,7 +39,6 @@ import com.devnexus.ting.common.SpringProfile;
  */
 @Configuration
 @ComponentScan({"com.devnexus.ting.core.service"})
-@Import(PersistenceConfig.class)
 @ImportResource({
 	"classpath:spring/spring-integration-cfp-context.xml"
 })

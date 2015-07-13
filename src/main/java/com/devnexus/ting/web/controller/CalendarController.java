@@ -33,8 +33,8 @@ import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.CalendarServices;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserCalendar;
-import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -60,7 +60,7 @@ public class CalendarController {
     }
 
     @Autowired
-    private JaxbJacksonObjectMapper mapper;
+    private ObjectMapper mapper;
 
     @Autowired
     JavaSender javaSender;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
  *
  * @author Gunnar Hillert
  *
- *
+ * See also: http://blog.trifork.com/2013/06/06/adding-user-info-to-log-entries-in-a-multi-user-app-using-mapped-diagnostic-context/
  */
 public class LoggingFilter4Logback implements Filter {
 
