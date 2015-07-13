@@ -82,7 +82,7 @@ public class SiteController {
 		return "index";
 	}
 
-	@RequestMapping({"/manager", "/"})
+	@RequestMapping({"/manager"})
 	public String manager(final Model model) {
 		final Event event = businessService.getCurrentEvent();
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);

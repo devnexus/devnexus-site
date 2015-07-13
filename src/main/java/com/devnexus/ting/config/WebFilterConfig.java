@@ -15,20 +15,14 @@
  */
 package com.devnexus.ting.config;
 
-import javax.servlet.FilterRegistration;
-
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
-import org.springframework.web.filter.DelegatingFilterProxy;
-import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
 import com.devnexus.ting.web.filter.DevNexusSiteMeshFilter;
-import com.devnexus.ting.web.filter.JSONPRequestFilter;
-import com.devnexus.ting.web.filter.LoggingFilter4Logback;
 import com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter;
 
 /**

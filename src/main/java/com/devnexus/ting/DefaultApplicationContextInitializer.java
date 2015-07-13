@@ -21,10 +21,12 @@ import java.io.IOException;
 import org.cloudfoundry.runtime.env.CloudEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.env.YamlPropertySourceLoader;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.io.support.ResourcePropertySource;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.io.DefaultResourceLoader;
 
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
@@ -42,47 +44,44 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 	@Override
 	public void initialize(ConfigurableApplicationContext applicationContext) {
 
+
 		final CloudEnvironment env = new CloudEnvironment();
 		if (env.getInstanceInfo() != null) {
 			LOGGER.info("cloud API: " + env.getCloudApiUri());
 			applicationContext.getEnvironment().setActiveProfiles("cloud", SpringContextMode.DemoContextConfiguration.getCode());
 		}
 		else {
-			final String profile = System.getProperty("ting-spring-profile");
 
-			if (profile == null) {
-				LOGGER.info("System property 'ting-spring-profile' not set. Setting active profile to '{}'.", SpringContextMode.DemoContextConfiguration.getCode());
-				applicationContext.getEnvironment().setActiveProfiles(SpringContextMode.DemoContextConfiguration.getCode());
+			final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
+			SpringContextMode springContextMode;
+
+			if (SystemInformationUtils.existsConfigFile(apphome.getAppHomePath())) {
+				springContextMode = SpringContextMode.ProductionContextConfiguration;
+			} else {
+				springContextMode = SpringContextMode.DemoContextConfiguration;
 			}
-			else {
-				applicationContext.getEnvironment().setActiveProfiles(profile);
-			}
+
+			applicationContext.getEnvironment().setActiveProfiles(springContextMode.getCode());
 		}
 
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
 
 		if (environment.acceptsProfiles(SpringProfile.STANDALONE)) {
 			final String tingHome = environment.getProperty(Apphome.APP_HOME_DIRECTORY);
-			final ResourcePropertySource propertySource;
+			final PropertySource<?> propertySource;
+			final YamlPropertySourceLoader yamlPropertySourceLoader = new YamlPropertySourceLoader();
+
 			final String productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
 			try {
-				propertySource = new ResourcePropertySource(productionPropertySourceLocation);
+				propertySource = yamlPropertySourceLoader.load("devnexus-standalone", new DefaultResourceLoader().getResource(productionPropertySourceLocation), null);
 			} catch (IOException e) {
 				throw new IllegalStateException("Unable to get ResourcePropertySource '" + productionPropertySourceLocation + "'", e);
 			}
 			environment.getPropertySources().addFirst(propertySource);
-			LOGGER.info("Properties for standalone mode loaded [" + productionPropertySourceLocation + "]");
+			LOGGER.info("Properties for standalone mode loaded [" + productionPropertySourceLocation + "].");
 		}
 		else {
-			final String demoPropertySourceLocation = "classpath:ting-demo.properties";
-			final ResourcePropertySource propertySource;
-			try {
-				propertySource = new ResourcePropertySource(demoPropertySourceLocation);
-			} catch (IOException e) {
-				throw new IllegalStateException("Unable to get ResourcePropertySource '" + demoPropertySourceLocation + "'", e);
-			}
-			environment.getPropertySources().addFirst(propertySource);
-			LOGGER.info("Properties for demo mode loaded [" + demoPropertySourceLocation + "]");
+			LOGGER.info("Using Properties for demo mode.");
 		}
 
 		final boolean mailEnabled      = environment.getProperty("mail.enabled",      Boolean.class, Boolean.FALSE);
