@@ -28,8 +28,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.web.config.ServicesConfig;
+
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;

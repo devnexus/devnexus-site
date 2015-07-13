@@ -1,4 +1,4 @@
-package com.devnexus.ting.web.config;
+package com.devnexus.ting.config;
 
 import org.springframework.cloud.Cloud;
 import org.springframework.cloud.CloudFactory;

@@ -29,12 +29,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.repository.UserRepository;
-import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
  * @author Gunnar Hillert

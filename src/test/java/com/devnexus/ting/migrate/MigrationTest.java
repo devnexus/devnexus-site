@@ -25,10 +25,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.repository.FileDataRepository;
 import com.devnexus.ting.repository.SpeakerRepository;
-import com.devnexus.ting.web.config.ServicesConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
