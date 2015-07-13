@@ -27,9 +27,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.devnexus.ting.DefaultApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 import com.devnexus.ting.web.config.ServicesConfig;
 
 /**

@@ -33,10 +33,10 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
+import com.devnexus.ting.DefaultApplicationContextInitializer;
 import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.web.config.DefaultApplicationContextInitializer;
 import com.devnexus.ting.web.config.MainConfig;
 import com.devnexus.ting.web.filter.JSONPRequestFilter;
 import com.devnexus.ting.web.filter.LoggingFilter4Logback;
