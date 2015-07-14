@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -127,6 +127,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
+	@CacheEvict(value={"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries=true)
 	public void deleteEvent(Event event) {
 		Assert.notNull(event, "The provided event must not be null.");
 		Assert.notNull(event.getId(), "Id must not be Null for event " + event);
@@ -193,6 +194,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	/** {@inheritDoc} */
 	@Override
+	@Cacheable("getAllNonCurrentEvents")
 	public List<Event> getAllNonCurrentEvents() {
 		return eventDao.getAllNonCurrentEvents();
 	}
@@ -349,6 +351,7 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
+	@CacheEvict(value={"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries=true)
 	public void saveEvent(Event event) {
 		eventDao.save(event);
 	}
@@ -441,9 +444,8 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
+	@Cacheable("getCurrentEvent")
 	public Event getCurrentEvent() {
-		environment.getActiveProfiles();
-		environment.getProperty("database.jdbc.url");
 		return eventDao.getCurrentEvent();
 	}
 
