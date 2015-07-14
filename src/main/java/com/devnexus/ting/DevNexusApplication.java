@@ -19,6 +19,7 @@ import org.jboss.aerogear.unifiedpush.SenderClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -34,6 +35,7 @@ import com.google.common.cache.CacheBuilder;
  * @author Gunnar Hillert
  *
  */
+@EnableCaching
 @SpringBootApplication(exclude = { org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class })
 public class DevNexusApplication {
 
