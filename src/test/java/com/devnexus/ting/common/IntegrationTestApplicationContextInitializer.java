@@ -19,10 +19,12 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.env.YamlPropertySourceLoader;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.io.support.ResourcePropertySource;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.io.DefaultResourceLoader;
 
 /**
  *
@@ -40,14 +42,18 @@ public class IntegrationTestApplicationContextInitializer implements Application
 
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
 
-		final String demoPropertySourceLocation = "classpath:ting-demo.properties";
-		final ResourcePropertySource propertySource;
+		final String demoPropertySourceLocation = "classpath:application.yml";
+
+		final PropertySource<?> propertySource;
+		final YamlPropertySourceLoader yamlPropertySourceLoader = new YamlPropertySourceLoader();
+
 		try {
-			propertySource = new ResourcePropertySource(demoPropertySourceLocation);
+			propertySource = yamlPropertySourceLoader.load("devnexus-test", new DefaultResourceLoader().getResource(demoPropertySourceLocation), null);
 		} catch (IOException e) {
 			throw new IllegalStateException("Unable to get ResourcePropertySource '" + demoPropertySourceLocation + "'", e);
 		}
 		environment.getPropertySources().addFirst(propertySource);
+
 		LOGGER.info("Properties for demo mode loaded [" + demoPropertySourceLocation + "]");
 
 	}

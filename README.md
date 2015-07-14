@@ -9,6 +9,20 @@ Build Status:
 
 [![Build Status](https://travis-ci.org/devnexus/devnexus-site.png?branch=master)](https://travis-ci.org/devnexus/devnexus-site)
 
+#### Requirements
+
+* Git
+* Maven
+
+#### Quickstart (Demo Mode)
+
+	$ git clone https://github.com/devnexus/devnexus-site.git
+	$ cd devnexus-site/
+	$ mvn clean package
+	$ java -jar target/devnexus.jar
+
+The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8080/`
+
 #### Running on Cloud Foundry
 
 **Demo Deployment**: http://devnexus.cfapps.io/

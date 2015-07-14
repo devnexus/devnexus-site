@@ -24,6 +24,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.config.PersistenceConfig;
 import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
@@ -38,7 +39,7 @@ import com.devnexus.ting.model.SkillLevel;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
 		initializers=IntegrationTestApplicationContextInitializer.class,
-				classes=ServicesConfig.class)
+				classes={ServicesConfig.class, PersistenceConfig.class})
 public class MailSendingTest {
 
 	@Autowired
