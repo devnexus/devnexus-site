@@ -53,7 +53,7 @@ public class WebFilterConfig {
 		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
 
 		registrationBean.setFilter(encodingFilter);
-		registrationBean.addUrlPatterns("/s/*");
+		registrationBean.addUrlPatterns("/*");
 		registrationBean.setOrder(2);
 		return registrationBean;
 	}

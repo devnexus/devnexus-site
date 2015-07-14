@@ -17,9 +17,15 @@ package com.devnexus.ting.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.devnexus.ting.web.converter.StringToEvent;
+import com.devnexus.ting.web.converter.StringToPresentationType;
+import com.devnexus.ting.web.converter.StringToRoom;
+import com.devnexus.ting.web.converter.StringToSkillLevel;
+import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
 
 /**
@@ -39,5 +45,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(globalDataInterceptor()).addPathPatterns("/**");
     }
+
+	@Override
+	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(new StringToEvent());
+		registry.addConverter(new StringToRoom());
+		registry.addConverter(new StringToSkillLevel());
+		registry.addConverter(new StringToPresentationType());
+		registry.addConverter(new StringToSponsorLevel());
+	}
 
 }
