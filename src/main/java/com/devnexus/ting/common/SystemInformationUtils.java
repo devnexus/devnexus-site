@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ public final class SystemInformationUtils {
 
 	public static int CONSOLE_SPACER_WIDTH = 40;
 	public static String CONSOLE_SPACER_CHARACTER = ".";
-	public static String TING_CONFIG_FILENAME = "ting.properties";
+	public static String TING_CONFIG_FILENAME = "devnexus.yml";
 
 	public enum AppHomeDirectories {
 
