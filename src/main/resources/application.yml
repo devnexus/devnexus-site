@@ -1,6 +1,7 @@
 debug: false
 server:
   servlet-path: /s
+  session-timeout: 20
   tomcat:
     compression: on
     compressableMimeTypes: application/json,application/xml,text/html,text/xml,text/plain
