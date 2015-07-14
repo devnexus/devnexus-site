@@ -122,10 +122,6 @@
 				<executions>
 					<execution>
 						<phase>compile</phase>
-						<configuration>
-							<wroFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.xml</wroFile>
-							<extraConfigFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.properties</extraConfigFile>
-						</configuration>
 						<goals>
 							<goal>run</goal>
 						</goals>
@@ -134,6 +130,8 @@
 				<configuration>
 					<wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
 					<destinationFolder>${basedir}/src/main/resources/META-INF/resources/wro/</destinationFolder>
+					<wroFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.xml</wroFile>
+					<extraConfigFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.properties</extraConfigFile>
 				</configuration>
 			</plugin>
 		</plugins>
