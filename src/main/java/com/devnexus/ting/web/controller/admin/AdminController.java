@@ -36,6 +36,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Event;
@@ -63,9 +64,9 @@ public class AdminController {
 	}
 
 	@RequestMapping({"/admin/index"})
-	public String execute(ModelMap model) {
+	public String execute(RedirectAttributes redirectAttributes) {
 		final Event currentEvent = businessService.getCurrentEvent();
-		model.addAttribute("eventKey", currentEvent.getEventKey());
+		redirectAttributes.addAttribute("eventKey", currentEvent.getEventKey());
 		return "redirect:/s/admin/{eventKey}/index";
 	}
 
@@ -112,7 +113,7 @@ public class AdminController {
 	}
 
 	@RequestMapping("/logout")
-	public String logout(ModelMap model) {
+	public String logout(RedirectAttributes redirectAttributes) {
 
 		final SecurityContext context = SecurityContextHolder.getContext();
 
@@ -123,8 +124,7 @@ public class AdminController {
 		}
 
 		context.setAuthentication(null);
-
-		//super.addActionMessage("You logged out successfully.");
+		redirectAttributes.addFlashAttribute("succesMessage", "You logged out successfully.");
 
 		return "/index";
 	}
