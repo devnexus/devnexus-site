@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
 <title>Manage Registration</title>
@@ -9,7 +10,7 @@
 			<div class="col-md-10 col-md-offset-1">
 				<div class="top-intro travel">
 					<h4 class="section-white-title decorated"><span>Manage ${event.eventKey} Registration</span></h4>
-					
+
 				</div>
 			</div>
 		</div>
@@ -26,7 +27,7 @@
 				</tr>
 			</thead>
 
-			
+
 				<tr>
 					<td>Early Bird</td>
 					<td>Sept. 1 2015</td>
@@ -34,7 +35,7 @@
 						Jan. 1 2016
 					</td>
 					<td>$300</td>
-					
+
 				</tr>
                                 <tr>
 					<td>Normal Price</td>
@@ -43,7 +44,7 @@
 						Feb. 15 2016
 					</td>
 					<td>$400</td>
-					
+
 				</tr>
                                 <tr>
 					<td>Late Price</td>
@@ -52,7 +53,7 @@
 						March 16 2016
 					</td>
 					<td>$900</td>
-					
+
 				</tr>
                                 <tr>
 					<td>T-shirt size</td>
@@ -61,9 +62,9 @@
 						Jan. 1 2016
 					</td>
 					<td>$30</td>
-					
+
 				</tr>
-			
+
 		</table>
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration" role="button">Add Registration</a>
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>

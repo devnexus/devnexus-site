@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +94,7 @@
 						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
 					<div class="col-md-10 col-md-offset-1">
-						<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While you’re here, you’ll also connect with like-minded developers who are mastering their craft in a wide range of today’s most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you can’t afford to miss it!</p>
+						<p class="lead">Welcome to the premier conference for professional software developers who want to hear from and interact directly with internationally acclaimed presenters and technologists. While youâre here, youâll also connect with like-minded developers who are mastering their craft in a wide range of todayâs most relevant technologies. Find out why DevNexus has sold out early for the last six years in a row, and why you canât afford to miss it!</p>
 					</div>
 				</div>
 				<div class="row">
@@ -162,8 +163,8 @@
 						<h3 class="lead">DATA + INTEGRATION</h3>
 						<p>
 						Whether your data is big or small, you need to make it
-						‘play nicely’ with everything else. Whether you SQL or you
-						NoSQL, you’ll find what you need here, along with the
+						âplay nicelyâ with everything else. Whether you SQL or you
+						NoSQL, youâll find what you need here, along with the
 						techniques and tools to make your data welcome wherever
 						it goes!</p>
 					</div>
@@ -175,7 +176,7 @@
 						<p>
 						We like the language, but we love the platform. Whatever
 						your flavor of Java (SE, EE, Spring), whether you need to
-						refactor or build new, we’ll deliver the new features,
+						refactor or build new, weâll deliver the new features,
 						tools and techniques you need to elevate your skills!</p>
 					</div>
 				</div>
@@ -186,7 +187,7 @@
 						<p>Overwhelmed by the exploding numbers of .js frameworks
 						in this soup du jour of modern web development? Need to
 						understand how HTML5 brings native capabilities to the
-						browser? Whatever you need, we’ve got it here!</p>
+						browser? Whatever you need, weâve got it here!</p>
 					</div>
 				</div>
 			</div>
@@ -196,8 +197,8 @@
 					<img src="${assetsUrl}/img/chat.png" alt="Chat">
 						<h3 class="lead">ATLERNATIVE LANGUAGES</h3>
 						<p>
-						Guess what? Java isn’t the only language to run on the
-						JVM—shocker, right? Meet Scala, Kotlin, Ceylon, Xtend,
+						Guess what? Java isnât the only language to run on the
+						JVMâshocker, right? Meet Scala, Kotlin, Ceylon, Xtend,
 						Groovy, Clojure, Fantom and about a gazillion more. Find
 						out what all the cool kids are into and why!</p>
 					</div>
@@ -208,7 +209,7 @@
 						<h3 class="lead">AGILE + TOOLS</h3>
 						<p>
 						How far down the Agile rabbit hole have you gone? Whether
-						you’re ‘Agile-ish’ or ‘full-on Scrum’ with pair programming
+						youâre âAgile-ishâ or âfull-on Scrumâ with pair programming
 						and bells and whistles, come learn from the best about
 						how to open up a can of worms!</p>
 					</div>
@@ -219,9 +220,9 @@
 						<h3 class="lead">MOBILE</h3>
 						<p>
 						Designing for mobile first is the hottest ticket in
-						town—even in web development. So whether you roll with
+						townâeven in web development. So whether you roll with
 						hardcore Objective C, Java with Android SDK, or a dev
-						framework like PhoneGap, Titanium or Xamarin—we’ve got
+						framework like PhoneGap, Titanium or Xamarinâweâve got
 						you covered!</p>
 					</div>
 				</div>
@@ -242,7 +243,7 @@
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
 					<p class="info">MARK YOUR CALENDARS FEBRUARY 15-17 2016</p>
-					
+
 				</div>
 			</div>
 		</div>

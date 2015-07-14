@@ -1,6 +1,5 @@
-<%@page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
         trimDirectiveWhitespaces="false" deferredSyntaxAllowedAsLiteral="true"%>
-
 <%
 response.setHeader("Cache-Control","no-cache");
 response.setHeader("Pragma","no-cache");

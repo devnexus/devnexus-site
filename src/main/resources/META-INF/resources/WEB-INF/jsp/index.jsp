@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -298,7 +299,7 @@
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
 					<p class="info"> MARK YOUR CALENDARS FEBRUARY 15-17 2016</p>
-					
+
 				</div>
 			</div>
 		</div>
@@ -312,7 +313,7 @@
 			<div class="row travel-row-spacing">
                             <h4 class="travel-address"><a href="https://www.google.com/maps/place/Georgia+World+Congress+Center/@33.76042,-84.3980223,17z/data=!4m2!3m1!1s0x0000000000000000:0x0072f65a339b8777">Georgia World Congress Center | 285 Andrew Young International Blvd NW, Atlanta, GA 30303
                                     | 404-223-4000</a></h4>
-				
+
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
@@ -334,7 +335,7 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
 						<a class="travel-directions-link" href="http://www.omnihotels.com/hotels/atlanta-cnn-center" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/omni.jpg" alt="Omni Hotel"><div>Omni Hotel</div></a>
-						
+
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -357,7 +358,7 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="text-center">
 						<a class="travel-directions-link" href="https://www.civilandhumanrights.org/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/civilrights.jpg" alt="Center for Civil and Human Rights"><div>Center for Civil and Human Rights</div></a>
-						
+
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">

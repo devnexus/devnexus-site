@@ -1,12 +1,8 @@
-<%@page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"
-        trimDirectiveWhitespaces="false" deferredSyntaxAllowedAsLiteral="true"%>
-<%
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %><%
 response.setHeader("Cache-Control","no-cache");
 response.setHeader("Pragma","no-cache");
 response.setHeader("Expires","0");
-%>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+%><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
