@@ -124,18 +124,18 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 							context.addErrorPage(errorPage403);
 							context.addErrorPage(throwableErrorPage);
 
-							Collection<JspPropertyGroupDescriptor> jspPropertyGroups = new ArrayList<>();
-							Collection<TaglibDescriptor> taglibs = new ArrayList<>();
+							final Collection<JspPropertyGroupDescriptor> jspPropertyGroups = new ArrayList<>();
+							final Collection<TaglibDescriptor> taglibs = new ArrayList<>();
 
-							JspPropertyGroup group = new JspPropertyGroup();
+							final JspPropertyGroup group = new JspPropertyGroup();
 							group.addUrlPattern("*.jsp");
 							group.setPageEncoding("UTF-8");
 
-							JspPropertyGroupDescriptor descriptor = new JspPropertyGroupDescriptorImpl(group);
+							final JspPropertyGroupDescriptor descriptor = new JspPropertyGroupDescriptorImpl(group);
 
 							jspPropertyGroups.add(descriptor);
 
-							JspConfigDescriptor jspConfigDescriptor = new JspConfigDescriptorImpl(jspPropertyGroups, taglibs);
+							final JspConfigDescriptor jspConfigDescriptor = new JspConfigDescriptorImpl(jspPropertyGroups, taglibs);
 							context.setJspConfigDescriptor(jspConfigDescriptor);
 
 						}
