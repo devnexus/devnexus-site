@@ -64,6 +64,7 @@ import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.ScheduleItemList;
@@ -83,6 +84,7 @@ import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.OrganizerRepository;
 import com.devnexus.ting.repository.PresentationRepository;
 import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.repository.RoomRepository;
 import com.devnexus.ting.repository.ScheduleItemRepository;
 import com.devnexus.ting.repository.SpeakerRepository;
@@ -106,6 +108,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
+        @Autowired private RegistrationRepository        registrationDao;
         @Autowired private EventSignupRepository        eventSignupDao;
         @Autowired private TicketGroupRepository        ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
@@ -728,6 +731,16 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public TicketGroup getTicketGroup(Long ticketGroup) {
         return ticketGroupDao.findOne(ticketGroup);
+    }
+
+    @Override
+    public RegistrationDetails getRegistrationForm(String registrationKey) {
+        return registrationDao.findByKey(registrationKey);
+    }
+
+    @Override
+    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
+        return registrationDao.createRegistrationPendingPayment(registerForm);
     }
 
 }

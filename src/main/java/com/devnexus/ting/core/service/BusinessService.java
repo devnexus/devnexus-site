@@ -28,6 +28,7 @@ import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
@@ -36,6 +37,7 @@ import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
+
 
 /**
  * The central service layer of Ting.
@@ -273,5 +275,9 @@ public interface BusinessService {
         EventSignup getEventSignup();
 
         TicketGroup getTicketGroup(Long id);
+
+    public RegistrationDetails getRegistrationForm(String registrationKey);
+
+    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm);
         
 }

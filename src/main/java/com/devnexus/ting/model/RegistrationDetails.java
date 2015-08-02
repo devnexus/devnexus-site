@@ -13,25 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.web.form;
+package com.devnexus.ting.model;
 
-import com.devnexus.ting.model.BaseModelObject;
+import com.devnexus.ting.web.form.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author summers
  */
-
+@Entity
+@Table(name = "registration")
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RegisterFormPageTwo extends BaseModelObject {
+public class RegistrationDetails extends BaseModelObject {
 
     /**
      * serialVersionUID.
@@ -44,9 +53,20 @@ public class RegisterFormPageTwo extends BaseModelObject {
     @NotNull
     private Long ticketGroup;
 
+    @ManyToOne
+    //@JoinColumn(name="EVENT_ID")
+    @XmlTransient
+    private Event event;
+
+    @Column(unique = true)
+    private String registrationFormKey;
     private String couponCode;
+    private String paypal;
+    private String invoice;
+
     
-    private List<TickerOrderDetail> orderDetails = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER)
+    private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
     public Integer getTicketCount() {
         return ticketCount;
@@ -72,24 +92,53 @@ public class RegisterFormPageTwo extends BaseModelObject {
         this.couponCode = couponCode;
     }
 
-    public List<TickerOrderDetail> getOrderDetails() {
+    public List<TicketOrderDetail> getOrderDetails() {
         return orderDetails;
     }
 
-    public void setOrderDetails(List<TickerOrderDetail> orderDetails) {
+    public void setOrderDetails(List<TicketOrderDetail> orderDetails) {
         this.orderDetails = orderDetails;
     }
 
-    
-    
+    public String getPaypal() {
+        return paypal;
+    }
+
+    public void setPaypal(String paypal) {
+        this.paypal = paypal;
+    }
+
+    public String getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
+    }
+
+    public String getRegistrationFormKey() {
+        return registrationFormKey;
+    }
+
+    public void setRegistrationFormKey(String registrationFormKey) {
+        this.registrationFormKey = registrationFormKey;
+    }
+
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
+    }
+
     public void copyPageOne(RegisterForm registerForm) {
         setCouponCode(registerForm.getCouponCode());
         setTicketCount(registerForm.getTicketCount());
         setTicketGroup(registerForm.getTicketGroup());
-        IntStream.range(0,registerForm.getTicketCount()).forEach(ignore -> {orderDetails.add(new TickerOrderDetail());});
+        IntStream.range(0, registerForm.getTicketCount()).forEach(ignore -> {
+            orderDetails.add(new TicketOrderDetail());
+        });
     }
 
-    
-    
-    
 }

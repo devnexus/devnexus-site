@@ -174,10 +174,19 @@
                     </div>
                 </div>
             </c:forEach>
+            
+            <div class="form-group">
+                <div class="col-lg-offset-4 col-lg-10">
+                        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;" value="paypal" name="paypal"/>
+                </div>
+            </div>
 
-            <script async type='text/javascript' src = 'https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'>
-                </script>
-
+            <div class="form-group">
+                <div class="col-lg-offset-4 col-lg-10">
+                    <button type="submit" class="btn btn-link" lang="save" tabindex="19" value="invoice" name="invoice">I can't use PayPal.</button>
+                </div>
+            </div>
+            
             </form:form>
 
 

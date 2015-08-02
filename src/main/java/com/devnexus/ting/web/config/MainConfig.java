@@ -40,6 +40,7 @@ import com.google.common.cache.CacheBuilder;
 @EnableCaching
 public class MainConfig {
 
+    
 	@Bean
 	public GuavaCacheManager cacheManager() {
 		final CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
