@@ -47,6 +47,59 @@ alter table TICKET_GROUPS
 ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;
 
+
+    create table REGISTRATION (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        COUPON_CODE varchar(255),
+        INVOICE varchar(255),
+        PAYPAL varchar(255),
+        REGISTRATION_FORM_KEY varchar(255),
+        TICKET_COUNT integer,
+        TICKET_GROUP bigint,
+        EVENT bigint
+    );
+
+
+    create table TICKET_ORDER_DETAILS (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        CITY varchar(255),
+        COMPANY varchar(255),
+        COUNTRY varchar(255),
+        EMAIL_ADDRESS varchar(255),
+        FIRST_NAME varchar(255),
+        JOB_TITLE varchar(255),
+        LAST_NAME varchar(255),
+        STATE varchar(255),
+        T_SHIRT_SIZE varchar(255),
+        VEGETARIAN varchar(255),
+        REGISTRATION bigint
+    );
+
+    alter table REGISTRATION 
+        add constraint UK_5q9q45ncyv753dlfbt2paq8mx unique (REGISTRATION_FORM_KEY);
+
+    create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
+
+ALTER TABLE REGISTRATION
+	OWNER TO devnexus;
+
+create index REGISTRATION_FK_IDX on TICKET_ORDER_DETAILS (REGISTRATION );
+
+ALTER TABLE TICKET_ORDER_DETAILS
+	OWNER TO devnexus;
+
+    alter table TICKET_ORDER_DETAILS 
+        add constraint FK_e5hscu8ud3o7s2p0vti8h703j 
+        foreign key (REGISTRATION) 
+        references REGISTRATION;
+
+
 -- 2014 - Nov 9
 ALTER TABLE speakers ADD COLUMN cfp_speaker_id bigint;
 ALTER TABLE presentations ADD COLUMN cfp_id bigint;
@@ -80,3 +133,4 @@ WITH (
 ALTER TABLE sponsors
   OWNER TO devnexus;
 
+--Summers 8 

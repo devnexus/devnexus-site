@@ -56,7 +56,7 @@ public class ServicesConfig {
 		passwordEncoder.setStringDigester(stringDigester());
 		return passwordEncoder;
 	}
-
+        
 	@Bean
 	@Profile(SpringProfile.WEBSOCKET_DISABLED)
 	SimpMessageSendingOperations simpMessageSendingOperations() {

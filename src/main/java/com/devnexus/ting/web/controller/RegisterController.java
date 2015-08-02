@@ -18,13 +18,24 @@ package com.devnexus.ting.web.controller;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
 import com.devnexus.ting.web.form.RegisterForm;
 import com.devnexus.ting.model.TicketGroup;
-import com.devnexus.ting.web.form.RegisterFormPageTwo;
 import com.devnexus.ting.web.form.SignupRegisterView;
-import com.devnexus.ting.web.form.TickerOrderDetail;
+import com.devnexus.ting.model.TicketOrderDetail;
+import com.devnexus.ting.web.payment.PayPalSession;
+import com.google.api.client.repackaged.com.google.common.base.Strings;
+import com.paypal.api.payments.Amount;
+import com.paypal.api.payments.Payer;
+import com.paypal.api.payments.Payment;
+import com.paypal.api.payments.RedirectUrls;
+import com.paypal.api.payments.Transaction;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,6 +43,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -44,6 +56,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class RegisterController {
 
+    private enum PaymentMethod {
+
+        PAYPAL, INVOICE
+    };
+
+    @Autowired
+    private PayPalSession payPalSession;
+
     @Autowired
     private BusinessService businessService;
 
@@ -53,100 +73,131 @@ public class RegisterController {
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        
+
         model.addAttribute("registerForm", new RegisterForm());
-        
+
         return "register";
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String validateInitialFormAndPrepareDetailsForm(Model model,@Valid RegisterForm registerForm, BindingResult result) {
+    public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
 
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        
+
         if (registerForm.getTicketCount() < ticketGroup.getMinPurchase()) {
             result.addError(new FieldError("registerForm", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
         if (!StringUtils.isEmpty(ticketGroup.getCouponCode())) {
-            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode()))
-            result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
+            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode())) {
+                result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
+            }
         }
-        
-        
+
         if (result.hasErrors()) {
             model.addAttribute("registerForm", registerForm);
             return "register";
         }
-        
-        
-        RegisterFormPageTwo registerFormPageTwo = new RegisterFormPageTwo();
+
+        RegistrationDetails registerFormPageTwo = new RegistrationDetails();
         registerFormPageTwo.copyPageOne(registerForm);
-        
+
         model.addAttribute("registerFormPageTwo", registerFormPageTwo);
-        
-        
+
         return "register2";
-        
-        
+
     }
 
-    @RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
-    public String validateDetailsForm(Model model,@Valid RegisterFormPageTwo registerForm, BindingResult result) {
+    @RequestMapping(value = "/registerPageTwo/{registrationKey}", method = RequestMethod.GET)
+    public String loadPageTwo(@PathVariable("registrationKey") final String registrationKey, Model model) {
 
-        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
+
+        return "register2";
+
+    }
+    
+    @RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
+    public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
+
+        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+        PaymentMethod paymentMethod = !Strings.isNullOrEmpty(registerForm.getInvoice()) ? PaymentMethod.INVOICE : PaymentMethod.PAYPAL;
+        prepareHeader(currentEvent, model);
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        model.addAttribute("registerFormPageTwo", registerForm);
+
+        registerForm.setEvent(currentEvent);
         
         if (result.hasErrors()) {
             return "register2";
         }
-        
+
         if (registerForm.getTicketCount() < ticketGroup.getMinPurchase()) {
             result.addError(new FieldError("registerFormPageTwo", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
         if (!StringUtils.isEmpty(ticketGroup.getCouponCode())) {
-            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode()))
-            result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
+            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode())) {
+                result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
+            }
         }
-        
+
         for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
-            TickerOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
-            
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
+
             if (StringUtils.isEmpty(orderDetails.getFirstName())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails["+index+"].firstName", "First Name is required."));    
+                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].firstName", "First Name is required."));
             }
-            
+
             if (StringUtils.isEmpty(orderDetails.getLastName())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails["+index+"].lastName", "Last Name is required."));    
+                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].lastName", "Last Name is required."));
             }
-            
+
             if (StringUtils.isEmpty(orderDetails.getEmailAddress())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails["+index+"].emailAddress", "Email Address is required."));    
+                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].emailAddress", "Email Address is required."));
             }
-            
+
         }
-        
+
         if (result.hasErrors()) {
             return "register2";
         }
+
+        for (TicketOrderDetail detail : registerForm.getOrderDetails()) {
+            detail.setRegistration(registerForm);
+        }
         
-        return "index";
+        registerForm = businessService.createPendingRegistrationForm(registerForm);
         
-        
+        switch (paymentMethod) {
+
+            case INVOICE:
+                return "index";
+            case PAYPAL:
+                Payment createdPayment = runPayPal(registerForm, ticketGroup.getPrice().multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString());
+                return "redirect:" + createdPayment.getLinks().stream().filter(link -> {return link.getRel().equals("approval_url");}).findFirst().get().getHref();
+            default:
+                throw new IllegalStateException("The system did not understand the payment type.");
+
+        }
+
     }
-    
+
     private void prepareHeader(Event event, Model model) {
         final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-        
+
         model.addAttribute("event", event);
         SpeakerList speakers = new SpeakerList();
         speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
@@ -154,6 +205,34 @@ public class RegisterController {
 
         model.addAttribute("scheduleItemList", scheduleItemList);
 
+    }
+
+    private Payment runPayPal(RegistrationDetails registerForm, String total) {
+        
+        Amount amount = new Amount();
+        amount.setCurrency("USD");
+        amount.setTotal(total);
+
+        Transaction transaction = new Transaction();
+        transaction.setDescription("DevNexus Registration");
+        transaction.setAmount(amount);
+
+        List<Transaction> transactions = new ArrayList<Transaction>();
+        transactions.add(transaction);
+
+        Payer payer = new Payer();
+        payer.setPaymentMethod("paypal");
+
+        Payment payment = new Payment();
+        payment.setIntent("sale");
+        payment.setPayer(payer);
+        payment.setTransactions(transactions);
+        RedirectUrls redirectUrls = new RedirectUrls();
+        redirectUrls.setCancelUrl("http://localhost:8080/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
+        redirectUrls.setReturnUrl("http://localhost:8080/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
+        payment.setRedirectUrls(redirectUrls);
+
+        return payPalSession.createPayment(payment);
     }
 
 }

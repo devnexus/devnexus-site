@@ -1,9 +1,19 @@
-package com.devnexus.ting.web.form;
+package com.devnexus.ting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
-public class TickerOrderDetail {
+
+@Entity
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class TicketOrderDetail extends BaseModelObject implements Comparable<TicketOrderDetail>{
 
     @NotNull
     @Size(max = 255)
@@ -32,6 +42,10 @@ public class TickerOrderDetail {
     @Size(max = 255)
     private String vegetarian;
 
+    @ManyToOne
+    @XmlTransient
+    private RegistrationDetails registration;
+    
     public String getFirstName() {
         return firstName;
     }
@@ -111,5 +125,22 @@ public class TickerOrderDetail {
     public void setVegetarian(String vegetarian) {
         this.vegetarian = vegetarian;
     }
+
+    public RegistrationDetails getRegistration() {
+        return registration;
+    }
+
+    public void setRegistration(RegistrationDetails registration) {
+        this.registration = registration;
+    }
+
+    @Override
+    public int compareTo(TicketOrderDetail o) {
+        if (lastName.equals(o.lastName)) {
+            return firstName.compareTo(o.firstName);
+        }
+        return lastName.compareTo(o.lastName);
+    }
+
 
 }
