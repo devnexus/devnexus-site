@@ -27,7 +27,7 @@
     <div class="row">
 
 
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="registerPageTwo">
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/registerPageTwo">
 
             <form:hidden path="couponCode"/>
             <form:hidden path="ticketGroup"/>
@@ -177,7 +177,7 @@
             
             <div class="form-group">
                 <div class="col-lg-offset-4 col-lg-10">
-                        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;" value="paypal" name="paypal"/>
+                        <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;" />
                 </div>
             </div>
 

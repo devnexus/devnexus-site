@@ -54,6 +54,7 @@ ALTER TABLE TICKET_GROUPS
         UPDATED_DATE timestamp without time zone,
         VERSION integer,
         COUPON_CODE varchar(255),
+        PAYMENT_STATE varchar(255),
         INVOICE varchar(255),
         PAYPAL varchar(255),
         REGISTRATION_FORM_KEY varchar(255),

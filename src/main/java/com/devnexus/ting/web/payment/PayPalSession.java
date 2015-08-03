@@ -1,6 +1,7 @@
 package com.devnexus.ting.web.payment;
 
 import com.paypal.api.payments.Payment;
+import com.paypal.api.payments.PaymentExecution;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.OAuthTokenCredential;
 import com.paypal.base.rest.PayPalRESTException;
@@ -69,6 +70,20 @@ public final class PayPalSession {
     public Payment createPayment(Payment payment) {
         try {
             return payment.create(apiContext);
+        } catch (PayPalRESTException ex) {
+            Logger.getLogger(PayPalSession.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public void execute(String paymentId, String payerId) {
+        
+        try {
+            Payment payment = new Payment();
+            payment.setId(paymentId);
+            PaymentExecution paymentExecute = new PaymentExecution();
+            paymentExecute.setPayerId(payerId);
+            payment.execute(apiContext, paymentExecute);
         } catch (PayPalRESTException ex) {
             Logger.getLogger(PayPalSession.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex);
