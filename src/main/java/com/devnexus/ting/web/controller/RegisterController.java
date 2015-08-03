@@ -46,6 +46,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -126,6 +127,16 @@ public class RegisterController {
         return "register2";
 
     }
+
+    
+    @RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.GET)
+    public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
+
+        payPalSession.execute(paymentId, payerId);
+        return "redirect:/s/index";
+
+    }
+    
     
     @RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
     public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
@@ -179,13 +190,17 @@ public class RegisterController {
             detail.setRegistration(registerForm);
         }
         
-        registerForm = businessService.createPendingRegistrationForm(registerForm);
+        
         
         switch (paymentMethod) {
 
             case INVOICE:
+                registerForm.setPaymentState(RegistrationDetails.PaymentState.REQUIRES_INVOICE);
+                businessService.createPendingRegistrationForm(registerForm);
                 return "index";
             case PAYPAL:
+                registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
+                registerForm = businessService.createPendingRegistrationForm(registerForm);
                 Payment createdPayment = runPayPal(registerForm, ticketGroup.getPrice().multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString());
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {return link.getRel().equals("approval_url");}).findFirst().get().getHref();
             default:
@@ -229,7 +244,7 @@ public class RegisterController {
         payment.setTransactions(transactions);
         RedirectUrls redirectUrls = new RedirectUrls();
         redirectUrls.setCancelUrl("http://localhost:8080/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
-        redirectUrls.setReturnUrl("http://localhost:8080/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
+        redirectUrls.setReturnUrl("http://localhost:8080/s/executeRegistration/" + registerForm.getRegistrationFormKey());
         payment.setRedirectUrls(redirectUrls);
 
         return payPalSession.createPayment(payment);

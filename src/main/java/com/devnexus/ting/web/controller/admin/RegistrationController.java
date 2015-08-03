@@ -18,7 +18,6 @@ package com.devnexus.ting.web.controller.admin;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.repository.EventSignupRepository;
-import java.math.BigDecimal;
 import java.util.function.BinaryOperator;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;

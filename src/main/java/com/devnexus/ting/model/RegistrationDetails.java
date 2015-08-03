@@ -22,15 +22,19 @@ import java.util.stream.IntStream;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 
 /**
  *
@@ -47,6 +51,8 @@ public class RegistrationDetails extends BaseModelObject {
      */
     private static final long serialVersionUID = 1071233976549394025L;
 
+    public enum PaymentState {NONE, REQUIRES_INVOICE, PAYPAL_CREATED, PAID, REFUNDED, CANCELLED, ERROR, INVOICED};
+    
     @NotNull
     private Integer ticketCount;
 
@@ -61,9 +67,12 @@ public class RegistrationDetails extends BaseModelObject {
     @Column(unique = true)
     private String registrationFormKey;
     private String couponCode;
-    private String paypal;
+    
+    @Transient
     private String invoice;
 
+    @Enumerated(EnumType.STRING)
+    private PaymentState paymentState = PaymentState.NONE;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER)
     private List<TicketOrderDetail> orderDetails = new ArrayList<>();
@@ -100,14 +109,6 @@ public class RegistrationDetails extends BaseModelObject {
         this.orderDetails = orderDetails;
     }
 
-    public String getPaypal() {
-        return paypal;
-    }
-
-    public void setPaypal(String paypal) {
-        this.paypal = paypal;
-    }
-
     public String getInvoice() {
         return invoice;
     }
@@ -130,6 +131,14 @@ public class RegistrationDetails extends BaseModelObject {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+
+    public PaymentState getPaymentState() {
+        return paymentState;
+    }
+
+    public void setPaymentState(PaymentState paymentState) {
+        this.paymentState = paymentState;
     }
 
     public void copyPageOne(RegisterForm registerForm) {
