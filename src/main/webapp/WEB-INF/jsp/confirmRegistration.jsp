@@ -22,31 +22,28 @@
 
 <div class="container">
 
-    <h1>Register for <c:out value="${event.title}"/></h1>
+    <h1>Confirm Registration for <c:out value="${event.title}"/></h1>
 
     <div class="row">
-
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/registerPageTwo">
+            <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/executeRegistration/${registrationKey}?payerId=${payerId}&paymentId=${paymentId}">
 
             <%@include file="registration_details.jsp" %>
 
             <div class="form-group">
                 <div class="col-lg-offset-4 col-lg-10">
-                    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;" />
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-lg-offset-4 col-lg-10">
-                    <button type="submit" class="btn btn-link" lang="save" tabindex="19" value="invoice" name="invoice">I can't use PayPal.</button>
+                    <button type="submit" class="btn btn-lg btn-warning" lang="save" tabindex="19">Purchase and complete registration</button>
                 </div>
             </div>
 
         </form:form>
     </div>
 
-</div>
-<jsp:include page="includes/questions.jsp"/>
+    </div>
+    <jsp:include page="includes/questions.jsp"/>
 
-<content tag='bottom'>
-</content>
+    <content tag='bottom'>
+        <script type="text/javascript">
+            $("#form input").prop("disabled", true);
+        </script>
+    </content>
+    

@@ -28,9 +28,12 @@ import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.web.payment.PayPalSession;
 import com.google.api.client.repackaged.com.google.common.base.Strings;
 import com.paypal.api.payments.Amount;
+import com.paypal.api.payments.Item;
+import com.paypal.api.payments.ItemList;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
+import com.paypal.api.payments.ShippingInfo;
 import com.paypal.api.payments.Transaction;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -130,13 +133,30 @@ public class RegisterController {
 
     
     @RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.GET)
-    public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
+    public String confirmPayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
+
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+        prepareHeader(currentEvent, model);
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("registrationKey", registrationKey);
+        model.addAttribute("paymentId", paymentId);
+        model.addAttribute("payerId", payerId);
+        return "confirmRegistration";
+
+    }
+    
+        
+    @RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.POST)
+    public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
         payPalSession.execute(paymentId, payerId);
         return "redirect:/s/index";
 
     }
-    
     
     @RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
     public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
@@ -224,6 +244,8 @@ public class RegisterController {
 
     private Payment runPayPal(RegistrationDetails registerForm, String total) {
         
+        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
+        
         Amount amount = new Amount();
         amount.setCurrency("USD");
         amount.setTotal(total);
@@ -231,10 +253,17 @@ public class RegisterController {
         Transaction transaction = new Transaction();
         transaction.setDescription("DevNexus Registration");
         transaction.setAmount(amount);
-
+        
+        ItemList itemlist = new ItemList();
+        List<Item> items = new ArrayList<>(registerForm.getTicketCount());
+        for (TicketOrderDetail order : registerForm.getOrderDetails()) {
+            items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), ticketGroup.getPrice().setScale(2).toString(), "USD"));
+        }
+        itemlist.setItems(items);
+        
         List<Transaction> transactions = new ArrayList<Transaction>();
         transactions.add(transaction);
-
+        transaction.setItemList(itemlist);
         Payer payer = new Payer();
         payer.setPaymentMethod("paypal");
 
