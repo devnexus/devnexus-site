@@ -112,6 +112,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            var price = "";
+
             var s = skrollr.init({
                 forceHeight: false,
                 mobileCheck: function () {
@@ -120,24 +122,26 @@
             });
             $('#ticket-count').change(function () {
                 var signupId = $('#ticket-group option:selected').val();
-                var signupData = data['group_' + signupId];
-                $('#total-cost').val($('#ticket-count option:selected').val() * signupData.price);
+                $('#total-cost').val($('#ticket-count option:selected').val() * price);
             });
 
             $('#ticket-group').change(function () {
                 updateInfo()
+            });
+            
+            $('#coupon-code').change(function() {
+                jQuery.ajax("/s/lookupCouponCode/" + $('#ticket-group option:selected').val() + "/" + $('#coupon-code').val(), {
+                    success : function(data) { price = data;$('#total-cost').val($('#ticket-count option:selected').val() * price);}
+                });
             });
 
             function updateInfo() {
                 var signupId = $('#ticket-group option:selected').val();
                 if (signupId) {
                     var signupData = data['group_' + signupId];
-                    if (signupData.hasCoupon) {
-                        $('#coupon-code-group').show();
-                    } else {
-                        $('#coupon-code-group').hide();
-                    }
-
+                    $('#coupon-code-group').show();
+                    $('#coupon-code').val("");
+                    price = signupData.price;
                     $('#ticket-cost').val(signupData.price);
                     $('#ticket-count option').each(function (index, option) {
                         option = $(option);
@@ -163,8 +167,7 @@
             var data = {
         <c:forEach items="${signupRegisterView.groups}" var="group">
                 group_<c:out value="${group.id}"/>: {
-                    hasCoupon : <c:choose><c:when test="${empty group.couponCode}">false</c:when><c:otherwise>true</c:otherwise></c:choose>,
-                                            price: <c:out value="${group.price}"/>,
+                                    price: <c:out value="${group.price}"/>,
                                     minPurchase: <c:out value="${group.minPurchase}"/>
                                 },
         </c:forEach>

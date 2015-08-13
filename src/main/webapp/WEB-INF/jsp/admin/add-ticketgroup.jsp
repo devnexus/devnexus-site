@@ -90,19 +90,28 @@
                 </div>
             </div>
                 
-                
-            <spring:bind path="ticketGroup.couponCode">
-                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-            </spring:bind>
-            <div class="form-group${errorClass}">
-                <label for="couponCode" class="col-lg-2 control-label">Coupon Code</label>
-                <div class="col-lg-10">
-                    <form:input cssClass="form-control" path="couponCode" id="couponCode" tabindex="5" maxlength="255"/>
-                    <form:errors path="couponCode" cssClass="fieldError"/>
-                </div>
-            </div>
+            <div id="couponCodes">
+                <c:forEach items="${ticketGroup.couponCodes}" var="couponCode"  varStatus="status">
+                    <spring:bind path="couponCodes[${status.index}]">
+                        <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                    </spring:bind>
 
-                
+                    <div class="form-group${errorClass}">
+                        <label for="couponCodes[${status.index}].code" class="col-lg-2 control-label">Coupon Code</label>
+                        <div class="col-lg-10">
+                            <form:input cssClass="form-control" path="couponCodes[${status.index}].code" id="couponCodes[${status.index}].code" tabindex="5" maxlength="255"/>
+                            <form:errors path="couponCodes[${status.index}].code" cssClass="fieldError"/>
+                        </div>
+                        <label for="couponCodes[${status.index}].price" class="col-lg-2 control-label">Coupon Code</label>
+                        <div class="col-lg-10">
+                            <form:input cssClass="form-control" path="couponCodes[${status.index}].price" id="couponCodes[${status.index}].price" tabindex="5" maxlength="255"/>
+                            <form:errors path="couponCodes[${status.index}].price" cssClass="fieldError"/>
+                        </div>
+                    </div>
+                </c:forEach>
+           </div>
+            <button type="button" class="btn btn-default" lang="save" id="addCouponButton">Add Coupon</button>                
+            
                 
             <spring:bind path="ticketGroup.minPurchase">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -143,6 +152,11 @@
             $('textarea').maxlength({
                 alwaysShow: true
             });
+
+            $('#addCouponButton').click(function(event) {
+                size = $('#couponCodes').children().size();
+                $('#couponCodes').append('<div class="form-group$"> <label for="couponCodes['+size+'].code" class="col-lg-2 control-label">Coupon Code</label> <div class="col-lg-10"> <input class="form-control" name="couponCodes['+size+'].code" id="couponCodes['+size+'].code" tabindex="5" maxlength="255"/></div><label for="couponCodes['+size+'].price" class="col-lg-2 control-label">New Price</label><div class="col-lg-10"><input class="form-control" name="couponCodes['+size+'].price" id="couponCodes['+size+'].price" maxlength="255"/></div></div>');
+            })
 
         });
     </script>
