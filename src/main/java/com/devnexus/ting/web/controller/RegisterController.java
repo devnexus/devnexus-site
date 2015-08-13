@@ -238,7 +238,14 @@ public class RegisterController {
             case PAYPAL:
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
                 registerForm = businessService.createPendingRegistrationForm(registerForm);
-                Payment createdPayment = runPayPal(registerForm, ticketGroup.getPrice().multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString());
+                BigDecimal price = ticketGroup.getPrice();
+                if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode())) {
+                    CouponCode code = findCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode());
+                    if (CouponCode.EMPTY != code) {
+                        price = code.getPrice();
+                    }
+                }
+                Payment createdPayment = runPayPal(registerForm, price.multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString(), price.setScale(2).toString());
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {return link.getRel().equals("approval_url");}).findFirst().get().getHref();
             default:
                 throw new IllegalStateException("The system did not understand the payment type.");
@@ -259,7 +266,7 @@ public class RegisterController {
 
     }
 
-    private Payment runPayPal(RegistrationDetails registerForm, String total) {
+    private Payment runPayPal(RegistrationDetails registerForm, String total, String price) {
         
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         
@@ -274,7 +281,7 @@ public class RegisterController {
         ItemList itemlist = new ItemList();
         List<Item> items = new ArrayList<>(registerForm.getTicketCount());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
-            items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), ticketGroup.getPrice().setScale(2).toString(), "USD"));
+            items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
         }
         itemlist.setItems(items);
         
