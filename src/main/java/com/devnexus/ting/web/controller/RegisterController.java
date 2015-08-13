@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CouponCode;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.RegistrationDetails;
@@ -33,11 +34,11 @@ import com.paypal.api.payments.ItemList;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
-import com.paypal.api.payments.ShippingInfo;
 import com.paypal.api.payments.Transaction;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -59,6 +61,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class RegisterController {
+
 
     private enum PaymentMethod {
 
@@ -96,8 +99,8 @@ public class RegisterController {
             result.addError(new FieldError("registerForm", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
-        if (!StringUtils.isEmpty(ticketGroup.getCouponCode())) {
-            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode())) {
+        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
+            if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
             }
         }
@@ -116,6 +119,20 @@ public class RegisterController {
 
     }
 
+    @RequestMapping(value = "/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
+    @ResponseBody
+    public String getCodedPrice(Model model, @PathVariable("ticketGroupId") final Long ticketGroupId,
+                                @PathVariable("couponCode")    final String couponCode) {
+        TicketGroup group = businessService.getTicketGroup(ticketGroupId);
+        if (hasCode(group.getCouponCodes(), couponCode)) {
+            CouponCode code = findCode(group.getCouponCodes(), couponCode);
+            return code.getPrice().setScale(2).toPlainString();
+        } else {
+            return group.getPrice().setScale(2).toPlainString();
+        }
+        
+    }
+    
     @RequestMapping(value = "/registerPageTwo/{registrationKey}", method = RequestMethod.GET)
     public String loadPageTwo(@PathVariable("registrationKey") final String registrationKey, Model model) {
 
@@ -179,8 +196,8 @@ public class RegisterController {
             result.addError(new FieldError("registerFormPageTwo", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
-        if (!StringUtils.isEmpty(ticketGroup.getCouponCode())) {
-            if (!ticketGroup.getCouponCode().equals(registerForm.getCouponCode())) {
+        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
+            if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
             }
         }
@@ -279,4 +296,25 @@ public class RegisterController {
         return payPalSession.createPayment(payment);
     }
 
+    
+    private boolean hasCode(Collection<CouponCode> couponCodes, String couponCode) {
+        for (CouponCode code : couponCodes) {
+            if (code.getCode().equals(couponCode)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    
+    private CouponCode findCode(List<CouponCode> couponCodes, String couponCode) {
+        for (CouponCode code : couponCodes) {
+            if (code.getCode().equals(couponCode)) {
+                return code;
+            }
+        }
+        return CouponCode.EMPTY;
+    }
+
+    
 }

@@ -118,7 +118,7 @@ public class RegistrationController {
         group.setLabel(ticketGroupForm.getLabel());
         group.setCloseDate(ticketGroupForm.getCloseDate());
         group.setOpenDate(ticketGroupForm.getOpenDate());
-        group.setCouponCode(ticketGroupForm.getCouponCode());
+        group.setCouponCode(ticketGroupForm.getCouponCodes());
         group.setDescription(ticketGroupForm.getDescription());
         group.setMinPurchase(ticketGroupForm.getMinPurchase());
         group.setPrice(ticketGroupForm.getPrice());

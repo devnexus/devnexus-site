@@ -26,13 +26,23 @@ create table TICKET_GROUPS (
 	event_signup integer,
         label varchar(255),
         register_form_url varchar(255),
-        coupon_code varchar(255),
         price numeric (10,2),
         min_purchase integer,
         description text,
         open_date timestamp without time zone,
 	close_date timestamp without time zone
 );
+
+create table COUPON_CODES (
+	id bigint primary key NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+        ticket_group integer,
+        price numeric (10,2),
+        code varchar(255)
+);
+
 
 alter table TICKET_GROUPS
 	add constraint GROUPS_EVENTS
@@ -43,6 +53,13 @@ alter table TICKET_GROUPS
 	add constraint GROUPS_SIGNUPS
 	foreign key (event_signup)
 	references event_signups;
+
+
+alter table COUPON_CODES
+	add constraint CODE_GROUP
+	foreign key (ticket_group)
+	references ticket_groups;
+
 
 ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;

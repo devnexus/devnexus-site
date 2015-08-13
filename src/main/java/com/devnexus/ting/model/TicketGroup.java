@@ -1,9 +1,16 @@
 package com.devnexus.ting.model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -63,8 +70,8 @@ public class TicketGroup extends BaseModelObject {
     @Size(max = 255)
     protected String registerFormUrl;
 
-    @Size(max = 255)
-    protected String couponCode;
+    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
+    protected List<CouponCode> couponCodes = new ArrayList<>();
 
     public Event getEvent() {
         return event;
@@ -122,12 +129,18 @@ public class TicketGroup extends BaseModelObject {
         this.registerFormUrl = registerFormUrl;
     }
 
-    public String getCouponCode() {
-        return couponCode;
+    public List<CouponCode> getCouponCodes() {
+        return couponCodes;
     }
 
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
+    public void setCouponCode(List<CouponCode> couponCodes) {
+        this.couponCodes = new ArrayList<CouponCode>(couponCodes.size());
+        for (CouponCode code : couponCodes) {
+            if (code.getCode() != null && !code.getCode().isEmpty()) {
+                this.couponCodes.add(code);
+                code.setTicketGroup(this);
+            }
+        }
     }
 
     public String getDescription() {
