@@ -59,10 +59,12 @@ import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.ScheduleItemList;
@@ -71,19 +73,25 @@ import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorLevel;
 import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TicketAddOn;
+import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.repository.ApplicationCacheRepository;
 import com.devnexus.ting.repository.CfpSubmissionRepository;
 import com.devnexus.ting.repository.EvaluationRepository;
 import com.devnexus.ting.repository.EventRepository;
+import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.OrganizerRepository;
 import com.devnexus.ting.repository.PresentationRepository;
 import com.devnexus.ting.repository.PresentationTagRepository;
+import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.repository.RoomRepository;
 import com.devnexus.ting.repository.ScheduleItemRepository;
 import com.devnexus.ting.repository.SpeakerRepository;
 import com.devnexus.ting.repository.SponsorRepository;
+import com.devnexus.ting.repository.TicketAddonRepository;
+import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
 
 /**
@@ -102,6 +110,9 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
+        @Autowired private RegistrationRepository        registrationDao;
+        @Autowired private EventSignupRepository        eventSignupDao;
+        @Autowired private TicketGroupRepository        ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
 	@Autowired private PresentationRepository presentationDao;
 	@Autowired private PresentationTagRepository presentationTagDao;
@@ -110,6 +121,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private SpeakerRepository      speakerDao;
 	@Autowired private SponsorRepository      sponsorDao;
 	@Autowired private TrackRepository        trackDao;
+        @Autowired private TicketAddonRepository      ticketAddOnDao;
 	@Autowired private ApplicationCacheRepository applicationCacheDao;
 	@Autowired private Environment environment;
 
@@ -714,4 +726,34 @@ public class BusinessServiceImpl implements BusinessService {
 		return sponsorList;
 	}
 
+    @Override
+    public EventSignup getEventSignup() {
+        return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
+    }
+
+    @Override
+    public TicketGroup getTicketGroup(Long ticketGroup) {
+        return ticketGroupDao.findOne(ticketGroup);
+    }
+
+    @Override
+    public RegistrationDetails getRegistrationForm(String registrationKey) {
+        return registrationDao.findByKey(registrationKey);
+    }
+
+    @Override
+    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
+        return registrationDao.createRegistrationPendingPayment(registerForm);
+    }
+
+    @Override
+    public Long getCountOfAddonsSold(Long addOn) {
+        return registrationDao.countSalesOfAddons(addOn);
+    }
+
+    @Override
+    public TicketAddOn findAddOn(Long ticketAddOn) {
+        return ticketAddOnDao.findOne(ticketAddOn);
+    }
+    
 }

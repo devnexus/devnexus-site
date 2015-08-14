@@ -23,17 +23,22 @@ import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TicketAddOn;
+import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
+
 
 /**
  * The central service layer of Ting.
@@ -267,4 +272,17 @@ public interface BusinessService {
 	List<Organizer> getAllOrganizersWithPicture();
 
 	SponsorList getSponsorListForEvent(Long id, boolean large);
+        
+        EventSignup getEventSignup();
+
+        TicketGroup getTicketGroup(Long id);
+
+    public RegistrationDetails getRegistrationForm(String registrationKey);
+
+    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm);
+        
+    Long getCountOfAddonsSold(Long addOn);
+
+    public TicketAddOn findAddOn(Long ticketAddOn);
+    
 }

@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.web.config;
 
+import com.devnexus.ting.common.SpringProfile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,11 +64,15 @@ import org.springframework.web.servlet.view.xml.MarshallingView;
 import com.devnexus.ting.web.JaxbJacksonObjectMapper;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
+import com.devnexus.ting.web.converter.StringToPurchaseGroup;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSpeaker;
 import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
+import com.devnexus.ting.web.payment.PayPalSession;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
@@ -180,6 +185,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		conversionService.addConverter(new StringToSkillLevel());
 		conversionService.addConverter(new StringToPresentationType());
 		conversionService.addConverter(new StringToSponsorLevel());
+                conversionService.addConverter(new StringToPurchaseGroup());
 
 		bindingInitializer.setConversionService(conversionService);
 		bindingInitializer.setValidator(validator());
@@ -264,6 +270,20 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return new SenderClient(environment.getRequiredProperty("TING_PUSH_URL"));
 	}
 
+        
+        @Bean
+        @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+        public PayPalSession payPalSession() {
+            if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
+                return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+            } if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
+                return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+            } else {
+                return PayPalSession.DUMMY;
+            }
+            
+        }
+        
 	@Bean
 	public CommonsMultipartResolver multipartResolver() {
 		final CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();

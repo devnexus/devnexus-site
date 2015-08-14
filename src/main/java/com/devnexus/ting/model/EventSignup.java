@@ -1,29 +1,26 @@
 package com.devnexus.ting.model;
 
-import com.devnexus.ting.model.BaseModelObject;
-import com.devnexus.ting.model.Event;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
-import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventSignup extends BaseModelObject {
     
-    @ManyToMany(cascade = CascadeType.ALL)
-    private Set<PurchaseGroup> groups = new HashSet<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketGroup.class, fetch = FetchType.EAGER)
+    private Set<TicketGroup> groups = new HashSet<>();
 
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
@@ -31,11 +28,11 @@ public class EventSignup extends BaseModelObject {
     @XmlTransient
     private Event event;
 
-    public Set<PurchaseGroup> getGroups() {
+    public Set<TicketGroup> getGroups() {
         return groups;
     }
 
-    public void setGroups(Set<PurchaseGroup> groups) {
+    public void setGroups(Set<TicketGroup> groups) {
         this.groups = groups;
     }
 
@@ -45,6 +42,14 @@ public class EventSignup extends BaseModelObject {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+    public Optional<TicketGroup> getGroup(TicketGroup purchaseGroup) {
+        for (TicketGroup group : groups) {
+            if (group.getId().equals(purchaseGroup.getId())) {
+                return Optional.of(group);
+            }
+        }
+        return Optional.empty();
     }
     
     

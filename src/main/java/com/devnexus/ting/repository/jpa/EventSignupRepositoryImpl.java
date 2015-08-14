@@ -15,28 +15,40 @@
  */
 package com.devnexus.ting.repository.jpa;
 
+import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
 import com.devnexus.ting.repository.EventSignupRepositoryCustom;
 import com.devnexus.ting.model.EventSignup;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository("eventSignupDao")
 public class EventSignupRepositoryImpl
         implements EventSignupRepositoryCustom {
 
-    
-	@PersistenceContext
-	private EntityManager entityManager;
+    @PersistenceContext
+    private EntityManager entityManager;
 
+    @Autowired
+    private BusinessService businessService;
 
     @Override
     public EventSignup getByEventKey(String eventKey) {
-        return entityManager.createQuery("select es from EventSignup es "
-                + "    join es.event e "
-                + "where e.eventKey = :eventKey", EventSignup.class)
-                .setParameter("eventKey", eventKey)
-                .getSingleResult();
+        try {
+            return entityManager.createQuery("select es from EventSignup es "
+                    + "    join es.event e "
+                    + "where e.eventKey = :eventKey", EventSignup.class)
+                    .setParameter("eventKey", eventKey)
+                    .getSingleResult();
+        } catch (NoResultException ignore) {
+            Event event = businessService.getEventByEventKey(eventKey);
+            EventSignup signup = new EventSignup();
+            signup.setEvent(event);
+            return signup;
+        }
     }
 
 }

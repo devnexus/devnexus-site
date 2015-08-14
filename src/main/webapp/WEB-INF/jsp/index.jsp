@@ -448,9 +448,6 @@
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
-						<div id="get_touch" class="widget widget_get_touch">
-							<button disabled="disabled" class="btn btn-primary registerButton">Sold Out</button>
-						</div>
 					</div>
 				</div>
 			</div>

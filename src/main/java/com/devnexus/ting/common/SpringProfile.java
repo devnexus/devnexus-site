@@ -25,6 +25,9 @@ public final class SpringProfile {
 
 	public static final String MAIL_ENABLED       = "mail-enabled";
 	public static final String TWITTER_ENABLED    = "twitter-enabled";
+        public static final String PAYPAL_ENABLED    = "paypal-enabled";
+        public static final String PAYPAL_LIVE    = "paypal-live";
+        public static final String PAYPAL_SANDBOX    = "paypal-sandbox";
 	public static final String WEBSOCKET_ENABLED  = "websocket-enabled";
 	public static final String WEBSOCKET_DISABLED = "!websocket-enabled";
 

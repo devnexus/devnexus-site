@@ -73,8 +73,7 @@ public class PersistenceConfig {
 			com.devnexus.ting.model.ScheduleItemType.class,
 			com.devnexus.ting.model.CfpSubmission.class,
 			com.devnexus.ting.model.CfpSubmissionList.class,
-                        com.devnexus.ting.model.PurchaseGroup.class,
-                        com.devnexus.ting.model.PurchaseItem.class
+                        com.devnexus.ting.model.TicketGroup.class
 		);
 		return jaxbMarshaller;
 	}

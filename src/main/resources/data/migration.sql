@@ -16,50 +16,130 @@ alter table EVENT_SIGNUPS
 	foreign key (event)
 	references events;
 
-create table PURCHASE_GROUPS (
+
+create table TICKET_GROUPS (
 	id bigint primary key NOT NULL,
 	created_date timestamp without time zone,
 	updated_date timestamp without time zone,
 	version integer,
         event integer,
 	event_signup integer,
-        label varchar(255)
-);
-
-alter table PURCHASE_GROUPS
-	add constraint GROUPS_EVENTS
-	foreign key (event)
-	references events;
-
-alter table PURCHASE_GROUPS
-	add constraint GROUPS_SIGNUPS
-	foreign key (event_signup)
-	references event_signups;
-
-ALTER TABLE PURCHASE_GROUPS
-	OWNER TO devnexus;
-
-create table PURCHASE_ITEMS (
-	id bigint primary key NOT NULL,
-	created_date timestamp without time zone,
-	updated_date timestamp without time zone,
-	version integer,
-        event integer,
-        value varchar(255),
-	price numeric (10,2),
-        
-        purchase_group integer,
+        label varchar(255),
+        register_form_url varchar(255),
+        price numeric (10,2),
+        min_purchase integer,
+        max_available_tickets integer,
+        description text,
         open_date timestamp without time zone,
 	close_date timestamp without time zone
 );
 
-alter table PURCHASE_ITEMS
-	add constraint ITEM_GROUP
-	foreign key (purchase_group)
-	references purchase_groups;
 
-ALTER TABLE PURCHASE_ITEMS
+create table TICKET_ADD_ONS (
+	id bigint primary key NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+        label varchar(255),
+        price numeric (10,2),
+        max_available_tickets integer,
+        ticket_group integer
+);
+
+
+create table COUPON_CODES (
+	id bigint primary key NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+        ticket_group integer,
+        price numeric (10,2),
+        code varchar(255)
+);
+
+
+alter table TICKET_GROUPS
+	add constraint GROUPS_EVENTS
+	foreign key (event)
+	references events;
+
+alter table TICKET_GROUPS
+	add constraint GROUPS_SIGNUPS
+	foreign key (event_signup)
+	references event_signups;
+
+
+alter table COUPON_CODES
+	add constraint CODE_GROUP
+	foreign key (ticket_group)
+	references ticket_groups;
+
+
+alter table TICKET_ADD_ON
+	add constraint ADD_ON_GROUP
+	foreign key (ticket_group)
+	references ticket_groups;
+
+
+ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;
+
+
+    create table REGISTRATION (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        COUPON_CODE varchar(255),
+        PAYMENT_STATE varchar(255),
+        INVOICE varchar(255),
+        PAYPAL varchar(255),
+        REGISTRATION_FORM_KEY varchar(255),
+        TICKET_COUNT integer,
+        TICKET_GROUP bigint,
+        EVENT bigint
+    );
+
+
+    create table TICKET_ORDER_DETAILS (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        CITY varchar(255),
+        COMPANY varchar(255),
+        COUNTRY varchar(255),
+        EMAIL_ADDRESS varchar(255),
+        FIRST_NAME varchar(255),
+        JOB_TITLE varchar(255),
+        LAST_NAME varchar(255),
+        STATE varchar(255),
+        T_SHIRT_SIZE varchar(255),
+        VEGETARIAN varchar(255),
+        TICKET_ADD_ON bigint,
+        REGISTRATION bigint
+    );
+
+    alter table REGISTRATION 
+        add constraint UK_5q9q45ncyv753dlfbt2paq8mx unique (REGISTRATION_FORM_KEY);
+
+    create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
+    create index TICKET_ORDER_DETAILS_KEY_ADD_ON on ticket_order_details (TICKET_ADD_ON);
+
+ALTER TABLE REGISTRATION
+	OWNER TO devnexus;
+
+create index REGISTRATION_FK_IDX on TICKET_ORDER_DETAILS (REGISTRATION );
+
+ALTER TABLE TICKET_ORDER_DETAILS
+	OWNER TO devnexus;
+
+    alter table TICKET_ORDER_DETAILS 
+        add constraint FK_e5hscu8ud3o7s2p0vti8h703j 
+        foreign key (REGISTRATION) 
+        references REGISTRATION;
+
+
 -- 2014 - Nov 9
 ALTER TABLE speakers ADD COLUMN cfp_speaker_id bigint;
 ALTER TABLE presentations ADD COLUMN cfp_id bigint;
@@ -93,3 +173,4 @@ WITH (
 ALTER TABLE sponsors
   OWNER TO devnexus;
 
+--Summers 8 
