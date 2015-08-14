@@ -18,11 +18,12 @@ package com.devnexus.ting.core.service.impl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.config.PersistenceConfig;
 import com.devnexus.ting.config.ServicesConfig;
@@ -37,9 +38,9 @@ import com.devnexus.ting.model.SkillLevel;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(
+@SpringApplicationConfiguration(
 		initializers=IntegrationTestApplicationContextInitializer.class,
-				classes={ServicesConfig.class, PersistenceConfig.class})
+		classes={DevNexusApplication.class})
 public class MailSendingTest {
 
 	@Autowired

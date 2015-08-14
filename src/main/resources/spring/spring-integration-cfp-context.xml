@@ -18,14 +18,6 @@
 	</int:channel>
 
 	<beans profile="mail-enabled">
-		<bean id="mailPort" class="java.lang.Integer">
-			<constructor-arg value="${mail.smtp.port}"/>
-		</bean>
-		<bean id="cfpToMailTransformer" class="com.devnexus.ting.core.service.impl.CfpToMailTransformer">
-			<property name="mailSender" ref="mailSender"/>
-			<property name="fromUser" value="${mail.user.from}"/>
-			<property name="ccUser" value="${mail.user.cc}"/>
-		</bean>
 
 		<int:transformer id="prepareMailToSpeaker"
 			input-channel="mailChannel"
@@ -35,20 +27,6 @@
 		</int:transformer>
 
 		<int:channel id="sendMailChannel" />
-
-		<bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
-			<property name="host" value="${mail.smtp.host}"/>
-			<property name="port" value="${mail.smtp.port}"/>
-			<property name="username" value="${mail.user.id}"/>
-			<property name="password" value="${mail.user.password}"/>
-			<property name="javaMailProperties">
-				<props>
-					<prop key="mail.debug">${mail.debugEnabled}</prop>
-					<prop key="mail.smtp.auth">${mail.authenticationEnabled}</prop>
-					<!-- <prop key="mail.smtp.starttls.enable">true</prop> -->
-				</props>
-			</property>
-		</bean>
 
 		<int-mail:outbound-channel-adapter id="mailAdapter" channel="sendMailChannel"
 			mail-sender="mailSender"/>

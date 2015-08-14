@@ -55,6 +55,8 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
 			SpringContextMode springContextMode;
 
+			LOGGER.info("DevNexus Apphome: " + apphome);
+
 			if (SystemInformationUtils.existsConfigFile(apphome.getAppHomePath())) {
 				springContextMode = SpringContextMode.ProductionContextConfiguration;
 			} else {
@@ -84,9 +86,9 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			LOGGER.info("Using Properties for demo mode.");
 		}
 
-		final boolean mailEnabled      = environment.getProperty("mail.enabled",      Boolean.class, Boolean.FALSE);
-		final boolean twitterEnabled   = environment.getProperty("twitter.enabled",   Boolean.class, Boolean.FALSE);
-		final boolean websocketEnabled = environment.getProperty("websocket.enabled", Boolean.class, Boolean.FALSE);
+		final boolean mailEnabled      = environment.getProperty("devnexus.mail.enabled",      Boolean.class, Boolean.FALSE);
+		final boolean twitterEnabled   = environment.getProperty("devnexus.twitter.enabled",   Boolean.class, Boolean.FALSE);
+		final boolean websocketEnabled = environment.getProperty("devnexus.websocket.enabled", Boolean.class, Boolean.FALSE);
 
 		if (mailEnabled) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.MAIL_ENABLED);

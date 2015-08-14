@@ -90,7 +90,7 @@
 			var source = $("#tweet-template").html();
 			tweetTemplate = Handlebars.compile(source);
 
-					var socket = new SockJS('${ctx}/ws/websocketbroker');
+					var socket = new SockJS('${ctx}/s/websocketbroker');
 					var stompClient = Stomp.over(socket);
 			stompClient.connect('', '', function(frame) {
 				console.log('Connected ' + frame);

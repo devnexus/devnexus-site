@@ -23,6 +23,75 @@ Build Status:
 
 The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8080/`
 
+#### Production Mode
+
+The DevNexus site uses Postgres as the persistence store in production.
+
+	$ java -jar target/devnexus.jar -DTING_HOME=/opt/ting
+
+##### Configuration
+
+```yaml
+devnexus:
+  twitter:
+    enabled: true
+    oauth:
+      consumerKey:
+      consumerSecret:
+      accessToken:
+      accessTokenSecret:
+  mail:
+    enabled: true
+    authenticationEnabled: false
+    debugEnabled: true
+    user:
+      id:
+      password:
+      from: info@ajug.org
+      cc:
+    smtp:
+      port: 25
+      host: localhost
+  recaptcha:
+    enabled: true
+    publicKey:
+    privateKey:
+  websocket:
+    enabled: true
+  server:
+    address: http://localhost:8080/ting
+    https:
+      enabled: false
+# registration.state = open | closed | soldout | hide
+  registration:
+    state: open
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/devnexus
+    username:
+    password:
+    driverClassName: org.postgresql.Driver
+database:
+  hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    show_sql: false
+    generate_ddl: validate
+
+TING_CLIENT_ID:
+TING_CLIENT_SECRET:
+TING_PUSH_URL:
+TING_PUSH_APP_ID:
+TING_PUSH_MASTER_SECRET:
+```
+
+#### Running using Docker
+
+TBD
+
+##### Resources
+
+* https://spring.io/guides/gs/spring-boot-docker/
+
 #### Running on Cloud Foundry
 
 **Demo Deployment**: http://devnexus.cfapps.io/

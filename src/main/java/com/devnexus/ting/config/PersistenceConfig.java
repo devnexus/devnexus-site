@@ -49,7 +49,6 @@ import com.zaxxer.hikari.HikariDataSource;
  *
  */
 @Configuration
-@ComponentScan("com.devnexus.ting.core.dao")
 @EnableJpaRepositories(repositoryFactoryBeanClass=BaseRepositoryFactoryBean.class,
 		entityManagerFactoryRef="entityManagerFactory", basePackages="com.devnexus.ting.repository")
 public class PersistenceConfig {

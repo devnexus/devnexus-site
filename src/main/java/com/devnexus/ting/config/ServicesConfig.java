@@ -22,7 +22,7 @@ import org.jasypt.springsecurity3.authentication.encoding.PasswordEncoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessagingException;
@@ -38,10 +38,6 @@ import com.devnexus.ting.common.SpringProfile;
  *
  */
 @Configuration
-@ComponentScan({"com.devnexus.ting.core.service"})
-@ImportResource({
-	"classpath:spring/spring-integration-cfp-context.xml"
-})
 @EnableTransactionManagement
 public class ServicesConfig {
 

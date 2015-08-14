@@ -82,9 +82,11 @@
 		<level value="INFO"/>
 		<appender-ref ref="LOGFILE-SECURITY"/>
 	</logger>
-	<logger name="com.hillert.apptools.spring">
+
+	<logger name="com.devnexus.ting">
 		<level value="INFO"/>
 	</logger>
+
 	<root>
 		<level value="WARN"/>
 		<appender-ref ref="LOGFILE"/>

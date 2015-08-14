@@ -47,6 +47,10 @@ public final class Apphome {
 	public void setAppHomeSource(AppHomeSource appHomeSource) {
 		this.appHomeSource = appHomeSource;
 	}
+	@Override
+	public String toString() {
+		return "Apphome [appHomePath=" + appHomePath + ", appHomeSource=" + appHomeSource + "]";
+	}
 
 }
 

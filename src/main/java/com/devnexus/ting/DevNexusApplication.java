@@ -96,7 +96,7 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
 		if(container instanceof TomcatEmbeddedServletContainerFactory) {
-			TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory = (TomcatEmbeddedServletContainerFactory) container;
+			final TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory = (TomcatEmbeddedServletContainerFactory) container;
 			tomcatEmbeddedServletContainerFactory.addContextCustomizers(
 					new TomcatContextCustomizer() {
 						@Override
