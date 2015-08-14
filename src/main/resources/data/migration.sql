@@ -28,10 +28,24 @@ create table TICKET_GROUPS (
         register_form_url varchar(255),
         price numeric (10,2),
         min_purchase integer,
+        max_available_tickets integer,
         description text,
         open_date timestamp without time zone,
 	close_date timestamp without time zone
 );
+
+
+create table TICKET_ADD_ONS (
+	id bigint primary key NOT NULL,
+	created_date timestamp without time zone,
+	updated_date timestamp without time zone,
+	version integer,
+        label varchar(255),
+        price numeric (10,2),
+        max_available_tickets integer,
+        ticket_group integer
+);
+
 
 create table COUPON_CODES (
 	id bigint primary key NOT NULL,
@@ -57,6 +71,12 @@ alter table TICKET_GROUPS
 
 alter table COUPON_CODES
 	add constraint CODE_GROUP
+	foreign key (ticket_group)
+	references ticket_groups;
+
+
+alter table TICKET_ADD_ON
+	add constraint ADD_ON_GROUP
 	foreign key (ticket_group)
 	references ticket_groups;
 
