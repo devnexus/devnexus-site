@@ -35,6 +35,7 @@ import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
+import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
@@ -283,4 +284,8 @@ public interface BusinessService {
 
     public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment);
         
+    Long getCountOfAddonsSold(Long addOn);
+
+    public TicketAddOn findAddOn(Long ticketAddOn);
+    
 }

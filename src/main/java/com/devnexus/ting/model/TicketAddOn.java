@@ -99,7 +99,10 @@ public class TicketAddOn extends BaseModelObject {
     public void setEventSignup(EventSignup eventSignup) {
         this.eventSignup = eventSignup;
     }
-
-        
+    
+    public String getDisplayString() {
+        return String.format("%s - %s", label, price.setScale(2).toString());
+    }
+    
 
 }

@@ -12,7 +12,8 @@
 
         <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="ticketAddOn" enctype="multipart/form-data">
             <form:hidden path="event.id"/>
-
+            <form:hidden path="eventSignup.id"/>
+            
             <spring:bind path="ticketAddOn.label">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
@@ -25,7 +26,7 @@
             </div>
 
 
-            <spring:bind path="ticketGroup.price">
+            <spring:bind path="ticketAddOn.price">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <div class="form-group${errorClass}">
@@ -36,7 +37,7 @@
                 </div>
             </div>
 
-            <spring:bind path="ticketGroup.maxAvailableTickets">
+            <spring:bind path="ticketAddOn.maxAvailableTickets">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
             <label for="maxAvailableTickets" class="col-lg-2 control-label">Maximum Available</label>

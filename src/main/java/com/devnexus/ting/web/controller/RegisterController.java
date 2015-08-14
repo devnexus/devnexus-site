@@ -16,25 +16,6 @@
 package com.devnexus.ting.web.controller;
 
 import com.devnexus.ting.common.SpringProfile;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import javax.validation.Valid;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CouponCode;
@@ -45,6 +26,7 @@ import com.devnexus.ting.model.PaypalLink;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
+import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.web.form.RegisterForm;
@@ -59,8 +41,25 @@ import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -70,9 +69,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  */
 @Controller
 public class RegisterController {
-
+    
+    
     @Autowired
     private Environment environment;
+
+    private void addOverSoldErrorsToFields(RegistrationDetails registerForm, BindingResult result, TicketAddOn addOn) {
+
+        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
+            if (orderDetails.getTicketAddOn().equals(addOn)) {
+                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].ticketAddOn", "Sorry, this workshop is sold out."));
+            }
+        }
+    }
 
     private enum PaymentMethod {
 
@@ -93,6 +103,21 @@ public class RegisterController {
 
         return "register";
     }
+    
+    @RequestMapping(value = "/s/register/{registrationKey}", method = RequestMethod.GET)
+    public String viewRegistrationFormForCurrentEvent(@PathVariable("registrationKey") String registrationKey, Model model) {
+        
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+        prepareHeader(currentEvent, model);
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("addOns", eventSignup.getAddOns());
+
+        return "view-registration";
+    }
 
     @RequestMapping(value = "/s/register", method = RequestMethod.POST)
     public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
@@ -107,7 +132,7 @@ public class RegisterController {
             result.addError(new FieldError("registerForm", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
-        if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode()) && ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
+        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(registerForm.getCouponCode())) {
             if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
             }
@@ -122,6 +147,14 @@ public class RegisterController {
         registerFormPageTwo.copyPageOne(registerForm);
 
         model.addAttribute("registerFormPageTwo", registerFormPageTwo);
+
+        ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
+        for (TicketAddOn addOn : eventSignup.getAddOns()) {
+            if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                availableAddOns.add(addOn);
+            }
+        }
+        model.addAttribute("addOns", availableAddOns);
 
         return "register2";
 
@@ -151,7 +184,7 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
-
+        
         return "register2";
 
     }
@@ -169,6 +202,7 @@ public class RegisterController {
         model.addAttribute("registrationKey", registrationKey);
         model.addAttribute("paymentId", paymentId);
         model.addAttribute("payerId", payerId);
+        model.addAttribute("addOns", eventSignup.getAddOns());
         return "confirmRegistration";
 
     }
@@ -201,7 +235,7 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
-    public String validateDetailsForm(Model model, @ModelAttribute(value="registerFormPageTwo") @Valid RegistrationDetails registerForm, BindingResult result) {
+    public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
@@ -214,6 +248,15 @@ public class RegisterController {
         registerForm.setEvent(currentEvent);
 
         if (result.hasErrors()) {
+            
+            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
+            for (TicketAddOn addOn : eventSignup.getAddOns()) {
+                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                    availableAddOns.add(addOn);
+                }
+            }
+            model.addAttribute("addOns", availableAddOns);
+            
             return "register2";
         }
 
@@ -224,6 +267,25 @@ public class RegisterController {
         if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode()) && ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
             if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
+            }
+        }
+
+        Map<TicketAddOn, Integer> addOnCounts = new HashMap<>(registerForm.getOrderDetails().size());
+
+        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
+            
+            if (orderDetails.getTicketAddOn() != null) {
+                TicketAddOn addon = businessService.findAddOn(orderDetails.getTicketAddOn());
+                Integer count = addOnCounts.getOrDefault(addon, 0);
+                addOnCounts.put(addon, count + 1);
+            }
+        }
+
+        for (TicketAddOn addOn : addOnCounts.keySet()) {
+            Long sold = businessService.getCountOfAddonsSold(addOn.getId());
+            if (sold >= addOn.getMaxAvailableTickets()) {
+                addOverSoldErrorsToFields(registerForm, result, addOn);
             }
         }
 
@@ -265,6 +327,15 @@ public class RegisterController {
         }
 
         if (result.hasErrors()) {
+
+            
+            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
+            for (TicketAddOn addOn : eventSignup.getAddOns()) {
+                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                    availableAddOns.add(addOn);
+                }
+            }
+            model.addAttribute("addOns", availableAddOns);
             
             return "register2";
         }
@@ -289,7 +360,7 @@ public class RegisterController {
                         price = code.getPrice();
                     }
                 }
-                Payment createdPayment = runPayPal(registerForm, price.multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString(), price.setScale(2).toString());
+                Payment createdPayment = runPayPal(registerForm, price.setScale(2).toString());
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
                     return link.getRel().equals("approval_url");
                 }).findFirst().get().getHref();
@@ -312,13 +383,13 @@ public class RegisterController {
 
     }
 
-    private Payment runPayPal(RegistrationDetails registerForm, String total, String price) {
-        PayPalSession payPalSession = payPalSession();
-        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
+    private Payment runPayPal(RegistrationDetails registerForm, String price) {
+        final PayPalSession payPalSession = payPalSession();
+        
 
         Amount amount = new Amount();
         amount.setCurrency("USD");
-        amount.setTotal(total);
+        BigDecimal total = BigDecimal.ZERO;
 
         Transaction transaction = new Transaction();
         transaction.setDescription("DevNexus Registration");
@@ -328,9 +399,16 @@ public class RegisterController {
         List<Item> items = new ArrayList<>(registerForm.getTicketCount());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
             items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
+            total = total.add(new BigDecimal(price));
+            if (order.getTicketAddOn() != null) {
+                TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
+                items.add(new Item("1", String.format("%s for %s %s", addOn.getLabel(), order.getFirstName(), order.getLastName()), addOn.getPrice().setScale(2).toString(), "USD"));
+                total = total.add(addOn.getPrice());
+            }
         }
         itemlist.setItems(items);
 
+        amount.setTotal(total.setScale(2).toString());
         List<Transaction> transactions = new ArrayList<Transaction>();
         transactions.add(transaction);
         transaction.setItemList(itemlist);

@@ -80,12 +80,38 @@ public class RegistrationController {
 
 		model.addAttribute("event", signUp.getEvent());
                 model.addAttribute("eventSignUp", signUp);
-                model.addAttribute("ticketGroup", signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId)));
+                model.addAttribute("ticketAddOn", signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId)));
 		
 		return "/admin/add-ticketaddon";
 	}
 
+        @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn/{addOnId}", method = RequestMethod.POST)
+	public String saveEditTicketAddOnForm(ModelMap model, @Valid TicketAddOn ticketAddOnForm, BindingResult result, 
+                        HttpServletRequest request,
+			@PathVariable(value = "eventKey") String eventKey,
+                        @PathVariable(value = "addOnId") String groupId) {
 
+                EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+		TicketAddOn oldAddOn = signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId));
+                
+		if (request.getParameter("cancel") != null) {
+			return String.format("redirect:/s/admin/%s/registration/", eventKey);
+		}
+
+                
+		if (result.hasErrors()) {
+			return String.format("/admin/add-ticketaddon", eventKey);
+		}
+
+		oldAddOn.setLabel(ticketAddOnForm.getLabel());
+                oldAddOn.setMaxAvailableTickets(ticketAddOnForm.getMaxAvailableTickets());
+                oldAddOn.setPrice(ticketAddOnForm.getPrice());
+		eventSignupController.saveAndFlush(signUp);
+
+		return String.format("redirect:/s/admin/%s/registration/", eventKey);
+	}
+
+        
 	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn", method = RequestMethod.GET)
 	public String showAddTicketAddOnForm(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
@@ -93,6 +119,7 @@ public class RegistrationController {
 		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
 		model.addAttribute("event", signUp.getEvent());
+                model.addAttribute("eventSignup", signUp);
                 model.addAttribute("ticketAddOn", new TicketAddOn());
 		return "/admin/add-ticketaddon";
 	}

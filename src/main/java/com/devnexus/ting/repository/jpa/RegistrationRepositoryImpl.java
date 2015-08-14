@@ -33,27 +33,32 @@ import com.devnexus.ting.repository.RegistrationRepositoryCustom;
 @Repository("registrationDao")
 public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom {
 
-	@PersistenceContext
-	private EntityManager entityManager;
+    @PersistenceContext
+    private EntityManager entityManager;
+    
+    @Override
+    @Transactional
+    public RegistrationDetails createRegistrationPendingPayment(RegistrationDetails pendingRegistration) {
+     
+        pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
+        
+        while(!entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", pendingRegistration.getRegistrationFormKey()).getResultList().isEmpty()) {
+            pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
+        };
+        
+        entityManager.persist(pendingRegistration);
+        entityManager.flush();
+        return pendingRegistration;
+    }
 
-	@Override
-	@Transactional
-	public RegistrationDetails createRegistrationPendingPayment(RegistrationDetails pendingRegistration) {
+    @Override
+    public RegistrationDetails findByKey(String registrationKey) {
+        return (RegistrationDetails) entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", registrationKey).getSingleResult();
+    }
 
-		pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
-
-		while(!entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", pendingRegistration.getRegistrationFormKey()).getResultList().isEmpty()) {
-			pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
-		};
-
-		entityManager.persist(pendingRegistration);
-		entityManager.flush();
-		return pendingRegistration;
-	}
-
-	@Override
-	public RegistrationDetails findByKey(String registrationKey) {
-		return (RegistrationDetails) entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", registrationKey).getSingleResult();
-	}
-
+    @Override
+    public Long countSalesOfAddons(Long addOnId) {
+        return (Long) entityManager.createQuery("select count(*) from TicketOrderDetail where ticketAddOn= :addOnId and (registration.paymentState=:PAID or registration.paymentState=:INVOICED)").setParameter("addOnId", addOnId).setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).getSingleResult();
+    }
+    
 }

@@ -126,48 +126,47 @@ alter table TICKET_ADD_ONS
 ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;
 
-
-create table REGISTRATION (
-	ID bigint primary key NOT NULL,
-	CREATED_DATE timestamp without time zone,
-	UPDATED_DATE timestamp without time zone,
-	VERSION integer,
-        CONTACT_NAME varchar(255),
-        CONTACT_EMAIL_ADDRESS  varchar(255),
-        CONTACT_PHONE_NUMBER  varchar(255),
-	COUPON_CODE varchar(255),
-	PAYMENT_STATE varchar(255),
-	INVOICE varchar(255),
-	PAYPAL varchar(255),
-	REGISTRATION_FORM_KEY varchar(255),
-	TICKET_COUNT integer,
-	TICKET_GROUP bigint,
-	EVENT bigint
-);
+    create table REGISTRATION (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        COUPON_CODE varchar(255),
+        PAYMENT_STATE varchar(255),
+        INVOICE varchar(255),
+        PAYPAL varchar(255),
+        REGISTRATION_FORM_KEY varchar(255),
+        TICKET_COUNT integer,
+        TICKET_GROUP bigint,
+        EVENT bigint
+    );
 
 
-create table TICKET_ORDER_DETAILS (
-	ID bigint primary key NOT NULL,
-	CREATED_DATE timestamp without time zone,
-	UPDATED_DATE timestamp without time zone,
-	VERSION integer,
-	CITY varchar(255),
-	COMPANY varchar(255),
-	COUNTRY varchar(255),
-	EMAIL_ADDRESS varchar(255),
-	FIRST_NAME varchar(255),
-	JOB_TITLE varchar(255),
-	LAST_NAME varchar(255),
-	STATE varchar(255),
-	T_SHIRT_SIZE varchar(255),
-	VEGETARIAN varchar(255),
-	REGISTRATION bigint
-);
+    create table TICKET_ORDER_DETAILS (
+        ID bigint primary key NOT NULL,
+        CREATED_DATE timestamp without time zone,
+        UPDATED_DATE timestamp without time zone,
+        VERSION integer,
+        CITY varchar(255),
+        COMPANY varchar(255),
+        COUNTRY varchar(255),
+        EMAIL_ADDRESS varchar(255),
+        FIRST_NAME varchar(255),
+        JOB_TITLE varchar(255),
+        LAST_NAME varchar(255),
+        STATE varchar(255),
+        T_SHIRT_SIZE varchar(255),
+        VEGETARIAN varchar(255),
+        TICKET_ADD_ON bigint,
+        REGISTRATION bigint
+    );
 
-alter table REGISTRATION
-	add constraint UK_5q9q45ncyv753dlfbt2paq8mx unique (REGISTRATION_FORM_KEY);
+    alter table REGISTRATION 
+        add constraint REGISTRATION_UNIQUE_KEY unique (REGISTRATION_FORM_KEY);
 
-create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
+    create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
+    create index TICKET_ORDER_DETAILS_KEY_ADD_ON on ticket_order_details (TICKET_ADD_ON);
+
 
 ALTER TABLE REGISTRATION
 	OWNER TO devnexus;
