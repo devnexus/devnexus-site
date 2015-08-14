@@ -23,26 +23,30 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
+import com.devnexus.ting.config.PersistenceConfig;
+import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.repository.UserRepository;
-import com.devnexus.ting.web.config.ServicesConfig;
 
 /**
  * @author Gunnar Hillert
  */
 @SuppressWarnings("deprecation")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers=IntegrationTestApplicationContextInitializer.class,
-classes=ServicesConfig.class)
+@SpringApplicationConfiguration(
+		initializers=IntegrationTestApplicationContextInitializer.class,
+		classes={DevNexusApplication.class})
 @Transactional(readOnly=false)
 public class SecurityServicesTest {
 

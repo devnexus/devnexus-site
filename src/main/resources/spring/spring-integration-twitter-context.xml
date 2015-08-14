@@ -14,13 +14,6 @@
 
 	<beans profile="twitter-enabled">
 
-	<bean id="twitterTemplate" class="org.springframework.social.twitter.api.impl.TwitterTemplate">
-		<constructor-arg name="consumerKey"       value="${twitter.oauth.consumerKey}"/>
-		<constructor-arg name="consumerSecret"    value="${twitter.oauth.consumerSecret}"/>
-		<constructor-arg name="accessToken"       value="${twitter.oauth.accessToken}"/>
-		<constructor-arg name="accessTokenSecret" value="${twitter.oauth.accessTokenSecret}"/>
-	</bean>
-
 	<!-- See also: http://static.springsource.org/spring-integration/reference/htmlsingle/#twitter -->
 	<int-twitter:search-inbound-channel-adapter
 		id="twitter" query="devnexus" twitter-template="twitterTemplate"
@@ -33,8 +26,6 @@
 	<int:service-activator id="twitterServiceActivator"
 		input-channel="twitterChannel" output-channel="nullChannel" ref="twitterService"
 		method="addTwitterMessages" />
-
-	<bean id="twitterService" class="com.devnexus.ting.core.service.impl.DefaultTwitterService"/>
 
 	<int:logging-channel-adapter id="logger"
 		level="INFO"

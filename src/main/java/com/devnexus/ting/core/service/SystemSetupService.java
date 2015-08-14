@@ -17,8 +17,6 @@ package com.devnexus.ting.core.service;
 
 import java.io.InputStream;
 
-import com.devnexus.ting.model.Backup;
-
 /**
  * Special services allowing the administrator to populate the sytem with
  * demo data.
@@ -31,20 +29,10 @@ public interface SystemSetupService {
 	/**
 	 * Restore a set of backed-up master data.
 	 */
-	void restore(Backup backup);
-
-	/**
-	 * Restore a set of backed-up master data.
-	 */
 	void restore(InputStream inputStream);
-
-	/** Update the database using Hibernate's SchemaUpdate functionality */
-	void updateDatabase();
 
 	/** */
 	boolean isDatabaseSetup();
-
-	Backup convertToBackupData(InputStream inputStream);
 
 	void setupDatabase();
 

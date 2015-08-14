@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,18 +21,12 @@ import javax.persistence.PersistenceContext;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.web.config.ServicesConfig;
-import org.springframework.test.context.TestExecutionListeners;
-import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
 /**
  * Base class for Dao Test Cases.
@@ -41,21 +35,19 @@ import org.springframework.test.context.transaction.TransactionalTestExecutionLi
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers = IntegrationTestApplicationContextInitializer.class,
-        classes = ServicesConfig.class)
-@ActiveProfiles({SpringProfile.DEFAULT})
-@TestExecutionListeners({DependencyInjectionTestExecutionListener.class, TransactionalTestExecutionListener.class})
-@Configuration
+@SpringApplicationConfiguration(
+		initializers=IntegrationTestApplicationContextInitializer.class,
+		classes={DevNexusApplication.class})
 public abstract class BaseDaoIntegrationTest {
 
-    protected @PersistenceContext
-    EntityManager entityManager;
+	protected @PersistenceContext
+	EntityManager entityManager;
 
-    @Autowired
-    private SystemSetupService systemSetupService;
+	@Autowired
+	private SystemSetupService systemSetupService;
 
-    @Autowired
-    private SystemDao systemDao;
+	@Autowired
+	private SystemDao systemDao;
 
 	@Before
 	public void setup() {

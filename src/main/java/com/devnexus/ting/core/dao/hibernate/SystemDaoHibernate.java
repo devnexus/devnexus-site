@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,16 +23,16 @@ import javax.sql.DataSource;
 
 import org.hibernate.HibernateException;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.ejb.Ejb3Configuration;
+import org.hibernate.dialect.PostgreSQL9Dialect;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
-import org.hibernate.tool.hbm2ddl.SchemaUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Repository;
 
+import com.devnexus.ting.config.PersistenceConfig;
 import com.devnexus.ting.core.dao.SystemDao;
+import com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy;
 
-@SuppressWarnings("deprecation")
 @Repository("systemDao")
 public class SystemDaoHibernate implements SystemDao {
 
@@ -43,63 +43,49 @@ public class SystemDaoHibernate implements SystemDao {
 	private LocalContainerEntityManagerFactoryBean fb;
 
 	@Override
-	public void updateDatabase() {
-
-		final Ejb3Configuration cfg = new Ejb3Configuration();
-		final Ejb3Configuration configured = cfg.configure( fb.getPersistenceUnitInfo(), fb.getJpaPropertyMap() );
-		final Configuration configuration = configured.getHibernateConfiguration();
-
-		HibernateHack.dataSource = dataSource;
-
-		Properties props = new Properties();
-		props.put("hibernate.connection.provider_class",
-		 "com.devnexus.ting.core.dao.hibernate.SystemDaoHibernate.HibernateHack");
-
-
-		final org.hibernate.tool.hbm2ddl.SchemaUpdate schemaUpdate;
-
-		try {
-			schemaUpdate = new SchemaUpdate(configuration, props);
-		} catch (HibernateException e) {
-			throw new IllegalStateException(e);
-		}
-
-		schemaUpdate.execute(false, true);
-
-	}
-
-	@Override
 	public void createDatabase(boolean outputOnly, String dialect) {
 
-		final Ejb3Configuration cfg = new Ejb3Configuration();
+		final Map<String, Object> propertyMap = fb.getJpaPropertyMap();
 
-		final Map<String, Object> properties = fb.getJpaPropertyMap();
+		Properties properties = new Properties();
+		properties.putAll(propertyMap);
 
 		if (dialect != null) {
 			properties.put("hibernate.dialect", dialect);
 		}
 
-		final Ejb3Configuration configured = cfg.configure( fb.getPersistenceUnitInfo(), fb.getJpaPropertyMap() );
-		final Configuration configuration = configured.getHibernateConfiguration();
+		Configuration configuration = new Configuration();
+
+		for (Class<?> clazz : PersistenceConfig.getAnnotatedPersistenceClasses()) {
+			configuration.addAnnotatedClass(clazz);
+		}
+
+		configuration.addProperties(properties);
+		configuration.setNamingStrategy(new ImprovedPluralizedNamingStrategy());
+
+		StringBuilder builder = new StringBuilder();
+
+		for (String line : configuration.generateSchemaCreationScript(new PostgreSQL9Dialect())) {
+			builder.append(line + "\n");
+		}
+
+		builder.toString();
 
 		final SchemaExport schemaExport;
 
 		try {
-			schemaExport = new SchemaExport(configuration, dataSource.getConnection());
-		} catch (HibernateException e) {
+			schemaExport = new SchemaExport(configuration,
+				dataSource.getConnection());
+		}
+		catch (HibernateException e) {
 			throw new IllegalStateException(e);
-		} catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			throw new IllegalStateException(e);
 		}
 
 		schemaExport.create(true, !outputOnly);
 
 	}
-
-	private static class HibernateHack {
-		@SuppressWarnings("unused")
-		public static DataSource dataSource;
-	}
-
 
 }

@@ -15,13 +15,20 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
+import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.model.CfpSubmission;
@@ -36,8 +43,11 @@ import com.devnexus.ting.model.SkillLevel;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
+@ContextConfiguration(initializers = IntegrationTestApplicationContextInitializer.class)
+@TestExecutionListeners({DependencyInjectionTestExecutionListener.class, TransactionalTestExecutionListener.class})
 @ActiveProfiles({SpringProfile.MAIL_ENABLED})
+@ImportResource("classpath:spring/spring-integration-cfp-context.xml")
+@Ignore
 public class CfpToMailTransformerTests {
 
 	@Autowired
@@ -104,4 +114,5 @@ public class CfpToMailTransformerTests {
 
 		return cfpSubmission;
 	}
+
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,13 +32,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SpringContextMode;
-import com.devnexus.ting.core.dao.BackupDao;
 import com.devnexus.ting.core.dao.SystemDao;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.AuthorityType;
-import com.devnexus.ting.model.Backup;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.model.Room;
@@ -66,16 +64,13 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
 
 	@Autowired
-	private SchemaMigrationRepository   schemaMigrationRepository;
+	private SchemaMigrationRepository schemaMigrationRepository;
 
 	@Autowired
-	private BackupDao            backupDao;
+	private SystemDao systemDao;
 
 	@Autowired
-	private SystemDao            systemDao;
-
-	@Autowired
-	private UserAuthorityRepository     userAuthorityDao;
+	private UserAuthorityRepository userAuthorityDao;
 
 	@Autowired
 	private Environment environment;
@@ -98,18 +93,18 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	@Autowired
 	private ScheduleItemRepository scheduleItemDao;
 
-	@Value("${database.jdbc.driverClassName}")
+	@Value("${spring.datasource.driverClassName}")
 	private String jdbcDriverClassName;
 
-	@Value("${database.jdbc.url}")
+	@Value("${spring.datasource.url}")
 	private String jdbcDatabaseUrl;
 
 	@Override
 	public void restore(final InputStream inputStream) {
 
-		final Backup backup = backupDao.convertToBackupData(inputStream);
-
-		this.restore(backup);
+//		final Backup backup = backupDao.convertToBackupData(inputStream);
+//
+//		this.restore(backup);
 
 	}
 
@@ -135,23 +130,9 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 	}
 
-	/** {@inheritDoc} */
-	@Override
-	public void restore(final Backup backup) {
-
-		//TODO
-
-	}
-
 	private void createDatabase() {
 		LOGGER.warn("Create Database with Settings jdbcDriverClassName: '{}'; jdbcDatabaseUrl: '{}'", jdbcDriverClassName, jdbcDatabaseUrl);
 		systemDao.createDatabase(false, null);
-	}
-
-	@Transactional
-	@Override
-	public void updateDatabase() {
-		systemDao.updateDatabase();
 	}
 
 	@Override
@@ -168,11 +149,6 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 			LOGGER.warn("Looks like the database has not been set up, yet.", e.getMessage());
 			return false;
 		}
-	}
-
-	@Override
-	public Backup convertToBackupData(InputStream inputStream) {
-		return backupDao.convertToBackupData(inputStream);
 	}
 
 	@Override

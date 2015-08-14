@@ -1,0 +1,54 @@
+debug: false
+server:
+  servlet-path: /s
+  session-timeout: 20
+  tomcat:
+    compression: on
+    compressableMimeTypes: application/json,application/xml,text/html,text/xml,text/plain
+devnexus:
+  twitter:
+    enabled: false
+    oauth:
+      consumerKey:
+      consumerSecret:
+      accessToken:
+      accessTokenSecret:
+  mail:
+    enabled: false
+    authenticationEnabled: false
+    debugEnabled: false
+    user:
+      id:
+      password:
+      from: info@ajug.org
+      cc:
+    smtp:
+      port: 25
+      host: localhost
+  recaptcha:
+    enabled: false
+    publicKey:
+    privateKey:
+spring:
+  datasource:
+    url: jdbc:h2:mem:devnexus_demo
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+  view:
+    prefix: /WEB-INF/jsp/
+    suffix: .jsp
+database:
+  hibernate:
+    dialect: com.devnexus.ting.core.hibernate.ImprovedH2Dialect
+    show_sql: false
+    generate_ddl: validate
+
+TING_CLIENT_ID: fillme
+TING_CLIENT_SECRET: fillme
+TING_PUSH_URL: fillme
+TING_PUSH_APP_ID: fillme
+TING_PUSH_MASTER_SECRET: fillme
+
+https:
+    enabled: false
