@@ -89,30 +89,61 @@
                     <form:errors path="registerFormUrl" cssClass="fieldError"/>
                 </div>
             </div>
-                
-            <div id="couponCodes">
-                <c:forEach items="${ticketGroup.couponCodes}" var="couponCode"  varStatus="status">
-                    <spring:bind path="couponCodes[${status.index}]">
-                        <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                    </spring:bind>
 
-                    <div class="form-group${errorClass}">
-                        <label for="couponCodes[${status.index}].code" class="col-lg-2 control-label">Coupon Code</label>
-                        <div class="col-lg-10">
-                            <form:input cssClass="form-control" path="couponCodes[${status.index}].code" id="couponCodes[${status.index}].code" tabindex="5" maxlength="255"/>
-                            <form:errors path="couponCodes[${status.index}].code" cssClass="fieldError"/>
+            <fieldset>
+                <div id="couponCodes">
+                    <c:forEach items="${ticketGroup.couponCodes}" var="couponCode"  varStatus="status">
+                        <spring:bind path="couponCodes[${status.index}]">
+                            <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                        </spring:bind>
+
+                        <div class="form-group${errorClass}">
+                            <label for="couponCodes[${status.index}].code" class="col-lg-2 control-label">Coupon Code</label>
+                            <div class="col-lg-10">
+                                <form:input cssClass="form-control" path="couponCodes[${status.index}].code" id="couponCodes[${status.index}].code" tabindex="5" maxlength="255"/>
+                                <form:errors path="couponCodes[${status.index}].code" cssClass="fieldError"/>
+                            </div>
+                            <label for="couponCodes[${status.index}].price" class="col-lg-2 control-label">Price</label>
+                            <div class="col-lg-10">
+                                <form:input cssClass="form-control" path="couponCodes[${status.index}].price" id="couponCodes[${status.index}].price" tabindex="5" maxlength="255"/>
+                                <form:errors path="couponCodes[${status.index}].price" cssClass="fieldError"/>
+                            </div>
                         </div>
-                        <label for="couponCodes[${status.index}].price" class="col-lg-2 control-label">Coupon Code</label>
-                        <div class="col-lg-10">
-                            <form:input cssClass="form-control" path="couponCodes[${status.index}].price" id="couponCodes[${status.index}].price" tabindex="5" maxlength="255"/>
-                            <form:errors path="couponCodes[${status.index}].price" cssClass="fieldError"/>
+                    </c:forEach>
+                </div>
+                <button type="button" class="btn btn-default" lang="save" id="addCouponButton">Add Coupon</button>                
+            </fieldset>
+
+            <fieldset>
+                <div id="ticketAddOns">
+                    <c:forEach items="${ticketGroup.ticketAddOns}" var="ticketAddOn"  varStatus="status">
+                        <spring:bind path="ticketAddOns[${status.index}]">
+                            <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                        </spring:bind>
+
+                        <div class="form-group${errorClass}">
+                            <label for="ticketAddOns[${status.index}].label" class="col-lg-2 control-label">Label</label>
+                            <div class="col-lg-10">
+                                <form:input cssClass="form-control" path="ticketAddOns[${status.index}].label" id="ticketAddOns[${status.index}].label" tabindex="5" maxlength="255"/>
+                                <form:errors path="ticketAddOns[${status.index}].label" cssClass="fieldError"/>
+                            </div>
+                            <label for="ticketAddOns[${status.index}].price" class="col-lg-2 control-label">Price</label>
+                            <div class="col-lg-10">
+                                <form:input cssClass="form-control" path="ticketAddOns[${status.index}].price" id="ticketAddOns[${status.index}].price" tabindex="5" maxlength="255"/>
+                                <form:errors path="ticketAddOns[${status.index}].price" cssClass="fieldError"/>
+                            </div>
+                            <label for="ticketAddOns[${status.index}].maxAvailableTickets" class="col-lg-2 control-label">Maximum Available</label>
+                            <div class="col-lg-10">
+                                <form:input cssClass="form-control" path="ticketAddOns[${status.index}].maxAvailableTickets" id="ticketAddOns[${status.index}].maxAvailableTickets" tabindex="5" maxlength="255"/>
+                                <form:errors path="ticketAddOns[${status.index}].maxAvailableTickets" cssClass="fieldError"/>
+                            </div>
                         </div>
-                    </div>
-                </c:forEach>
-           </div>
-            <button type="button" class="btn btn-default" lang="save" id="addCouponButton">Add Coupon</button>                
-            
-                
+                    </c:forEach>
+                </div>
+                <button type="button" class="btn btn-default" lang="save" id="addAddOnButton">Add Workshop</button>                
+            </fieldset>
+
+
             <spring:bind path="ticketGroup.minPurchase">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
@@ -136,7 +167,7 @@
 </div>
 
 <content tag='bottom'>
-   
+
     <script src="${ctx}/assets/js/other/bootstrap-maxlength.min.js"></script>
     <script type="text/javascript">
 
@@ -144,19 +175,25 @@
             $("input[type='text']:visible:enabled:first", document.forms['cfpForm']).focus();
 
 
--            $("#openDate").datepicker();
--
--            $("#closeDate").datepicker();
--
-
-            $('textarea').maxlength({
+            -$("#openDate").datepicker();
+            -
+                    -$("#closeDate").datepicker();
+            -
+                    $('textarea').maxlength({
                 alwaysShow: true
             });
 
-            $('#addCouponButton').click(function(event) {
+            $('#addCouponButton').click(function (event) {
                 size = $('#couponCodes').children().size();
-                $('#couponCodes').append('<div class="form-group$"> <label for="couponCodes['+size+'].code" class="col-lg-2 control-label">Coupon Code</label> <div class="col-lg-10"> <input class="form-control" name="couponCodes['+size+'].code" id="couponCodes['+size+'].code" tabindex="5" maxlength="255"/></div><label for="couponCodes['+size+'].price" class="col-lg-2 control-label">New Price</label><div class="col-lg-10"><input class="form-control" name="couponCodes['+size+'].price" id="couponCodes['+size+'].price" maxlength="255"/></div></div>');
+                $('#couponCodes').append('<div class="form-group$"> <label for="couponCodes[' + size + '].code" class="col-lg-2 control-label">Coupon Code</label> <div class="col-lg-10"> <input class="form-control" name="couponCodes[' + size + '].code" id="couponCodes[' + size + '].code" tabindex="5" maxlength="255"/></div><label for="couponCodes[' + size + '].price" class="col-lg-2 control-label">New Price</label><div class="col-lg-10"><input class="form-control" name="couponCodes[' + size + '].price" id="couponCodes[' + size + '].price" maxlength="255"/></div></div>');
             })
+
+            $('#addAddOnButton').click(function (event) {
+                size = $('#ticketAddOns').children().size();
+                $('#ticketAddOns').append('<div class="form-group$"> <label for="ticketAddOns[' + size + '].label" class="col-lg-2 control-label">Label</label> <div class="col-lg-10"> <input class="form-control" name="ticketAddOns[' + size + '].label" id="ticketAddOns[' + size + '].label" tabindex="5" maxlength="255"/></div><label for="ticketAddOns[' + size + '].price" class="col-lg-2 control-label">Price</label><div class="col-lg-10"><input class="form-control" name="ticketAddOns[' + size + '].price" id="ticketAddOns[' + size + '].price" maxlength="255"/></div><label for="ticketAddOns[' + size + '].maxAvailableTickets" class="col-lg-2 control-label">Max Available</label><div class="col-lg-10"> <input class="form-control" name="ticketAddOns[' + size + '].maxAvailableTickets" id="ticketAddOns[' + size + '].maxAvailableTickets" tabindex="5" maxlength="255"/></div></div>');
+
+            })
+
 
         });
     </script>

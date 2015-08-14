@@ -3,9 +3,7 @@ package com.devnexus.ting.model;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -59,6 +57,10 @@ public class TicketGroup extends BaseModelObject {
 
     @NotNull
     private Integer minPurchase = 1;
+
+    @NotNull
+    private Integer maxAvailableTickets = 5000;
+
     
     @Temporal(TemporalType.DATE)
     private Date openDate;
@@ -73,6 +75,11 @@ public class TicketGroup extends BaseModelObject {
     @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
     protected List<CouponCode> couponCodes = new ArrayList<>();
 
+    
+    @OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
+    protected List<TicketAddOn> ticketAddOns = new ArrayList<>();
+
+    
     public Event getEvent() {
         return event;
     }
@@ -159,6 +166,28 @@ public class TicketGroup extends BaseModelObject {
         this.minPurchase = minPurchase;
     }
 
-    
-    
+    public Integer getMaxAvailableTickets() {
+        return maxAvailableTickets;
+    }
+
+    public void setMaxAvailableTickets(Integer maxAvailableTickets) {
+        this.maxAvailableTickets = maxAvailableTickets;
+    }
+
+    public List<TicketAddOn> getTicketAddOns() {
+        return ticketAddOns;
+    }
+
+    public void setTicketAddOns(List<TicketAddOn> ticketAddOns) {
+        this.ticketAddOns = new ArrayList<>(ticketAddOns.size());
+        for (TicketAddOn addOn : ticketAddOns) {
+            if (addOn.getLabel()!= null && !addOn.getLabel().isEmpty()) {
+                this.ticketAddOns.add(addOn);
+                addOn.setTicketGroup(this);
+            }
+        }
+        
+    }
+
+
 }
