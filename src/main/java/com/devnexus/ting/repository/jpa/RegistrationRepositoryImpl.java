@@ -34,5 +34,10 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
     public RegistrationDetails findByKey(String registrationKey) {
         return (RegistrationDetails) entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", registrationKey).getSingleResult();
     }
+
+    @Override
+    public Long countSalesOfAddons(Long addOnId) {
+        return (Long) entityManager.createQuery("select count(*) from TicketOrderDetail where ticketAddOn.id= :addOnId").setParameter("addOnId", addOnId).getSingleResult();
+    }
     
 }

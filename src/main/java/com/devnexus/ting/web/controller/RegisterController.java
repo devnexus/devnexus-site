@@ -22,6 +22,7 @@ import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
+import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.web.form.RegisterForm;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.web.form.SignupRegisterView;
@@ -39,7 +40,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -62,6 +65,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class RegisterController {
 
+    private void addOverSoldErrorsToFields(RegistrationDetails registerForm, BindingResult result, TicketAddOn addOn) {
+
+        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
+            if (orderDetails.getTicketAddOn().equals(addOn)) {
+                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].ticketAddOn", "Sorry, this workshop is sold out."));
+            }
+        }
+    }
 
     private enum PaymentMethod {
 
@@ -99,7 +111,7 @@ public class RegisterController {
             result.addError(new FieldError("registerForm", "ticketCount", "You need to buy more tickets for this Registration Type."));
         }
 
-        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
+        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(registerForm.getCouponCode())) {
             if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
             }
@@ -115,6 +127,14 @@ public class RegisterController {
 
         model.addAttribute("registerFormPageTwo", registerFormPageTwo);
 
+        ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(ticketGroup.getTicketAddOns().size());
+        for (TicketAddOn addOn : ticketGroup.getTicketAddOns()) {
+            if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                availableAddOns.add(addOn);
+            }
+        }
+        model.addAttribute("addOns", availableAddOns);
+
         return "register2";
 
     }
@@ -122,7 +142,7 @@ public class RegisterController {
     @RequestMapping(value = "/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
     @ResponseBody
     public String getCodedPrice(Model model, @PathVariable("ticketGroupId") final Long ticketGroupId,
-                                @PathVariable("couponCode")    final String couponCode) {
+            @PathVariable("couponCode") final String couponCode) {
         TicketGroup group = businessService.getTicketGroup(ticketGroupId);
         if (hasCode(group.getCouponCodes(), couponCode)) {
             CouponCode code = findCode(group.getCouponCodes(), couponCode);
@@ -130,9 +150,9 @@ public class RegisterController {
         } else {
             return group.getPrice().setScale(2).toPlainString();
         }
-        
+
     }
-    
+
     @RequestMapping(value = "/registerPageTwo/{registrationKey}", method = RequestMethod.GET)
     public String loadPageTwo(@PathVariable("registrationKey") final String registrationKey, Model model) {
 
@@ -143,12 +163,11 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
-
+        
         return "register2";
 
     }
 
-    
     @RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.GET)
     public String confirmPayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
 
@@ -165,8 +184,7 @@ public class RegisterController {
         return "confirmRegistration";
 
     }
-    
-        
+
     @RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.POST)
     public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
@@ -174,7 +192,7 @@ public class RegisterController {
         return "redirect:/s/index";
 
     }
-    
+
     @RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
     public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 
@@ -187,8 +205,17 @@ public class RegisterController {
         model.addAttribute("registerFormPageTwo", registerForm);
 
         registerForm.setEvent(currentEvent);
-        
+
         if (result.hasErrors()) {
+            
+            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(ticketGroup.getTicketAddOns().size());
+            for (TicketAddOn addOn : ticketGroup.getTicketAddOns()) {
+                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                    availableAddOns.add(addOn);
+                }
+            }
+            model.addAttribute("addOns", availableAddOns);
+            
             return "register2";
         }
 
@@ -199,6 +226,25 @@ public class RegisterController {
         if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
             if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
                 result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
+            }
+        }
+
+        Map<TicketAddOn, Integer> addOnCounts = new HashMap<>(registerForm.getOrderDetails().size());
+
+        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
+            
+            if (orderDetails.getTicketAddOn() != null) {
+                TicketAddOn addon = businessService.findAddOn(orderDetails.getTicketAddOn());
+                Integer count = addOnCounts.getOrDefault(addon, 0);
+                addOnCounts.put(addon, count + 1);
+            }
+        }
+
+        for (TicketAddOn addOn : addOnCounts.keySet()) {
+            Long sold = businessService.getCountOfAddonsSold(addOn.getId());
+            if (sold >= addOn.getMaxAvailableTickets()) {
+                addOverSoldErrorsToFields(registerForm, result, addOn);
             }
         }
 
@@ -220,15 +266,23 @@ public class RegisterController {
         }
 
         if (result.hasErrors()) {
+
+            
+            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(ticketGroup.getTicketAddOns().size());
+            for (TicketAddOn addOn : ticketGroup.getTicketAddOns()) {
+                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
+                    availableAddOns.add(addOn);
+                }
+            }
+            model.addAttribute("addOns", availableAddOns);
+            
             return "register2";
         }
 
         for (TicketOrderDetail detail : registerForm.getOrderDetails()) {
             detail.setRegistration(registerForm);
         }
-        
-        
-        
+
         switch (paymentMethod) {
 
             case INVOICE:
@@ -245,8 +299,10 @@ public class RegisterController {
                         price = code.getPrice();
                     }
                 }
-                Payment createdPayment = runPayPal(registerForm, price.multiply(BigDecimal.valueOf(registerForm.getTicketCount())).setScale(2, RoundingMode.HALF_UP).toString(), price.setScale(2).toString());
-                return "redirect:" + createdPayment.getLinks().stream().filter(link -> {return link.getRel().equals("approval_url");}).findFirst().get().getHref();
+                Payment createdPayment = runPayPal(registerForm, price.setScale(2).toString());
+                return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
+                    return link.getRel().equals("approval_url");
+                }).findFirst().get().getHref();
             default:
                 throw new IllegalStateException("The system did not understand the payment type.");
 
@@ -266,25 +322,32 @@ public class RegisterController {
 
     }
 
-    private Payment runPayPal(RegistrationDetails registerForm, String total, String price) {
-        
+    private Payment runPayPal(RegistrationDetails registerForm, String price) {
+
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
-        
+
         Amount amount = new Amount();
         amount.setCurrency("USD");
-        amount.setTotal(total);
+        BigDecimal total = BigDecimal.ZERO;
 
         Transaction transaction = new Transaction();
         transaction.setDescription("DevNexus Registration");
         transaction.setAmount(amount);
-        
+
         ItemList itemlist = new ItemList();
         List<Item> items = new ArrayList<>(registerForm.getTicketCount());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
             items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
+            total = total.add(new BigDecimal(price));
+            if (order.getTicketAddOn() != null) {
+                TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
+                items.add(new Item("1", String.format("%s for %s %s", addOn.getLabel(), order.getFirstName(), order.getLastName()), addOn.getPrice().setScale(2).toString(), "USD"));
+                total = total.add(addOn.getPrice());
+            }
         }
         itemlist.setItems(items);
-        
+
+        amount.setTotal(total.setScale(2).toString());
         List<Transaction> transactions = new ArrayList<Transaction>();
         transactions.add(transaction);
         transaction.setItemList(itemlist);
@@ -303,7 +366,6 @@ public class RegisterController {
         return payPalSession.createPayment(payment);
     }
 
-    
     private boolean hasCode(Collection<CouponCode> couponCodes, String couponCode) {
         for (CouponCode code : couponCodes) {
             if (code.getCode().equals(couponCode)) {
@@ -313,7 +375,6 @@ public class RegisterController {
         return false;
     }
 
-    
     private CouponCode findCode(List<CouponCode> couponCodes, String couponCode) {
         for (CouponCode code : couponCodes) {
             if (code.getCode().equals(couponCode)) {
@@ -323,5 +384,4 @@ public class RegisterController {
         return CouponCode.EMPTY;
     }
 
-    
 }

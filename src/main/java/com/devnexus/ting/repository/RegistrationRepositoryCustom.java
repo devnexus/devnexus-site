@@ -7,4 +7,7 @@ public interface RegistrationRepositoryCustom {
     public RegistrationDetails createRegistrationPendingPayment(RegistrationDetails pendingRegistration);
 
     public RegistrationDetails findByKey(String registrationKey);
+
+    public Long countSalesOfAddons(Long addOn);
+
 }

@@ -116,6 +116,7 @@ ALTER TABLE TICKET_GROUPS
         STATE varchar(255),
         T_SHIRT_SIZE varchar(255),
         VEGETARIAN varchar(255),
+        TICKET_ADD_ON bigint,
         REGISTRATION bigint
     );
 
@@ -123,6 +124,7 @@ ALTER TABLE TICKET_GROUPS
         add constraint UK_5q9q45ncyv753dlfbt2paq8mx unique (REGISTRATION_FORM_KEY);
 
     create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
+    create index TICKET_ORDER_DETAILS_KEY_ADD_ON on ticket_order_details (TICKET_ADD_ON);
 
 ALTER TABLE REGISTRATION
 	OWNER TO devnexus;

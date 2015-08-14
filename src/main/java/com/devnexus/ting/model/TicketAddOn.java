@@ -66,7 +66,9 @@ public class TicketAddOn extends BaseModelObject {
         this.ticketGroup = ticketGroup;
     }
     
-    
+    public String getDisplayString() {
+        return String.format("%s - %s", label, price.setScale(2).toString());
+    }
     
 
 }

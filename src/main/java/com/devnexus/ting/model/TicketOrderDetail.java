@@ -1,5 +1,6 @@
 package com.devnexus.ting.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
@@ -42,6 +43,8 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     @Size(max = 255)
     private String vegetarian;
 
+    private Long ticketAddOn;
+    
     @ManyToOne
     @XmlTransient
     private RegistrationDetails registration;
@@ -142,5 +145,12 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         return lastName.compareTo(o.lastName);
     }
 
+    public Long getTicketAddOn() {
+        return ticketAddOn;
+    }
+
+    public void setTicketAddOn(Long ticketAddOn) {
+        this.ticketAddOn = ticketAddOn;
+    }
 
 }
