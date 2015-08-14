@@ -30,6 +30,7 @@
 		<java-version>1.8</java-version>
 		<org.cloudfoundry-version>0.8.6</org.cloudfoundry-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<docker.image.prefix>springio</docker.image.prefix>
 	</properties>
 
 	<build>
@@ -132,6 +133,22 @@
 					<destinationFolder>${basedir}/src/main/resources/META-INF/resources/wro/</destinationFolder>
 					<wroFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.xml</wroFile>
 					<extraConfigFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.properties</extraConfigFile>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.3.1</version>
+				<configuration>
+					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -244,9 +261,9 @@
 		<!-- Google -->
 
 		<dependency>
-	      <groupId>com.google.code.gson</groupId>
-	      <artifactId>gson</artifactId>
-	    </dependency>
+		  <groupId>com.google.code.gson</groupId>
+		  <artifactId>gson</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.google.oauth-client</groupId>
 			<artifactId>google-oauth-client</artifactId>
@@ -276,9 +293,9 @@
 		</dependency>
 
 		<dependency>
-	        <groupId>com.zaxxer</groupId>
-	        <artifactId>HikariCP</artifactId>
-	    </dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
 
 		<!-- Other -->
 
