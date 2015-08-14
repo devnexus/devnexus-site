@@ -67,6 +67,30 @@ public class RegistrationController {
         return "/admin/add-ticketgroup";
     }
 
+    
+    @RequestMapping(value = "/admin/{eventKey}/invoicing", method = RequestMethod.GET)
+    public String showInvoicing(ModelMap model, HttpServletRequest request,
+            @PathVariable(value = "eventKey") String eventKey) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+        model.addAttribute("event", signUp.getEvent());
+        
+        return "/admin/invoicing";
+    }
+    
+    @RequestMapping(value = "/admin/{eventKey}/dashboard", method = RequestMethod.GET)
+    public String showDashboard(ModelMap model, HttpServletRequest request,
+            @PathVariable(value = "eventKey") String eventKey) {
+
+        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+        model.addAttribute("event", signUp.getEvent());
+        
+        return "/admin/dashboard";
+    }
+
+    
     @RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.GET)
     public String prepareEditTicketGroupForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId) {
