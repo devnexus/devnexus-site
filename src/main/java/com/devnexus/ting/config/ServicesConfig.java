@@ -20,9 +20,7 @@ import java.util.Map;
 import org.jasypt.digest.StandardStringDigester;
 import org.jasypt.springsecurity3.authentication.encoding.PasswordEncoder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessagingException;
@@ -56,7 +54,7 @@ public class ServicesConfig {
 		passwordEncoder.setStringDigester(stringDigester());
 		return passwordEncoder;
 	}
-
+        
 	@Bean
 	@Profile(SpringProfile.WEBSOCKET_DISABLED)
 	SimpMessageSendingOperations simpMessageSendingOperations() {

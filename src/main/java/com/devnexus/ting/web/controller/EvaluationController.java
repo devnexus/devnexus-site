@@ -21,11 +21,6 @@ import java.util.Properties;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import net.tanesha.recaptcha.ReCaptcha;
-import net.tanesha.recaptcha.ReCaptchaFactory;
-import net.tanesha.recaptcha.ReCaptchaImpl;
-import net.tanesha.recaptcha.ReCaptchaResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.stereotype.Controller;
@@ -39,6 +34,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
+
+import net.tanesha.recaptcha.ReCaptcha;
+import net.tanesha.recaptcha.ReCaptchaFactory;
+import net.tanesha.recaptcha.ReCaptchaImpl;
+import net.tanesha.recaptcha.ReCaptchaResponse;
 
 /**
  * @author Gunnar Hillert

@@ -26,7 +26,6 @@ import javax.sql.DataSource;
 import org.reflections.Reflections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
@@ -36,6 +35,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.devnexus.ting.common.SpringProfile;
@@ -57,6 +57,31 @@ public class PersistenceConfig {
 
 	@Autowired
 	Environment environment;
+
+	@Bean
+	public Jaxb2Marshaller jaxbMarshaller() {
+		Jaxb2Marshaller jaxbMarshaller = new Jaxb2Marshaller();
+		jaxbMarshaller.setClassesToBeBound(
+
+			com.devnexus.ting.model.Evaluation.class,
+			com.devnexus.ting.model.EvaluationList.class,
+			com.devnexus.ting.model.Event.class,
+			com.devnexus.ting.model.Presentation.class,
+			com.devnexus.ting.model.PresentationList.class,
+			com.devnexus.ting.model.Room.class,
+			com.devnexus.ting.model.RoomList.class,
+			com.devnexus.ting.model.ScheduleItem.class,
+			com.devnexus.ting.model.ScheduleItemList.class,
+			com.devnexus.ting.model.Sponsor.class,
+			com.devnexus.ting.model.Speaker.class,
+			com.devnexus.ting.model.SpeakerList.class,
+			com.devnexus.ting.model.ScheduleItemType.class,
+			com.devnexus.ting.model.CfpSubmission.class,
+			com.devnexus.ting.model.CfpSubmissionList.class,
+                        com.devnexus.ting.model.TicketGroup.class
+		);
+		return jaxbMarshaller;
+	}
 
 	@Bean
 	public HibernateJpaVendorAdapter hibernateJpaVendorAdapter() {

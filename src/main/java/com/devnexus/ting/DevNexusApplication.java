@@ -23,6 +23,8 @@ import javax.servlet.descriptor.JspPropertyGroupDescriptor;
 import javax.servlet.descriptor.TaglibDescriptor;
 
 import org.apache.catalina.Context;
+import org.apache.catalina.connector.Connector;
+import org.apache.catalina.valves.RemoteIpValve;
 import org.apache.tomcat.util.descriptor.web.ErrorPage;
 import org.apache.tomcat.util.descriptor.web.JspConfigDescriptorImpl;
 import org.apache.tomcat.util.descriptor.web.JspPropertyGroup;
@@ -139,7 +141,22 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 							context.setJspConfigDescriptor(jspConfigDescriptor);
 
 						}
-					});
+			});
+			tomcatEmbeddedServletContainerFactory.addAdditionalTomcatConnectors(createConnector());
+			tomcatEmbeddedServletContainerFactory.addContextValves(createRemoteIpValves());
 		}
+	}
+
+	private static RemoteIpValve createRemoteIpValves() {
+		RemoteIpValve remoteIpValve = new RemoteIpValve();
+		remoteIpValve.setRemoteIpHeader("x-forwarded-for");
+		remoteIpValve.setProtocolHeader("x-forwarded-proto");
+		return remoteIpValve;
+	}
+
+	private static Connector createConnector() {
+		Connector connector = new Connector("AJP/1.3");
+		connector.setPort(8009);
+		return connector;
 	}
 }

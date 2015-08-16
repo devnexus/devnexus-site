@@ -20,6 +20,7 @@
 	<link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
 	<link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
+	<link href="${assetsUrl}/css/jquery-ui.css" rel="stylesheet">
 
 	<!-- fonts: external links -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -157,6 +158,7 @@
 
 	<script src="${assetsUrl}/js/other/masonry.pkgd.js"></script>
 	<script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script>
+	<script src="${assetsUrl}/js/jquery-plugins/jquery-ui.min.js"></script>
 
 	<sitemesh:write property='page.bottom'/>
 </body>

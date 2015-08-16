@@ -112,6 +112,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private void loadAndRestoreSeedData() {
 
 		User user = new User();
+                user.setId(1024l);
 		user.setPassword("devnexus");
 		user.setUsername("admin");
 		user.setFirstName("admin");

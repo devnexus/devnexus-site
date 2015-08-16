@@ -17,36 +17,16 @@ package com.devnexus.ting.config;
 
 import java.util.Properties;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.encrypt.Encryptors;
-import org.springframework.social.connect.ConnectionFactory;
-import org.springframework.social.connect.ConnectionFactoryLocator;
-import org.springframework.social.connect.ConnectionRepository;
-import org.springframework.social.connect.NotConnectedException;
-import org.springframework.social.connect.UsersConnectionRepository;
-import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
-import org.springframework.social.connect.support.ConnectionFactoryRegistry;
-import org.springframework.social.connect.web.ProviderSignInController;
-import org.springframework.social.google.api.Google;
-import org.springframework.social.google.connect.GoogleConnectionFactory;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.config.support.MailSettings;
-import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.impl.CfpToMailTransformer;
-import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
-import com.devnexus.ting.model.User;
 
 
 /**
