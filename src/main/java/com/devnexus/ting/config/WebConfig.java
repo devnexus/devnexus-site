@@ -15,18 +15,25 @@
  */
 package com.devnexus.ting.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
+import com.devnexus.ting.web.converter.StringToPurchaseGroup;
 import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
+import com.devnexus.ting.web.payment.PayPalSession;
 
 /**
  *
@@ -36,15 +43,18 @@ import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+	@Autowired
+	private Environment environment;
+
 	@Bean
 	public GlobalDataInterceptor globalDataInterceptor() {
 		return new GlobalDataInterceptor();
 	}
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(globalDataInterceptor()).addPathPatterns("/**");
-    }
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(globalDataInterceptor()).addPathPatterns("/**");
+	}
 
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
@@ -53,6 +63,20 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToSkillLevel());
 		registry.addConverter(new StringToPresentationType());
 		registry.addConverter(new StringToSponsorLevel());
+		registry.addConverter(new StringToPurchaseGroup());
 	}
 
+	@Bean
+	@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+	public PayPalSession payPalSession() {
+		if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
+			return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+		}
+		else if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
+			return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+		}
+		else {
+			return PayPalSession.DUMMY;
+		}
+	}
 }

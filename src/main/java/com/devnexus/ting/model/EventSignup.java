@@ -3,6 +3,7 @@ package com.devnexus.ting.model;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,11 +15,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+* @author Summers Pittman
+*/
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventSignup extends BaseModelObject {
-    
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketGroup.class, fetch = FetchType.EAGER)
     private Set<TicketGroup> groups = new HashSet<>();
 
@@ -51,7 +55,7 @@ public class EventSignup extends BaseModelObject {
         }
         return Optional.empty();
     }
-    
-    
-    
+
+
+
 }

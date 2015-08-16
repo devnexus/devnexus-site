@@ -128,7 +128,7 @@
             $('#ticket-group').change(function () {
                 updateInfo()
             });
-            
+
             $('#coupon-code').change(function() {
                 jQuery.ajax("/s/lookupCouponCode/" + $('#ticket-group option:selected').val() + "/" + $('#coupon-code').val(), {
                     success : function(data) { price = data;$('#total-cost').val($('#ticket-count option:selected').val() * price);}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,40 +15,46 @@
  */
 package com.devnexus.ting.repository.jpa;
 
-import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.model.Event;
-import com.devnexus.ting.repository.EventSignupRepositoryCustom;
-import com.devnexus.ting.model.EventSignup;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
+import com.devnexus.ting.repository.EventSignupRepositoryCustom;
+
+/**
+*
+* @author Summers Pittman
+*/
 @Repository("eventSignupDao")
 public class EventSignupRepositoryImpl
-        implements EventSignupRepositoryCustom {
+		implements EventSignupRepositoryCustom {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+	@PersistenceContext
+	private EntityManager entityManager;
 
-    @Autowired
-    private BusinessService businessService;
+	@Autowired
+	private BusinessService businessService;
 
-    @Override
-    public EventSignup getByEventKey(String eventKey) {
-        try {
-            return entityManager.createQuery("select es from EventSignup es "
-                    + "    join es.event e "
-                    + "where e.eventKey = :eventKey", EventSignup.class)
-                    .setParameter("eventKey", eventKey)
-                    .getSingleResult();
-        } catch (NoResultException ignore) {
-            Event event = businessService.getEventByEventKey(eventKey);
-            EventSignup signup = new EventSignup();
-            signup.setEvent(event);
-            return signup;
-        }
-    }
+	@Override
+	public EventSignup getByEventKey(String eventKey) {
+		try {
+			return entityManager.createQuery("select es from EventSignup es "
+					+ "    join es.event e "
+					+ "where e.eventKey = :eventKey", EventSignup.class)
+					.setParameter("eventKey", eventKey)
+					.getSingleResult();
+		} catch (NoResultException ignore) {
+			Event event = businessService.getEventByEventKey(eventKey);
+			EventSignup signup = new EventSignup();
+			signup.setEvent(event);
+			return signup;
+		}
+	}
 
 }

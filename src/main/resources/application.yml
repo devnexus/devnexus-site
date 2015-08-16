@@ -52,3 +52,9 @@ TING_PUSH_MASTER_SECRET: fillme
 
 https:
     enabled: false
+
+#paypal
+PAYPAL_ACCOUNT: payments-facilitator@ajug.org
+PAYPAL_ENDPOINT: api.sandbox.paypal.com
+PAYPAL_CLIENT_ID: xxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxx_xxxxxxxxxx
+PAYPAL_CLIENT_SECRET: xxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxx_xxxxxxxxxx

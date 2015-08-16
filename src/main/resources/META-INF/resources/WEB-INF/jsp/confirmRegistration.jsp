@@ -46,4 +46,3 @@
             $("#form input").prop("disabled", true);
         </script>
     </content>
-    

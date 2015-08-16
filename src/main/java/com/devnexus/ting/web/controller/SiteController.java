@@ -298,7 +298,17 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/sponsors", method=RequestMethod.GET)
+	@RequestMapping("/{eventKey}/sponsors")
+	public String getSponsorsForEvent(@PathVariable("eventKey") String eventKey, final Model model) {
+
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), true);
+		model.addAttribute("sponsorList", sponsorList);
+
+		return "sponsors";
+	}
+
+	@RequestMapping(value="/sponsors")
 	public String getSponsors(Model model) {
 
 		final Event event = businessService.getCurrentEvent();

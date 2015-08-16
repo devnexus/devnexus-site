@@ -1,7 +1,6 @@
 <%@page import="com.devnexus.ting.model.ScheduleItemType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-
             <form:hidden path="couponCode"/>
             <form:hidden path="ticketGroup"/>
             <form:hidden path="ticketCount"/>
@@ -147,5 +146,3 @@
                     </div>
                 </div>
             </c:forEach>
-            
- 

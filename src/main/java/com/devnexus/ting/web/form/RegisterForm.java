@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,59 +15,56 @@
  */
 package com.devnexus.ting.web.form;
 
-import com.devnexus.ting.model.BaseModelObject;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.devnexus.ting.model.BaseModelObject;
+
 /**
  *
- * @author summers
+ * @author Summers Pittman
  */
-
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegisterForm extends BaseModelObject {
 
-    /**
-     * serialVersionUID.
-     */
-    private static final long serialVersionUID = 1071233976549394025L;
+	/**
+	 * serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1071233976549394025L;
 
-    @NotNull
-    private Integer ticketCount;
+	@NotNull
+	private Integer ticketCount;
 
-    @NotNull
-    private Long ticketGroup;
+	@NotNull
+	private Long ticketGroup;
 
-    private String couponCode;
+	private String couponCode;
 
-    public Integer getTicketCount() {
-        return ticketCount;
-    }
+	public Integer getTicketCount() {
+		return ticketCount;
+	}
 
-    public void setTicketCount(Integer ticketCount) {
-        this.ticketCount = ticketCount;
-    }
+	public void setTicketCount(Integer ticketCount) {
+		this.ticketCount = ticketCount;
+	}
 
-    public Long getTicketGroup() {
-        return ticketGroup;
-    }
+	public Long getTicketGroup() {
+		return ticketGroup;
+	}
 
-    public void setTicketGroup(Long ticketGroup) {
-        this.ticketGroup = ticketGroup;
-    }
+	public void setTicketGroup(Long ticketGroup) {
+		this.ticketGroup = ticketGroup;
+	}
 
-    public String getCouponCode() {
-        return couponCode;
-    }
+	public String getCouponCode() {
+		return couponCode;
+	}
 
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
+	public void setCouponCode(String couponCode) {
+		this.couponCode = couponCode;
+	}
 
-    
-    
-    
 }

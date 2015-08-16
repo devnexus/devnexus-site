@@ -25,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -47,7 +48,6 @@ import com.devnexus.ting.model.AuthorityType;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserAuthority;
 import com.devnexus.ting.repository.UserRepository;
-import org.springframework.dao.DataIntegrityViolationException;
 
 /**
  * Provides user specific services.

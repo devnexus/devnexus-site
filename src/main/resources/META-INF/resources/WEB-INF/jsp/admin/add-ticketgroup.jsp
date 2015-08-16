@@ -111,7 +111,7 @@
                         </div>
                     </c:forEach>
                 </div>
-                <button type="button" class="btn btn-default" lang="save" id="addCouponButton">Add Coupon</button>                
+                <button type="button" class="btn btn-default" lang="save" id="addCouponButton">Add Coupon</button>
             </fieldset>
 
             <fieldset>
@@ -140,7 +140,7 @@
                         </div>
                     </c:forEach>
                 </div>
-                <button type="button" class="btn btn-default" lang="save" id="addAddOnButton">Add Workshop</button>                
+                <button type="button" class="btn btn-default" lang="save" id="addAddOnButton">Add Workshop</button>
             </fieldset>
 
 
@@ -193,7 +193,6 @@
                 $('#ticketAddOns').append('<div class="form-group$"> <label for="ticketAddOns[' + size + '].label" class="col-lg-2 control-label">Label</label> <div class="col-lg-10"> <input class="form-control" name="ticketAddOns[' + size + '].label" id="ticketAddOns[' + size + '].label" tabindex="5" maxlength="255"/></div><label for="ticketAddOns[' + size + '].price" class="col-lg-2 control-label">Price</label><div class="col-lg-10"><input class="form-control" name="ticketAddOns[' + size + '].price" id="ticketAddOns[' + size + '].price" maxlength="255"/></div><label for="ticketAddOns[' + size + '].maxAvailableTickets" class="col-lg-2 control-label">Max Available</label><div class="col-lg-10"> <input class="form-control" name="ticketAddOns[' + size + '].maxAvailableTickets" id="ticketAddOns[' + size + '].maxAvailableTickets" tabindex="5" maxlength="255"/></div></div>');
 
             })
-
 
         });
     </script>

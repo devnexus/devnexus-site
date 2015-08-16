@@ -19,11 +19,10 @@
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
-        
+
         There are no sales yet.
         <div>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
         </div>
     </div>
 </div>
-
