@@ -71,13 +71,13 @@ public class CalendarController {
     @Autowired
     private BusinessService businessService;
 
-    @RequestMapping(value={"/usercalendar"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/s/usercalendar"}, method=RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<List<UserCalendar>>  calendar() throws JsonProcessingException {
         return calendar(businessService.getCurrentEvent().getEventKey());
     }
 
-    @RequestMapping(value={"/{eventKey}/usercalendar"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/s/{eventKey}/usercalendar"}, method=RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<List<UserCalendar>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
 
@@ -96,7 +96,7 @@ public class CalendarController {
         return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value="/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+    @RequestMapping(value="/s/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
     @ResponseBody
     public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("eventKey") String eventKey, @PathVariable("id") String id, HttpServletRequest request) {
 
@@ -134,7 +134,7 @@ public class CalendarController {
 
     }
 
-    @RequestMapping(value="/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+    @RequestMapping(value="/s/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
     @ResponseBody
     public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("id") String id, HttpServletRequest request) {
         return updateCalendar(businessService.getCurrentEvent().getEventKey(), id, request);

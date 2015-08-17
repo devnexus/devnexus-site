@@ -97,7 +97,7 @@ public class CallForPapersController {
 
 	}
 
-	@RequestMapping(value="/cfp", method=RequestMethod.GET)
+	@RequestMapping(value="/s/cfp", method=RequestMethod.GET)
 	public String openAddCfp(ModelMap model, WebRequest request) {
 
 		final String cfpState = environment.getProperty("cfp.state");
@@ -123,7 +123,7 @@ public class CallForPapersController {
 
 	}
 
-	@RequestMapping(value="/cfp", method=RequestMethod.POST)
+	@RequestMapping(value="/s/cfp", method=RequestMethod.POST)
 	public String addCfp(@Valid @ModelAttribute("cfpSubmission") CfpSubmissionForm cfpSubmission,
 			BindingResult bindingResult,
 			ModelMap model,
@@ -247,7 +247,7 @@ public class CallForPapersController {
 		return "redirect:/s/add-cfp-success";
 	}
 
-	@RequestMapping(value="/add-cfp-success", method=RequestMethod.GET)
+	@RequestMapping(value="/s/add-cfp-success", method=RequestMethod.GET)
 	public String addCfpSuccess(ModelMap model) {
 
 		model.addAttribute("headerTitle", "Call for Papers");

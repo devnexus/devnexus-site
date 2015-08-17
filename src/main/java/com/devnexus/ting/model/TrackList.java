@@ -35,12 +35,22 @@ public class TrackList implements Serializable {
 	@XmlElement(name="track")
 	private List<Track> tracks;
 
+	private int unassignedSessions;
+
 	public List<Track> getTracks() {
 		return tracks;
 	}
 
 	public void setTracks(List<Track> tracks) {
 		this.tracks = tracks;
+	}
+
+	public void setUnassignedSessions(int unassignedSessions) {
+		this.unassignedSessions = unassignedSessions;
+	}
+
+	public int getUnassignedSessions() {
+		return unassignedSessions;
 	}
 
 }

@@ -42,14 +42,14 @@ public class SpeakerController {
 
 	@Autowired private BusinessService businessService;
 
-	@RequestMapping(value="/speakers", method = RequestMethod.GET)
+	@RequestMapping(value="/s/speakers", method = RequestMethod.GET)
 	public String getSpeakersForCurrentEvent(Model model, @RequestParam(value="image", defaultValue="false") boolean image) {
 		Event currentEvent = businessService.getCurrentEvent();
 		prepareSpeakers(currentEvent, model);
 		return "speakers";
 	}
 
-	@RequestMapping("/{eventKey}/speakers")
+	@RequestMapping("/s/{eventKey}/speakers")
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		prepareSpeakers(event, model);
@@ -66,7 +66,7 @@ public class SpeakerController {
 		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
 	}
 
-	@RequestMapping(value="/speakers/{speakerId}.jpg", method=RequestMethod.GET)
+	@RequestMapping(value="/s/speakers/{speakerId}.jpg", method=RequestMethod.GET)
 	public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
 
 		final byte[] speakerImage = businessService.getSpeakerImage(speakerId);

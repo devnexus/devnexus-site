@@ -36,7 +36,7 @@ import com.devnexus.ting.model.Event;
  * @author Gunnar Hillert
  */
 @Controller
-@RequestMapping("/admin/{eventKey}/evaluations")
+@RequestMapping("/s/admin/{eventKey}/evaluations")
 public class ManageEvaluationsController {
 
 	@Autowired private BusinessService businessService;
@@ -52,7 +52,7 @@ public class ManageEvaluationsController {
 		return "admin/manage-evaluations";
 	}
 
-	@RequestMapping(value="/admin/evaluations/{evaluationId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/evaluations/{evaluationId}", method=RequestMethod.POST)
 	@ResponseBody
 	public void removeEvaluation(@PathVariable("evaluationId") Long evaluationId, ModelMap model) {
 		businessService.removeEvaluation(evaluationId);

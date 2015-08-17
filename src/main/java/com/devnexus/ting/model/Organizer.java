@@ -27,13 +27,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  */
 @Entity
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Organizer extends Person {
 
 	private static final long serialVersionUID = 1L;
 
-	@XmlAnyAttribute
 	private Integer sortOrder;
 
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

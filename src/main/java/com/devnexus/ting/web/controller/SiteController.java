@@ -74,7 +74,7 @@ public class SiteController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
-	@RequestMapping({"/index", "/"})
+	@RequestMapping({"/s/index", "/s/"})
 	public String index(final Model model) {
 		final Event event = businessService.getCurrentEvent();
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
@@ -82,7 +82,7 @@ public class SiteController {
 		return "index";
 	}
 
-	@RequestMapping({"/manager"})
+	@RequestMapping({"/s/manager"})
 	public String manager(final Model model) {
 		final Event event = businessService.getCurrentEvent();
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
@@ -90,7 +90,7 @@ public class SiteController {
 		return "manager";
 	}
 
-	@RequestMapping({"/schedule", "/api/schedule"})
+	@RequestMapping("/s/schedule")
 	public String scheduleForCurrentEvent(final Model model,
 			@RequestParam(required=false, value="old") boolean old) {
 
@@ -111,7 +111,7 @@ public class SiteController {
 		return "schedule";
 	}
 
-	@RequestMapping({"/new-schedule", "/api/schedule"})
+	@RequestMapping("/s/new-schedule")
 	public String newscheduleForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();
@@ -128,17 +128,17 @@ public class SiteController {
 		return "new-schedule";
 	}
 
-	@RequestMapping("/privacy-policy")
+	@RequestMapping("/s/privacy-policy")
 	public String privacyPolicy() {
 		return "privacy-policy";
 	}
 
-	@RequestMapping("/code-of-conduct")
+	@RequestMapping("/s/code-of-conduct")
 	public String codeOfConduct() {
 		return "code-of-conduct";
 	}
 
-	@RequestMapping("/past-conferences")
+	@RequestMapping("/s/past-conferences")
 	public String pastConferences(final Model model) {
 
 		//TODO
@@ -147,7 +147,7 @@ public class SiteController {
 
 	}
 
-	@RequestMapping({"/{eventKey}/schedule", "/api/{eventKey}/schedule"})
+	@RequestMapping("/s/{eventKey}/schedule")
 	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -160,13 +160,13 @@ public class SiteController {
 		return "schedule";
 	}
 
-	@RequestMapping("/travel")
+	@RequestMapping("/s/travel")
 	public String travel(final Model model) {
 		LOGGER.warn("This is a log.");
 		return "travel";
 	}
 
-	@RequestMapping("/appcache.manifest")
+	@RequestMapping("/s/appcache.manifest")
 	public String appcache(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
@@ -184,7 +184,7 @@ public class SiteController {
 		return "appcache";
 	}
 
-	@RequestMapping("/appcache-mobile.manifest")
+	@RequestMapping("/s/appcache-mobile.manifest")
 	public String appcacheMobile(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizers();
@@ -202,7 +202,7 @@ public class SiteController {
 		return "appcache-mobile";
 	}
 
-	@RequestMapping("/organizers")
+	@RequestMapping("/s/organizers")
 	public String getOrganizers(final Model model) {
 
 		final List<Organizer>organizers = businessService.getAllOrganizersWithPicture();
@@ -252,7 +252,7 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/organizers/{organizerId}.jpg", method=RequestMethod.GET)
+	@RequestMapping(value="/s/organizers/{organizerId}.jpg", method=RequestMethod.GET)
 	public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
 
 		final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
@@ -275,7 +275,7 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/sponsors/{sponsorId}.jpg", method=RequestMethod.GET)
+	@RequestMapping(value="/s/sponsors/{sponsorId}.jpg", method=RequestMethod.GET)
 	public void getSponsorPicture(@PathVariable("sponsorId") Long sponsorId, HttpServletResponse response) {
 
 		final Sponsor sponsor = businessService.getSponsorWithPicture(sponsorId);
@@ -298,7 +298,7 @@ public class SiteController {
 
 	}
 
-	@RequestMapping("/{eventKey}/sponsors")
+	@RequestMapping("/s/{eventKey}/sponsors")
 	public String getSponsorsForEvent(@PathVariable("eventKey") String eventKey, final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -308,7 +308,7 @@ public class SiteController {
 		return "sponsors";
 	}
 
-	@RequestMapping(value="/sponsors")
+	@RequestMapping(value="/s/sponsors")
 	public String getSponsors(Model model) {
 
 		final Event event = businessService.getCurrentEvent();
@@ -319,7 +319,7 @@ public class SiteController {
 
 	}
 
-	@RequestMapping(value="/social", method=RequestMethod.GET)
+	@RequestMapping(value="/s/social", method=RequestMethod.GET)
 	public String getTwitterFeed(Model model) {
 
 		final Collection<TwitterMessage> tweets = twitterService.getTwitterMessages();

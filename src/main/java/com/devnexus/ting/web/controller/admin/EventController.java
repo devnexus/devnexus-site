@@ -50,7 +50,7 @@ public class EventController {
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
 
-	@RequestMapping(value="/admin/event", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/event", method=RequestMethod.GET)
 	public String prepareAddEvent(ModelMap model) {
 
 		final EventForm eventForm = new EventForm();
@@ -62,7 +62,7 @@ public class EventController {
 		return "/admin/add-event";
 	}
 
-	@RequestMapping(value="/admin/event/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/event/{id}", method=RequestMethod.GET)
 	public String prepareEditEvent(@PathVariable("id") Long eventId, ModelMap model) {
 
 		final EventForm eventForm = new EventForm();
@@ -78,7 +78,7 @@ public class EventController {
 		return "/admin/add-event";
 	}
 
-	@RequestMapping(value="/admin/event/{id}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/event/{id}", method=RequestMethod.POST)
 	public String editEvent(@PathVariable("id") Long eventId, @Valid EventForm eventForm,
 			BindingResult bindingResult,
 			HttpServletRequest request,
@@ -138,7 +138,7 @@ public class EventController {
 		return "redirect:/s/admin/index";
 	}
 
-	@RequestMapping(value="/admin/event", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/event", method=RequestMethod.POST)
 	public String addEvent(@Valid EventForm eventForm, BindingResult bindingResult,
 			RedirectAttributes redirectAttributes,
 			HttpServletRequest request) {
@@ -185,7 +185,7 @@ public class EventController {
 		return "redirect:/s/admin/index";
 	}
 
-	@RequestMapping(value="/admin/events", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/events", method=RequestMethod.GET)
 	public String getEvents(ModelMap model, HttpServletRequest request) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();

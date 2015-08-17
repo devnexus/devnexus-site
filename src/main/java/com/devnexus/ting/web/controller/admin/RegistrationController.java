@@ -45,7 +45,7 @@ public class RegistrationController {
 	@Inject
 	private EventSignupRepository eventSignupController;
 
-	@RequestMapping(value = "/admin/{eventKey}/registration", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/admin/{eventKey}/registration", method = RequestMethod.GET)
 	public String loadRegistration(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
 
@@ -57,7 +57,7 @@ public class RegistrationController {
 		return "/admin/manage-registration";
 	}
 
-	@RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.GET)
 	public String showAddTicketGroupForm(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
 
@@ -71,7 +71,7 @@ public class RegistrationController {
 	}
 
 
-	@RequestMapping(value = "/admin/{eventKey}/invoicing", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/admin/{eventKey}/invoicing", method = RequestMethod.GET)
 	public String showInvoicing(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
 
@@ -82,7 +82,7 @@ public class RegistrationController {
 		return "/admin/invoicing";
 	}
 
-	@RequestMapping(value = "/admin/{eventKey}/dashboard", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/admin/{eventKey}/dashboard", method = RequestMethod.GET)
 	public String showDashboard(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
 
@@ -94,7 +94,7 @@ public class RegistrationController {
 	}
 
 
-	@RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.GET)
 	public String prepareEditTicketGroupForm(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId) {
 
@@ -107,7 +107,7 @@ public class RegistrationController {
 		return "/admin/add-ticketgroup";
 	}
 
-	@RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.POST)
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.POST)
 	public String addTicketGroup(@PathVariable(value = "eventKey") String eventKey, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
 		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
@@ -128,7 +128,7 @@ public class RegistrationController {
 		return String.format("redirect:/s/admin/%s/registration/", eventKey);
 	}
 
-	@RequestMapping(value = "/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.POST)
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.POST)
 	public String editTicketGroup(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
 		EventSignup signUp = eventSignupController.getByEventKey(eventKey);

@@ -71,7 +71,7 @@ public class PresentationController {
 		model.addAttribute("tracks", tracks);
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/presentations", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/presentations", method=RequestMethod.GET)
 	public String getPresentations(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -86,7 +86,7 @@ public class PresentationController {
 		return "/admin/manage-presentations";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/presentation", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/presentation", method=RequestMethod.GET)
 	public String prepareAddPresentation(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model) {
 
 		final Event event;
@@ -111,7 +111,7 @@ public class PresentationController {
 		return "/admin/add-presentation";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/presentation", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/presentation", method=RequestMethod.POST)
 	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, ModelMap model, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {
@@ -159,7 +159,7 @@ public class PresentationController {
 		return "redirect:/s/admin/presentations";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.GET)
 	public String prepareEditPresentation(@PathVariable("presentationId") Long presentationId, ModelMap model) {
 
 		final Presentation presentation = businessService.getPresentation(presentationId);
@@ -174,7 +174,7 @@ public class PresentationController {
 		return "/admin/add-presentation";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.POST)
 	public String editPresentation(@PathVariable("presentationId") Long presentationId,
 			@RequestParam MultipartFile uploadedFile,
 								@Valid Presentation presentation,

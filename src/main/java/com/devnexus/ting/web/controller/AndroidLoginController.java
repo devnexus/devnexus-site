@@ -87,7 +87,7 @@ public class AndroidLoginController {
      * <p/>
      * Additionally it will create an account if one does not exist.
      */
-    @RequestMapping(value = "/loginAndroid", method = RequestMethod.POST)
+    @RequestMapping(value = "/s/loginAndroid", method = RequestMethod.POST)
     public String login(HttpServletRequest request, HttpServletResponse response) {
 
         JsonObjectParser json = FACTORY.createJsonObjectParser();

@@ -1,6 +1,6 @@
 debug: false
 server:
-  servlet-path: /s
+  servlet-path: /
   session-timeout: 20
   tomcat:
     compression: on

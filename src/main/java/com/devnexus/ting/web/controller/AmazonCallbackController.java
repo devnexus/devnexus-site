@@ -20,12 +20,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 @org.springframework.transaction.annotation.Transactional
-@RequestMapping("/amazon/**.act")
+@RequestMapping("/s/amazon/**.act")
 public class AmazonCallbackController {
 
     private static final Log LOG = LogFactory.getLog(AmazonCallbackController.class);
 
-    @RequestMapping(value = "/amazon/payment.act", method = RequestMethod.POST)
+    @RequestMapping(value = "/s/amazon/payment.act", method = RequestMethod.POST)
     public String processPayment(HttpServletRequest request, String recipientEmail, String referenceId, String status) {
 
         LOG.info("Received message form Amazon:" + formatHttpRequest(request));
@@ -34,7 +34,7 @@ public class AmazonCallbackController {
         //Set amazon's credentials
         //Set amazon to security context
         //SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken("System", "System", ArrayUtils.makeList(new UserAuthority AuthorityType.ADMIN)));
-        
+
         try {
             referenceLong = Long.parseLong(referenceId);
         } catch(NumberFormatException nfe) {
@@ -44,7 +44,7 @@ public class AmazonCallbackController {
         }
           if (status.compareToIgnoreCase("PF") == 0) {//problems capt'm.  Notify someone
                     LOG.info("Payment Failed :" );
-                    //set unpaid 
+                    //set unpaid
                     //set unpending
                     //save
         } else {//Money is coming, register the game

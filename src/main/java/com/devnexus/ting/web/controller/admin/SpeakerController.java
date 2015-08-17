@@ -55,14 +55,14 @@ public class SpeakerController {
 
 	@Autowired private Validator validator;
 
-	@RequestMapping(value="/admin/speakers", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/speakers", method=RequestMethod.GET)
 	public String getAllSpeakers(ModelMap model, HttpServletRequest request) {
 		final List<Speaker> speakers = businessService.getAllSpeakersOrderedByName();
 		model.addAttribute("speakers", speakers);
 		return "speakers";
 	}
 
-	@RequestMapping("/admin/{eventKey}/speakers")
+	@RequestMapping("/s/admin/{eventKey}/speakers")
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		final SpeakerList speakerList = new SpeakerList();
@@ -73,7 +73,7 @@ public class SpeakerController {
 		return "/admin/manage-speakers";
 	}
 
-	@RequestMapping(value="/admin/speaker", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/speaker", method=RequestMethod.GET)
 	public String prepareAddSpeaker(ModelMap model) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
@@ -83,7 +83,7 @@ public class SpeakerController {
 		return "/admin/add-speaker";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/speaker", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/speaker", method=RequestMethod.GET)
 	public String prepareAddSpeakerForEvent(ModelMap model) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
@@ -93,7 +93,7 @@ public class SpeakerController {
 		return "/admin/add-speaker";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.GET)
 	public String prepareEditSpeaker(@PathVariable("speakerId") Long speakerId, ModelMap model) {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
@@ -107,7 +107,7 @@ public class SpeakerController {
 		return "/admin/add-speaker";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.POST)
 	public String editSpeaker(@PathVariable("speakerId") Long speakerId,
 							  @RequestParam MultipartFile pictureFile,
 							  @Valid Speaker speakerForm,
@@ -169,7 +169,7 @@ public class SpeakerController {
 		return "redirect:/s/admin/{eventKey}/speakers";
 	}
 
-	@RequestMapping(value="/admin/speaker", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/speaker", method=RequestMethod.POST)
 	public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {

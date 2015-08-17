@@ -77,7 +77,7 @@ public class RegisterController {
 	@Autowired
 	private BusinessService businessService;
 
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/register", method = RequestMethod.GET)
 	public String getRegistrationFormForCurrentEvent(Model model) {
 		Event currentEvent = businessService.getCurrentEvent();
 		EventSignup eventSignup = businessService.getEventSignup();
@@ -89,7 +89,7 @@ public class RegisterController {
 		return "register";
 	}
 
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/s/register", method = RequestMethod.POST)
 	public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
 
 		TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
@@ -122,7 +122,7 @@ public class RegisterController {
 
 	}
 
-	@RequestMapping(value = "/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
 	@ResponseBody
 	public String getCodedPrice(Model model, @PathVariable("ticketGroupId") final Long ticketGroupId,
 								@PathVariable("couponCode")    final String couponCode) {
@@ -136,7 +136,7 @@ public class RegisterController {
 
 	}
 
-	@RequestMapping(value = "/registerPageTwo/{registrationKey}", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/registerPageTwo/{registrationKey}", method = RequestMethod.GET)
 	public String loadPageTwo(@PathVariable("registrationKey") final String registrationKey, Model model) {
 
 		RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
@@ -152,7 +152,7 @@ public class RegisterController {
 	}
 
 
-	@RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.GET)
+	@RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.GET)
 	public String confirmPayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
 
 		RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
@@ -170,7 +170,7 @@ public class RegisterController {
 	}
 
 
-	@RequestMapping(value = "/executeRegistration/{registrationKey}", method = RequestMethod.POST)
+	@RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.POST)
 	public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
 		payPalSession.execute(paymentId, payerId);
@@ -178,7 +178,7 @@ public class RegisterController {
 
 	}
 
-	@RequestMapping(value = "/registerPageTwo", method = RequestMethod.POST)
+	@RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
 	public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 
 		TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());

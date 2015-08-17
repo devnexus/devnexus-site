@@ -51,7 +51,7 @@ public class OrganizerController {
 
 	@Autowired private Validator validator;
 
-	@RequestMapping(value="/admin/organizers", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/organizers", method=RequestMethod.GET)
 	public String getOrganizers(ModelMap model, HttpServletRequest request) {
 
 		final List<Organizer> organizers = businessService.getAllOrganizers();
@@ -60,7 +60,7 @@ public class OrganizerController {
 		return "/admin/manage-organizers";
 	}
 
-	@RequestMapping(value="/admin/organizer", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/organizer", method=RequestMethod.GET)
 	public String prepareAddOrganizer(ModelMap model) {
 
 		Organizer organizerForm = new Organizer();
@@ -70,7 +70,7 @@ public class OrganizerController {
 		return "/admin/add-organizer";
 	}
 
-	@RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/organizer/{organizerId}", method=RequestMethod.GET)
 	public String prepareEditOrganizer(@PathVariable("organizerId") Long organizerId, ModelMap model) {
 
 		final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
@@ -80,7 +80,7 @@ public class OrganizerController {
 		return "/admin/add-organizer";
 	}
 
-	@RequestMapping(value="/admin/organizer/{organizerId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/organizer/{organizerId}", method=RequestMethod.POST)
 	public String editOrganizer(@PathVariable("organizerId") Long organizerId,
 			@RequestParam MultipartFile pictureFile,
 			@Valid Organizer organizerForm,
@@ -150,7 +150,7 @@ public class OrganizerController {
 		return "redirect:/s/admin/organizers";
 	}
 
-	@RequestMapping(value="/admin/organizer", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/organizer", method=RequestMethod.POST)
 	public String addOrganizer(@RequestParam MultipartFile pictureFile, @Valid Organizer organizerForm, BindingResult result, HttpServletRequest request) {
 
 		if (request.getParameter("cancel") != null) {

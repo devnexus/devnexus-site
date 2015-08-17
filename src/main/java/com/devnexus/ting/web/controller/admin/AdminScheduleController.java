@@ -58,7 +58,7 @@ public class AdminScheduleController {
 
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/manage-schedule", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/manage-schedule", method=RequestMethod.GET)
 	public String prepareEditCfp(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
 		prepareReferenceData(model);

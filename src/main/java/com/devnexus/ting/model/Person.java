@@ -26,6 +26,7 @@ import org.hibernate.annotations.CascadeType;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  *
@@ -53,6 +54,7 @@ public abstract class Person extends BaseModelObject {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
+	@JsonIgnore
 	@Cascade(CascadeType.ALL)
 	protected FileData picture;
 

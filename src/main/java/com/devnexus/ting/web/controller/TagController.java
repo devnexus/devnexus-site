@@ -35,7 +35,7 @@ public class TagController {
 
 	@Autowired private BusinessService businessService;
 
-	@RequestMapping("/{eventKey}/tags")
+	@RequestMapping("/s/{eventKey}/tags")
 	public String getTracksForEventKey(@PathVariable("eventKey") final String eventKey,
 										final Model model) {
 
@@ -47,7 +47,7 @@ public class TagController {
 		return "tags";
 	}
 
-	@RequestMapping("/tags")
+	@RequestMapping("/s/tags")
 	public String getTagCloudForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();

@@ -68,14 +68,14 @@ public class EvaluationController {
 
 	}
 
-	@RequestMapping(value="/evaluations/add", method=RequestMethod.GET)
+	@RequestMapping(value="/s/evaluations/add", method=RequestMethod.GET)
 	public String openAddEvaluations(ModelMap model) {
 		model.addAttribute("evaluation", new Evaluation());
 		prepareReferenceData(model);
 		return "add-evaluation";
 	}
 
-	@RequestMapping(value="/evaluations/add", method=RequestMethod.POST)
+	@RequestMapping(value="/s/evaluations/add", method=RequestMethod.POST)
 	public String editEvent(@Valid Evaluation evaluation,
 			BindingResult bindingResult,
 			ModelMap model,
@@ -124,7 +124,7 @@ public class EvaluationController {
 		return "redirect:/s/add-evaluation-success";
 	}
 
-	@RequestMapping(value="/add-evaluation-success", method=RequestMethod.GET)
+	@RequestMapping(value="/s/add-evaluation-success", method=RequestMethod.GET)
 	public String addEvaluationSuccess(ModelMap model) {
 		return "evaluation-add-success";
 	}

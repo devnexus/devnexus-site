@@ -71,7 +71,7 @@ public class AdminCallForPapersController {
 		model.addAttribute("allSpeakers", allSpeakers);
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/cfps", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/cfps", method=RequestMethod.GET)
 	public String viewCfps(@PathVariable("eventKey") String eventKey, ModelMap model) {
 
 		Event event = businessService.getEventByEventKey(eventKey);
@@ -83,7 +83,7 @@ public class AdminCallForPapersController {
 		return "admin/manage-cfps";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.GET)
 	public String prepareEditCfp(@PathVariable("eventKey") String eventKey,
 	                             @PathVariable("cfpId") Long cfpId, ModelMap model) {
 		Event event = businessService.getEventByEventKey(eventKey);
@@ -96,7 +96,7 @@ public class AdminCallForPapersController {
 		return "/admin/edit-cfp";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.POST)
 	public String editCfp(@PathVariable("eventKey") String eventKey,
 	                      @PathVariable("cfpId") Long cfpId,
 	                      CfpSubmission cfpSubmission,
@@ -111,7 +111,7 @@ public class AdminCallForPapersController {
 		}
 
 		if (result.hasErrors()) {
-			return "/admin/edit-cfp";
+			return "/s/admin/edit-cfp";
 		}
 
 		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);

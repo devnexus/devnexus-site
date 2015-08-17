@@ -33,7 +33,7 @@ public class RoomController {
 
 	@Autowired private BusinessService businessService;
 
-	@RequestMapping("/{eventKey}/rooms")
+	@RequestMapping("/s/{eventKey}/rooms")
 	public String getRoomsForEventKey(@PathVariable("eventKey") final String eventKey,
 										final Model model) {
 
@@ -47,7 +47,7 @@ public class RoomController {
 		return "rooms";
 	}
 
-	@RequestMapping("/rooms")
+	@RequestMapping("/s/rooms")
 	public String getRoomsForCurrentEvent(final Model model) {
 
 		final Event event = businessService.getCurrentEvent();

@@ -58,19 +58,19 @@ public class AdminController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
-	@RequestMapping({"/admin", "/admin/"})
+	@RequestMapping({"/s/admin", "/s/admin/"})
 	public String redirectToAdmin(ModelMap model) {
 		return "redirect:/s/admin/index";
 	}
 
-	@RequestMapping({"/admin/index"})
+	@RequestMapping({"/s/admin/index"})
 	public String execute(RedirectAttributes redirectAttributes) {
 		final Event currentEvent = businessService.getCurrentEvent();
 		redirectAttributes.addAttribute("eventKey", currentEvent.getEventKey());
 		return "redirect:/s/admin/{eventKey}/index";
 	}
 
-	@RequestMapping("/admin/{eventKey}/index")
+	@RequestMapping("/s/admin/{eventKey}/index")
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		model.addAttribute("event", event);
@@ -88,7 +88,7 @@ public class AdminController {
 		return "/admin/index";
 	}
 
-	@RequestMapping(value="/admin/index", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/index", method=RequestMethod.POST)
 	public String changeEvent(@ModelAttribute("event") Event event,
 			BindingResult bindingResult,
 			ModelMap model) {
@@ -96,13 +96,13 @@ public class AdminController {
 		return "redirect:/s/admin/{eventKey}/index";
 	}
 
-	@RequestMapping({"/admin/update-application-cache"})
+	@RequestMapping({"/s/admin/update-application-cache"})
 	public String updateApplicationCache(ModelMap model) {
 		businessService.updateApplicationCacheManifest();
 		return "redirect:/s/admin/index";
 	}
 
-	@RequestMapping({"/admin/reset-spring-cache"})
+	@RequestMapping({"/s/admin/reset-spring-cache"})
 	public String resetSpringCache(ModelMap model) {
 		Collection<String> cacheNames = cacheManager.getCacheNames();
 		LOGGER.warn("Clearing caches: {}", StringUtils.collectionToCommaDelimitedString(cacheNames));
@@ -112,7 +112,7 @@ public class AdminController {
 		return "redirect:/s/admin/index";
 	}
 
-	@RequestMapping("/logout")
+	@RequestMapping("/s/logout")
 	public String logout(RedirectAttributes redirectAttributes) {
 
 		final SecurityContext context = SecurityContextHolder.getContext();
@@ -126,10 +126,10 @@ public class AdminController {
 		context.setAuthentication(null);
 		redirectAttributes.addFlashAttribute("succesMessage", "You logged out successfully.");
 
-		return "/index";
+		return "/s/index";
 	}
 
-	@RequestMapping("/login")
+	@RequestMapping("/s/login")
 	public String login(ModelMap model) {
 		return "/login";
 	}

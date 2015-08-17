@@ -81,7 +81,7 @@ public class PresentationController {
 		return presentationList;
 	}
 
-	@RequestMapping("/{eventKey}/presentations")
+	@RequestMapping("/s/{eventKey}/presentations")
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
 											@RequestParam(value="order", defaultValue="track") String order,
 											@RequestParam(value="trackId", required=false) Long trackId,
@@ -101,7 +101,7 @@ public class PresentationController {
 		return "presentations-by-" + order;
 	}
 
-	@RequestMapping(value="/presentations/{presentationId}/slides", method=RequestMethod.GET)
+	@RequestMapping(value="/s/presentations/{presentationId}/slides", method=RequestMethod.GET)
 	public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
 
 		final FileData presentationFileData = businessService.getPresentationFileData(presentationId);
@@ -128,7 +128,7 @@ public class PresentationController {
 
 	}
 
-	@RequestMapping("/presentations")
+	@RequestMapping("/s/presentations")
 	public String getPresentationsForCurrentEvent(
 			@RequestParam(value="order", defaultValue="track") String order,
 			@RequestParam(value="trackId", required=false) Long trackId,
@@ -150,7 +150,7 @@ public class PresentationController {
 		return "presentations-by-" + order;
 	}
 
-	@RequestMapping("/old-presentations")
+	@RequestMapping("/s/old-presentations")
 	public String getOldPresentationsForCurrentEvent(
 			@RequestParam(value="order", defaultValue="track") String order,
 			@RequestParam(value="trackId", required=false) Long trackId,

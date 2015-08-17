@@ -52,7 +52,7 @@ public class SponsorController {
 
 	@Autowired private Validator validator;
 
-	@RequestMapping(value="/admin/{eventKey}/sponsors", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/sponsors", method=RequestMethod.GET)
 	public String getSponsorsForCurrentEvent(@PathVariable("eventKey") String eventKey,
 			ModelMap model, HttpServletRequest request) {
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -62,21 +62,21 @@ public class SponsorController {
 		return "/admin/manage-sponsors";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/sponsor", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/sponsor", method=RequestMethod.GET)
 	public String prepareAddSponsor(ModelMap model) {
 		final Sponsor sponsorForm = new Sponsor();
 		model.addAttribute("sponsor", sponsorForm);
 		return "/admin/add-sponsor";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.GET)
 	public String prepareEditSponsor(@PathVariable("sponsorId") Long sponsorId, ModelMap model) {
 		final Sponsor sponsorFromDb = businessService.getSponsor(sponsorId);
 		model.addAttribute("sponsor", sponsorFromDb);
 		return "/admin/add-sponsor";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/sponsor/{sponsorId}", method=RequestMethod.POST)
 	public String editSponsor(@PathVariable("sponsorId") Long sponsorId,
 			@RequestParam MultipartFile pictureFile,
 			@Valid Sponsor sponsorForm,
@@ -137,7 +137,7 @@ public class SponsorController {
 		return "redirect:/s/admin/{eventKey}/sponsors";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/sponsor", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/sponsor", method=RequestMethod.POST)
 	public String addSponsor(@RequestParam MultipartFile pictureFile,
 			@Valid Sponsor sponsorForm, BindingResult result, HttpServletRequest request,
 			@PathVariable("eventKey") String eventKey) {

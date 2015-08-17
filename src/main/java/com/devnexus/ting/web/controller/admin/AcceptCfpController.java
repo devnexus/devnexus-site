@@ -68,7 +68,7 @@ public class AcceptCfpController {
 		model.addAttribute("allSpeakers", allSpeakers);
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.GET)
+	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.GET)
 	public String prepareAcceptCfp(@PathVariable("cfpId") Long cfpId, ModelMap model) {
 		prepareReferenceData(model);
 		final CfpSubmission cfpSubmission = businessService.getCfpSubmission(cfpId);
@@ -76,7 +76,7 @@ public class AcceptCfpController {
 		return "/admin/accept-cfp";
 	}
 
-	@RequestMapping(value="/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.POST)
+	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}/accept", method=RequestMethod.POST)
 	public String acceptCfp(@PathVariable("eventKey") String eventKey,
 	                        @PathVariable("cfpId") Long cfpId,
 	                        CfpSubmission cfpSubmission,
