@@ -14,3 +14,4 @@ src/main/webapp/META-INF/context.xml
 .springBeans
 src/main/webapp/wro
 src/main/resources/META-INF/resources/wro
+nb-configuration.xml
