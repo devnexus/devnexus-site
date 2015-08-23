@@ -15,3 +15,4 @@ src/main/webapp/META-INF/context.xml
 src/main/webapp/wro
 src/main/resources/META-INF/resources/wro
 nb-configuration.xml
+nbactions.xml
