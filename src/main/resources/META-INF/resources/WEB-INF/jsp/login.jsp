@@ -49,7 +49,7 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<hr/>
-		<form class="form-horizontal" role="form" action="<c:url value="/s/signin/google" />" method="POST">
+		<form class="form-horizontal" role="form" action="<c:url value="/auth/google" />" method="POST">
 			<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-10">
 					<button type="submit" class="btn btn-default">Sign in with Google</button>

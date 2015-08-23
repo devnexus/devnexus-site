@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.social.security.SocialUserDetails;
 
 
 /**
@@ -43,7 +43,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  *
  */
 @Entity
-public class User extends BaseModelObject implements Serializable, UserDetails {
+public class User extends BaseModelObject implements Serializable, SocialUserDetails {
 	private static final long serialVersionUID = 1L;
 
 	@XmlID
@@ -221,6 +221,11 @@ public class User extends BaseModelObject implements Serializable, UserDetails {
     @Override
     public String toString() {
         return "User{" + "username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", registrationDate=" + registrationDate + ", lastLoginDate=" + lastLoginDate + '}';
+    }
+
+    @Override
+    public String getUserId() {
+        return this.getFirstName() + " " + this.getLastName();
     }
     
 }

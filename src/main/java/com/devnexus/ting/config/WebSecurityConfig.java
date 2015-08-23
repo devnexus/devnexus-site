@@ -27,6 +27,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
+import com.devnexus.ting.model.User;
+import org.springframework.dao.DataAccessException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.social.security.SocialUser;
+import org.springframework.social.security.SocialUserDetails;
+import org.springframework.social.security.SocialUserDetailsService;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
  * @author Gunnar Hillert
@@ -65,6 +73,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.loginPage("/s/login")
 			.failureUrl("/s/login?status=error")
 			.permitAll();
+                
+                
+            http.apply(new SpringSocialConfigurer()
+                .postLoginUrl("/")
+                
+                .alwaysUsePostLoginUrl(true));
 	}
 
 	@Override
@@ -76,4 +90,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public SecurityEventListener securityEventListener() {
 		return new SecurityEventListener();
 	}
+        
+        
+    @Bean
+    public SocialUserDetailsService socialUsersDetailService() {
+        return new SocialUserDetailsService() {
+
+            @Override
+            public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException, DataAccessException {
+                        User userDetails = (User) userDetailsService.loadUserByUsername(userId);
+                        return userDetails;
+            }
+        };
+    }
+        
 }

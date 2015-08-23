@@ -25,92 +25,95 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.encrypt.Encryptors;
-import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.social.connect.ConnectionFactoryLocator;
-import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.NotConnectedException;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.support.ConnectionFactoryRegistry;
-import org.springframework.social.connect.web.ProviderSignInController;
 import org.springframework.social.google.api.Google;
 import org.springframework.social.google.connect.GoogleConnectionFactory;
 
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.impl.SimpleConnectionSignUp;
 import com.devnexus.ting.model.User;
-
+import org.springframework.core.env.Environment;
+import org.springframework.social.UserIdSource;
+import org.springframework.social.config.annotation.ConnectionFactoryConfigurer;
+import org.springframework.social.config.annotation.EnableSocial;
+import org.springframework.social.config.annotation.SocialConfigurer;
 
 /**
  * Spring Social Configuration.
+ *
  * @author Keith Donald
  */
 @Configuration
-public class SocialConfig {
+@EnableSocial
+public class SocialConfig implements SocialConfigurer {
 
-	@Value("#{environment.TING_CLIENT_ID}")
-	private String clientId;
+    @Value("#{environment.TING_CLIENT_ID}")
+    private String clientId;
 
-	@Value("#{environment.TING_CLIENT_SECRET}")
-	private String clientSecret;
-
+    @Value("#{environment.TING_CLIENT_SECRET}")
+    private String clientSecret;
 
     @Autowired
     private UserService userService;
 
-
     @Autowired
-	private DataSource dataSource;
+    private DataSource dataSource;
+    
+    /**
+     * A proxy to a request-scoped object representing the current user's
+     * primary Google account.
+     *
+     * @throws NotConnectedException if the user is not connected to google.
+     */
+    @Bean
+    @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
+    public Google google() {
+        final ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
+        registry.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
+        
+        JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
+                registry, Encryptors.noOpText());
+        repository.setConnectionSignUp(new SimpleConnectionSignUp());
+        
+        
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return repository.createConnectionRepository(user.getId().toString()).getPrimaryConnection(Google.class).getApi();
+    }
 
-	/**
-	 * When a new provider is added to the app, register its {@link ConnectionFactory} here.
-	 * @see FacebookConnectionFactory
-	 */
-	@Bean
-	public ConnectionFactoryLocator connectionFactoryLocator() {
-		final ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
-		registry.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
-		return registry;
-	}
+    @Override
+    public void addConnectionFactories(ConnectionFactoryConfigurer connectionFactoryConfigurer, Environment environment) {
+        connectionFactoryConfigurer.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
+    }
 
-	/**
-	 * Singleton data access object providing access to connections across all users.
-	 */
-	@Bean
-	public UsersConnectionRepository usersConnectionRepository() {
-		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
-				connectionFactoryLocator(), Encryptors.noOpText());
-		repository.setConnectionSignUp(new SimpleConnectionSignUp());
-		return repository;
-	}
+    @Override
+    public UserIdSource getUserIdSource() {
+        return new UserIdSource() {
 
-	/**
-	 * Request-scoped data access object providing access to the current user's connections.
-	 */
-	@Bean
-	@Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)
-	public ConnectionRepository connectionRepository() {
-            User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	    return usersConnectionRepository().createConnectionRepository(user.getId().toString());
-	}
+            @Override
+            public String getUserId() {
+                User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+                return user.getId().toString();
+            }
+        };
+    }
 
-	/**
-	 * A proxy to a request-scoped object representing the current user's primary Facebook account.
-	 * @throws NotConnectedException if the user is not connected to facebook.
-	 */
-	@Bean
-	@Scope(value="request", proxyMode=ScopedProxyMode.INTERFACES)
-	public Google facebook() {
-	    return connectionRepository().getPrimaryConnection(Google.class).getApi();
-	}
-
-	/**
-	 * The Spring MVC Controller that allows users to sign-in with their provider accounts.
-	 */
-	@Bean
-	public ProviderSignInController providerSignInController() {
-		return new ProviderSignInController(connectionFactoryLocator(), usersConnectionRepository(),
-				userService);
-	}
+    @Override
+    public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
+        final ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
+        registry.addConnectionFactory(new GoogleConnectionFactory(clientId, clientSecret));
+        
+        JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
+                registry, Encryptors.noOpText());
+        repository.setConnectionSignUp(new SimpleConnectionSignUp());
+        
+        
+        
+        return repository;
+        
+    }
 
 }
