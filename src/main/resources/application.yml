@@ -5,6 +5,10 @@ server:
   tomcat:
     compression: on
     compressableMimeTypes: application/json,application/xml,text/html,text/xml,text/plain
+multipart:
+  enabled: true
+  max-file-size: 5Mb
+  max-request-size: 10Mb
 devnexus:
   twitter:
     enabled: false

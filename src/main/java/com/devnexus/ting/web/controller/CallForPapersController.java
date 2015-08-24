@@ -26,7 +26,6 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -41,6 +40,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.config.support.CfpSettings;
+import com.devnexus.ting.config.support.RecaptchaSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
@@ -63,16 +64,19 @@ public class CallForPapersController {
 	@Autowired private BusinessService businessService;
 	@Autowired private Validator validator;
 
-	@Autowired private ConfigurableEnvironment environment;
+	@Autowired
+	private RecaptchaSettings recaptchaSettings;
+
+	@Autowired
+	private CfpSettings cfpSettings;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
 	private void prepareReferenceData(ModelMap model, boolean isSecure) {
-		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
-		final String recaptchaPublicKey = environment.getProperty("recaptcha.publicKey");
-		final String recaptchaPrivateKey = environment.getProperty("recaptcha.privateKey");
+		final String recaptchaPublicKey = recaptchaSettings.getPublicKey();
+		final String recaptchaPrivateKey = recaptchaSettings.getPrivateKey();
 
-		if (Boolean.valueOf(reCaptchaEnabled)) {
+		if (recaptchaSettings.isEnabled()) {
 			final ReCaptcha reCaptcha;
 			reCaptcha = ReCaptchaFactory.newSecureReCaptcha(recaptchaPublicKey, recaptchaPrivateKey, true);
 
@@ -84,7 +88,7 @@ public class CallForPapersController {
 			model.addAttribute("reCaptchaHtml", reCaptcha.createRecaptchaHtml(null, null));
 		}
 
-		model.addAttribute("reCaptchaEnabled", reCaptchaEnabled);
+		model.addAttribute("reCaptchaEnabled", recaptchaSettings.isEnabled());
 
 		final Event currentEvent = businessService.getCurrentEvent();
 		model.addAttribute("currentEvent", currentEvent);
@@ -100,9 +104,7 @@ public class CallForPapersController {
 	@RequestMapping(value="/s/cfp", method=RequestMethod.GET)
 	public String openAddCfp(ModelMap model, WebRequest request) {
 
-		final String cfpState = environment.getProperty("cfp.state");
-
-		if ("closed".equalsIgnoreCase(cfpState)) {
+		if (CfpSettings.CfpState.CLOSED.equals(cfpSettings.getCfpState())) {
 			return "redirect:/s/index";
 		}
 
@@ -147,13 +149,10 @@ public class CallForPapersController {
 			return "/cfp";
 		}
 
-		final String reCaptchaEnabled = environment.getProperty("recaptcha.enabled");
-		final String recaptchaPrivateKey = environment.getProperty("recaptcha.privateKey");
-
-		if (Boolean.valueOf(reCaptchaEnabled)) {
+		if (recaptchaSettings.isEnabled()) {
 			String remoteAddr = request.getRemoteAddr();
 			ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
-			reCaptcha.setPrivateKey(recaptchaPrivateKey);
+			reCaptcha.setPrivateKey(recaptchaSettings.getPrivateKey());
 
 			String challenge = request.getParameter("recaptcha_challenge_field");
 			String uresponse = request.getParameter("recaptcha_response_field");

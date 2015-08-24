@@ -54,6 +54,7 @@ import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
@@ -108,9 +109,9 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
-        @Autowired private RegistrationRepository        registrationDao;
-        @Autowired private EventSignupRepository        eventSignupDao;
-        @Autowired private TicketGroupRepository        ticketGroupDao;
+	@Autowired private RegistrationRepository registrationDao;
+	@Autowired private EventSignupRepository  eventSignupDao;
+	@Autowired private TicketGroupRepository  ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
 	@Autowired private PresentationRepository presentationDao;
 	@Autowired private PresentationTagRepository presentationTagDao;
@@ -125,6 +126,9 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private MessageChannel mailChannel;
 
 	private final TransactionTemplate transactionTemplate;
+
+	@Autowired
+	private MailSettings mailSettings;
 
 	@Autowired
 	public BusinessServiceImpl(PlatformTransactionManager transactionManager) {
@@ -589,9 +593,7 @@ public class BusinessServiceImpl implements BusinessService {
 			}
 		});
 
-		final String mailEnabled = environment.getProperty("mail.enabled");
-
-		if (Boolean.valueOf(mailEnabled)) {
+		if (mailSettings.isEnabled()) {
 			mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
 		}
 
@@ -725,24 +727,24 @@ public class BusinessServiceImpl implements BusinessService {
 		return sponsorList;
 	}
 
-    @Override
-    public EventSignup getEventSignup() {
-        return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
-    }
+	@Override
+	public EventSignup getEventSignup() {
+		return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
+	}
 
-    @Override
-    public TicketGroup getTicketGroup(Long ticketGroup) {
-        return ticketGroupDao.findOne(ticketGroup);
-    }
+	@Override
+	public TicketGroup getTicketGroup(Long ticketGroup) {
+		return ticketGroupDao.findOne(ticketGroup);
+	}
 
-    @Override
-    public RegistrationDetails getRegistrationForm(String registrationKey) {
-        return registrationDao.findByKey(registrationKey);
-    }
+	@Override
+	public RegistrationDetails getRegistrationForm(String registrationKey) {
+		return registrationDao.findByKey(registrationKey);
+	}
 
-    @Override
-    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
-        return registrationDao.createRegistrationPendingPayment(registerForm);
-    }
+	@Override
+	public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
+		return registrationDao.createRegistrationPendingPayment(registerForm);
+	}
 
 }
