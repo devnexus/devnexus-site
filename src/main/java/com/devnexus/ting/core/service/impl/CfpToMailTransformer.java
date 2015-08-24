@@ -84,7 +84,7 @@ public class CfpToMailTransformer {
 				messageHelper.setCc(this.ccUser);
 			}
 
-			messageHelper.setSubject("DevNexus 2015 - CFP - " + cfpSubmission.getSpeakersAsString(false));
+			messageHelper.setSubject("DevNexus 2016 - CFP - " + cfpSubmission.getSpeakersAsString(false));
 
 		} catch (MessagingException e) {
 			throw new IllegalStateException("Error creating mail message for CFP: " + cfpSubmission, e);

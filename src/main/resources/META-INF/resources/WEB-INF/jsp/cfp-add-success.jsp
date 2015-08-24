@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<title>Submission Success - DevNexus 2015</title>
+<title>Submission Success - DevNexus 2016</title>
 
 <section id="speaker" class="bg-light-gray">
 	<div class="container subsuccess">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="col-md-10">
 				<h3>Your submission has been added successfully!</h3>
-				<h3><strong>Thank you for your interest in DevNexus 2015!</strong><br />
+				<h3><strong>Thank you for your interest in DevNexus 2016!</strong><br />
 					We look forward to reviewing your session proposals for the South-East's largest developer conference.</h3>
 				<p>Shortly you should receive and email confirming that we received your information.</p>
 				<p>We will review your submission as soon as possible and contact you once you

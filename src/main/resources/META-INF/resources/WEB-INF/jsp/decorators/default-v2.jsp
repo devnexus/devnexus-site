@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width" />
 
-	<meta property="og:title" content="DevNexus 2015">
+	<meta property="og:title" content="DevNexus 2016">
 	<meta property="og:type" content="company">
 	<meta property="og:site_name" content="DevNexus">
 	<meta property="og:url" content="http://devnexus.com/s/index">
@@ -115,7 +115,7 @@
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
 						<div id="tweet" class="footer-widget">
-							<h3 class="footer-title">DEVNEXUS 2015</h3>
+							<h3 class="footer-title">DEVNEXUS 2016</h3>
 							<ul class="footer-social">
 								<li class=""><a href="${scheduleUrl}" target="_blank">Schedule</a></li>
 								<li class=""><a href="${speakersUrl}" target="_blank">Speakers</a></li>

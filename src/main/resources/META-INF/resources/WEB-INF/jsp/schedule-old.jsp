@@ -7,7 +7,7 @@
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 
-<title>DevNexus 2015 - Schedule</title>
+<title>DevNexus 2016 - Schedule</title>
 <div id="content" class="span-22 last">
   <div class="quote"><span>What the community says:</span> "Best Dev Education bargain in Atlanta"</div>
   <h2>Schedule</h2>
