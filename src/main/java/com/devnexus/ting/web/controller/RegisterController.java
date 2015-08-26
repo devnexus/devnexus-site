@@ -59,6 +59,7 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
@@ -75,7 +76,6 @@ public class RegisterController {
     };
 
     @Autowired
-    
     private PayPalSession payPalSession;
 
     @Autowired

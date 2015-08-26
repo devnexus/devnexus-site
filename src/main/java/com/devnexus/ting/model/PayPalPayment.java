@@ -80,6 +80,7 @@ public class PayPalPayment extends BaseModelObject {
 
     public void addLink(PaypalLink  link) {
         links.add(link);
+        link.setPayment(this);
     }
 
     
