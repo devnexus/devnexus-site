@@ -26,6 +26,7 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.PayPalPayment;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.model.RegistrationDetails;
@@ -279,5 +280,7 @@ public interface BusinessService {
     public RegistrationDetails getRegistrationForm(String registrationKey);
 
     public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm);
+
+    public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment);
         
 }

@@ -66,8 +66,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToPurchaseGroup());
 	}
 
-	@Bean
-	@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+	@Bean()
+	@Scope("request")
 	public PayPalSession payPalSession() {
 		if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
 			return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));

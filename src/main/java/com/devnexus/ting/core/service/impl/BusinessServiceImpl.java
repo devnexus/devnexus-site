@@ -63,6 +63,7 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.PayPalPayment;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.model.RegistrationDetails;
@@ -83,6 +84,7 @@ import com.devnexus.ting.repository.EvaluationRepository;
 import com.devnexus.ting.repository.EventRepository;
 import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.OrganizerRepository;
+import com.devnexus.ting.repository.PayPalRepository;
 import com.devnexus.ting.repository.PresentationRepository;
 import com.devnexus.ting.repository.PresentationTagRepository;
 import com.devnexus.ting.repository.RegistrationRepository;
@@ -110,6 +112,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
 	@Autowired private RegistrationRepository registrationDao;
+        @Autowired private PayPalRepository       payPalDao;
 	@Autowired private EventSignupRepository  eventSignupDao;
 	@Autowired private TicketGroupRepository  ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
@@ -746,5 +749,11 @@ public class BusinessServiceImpl implements BusinessService {
 	public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
 		return registrationDao.createRegistrationPendingPayment(registerForm);
 	}
+
+        @Override
+        public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
+                registrationDao.saveAndFlush(registerForm);
+                payPalDao.saveAndFlush(payment);
+        }
 
 }

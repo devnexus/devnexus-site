@@ -15,7 +15,13 @@
  */
 package com.devnexus.ting.model;
 
+import com.paypal.api.payments.Links;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 /**
  * @author Summers Pittman
@@ -23,15 +29,59 @@ import javax.persistence.Entity;
 @Entity
 public class PayPalPayment extends BaseModelObject {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String paypalId;
-	private String executeURL;
-	private String acceptUrl;
-	private String selfUrl;
-	private String refundUrl;
-	private String payerId;
-	private String paymentId;
+    private String paypalId;
+    private String payerId;
+    private String paymentId;
+    private String registrationKey;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "payment", targetEntity = PaypalLink.class, fetch = FetchType.EAGER)
+    private List<PaypalLink> links = new ArrayList<>();
 
+    public String getPaypalId() {
+        return paypalId;
+    }
 
+    public void setPaypalId(String paypalId) {
+        this.paypalId = paypalId;
+    }
+
+    public String getPayerId() {
+        return payerId;
+    }
+
+    public void setPayerId(String payerId) {
+        this.payerId = payerId;
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public String getRegistrationKey() {
+        return registrationKey;
+    }
+
+    public void setRegistrationKey(String registrationKey) {
+        this.registrationKey = registrationKey;
+    }
+
+    public List<PaypalLink> getLinks() {
+        return links;
+    }
+
+    public void setLinks(List<PaypalLink> links) {
+        this.links = links;
+    }
+
+    public void addLink(PaypalLink  link) {
+        links.add(link);
+    }
+
+    
+    
 }

@@ -176,3 +176,43 @@ alter table TICKET_ORDER_DETAILS
 
 ALTER TABLE EVENT_SIGNUPS
 	OWNER TO devnexus;
+
+
+
+create table PAY_PAL_PAYMENTS (
+	ID bigint primary key NOT NULL,
+	CREATED_DATE timestamp without time zone,
+	UPDATED_DATE timestamp without time zone,
+	VERSION integer,
+        PAYPAL_ID varchar(255),
+        PAYER_ID varchar(255),
+        PAYMENT_ID varchar(255),
+        REGISTRATION_KEY varchar(255)
+);
+
+
+create table PAYPAL_LINKS (
+	ID bigint primary key NOT NULL,
+	CREATED_DATE timestamp without time zone,
+	UPDATED_DATE timestamp without time zone,
+	VERSION integer,
+        HREF varchar(255),
+        REL varchar(255),
+        HTTP_METHOD varchar(255),
+	payment bigint
+);
+
+create index PAYMENT_REGISTRATION_FORM_KEY_IDX on PAY_PAL_PAYMENTS (REGISTRATION_KEY);
+
+ALTER TABLE PAY_PAL_PAYMENTS
+	OWNER TO devnexus;
+
+create index PAYMENT_LINKS_FK_IDX on PAYPAL_LINKS (payment );
+
+ALTER TABLE PAYPAL_LINKS
+	OWNER TO devnexus;
+
+alter table PAYPAL_LINKS
+	add constraint PAYPAL_LINKS_FK
+	foreign key (PAYMENT)
+	references PAY_PAL_PAYMENTS;
