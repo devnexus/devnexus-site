@@ -66,17 +66,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToPurchaseGroup());
 	}
 
-	@Bean()
-	@Scope("request")
-	public PayPalSession payPalSession() {
-		if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
-			return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
-		}
-		else if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
-			return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
-		}
-		else {
-			return PayPalSession.DUMMY;
-		}
-	}
+	
 }

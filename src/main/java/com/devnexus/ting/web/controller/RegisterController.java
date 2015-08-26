@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.web.controller;
 
+import com.devnexus.ting.common.SpringProfile;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -60,6 +61,7 @@ import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.context.annotation.Scope;
+import org.springframework.core.env.Environment;
 
 /**
  *
@@ -70,14 +72,15 @@ import org.springframework.context.annotation.Scope;
 @Controller
 public class RegisterController {
 
+    @Autowired
+    private Environment environment;
+    
     private enum PaymentMethod {
 
         PAYPAL, INVOICE
     };
 
-    @Autowired
-    private PayPalSession payPalSession;
-
+    
     @Autowired
     private BusinessService businessService;
 
@@ -175,6 +178,8 @@ public class RegisterController {
     @RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.POST)
     public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
+        PayPalSession payPalSession = payPalSession();
+        
         Payment payment = payPalSession.execute(paymentId, payerId);
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
         
@@ -291,7 +296,7 @@ public class RegisterController {
     }
 
     private Payment runPayPal(RegistrationDetails registerForm, String total, String price) {
-
+        PayPalSession payPalSession = payPalSession();
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
 
         Amount amount = new Amount();
@@ -345,4 +350,16 @@ public class RegisterController {
         return CouponCode.EMPTY;
     }
 
+    public PayPalSession payPalSession() {
+		if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
+			return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+		}
+		else if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
+			return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+		}
+		else {
+			return PayPalSession.DUMMY;
+		}
+	}
+    
 }
