@@ -156,7 +156,7 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 
 	private static Connector createConnector() {
 		Connector connector = new Connector("AJP/1.3");
-		connector.setPort(8009);
+		connector.setPort(8099);
 		return connector;
 	}
 }

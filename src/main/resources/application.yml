@@ -1,10 +1,11 @@
 debug: false
 server:
+  port: 8090
   servlet-path: /
   session-timeout: 20
   tomcat:
     compression: on
-    compressableMimeTypes: application/json,application/xml,text/html,text/xml,text/plain
+    compressable-mime-types: application/json,application/xml,text/html,text/xml,text/plain
 multipart:
   enabled: true
   max-file-size: 5Mb
