@@ -207,6 +207,9 @@ public class RegistrationController {
 		signUp.getGroups().add(ticketGroupForm);
 		ticketGroupForm.setEventSignup(signUp);
 		ticketGroupForm.setEvent(signUp.getEvent());
+                
+                ticketGroupForm.getCouponCodes().forEach((code)->{code.setTicketGroup(ticketGroupForm);});
+                
 		eventSignupController.saveAndFlush(signUp);
 
 		return String.format("redirect:/s/admin/%s/registration/", eventKey);

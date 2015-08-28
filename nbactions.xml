@@ -13,6 +13,8 @@
             <properties>
                 <netbeans.deploy>true</netbeans.deploy>
                 <skipTests>true</skipTests>
+                <TING_HOME>/home/summers/Programs/ting</TING_HOME>
+                
             </properties>
         </action>
         <action>
@@ -43,6 +45,8 @@
                 <netbeans.deploy.debugmode>true</netbeans.deploy.debugmode>
                 <netbeans.deploy>true</netbeans.deploy>
                 <skipTests>true</skipTests>
+                <TING_HOME>/home/summers/Programs/ting</TING_HOME>
+                
             </properties>
         </action>
         <action>
@@ -71,6 +75,39 @@
             </goals>
             <properties>
                 <skipTests>true</skipTests>
+            </properties>
+        </action>
+        <action>
+            <actionName>run.single.main</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>${classPathScope}</exec.classpathScope>
+                <TING_HOME>/home/summers/Programs/ting</TING_HOME>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug.single.main</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>${classPathScope}</exec.classpathScope>
+                <jpda.listen>true</jpda.listen>
+                <TING_HOME>/home/summers/Programs/ting</TING_HOME>
             </properties>
         </action>
     </actions>

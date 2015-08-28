@@ -37,7 +37,7 @@
                     <c:forEach items="${eventSignup.groups}" var="ticketGroup" >
                         <tr>
                             <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketGroup/${ticketGroup.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-                            <td colspan="5"><c:out value="${ticketGroup.label}"/></td>
+                            <td><c:out value="${ticketGroup.label}"/></td>
 
                             <td><c:out value="${ticketGroup.openDate}"/></td>
                             <td><c:out value="${ticketGroup.closeDate}"/></td>
@@ -69,7 +69,7 @@
                     <c:forEach items="${eventSignup.addOns}" var="ticketAddOn" >
                         <tr>
                             <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketAddOn/${ticketAddOn.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
-                            <td colspan="5"><c:out value="${ticketAddOn.label}"/></td>
+                            <td ><c:out value="${ticketAddOn.label}"/></td>
 
                             <td><c:out value="${ticketAddOn.price}"/></td>
                             <td><c:out value="${ticketAddOn.maxAvailableTickets}"/></td>
