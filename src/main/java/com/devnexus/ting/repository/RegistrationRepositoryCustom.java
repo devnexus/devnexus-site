@@ -15,4 +15,10 @@ public interface RegistrationRepositoryCustom {
     
     public List<RegistrationDetails> findPurchasedForEvent(Event event);
 
+    
+    public List<RegistrationDetails> findIncompletePaypalOrdersForEvent(Event event);
+
+    public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event);
+
+    
 }

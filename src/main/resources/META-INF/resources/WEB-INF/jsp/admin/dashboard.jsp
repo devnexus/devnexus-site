@@ -36,7 +36,6 @@
                     <div class="row">
                         <h2>Totals: </h2>
 
-
                         <div class="row">
                             <div class="col-md-4">Tickets Sold</div>
                             <div class="col-md-4"><c:out value="${dashboard.totalTicketsSold}" /></div>
@@ -46,12 +45,21 @@
                             <div class="col-md-4"><c:out value="${dashboard.totalDollars}" /></div>
                         </div>
 
-
                     </div>
 
+                    <div class="row">
+                        <h2>Problems : </h2>
 
+                        <div class="row">
+                            <div class="col-md-4">Orders which did not complete PayPal</div>
+                            <div class="col-md-4"><c:out value="${fn:length(dashboard.inCompletePaypalOrders)}" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Orders requesting invoice</div>
+                            <div class="col-md-4"><c:out value="${fn:length(dashboard.ordersRequestingInvoice)}" /></div>
+                        </div>
 
-
+                    </div>
 
                 </div>
             </div>

@@ -67,5 +67,15 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
     public List<RegistrationDetails> findPurchasedForEvent(Event event) {
         return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)").setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).setParameter("eventId", event.getId()).getResultList();
     }
+
+    @Override
+    public List<RegistrationDetails> findIncompletePaypalOrdersForEvent(Event event) {
+        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAYPAL_PENDING)").setParameter("PAYPAL_PENDING", RegistrationDetails.PaymentState.PAYPAL_CREATED).setParameter("eventId", event.getId()).getResultList();
+    }
+
+    @Override
+    public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event) {
+        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)").setParameter("REQUIRES_INVOICE", RegistrationDetails.PaymentState.REQUIRES_INVOICE).setParameter("eventId", event.getId()).getResultList();
+    }
     
 }

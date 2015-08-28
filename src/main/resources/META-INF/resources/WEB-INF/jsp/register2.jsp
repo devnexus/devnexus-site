@@ -38,7 +38,7 @@
 
             <div class="form-group">
                 <div class="col-lg-offset-4 col-lg-10">
-                    <button type="submit" class="btn btn-link" lang="save" tabindex="19" value="invoice" name="invoice">I can't use PayPal.</button>
+                    <button type="submit" class="btn btn-link" lang="save" tabindex="19" value="invoice" name="invoice">I can't use PayPal; Please invoice me manually.</button>
                 </div>
             </div>
 

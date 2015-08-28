@@ -785,6 +785,20 @@ public class BusinessServiceImpl implements BusinessService {
             dashboard.addOrder(order);
         });
         
+        orders = registrationDao.findIncompletePaypalOrdersForEvent(signUp.getEvent());
+        orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
+        
+        orders.stream().forEach((order) -> {
+            dashboard.addInCompletePaypalOrders(order);
+        });
+        
+        orders = registrationDao.findOrdersRequestingInvoiceForEvent(signUp.getEvent());
+        orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
+        
+        orders.stream().forEach((order) -> {
+            dashboard.addOrdersRequestingInvoice(order);
+        });
+        
         Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
         Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
         

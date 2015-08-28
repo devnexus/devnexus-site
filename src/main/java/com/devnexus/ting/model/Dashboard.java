@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Dashboard {
 
     private final List<RegistrationDetails> orders = new ArrayList<>();
+    private final List<RegistrationDetails> inCompletePaypalOrders = new ArrayList<>();
+    private final List<RegistrationDetails> ordersRequestingInvoice = new ArrayList<>();
     private final Map<TicketGroup, Integer> salesByType = new HashMap<>();
     private final Map<TicketAddOn, Integer> salesOfWorkshops;
     
@@ -52,6 +54,25 @@ public class Dashboard {
     public void addWorkshopSale(TicketAddOn workshop, int count) {
         salesOfWorkshops.put(workshop, count);
     }
+
+    public void addInCompletePaypalOrders(RegistrationDetails order) {
+        inCompletePaypalOrders.add(order);
+    }
+    
+    
+    public List<RegistrationDetails> getInCompletePaypalOrders() {
+        return inCompletePaypalOrders;
+    }
+
+    public void addOrdersRequestingInvoice(RegistrationDetails order) {
+        ordersRequestingInvoice.add(order);
+    }
+    
+    public List<RegistrationDetails> getOrdersRequestingInvoice() {
+        return ordersRequestingInvoice;
+    }
+    
+    
     
     
 }
