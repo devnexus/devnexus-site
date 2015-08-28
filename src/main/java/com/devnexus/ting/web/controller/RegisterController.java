@@ -69,8 +69,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class RegisterController {
-    
-    
+
     @Autowired
     private Environment environment;
 
@@ -103,10 +102,10 @@ public class RegisterController {
 
         return "register";
     }
-    
+
     @RequestMapping(value = "/s/register/{registrationKey}", method = RequestMethod.GET)
     public String viewRegistrationFormForCurrentEvent(@PathVariable("registrationKey") String registrationKey, Model model) {
-        
+
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
 
         Event currentEvent = businessService.getCurrentEvent();
@@ -184,7 +183,7 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
-        
+
         return "register2";
 
     }
@@ -248,7 +247,7 @@ public class RegisterController {
         registerForm.setEvent(currentEvent);
 
         if (result.hasErrors()) {
-            
+
             ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
             for (TicketAddOn addOn : eventSignup.getAddOns()) {
                 if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
@@ -256,7 +255,7 @@ public class RegisterController {
                 }
             }
             model.addAttribute("addOns", availableAddOns);
-            
+
             return "register2";
         }
 
@@ -274,7 +273,7 @@ public class RegisterController {
 
         for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
             TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
-            
+
             if (orderDetails.getTicketAddOn() != null) {
                 TicketAddOn addon = businessService.findAddOn(orderDetails.getTicketAddOn());
                 Integer count = addOnCounts.getOrDefault(addon, 0);
@@ -293,42 +292,41 @@ public class RegisterController {
             TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
 
             if (StringUtils.isEmpty(orderDetails.getFirstName())) {
-                result.rejectValue("orderDetails[" + index + "].firstName", "firstName.isRequired",  "First Name is required.");
+                result.rejectValue("orderDetails[" + index + "].firstName", "firstName.isRequired", "First Name is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getLastName())) {
-                result.rejectValue("orderDetails[" + index + "].lastName", "lastName.isRequired",  "Last Name is required.");
+                result.rejectValue("orderDetails[" + index + "].lastName", "lastName.isRequired", "Last Name is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getEmailAddress())) {
-                result.rejectValue("orderDetails[" + index + "].emailAddress", "emailAddress.isRequired",  "Email Address is required.");
+                result.rejectValue("orderDetails[" + index + "].emailAddress", "emailAddress.isRequired", "Email Address is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getCity())) {
-                result.rejectValue("orderDetails[" + index + "].city", "city.isRequired",  "City is required.");
+                result.rejectValue("orderDetails[" + index + "].city", "city.isRequired", "City is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getState())) {
-                result.rejectValue("orderDetails[" + index + "].state", "state.isRequired",  "State is required.");
+                result.rejectValue("orderDetails[" + index + "].state", "state.isRequired", "State is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getCountry())) {
-                result.rejectValue("orderDetails[" + index + "].country", "country.isRequired",  "Country is required.");
+                result.rejectValue("orderDetails[" + index + "].country", "country.isRequired", "Country is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getJobTitle())) {
-                result.rejectValue("orderDetails[" + index + "].jobTitle", "jobTitle.isRequired",  "Job Title is required.");
+                result.rejectValue("orderDetails[" + index + "].jobTitle", "jobTitle.isRequired", "Job Title is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getCompany())) {
-                result.rejectValue( "orderDetails[" + index + "].company", "company.isRequired", "Company is required.");
+                result.rejectValue("orderDetails[" + index + "].company", "company.isRequired", "Company is required.");
             }
 
         }
 
         if (result.hasErrors()) {
 
-            
             ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
             for (TicketAddOn addOn : eventSignup.getAddOns()) {
                 if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
@@ -336,7 +334,7 @@ public class RegisterController {
                 }
             }
             model.addAttribute("addOns", availableAddOns);
-            
+
             return "register2";
         }
 
@@ -344,23 +342,26 @@ public class RegisterController {
             detail.setRegistration(registerForm);
         }
 
+        BigDecimal ticketPrice = ticketGroup.getPrice();
+        if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode())) {
+            CouponCode code = findCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode());
+            if (CouponCode.EMPTY != code) {
+                ticketPrice = code.getPrice();
+            }
+        }
+
         switch (paymentMethod) {
 
             case INVOICE:
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.REQUIRES_INVOICE);
+                registerForm.setFinalCost(getTotal(registerForm, ticketPrice));
                 businessService.createPendingRegistrationForm(registerForm);
                 return "index";
             case PAYPAL:
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
+                registerForm.setFinalCost(getTotal(registerForm, ticketPrice));
                 registerForm = businessService.createPendingRegistrationForm(registerForm);
-                BigDecimal price = ticketGroup.getPrice();
-                if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode())) {
-                    CouponCode code = findCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode());
-                    if (CouponCode.EMPTY != code) {
-                        price = code.getPrice();
-                    }
-                }
-                Payment createdPayment = runPayPal(registerForm, price.setScale(2).toString());
+                Payment createdPayment = runPayPal(registerForm, ticketPrice.setScale(2).toString());
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
                     return link.getRel().equals("approval_url");
                 }).findFirst().get().getHref();
@@ -385,11 +386,10 @@ public class RegisterController {
 
     private Payment runPayPal(RegistrationDetails registerForm, String price) {
         final PayPalSession payPalSession = payPalSession();
-        
 
         Amount amount = new Amount();
         amount.setCurrency("USD");
-        BigDecimal total = BigDecimal.ZERO;
+        final BigDecimal total = getTotal(registerForm, new BigDecimal(price));
 
         Transaction transaction = new Transaction();
         transaction.setDescription("DevNexus Registration");
@@ -399,11 +399,9 @@ public class RegisterController {
         List<Item> items = new ArrayList<>(registerForm.getTicketCount());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
             items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
-            total = total.add(new BigDecimal(price));
             if (order.getTicketAddOn() != null) {
                 TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
                 items.add(new Item("1", String.format("%s for %s %s", addOn.getLabel(), order.getFirstName(), order.getLastName()), addOn.getPrice().setScale(2).toString(), "USD"));
-                total = total.add(addOn.getPrice());
             }
         }
         itemlist.setItems(items);
@@ -425,6 +423,20 @@ public class RegisterController {
         payment.setRedirectUrls(redirectUrls);
 
         return payPalSession.createPayment(payment);
+    }
+
+    private BigDecimal getTotal(RegistrationDetails registerForm, BigDecimal ticketPrice) {
+        BigDecimal total = BigDecimal.ZERO;
+
+        for (TicketOrderDetail order : registerForm.getOrderDetails()) {
+            total = total.add((ticketPrice));
+            if (order.getTicketAddOn() != null) {
+                TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
+                total = total.add(addOn.getPrice());
+            }
+        }
+
+        return total.setScale(2);
     }
 
     private boolean hasCode(Collection<CouponCode> couponCodes, String couponCode) {

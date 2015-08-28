@@ -44,5 +44,6 @@
     <content tag='bottom'>
         <script type="text/javascript">
             $("#form input").prop("disabled", true);
+            $("#form select").prop("disabled", true);
         </script>
     </content>

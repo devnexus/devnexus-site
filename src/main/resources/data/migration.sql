@@ -138,6 +138,7 @@ ALTER TABLE TICKET_GROUPS
         REGISTRATION_FORM_KEY varchar(255),
         TICKET_COUNT integer,
         TICKET_GROUP bigint,
+        FINAL_COST numeric (10,2),
         EVENT bigint
     );
 

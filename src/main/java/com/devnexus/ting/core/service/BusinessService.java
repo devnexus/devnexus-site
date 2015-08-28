@@ -21,6 +21,7 @@ import java.util.Set;
 
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
@@ -287,5 +288,7 @@ public interface BusinessService {
     Long getCountOfAddonsSold(Long addOn);
 
     public TicketAddOn findAddOn(Long ticketAddOn);
+
+    public Dashboard generateDashBoardForSignUp(EventSignup signUp);
     
 }

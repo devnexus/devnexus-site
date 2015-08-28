@@ -15,6 +15,8 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.Dashboard;
 import java.util.function.BinaryOperator;
 
 import javax.inject.Inject;
@@ -45,6 +47,8 @@ public class RegistrationController {
 
 	@Inject
 	private EventSignupRepository eventSignupController;
+        @Inject
+	private BusinessService businessService;
 
 	@RequestMapping(value = "/s/admin/{eventKey}/registration", method = RequestMethod.GET)
 	public String loadRegistration(ModelMap model, HttpServletRequest request,
@@ -165,8 +169,11 @@ public class RegistrationController {
 
 		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
 
+                Dashboard dashboard = businessService.generateDashBoardForSignUp(signUp);
+                
 		model.addAttribute("event", signUp.getEvent());
-
+                model.addAttribute("dashboard", dashboard);
+                    
 		return "/admin/dashboard";
 	}
 

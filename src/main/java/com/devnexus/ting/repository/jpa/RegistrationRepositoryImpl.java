@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.repository.jpa;
 
+import com.devnexus.ting.model.Event;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
@@ -25,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.repository.RegistrationRepositoryCustom;
+import java.util.List;
 
 /**
 *
@@ -59,6 +61,11 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
     @Override
     public Long countSalesOfAddons(Long addOnId) {
         return (Long) entityManager.createQuery("select count(*) from TicketOrderDetail where ticketAddOn= :addOnId and (registration.paymentState=:PAID or registration.paymentState=:INVOICED)").setParameter("addOnId", addOnId).setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).getSingleResult();
+    }
+
+    @Override
+    public List<RegistrationDetails> findPurchasedForEvent(Event event) {
+        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)").setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).setParameter("eventId", event.getId()).getResultList();
     }
     
 }

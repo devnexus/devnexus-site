@@ -58,6 +58,7 @@ import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
@@ -77,6 +78,7 @@ import com.devnexus.ting.model.SponsorLevel;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
+import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.repository.ApplicationCacheRepository;
@@ -96,6 +98,9 @@ import com.devnexus.ting.repository.SponsorRepository;
 import com.devnexus.ting.repository.TicketAddonRepository;
 import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
+import java.util.HashMap;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -767,6 +772,58 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public TicketAddOn findAddOn(Long ticketAddOn) {
         return ticketAddOnDao.findOne(ticketAddOn);
+    }
+
+    @Override
+    public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
+        Dashboard dashboard = new Dashboard();
+        
+        List<RegistrationDetails> orders = registrationDao.findPurchasedForEvent(signUp.getEvent());
+        orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
+        
+        orders.stream().forEach((order) -> {
+            dashboard.addOrder(order);
+        });
+        
+        Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
+        Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
+        
+        for (RegistrationDetails order : orders) {
+            Long ticketGroupId = order.getTicketGroup();
+            ticketIdToGroup.computeIfAbsent(ticketGroupId, (id)->{return getTicketGroup(id);});
+            TicketGroup group = ticketIdToGroup.get(ticketGroupId);
+            int count = ticketGroupCount.getOrDefault(group, 0);
+            ticketGroupCount.put(group, count + 1);
+        }
+        
+        for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {
+            dashboard.addSale(entry.getKey(), entry.getValue());
+        }
+        
+        Map<Long, TicketAddOn> workshopIdToWorkshop = new HashMap<>();
+        Map<TicketAddOn, Integer> workshopCount = new HashMap<>();
+        
+        
+        for (RegistrationDetails order : orders) {
+            for (TicketOrderDetail detail : order.getOrderDetails()) {
+                Long workshopId = detail.getTicketAddOn();
+                if (workshopId == null) {
+                    continue;
+                }
+                workshopIdToWorkshop.computeIfAbsent(workshopId, (id)->{return ticketAddOnDao.findOne(id);});
+                TicketAddOn workshop = workshopIdToWorkshop.get(workshopId);
+                int count = workshopCount.getOrDefault(workshop, 0);
+                workshopCount.put(workshop, count + 1);
+            }
+            
+        }
+        
+        for (Map.Entry<TicketAddOn, Integer> entry : workshopCount.entrySet()) {
+            dashboard.addWorkshopSale(entry.getKey(), entry.getValue());
+        }
+        
+        
+        return dashboard;
     }
     
 }

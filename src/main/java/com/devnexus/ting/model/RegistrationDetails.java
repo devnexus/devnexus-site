@@ -36,6 +36,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import com.devnexus.ting.web.form.RegisterForm;
+import java.math.BigDecimal;
 
 /**
  * @author Summers Pittman
@@ -62,6 +63,7 @@ public class RegistrationDetails extends BaseModelObject {
     @NotNull
     private String contactPhoneNumber;
 
+    private BigDecimal finalCost = BigDecimal.ZERO;
     
     @NotNull
     private String contactEmailAddress;
@@ -176,6 +178,14 @@ public class RegistrationDetails extends BaseModelObject {
 
     public void setContactPhoneNumber(String contactPhoneNumber) {
         this.contactPhoneNumber = contactPhoneNumber;
+    }
+
+    public BigDecimal getFinalCost() {
+        return finalCost == null?BigDecimal.ZERO:finalCost;
+    }
+
+    public void setFinalCost(BigDecimal finalCost) {
+        this.finalCost = finalCost;
     }
 
     
