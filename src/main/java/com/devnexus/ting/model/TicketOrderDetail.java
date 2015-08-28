@@ -25,141 +25,150 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
-* @author Summers Pittman
-*/
+ * @author Summers Pittman
+ */
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TicketOrderDetail extends BaseModelObject implements Comparable<TicketOrderDetail>{
+public class TicketOrderDetail extends BaseModelObject implements Comparable<TicketOrderDetail> {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@NotNull
-	@Size(max = 255)
-	private String firstName;
-	@NotNull
-	@Size(max = 255)
-	private String lastName;
-	@NotNull
-	@Size(max = 255)
-	private String emailAddress;
+    @NotNull
+    @Size(max = 255)
+    private String firstName;
+    
+    @NotNull
+    @Size(max = 255)
+    private String lastName;
+    
+    @NotNull
+    @Size(max = 255)
+    private String emailAddress;
 
-	@Size(max = 255)
-	private String city;
-	@Size(max = 255)
-	private String state;
-	@Size(max = 255)
-	private String country;
+    @Size(min = 1, max = 255)
+    @NotNull
+    private String city;
+    
+    @Size(min = 1, max = 255)
+    @NotNull
+    private String state;
+    
+    @Size(min = 1, max = 255)
+    @NotNull
+    private String country;
 
-	@Size(max = 255)
-	private String jobTitle;
-	@Size(max = 255)
-	private String company;
+    @Size(min = 1, max = 255)
+    @NotNull
+    private String jobTitle;
 
-	@Size(max = 255)
-	private String tShirtSize;
-	@Size(max = 255)
-	private String vegetarian;
+    @Size(min = 1, max = 255)
+    @NotNull
+    private String company;
 
-	@ManyToOne
-	@XmlTransient
-	private RegistrationDetails registration;
+    @Size(max = 255)
+    private String tShirtSize;
+    @Size(max = 255)
+    private String vegetarian;
 
-	public String getFirstName() {
-		return firstName;
-	}
+    @ManyToOne
+    @XmlTransient
+    private RegistrationDetails registration;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getEmailAddress() {
-		return emailAddress;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
+    public String getCountry() {
+        return country;
+    }
 
-	public String getJobTitle() {
-		return jobTitle;
-	}
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
-	}
+    public String getJobTitle() {
+        return jobTitle;
+    }
 
-	public String getCompany() {
-		return company;
-	}
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
 
-	public void setCompany(String company) {
-		this.company = company;
-	}
+    public String getCompany() {
+        return company;
+    }
 
-	public String gettShirtSize() {
-		return tShirtSize;
-	}
+    public void setCompany(String company) {
+        this.company = company;
+    }
 
-	public void settShirtSize(String tShirtSize) {
-		this.tShirtSize = tShirtSize;
-	}
+    public String gettShirtSize() {
+        return tShirtSize;
+    }
 
-	public String getVegetarian() {
-		return vegetarian;
-	}
+    public void settShirtSize(String tShirtSize) {
+        this.tShirtSize = tShirtSize;
+    }
 
-	public void setVegetarian(String vegetarian) {
-		this.vegetarian = vegetarian;
-	}
+    public String getVegetarian() {
+        return vegetarian;
+    }
 
-	public RegistrationDetails getRegistration() {
-		return registration;
-	}
+    public void setVegetarian(String vegetarian) {
+        this.vegetarian = vegetarian;
+    }
 
-	public void setRegistration(RegistrationDetails registration) {
-		this.registration = registration;
-	}
+    public RegistrationDetails getRegistration() {
+        return registration;
+    }
 
-	@Override
-	public int compareTo(TicketOrderDetail o) {
-		if (lastName.equals(o.lastName)) {
-			return firstName.compareTo(o.firstName);
-		}
-		return lastName.compareTo(o.lastName);
-	}
+    public void setRegistration(RegistrationDetails registration) {
+        this.registration = registration;
+    }
 
+    @Override
+    public int compareTo(TicketOrderDetail o) {
+        if (lastName.equals(o.lastName)) {
+            return firstName.compareTo(o.firstName);
+        }
+        return lastName.compareTo(o.lastName);
+    }
 
 }

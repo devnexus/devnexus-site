@@ -59,9 +59,8 @@ import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
-import com.paypal.base.rest.PayPalRESTException;
-import org.springframework.context.annotation.Scope;
 import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
  *
@@ -74,13 +73,12 @@ public class RegisterController {
 
     @Autowired
     private Environment environment;
-    
+
     private enum PaymentMethod {
 
         PAYPAL, INVOICE
     };
 
-    
     @Autowired
     private BusinessService businessService;
 
@@ -179,12 +177,12 @@ public class RegisterController {
     public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
         PayPalSession payPalSession = payPalSession();
-        
+
         Payment payment = payPalSession.execute(paymentId, payerId);
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
-        
+
         registerForm.setPaymentState(RegistrationDetails.PaymentState.PAID);
-        
+
         PayPalPayment payPalPayment = new PayPalPayment();
         payPalPayment.setPayerId(payerId);
         payPalPayment.setPaymentId(paymentId);
@@ -197,15 +195,13 @@ public class RegisterController {
             payPalPayment.addLink(paypalLink);
         }
         businessService.saveAndEmailPaidRegistration(registerForm, payPalPayment);
-        
-        
-        
+
         return "redirect:/s/index";
 
     }
 
     @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
-    public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
+    public String validateDetailsForm(Model model, @ModelAttribute(value="registerFormPageTwo") @Valid RegistrationDetails registerForm, BindingResult result) {
 
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
@@ -235,20 +231,41 @@ public class RegisterController {
             TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
 
             if (StringUtils.isEmpty(orderDetails.getFirstName())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].firstName", "First Name is required."));
+                result.rejectValue("orderDetails[" + index + "].firstName", "firstName.isRequired",  "First Name is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getLastName())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].lastName", "Last Name is required."));
+                result.rejectValue("orderDetails[" + index + "].lastName", "lastName.isRequired",  "Last Name is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getEmailAddress())) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].emailAddress", "Email Address is required."));
+                result.rejectValue("orderDetails[" + index + "].emailAddress", "emailAddress.isRequired",  "Email Address is required.");
+            }
+
+            if (StringUtils.isEmpty(orderDetails.getCity())) {
+                result.rejectValue("orderDetails[" + index + "].city", "city.isRequired",  "City is required.");
+            }
+
+            if (StringUtils.isEmpty(orderDetails.getState())) {
+                result.rejectValue("orderDetails[" + index + "].state", "state.isRequired",  "State is required.");
+            }
+
+            if (StringUtils.isEmpty(orderDetails.getCountry())) {
+                result.rejectValue("orderDetails[" + index + "].country", "country.isRequired",  "Country is required.");
+            }
+
+            if (StringUtils.isEmpty(orderDetails.getJobTitle())) {
+                result.rejectValue("orderDetails[" + index + "].jobTitle", "jobTitle.isRequired",  "Job Title is required.");
+            }
+
+            if (StringUtils.isEmpty(orderDetails.getCompany())) {
+                result.rejectValue( "orderDetails[" + index + "].company", "company.isRequired", "Company is required.");
             }
 
         }
 
         if (result.hasErrors()) {
+            
             return "register2";
         }
 
@@ -351,15 +368,13 @@ public class RegisterController {
     }
 
     public PayPalSession payPalSession() {
-		if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
-			return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
-		}
-		else if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
-			return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
-		}
-		else {
-			return PayPalSession.DUMMY;
-		}
-	}
-    
+        if (environment.acceptsProfiles(SpringProfile.PAYPAL_SANDBOX)) {
+            return PayPalSession.getSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+        } else if (environment.acceptsProfiles(SpringProfile.PAYPAL_LIVE)) {
+            return PayPalSession.getLiveSession(environment.getRequiredProperty("PAYPAL_CLIENT_ID"), environment.getRequiredProperty("PAYPAL_CLIENT_SECRET"));
+        } else {
+            return PayPalSession.DUMMY;
+        }
+    }
+
 }

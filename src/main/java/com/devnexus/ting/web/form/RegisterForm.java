@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.devnexus.ting.model.BaseModelObject;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -30,41 +31,80 @@ import com.devnexus.ting.model.BaseModelObject;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegisterForm extends BaseModelObject {
 
-	/**
-	 * serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1071233976549394025L;
+    /**
+     * serialVersionUID.
+     */
+    private static final long serialVersionUID = 1071233976549394025L;
 
-	@NotNull
-	private Integer ticketCount;
+    @NotNull
+    private Integer ticketCount;
 
-	@NotNull
-	private Long ticketGroup;
+    @NotNull
+    @Size(min = 1, max = 255)
+    private String contactName;
 
-	private String couponCode;
+    @NotNull
+    @Size(min = 1, max = 255)
+    private String contactEmailAddress;
 
-	public Integer getTicketCount() {
-		return ticketCount;
-	}
+    @NotNull
+    @Size(min = 1, max = 255)
+    private String contactPhoneNumber;
 
-	public void setTicketCount(Integer ticketCount) {
-		this.ticketCount = ticketCount;
-	}
+    
+    @NotNull
+    private Long ticketGroup;
 
-	public Long getTicketGroup() {
-		return ticketGroup;
-	}
+    private String couponCode;
 
-	public void setTicketGroup(Long ticketGroup) {
-		this.ticketGroup = ticketGroup;
-	}
+    public Integer getTicketCount() {
+        return ticketCount;
+    }
 
-	public String getCouponCode() {
-		return couponCode;
-	}
+    public void setTicketCount(Integer ticketCount) {
+        this.ticketCount = ticketCount;
+    }
 
-	public void setCouponCode(String couponCode) {
-		this.couponCode = couponCode;
-	}
+    public Long getTicketGroup() {
+        return ticketGroup;
+    }
 
+    public void setTicketGroup(Long ticketGroup) {
+        this.ticketGroup = ticketGroup;
+    }
+
+    public String getCouponCode() {
+        return couponCode;
+    }
+
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
+    public String getContactEmailAddress() {
+        return contactEmailAddress;
+    }
+
+    public void setContactEmailAddress(String contactEmailAddress) {
+        this.contactEmailAddress = contactEmailAddress;
+    }
+
+    public String getContactPhoneNumber() {
+        return contactPhoneNumber;
+    }
+
+    public void setContactPhoneNumber(String contactPhoneNumber) {
+        this.contactPhoneNumber = contactPhoneNumber;
+    }
+
+    
+    
 }

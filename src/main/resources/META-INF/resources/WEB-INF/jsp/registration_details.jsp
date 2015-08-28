@@ -4,8 +4,12 @@
             <form:hidden path="couponCode"/>
             <form:hidden path="ticketGroup"/>
             <form:hidden path="ticketCount"/>
-
+            <form:hidden path="contactName"/>
+            <form:hidden path="contactEmailAddress"/>
+            <form:hidden path="contactPhoneNumber"/>
+            
             <c:forEach items="${registerFormPageTwo.orderDetails}" varStatus="orderStatus">
+                <c:out value="${status.toString()}"/>
                 <div style="border: 1px solid  #008F9C; border-radius: 5px;margin: 26px; padding: 13px;">
                     <h4>Registrant Information - Required - </h4>
                     <br/>
@@ -43,14 +47,14 @@
                         </div>
                     </div>
 
-                    <h4>Location Information - Appreciated - </h4>
+                    <h4>Location Information - Required - </h4>
                     <br/>
 
                     <spring:bind path="orderDetails[${orderStatus.index}].city">
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].city" class="col-lg-2 control-label">City </label>
+                        <label for="orderDetails[${orderStatus.index}].city" class="col-lg-2 control-label">City*</label>
                         <div class="col-lg-10">
                             <form:input cssClass="form-control" path="orderDetails[${orderStatus.index}].city" id="orderDetails[${orderStatus.index}].city" maxlength="255"/>
                             <form:errors path="orderDetails[${orderStatus.index}].city" cssClass="fieldError"/>
@@ -61,7 +65,7 @@
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].state" class="col-lg-2 control-label">State</label>
+                        <label for="orderDetails[${orderStatus.index}].state" class="col-lg-2 control-label">State*</label>
                         <div class="col-lg-10">
                             <form:input cssClass="form-control" path="orderDetails[${orderStatus.index}].state" id="orderDetails[${orderStatus.index}].state" maxlength="255"/>
                             <form:errors path="orderDetails[${orderStatus.index}].state" cssClass="fieldError"/>
@@ -72,21 +76,21 @@
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].country" class="col-lg-2 control-label">Country</label>
+                        <label for="orderDetails[${orderStatus.index}].country" class="col-lg-2 control-label">Country*</label>
                         <div class="col-lg-10">
                             <form:input cssClass="form-control" path="orderDetails[${orderStatus.index}].country" id="orderDetails[${orderStatus.index}].country" maxlength="255"/>
                             <form:errors path="orderDetails[${orderStatus.index}].country" cssClass="fieldError"/>
                         </div>
                     </div>
 
-                    <h4>Employment Information - Just Curious - </h4>
+                    <h4>Employment Information - Required - </h4>
                     <br/>
 
                     <spring:bind path="orderDetails[${orderStatus.index}].jobTitle">
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].jobTitle" class="col-lg-2 control-label">Job Title</label>
+                        <label for="orderDetails[${orderStatus.index}].jobTitle" class="col-lg-2 control-label">Job Title*</label>
                         <div class="col-lg-10">
                             <form:input cssClass="form-control" path="orderDetails[${orderStatus.index}].jobTitle" id="orderDetails[${orderStatus.index}].jobTitle" maxlength="255"/>
                             <form:errors path="orderDetails[${orderStatus.index}].jobTitle" cssClass="fieldError"/>
@@ -97,14 +101,14 @@
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].company" class="col-lg-2 control-label">Company</label>
+                        <label for="orderDetails[${orderStatus.index}].company" class="col-lg-2 control-label">Company*</label>
                         <div class="col-lg-10">
                             <form:input cssClass="form-control" path="orderDetails[${orderStatus.index}].company" id="orderDetails[${orderStatus.index}].company" maxlength="255"/>
                             <form:errors path="orderDetails[${orderStatus.index}].company" cssClass="fieldError"/>
                         </div>
                     </div>
 
-                    <h4>Amenities Information - For your comfort - </h4>
+                    <h4>Other Information </h4>
                     <br/>
 
                     <spring:bind path="orderDetails[${orderStatus.index}].tShirtSize">

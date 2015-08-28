@@ -26,6 +26,43 @@
 
     <div class="row">
         <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerForm" enctype="multipart/form-data">
+
+            <h4>Purchaser Information - Required - </h4>
+            <br/>
+
+            <spring:bind path="contactName">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactName" class="col-lg-2 control-label">Contact Name*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactName" id="contactName" maxlength="255"/>
+                    <form:errors path="contactName" cssClass="fieldError"/>
+                </div>
+            </div>
+
+            <spring:bind path="contactEmailAddress">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactEmailAddress" class="col-lg-2 control-label">Email Address*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactEmailAddress" id="contactEmailAddress" maxlength="255"/>
+                    <form:errors path="contactEmailAddress" cssClass="fieldError"/>
+                </div>
+            </div>
+
+            <spring:bind path="contactPhoneNumber">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactPhoneNumber" class="col-lg-2 control-label">Phone Number*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactPhoneNumber" id="contactPhoneNumber" maxlength="255"/>
+                    <form:errors path="contactPhoneNumber" cssClass="fieldError"/>
+                </div>
+            </div>
+
             <spring:bind path="ticketGroup">
                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
             </spring:bind>
@@ -129,9 +166,12 @@
                 updateInfo()
             });
 
-            $('#coupon-code').change(function() {
+            $('#coupon-code').change(function () {
                 jQuery.ajax("/s/lookupCouponCode/" + $('#ticket-group option:selected').val() + "/" + $('#coupon-code').val(), {
-                    success : function(data) { price = data;$('#total-cost').val($('#ticket-count option:selected').val() * price);}
+                    success: function (data) {
+                        price = data;
+                        $('#total-cost').val($('#ticket-count option:selected').val() * price);
+                    }
                 });
             });
 
@@ -167,12 +207,12 @@
             var data = {
         <c:forEach items="${signupRegisterView.groups}" var="group">
                 group_<c:out value="${group.id}"/>: {
-                                    price: <c:out value="${group.price}"/>,
-                                    minPurchase: <c:out value="${group.minPurchase}"/>
-                                },
+                    price: <c:out value="${group.price}"/>,
+                            minPurchase: <c:out value="${group.minPurchase}"/>
+                },
         </c:forEach>
-                            };
-                            updateInfo();
-                        });
+            };
+            updateInfo();
+        });
     </script>
 </content>

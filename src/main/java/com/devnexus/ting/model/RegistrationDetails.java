@@ -38,116 +38,158 @@ import javax.xml.bind.annotation.XmlTransient;
 import com.devnexus.ting.web.form.RegisterForm;
 
 /**
-* @author Summers Pittman
-*/
+ * @author Summers Pittman
+ */
 @Entity
 @Table(name = "registration")
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegistrationDetails extends BaseModelObject {
 
-	/**
-	 * serialVersionUID.
-	 */
-	private static final long serialVersionUID = 1071233976549394025L;
+    /**
+     * serialVersionUID.
+     */
+    private static final long serialVersionUID = 1071233976549394025L;
 
-	public enum PaymentState {NONE, REQUIRES_INVOICE, PAYPAL_CREATED, PAID, REFUNDED, CANCELLED, ERROR, INVOICED};
+    public enum PaymentState {
 
-	@NotNull
-	private Integer ticketCount;
+        NONE, REQUIRES_INVOICE, PAYPAL_CREATED, PAID, REFUNDED, CANCELLED, ERROR, INVOICED
+    };
 
-	@NotNull
-	private Long ticketGroup;
+    @NotNull
+    private String contactName;
 
-	@ManyToOne
-	//@JoinColumn(name="EVENT_ID")
-	@XmlTransient
-	private Event event;
+    @NotNull
+    private String contactPhoneNumber;
 
-	@Column(unique = true)
-	private String registrationFormKey;
-	private String couponCode;
+    
+    @NotNull
+    private String contactEmailAddress;
 
-	@Transient
-	private String invoice;
+    @NotNull
+    private Integer ticketCount;
 
-	@Enumerated(EnumType.STRING)
-	private PaymentState paymentState = PaymentState.NONE;
+    @NotNull
+    private Long ticketGroup;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER)
-	private List<TicketOrderDetail> orderDetails = new ArrayList<>();
+    @ManyToOne
+    //@JoinColumn(name="EVENT_ID")
+    @XmlTransient
+    private Event event;
 
-	public Integer getTicketCount() {
-		return ticketCount;
-	}
+    @Column(unique = true)
+    private String registrationFormKey;
+    private String couponCode;
 
-	public void setTicketCount(Integer ticketCount) {
-		this.ticketCount = ticketCount;
-	}
+    @Transient
+    private String invoice;
 
-	public Long getTicketGroup() {
-		return ticketGroup;
-	}
+    @Enumerated(EnumType.STRING)
+    private PaymentState paymentState = PaymentState.NONE;
 
-	public void setTicketGroup(Long ticketGroup) {
-		this.ticketGroup = ticketGroup;
-	}
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER)
+    private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
-	public String getCouponCode() {
-		return couponCode;
-	}
+    public Integer getTicketCount() {
+        return ticketCount;
+    }
 
-	public void setCouponCode(String couponCode) {
-		this.couponCode = couponCode;
-	}
+    public void setTicketCount(Integer ticketCount) {
+        this.ticketCount = ticketCount;
+    }
 
-	public List<TicketOrderDetail> getOrderDetails() {
-		return orderDetails;
-	}
+    public Long getTicketGroup() {
+        return ticketGroup;
+    }
 
-	public void setOrderDetails(List<TicketOrderDetail> orderDetails) {
-		this.orderDetails = orderDetails;
-	}
+    public void setTicketGroup(Long ticketGroup) {
+        this.ticketGroup = ticketGroup;
+    }
 
-	public String getInvoice() {
-		return invoice;
-	}
+    public String getCouponCode() {
+        return couponCode;
+    }
 
-	public void setInvoice(String invoice) {
-		this.invoice = invoice;
-	}
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
+    }
 
-	public String getRegistrationFormKey() {
-		return registrationFormKey;
-	}
+    public List<TicketOrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
 
-	public void setRegistrationFormKey(String registrationFormKey) {
-		this.registrationFormKey = registrationFormKey;
-	}
+    public void setOrderDetails(List<TicketOrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
 
-	public Event getEvent() {
-		return event;
-	}
+    public String getInvoice() {
+        return invoice;
+    }
 
-	public void setEvent(Event event) {
-		this.event = event;
-	}
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
+    }
 
-	public PaymentState getPaymentState() {
-		return paymentState;
-	}
+    public String getRegistrationFormKey() {
+        return registrationFormKey;
+    }
 
-	public void setPaymentState(PaymentState paymentState) {
-		this.paymentState = paymentState;
-	}
+    public void setRegistrationFormKey(String registrationFormKey) {
+        this.registrationFormKey = registrationFormKey;
+    }
 
-	public void copyPageOne(RegisterForm registerForm) {
-		setCouponCode(registerForm.getCouponCode());
-		setTicketCount(registerForm.getTicketCount());
-		setTicketGroup(registerForm.getTicketGroup());
-		IntStream.range(0, registerForm.getTicketCount()).forEach(ignore -> {
-			orderDetails.add(new TicketOrderDetail());
-		});
-	}
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
+    }
+
+    public PaymentState getPaymentState() {
+        return paymentState;
+    }
+
+    public void setPaymentState(PaymentState paymentState) {
+        this.paymentState = paymentState;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
+    public String getContactEmailAddress() {
+        return contactEmailAddress;
+    }
+
+    public void setContactEmailAddress(String contactEmailAddress) {
+        this.contactEmailAddress = contactEmailAddress;
+    }
+
+    public String getContactPhoneNumber() {
+        return contactPhoneNumber;
+    }
+
+    public void setContactPhoneNumber(String contactPhoneNumber) {
+        this.contactPhoneNumber = contactPhoneNumber;
+    }
+
+    
+    
+    public void copyPageOne(RegisterForm registerForm) {
+        setCouponCode(registerForm.getCouponCode());
+        setTicketCount(registerForm.getTicketCount());
+        setTicketGroup(registerForm.getTicketGroup());
+        setContactEmailAddress(registerForm.getContactEmailAddress());
+        setContactPhoneNumber(registerForm.getContactPhoneNumber());
+        setContactName(registerForm.getContactName());
+        IntStream.range(0, registerForm.getTicketCount()).forEach(ignore -> {
+            orderDetails.add(new TicketOrderDetail());
+        });
+    }
 
 }
