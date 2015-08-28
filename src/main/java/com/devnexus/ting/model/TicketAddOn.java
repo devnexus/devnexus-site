@@ -53,8 +53,13 @@ public class TicketAddOn extends BaseModelObject {
 	@ManyToOne
 	@XmlTransient
 	@NotNull
-	private TicketGroup ticketGroup;
+	private Event event;
 
+        @ManyToOne
+	@XmlTransient
+	@NotNull
+	private EventSignup eventSignup;
+        
 	public String getLabel() {
 		return label;
 	}
@@ -79,12 +84,22 @@ public class TicketAddOn extends BaseModelObject {
 		this.maxAvailableTickets = maxAvailableTickets;
 	}
 
-	public TicketGroup getTicketGroup() {
-		return ticketGroup;
-	}
+    public Event getEvent() {
+        return event;
+    }
 
-	public void setTicketGroup(TicketGroup ticketGroup) {
-		this.ticketGroup = ticketGroup;
-	}
+    public void setEvent(Event event) {
+        this.event = event;
+    }
+
+    public EventSignup getEventSignup() {
+        return eventSignup;
+    }
+
+    public void setEventSignup(EventSignup eventSignup) {
+        this.eventSignup = eventSignup;
+    }
+
+        
 
 }

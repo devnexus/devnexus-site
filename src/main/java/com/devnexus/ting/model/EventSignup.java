@@ -26,6 +26,10 @@ public class EventSignup extends BaseModelObject {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketGroup.class, fetch = FetchType.EAGER)
     private Set<TicketGroup> groups = new HashSet<>();
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketAddOn.class, fetch = FetchType.EAGER)
+    private Set<TicketAddOn> addOns = new HashSet<>();
+
+    
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
     @NotNull
@@ -54,6 +58,14 @@ public class EventSignup extends BaseModelObject {
             }
         }
         return Optional.empty();
+    }
+
+    public Set<TicketAddOn> getAddOns() {
+        return addOns;
+    }
+
+    public void setAddOns(Set<TicketAddOn> addOns) {
+        this.addOns = addOns;
     }
 
 

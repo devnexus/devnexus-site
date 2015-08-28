@@ -94,11 +94,6 @@ public class TicketGroup extends BaseModelObject {
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
 	protected List<CouponCode> couponCodes = new ArrayList<>();
 
-
-	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
-	protected List<TicketAddOn> ticketAddOns = new ArrayList<>();
-
-
 	public Event getEvent() {
 		return event;
 	}
@@ -193,18 +188,4 @@ public class TicketGroup extends BaseModelObject {
 		this.maxAvailableTickets = maxAvailableTickets;
 	}
 
-	public List<TicketAddOn> getTicketAddOns() {
-		return ticketAddOns;
-	}
-
-	public void setTicketAddOns(List<TicketAddOn> ticketAddOns) {
-		this.ticketAddOns = new ArrayList<>(ticketAddOns.size());
-		for (TicketAddOn addOn : ticketAddOns) {
-			if (addOn.getLabel()!= null && !addOn.getLabel().isEmpty()) {
-				this.ticketAddOns.add(addOn);
-				addOn.setTicketGroup(this);
-			}
-		}
-
-	}
 }

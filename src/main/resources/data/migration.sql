@@ -82,7 +82,8 @@ create table TICKET_ADD_ONS (
 	label varchar(255),
 	price numeric (10,2),
 	max_available_tickets integer,
-	ticket_group integer
+        event_signup integer,
+	event integer
 );
 
 create table COUPON_CODES (
@@ -113,10 +114,14 @@ alter table COUPON_CODES
 
 
 alter table TICKET_ADD_ONS
-	add constraint ADD_ON_GROUP
-	foreign key (ticket_group)
-	references ticket_groups;
+	add constraint ADD_ON_EVENT
+	foreign key (event)
+	references events;
 
+alter table TICKET_ADD_ONS
+	add constraint ADD_ON_EVENT_SIGNUP
+	foreign key (event_signup)
+	references EVENT_SIGNUPS;
 
 ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;

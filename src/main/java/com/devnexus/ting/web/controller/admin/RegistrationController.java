@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.model.EventSignup;
+import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.repository.EventSignupRepository;
 
@@ -70,7 +71,56 @@ public class RegistrationController {
 		return "/admin/add-ticketgroup";
 	}
 
+        @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn/{addOnId}", method = RequestMethod.GET)
+	public String showEditTicketAddOnForm(ModelMap model, HttpServletRequest request,
+			@PathVariable(value = "eventKey") String eventKey,
+                        @PathVariable(value = "addOnId") String groupId) {
 
+		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+		model.addAttribute("event", signUp.getEvent());
+                model.addAttribute("eventSignUp", signUp);
+                model.addAttribute("ticketGroup", signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId)));
+		
+		return "/admin/add-ticketaddon";
+	}
+
+
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn", method = RequestMethod.GET)
+	public String showAddTicketAddOnForm(ModelMap model, HttpServletRequest request,
+			@PathVariable(value = "eventKey") String eventKey) {
+
+		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+		model.addAttribute("event", signUp.getEvent());
+                model.addAttribute("ticketAddOn", new TicketAddOn());
+		return "/admin/add-ticketaddon";
+	}
+        
+        
+	@RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn", method = RequestMethod.POST)
+	public String saveAddTicketAddOnForm(ModelMap model, @Valid TicketAddOn ticketAddOnForm, BindingResult result, HttpServletRequest request,
+			@PathVariable(value = "eventKey") String eventKey) {
+
+		EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+
+		
+		if (request.getParameter("cancel") != null) {
+			return String.format("redirect:/s/admin/%s/registration/", eventKey);
+		}
+
+		if (result.hasErrors()) {
+			return String.format("/admin/add-ticketaddon", eventKey);
+		}
+
+		signUp.getAddOns().add(ticketAddOnForm);
+		ticketAddOnForm.setEventSignup(signUp);
+		ticketAddOnForm.setEvent(signUp.getEvent());
+		eventSignupController.saveAndFlush(signUp);
+
+		return String.format("redirect:/s/admin/%s/registration/", eventKey);
+	}
+        
 	@RequestMapping(value = "/s/admin/{eventKey}/invoicing", method = RequestMethod.GET)
 	public String showInvoicing(ModelMap model, HttpServletRequest request,
 			@PathVariable(value = "eventKey") String eventKey) {
@@ -146,7 +196,6 @@ public class RegistrationController {
 		group.setCloseDate(ticketGroupForm.getCloseDate());
 		group.setOpenDate(ticketGroupForm.getOpenDate());
 		group.setCouponCode(ticketGroupForm.getCouponCodes());
-		group.setTicketAddOns(ticketGroupForm.getTicketAddOns());
 		group.setDescription(ticketGroupForm.getDescription());
 		group.setMinPurchase(ticketGroupForm.getMinPurchase());
 		group.setPrice(ticketGroupForm.getPrice());
@@ -159,6 +208,12 @@ public class RegistrationController {
 
 
 	private BinaryOperator<TicketGroup> ticketGroupReducer(String groupId) {
+		return (left, right) -> {
+			return Long.parseLong(groupId) == right.getId() ? right : left;
+		};
+	}
+        
+        private BinaryOperator<TicketAddOn> ticketAddOnReducer(String groupId) {
 		return (left, right) -> {
 			return Long.parseLong(groupId) == right.getId() ? right : left;
 		};

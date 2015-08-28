@@ -51,8 +51,39 @@
 
         </table>
 
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th ></th><th>Name</th><th/><th>Price</th><th>Max Available</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <c:if test="${empty eventSignup.addOns}">
+                    <tr>
+
+                        <td colspan="6">Nothing to see here</td>
+                    </tr>
+                </c:if>
+                <c:if test="${not empty eventSignup.addOns}">
+                    <c:forEach items="${eventSignup.addOns}" var="ticketAddOn" >
+                        <tr>
+                            <td><a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketAddOn/${ticketAddOn.id}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a></td>
+                            <td colspan="5"><c:out value="${ticketAddOn.label}"/></td>
+
+                            <td><c:out value="${ticketAddOn.price}"/></td>
+                            <td><c:out value="${ticketAddOn.maxAvailableTickets}"/></td>
+                        </tr>
+
+                    </c:forEach>
+                </c:if>
+            </tbody>
+
+
+        </table>
 
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketGroup" role="button">Add Event Ticket Type</a>
+        <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/registration/ticketAddOn" role="button">Add Ticket Add On</a>
         <a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
     </div>
 </div>
