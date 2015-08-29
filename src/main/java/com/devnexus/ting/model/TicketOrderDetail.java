@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -182,4 +183,68 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         this.ticketAddOn = ticketAddOn;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 23 * hash + Objects.hashCode(this.firstName);
+        hash = 23 * hash + Objects.hashCode(this.lastName);
+        hash = 23 * hash + Objects.hashCode(this.emailAddress);
+        hash = 23 * hash + Objects.hashCode(this.city);
+        hash = 23 * hash + Objects.hashCode(this.state);
+        hash = 23 * hash + Objects.hashCode(this.country);
+        hash = 23 * hash + Objects.hashCode(this.jobTitle);
+        hash = 23 * hash + Objects.hashCode(this.company);
+        hash = 23 * hash + Objects.hashCode(this.tShirtSize);
+        hash = 23 * hash + Objects.hashCode(this.vegetarian);
+        hash = 23 * hash + Objects.hashCode(this.ticketAddOn);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final TicketOrderDetail other = (TicketOrderDetail) obj;
+        if (!Objects.equals(this.firstName, other.firstName)) {
+            return false;
+        }
+        if (!Objects.equals(this.lastName, other.lastName)) {
+            return false;
+        }
+        if (!Objects.equals(this.emailAddress, other.emailAddress)) {
+            return false;
+        }
+        if (!Objects.equals(this.city, other.city)) {
+            return false;
+        }
+        if (!Objects.equals(this.state, other.state)) {
+            return false;
+        }
+        if (!Objects.equals(this.country, other.country)) {
+            return false;
+        }
+        if (!Objects.equals(this.jobTitle, other.jobTitle)) {
+            return false;
+        }
+        if (!Objects.equals(this.company, other.company)) {
+            return false;
+        }
+        if (!Objects.equals(this.tShirtSize, other.tShirtSize)) {
+            return false;
+        }
+        if (!Objects.equals(this.vegetarian, other.vegetarian)) {
+            return false;
+        }
+        if (!Objects.equals(this.ticketAddOn, other.ticketAddOn)) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
 }

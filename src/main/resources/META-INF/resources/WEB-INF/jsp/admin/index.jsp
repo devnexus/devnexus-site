@@ -61,7 +61,6 @@
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/sponsors">Manage Sponsors</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/presentations">Manage Presentations</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/manage-schedule">Manage Schedule</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Registration</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/evaluations">Show Evaluations</a></li>
 					</sec:authorize>
 					<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">
@@ -93,14 +92,17 @@
         <div class="col-md-4 col-md-offset-0">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title"><c:out value="${event.title}"> Registration</c:out></h3>
+				<h3 class="panel-title"><c:out value="${event.title}"/>  Registration</h3>
 			</div>
 			<div class="panel-body">
 				<ul>
 					<sec:authorize access="hasRole('ADMIN')">
                                                 <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Tickets For Sale</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Invoicing</a></li>
                                                 <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/dashboard">Dashboard</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Invoicing</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Reporting</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/editRegistration">Edit Registrations</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Create Ticket</a></li>
 					</sec:authorize>
 				</ul>
 			</div>

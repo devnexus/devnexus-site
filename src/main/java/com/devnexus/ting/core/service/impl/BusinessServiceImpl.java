@@ -98,9 +98,8 @@ import com.devnexus.ting.repository.SponsorRepository;
 import com.devnexus.ting.repository.TicketAddonRepository;
 import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -842,6 +841,23 @@ public class BusinessServiceImpl implements BusinessService {
         
         
         return dashboard;
+    }
+
+    @Override
+    public List findRegistrations(String email, String name, EventSignup signUp) {
+        
+        List<List> results = new ArrayList<>();
+        
+        if (name != null && !name.isEmpty()) {
+            String[] names = name.split(" ");
+            results.addAll(registrationDao.findOrdersWithContactName(names, signUp));
+        }
+        if (email != null &&!email.isEmpty() ) {
+            results.addAll(registrationDao.findOrdersWithContactEmail(email, signUp));
+        }
+        
+        return new ArrayList<>(results);
+        
     }
     
 }

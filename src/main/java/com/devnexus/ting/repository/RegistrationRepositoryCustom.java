@@ -1,6 +1,7 @@
 package com.devnexus.ting.repository;
 
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.RegistrationDetails;
 import java.util.List;
 
@@ -20,5 +21,10 @@ public interface RegistrationRepositoryCustom {
 
     public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event);
 
+    
+    public List findOrdersWithContactEmail(String email, EventSignup signUp);
+
+    public List findOrdersWithContactName(String[] names, EventSignup signUp);
+    
     
 }

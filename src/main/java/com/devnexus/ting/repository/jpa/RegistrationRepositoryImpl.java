@@ -16,6 +16,7 @@
 package com.devnexus.ting.repository.jpa;
 
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.EventSignup;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
@@ -26,7 +27,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.repository.RegistrationRepositoryCustom;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import org.springframework.util.StringUtils;
 
 /**
 *
@@ -76,6 +80,26 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
     @Override
     public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event) {
         return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)").setParameter("REQUIRES_INVOICE", RegistrationDetails.PaymentState.REQUIRES_INVOICE).setParameter("eventId", event.getId()).getResultList();
+    }
+
+    @Override
+    public List findOrdersWithContactEmail(String email, EventSignup signUp) {
+        List<Object[]> results = entityManager.createQuery("from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)").setParameter("event_id", signUp.getEvent().getId()).setParameter("email", email).setParameter("ticket_email", email).getResultList();
+        List detailsFromEmail = new ArrayList();
+        results.stream().forEach(objects -> {detailsFromEmail.addAll(Arrays.asList(objects));});
+        return detailsFromEmail;
+    }
+
+    @Override
+    public List findOrdersWithContactName(String[] namesA, EventSignup signUp) {
+        String fullName = StringUtils.arrayToDelimitedString(namesA, " ");
+        List names = Arrays.asList(namesA);
+        List<Object[]> resultList = entityManager.createQuery("from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))").setParameter("event_id", signUp.getEvent().getId()).setParameter("name", "%" + fullName + "%").setParameter("first_names", names).setParameter("last_names", names).getResultList();
+        
+        List detailsFromEmail = new ArrayList();
+        resultList.stream().forEach(objects -> {detailsFromEmail.addAll(Arrays.asList(objects));});
+        
+        return detailsFromEmail;
     }
     
 }

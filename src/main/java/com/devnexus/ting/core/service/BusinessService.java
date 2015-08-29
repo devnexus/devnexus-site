@@ -290,5 +290,7 @@ public interface BusinessService {
     public TicketAddOn findAddOn(Long ticketAddOn);
 
     public Dashboard generateDashBoardForSignUp(EventSignup signUp);
+
+    public List findRegistrations(String email, String name, EventSignup signUp);
     
 }

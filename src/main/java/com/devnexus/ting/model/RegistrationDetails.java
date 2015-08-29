@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import com.devnexus.ting.web.form.RegisterForm;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * @author Summers Pittman
@@ -202,4 +203,64 @@ public class RegistrationDetails extends BaseModelObject {
         });
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.contactName);
+        hash = 67 * hash + Objects.hashCode(this.contactPhoneNumber);
+        hash = 67 * hash + Objects.hashCode(this.finalCost);
+        hash = 67 * hash + Objects.hashCode(this.contactEmailAddress);
+        hash = 67 * hash + Objects.hashCode(this.ticketCount);
+        hash = 67 * hash + Objects.hashCode(this.ticketGroup);
+        hash = 67 * hash + Objects.hashCode(this.registrationFormKey);
+        hash = 67 * hash + Objects.hashCode(this.couponCode);
+        hash = 67 * hash + Objects.hashCode(this.invoice);
+        hash = 67 * hash + Objects.hashCode(this.paymentState);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final RegistrationDetails other = (RegistrationDetails) obj;
+        if (!Objects.equals(this.contactName, other.contactName)) {
+            return false;
+        }
+        if (!Objects.equals(this.contactPhoneNumber, other.contactPhoneNumber)) {
+            return false;
+        }
+        if (!Objects.equals(this.finalCost, other.finalCost)) {
+            return false;
+        }
+        if (!Objects.equals(this.contactEmailAddress, other.contactEmailAddress)) {
+            return false;
+        }
+        if (!Objects.equals(this.ticketCount, other.ticketCount)) {
+            return false;
+        }
+        if (!Objects.equals(this.ticketGroup, other.ticketGroup)) {
+            return false;
+        }
+        if (!Objects.equals(this.registrationFormKey, other.registrationFormKey)) {
+            return false;
+        }
+        if (!Objects.equals(this.couponCode, other.couponCode)) {
+            return false;
+        }
+        if (!Objects.equals(this.invoice, other.invoice)) {
+            return false;
+        }
+        if (this.paymentState != other.paymentState) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
 }
