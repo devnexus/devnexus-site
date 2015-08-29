@@ -47,6 +47,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -234,7 +235,7 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
-    public String validateDetailsForm(Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
+    public String validateDetailsForm(HttpServletRequest request, Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 
         TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
@@ -361,7 +362,8 @@ public class RegisterController {
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
                 registerForm.setFinalCost(getTotal(registerForm, ticketPrice));
                 registerForm = businessService.createPendingRegistrationForm(registerForm);
-                Payment createdPayment = runPayPal(registerForm, ticketPrice.setScale(2).toString());
+                String baseUrl = String.format("%s://%s:%d/",request.getScheme(),  request.getServerName(), request.getServerPort());
+                Payment createdPayment = runPayPal(registerForm, ticketPrice.setScale(2).toString(), baseUrl);
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
                     return link.getRel().equals("approval_url");
                 }).findFirst().get().getHref();
@@ -384,7 +386,7 @@ public class RegisterController {
 
     }
 
-    private Payment runPayPal(RegistrationDetails registerForm, String price) {
+    private Payment runPayPal(RegistrationDetails registerForm, String price, String serverBaseUrl) {
         final PayPalSession payPalSession = payPalSession();
 
         Amount amount = new Amount();
@@ -418,8 +420,8 @@ public class RegisterController {
         payment.setPayer(payer);
         payment.setTransactions(transactions);
         RedirectUrls redirectUrls = new RedirectUrls();
-        redirectUrls.setCancelUrl("http://localhost:8080/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
-        redirectUrls.setReturnUrl("http://localhost:8080/s/executeRegistration/" + registerForm.getRegistrationFormKey());
+        redirectUrls.setCancelUrl(serverBaseUrl + "/s/registerPageTwo/" + registerForm.getRegistrationFormKey());
+        redirectUrls.setReturnUrl(serverBaseUrl + "/s/executeRegistration/" + registerForm.getRegistrationFormKey());
         payment.setRedirectUrls(redirectUrls);
 
         return payPalSession.createPayment(payment);

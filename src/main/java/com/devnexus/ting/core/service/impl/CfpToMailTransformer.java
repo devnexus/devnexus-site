@@ -32,6 +32,7 @@ import org.springframework.util.StringUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.RegistrationDetails;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
@@ -93,6 +94,34 @@ public class CfpToMailTransformer {
 		return messageHelper.getMimeMessage();
 	}
 
+        public MimeMessage prepareMailToRegister(RegistrationDetails registrationDetails) {
+
+		String htmlMessage = SystemInformationUtils.getRegisterHtmlEmailTemplate();
+		String textMessage = SystemInformationUtils.getRegisterTextEmailTemplate();
+
+		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
+		MimeMessageHelper messageHelper;
+		try {
+			messageHelper = new MimeMessageHelper(mimeMessage, true);
+			messageHelper.setText(textMessage, htmlMessage);
+
+			messageHelper.setFrom(fromUser);
+                        messageHelper.addTo(registrationDetails.getContactEmailAddress());
+
+			if (StringUtils.hasText(this.ccUser)) {
+				messageHelper.setCc(this.ccUser);
+			}
+
+			messageHelper.setSubject("DevNexus 2016 - Registration Confirmed");
+
+		} catch (MessagingException e) {
+			throw new IllegalStateException("Error creating mail message for Registration: " + registrationDetails, e);
+		}
+
+		return messageHelper.getMimeMessage();
+	}
+
+        
 	public String applyMustacheTemplate(CfpSubmission cfpSubmission, String template) {
 		Map<String, Object> context = new HashMap<String, Object>();
 

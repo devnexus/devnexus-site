@@ -135,6 +135,7 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private Environment environment;
 
 	@Autowired private MessageChannel mailChannel;
+	@Autowired private MessageChannel registrationMailChannel;
 
 	private final TransactionTemplate transactionTemplate;
 
@@ -762,6 +763,9 @@ public class BusinessServiceImpl implements BusinessService {
         public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
                 registrationDao.saveAndFlush(registerForm);
                 payPalDao.saveAndFlush(payment);
+                if (mailSettings.isEnabled()) {
+			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
+		}
         }
 
     @Override
