@@ -292,5 +292,7 @@ public interface BusinessService {
     public Dashboard generateDashBoardForSignUp(EventSignup signUp);
 
     public List findRegistrations(String email, String name, EventSignup signUp);
+
+    public void updateRegistration(RegistrationDetails originalForm);
     
 }

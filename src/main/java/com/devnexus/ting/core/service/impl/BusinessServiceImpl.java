@@ -754,11 +754,13 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
+        @Transactional
 	public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
 		return registrationDao.createRegistrationPendingPayment(registerForm);
 	}
 
         @Override
+        @Transactional
         public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
                 registrationDao.saveAndFlush(registerForm);
                 payPalDao.saveAndFlush(payment);
@@ -858,6 +860,12 @@ public class BusinessServiceImpl implements BusinessService {
         
         return new ArrayList<>(results);
         
+    }
+
+    @Override
+    @Transactional
+    public void updateRegistration(RegistrationDetails originalForm) {
+        registrationDao.saveAndFlush(originalForm);
     }
     
 }

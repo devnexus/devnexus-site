@@ -25,21 +25,70 @@
     <h1>Registration for <c:out value="${event.title}"/></h1>
 
     <div class="row">
-            <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/executeRegistration/${registrationKey}?payerId=${payerId}&paymentId=${paymentId}">
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" >
+
+            <h4>Purchaser Information - Required - </h4>
+            <br/>
+
+            <spring:bind path="contactName">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactName" class="col-lg-2 control-label">Contact Name*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactName" id="contactName" maxlength="255"/>
+                    <form:errors path="contactName" cssClass="fieldError"/>
+                </div>
+            </div>
+
+            <spring:bind path="contactEmailAddress">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactEmailAddress" class="col-lg-2 control-label">Email Address*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactEmailAddress" id="contactEmailAddress" maxlength="255"/>
+                    <form:errors path="contactEmailAddress" cssClass="fieldError"/>
+                </div>
+            </div>
+
+            <spring:bind path="contactPhoneNumber">
+                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+            </spring:bind>
+            <div class="form-group${errorClass}">
+                <label for="contactPhoneNumber" class="col-lg-2 control-label">Phone Number*</label>
+                <div class="col-lg-10">
+                    <form:input cssClass="form-control" path="contactPhoneNumber" id="contactPhoneNumber" maxlength="255"/>
+                    <form:errors path="contactPhoneNumber" cssClass="fieldError"/>
+                </div>
+            </div>
+
+                <div class="form-group${errorClass}">
+                <label for="skill-level" class="col-lg-2 control-label">Payment State*</label>
+                <div class="col-lg-10">
+                    <form:select cssClass="form-control" path="paymentState" id="payment-state" tabindex="10">
+                        <form:options items="${paymentStates}" />
+                    </form:select>
+                    <form:errors path="paymentState" cssClass="fieldError" />
+                </div>
+            </div>
+                
+            <form:hidden cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10"/>
+            <form:hidden cssClass="form-control" path="ticketCount" id="ticket-count" tabindex="10"/>
+
 
             <%@include file="registration_details.jsp" %>
 
+            <div class="form-group">
+                <div class="col-lg-offset-4 col-lg-10">
+                    <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Update Form</button>
+                </div>
+            </div>
         </form:form>
     </div>
 
-    </div>
-    <jsp:include page="includes/questions.jsp"/>
+</div>
 
-    <content tag='bottom'>
-        <script type="text/javascript">
-            $("#form input").prop("disabled", true);
-            $("#form select").prop("disabled", true);
-        </script>
-    </content>
+<content tag='bottom'>
+</content>
 
-    

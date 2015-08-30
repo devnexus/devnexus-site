@@ -38,6 +38,7 @@ import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.repository.EventSignupRepository;
+import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.web.form.SignupRegisterView;
 import java.util.HashSet;
 import java.util.List;
@@ -54,7 +55,11 @@ import java.util.Set;
 public class RegistrationController {
 
     @Inject
-    private EventSignupRepository eventSignupController;
+    private EventSignupRepository eventSignupRepository;
+    
+    @Inject
+    private RegistrationRepository registrationDao;
+    
     @Inject
     private BusinessService businessService;
 
@@ -62,7 +67,7 @@ public class RegistrationController {
     public String loadRegistration(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignup", signUp);
@@ -74,7 +79,7 @@ public class RegistrationController {
     public String showAddTicketGroupForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignUp", signUp);
@@ -88,7 +93,7 @@ public class RegistrationController {
             @PathVariable(value = "eventKey") String eventKey,
             @PathVariable(value = "addOnId") String groupId) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignUp", signUp);
@@ -103,7 +108,7 @@ public class RegistrationController {
             @PathVariable(value = "eventKey") String eventKey,
             @PathVariable(value = "addOnId") String groupId) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
         TicketAddOn oldAddOn = signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId));
 
         if (request.getParameter("cancel") != null) {
@@ -117,7 +122,7 @@ public class RegistrationController {
         oldAddOn.setLabel(ticketAddOnForm.getLabel());
         oldAddOn.setMaxAvailableTickets(ticketAddOnForm.getMaxAvailableTickets());
         oldAddOn.setPrice(ticketAddOnForm.getPrice());
-        eventSignupController.saveAndFlush(signUp);
+        eventSignupRepository.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
@@ -126,7 +131,7 @@ public class RegistrationController {
     public String showAddTicketAddOnForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignup", signUp);
@@ -138,7 +143,7 @@ public class RegistrationController {
     public String saveAddTicketAddOnForm(ModelMap model, @Valid TicketAddOn ticketAddOnForm, BindingResult result, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         if (request.getParameter("cancel") != null) {
             return String.format("redirect:/s/admin/%s/registration/", eventKey);
@@ -151,7 +156,7 @@ public class RegistrationController {
         signUp.getAddOns().add(ticketAddOnForm);
         ticketAddOnForm.setEventSignup(signUp);
         ticketAddOnForm.setEvent(signUp.getEvent());
-        eventSignupController.saveAndFlush(signUp);
+        eventSignupRepository.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
@@ -160,7 +165,7 @@ public class RegistrationController {
     public String showInvoicing(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
 
@@ -171,7 +176,7 @@ public class RegistrationController {
     public String showDashboard(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         Dashboard dashboard = businessService.generateDashBoardForSignUp(signUp);
 
@@ -185,7 +190,7 @@ public class RegistrationController {
     public String prepareEditTicketGroupForm(ModelMap model, HttpServletRequest request,
             @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignUp", signUp);
@@ -197,7 +202,7 @@ public class RegistrationController {
     @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup", method = RequestMethod.POST)
     public String addTicketGroup(@PathVariable(value = "eventKey") String eventKey, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         if (request.getParameter("cancel") != null) {
             return String.format("redirect:/s/admin/%s/registration/", eventKey);
@@ -215,7 +220,7 @@ public class RegistrationController {
             code.setTicketGroup(ticketGroupForm);
         });
 
-        eventSignupController.saveAndFlush(signUp);
+        eventSignupRepository.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
@@ -223,7 +228,7 @@ public class RegistrationController {
     @RequestMapping(value = "/s/admin/{eventKey}/editRegistration", method = RequestMethod.GET)
     public String editRegistrationsShowSearch(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         model.addAttribute("event", signUp.getEvent());
         model.addAttribute("eventSignup", signUp);
@@ -234,7 +239,7 @@ public class RegistrationController {
     @RequestMapping(value = "/s/admin/{eventKey}/editRegistration/{registrationId}", method = RequestMethod.GET)
     public String editRegistrations(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
         model.addAttribute("event", signUp.getEvent());
         
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationId);
@@ -244,15 +249,35 @@ public class RegistrationController {
         
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("paymentStates", RegistrationDetails.PaymentState.values());
         model.addAttribute("addOns", eventSignup.getAddOns());
 
-        return "view-registration";
+        return "/admin/edit-registration";
+    }
+    
+    @RequestMapping(value = "/s/admin/{eventKey}/editRegistration/{registrationId}", method = RequestMethod.POST)
+    public String saveEditedRegistrations(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId,@Valid RegistrationDetails registerForm, BindingResult result) {
+
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
+        model.addAttribute("event", signUp.getEvent());
+        
+        RegistrationDetails originalForm = businessService.getRegistrationForm(registrationId);
+
+        originalForm.setContactEmailAddress(registerForm.getContactEmailAddress());
+        originalForm.setContactName(registerForm.getContactName());
+        originalForm.setPaymentState(registerForm.getPaymentState());
+        originalForm.setContactPhoneNumber(registerForm.getContactPhoneNumber());
+        originalForm.setOrderDetails(registerForm.getOrderDetails());
+        
+        businessService.updateRegistration(originalForm);
+        
+        return "redirect:/s/admin";
     }
 
     @RequestMapping(value = "/s/admin/{eventKey}/editRegistration", method = RequestMethod.POST)
     public String editRegistrationsShowSearchResults(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @Valid RegistrationSearchForm searchForm, BindingResult result) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         Set<RegistrationDetails> detailsResults = new HashSet<>();
         Set<TicketOrderDetail> orderDetailsResults = new HashSet<>();
@@ -282,7 +307,7 @@ public class RegistrationController {
     @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketGroup/{groupId}", method = RequestMethod.POST)
     public String editTicketGroup(@PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "groupId") String groupId, @Valid TicketGroup ticketGroupForm, BindingResult result, HttpServletRequest request) {
 
-        EventSignup signUp = eventSignupController.getByEventKey(eventKey);
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
 
         if (request.getParameter("cancel") != null) {
             return String.format("redirect:/s/admin/%s/registration/", eventKey);
@@ -302,7 +327,7 @@ public class RegistrationController {
         group.setPrice(ticketGroupForm.getPrice());
         group.setRegisterFormUrl(ticketGroupForm.getRegisterFormUrl());
 
-        eventSignupController.saveAndFlush(signUp);
+        eventSignupRepository.saveAndFlush(signUp);
 
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
