@@ -99,10 +99,8 @@
 					<sec:authorize access="hasRole('ADMIN')">
                                                 <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Tickets For Sale</a></li>
                                                 <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/dashboard">Dashboard</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Invoicing</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Reporting</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/reporting">Reporting</a></li>
                                                 <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/editRegistration">Edit Registrations</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/invoicing">Create Ticket</a></li>
 					</sec:authorize>
 				</ul>
 			</div>

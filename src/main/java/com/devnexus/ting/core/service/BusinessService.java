@@ -294,5 +294,7 @@ public interface BusinessService {
     public List findRegistrations(String email, String name, EventSignup signUp);
 
     public void updateRegistration(RegistrationDetails originalForm);
+
+    public List<RegistrationDetails> findRegistrationsForEvent(Event event);
     
 }

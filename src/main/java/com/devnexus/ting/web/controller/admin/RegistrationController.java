@@ -40,9 +40,16 @@ import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.web.form.SignupRegisterView;
+import java.awt.print.Book;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.servlet.http.HttpServletResponse;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 /**
  *
@@ -56,10 +63,10 @@ public class RegistrationController {
 
     @Inject
     private EventSignupRepository eventSignupRepository;
-    
+
     @Inject
     private RegistrationRepository registrationDao;
-    
+
     @Inject
     private BusinessService businessService;
 
@@ -161,15 +168,37 @@ public class RegistrationController {
         return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
 
-    @RequestMapping(value = "/s/admin/{eventKey}/invoicing", method = RequestMethod.GET)
-    public String showInvoicing(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey) {
+    @RequestMapping(value = "/s/admin/{eventKey}/reporting", method = RequestMethod.GET)
+    public void createReport(@PathVariable(value = "eventKey") String eventKey, HttpServletResponse response) throws IOException {
 
-        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
+        Event event = businessService.getEventByEventKey(eventKey);
+        
+        String csvFileName = eventKey + "registrations.csv";
 
-        model.addAttribute("event", signUp.getEvent());
+        response.setContentType("text/csv");
 
-        return "/admin/invoicing";
+        // creates mock data
+        String headerKey = "Content-Disposition";
+        String headerValue = String.format("attachment; filename=\"%s\"",
+                csvFileName);
+        response.setHeader(headerKey, headerValue);
+
+         List<RegistrationDetails> registrations = businessService.findRegistrationsForEvent(event);
+ 
+        try ( // uses the Super CSV API to generate CSV data from the model data
+                ICsvBeanWriter csvWriter = new TicketCsvWriter(response.getWriter(), businessService)) {
+            String[] header = { "First Name","Last Name", "Email Address", "City", "State","County", "Job Title", "Company", "T Shirt Size", "Vegetarian Meal",
+                "Allow Sponsor To Contact", "Workshop"};
+            
+            csvWriter.writeHeader(header);
+            
+            for (RegistrationDetails registration : registrations) {
+                for (TicketOrderDetail detail : registration.getOrderDetails()) {
+                    csvWriter.write(detail, header);
+                }
+            }
+        }
+
     }
 
     @RequestMapping(value = "/s/admin/{eventKey}/dashboard", method = RequestMethod.GET)
@@ -241,12 +270,12 @@ public class RegistrationController {
 
         EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
         model.addAttribute("event", signUp.getEvent());
-        
+
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationId);
 
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
-        
+
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
         model.addAttribute("paymentStates", RegistrationDetails.PaymentState.values());
@@ -254,13 +283,13 @@ public class RegistrationController {
 
         return "/admin/edit-registration";
     }
-    
+
     @RequestMapping(value = "/s/admin/{eventKey}/editRegistration/{registrationId}", method = RequestMethod.POST)
-    public String saveEditedRegistrations(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId,@Valid RegistrationDetails registerForm, BindingResult result) {
+    public String saveEditedRegistrations(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId, @Valid RegistrationDetails registerForm, BindingResult result) {
 
         EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
         model.addAttribute("event", signUp.getEvent());
-        
+
         RegistrationDetails originalForm = businessService.getRegistrationForm(registrationId);
 
         originalForm.setContactEmailAddress(registerForm.getContactEmailAddress());
@@ -268,9 +297,9 @@ public class RegistrationController {
         originalForm.setPaymentState(registerForm.getPaymentState());
         originalForm.setContactPhoneNumber(registerForm.getContactPhoneNumber());
         originalForm.setOrderDetails(registerForm.getOrderDetails());
-        
+
         businessService.updateRegistration(originalForm);
-        
+
         return "redirect:/s/admin";
     }
 

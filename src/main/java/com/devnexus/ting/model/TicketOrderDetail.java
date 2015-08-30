@@ -73,6 +73,9 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     @Size(max = 255)
     private String vegetarian;
 
+    @Size(max = 255)
+    private String sponsorMayContact = "True";
+
     private Long ticketAddOn;
     
     @ManyToOne
@@ -183,6 +186,16 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         this.ticketAddOn = ticketAddOn;
     }
 
+    public String getSponsorMayContact() {
+        return sponsorMayContact;
+    }
+
+    public void setSponsorMayContact(String sponsorMayContact) {
+        this.sponsorMayContact = sponsorMayContact;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 3;

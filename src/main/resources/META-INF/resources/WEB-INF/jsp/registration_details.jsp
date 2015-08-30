@@ -162,5 +162,16 @@
                             <form:errors path="orderDetails[${orderStatus.index}].vegetarian" cssClass="fieldError"/>
                         </div>
                     </div>
+                        <spring:bind path="orderDetails[${orderStatus.index}].sponsorMayContact">
+                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                    </spring:bind>
+                    <div class="form-group${errorClass}">
+                        <label for="orderDetails[${orderStatus.index}].sponsorMayContact" class="col-lg-2 control-label">Sponsor May Contact</label>
+                        <div class="col-lg-10">
+                            <form:checkbox cssClass="form-control" path="orderDetails[${orderStatus.index}].sponsorMayContact" id="orderDetails[${orderStatus.index}].sponsorMayContact" value="true"/>
+                            <form:errors path="orderDetails[${orderStatus.index}].sponsorMayContact" cssClass="fieldError"/>
+                        </div>
+                    </div>
+                    
                 </div>
             </c:forEach>

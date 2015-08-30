@@ -867,5 +867,12 @@ public class BusinessServiceImpl implements BusinessService {
     public void updateRegistration(RegistrationDetails originalForm) {
         registrationDao.saveAndFlush(originalForm);
     }
+
+    @Override
+    public List<RegistrationDetails> findRegistrationsForEvent(Event eventKey) {
+        return registrationDao.findAllForEvent(eventKey);
+    }
+    
+    
     
 }

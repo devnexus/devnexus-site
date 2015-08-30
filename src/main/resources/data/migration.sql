@@ -158,6 +158,7 @@ ALTER TABLE TICKET_GROUPS
         STATE varchar(255),
         T_SHIRT_SIZE varchar(255),
         VEGETARIAN varchar(255),
+        SPONSOR_MAY_CONTACT varchar(255),
         TICKET_ADD_ON bigint,
         REGISTRATION bigint
     );
