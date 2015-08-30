@@ -74,7 +74,7 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     private String vegetarian;
 
     @Size(max = 255)
-    private String sponsorMayContact = "True";
+    private String sponsorMayContact = "true";
 
     private Long ticketAddOn;
     

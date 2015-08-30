@@ -188,7 +188,7 @@ public class RegistrationController {
         try ( // uses the Super CSV API to generate CSV data from the model data
                 ICsvBeanWriter csvWriter = new TicketCsvWriter(response.getWriter(), businessService)) {
             String[] header = { "First Name","Last Name", "Email Address", "City", "State","County", "Job Title", "Company", "T Shirt Size", "Vegetarian Meal",
-                "Allow Sponsor To Contact", "Workshop"};
+                "Allow Sponsor To Contact", "Workshop", "Payment state"};
             
             csvWriter.writeHeader(header);
             
@@ -296,8 +296,11 @@ public class RegistrationController {
         originalForm.setContactName(registerForm.getContactName());
         originalForm.setPaymentState(registerForm.getPaymentState());
         originalForm.setContactPhoneNumber(registerForm.getContactPhoneNumber());
-        originalForm.setOrderDetails(registerForm.getOrderDetails());
+        originalForm.getOrderDetails().removeAll(originalForm.getOrderDetails());
+        originalForm.getOrderDetails().addAll(registerForm.getOrderDetails());
 
+        originalForm.getOrderDetails().forEach(detail -> {detail.setRegistration(originalForm);});
+        
         businessService.updateRegistration(originalForm);
 
         return "redirect:/s/admin";

@@ -807,7 +807,7 @@ public class BusinessServiceImpl implements BusinessService {
         Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
         Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
         
-        for (RegistrationDetails order : orders) {
+        for (RegistrationDetails order : dashboard.getOrders()) {
             Long ticketGroupId = order.getTicketGroup();
             ticketIdToGroup.computeIfAbsent(ticketGroupId, (id)->{return getTicketGroup(id);});
             TicketGroup group = ticketIdToGroup.get(ticketGroupId);
@@ -823,7 +823,7 @@ public class BusinessServiceImpl implements BusinessService {
         Map<TicketAddOn, Integer> workshopCount = new HashMap<>();
         
         
-        for (RegistrationDetails order : orders) {
+        for (RegistrationDetails order : dashboard.getOrders()) {
             for (TicketOrderDetail detail : order.getOrderDetails()) {
                 Long workshopId = detail.getTicketAddOn();
                 if (workshopId == null) {
@@ -871,6 +871,11 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public List<RegistrationDetails> findRegistrationsForEvent(Event eventKey) {
         return registrationDao.findAllForEvent(eventKey);
+    }
+
+    @Override
+    public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event) {
+        return registrationDao.findPurchasedForEvent(event);
     }
     
     

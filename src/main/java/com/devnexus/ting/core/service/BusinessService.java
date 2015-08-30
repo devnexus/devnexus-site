@@ -296,5 +296,7 @@ public interface BusinessService {
     public void updateRegistration(RegistrationDetails originalForm);
 
     public List<RegistrationDetails> findRegistrationsForEvent(Event event);
+
+    public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event);
     
 }

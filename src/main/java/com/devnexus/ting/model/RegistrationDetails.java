@@ -90,7 +90,7 @@ public class RegistrationDetails extends BaseModelObject {
     @Enumerated(EnumType.STRING)
     private PaymentState paymentState = PaymentState.NONE;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
     public Integer getTicketCount() {
