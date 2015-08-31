@@ -333,11 +333,10 @@
             <artifactId>jasypt-spring31</artifactId>
             <version>1.9.2</version>
         </dependency>
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.4</version>
-        </dependency>
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+		</dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -440,7 +439,6 @@
             <type>jar</type>
         </dependency>
     </dependencies>
-
     <inceptionYear>2010</inceptionYear>
     <developers>
         <developer>

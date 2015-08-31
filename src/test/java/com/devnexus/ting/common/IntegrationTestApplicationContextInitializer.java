@@ -38,7 +38,7 @@ public class IntegrationTestApplicationContextInitializer implements Application
 	public void initialize(ConfigurableApplicationContext applicationContext) {
 
 		LOGGER.info("System property 'ting-spring-profile' not set. Setting active profile to '{}'.", SpringContextMode.DemoContextConfiguration.getCode());
-		applicationContext.getEnvironment().setActiveProfiles(SpringContextMode.DemoContextConfiguration.getCode());
+		applicationContext.getEnvironment().addActiveProfile(SpringContextMode.DemoContextConfiguration.getCode());
 
 		final ConfigurableEnvironment environment = applicationContext.getEnvironment();
 

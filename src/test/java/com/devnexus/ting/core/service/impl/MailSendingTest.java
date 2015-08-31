@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,18 +15,21 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.core.env.Environment;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.config.PersistenceConfig;
-import com.devnexus.ting.config.ServicesConfig;
+import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.PresentationType;
@@ -41,13 +44,20 @@ import com.devnexus.ting.model.SkillLevel;
 @SpringApplicationConfiguration(
 		initializers=IntegrationTestApplicationContextInitializer.class,
 		classes={DevNexusApplication.class})
+@ActiveProfiles(SpringProfile.MAIL_ENABLED)
+@Ignore
 public class MailSendingTest {
 
 	@Autowired
 	private MessageChannel mailChannel;
 
+	@Autowired
+	private Environment environment;
+
 	@Test
 	public void sendCfpEmail() throws InterruptedException {
+
+		Assert.assertTrue(environment.acceptsProfiles(SpringProfile.MAIL_ENABLED));
 
 		final CfpSubmissionSpeaker cfpSubmissionSpeaker = new CfpSubmissionSpeaker();
 		final CfpSubmission cfpSubmission = new CfpSubmission();

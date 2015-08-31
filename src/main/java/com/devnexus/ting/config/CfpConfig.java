@@ -62,8 +62,8 @@ public class CfpConfig {
 		mailSender.setPassword(mailSettings.getUser().getPassword());
 
 		Properties javaMailProperties = new Properties();
-		javaMailProperties.put("mail.debug", mailSettings.isDebugEnabled());
-		javaMailProperties.put("mail.smtp.auth", mailSettings.isAuthenticationEnabled());
+		javaMailProperties.put("mail.debug", String.valueOf(mailSettings.isDebugEnabled()));
+		javaMailProperties.put("mail.smtp.auth", String.valueOf(mailSettings.isAuthenticationEnabled()));
 		mailSender.setJavaMailProperties(javaMailProperties);
 		return mailSender;
 	}
