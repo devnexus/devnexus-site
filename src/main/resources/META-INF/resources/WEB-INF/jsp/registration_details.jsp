@@ -142,8 +142,8 @@
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].vegetarian" class="col-lg-2 control-label">Request Vegetarian Meal</label>
-                        <div class="col-lg-10">
+                        <label for="orderDetails[${orderStatus.index}].vegetarian" class="col-lg-6 control-label">I would like a vegetarian lunch</label>
+                        <div class="col-lg-2">
                             <form:checkbox cssClass="form-control" path="orderDetails[${orderStatus.index}].vegetarian" id="orderDetails[${orderStatus.index}].vegetarian" value="true"/>
                             <form:errors path="orderDetails[${orderStatus.index}].vegetarian" cssClass="fieldError"/>
                         </div>
@@ -151,9 +151,10 @@
                         <spring:bind path="orderDetails[${orderStatus.index}].sponsorMayContact">
                     <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
+                        
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].sponsorMayContact" class="col-lg-2 control-label">Sponsor May Contact</label>
-                        <div class="col-lg-10">
+                        <label for="orderDetails[${orderStatus.index}].sponsorMayContact" class="col-lg-6 control-label">I would like to receive information from DevNexus sponsors</label>
+                        <div class="col-lg-2">
                             <form:checkbox cssClass="form-control" path="orderDetails[${orderStatus.index}].sponsorMayContact" id="orderDetails[${orderStatus.index}].sponsorMayContact" value="true"/>
                             <form:errors path="orderDetails[${orderStatus.index}].sponsorMayContact" cssClass="fieldError"/>
                         </div>
