@@ -69,12 +69,6 @@ public class RegistrationDetails extends BaseModelObject {
     @NotNull
     private String contactEmailAddress;
 
-    @NotNull
-    private Integer ticketCount;
-
-    @NotNull
-    private Long ticketGroup;
-
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
     @XmlTransient
@@ -82,7 +76,6 @@ public class RegistrationDetails extends BaseModelObject {
 
     @Column(unique = true)
     private String registrationFormKey;
-    private String couponCode;
 
     @Transient
     private String invoice;
@@ -93,29 +86,6 @@ public class RegistrationDetails extends BaseModelObject {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
-    public Integer getTicketCount() {
-        return ticketCount;
-    }
-
-    public void setTicketCount(Integer ticketCount) {
-        this.ticketCount = ticketCount;
-    }
-
-    public Long getTicketGroup() {
-        return ticketGroup;
-    }
-
-    public void setTicketGroup(Long ticketGroup) {
-        this.ticketGroup = ticketGroup;
-    }
-
-    public String getCouponCode() {
-        return couponCode;
-    }
-
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
 
     public List<TicketOrderDetail> getOrderDetails() {
         return orderDetails;
@@ -192,15 +162,15 @@ public class RegistrationDetails extends BaseModelObject {
     
     
     public void copyPageOne(RegisterForm registerForm) {
-        setCouponCode(registerForm.getCouponCode());
-        setTicketCount(registerForm.getTicketCount());
-        setTicketGroup(registerForm.getTicketGroup());
         setContactEmailAddress(registerForm.getContactEmailAddress());
         setContactPhoneNumber(registerForm.getContactPhoneNumber());
         setContactName(registerForm.getContactName());
-        IntStream.range(0, registerForm.getTicketCount()).forEach(ignore -> {
-            orderDetails.add(new TicketOrderDetail());
+        registerForm.getTicketGroupRegistrations().forEach(ticketRegistration -> {
+            IntStream.range(0, ticketRegistration.getTicketCount()).forEach(ignore -> {
+                orderDetails.add(new TicketOrderDetail(ticketRegistration));
+            });
         });
+        
     }
 
     @Override
@@ -210,10 +180,7 @@ public class RegistrationDetails extends BaseModelObject {
         hash = 67 * hash + Objects.hashCode(this.contactPhoneNumber);
         hash = 67 * hash + Objects.hashCode(this.finalCost);
         hash = 67 * hash + Objects.hashCode(this.contactEmailAddress);
-        hash = 67 * hash + Objects.hashCode(this.ticketCount);
-        hash = 67 * hash + Objects.hashCode(this.ticketGroup);
         hash = 67 * hash + Objects.hashCode(this.registrationFormKey);
-        hash = 67 * hash + Objects.hashCode(this.couponCode);
         hash = 67 * hash + Objects.hashCode(this.invoice);
         hash = 67 * hash + Objects.hashCode(this.paymentState);
         return hash;
@@ -240,18 +207,10 @@ public class RegistrationDetails extends BaseModelObject {
         if (!Objects.equals(this.contactEmailAddress, other.contactEmailAddress)) {
             return false;
         }
-        if (!Objects.equals(this.ticketCount, other.ticketCount)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketGroup, other.ticketGroup)) {
-            return false;
-        }
         if (!Objects.equals(this.registrationFormKey, other.registrationFormKey)) {
             return false;
         }
-        if (!Objects.equals(this.couponCode, other.couponCode)) {
-            return false;
-        }
+        
         if (!Objects.equals(this.invoice, other.invoice)) {
             return false;
         }

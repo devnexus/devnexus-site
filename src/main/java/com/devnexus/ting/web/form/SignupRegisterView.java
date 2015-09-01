@@ -24,30 +24,31 @@ import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.TicketGroup;
 
 /**
-*
-* @author Summers Pittman
-*/
+ *
+ * @author Summers Pittman
+ */
 public class SignupRegisterView {
 
-	private final EventSignup signUp;
-	private final Date today = new Date();
+    private final EventSignup signUp;
+    private final Date today = new Date();
 
-	public SignupRegisterView(EventSignup signUp) {
-		this.signUp = signUp;
-	}
+    public SignupRegisterView(EventSignup signUp) {
+        this.signUp = signUp;
+    }
 
-	public List<TicketGroup> getGroups() {
-		return new ArrayList<TicketGroup>(
-				signUp.getGroups().stream()
-						.filter(
-								item -> {return item.getCloseDate().after(today) && item.getOpenDate().before(today);})
-						.sorted(
-								(ticket, other) -> {return ticket.getLabel().compareTo(other.getLabel());})
-						.collect(Collectors.toList())
-
-				);
-	}
-
-
+    public List<TicketGroup> getGroups() {
+        return new ArrayList<TicketGroup>(
+                signUp.getGroups().stream()
+                .filter(
+                        item -> {
+                            return item.getCloseDate().after(today) && item.getOpenDate().before(today);
+                        })
+                .sorted(
+                        (ticket, other) -> {
+                            return ticket.getLabel().compareTo(other.getLabel());
+                        })
+                .collect(Collectors.toList())
+        );
+    }
 
 }

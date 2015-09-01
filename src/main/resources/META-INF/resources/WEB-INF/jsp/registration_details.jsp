@@ -1,16 +1,14 @@
 <%@page import="com.devnexus.ting.model.ScheduleItemType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-            <form:hidden path="couponCode"/>
-            <form:hidden path="ticketGroup"/>
-            <form:hidden path="ticketCount"/>
             <form:hidden path="contactName"/>
             <form:hidden path="contactEmailAddress"/>
             <form:hidden path="contactPhoneNumber"/>
             
-            <c:forEach items="${registerFormPageTwo.orderDetails}" varStatus="orderStatus">
-                <c:out value="${status.toString()}"/>
+            <c:forEach items="${registerFormPageTwo.orderDetails}" varStatus="orderStatus" var="order">
+                
                 <div style="border: 1px solid  #008F9C; border-radius: 5px;margin: 26px; padding: 13px;">
+                    <h3>Details for ticket : <c:out value="${order.label}"/></h3>
                     <h4>Registrant Information - Required - </h4>
                     <br/>
 
@@ -60,7 +58,9 @@
                             <form:errors path="orderDetails[${orderStatus.index}].city" cssClass="fieldError"/>
                         </div>
                     </div>
-
+                    <form:hidden path="orderDetails[${orderStatus.index}].couponCode"/>
+                    <form:hidden path="orderDetails[${orderStatus.index}].ticketGroup"/>
+                    <form:hidden path="orderDetails[${orderStatus.index}].label"/>
                     <spring:bind path="orderDetails[${orderStatus.index}].state">
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>

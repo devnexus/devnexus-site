@@ -15,8 +15,8 @@
  */
 package com.devnexus.ting.model;
 
+import com.devnexus.ting.web.form.RegisterForm;
 import java.util.Objects;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * @author Summers Pittman
@@ -76,9 +77,28 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     @Size(max = 255)
     private String sponsorMayContact = "true";
     
+    @NotEmpty
+    @Size(max = 255)
+    private String label;
+    
+    @NotNull
+    private Long ticketGroup;
+
+    private String couponCode;
+    
     @ManyToOne
     @XmlTransient
     private RegistrationDetails registration;
+
+    public TicketOrderDetail(RegisterForm.TicketGroupRegistration ticketRegistration) {
+        this.ticketGroup = ticketRegistration.getTicketGroupId();
+        this.couponCode = ticketRegistration.getCouponCode();
+        this.label = ticketRegistration.getGroup().label;
+    }
+    
+    public TicketOrderDetail() {
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -184,22 +204,21 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         this.sponsorMayContact = sponsorMayContact;
     }
 
-    
-    
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 23 * hash + Objects.hashCode(this.firstName);
-        hash = 23 * hash + Objects.hashCode(this.lastName);
-        hash = 23 * hash + Objects.hashCode(this.emailAddress);
-        hash = 23 * hash + Objects.hashCode(this.city);
-        hash = 23 * hash + Objects.hashCode(this.state);
-        hash = 23 * hash + Objects.hashCode(this.country);
-        hash = 23 * hash + Objects.hashCode(this.jobTitle);
-        hash = 23 * hash + Objects.hashCode(this.company);
-        hash = 23 * hash + Objects.hashCode(this.tShirtSize);
-        hash = 23 * hash + Objects.hashCode(this.vegetarian);
-        
+        int hash = 5;
+        hash = 53 * hash + Objects.hashCode(this.firstName);
+        hash = 53 * hash + Objects.hashCode(this.lastName);
+        hash = 53 * hash + Objects.hashCode(this.emailAddress);
+        hash = 53 * hash + Objects.hashCode(this.city);
+        hash = 53 * hash + Objects.hashCode(this.state);
+        hash = 53 * hash + Objects.hashCode(this.country);
+        hash = 53 * hash + Objects.hashCode(this.jobTitle);
+        hash = 53 * hash + Objects.hashCode(this.tShirtSize);
+        hash = 53 * hash + Objects.hashCode(this.vegetarian);
+        hash = 53 * hash + Objects.hashCode(this.sponsorMayContact);
+        hash = 53 * hash + Objects.hashCode(this.ticketGroup);
+        hash = 53 * hash + Objects.hashCode(this.couponCode);
         return hash;
     }
 
@@ -236,14 +255,44 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         if (!Objects.equals(this.company, other.company)) {
             return false;
         }
-        if (!Objects.equals(this.tShirtSize, other.tShirtSize)) {
-            return false;
-        }
         if (!Objects.equals(this.vegetarian, other.vegetarian)) {
             return false;
         }
-        
+        if (!Objects.equals(this.sponsorMayContact, other.sponsorMayContact)) {
+            return false;
+        }
+        if (!Objects.equals(this.ticketGroup, other.ticketGroup)) {
+            return false;
+        }
+        if (!Objects.equals(this.couponCode, other.couponCode)) {
+            return false;
+        }
         return true;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+
+    public Long getTicketGroup() {
+        return ticketGroup;
+    }
+
+    public void setTicketGroup(Long ticketGroup) {
+        this.ticketGroup = ticketGroup;
+    }
+
+    public String getCouponCode() {
+        return couponCode;
+    }
+
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
     }
 
     

@@ -62,80 +62,83 @@
                     <form:errors path="contactPhoneNumber" cssClass="fieldError"/>
                 </div>
             </div>
+            <div class="col-lg-offset-2 col-lg-10">
+                <table class="table table-striped">
 
-            <spring:bind path="ticketGroup">
-                <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-            </spring:bind>
-            <div class="form-group${errorClass}">
-                <label for="skill-level" class="col-lg-2 control-label">Registration Type*</label>
+                    <c:forEach items="${signupRegisterView.groups}" var="ticketGroup" varStatus="ticketGroupStatus">
+                        <form:hidden path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketGroupId" id="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketGroupId" />
+                                     <tr>
+                                         <td>
+                                             <h4><c:out value="${ticketGroup.label}"/> </h4><br/>
+                                             <p><c:out value="${ticketGroup.description}"/></p>
+                                         </td>
+                                         <td>
+                                             <div class="form-group">
+                                                 <label for="ticketCost" class="col-lg-5 control-label">Cost per Ticket </label>
+                                                 <input type="hidden" id="ticket-cost-${ticketGroup.id}" class="ticket-cost" value="<c:out value="${ticketGroup.price}"/>" disabled />
+                                                 <div class="col-lg-6"><input value="<c:out value="${ticketGroup.formattedPrice}"/>" Class="form-control" disabled /></div>
+                                             </div>
+                                             <spring:bind path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount">
+                                                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                                             </spring:bind>
+                                             <div class="form-group${errorClass}">
+                                                 <label for="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" class="col-lg-5 control-label">Number of Tickets: </label>
+                                                 <div class="col-lg-6">
+                                                     <form:select cssClass="form-control ticket-count" path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" id="ticket-count" tabindex="10">
+                                                         <form:option value="0" label="0" />
+                                                         <form:option value="1" label="1" />
+                                                         <form:option value="2" label="2" />
+                                                         <form:option value="3" label="3" />
+                                                         <form:option value="4" label="4" />
+                                                         <form:option value="5" label="5" />
+                                                         <form:option value="6" label="6" />
+                                                         <form:option value="7" label="7" />
+                                                         <form:option value="8" label="8" />
+                                                         <form:option value="9" label="9" />
+                                                         <form:option value="10" label="10" />
+                                                         <form:option value="11" label="11" />
+                                                         <form:option value="12" label="12" />
+                                                         <form:option value="13" label="13" />
+                                                         <form:option value="14" label="14" />
+                                                         <form:option value="15" label="15" />
+                                                         <form:option value="16" label="16" />
+                                                         <form:option value="-1" label="Need more? Email info@ajug.org" />
+                                                     </form:select>
+                                                     <form:errors path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" cssClass="fieldError" />
+                                                 </div>
+                                             </div>
+
+                                             <spring:bind path="ticketGroupRegistrations[${ticketGroupStatus.index}].couponCode">
+                                                 <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+                                             </spring:bind>
+                                             <div class="form-group${errorClass}" id="coupon-code-group">
+                                                 <label for="ticketGroupRegistrations[${ticketGroupStatus.index}].coupon-code" class="col-lg-5 control-label">Coupon Code: </label>
+                                                 <div class="col-lg-6">
+                                                     <input type="hidden" value="<c:out value="${registerForm.ticketGroupRegistrations[ticketGroupStatus.index].ticketGroupId}" />"/>
+                                                     <form:input cssClass="form-control coupon-code"  path="ticketGroupRegistrations[${ticketGroupStatus.index}].couponCode" id="ticketGroupRegistrations[${ticketGroupStatus.index}].coupon-code" tabindex="10"/>
+                                                     <form:errors path="ticketGroupRegistrations[${ticketGroupStatus.index}].couponCode" cssClass="fieldError" />
+                                                 </div>
+                                             </div>
+
+                                         </td>
+                                     </tr>    
+                    </c:forEach>
+                </table>
+            </div>
+
+
+            <div class="form-group">
+                <label for="total-cost" class="col-lg-2 control-label">Final Price: </label>
                 <div class="col-lg-10">
-                    <form:select cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10">
-                        <form:option value="" label="Please Select a Registration Type" />
-                        <form:options items="${signupRegisterView.groups}" itemLabel="display" itemValue="id"/>
-                    </form:select>
-                    <form:errors path="ticketGroup" cssClass="fieldError" />
+                    <input class="form-control" id="total-cost" name="total-cost"  disabled="disabled" value="$0.00"/>
                 </div>
             </div>
-            <span id="signup_details" >
-                <div class="form-group">
-                    <label for="ticket-cost" class="col-lg-2 control-label">Price per Ticket: </label>
-                    <div class="col-lg-10">
-                        <input class="form-control" id="ticket-cost" name="ticket-cost"  disabled="disabled" value="$0.00"/>
-                    </div>
-                </div>
-                <spring:bind path="ticketCount">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}">
-                    <label for="ticketCount" class="col-lg-2 control-label">Number of Tickets: *</label>
-                    <div class="col-lg-10">
-                        <form:select cssClass="form-control" path="ticketCount" id="ticket-count" tabindex="10">
-                            <form:option value="1" label="1" />
-                            <form:option value="2" label="2" />
-                            <form:option value="3" label="3" />
-                            <form:option value="4" label="4" />
-                            <form:option value="5" label="5" />
-                            <form:option value="6" label="6" />
-                            <form:option value="7" label="7" />
-                            <form:option value="8" label="8" />
-                            <form:option value="9" label="9" />
-                            <form:option value="10" label="10" />
-                            <form:option value="11" label="11" />
-                            <form:option value="12" label="12" />
-                            <form:option value="13" label="13" />
-                            <form:option value="14" label="14" />
-                            <form:option value="15" label="15" />
-                            <form:option value="16" label="16" />
-                            <form:option value="-1" label="Need more? Email info@ajug.org" />
-                        </form:select>
-                        <form:errors path="ticketCount" cssClass="fieldError" />
-                    </div>
-                </div>
 
-                <spring:bind path="couponCode">
-                    <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                </spring:bind>
-                <div class="form-group${errorClass}" id="coupon-code-group">
-                    <label for="coupon-code" class="col-lg-2 control-label">Coupon Code: </label>
-                    <div class="col-lg-10">
-                        <form:input cssClass="form-control" path="couponCode" id="coupon-code" tabindex="10"/>
-                        <form:errors path="couponCode" cssClass="fieldError" />
-                    </div>
+            <div class="form-group">
+                <div class="col-lg-offset-4 col-lg-10">
+                    <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Continue to Complete Registration</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="total-cost" class="col-lg-2 control-label">Final Price: </label>
-                    <div class="col-lg-10">
-                        <input class="form-control" id="total-cost" name="total-cost"  disabled="disabled" value="$0.00"/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-lg-offset-4 col-lg-10">
-                        <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Enter Ticket Information</button>
-                    </div>
-                </div>
-            </span>
+            </div>
 
         </form:form>
 
@@ -157,62 +160,42 @@
                     return false;
                 }
             });
-            $('#ticket-count').change(function () {
-                var signupId = $('#ticket-group option:selected').val();
-                $('#total-cost').val($('#ticket-count option:selected').val() * price);
+            $('.ticket-count').change(function () {
+                var cost = 0;
+                $('.ticket-count').each(function(i, el){cost += (el.selectedIndex * $('.ticket-cost')[i].value);});
+                $('#total-cost').val("$" + cost + ".00");
             });
 
-            $('#ticket-group').change(function () {
-                updateInfo()
-            });
 
-            $('#coupon-code').change(function () {
-                jQuery.ajax("/s/lookupCouponCode/" + $('#ticket-group option:selected').val() + "/" + $('#coupon-code').val(), {
+            $('.coupon-code').change(function (el) {
+                couponCode = $(el.target).val();
+                ticketGroupId = $(el.target).siblings().val();
+                console.log(couponCode + " " + ticketGroupId);
+                jQuery.ajax("/s/lookupCouponCode/" + ticketGroupId + "/" + couponCode, {
                     success: function (data) {
-                        price = data;
-                        $('#total-cost').val($('#ticket-count option:selected').val() * price);
+                        $('#ticket-cost-' + ticketGroupId).val(data);
+                        var cost = 0;
+                        $('.ticket-count').each(function(i, el){cost += (el.selectedIndex * $('.ticket-cost')[i].value);});
+                        $('#total-cost').val("$" + cost + ".00");
                     }
                 });
             });
 
-            function updateInfo() {
-                var signupId = $('#ticket-group option:selected').val();
-                if (signupId) {
-                    var signupData = data['group_' + signupId];
-                    $('#coupon-code-group').show();
-                    $('#coupon-code').val("");
-                    price = signupData.price;
-                    $('#ticket-cost').val(signupData.price);
-                    $('#ticket-count option').each(function (index, option) {
-                        option = $(option);
-                        if (option.val() >= signupData.minPurchase) {
-                            option.show();
-                        } else {
-                            option.hide();
-                        }
-                    });
-                    $('#ticket-count option:selected').prop('selected', false);
-                    $('#ticket-count option').filter(function () {
-                        return $(this).val() == signupData.minPurchase;
-                    }).prop('selected', true);
+            
 
-                    $('#total-cost').val($('#ticket-count option:selected').val() * signupData.price);
-
-                    $('#signup_details').show();
-                } else {
-                    $('#signup_details').hide();
-                }
-            }
-
-            var data = {
-        <c:forEach items="${signupRegisterView.groups}" var="group">
-                group_<c:out value="${group.id}"/>: {
-                    price: <c:out value="${group.price}"/>,
-                            minPurchase: <c:out value="${group.minPurchase}"/>
-                },
-        </c:forEach>
-            };
-            updateInfo();
+            $('.coupon-code').each(function (i, el) {
+                couponCode = $(el).val();
+                ticketGroupId = $(el).siblings().val();
+                console.log(couponCode + " " + ticketGroupId);
+                jQuery.ajax("/s/lookupCouponCode/" + ticketGroupId + "/" + couponCode, {
+                    success: function (data) {
+                        $('#ticket-cost-' + ticketGroupId).val(data);
+                        var cost = 0;
+                        $('.ticket-count').each(function(i, el){cost += (el.selectedIndex * $('.ticket-cost')[i].value);});
+                        $('#total-cost').val("$" + cost + ".00");
+                    }
+                });
+            });
         });
     </script>
 </content>

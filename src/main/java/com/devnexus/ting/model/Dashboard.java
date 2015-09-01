@@ -22,7 +22,7 @@ public class Dashboard {
     
     public Integer getTotalTicketsSold() {
         final AtomicInteger count = new AtomicInteger(0);
-        orders.forEach((order) -> {count.addAndGet(order.getTicketCount());});
+        orders.forEach((order) -> {count.addAndGet(order.getOrderDetails().size());});
         return count.get();
     }
 

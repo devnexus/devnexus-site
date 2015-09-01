@@ -86,9 +86,12 @@ public class RegisterController {
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
-        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        
+        SignupRegisterView signupView = new SignupRegisterView(eventSignup);
+        
+        model.addAttribute("signupRegisterView", signupView);
 
-        model.addAttribute("registerForm", new RegisterForm());
+        model.addAttribute("registerForm", new RegisterForm(signupView.getGroups()));
 
         return "register";
     }
@@ -103,7 +106,6 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
-        
 
         return "view-registration";
     }
@@ -111,22 +113,37 @@ public class RegisterController {
     @RequestMapping(value = "/s/register", method = RequestMethod.POST)
     public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
 
-        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
 
-        if (registerForm.getTicketCount() < ticketGroup.getMinPurchase()) {
-            result.addError(new FieldError("registerForm", "ticketCount", "You need to buy more tickets for this Registration Type."));
-        }
-
-        if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(registerForm.getCouponCode())) {
-            if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
-                result.addError(new FieldError("registerForm", "couponCode", "Invalid Coupon Code."));
+        int totalTickets = 0;
+        
+        for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
+            RegisterForm.TicketGroupRegistration ticketReg = registerForm.getTicketGroupRegistrations().get(i);
+            TicketGroup ticketGroup = businessService.getTicketGroup(ticketReg.getTicketGroupId());
+            ticketReg.setGroup(ticketGroup);
+            if (ticketReg.getTicketCount() > 0 && ticketReg.getTicketCount() < ticketGroup.getMinPurchase()) {
+                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You need to buy more tickets."));
+            }
+            
+            totalTickets += ticketReg.getTicketCount();
+            
+            if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(ticketReg.getCouponCode())) {
+                if (!hasCode(ticketGroup.getCouponCodes(), ticketReg.getCouponCode())) {
+                    result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].couponCode", "Invalid Coupon Code."));
+                }
             }
         }
-
+        
+        
+        if ( totalTickets == 0 ) {
+            for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
+                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You must purchase a ticket to continue."));
+            }
+        }
+        
         if (result.hasErrors()) {
             model.addAttribute("registerForm", registerForm);
             return "register";
@@ -217,7 +234,6 @@ public class RegisterController {
     @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
     public String validateDetailsForm(HttpServletRequest request, Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 
-        TicketGroup ticketGroup = businessService.getTicketGroup(registerForm.getTicketGroup());
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         PaymentMethod paymentMethod = !Strings.isNullOrEmpty(registerForm.getInvoice()) ? PaymentMethod.INVOICE : PaymentMethod.PAYPAL;
@@ -228,29 +244,19 @@ public class RegisterController {
         registerForm.setEvent(currentEvent);
 
         if (result.hasErrors()) {
-
             return "register2";
         }
 
-        if (registerForm.getTicketCount() < ticketGroup.getMinPurchase()) {
-            result.addError(new FieldError("registerFormPageTwo", "ticketCount", "You need to buy more tickets for this Registration Type."));
-        }
+        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
+            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
 
-        if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode()) && ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
-            if (!hasCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode())) {
-                result.addError(new FieldError("registerFormPageTwo", "couponCode", "Invalid Coupon Code."));
+            TicketGroup ticketGroup = businessService.getTicketGroup(orderDetails.getTicketGroup());
+
+            if (!com.google.common.base.Strings.isNullOrEmpty(orderDetails.getCouponCode()) && ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
+                if (!hasCode(ticketGroup.getCouponCodes(), orderDetails.getCouponCode())) {
+                    result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].couponCode", "Invalid Coupon Code."));
+                }
             }
-        }
-
-
-        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
-            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
-
-            
-        }
-
-        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
-            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
 
             if (StringUtils.isEmpty(orderDetails.getFirstName())) {
                 result.rejectValue("orderDetails[" + index + "].firstName", "firstName.isRequired", "First Name is required.");
@@ -295,27 +301,19 @@ public class RegisterController {
             detail.setRegistration(registerForm);
         }
 
-        BigDecimal ticketPrice = ticketGroup.getPrice();
-        if (!com.google.common.base.Strings.isNullOrEmpty(registerForm.getCouponCode())) {
-            CouponCode code = findCode(ticketGroup.getCouponCodes(), registerForm.getCouponCode());
-            if (CouponCode.EMPTY != code) {
-                ticketPrice = code.getPrice();
-            }
-        }
-
         switch (paymentMethod) {
 
             case INVOICE:
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.REQUIRES_INVOICE);
-                registerForm.setFinalCost(getTotal(registerForm, ticketPrice));
+                registerForm.setFinalCost(getTotal(registerForm));
                 businessService.createPendingRegistrationForm(registerForm);
                 return "index";
             case PAYPAL:
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
-                registerForm.setFinalCost(getTotal(registerForm, ticketPrice));
+                registerForm.setFinalCost(getTotal(registerForm));
                 registerForm = businessService.createPendingRegistrationForm(registerForm);
-                String baseUrl = String.format("%s://%s:%d/",request.getScheme(),  request.getServerName(), request.getServerPort());
-                Payment createdPayment = runPayPal(registerForm, ticketPrice.setScale(2).toString(), baseUrl);
+                String baseUrl = String.format("%s://%s:%d/", request.getScheme(), request.getServerName(), request.getServerPort());
+                Payment createdPayment = runPayPal(registerForm, baseUrl);
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
                     return link.getRel().equals("approval_url");
                 }).findFirst().get().getHref();
@@ -338,21 +336,21 @@ public class RegisterController {
 
     }
 
-    private Payment runPayPal(RegistrationDetails registerForm, String price, String serverBaseUrl) {
+    private Payment runPayPal(RegistrationDetails registerForm, String serverBaseUrl) {
         final PayPalSession payPalSession = payPalSession();
 
         Amount amount = new Amount();
         amount.setCurrency("USD");
-        final BigDecimal total = getTotal(registerForm, new BigDecimal(price));
+        final BigDecimal total = getTotal(registerForm);
 
         Transaction transaction = new Transaction();
         transaction.setDescription("DevNexus Registration");
         transaction.setAmount(amount);
 
         ItemList itemlist = new ItemList();
-        List<Item> items = new ArrayList<>(registerForm.getTicketCount());
+        List<Item> items = new ArrayList<>(registerForm.getOrderDetails().size());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
-            items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
+            items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), getOrderPrice(order).setScale(2).toString(), "USD"));
         }
         itemlist.setItems(items);
 
@@ -375,11 +373,12 @@ public class RegisterController {
         return payPalSession.createPayment(payment);
     }
 
-    private BigDecimal getTotal(RegistrationDetails registerForm, BigDecimal ticketPrice) {
+    private BigDecimal getTotal(RegistrationDetails registerForm) {
         BigDecimal total = BigDecimal.ZERO;
 
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
-            total = total.add((ticketPrice));
+
+            total = total.add(getOrderPrice(order));
         }
 
         return total.setScale(2);
@@ -411,6 +410,18 @@ public class RegisterController {
         } else {
             return PayPalSession.DUMMY;
         }
+    }
+
+    private BigDecimal getOrderPrice(TicketOrderDetail order) {
+        TicketGroup ticketGroup = businessService.getTicketGroup(order.getTicketGroup());
+        BigDecimal ticketPrice = ticketGroup.getPrice();
+        if (!com.google.common.base.Strings.isNullOrEmpty(order.getCouponCode())) {
+            CouponCode code = findCode(ticketGroup.getCouponCodes(), order.getCouponCode());
+            if (CouponCode.EMPTY != code) {
+                ticketPrice = code.getPrice();
+            }
+        }
+        return ticketPrice;
     }
 
 }

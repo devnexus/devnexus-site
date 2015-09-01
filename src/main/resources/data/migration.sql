@@ -108,7 +108,6 @@ ALTER TABLE TICKET_GROUPS
         CREATED_DATE timestamp without time zone,
         UPDATED_DATE timestamp without time zone,
         VERSION integer,
-        COUPON_CODE varchar(255),
         PAYMENT_STATE varchar(255),
         INVOICE varchar(255),
         PAYPAL varchar(255),
@@ -116,8 +115,6 @@ ALTER TABLE TICKET_GROUPS
         CONTACT_PHONE_NUMBER varchar(255),
         CONTACT_NAME  varchar(255),
         REGISTRATION_FORM_KEY varchar(255),
-        TICKET_COUNT integer,
-        TICKET_GROUP bigint,
         FINAL_COST numeric (10,2),
         EVENT bigint
     );
@@ -139,11 +136,16 @@ ALTER TABLE TICKET_GROUPS
         T_SHIRT_SIZE varchar(255),
         VEGETARIAN varchar(255),
         SPONSOR_MAY_CONTACT varchar(255),
+        TICKET_GROUP bigint,
+        COUPON_CODE varchar(255),        
+        LABEL varchar(255),        
         REGISTRATION bigint
     );
 
     alter table REGISTRATION 
         add constraint REGISTRATION_UNIQUE_KEY unique (REGISTRATION_FORM_KEY);
+
+
 
     create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
 

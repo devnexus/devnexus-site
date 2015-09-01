@@ -795,11 +795,13 @@ public class BusinessServiceImpl implements BusinessService {
         Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
         
         for (RegistrationDetails order : dashboard.getOrders()) {
-            Long ticketGroupId = order.getTicketGroup();
-            ticketIdToGroup.computeIfAbsent(ticketGroupId, (id)->{return getTicketGroup(id);});
-            TicketGroup group = ticketIdToGroup.get(ticketGroupId);
-            int count = ticketGroupCount.getOrDefault(group, 0);
-            ticketGroupCount.put(group, count + 1);
+            for (TicketOrderDetail ticketOrder : order.getOrderDetails()) {
+                Long ticketGroupId = ticketOrder.getTicketGroup();
+                ticketIdToGroup.computeIfAbsent(ticketGroupId, (id)->{return getTicketGroup(id);});
+                TicketGroup group = ticketIdToGroup.get(ticketGroupId);
+                int count = ticketGroupCount.getOrDefault(group, 0);
+                ticketGroupCount.put(group, count + 1);
+            }
         }
         
         for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {

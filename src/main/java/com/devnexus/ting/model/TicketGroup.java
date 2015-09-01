@@ -192,4 +192,8 @@ public class TicketGroup extends BaseModelObject {
         return label + " " + NumberFormat.getCurrencyInstance().format(price);
     }
 
+    public String getFormattedPrice() {
+        return NumberFormat.getCurrencyInstance().format(price);
+    }
+
 }

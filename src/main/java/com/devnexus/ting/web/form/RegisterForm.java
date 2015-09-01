@@ -21,6 +21,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.devnexus.ting.model.BaseModelObject;
+import com.devnexus.ting.model.TicketGroup;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 import javax.validation.constraints.Size;
 
 /**
@@ -37,9 +42,6 @@ public class RegisterForm extends BaseModelObject {
     private static final long serialVersionUID = 1071233976549394025L;
 
     @NotNull
-    private Integer ticketCount;
-
-    @NotNull
     @Size(min = 1, max = 255)
     private String contactName;
 
@@ -51,35 +53,16 @@ public class RegisterForm extends BaseModelObject {
     @Size(min = 1, max = 255)
     private String contactPhoneNumber;
 
+    private List<TicketGroupRegistration> ticketGroupRegistrations = new ArrayList<>();
+
+    public RegisterForm(List<TicketGroup> groups) {
+        groups.stream().forEach((group) -> {ticketGroupRegistrations.add(new TicketGroupRegistration(group));});
+    }
+
     
-    @NotNull
-    private Long ticketGroup;
-
-    private String couponCode;
-
-    public Integer getTicketCount() {
-        return ticketCount;
+    public RegisterForm() {
     }
 
-    public void setTicketCount(Integer ticketCount) {
-        this.ticketCount = ticketCount;
-    }
-
-    public Long getTicketGroup() {
-        return ticketGroup;
-    }
-
-    public void setTicketGroup(Long ticketGroup) {
-        this.ticketGroup = ticketGroup;
-    }
-
-    public String getCouponCode() {
-        return couponCode;
-    }
-
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
 
     public String getContactName() {
         return contactName;
@@ -105,6 +88,102 @@ public class RegisterForm extends BaseModelObject {
         this.contactPhoneNumber = contactPhoneNumber;
     }
 
+    public List<TicketGroupRegistration> getTicketGroupRegistrations() {
+        return ticketGroupRegistrations;
+    }
+
+    public void setTicketGroupRegistrations(List<TicketGroupRegistration> ticketGroupRegistrations) {
+        this.ticketGroupRegistrations = ticketGroupRegistrations;
+    }
+
     
+    
+    public final static class TicketGroupRegistration {
+        
+        private Integer ticketCount = 0;
+        
+        @NotNull
+        private Long ticketGroupId;
+        
+        private String couponCode = "";
+
+        private TicketGroup group;
+        
+        public TicketGroupRegistration(TicketGroup group) {
+            this.ticketGroupId = group.getId();
+            this.group = group;
+        }
+
+        public TicketGroupRegistration() {
+        }
+
+        
+        public Integer getTicketCount() {
+            return ticketCount;
+        }
+
+        public void setTicketCount(Integer ticketCount) {
+            this.ticketCount = ticketCount;
+        }
+
+        public Long getTicketGroupId() {
+            return ticketGroupId;
+        }
+
+        public void setTicketGroupId(Long ticketGroupId) {
+            this.ticketGroupId = ticketGroupId;
+        }
+
+        public String getCouponCode() {
+            return couponCode;
+        }
+
+        public void setCouponCode(String couponCode) {
+            this.couponCode = couponCode;
+        }
+
+        public TicketGroup getGroup() {
+            return group;
+        }
+
+        public void setGroup(TicketGroup group) {
+            this.group = group;
+        }
+
+        
+        
+        @Override
+        public int hashCode() {
+            int hash = 3;
+            hash = 79 * hash + Objects.hashCode(this.ticketCount);
+            hash = 79 * hash + Objects.hashCode(this.ticketGroupId);
+            hash = 79 * hash + Objects.hashCode(this.couponCode);
+            return hash;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final TicketGroupRegistration other = (TicketGroupRegistration) obj;
+            if (!Objects.equals(this.ticketCount, other.ticketCount)) {
+                return false;
+            }
+            if (!Objects.equals(this.ticketGroupId, other.ticketGroupId)) {
+                return false;
+            }
+            if (!Objects.equals(this.couponCode, other.couponCode)) {
+                return false;
+            }
+            return true;
+        }
+        
+        
+        
+    }
     
 }
