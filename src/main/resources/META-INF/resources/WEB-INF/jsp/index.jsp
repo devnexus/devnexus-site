@@ -135,25 +135,15 @@
 					</div>
 					<div class="col-md-8 col-md-offset-2">
 						<p class="lead">MARK YOUR CALENDARS FEBRUARY 15-17 2016!
-                                                    Our ninth DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.  We are looking forward to hosting our largest event yet and can't wait for you to join.  Check out out <a href="past-conferences">previous years'</a> content, bookmark this site to stay up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
+							Our ninth DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.
+							We are looking forward to hosting our largest event yet and can't wait for you to join.
+							Check out out <a href="past-conferences">previous years'</a> content, bookmark this site to stay
+							up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
+					<a href="${ctx}/s/cfp" class="btn btn-primary btn-block">Call For Papers</a>
 					</div>
 				</div>
-				<div class="row" style="margin-bottom: 20px;">
-					<div class="col-sm-2 col-sm-offset-4 text-center">
-						<a href="https://play.google.com/store/apps/details?id=org.devnexus" target="_blank">
-							<img alt="Get the DevNexus app for your Android phone"
-								src="${ctx}/assets/img/appstore-logos/google-play_en_app_rgb_wo_60.png">
-						</a>
-					</div>
-					<div class="col-sm-2 text-center">
-						<a href="https://itunes.apple.com/de/app/devnexus/id963526236?l=en&mt=8" target="_blank">
-							<img alt="Get the DevNexus app for your iPhone or iPad"
-								style="margin-top: 10px; margin-bottom: 10px;"
-										src="${ctx}/assets/img/appstore-logos/Download_on_the_App_Store_Badge_US-UK_135x40.svg">
-						</a>
-					</div>
-				</div>
-				<div class="row">
+
+				<div class="row" style="margin-top: 1em;">
 					<div id="d3chart" class="col-md-10 col-md-offset-1">
 					</div>
 				</div>

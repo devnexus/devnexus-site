@@ -22,7 +22,9 @@ import javax.servlet.descriptor.JspConfigDescriptor;
 import javax.servlet.descriptor.JspPropertyGroupDescriptor;
 import javax.servlet.descriptor.TaglibDescriptor;
 
+import org.apache.catalina.Container;
 import org.apache.catalina.Context;
+import org.apache.catalina.Wrapper;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.valves.RemoteIpValve;
 import org.apache.tomcat.util.descriptor.web.ErrorPage;
@@ -140,6 +142,10 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 							final JspConfigDescriptor jspConfigDescriptor = new JspConfigDescriptorImpl(jspPropertyGroups, taglibs);
 							context.setJspConfigDescriptor(jspConfigDescriptor);
 
+							Container jsp = context.findChild("jsp");
+							if (jsp instanceof Wrapper) {
+								((Wrapper)jsp).addInitParameter("development", "false");
+							}
 						}
 			});
 			tomcatEmbeddedServletContainerFactory.addAdditionalTomcatConnectors(createConnector());

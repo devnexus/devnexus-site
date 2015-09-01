@@ -371,13 +371,13 @@
 			</div>
 			<div class="modal-body">
 				<h4>When will the CFP close?</h4>
-				<p>The CFP will close on <strong>December 1, 2014</strong></p>
+				<p>The CFP will close on <strong>5th November 2015</strong></p>
 				<h4>When is the Workshop day?</h4>
-				<p>The workshop day is on <strong>March 10</strong>. We will have 5 rooms available,
-				each accomodating 25-35 attendees.</p>
+				<p>The workshop day is on <strong>February 15</strong>. We will have 5 rooms available,
+				each accommodating 25-35 attendees.</p>
 				<h4>How long are the sessions for the main conference?</h4>
 				<p>
-					The main conference days are <strong>March 11 &amp; 12</strong>. Breakout sessions
+					The main conference days are <strong>February 16 &amp; 17</strong>. Breakout sessions
 					(normal sessions) are <strong>75 minutes</strong> each. Keynotes
 					are <strong>60 minutes</strong>.
 				</p>
