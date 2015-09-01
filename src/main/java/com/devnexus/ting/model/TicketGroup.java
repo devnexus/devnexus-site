@@ -16,6 +16,7 @@
 package com.devnexus.ting.model;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -46,146 +47,149 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TicketGroup extends BaseModelObject {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public static TicketGroup fromId(Long valueOf) {
-		TicketGroup group = new TicketGroup();
-		group.setId(valueOf);
-		return group;
-	}
+    public static TicketGroup fromId(Long valueOf) {
+        TicketGroup group = new TicketGroup();
+        group.setId(valueOf);
+        return group;
+    }
 
-	@ManyToOne
-	//@JoinColumn(name="EVENT_ID")
-	@NotNull
-	@XmlTransient
-	private Event event;
+    @ManyToOne
+    //@JoinColumn(name="EVENT_ID")
+    @NotNull
+    @XmlTransient
+    private Event event;
 
-	@NotEmpty
-	@Size(max = 255)
-	protected String label;
+    @NotEmpty
+    @Size(max = 255)
+    protected String label;
 
-	@ManyToOne
-	@XmlTransient
-	protected EventSignup eventSignup;
+    @ManyToOne
+    @XmlTransient
+    protected EventSignup eventSignup;
 
-	@Size(max = 10000)
-	private String description;
+    @Size(max = 10000)
+    private String description;
 
-	@NotNull
-	private BigDecimal price;
+    @NotNull
+    private BigDecimal price;
 
-	@NotNull
-	private Integer minPurchase = 1;
+    @NotNull
+    private Integer minPurchase = 1;
 
-	@NotNull
-	private Integer maxAvailableTickets = 5000;
+    @NotNull
+    private Integer maxAvailableTickets = 5000;
 
+    @Temporal(TemporalType.DATE)
+    private Date openDate;
 
-	@Temporal(TemporalType.DATE)
-	private Date openDate;
+    @Temporal(TemporalType.DATE)
+    private Date closeDate;
 
-	@Temporal(TemporalType.DATE)
-	private Date closeDate;
+    @NotEmpty
+    @Size(max = 255)
+    protected String registerFormUrl;
 
-	@NotEmpty
-	@Size(max = 255)
-	protected String registerFormUrl;
+    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "ticketGroup")
+    protected List<CouponCode> couponCodes = new ArrayList<>();
 
-	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="ticketGroup")
-	protected List<CouponCode> couponCodes = new ArrayList<>();
+    public Event getEvent() {
+        return event;
+    }
 
-	public Event getEvent() {
-		return event;
-	}
+    public void setEvent(Event event) {
+        this.event = event;
+    }
 
-	public void setEvent(Event event) {
-		this.event = event;
-	}
+    public String getLabel() {
+        return label;
+    }
 
-	public String getLabel() {
-		return label;
-	}
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
-	public void setLabel(String label) {
-		this.label = label;
-	}
+    public EventSignup getEventSignup() {
+        return eventSignup;
+    }
 
-	public EventSignup getEventSignup() {
-		return eventSignup;
-	}
+    public void setEventSignup(EventSignup eventSignup) {
+        this.eventSignup = eventSignup;
+    }
 
-	public void setEventSignup(EventSignup eventSignup) {
-		this.eventSignup = eventSignup;
-	}
+    public BigDecimal getPrice() {
+        return price;
+    }
 
-	public BigDecimal getPrice() {
-		return price;
-	}
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
+    public Date getOpenDate() {
+        return openDate;
+    }
 
-	public Date getOpenDate() {
-		return openDate;
-	}
+    public void setOpenDate(Date openDate) {
+        this.openDate = openDate;
+    }
 
-	public void setOpenDate(Date openDate) {
-		this.openDate = openDate;
-	}
+    public Date getCloseDate() {
+        return closeDate;
+    }
 
-	public Date getCloseDate() {
-		return closeDate;
-	}
+    public void setCloseDate(Date closeDate) {
+        this.closeDate = closeDate;
+    }
 
-	public void setCloseDate(Date closeDate) {
-		this.closeDate = closeDate;
-	}
+    public String getRegisterFormUrl() {
+        return registerFormUrl;
+    }
 
-	public String getRegisterFormUrl() {
-		return registerFormUrl;
-	}
+    public void setRegisterFormUrl(String registerFormUrl) {
+        this.registerFormUrl = registerFormUrl;
+    }
 
-	public void setRegisterFormUrl(String registerFormUrl) {
-		this.registerFormUrl = registerFormUrl;
-	}
+    public List<CouponCode> getCouponCodes() {
+        return couponCodes;
+    }
 
-	public List<CouponCode> getCouponCodes() {
-		return couponCodes;
-	}
+    public void setCouponCode(List<CouponCode> couponCodes) {
+        this.couponCodes = new ArrayList<CouponCode>(couponCodes.size());
+        for (CouponCode code : couponCodes) {
+            if (code.getCode() != null && !code.getCode().isEmpty()) {
+                this.couponCodes.add(code);
+                code.setTicketGroup(this);
+            }
+        }
+    }
 
-	public void setCouponCode(List<CouponCode> couponCodes) {
-		this.couponCodes = new ArrayList<CouponCode>(couponCodes.size());
-		for (CouponCode code : couponCodes) {
-			if (code.getCode() != null && !code.getCode().isEmpty()) {
-				this.couponCodes.add(code);
-				code.setTicketGroup(this);
-			}
-		}
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public Integer getMinPurchase() {
+        return minPurchase;
+    }
 
-	public Integer getMinPurchase() {
-		return minPurchase;
-	}
+    public void setMinPurchase(Integer minPurchase) {
+        this.minPurchase = minPurchase;
+    }
 
-	public void setMinPurchase(Integer minPurchase) {
-		this.minPurchase = minPurchase;
-	}
+    public Integer getMaxAvailableTickets() {
+        return maxAvailableTickets;
+    }
 
-	public Integer getMaxAvailableTickets() {
-		return maxAvailableTickets;
-	}
+    public void setMaxAvailableTickets(Integer maxAvailableTickets) {
+        this.maxAvailableTickets = maxAvailableTickets;
+    }
 
-	public void setMaxAvailableTickets(Integer maxAvailableTickets) {
-		this.maxAvailableTickets = maxAvailableTickets;
-	}
+    public String getDisplay() {
+        return label + " " + NumberFormat.getCurrencyInstance().format(price);
+    }
 
 }

@@ -71,7 +71,7 @@
                 <div class="col-lg-10">
                     <form:select cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10">
                         <form:option value="" label="Please Select a Registration Type" />
-                        <form:options items="${signupRegisterView.groups}" itemLabel="label" itemValue="id"/>
+                        <form:options items="${signupRegisterView.groups}" itemLabel="display" itemValue="id"/>
                     </form:select>
                     <form:errors path="ticketGroup" cssClass="fieldError" />
                 </div>
