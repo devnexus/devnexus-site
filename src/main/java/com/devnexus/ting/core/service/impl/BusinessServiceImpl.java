@@ -766,6 +766,13 @@ public class BusinessServiceImpl implements BusinessService {
 		}
         }
 
+        @Override
+        public void resendRegistrationEmail(RegistrationDetails registerForm) {
+                if (mailSettings.isEnabled()) {
+			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
+		}
+        }
+        
     @Override
     public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
         Dashboard dashboard = new Dashboard();

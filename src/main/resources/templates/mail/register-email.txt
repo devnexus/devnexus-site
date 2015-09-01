@@ -13,5 +13,26 @@ The Atlanta Java Users Group will not be liable for any direct or indirect damag
  
 Have a question? Contact the organizer at vince.mayers@gmail.com
 
+Order Summary
+
+Order Id : {{orderId}}
+Order Link : https://www.devnexus.com/s/register/{{orderId}}
+=======================================
+Order Details
+=======================================
+
+{{#orderDetails}}
+
+First Name:       {{{firstName}}}
+Last Name:        {{{lastName}}}
+Email:            {{{emailAddress}}}
+Ticket Type:      {{{label}}}
+
+T-Shirt Size:     {{{tShirtSize}}}
+--------------------------------------
+{{/orderDetails}}
+
+Total : ${{{finalPrice}}}
+
 Cheers
 Vincent 

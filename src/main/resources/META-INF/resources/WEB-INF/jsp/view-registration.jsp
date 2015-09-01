@@ -24,8 +24,8 @@
 
     <h1>Registration for <c:out value="${event.title}"/></h1>
 
-    <div class="row">
-            <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/executeRegistration/${registrationKey}?payerId=${payerId}&paymentId=${paymentId}">
+        <div class="row">
+            <form:form id="form" class="form-horizontal" role="form" method="get" modelAttribute="registrationDetails"  >
 
             <%@include file="registration_details.jsp" %>
 
@@ -41,5 +41,3 @@
             $("#form select").prop("disabled", true);
         </script>
     </content>
-
-    

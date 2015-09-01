@@ -5,7 +5,7 @@
             <form:hidden path="contactEmailAddress"/>
             <form:hidden path="contactPhoneNumber"/>
             
-            <c:forEach items="${registerFormPageTwo.orderDetails}" varStatus="orderStatus" var="order">
+            <c:forEach items="${registrationDetails.orderDetails}" varStatus="orderStatus" var="order">
                 
                 <div style="border: 1px solid  #008F9C; border-radius: 5px;margin: 26px; padding: 13px;">
                     <h3>Details for ticket : <c:out value="${order.label}"/></h3>

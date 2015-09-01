@@ -1,10 +1,10 @@
 <%@page import="com.devnexus.ting.model.ScheduleItemType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
-
             
-            <c:forEach items="${registerFormPageTwo.orderDetails}" varStatus="orderStatus">
-                <c:out value="${status.toString()}"/>
+            <c:forEach items="${registrationDetails.orderDetails}" varStatus="orderStatus" var="order">
+                
                 <div style="border: 1px solid  #008F9C; border-radius: 5px;margin: 26px; padding: 13px;">
+                    <h3>Details for ticket : <c:out value="${order.label}"/></h3>
                     <h4>Registrant Information - Required - </h4>
                     <br/>
 
@@ -54,7 +54,9 @@
                             <form:errors path="orderDetails[${orderStatus.index}].city" cssClass="fieldError"/>
                         </div>
                     </div>
-
+                    <form:hidden path="orderDetails[${orderStatus.index}].couponCode"/>
+                    <form:hidden path="orderDetails[${orderStatus.index}].ticketGroup"/>
+                    <form:hidden path="orderDetails[${orderStatus.index}].label"/>
                     <spring:bind path="orderDetails[${orderStatus.index}].state">
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
@@ -136,23 +138,23 @@
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].vegetarian" class="col-lg-2 control-label">Request Vegetarian Meal</label>
-                        <div class="col-lg-10">
+                        <label for="orderDetails[${orderStatus.index}].vegetarian" class="col-lg-6 control-label">I would like a vegetarian lunch</label>
+                        <div class="col-lg-2">
                             <form:checkbox cssClass="form-control" path="orderDetails[${orderStatus.index}].vegetarian" id="orderDetails[${orderStatus.index}].vegetarian" value="true"/>
                             <form:errors path="orderDetails[${orderStatus.index}].vegetarian" cssClass="fieldError"/>
                         </div>
                     </div>
-                        
-                    <spring:bind path="orderDetails[${orderStatus.index}].sponsorMayContact">
+                        <spring:bind path="orderDetails[${orderStatus.index}].sponsorMayContact">
                     <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>
+                        
                     <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].sponsorMayContact" class="col-lg-2 control-label">Sponsor May Contact</label>
-                        <div class="col-lg-10">
+                        <label for="orderDetails[${orderStatus.index}].sponsorMayContact" class="col-lg-6 control-label">I would like to receive information from DevNexus sponsors</label>
+                        <div class="col-lg-2">
                             <form:checkbox cssClass="form-control" path="orderDetails[${orderStatus.index}].sponsorMayContact" id="orderDetails[${orderStatus.index}].sponsorMayContact" value="true"/>
                             <form:errors path="orderDetails[${orderStatus.index}].sponsorMayContact" cssClass="fieldError"/>
                         </div>
                     </div>
-                        
+                    
                 </div>
             </c:forEach>

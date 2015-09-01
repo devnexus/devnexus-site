@@ -33,6 +33,7 @@ import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.RegistrationDetails;
+import com.devnexus.ting.model.TicketOrderDetail;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
@@ -99,15 +100,26 @@ public class CfpToMailTransformer {
 		String htmlMessage = SystemInformationUtils.getRegisterHtmlEmailTemplate();
 		String textMessage = SystemInformationUtils.getRegisterTextEmailTemplate();
 
+                
+		String renderedHtmlTemplate = applyMustacheTemplate(registrationDetails, htmlMessage);
+		String renderedTextTemplate = applyMustacheTemplate(registrationDetails, textMessage);
+                
 		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
 		MimeMessageHelper messageHelper;
+                Map<String, Object> context = new HashMap<String, Object>();
 		try {
 			messageHelper = new MimeMessageHelper(mimeMessage, true);
-			messageHelper.setText(textMessage, htmlMessage);
+			messageHelper.setText(renderedTextTemplate, renderedHtmlTemplate);
 
 			messageHelper.setFrom(fromUser);
                         messageHelper.addTo(registrationDetails.getContactEmailAddress());
-
+                        
+                        for (TicketOrderDetail order : registrationDetails.getOrderDetails()) {
+                            if (!order.getEmailAddress().equals(registrationDetails.getContactEmailAddress())) {
+                                messageHelper.addTo(order.getEmailAddress());
+                            }
+                        }
+                        
 			if (StringUtils.hasText(this.ccUser)) {
 				messageHelper.setCc(this.ccUser);
 			}
@@ -121,6 +133,25 @@ public class CfpToMailTransformer {
 		return messageHelper.getMimeMessage();
 	}
 
+        public String applyMustacheTemplate(RegistrationDetails registrationDetails, String template) {
+		Map<String, Object> context = new HashMap<String, Object>();
+
+		context.put("orderId", registrationDetails.getRegistrationFormKey());
+		context.put("orderDetails", registrationDetails.getOrderDetails());
+		context.put("finalPrice", registrationDetails.getFinalCost().setScale(2).toString());
+		
+		Writer writer = new StringWriter();
+		MustacheFactory mf = new DefaultMustacheFactory();
+		Mustache mustache = mf.compile(new StringReader(template), "email-notification");
+
+		try {
+			mustache.execute(writer, context).flush();
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+		return writer.toString();
+	}
         
 	public String applyMustacheTemplate(CfpSubmission cfpSubmission, String template) {
 		Map<String, Object> context = new HashMap<String, Object>();

@@ -172,7 +172,29 @@
 
                             </td>
                         </tr>
-
+                        <tr>
+                            <td><h1>Order Summary</h1></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Order Id : </strong><a href="https://www.devnexus.com/s/register/{{orderId}}">{{orderId}}</a><br/></td>
+                        </tr>
+                        
+                        {{#orderDetails}}
+                        <tr>
+                            <td><strong>----------------------------------------<br/></td>
+                        </tr>
+                        <tr>
+                            <td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
+                                <strong>First Name:       </strong>{{{firstName}}}<br/>
+                                <strong>Last Name:        </strong>{{{lastName}}}<br/>
+                                <strong>Email:            </strong>{{{emailAddress}}}<br/>
+                                <strong>Ticket Type:      </strong>{{{label}}}<br/>
+                            </td>
+                        </tr>
+                        {{/orderDetails}}
+                        <tr>
+                            <td><strong>Total : </strong>${{{finalPrice}}}</td>
+                        </tr>
 
 
                 </td>

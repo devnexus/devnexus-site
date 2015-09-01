@@ -105,7 +105,7 @@ public class RegisterController {
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("registrationDetails", registerForm);
 
         return "view-registration";
     }
@@ -152,7 +152,9 @@ public class RegisterController {
         RegistrationDetails registerFormPageTwo = new RegistrationDetails();
         registerFormPageTwo.copyPageOne(registerForm);
 
-        model.addAttribute("registerFormPageTwo", registerFormPageTwo);
+        registerFormPageTwo.setFinalCost(getTotal(registerFormPageTwo));
+        
+        model.addAttribute("registrationDetails", registerFormPageTwo);
 
         return "register2";
 
@@ -181,7 +183,7 @@ public class RegisterController {
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("registrationDetails", registerForm);
 
         return "register2";
 
@@ -196,11 +198,28 @@ public class RegisterController {
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("registrationDetails", registerForm);
         model.addAttribute("registrationKey", registrationKey);
         model.addAttribute("paymentId", paymentId);
         model.addAttribute("payerId", payerId);
         return "confirmRegistration";
+
+    }
+    
+    @RequestMapping(value = "/s/viewRegistration/{registrationKey}", method = RequestMethod.GET)
+    public String viewRegistration(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
+
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+        prepareHeader(currentEvent, model);
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        model.addAttribute("registrationDetails", registerForm);
+        model.addAttribute("registrationKey", registrationKey);
+        model.addAttribute("paymentId", paymentId);
+        model.addAttribute("payerId", payerId);
+        return "viewRegistration";
 
     }
 
@@ -236,11 +255,11 @@ public class RegisterController {
 
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
-        PaymentMethod paymentMethod = !Strings.isNullOrEmpty(registerForm.getInvoice()) ? PaymentMethod.INVOICE : PaymentMethod.PAYPAL;
+        PaymentMethod paymentMethod = PaymentMethod.PAYPAL;
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        model.addAttribute("registerFormPageTwo", registerForm);
-
+        model.addAttribute("registrationDetails", registerForm);
+        
         registerForm.setEvent(currentEvent);
 
         if (result.hasErrors()) {
@@ -254,7 +273,7 @@ public class RegisterController {
 
             if (!com.google.common.base.Strings.isNullOrEmpty(orderDetails.getCouponCode()) && ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0) {
                 if (!hasCode(ticketGroup.getCouponCodes(), orderDetails.getCouponCode())) {
-                    result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].couponCode", "Invalid Coupon Code."));
+                    result.addError(new FieldError("registrationDetails", "orderDetails[" + index + "].couponCode", "Invalid Coupon Code."));
                 }
             }
 

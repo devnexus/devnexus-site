@@ -22,18 +22,6 @@
                     </div>
 
                     <div class="row">
-                        <h2>Sales Of Workshops : </h2>
-
-                        <c:forEach items="${dashboard.salesOfWorkshops}" var="type">
-                            <div class="row">
-                                <div class="col-md-4"><c:out value="${type.key.label}" /></div>
-                                <div class="col-md-4"><c:out value="${type.value}" /></div>
-                            </div>
-                        </c:forEach>
-
-                    </div>
-
-                    <div class="row">
                         <h2>Totals: </h2>
 
                         <div class="row">

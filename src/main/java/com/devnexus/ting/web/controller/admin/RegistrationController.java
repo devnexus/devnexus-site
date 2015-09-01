@@ -199,12 +199,33 @@ public class RegistrationController {
         EventSignup eventSignup = businessService.getEventSignup();
 
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-        model.addAttribute("registerFormPageTwo", registerForm);
+        model.addAttribute("registrationDetails", registerForm);
         model.addAttribute("paymentStates", RegistrationDetails.PaymentState.values());
         
         return "/admin/edit-registration";
     }
 
+    @RequestMapping(value = "/s/admin/{eventKey}/editRegistration/{registrationId}/resendEmail", method = RequestMethod.GET)
+    public String resendRegistrationsEmail(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId) {
+
+        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
+        model.addAttribute("event", signUp.getEvent());
+
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationId);
+
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+        model.addAttribute("registrationDetails", registerForm);
+        model.addAttribute("paymentStates", RegistrationDetails.PaymentState.values());
+        
+        businessService.resendRegistrationEmail(registerForm);
+        
+        return "/admin/edit-registration";
+    }
+
+    
     @RequestMapping(value = "/s/admin/{eventKey}/editRegistration/{registrationId}", method = RequestMethod.POST)
     public String saveEditedRegistrations(ModelMap model, HttpServletRequest request, @PathVariable(value = "eventKey") String eventKey, @PathVariable(value = "registrationId") String registrationId, @Valid RegistrationDetails registerForm, BindingResult result) {
 

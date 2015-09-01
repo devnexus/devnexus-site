@@ -293,5 +293,6 @@ public interface BusinessService {
     public List<RegistrationDetails> findRegistrationsForEvent(Event event);
 
     public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event);
-    
+ 
+    public void resendRegistrationEmail(RegistrationDetails registerForm);
 }

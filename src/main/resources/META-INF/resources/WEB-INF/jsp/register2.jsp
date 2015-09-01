@@ -26,9 +26,18 @@
 
     <div class="row">
 
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" action="/s/registerPageTwo">
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registrationDetails"  enctype="multipart/form-data" action="/s/registerPageTwo">
 
             <%@include file="registration_details.jsp" %>
+
+            <div class="form-group">
+                <label for="total-cost" class="col-lg-2 control-label">Final Price: </label>
+                <div class="col-lg-9">
+                    <input class="form-control" disabled="disabled" value="$<c:out value="${registrationDetails.finalCost}"/>"/>
+                </div>
+            </div>
+
+
 
             <div class="form-group">
                 <div class="col-lg-offset-4 col-lg-10">

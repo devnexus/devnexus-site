@@ -25,7 +25,7 @@
     <h1>Registration for <c:out value="${event.title}"/></h1>
 
     <div class="row">
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerFormPageTwo"  enctype="multipart/form-data" >
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registrationDetails"  enctype="multipart/form-data" >
 
             <h4>Purchaser Information - Required - </h4>
             <br/>
@@ -72,9 +72,6 @@
                     <form:errors path="paymentState" cssClass="fieldError" />
                 </div>
             </div>
-                
-            <form:hidden cssClass="form-control" path="ticketGroup" id="ticket-group" tabindex="10"/>
-            <form:hidden cssClass="form-control" path="ticketCount" id="ticket-count" tabindex="10"/>
 
 
             <%@include file="registration_details.jsp" %>
