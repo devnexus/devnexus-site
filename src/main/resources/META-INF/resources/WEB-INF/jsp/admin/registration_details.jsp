@@ -132,20 +132,6 @@
                         </div>
                     </div>
 
-                    <spring:bind path="orderDetails[${orderStatus.index}].ticketAddOn">
-                        <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
-                    </spring:bind>
-                    <div class="form-group${errorClass}">
-                        <label for="orderDetails[${orderStatus.index}].ticketAddOn" class="col-lg-2 control-label">Workshop</label>
-                        <div class="col-lg-10">
-                            <form:select cssClass="form-control" path="orderDetails[${orderStatus.index}].ticketAddOn" id="orderDetails[${orderStatus.index}].ticketAddOn" >
-                                <form:option value="" label="" />
-                                <form:options items="${addOns}" itemLabel="displayString" itemValue="id"/>
-                            </form:select>
-                            <form:errors path="orderDetails[${orderStatus.index}].tShirtSize" cssClass="fieldError"/>
-                        </div>
-                    </div>
-                        
                     <spring:bind path="orderDetails[${orderStatus.index}].vegetarian">
                         <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                     </spring:bind>

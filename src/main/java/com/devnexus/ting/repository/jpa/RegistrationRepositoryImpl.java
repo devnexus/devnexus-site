@@ -62,10 +62,6 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
         return (RegistrationDetails) entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", registrationKey).getSingleResult();
     }
 
-    @Override
-    public Long countSalesOfAddons(Long addOnId) {
-        return (Long) entityManager.createQuery("select count(*) from TicketOrderDetail where ticketAddOn= :addOnId and (registration.paymentState=:PAID or registration.paymentState=:INVOICED)").setParameter("addOnId", addOnId).setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).getSingleResult();
-    }
 
     @Override
     public List<RegistrationDetails> findPurchasedForEvent(Event event) {

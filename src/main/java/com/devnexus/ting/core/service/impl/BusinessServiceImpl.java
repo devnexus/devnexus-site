@@ -76,7 +76,6 @@ import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorLevel;
 import com.devnexus.ting.model.SponsorList;
-import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.model.Track;
@@ -95,7 +94,6 @@ import com.devnexus.ting.repository.RoomRepository;
 import com.devnexus.ting.repository.ScheduleItemRepository;
 import com.devnexus.ting.repository.SpeakerRepository;
 import com.devnexus.ting.repository.SponsorRepository;
-import com.devnexus.ting.repository.TicketAddonRepository;
 import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
 import java.util.ArrayList;
@@ -129,7 +127,6 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private SpeakerRepository      speakerDao;
 	@Autowired private SponsorRepository      sponsorDao;
 	@Autowired private TrackRepository        trackDao;
-        @Autowired private TicketAddonRepository      ticketAddOnDao;
 	@Autowired private ApplicationCacheRepository applicationCacheDao;
 	@Autowired private Environment environment;
 
@@ -770,16 +767,6 @@ public class BusinessServiceImpl implements BusinessService {
         }
 
     @Override
-    public Long getCountOfAddonsSold(Long addOn) {
-        return registrationDao.countSalesOfAddons(addOn);
-    }
-
-    @Override
-    public TicketAddOn findAddOn(Long ticketAddOn) {
-        return ticketAddOnDao.findOne(ticketAddOn);
-    }
-
-    @Override
     public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
         Dashboard dashboard = new Dashboard();
         
@@ -818,29 +805,6 @@ public class BusinessServiceImpl implements BusinessService {
         for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {
             dashboard.addSale(entry.getKey(), entry.getValue());
         }
-        
-        Map<Long, TicketAddOn> workshopIdToWorkshop = new HashMap<>();
-        Map<TicketAddOn, Integer> workshopCount = new HashMap<>();
-        
-        
-        for (RegistrationDetails order : dashboard.getOrders()) {
-            for (TicketOrderDetail detail : order.getOrderDetails()) {
-                Long workshopId = detail.getTicketAddOn();
-                if (workshopId == null) {
-                    continue;
-                }
-                workshopIdToWorkshop.computeIfAbsent(workshopId, (id)->{return ticketAddOnDao.findOne(id);});
-                TicketAddOn workshop = workshopIdToWorkshop.get(workshopId);
-                int count = workshopCount.getOrDefault(workshop, 0);
-                workshopCount.put(workshop, count + 1);
-            }
-            
-        }
-        
-        for (Map.Entry<TicketAddOn, Integer> entry : workshopCount.entrySet()) {
-            dashboard.addWorkshopSale(entry.getKey(), entry.getValue());
-        }
-        
         
         return dashboard;
     }

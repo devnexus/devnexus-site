@@ -13,11 +13,11 @@ public class Dashboard {
     private final List<RegistrationDetails> inCompletePaypalOrders = new ArrayList<>();
     private final List<RegistrationDetails> ordersRequestingInvoice = new ArrayList<>();
     private final Map<TicketGroup, Integer> salesByType = new HashMap<>();
-    private final Map<TicketAddOn, Integer> salesOfWorkshops;
+    
     
     
     public Dashboard() {
-        this.salesOfWorkshops = new HashMap<>();
+    
     }
     
     public Integer getTotalTicketsSold() {
@@ -39,10 +39,6 @@ public class Dashboard {
         return new HashMap<>(salesByType);
     }
 
-    public Map<TicketAddOn, Integer> getSalesOfWorkshops() {
-        return new HashMap<>(salesOfWorkshops);
-    }
-    
     public void addOrder(RegistrationDetails order) {
         orders.add(order);
     }
@@ -51,10 +47,7 @@ public class Dashboard {
         salesByType.put(type, count);
     }
     
-    public void addWorkshopSale(TicketAddOn workshop, int count) {
-        salesOfWorkshops.put(workshop, count);
-    }
-
+    
     public void addInCompletePaypalOrders(RegistrationDetails order) {
         inCompletePaypalOrders.add(order);
     }

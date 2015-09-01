@@ -75,8 +75,6 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
 
     @Size(max = 255)
     private String sponsorMayContact = "true";
-
-    private Long ticketAddOn;
     
     @ManyToOne
     @XmlTransient
@@ -178,14 +176,6 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         return lastName.compareTo(o.lastName);
     }
 
-    public Long getTicketAddOn() {
-        return ticketAddOn;
-    }
-
-    public void setTicketAddOn(Long ticketAddOn) {
-        this.ticketAddOn = ticketAddOn;
-    }
-
     public String getSponsorMayContact() {
         return sponsorMayContact;
     }
@@ -209,7 +199,7 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         hash = 23 * hash + Objects.hashCode(this.company);
         hash = 23 * hash + Objects.hashCode(this.tShirtSize);
         hash = 23 * hash + Objects.hashCode(this.vegetarian);
-        hash = 23 * hash + Objects.hashCode(this.ticketAddOn);
+        
         return hash;
     }
 
@@ -252,9 +242,7 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
         if (!Objects.equals(this.vegetarian, other.vegetarian)) {
             return false;
         }
-        if (!Objects.equals(this.ticketAddOn, other.ticketAddOn)) {
-            return false;
-        }
+        
         return true;
     }
 

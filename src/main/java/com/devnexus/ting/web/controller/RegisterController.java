@@ -26,7 +26,6 @@ import com.devnexus.ting.model.PaypalLink;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
-import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.web.form.RegisterForm;
@@ -74,16 +73,6 @@ public class RegisterController {
     @Autowired
     private Environment environment;
 
-    private void addOverSoldErrorsToFields(RegistrationDetails registerForm, BindingResult result, TicketAddOn addOn) {
-
-        for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
-            TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
-            if (orderDetails.getTicketAddOn().equals(addOn)) {
-                result.addError(new FieldError("registerFormPageTwo", "orderDetails[" + index + "].ticketAddOn", "Sorry, this workshop is sold out."));
-            }
-        }
-    }
-
     private enum PaymentMethod {
 
         PAYPAL, INVOICE
@@ -114,7 +103,7 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
-        model.addAttribute("addOns", eventSignup.getAddOns());
+        
 
         return "view-registration";
     }
@@ -147,14 +136,6 @@ public class RegisterController {
         registerFormPageTwo.copyPageOne(registerForm);
 
         model.addAttribute("registerFormPageTwo", registerFormPageTwo);
-
-        ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
-        for (TicketAddOn addOn : eventSignup.getAddOns()) {
-            if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
-                availableAddOns.add(addOn);
-            }
-        }
-        model.addAttribute("addOns", availableAddOns);
 
         return "register2";
 
@@ -202,7 +183,6 @@ public class RegisterController {
         model.addAttribute("registrationKey", registrationKey);
         model.addAttribute("paymentId", paymentId);
         model.addAttribute("payerId", payerId);
-        model.addAttribute("addOns", eventSignup.getAddOns());
         return "confirmRegistration";
 
     }
@@ -249,14 +229,6 @@ public class RegisterController {
 
         if (result.hasErrors()) {
 
-            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
-            for (TicketAddOn addOn : eventSignup.getAddOns()) {
-                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
-                    availableAddOns.add(addOn);
-                }
-            }
-            model.addAttribute("addOns", availableAddOns);
-
             return "register2";
         }
 
@@ -270,23 +242,11 @@ public class RegisterController {
             }
         }
 
-        Map<TicketAddOn, Integer> addOnCounts = new HashMap<>(registerForm.getOrderDetails().size());
 
         for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
             TicketOrderDetail orderDetails = registerForm.getOrderDetails().get(index);
 
-            if (orderDetails.getTicketAddOn() != null) {
-                TicketAddOn addon = businessService.findAddOn(orderDetails.getTicketAddOn());
-                Integer count = addOnCounts.getOrDefault(addon, 0);
-                addOnCounts.put(addon, count + 1);
-            }
-        }
-
-        for (TicketAddOn addOn : addOnCounts.keySet()) {
-            Long sold = businessService.getCountOfAddonsSold(addOn.getId());
-            if (sold >= addOn.getMaxAvailableTickets()) {
-                addOverSoldErrorsToFields(registerForm, result, addOn);
-            }
+            
         }
 
         for (int index = 0; index < registerForm.getOrderDetails().size(); index++) {
@@ -327,14 +287,6 @@ public class RegisterController {
         }
 
         if (result.hasErrors()) {
-
-            ArrayList<TicketAddOn> availableAddOns = new ArrayList<>(eventSignup.getAddOns().size());
-            for (TicketAddOn addOn : eventSignup.getAddOns()) {
-                if (addOn.getMaxAvailableTickets() > businessService.getCountOfAddonsSold(addOn.getId())) {
-                    availableAddOns.add(addOn);
-                }
-            }
-            model.addAttribute("addOns", availableAddOns);
 
             return "register2";
         }
@@ -401,10 +353,6 @@ public class RegisterController {
         List<Item> items = new ArrayList<>(registerForm.getTicketCount());
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
             items.add(new Item("1", String.format("Registration for %s %s", order.getFirstName(), order.getLastName()), price, "USD"));
-            if (order.getTicketAddOn() != null) {
-                TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
-                items.add(new Item("1", String.format("%s for %s %s", addOn.getLabel(), order.getFirstName(), order.getLastName()), addOn.getPrice().setScale(2).toString(), "USD"));
-            }
         }
         itemlist.setItems(items);
 
@@ -432,10 +380,6 @@ public class RegisterController {
 
         for (TicketOrderDetail order : registerForm.getOrderDetails()) {
             total = total.add((ticketPrice));
-            if (order.getTicketAddOn() != null) {
-                TicketAddOn addOn = businessService.findAddOn(order.getTicketAddOn());
-                total = total.add(addOn.getPrice());
-            }
         }
 
         return total.setScale(2);

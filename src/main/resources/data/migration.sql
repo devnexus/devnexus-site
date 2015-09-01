@@ -73,19 +73,6 @@ create table TICKET_GROUPS (
 	close_date timestamp without time zone
 );
 
-
-create table TICKET_ADD_ONS (
-	id bigint primary key NOT NULL,
-	created_date timestamp without time zone,
-	updated_date timestamp without time zone,
-	version integer,
-	label varchar(255),
-	price numeric (10,2),
-	max_available_tickets integer,
-        event_signup integer,
-	event integer
-);
-
 create table COUPON_CODES (
 	id bigint primary key NOT NULL,
 	created_date timestamp without time zone,
@@ -113,16 +100,6 @@ alter table COUPON_CODES
 	references ticket_groups;
 
 
-alter table TICKET_ADD_ONS
-	add constraint ADD_ON_EVENT
-	foreign key (event)
-	references events;
-
-alter table TICKET_ADD_ONS
-	add constraint ADD_ON_EVENT_SIGNUP
-	foreign key (event_signup)
-	references EVENT_SIGNUPS;
-
 ALTER TABLE TICKET_GROUPS
 	OWNER TO devnexus;
 
@@ -135,9 +112,9 @@ ALTER TABLE TICKET_GROUPS
         PAYMENT_STATE varchar(255),
         INVOICE varchar(255),
         PAYPAL varchar(255),
-CONTACT_EMAIL_ADDRESS varchar(255),
-CONTACT_PHONE_NUMBER varchar(255),
-CONTACT_NAME  varchar(255),
+        CONTACT_EMAIL_ADDRESS varchar(255),
+        CONTACT_PHONE_NUMBER varchar(255),
+        CONTACT_NAME  varchar(255),
         REGISTRATION_FORM_KEY varchar(255),
         TICKET_COUNT integer,
         TICKET_GROUP bigint,
@@ -162,7 +139,6 @@ CONTACT_NAME  varchar(255),
         T_SHIRT_SIZE varchar(255),
         VEGETARIAN varchar(255),
         SPONSOR_MAY_CONTACT varchar(255),
-        TICKET_ADD_ON bigint,
         REGISTRATION bigint
     );
 
@@ -170,7 +146,6 @@ CONTACT_NAME  varchar(255),
         add constraint REGISTRATION_UNIQUE_KEY unique (REGISTRATION_FORM_KEY);
 
     create index REGISTRATION_FORM_KEY_IDX on REGISTRATION (REGISTRATION_FORM_KEY);
-    create index TICKET_ORDER_DETAILS_KEY_ADD_ON on ticket_order_details (TICKET_ADD_ON);
 
 
 ALTER TABLE REGISTRATION

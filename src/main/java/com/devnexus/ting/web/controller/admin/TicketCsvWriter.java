@@ -50,7 +50,6 @@ class TicketCsvWriter extends AbstractCsvWriter implements ICsvBeanWriter {
                 detail.getVegetarian(),
                 detail.getSponsorMayContact(),
                 detail.getCreatedDate(),
-                detail.getTicketAddOn()==null?"":service.findAddOn(detail.getTicketAddOn()).getLabel(),
                 detail.getRegistration().getPaymentState().name()
         );
     }
@@ -79,7 +78,6 @@ class TicketCsvWriter extends AbstractCsvWriter implements ICsvBeanWriter {
                 detail.getVegetarian(),
                 detail.getSponsorMayContact(),
                 detail.getCreatedDate(),
-                detail.getTicketAddOn()==null?"":service.findAddOn(detail.getTicketAddOn()).getLabel(),
                 detail.getRegistration().getPaymentState().name()
         );
 

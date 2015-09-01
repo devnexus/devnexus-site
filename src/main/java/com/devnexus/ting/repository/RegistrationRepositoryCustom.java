@@ -11,9 +11,6 @@ public interface RegistrationRepositoryCustom {
 
     public RegistrationDetails findByKey(String registrationKey);
 
-    public Long countSalesOfAddons(Long addOn);
-    
-    
     public List<RegistrationDetails> findPurchasedForEvent(Event event);
 
     public List<RegistrationDetails> findAllForEvent(Event event);

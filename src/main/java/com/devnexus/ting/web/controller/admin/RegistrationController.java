@@ -34,22 +34,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.model.EventSignup;
 import com.devnexus.ting.model.RegistrationDetails;
-import com.devnexus.ting.model.TicketAddOn;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.repository.EventSignupRepository;
 import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.web.form.SignupRegisterView;
-import java.awt.print.Book;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.servlet.http.HttpServletResponse;
-import org.supercsv.io.CsvBeanWriter;
 import org.supercsv.io.ICsvBeanWriter;
-import org.supercsv.prefs.CsvPreference;
 
 /**
  *
@@ -93,79 +88,6 @@ public class RegistrationController {
         model.addAttribute("ticketGroup", new TicketGroup());
 
         return "/admin/add-ticketgroup";
-    }
-
-    @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn/{addOnId}", method = RequestMethod.GET)
-    public String showEditTicketAddOnForm(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey,
-            @PathVariable(value = "addOnId") String groupId) {
-
-        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignUp", signUp);
-        model.addAttribute("ticketAddOn", signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId)));
-
-        return "/admin/add-ticketaddon";
-    }
-
-    @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn/{addOnId}", method = RequestMethod.POST)
-    public String saveEditTicketAddOnForm(ModelMap model, @Valid TicketAddOn ticketAddOnForm, BindingResult result,
-            HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey,
-            @PathVariable(value = "addOnId") String groupId) {
-
-        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
-        TicketAddOn oldAddOn = signUp.getAddOns().stream().reduce(new TicketAddOn(), ticketAddOnReducer(groupId));
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-ticketaddon", eventKey);
-        }
-
-        oldAddOn.setLabel(ticketAddOnForm.getLabel());
-        oldAddOn.setMaxAvailableTickets(ticketAddOnForm.getMaxAvailableTickets());
-        oldAddOn.setPrice(ticketAddOnForm.getPrice());
-        eventSignupRepository.saveAndFlush(signUp);
-
-        return String.format("redirect:/s/admin/%s/registration/", eventKey);
-    }
-
-    @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn", method = RequestMethod.GET)
-    public String showAddTicketAddOnForm(ModelMap model, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey) {
-
-        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
-
-        model.addAttribute("event", signUp.getEvent());
-        model.addAttribute("eventSignup", signUp);
-        model.addAttribute("ticketAddOn", new TicketAddOn());
-        return "/admin/add-ticketaddon";
-    }
-
-    @RequestMapping(value = "/s/admin/{eventKey}/registration/ticketAddOn", method = RequestMethod.POST)
-    public String saveAddTicketAddOnForm(ModelMap model, @Valid TicketAddOn ticketAddOnForm, BindingResult result, HttpServletRequest request,
-            @PathVariable(value = "eventKey") String eventKey) {
-
-        EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
-
-        if (request.getParameter("cancel") != null) {
-            return String.format("redirect:/s/admin/%s/registration/", eventKey);
-        }
-
-        if (result.hasErrors()) {
-            return String.format("/admin/add-ticketaddon", eventKey);
-        }
-
-        signUp.getAddOns().add(ticketAddOnForm);
-        ticketAddOnForm.setEventSignup(signUp);
-        ticketAddOnForm.setEvent(signUp.getEvent());
-        eventSignupRepository.saveAndFlush(signUp);
-
-        return String.format("redirect:/s/admin/%s/registration/", eventKey);
     }
 
     @RequestMapping(value = "/s/admin/{eventKey}/reporting", method = RequestMethod.GET)
@@ -279,8 +201,7 @@ public class RegistrationController {
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registerFormPageTwo", registerForm);
         model.addAttribute("paymentStates", RegistrationDetails.PaymentState.values());
-        model.addAttribute("addOns", eventSignup.getAddOns());
-
+        
         return "/admin/edit-registration";
     }
 
@@ -370,9 +291,5 @@ public class RegistrationController {
         };
     }
 
-    private BinaryOperator<TicketAddOn> ticketAddOnReducer(String groupId) {
-        return (left, right) -> {
-            return Long.parseLong(groupId) == right.getId() ? right : left;
-        };
-    }
+    
 }
