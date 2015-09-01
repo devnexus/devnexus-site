@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlTransient;
 import com.devnexus.ting.web.form.RegisterForm;
 import java.math.BigDecimal;
 import java.util.Objects;
+import javax.validation.Valid;
+import org.hibernate.validator.constraints.Email;
 
 /**
  * @author Summers Pittman
@@ -67,6 +69,7 @@ public class RegistrationDetails extends BaseModelObject {
     private BigDecimal finalCost = BigDecimal.ZERO;
     
     @NotNull
+    @Email
     private String contactEmailAddress;
 
     @ManyToOne
@@ -84,6 +87,7 @@ public class RegistrationDetails extends BaseModelObject {
     private PaymentState paymentState = PaymentState.NONE;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER, orphanRemoval = true)
+    @Valid
     private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
 

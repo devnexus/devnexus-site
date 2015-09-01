@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -47,6 +48,7 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     
     @NotNull
     @Size(max = 255)
+    @Email
     private String emailAddress;
 
     @Size(min = 1, max = 255)

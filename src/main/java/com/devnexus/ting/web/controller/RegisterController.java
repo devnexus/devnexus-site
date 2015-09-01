@@ -259,7 +259,7 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registrationDetails", registerForm);
-        
+        registerForm.setFinalCost(getTotal(registerForm));
         registerForm.setEvent(currentEvent);
 
         if (result.hasErrors()) {
@@ -286,7 +286,7 @@ public class RegisterController {
             }
 
             if (StringUtils.isEmpty(orderDetails.getEmailAddress())) {
-                result.rejectValue("orderDetails[" + index + "].emailAddress", "emailAddress.isRequired", "Email Address is required.");
+                result.rejectValue("orderDetails[" + index + "].emailAddress", "emailAddress.isReq uired", "Email Address is required.");
             }
 
             if (StringUtils.isEmpty(orderDetails.getCity())) {

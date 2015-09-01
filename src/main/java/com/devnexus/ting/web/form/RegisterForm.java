@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.Email;
 
 /**
  *
@@ -46,6 +47,7 @@ public class RegisterForm extends BaseModelObject {
     private String contactName;
 
     @NotNull
+    @Email
     @Size(min = 1, max = 255)
     private String contactEmailAddress;
 
