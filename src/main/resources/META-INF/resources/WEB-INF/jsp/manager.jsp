@@ -70,7 +70,7 @@
         <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
         <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
         <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
-        <c:url var="registrationUrl" value="https://devnexus2015.eventbrite.com"/>
+        <c:url var="registrationUrl" value="https://www.devnexus.com/s/register"/>
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
         <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
         <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
@@ -254,7 +254,7 @@
                                 <ul class="footer-social">
                                     <li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
                                     <li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-                                    <li class=""><a href="${ctx}/static/2015/files/promo/devnexus-2015-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
+                                    <li class=""><a href="${ctx}/sponsor.pdf" target="_blank">Sponsorship (PDF)</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
                         </div>
                         <div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
                             <div id="get_touch" class="widget widget_get_touch">
-                                <button disabled="disabled" class="btn btn-primary registerButton">Sold Out</button>
+                                <a class="btn btn-primary registerButton" href="https://www.devnexus.com/s/register">REGISTER</a>
                             </div>
                         </div>
                     </div>

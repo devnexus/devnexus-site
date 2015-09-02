@@ -25,6 +25,7 @@ import org.springframework.stereotype.Repository;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
+import com.devnexus.ting.repository.EventRepository;
 import com.devnexus.ting.repository.EventSignupRepositoryCustom;
 
 /**
@@ -39,7 +40,7 @@ public class EventSignupRepositoryImpl
 	private EntityManager entityManager;
 
 	@Autowired
-	private BusinessService businessService;
+	private EventRepository eventRepository;
 
 	@Override
 	public EventSignup getByEventKey(String eventKey) {
@@ -50,7 +51,7 @@ public class EventSignupRepositoryImpl
 					.setParameter("eventKey", eventKey)
 					.getSingleResult();
 		} catch (NoResultException ignore) {
-			Event event = businessService.getEventByEventKey(eventKey);
+			Event event = eventRepository.getByEventKey(eventKey);
 			EventSignup signup = new EventSignup();
 			signup.setEvent(event);
 			return signup;
