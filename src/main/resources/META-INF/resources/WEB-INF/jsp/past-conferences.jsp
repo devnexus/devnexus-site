@@ -43,7 +43,9 @@
                     <c:if test="${event.eventKey eq 'devnexus2013'}">
                         <p><a href="http://www.infoq.com/devnexus/">DevNexus 2013 Videos on InfoQ</a></p>
                     </c:if>
-
+                    <c:if test="${event.eventKey eq 'devnexus2015'}">
+                        <p><a href="https://www.youtube.com/channel/UCQweMZq2VAZqPisncB3ZgTw">DevNexus 2015 Videos on YouTube</a></p>
+                    </c:if>
                 </div>
             </div>
         </div>
