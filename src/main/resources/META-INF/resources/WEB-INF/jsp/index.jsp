@@ -140,10 +140,16 @@
 							We are looking forward to hosting our largest event yet and can't wait for you to join.
 							Check out out <a href="past-conferences">previous years'</a> content, bookmark this site to stay
 							up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
-						<a href="${ctx}/s/cfp" class="btn btn-primary btn-block">Call For Papers</a>
 					</div>
 				</div>
-
+				<div class="row centered">
+					<div class="col-md-4 col-md-offset-2">
+						<a href="${ctx}/s/cfp" class="btn btn-primary btn-block">Call For Papers</a>
+					</div>
+					<div class="col-md-4">
+						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
+					</div>
+				</div>
 				<div class="row" style="margin-top: 1em;">
 					<div id="d3chart" class="col-md-10 col-md-offset-1">
 					</div>
@@ -424,7 +430,7 @@
 							<ul class="footer-social">
 								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
 								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}/sponsor.pdf" target="_blank">Sponsorship (PDF)</a></li>
+								<li class=""><a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
 							</ul>
 						</div>
 					</div>
