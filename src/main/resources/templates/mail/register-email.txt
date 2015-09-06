@@ -7,7 +7,7 @@ CONGRATULATIONS.... you are on your way to DevNexus 2016, Atlanta's premier prof
  * DevNexus 2016 workshop registration will entitle the named holder entrance to the workshops on 15 February 2016.
  * The content of DevNexus 2016 is subject to change without notification.
  * Places may be resold and are transferrable by contacting the organizer until 1 February 2016.
- * No refunds will be issued after 1 February 2016.
+ * If you require a refund, please send an email to refunds@ajug.org including your Order ID. No refunds will be issued after February 1st 2016.
  
 The Atlanta Java Users Group will not be liable for any direct or indirect damage of any nature arising out of the cancellation of the conference.
  
