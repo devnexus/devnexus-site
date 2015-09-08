@@ -143,10 +143,15 @@
 					</div>
 				</div>
 				<div class="row centered">
-					<div class="col-md-4 col-md-offset-2">
+					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
+						<a href="${registrationUrl}" class="btn btn-primary btn-block">Register Now!</a>
+					</div>
+				</div>
+				<div class="row centered">
+					<div class="col-md-4 col-md-offset-2" style="margin-bottom: 1em;">
 						<a href="${ctx}/s/cfp" class="btn btn-primary btn-block">Call For Papers</a>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" style="margin-bottom: 1em;">
 						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div>

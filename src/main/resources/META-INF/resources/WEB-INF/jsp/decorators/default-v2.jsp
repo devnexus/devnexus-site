@@ -83,6 +83,7 @@
 				</li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
+				<li><a class="" href="${registrationUrl}">Register Now!</a></li>
 				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
