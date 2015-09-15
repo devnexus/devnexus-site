@@ -371,7 +371,11 @@
 			</div>
 			<div class="modal-body">
 				<h4>When will the CFP close?</h4>
-				<p>The CFP will close on <strong>5th November 2015</strong></p>
+				<p>The CFP will close on <strong>15th November 2015</strong>.</p>
+				<h4>When will I get notified whether I got accepted or not?</h4>
+				<p>We will notify you by <strong>December 1, 2015</strong>.</p>
+				<h4>When will the schedule be ready?</h4>
+				<p>A draft schedule will be ready on <strong>December 1, 2015</strong>.</p>
 				<h4>When is the Workshop day?</h4>
 				<p>The workshop day is on <strong>February 15</strong>. We will have 5 rooms available,
 				each accommodating 25-35 attendees.</p>

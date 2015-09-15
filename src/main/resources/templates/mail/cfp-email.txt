@@ -2,7 +2,8 @@ Dear {{{salutation}}},
 
 THANK YOU for your submission to DevNexus 2016!
 
-We received your information and will review your submission as soon as possible. Please expect a confirmation over the coming weeks. If you have any questions, please don't hesitate to contact us at info@ajug.org. CFP Confirmations will be delivered by November 15, 2015. 
+We received your information and will review your submission as soon as possible. CFP confirmations/rejections will be delivered by December 1, 2015. A draft schedule will be ready on December 1, 2015.
+If you have any questions, please don't hesitate to contact us at info@ajug.org.
 
 Summary of your submitted information
 =======================================

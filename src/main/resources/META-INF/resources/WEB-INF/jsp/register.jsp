@@ -12,7 +12,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="top-intro travel">
                     <h4 class="section-white-title decorated"><span>Register for ${event.title}</span></h4>
-                    <h5 class="intro-white-lead">${scheduleItemList.numberOfSpeakersAssigned} Speakers, ${scheduleItemList.numberOfSessions} Presentations, ${scheduleItemList.days.size()} Days.</h5>
+                    <h5 class="intro-white-lead">1600+ attendees, 90+ Speakers, 12+ tracks, 2 Conference Days + 1 Workshop Day.</h5>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                                              </div>
 
                                          </td>
-                                     </tr>    
+                                     </tr>
                     </c:forEach>
                 </table>
             </div>
@@ -181,7 +181,7 @@
                 });
             });
 
-            
+
 
             $('.coupon-code').each(function (i, el) {
                 couponCode = $(el).val();
