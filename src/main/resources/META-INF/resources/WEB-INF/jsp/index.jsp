@@ -322,14 +322,14 @@
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
 					<p>
-					The Georgia World Conress Center website includes <a href="http://www.gwcc.com/directions/Default.aspx" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
+					The Georgia World Congress Center website includes <a href="http://www.gwcc.com/directions/Default.aspx" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
 					<p>
 					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta's public transportation  system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.</p>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
 				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<h4 class="travel-address">Georgia World Conress Center is accessible from several nearby hotels</h4>
+					<h4 class="travel-address">Georgia World Congress Center is accessible from several nearby hotels</h4>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
