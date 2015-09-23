@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Validator;
 
 import org.slf4j.Logger;
@@ -64,7 +65,7 @@ public class AdminController {
 	}
 
 	@RequestMapping({"/s/admin/index"})
-	public String execute(RedirectAttributes redirectAttributes) {
+	public String execute(RedirectAttributes redirectAttributes, HttpServletRequest r) {
 		final Event currentEvent = businessService.getCurrentEvent();
 		redirectAttributes.addAttribute("eventKey", currentEvent.getEventKey());
 		return "redirect:/s/admin/{eventKey}/index";

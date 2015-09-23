@@ -2,13 +2,17 @@ server:
   port: 8090
   servlet-path: /
   session-timeout: 20
-  tomcat:
-    compression: on
-    compressable-mime-types: application/json,application/xml,text/html,text/xml,text/plain
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+  ssl:
+    enabled: false
 multipart:
   enabled: true
   max-file-size: 5Mb
   max-request-size: 10Mb
+security:
+  enable-csrf: false
 devnexus:
   twitter:
     enabled: false
@@ -19,6 +23,8 @@ devnexus:
       accessTokenSecret:
   mail:
     enabled: false
+    sendgrid:
+      enabled: false
     authenticationEnabled: false
     debugEnabled: false
     user:
@@ -38,24 +44,22 @@ spring:
     url: jdbc:h2:mem:devnexus_demo
     username: sa
     password: sa
-    driverClassName: org.h2.Driver
-  view:
-    prefix: /WEB-INF/jsp/
-    suffix: .jsp
-database:
-  hibernate:
-    dialect: com.devnexus.ting.core.hibernate.ImprovedH2Dialect
-    show_sql: false
-    generate_ddl: validate
+    driver-class-name: org.h2.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  jpa:
+    properties:
+      dialect: com.devnexus.ting.core.hibernate.ImprovedH2Dialect
+      show_sql: false
+      generate_ddl: validate
 
 TING_CLIENT_ID: fillme
 TING_CLIENT_SECRET: fillme
 TING_PUSH_URL: fillme
 TING_PUSH_APP_ID: fillme
 TING_PUSH_MASTER_SECRET: fillme
-
-https:
-    enabled: false
 
 #paypal
 PAYPAL_ACCOUNT: payments-facilitator@ajug.org

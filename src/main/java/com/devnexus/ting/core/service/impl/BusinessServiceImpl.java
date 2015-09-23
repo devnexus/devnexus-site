@@ -19,9 +19,11 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -40,7 +42,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.core.env.Environment;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.stereotype.Service;
@@ -58,6 +59,7 @@ import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
@@ -82,6 +84,7 @@ import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.repository.ApplicationCacheRepository;
 import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.CfpSubmissionSpeakerRepository;
 import com.devnexus.ting.repository.EvaluationRepository;
 import com.devnexus.ting.repository.EventRepository;
 import com.devnexus.ting.repository.EventSignupRepository;
@@ -96,8 +99,6 @@ import com.devnexus.ting.repository.SpeakerRepository;
 import com.devnexus.ting.repository.SponsorRepository;
 import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  *
@@ -113,10 +114,11 @@ public class BusinessServiceImpl implements BusinessService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
 
 	@Autowired private CfpSubmissionRepository cfpSubmissionRepository;
+	@Autowired private CfpSubmissionSpeakerRepository cfpSubmissionSpeakerRepository;
 	@Autowired private EvaluationRepository   evaluationDao;
 	@Autowired private EventRepository        eventDao;
 	@Autowired private RegistrationRepository registrationDao;
-        @Autowired private PayPalRepository       payPalDao;
+	@Autowired private PayPalRepository       payPalDao;
 	@Autowired private EventSignupRepository  eventSignupDao;
 	@Autowired private TicketGroupRepository  ticketGroupDao;
 	@Autowired private OrganizerRepository    organizerDao;
@@ -128,10 +130,12 @@ public class BusinessServiceImpl implements BusinessService {
 	@Autowired private SponsorRepository      sponsorDao;
 	@Autowired private TrackRepository        trackDao;
 	@Autowired private ApplicationCacheRepository applicationCacheDao;
-	@Autowired private Environment environment;
 
-	@Autowired private MessageChannel mailChannel;
-	@Autowired private MessageChannel registrationMailChannel;
+	@Autowired
+	private MessageChannel mailChannel;
+
+	@Autowired
+	private MessageChannel registrationMailChannel;
 
 	private final TransactionTemplate transactionTemplate;
 
@@ -772,35 +776,35 @@ public class BusinessServiceImpl implements BusinessService {
 			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
 		}
         }
-        
+
     @Override
     public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
         Dashboard dashboard = new Dashboard();
-        
+
         List<RegistrationDetails> orders = registrationDao.findPurchasedForEvent(signUp.getEvent());
         orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
-        
+
         orders.stream().forEach((order) -> {
             dashboard.addOrder(order);
         });
-        
+
         orders = registrationDao.findIncompletePaypalOrdersForEvent(signUp.getEvent());
         orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
-        
+
         orders.stream().forEach((order) -> {
             dashboard.addInCompletePaypalOrders(order);
         });
-        
+
         orders = registrationDao.findOrdersRequestingInvoiceForEvent(signUp.getEvent());
         orders.sort((order1, order2) -> {return order1.getCreatedDate().compareTo(order2.getCreatedDate());});
-        
+
         orders.stream().forEach((order) -> {
             dashboard.addOrdersRequestingInvoice(order);
         });
-        
+
         Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
         Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
-        
+
         for (RegistrationDetails order : dashboard.getOrders()) {
             for (TicketOrderDetail ticketOrder : order.getOrderDetails()) {
                 Long ticketGroupId = ticketOrder.getTicketGroup();
@@ -810,19 +814,19 @@ public class BusinessServiceImpl implements BusinessService {
                 ticketGroupCount.put(group, count + 1);
             }
         }
-        
+
         for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {
             dashboard.addSale(entry.getKey(), entry.getValue());
         }
-        
+
         return dashboard;
     }
 
     @Override
     public List findRegistrations(String email, String name, EventSignup signUp) {
-        
+
         List<List> results = new ArrayList<>();
-        
+
         if (name != null && !name.isEmpty()) {
             String[] names = name.split(" ");
             results.addAll(registrationDao.findOrdersWithContactName(names, signUp));
@@ -830,9 +834,9 @@ public class BusinessServiceImpl implements BusinessService {
         if (email != null &&!email.isEmpty() ) {
             results.addAll(registrationDao.findOrdersWithContactEmail(email, signUp));
         }
-        
+
         return new ArrayList<>(results);
-        
+
     }
 
     @Override
@@ -850,7 +854,17 @@ public class BusinessServiceImpl implements BusinessService {
     public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event) {
         return registrationDao.findPurchasedForEvent(event);
     }
-    
-    
-    
+
+	@Override
+	public CfpSubmissionSpeaker getCfpSubmissionSpeaker(Long speakerId) {
+		return cfpSubmissionSpeakerRepository.findOne(speakerId);
+	}
+
+	@Override
+	@Transactional
+	public CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId) {
+		CfpSubmissionSpeaker cfpSubmissionSpeaker = cfpSubmissionSpeakerRepository.getCfpSubmissionSpeakerWithPicture(speakerId);
+		return cfpSubmissionSpeaker;
+	}
+
 }

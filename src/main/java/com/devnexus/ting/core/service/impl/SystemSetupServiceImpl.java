@@ -24,7 +24,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.stereotype.Service;
@@ -93,11 +93,8 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	@Autowired
 	private ScheduleItemRepository scheduleItemDao;
 
-	@Value("${spring.datasource.driverClassName}")
-	private String jdbcDriverClassName;
-
-	@Value("${spring.datasource.url}")
-	private String jdbcDatabaseUrl;
+	@Autowired
+	private DataSourceProperties dataSourceProperties;
 
 	@Override
 	public void restore(final InputStream inputStream) {
@@ -132,7 +129,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	}
 
 	private void createDatabase() {
-		LOGGER.warn("Create Database with Settings jdbcDriverClassName: '{}'; jdbcDatabaseUrl: '{}'", jdbcDriverClassName, jdbcDatabaseUrl);
+		LOGGER.warn("Create Database with Settings jdbcDriverClassName: '{}'; jdbcDatabaseUrl: '{}'", dataSourceProperties.getDriverClassName(), dataSourceProperties.getUrl());
 		systemDao.createDatabase(false, null);
 	}
 

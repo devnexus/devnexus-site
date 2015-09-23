@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import java.util.Set;
 
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
@@ -273,26 +274,30 @@ public interface BusinessService {
 	List<Organizer> getAllOrganizersWithPicture();
 
 	SponsorList getSponsorListForEvent(Long id, boolean large);
-        
-        EventSignup getEventSignup();
 
-        TicketGroup getTicketGroup(Long id);
+	EventSignup getEventSignup();
 
-    public RegistrationDetails getRegistrationForm(String registrationKey);
+	TicketGroup getTicketGroup(Long id);
 
-    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm);
+	RegistrationDetails getRegistrationForm(String registrationKey);
 
-    public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment);
+	RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm);
 
-    public Dashboard generateDashBoardForSignUp(EventSignup signUp);
+	void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment);
 
-    public List findRegistrations(String email, String name, EventSignup signUp);
+	Dashboard generateDashBoardForSignUp(EventSignup signUp);
 
-    public void updateRegistration(RegistrationDetails originalForm);
+	List findRegistrations(String email, String name, EventSignup signUp);
 
-    public List<RegistrationDetails> findRegistrationsForEvent(Event event);
+	void updateRegistration(RegistrationDetails originalForm);
 
-    public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event);
- 
-    public void resendRegistrationEmail(RegistrationDetails registerForm);
+	List<RegistrationDetails> findRegistrationsForEvent(Event event);
+
+	List<RegistrationDetails> findPaidRegistrationsForEvent(Event event);
+
+	void resendRegistrationEmail(RegistrationDetails registerForm);
+
+	CfpSubmissionSpeaker getCfpSubmissionSpeaker(Long speakerId);
+
+	CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId);
 }

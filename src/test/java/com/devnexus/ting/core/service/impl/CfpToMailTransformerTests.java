@@ -32,7 +32,7 @@ import org.springframework.test.context.transaction.TransactionalTestExecutionLi
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
-import com.devnexus.ting.config.CfpConfig;
+import com.devnexus.ting.config.MailNotificationConfig;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.PresentationType;
@@ -48,18 +48,18 @@ import com.devnexus.ting.model.SkillLevel;
 @ContextConfiguration(initializers = IntegrationTestApplicationContextInitializer.class)
 @TestExecutionListeners({DependencyInjectionTestExecutionListener.class, TransactionalTestExecutionListener.class})
 @ActiveProfiles({SpringProfile.MAIL_ENABLED})
-@Import(CfpConfig.class)
+@Import(MailNotificationConfig.class)
 @Ignore
 public class CfpToMailTransformerTests {
 
 	@Autowired
-	private CfpToMailTransformer cfpToMailTransformer;
+	private PrepareMailToSpeakerTransformer prepareMailToSpeaker;
 
 	@Test
 	public void transformText() throws InterruptedException {
 		CfpSubmission cfpSubmission = getCfpSubmission();
 		String template = SystemInformationUtils.getCfpTextEmailTemplate();
-		String renderedTemplate = cfpToMailTransformer.applyMustacheTemplate(cfpSubmission, template);
+		String renderedTemplate = prepareMailToSpeaker.applyMustacheTemplate(cfpSubmission, template);
 		System.out.println(renderedTemplate);
 	}
 
@@ -67,7 +67,7 @@ public class CfpToMailTransformerTests {
 	public void transformHtml() throws InterruptedException {
 		CfpSubmission cfpSubmission = getCfpSubmission();
 		String template = SystemInformationUtils.getCfpHtmlEmailTemplate();
-		String renderedTemplate = cfpToMailTransformer.applyMustacheTemplate(cfpSubmission, template);
+		String renderedTemplate = prepareMailToSpeaker.applyMustacheTemplate(cfpSubmission, template);
 		System.out.println(renderedTemplate);
 	}
 

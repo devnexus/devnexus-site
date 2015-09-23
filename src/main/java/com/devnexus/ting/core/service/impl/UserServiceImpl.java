@@ -136,11 +136,13 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
     }
 
     @Override
+    @Transactional
     public void updateUser(User user) {
         userDao.save(user);
     }
 
     @Override
+    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public User getUser(Long userId) {
         return userDao.getOne(userId);
     }

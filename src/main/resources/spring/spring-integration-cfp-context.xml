@@ -1,58 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:int="http://www.springframework.org/schema/integration"
-       xmlns:int-twitter="http://www.springframework.org/schema/integration/twitter"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:int-mail="http://www.springframework.org/schema/integration/mail"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
-		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
-		http://www.springframework.org/schema/integration/twitter http://www.springframework.org/schema/integration/twitter/spring-integration-twitter.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-mail="http://www.springframework.org/schema/integration/mail"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd">
 
-    <int:channel id="mailChannel">
-        <int:queue/>
-    </int:channel>
+	<beans profile="mail-enabled">
 
-    <int:channel id="registrationMailChannel">
-        <int:queue/>
-    </int:channel>
+		<int:transformer id="prepareMailToSpeaker"
+								input-channel="mailChannel"
+								output-channel="sendMailChannel"
+								ref="prepareMailToSpeakerTransformer">
+			<int:poller fixed-rate="1000" error-channel="errorChannel"/>
+		</int:transformer>
 
-    <beans profile="mail-enabled">
+		<int:transformer id="prepareMailToRegister"
+								input-channel="registrationMailChannel"
+								output-channel="sendMailChannel"
+								ref="prepareMailToRegisterTransformer">
+			<int:poller fixed-rate="1000" error-channel="errorChannel"/>
+		</int:transformer>
 
-        <int:transformer id="prepareMailToSpeaker"
-                                 input-channel="mailChannel"
-                                 output-channel="sendMailChannel"
-                                 ref="cfpToMailTransformer" method="prepareMailToSpeaker">
-            <int:poller fixed-rate="1000" error-channel="errorChannel"/>
-        </int:transformer>
+		<int-mail:outbound-channel-adapter id="mailAdapter" channel="sendMailChannel"
+				mail-sender="mailSender"/>
 
-        <int:transformer id="prepareMailToRegister"
-                                 input-channel="registrationMailChannel"
-                                 output-channel="sendMailChannel"
-                                 ref="cfpToMailTransformer" method="prepareMailToRegister">
-            <int:poller fixed-rate="1000" error-channel="errorChannel"/>
-        </int:transformer>
+	</beans>
 
-        <int:channel id="sendMailChannel" />
-
-        <int-mail:outbound-channel-adapter id="mailAdapter" channel="sendMailChannel"
-                                                   mail-sender="mailSender"/>
-
-        <int:channel id="errorChannel"/>
-        <int:logging-channel-adapter id="loggit" log-full-message="true" level="ERROR" channel="errorChannel"/>
-    </beans>
-
-    <beans profile="default">
-        <int:logging-channel-adapter log-full-message="true" channel="registrationMailChannel">
-            <int:poller fixed-rate="1000" error-channel="errorChannel"/>
-        </int:logging-channel-adapter>
-        <int:logging-channel-adapter log-full-message="true" channel="mailChannel">
-            <int:poller fixed-rate="1000" error-channel="errorChannel"/>
-        </int:logging-channel-adapter>
-    </beans>
-
+	<beans profile="!mail-enabled">
+		<int:logging-channel-adapter channel="registrationMailChannel"/>
+		<int:logging-channel-adapter channel="mailChannel"/>
+	</beans>
 </beans>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 the original author or authors.
+ * Copyright 2014-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,10 +24,11 @@ package com.devnexus.ting.common;
 public final class SpringProfile {
 
 	public static final String MAIL_ENABLED       = "mail-enabled";
+	public static final String MAIL_DISABLED      = "!mail-enabled";
 	public static final String TWITTER_ENABLED    = "twitter-enabled";
-        public static final String PAYPAL_ENABLED    = "paypal-enabled";
-        public static final String PAYPAL_LIVE    = "paypal-live";
-        public static final String PAYPAL_SANDBOX    = "paypal-sandbox";
+	public static final String PAYPAL_ENABLED     = "paypal-enabled";
+	public static final String PAYPAL_LIVE        = "paypal-live";
+	public static final String PAYPAL_SANDBOX     = "paypal-sandbox";
 	public static final String WEBSOCKET_ENABLED  = "websocket-enabled";
 	public static final String WEBSOCKET_DISABLED = "!websocket-enabled";
 

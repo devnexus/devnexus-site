@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
 package com.devnexus.ting.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -25,6 +27,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.ParamDef;
@@ -54,6 +58,12 @@ public class CfpSubmissionSpeaker extends Person {
 	@NotNull
 	@XmlTransient
 	private CfpSubmission cfpSubmission;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@XmlTransient
+	@Cascade(CascadeType.ALL)
+	@Valid
+	private CfpSpeakerImage cfpSpeakerImage;
 
 	@NotEmpty
 	@Size(max=255)
@@ -171,6 +181,14 @@ public class CfpSubmissionSpeaker extends Person {
 
 	public void setSpeaker(Speaker speaker) {
 		this.speaker = speaker;
+	}
+
+	public CfpSpeakerImage getCfpSpeakerImage() {
+		return cfpSpeakerImage;
+	}
+
+	public void setCfpSpeakerImage(CfpSpeakerImage cfpSpeakerImage) {
+		this.cfpSpeakerImage = cfpSpeakerImage;
 	}
 
 	/* (non-Javadoc)

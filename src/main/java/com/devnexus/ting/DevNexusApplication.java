@@ -56,7 +56,7 @@ import com.google.common.cache.CacheBuilder;
  *
  */
 @EnableCaching
-@SpringBootApplication(exclude = { org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class })
+@SpringBootApplication
 public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 
 	@Autowired

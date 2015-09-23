@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.social.security.SocialUserDetails;
 
 
@@ -176,7 +177,10 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 	@Override
 	public Collection<GrantedAuthority> getAuthorities() {
 		final Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
-		authorities.addAll(this.getUserAuthorities());
+		for (GrantedAuthority authority : this.getUserAuthorities()) {
+			authorities.add(new SimpleGrantedAuthority("ROLE_" + authority.getAuthority()));
+		}
+		//authorities.addAll(this.getUserAuthorities());
 		return authorities;
 	}
 
@@ -227,5 +231,5 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
     public String getUserId() {
         return this.getFirstName() + " " + this.getLastName();
     }
-    
+
 }

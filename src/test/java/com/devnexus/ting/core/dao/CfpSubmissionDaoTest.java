@@ -40,7 +40,6 @@ import com.devnexus.ting.repository.EventRepository;
  */
 @Transactional
 @DirtiesContext(classMode=ClassMode.AFTER_EACH_TEST_METHOD)
-@Ignore
 public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private CfpSubmissionRepository cfpSubmissionDao;
@@ -60,7 +59,6 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 	}
 
 	@Test
-	@Ignore
 	public void testCreateCfpForEvent() {
 
 		final Event event = eventDao.getCurrentEvent();
@@ -85,7 +83,6 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmission.setEvent(event);
 		cfpSubmission.setDescription("myDescription");
 
-		//cfpSubmission.setPicture(null);
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
 		cfpSubmission.setSessionRecordingApproved(true);
 		cfpSubmission.setSkillLevel(SkillLevel.BEGINNER);
@@ -142,7 +139,6 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmission.getSpeakers().add(speaker2);
 
 		cfpSubmission.setDescription("myDescription");
-		//cfpSubmission.setPicture(null);
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
 		cfpSubmission.setSessionRecordingApproved(true);
 		cfpSubmission.setSkillLevel(SkillLevel.BEGINNER);

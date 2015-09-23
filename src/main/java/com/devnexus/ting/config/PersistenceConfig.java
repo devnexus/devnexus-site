@@ -25,11 +25,12 @@ import javax.sql.DataSource;
 
 import org.reflections.Reflections;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -39,7 +40,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.devnexus.ting.common.SpringProfile;
-import com.devnexus.ting.repository.jpa.support.BaseRepositoryFactoryBean;
+import com.devnexus.ting.repository.jpa.BaseRepositoryImpl;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -49,14 +50,17 @@ import com.zaxxer.hikari.HikariDataSource;
  *
  */
 @Configuration
-@EnableJpaRepositories(repositoryFactoryBeanClass=BaseRepositoryFactoryBean.class,
+@EnableJpaRepositories(repositoryBaseClass=BaseRepositoryImpl.class,
 		entityManagerFactoryRef="entityManagerFactory", basePackages="com.devnexus.ting.repository")
 public class PersistenceConfig {
 
 	private static final String PERSISTENCE_BASE_PACKAGE = "com/devnexus/ting/model";
 
 	@Autowired
-	Environment environment;
+	private DataSourceProperties dataSourceProperties;
+
+	@Autowired
+	private JpaProperties jpaSettings;
 
 	@Bean
 	public Jaxb2Marshaller jaxbMarshaller() {
@@ -101,23 +105,15 @@ public class PersistenceConfig {
 
 		final Map<String, Object> jpaProperties = new HashMap<>();
 
-		jpaProperties.put("hibernate.dialect", getHibernateDialect());
+		jpaProperties.put("hibernate.dialect", this.jpaSettings.getProperties().get("dialect"));
 		jpaProperties.put("hibernate.generate_statistics", false);
-		jpaProperties.put("hibernate.show_sql", isShowHibernateSql());
+		jpaProperties.put("hibernate.show_sql", this.jpaSettings.isShowSql());
 		jpaProperties.put("hibernate.format_sql", true);
 		jpaProperties.put("hibernate.ejb.naming_strategy", "com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy");
 
 		entityManagerFactory.setJpaPropertyMap(jpaProperties);
 
 		return entityManagerFactory;
-	}
-
-	private boolean isShowHibernateSql() {
-		return environment.getRequiredProperty("database.hibernate.show_sql", Boolean.class);
-	}
-
-	private String getHibernateDialect() {
-		return environment.getRequiredProperty("database.hibernate.dialect");
 	}
 
 	@Bean
@@ -132,32 +128,16 @@ public class PersistenceConfig {
 	public DataSource dataSource() {
 
 		HikariConfig config = new HikariConfig();
-		config.setDriverClassName(getDriverClassName());
-		config.setJdbcUrl(getUrl());
-		config.setUsername(getUser());
-		config.setPassword(getPassword());
+		config.setDriverClassName(dataSourceProperties.getDriverClassName());
+		config.setJdbcUrl(dataSourceProperties.getUrl());
+		config.setUsername(dataSourceProperties.getUsername());
+		config.setPassword(dataSourceProperties.getPassword());
 		config.setConnectionTestQuery("select 1");
 		config.setInitializationFailFast(true);
 
 		HikariDataSource dataSource = new HikariDataSource(config);
 
 		return dataSource;
-	}
-
-	private String getPassword() {
-		return environment.getRequiredProperty("spring.datasource.password");
-	}
-
-	private String getUser() {
-		return environment.getRequiredProperty("spring.datasource.username");
-	}
-
-	private String getUrl() {
-		return environment.getRequiredProperty("spring.datasource.url");
-	}
-
-	private String getDriverClassName() {
-		return environment.getRequiredProperty("spring.datasource.driverClassName");
 	}
 
 	public static Class<?>[] getAnnotatedPersistenceClasses() {

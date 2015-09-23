@@ -15,11 +15,13 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import java.io.IOException;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Validator;
 
 import org.slf4j.Logger;
@@ -32,6 +34,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionList;
@@ -94,6 +97,28 @@ public class AdminCallForPapersController {
 		model.addAttribute("event", event);
 
 		return "/admin/edit-cfp";
+	}
+
+	@RequestMapping(value="/s/admin/{eventKey}/cfps/speaker-image/{speakerId}", method=RequestMethod.GET)
+	public void getOrganizerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
+
+		final CfpSubmissionSpeaker cfpSubmissionSpeaker = businessService.getCfpSubmissionSpeakerWithPicture(speakerId);
+
+		final byte[] organizerPicture;
+
+		if (cfpSubmissionSpeaker==null || cfpSubmissionSpeaker.getCfpSpeakerImage() == null) {
+			organizerPicture = SystemInformationUtils.getOrganizerImage(null);
+			response.setContentType("image/jpg");
+		} else {
+			organizerPicture = cfpSubmissionSpeaker.getCfpSpeakerImage().getFileData();
+			response.setContentType(cfpSubmissionSpeaker.getCfpSpeakerImage().getType());
+		}
+
+		try {
+			org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.POST)

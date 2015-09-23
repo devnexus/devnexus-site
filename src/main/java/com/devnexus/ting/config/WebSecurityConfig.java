@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,50 +19,50 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.encoding.PasswordEncoder;
+import org.springframework.core.env.Environment;
+import org.springframework.dao.DataAccessException;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
-
-import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
-import com.devnexus.ting.model.User;
-import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.social.security.SocialUserDetails;
 import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.social.security.SpringSocialConfigurer;
+
+import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
+import com.devnexus.ting.model.User;
 
 /**
  * @author Gunnar Hillert
  *
  */
 @Configuration
-@SuppressWarnings("deprecation")
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsService userDetailsService;
 
+	@SuppressWarnings("deprecation")
 	@Autowired
-	private PasswordEncoder passwordEncoder;
+	private org.springframework.security.authentication.encoding.PasswordEncoder passwordEncoder;
 
-	@Value("#{environment['https.enabled']}")
-	private boolean httpsEnabled;
+	@Autowired
+	private Environment environment;
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		HttpSecurity httpSecurity = http
 		.csrf().disable() //TODO Refactor login form
-		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ADMIN", "CFP_REVIEWER").and()
-		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ADMIN", "CFP_REVIEWER").and()
-		.authorizeRequests().antMatchers("/s/admin/**").hasAuthority("ADMIN").and()
+		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER").and()
+		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER").and()
+		.authorizeRequests().antMatchers("/s/admin/**").hasAuthority("ROLE_ADMIN").and()
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
 		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and();
 
-		if (httpsEnabled) {
+		if (environment.getRequiredProperty("server.ssl.enabled", Boolean.class)) {
 			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
 		}
 
@@ -71,11 +71,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.loginPage("/s/login")
 			.failureUrl("/s/login?status=error")
 			.permitAll();
-                
-                
+
+
             http.apply(new SpringSocialConfigurer()
                 .postLoginUrl("/")
-                
+
                 .alwaysUsePostLoginUrl(true));
 	}
 
@@ -88,8 +88,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public SecurityEventListener securityEventListener() {
 		return new SecurityEventListener();
 	}
-        
-        
+
+
     @Bean
     public SocialUserDetailsService socialUsersDetailService() {
         return new SocialUserDetailsService() {
@@ -101,5 +101,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             }
         };
     }
-        
+
 }

@@ -137,12 +137,12 @@ ALTER TABLE TICKET_GROUPS
         VEGETARIAN varchar(255),
         SPONSOR_MAY_CONTACT varchar(255),
         TICKET_GROUP bigint,
-        COUPON_CODE varchar(255),        
-        LABEL varchar(255),        
+        COUPON_CODE varchar(255),
+        LABEL varchar(255),
         REGISTRATION bigint
     );
 
-    alter table REGISTRATION 
+    alter table REGISTRATION
         add constraint REGISTRATION_UNIQUE_KEY unique (REGISTRATION_FORM_KEY);
 
 
@@ -205,3 +205,22 @@ alter table PAYPAL_LINKS
 	add constraint PAYPAL_LINKS_FK
 	foreign key (PAYMENT)
 	references PAY_PAL_PAYMENTS;
+
+-- Sep 20 2015
+
+create table CFP_SPEAKER_IMAGES (
+	ID bigint primary key NOT NULL,
+	FILE_DATA oid,
+	FILE_MODIFIED timestamp,
+	FILE_SIZE int8,
+	NAME varchar(255),
+	TYPE varchar(255)
+);
+
+ALTER TABLE CFP_SUBMISSION_SPEAKERS ADD COLUMN CFP_SPEAKER_IMAGE bigint;
+
+alter table CFP_SUBMISSION_SPEAKERS
+	add constraint FK_SPEAKER_IMAGE_SUBMISSION_SPEAKERS
+	foreign key (CFP_SPEAKER_IMAGE)
+	references CFP_SPEAKER_IMAGES;
+

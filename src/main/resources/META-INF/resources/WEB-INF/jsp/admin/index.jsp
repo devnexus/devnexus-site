@@ -94,6 +94,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title"><c:out value="${event.title}"/>  Registration</h3>
 			</div>
+			bb <sec:authentication property="authorities"/>
 			<div class="panel-body">
 				<ul>
 					<sec:authorize access="hasRole('ADMIN')">

@@ -70,7 +70,7 @@ public class WebFilterConfig {
 
 		registrationBean.setFilter(openEntityManagerInViewFilter);
 		registrationBean.addUrlPatterns("/s/*");
-		registrationBean.setOrder(3);
+		registrationBean.setOrder(Integer.MIN_VALUE);
 		return registrationBean;
 	}
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
@@ -39,10 +39,10 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.config.support.CfpSettings;
 import com.devnexus.ting.config.support.RecaptchaSettings;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSpeakerImage;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
@@ -202,10 +202,11 @@ public class CallForPapersController {
 		for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getSpeakers()) {
 
 			final MultipartFile picture = cfpSubmission.getPictureFiles().get(index);
-			InputStream pictureInputStream = null;
+			byte[] pictureData = null;
+			CfpSpeakerImage cfpSpeakerImage = null;
 
 			try {
-				pictureInputStream = picture.getInputStream();
+				pictureData = picture.getBytes();
 			} catch (IOException e) {
 				LOGGER.error("Error processing Image.", e);
 				bindingResult.addError(new FieldError("cfpSubmission", "pictureFile", "Error processing Image."));
@@ -213,9 +214,14 @@ public class CallForPapersController {
 				return "/cfp";
 			}
 
-			if (pictureInputStream != null && picture.getSize() > 0) {
-				SystemInformationUtils.setSpeakerImage("CFP_" + cfpSubmissionSpeaker.getFirstName()
-					+ "_" + cfpSubmissionSpeaker.getLastName() + "_" + picture.getOriginalFilename(), pictureInputStream);
+			if (pictureData != null && picture.getSize() > 0) {
+				cfpSpeakerImage = new CfpSpeakerImage();
+
+				cfpSpeakerImage.setFileData(pictureData);
+				cfpSpeakerImage.setFileModified(new Date());
+				cfpSpeakerImage.setFileSize(picture.getSize());
+				cfpSpeakerImage.setName(picture.getOriginalFilename());
+				cfpSpeakerImage.setType(picture.getContentType());
 			}
 
 			index++;
@@ -236,6 +242,8 @@ public class CallForPapersController {
 			cfpSubmissionSpeakerToSave.setTshirtSize(cfpSubmissionSpeaker.getTshirtSize());
 			cfpSubmissionSpeakerToSave.setPhone(cfpSubmissionSpeaker.getPhone());
 			cfpSubmissionSpeakerToSave.setCfpSubmission(cfpSubmissionToSave);
+			cfpSubmissionSpeakerToSave.setCfpSpeakerImage(cfpSpeakerImage);
+
 			cfpSubmissionToSave.getSpeakers().add(cfpSubmissionSpeakerToSave);
 
 		}
