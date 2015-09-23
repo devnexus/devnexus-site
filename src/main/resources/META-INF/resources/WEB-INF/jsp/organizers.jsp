@@ -23,8 +23,8 @@
 </section>
 <!-- /intro -->
 
-<section id="speaker" class="bg-light-gray">
-	<div class="container">
+<section id="speaker" class="bg-light-gray" style="margin-top: 0">
+
 		<c:forEach items="${organizerList.organizers}" var="organizer" varStatus="status">
 			<c:choose>
 				<c:when test="${status.first && status.index%3 == 0}">
@@ -36,12 +36,12 @@
 				</c:when>
 			</c:choose>
 			<div class="col-sm-4 masonryitem">
-				<div class="speaker-member">
+				<div id="${organizer.firstName}_${organizer.lastName}" class="speaker-member text-center">
 					<c:if test="${organizer.picture != null}">
 						<img class="img-responsive img-circle" src="${organizerPictures[organizer.id]}" alt="${organizer.firstName} ${organizer.lastName}" title="${organizer.firstName} ${organizer.lastName}"/>
 					</c:if>
-					<h4><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></h4>
-					<p>
+					<h4 class="text-center"><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></h4>
+					<p class="text-center" style="margin-top: 1em;">
 						<c:if test="${!empty organizer.googlePlusId}">
 							<a href="https://plus.google.com/<c:out value="${organizer.googlePlusId}" />" target="_blank">
 								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
@@ -85,7 +85,6 @@
 				</div>
 			</c:if>
 		</c:forEach>
-	</div>
 </section>
 
 <jsp:include page="includes/questions.jsp"/>
