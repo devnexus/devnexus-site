@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.service.impl;
+package com.devnexus.ting.core.service.integration;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -22,14 +22,11 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-
 import org.springframework.integration.annotation.Transformer;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.service.impl.GenericEmail;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.TicketOrderDetail;
@@ -38,7 +35,7 @@ import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
 
 /**
- * Converts a {@link CfpSubmission} and converts it to a {@link MimeMessage}.
+ * Converts a {@link CfpSubmission} and converts it to a {@link GenericEmail}.
  *
  * @author Gunnar Hillert
  *
@@ -46,42 +43,33 @@ import com.github.mustachejava.MustacheFactory;
 public class PrepareMailToRegisterTransformer extends BaseMailTransformer {
 
 	@Transformer
-	public MimeMessage prepareMailToRegister(RegistrationDetails registrationDetails) {
+	public GenericEmail prepareMailToRegister(RegistrationDetails registrationDetails) {
 
-		String htmlMessage = SystemInformationUtils.getRegisterHtmlEmailTemplate();
-		String textMessage = SystemInformationUtils.getRegisterTextEmailTemplate();
+		final String htmlMessage = SystemInformationUtils.getRegisterHtmlEmailTemplate();
+		final String textMessage = SystemInformationUtils.getRegisterTextEmailTemplate();
 
+		final String renderedHtmlTemplate = applyMustacheTemplate(registrationDetails, htmlMessage);
+		final String renderedTextTemplate = applyMustacheTemplate(registrationDetails, textMessage);
 
-		String renderedHtmlTemplate = applyMustacheTemplate(registrationDetails, htmlMessage);
-		String renderedTextTemplate = applyMustacheTemplate(registrationDetails, textMessage);
+		final GenericEmail email = new GenericEmail();
 
-		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
-		MimeMessageHelper messageHelper;
+		email.setText(renderedTextTemplate)
+			.setHtml(renderedHtmlTemplate)
+			.setFrom(fromUser)
+			.addTo(registrationDetails.getContactEmailAddress())
+			.setSubject("DevNexus 2016 - Registration Confirmed");
 
-		try {
-			messageHelper = new MimeMessageHelper(mimeMessage, true);
-			messageHelper.setText(renderedTextTemplate, renderedHtmlTemplate);
-
-			messageHelper.setFrom(fromUser);
-						messageHelper.addTo(registrationDetails.getContactEmailAddress());
-
-						for (TicketOrderDetail order : registrationDetails.getOrderDetails()) {
-							if (!order.getEmailAddress().equals(registrationDetails.getContactEmailAddress())) {
-								messageHelper.addTo(order.getEmailAddress());
-							}
-						}
-
-			if (StringUtils.hasText(this.ccUser)) {
-				messageHelper.setCc(this.ccUser);
+		for (TicketOrderDetail order : registrationDetails.getOrderDetails()) {
+			if (!order.getEmailAddress().equals(registrationDetails.getContactEmailAddress())) {
+				email.addTo(order.getEmailAddress());
 			}
-
-			messageHelper.setSubject("DevNexus 2016 - Registration Confirmed");
-
-		} catch (MessagingException e) {
-			throw new IllegalStateException("Error creating mail message for Registration: " + registrationDetails, e);
 		}
 
-		return messageHelper.getMimeMessage();
+		if (StringUtils.hasText(this.ccUser)) {
+			email.setCc(this.ccUser);
+		}
+
+		return email;
 	}
 
 	public String applyMustacheTemplate(RegistrationDetails registrationDetails, String template) {

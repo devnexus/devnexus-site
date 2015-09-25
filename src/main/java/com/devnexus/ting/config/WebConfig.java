@@ -16,16 +16,16 @@
 package com.devnexus.ting.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.web.converter.StringToEvent;
 import com.devnexus.ting.web.converter.StringToPresentationType;
 import com.devnexus.ting.web.converter.StringToPurchaseGroup;
@@ -33,7 +33,6 @@ import com.devnexus.ting.web.converter.StringToRoom;
 import com.devnexus.ting.web.converter.StringToSkillLevel;
 import com.devnexus.ting.web.converter.StringToSponsorLevel;
 import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
-import com.devnexus.ting.web.payment.PayPalSession;
 
 /**
  *
@@ -42,6 +41,22 @@ import com.devnexus.ting.web.payment.PayPalSession;
  */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
+
+	@Bean
+	public ReloadableResourceBundleMessageSource messageSource() {
+		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+		messageSource.setBasename("classpath:messages");
+		messageSource.setDefaultEncoding("utf-8");
+		messageSource.setCacheSeconds(0);
+		return messageSource;
+	}
+
+	@Bean
+	public LocalValidatorFactoryBean validator() {
+		final LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+		localValidatorFactoryBean.setValidationMessageSource(messageSource());
+		return localValidatorFactoryBean;
+	}
 
 	@Autowired
 	private Environment environment;
@@ -66,5 +81,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToPurchaseGroup());
 	}
 
-	
+	@Override
+	public Validator getValidator() {
+		return validator();
+	}
+
 }

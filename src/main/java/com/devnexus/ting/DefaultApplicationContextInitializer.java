@@ -86,12 +86,16 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			LOGGER.info("Using Properties for demo mode.");
 		}
 
-		final boolean mailEnabled      = environment.getProperty("devnexus.mail.enabled",      Boolean.class, Boolean.FALSE);
-		final boolean twitterEnabled   = environment.getProperty("devnexus.twitter.enabled",   Boolean.class, Boolean.FALSE);
-		final boolean websocketEnabled = environment.getProperty("devnexus.websocket.enabled", Boolean.class, Boolean.FALSE);
-		final boolean payPalEnabled = environment.containsProperty("PAYPAL_MODE");
+		final boolean mailEnabled      = environment.getProperty("devnexus.mail.enabled",          Boolean.class, Boolean.FALSE);
+		final boolean sendgridEnabled  = environment.getProperty("devnexus.mail.sendgrid-enabled", Boolean.class, Boolean.FALSE);
+		final boolean twitterEnabled   = environment.getProperty("devnexus.twitter.enabled",       Boolean.class, Boolean.FALSE);
+		final boolean websocketEnabled = environment.getProperty("devnexus.websocket.enabled",     Boolean.class, Boolean.FALSE);
+		final boolean payPalEnabled    = environment.containsProperty("PAYPAL_MODE");
 
-		if (mailEnabled) {
+		if (sendgridEnabled) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.SENDGRID_ENABLED);
+		}
+		else if (mailEnabled) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.MAIL_ENABLED);
 		}
 		if (twitterEnabled) {
@@ -100,19 +104,16 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 		if (websocketEnabled) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.WEBSOCKET_ENABLED);
 		}
-                if (payPalEnabled) {
-                    applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_ENABLED);
-                    switch (environment.getProperty("PAYPAL_MODE")) {
-                        case "live": 
-                            applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_LIVE);
-                            break;
-                        default:
-                            applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_SANDBOX);
-                            break;
-                    }
-                        
-                }
-
+		if (payPalEnabled) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_ENABLED);
+			switch (environment.getProperty("PAYPAL_MODE")) {
+				case "live":
+					applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_LIVE);
+					break;
+				default:
+					applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_SANDBOX);
+					break;
+			}
+		}
 	}
-
 }

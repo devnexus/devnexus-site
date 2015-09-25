@@ -13,10 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.service.impl;
+package com.devnexus.ting.core.service.integration;
 import javax.mail.internet.MimeMessage;
-
-import org.springframework.mail.javamail.JavaMailSender;
 
 import com.devnexus.ting.model.CfpSubmission;
 
@@ -28,7 +26,6 @@ import com.devnexus.ting.model.CfpSubmission;
  */
 abstract class BaseMailTransformer {
 
-	protected JavaMailSender mailSender;
 	protected String fromUser;
 	protected String ccUser;
 
@@ -38,10 +35,6 @@ abstract class BaseMailTransformer {
 
 	public void setCcUser(String ccUser) {
 		this.ccUser = ccUser;
-	}
-
-	public void setMailSender(JavaMailSender mailSender) {
-		this.mailSender = mailSender;
 	}
 
 }

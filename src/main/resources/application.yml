@@ -23,8 +23,8 @@ devnexus:
       accessTokenSecret:
   mail:
     enabled: false
-    sendgrid:
-      enabled: false
+    sendgrid-enabled: false
+    sendgrid-api-key:
     authenticationEnabled: false
     debugEnabled: false
     user:

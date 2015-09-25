@@ -7,28 +7,32 @@
 		http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd">
 
-	<beans profile="mail-enabled">
-
+	<beans profile="mail-enabled,sendgrid-enabled">
 		<int:transformer id="prepareMailToSpeaker"
 								input-channel="mailChannel"
 								output-channel="sendMailChannel"
 								ref="prepareMailToSpeakerTransformer">
-			<int:poller fixed-rate="1000" error-channel="errorChannel"/>
 		</int:transformer>
 
 		<int:transformer id="prepareMailToRegister"
 								input-channel="registrationMailChannel"
 								output-channel="sendMailChannel"
 								ref="prepareMailToRegisterTransformer">
-			<int:poller fixed-rate="1000" error-channel="errorChannel"/>
 		</int:transformer>
-
-		<int-mail:outbound-channel-adapter id="mailAdapter" channel="sendMailChannel"
-				mail-sender="mailSender"/>
-
 	</beans>
 
-	<beans profile="!mail-enabled">
+	<beans profile="mail-enabled">
+		<int:chain input-channel="sendMailChannel">
+			<int:transformer id="genericEmailToMimeMessage" ref="genericEmailToMimeMessageTransformer"/>
+			<int-mail:outbound-channel-adapter id="mailAdapter" mail-sender="mailSender"/>
+		</int:chain>
+	</beans>
+
+	<beans profile="sendgrid-enabled">
+		<int:service-activator input-channel="sendMailChannel" ref="sendUsingSendgrid"/>
+	</beans>
+
+	<beans profile="demo">
 		<int:logging-channel-adapter channel="registrationMailChannel"/>
 		<int:logging-channel-adapter channel="mailChannel"/>
 	</beans>

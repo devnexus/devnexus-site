@@ -33,6 +33,7 @@ import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.config.MailNotificationConfig;
+import com.devnexus.ting.core.service.integration.PrepareMailToSpeakerTransformer;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.PresentationType;

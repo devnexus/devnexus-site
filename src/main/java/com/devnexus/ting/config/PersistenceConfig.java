@@ -152,12 +152,4 @@ public class PersistenceConfig {
 		return new PersistenceExceptionTranslationPostProcessor();
 	}
 
-	@Bean
-	ReloadableResourceBundleMessageSource messageSource() {
-		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-		messageSource.setBasename("classpath:messages");
-		messageSource.setDefaultEncoding("utf-8");
-		messageSource.setCacheSeconds(0);
-		return messageSource;
-	}
 }

@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Configuration;
 public class MailSettings {
 
 	private boolean enabled;
+	private boolean sendgridEnabled;
+
+	private String  sendgridApiKey;
 	private boolean authenticationEnabled;
 	private boolean debugEnabled;
 	private User user;
@@ -19,6 +22,22 @@ public class MailSettings {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public boolean isSendgridEnabled() {
+		return sendgridEnabled;
+	}
+
+	public String getSendgridApiKey() {
+		return sendgridApiKey;
+	}
+
+	public void setSendgridApiKey(String sendgridApiKey) {
+		this.sendgridApiKey = sendgridApiKey;
+	}
+
+	public void setSendgridEnabled(boolean sendgridEnabled) {
+		this.sendgridEnabled = sendgridEnabled;
 	}
 
 	public boolean isAuthenticationEnabled() {

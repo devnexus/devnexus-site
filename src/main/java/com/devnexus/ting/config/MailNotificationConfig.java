@@ -32,8 +32,10 @@ import org.springframework.scheduling.support.PeriodicTrigger;
 
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.config.support.MailSettings;
-import com.devnexus.ting.core.service.impl.PrepareMailToRegisterTransformer;
-import com.devnexus.ting.core.service.impl.PrepareMailToSpeakerTransformer;
+import com.devnexus.ting.core.service.integration.GenericEmailToMimeMessageTransformer;
+import com.devnexus.ting.core.service.integration.PrepareMailToRegisterTransformer;
+import com.devnexus.ting.core.service.integration.PrepareMailToSpeakerTransformer;
+import com.devnexus.ting.core.service.integration.SendgridSender;
 
 
 /**
@@ -59,23 +61,35 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile(SpringProfile.MAIL_ENABLED)
+	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
 	public PrepareMailToSpeakerTransformer prepareMailToSpeakerTransformer() {
 		PrepareMailToSpeakerTransformer transformer = new PrepareMailToSpeakerTransformer();
 		transformer.setCcUser(mailSettings.getUser().getCc());
 		transformer.setFromUser(mailSettings.getUser().getFrom());
-		transformer.setMailSender(mailSender());
+		return transformer;
+	}
+
+	@Bean
+	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
+	public PrepareMailToRegisterTransformer prepareMailToRegisterTransformer() {
+		PrepareMailToRegisterTransformer transformer = new PrepareMailToRegisterTransformer();
+		transformer.setCcUser(mailSettings.getUser().getCc());
+		transformer.setFromUser(mailSettings.getUser().getFrom());
 		return transformer;
 	}
 
 	@Bean
 	@Profile(SpringProfile.MAIL_ENABLED)
-	public PrepareMailToRegisterTransformer prepareMailToRegisterTransformer() {
-		PrepareMailToRegisterTransformer transformer = new PrepareMailToRegisterTransformer();
-		transformer.setCcUser(mailSettings.getUser().getCc());
-		transformer.setFromUser(mailSettings.getUser().getFrom());
+	public GenericEmailToMimeMessageTransformer genericEmailToMimeMessageTransformer() {
+		GenericEmailToMimeMessageTransformer transformer = new GenericEmailToMimeMessageTransformer();
 		transformer.setMailSender(mailSender());
 		return transformer;
+	}
+
+	@Bean
+	@Profile(SpringProfile.SENDGRID_ENABLED)
+	public SendgridSender sendUsingSendgrid() {
+		return new SendgridSender(mailSettings);
 	}
 
 	@Bean
@@ -95,7 +109,7 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile(SpringProfile.MAIL_ENABLED)
+	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
 	public MessageChannel sendMailChannel() {
 		return new DirectChannel();
 	}

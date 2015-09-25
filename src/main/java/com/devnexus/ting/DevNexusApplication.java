@@ -43,6 +43,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
@@ -88,13 +89,6 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 	@Bean
 	public SenderClient javaSender() {
 		return new SenderClient(environment.getRequiredProperty("TING_PUSH_URL"));
-	}
-
-	@Bean
-	LocalValidatorFactoryBean validator() {
-		final LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
-		localValidatorFactoryBean.setValidationMessageSource(this.messageSource);
-		return localValidatorFactoryBean;
 	}
 
 	@Override

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.core.service.impl;
+package com.devnexus.ting.core.service.integration;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -22,18 +22,15 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.integration.annotation.Transformer;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.core.service.impl.GenericEmail;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.model.RegistrationDetails;
-import com.devnexus.ting.model.TicketOrderDetail;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
@@ -47,7 +44,7 @@ import com.github.mustachejava.MustacheFactory;
 public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 
 	@Transformer
-	public MimeMessage prepareMailToSpeaker(CfpSubmission cfpSubmission) {
+	public GenericEmail prepareMailToSpeaker(CfpSubmission cfpSubmission) {
 
 		String templateHtml = SystemInformationUtils.getCfpHtmlEmailTemplate();
 		String templateText = SystemInformationUtils.getCfpTextEmailTemplate();
@@ -55,29 +52,22 @@ public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 		String renderedHtmlTemplate = applyMustacheTemplate(cfpSubmission, templateHtml);
 		String renderedTextTemplate = applyMustacheTemplate(cfpSubmission, templateText);
 
-		MimeMessage mimeMessage = this.mailSender.createMimeMessage();
-		MimeMessageHelper messageHelper;
-		try {
-			messageHelper = new MimeMessageHelper(mimeMessage, true);
-			messageHelper.setText(renderedTextTemplate, renderedHtmlTemplate);
+		final GenericEmail email = new GenericEmail();
 
-			messageHelper.setFrom(fromUser);
+		email.setText(renderedTextTemplate)
+			.setHtml(renderedHtmlTemplate)
+			.setFrom(fromUser)
+			.setSubject("DevNexus 2016 - CFP - " + cfpSubmission.getSpeakersAsString(false));
 
-			for (CfpSubmissionSpeaker submissionSpeaker : cfpSubmission.getSpeakers()) {
-				messageHelper.addTo(submissionSpeaker.getEmail());
-			}
-
-			if (StringUtils.hasText(this.ccUser)) {
-				messageHelper.setCc(this.ccUser);
-			}
-
-			messageHelper.setSubject("DevNexus 2016 - CFP - " + cfpSubmission.getSpeakersAsString(false));
-
-		} catch (MessagingException e) {
-			throw new IllegalStateException("Error creating mail message for CFP: " + cfpSubmission, e);
+		for (CfpSubmissionSpeaker submissionSpeaker : cfpSubmission.getSpeakers()) {
+			email.addTo(submissionSpeaker.getEmail());
 		}
 
-		return messageHelper.getMimeMessage();
+		if (StringUtils.hasText(this.ccUser)) {
+			email.setCc(this.ccUser);
+		}
+
+		return email;
 	}
 
 	public String applyMustacheTemplate(CfpSubmission cfpSubmission, String template) {
