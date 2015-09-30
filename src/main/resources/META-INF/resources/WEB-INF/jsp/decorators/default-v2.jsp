@@ -110,7 +110,7 @@
 							<ul class="footer-social">
 								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
 								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}sponsor.pdf" target="_blank">Sponsorship (PDF)</a></li>
+								<li class=""><a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
 							</ul>
 						</div>
 					</div>

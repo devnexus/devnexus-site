@@ -24,7 +24,7 @@
 			<div class="col-md-10 col-md-offset-1">
 				<div class="top-intro travel">
 					<h4 class="section-white-title decorated"><span>Schedule for ${event.title}</span></h4>
-					<h5 class="intro-white-lead">${scheduleItemList.numberOfSpeakersAssigned} Speakers, ${scheduleItemList.numberOfSessions} Presentations, ${scheduleItemList.days.size()} Days.</h5>
+					<h5 class="intro-white-lead">12 Tracks, 120 Presentations, 2+1 Days.</h5>
 				</div>
 			</div>
 		</div>
