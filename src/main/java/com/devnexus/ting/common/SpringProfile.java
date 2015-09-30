@@ -34,6 +34,7 @@ public final class SpringProfile {
 	public static final String WEBSOCKET_ENABLED  = "websocket-enabled";
 	public static final String WEBSOCKET_DISABLED = "!websocket-enabled";
 
+	public static final String CLOUD = "cloud";
 	public static final String DEMO = "demo";
 	public static final String STANDALONE = "standalone";
 	public static final String DEFAULT = "default";

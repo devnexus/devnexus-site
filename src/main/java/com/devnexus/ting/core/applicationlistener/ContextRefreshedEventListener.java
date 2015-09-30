@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.env.Environment;
 
+import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.core.service.SystemSetupService;
 
 /**
@@ -44,7 +45,7 @@ public class ContextRefreshedEventListener implements
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 
-		if (environment.acceptsProfiles("demo", "cloud")) {
+		if (environment.acceptsProfiles(SpringProfile.DEMO)) {
 			// From: http://forum.springsource.org/showthread.php?t=84312&page=2
 			//configurer.toString();
 			if (event.getApplicationContext().getParent() == null) {

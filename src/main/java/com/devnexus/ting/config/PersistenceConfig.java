@@ -82,7 +82,7 @@ public class PersistenceConfig {
 			com.devnexus.ting.model.ScheduleItemType.class,
 			com.devnexus.ting.model.CfpSubmission.class,
 			com.devnexus.ting.model.CfpSubmissionList.class,
-                        com.devnexus.ting.model.TicketGroup.class
+			com.devnexus.ting.model.TicketGroup.class
 		);
 		return jaxbMarshaller;
 	}
@@ -96,7 +96,7 @@ public class PersistenceConfig {
 	}
 
 	@Bean
-	@Profile({SpringProfile.STANDALONE, SpringProfile.DEFAULT, SpringProfile.DEMO, "cloud"})
+	@Profile({SpringProfile.STANDALONE, SpringProfile.DEFAULT, SpringProfile.DEMO, SpringProfile.CLOUD})
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
@@ -123,7 +123,7 @@ public class PersistenceConfig {
 		return txManager;
 	}
 
-	//@Profile({"cloud", "default"})
+	@Profile({SpringProfile.DEMO, SpringProfile.STANDALONE})
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 

@@ -47,8 +47,8 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 
 		final CloudEnvironment env = new CloudEnvironment();
 		if (env.getInstanceInfo() != null) {
-			LOGGER.info("cloud API: " + env.getCloudApiUri());
-			applicationContext.getEnvironment().setActiveProfiles("cloud", SpringContextMode.DemoContextConfiguration.getCode());
+			LOGGER.info("Running in the cloud - API: " + env.getCloudApiUri());
+			applicationContext.getEnvironment().setActiveProfiles(SpringProfile.CLOUD);
 		}
 		else {
 
