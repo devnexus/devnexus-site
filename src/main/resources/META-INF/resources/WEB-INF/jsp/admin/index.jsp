@@ -89,19 +89,18 @@
 			</div>
 		</div>
 	</div>
-        <div class="col-md-4 col-md-offset-0">
+		<div class="col-md-4 col-md-offset-0">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title"><c:out value="${event.title}"/>  Registration</h3>
 			</div>
-			bb <sec:authentication property="authorities"/>
 			<div class="panel-body">
 				<ul>
 					<sec:authorize access="hasRole('ADMIN')">
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Tickets For Sale</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/dashboard">Dashboard</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/reporting">Reporting</a></li>
-                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/editRegistration">Edit Registrations</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/registration">Manage Tickets For Sale</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/dashboard">Dashboard</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/reporting">Reporting</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/editRegistration">Edit Registrations</a></li>
 					</sec:authorize>
 				</ul>
 			</div>

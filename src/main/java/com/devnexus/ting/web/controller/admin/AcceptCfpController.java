@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Validator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +53,6 @@ public class AcceptCfpController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AcceptCfpController.class);
 
 	@Autowired private BusinessService businessService;
-	@Autowired private Validator validator;
 
 	private void prepareReferenceData(ModelMap model) {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,11 +32,8 @@ import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
-import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.annotation.SendToUser;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -327,16 +324,6 @@ public class SiteController {
 
 		return "social";
 
-	}
-
-	@Autowired private SimpMessageSendingOperations messagingTemplate;
-	@Autowired
-	ApplicationEventPublisher applicationEventPublisher;
-
-	@SubscribeMapping("/positions")
-	public void onApplicationEvent() {
-		LOGGER.info("New user subscribing");
-		//messagingTemplate.convertAndSend("/queue/tweets", event.getTwitterMessage());
 	}
 
 	@MessageExceptionHandler
