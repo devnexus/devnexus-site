@@ -21,7 +21,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,8 +48,6 @@ import com.devnexus.ting.model.Sponsor;
 public class SponsorController {
 
 	@Autowired private BusinessService businessService;
-
-	@Autowired private Validator validator;
 
 	@RequestMapping(value="/s/admin/{eventKey}/sponsors", method=RequestMethod.GET)
 	public String getSponsorsForCurrentEvent(@PathVariable("eventKey") String eventKey,
@@ -92,7 +89,7 @@ public class SponsorController {
 			return "/admin/add-sponsor";
 		}
 
-		final Sponsor sponsorFromDb = businessService.getSponsor(sponsorId);
+		final Sponsor sponsorFromDb = businessService.getSponsorWithPicture(sponsorId);
 
 		if (request.getParameter("delete") != null) {
 			businessService.deleteSponsor(sponsorFromDb);
@@ -131,6 +128,7 @@ public class SponsorController {
 		}
 
 		businessService.saveSponsor(sponsorFromDb);
+
 		redirectAttributes.addFlashAttribute("successMessage",
 			String.format("The sponsor '%s' was edited successfully.", sponsorFromDb.getName()));
 
@@ -140,6 +138,7 @@ public class SponsorController {
 	@RequestMapping(value="/s/admin/{eventKey}/sponsor", method=RequestMethod.POST)
 	public String addSponsor(@RequestParam MultipartFile pictureFile,
 			@Valid Sponsor sponsorForm, BindingResult result, HttpServletRequest request,
+			RedirectAttributes redirectAttributes,
 			@PathVariable("eventKey") String eventKey) {
 
 		if (request.getParameter("cancel") != null) {
@@ -171,16 +170,12 @@ public class SponsorController {
 
 			 sponsorForm.setLogo(pictureData);
 
-			//TODO
-			//String message = "File '" + sponsorForm.getPicture().getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
-
 		}
 
-		//TODO
-		Sponsor savedSponsor = businessService.saveSponsor(sponsorForm);
+		final Sponsor savedSponsor = businessService.saveSponsor(sponsorForm);
 
-		//FlashMap.setSuccessMessage("The sponsor was added successfully.");
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The sponsor '%s' was added successfully.", savedSponsor.getName()));
 		return "redirect:/s/admin/{eventKey}/sponsors";
 	}
 
