@@ -112,5 +112,7 @@ public interface UserService extends SignInAdapter {
          * @param eventKey 
          */
         public void initializeUserforEvent(User user, String eventKey);
+
+		void trackUserLogin(User user);
         
 }

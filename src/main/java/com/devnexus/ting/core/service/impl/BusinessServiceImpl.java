@@ -409,6 +409,23 @@ public class BusinessServiceImpl implements BusinessService {
 		return speakerDao.save(speaker);
 	}
 
+	@Override
+	@Transactional
+	public Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker) {
+		final Speaker savedSpeaker = speakerDao.save(speaker);
+		final Event currentEvent = this.getCurrentEvent();
+
+		if (!currentEvent.hasSpeaker(savedSpeaker.getId())) {
+			LOGGER.info(String.format("Adding speaker '%s' to event '%s'",
+					speaker.getFirstLastName(),
+					currentEvent.getId()));
+			currentEvent.getSpeakers().add(savedSpeaker);
+			this.saveEvent(currentEvent);
+		}
+		return savedSpeaker;
+	}
+
+
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
@@ -470,6 +487,7 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	@Cacheable("getCurrentEvent")
+	@Transactional(readOnly=true)
 	public Event getCurrentEvent() {
 		return eventDao.getCurrentEvent();
 	}

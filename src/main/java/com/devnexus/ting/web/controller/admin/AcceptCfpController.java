@@ -20,6 +20,7 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.EntityManagerFactory;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -130,15 +131,7 @@ public class AcceptCfpController {
 			speaker.setTwitterId(cfpSubmissionSpeaker.getTwitterId());
 			speaker.setCfpSpeakerId(cfpSubmissionSpeaker.getId());
 
-			final Speaker updatedSpeaker = businessService.saveSpeaker(speaker);
-
-			if (!currentEvent.hasSpeaker(updatedSpeaker.getId())) {
-				LOGGER.info(String.format("Adding speaker '%s' to event '%s'",
-						speaker.getFirstLastName(),
-						currentEvent.getId()));
-				currentEvent.getSpeakers().add(updatedSpeaker);
-				businessService.saveEvent(currentEvent);
-			}
+			final Speaker updatedSpeaker = businessService.saveSpeakerAndAddToEventIfNecessary(speaker);
 
 			updatedSpeakers.add(updatedSpeaker);
 		}
@@ -172,4 +165,5 @@ public class AcceptCfpController {
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
 		return "redirect:/s/admin/{eventKey}/cfps";
 	}
+
 }

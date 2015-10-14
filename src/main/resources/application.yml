@@ -50,6 +50,7 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
   jpa:
+    open-in-view: false
     properties:
       dialect: com.devnexus.ting.core.hibernate.ImprovedH2Dialect
       show_sql: false

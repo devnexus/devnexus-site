@@ -9,18 +9,13 @@
 
         <title><sitemesh:write property='title'/></title>
 
-        <title><sitemesh:write property='title'/></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="shortcut icon" href="${ctx}/favicon.png">
 
-        <!-- vendor CSS -->
-        <link href="${assetsUrl}/css/vendor/bootstrap.min.css" rel="stylesheet">
-        <link href="${assetsUrl}/css/vendor/animate.css" rel="stylesheet">
-        <link href="${assetsUrl}/css/vendor/font-awesome.css" rel="stylesheet">
-        <link href="${assetsUrl}/css/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
         <!-- fonts: external links -->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -108,11 +103,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
-                            <div id="get_touch" class="widget widget_get_touch">
-                                <a href="${registrationUrl}" class="btn btn-primary registerButton">Register Now!</a>
-                            </div>
-                        </div>
                         <div class="col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
                             <div id="tweet" class="footer-widget">
                                 <h3 class="footer-title">Learn More</h3>
@@ -151,15 +141,7 @@
         <!-- /footer -->
 
         <!-- javascipt -->
-        <script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
-        <script src="${assetsUrl}/js/jquery.modernizr.js"></script>
-        <script src="${assetsUrl}/js/jquery.scrollTo.js"></script>
-        <script src="${assetsUrl}/js/jquery.easing.min.js"></script>
-        <script src="${assetsUrl}/js/bootstrap.min.js"></script>
-
-        <script src="${assetsUrl}/js/other/masonry.pkgd.js"></script>
-        <script src="${assetsUrl}/js/other/imagesloaded.pkgd.min.js"></script>
-        <script src="${assetsUrl}/js/jquery-plugins/jquery-ui.min.js"></script>
+        <script src="${ctx}/wro/all.js"></script>
 
         <sitemesh:write property='page.bottom'/>
     </body>

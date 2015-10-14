@@ -50,10 +50,7 @@ public class SecurityEventListener implements
 			successEvent.getAuthentication();
 
 			final User user = (User)successEvent.getAuthentication().getPrincipal();
-
-			User userFromDb = userService.getUser(user.getId());
-			userFromDb.setLastLoginDate(new Date());
-			userService.updateUser(userFromDb);
+			userService.trackUserLogin(user);
 
 		} else if (event instanceof InteractiveAuthenticationSuccessEvent) {
 

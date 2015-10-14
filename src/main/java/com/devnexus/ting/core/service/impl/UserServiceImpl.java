@@ -137,6 +137,14 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 
     @Override
     @Transactional
+    public void trackUserLogin(User user) {
+        final User userToUpdate = getUser(user.getId());
+        userToUpdate.setLastLoginDate(new Date());
+        userDao.save(userToUpdate);
+    }
+
+    @Override
+    @Transactional
     public void updateUser(User user) {
         userDao.save(user);
     }
