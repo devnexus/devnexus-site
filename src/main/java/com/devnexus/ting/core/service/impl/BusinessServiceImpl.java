@@ -330,6 +330,12 @@ public class BusinessServiceImpl implements BusinessService {
 		return speakerDao.getOne(speakerId);
 	}
 
+	@Override
+	@Transactional
+	public Speaker getSpeakerWithPicture(Long speakerId) {
+		return speakerDao.getSpeakerWithPicture(speakerId);
+	}
+
 	/** {@inheritDoc} */
 	@Override
 	@Transactional(readOnly=false)

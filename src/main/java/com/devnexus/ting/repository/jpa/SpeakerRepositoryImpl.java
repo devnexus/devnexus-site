@@ -24,6 +24,7 @@ import org.hibernate.Filter;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.repository.SpeakerRepositoryCustom;
 
@@ -82,4 +83,11 @@ public class SpeakerRepositoryImpl implements SpeakerRepositoryCustom {
 		return speakers;
 	}
 
+	@Override
+	public Speaker getSpeakerWithPicture(Long speakerId) {
+		return this.entityManager
+		.createQuery("select s from Speaker s left outer join fetch s.picture where s.id = :id", Speaker.class)
+		.setParameter("id", speakerId)
+		.getSingleResult();
+	}
 }

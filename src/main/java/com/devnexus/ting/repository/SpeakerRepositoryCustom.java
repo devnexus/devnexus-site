@@ -27,4 +27,6 @@ public interface SpeakerRepositoryCustom {
 
 	List<Speaker> getAllSpeakersOrderedByName();
 
+	Speaker getSpeakerWithPicture(Long speakerId);
+
 }

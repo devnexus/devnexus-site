@@ -16,6 +16,16 @@
 		</div>
 	</div>
 </section>
+
+<c:if test="${not empty successMessage}">
+	<div class="row" style="margin-top: 2em;">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="alert alert-success text-center" role="alert"><c:out value="${successMessage}"></c:out></div>
+		</div>
+	</div>
+</c:if>
+
+
 <!-- /intro -->
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">

@@ -87,7 +87,7 @@ public class PresentationController {
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/presentation", method=RequestMethod.GET)
-	public String prepareAddPresentation(@RequestParam(value="eventId", required = false) Long eventId, ModelMap model) {
+	public String prepareAddPresentation(@RequestParam(value="eventKey", required = false) Long eventId, ModelMap model) {
 
 		final Event event;
 
@@ -112,10 +112,15 @@ public class PresentationController {
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/presentation", method=RequestMethod.POST)
-	public String addPresentation(@Valid Presentation presentation, BindingResult bindingResult, ModelMap model, HttpServletRequest request) {
+	public String addPresentation(@RequestParam(value="eventKey", required = false) Long eventId,
+			@Valid Presentation presentation,
+			BindingResult bindingResult, 
+			ModelMap model,
+			HttpServletRequest request,
+			RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/presentations";
+			return "redirect:/s/admin/{eventKey}/presentations";
 		}
 
 		if (bindingResult.hasErrors()) {
@@ -155,8 +160,11 @@ public class PresentationController {
 		final Set<PresentationTag> presentationTagsToSave = businessService.processPresentationTags(presentation.getTagsAsText());
 		presentationToSave.getPresentationTags().addAll(presentationTagsToSave);
 
-		businessService.savePresentation(presentationToSave);
-		return "redirect:/s/admin/presentations";
+		final Presentation savedPresentation = businessService.savePresentation(presentationToSave);
+
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The presentation '%s' was added successfully.", savedPresentation.getTitle()));
+		return "redirect:/s/admin/{eventKey}/presentations";
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/presentation/{presentationId}", method=RequestMethod.GET)
@@ -194,7 +202,9 @@ public class PresentationController {
 
 		if (request.getParameter("delete") != null) {
 			businessService.deletePresentation(presentationFromDb);
-			//FlashMap.setSuccessMessage("The organizer was deleted successfully.");
+			
+			redirectAttributes.addFlashAttribute("successMessage",
+					String.format("The presentation '%s' was deleted successfully.", presentationFromDb.getTitle()));
 			return "redirect:/s/admin/{eventKey}/presentations";
 		}
 
@@ -244,8 +254,10 @@ public class PresentationController {
 		}
 
 		businessService.savePresentation(presentationFromDb);
+		
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The presentation '%s' was edited successfully.", presentationFromDb.getTitle()));
 
-		redirectAttributes.addFlashAttribute("successMessage", "The presentation was edited successfully.");
 		return "redirect:/s/admin/{eventKey}/presentations";
 	}
 

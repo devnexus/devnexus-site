@@ -21,7 +21,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +33,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Event;
@@ -52,8 +52,6 @@ import com.devnexus.ting.model.SpeakerList;
 public class SpeakerController {
 
 	@Autowired private BusinessService businessService;
-
-	@Autowired private Validator validator;
 
 	@RequestMapping(value="/s/admin/speakers", method=RequestMethod.GET)
 	public String getAllSpeakers(ModelMap model, HttpServletRequest request) {
@@ -108,10 +106,14 @@ public class SpeakerController {
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/speaker/{speakerId}", method=RequestMethod.POST)
-	public String editSpeaker(@PathVariable("speakerId") Long speakerId,
+	public String editSpeaker(
+			@PathVariable("eventKey") String eventKey,
+			@PathVariable("speakerId") Long speakerId,
 							  @RequestParam MultipartFile pictureFile,
 							  @Valid Speaker speakerForm,
-							  BindingResult result, HttpServletRequest request, ModelMap model) {
+							  BindingResult result, HttpServletRequest request,
+							  ModelMap model,
+							  RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/{eventKey}/speakers";
@@ -121,7 +123,7 @@ public class SpeakerController {
 			return "/admin/add-speaker";
 		}
 
-		final Speaker speakerFromDb = businessService.getSpeaker(speakerId);
+		final Speaker speakerFromDb = businessService.getSpeakerWithPicture(speakerId);
 
 		speakerFromDb.setBio(speakerForm.getBio());
 		speakerFromDb.setTwitterId(speakerForm.getTwitterId());
@@ -152,28 +154,30 @@ public class SpeakerController {
 				pictureData.setType(pictureFile.getContentType());
 
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new IllegalStateException(e);
 			}
 
 			speakerFromDb.setPicture(pictureData);
 
-			//TODO
-			//String message = "File '" + pictureData.getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
 		}
 
 		businessService.saveSpeaker(speakerFromDb);
 
-		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The speaker '%s' was edited successfully.", speakerFromDb.getFirstLastName()));
+		
 		return "redirect:/s/admin/{eventKey}/speakers";
 	}
 
 	@RequestMapping(value="/s/admin/speaker", method=RequestMethod.POST)
-	public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request) {
+	public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request, RedirectAttributes redirectAttributes) {
 
+		Event currentEvent = this.businessService.getCurrentEvent();
+		
+		redirectAttributes.addAttribute("eventKey", currentEvent.getEventKey());
+		
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/speakers";
+			return "redirect:/s/admin/{eventKey}/speakers";
 		}
 
 		if (result.hasErrors()) {
@@ -199,16 +203,14 @@ public class SpeakerController {
 
 			 speakerForm.setPicture(pictureData);
 
-			//TODO
-			//String message = "File '" + speakerForm.getPicture().getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
-
 		}
 
-		//TODO
-		Speaker savedSpeaker = businessService.saveSpeaker(speakerForm);
-		//FlashMap.setSuccessMessage("The speaker was added successfully.");
-		return "redirect:/s/admin/speakers";
+		final Speaker savedSpeaker = businessService.saveSpeaker(speakerForm);
+		
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The speaker '%s' was added successfully.", savedSpeaker.getFirstLastName()));
+
+		return "redirect:/s/admin/{eventKey}/speakers";
 	}
 
 }

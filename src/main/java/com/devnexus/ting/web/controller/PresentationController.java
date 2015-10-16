@@ -81,7 +81,7 @@ public class PresentationController {
 		return presentationList;
 	}
 
-	@RequestMapping("/s/{eventKey}/presentations")
+	@RequestMapping(value="/s/{eventKey}/presentations", method=RequestMethod.GET)
 	public String getPresentationsForEvent(@PathVariable("eventKey") final String eventKey,
 											@RequestParam(value="order", defaultValue="track") String order,
 											@RequestParam(value="trackId", required=false) Long trackId,

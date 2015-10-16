@@ -302,4 +302,6 @@ public interface BusinessService {
 	CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId);
 
 	Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker);
+
+	Speaker getSpeakerWithPicture(Long speakerId);
 }
