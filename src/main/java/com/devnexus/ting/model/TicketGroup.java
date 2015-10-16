@@ -37,6 +37,8 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.devnexus.ting.common.TingUtil;
+
 /**
  * A purchase group is a collection if Items of which only one may be purchased.
  *
@@ -167,6 +169,10 @@ public class TicketGroup extends BaseModelObject {
     public String getDescription() {
         return description;
     }
+
+	public String getDescriptionAsHtml() {
+		return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
+	}
 
     public void setDescription(String description) {
         this.description = description;

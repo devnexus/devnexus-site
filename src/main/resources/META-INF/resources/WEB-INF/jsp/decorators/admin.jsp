@@ -16,7 +16,8 @@
         <link rel="shortcut icon" href="${ctx}/favicon.png">
 
 		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
-
+		<link href="${assetsUrl}/css/jquery-ui.css" rel="stylesheet">
+		
         <!-- fonts: external links -->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -142,7 +143,7 @@
 
         <!-- javascipt -->
         <script src="${ctx}/wro/all.js"></script>
-
+		<script src="${assetsUrl}/js/jquery-plugins/jquery-ui.min.js"></script>
         <sitemesh:write property='page.bottom'/>
     </body>
 </html>

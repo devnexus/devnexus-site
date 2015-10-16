@@ -70,9 +70,9 @@
                                      <tr>
                                          <td>
                                              <h4><c:out value="${ticketGroup.label}"/> </h4><br/>
-                                             <p><c:out value="${ticketGroup.description}"/></p>
+                                             <c:out value="${ticketGroup.descriptionAsHtml}" escapeXml="false"/>
                                          </td>
-                                         <td>
+                                         <td style="width: 300px">
                                              <div class="form-group">
                                                  <label for="ticketCost" class="col-lg-5 control-label">Cost per Ticket </label>
                                                  <input type="hidden" id="ticket-cost-${ticketGroup.id}" class="ticket-cost" value="<c:out value="${ticketGroup.price}"/>" disabled />

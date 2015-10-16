@@ -40,7 +40,7 @@
             <div class="form-group${errorClass}">
                 <label for="label" class="col-lg-2 control-label">Description *</label>
                 <div class="col-lg-10">
-                    <form:input cssClass="form-control" path="description" id="description" maxlength="10000" tabindex="1"/>
+                    <form:textarea cssClass="form-control" path="description" id="description" maxlength="10000" rows="10" tabindex="1"/>
                     <form:errors path="description" cssClass="fieldError"/>
                 </div>
             </div>
