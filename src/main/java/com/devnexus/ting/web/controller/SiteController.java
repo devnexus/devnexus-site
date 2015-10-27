@@ -40,6 +40,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.BusinessService;
@@ -70,6 +71,11 @@ public class SiteController {
 	@Autowired private TwitterService twitterService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
+
+	@RequestMapping({"/api/", "/api"})
+	public ModelAndView apiRoot() {
+		return new ModelAndView("redirect:/swagger-ui.html");
+	}
 
 	@RequestMapping({"/s/index", "/s/"})
 	public String index(final Model model) {

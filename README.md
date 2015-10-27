@@ -9,12 +9,12 @@ Build Status:
 
 [![Build Status](https://travis-ci.org/devnexus/devnexus-site.png?branch=master)](https://travis-ci.org/devnexus/devnexus-site)
 
-#### Requirements
+## Requirements
 
 * Git
 * Maven
 
-#### Quickstart (Demo Mode)
+## Quickstart (Demo Mode)
 
 	$ git clone https://github.com/devnexus/devnexus-site.git
 	$ cd devnexus-site/
@@ -23,13 +23,13 @@ Build Status:
 
 The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8080/`
 
-#### Production Mode
+## Production Mode - Standalone
 
 The DevNexus site uses Postgres as the persistence store in production.
 
 	$ java -jar target/devnexus.jar -DTING_HOME=/opt/ting
 
-##### Configuration
+### Configuration
 
 ```yaml
 devnexus:
@@ -84,15 +84,7 @@ TING_PUSH_APP_ID:
 TING_PUSH_MASTER_SECRET:
 ```
 
-#### Running using Docker
-
-TBD
-
-##### Resources
-
-* https://spring.io/guides/gs/spring-boot-docker/
-
-#### Running on Cloud Foundry
+## Cloud Foundry Mode
 
 **Demo Deployment**: http://devnexus.cfapps.io/
 
@@ -101,7 +93,28 @@ Mind the Java 8 meta space: https://github.com/cloudfoundry/java-buildpack/issue
 	$ cf set-env my_app JBP_CONFIG_OPEN_JDK_JRE ‘[memory_heuristics: {metaspace: 128}, memory_sizes: {metaspace: 96m..}]’
 	$ cf restage my_app
 
-#### Running Postgres on Mac
+### Postgres
+
+### Sendgrid
+
+For sending mail notifications, the app uses SendGrid:
+
+http://docs.run.pivotal.io/marketplace/services/sendgrid.html
+https://github.com/sendgrid/sendgrid-java
+
+
+
+## Running using Docker
+
+TBD
+
+### Resources
+
+* https://spring.io/guides/gs/spring-boot-docker/
+
+## Pittfalls
+
+### Running Postgres on Mac
 
 You may run into issues such as the following:
 

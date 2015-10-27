@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.BusinessService;
@@ -42,6 +43,7 @@ import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TrackList;
+import com.paypal.base.util.OAuthSignature.HTTPMethod;
 
 /**
  * Main DevNexus REST Controller.
@@ -53,11 +55,12 @@ import com.devnexus.ting.model.TrackList;
 @RequestMapping("/api")
 public class RestApiController {
 
+
 	@Autowired private BusinessService businessService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RestApiController.class);
 
-	@RequestMapping("/schedule")
+	@RequestMapping(path="/schedule", method=RequestMethod.GET)
 	public ScheduleItemList scheduleForCurrentEvent() {
 
 		final Event event = businessService.getCurrentEvent();
@@ -72,7 +75,7 @@ public class RestApiController {
 		}
 	}
 
-	@RequestMapping("/{eventKey}/schedule")
+	@RequestMapping(path="/{eventKey}/schedule", method=RequestMethod.GET)
 	public ScheduleItemList schedule(@PathVariable("eventKey") String eventKey) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -86,11 +89,10 @@ public class RestApiController {
 		}
 	}
 
-	@RequestMapping("/organizers")
-	public OrganizerList getOrganizers() {
+	@RequestMapping(path="/organizers", method=RequestMethod.GET)
+	public List<Organizer> getOrganizers() {
 
-		final List<Organizer>organizers = businessService.getAllOrganizersWithPicture();
-		return new OrganizerList(organizers);
+		return businessService.getAllOrganizersWithPicture();
 
 	}
 
@@ -139,24 +141,24 @@ public class RestApiController {
 		}
 	}
 
-	@RequestMapping("/{eventKey}/sponsors")
+	@RequestMapping(path="/{eventKey}/sponsors", method=RequestMethod.GET)
 	public SponsorList getSponsorsForEvent(@PathVariable("eventKey") String eventKey) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		return businessService.getSponsorListForEvent(event.getId(), true);
 	}
 
-	@RequestMapping(value="/sponsors")
+	@RequestMapping(path="/sponsors", method=RequestMethod.GET)
 	public SponsorList getSponsors() {
 		final Event event = businessService.getCurrentEvent();
 		return businessService.getSponsorListForEvent(event.getId(), true);
 	}
 
-	@RequestMapping("/{eventKey}/tracks")
+	@RequestMapping(path="/{eventKey}/tracks", method=RequestMethod.GET)
 	public TrackList getTracksForEventKey(@PathVariable("eventKey") final String eventKey) {
 		return prepareTrackData(businessService.getEventByEventKey(eventKey));
 	}
 
-	@RequestMapping("/tracks")
+	@RequestMapping(path="/tracks", method=RequestMethod.GET)
 	public TrackList getTracksForCurrentEvent() {
 		return prepareTrackData(businessService.getCurrentEvent());
 	}
@@ -176,7 +178,7 @@ public class RestApiController {
 		return trackList;
 	}
 
-	@RequestMapping("/{eventKey}/tags")
+	@RequestMapping(path="/{eventKey}/tags", method=RequestMethod.GET)
 	public Map<PresentationTag, Long> getTracksForEventKey(@PathVariable("eventKey") final String eventKey,
 										final Model model) {
 
@@ -187,7 +189,7 @@ public class RestApiController {
 		return tagCloud;
 	}
 
-	@RequestMapping("/tags")
+	@RequestMapping(path="/tags", method=RequestMethod.GET)
 	public Map<PresentationTag, Long> getTagCloudForCurrentEvent() {
 
 		final Event event = businessService.getCurrentEvent();
@@ -197,7 +199,7 @@ public class RestApiController {
 		return tagCloud;
 	}
 
-	@RequestMapping("/{eventKey}/rooms")
+	@RequestMapping(path="/{eventKey}/rooms", method=RequestMethod.GET)
 	public RoomList getRoomsForEventKey(@PathVariable("eventKey") final String eventKey) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
@@ -208,7 +210,7 @@ public class RestApiController {
 		return roomList;
 	}
 
-	@RequestMapping("/rooms")
+	@RequestMapping(path="/rooms", method=RequestMethod.GET)
 	public RoomList getRoomsForCurrentEvent() {
 
 		final Event event = businessService.getCurrentEvent();
