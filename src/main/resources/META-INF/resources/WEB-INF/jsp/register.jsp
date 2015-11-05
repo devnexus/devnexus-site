@@ -102,6 +102,20 @@
                                                          <form:option value="14" label="14" />
                                                          <form:option value="15" label="15" />
                                                          <form:option value="16" label="16" />
+                                                         <form:option value="17" label="17" />
+                                                         <form:option value="18" label="18" />
+                                                         <form:option value="19" label="19" />
+                                                         <form:option value="20" label="20" />
+                                                         <form:option value="21" label="21" />
+                                                         <form:option value="22" label="22" />
+                                                         <form:option value="23" label="23" />
+                                                         <form:option value="24" label="24" />
+                                                         <form:option value="25" label="25" />
+                                                         <form:option value="26" label="26" />
+                                                         <form:option value="27" label="27" />
+                                                         <form:option value="28" label="28" />
+                                                         <form:option value="29" label="29" />
+                                                         <form:option value="30" label="30" />
                                                          <form:option value="-1" label="Need more? Email info@ajug.org" />
                                                      </form:select>
                                                      <form:errors path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" cssClass="fieldError" />
