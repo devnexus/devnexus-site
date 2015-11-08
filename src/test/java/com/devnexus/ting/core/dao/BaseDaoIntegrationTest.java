@@ -23,6 +23,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
@@ -38,6 +39,7 @@ import com.devnexus.ting.core.service.SystemSetupService;
 @SpringApplicationConfiguration(
 		initializers=IntegrationTestApplicationContextInitializer.class,
 		classes={DevNexusApplication.class})
+@WebAppConfiguration
 public abstract class BaseDaoIntegrationTest {
 
 	protected @PersistenceContext
@@ -45,9 +47,6 @@ public abstract class BaseDaoIntegrationTest {
 
 	@Autowired
 	private SystemSetupService systemSetupService;
-
-	@Autowired
-	private SystemDao systemDao;
 
 	@Before
 	public void setup() {

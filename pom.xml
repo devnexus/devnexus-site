@@ -80,21 +80,36 @@
 				<artifactId>cf-maven-plugin</artifactId>
 				<version>1.1.1</version>
 				<configuration>
-					<server>mycloudfoundry-instance</server>
+					<server>cf-devnexus</server>
 					<target>http://api.run.pivotal.io</target>
-					<org>FrameworksAndRuntimes</org>
-					<space>ghillert</space>
+					<org>devnexus</org>
+					<space>production</space>
 					<appname>devnexus</appname>
-					<url>devnexus.cfapps.io</url>
+					<url>devnexus-staging.cfapps.io</url>
 					<memory>1024</memory>
 					<diskQuota>1024</diskQuota>
 					<healthCheckTimeout>180</healthCheckTimeout>
 					<mergeEnv>true</mergeEnv>
 					<services>
 						<service>
-							<name>devnexus-mail</name>
+							<name>postgres</name>
 						</service>
 					</services>
+					<env>
+						<devnexus_mail_enabled>true</devnexus_mail_enabled>
+						<devnexus_mail_sendgrid-api-key>****</devnexus_mail_sendgrid-api-key>
+						<devnexus_mail_sendgrid-enabled>true</devnexus_mail_sendgrid-enabled>
+						<devnexus_recaptcha_enabled>true</devnexus_recaptcha_enabled>
+						<devnexus_recaptcha_privateKey>****</devnexus_recaptcha_privateKey>
+						<devnexus_recaptcha_publicKey>****</devnexus_recaptcha_publicKey>
+						<devnexus_twitter_enabled>true</devnexus_twitter_enabled>
+						<devnexus_twitter_oauth_accessToken>****</devnexus_twitter_oauth_accessToken>
+						<devnexus_twitter_oauth_accessTokenSecret>****</devnexus_twitter_oauth_accessTokenSecret>
+						<devnexus_twitter_oauth_consumerKey>****</devnexus_twitter_oauth_consumerKey>
+						<devnexus_twitter_oauth_consumerSecret>****</devnexus_twitter_oauth_consumerSecret>
+						<devnexus_websocket_enabled>true</devnexus_websocket_enabled>
+						<spring_jpa_properties_dialect>org.hibernate.dialect.PostgreSQLDialect</spring_jpa_properties_dialect>
+					</env>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -278,9 +293,9 @@
 		<!-- Persistence -->
 
 		<dependency>
-			<groupId>postgresql</groupId>
+			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.1-901-1.jdbc4</version>
+			<version>9.4-1205-jdbc42</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -385,7 +400,6 @@
 		<dependency>
 			<groupId>com.sendgrid</groupId>
 			<artifactId>sendgrid-java</artifactId>
-			<version>2.2.2</version>
 		</dependency>
 
 		<dependency>

@@ -95,22 +95,16 @@ Mind the Java 8 meta space: https://github.com/cloudfoundry/java-buildpack/issue
 
 ### Postgres
 
+When accessing Postgres with pgAdmin in Cloud environments the following tip might be useful:
+
+http://stackoverflow.com/questions/12663639/how-to-hide-databases-that-i-am-not-allowed-to-access
+
 ### Sendgrid
 
 For sending mail notifications, the app uses SendGrid:
 
 http://docs.run.pivotal.io/marketplace/services/sendgrid.html
 https://github.com/sendgrid/sendgrid-java
-
-
-
-## Running using Docker
-
-TBD
-
-### Resources
-
-* https://spring.io/guides/gs/spring-boot-docker/
 
 ## Pittfalls
 

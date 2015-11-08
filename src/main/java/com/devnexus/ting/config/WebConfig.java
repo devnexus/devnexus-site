@@ -15,11 +15,10 @@
  */
 package com.devnexus.ting.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -41,6 +40,7 @@ import com.devnexus.ting.web.interceptor.GlobalDataInterceptor;
  *
  */
 @Configuration
+@Import(SwaggerConfig.class)
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
@@ -58,9 +58,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		localValidatorFactoryBean.setValidationMessageSource(messageSource());
 		return localValidatorFactoryBean;
 	}
-
-	@Autowired
-	private Environment environment;
 
 	@Bean
 	public GlobalDataInterceptor globalDataInterceptor() {
@@ -91,5 +88,4 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public Validator getValidator() {
 		return validator();
 	}
-
 }

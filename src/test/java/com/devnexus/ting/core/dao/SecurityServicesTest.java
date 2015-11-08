@@ -25,14 +25,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.DevNexusApplication;
 import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.config.PersistenceConfig;
-import com.devnexus.ting.config.ServicesConfig;
 import com.devnexus.ting.core.service.SystemSetupService;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
@@ -48,6 +46,7 @@ import com.devnexus.ting.repository.UserRepository;
 		initializers=IntegrationTestApplicationContextInitializer.class,
 		classes={DevNexusApplication.class})
 @Transactional(readOnly=false)
+@WebAppConfiguration
 public class SecurityServicesTest {
 
 	@Autowired private SystemSetupService systemSetupService;

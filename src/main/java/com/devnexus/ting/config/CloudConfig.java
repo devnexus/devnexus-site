@@ -24,22 +24,24 @@ public class CloudConfig {
 		return cloudFactory.getCloud();
 	}
 
-	@Bean
-	public SendGrid sendGrid() {
-		UriBasedServiceInfo serviceInfo = (UriBasedServiceInfo) cloud().getServiceInfo("devnexus-mail");
-		return new SendGrid(serviceInfo.getUserName(), serviceInfo.getPassword());
-	}
+//	@Bean
+//	public SendGrid sendGrid() {
+//		UriBasedServiceInfo serviceInfo = (UriBasedServiceInfo) cloud().getServiceInfo("devnexus-mail");
+//		return new SendGrid(serviceInfo.getUserName(), serviceInfo.getPassword());
+//	}
 
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 
 		final DataSource dataSource = cloud().getSingletonServiceConnector(DataSource.class, null);
 
-		final HikariConfig config = new HikariConfig();
-		config.setDataSource(dataSource);
-		config.setConnectionTestQuery("select 1");
-		config.setInitializationFailFast(true);
-		return new HikariDataSource(config);
+//		final HikariConfig config = new HikariConfig();
+//		config.setDataSource(dataSource);
+//		config.setConnectionTestQuery("select 1");
+//		config.setInitializationFailFast(true);
+//		return new HikariDataSource(config);
+
+		return dataSource;
 	}
 
 }

@@ -48,15 +48,6 @@ import org.springframework.core.env.Environment;
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 import com.google.common.cache.CacheBuilder;
 
-import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.service.ApiInfo;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger.web.UiConfiguration;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 /**
  * Main entry point for the DevNexus application.
  *
@@ -65,7 +56,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @EnableCaching
 @SpringBootApplication
-@EnableSwagger2
 public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 
 	@Autowired
@@ -168,27 +158,4 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 		return connector;
 	}
 
-	@Bean
-	public Docket documentation() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.select()
-				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.regex("/api/.*"))
-				.build()
-				.pathMapping("/")
-				.apiInfo(metadata());
-	}
-	@Bean
-	public UiConfiguration uiConfig() {
-		return UiConfiguration.DEFAULT;
-	}
-
-	private ApiInfo metadata() {
-		return new ApiInfoBuilder()
-				.title("DevNexus API")
-				.description("DevNexus REST API")
-				.version("1.0")
-				.contact("info@ajug.org")
-				.build();
-	}
 }
