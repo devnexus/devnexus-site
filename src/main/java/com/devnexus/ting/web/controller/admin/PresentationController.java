@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller.admin;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.List;
@@ -114,7 +115,7 @@ public class PresentationController {
 	@RequestMapping(value="/s/admin/{eventKey}/presentation", method=RequestMethod.POST)
 	public String addPresentation(@RequestParam(value="eventKey", required = false) Long eventId,
 			@Valid Presentation presentation,
-			BindingResult bindingResult, 
+			BindingResult bindingResult,
 			ModelMap model,
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
@@ -175,7 +176,7 @@ public class PresentationController {
 		model.addAttribute("presentation", presentation);
 
 		final List<Speaker> speakers = businessService.getSpeakersForEvent(presentation.getEvent().getId());
-		model.addAttribute("sp2", speakers);
+		model.addAttribute("speakers", speakers);
 
 		this.prepareReferenceData(model, presentation.getEvent());
 
@@ -202,7 +203,7 @@ public class PresentationController {
 
 		if (request.getParameter("delete") != null) {
 			businessService.deletePresentation(presentationFromDb);
-			
+
 			redirectAttributes.addFlashAttribute("successMessage",
 					String.format("The presentation '%s' was deleted successfully.", presentationFromDb.getTitle()));
 			return "redirect:/s/admin/{eventKey}/presentations";
@@ -253,8 +254,24 @@ public class PresentationController {
 			redirectAttributes.addFlashAttribute("successMessage", message);
 		}
 
+		final List<Speaker> goodSpeakers = new ArrayList<>();
+
+		if (presentation.getSpeakers() != null) {
+			for (Speaker speaker : presentation.getSpeakers()) {
+				if (speaker != null && speaker.getId() != null) {
+					Speaker speakerFromDb = businessService.getSpeaker(speaker.getId());
+					goodSpeakers.add(speakerFromDb);
+				}
+			}
+		}
+
+		if (goodSpeakers.size() > 0) {
+			presentationFromDb.getSpeakers().clear();
+			presentationFromDb.getSpeakers().addAll(goodSpeakers);
+		}
+
 		businessService.savePresentation(presentationFromDb);
-		
+
 		redirectAttributes.addFlashAttribute("successMessage",
 				String.format("The presentation '%s' was edited successfully.", presentationFromDb.getTitle()));
 

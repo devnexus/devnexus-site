@@ -33,6 +33,9 @@ public class CfpSubmissionList implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Integer numberOfCfps;
+	private Integer numberOfAcceptedCfps = 0;
+	private Integer numberOfRejectedCfps = 0;
+	private Integer numberOfPendingCfps = 0;
 
 	@XmlElement(name="cfp-submission")
 	private List<CfpSubmission> cfpSubmissions;
@@ -45,11 +48,25 @@ public class CfpSubmissionList implements Serializable {
 		this.cfpSubmissions = cfpSubmissions;
 		this.numberOfCfps = cfpSubmissions.size();
 
+		for (CfpSubmission cfpSubmission : cfpSubmissions) {
+			if (CfpSubmissionStatusType.ACCEPTED.equals(cfpSubmission.getStatus())) {
+				numberOfAcceptedCfps++;
+			}
+			else if (CfpSubmissionStatusType.REJECTED.equals(cfpSubmission.getStatus())) {
+				numberOfRejectedCfps++;
+			}
+			else if (CfpSubmissionStatusType.PENDING.equals(cfpSubmission.getStatus()) || cfpSubmission.getStatus() == null) {
+				numberOfPendingCfps++;
+			}
+			else {
+				throw new IllegalStateException("Unsupported CfpSubmissionStatusType " + cfpSubmission.getStatus());
+			}
+		}
+
 	}
 
 	public CfpSubmissionList() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public List<CfpSubmission> getCfpSubmissions() {
@@ -64,8 +81,16 @@ public class CfpSubmissionList implements Serializable {
 		return numberOfCfps;
 	}
 
-	public void setNumberOfCfps(Integer numberOfCfps) {
-		this.numberOfCfps = numberOfCfps;
+	public Integer getNumberOfAcceptedCfps() {
+		return numberOfAcceptedCfps;
+	}
+
+	public Integer getNumberOfRejectedCfps() {
+		return numberOfRejectedCfps;
+	}
+
+	public Integer getNumberOfPendingCfps() {
+		return numberOfPendingCfps;
 	}
 
 }

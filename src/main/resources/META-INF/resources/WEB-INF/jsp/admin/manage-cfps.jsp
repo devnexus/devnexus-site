@@ -24,6 +24,30 @@
 </section>
 <!-- /intro -->
 
+<div class="row" style="margin-top: 1em;">
+	<div class="col-md-10 col-md-offset-1">
+		<table class="table table-striped table-bordered table-hover">
+			<tbody>
+				<tr>
+					<td>Number of CFPs</td>
+					<td>${cfpSubmissionList.numberOfCfps}</td>
+				</tr>
+				<tr>
+					<td>Number of Accepted CFPs</td>
+					<td>${cfpSubmissionList.numberOfAcceptedCfps}</td>
+				</tr>
+				<tr>
+					<td>Number of Rejected CFPs</td>
+					<td>${cfpSubmissionList.numberOfRejectedCfps}</td>
+				</tr>
+				<tr>
+					<td>Number of Pending CFPs</td>
+					<td>${cfpSubmissionList.numberOfPendingCfps}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
 <div class="row">
 	<div class="col-md-12">
 		<table class="table table-hover">
