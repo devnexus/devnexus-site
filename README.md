@@ -86,12 +86,39 @@ TING_PUSH_MASTER_SECRET:
 
 ## Cloud Foundry Mode
 
-**Demo Deployment**: http://devnexus.cfapps.io/
+The easiest to deploy DevNexus is using Maven. Please update the POM with the
+credentials that pertain to you:
 
-Mind the Java 8 meta space: https://github.com/cloudfoundry/java-buildpack/issues/174
+```xml
+<env>
+	<devnexus_mail_enabled>true</devnexus_mail_enabled>
+	<devnexus_mail_sendgrid-api-key>****</devnexus_mail_sendgrid-api-key>
+	<devnexus_mail_sendgrid-enabled>true</devnexus_mail_sendgrid-enabled>
+	<devnexus_recaptcha_enabled>true</devnexus_recaptcha_enabled>
+	<devnexus_recaptcha_privateKey>****</devnexus_recaptcha_privateKey>
+	<devnexus_recaptcha_publicKey>****</devnexus_recaptcha_publicKey>
+	<devnexus_twitter_enabled>true</devnexus_twitter_enabled>
+	<devnexus_twitter_oauth_accessToken>****</devnexus_twitter_oauth_accessToken>
+	<devnexus_twitter_oauth_accessTokenSecret>****</devnexus_twitter_oauth_accessTokenSecret>
+	<devnexus_twitter_oauth_consumerKey>****</devnexus_twitter_oauth_consumerKey>
+	<devnexus_twitter_oauth_consumerSecret>****</devnexus_twitter_oauth_consumerSecret>
+	<devnexus_websocket_enabled>true</devnexus_websocket_enabled>
+	<spring_jpa_properties_dialect>org.hibernate.dialect.PostgreSQLDialect</spring_jpa_properties_dialect>
+	<PAYPAL_MODE>live</PAYPAL_MODE>
+	<PAYPAL_ENDPOINT>api.paypal.com</PAYPAL_ENDPOINT>
+	<PAYPAL_CLIENT_SECRET>****</PAYPAL_CLIENT_SECRET>
+	<PAYPAL_CLIENT_ID>****</PAYPAL_CLIENT_ID>
+	<PAYPAL_ACCOUNT>****</PAYPAL_ACCOUNT>
+</env>
+```
 
-	$ cf set-env my_app JBP_CONFIG_OPEN_JDK_JRE ‘[memory_heuristics: {metaspace: 128}, memory_sizes: {metaspace: 96m..}]’
-	$ cf restage my_app
+Once configured, you can push the app using:
+
+	$ mvn cf:push
+
+When interacting with Cloud Foundry, you may consider using the command line tool also:
+
+https://github.com/cloudfoundry/cli
 
 ### Postgres
 
