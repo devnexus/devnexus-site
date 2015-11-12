@@ -81,6 +81,11 @@ public class RegisterController {
     @Autowired
     private BusinessService businessService;
 
+    @RequestMapping(value = "/s/register-overview", method = RequestMethod.GET)
+    public String getRegistrationOverview(Model model) {
+        return "register-overview";
+    }
+  
     @RequestMapping(value = "/s/register", method = RequestMethod.GET)
     public String getRegistrationFormForCurrentEvent(Model model) {
         Event currentEvent = businessService.getCurrentEvent();

@@ -69,7 +69,7 @@
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
 	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
-	<c:url var="registrationUrl" value="https://www.devnexus.com/s/register"/>
+	<c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
@@ -181,7 +181,7 @@
 						<i class="fa fa-cogs"></i>
 					</div><!--//icon-->
 					<div class="content">
-						<p class="lead counter-stat">6</p>
+						<p class="lead counter-stat">9</p>
 						<p class="lead counter-commits">WORKSHOPS</p>
 					</div><!--//content-->
 				</div>

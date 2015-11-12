@@ -97,6 +97,7 @@
 					</services>
 					<env>
 						<devnexus_mail_enabled>true</devnexus_mail_enabled>
+						<devnexus_mail_user_cc>info@ajug.org</devnexus_mail_user_cc>
 						<devnexus_mail_sendgrid-api-key>****</devnexus_mail_sendgrid-api-key>
 						<devnexus_mail_sendgrid-enabled>true</devnexus_mail_sendgrid-enabled>
 						<devnexus_recaptcha_enabled>true</devnexus_recaptcha_enabled>
