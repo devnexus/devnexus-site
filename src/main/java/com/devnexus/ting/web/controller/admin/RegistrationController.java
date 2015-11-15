@@ -110,7 +110,7 @@ public class RegistrationController {
         try ( // uses the Super CSV API to generate CSV data from the model data
                 ICsvBeanWriter csvWriter = new TicketCsvWriter(response.getWriter(), businessService)) {
             String[] header = { "First Name","Last Name", "Email Address", "City", "State","County", "Job Title", "Company", "T Shirt Size", "Vegetarian Meal",
-                "Allow Sponsor To Contact", "Workshop", "Payment state"};
+                "Allow Sponsor To Contact", "Purchase Date", "Ticket Type", "Payment state"};
             
             csvWriter.writeHeader(header);
             
