@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting;
 
+import com.devnexus.ting.common.AppHomeSource;
 import java.io.File;
 import java.io.IOException;
 
@@ -73,7 +74,14 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			final PropertySource<?> propertySource;
 			final YamlPropertySourceLoader yamlPropertySourceLoader = new YamlPropertySourceLoader();
 
-			final String productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
+			final String productionPropertySourceLocation;
+                        final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
+                        if (apphome.getAppHomeSource() == AppHomeSource.USER_DIRECTORY) {
+                             productionPropertySourceLocation = "file:" + apphome.getAppHomePath() + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
+                        } else {
+                            productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
+                        }
+                        
 			try {
 				propertySource = yamlPropertySourceLoader.load("devnexus-standalone", new DefaultResourceLoader().getResource(productionPropertySourceLocation), null);
 			} catch (IOException e) {
