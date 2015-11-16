@@ -8,7 +8,8 @@ public enum SponsorLevel {
 	GOLD( 200L, "Gold Sponsor", "sponsorsGold"),
 	SILVER( 300L, "Silver Sponsor", "sponsorsSilver"),
 	MEDIA_PARTNER(350L, "Media Partner", "sponsorsMediaPartner"),
-	COCKTAIL_HOUR( 400L, "Cocktail Hour Sponsor", "sponsorsCocktail");
+	COCKTAIL_HOUR( 400L, "Cocktail Hour Sponsor", "sponsorsCocktail"),
+	BADGE( 370L, "Badge Sponsor", "sponsorsBadge");
 
 	private Long id;
 	private String name;
