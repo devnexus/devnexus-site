@@ -67,49 +67,38 @@
 						</c:if>
 						<p class="text-center">
 							<c:if test="${!empty speaker.googlePlusId}">
-								<a href="https://plus.google.com/<c:out value="${speaker.googlePlusId}" />" target="_blank">
-									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-										<span class="fa fa-google"></span>
-									</button>
+								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://plus.google.com/<c:out value="${speaker.googlePlusId}" />" target="_blank">
+									<span class="fa fa-google"></span>
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.twitterId}">
-								<a href="https://twitter.com/<c:out value="${speaker.twitterId}"/>" target="_blank">
-									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-										<span class="fa fa-twitter"></span>
-									</button>
+								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://twitter.com/<c:out value="${speaker.twitterId}"/>" target="_blank">
+									<span class="fa fa-twitter"></span>
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.linkedInId}">
-								<a href="https://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />" target="_blank">
-									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-										<span class="fa fa-linkedin"></span>
-									</button>
+								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />" target="_blank">
+									<span class="fa fa-linkedin"></span>
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.githubId}">
-								<a href="https://github.com/<c:out value="${speaker.githubId}" />" target="_blank">
-									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-										<span class="fa fa-github"></span>
-									</button>
+								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://github.com/<c:out value="${speaker.githubId}" />" target="_blank">
+									<span class="fa fa-github"></span>
 								</a>
 							</c:if>
 							<c:if test="${!empty speaker.lanyrdId}">
-								<a href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />/" target="_blank">
-									<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-										<span>L</span>
-									</button>
+								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />/" target="_blank">
+									<span>L</span>
 								</a>
 							</c:if>
 						</p>
-						<p><c:out value="${speaker.bioAsHtml}" escapeXml="false"/></p>
+						<div><c:out value="${speaker.bioAsHtml}" escapeXml="false"/></div>
 					</div>
 				</div>
 				<c:if test="${status.last}">
 					</div>
 				</c:if>
 			</c:forEach>
-		</div>
 	</section>
 
 	<jsp:include page="includes/questions.jsp"/>

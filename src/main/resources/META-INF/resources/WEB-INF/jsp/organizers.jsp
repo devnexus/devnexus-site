@@ -43,42 +43,32 @@
 					<h4 class="text-center"><c:out value="${organizer.firstName}"/> <c:out value="${organizer.lastName}"/></h4>
 					<p class="text-center" style="margin-top: 1em;">
 						<c:if test="${!empty organizer.googlePlusId}">
-							<a href="https://plus.google.com/<c:out value="${organizer.googlePlusId}" />" target="_blank">
-								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-									<span class="fa fa-google"></span>
-								</button>
+							<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://plus.google.com/<c:out value="${organizer.googlePlusId}" />" target="_blank">
+								<span class="fa fa-google"></span>
 							</a>
 						</c:if>
 						<c:if test="${!empty organizer.twitterId}">
-							<a href="https://twitter.com/<c:out value="${organizer.twitterId}"/>" target="_blank">
-								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-									<span class="fa fa-twitter"></span>
-								</button>
+							<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://twitter.com/<c:out value="${organizer.twitterId}"/>" target="_blank">
+								<span class="fa fa-twitter"></span>
 							</a>
 						</c:if>
 						<c:if test="${!empty organizer.linkedInId}">
-							<a href="http://www.linkedin.com/in/<c:out value="${organizer.linkedInId}" />" target="_blank">
-								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-									<span class="fa fa-linkedin"></span>
-								</button>
+							<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="http://www.linkedin.com/in/<c:out value="${organizer.linkedInId}" />" target="_blank">
+								<span class="fa fa-linkedin"></span>
 							</a>
 						</c:if>
 						<c:if test="${!empty organizer.githubId}">
-							<a href="http://github.com/<c:out value="${organizer.githubId}" />" target="_blank">
-								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-									<span class="fa fa-github"></span>
-								</button>
+							<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="http://github.com/<c:out value="${organizer.githubId}" />" target="_blank">
+								<span class="fa fa-github"></span>
 							</a>
 						</c:if>
 						<c:if test="${!empty organizer.lanyrdId}">
-							<a href="http://lanyrd.com/profile/<c:out value="${organizer.lanyrdId}" />" target="_blank">
-								<button type="button" class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom">
-									<span>L</span>
-								</button>
+							<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="http://lanyrd.com/profile/<c:out value="${organizer.lanyrdId}" />" target="_blank">
+								<span>L</span>
 							</a>
 						</c:if>
 					</p>
-					<p><c:out value="${organizer.bioAsHtml}" escapeXml="false"/></p>
+					<div><c:out value="${organizer.bioAsHtml}" escapeXml="false"/></div>
 				</div>
 			</div>
 			<c:if test="${status.last}">
