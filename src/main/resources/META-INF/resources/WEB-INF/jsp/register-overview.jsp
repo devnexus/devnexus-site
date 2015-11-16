@@ -95,26 +95,47 @@
 
 <section id="speaker" class="bg-light-gray">
 	<div class="container">
-		<div class="row price-box text-center">
+		<div class="row price-box text-center price-box">
 			<div class="col-md-8 col-md-offset-2 price-box-inner">
 				<div class="price-box-main">
-					<h2 >EARLY BIRD &amp; EARLY GROUP PRICE: <strong>$300</strong></h2>
+					<h2 >STANDARD PRICE: <strong>$340</strong></h2>
 					<a href="${baseSiteUrl}/register" class="btn btn-primary">Buy</a>
 				</div>
 				<div class="price-box-aux">
-					<div>Expires 2015/11/15</div>
+					<div>Valid from 2015/11/16 to 2016/1/10</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="row price-box text-center">
+		<div class="row price-box text-center price-box">
 			<div class="col-md-8 col-md-offset-2 price-box-inner">
 				<div class="price-box-main">
-					<h2 >WORKSHOPS: <strong>$495 - $595</strong></h2>
+					<h2 >GROUP PRICE (5+ Attendees): <strong>$300</strong></h2>
 					<a href="${baseSiteUrl}/register" class="btn btn-primary">Buy</a>
 				</div>
 				<div class="price-box-aux">
-					<div>Workshops can only be purchased as <strong>add-on to the main conference</strong>.</div>
+					<div>Valid from 2015/12/5 to 2016/1/10</div>
+				</div>
+			</div>
+		</div>
+		<div class="row price-box text-center">
+			<div class="col-md-8 col-md-offset-2 price-box-inner">
+				<div class="price-box-main">
+					<h2 >WORKSHOPS + MAIN CONF TICKET: <strong>$535 - $635</strong></h2>
+					<a href="${baseSiteUrl}/register" class="btn btn-primary">Buy</a>
+				</div>
+				<div class="price-box-aux">
+					<div>Workshops can only be purchased in combination <strong>with main conference ticket</strong>.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row price-box text-center">
+			<div class="col-md-8 col-md-offset-2 price-box-inner">
+				<div class="price-box-main">
+					<h2 >GROUP (5+) WORKSHOP + <br/> MAIN CONF COMBO: <strong>$495 - $595</strong></h2>
+					<div>Email us at info@ajug.org to purchase</div>
+				</div>
+				<div class="price-box-aux">
+					<div>Workshops can only be purchased in combination <strong>with main conference ticket</strong>.</div>
 				</div>
 			</div>
 		</div>
@@ -126,26 +147,6 @@
 				</div>
 				<div class="price-box-aux">
 					<div>Email us to get the code at info@ajug.org</div>
-				</div>
-			</div>
-		</div>
-		<div class="row price-box text-center price-box-disabled">
-			<div class="col-md-8 col-md-offset-2 price-box-inner">
-				<div class="price-box-main">
-					<h2 >STANDARD PRICE: <strong>$340</strong></h2>
-				</div>
-				<div class="price-box-aux">
-					<div>Valid from 2015/11/16 to 2016/1/10</div>
-				</div>
-			</div>
-		</div>
-		<div class="row price-box text-center price-box-disabled">
-			<div class="col-md-8 col-md-offset-2 price-box-inner">
-				<div class="price-box-main">
-					<h2 >GROUP PRICE (5+ Attendees): <strong>$300</strong></h2>
-				</div>
-				<div class="price-box-aux">
-					<div>Valid from 2015/12/5 to 2016/1/10</div>
 				</div>
 			</div>
 		</div>
@@ -169,7 +170,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="row text-center">
 			<div class="col-md-8 col-md-offset-2 package-details-box">
 				<div class="package-details-header">
