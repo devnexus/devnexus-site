@@ -136,6 +136,11 @@ public class SiteController {
 		return "privacy-policy";
 	}
 
+	@RequestMapping("/s/about")
+	public String about() {
+		return "about";
+	}
+
 	@RequestMapping("/s/code-of-conduct")
 	public String codeOfConduct() {
 		return "code-of-conduct";

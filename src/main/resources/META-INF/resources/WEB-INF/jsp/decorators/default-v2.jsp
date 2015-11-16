@@ -50,6 +50,8 @@
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
 	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
+	<c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
+	<c:url var="socialUrl" value="${baseSiteUrl}/social"/>
 	<c:url var="travelUrl" value="${baseSiteUrl}/travel"/>
 	<c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
@@ -65,7 +67,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
+			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png" alt="DevNexus Logo"></a>
 		</div>
 
 		<div class="collapse navbar-collapse">
@@ -85,6 +87,14 @@
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
 				<li><a class="" href="${registrationUrl}">Register Now!</a></li>
 				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="${aboutUrl}">About</a></li>
+						<li><a href="${organizersUrl}">Organizers</a></li>
+						<li><a href="${socialUrl}">Social</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -92,13 +102,13 @@
 	<sitemesh:write property='body'/>
 
 	<!-- footer -->
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 		<div class="footer-wrapper container">
 			<div class="row">
 				<div class="sidebar footer-sidebar clearfix">
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget first footer-widget">
 						<div id="meta" class="footer-widget">
-							<img src="${assetsUrl}/img/DevNexus_logo_small.png">
+							<img alt="DevNexus Logo" src="${assetsUrl}/img/DevNexus_logo_small.png">
 							<ul class="footer-social">
 								<li class=""><a href="https://twitter.com/devnexus" target="_blank"><i class="fa fa-twitter"></i>#devnexus</a></li>
 							</ul>
@@ -115,7 +125,7 @@
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet" class="footer-widget">
+						<div id="devnexus-links" class="footer-widget">
 							<h3 class="footer-title">DEVNEXUS 2016</h3>
 							<ul class="footer-social">
 								<li class=""><a href="${scheduleUrl}" target="_blank">Schedule</a></li>

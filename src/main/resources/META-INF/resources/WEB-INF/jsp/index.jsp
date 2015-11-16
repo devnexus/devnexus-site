@@ -69,6 +69,8 @@
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
 	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
+	<c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
+	<c:url var="socialUrl" value="${baseSiteUrl}/social"/>
 	<c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
@@ -103,6 +105,14 @@
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
 				<li><a class="" href="${registrationUrl}">Register Now!</a></li>
 				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="${aboutUrl}">About</a></li>
+						<li><a href="${organizersUrl}">Organizers</a></li>
+						<li><a href="${socialUrl}">Social</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</nav>
