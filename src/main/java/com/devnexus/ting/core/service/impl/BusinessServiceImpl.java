@@ -730,6 +730,9 @@ public class BusinessServiceImpl implements BusinessService {
 			else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
 				size = large ? 360 : 110;
 			}
+			else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			}
 			else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
 				size = large ? 360 : 180;
 			}
