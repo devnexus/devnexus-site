@@ -50,6 +50,7 @@ public class TrackController {
 	}
 
 	public void prepareData(Event event, final Model model) {
+		model.addAttribute("contextEvent", event);
 		final TrackList trackList = new TrackList();
 		trackList.setTracks(businessService.getTracksForEvent(event.getId()));
 		model.addAttribute("trackList", trackList);

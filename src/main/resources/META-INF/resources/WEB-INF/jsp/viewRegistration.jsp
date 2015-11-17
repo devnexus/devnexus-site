@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 <head>
-    <title>${event.title} - Register</title>
+    <title>${contextEvent.title} - Register</title>
 </head>
 
 <!-- intro -->

@@ -52,6 +52,7 @@ public class SpeakerController {
 	@RequestMapping("/s/{eventKey}/speakers")
 	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("contextEvent", event);
 		prepareSpeakers(event, model);
 		return "speakers";
 	}

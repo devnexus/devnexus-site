@@ -3,8 +3,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 <head>
-	<title><c:out value="${event.title}"/> - Presentations</title>
-
+	<title>${contextEvent.title} | Presentations</title>
 	<style type="text/css">
 		#speaker {
 			opacity: 0.0;

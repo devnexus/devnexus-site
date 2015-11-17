@@ -59,6 +59,7 @@ public class GlobalDataInterceptor implements HandlerInterceptor {
 		final Event currentEvent = businessService.getCurrentEvent();
 		request.setAttribute("eventsForMenu", events);
 		request.setAttribute("currentEvent", currentEvent);
+		request.setAttribute("contextEvent", currentEvent);
 
 		final String cfpState = environment.getProperty("cfpState.state");
 		request.setAttribute("cfpState", cfpState);

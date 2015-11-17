@@ -93,6 +93,7 @@
 						<li><a href="${aboutUrl}">About</a></li>
 						<li><a href="${organizersUrl}">Organizers</a></li>
 						<li><a href="${socialUrl}">Social</a></li>
+						<li><a href="${pastConferencesUrl}">Past Conferences</a></li>
 					</ul>
 				</li>
 			</ul>

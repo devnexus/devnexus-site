@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 <head>
-	<title>DevNexus - About</title>
+	<title>${contextEvent.title} | About</title>
 	<style type="text/css">
 
 	.tech-logos {
@@ -110,6 +110,19 @@
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<h2>We are giving back to the OSS Community</h2>
+
+				<div class="row">
+					<div class="col-xs-4"><a href="http://junit.org/junit-lambda.html" target="_blank"><img src="${ctx}/assets/img/tech-logos/junit-lambda-110.png" alt="Junit Lambda" title="Junit Lambda"></a></div>
+					<div class="col-xs-8">The <a href="http://www.ajug.org/"
+					target="_blank">Atlanta Java Users Group</a> and DevNexus
+					have been one of the earliest major <a href="http://junit.org/junit-lambda-contributors.html" target="_blank">
+					<strong>Crowdfunding Campaign Contributors</strong></a>  for the <strong>JUnit Lambda</strong> project.
+					<a href="http://junit.org/" target="_blank">JUnit</a> is one of the globe's most heavily used testing libraries.
+					We want to support the efforts of creating the next major version
+					of JUnit, enabling it to support Java 8 features (including Lambdas) among other features.</div>
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width" />
 
-		<title>DevNexus 2016</title>
+		<title>${contextEvent.title} | Main</title>
 
 		<meta property="og:title" content="DevNexus 2016">
 		<meta property="og:type" content="company">
@@ -111,6 +111,7 @@
 						<li><a href="${aboutUrl}">About</a></li>
 						<li><a href="${organizersUrl}">Organizers</a></li>
 						<li><a href="${socialUrl}">Social</a></li>
+						<li><a href="${pastConferencesUrl}">Past Conferences</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -158,10 +159,7 @@
 					</div>
 				</div>
 				<div class="row centered">
-					<div class="col-md-4 col-md-offset-2" style="margin-bottom: 1em;">
-						<a href="${ctx}/s/cfp" class="btn btn-primary btn-block">Call For Papers</a>
-					</div>
-					<div class="col-md-4" style="margin-bottom: 1em;">
+					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
 						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div>

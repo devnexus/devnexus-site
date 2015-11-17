@@ -3,6 +3,8 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
+<title>${contextEvent.title} | Presentations</title>
+
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">
 	<div class="container header">

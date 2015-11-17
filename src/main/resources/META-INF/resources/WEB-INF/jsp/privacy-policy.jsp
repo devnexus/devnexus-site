@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
+<title>${contextEvent.title} | Privacy Policy</title>
+
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">
 	<div class="container header">

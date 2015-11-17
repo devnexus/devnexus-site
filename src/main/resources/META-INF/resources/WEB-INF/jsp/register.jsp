@@ -1,9 +1,7 @@
 <%@page import="com.devnexus.ting.model.ScheduleItemType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<head>
-    <title>${event.title} - Register</title>
-</head>
+<title>${contextEvent.title} | Register</title>
 
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">

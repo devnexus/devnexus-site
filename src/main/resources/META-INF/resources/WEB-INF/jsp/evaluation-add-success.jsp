@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 
-<title>Submission Success - DevNexus 2016</title>
+<title>${contextEvent.title} | Evaluation Submitted</title>
 
 <section id="speaker" class="bg-light-gray">
 	<div class="container subsuccess">

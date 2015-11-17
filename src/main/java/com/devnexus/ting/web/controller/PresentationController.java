@@ -91,7 +91,7 @@ public class PresentationController {
 											@RequestParam(value="tags", required=false)  String tags,
 											final Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
-
+		model.addAttribute("contextEvent", event);
 		final PresentationList presentationList = this.preparePresentationsForEvent(event, model, order, PresentationSearchQuery.create(event, trackId, trackName, type, experience, tags));
 
 		if ("room".equalsIgnoreCase(order) && presentationList.getPresentations().isEmpty()) {

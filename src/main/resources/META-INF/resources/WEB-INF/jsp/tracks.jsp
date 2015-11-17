@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
-<title>Tracks</title>
+<title>${contextEvent.title} | Tracks</title>
 
 <!-- intro -->
 <section id="tracks" class="module parallax parallax-3">

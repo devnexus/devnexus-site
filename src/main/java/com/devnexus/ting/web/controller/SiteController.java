@@ -160,6 +160,7 @@ public class SiteController {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
 		model.addAttribute("event", event);
+		model.addAttribute("contextEvent", event);
 
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 
@@ -312,7 +313,8 @@ public class SiteController {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), true);
 		model.addAttribute("sponsorList", sponsorList);
-
+		model.addAttribute("contextEvent", event);
+		
 		return "sponsors";
 	}
 

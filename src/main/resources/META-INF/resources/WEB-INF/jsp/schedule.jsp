@@ -7,9 +7,7 @@
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 
-<head>
-	<title>${event.title} - Schedule</title>
-</head>
+<title>${contextEvent.title} | Schedule</title>
 
 <div class="ribbon animated fadeIn delayp1"
 	data-50="opacity:1;"

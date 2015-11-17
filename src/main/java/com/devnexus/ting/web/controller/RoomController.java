@@ -38,7 +38,8 @@ public class RoomController {
 										final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
-
+		model.addAttribute("contextEvent", event);
+		
 		final RoomList roomList = new RoomList();
 		roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
 

@@ -40,6 +40,7 @@ public class TagController {
 										final Model model) {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("contextEvent", event);
 
 		final Map<PresentationTag, Long> tagCloud = businessService.getTagCloud(event.getId());
 		model.addAttribute("tagCloud", tagCloud);

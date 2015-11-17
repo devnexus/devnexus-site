@@ -4,7 +4,7 @@
 <% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
 <head>
-	<title><c:out value="${event.title}"/> - Speakers</title>
+	<title>${contextEvent.title} | Speakers</title>
 
 	<style type="text/css">
 		#speaker {

@@ -2,9 +2,7 @@
 <%@page import="com.devnexus.ting.model.PresentationType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
-<head>
-	<title><c:out value="${event.title}"/> - Presentations</title>
-</head>
+<title>${contextEvent.title} | Presentations</title>
 
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">

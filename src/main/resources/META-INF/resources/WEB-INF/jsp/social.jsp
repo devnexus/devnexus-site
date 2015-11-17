@@ -2,6 +2,8 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp"%>
 <% pageContext.setAttribute("lf", "\n"); %>
 
+<title>${contextEvent.title} | Social</title>
+
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">
 	<div class="container header">
