@@ -71,52 +71,14 @@
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
 	<c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
 	<c:url var="socialUrl" value="${baseSiteUrl}/social"/>
+	<c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
 	<c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-custom navbar-fixed-top">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="${homeUrl}"><img src="${assetsUrl}/img/DevNexus_logo_small.png"></a>
-		</div>
+	<%@ include file="/WEB-INF/jsp/includes/navigation.jsp" %>
 
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Presentations <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="${presentationsUrl}?order=track">Presentations by Track</a></li>
-						<li><a href="${presentationsUrl}?order=room">Presentations by Room</a></li>
-						<li><a href="${presentationsUrl}?order=name">Presentations by Name</a></li>
-						<li><a href="${ctx}/s/tracks">Show Tracks</a></li>
-						<li><a href="${ctx}/s/tags">Show Presentation Tags</a></li>
-						<li><a href="${ctx}/s/rooms">Show Rooms</a></li>
-					</ul>
-				</li>
-				<li><a class="" href="${speakersUrl}">Speakers</a></li>
-				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
-				<li><a class="" href="${registrationUrl}">Register Now!</a></li>
-				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="${aboutUrl}">About</a></li>
-						<li><a href="${organizersUrl}">Organizers</a></li>
-						<li><a href="${socialUrl}">Social</a></li>
-						<li><a href="${pastConferencesUrl}">Past Conferences</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</nav>
 	<div id="chart-tooltip" class="hidden">
 		<p><strong><span id="value">123</span> Attendees</strong></p>
 		<p><span id="session-title">title</span></p>
@@ -148,8 +110,8 @@
 					<div class="col-md-8 col-md-offset-2">
 						<p class="lead">MARK YOUR CALENDARS FEBRUARY 15-17 2016!
 							Our ninth DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.
-							We are looking forward to hosting our largest event yet and can't wait for you to join.
-							Check out out <a href="past-conferences">previous years'</a> content, bookmark this site to stay
+							We are looking forward to hosting our largest event yet and can’t wait for you to join.
+							Check out out <a href="past-conferences">previous years’</a> content, bookmark this site to stay
 							up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
 					</div>
 				</div>
@@ -260,7 +222,7 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="icon-box text-center">
 					<img src="${assetsUrl}/img/chat.png" alt="Chat">
-						<h3 class="lead">ATLERNATIVE LANGUAGES</h3>
+						<h3 class="lead">ALTERNATIVE LANGUAGES</h3>
 						<p>
 						Guess what? Java isn’t the only language to run on the
 						JVM—shocker, right? Meet Scala, Kotlin, Ceylon, Xtend,
@@ -332,7 +294,7 @@
 					<p>
 					The Georgia World Congress Center website includes <a href="http://www.gwcc.com/directions/Default.aspx" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
 					<p>
-					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta's public transportation  system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.</p>
+					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta’s public transportation  system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.</p>
 				</div>
 			</div>
 			<div class="row travel-row-spacing">
@@ -386,7 +348,7 @@
 	</section>
 
 	<section id="sponsors">
-		<div class="row">
+		<div class="row" style="margin-left: 0; margin-right: 0;">
 			<div class="col-md-8 col-md-push-2">
 				<c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
 					<c:choose>
@@ -424,59 +386,7 @@
 		</div>
 	</section>
 
-	<!-- footer -->
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="footer-wrapper container">
-			<div class="row">
-				<div class="sidebar footer-sidebar clearfix">
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget first footer-widget">
-						<div id="meta" class="footer-widget">
-							<img src="${assetsUrl}/img/DevNexus_logo_small.png" alt="DevNexus logo small">
-							<ul class="footer-social">
-								<li class=""><a href="https://twitter.com/devnexus" target="_blank"><i class="fa fa-twitter"></i>#devnexus</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet" class="footer-widget">
-							<h3 class="footer-title">Learn More</h3>
-							<ul class="footer-social">
-								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
-								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet2" class="footer-widget">
-							<h3 class="footer-title">DEVNEXUS 2016</h3>
-							<ul class="footer-social">
-								<li class=""><a href="${scheduleUrl}">Schedule</a></li>
-								<li class=""><a href="${speakersUrl}">Speakers</a></li>
-								<li class=""><a href="${presentationsUrl}">Presentations</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
-						<div id="get_touch" class="widget widget_get_touch">
-							<a href="${registrationUrl}" ><button class="btn btn-primary registerButton">Register Now!</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10-offset-1 legal">
-					<p>&copy; 2004-2015 <a href="http://www.ajug.org/">Atlanta Java Users Group</a> (AJUG)
-						<a href="${privacyPolicyUrl}"><span class="label">Privacy Policy</span></a>
-						<a href="${codeOfConductUrl}"><span class="label">Code of Conduct</span></a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- /footer -->
+	<%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
 
 	<!-- javascipt -->
 	<script src="${ctx}/wro/all.js"></script>

@@ -21,7 +21,7 @@
 <!-- sponsors -->
 <section>
 	<div class="row">
-		<div class="col-md-10 col-md-push-1">
+		<div class="col-md-12">
 			<c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
 				<c:choose>
 					<c:when test="${sponsor.sponsorLevel.name ne sponsorLevel}">

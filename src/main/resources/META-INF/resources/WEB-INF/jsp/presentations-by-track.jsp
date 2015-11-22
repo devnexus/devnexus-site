@@ -11,7 +11,16 @@
 		<div class="row centered">
 			<div class="col-md-10 col-md-offset-1">
 				 <div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Presentations</span></h4>
+					<h4 class="section-white-title decorated">
+						<c:choose>
+							<c:when test="${not empty track}">
+								<span>Presentations for the ${track.name} track</span>
+							</c:when>
+							<c:otherwise>
+								<span>Presentations ordered by track</span>
+							</c:otherwise>
+						</c:choose>
+					</h4>
 					<h5 class="intro-white-lead">Discover how the industry's best minds use the latest technologies to build solutions.</h5>
 					<ul class="list-inline">
 						<li>Data + Integration</li>

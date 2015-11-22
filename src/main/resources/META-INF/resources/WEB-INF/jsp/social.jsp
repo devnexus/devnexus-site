@@ -19,7 +19,7 @@
 </section>
 <!-- /intro -->
 
-<div class="masonry">
+<div class="masonry" style="margin-top: 1em;">
 		<c:forEach items="${tweets}" var="tweet">
 			<div class="col-md-3 tweet-box">
 				<div class="panel panel-default">

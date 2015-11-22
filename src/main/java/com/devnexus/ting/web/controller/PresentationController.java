@@ -35,6 +35,8 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationList;
+import com.devnexus.ting.model.Room;
+import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 
 /**
@@ -74,6 +76,12 @@ public class PresentationController {
 		}
 		else {
 			presentations = businessService.findPresentations(presentationSearchQuery);
+
+			if (presentationSearchQuery.getTrack() != null) {
+				final Track track = businessService.getTrack(presentationSearchQuery.getTrack().getId());
+				model.addAttribute("track", track);
+			}
+
 			presentationList.setPresentations(presentations);
 			model.addAttribute("presentationList", presentationList);
 		}
