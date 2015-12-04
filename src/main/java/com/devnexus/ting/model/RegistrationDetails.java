@@ -36,6 +36,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import com.devnexus.ting.web.form.RegisterForm;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 import java.util.Objects;
 import javax.validation.Valid;
@@ -75,6 +76,7 @@ public class RegistrationDetails extends BaseModelObject {
     @ManyToOne
     //@JoinColumn(name="EVENT_ID")
     @XmlTransient
+    @JsonIgnore
     private Event event;
 
     @Column(unique = true)

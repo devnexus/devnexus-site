@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -80,6 +81,7 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER, mappedBy="user")
 	@XmlTransient
+        @JsonIgnore
 	@BatchSize(size=20)
 	private Set<UserAuthority> userAuthorities = new HashSet<>(0);
 

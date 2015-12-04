@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -59,14 +60,17 @@ public class Speaker extends Person {
 	})
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
+        @JsonIgnore
 	@BatchSize(size=20)
 	private List<Presentation>presentations = new ArrayList<Presentation>(0);
 
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
+        @JsonIgnore
 	private Set<Event>events = new HashSet<Event>(0);
 
 	@XmlTransient
+        @JsonIgnore
 	private Long cfpSpeakerId;
 
 	public Speaker() {

@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
@@ -47,6 +48,7 @@ public class Sponsor extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@NotEmpty
@@ -67,6 +69,7 @@ public class Sponsor extends BaseModelObject {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
+        @JsonIgnore
 	@Cascade(CascadeType.ALL)
 	protected FileData logo;
 

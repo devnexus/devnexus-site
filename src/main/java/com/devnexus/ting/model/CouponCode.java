@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
@@ -33,15 +34,18 @@ public class CouponCode extends BaseModelObject {
 
     @XmlTransient
     @Transient
+    @JsonIgnore
     public static final CouponCode EMPTY = new CouponCode();
 
     @XmlTransient
     @NotNull
+    @JsonIgnore
     private String code;
 
     @ManyToOne
     @XmlTransient
     @NotNull
+    @JsonIgnore
     private TicketGroup ticketGroup;
 
 

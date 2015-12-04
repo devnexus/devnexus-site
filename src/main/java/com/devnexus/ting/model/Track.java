@@ -36,6 +36,7 @@ import org.hibernate.annotations.Filters;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * The persistent class for the tracks database table.
@@ -70,6 +71,7 @@ public class Track extends BaseModelObject implements Comparable<Track> {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="track")
@@ -78,6 +80,7 @@ public class Track extends BaseModelObject implements Comparable<Track> {
 		@Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
 	})
 	@XmlTransient
+        @JsonIgnore
 	@BatchSize(size=20)
 	private Set<Presentation> presentations = new HashSet<Presentation>(0);
 

@@ -46,7 +46,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.cache.CacheBuilder;
+import org.springframework.context.annotation.Primary;
 
 /**
  * Main entry point for the DevNexus application.
@@ -84,6 +87,18 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 		return new ContextRefreshedEventListener();
 	}
 
+        @Bean
+        @Primary
+        ObjectMapper jacksonObjectMapper() {
+            ObjectMapper om = new ObjectMapper();
+            om.setVisibility(om.getSerializationConfig().getDefaultVisibilityChecker()
+                .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+                .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
+                .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
+                .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
+            return om;
+        }
+        
 	@Bean
 	public SenderClient javaSender() {
 		return new SenderClient(environment.getRequiredProperty("TING_PUSH_URL"));

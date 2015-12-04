@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -49,6 +50,7 @@ public class PresentationTag extends BaseModelObject implements Comparable<Prese
 
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="presentationTags")
 	@XmlTransient
+        @JsonIgnore
 	private Set<Presentation>presentations = new HashSet<Presentation>(0);
 
 	public PresentationTag() {
