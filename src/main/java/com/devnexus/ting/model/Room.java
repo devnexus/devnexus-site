@@ -36,6 +36,7 @@ import org.hibernate.annotations.ParamDef;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * The persistent class for the speakers database table.
@@ -79,11 +80,13 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 	//@JoinColumn(name="EVENT_ID")
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@OneToMany(mappedBy="room", targetEntity=ScheduleItem.class,
 	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
 	@XmlTransient
+        @JsonIgnore
 	private Set<ScheduleItem>scheduleItems = new HashSet<>(0);
 
 	public Room() {
@@ -169,6 +172,7 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 		return scheduleItems;
 	}
 
+        @JsonIgnore
 	public Set<ScheduleItem> getScheduleItemsWithAssignedSessions() {
 		Set<ScheduleItem> scheduleItemsWithAssignedSessions = new HashSet<>(0);
 

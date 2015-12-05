@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
@@ -57,10 +58,12 @@ public class CfpSubmissionSpeaker extends Person {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private CfpSubmission cfpSubmission;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
+        @JsonIgnore
 	@Cascade(CascadeType.ALL)
 	@Valid
 	private CfpSpeakerImage cfpSpeakerImage;

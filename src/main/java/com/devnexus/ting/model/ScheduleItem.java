@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -80,6 +81,7 @@ public class ScheduleItem extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@Transient

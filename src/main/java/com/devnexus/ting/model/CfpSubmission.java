@@ -42,6 +42,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Represents a Call for Papers Submission.
@@ -60,6 +61,7 @@ public class CfpSubmission extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@Valid
@@ -127,6 +129,7 @@ public class CfpSubmission extends BaseModelObject {
 		return this.description;
 	}
 
+        @JsonIgnore
 	public String getDescriptionAsHtml() {
 		return TingUtil.getMarkDownProcessor().markdownToHtml(this.description);
 	}

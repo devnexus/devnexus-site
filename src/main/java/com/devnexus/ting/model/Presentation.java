@@ -43,6 +43,7 @@ import org.hibernate.annotations.Type;
 import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 /**
@@ -66,10 +67,12 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
+        @JsonIgnore
 	@Cascade(CascadeType.ALL)
 	@Valid
 	private FileData presentationFile;
@@ -104,12 +107,14 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 
 	@OneToOne(mappedBy = "presentation")
 	@XmlTransient
+        @JsonIgnore
 	private ScheduleItem scheduleItem;
 
 	@ManyToMany(cascade={javax.persistence.CascadeType.ALL}, fetch=FetchType.LAZY)
 	private Set<PresentationTag>presentationTags = new HashSet<>(0);
 
 	@XmlTransient
+        @JsonIgnore
 	private Long cfpId;
 
 	//~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -5,6 +5,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlTransient;
@@ -21,6 +22,7 @@ public class PaypalLink extends BaseModelObject {
     
     @ManyToOne
     @XmlTransient
+    @JsonIgnore
     private PayPalPayment payment;
 
     public String getHref() {

@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.validator.constraints.Range;
 
 import com.devnexus.ting.common.TingUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * The persistent class for the speakers database table.
@@ -44,6 +45,7 @@ public class Evaluation extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
+        @JsonIgnore
 	private Event event;
 
 	@Size(max=10000)

@@ -16,6 +16,7 @@
 package com.devnexus.ting.model;
 
 import com.devnexus.ting.web.form.RegisterForm;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -90,6 +91,7 @@ public class TicketOrderDetail extends BaseModelObject implements Comparable<Tic
     
     @ManyToOne
     @XmlTransient
+    @JsonIgnore
     private RegistrationDetails registration;
 
     public TicketOrderDetail(RegisterForm.TicketGroupRegistration ticketRegistration) {

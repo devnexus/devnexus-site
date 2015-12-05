@@ -1,5 +1,6 @@
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -31,6 +32,7 @@ public class EventSignup extends BaseModelObject {
     //@JoinColumn(name="EVENT_ID")
     @NotNull
     @XmlTransient
+    @JsonIgnore
     private Event event;
 
     public Set<TicketGroup> getGroups() {
