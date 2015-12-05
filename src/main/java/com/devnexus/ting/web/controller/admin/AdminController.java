@@ -15,11 +15,17 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Validator;
 
 import org.slf4j.Logger;
@@ -38,9 +44,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.supercsv.cellprocessor.ift.CellProcessor;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmission;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionStatusType;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.web.controller.admin.support.CsvRejectedSpeakerBean;
+import com.devnexus.ting.web.controller.admin.support.CsvSpeakerBean;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheStats;
 
@@ -87,6 +104,168 @@ public class AdminController {
 		}
 		model.addAttribute("cacheStats", cacheStats);
 		return "/admin/index";
+	}
+
+	@RequestMapping("/s/admin/{eventKey}/download-accepted-speakers")
+	public void downloadAcceptedSpeakersForEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
+		throws IOException {
+
+		final Event event = businessService.getEventByEventKey(eventKey);
+
+		final String csvFileName = event.getEventKey() + "-accepted-speakers.csv";
+
+		response.setContentType("text/csv");
+
+		final String headerKey = "Content-Disposition";
+		final String headerValue = String.format("attachment; filename=\"%s\"", csvFileName);
+		response.setHeader(headerKey, headerValue);
+
+		final List<Speaker> speakers = businessService.getSpeakersForEvent(event.getId());
+		final List<CsvSpeakerBean> csvData = new ArrayList<>();
+
+		for (Speaker speaker : speakers) {
+			final CsvSpeakerBean csvSpeakerBean = new CsvSpeakerBean();
+			csvSpeakerBean.setFirstName(speaker.getFirstName());
+			csvSpeakerBean.setLastName(speaker.getLastName());
+			csvSpeakerBean.setTwitterId(speaker.getTwitterId());
+
+			final Long cfpSpeakerId = speaker.getCfpSpeakerId();
+
+			if (cfpSpeakerId != null) {
+				CfpSubmissionSpeaker cfpSpeaker = businessService.getCfpSubmissionSpeaker(cfpSpeakerId);
+				if (cfpSpeaker != null) {
+					csvSpeakerBean.setLocation(cfpSpeaker.getLocation());
+					csvSpeakerBean.setPhone(cfpSpeaker.getPhone());
+					csvSpeakerBean.setReimburseTravel(cfpSpeaker.isMustReimburseTravelCost());
+					csvSpeakerBean.setTshirtSize(cfpSpeaker.getTshirtSize());
+					csvSpeakerBean.setEmail(cfpSpeaker.getEmail());
+				}
+			}
+
+			csvData.add(csvSpeakerBean);
+		}
+
+		ICsvBeanWriter beanWriter = null;
+		try {
+				beanWriter = new CsvBeanWriter(response.getWriter(),
+						CsvPreference.STANDARD_PREFERENCE);
+
+				final String[] header = new String[] {
+						"firstName",
+						"lastName",
+						"email",
+						"twitterId",
+						"phone",
+						"tshirtSize",
+						"reimburseTravel",
+						"location"
+					};
+
+				final CellProcessor[] processors = CsvSpeakerBean.getProcessors();
+
+				beanWriter.writeHeader(header);
+
+				for( final CsvSpeakerBean speaker : csvData ) {
+						beanWriter.write(speaker, header, processors);
+				}
+
+		}
+		finally {
+				if( beanWriter != null ) {
+						beanWriter.close();
+				}
+		}
+	}
+
+	private boolean speakerAlreadyAccepted(List<Presentation> presentations, CfpSubmissionSpeaker cfpSubmissionSpeaker) {
+		for (Presentation presentation : presentations) {
+			for (Speaker speaker : presentation.getSpeakers()) {
+				if (speaker.getFirstName().toLowerCase().equals(cfpSubmissionSpeaker.getFirstName().trim().toLowerCase())
+					&& speaker.getLastName().toLowerCase().equals(cfpSubmissionSpeaker.getLastName().trim().toLowerCase())) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+
+	@RequestMapping("/s/admin/{eventKey}/download-rejected-speakers")
+	public void downloadRejectedSpeakersForEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
+		throws IOException {
+
+		final Event event = businessService.getEventByEventKey(eventKey);
+
+		final String csvFileName = event.getEventKey() + "-rejected-speakers.csv";
+
+		response.setContentType("text/csv");
+
+		final String headerKey = "Content-Disposition";
+		final String headerValue = String.format("attachment; filename=\"%s\"", csvFileName);
+		response.setHeader(headerKey, headerValue);
+
+		final List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(event.getId());
+		final SortedSet<CsvRejectedSpeakerBean> rejectedSpeakers = new TreeSet<>();
+
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
+
+		for (CfpSubmission cfpSubmission : cfpSubmissions) {
+
+			if (CfpSubmissionStatusType.REJECTED.equals(cfpSubmission.getStatus())) {
+
+				for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getSpeakers()) {
+
+					boolean speakerAlreadyAccepted = speakerAlreadyAccepted(presentations, cfpSubmissionSpeaker);
+
+					if (!speakerAlreadyAccepted) {
+
+						final CsvRejectedSpeakerBean rejectedSpeaker = new CsvRejectedSpeakerBean();
+						rejectedSpeaker.setEmail(cfpSubmissionSpeaker.getEmail().trim().toLowerCase());
+						rejectedSpeaker.setFirstName(cfpSubmissionSpeaker.getFirstName().trim().toLowerCase());
+						rejectedSpeaker.setLastName(cfpSubmissionSpeaker.getLastName().trim().toLowerCase());
+						rejectedSpeaker.setLocation(cfpSubmissionSpeaker.getLocation());
+						rejectedSpeaker.setPhone(cfpSubmissionSpeaker.getPhone());
+						rejectedSpeaker.setReimburseTravel(cfpSubmissionSpeaker.isMustReimburseTravelCost());
+						rejectedSpeaker.setTwitterId(cfpSubmissionSpeaker.getTwitterId());
+
+						rejectedSpeakers.add(rejectedSpeaker);
+					}
+
+				}
+
+			}
+
+		}
+
+		ICsvBeanWriter beanWriter = null;
+		try {
+				beanWriter = new CsvBeanWriter(response.getWriter(),
+						CsvPreference.STANDARD_PREFERENCE);
+
+				final String[] header = new String[] {
+						"firstName",
+						"lastName",
+						"email",
+						"twitterId",
+						"phone",
+						"reimburseTravel",
+						"location"
+					};
+
+				final CellProcessor[] processors = CsvRejectedSpeakerBean.getProcessors();
+
+				beanWriter.writeHeader(header);
+
+				for( final CsvRejectedSpeakerBean rejectedSpeaker : rejectedSpeakers ) {
+						beanWriter.write(rejectedSpeaker, header, processors);
+				}
+
+		}
+		finally {
+				if( beanWriter != null ) {
+						beanWriter.close();
+				}
+		}
 	}
 
 	@RequestMapping(value="/s/admin/index", method=RequestMethod.POST)

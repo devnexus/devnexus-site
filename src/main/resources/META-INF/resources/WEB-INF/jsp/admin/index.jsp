@@ -62,6 +62,8 @@
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/presentations">Manage Presentations</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/manage-schedule">Manage Schedule</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/evaluations">Show Evaluations</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-accepted-speakers">Download Accepted Speakers (CSV)</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-rejected-speakers">Download Rejected Speakers (CSV)</a></li>
 					</sec:authorize>
 					<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/cfps">Manage Call for Papers</a></li>

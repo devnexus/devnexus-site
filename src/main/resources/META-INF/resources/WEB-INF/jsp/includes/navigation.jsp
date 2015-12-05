@@ -35,9 +35,9 @@
 						<li><a href="${sponsorsUrl}">Sponsors</a></li>
 						<li><a href="${socialUrl}">Social</a></li>
 						<li><a href="${pastConferencesUrl}">Past Conferences</a></li>
-						<li><a href="${pastConferencesUrl}"><i class="fa fa-facebook fa-fw"></i> Facebook</a></li>
-						<li><a href="${pastConferencesUrl}"><i class="fa fa-youtube fa-fw"></i> Youtube</a></li>
-						<li><a href="${pastConferencesUrl}"><i class="fa fa-flickr fa-fw"></i> Flickr</a></li>
+						<li><a href="https://www.facebook.com/devnexus" target="_blank"><i class="fa fa-facebook fa-fw"></i> Facebook</a></li>
+						<li><a href="https://www.youtube.com/devnexus-conference" target="_blank"><i class="fa fa-youtube fa-fw"></i> Youtube</a></li>
+						<li><a href="https://www.flickr.com/search/?text=devnexus&sort=date-taken-desc" target="_blank"><i class="fa fa-flickr fa-fw"></i> Flickr</a></li>
 					</ul>
 				</li>
 			</ul>

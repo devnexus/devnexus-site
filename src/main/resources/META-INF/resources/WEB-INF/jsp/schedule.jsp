@@ -22,7 +22,7 @@
 			<div class="col-md-10 col-md-offset-1">
 				<div class="top-intro travel">
 					<h4 class="section-white-title decorated"><span>Schedule for ${event.title}</span></h4>
-					<h5 class="intro-white-lead">12 Tracks, 120 Presentations, 2+1 Days.</h5>
+					<h5 class="intro-white-lead">13 Tracks, 120+ Presentations, 2+1 Days.</h5>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,14 @@
 	<c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
 
 			<!-- Example row of columns -->
-			<h1 class="text-center">Day ${dateStatus.index + 1}</h1>
+			<c:choose>
+				<c:when test="${dateStatus.index eq 0}">
+					<h1 class="text-center">Workshop Day</h1>
+				</c:when>
+				<c:otherwise>
+					<h1 class="text-center">Conference Day ${dateStatus.index}</h1>
+				</c:otherwise>
+			</c:choose>
 
 			<h4 class="text-center"><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${date}"/></h4>
 			<div class="header-item-container">

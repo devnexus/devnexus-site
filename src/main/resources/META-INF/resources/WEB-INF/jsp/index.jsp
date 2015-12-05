@@ -27,7 +27,7 @@
 		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
 		<!-- fonts: external links -->
-		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -160,7 +160,7 @@
 						<i class="fa fa-arrows"></i>
 					</div><!--//icon-->
 					<div class="content">
-						<p class="lead counter-stat">12</p>
+						<p class="lead counter-stat">13</p>
 						<p class="lead counter-commits">TRACKS</p>
 					</div><!--//content-->
 				</div>
@@ -169,7 +169,7 @@
 						<i class="fa fa-university"></i>
 					</div><!--//icon-->
 					<div class="content">
-						<p class="lead counter-stat">120</p>
+						<p class="lead counter-stat">120+</p>
 						<p class="lead counter-commits">PRESENTATIONS</p>
 					</div><!--//content-->
 				</div>

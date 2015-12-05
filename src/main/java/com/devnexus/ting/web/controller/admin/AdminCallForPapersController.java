@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller.admin;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
@@ -44,6 +45,7 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.PresentationType;
 import com.devnexus.ting.model.SkillLevel;
 import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.web.form.ManageCfpsForm;
 
 /**
  * @author Gunnar Hillert
@@ -83,7 +85,20 @@ public class AdminCallForPapersController {
 		CfpSubmissionList cfpSubmissionList = new CfpSubmissionList(cfpSubmissions);
 		model.addAttribute("cfpSubmissionList", cfpSubmissionList);
 		model.addAttribute("event", event);
+		model.addAttribute("manageCfpsForm", new ManageCfpsForm());
 		return "admin/manage-cfps";
+	}
+
+	@RequestMapping(value="/s/admin/{eventKey}/cfps", method=RequestMethod.POST)
+	public String bulkProcessCfps(@PathVariable("eventKey") String eventKey, ManageCfpsForm manageCfpsForm) {
+
+		for (Long cfpId : manageCfpsForm.getCfpIds()) {
+			CfpSubmission cfpSubmission = businessService.getCfpSubmission(cfpId);
+			cfpSubmission.setStatus(CfpSubmissionStatusType.REJECTED);
+			businessService.saveCfpSubmission(cfpSubmission);
+		}
+
+		return "redirect:cfps";
 	}
 
 	@RequestMapping(value="/s/admin/{eventKey}/cfps/{cfpId}", method=RequestMethod.GET)

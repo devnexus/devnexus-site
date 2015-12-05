@@ -21,7 +21,7 @@
 								<li class="" style="margin-top: 1em;">
 									<a title="Facebook" href="https://www.facebook.com/devnexus" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-facebook"></span></a>
 									<a title="Youtube" href="https://www.youtube.com/devnexus-conference" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-youtube"></span></a>
-									<a title="Flickr" href="https://www.flickr.com/search/?text=devnexus" target="_blank"><span class="fa fa-2x fa-flickr"></span></a>
+									<a title="Flickr" href="https://www.flickr.com/search/?text=devnexus&sort=date-taken-desc" target="_blank"><span class="fa fa-2x fa-flickr"></span></a>
 								</li>
 							</ul>
 						</div>
@@ -36,9 +36,9 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
+					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
 						<div id="get_touch" class="widget widget_get_touch">
-							<a href="${registrationUrl}" ><button class="btn btn-primary registerButton">Register Now!</button></a>
+							<a href="${registrationUrl}" ><button class="btn btn-primary btn-block registerButton">Register Now!</button></a>
 						</div>
 					</div>
 				</div>

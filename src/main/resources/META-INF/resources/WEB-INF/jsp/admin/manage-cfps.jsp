@@ -48,6 +48,9 @@
 		</table>
 	</div>
 </div>
+
+<form:form id="cfpForm" role="form" method="post" modelAttribute="manageCfpsForm">
+
 <div class="row">
 	<div class="col-md-12">
 		<table class="table table-hover">
@@ -76,7 +79,9 @@
 						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-default" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
 						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
 							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-default" title="Accept"><span class="glyphicon glyphicon-ok"></span></a>
+							<form:checkbox path="cfpIds" value="${cfp.id}"/>
 						</c:if>
+
 					</td>
 					<td>
 						<c:forEach var="speaker" items="${cfp.speakers}">
@@ -96,7 +101,12 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-default" lang="save" tabindex="19">Mark Selected CFPs as Rejected</button>
+			</div>
+		</div>
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/index" role="button">Main Menu</a>
 	</div>
 </div>
-
+</form:form>
