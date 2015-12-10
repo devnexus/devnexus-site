@@ -304,4 +304,6 @@ public interface BusinessService {
 	Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker);
 
 	Speaker getSpeakerWithPicture(Long speakerId);
+
+	Speaker getSpeakerFilteredForEvent(Long speakerId, Event event);
 }

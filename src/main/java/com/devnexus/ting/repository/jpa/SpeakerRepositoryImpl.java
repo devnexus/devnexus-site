@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,10 +24,15 @@ import org.hibernate.Filter;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
-import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.repository.SpeakerRepositoryCustom;
 
+/**
+ *
+ * @author Gunnar Hillert
+ *
+ */
 @Repository("speakerDao")
 public class SpeakerRepositoryImpl implements SpeakerRepositoryCustom {
 
@@ -52,6 +57,7 @@ public class SpeakerRepositoryImpl implements SpeakerRepositoryCustom {
 
 		final List<Speaker> speakers = (List<Speaker>) session.createQuery("select s from Speaker s "
 				   + "    join fetch s.events e "
+				   + "    left outer join fetch s.picture "
 				   + "    where e.current = :iscurrent "
 				   + "    order by s.lastName ASC, s.firstName ASC")
 		.setParameter("iscurrent", Boolean.TRUE)
@@ -75,6 +81,7 @@ public class SpeakerRepositoryImpl implements SpeakerRepositoryCustom {
 		final List<Speaker> speakers = (List<Speaker>) this.entityManager
 				.createQuery("select s from Speaker s "
 						+ "    join s.events e "
+						+ "    left outer join fetch s.picture "
 						+ "where e.id = :eventId "
 						+ "order by s.lastName ASC")
 			 .setParameter("eventId", eventId)
@@ -90,4 +97,20 @@ public class SpeakerRepositoryImpl implements SpeakerRepositoryCustom {
 		.setParameter("id", speakerId)
 		.getSingleResult();
 	}
+
+	@Override
+	public Speaker getSpeakerFilteredForEvent(Long speakerId, Event event) {
+
+		final Session session = (Session) this.entityManager.getDelegate();
+		Filter filter = session.enableFilter("presentationFilterEventId");
+		filter.setParameter("eventId", event.getId());
+
+		final Speaker speaker = this.entityManager
+				.createQuery("select s from Speaker s left outer join fetch s.picture where s.id = :id", Speaker.class)
+				.setParameter("id", speakerId)
+				.getSingleResult();
+
+		return speaker;
+	}
+
 }

@@ -104,7 +104,7 @@ public class CallForPapersController {
 	@RequestMapping(value="/s/cfp", method=RequestMethod.GET)
 	public String openAddCfp(ModelMap model, WebRequest request) {
 
-		if (CfpSettings.CfpState.CLOSED.equals(cfpSettings.getCfpState())) {
+		if (CfpSettings.CfpState.CLOSED.equals(cfpSettings.getState())) {
 			return "redirect:/s/index";
 		}
 
@@ -132,9 +132,14 @@ public class CallForPapersController {
 			HttpServletRequest request,
 			RedirectAttributes redirectAttributes) {
 
+		if (CfpSettings.CfpState.CLOSED.equals(cfpSettings.getState())) {
+			return "redirect:/s/index";
+		}
+
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/index";
 		}
+
 		if (request.getParameter("addSpeaker") != null) {
 			prepareReferenceData(model, request.isSecure());
 			CfpSubmissionSpeaker speaker = new CfpSubmissionSpeaker();

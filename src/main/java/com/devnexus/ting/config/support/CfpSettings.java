@@ -28,11 +28,11 @@ import org.springframework.context.annotation.Configuration;
 public class CfpSettings {
 	private CfpState cfpState;
 
-	public CfpState getCfpState() {
+	public CfpState getState() {
 		return cfpState;
 	}
 
-	public void setCfpState(CfpState cfpState) {
+	public void setState(CfpState cfpState) {
 		this.cfpState = cfpState;
 	}
 

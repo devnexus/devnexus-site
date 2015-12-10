@@ -39,6 +39,10 @@ devnexus:
     enabled: false
     publicKey:
     privateKey:
+  registration:
+    state: open # open | closed | soldout | hide
+  cfp:
+    state: closed # open | closed
 spring:
   datasource:
     url: jdbc:h2:mem:devnexus_demo

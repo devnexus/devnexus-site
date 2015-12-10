@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
 
 /**
@@ -57,6 +58,27 @@ public class SpeakerController {
 		return "speakers";
 	}
 
+	@RequestMapping("/s/speakers/{speakerId}")
+	public String getSpeakerDetails(@PathVariable("speakerId") Long speakerId, Model model) {
+		final Event event = businessService.getCurrentEvent();
+		prepareSpeaker(event, speakerId, model);
+		return "speaker-details";
+	}
+
+	@RequestMapping("/s/{eventKey}/speakers/{speakerId}")
+	public String getSpeakerDetailsForEvent(@PathVariable("eventKey") String eventKey, @PathVariable("speakerId") Long speakerId, Model model) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		model.addAttribute("contextEvent", event);
+		prepareSpeaker(event, speakerId, model);
+		return "speaker-details";
+	}
+
+	private void prepareSpeaker(Event event, Long speakerId, Model model) {
+		model.addAttribute("event", event);
+		final Speaker speaker = businessService.getSpeakerFilteredForEvent(speakerId, event);
+		model.addAttribute("speaker", speaker);
+	}
+
 	private void prepareSpeakers(Event event, Model model) {
 		model.addAttribute("event", event);
 		SpeakerList speakers = new SpeakerList();
@@ -70,7 +92,7 @@ public class SpeakerController {
 	@RequestMapping(value="/s/speakers/{speakerId}.jpg", method=RequestMethod.GET)
 	public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
 
-		final byte[] speakerImage = businessService.getSpeakerImage(speakerId);
+		byte[] speakerImage = businessService.getSpeakerImage(speakerId);
 
 		try {
 			org.apache.commons.io.IOUtils.write(speakerImage, response.getOutputStream());

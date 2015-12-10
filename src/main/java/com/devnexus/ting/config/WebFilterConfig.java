@@ -20,10 +20,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
 import com.devnexus.ting.web.filter.DevNexusSiteMeshFilter;
 import com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter;
+import com.devnexus.ting.web.filter.WeakShallowEtagHeaderFilter;
 
 /**
  * @author Gunnar Hillert
@@ -86,6 +88,18 @@ public class WebFilterConfig {
 //	// etagFilter
 //	FilterRegistration.Dynamic etagFilterRegistration = servletContext.addFilter("etagFilter", ShallowEtagHeaderFilter.class);
 //	etagFilterRegistration.addMappingForUrlPatterns(null, true, "/s/*");
+
+	@Bean
+	public FilterRegistrationBean etagFilterRegistrationBean () {
+
+		final ShallowEtagHeaderFilter shallowEtagHeaderFilter = new WeakShallowEtagHeaderFilter();
+		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+
+		registrationBean.setFilter(shallowEtagHeaderFilter);
+		registrationBean.addUrlPatterns("/s/*");
+		registrationBean.setOrder(3);
+		return registrationBean;
+	}
 
 	@Bean
 	public FilterRegistrationBean devNexusSiteMeshFilterRegistrationBean () {

@@ -53,4 +53,5 @@ public class SpeakerList implements Serializable {
 			return 0;
 		}
 	}
+
 }

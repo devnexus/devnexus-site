@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.repository;
 
+import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 
 /**

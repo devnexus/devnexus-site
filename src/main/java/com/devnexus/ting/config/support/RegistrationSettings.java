@@ -24,16 +24,16 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-@ConfigurationProperties(prefix="devnexus.cfp")
+@ConfigurationProperties(prefix="devnexus.registration")
 public class RegistrationSettings {
 
 	private RegistrationState registrationState;
 
-	public RegistrationState getRegistrationState() {
+	public RegistrationState getState() {
 		return registrationState;
 	}
 
-	public void setRegistrationState(RegistrationState registrationState) {
+	public void setState(RegistrationState registrationState) {
 		this.registrationState = registrationState;
 	}
 

@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.apache.commons.codec.binary.Base64;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;

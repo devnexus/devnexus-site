@@ -336,6 +336,12 @@ public class BusinessServiceImpl implements BusinessService {
 		return speakerDao.getSpeakerWithPicture(speakerId);
 	}
 
+	@Override
+	@Transactional
+	public Speaker getSpeakerFilteredForEvent(Long speakerId, Event event) {
+		return speakerDao.getSpeakerFilteredForEvent(speakerId, event);
+	}
+
 	/** {@inheritDoc} */
 	@Override
 	@Transactional(readOnly=false)
@@ -360,13 +366,30 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	public List<Speaker> getSpeakersForCurrentEvent() {
-		return speakerDao.getSpeakersForCurrentEvent();
+
+		final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
+			public List<Speaker> doInTransaction(TransactionStatus status) {
+				return speakerDao.getSpeakersForCurrentEvent();
+			}
+		});
+
+		return speakers;
+
 	}
 
 	/** {@inheritDoc} */
 	@Override
+	@Cacheable("getSpeakersForEvent")
 	public List<Speaker> getSpeakersForEvent(Long eventId) {
-		return speakerDao.getSpeakersForEvent(eventId);
+
+		final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
+			public List<Speaker> doInTransaction(TransactionStatus status) {
+				return speakerDao.getSpeakersForEvent(eventId);
+			}
+		});
+
+		return speakers;
+
 	}
 
 	@Override
@@ -411,12 +434,14 @@ public class BusinessServiceImpl implements BusinessService {
 	/** {@inheritDoc} */
 	@Override
 	@Transactional
+	@CacheEvict(value="getSpeakersForEvent", allEntries=true)
 	public Speaker saveSpeaker(Speaker speaker) {
 		return speakerDao.save(speaker);
 	}
 
 	@Override
 	@Transactional
+	@CacheEvict(value="getSpeakersForEvent", allEntries=true)
 	public Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker) {
 		final Speaker savedSpeaker = speakerDao.save(speaker);
 		final Event currentEvent = this.getCurrentEvent();

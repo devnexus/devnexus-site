@@ -17,6 +17,7 @@ package com.devnexus.ting.repository;
 
 import java.util.List;
 
+import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 
 public interface SpeakerRepositoryCustom {
@@ -28,5 +29,7 @@ public interface SpeakerRepositoryCustom {
 	List<Speaker> getAllSpeakersOrderedByName();
 
 	Speaker getSpeakerWithPicture(Long speakerId);
+
+	Speaker getSpeakerFilteredForEvent(Long speakerId, Event event);
 
 }

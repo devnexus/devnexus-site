@@ -21,10 +21,12 @@ import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.apache.commons.codec.binary.Base64;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.common.TingUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -159,4 +161,23 @@ public abstract class Person extends BaseModelObject {
 		this.githubId = githubId;
 	}
 
+	@JsonIgnore
+	public String getPictureSerialized() {
+		final FileData picture = this.getPicture();
+
+		final byte[] speakerOfPerson;
+		final String type;
+
+		if (picture==null || picture.getFileData() == null) {
+			speakerOfPerson = SystemInformationUtils.getSpeakerImage(null);
+			type = "image/jpg";
+		} else {
+			speakerOfPerson = picture.getFileData();
+			type = picture.getType();
+		}
+
+		final String base64bytes = Base64.encodeBase64String(speakerOfPerson);
+		final String base64Speaker = "data:" + type + ";base64," + base64bytes;
+		return base64Speaker;
+	}
 }

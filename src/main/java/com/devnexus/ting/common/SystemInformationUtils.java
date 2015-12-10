@@ -203,7 +203,7 @@ public final class SystemInformationUtils {
 
 		if (imageName == null) {
 			return SystemInformationUtils.class
-					.getResourceAsStream("/data/images/image_not_available.jpg");
+					.getResourceAsStream("/data/images/speaker-na.jpg");
 		}
 
 		final File image = new File(
@@ -272,7 +272,7 @@ public final class SystemInformationUtils {
 		return template;
 	}
 
-        
+
 	public static String getRegisterTextEmailTemplate() {
 
 		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/register-email.txt");
@@ -287,7 +287,7 @@ public final class SystemInformationUtils {
 
 		return template;
 	}
-        
+
 	public static String getRegisterHtmlEmailTemplate() {
 
 		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/register-email.html");

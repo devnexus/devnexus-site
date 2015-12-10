@@ -10,6 +10,41 @@
 		#speaker {
 			opacity: 0.0;
 		}
+		.centered {
+			text-align: center;
+		}
+		.centered > div {
+			float: none;
+			display: inline-block;
+		}
+
+		.speaker-div-inner {
+			margin: 5px 20px;
+			border-radius: 8px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			-o-border-radius: 8px;
+
+			border-color: rgba(123,173,52,0);;
+			border-style: solid;
+			border-width: 2px;
+
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+			-moz-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			-ms-transition: all 0.2s;
+		}
+
+		.speaker-div-inner:HOVER, .speaker-div-inner:FOCUS {
+			border-color: rgba(123,173,52,1);
+
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+			-moz-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			-ms-transition: all 0.2s;
+		}
 	</style>
 </head>
 
@@ -18,16 +53,9 @@
 		<div class="container header">
 				<div class="row centered">
 					<div class="col-md-10 col-md-offset-1">
-						 <div class="top-intro travel">
+						<div class="top-intro travel">
 							<h4 class="section-white-title decorated"><span>Speakers</span></h4>
-							<h5 class="intro-white-lead">Discover how the industry's best minds use the latest technologies to build solutions.</h5>
-							<br>
-							<ul class="list-inline">
-								<c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
-									<li><a class="speaker-link" href="#${speaker.firstName}_${speaker.lastName}"><c:out
-										value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></a></li>
-								</c:forEach>
-							</ul>
+							<h5 class="intro-white-lead">Tap into the expertise of ${fn:length(speakerList.speakers)} thought-leaders.</h5>
 						</div>
 					</div>
 				</div>
@@ -35,96 +63,47 @@
 	</section>
 	<!-- /intro -->
 
-	<section id="speaker" class="bg-light-gray" style="margin-top: 0">
-			<c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
-				<c:choose>
-					<c:when test="${status.first && status.index%3 == 0}">
-						<div class="row">
-					</c:when>
-					<c:when test="${not status.first && not status.last && status.index%3 == 0}">
-						</div>
-						<div class="row">
-					</c:when>
-				</c:choose>
-				<div class="col-sm-4 masonryitem">
-					<div id="${speaker.firstName}_${speaker.lastName}" class="speaker-member text-center">
-						<c:if test="${speaker.picture != null}">
-								<img src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" class="img-responsive img-circle" alt="">
-						</c:if>
+	<section id="speaker" class="bg-light-gray" style="margin-top: 2em; ">
+		<div class="col-lg-10 col-lg-offset-1">
+		<div class="row centered"
+			><c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status"
+			><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 speaker-div masonryitem"
+					style="">
+				<a href="${ctx}${baseSiteUrl}/speakers/${speaker.id}">
+				<div class="speaker-div-inner">
+					<div id="${speaker.firstName}_${speaker.lastName}"
+						class="speaker-member text-center" style="margin-bottom: 5px; margin-top: 5px">
+						<img src="${speaker.pictureSerialized}" class="img-responsive img-circle" alt="">
 						<h4 class="text-center"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
-						<c:if test="${!empty speaker.presentations}">
-							<ul>
-							<c:forEach var="presentation" items="${speaker.presentations}" varStatus="loop">
-								<li class="text-center">
-									<a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
-										 value="${presentation.title}"/></a>
-									<c:if test="${presentation.presentationType == keynoteType}">
-										(Keynote)
-									</c:if>
-								</li>
-							</c:forEach>
-							</ul>
-						</c:if>
-						<p class="text-center">
-							<c:if test="${!empty speaker.googlePlusId}">
-								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://plus.google.com/<c:out value="${speaker.googlePlusId}" />" target="_blank">
-									<span class="fa fa-google"></span>
-								</a>
-							</c:if>
-							<c:if test="${!empty speaker.twitterId}">
-								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://twitter.com/<c:out value="${speaker.twitterId}"/>" target="_blank">
-									<span class="fa fa-twitter"></span>
-								</a>
-							</c:if>
-							<c:if test="${!empty speaker.linkedInId}">
-								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://www.linkedin.com/in/<c:out value="${speaker.linkedInId}" />" target="_blank">
-									<span class="fa fa-linkedin"></span>
-								</a>
-							</c:if>
-							<c:if test="${!empty speaker.githubId}">
-								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="https://github.com/<c:out value="${speaker.githubId}" />" target="_blank">
-									<span class="fa fa-github"></span>
-								</a>
-							</c:if>
-							<c:if test="${!empty speaker.lanyrdId}">
-								<a class="btn btn-default btn" data-toggle="tooltip" data-placement="bottom" href="http://lanyrd.com/profile/<c:out value="${speaker.lanyrdId}" />/" target="_blank">
-									<span>L</span>
-								</a>
-							</c:if>
-						</p>
-						<div><c:out value="${speaker.bioAsHtml}" escapeXml="false"/></div>
-					</div>
 				</div>
-				<c:if test="${status.last}">
-					</div>
-				</c:if>
-			</c:forEach>
+		</div></a></div></c:forEach></div>
+		</div>
 	</section>
-
-	<jsp:include page="includes/questions.jsp"/>
 
 <content tag='bottom'>
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-
-
-			if (location.hash) {
-				setTimeout(function() {
-					window.scrollTo(0, 0);
-				}, 1);
-			}
-
 			var $container = $('#speaker');
 
-			console.log($container);
+			function resizeSpeakerDivs() {
+				var speakerDivMaxHeight = 0;
+
+				$('.speaker-div').each(function () {
+					$(this).outerHeight('auto');
+					var height = $(this).outerHeight();
+					if (height > speakerDivMaxHeight) {
+						speakerDivMaxHeight = height;
+					}
+				}).promise().done(function (item) {
+					$('.speaker-div').each(function () {
+						$(this).outerHeight(speakerDivMaxHeight);
+					});
+				});
+			}
 
 			$container.imagesLoaded(function () {
-				$container.masonry({
-						itemSelector: '.masonryitem',
-						columnWidth: '.masonryitem',
-						isAnimated: true
-				});
+
 
 				var hash = window.location.hash;
 				console.log('Hash is: ' + hash);
@@ -133,9 +112,15 @@
 					console.log('Scroll: ', el);
 					$('html, body').animate({scrollTop: el.offset().top - 100}, 'fast');
 				}
-
+				resizeSpeakerDivs();
+				$container.masonry({
+					itemSelector: '.masonryitem',
+					columnWidth: '.masonryitem',
+					isAnimated: true
+				});
 				$('#speaker').css('opacity', '1');
 			});
+
 		});
 	</script>
 </content>
