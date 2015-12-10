@@ -105,7 +105,7 @@ public class CallForPapersController {
 	public String openAddCfp(ModelMap model, WebRequest request) {
 
 		if (CfpSettings.CfpState.CLOSED.equals(cfpSettings.getState())) {
-			return "redirect:/s/index";
+			return "cfp-closed";
 		}
 
 		model.addAttribute("headerTitle", "Call for Papers");

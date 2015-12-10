@@ -24,7 +24,7 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-@ConfigurationProperties(prefix="devnexus.registration")
+@ConfigurationProperties(prefix="devnexus.cfp")
 public class CfpSettings {
 	private CfpState cfpState;
 
