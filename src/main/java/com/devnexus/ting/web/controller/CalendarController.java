@@ -1,9 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright 2014-2015 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
@@ -34,7 +43,6 @@ import com.devnexus.ting.core.service.CalendarServices;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserCalendar;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -47,98 +55,95 @@ import com.google.gson.GsonBuilder;
 @Controller
 public class CalendarController {
 
-    private static final Gson GSON = new GsonBuilder().create();
+	private static final Gson GSON = new GsonBuilder().create();
 
 	@Value("#{environment.TING_PUSH_APP_ID}")
-    private String PUSH_APP_ID;
+	private String PUSH_APP_ID;
 
 	@Value("#{environment.TING_PUSH_MASTER_SECRET}")
-    private String PUSH_APP_SECRET;
+	private String PUSH_APP_SECRET;
 
-    static {
-        System.setProperty("jsse.enableSNIExtension", "false");
-    }
+	static {
+		System.setProperty("jsse.enableSNIExtension", "false");
+	}
 
-    @Autowired
-    private ObjectMapper mapper;
+	@Autowired
+	JavaSender javaSender;
 
-    @Autowired
-    JavaSender javaSender;
+	@Autowired
+	CalendarServices calendarService;
 
-    @Autowired
-    CalendarServices calendarService;
+	@Autowired
+	private BusinessService businessService;
 
-    @Autowired
-    private BusinessService businessService;
+	@RequestMapping(value={"/s/usercalendar"}, method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<List<UserCalendar>>  calendar() throws JsonProcessingException {
+		return calendar(businessService.getCurrentEvent().getEventKey());
+	}
 
-    @RequestMapping(value={"/s/usercalendar"}, method=RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<List<UserCalendar>>  calendar() throws JsonProcessingException {
-        return calendar(businessService.getCurrentEvent().getEventKey());
-    }
+	@RequestMapping(value={"/s/{eventKey}/usercalendar"}, method=RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<List<UserCalendar>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
 
-    @RequestMapping(value={"/s/{eventKey}/usercalendar"}, method=RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<List<UserCalendar>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "application/json; charset=utf-8");
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
+		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
 
-        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
+			headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
 
-            headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
+			return new ResponseEntity<List<UserCalendar>>(new ArrayList<UserCalendar>(), headers, HttpStatus.UNAUTHORIZED);
+		}
 
-            return new ResponseEntity<List<UserCalendar>>(new ArrayList<UserCalendar>(), headers, HttpStatus.UNAUTHORIZED);
-        }
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		List<UserCalendar> calendar = calendarService.getUserCalendar(user, eventKey);
+		return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
+	}
 
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<UserCalendar> calendar = calendarService.getUserCalendar(user, eventKey);
-        return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
-    }
+	@RequestMapping(value="/s/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+	@ResponseBody
+	public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("eventKey") String eventKey, @PathVariable("id") String id, HttpServletRequest request) {
 
-    @RequestMapping(value="/s/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
-    @ResponseBody
-    public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("eventKey") String eventKey, @PathVariable("id") String id, HttpServletRequest request) {
+		HttpHeaders headers = new HttpHeaders();
 
-        HttpHeaders headers = new HttpHeaders();
+		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
+			headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
+			return new ResponseEntity<>(new UserCalendar(), headers, HttpStatus.UNAUTHORIZED);
+		}
 
-        if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
-            headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
-            return new ResponseEntity<>(new UserCalendar(), headers, HttpStatus.UNAUTHORIZED);
-        }
-
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
 
 
-        UserCalendar calendar = null;
-        try {
-            calendar = GSON.fromJson(request.getReader(), UserCalendar.class);
+		UserCalendar calendar = null;
+		try {
+			calendar = GSON.fromJson(request.getReader(), UserCalendar.class);
 
-            calendar = calendarService.updateEntry(calendar.getId(), user, calendar);
+			calendar = calendarService.updateEntry(calendar.getId(), user, calendar);
 
-             UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
-                .pushApplicationId(PUSH_APP_ID)
-                .masterSecret(PUSH_APP_SECRET)
-                .aliases(Arrays.asList(user.getEmail()))
-                .attribute("org.devnexus.sync.UserCalendar", "true")
-                .build();
+			 UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
+				.pushApplicationId(PUSH_APP_ID)
+				.masterSecret(PUSH_APP_SECRET)
+				.aliases(Arrays.asList(user.getEmail()))
+				.attribute("org.devnexus.sync.UserCalendar", "true")
+				.build();
 
-            javaSender.send(unifiedMessage);
+			javaSender.send(unifiedMessage);
 
-            return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
-        } catch (IOException e) {
-            Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
-            throw new RuntimeException(e);
-        }
+			return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
+		} catch (IOException e) {
+			Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
+			throw new RuntimeException(e);
+		}
 
-    }
+	}
 
-    @RequestMapping(value="/s/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
-    @ResponseBody
-    public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("id") String id, HttpServletRequest request) {
-        return updateCalendar(businessService.getCurrentEvent().getEventKey(), id, request);
+	@RequestMapping(value="/s/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+	@ResponseBody
+	public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("id") String id, HttpServletRequest request) {
+		return updateCalendar(businessService.getCurrentEvent().getEventKey(), id, request);
 
-    }
+	}
 
 }

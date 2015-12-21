@@ -39,7 +39,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.devnexus.ting.common.SystemInformationUtils;
@@ -50,7 +49,6 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.OrganizerList;
-import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
@@ -93,44 +91,6 @@ public class SiteController {
 		return "manager";
 	}
 
-	@RequestMapping("/s/schedule")
-	public String scheduleForCurrentEvent(final Model model,
-			@RequestParam(required=false, value="old") boolean old) {
-
-		final Event event = businessService.getCurrentEvent();
-		model.addAttribute("event", event);
-
-		if (event != null) {
-			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-			model.addAttribute("scheduleItemList", scheduleItemList);
-		}
-		else {
-			LOGGER.warn("No current event available.");
-		}
-
-		if (old) {
-			return "schedule-old";
-		}
-		return "schedule";
-	}
-
-	@RequestMapping("/s/new-schedule")
-	public String newscheduleForCurrentEvent(final Model model) {
-
-		final Event event = businessService.getCurrentEvent();
-		model.addAttribute("event", event);
-
-		if (event != null) {
-			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-			model.addAttribute("scheduleItemList", scheduleItemList);
-		}
-		else {
-			LOGGER.warn("No current event available.");
-		}
-
-		return "new-schedule";
-	}
-
 	@RequestMapping("/s/privacy-policy")
 	public String privacyPolicy() {
 		return "privacy-policy";
@@ -153,20 +113,6 @@ public class SiteController {
 		model.addAttribute("headerTitle", "Previous Conferences");
 		return "past-conferences";
 
-	}
-
-	@RequestMapping("/s/{eventKey}/schedule")
-	public String scheduleV2(@PathVariable("eventKey") String eventKey, final Model model) {
-
-		final Event event = businessService.getEventByEventKey(eventKey);
-		model.addAttribute("event", event);
-		model.addAttribute("contextEvent", event);
-
-		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-
-		model.addAttribute("scheduleItemList", scheduleItemList);
-
-		return "schedule";
 	}
 
 	@RequestMapping("/s/travel")
@@ -314,7 +260,7 @@ public class SiteController {
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), true);
 		model.addAttribute("sponsorList", sponsorList);
 		model.addAttribute("contextEvent", event);
-		
+
 		return "sponsors";
 	}
 
