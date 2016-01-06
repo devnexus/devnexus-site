@@ -14,6 +14,8 @@ multipart:
 security:
   enable-csrf: false
 devnexus:
+  csv:
+    date-format: MM/dd/yyyy
   twitter:
     enabled: false
     oauth:

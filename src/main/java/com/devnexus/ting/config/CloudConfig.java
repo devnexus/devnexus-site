@@ -4,15 +4,11 @@ import javax.sql.DataSource;
 
 import org.springframework.cloud.Cloud;
 import org.springframework.cloud.CloudFactory;
-import org.springframework.cloud.service.UriBasedServiceInfo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.devnexus.ting.common.SpringProfile;
-import com.sendgrid.SendGrid;
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 
 @Profile(SpringProfile.CLOUD)
 @Configuration
