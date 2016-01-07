@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2015-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,12 +71,27 @@ public class ScheduleController {
 		return prepareSchedule(event, model);
 	}
 
+	@RequestMapping("/s/user-schedule")
+	public String userScheduleForCurrentEvent(final Model model) {
+		final Event event = businessService.getCurrentEvent();
+		prepareSchedule(event, model);
+		return "user-schedule";
+	}
+
+	@RequestMapping("/s/{eventKey}/user-schedule")
+	public String userScheduleForEvent(@PathVariable("eventKey") String eventKey, final Model model) {
+
+		final Event event = businessService.getEventByEventKey(eventKey);
+		prepareSchedule(event, model);
+		return "user-schedule";
+	}
+
 	@RequestMapping("/s/schedule.pdf")
 	public void scheduleAsPdfForCurrentEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
 		throws IOException {
 
 		final Event event = businessService.getCurrentEvent();
-		prepareScheduleAsPdf(event, response);
+		prepareScheduleAsPdf(event, response, false);
 	}
 
 	@RequestMapping("/s/{eventKey}/schedule.pdf")
@@ -84,11 +99,28 @@ public class ScheduleController {
 		throws IOException {
 
 		final Event event = businessService.getEventByEventKey(eventKey);
-		prepareScheduleAsPdf(event, response);
+		prepareScheduleAsPdf(event, response, false);
 
 	}
 
-	private void prepareScheduleAsPdf(Event event, HttpServletResponse response)
+	@RequestMapping("/s/user-schedule.pdf")
+	public void userScheduleAsPdfForCurrentEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
+		throws IOException {
+
+		final Event event = businessService.getCurrentEvent();
+		prepareScheduleAsPdf(event, response, true);
+	}
+
+	@RequestMapping("/s/{eventKey}/user-schedule.pdf")
+	public void userScheduleAsPdf(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
+		throws IOException {
+
+		final Event event = businessService.getEventByEventKey(eventKey);
+		prepareScheduleAsPdf(event, response, true);
+
+	}
+
+	private void prepareScheduleAsPdf(Event event, HttpServletResponse response, boolean userSchedule)
 		throws IOException {
 
 		final String pdfFileName = event.getEventKey() + "-schedule.pdf";
@@ -103,7 +135,16 @@ public class ScheduleController {
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d, yyyy");
 		final SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 
-		final PdfUtils pdfUtils = new PdfUtils(72f, event.getTitle());
+		final String eventTitle;
+
+		if (userSchedule) {
+			eventTitle = "My Schedule for " + event.getTitle();
+		}
+		else {
+			eventTitle = event.getTitle();
+		}
+
+		final PdfUtils pdfUtils = new PdfUtils(72f, eventTitle);
 
 		try {
 
@@ -129,6 +170,10 @@ public class ScheduleController {
 				}
 
 				for (ScheduleItem scheduleItem : scheduleItemList.findBreakoutItemsOnDate(conferenceDay)) {
+
+					if (userSchedule && !scheduleItem.isFavorite()) {
+						continue;
+					}
 
 					if (fromTimeslot == null || !fromTimeslot.equals(scheduleItem.getFromTime())) {
 						fromTimeslot = scheduleItem.getFromTime();
@@ -171,4 +216,5 @@ public class ScheduleController {
 
 		return "new-schedule";
 	}
+
 }

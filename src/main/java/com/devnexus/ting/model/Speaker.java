@@ -15,7 +15,6 @@
  */
 package com.devnexus.ting.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -29,13 +28,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import org.apache.commons.codec.binary.Base64;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
 import org.hibernate.annotations.Filters;
 import org.hibernate.annotations.ParamDef;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * The persistent class for the speakers database table.
@@ -61,17 +61,17 @@ public class Speaker extends Person {
 	})
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	@BatchSize(size=20)
 	private List<Presentation>presentations = new ArrayList<Presentation>(0);
 
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	private Set<Event>events = new HashSet<Event>(0);
 
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	private Long cfpSpeakerId;
 
 	public Speaker() {

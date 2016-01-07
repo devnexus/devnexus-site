@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,12 +22,14 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.User;
-import com.devnexus.ting.model.UserCalendar;
+import com.devnexus.ting.model.UserScheduleItem;
 import com.devnexus.ting.repository.UserCalendarRepositoryCustom;
 
 /**
  * @author Summers Pittman
+ * @author Gunnar Hillert
  */
 @Repository("userCalendarDao")
 public class UserCalendarRepositoryImpl implements UserCalendarRepositoryCustom {
@@ -36,13 +38,14 @@ public class UserCalendarRepositoryImpl implements UserCalendarRepositoryCustom 
 	private EntityManager entityManager;
 
 	@Override
-	public List<UserCalendar> getUserCalendar(User user, String eventKey) {
-		return this.entityManager.createQuery("from UserCalendar where event_key = :eventKey and username = :username order by fromTime", UserCalendar.class).setParameter("username", user.getUsername()).setParameter("eventKey", eventKey).getResultList();
-	}
-
-	@Override
-	public List<UserCalendar> getTemplateCalendar(String eventKey) {
-		return this.entityManager.createQuery("from UserCalendar where event_key = :eventKey and template = true order by fromTime", UserCalendar.class).setParameter("eventKey", eventKey).getResultList();
+	public List<UserScheduleItem> getUserScheduleItems(User user, Event event) {
+		return this.entityManager
+			.createQuery("select us from UserScheduleItem us "
+					+ "left join fetch us.scheduleItem si "
+					+ "where si.event.id = :eventId and us.user.id = :userId order by si.fromTime", UserScheduleItem.class)
+			.setParameter("userId", user.getId())
+			.setParameter("eventId", event.getId())
+			.getResultList();
 	}
 
 }

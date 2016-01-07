@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
- *
+ * @author Gunnar Hillert
  */
 @XmlRootElement(name="schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,6 +51,8 @@ public class ScheduleItemList implements Serializable {
 	@XmlElement(name="scheduleItems")
 	private List<ScheduleItem> scheduleItems;
 
+	private List<Long> favoriteScheduleItemIds;
+
 	@XmlElement(name="headerItems")
 	private List<ScheduleItem> headerItems;
 	private transient Map<Date, List<ScheduleItem>> headerItemsByDate;
@@ -62,6 +64,13 @@ public class ScheduleItemList implements Serializable {
 	@XmlElement(name="breakoutItems")
 	private List<ScheduleItem> breakoutItems;
 
+	public List<Long> getFavoriteScheduleItemIds() {
+		return favoriteScheduleItemIds;
+	}
+
+	public void setFavoriteScheduleItemIds(List<Long> favoriteScheduleItemIds) {
+		this.favoriteScheduleItemIds = favoriteScheduleItemIds;
+	}
 
 	private transient Map<Date, List<ScheduleItem>> breakoutItemsByDate;
 
@@ -260,6 +269,18 @@ public class ScheduleItemList implements Serializable {
 		SortedSet<Room>rooms = new TreeSet<Room>();
 		for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
 			rooms.add(item.getRoom());
+		}
+
+		return rooms;
+	}
+
+	public SortedSet<Room> findRoomsWithFavoriteSessions(Date date) {
+
+		SortedSet<Room>rooms = new TreeSet<Room>();
+		for (ScheduleItem item : findBreakoutItemsOnDate(date)) {
+			if (item.isFavorite()) {
+				rooms.add(item.getRoom());
+			}
 		}
 
 		return rooms;

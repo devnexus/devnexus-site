@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import com.devnexus.ting.core.service.UserService;
@@ -105,7 +106,9 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         userToSave.setId(user.getId());
         userToSave.setFirstName(user.getFirstName());
         userToSave.setLastName(user.getLastName());
-        userToSave.setPassword(this.stringDigester.digest(user.getPassword()));
+        if(user.getPassword() != null && StringUtils.hasText(user.getPassword())) {
+        	userToSave.setPassword(this.stringDigester.digest(user.getPassword()));
+        }
         userToSave.setRegistrationDate(new Date());
         userToSave.setUsername(user.getUsername());
         try {
@@ -155,6 +158,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
         return userDao.getOne(userId);
     }
 
+    @Override
     public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
 
         assert userDao != null;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,12 +15,15 @@
  */
 package com.devnexus.ting.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -31,21 +34,26 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
+import org.hibernate.annotations.Filters;
 import org.hibernate.annotations.ParamDef;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
- * The persistent class for the speakers database table.
+ * A ScheduleItem represents a fragment of a conference (Event) schedule.
  *
  */
 @Entity
 @FilterDefs({
 		@FilterDef(name = "scheduleItemFilter"),
-		@FilterDef(name = "scheduleItemFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) )
-		})
+		@FilterDef(name = "scheduleItemFilterEventId", parameters=@ParamDef( name="eventId", type="long" ) ),
+		@FilterDef(name = "userFilter", parameters=@ParamDef( name="userId", type="long" ) )
+})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ScheduleItem extends BaseModelObject {
@@ -77,6 +85,12 @@ public class ScheduleItem extends BaseModelObject {
 	@ManyToOne
 	@JoinColumn(name="PRESENTATION_ID")
 	private Presentation presentation;
+
+	@Filters({
+		@Filter(name = "userFilter", condition = "USER_ID = :userId")
+	})
+	@OneToMany(fetch=FetchType.LAZY, mappedBy="scheduleItem")
+	private Set<UserScheduleItem>userScheduleItems = new HashSet<>(0);
 
 	@ManyToOne
 	@NotNull
@@ -155,6 +169,23 @@ public class ScheduleItem extends BaseModelObject {
 
 	public void setRowspan(int rowspan) {
 		this.rowspan = rowspan;
+	}
+
+	public Set<UserScheduleItem> getUserScheduleItems() {
+		return userScheduleItems;
+	}
+
+	public void setUserScheduleItems(Set<UserScheduleItem> userScheduleItems) {
+		this.userScheduleItems = userScheduleItems;
+	}
+
+	public boolean isFavorite() {
+		if (this.userScheduleItems.isEmpty()) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
 
 	@Override

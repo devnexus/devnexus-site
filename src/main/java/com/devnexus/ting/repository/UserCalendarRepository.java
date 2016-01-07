@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@ package com.devnexus.ting.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.devnexus.ting.model.UserCalendar;
+import com.devnexus.ting.model.UserScheduleItem;
 
-public interface UserCalendarRepository extends JpaRepository<UserCalendar, Long >, UserCalendarRepositoryCustom {
+public interface UserCalendarRepository extends JpaRepository<UserScheduleItem, Long >, UserCalendarRepositoryCustom {
 
 }

@@ -224,3 +224,27 @@ alter table CFP_SUBMISSION_SPEAKERS
 	foreign key (CFP_SPEAKER_IMAGE)
 	references CFP_SPEAKER_IMAGES;
 
+-- Jan 3, 2016
+
+CREATE TABLE user_schedule_items
+(
+  id bigint NOT NULL,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  schedule_item_id bigint,
+  user_id bigint,
+  CONSTRAINT user_schedule_items_pk PRIMARY KEY (id),
+  CONSTRAINT schedule_item_fk FOREIGN KEY (schedule_item_id)
+      REFERENCES schedule_items (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT user_fk FOREIGN KEY (user_id)
+      REFERENCES users (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT user_schedule_items_unique UNIQUE (user_id, schedule_item_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE user_schedule_items
+  OWNER TO devnexus;

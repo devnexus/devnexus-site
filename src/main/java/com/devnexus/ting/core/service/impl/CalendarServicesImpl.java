@@ -1,12 +1,20 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright 2014-2016 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package com.devnexus.ting.core.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,70 +22,55 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devnexus.ting.core.service.CalendarServices;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.User;
-import com.devnexus.ting.model.UserCalendar;
+import com.devnexus.ting.model.UserScheduleItem;
 import com.devnexus.ting.repository.ScheduleItemRepository;
 import com.devnexus.ting.repository.UserCalendarRepository;
 
+/**
+ *
+ * @author Summers
+ * @author Gunnar Hillert
+ *
+ */
 @Service
 public class CalendarServicesImpl implements CalendarServices{
 
-    @Autowired
-    UserCalendarRepository calendarRepository;
+	@Autowired
+	UserCalendarRepository calendarRepository;
 
-    @Autowired
-    ScheduleItemRepository scheduleRepository;
+	@Autowired
+	ScheduleItemRepository scheduleItemRepository;
 
+	@Override
+	@Transactional
+	public List<UserScheduleItem> getUserSchedule(User user, Event event) {
+		return calendarRepository.getUserScheduleItems(user, event);
+	}
 
-    @Override
-    public List<UserCalendar> getCalendarTemplate(String eventKey) {
-        return calendarRepository.getTemplateCalendar(eventKey);
-    }
+	@Override
+	@Transactional
+	public UserScheduleItem addScheduleItemToUserSchedule(User user, ScheduleItem scheduleItem) {
+		final UserScheduleItem userScheduleItem = new UserScheduleItem();
+		userScheduleItem.setScheduleItem(scheduleItem);
+		userScheduleItem.setUser(user);
+		return calendarRepository.save(userScheduleItem);
+	}
 
-
-    @Override
-    @Transactional
-    public List<UserCalendar> getUserCalendar(User user, String eventKey) {
-        List<UserCalendar> calendar = calendarRepository.getUserCalendar(user, eventKey);
-        if (calendar == null || calendar.isEmpty()) {
-            List<UserCalendar> template = getCalendarTemplate(eventKey);
-            calendar = new ArrayList<UserCalendar>();
-            for (UserCalendar entry : template) {
-                UserCalendar copy = entry.copy();
-
-                copy.setUsername(user.getUsername());
-                calendar.add(calendarRepository.save(copy));
-            }
-
-        }
-
-        return calendar;
-    }
-
-    @Override
-    @Transactional
-    public UserCalendar updateEntry(Long id, User user, UserCalendar newCalendar) {
-
-        UserCalendar storedCalendar = calendarRepository.getOne(id);
-
-        if (!storedCalendar.getUsername().equals(user.getUsername())) {
-            throw new IllegalAccessError("User " + user.getUsername() + " does not have access to this calendar.");
-        }
-
-        if (storedCalendar.isFixed()) {
-            return storedCalendar;
-        }
-
-        if (newCalendar.getItem() != null) {
-            storedCalendar.setItem(scheduleRepository.getOne(newCalendar.getItem().getId()));
-        } else {
-            storedCalendar.setItem(null);
-        }
-
-        calendarRepository.save(storedCalendar);
-
-        return storedCalendar;
-
-    }
+	@Override
+	@Transactional
+	public void removeScheduleItemFromUserSchedule(User user, ScheduleItem scheduleItem) {
+		UserScheduleItem userScheduleItem = null;
+		for (UserScheduleItem userScheduleItemFromDb : calendarRepository.getUserScheduleItems(user, scheduleItem.getEvent())) {
+			if (userScheduleItemFromDb.getScheduleItem().getId().equals(scheduleItem.getId())) {
+				userScheduleItem = userScheduleItemFromDb;
+			}
+		}
+		if (userScheduleItem != null) {
+			calendarRepository.delete(userScheduleItem.getId());
+		}
+	}
 
 }

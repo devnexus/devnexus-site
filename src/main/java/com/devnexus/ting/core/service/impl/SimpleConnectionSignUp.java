@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 the original author or authors.
+ * Copyright 2013-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,25 +15,55 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import java.util.concurrent.atomic.AtomicLong;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
-import org.springframework.social.google.api.Google;
+import org.springframework.social.connect.UserProfile;
+
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.User;
 
 /**
  * Simple little {@link ConnectionSignUp} command that allocates new userIds in memory.
  * Doesn't bother storing a user record in any local database, since this quickstart just stores the user id in a cookie.
  *
  * @author Keith Donald
+ * @author Gunnar Hillert
  */
 public final class SimpleConnectionSignUp implements ConnectionSignUp {
 
-    private final AtomicLong userIdSequence = new AtomicLong();
+	/**
+	 * Initialize Logging.
+	 */
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    public String execute(Connection<?> connection) {
-        ((Google) connection.getApi()).plusOperations();
-        return Long.toString(userIdSequence.incrementAndGet());
-    }
+	final UserService userService;
+
+	public SimpleConnectionSignUp(UserService userService) {
+		this.userService = userService;
+	}
+
+	@Override
+	public String execute(Connection<?> connection) {
+		final UserProfile profile = connection.fetchUserProfile();
+		final User user = new User();
+		user.setFirstName(profile.getFirstName());
+		user.setLastName(profile.getLastName());
+		user.setUsername(connection.getKey().toString());
+		user.setPassword(null);
+
+		final User createdUser;
+		try {
+			createdUser = this.userService.addUser(user);
+		}
+		catch (DuplicateUserException e) {
+			LOGGER.error("User {} already exists. Exception: {}", user.getUsername(), e.getMessage());
+			return null;
+		}
+		LOGGER.info("User {} with Id {} created.", createdUser.getUsername(), user.getId());
+		return user.getUserId();
+	}
 
 }

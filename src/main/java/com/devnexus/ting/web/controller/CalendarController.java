@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2015 the original author or authors.
+ * Copyright 2014-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,17 +15,12 @@
  */
 package com.devnexus.ting.web.controller;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.jboss.aerogear.unifiedpush.JavaSender;
-import org.jboss.aerogear.unifiedpush.message.UnifiedMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -40,8 +35,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.CalendarServices;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.User;
-import com.devnexus.ting.model.UserCalendar;
+import com.devnexus.ting.model.UserScheduleItem;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,11 +48,10 @@ import com.google.gson.GsonBuilder;
  * This class will service a users requests for their personalized calendar.
  *
  * @author summers
+ * @author Gunnar Hillert
  */
 @Controller
 public class CalendarController {
-
-	private static final Gson GSON = new GsonBuilder().create();
 
 	@Value("#{environment.TING_PUSH_APP_ID}")
 	private String PUSH_APP_ID;
@@ -78,72 +74,89 @@ public class CalendarController {
 
 	@RequestMapping(value={"/s/usercalendar"}, method=RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity<List<UserCalendar>>  calendar() throws JsonProcessingException {
+	public ResponseEntity<List<UserScheduleItem>>  calendar() throws JsonProcessingException {
 		return calendar(businessService.getCurrentEvent().getEventKey());
 	}
 
 	@RequestMapping(value={"/s/{eventKey}/usercalendar"}, method=RequestMethod.GET)
 	@ResponseBody
-	public ResponseEntity<List<UserCalendar>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
+	public ResponseEntity<List<UserScheduleItem>>  calendar(@PathVariable("eventKey") String eventKey) throws JsonProcessingException {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json; charset=utf-8");
 
 		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
-
 			headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
-
-			return new ResponseEntity<List<UserCalendar>>(new ArrayList<UserCalendar>(), headers, HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<List<UserScheduleItem>>(new ArrayList<UserScheduleItem>(), headers, HttpStatus.UNAUTHORIZED);
 		}
 
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		List<UserCalendar> calendar = calendarService.getUserCalendar(user, eventKey);
+		final User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		final Event event = businessService.getEventByEventKey(eventKey);
+
+		List<UserScheduleItem> calendar = calendarService.getUserSchedule(user, event);
 		return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
 	}
 
-	@RequestMapping(value="/s/{eventKey}/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
+	@RequestMapping(value="/s/{eventKey}/usercalendar/{scheduleItemId}", method={RequestMethod.POST, RequestMethod.PUT})
 	@ResponseBody
-	public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("eventKey") String eventKey, @PathVariable("id") String id, HttpServletRequest request) {
+	public ResponseEntity<UserScheduleItem> addToCalendar(
+			@PathVariable("eventKey") String eventKey,
+			@PathVariable("scheduleItemId") Long scheduleItemId,
+			HttpServletRequest request) {
 
 		HttpHeaders headers = new HttpHeaders();
 
 		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
 			headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
-			return new ResponseEntity<>(new UserCalendar(), headers, HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<>(new UserScheduleItem(), headers, HttpStatus.UNAUTHORIZED);
 		}
 
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		final User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		final Event event = businessService.getEventByEventKey(eventKey);
 
-
-
-		UserCalendar calendar = null;
-		try {
-			calendar = GSON.fromJson(request.getReader(), UserCalendar.class);
-
-			calendar = calendarService.updateEntry(calendar.getId(), user, calendar);
-
-			 UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
-				.pushApplicationId(PUSH_APP_ID)
-				.masterSecret(PUSH_APP_SECRET)
-				.aliases(Arrays.asList(user.getEmail()))
-				.attribute("org.devnexus.sync.UserCalendar", "true")
-				.build();
-
-			javaSender.send(unifiedMessage);
-
-			return new ResponseEntity<>(calendar, headers, HttpStatus.OK);
-		} catch (IOException e) {
-			Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
-			throw new RuntimeException(e);
+		if (user == null) {
+			return new ResponseEntity<>(null, headers, HttpStatus.FORBIDDEN);
 		}
 
+		final ScheduleItem scheduleItem = businessService.getScheduleItem(scheduleItemId);
+
+		final UserScheduleItem savedUserScheduleItem = calendarService.addScheduleItemToUserSchedule(user, scheduleItem);
+
+		return new ResponseEntity<>(savedUserScheduleItem, headers, HttpStatus.OK);
 	}
 
 	@RequestMapping(value="/s/usercalendar/{id}", method={RequestMethod.POST, RequestMethod.PUT})
 	@ResponseBody
-	public ResponseEntity<UserCalendar>  updateCalendar(@PathVariable("id") String id, HttpServletRequest request) {
-		return updateCalendar(businessService.getCurrentEvent().getEventKey(), id, request);
+	public ResponseEntity<UserScheduleItem>  updateCalendar(@PathVariable("id") Long id, HttpServletRequest request) {
+		return addToCalendar(businessService.getCurrentEvent().getEventKey(), id, request);
+	}
 
+	@RequestMapping(value="/s/{eventKey}/usercalendar/{scheduleItemId}", method={RequestMethod.DELETE})
+	@ResponseBody
+	public ResponseEntity<UserScheduleItem> removeFromCalendar(
+			@PathVariable("eventKey") String eventKey,
+			@PathVariable("scheduleItemId") Long scheduleItemId,
+			HttpServletRequest request) {
+
+		HttpHeaders headers = new HttpHeaders();
+
+		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof  String) {
+			headers.add("WWW-Authenticate", "Google realm=\"http://www.devnexus.org\"");
+			return new ResponseEntity<>(new UserScheduleItem(), headers, HttpStatus.UNAUTHORIZED);
+		}
+
+		final User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		final Event event = businessService.getEventByEventKey(eventKey);
+
+		if (user == null) {
+			return new ResponseEntity<>(null, headers, HttpStatus.FORBIDDEN);
+		}
+
+		final ScheduleItem scheduleItem = businessService.getScheduleItem(scheduleItemId);
+
+		calendarService.removeScheduleItemFromUserSchedule(user, scheduleItem);
+
+		return new ResponseEntity<>(null, headers, HttpStatus.OK);
 	}
 
 }

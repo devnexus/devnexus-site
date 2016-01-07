@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,8 +54,8 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 	@Column(unique=true)
 	private String username;
 
-	@NotNull
 	@Size(max=120)
+	@JsonIgnore
 	private String password;
 
 	@NotNull
@@ -68,20 +68,22 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 
 	@Size(max=50)
 	@Email
+	@JsonIgnore
 	private String email;
 
 	@XmlAttribute
+	@JsonIgnore
 	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
 	private Date registrationDate;
 
 	@XmlAttribute
+	@JsonIgnore
 	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
 	private Date lastLoginDate;
 
-
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER, mappedBy="user")
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	@BatchSize(size=20)
 	private Set<UserAuthority> userAuthorities = new HashSet<>(0);
 
@@ -205,21 +207,25 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 	}
 
 	@Override
+	@JsonIgnore
 	public boolean isAccountNonExpired() {
 		return true;
 	}
 
 	@Override
+	@JsonIgnore
 	public boolean isAccountNonLocked() {
 		return true;
 	}
 
 	@Override
+	@JsonIgnore
 	public boolean isCredentialsNonExpired() {
 		return true;
 	}
 
 	@Override
+	@JsonIgnore
 	public boolean isEnabled() {
 		return true;
 	}
@@ -231,7 +237,7 @@ public class User extends BaseModelObject implements Serializable, SocialUserDet
 
     @Override
     public String getUserId() {
-        return this.getFirstName() + " " + this.getLastName();
+        return this.getUsername();
     }
 
 }

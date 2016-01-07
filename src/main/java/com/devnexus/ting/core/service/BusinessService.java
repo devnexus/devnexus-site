@@ -33,6 +33,7 @@ import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.Room;
+import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
@@ -223,6 +224,8 @@ public interface BusinessService {
 	Room getRoom(Long id);
 
 	ScheduleItemList getScheduleForEvent(Long eventId);
+
+	ScheduleItem     getScheduleItem(Long scheduleItemId);
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 

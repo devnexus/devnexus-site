@@ -7,13 +7,7 @@
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 
-<title>${contextEvent.title} | Schedule</title>
-
-<style>
-	.is-favorite span {
-		color: orange;
-	}
-</style>
+<title>${contextEvent.title} | My Schedule</title>
 
 <div class="ribbon animated fadeIn delayp1"
 	data-50="opacity:1;"
@@ -27,7 +21,7 @@
 		<div class="row centered">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Schedule for ${event.title}</span></h4>
+					<h4 class="section-white-title decorated"><span>My Schedule for ${event.title}</span></h4>
 					<h5 class="intro-white-lead">13 Tracks, 120+ Presentations, 2+1 Days.</h5>
 				</div>
 			</div>
@@ -37,15 +31,12 @@
 <!-- /intro -->
 
 <div class="container" style="margin-top: 1em;">
-
 	<sec:authorize access="isAuthenticated()">
 		<a class="btn btn-default" href="${ctx}${baseSiteUrl}/logout"><i class="fa fa-sign-out"></i> Logout <sec:authentication property="principal.firstName"/></a>
-		<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/user-schedule"><i class="fa fa-user"></i> View User Schedule</a>
 	</sec:authorize>
-	<sec:authorize access="!isAuthenticated()">
-		<a class="btn btn-default btn-social btn-google" href="/auth/google?scope=profile"><i class="fa fa-google"></i> Login with Google to create Custom Schedule</a>
-	</sec:authorize>
-	<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/schedule.pdf"><i class="fa fa-file-pdf-o"></i> Download Full Schedule as PDF</a>
+
+	<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/schedule">Full Schedule</a>
+	<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/user-schedule.pdf"><i class="fa fa-file-pdf-o"></i> Download User Schedule as PDF</a>
 	<c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
 
 			<!-- Example row of columns -->
@@ -114,7 +105,7 @@
 			</div>
 			<h4 class="text-center">Breakouts</h4>
 			<div id="schedule">
-				<c:forEach items="${scheduleItemList.findRooms(date)}" var="room" varStatus="roomStatus">
+				<c:forEach items="${scheduleItemList.findRoomsWithFavoriteSessions(date)}" var="room" varStatus="roomStatus">
 					<c:if test="${roomStatus.index%4 == 0}">
 						<div class="row schedule-row row-centered">
 					</c:if>
@@ -124,45 +115,47 @@
 							<h3 class="track-room-name">${room.track}<br/>${room.name}</h3>
 							<c:forEach items="${scheduleItemList.findBreakoutItemsOnDateInRoom(date, room)}" var="session"
 								varStatus="sessionStatus">
-								<div class="schedule-item-session" id="schedule-item-${session.id}" style="position: relative;"><strong><fmt:formatDate pattern="h:mm" value="${session.fromTime}"/>-<fmt:formatDate
-												pattern="h:mm" value="${session.toTime}"/> <fmt:formatDate pattern="a"
-												value="${session.toTime}"/></strong><br/>
-									<c:choose>
-										<c:when test="${not empty session.presentation}">
-											<c:url var="presentationUrl"
-												value="${baseSiteUrl}/presentations#id-${session.presentation.id}"/>
-											<span class="session-title"><a
-												href="${presentationUrl}"><c:out value="${session.presentation.title}"/></a></span>
-										</c:when>
-										<c:otherwise>
-											<c:out value="${session.title}" default="N/A"/>
-										</c:otherwise>
-									</c:choose>
-									<c:forEach var="speaker" items="${session.presentation.speakers}" varStatus="status">
-										<c:if test="${status.first}"><br/></c:if>
-										<c:if test="${status.last and not status.first}">&amp;</c:if>
-										<c:if test="${not status.last and not status.first}">,</c:if>
-										${speaker.firstName} ${speaker.lastName}
-									</c:forEach>
-									<sec:authorize access="isAuthenticated()">
+								<c:if test="${session.favorite}">
+									<div class="schedule-item-session" id="schedule-item-${session.id}" style="position: relative;"><strong><fmt:formatDate pattern="h:mm" value="${session.fromTime}"/>-<fmt:formatDate
+													pattern="h:mm" value="${session.toTime}"/> <fmt:formatDate pattern="a"
+													value="${session.toTime}"/></strong><br/>
 										<c:choose>
-											<c:when test="${session.favorite}">
-												<a style="position: absolute; top: 0; right: 0" class="session-favorite is-favorite"
-													data-schedule-item-id="${session.id}" data-is-favorite="${session.favorite}"
-													href="#" title="Remove as favorite">
-													<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-												</a>
+											<c:when test="${not empty session.presentation}">
+												<c:url var="presentationUrl"
+													value="${baseSiteUrl}/presentations#id-${session.presentation.id}"/>
+												<span class="session-title"><a
+													href="${presentationUrl}"><c:out value="${session.presentation.title}"/></a></span>
 											</c:when>
 											<c:otherwise>
-												<a style="position: absolute; top: 0; right: 0" class="session-favorite"
-													data-schedule-item-id="${session.id}" data-is-favorite="${session.favorite}"
-													href="#" title="Add as favorite">
-													<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-												</a>
+												<c:out value="${session.title}" default="N/A"/>
 											</c:otherwise>
 										</c:choose>
-									</sec:authorize>
-								</div>
+										<c:forEach var="speaker" items="${session.presentation.speakers}" varStatus="status">
+											<c:if test="${status.first}"><br/></c:if>
+											<c:if test="${status.last and not status.first}">&amp;</c:if>
+											<c:if test="${not status.last and not status.first}">,</c:if>
+											${speaker.firstName} ${speaker.lastName}
+										</c:forEach>
+										<sec:authorize access="isAuthenticated()">
+											<c:choose>
+												<c:when test="${session.favorite}">
+													<a style="position: absolute; top: 0; right: 0" class="session-favorite"
+														data-schedule-item-id="${session.id}" data-is-favorite="${session.favorite}"
+														href="#" title="Remove as favorite">
+														<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+													</a>
+												</c:when>
+												<c:otherwise>
+													<a style="position: absolute; top: 0; right: 0" class="session-favorite"
+														data-schedule-item-id="${session.id}" data-is-favorite="${session.favorite}"
+														href="#" title="Add as favorite">
+														<span class="glyphicon glyphicon-star" aria-hidden="true" style="color: red"></span>
+													</a>
+												</c:otherwise>
+											</c:choose>
+										</sec:authorize>
+									</div>
+								</c:if>
 							</c:forEach>
 						</div>
 					</div>
@@ -181,9 +174,10 @@
 		$(document).ready(function() {
 
 			$('body').on('click', 'a.session-favorite', function() {
-				var element = $(this);
-				var favorite = element.data('is-favorite');
-				var scheduleItemId = element.data('schedule-item-id');
+				var favorite = $(this).data('is-favorite');
+				var scheduleItemId = $(this).data('schedule-item-id');
+
+				console.log($(this).parent('.schedule-item').find('.schedule-item-session').length);
 
 				if (!favorite) {
 					console.log('Add schedule item Id: ' + scheduleItemId + ' as favorite.');
@@ -194,13 +188,12 @@
 					})
 					.done(function( msg ) {
 						console.log( "Added: ", msg );
-						element.addClass('is-favorite');
-						element.attr('title', 'Remove as favorite');
-						element.data('is-favorite', true);
 					});
 				}
 				else {
 					console.log('Remove schedule item Id: ' + scheduleItemId + ' as favorite.');
+					var parent = $(this).parent().parent();
+					console.log($(this).parent().parent().find('.schedule-item-session').length);
 					$.ajax({
 						method: "DELETE",
 						url: "${ctx}/s/${event.eventKey}/usercalendar/" + scheduleItemId,
@@ -208,9 +201,12 @@
 					})
 					.done(function( msg ) {
 						console.log( "Removed: " + msg );
-						element.removeClass('is-favorite')
-						element.attr('title', 'Add as favorite')
-						element.data('is-favorite', false);
+						$('#schedule-item-' + scheduleItemId).remove();
+						console.log(parent.find().length);
+						if (parent.find('.schedule-item-session').length == 0) {
+							parent.remove();
+						}
+						resizeScheduleItems();
 					});
 				}
 

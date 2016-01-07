@@ -919,4 +919,9 @@ public class BusinessServiceImpl implements BusinessService {
 		return cfpSubmissionSpeaker;
 	}
 
+	@Override
+	public ScheduleItem getScheduleItem(Long scheduleItemId) {
+		return scheduleItemDao.findOne(scheduleItemId);
+	}
+
 }

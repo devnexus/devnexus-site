@@ -16,7 +16,6 @@
 package com.devnexus.ting.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -27,6 +26,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.social.connect.UsersConnectionRepository;
+import org.springframework.social.security.SocialAuthenticationProvider;
 import org.springframework.social.security.SocialUserDetails;
 import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.social.security.SpringSocialConfigurer;
@@ -44,6 +46,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsService userDetailsService;
+
+	@Autowired
+	private UsersConnectionRepository usersConnectionRepository;
 
 	@SuppressWarnings("deprecation")
 	@Autowired
@@ -66,21 +71,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
 		}
 
+		final SimpleUrlAuthenticationSuccessHandler successHandler = new SimpleUrlAuthenticationSuccessHandler();
+		successHandler.setUseReferer(false);
+		successHandler.setTargetUrlParameter("target");
+		successHandler.setDefaultTargetUrl("/s/admin/index");
+
 		httpSecurity.formLogin().loginProcessingUrl("/s/login")
-			.defaultSuccessUrl("/s/admin/index")
 			.loginPage("/s/login")
 			.failureUrl("/s/login?status=error")
+			.successHandler(successHandler)
 			.permitAll();
 
-
-            http.apply(new SpringSocialConfigurer()
-                .postLoginUrl("/")
-
-                .alwaysUsePostLoginUrl(true));
+		http.apply(new SpringSocialConfigurer()
+			.postLoginUrl("/s/schedule"));
 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.authenticationProvider(socialAuthenticationProvider());
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
 	}
 
@@ -89,17 +97,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new SecurityEventListener();
 	}
 
+	@Bean
+	public SocialAuthenticationProvider socialAuthenticationProvider(){
+		return new SocialAuthenticationProvider(usersConnectionRepository, socialUsersDetailService());
+	}
 
-    @Bean
-    public SocialUserDetailsService socialUsersDetailService() {
-        return new SocialUserDetailsService() {
+	@Bean
+	public SocialUserDetailsService socialUsersDetailService() {
+		return new SocialUserDetailsService() {
 
-            @Override
-            public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException, DataAccessException {
-                        User userDetails = (User) userDetailsService.loadUserByUsername(userId);
-                        return userDetails;
-            }
-        };
-    }
+			@Override
+			public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException, DataAccessException {
+						User userDetails = (User) userDetailsService.loadUserByUsername(userId);
+						return userDetails;
+			}
+		};
+	}
 
 }
