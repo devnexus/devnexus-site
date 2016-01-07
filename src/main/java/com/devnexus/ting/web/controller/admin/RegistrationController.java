@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import com.devnexus.ting.config.support.CsvExportSettings;
 import com.devnexus.ting.web.form.RegistrationSearchForm;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.Dashboard;
@@ -37,9 +38,9 @@ import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.repository.EventSignupRepository;
-import com.devnexus.ting.repository.RegistrationRepository;
 import com.devnexus.ting.web.form.SignupRegisterView;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -60,8 +61,8 @@ public class RegistrationController {
     private EventSignupRepository eventSignupRepository;
 
     @Inject
-    private RegistrationRepository registrationDao;
-
+    private CsvExportSettings csvSettings;
+    
     @Inject
     private BusinessService businessService;
 
@@ -108,7 +109,7 @@ public class RegistrationController {
          List<RegistrationDetails> registrations = businessService.findRegistrationsForEvent(event);
  
         try ( // uses the Super CSV API to generate CSV data from the model data
-                ICsvBeanWriter csvWriter = new TicketCsvWriter(response.getWriter(), businessService)) {
+                ICsvBeanWriter csvWriter = new TicketCsvWriter(response.getWriter(), new SimpleDateFormat(csvSettings.getDateFormat()))) {
             String[] header = { "First Name","Last Name", "Email Address", "City", "State","County", "Job Title", "Company", "T Shirt Size", "Vegetarian Meal",
                 "Allow Sponsor To Contact", "Purchase Date", "Ticket Type", "Payment state"};
             
@@ -213,7 +214,6 @@ public class RegistrationController {
 
         RegistrationDetails registerForm = businessService.getRegistrationForm(registrationId);
 
-        Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
 
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
