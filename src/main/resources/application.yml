@@ -23,9 +23,11 @@ devnexus:
       consumerSecret:
       accessToken:
       accessTokenSecret:
+  amazon:
+    awsAccessKeyId:
+    awsSecretKey:
   mail:
-    enabled: false
-    sendgrid-enabled: false
+    emailProvider: none # none | smtp | sendgrid | amazon_ses
     sendgrid-api-key:
     authenticationEnabled: false
     debugEnabled: false

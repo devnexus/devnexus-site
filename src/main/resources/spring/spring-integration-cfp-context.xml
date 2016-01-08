@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd">
 
-	<beans profile="mail-enabled,sendgrid-enabled">
+	<beans profile="mail-enabled">
 		<int:transformer id="prepareMailToSpeaker"
 								input-channel="mailChannel"
 								output-channel="sendMailChannel"
@@ -21,7 +21,7 @@
 		</int:transformer>
 	</beans>
 
-	<beans profile="mail-enabled">
+	<beans profile="smtp-enabled">
 		<int:chain input-channel="sendMailChannel">
 			<int:transformer id="genericEmailToMimeMessage" ref="genericEmailToMimeMessageTransformer"/>
 			<int-mail:outbound-channel-adapter id="mailAdapter" mail-sender="mailSender"/>
@@ -30,6 +30,10 @@
 
 	<beans profile="sendgrid-enabled">
 		<int:service-activator input-channel="sendMailChannel" ref="sendUsingSendgrid"/>
+	</beans>
+
+	<beans profile="amazon-ses-enabled">
+		<int:service-activator input-channel="sendMailChannel" ref="sendUsingAmazonSes"/>
 	</beans>
 
 	<beans profile="demo">

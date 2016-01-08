@@ -33,6 +33,7 @@ import com.devnexus.ting.common.Apphome;
 import com.devnexus.ting.common.SpringContextMode;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.common.SystemInformationUtils;
+import com.devnexus.ting.config.support.MailSettings.EmailProvider;
 
 /**
  *
@@ -81,7 +82,7 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
                         } else {
                             productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
                         }
-                        
+
 			try {
 				propertySource = yamlPropertySourceLoader.load("devnexus-standalone", new DefaultResourceLoader().getResource(productionPropertySourceLocation), null);
 			} catch (IOException e) {
@@ -94,18 +95,30 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			LOGGER.info("Using Properties for demo mode.");
 		}
 
-		final boolean mailEnabled      = environment.getProperty("devnexus.mail.enabled",          Boolean.class, Boolean.FALSE);
-		final boolean sendgridEnabled  = environment.getProperty("devnexus.mail.sendgrid-enabled", Boolean.class, Boolean.FALSE);
+		final EmailProvider emailProvider = environment.getProperty("devnexus.mail.emailProvider", EmailProvider.class, EmailProvider.NONE);
 		final boolean twitterEnabled   = environment.getProperty("devnexus.twitter.enabled",       Boolean.class, Boolean.FALSE);
 		final boolean websocketEnabled = environment.getProperty("devnexus.websocket.enabled",     Boolean.class, Boolean.FALSE);
 		final boolean payPalEnabled    = environment.containsProperty("PAYPAL_MODE");
 
-		if (sendgridEnabled) {
+		if (EmailProvider.SENDGRID.equals(emailProvider)) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.SENDGRID_ENABLED);
 		}
-		else if (mailEnabled) {
+		else if (EmailProvider.SMTP.equals(emailProvider)) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.SMTP_ENABLED);
+		}
+		else if (EmailProvider.AMAZON_SES.equals(emailProvider)) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.AMAZON_SES_ENABLED);
+		}
+		else if (EmailProvider.NONE.equals(emailProvider)) {
+		}
+		else {
+			throw new IllegalArgumentException("Unknown EmailProvider: " + emailProvider);
+		}
+
+		if (!EmailProvider.NONE.equals(emailProvider)) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.MAIL_ENABLED);
 		}
+
 		if (twitterEnabled) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.TWITTER_ENABLED);
 		}

@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix="devnexus.mail")
 public class MailSettings {
 
-	private boolean enabled;
-	private boolean sendgridEnabled;
+	private EmailProvider emailProvider;
 
 	private String  sendgridApiKey;
 	private boolean authenticationEnabled;
@@ -16,16 +15,12 @@ public class MailSettings {
 	private User user;
 	private Smtp smtp;
 
-	public boolean isEnabled() {
-		return enabled;
+	public EmailProvider getEmailProvider() {
+		return emailProvider;
 	}
 
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
-
-	public boolean isSendgridEnabled() {
-		return sendgridEnabled;
+	public void setEmailProvider(EmailProvider emailProvider) {
+		this.emailProvider = emailProvider;
 	}
 
 	public String getSendgridApiKey() {
@@ -34,10 +29,6 @@ public class MailSettings {
 
 	public void setSendgridApiKey(String sendgridApiKey) {
 		this.sendgridApiKey = sendgridApiKey;
-	}
-
-	public void setSendgridEnabled(boolean sendgridEnabled) {
-		this.sendgridEnabled = sendgridEnabled;
 	}
 
 	public boolean isAuthenticationEnabled() {
@@ -70,6 +61,10 @@ public class MailSettings {
 
 	public void setSmtp(Smtp smtp) {
 		this.smtp = smtp;
+	}
+
+	public boolean isEmailEnabled() {
+		return !EmailProvider.NONE.equals(this.emailProvider);
 	}
 
 	public static class User {
@@ -125,5 +120,7 @@ public class MailSettings {
 		}
 
 	}
+
+	public enum EmailProvider { NONE, SENDGRID, AMAZON_SES, SMTP }
 }
 

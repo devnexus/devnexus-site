@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2015-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,9 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.scheduling.support.PeriodicTrigger;
 
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.config.support.AmazonSettings;
 import com.devnexus.ting.config.support.MailSettings;
+import com.devnexus.ting.core.service.integration.AmazonSesSender;
 import com.devnexus.ting.core.service.integration.GenericEmailToMimeMessageTransformer;
 import com.devnexus.ting.core.service.integration.PrepareMailToRegisterTransformer;
 import com.devnexus.ting.core.service.integration.PrepareMailToSpeakerTransformer;
@@ -50,6 +52,9 @@ public class MailNotificationConfig {
 	@Autowired
 	private MailSettings mailSettings;
 
+	@Autowired
+	private AmazonSettings amazonSettings;
+
 	@Bean
 	public QueueChannel mailChannel() {
 		return new QueueChannel();
@@ -61,7 +66,7 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
+	@Profile({SpringProfile.MAIL_ENABLED})
 	public PrepareMailToSpeakerTransformer prepareMailToSpeakerTransformer() {
 		PrepareMailToSpeakerTransformer transformer = new PrepareMailToSpeakerTransformer();
 		transformer.setCcUser(mailSettings.getUser().getCc());
@@ -70,7 +75,7 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
+	@Profile({SpringProfile.MAIL_ENABLED})
 	public PrepareMailToRegisterTransformer prepareMailToRegisterTransformer() {
 		PrepareMailToRegisterTransformer transformer = new PrepareMailToRegisterTransformer();
 		transformer.setCcUser(mailSettings.getUser().getCc());
@@ -79,7 +84,7 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile(SpringProfile.MAIL_ENABLED)
+	@Profile(SpringProfile.SMTP_ENABLED)
 	public GenericEmailToMimeMessageTransformer genericEmailToMimeMessageTransformer() {
 		GenericEmailToMimeMessageTransformer transformer = new GenericEmailToMimeMessageTransformer();
 		transformer.setMailSender(mailSender());
@@ -93,7 +98,13 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile(SpringProfile.MAIL_ENABLED)
+	@Profile(SpringProfile.AMAZON_SES_ENABLED)
+	public AmazonSesSender sendUsingAmazonSes() {
+		return new AmazonSesSender(amazonSettings);
+	}
+
+	@Bean
+	@Profile(SpringProfile.SMTP_ENABLED)
 	public JavaMailSenderImpl mailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 		mailSender.setHost(mailSettings.getSmtp().getHost());
@@ -109,7 +120,7 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
-	@Profile({SpringProfile.MAIL_ENABLED, SpringProfile.SENDGRID_ENABLED})
+	@Profile({SpringProfile.MAIL_ENABLED})
 	public MessageChannel sendMailChannel() {
 		return new DirectChannel();
 	}

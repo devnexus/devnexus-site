@@ -654,7 +654,7 @@ public class BusinessServiceImpl implements BusinessService {
 			}
 		});
 
-		if (mailSettings.isEnabled()) {
+		if (mailSettings.isEmailEnabled()) {
 			mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
 		}
 
@@ -817,14 +817,14 @@ public class BusinessServiceImpl implements BusinessService {
         public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
                 registrationDao.saveAndFlush(registerForm);
                 payPalDao.saveAndFlush(payment);
-                if (mailSettings.isEnabled()) {
+                if (mailSettings.isEmailEnabled()) {
 			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
 		}
         }
 
         @Override
         public void resendRegistrationEmail(RegistrationDetails registerForm) {
-                if (mailSettings.isEnabled()) {
+                if (mailSettings.isEmailEnabled()) {
 			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
 		}
         }

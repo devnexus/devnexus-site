@@ -26,6 +26,10 @@ public final class SpringProfile {
 	public static final String MAIL_ENABLED       = "mail-enabled";
 	public static final String SENDGRID_ENABLED   = "sendgrid-enabled";
 	public static final String SENDGRID_DISABLED  = "!sendgrid-enabled";
+	public static final String SMTP_ENABLED   = "smtp-enabled";
+	public static final String SMTP_DISABLED  = "!smtp-enabled";
+	public static final String AMAZON_SES_ENABLED   = "amazon-ses-enabled";
+	public static final String AMAZON_SES_DISABLED  = "!amazon-ses-enabled";
 	public static final String MAIL_DISABLED      = "!mail-enabled";
 	public static final String TWITTER_ENABLED    = "twitter-enabled";
 	public static final String PAYPAL_ENABLED     = "paypal-enabled";
