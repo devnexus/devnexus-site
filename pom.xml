@@ -95,7 +95,9 @@
 						</service>
 					</services>
 					<env>
-						<devnexus_mail_enabled>true</devnexus_mail_enabled>
+						<devnexus_amazon_awsAccessKeyId></devnexus_amazon_awsAccessKeyId>
+						<devnexus_amazon_awsSecretKey></devnexus_amazon_awsSecretKey>
+						<devnexus_mail_emailProvider>AMAZON_SES</devnexus_mail_emailProvider>
 						<devnexus_mail_user_cc>info@ajug.org</devnexus_mail_user_cc>
 						<devnexus_mail_sendgrid-api-key>****</devnexus_mail_sendgrid-api-key>
 						<devnexus_mail_sendgrid-enabled>true</devnexus_mail_sendgrid-enabled>
@@ -391,10 +393,18 @@
 			<version>2.6</version>
 		</dependency>
 
+		<!-- Email -->
 		<dependency>
 			<groupId>com.sendgrid</groupId>
 			<artifactId>sendgrid-java</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-ses</artifactId>
+			<version>1.10.44</version>
+		</dependency>
+
+		<!--  -->
 
 		<dependency>
 			<groupId>io.springfox</groupId>
