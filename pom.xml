@@ -100,7 +100,6 @@
 						<devnexus_mail_emailProvider>AMAZON_SES</devnexus_mail_emailProvider>
 						<devnexus_mail_user_cc>info@ajug.org</devnexus_mail_user_cc>
 						<devnexus_mail_sendgrid-api-key>****</devnexus_mail_sendgrid-api-key>
-						<devnexus_mail_sendgrid-enabled>true</devnexus_mail_sendgrid-enabled>
 						<devnexus_recaptcha_enabled>true</devnexus_recaptcha_enabled>
 						<devnexus_recaptcha_privateKey>****</devnexus_recaptcha_privateKey>
 						<devnexus_recaptcha_publicKey>****</devnexus_recaptcha_publicKey>

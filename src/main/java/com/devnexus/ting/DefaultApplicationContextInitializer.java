@@ -95,10 +95,18 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			LOGGER.info("Using Properties for demo mode.");
 		}
 
-		final EmailProvider emailProvider = environment.getProperty("devnexus.mail.emailProvider", EmailProvider.class, EmailProvider.NONE);
+		final String emailProviderAsString = environment.getProperty("devnexus.mail.emailProvider");
+		final EmailProvider emailProvider = EmailProvider.valueOf(emailProviderAsString.trim().toUpperCase());
 		final boolean twitterEnabled   = environment.getProperty("devnexus.twitter.enabled",       Boolean.class, Boolean.FALSE);
 		final boolean websocketEnabled = environment.getProperty("devnexus.websocket.enabled",     Boolean.class, Boolean.FALSE);
 		final boolean payPalEnabled    = environment.containsProperty("PAYPAL_MODE");
+
+		LOGGER.info("Uses Settings:"
+			+ "\nEmail Provider: " + emailProvider
+			+ "\nTwitter Enabled: " + twitterEnabled
+			+ "\nPayPal Enabled: " + payPalEnabled
+			+ "\nWebsocket Enabled: " + websocketEnabled
+			);
 
 		if (EmailProvider.SENDGRID.equals(emailProvider)) {
 			applicationContext.getEnvironment().addActiveProfile(SpringProfile.SENDGRID_ENABLED);
