@@ -8,6 +8,8 @@ public enum ScheduleItemType {
 	REGISTRATION(100L, "Registration", "registration"),
 	KEYNOTE(200L, "Keynote", "keynote"),
 	BREAK( 300L, "Break", "break"),
+	MORNING_RECEPTION( 110L, "Morning Reception", "reception"),
+	EVENING_RECEPTION( 600L, "Evening Reception", "evening-reception"),
 	SESSION( 400L, "Session", "talk"),
 	ADMINISTRATIVE( 500L, "Administrative", "keynote");
 

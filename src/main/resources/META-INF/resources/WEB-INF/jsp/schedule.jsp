@@ -2,9 +2,11 @@
 <%@page import="com.devnexus.ting.model.ScheduleItemType" %>
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <% pageContext.setAttribute("scheduleItemTypeAdminsitrative", ScheduleItemType.ADMINISTRATIVE); %>
+<% pageContext.setAttribute("scheduleItemTypeEveningReception", ScheduleItemType.EVENING_RECEPTION); %>
 <% pageContext.setAttribute("scheduleItemTypeBreak", ScheduleItemType.BREAK); %>
 <% pageContext.setAttribute("scheduleItemTypeKeynote", ScheduleItemType.KEYNOTE); %>
 <% pageContext.setAttribute("scheduleItemTypeRegistration", ScheduleItemType.REGISTRATION); %>
+<% pageContext.setAttribute("scheduleItemTypeMorningReception", ScheduleItemType.MORNING_RECEPTION); %>
 <% pageContext.setAttribute("scheduleItemTypeSession", ScheduleItemType.SESSION); %>
 
 <title>${contextEvent.title} | Schedule</title>
@@ -13,6 +15,23 @@
 	.is-favorite span {
 		color: orange;
 	}
+	.header-item-container .registration-item,
+	.header-item-container .header-item {
+		color: #ffffff;
+	}
+
+	.header-item-container .registration-item a,
+	.header-item-container .header-item a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	.registration-item p, .header-item p  {
+		margin-bottom: 10px;
+	}
+}
+
+
 </style>
 
 <div class="ribbon animated fadeIn delayp1"
@@ -61,24 +80,67 @@
 			<h4 class="text-center"><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${date}"/></h4>
 			<div class="header-item-container">
 				<div class="row row-centered">
-				<c:forEach items="${scheduleItemList.findRegistrationItemsOnDate(date)}" var="registrationItem"
-						varStatus="registrationStatus">
-					<div class="col-xs-12  col-centered">
-						<div class="registration-item">
-							<h3 id="green">${registrationItem.title}</h3>
-							<div>
-								<h4><fmt:formatDate pattern="h:mm" value="${registrationItem.fromTime}"/>-<fmt:formatDate
-									pattern="h:mm" value="${registrationItem.toTime}"/><span id="small"> <fmt:formatDate
-									pattern="a" value="${registrationItem.toTime}"/></span> | ${registrationItem.room.name}</h4>
+					<c:set var="registrationItems" value="${scheduleItemList.findRegistrationItemsWithoutReceptionItemsOnDate(date)}"/>
+					<c:set var="morningReceptionItems" value="${scheduleItemList.findMorningReceptionItemsOnDate(date)}"/>
+					<c:set var="columnwidth" value="${12 - (3*fn:length(morningReceptionItems))}"/>
+
+					<c:forEach items="${registrationItems}" var="registrationItem"
+							varStatus="registrationStatus">
+						<div class="col-sm-${columnwidth} col-xs-12 col-centered">
+							<c:set var="backgroundStyle" value="background-color:  ${registrationItem.room.color}"/>
+							<div class="registration-item morning-registration-item" style="${not empty registrationItem.room.color ? backgroundStyle : ''}">
+								<h3 id="green">${registrationItem.title}</h3>
+								<div>
+									<h4><fmt:formatDate pattern="h:mm" value="${registrationItem.fromTime}"/>-<fmt:formatDate
+										pattern="h:mm" value="${registrationItem.toTime}"/><span id="small"> <fmt:formatDate
+										pattern="a" value="${registrationItem.toTime}"/></span></h4>
+									<p>${registrationItem.room.name}</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
+					<c:forEach items="${morningReceptionItems}" var="session"
+							varStatus="registrationStatus">
+						<div class="col-sm-3 col-xs-12 col-centered">
+							<c:set var="backgroundStyle" value="background-color:  ${session.room.color}"/>
+							<div class="registration-item morning-registration-item ${session.room.cssStyleName}" style="${not empty session.room.color ? backgroundStyle : ''}">
+								<h3 id="green">${session.title}</h3>
+								<div>
+									<h4><fmt:formatDate pattern="h:mm" value="${session.fromTime}"/>-<fmt:formatDate
+											pattern="h:mm" value="${session.toTime}"/><span id="small"> <fmt:formatDate
+											pattern="a" value="${session.toTime}"/></span></h4>
+									<p>${session.room.name}</p>
+								</div>
+								<c:choose>
+									<c:when test="${not empty session.presentation}">
+										<c:url var="presentationUrl"
+											value="${baseSiteUrl}/presentations#id-${session.presentation.id}"/>
+										<span class="session-title"><a
+											href="${presentationUrl}"><c:out value="${session.presentation.title}"/></a></span>
+									</c:when>
+									<c:otherwise>
+										<c:out value="${session.title}" default="N/A"/>
+									</c:otherwise>
+								</c:choose>
+								<c:forEach var="speaker" items="${session.presentation.speakers}" varStatus="status">
+									<c:if test="${status.first}"><br/></c:if>
+									<c:if test="${status.last and not status.first}">&amp;</c:if>
+									<c:if test="${not status.last and not status.first}">,</c:if>
+									${speaker.firstName} ${speaker.lastName}
+								</c:forEach>
+							</div>
+						</div>
+					</c:forEach>
 				</div>
 				<div class="row row-centered"
 					><c:forEach items="${scheduleItemList.findHeaderItemsOnDate(date)}" var="headerItem"
-						varStatus="headerStatus"><c:if test="${headerItem.scheduleItemType != scheduleItemTypeRegistration}"><div class="col-xs-6 col-md-3 col-centered">
-							<div class="header-item">
+						varStatus="headerStatus">
+
+						<c:if test="${headerItem.scheduleItemType != scheduleItemTypeRegistration
+										&& headerItem.scheduleItemType != scheduleItemTypeMorningReception
+										&& headerItem.scheduleItemType != scheduleItemTypeEveningReception}"><div class="col-xs-6 col-md-3 col-centered">
+							<c:set var="backgroundStyle" value="background-color:  ${headerItem.room.color}"/>
+							<div class="header-item" style="${not empty headerItem.room.color ? backgroundStyle : ''}">
 								<h3 id="green">${headerItem.title}</h3>
 								<div>
 									<h4><fmt:formatDate pattern="h:mm" value="${headerItem.fromTime}"/>-<fmt:formatDate
@@ -99,17 +161,66 @@
 						<c:set var="breaks" value="${scheduleItemList.findBreakItemsOnDate(date)}"/>
 						<c:if test="${not empty breaks}">
 							<div class="col-xs-6 col-md-3 col-centered">
-								<div class="header-item">
+								<c:set var="backgroundStyle" value="background-color:  ${scheduleItemList.findColorForBreakItemsOnDate(date)}"/>
+								<div class="header-item" style="${backgroundStyle}">
 									<h3>Breaks</h3>
 									<c:forEach items="${breaks}" var="breakItem" varStatus="headerStatus">
-									<h4><fmt:formatDate pattern="h:mm" value="${breakItem.fromTime}"/>-<fmt:formatDate
-										pattern="h:mm" value="${breakItem.toTime}"/><span id="small"> <fmt:formatDate
-										pattern="a" value="${breakItem.toTime}"/></span></h4>
+									<c:if test="${breakItem.title ne 'Dessert' && breakItem.title ne 'Lunch'}">
+										<h4><fmt:formatDate pattern="h:mm" value="${breakItem.fromTime}"/>-<fmt:formatDate
+											pattern="h:mm" value="${breakItem.toTime}"/><span id="small"> <fmt:formatDate
+											pattern="a" value="${breakItem.toTime}"/></span></h4>
+									</c:if>
 									</c:forEach>
 									<p>Exhibit Area</p>
 								</div>
 							</div>
 						</c:if>
+						<c:set var="lunchItems" value="${scheduleItemList.findLunchItemsOnDate(date)}"/>
+						<c:if test="${not empty lunchItems}">
+							<div class="col-xs-6 col-md-3 col-centered">
+
+									<c:forEach items="${lunchItems}" var="lunchItem" varStatus="headerStatus">
+									<c:set var="backgroundStyle" value="background-color:  ${lunchItem.room.color}"/>
+
+									<div class="header-item lunch-item" style="${not empty lunchItem.room.color ? backgroundStyle : ''}">
+										<h3>${lunchItem.title}</h3>
+										<h4><fmt:formatDate pattern="h:mm" value="${lunchItem.fromTime}"/>-<fmt:formatDate
+											pattern="h:mm" value="${lunchItem.toTime}"/><span id="small"> <fmt:formatDate
+											pattern="a" value="${lunchItem.toTime}"/></span></h4>
+										<p>${lunchItem.room.name}</p>
+									</div>
+									</c:forEach>
+							</div>
+						</c:if>
+				</div>
+				<div class="row row-centered"
+					>
+					<c:set var="eveningReceptionItems" value="${scheduleItemList.findEveningReceptionItemsOnDate(date)}"/>
+					<c:set var="columnwidthFloat" value="${12 / fn:length(eveningReceptionItems)}"/>
+					<fmt:formatNumber maxFractionDigits="0" maxIntegerDigits="2" value="${columnwidthFloat}" var="columnwidth"/>
+
+					<c:forEach items="${eveningReceptionItems}" var="headerItem"
+						varStatus="headerStatus">
+
+						<div class="col-xs-${columnwidth} col-md-${columnwidth} col-centered"
+							><c:set var="backgroundStyle" value="background-color:  ${headerItem.room.color}"
+							/><div class="registration-item evening-gregistration-item" style="margin-top: 20px; ${not empty headerItem.room.color ? backgroundStyle : ''}">
+								<h3 id="green">${headerItem.title}</h3>
+								<div>
+									<h4><fmt:formatDate pattern="h:mm" value="${headerItem.fromTime}"/>-<fmt:formatDate
+										pattern="h:mm" value="${headerItem.toTime}"/><span id="small"> <fmt:formatDate
+										pattern="a" value="${headerItem.toTime}"/></span></h4>
+									<p>${headerItem.room.name}</p>
+								</div>
+								<c:if test="${not empty headerItem.presentation}">
+
+									<c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${headerItem.presentation.id}"/>
+									<p><a href="${presentationUrl}"><c:out value="${headerItem.presentation.title}"/></a>
+									<c:forEach var="speaker" items="${headerItem.presentation.speakers}">
+										<br/>${speaker.firstName} ${speaker.lastName}
+									</c:forEach></p>
+								</c:if>
+						</div></div></c:forEach>
 				</div>
 			</div>
 			<h4 class="text-center">Breakouts</h4>
@@ -275,8 +386,44 @@
 					}).promise().done(function (item) {
 						$(item).each(function () {
 							$(this).outerHeight(maxHeight);
+
+/* 							$('.lunch-item', this).each(function () {
+								$(this).outerHeight(maxHeight/2);
+							}); */
 						});
-					});;
+					});
+
+					$('.lunch-item', this).each(function () {
+						$(this).outerHeight(maxHeight/2-2);
+					});
+
+					var maxHeight = 0;
+					$('.morning-registration-item', this).each(function () {
+						$(this).outerHeight('auto');
+						var height = $(this).parent().innerHeight();
+						if (height > maxHeight) {
+							maxHeight = height;
+							console.log(maxHeight);
+						}
+					}).promise().done(function (item) {
+						$(item).each(function () {
+							$(this).outerHeight(maxHeight);
+						});
+					});
+
+					var maxHeight = 0;
+					$('.evening-gregistration-item', this).each(function () {
+						$(this).outerHeight('auto');
+						var height = $(this).parent().innerHeight();
+						if (height > maxHeight) {
+							maxHeight = height;
+							console.log(maxHeight);
+						}
+					}).promise().done(function (item) {
+						$(item).each(function () {
+							$(this).outerHeight(maxHeight-40);
+						});
+					});
 				});
 			}
 			resizeScheduleItems();

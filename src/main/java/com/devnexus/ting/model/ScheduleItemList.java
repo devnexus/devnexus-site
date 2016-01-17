@@ -190,6 +190,10 @@ public class ScheduleItemList implements Serializable {
 		return item.getScheduleItemType().equals(ScheduleItemType.REGISTRATION);
 	}
 
+	public boolean isMorningReceptionItem(ScheduleItem item) {
+		return item.getScheduleItemType().equals(ScheduleItemType.MORNING_RECEPTION);
+	}
+
 	public boolean isBreakoutItem(ScheduleItem item) {
 		return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
 	}
@@ -233,6 +237,47 @@ public class ScheduleItemList implements Serializable {
 		return headerItemsByDate.get(search);
 	}
 
+	public List<ScheduleItem> findRegistrationItemsWithoutReceptionItemsOnDate(Date search) {
+		final List<ScheduleItem> registrationItemsWithoutReceptionItems = new ArrayList<>();
+
+		for (ScheduleItem item : findRegistrationItemsOnDate(search)) {
+			if (item.getTitle() != null && item.getTitle().startsWith("Reception")) {
+
+			}
+			else {
+				registrationItemsWithoutReceptionItems.add(item);
+			}
+		}
+
+		return registrationItemsWithoutReceptionItems;
+
+	}
+
+	public List<ScheduleItem> findMorningReceptionItemsOnDate(Date search) {
+		final List<ScheduleItem> morningReceptionItems = new ArrayList<>();
+
+		for (ScheduleItem item : findRegistrationItemsOnDate(search)) {
+			if (item.getTitle() != null && item.getTitle().startsWith("Reception")) {
+				morningReceptionItems.add(item);
+			}
+		}
+
+		return morningReceptionItems;
+
+	}
+
+	public List<ScheduleItem> findEveningReceptionItemsOnDate(Date search) {
+		final List<ScheduleItem> eveningReceptionItems = new ArrayList<>();
+
+		for (ScheduleItem item : findHeaderItemsOnDate(search)) {
+			if (ScheduleItemType.EVENING_RECEPTION.equals(item.getScheduleItemType())) {
+				eveningReceptionItems.add(item);
+			}
+		}
+
+		return eveningReceptionItems;
+	}
+
 	public List<ScheduleItem> findBreakItemsOnDate(Date search) {
 		final List<ScheduleItem> breakItems = new ArrayList<>();
 
@@ -244,6 +289,32 @@ public class ScheduleItemList implements Serializable {
 		return breakItems;
 	}
 
+	public String findColorForBreakItemsOnDate(Date search) {
+
+		for (ScheduleItem item : scheduleItems) {
+			if ((search.getDate() == item.getFromTime().getDate()) && ScheduleItemType.BREAK.equals(item.getScheduleItemType())) {
+				if (item.getRoom() != null) {
+					return item.getRoom().getColor();
+				}
+			}
+		}
+
+		return "#ffffff";
+	}
+
+	public List<ScheduleItem> findLunchItemsOnDate(Date search) {
+		final List<ScheduleItem> breakItems = new ArrayList<>();
+
+		for (ScheduleItem item : scheduleItems) {
+			if ((search.getDate() == item.getFromTime().getDate()) && ScheduleItemType.BREAK.equals(item.getScheduleItemType())) {
+				if ("lunch".equals(item.getTitle().toLowerCase()) || "dessert".equals(item.getTitle().toLowerCase())) {
+					breakItems.add(item);
+				}
+
+			}
+		}
+		return breakItems;
+	}
 	public List<ScheduleItem> findBreakoutItemsOnDate(Date search) {
 		if (breakoutItemsByDate == null) {
 			breakoutItemsByDate = new HashMap<Date, List<ScheduleItem>>(scheduleItems.size());
