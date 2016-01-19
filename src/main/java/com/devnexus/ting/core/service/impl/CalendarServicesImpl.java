@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.core.service.impl;
 
+import com.devnexus.ting.core.service.BusinessService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,9 @@ public class CalendarServicesImpl implements CalendarServices{
 	@Autowired
 	ScheduleItemRepository scheduleItemRepository;
 
+        @Autowired
+        BusinessService businessService;
+        
 	@Override
 	@Transactional
 	public List<UserScheduleItem> getUserSchedule(User user, Event event) {
@@ -72,5 +76,13 @@ public class CalendarServicesImpl implements CalendarServices{
 			calendarRepository.delete(userScheduleItem.getId());
 		}
 	}
+
+    @Override
+    @Transactional
+    public void replaceScheduleItemsForUser(User user, List<UserScheduleItem> scheduleItems) {
+            List<UserScheduleItem> currentItems = calendarRepository.getUserScheduleItems(user, businessService.getCurrentEvent());
+            calendarRepository.delete(currentItems);
+            calendarRepository.save(scheduleItems);
+    }
 
 }

@@ -41,4 +41,15 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
 		}
 	}
 
+    @Override
+    public User findByAndroidToken(String accessToken) {
+        try {
+			return this.entityManager.createQuery("select signIn.user from MobileSignIn signIn where signIn.token = :accessToken", User.class)
+					.setParameter("accessToken", accessToken)
+					.getSingleResult();
+		} catch (NoResultException nre) {
+			return null;
+		}
+    }
+
 }

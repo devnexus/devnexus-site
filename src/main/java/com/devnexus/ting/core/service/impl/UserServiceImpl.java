@@ -195,8 +195,10 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
     }
 
     @Override
-    public void initializeUserforEvent(User user, String eventKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User loadUserByAndroidToken(String accessToken) {
+        return userDao.findByAndroidToken(accessToken);
     }
 
+    
+    
 }

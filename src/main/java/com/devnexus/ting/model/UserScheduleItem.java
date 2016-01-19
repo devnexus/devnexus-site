@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -69,5 +70,10 @@ public class UserScheduleItem extends BaseModelObject {
 	public void setScheduleItem(ScheduleItem scheduleItem) {
 		this.scheduleItem = scheduleItem;
 	}
-
+        
+        @JsonGetter("scheduleItemId")
+        public Long getScheduleItemId() {
+            return scheduleItem.getId();
+        }
+        
 }
