@@ -82,7 +82,9 @@ public class CalendarServicesImpl implements CalendarServices{
     public void replaceScheduleItemsForUser(User user, List<UserScheduleItem> scheduleItems) {
             List<UserScheduleItem> currentItems = calendarRepository.getUserScheduleItems(user, businessService.getCurrentEvent());
             calendarRepository.delete(currentItems);
-            calendarRepository.save(scheduleItems);
+            for (UserScheduleItem item : scheduleItems) {
+                calendarRepository.saveAndFlush(item);
+            }
     }
 
 }

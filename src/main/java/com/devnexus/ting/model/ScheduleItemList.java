@@ -183,11 +183,11 @@ public class ScheduleItemList implements Serializable {
 	}
 
 	public boolean isHeaderItem(ScheduleItem item) {
-		return !item.getScheduleItemType().equals(ScheduleItemType.SESSION) && !item.getScheduleItemType().equals(ScheduleItemType.BREAK);
+		return !ScheduleItemType.SESSION.equals(item.getScheduleItemType()) && !ScheduleItemType.BREAK.equals(item.getScheduleItemType());
 	}
 
 	public boolean isRegistrationItem(ScheduleItem item) {
-		return item.getScheduleItemType().equals(ScheduleItemType.REGISTRATION);
+		return ScheduleItemType.REGISTRATION.equals(item.getScheduleItemType());
 	}
 
 	public boolean isMorningReceptionItem(ScheduleItem item) {
@@ -195,7 +195,7 @@ public class ScheduleItemList implements Serializable {
 	}
 
 	public boolean isBreakoutItem(ScheduleItem item) {
-		return item.getScheduleItemType().equals(ScheduleItemType.SESSION);
+		return ScheduleItemType.SESSION.equals(item.getScheduleItemType());
 	}
 
 	public List<ScheduleItem> findRegistrationItemsOnDate(Date search) {

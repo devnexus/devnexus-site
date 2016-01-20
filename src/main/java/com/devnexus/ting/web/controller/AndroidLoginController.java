@@ -53,8 +53,12 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import java.math.BigInteger;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -174,17 +178,31 @@ public class AndroidLoginController {
     }
 
     @RequestMapping(path = "/s/user-schedule", method = {RequestMethod.POST, RequestMethod.PUT})
-    public List<UserScheduleItem> updateUserScheduleCurrentEvent(List<UserScheduleItem> scheduleItems,BindingResult bindingResult,
-			ModelMap model,
-			HttpServletRequest request) {
+    public List<UserScheduleItem> updateUserScheduleCurrentEvent(HttpServletRequest request) {
 
-        String accessToken = request.getHeader("authToken");
-
-        User user;
-        user = (User) userService.loadUserByAndroidToken(accessToken);
-
-        calendarServices.replaceScheduleItemsForUser(user, scheduleItems);
-        return businessService.getUserScheduleItemsForCurrentEventForUser(user);
+        try {
+            String accessToken = request.getHeader("authToken");
+            
+            User user;
+            user = (User) userService.loadUserByAndroidToken(accessToken);
+            
+            JsonArray presentaitonIds = new JsonParser().parse(request.getReader()).getAsJsonArray();
+            List<UserScheduleItem> scheduleItems = new ArrayList<>(presentaitonIds.size());
+            
+            for (int index = 0; index < presentaitonIds.size(); index++) {
+                UserScheduleItem item = new UserScheduleItem();
+                
+                item.setUser(user);
+                item.setScheduleItem(businessService.getPresentation(presentaitonIds.get(index).getAsLong()).getScheduleItem());
+                scheduleItems.add(item);
+            }
+            
+            calendarServices.replaceScheduleItemsForUser(user, scheduleItems);
+            return businessService.getUserScheduleItemsForCurrentEventForUser(user);
+        } catch (IOException ex) {
+            Logger.getLogger(AndroidLoginController.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException(ex);
+        }
     }
 
     

@@ -17,7 +17,6 @@ package com.devnexus.ting.model;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,6 +37,10 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A purchase group is a collection if Items of which only one may be purchased.
@@ -94,7 +97,7 @@ public class TicketGroup extends BaseModelObject {
     protected String registerFormUrl;
 
     @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "ticketGroup")
-    protected List<CouponCode> couponCodes = new ArrayList<>();
+    protected Set<CouponCode> couponCodes = new HashSet<>();
 
     public Event getEvent() {
         return event;
@@ -153,11 +156,11 @@ public class TicketGroup extends BaseModelObject {
     }
 
     public List<CouponCode> getCouponCodes() {
-        return couponCodes;
+        return new ArrayList<>(couponCodes);
     }
 
-    public void setCouponCode(List<CouponCode> couponCodes) {
-        this.couponCodes = new ArrayList<CouponCode>(couponCodes.size());
+    public void setCouponCode(Collection<CouponCode> couponCodes) {
+        this.couponCodes = new HashSet<>(couponCodes.size());
         for (CouponCode code : couponCodes) {
             if (code.getCode() != null && !code.getCode().isEmpty()) {
                 this.couponCodes.add(code);
