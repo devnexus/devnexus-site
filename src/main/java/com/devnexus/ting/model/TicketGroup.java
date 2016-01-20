@@ -17,6 +17,7 @@ package com.devnexus.ting.model;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -37,10 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import org.springframework.util.StringUtils;
 
 /**
  * A purchase group is a collection if Items of which only one may be purchased.
@@ -50,7 +48,7 @@ import java.util.Set;
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TicketGroup extends BaseModelObject {
+public class TicketGroup extends BaseModelObject implements Comparable<TicketGroup>{
 
     private static final long serialVersionUID = 1L;
 
@@ -97,7 +95,7 @@ public class TicketGroup extends BaseModelObject {
     protected String registerFormUrl;
 
     @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "ticketGroup")
-    protected Set<CouponCode> couponCodes = new HashSet<>();
+    protected List<CouponCode> couponCodes = new ArrayList<>();
 
     public Event getEvent() {
         return event;
@@ -156,13 +154,13 @@ public class TicketGroup extends BaseModelObject {
     }
 
     public List<CouponCode> getCouponCodes() {
-        return new ArrayList<>(couponCodes);
+        return couponCodes;
     }
 
-    public void setCouponCode(Collection<CouponCode> couponCodes) {
-        this.couponCodes = new HashSet<>(couponCodes.size());
+    public void setCouponCode(List<CouponCode> couponCodes) {
+        
         for (CouponCode code : couponCodes) {
-            if (code.getCode() != null && !code.getCode().isEmpty()) {
+            if (code.getCode() != null && !code.getCode().isEmpty() && !this.couponCodes.contains(code)) {
                 this.couponCodes.add(code);
                 code.setTicketGroup(this);
             }
@@ -205,4 +203,11 @@ public class TicketGroup extends BaseModelObject {
         return NumberFormat.getCurrencyInstance().format(price);
     }
 
+    @Override
+    public int compareTo(TicketGroup o) {
+        return (label==null?"":label).compareTo((o == null?new TicketGroup():o).label);
+    }
+
+    
+    
 }

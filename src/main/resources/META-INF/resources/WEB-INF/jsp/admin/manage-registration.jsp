@@ -22,7 +22,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th ></th><th>Name</th><th/><th>Start Date</th><th>End Date</th><th>Price</th>
+                    <th ></th><th>Name</th><th>Start Date</th><th>End Date</th><th>Price</th>
                 </tr>
             </thead>
             <tbody>

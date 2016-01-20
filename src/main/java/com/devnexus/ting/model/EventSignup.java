@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -15,6 +17,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.hibernate.annotations.SortNatural;
 
 /**
 * @author Summers Pittman
@@ -25,7 +28,8 @@ import javax.xml.bind.annotation.XmlTransient;
 public class EventSignup extends BaseModelObject {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventSignup", targetEntity = TicketGroup.class, fetch = FetchType.EAGER)
-    private Set<TicketGroup> groups = new HashSet<>();
+    @SortNatural
+    private SortedSet<TicketGroup> groups = new TreeSet<>();
 
     
     @ManyToOne
@@ -40,7 +44,7 @@ public class EventSignup extends BaseModelObject {
     }
 
     public void setGroups(Set<TicketGroup> groups) {
-        this.groups = groups;
+        this.groups = new TreeSet<>(groups);
     }
 
     public Event getEvent() {

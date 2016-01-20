@@ -79,10 +79,9 @@ public class CouponCode extends BaseModelObject {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.code);
-        
-        hash = 53 * hash + Objects.hashCode(this.price);
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.code);
+        hash = 37 * hash + Objects.hashCode(this.price);
         return hash;
     }
 
@@ -101,7 +100,6 @@ public class CouponCode extends BaseModelObject {
         if (!Objects.equals(this.code, other.code)) {
             return false;
         }
-        
         if (!Objects.equals(this.price, other.price)) {
             return false;
         }
