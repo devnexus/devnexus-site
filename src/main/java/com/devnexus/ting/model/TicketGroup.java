@@ -38,6 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
+import org.springframework.util.StringUtils;
 
 /**
  * A purchase group is a collection if Items of which only one may be purchased.
@@ -47,7 +48,7 @@ import com.devnexus.ting.common.TingUtil;
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TicketGroup extends BaseModelObject {
+public class TicketGroup extends BaseModelObject implements Comparable<TicketGroup>{
 
     private static final long serialVersionUID = 1L;
 
@@ -157,9 +158,9 @@ public class TicketGroup extends BaseModelObject {
     }
 
     public void setCouponCode(List<CouponCode> couponCodes) {
-        this.couponCodes = new ArrayList<CouponCode>(couponCodes.size());
+        
         for (CouponCode code : couponCodes) {
-            if (code.getCode() != null && !code.getCode().isEmpty()) {
+            if (code.getCode() != null && !code.getCode().isEmpty() && !this.couponCodes.contains(code)) {
                 this.couponCodes.add(code);
                 code.setTicketGroup(this);
             }
@@ -202,4 +203,11 @@ public class TicketGroup extends BaseModelObject {
         return NumberFormat.getCurrencyInstance().format(price);
     }
 
+    @Override
+    public int compareTo(TicketGroup o) {
+        return (label==null?"":label).compareTo((o == null?new TicketGroup():o).label);
+    }
+
+    
+    
 }

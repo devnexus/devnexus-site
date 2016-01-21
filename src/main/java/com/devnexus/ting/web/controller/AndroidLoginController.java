@@ -27,37 +27,48 @@ import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.core.service.CalendarServices;
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.AuthorityType;
+import com.devnexus.ting.model.MobileSignIn;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserAuthority;
-import com.devnexus.ting.web.controller.googleauth.Checker;
+import com.devnexus.ting.model.UserScheduleItem;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import java.math.BigInteger;
+import java.security.GeneralSecurityException;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * This class manages logins from the Android client using Google's services.
  */
-@Controller
+@RestController
 public class AndroidLoginController {
 
     private static final Gson GSON = new GsonBuilder().create();
@@ -68,10 +79,13 @@ public class AndroidLoginController {
     @Autowired
     BusinessService businessService;
 
-	@Value("#{environment.TING_CLIENT_ID}")
+    @Autowired
+    CalendarServices calendarServices;
+
+    @Value("#{environment.TING_CLIENT_ID}")
     private String CLIENT_ID;
 
-	@Value("#{environment.TING_CLIENT_SECRET}")
+    @Value("#{environment.TING_CLIENT_SECRET}")
     private String TING_CLIENT_SECRET;
 
     private static final String SCOPES = "https://www.googleapis.com/auth/plus.login "
@@ -88,35 +102,43 @@ public class AndroidLoginController {
      * Additionally it will create an account if one does not exist.
      */
     @RequestMapping(value = "/s/loginAndroid", method = RequestMethod.POST)
+    @ResponseBody
     public String login(HttpServletRequest request, HttpServletResponse response) {
-
-        JsonObjectParser json = FACTORY.createJsonObjectParser();
 
         try {
 
             AndroidAuthentication auth = GSON.fromJson(request.getReader(), AndroidAuthentication.class);
-            String accessToken = auth.accessToken;
+            String accessToken = auth.idToken;
 
-            GoogleIdToken.Payload payload = new Checker(new String[]{CLIENT_ID}, CLIENT_ID).check(accessToken);
+            GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), new JacksonFactory())
+                    .setAudience(Arrays.asList(CLIENT_ID))
+                    // If you retrieved the token on Android using the Play Services 8.3 API or newer, set
+                    // the issuer to "https://accounts.google.com". Otherwise, set the issuer to 
+                    // "accounts.google.com". If you need to verify tokens from multiple sources, build
+                    // a GoogleIdTokenVerifier for each issuer and try them both.
+                    .setIssuer("https://accounts.google.com")
+                    .build();
+
+            GoogleIdToken idToken = verifier.verify(accessToken);
+            Payload payload = idToken.getPayload();
 
             User user;
             try {
-                user = (User) userService.loadUserByUsername(payload.getSubject());
+                user = (User) userService.loadUserByUsername("google:" + payload.getSubject());
             } catch (UsernameNotFoundException e) {
                 user = new User();
                 user.setEmail(payload.getEmail());
-                user.setUsername(payload.getSubject());
+                user.setUsername("google:" + payload.getSubject());
                 user.setUserAuthorities(new HashSet<UserAuthority>(1));
                 user.getUserAuthorities().add(new UserAuthority(user, AuthorityType.APP_USER));
-                user.setFirstName("");
-                user.setLastName("");
+                user.setFirstName((String) payload.get("given_name"));
+                user.setLastName((String) payload.get("family_name"));
                 byte[] password = new byte[16];
                 new SecureRandom().nextBytes(password);
                 user.setPassword(Arrays.toString(password));
 
                 try {
                     userService.addUser(user);
-                    userService.initializeUserforEvent(user, businessService.getCurrentEvent().getEventKey());
                 } catch (DuplicateUserException ex) {
                     Logger.getLogger(AndroidLoginController.class.getName()).log(Level.SEVERE, null, ex);
                     throw new RuntimeException(ex);
@@ -125,24 +147,17 @@ public class AndroidLoginController {
                 user = (User) userService.loadUserByUsername(user.getUsername());
 
             }
-            SecurityContext securityContext = SecurityContextHolder.getContext();
 
-            securityContext.setAuthentication(new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities()));
+            MobileSignIn signIn = new MobileSignIn();
+            signIn.setToken(new BigInteger(512, new SecureRandom()).toString(32));
+            signIn.setUser(user);
+            user.getMobileTokens().add(signIn);
+            
+            userService.updateUser(user);
 
-            // Create a new session and add the security context.
-            HttpSession session = request.getSession(false);
+            return "{\"token\":\"" + signIn.getToken() + "\"}";
 
-            if (session!=null && !session.isNew()) {
-                session.invalidate();
-            }
-
-            request.getSession(true);
-
-            session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
-
-            return "{}";
-
-        } catch (IOException e) {
+        } catch (IOException | GeneralSecurityException e) {
             Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage(), e);
 
             throw new RuntimeException(e);
@@ -150,6 +165,47 @@ public class AndroidLoginController {
 
     }
 
+    @RequestMapping(path = "/s/user-schedule", method = RequestMethod.GET)
+    public List<UserScheduleItem> getUserScheduleCurrentEvent(HttpServletRequest request, HttpServletResponse response) {
+
+        String accessToken = request.getHeader("authToken");
+
+        User user;
+        user = (User) userService.loadUserByAndroidToken(accessToken);
+
+        return businessService.getUserScheduleItemsForCurrentEventForUser(user);
+
+    }
+
+    @RequestMapping(path = "/s/user-schedule", method = {RequestMethod.POST, RequestMethod.PUT})
+    public List<UserScheduleItem> updateUserScheduleCurrentEvent(HttpServletRequest request) {
+
+        try {
+            String accessToken = request.getHeader("authToken");
+            
+            User user;
+            user = (User) userService.loadUserByAndroidToken(accessToken);
+            
+            JsonArray presentaitonIds = new JsonParser().parse(request.getReader()).getAsJsonArray();
+            List<UserScheduleItem> scheduleItems = new ArrayList<>(presentaitonIds.size());
+            
+            for (int index = 0; index < presentaitonIds.size(); index++) {
+                UserScheduleItem item = new UserScheduleItem();
+                
+                item.setUser(user);
+                item.setScheduleItem(businessService.getPresentation(presentaitonIds.get(index).getAsLong()).getScheduleItem());
+                scheduleItems.add(item);
+            }
+            
+            calendarServices.replaceScheduleItemsForUser(user, scheduleItems);
+            return businessService.getUserScheduleItemsForCurrentEventForUser(user);
+        } catch (IOException ex) {
+            Logger.getLogger(AndroidLoginController.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    
     /**
      * JSON representation of a token's status.
      */
@@ -204,25 +260,17 @@ public class AndroidLoginController {
 
     public static class AndroidAuthentication {
 
-        String gPlusId, accessToken;
+        String idToken;
 
         public AndroidAuthentication() {
         }
 
-        public String getgPlusId() {
-            return gPlusId;
+        public String getIdToken() {
+            return idToken;
         }
 
-        public void setgPlusId(String gPlusId) {
-            this.gPlusId = gPlusId;
-        }
-
-        public String getAccessToken() {
-            return accessToken;
-        }
-
-        public void setAccessToken(String accessToken) {
-            this.accessToken = accessToken;
+        public void setIdToken(String idToken) {
+            this.idToken = idToken;
         }
 
     }

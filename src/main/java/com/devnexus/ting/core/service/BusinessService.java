@@ -40,7 +40,10 @@ import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TicketGroup;
 import com.devnexus.ting.model.Track;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserScheduleItem;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
+import com.devnexus.ting.web.controller.UserNotLoggedInException;
 
 
 /**
@@ -309,4 +312,11 @@ public interface BusinessService {
 	Speaker getSpeakerWithPicture(Long speakerId);
 
 	Speaker getSpeakerFilteredForEvent(Long speakerId, Event event);
+        
+        /**
+         * 
+         * @return a list of user schedule items
+         * @throws UserNotLoggedInException if a user isn't logged in.
+         */
+        List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) throws UserNotLoggedInException;
 }

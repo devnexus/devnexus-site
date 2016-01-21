@@ -51,7 +51,8 @@
             <div class="form-group${errorClass}">
                 <label for="openDate" class="col-lg-2 control-label">Open Date(inclusive)*</label>
                 <div class="col-lg-10">
-                    <form:input cssClass="form-control" path="openDate" id="openDate" tabindex="3" maxlength="255"/>
+                    <fmt:formatDate value="${ticketGroup.openDate}" var="openDateString" type="both" pattern="MM/dd/yyyy" />
+                    <form:input cssClass="form-control" path="openDate" id="openDate" value="${openDateString}" tabindex="3" maxlength="255"/>
                     <form:errors path="openDate" cssClass="fieldError"/>
                 </div>
             </div>
@@ -62,7 +63,8 @@
             <div class="form-group${errorClass}">
                 <label for="closeDate" class="col-lg-2 control-label">Close Date(exclusive)*</label>
                 <div class="col-lg-10">
-                    <form:input cssClass="form-control" path="closeDate" id="closeDate" tabindex="4" maxlength="255"/>
+                    <fmt:formatDate value="${ticketGroup.closeDate}" var="closeDateString" type="both" pattern="MM/dd/yyyy" />
+                    <form:input cssClass="form-control" path="closeDate" id="closeDate" value="${closeDateString}" tabindex="4" maxlength="255"/>
                     <form:errors path="closeDate" cssClass="fieldError"/>
                 </div>
             </div>

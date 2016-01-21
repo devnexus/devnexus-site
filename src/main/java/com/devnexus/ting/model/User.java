@@ -39,196 +39,208 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.social.security.SocialUserDetails;
 
-
 /**
  * The persistent class for the users database table.
  *
  */
 @Entity
 public class User extends BaseModelObject implements Serializable, SocialUserDetails {
-	private static final long serialVersionUID = 1L;
 
-	@XmlID
-	@NotNull
-	@Size(min=3, max=50)
-	@Column(unique=true)
-	private String username;
+    private static final long serialVersionUID = 1L;
 
-	@Size(max=120)
-	@JsonIgnore
-	private String password;
+    @XmlID
+    @NotNull
+    @Size(min = 3, max = 50)
+    @Column(unique = true)
+    private String username;
 
-	@NotNull
-	@Size(max=50)
-	private String firstName;
+    @Size(max = 120)
+    @JsonIgnore
+    private String password;
 
-	@NotNull
-	@Size(max=50)
-	private String lastName;
+    @NotNull
+    @Size(max = 50)
+    private String firstName;
 
-	@Size(max=50)
-	@Email
-	@JsonIgnore
-	private String email;
+    @NotNull
+    @Size(max = 50)
+    private String lastName;
 
-	@XmlAttribute
-	@JsonIgnore
-	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
-	private Date registrationDate;
+    @Size(max = 50)
+    @Email
+    @JsonIgnore
+    private String email;
 
-	@XmlAttribute
-	@JsonIgnore
-	//FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
-	private Date lastLoginDate;
+    @XmlAttribute
+    @JsonIgnore
+    //FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
+    private Date registrationDate;
 
-	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER, mappedBy="user")
-	@XmlTransient
-	@JsonIgnore
-	@BatchSize(size=20)
-	private Set<UserAuthority> userAuthorities = new HashSet<>(0);
+    @XmlAttribute
+    @JsonIgnore
+    //FIXME @XmlJavaTypeAdapter(JaxbDateAdapter.class)
+    private Date lastLoginDate;
 
-	//~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "user")
+    @XmlTransient
+    @JsonIgnore
+    @BatchSize(size = 20)
+    private Set<UserAuthority> userAuthorities = new HashSet<>(0);
 
-	public User() {
-	}
+    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "user")
+    @XmlTransient
+    @JsonIgnore
+    @BatchSize(size = 20)
+    private Set<MobileSignIn> mobileTokens = new HashSet<>(0);
 
-	//~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //~~~~Constructor~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    public User() {
+    }
 
-	/**
-	 * @return the firstName
-	 */
-	public String getFirstName() {
-		return firstName;
-	}
+    //~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /**
+     * @return the firstName
+     */
+    public String getFirstName() {
+        return firstName;
+    }
 
-	/**
-	 * @param firstName the firstName to set
-	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	/**
-	 * @return the lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
 
-	/**
-	 * @param lastName the lastName to set
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	/**
-	 * @return the email
-	 */
-	public String getEmail() {
-		return email;
-	}
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
 
-	/**
-	 * @param email the email to set
-	 */
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	/**
-	 * @return the registrationDate
-	 */
-	public Date getRegistrationDate() {
-		return registrationDate;
-	}
+    /**
+     * @return the registrationDate
+     */
+    public Date getRegistrationDate() {
+        return registrationDate;
+    }
 
-	/**
-	 * @param registrationDate the registrationDate to set
-	 */
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
-	}
+    /**
+     * @param registrationDate the registrationDate to set
+     */
+    public void setRegistrationDate(Date registrationDate) {
+        this.registrationDate = registrationDate;
+    }
 
-	/**
-	 * @return the lastLoginDate
-	 */
-	public Date getLastLoginDate() {
-		return lastLoginDate;
-	}
+    /**
+     * @return the lastLoginDate
+     */
+    public Date getLastLoginDate() {
+        return lastLoginDate;
+    }
 
-	/**
-	 * @param lastLoginDate the lastLoginDate to set
-	 */
-	public void setLastLoginDate(Date lastLoginDate) {
-		this.lastLoginDate = lastLoginDate;
-	}
+    /**
+     * @param lastLoginDate the lastLoginDate to set
+     */
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
+    }
 
-	/**
-	 * @param username the username to set
-	 */
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    /**
+     * @param username the username to set
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	/**
-	 * @param password the password to set
-	 */
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	@Override
-	public Collection<GrantedAuthority> getAuthorities() {
-		final Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
-		for (GrantedAuthority authority : this.getUserAuthorities()) {
-			authorities.add(new SimpleGrantedAuthority("ROLE_" + authority.getAuthority()));
-		}
-		//authorities.addAll(this.getUserAuthorities());
-		return authorities;
-	}
+    @Override
+    public Collection<GrantedAuthority> getAuthorities() {
+        final Collection<GrantedAuthority> authorities = new java.util.ArrayList<GrantedAuthority>();
+        for (GrantedAuthority authority : this.getUserAuthorities()) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + authority.getAuthority()));
+        }
+        //authorities.addAll(this.getUserAuthorities());
+        return authorities;
+    }
 
-	public Set<UserAuthority> getUserAuthorities() {
-		return userAuthorities;
-	}
+    public Set<UserAuthority> getUserAuthorities() {
+        return userAuthorities;
+    }
 
-	public void setUserAuthorities(Set<UserAuthority> userAuthorities) {
-		this.userAuthorities = userAuthorities;
-	}
+    public void setUserAuthorities(Set<UserAuthority> userAuthorities) {
+        this.userAuthorities = userAuthorities;
+    }
 
-	@Override
-	public String getPassword() {
-		return password;
-	}
+    public Set<MobileSignIn> getMobileTokens() {
+        return mobileTokens;
+    }
 
-	@Override
-	public String getUsername() {
-		return username;
-	}
+    public void setMobileTokens(Set<MobileSignIn> mobileTokens) {
+        this.mobileTokens = mobileTokens;
+    }
 
-	@Override
-	@JsonIgnore
-	public boolean isAccountNonExpired() {
-		return true;
-	}
+    @Override
+    public String getPassword() {
+        return password;
+    }
 
-	@Override
-	@JsonIgnore
-	public boolean isAccountNonLocked() {
-		return true;
-	}
+    @Override
+    public String getUsername() {
+        return username;
+    }
 
-	@Override
-	@JsonIgnore
-	public boolean isCredentialsNonExpired() {
-		return true;
-	}
+    @Override
+    @JsonIgnore
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 
-	@Override
-	@JsonIgnore
-	public boolean isEnabled() {
-		return true;
-	}
+    @Override
+    @JsonIgnore
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    @JsonIgnore
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    @JsonIgnore
+    public boolean isEnabled() {
+        return true;
+    }
 
     @Override
     public String toString() {

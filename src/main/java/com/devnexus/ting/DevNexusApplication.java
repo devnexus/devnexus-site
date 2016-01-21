@@ -49,6 +49,7 @@ import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.cache.CacheBuilder;
+import java.util.TimeZone;
 import org.springframework.context.annotation.Primary;
 
 /**
@@ -68,6 +69,7 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 	MessageSource messageSource;
 
 	public static void main(String[] args) throws Exception {
+            TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 		final SpringApplication application = new SpringApplication(DevNexusApplication.class);
 		application.addInitializers(new DefaultApplicationContextInitializer());
 		application.run(args);

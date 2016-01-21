@@ -21,4 +21,6 @@ public interface UserRepositoryCustom {
 
 	User getUserByUsername(String trim);
 
+       User findByAndroidToken(String accessToken);
+
 }

@@ -42,6 +42,7 @@ import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TrackList;
+import com.devnexus.ting.model.UserScheduleItem;
 
 /**
  * Main DevNexus REST Controller.
