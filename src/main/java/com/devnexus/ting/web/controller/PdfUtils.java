@@ -50,6 +50,7 @@ public class PdfUtils {
 	final PDDocument doc;
 	final PDFont baseFont;
 	final PDFont headerFont;
+	final PDFont subHeaderFont;
 	final PDDocument devnexusLogo;
 
 	PDPage currentPage = new PDPage();
@@ -58,7 +59,7 @@ public class PdfUtils {
 	final List<PDPage> pages = new ArrayList<>();
 	final float margin;
 
-	final float baseFontSize = 12;
+	final float baseFontSize = 11;
 	final float headerFontSize = 18;
 
 	final float lineSpacing = 1.5f;
@@ -73,6 +74,7 @@ public class PdfUtils {
 		doc = new PDDocument();
 		baseFont   = PDType0Font.load(doc, PdfUtils.class.getResourceAsStream("/fonts/Arial.ttf"));
 		headerFont = PDType1Font.HELVETICA_BOLD;
+		subHeaderFont = PDType1Font.HELVETICA_BOLD;
 		devnexusLogo = PDDocument.load(PdfUtils.class.getResourceAsStream("/fonts/devnexus-logo.pdf"));
 
 		this.currentPage = new PDPage();

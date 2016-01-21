@@ -127,13 +127,13 @@ public class ScheduleController {
 
 		response.setContentType("application/pdf");
 
-		final String headerKey = "Content-Disposition";
-		final String headerValue = String.format("attachment; filename=\"%s\"", pdfFileName);
-		response.setHeader(headerKey, headerValue);
+//		final String headerKey = "Content-Disposition";
+//		final String headerValue = String.format("attachment; filename=\"%s\"", pdfFileName);
+//		response.setHeader(headerKey, headerValue);
 
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d, yyyy");
-		final SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
+		final SimpleDateFormat timeFormat = new SimpleDateFormat("kk:mm");
 
 		final String eventTitle;
 
@@ -163,8 +163,16 @@ public class ScheduleController {
 
 					final String title = scheduleItem.getPresentation() != null ? scheduleItem.getPresentation().getTitle() : scheduleItem.getTitle();
 
-					pdfUtils.print(150f, scheduleItem.getRoom().getName());
-					pdfUtils.print(200, "");
+					pdfUtils.print(105f, scheduleItem.getRoom().getName());
+
+					if (scheduleItem.getPresentation() != null && scheduleItem.getPresentation().getTrack() != null) {
+						pdfUtils.print(150f, scheduleItem.getPresentation().getTrack().getName());
+						pdfUtils.print(60f, "");
+					}
+					else {
+						pdfUtils.print(150f, "");
+					}
+
 					pdfUtils.println(title);
 
 				}
@@ -182,10 +190,17 @@ public class ScheduleController {
 						pdfUtils.println();
 					}
 
-					final String title = scheduleItem.getPresentation() != null ? scheduleItem.getPresentation().getTitle() : "N/A";
-
 					pdfUtils.print(scheduleItem.getRoom().getName(), scheduleItem.getRoom().getColor());
-					pdfUtils.print(150, "");
+
+					if (scheduleItem.getPresentation() != null && scheduleItem.getPresentation().getTrack() != null) {
+						pdfUtils.print(105f, scheduleItem.getPresentation().getTrack().getName());
+						pdfUtils.print(150f, "");
+					}
+					else {
+						pdfUtils.print(265f, "");
+					}
+
+					final String title = scheduleItem.getPresentation() != null ? scheduleItem.getPresentation().getTitle() : "N/A";
 					pdfUtils.println(title);
 
 				}
