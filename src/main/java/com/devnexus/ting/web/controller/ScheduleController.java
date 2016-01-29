@@ -127,9 +127,9 @@ public class ScheduleController {
 
 		response.setContentType("application/pdf");
 
-//		final String headerKey = "Content-Disposition";
-//		final String headerValue = String.format("attachment; filename=\"%s\"", pdfFileName);
-//		response.setHeader(headerKey, headerValue);
+		final String headerKey = "Content-Disposition";
+		final String headerValue = String.format("attachment; filename=\"%s\"", pdfFileName);
+		response.setHeader(headerKey, headerValue);
 
 		final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d, yyyy");
@@ -165,7 +165,9 @@ public class ScheduleController {
 
 					pdfUtils.print(105f, scheduleItem.getRoom().getName());
 
-					if (scheduleItem.getPresentation() != null && scheduleItem.getPresentation().getTrack() != null) {
+					if (scheduleItem.getPresentation() != null
+							&& scheduleItem.getPresentation().getTrack() != null
+							&& "misc".equalsIgnoreCase(scheduleItem.getPresentation().getTrack().getName())) {
 						pdfUtils.print(150f, scheduleItem.getPresentation().getTrack().getName());
 						pdfUtils.print(60f, "");
 					}

@@ -47,6 +47,15 @@
 		</form:form>
 	</div>
 </div>
+
+<c:if test="${not empty successMessage}">
+	<div class="row" style="margin-top: 2em;">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="alert alert-success text-center" role="alert"><c:out value="${successMessage}"></c:out></div>
+		</div>
+	</div>
+</c:if>
+
 <div class="row">
 	<div class="col-md-4 col-md-offset-2">
 		<div class="panel panel-default">
@@ -117,6 +126,7 @@
 			</div>
 			<div class="panel-body">
 				<ul>
+					<li><a href="${ctx}${baseSiteUrl}/admin/change-password">Change Password</a></li>
 					<li><a href="${ctx}${baseSiteUrl}/logout">Logout</a> (<sec:authentication property="principal.username"/>)</li>
 				</ul>
 			</div>

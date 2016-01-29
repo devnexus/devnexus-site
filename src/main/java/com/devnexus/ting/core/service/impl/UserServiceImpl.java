@@ -61,144 +61,153 @@ import com.devnexus.ting.repository.UserRepository;
 @Transactional
 public class UserServiceImpl implements UserService, UserDetailsService, SignInAdapter {
 
-    /**
-     * Initialize Logging.
-     */
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+	/**
+	 * Initialize Logging.
+	 */
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    /**
-     * User Dao.
-     */
-    @Autowired
-    private UserRepository userDao;
+	/**
+	 * User Dao.
+	 */
+	@Autowired
+	private UserRepository userDao;
 
-    @Autowired
-    private StringDigester stringDigester;
+	@Autowired
+	private StringDigester stringDigester;
 
-    /**
-     * {@inheritDoc}
-     */
-    public User addUser(final User user) throws DuplicateUserException {
+	/**
+	 * {@inheritDoc}
+	 */
+	public User addUser(final User user) throws DuplicateUserException {
 
-        Assert.notNull(user, "User must not be null.");
+		Assert.notNull(user, "User must not be null.");
 
-        User duplicateUser;
+		User duplicateUser;
 
-        try {
-            duplicateUser = userDao.getUserByUsername(user.getUsername());
-        } catch (EmptyResultDataAccessException e) {
-            if (user.getId() != null) {
-                duplicateUser = userDao.findOne(user.getId());
-            } else {
-                duplicateUser = null;
-            }
-        }
+		try {
+			duplicateUser = userDao.getUserByUsername(user.getUsername());
+		} catch (EmptyResultDataAccessException e) {
+			if (user.getId() != null) {
+				duplicateUser = userDao.findOne(user.getId());
+			} else {
+				duplicateUser = null;
+			}
+		}
 
-        if (duplicateUser != null) {
-            throw new DuplicateUserException("User " + duplicateUser.getUsername()
-                    + "(Id=" + duplicateUser.getId() + ") already exists!");
-        }
+		if (duplicateUser != null) {
+			throw new DuplicateUserException("User " + duplicateUser.getUsername()
+					+ "(Id=" + duplicateUser.getId() + ") already exists!");
+		}
 
-        final User userToSave = new User();
+		final User userToSave = new User();
 
-        userToSave.setCreatedDate(new Date());
-        userToSave.setEmail(user.getEmail());
-        userToSave.setId(user.getId());
-        userToSave.setFirstName(user.getFirstName());
-        userToSave.setLastName(user.getLastName());
-        if(user.getPassword() != null && StringUtils.hasText(user.getPassword())) {
-        	userToSave.setPassword(this.stringDigester.digest(user.getPassword()));
-        }
-        userToSave.setRegistrationDate(new Date());
-        userToSave.setUsername(user.getUsername());
-        try {
-            final User savedUser = userDao.save(userToSave);
-            return savedUser;
-        } catch (DataIntegrityViolationException ex) {
-            throw new RuntimeException(ex);
-        }
-    }
+		userToSave.setCreatedDate(new Date());
+		userToSave.setEmail(user.getEmail());
+		userToSave.setId(user.getId());
+		userToSave.setFirstName(user.getFirstName());
+		userToSave.setLastName(user.getLastName());
+		if(user.getPassword() != null && StringUtils.hasText(user.getPassword())) {
+			userToSave.setPassword(this.stringDigester.digest(user.getPassword()));
+		}
+		userToSave.setRegistrationDate(new Date());
+		userToSave.setUsername(user.getUsername());
+		try {
+			final User savedUser = userDao.save(userToSave);
+			return savedUser;
+		} catch (DataIntegrityViolationException ex) {
+			throw new RuntimeException(ex);
+		}
+	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-    public UserDetails loadUserByUsername(final String userName) throws UsernameNotFoundException, DataAccessException {
+	@Override
+	public void changePassword(String password) {
+		Assert.hasText(password, "The password must not be empty.");
+		final User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		final User userFromDb = userDao.getUserByUsername(user.getUsername());
+		userFromDb.setPassword(this.stringDigester.digest(password));
+		userDao.save(userFromDb);
+	}
 
-        final User user = userDao.getUserByUsername(userName.trim());
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+	public UserDetails loadUserByUsername(final String userName) throws UsernameNotFoundException, DataAccessException {
 
-        if (user == null) {
-            LOGGER.warn("loadUserByUsername() - No user with id " + userName + " found.");
-            throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + userName + " found.");
-        }
+		final User user = userDao.getUserByUsername(userName.trim());
 
-        LOGGER.info("User {} ({}) loaded.", new Object[]{user.getUsername(), user.getEmail()});
+		if (user == null) {
+			LOGGER.warn("loadUserByUsername() - No user with id " + userName + " found.");
+			throw new UsernameNotFoundException("loadUserByUsername() - No user with id " + userName + " found.");
+		}
 
-        return user;
-    }
+		LOGGER.info("User {} ({}) loaded.", new Object[]{user.getUsername(), user.getEmail()});
 
-    @Override
-    @Transactional
-    public void trackUserLogin(User user) {
-        final User userToUpdate = getUser(user.getId());
-        userToUpdate.setLastLoginDate(new Date());
-        userDao.save(userToUpdate);
-    }
+		return user;
+	}
 
-    @Override
-    @Transactional
-    public void updateUser(User user) {
-        userDao.save(user);
-    }
+	@Override
+	@Transactional
+	public void trackUserLogin(User user) {
+		final User userToUpdate = getUser(user.getId());
+		userToUpdate.setLastLoginDate(new Date());
+		userDao.save(userToUpdate);
+	}
 
-    @Override
-    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-    public User getUser(Long userId) {
-        return userDao.getOne(userId);
-    }
+	@Override
+	@Transactional
+	public void updateUser(User user) {
+		userDao.save(user);
+	}
 
-    @Override
-    public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
+	@Override
+	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+	public User getUser(Long userId) {
+		return userDao.getOne(userId);
+	}
 
-        assert userDao != null;
+	@Override
+	public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
 
-        assert false;
+		assert userDao != null;
 
-        Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
+		assert false;
 
-        User u = new User();
+		Person person = ((Google) connection.getApi()).plusOperations().getGoogleProfile();
 
-        u.setEmail(person.getAccountEmail());
-        u.setFirstName(person.getGivenName());
-        u.setLastName(person.getFamilyName());
-        u.setUsername(person.getId());
-        u.setUserAuthorities(new HashSet<UserAuthority>(1));
-        u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
-        u.setId((long) person.getId().hashCode());
+		User u = new User();
 
-        if (null == userDao.getUserByUsername(u.getUsername())) {
-            byte[] password = new byte[16];
-            new SecureRandom().nextBytes(password);
+		u.setEmail(person.getAccountEmail());
+		u.setFirstName(person.getGivenName());
+		u.setLastName(person.getFamilyName());
+		u.setUsername(person.getId());
+		u.setUserAuthorities(new HashSet<UserAuthority>(1));
+		u.getUserAuthorities().add(new UserAuthority(u, AuthorityType.APP_USER));
+		u.setId((long) person.getId().hashCode());
 
-            LOGGER.info(Arrays.toString(password));
+		if (null == userDao.getUserByUsername(u.getUsername())) {
+			byte[] password = new byte[16];
+			new SecureRandom().nextBytes(password);
 
-            u.setPassword(Arrays.toString(password));
-            userDao.save(u);
-        }
+			LOGGER.info(Arrays.toString(password));
 
-        u = userDao.getUserByUsername(u.getUsername());
+			u.setPassword(Arrays.toString(password));
+			userDao.save(u);
+		}
 
-        SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
+		u = userDao.getUserByUsername(u.getUsername());
 
-        return null;
-    }
+		SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(u, null, u.getAuthorities()));
 
-    @Override
-    public User loadUserByAndroidToken(String accessToken) {
-        return userDao.findByAndroidToken(accessToken);
-    }
+		return null;
+	}
 
-    
-    
+	@Override
+	public User loadUserByAndroidToken(String accessToken) {
+		return userDao.findByAndroidToken(accessToken);
+	}
+
+
+
 }
