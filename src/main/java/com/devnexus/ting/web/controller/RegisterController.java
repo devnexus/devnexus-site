@@ -40,12 +40,11 @@ import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
+import com.paypal.base.rest.PayPalRESTException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -231,6 +230,8 @@ public class RegisterController {
     @RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.POST)
     public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
+        try {
+        
         PayPalSession payPalSession = payPalSession();
 
         Payment payment = payPalSession.execute(paymentId, payerId);
@@ -253,6 +254,19 @@ public class RegisterController {
 
         return "redirect:/s/index";
 
+        } catch (PayPalRESTException payPalRESTException) {
+            Event currentEvent = businessService.getCurrentEvent();
+            RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+            EventSignup eventSignup = businessService.getEventSignup();
+            prepareHeader(currentEvent, model);
+            model.addAttribute("payPalError", payPalRESTException.getDetails());
+            model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+            model.addAttribute("registrationDetails", registerForm);
+            model.addAttribute("registrationKey", registrationKey);
+            model.addAttribute("paymentId", paymentId);
+            model.addAttribute("payerId", payerId);
+            return "confirmRegistration";
+        }
     }
 
     @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
