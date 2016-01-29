@@ -97,7 +97,7 @@ public final class PayPalSession {
         }
     }
 
-    public Payment execute(String paymentId, String payerId) {
+    public Payment execute(String paymentId, String payerId) throws PayPalRESTException {
 
         try {
             Payment payment = new Payment();
@@ -107,7 +107,7 @@ public final class PayPalSession {
             return payment.execute(apiContext, paymentExecute);
         } catch (PayPalRESTException ex) {
             Logger.getLogger(PayPalSession.class.getName()).log(Level.SEVERE, null, ex);
-            throw new RuntimeException(ex);
+            throw ex;
         }
     }
 

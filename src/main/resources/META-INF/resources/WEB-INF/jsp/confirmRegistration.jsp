@@ -23,13 +23,32 @@
 
     <h1>Confirm Registration for <c:out value="${event.title}"/></h1>
     <div class="row">
-        <div class="col-lg-offset-1 col-lg-10 bg-info ">
-        <h3><p class="center">Please review your registration details and click &QUOT;Purchase and complete registration&QUOT; to complete your registration.</p></h3>
-        </div>
+
+        <c:choose>
+            <c:when test="${not empty payPalError}">
+                <div class="col-lg-offset-1 col-lg-10 bg-danger">
+                    <h3><p class="center">
+                            <span>The transaction did not complete with PayPal.  PayPal has returned the following information :</span>
+                        <ul>
+                            <li>
+                                <div class="label-danger">Error Message from PayPal</div>
+                                <div class="col-sm-offset-1"><c:out value="${payPalError.message}"/></div>
+                            </li>
+                        </ul>
+                        <span>You may try to resolve the problem with PayPal and retry registration, or contact us at <a href="mailto:info@ajug.org">info@ajug.org</a> for assistance.</span>
+                        </p></h3>
+                </div>
+            </c:when>
+            <c:otherwise>
+                <div class="col-lg-offset-1 col-lg-10 bg-info ">
+                    <h3><p class="center">Please review your registration details and click &QUOT;Purchase and complete registration&QUOT; to complete your registration.</p></h3>
+                </div>
+            </c:otherwise>
+        </c:choose>
     </div>
 
     <div class="row">
-            <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registrationDetails"  enctype="multipart/form-data" action="/s/executeRegistration/${registrationKey}?payerId=${payerId}&paymentId=${paymentId}">
+        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registrationDetails"  enctype="multipart/form-data" action="/s/executeRegistration/${registrationKey}?payerId=${payerId}&paymentId=${paymentId}">
 
             <%@include file="registration_details.jsp" %>
 
@@ -42,12 +61,12 @@
         </form:form>
     </div>
 
-    </div>
-    <jsp:include page="includes/questions.jsp"/>
+</div>
+<jsp:include page="includes/questions.jsp"/>
 
-    <content tag='bottom'>
-        <script type="text/javascript">
-            $("#form input").prop("disabled", true);
-            $("#form select").prop("disabled", true);
-        </script>
-    </content>
+<content tag='bottom'>
+    <script type="text/javascript">
+        $("#form input").prop("disabled", true);
+        $("#form select").prop("disabled", true);
+    </script>
+</content>
