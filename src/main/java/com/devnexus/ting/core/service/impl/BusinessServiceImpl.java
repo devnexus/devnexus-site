@@ -831,6 +831,8 @@ public class BusinessServiceImpl implements BusinessService {
                 size = large ? 360 : 110;
             } else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
                 size = large ? 360 : 110;
+            } else if (SponsorLevel.DEV_LOUNGE.equals(sponsor.getSponsorLevel())) {
+                size = large ? 360 : 180;
             } else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
                 size = large ? 360 : 180;
             } else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
@@ -1005,7 +1007,7 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     public List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) {
-        
+
         if (user == null || !(user instanceof User)) {
             throw new UserNotLoggedInException("User is not logged in");
         }
