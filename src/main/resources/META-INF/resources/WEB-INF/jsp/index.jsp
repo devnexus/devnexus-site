@@ -117,7 +117,7 @@
 				</div>
 				<div class="row centered">
 					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${registrationUrl}" class="btn btn-primary btn-block">Register Now!</a>
+						<button disabled="disabled" class="btn btn-primary btn-block">¡Sold Out!</button>
 					</div>
 				</div>
 				<div class="row centered">

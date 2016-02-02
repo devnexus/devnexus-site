@@ -38,7 +38,7 @@
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
 						<div id="get_touch" class="widget widget_get_touch">
-							<a href="${registrationUrl}" ><button class="btn btn-primary btn-block registerButton">Register Now!</button></a>
+							<a><button class="btn btn-primary btn-block registerButton" disabled="disabled">¡Sold Out!</button></a>
 						</div>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10-offset-1 legal">
-					<p>&copy; 2004-2015 <a href="http://www.ajug.org/">Atlanta Java Users Group</a> (AJUG)
+					<p>&copy; 2004-2016 <a href="http://www.ajug.org/">Atlanta Java Users Group</a> (AJUG)
 						<a href="${privacyPolicyUrl}"><span class="label">Privacy Policy</span></a>
 						<a href="${codeOfConductUrl}"><span class="label">Code of Conduct</span></a>
 					</p>
