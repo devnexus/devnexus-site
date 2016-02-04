@@ -106,6 +106,11 @@ public class SiteController {
 		return "code-of-conduct";
 	}
 
+	@RequestMapping("/s/workshop-instructions")
+	public String workshopInstructions() {
+		return "workshop-instructions";
+	}
+
 	@RequestMapping("/s/past-conferences")
 	public String pastConferences(final Model model) {
 

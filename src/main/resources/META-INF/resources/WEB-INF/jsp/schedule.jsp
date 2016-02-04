@@ -71,6 +71,7 @@
 			<c:choose>
 				<c:when test="${dateStatus.index eq 0}">
 					<h1 class="text-center">Workshop Day</h1>
+					<p class="text-center"><a href="${ctx}/s/workshop-instructions">Workshop Instructions (DevNexus 2016)</a></p>
 				</c:when>
 				<c:otherwise>
 					<h1 class="text-center">Conference Day ${dateStatus.index}</h1>

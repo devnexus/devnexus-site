@@ -125,6 +125,11 @@
 						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div>
+				<div class="row centered">
+					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
+						<a href="${ctx}/s/workshop-instructions" class="btn btn-primary btn-block">Workshop Instructions</a>
+					</div>
+				</div>
 				<div class="row" style="margin-top: 1em;">
 					<div id="d3chart" class="col-md-10 col-md-offset-1">
 					</div>
