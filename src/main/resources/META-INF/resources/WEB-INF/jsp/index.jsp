@@ -120,11 +120,11 @@
 						<button disabled="disabled" class="btn btn-primary btn-block">¡Sold Out!</button>
 					</div>
 				</div>
-				<div class="row centered">
+<%-- 				<div class="row centered">
 					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
 						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
-				</div>
+				</div> --%>
 				<div class="row centered">
 					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
 						<a href="${ctx}/s/workshop-instructions" class="btn btn-primary btn-block">Workshop Instructions</a>
@@ -147,7 +147,7 @@
 						<i class="fa fa-group"></i>
 					</div><!--//icon-->
 					<div class="content">
-						<p class="lead counter-stat">1700</p>
+						<p class="lead counter-stat">1800</p>
 						<p class="lead counter-commits">DEVELOPERS</p>
 					</div><!--//content-->
 				</div>

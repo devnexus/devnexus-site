@@ -9,8 +9,8 @@
         <div class="row centered">
             <div class="col-md-10 col-md-offset-1">
                 <div class="top-intro travel">
-                    <h4 class="section-white-title decorated"><span>Register for ${event.title}</span></h4>
-                    <h5 class="intro-white-lead">1600+ attendees, 90+ Speakers, 12+ tracks, 2 Conference Days + 1 Workshop Day.</h5>
+                    <h4 class="section-white-title decorated"><span>${event.title} is Sold Out!</span></h4>
+                    <h5 class="intro-white-lead">1800 attendees, 90+ Speakers, 12+ tracks, 2 Conference Days + 1 Workshop Day.</h5>
                 </div>
             </div>
         </div>
@@ -20,10 +20,16 @@
 
 <div class="container">
 
-    <h1>Register for <c:out value="${event.title}"/></h1>
+    <%-- <h1>Register for <c:out value="${event.title}"/></h1> --%>
 
     <div class="row">
-        <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerForm" enctype="multipart/form-data">
+        <div class="col-md-8 col-md-offset-2">
+        <h1><strong><span style="color: red;">We Are Sold Out!</span></strong></h1>
+        <p>Thank you so much for your interest and finding this hidden link ;-). Unfortunately, we are
+            totally sold out with 1800 expected attendees. We simply cannot squeeze any more people in.</p>
+        <p>Please keep us in mind for 2017 though! THANK YOU!</p>
+        </div>
+        <%-- <form:form id="form" class="form-horizontal" role="form" method="post" modelAttribute="registerForm" enctype="multipart/form-data">
 
             <h4>Purchaser Information - Required - </h4>
             <br/>
@@ -152,7 +158,7 @@
                 </div>
             </div>
 
-        </form:form>
+        </form:form> --%>
 
 
     </div>
