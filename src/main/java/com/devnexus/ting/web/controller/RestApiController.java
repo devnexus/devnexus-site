@@ -39,10 +39,10 @@ import com.devnexus.ting.model.PresentationList;
 import com.devnexus.ting.model.PresentationTag;
 import com.devnexus.ting.model.RoomList;
 import com.devnexus.ting.model.ScheduleItemList;
+import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TrackList;
-import com.devnexus.ting.model.UserScheduleItem;
 
 /**
  * Main DevNexus REST Controller.
@@ -175,6 +175,18 @@ public class RestApiController {
     public SponsorList getSponsors() {
         final Event event = businessService.getCurrentEvent();
         return businessService.getSponsorListForEvent(event.getId(), true);
+    }
+
+    @RequestMapping(path = "/{eventKey}/speakers", method = RequestMethod.GET)
+    public List<Speaker> getSpeakersForEvent(@PathVariable("eventKey") String eventKey) {
+        final Event event = businessService.getEventByEventKey(eventKey);
+        return businessService.getSpeakersForEvent(event.getId());
+    }
+
+    @RequestMapping(path = "/speakers", method = RequestMethod.GET)
+    public List<Speaker> getSpeakers() {
+        final Event event = businessService.getCurrentEvent();
+        return businessService.getSpeakersForEvent(event.getId());
     }
 
     @RequestMapping(path = "/{eventKey}/tracks", method = RequestMethod.GET)
