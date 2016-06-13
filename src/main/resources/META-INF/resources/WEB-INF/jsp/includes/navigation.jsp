@@ -25,7 +25,7 @@
 				</li>
 				<li><a class="" href="${speakersUrl}">Speakers</a></li>
 				<li><a class="" href="${scheduleUrl}">Schedule</a></li>
-				<li><a style="color: #f7931d;">Sold Out!</a></li>
+<!--				<li><a style="color: #f7931d;">Sold Out!</a></li>-->
 				<li><a class="page-scroll" href="${homeUrl}#travel">Travel</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
