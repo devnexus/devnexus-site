@@ -30,6 +30,7 @@ public enum SponsorLevel {
 	MEDIA_PARTNER(350L, "Media Partner", "sponsorsMediaPartner"),
 	COCKTAIL_HOUR( 400L, "Cocktail Hour Sponsor", "sponsorsCocktail"),
 	BADGE( 370L, "Badge Sponsor", "sponsorsBadge"),
+        LANYARD_SPONSOR( 375L, "LANYARD Sponsor", "sponsorsLanyard"),
 	DEV_LOUNGE( 380L, "Dev Lounge Sponsor", "sponsorsDevLounge");
 
 	private Long id;
