@@ -14,7 +14,7 @@
 			</div>
 			<div class="col-md-8 col-sm-8 col-xs-10 ">
 				<h3>Your evaluation has been added successfully!</h3>
-				<h3><strong>Thank you for attending DevNexus 2016!</strong></h3>
+				<h3><strong>Thank you for attending DevNexus 2017!</strong></h3>
 					<p>Your feedback helps us tremendously to improve DevNexus! If you have further
 					questions or concerns, please don&rsquo;t hesitate to contact us at:</p>
 					<p><strong>info at ajug dot org</strong></p>

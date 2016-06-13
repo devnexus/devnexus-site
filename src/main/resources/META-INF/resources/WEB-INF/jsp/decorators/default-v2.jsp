@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width" />
 
-	<meta property="og:title" content="DevNexus 2016">
+	<meta property="og:title" content="DevNexus 2017">
 	<meta property="og:type" content="company">
 	<meta property="og:site_name" content="DevNexus">
 	<meta property="og:url" content="http://devnexus.com/s/index">
