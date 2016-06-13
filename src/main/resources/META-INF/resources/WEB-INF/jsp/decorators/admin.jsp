@@ -116,7 +116,7 @@
                         </div>
                         <div class="col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
                             <div id="tweet" class="footer-widget">
-                                <h3 class="footer-title">DEVNEXUS 2016</h3>
+                                <h3 class="footer-title">DEVNEXUS 2017</h3>
                                 <ul class="footer-social">
                                     <li class=""><a href="${scheduleUrl}" target="_blank">Schedule</a></li>
                                     <li class=""><a href="${speakersUrl}" target="_blank">Speakers</a></li>

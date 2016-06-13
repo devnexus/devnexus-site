@@ -11,7 +11,7 @@
 			</div>
 			<div class="col-md-10">
 				<h3>Your submission has been added successfully!</h3>
-				<h3><strong>Thank you for your interest in DevNexus 2016!</strong><br />
+				<h3><strong>Thank you for your interest in DevNexus 2017!</strong><br />
 					We look forward to reviewing your session proposals for the South-East's
 					largest developer conference.</h3>
 				<p>Shortly you should receive an email confirming that we received your information.</p>

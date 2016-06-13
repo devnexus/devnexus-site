@@ -48,7 +48,7 @@
 
                             #DEVNEXUS tweets for additional reference materials to include.</p>
 
-                        <h2>The Top 5 Reasons to Attend DEVNEXUS 2016</h2>
+                        <h2>The Top 5 Reasons to Attend DEVNEXUS 2017</h2>
 
                         <ol>
                             <li><p>Stack exposure. At DEVNEXUS we don't just look at the full stack, but all the
