@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -104,8 +104,6 @@ import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
 import com.devnexus.ting.repository.UserCalendarRepository;
 import com.devnexus.ting.web.controller.UserNotLoggedInException;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  *
@@ -154,8 +152,6 @@ public class BusinessServiceImpl implements BusinessService {
     private TrackRepository trackDao;
     @Autowired
     private UserCalendarRepository userCalendarDao;
-    @Autowired
-    private UserService userService;
     @Autowired
     private ApplicationCacheRepository applicationCacheDao;
 
@@ -830,6 +826,8 @@ public class BusinessServiceImpl implements BusinessService {
             } else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
                 size = large ? 360 : 110;
             } else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
+                size = large ? 360 : 110;
+            } else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
                 size = large ? 360 : 110;
             } else if (SponsorLevel.DEV_LOUNGE.equals(sponsor.getSponsorLevel())) {
                 size = large ? 360 : 180;
