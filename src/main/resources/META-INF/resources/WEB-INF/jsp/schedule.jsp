@@ -37,7 +37,7 @@
 <div class="ribbon animated fadeIn delayp1"
 	data-50="opacity:1;"
 	data-180="opacity:0;">
-	<a href="http://nighthacking.com/event/devnexus2015/" target="_blank">Nighthacking</a>
+	<a href="http://nighthacking.com/category/devnexus2016/" target="_blank">Nighthacking</a>
 </div>
 
 <!-- intro -->
@@ -65,6 +65,8 @@
 		<a class="btn btn-default btn-social btn-google" href="/auth/google?scope=profile"><i class="fa fa-google"></i> Login with Google to create Custom Schedule</a>
 	</sec:authorize>
 	<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/schedule.pdf"><i class="fa fa-file-pdf-o"></i> Download Full Schedule as PDF</a>
+	<a href="${ctx}/s/map" class="btn btn-default">Floor Plans</a>
+
 	<c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
 
 			<!-- Example row of columns -->

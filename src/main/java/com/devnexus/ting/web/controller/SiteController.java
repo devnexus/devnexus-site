@@ -101,6 +101,11 @@ public class SiteController {
 		return "about";
 	}
 
+	@RequestMapping("/s/map")
+	public String map() {
+		return "map";
+	}
+
 	@RequestMapping("/s/code-of-conduct")
 	public String codeOfConduct() {
 		return "code-of-conduct";

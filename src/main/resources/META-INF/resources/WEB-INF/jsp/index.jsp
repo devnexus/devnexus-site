@@ -108,32 +108,70 @@
 						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
 					</div>
 					<div class="col-md-8 col-md-offset-2">
-						<p class="lead">MARK YOUR CALENDARS FEBRUARY 15-17 2016!
-							Our ninth DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.
-							We are looking forward to hosting our largest event yet and can’t wait for you to join.
-							Check out out <a href="past-conferences">previous years’</a> content, bookmark this site to stay
-							up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
+						<p class="lead text-center"><strong>DEVNEXUS 2016 IS HERE!!</strong></p>
+						<p>Thank you so much for joining us this year. Below please find some useful links as well as the WIFI information at the
+						Georgia World Congress Center. Also, please
+						provide feedback. We love to hear from you regarding the things you liked or thought might need improving.</p>
 					</div>
 				</div>
-				<div class="row centered">
+<!-- 				<div class="row centered">
 					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
 						<button disabled="disabled" class="btn btn-primary btn-block">¡Sold Out!</button>
 					</div>
-				</div>
+				</div> -->
 <%-- 				<div class="row centered">
 					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
 						<a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div> --%>
 				<div class="row centered">
-					<div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-bottom: 1em;">
+					<div class="col-md-4 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
 						<a href="${ctx}/s/workshop-instructions" class="btn btn-primary btn-block">Workshop Instructions</a>
 					</div>
-				</div>
-				<div class="row" style="margin-top: 1em;">
-					<div id="d3chart" class="col-md-10 col-md-offset-1">
+					<div class="col-md-4 col-xs-12" style="margin-bottom: 1em;">
+						<a href="${ctx}/s/map" class="btn btn-primary btn-block">Floor Plans</a>
+					</div>
+					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
+						<a href="${ctx}/s/schedule" class="btn btn-primary btn-block">Schedule</a>
+					</div>
+					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
+						<a href="${ctx}/s/evaluations/add" class="btn btn-primary btn-block">Evaluations</a>
 					</div>
 				</div>
+				<div class="row centered">
+					<div class="col-md-4 col-md-offset-4 col-xs-12 text-center" style="margin-bottom: 1em;">
+						<strong>WIFI Info</strong>
+						<table class="table table-bordered">
+							<tr>
+								<td>Network Name</td>
+								<td>devnexus</td>
+							</tr>
+							<tr>
+								<td>Password</td>
+								<td>awesome16</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="row" style="margin-bottom: 20px;">
+					<div class="col-sm-2 col-sm-offset-4 text-center">
+						<a href="https://play.google.com/store/apps/details?id=org.devnexus" target="_blank">
+							<img alt="Get the DevNexus app for your Android phone"
+								src="${ctx}/assets/img/appstore-logos/google-play_en_app_rgb_wo_60.png">
+						</a>
+					</div>
+					<div class="col-sm-2 text-center">
+						<a href="https://itunes.apple.com/de/app/devnexus/id963526236?l=en&mt=8" target="_blank">
+							<img alt="Get the DevNexus app for your iPhone or iPad"
+								style="margin-top: 10px; margin-bottom: 10px;"
+										src="${ctx}/assets/img/appstore-logos/Download_on_the_App_Store_Badge_US-UK_135x40.svg">
+						</a>
+					</div>
+				</div>
+<!-- 				<div class="row" style="margin-top: 1em;">
+					<div id="d3chart" class="col-md-10 col-md-offset-1">
+					</div>
+				</div> -->
 		</div>
 	</section>
 	<!-- /intro -->

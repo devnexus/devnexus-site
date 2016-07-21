@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.0.RELEASE</version>
+		<version>1.3.2.RELEASE</version>
 	</parent>
 	<groupId>com.devnexus</groupId>
 	<artifactId>devnexus-site</artifactId>
@@ -88,6 +88,7 @@
 					<memory>2028</memory>
 					<diskQuota>1024</diskQuota>
 					<healthCheckTimeout>180</healthCheckTimeout>
+					<instances>2</instances>
 					<mergeEnv>true</mergeEnv>
 					<services>
 						<service>
@@ -433,7 +434,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>18.0</version>
+			<version>19.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.paypal.sdk</groupId>
