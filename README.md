@@ -86,7 +86,7 @@ TING_PUSH_MASTER_SECRET:
 
 ## Cloud Foundry Mode
 
-The easiest to deploy DevNexus is using Maven. Please update the POM with the
+The easiest way to deploy DevNexus is using Maven. Please update the POM with the
 credentials that pertain to you:
 
 ```xml
