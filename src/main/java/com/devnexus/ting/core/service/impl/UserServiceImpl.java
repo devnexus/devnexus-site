@@ -48,6 +48,7 @@ import com.devnexus.ting.core.service.exception.DuplicateUserException;
 import com.devnexus.ting.model.AuthorityType;
 import com.devnexus.ting.model.User;
 import com.devnexus.ting.model.UserAuthority;
+import com.devnexus.ting.repository.UserAuthorityRepository;
 import com.devnexus.ting.repository.UserRepository;
 
 /**
@@ -71,6 +72,9 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 	 */
 	@Autowired
 	private UserRepository userDao;
+
+	@Autowired
+	private UserAuthorityRepository userAuthorityRepository;
 
 	@Autowired
 	private StringDigester stringDigester;
@@ -113,6 +117,16 @@ public class UserServiceImpl implements UserService, UserDetailsService, SignInA
 		userToSave.setUsername(user.getUsername());
 		try {
 			final User savedUser = userDao.save(userToSave);
+
+			if (!user.getUserAuthorities().isEmpty()) {
+				for (UserAuthority userAuthority : user.getUserAuthorities()) {
+					final UserAuthority authorityTosave = new UserAuthority();
+					authorityTosave.setAuthorityType(userAuthority.getAuthorityType());
+					authorityTosave.setUser(savedUser);
+					userAuthorityRepository.save(authorityTosave);
+				}
+
+			}
 			return savedUser;
 		} catch (DataIntegrityViolationException ex) {
 			throw new RuntimeException(ex);

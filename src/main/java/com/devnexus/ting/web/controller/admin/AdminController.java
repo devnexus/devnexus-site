@@ -50,12 +50,15 @@ import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.CfpSubmissionStatusType;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.Speaker;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.security.SecurityFacade;
 import com.devnexus.ting.web.controller.admin.support.CsvRejectedSpeakerBean;
 import com.devnexus.ting.web.controller.admin.support.CsvSpeakerBean;
 import com.google.common.cache.Cache;
@@ -71,8 +74,10 @@ import com.google.common.cache.CacheStats;
 public class AdminController {
 
 	@Autowired private BusinessService businessService;
+	@Autowired private UserService userService;
 	@Autowired private Validator validator;
-	@Autowired GuavaCacheManager cacheManager;
+	@Autowired private GuavaCacheManager cacheManager;
+	@Autowired private SecurityFacade securityFacade;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminController.class);
 
@@ -213,7 +218,7 @@ public class AdminController {
 
 			if (CfpSubmissionStatusType.REJECTED.equals(cfpSubmission.getStatus())) {
 
-				for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getSpeakers()) {
+				for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getCfpSubmissionSpeakers()) {
 
 					boolean speakerAlreadyAccepted = speakerAlreadyAccepted(presentations, cfpSubmissionSpeaker);
 

@@ -23,7 +23,9 @@ import org.springframework.social.connect.UserProfile;
 
 import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.AuthorityType;
 import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.UserAuthority;
 
 /**
  * Simple little {@link ConnectionSignUp} command that allocates new userIds in memory.
@@ -50,9 +52,12 @@ public final class SimpleConnectionSignUp implements ConnectionSignUp {
 		final UserProfile profile = connection.fetchUserProfile();
 		final User user = new User();
 		user.setFirstName(profile.getFirstName());
+		user.setEmail(profile.getEmail());
 		user.setLastName(profile.getLastName());
 		user.setUsername(connection.getKey().toString());
 		user.setPassword(null);
+
+		user.getUserAuthorities().add(new UserAuthority(user, AuthorityType.APP_USER));
 
 		final User createdUser;
 		try {

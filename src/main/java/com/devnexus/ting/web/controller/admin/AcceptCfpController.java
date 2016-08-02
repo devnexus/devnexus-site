@@ -99,7 +99,7 @@ public class AcceptCfpController {
 
 		final List<Speaker> updatedSpeakers = new ArrayList<Speaker>(1);
 
-		for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmissionFromDb.getSpeakers()) {
+		for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmissionFromDb.getCfpSubmissionSpeakers()) {
 			final Long existingSpeakerId = cfpSubmission.getSpeakerIdForCfpSpeakerId(cfpSubmissionSpeaker.getId());
 			Assert.notNull(existingSpeakerId, "Speaker ID Must not be null.");
 

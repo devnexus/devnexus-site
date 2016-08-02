@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@ package com.devnexus.ting.core.dao;
 import java.util.List;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.DirtiesContext;
@@ -78,7 +77,7 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmissionSpeaker.setPhone("555-555-5555");
 		cfpSubmissionSpeaker.setTshirtSize("L");
 		cfpSubmissionSpeaker.setTwitterId("kctwitter");
-		cfpSubmissionSpeaker.setCfpSubmission(cfpSubmission);
+		cfpSubmissionSpeaker.getCfpSubmissions().add(cfpSubmission);
 
 		cfpSubmission.setEvent(event);
 		cfpSubmission.setDescription("myDescription");
@@ -90,11 +89,11 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmission.setStatus(CfpSubmissionStatusType.PENDING);
 		cfpSubmission.setTitle("my session title");
 		cfpSubmission.setTopic("java");
-		cfpSubmission.getSpeakers().add(cfpSubmissionSpeaker);
+		cfpSubmission.getCfpSubmissionSpeakers().add(cfpSubmissionSpeaker);
 		final CfpSubmission savedCfpSubmission = cfpSubmissionDao.save(cfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission.getId());
-		Assert.assertTrue(savedCfpSubmission.getSpeakers().size() == 1);
+		Assert.assertTrue(savedCfpSubmission.getCfpSubmissionSpeakers().size() == 1);
 	}
 
 	@Test
@@ -117,7 +116,7 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		speaker.setPhone("555-555-5555");
 		speaker.setTshirtSize("L");
 		speaker.setTwitterId("kctwitter");
-		speaker.setCfpSubmission(cfpSubmission);
+		speaker.getCfpSubmissions().add(cfpSubmission);
 
 		final CfpSubmissionSpeaker speaker2 = new CfpSubmissionSpeaker();
 		speaker2.setBio("myBio");
@@ -133,10 +132,10 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		speaker2.setPhone("555-555-5555");
 		speaker2.setTshirtSize("L");
 		speaker2.setTwitterId("ktwitter");
-		speaker2.setCfpSubmission(cfpSubmission);
+		speaker2.getCfpSubmissions().add(cfpSubmission);
 
-		cfpSubmission.getSpeakers().add(speaker);
-		cfpSubmission.getSpeakers().add(speaker2);
+		cfpSubmission.getCfpSubmissionSpeakers().add(speaker);
+		cfpSubmission.getCfpSubmissionSpeakers().add(speaker2);
 
 		cfpSubmission.setDescription("myDescription");
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
@@ -150,9 +149,9 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		final CfpSubmission savedCfpSubmission = cfpSubmissionDao.save(cfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission);
 		Assert.assertNotNull(savedCfpSubmission.getId());
-		Assert.assertEquals(Integer.valueOf(2), Integer.valueOf(savedCfpSubmission.getSpeakers().size()));
+		Assert.assertEquals(Integer.valueOf(2), Integer.valueOf(savedCfpSubmission.getCfpSubmissionSpeakers().size()));
 
-		for (CfpSubmissionSpeaker submissionSpeaker : savedCfpSubmission.getSpeakers()) {
+		for (CfpSubmissionSpeaker submissionSpeaker : savedCfpSubmission.getCfpSubmissionSpeakers()) {
 			Assert.assertNotNull(submissionSpeaker.getId());
 		}
 	}

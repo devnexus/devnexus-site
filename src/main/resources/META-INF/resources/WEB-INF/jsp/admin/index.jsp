@@ -24,7 +24,7 @@
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-		<p>Welcome <sec:authentication property="principal.username"/> (Logged-in since: <sec:authentication property="principal.lastLoginDate"/>)</p>
+		<p>Welcome <sec:authentication property="principal.firstName"/> (Logged-in since: <sec:authentication property="principal.lastLoginDate"/>)</p>
 		<form:form id="event" class="form-horizontal" role="form" method="post" modelAttribute="event" action="${ctx}/s/admin/index">
 			<spring:bind path="event.id">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
@@ -56,6 +56,7 @@
 	</div>
 </c:if>
 
+<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">
 <div class="row">
 	<div class="col-md-4 col-md-offset-2">
 		<div class="panel panel-default">
@@ -118,6 +119,8 @@
 		</div>
 	</div>
 </div>
+</sec:authorize>
+
 <div class="row">
 	<div class="col-md-4 col-md-offset-2">
 		<div class="panel panel-default">
@@ -132,19 +135,38 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-4 col-md-offset-0">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Miscellaneous</h3>
-			</div>
-			<div class="panel-body">
-				<ul>
-					<li><a href="${ctx}${baseSiteUrl}/admin/update-application-cache">Update HTML5 Application Cache Manifest</a></li>
-					<li><a href="${ctx}${baseSiteUrl}/admin/reset-spring-cache">Reset Spring Cache</a></li>
-				</ul>
+	<sec:authorize access="hasRole('ADMIN')">
+		<div class="col-md-4 col-md-offset-0">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Miscellaneous</h3>
+				</div>
+				<div class="panel-body">
+					<ul>
+						<li><a href="${ctx}${baseSiteUrl}/admin/update-application-cache">Update HTML5 Application Cache Manifest</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/reset-spring-cache">Reset Spring Cache</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
+	</sec:authorize>
+	<sec:authorize access="hasRole('APP_USER')">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">My Tasks</h3>
+					</div>
+					<div class="panel-body">
+						<ul>
+							<li><a href="${ctx}${baseSiteUrl}/cfp/index">My CFPs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</sec:authorize>
+	<sec:authorize access="hasRole('ADMIN')">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h4>Cache Status</h4>
@@ -166,4 +188,5 @@
 			</table>
 		</div>
 	</div>
+	</sec:authorize>
 </div>

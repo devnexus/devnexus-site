@@ -165,7 +165,7 @@ public class AdminCallForPapersController {
 		cfpSubmissionFromDb.setTopic(cfpSubmission.getTopic());
 
 
-		for (CfpSubmissionSpeaker speaker : cfpSubmission.getSpeakers()) {
+		for (CfpSubmissionSpeaker speaker : cfpSubmission.getCfpSubmissionSpeakers()) {
 			CfpSubmissionSpeaker speakerFromDb = cfpSubmissionFromDb.getSpeakerById(speaker.getId());
 			if (speakerFromDb != null) {
 				speakerFromDb.setBio(speaker.getBio());

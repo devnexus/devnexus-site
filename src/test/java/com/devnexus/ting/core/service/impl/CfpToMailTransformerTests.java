@@ -112,8 +112,8 @@ public class CfpToMailTransformerTests {
 		speaker2.setLocation("Berlin");
 		speaker2.setMustReimburseTravelCost(true);
 
-		cfpSubmission.getSpeakers().add(speaker1);
-		cfpSubmission.getSpeakers().add(speaker2);
+		cfpSubmission.getCfpSubmissionSpeakers().add(speaker1);
+		cfpSubmission.getCfpSubmissionSpeakers().add(speaker2);
 
 		return cfpSubmission;
 	}

@@ -101,6 +101,11 @@ public class SiteController {
 		return "about";
 	}
 
+	@RequestMapping("/s/cfp-overview")
+	public String cfpOveriew() {
+		return "cfp-overview";
+	}
+
 	@RequestMapping("/s/map")
 	public String map() {
 		return "map";

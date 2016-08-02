@@ -23,10 +23,9 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.model.Evaluation;
-import com.devnexus.ting.model.Organizer;
+import com.devnexus.ting.model.Event;
+import com.devnexus.ting.model.User;
 import com.devnexus.ting.repository.CfpSubmissionSpeakerRepositoryCustom;
-import com.devnexus.ting.repository.EvaluationRepositoryCustom;
 
 @Repository("cfpSubmissionSpeakerDao")
 public class CfpSubmissionSpeakerRepositoryImpl implements CfpSubmissionSpeakerRepositoryCustom {
@@ -40,6 +39,16 @@ public class CfpSubmissionSpeakerRepositoryImpl implements CfpSubmissionSpeakerR
 		.createQuery("select o from CfpSubmissionSpeaker o left outer join fetch o.cfpSpeakerImage where o.id = :id", CfpSubmissionSpeaker.class)
 		.setParameter("id", speakerId)
 		.getSingleResult();
+	}
+
+	@Override
+	public List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event) {
+		return this.entityManager
+		.createQuery("select o from CfpSubmissionSpeaker o "
+				+ "where o.createdByUser.id = :userId and o.event.id = :eventId", CfpSubmissionSpeaker.class)
+		.setParameter("userId", user.getId())
+		.setParameter("eventId", event.getId())
+		.getResultList();
 	}
 
 
