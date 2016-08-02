@@ -31,6 +31,7 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.PresentationType;
 import com.devnexus.ting.model.SkillLevel;
 import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.CfpSubmissionSpeakerRepository;
 import com.devnexus.ting.repository.EventRepository;
 
 /**
@@ -42,6 +43,7 @@ import com.devnexus.ting.repository.EventRepository;
 public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 
 	@Autowired private CfpSubmissionRepository cfpSubmissionDao;
+	@Autowired private CfpSubmissionSpeakerRepository cfpSubmissionSpeakerDao;
 	@Autowired private EventRepository eventDao;
 
 	@Test
@@ -103,6 +105,7 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		cfpSubmission.setEvent(event);
 
 		final CfpSubmissionSpeaker speaker = new CfpSubmissionSpeaker();
+		speaker.setEvent(event);
 		speaker.setBio("myBio");
 		speaker.setFirstName("Kenny");
 		speaker.setGithubId("kenny");
@@ -119,6 +122,7 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		speaker.getCfpSubmissions().add(cfpSubmission);
 
 		final CfpSubmissionSpeaker speaker2 = new CfpSubmissionSpeaker();
+		speaker2.setEvent(event);
 		speaker2.setBio("myBio");
 		speaker2.setFirstName("Kyle");
 		speaker2.setGithubId("kyle");
@@ -134,8 +138,11 @@ public class CfpSubmissionDaoTest extends BaseDaoIntegrationTest {
 		speaker2.setTwitterId("ktwitter");
 		speaker2.getCfpSubmissions().add(cfpSubmission);
 
-		cfpSubmission.getCfpSubmissionSpeakers().add(speaker);
-		cfpSubmission.getCfpSubmissionSpeakers().add(speaker2);
+		final CfpSubmissionSpeaker savedSpeaker1 = cfpSubmissionSpeakerDao.save(speaker);
+		final CfpSubmissionSpeaker savedSpeaker2 = cfpSubmissionSpeakerDao.save(speaker2);
+
+		cfpSubmission.getCfpSubmissionSpeakers().add(savedSpeaker1);
+		cfpSubmission.getCfpSubmissionSpeakers().add(savedSpeaker2);
 
 		cfpSubmission.setDescription("myDescription");
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
