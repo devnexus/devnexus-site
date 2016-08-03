@@ -15,9 +15,13 @@
  */
 package com.devnexus.ting.core.applicationlistener;
 
+import javax.sql.DataSource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.Cloud;
+import org.springframework.cloud.CloudException;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.env.Environment;
@@ -39,18 +43,29 @@ public class ContextRefreshedEventListener implements
 	@Autowired
 	private SystemSetupService systemSetupService;
 
+	@Autowired(required=false)
+	private Cloud cloud;
+
 	@Autowired
 	private Environment environment;
 
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-
-		if (environment.acceptsProfiles(SpringProfile.DEMO)) {
-			// From: http://forum.springsource.org/showthread.php?t=84312&page=2
-			//configurer.toString();
-			if (event.getApplicationContext().getParent() == null) {
+		// From: http://forum.springsource.org/showthread.php?t=84312&page=2
+		//configurer.toString();
+		if (event.getApplicationContext().getParent() == null) {
+			if (environment.acceptsProfiles(SpringProfile.DEMO)) {
 				if (!systemSetupService.isDatabaseSetup()) {
 					LOGGER.info("Setting up database...");
+					systemSetupService.setupDatabase();
+				}
+			}
+			else if (environment.acceptsProfiles(SpringProfile.CLOUD)) {
+				try {
+					cloud.getSingletonServiceConnector(DataSource.class, null);
+				}
+				catch (CloudException e) {
+					LOGGER.error("Setting up Cloud Demo database...");
 					systemSetupService.setupDatabase();
 				}
 			}

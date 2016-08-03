@@ -142,7 +142,7 @@
 			<label for="pictureFile" class="col-lg-2 control-label">Picture*</label>
 			<div class="col-lg-10">
 				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="5"/>
-				<span class="help-block">The absolute minimum size of the picture should be 100px x 133px.</span>
+				<span class="help-block">The absolute minimum size of the picture should be 360px x 360px.</span>
 			</div>
 		</div>
 
@@ -232,14 +232,12 @@
 				<span class="help-block">E.g. S, M, L etc.</span>
 			</div>
 		</div>
-
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
-				<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="20"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="19"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
 			</div>
 		</div>
-
 		<p>Fields denoted with * are mandatory.
 	</form:form>
 	</div>

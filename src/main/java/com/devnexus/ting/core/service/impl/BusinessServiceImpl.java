@@ -589,10 +589,15 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
-    @Cacheable("getCurrentEvent")
+    //FIXME
+    //@Cacheable("getCurrentEvent")
     @Transactional(readOnly = true)
     public Event getCurrentEvent() {
-        return eventDao.getCurrentEvent();
+        final Event currentEvent = eventDao.getCurrentEvent();
+    	if (currentEvent == null) {
+    		throw new IllegalStateException("No current event found.");
+    	}
+        return currentEvent;
     }
 
     @Override

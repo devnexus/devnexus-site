@@ -163,8 +163,8 @@
 		<hr/>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="20">Cancel</button>
-				<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="20"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="19"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Add</button>
 			</div>
 		</div>
 

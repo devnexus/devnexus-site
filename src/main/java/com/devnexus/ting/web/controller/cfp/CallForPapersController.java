@@ -28,6 +28,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,7 @@ import com.devnexus.ting.web.form.CfpSubmissionSpeakerForm;
  */
 @Controller
 @RequestMapping(value="/s/cfp")
-public class CallForPapersControllerNew {
+public class CallForPapersController {
 
 	@Autowired private BusinessService businessService;
 	@Autowired private UserService userService;
@@ -77,7 +78,7 @@ public class CallForPapersControllerNew {
 	@Autowired
 	private CfpSettings cfpSettings;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersControllerNew.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
 	private void prepareReferenceData(ModelMap model) {
 
@@ -164,7 +165,7 @@ public class CallForPapersControllerNew {
 		}
 
 		if (request.getParameter("cancel") != null) {
-			return "redirect:/s/admin/index";
+			return "redirect:/s/cfp/index";
 		}
 
 		if (bindingResult.hasErrors()) {
@@ -181,7 +182,7 @@ public class CallForPapersControllerNew {
 
 		if (bindingResult.hasErrors()) {
 			prepareReferenceData(model);
-			return "/cfp/speaker";
+			return "cfp/cfp-speaker";
 		}
 
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerToSave = new CfpSubmissionSpeaker();
@@ -206,7 +207,9 @@ public class CallForPapersControllerNew {
 		LOGGER.info(cfpSubmissionSpeakerToSave.toString());
 		businessService.saveCfpSubmissionSpeaker(cfpSubmissionSpeakerToSave);
 
-		return "redirect:/s/add-cfp-success";
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The speaker '%s' was added successfully.", cfpSubmissionSpeakerToSave.getFirstLastName()));
+		return "redirect:/s/cfp/index";
 	}
 
 	private CfpSpeakerImage processPicture(MultipartFile picture, BindingResult bindingResult) {
@@ -233,12 +236,22 @@ public class CallForPapersControllerNew {
 				return null;
 			}
 
+			if (image == null) {
+				//FIXME better way?
+				final String fileSizeFormatted = FileUtils.byteCountToDisplaySize(picture.getSize());
+				LOGGER.warn(String.format("Cannot parse file '%s' (Content Type: %s; Size: %s) as image.", picture.getOriginalFilename(), picture.getContentType(), fileSizeFormatted));
+				bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "pictureFile",
+					String.format("Did you upload a valid image? We cannot parse file '%s' (Size: %s) as image file.",
+						picture.getOriginalFilename(), fileSizeFormatted)));
+				return null;
+			}
+
 			int imageHeight = image.getHeight();
 			int imageWidth  = image.getWidth();
 
 			if (imageHeight < 360 && imageWidth < 360) {
 				bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "pictureFile",
-					String.format("Your image (%s x %s) is too small. Please provide an image of at least 360x360px.", imageWidth, imageHeight)));
+					String.format("Your image '%s' (%sx%spx) is too small. Please provide an image of at least 360x360px.", picture.getOriginalFilename(), imageWidth, imageHeight)));
 			}
 
 			cfpSpeakerImage = new CfpSpeakerImage();
@@ -309,18 +322,26 @@ public class CallForPapersControllerNew {
 			return "redirect:/s/cfp/index";
 		}
 
+		final Event eventFromDb = businessService.getCurrentEvent();
+
 		if (bindingResult.hasErrors()) {
 			prepareReferenceData(model);
+			final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+			final List<CfpSubmissionSpeaker> cfpSubmissionSpeakers = businessService.getCfpSubmissionSpeakersForUserAndEvent(user, eventFromDb);
+			model.addAttribute("speakers", cfpSubmissionSpeakers);
 			return "cfp/cfp";
 		}
 
-		final Event eventFromDb = businessService.getCurrentEvent();
 		final CfpSubmission cfpSubmissionToSave = new CfpSubmission();
 
-		if (cfpSubmission.getCfpSubmissionSpeakers().size() < 1) {
+		if (cfpSubmission.getCfpSubmissionSpeakers() == null || cfpSubmission.getCfpSubmissionSpeakers().size() < 1) {
 			ObjectError error = new ObjectError("error","Please submit at least 1 speaker.");
 			bindingResult.addError(error);
 			prepareReferenceData(model);
+
+			final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+			final List<CfpSubmissionSpeaker> cfpSubmissionSpeakers = businessService.getCfpSubmissionSpeakersForUserAndEvent(user, eventFromDb);
+			model.addAttribute("speakers", cfpSubmissionSpeakers);
 			return "cfp/cfp";
 		}
 
@@ -351,7 +372,9 @@ public class CallForPapersControllerNew {
 		LOGGER.info(cfpSubmissionToSave.toString());
 		businessService.saveAndNotifyCfpSubmission(cfpSubmissionToSave);
 
-		return "redirect:/s/add-cfp-success";
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("Your abstract '%s' was added successfully.", cfpSubmissionToSave.getTitle()));
+		return "redirect:/s/cfp/index";
 	}
 
 	/**

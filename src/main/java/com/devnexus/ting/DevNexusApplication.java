@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -69,7 +69,7 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 	MessageSource messageSource;
 
 	public static void main(String[] args) throws Exception {
-            TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+			TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 		final SpringApplication application = new SpringApplication(DevNexusApplication.class);
 		application.addInitializers(new DefaultApplicationContextInitializer());
 		application.run(args);
@@ -89,18 +89,18 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 		return new ContextRefreshedEventListener();
 	}
 
-        @Bean
-        @Primary
-        ObjectMapper jacksonObjectMapper() {
-            ObjectMapper om = new ObjectMapper();
-            om.setVisibility(om.getSerializationConfig().getDefaultVisibilityChecker()
-                .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-                .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
-                .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
-                .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
-            return om;
-        }
-        
+	@Bean
+	@Primary
+	ObjectMapper jacksonObjectMapper() {
+		ObjectMapper om = new ObjectMapper();
+		om.setVisibility(om.getSerializationConfig().getDefaultVisibilityChecker()
+			.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+			.withGetterVisibility(JsonAutoDetect.Visibility.NONE)
+			.withSetterVisibility(JsonAutoDetect.Visibility.NONE)
+			.withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
+		return om;
+	}
+
 	@Bean
 	public SenderClient javaSender() {
 		return new SenderClient(environment.getRequiredProperty("TING_PUSH_URL"));
