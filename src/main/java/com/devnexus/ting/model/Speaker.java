@@ -56,8 +56,8 @@ public class Speaker extends Person {
 
 	//@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="speaker")
 	@Filters({
-		@Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
-		@Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
+		@Filter(name = "presentationFilter", condition = "EVENT_ID = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
+		@Filter(name = "presentationFilterEventId", condition = "EVENT_ID = :eventId")
 	})
 	@ManyToMany(fetch=FetchType.LAZY, mappedBy="speakers")
 	@XmlTransient

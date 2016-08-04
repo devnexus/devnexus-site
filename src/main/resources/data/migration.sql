@@ -60,3 +60,27 @@ ALTER TABLE public.cfp_submissions
   ADD CONSTRAINT fk_cfp_submissions_users FOREIGN KEY (created_by_user)
       REFERENCES public.users (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+
+-- Aug 3 2016
+
+all tables: event --> event_id
+sponsors: logo --. logo_id
+presentations presentation_file --> presentation_file_id
+presentations_speakers: presentations --> presentations_id
+presentations_speakers: speakers --> speakers_id
+speakers: picture --> picture_id
+presentations_presentation_tags: presentations --> presentations_id
+presentations_presentation_tags: presentation_tags --> presentation_tags_id
+events_speakers: events --> events_id
+events_speakers: speakers --> events_id
+
+cfp_submissions_cfp_submission_speakers: cfp_submissions_id
+cfp_submissions_cfp_submission_speakers: cfp_submission_speakers_id
+cfp_submissions: picture --> picture_id
+cfp_submission_speakers: picture --> picture_id
+cfp_submission_speakers: cfp_speaker_image --> cfp_speaker_image_id
+cfp_submission_speakers: created_by_user --> created_by_user_id
+cfp_submissions: created_by_user --> created_by_user_id
+
+ALTER TABLE public.cfp_submission_speakers DROP COLUMN cfp_submission;

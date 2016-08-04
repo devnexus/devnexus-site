@@ -27,6 +27,7 @@ import org.reflections.Reflections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -39,6 +40,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.core.hibernate.DevNexusSpringImplicitNamingStrategy;
 import com.devnexus.ting.repository.jpa.BaseRepositoryImpl;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -109,7 +111,9 @@ public class PersistenceConfig {
 		jpaProperties.put("hibernate.generate_statistics", false);
 		jpaProperties.put("hibernate.show_sql", this.jpaSettings.isShowSql());
 		jpaProperties.put("hibernate.format_sql", true);
-		jpaProperties.put("hibernate.ejb.naming_strategy", "com.devnexus.ting.core.hibernate.ImprovedPluralizedNamingStrategy");
+
+		jpaProperties.put("hibernate.implicit_naming_strategy", DevNexusSpringImplicitNamingStrategy.class.getName());
+		jpaProperties.put("hibernate.physical_naming_strategy", SpringPhysicalNamingStrategy.class.getName());
 
 		entityManagerFactory.setJpaPropertyMap(jpaProperties);
 

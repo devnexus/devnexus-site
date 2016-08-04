@@ -16,13 +16,12 @@
 package com.devnexus.ting.core.hibernate;
 
 import java.io.Serializable;
-import java.util.Locale;
 
+import org.atteo.evo.inflector.English;
 import org.hibernate.AssertionFailure;
 import org.hibernate.cfg.DefaultNamingStrategy;
 import org.hibernate.cfg.NamingStrategy;
 import org.hibernate.internal.util.StringHelper;
-import org.jvnet.inflector.Noun;
 
 /**
  * An improved naming strategy that prefers embedded
@@ -97,8 +96,8 @@ public class ImprovedPluralizedNamingStrategy implements NamingStrategy, Seriali
 					buf2.append("_");
 				} else {
 					buf2.append(
-							Noun.pluralOf(
-									splitTableNameFragments[i], Locale.ENGLISH));
+							English.plural(
+									splitTableNameFragments[i]));
 				}
 			}
 
@@ -112,7 +111,7 @@ public class ImprovedPluralizedNamingStrategy implements NamingStrategy, Seriali
 			String ownerEntity, String ownerEntityTable, String associatedEntity, String associatedEntityTable,
 			String propertyName
 	) {
-		return tableName( Noun.pluralOf(ownerEntityTable, Locale.ENGLISH) + '_' + propertyToColumnName(propertyName) );
+		return tableName( English.plural(ownerEntityTable) + '_' + propertyToColumnName(propertyName) );
 	}
 
 	/**
@@ -155,11 +154,10 @@ public class ImprovedPluralizedNamingStrategy implements NamingStrategy, Seriali
 		}
 		else {
 			//use of a stringbuffer to workaround a JDK bug
-			return new StringBuffer(Noun.pluralOf(
-					ownerEntityTable, Locale.ENGLISH)).append("_")
+			return new StringBuffer(English.plural(ownerEntityTable)).append("_")
 					.append(
 						associatedEntityTable != null ?
-								Noun.pluralOf(associatedEntityTable, Locale.ENGLISH) :
+								English.plural(associatedEntityTable) :
 						StringHelper.unqualify( propertyName )
 					).toString();
 		}

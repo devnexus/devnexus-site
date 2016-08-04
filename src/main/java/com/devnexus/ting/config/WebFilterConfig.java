@@ -15,7 +15,7 @@
  */
 package com.devnexus.ting.config;
 
-import org.springframework.boot.context.embedded.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
@@ -25,7 +25,6 @@ import org.tuckey.web.filters.urlrewrite.UrlRewriteFilter;
 
 import com.devnexus.ting.web.filter.DevNexusSiteMeshFilter;
 import com.devnexus.ting.web.filter.ResponseAddHttpHeadersFilter;
-import com.devnexus.ting.web.filter.WeakShallowEtagHeaderFilter;
 
 /**
  * @author Gunnar Hillert
@@ -92,7 +91,8 @@ public class WebFilterConfig {
 	@Bean
 	public FilterRegistrationBean etagFilterRegistrationBean () {
 
-		final ShallowEtagHeaderFilter shallowEtagHeaderFilter = new WeakShallowEtagHeaderFilter();
+		final ShallowEtagHeaderFilter shallowEtagHeaderFilter = new ShallowEtagHeaderFilter();
+		shallowEtagHeaderFilter.setWriteWeakETag(true);
 		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
 
 		registrationBean.setFilter(shallowEtagHeaderFilter);

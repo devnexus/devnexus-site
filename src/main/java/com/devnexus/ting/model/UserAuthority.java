@@ -32,7 +32,6 @@ import org.springframework.security.core.GrantedAuthority;
  * The persistent class for the presentations database table.
  */
 @Entity
-@org.hibernate.annotations.Table(appliesTo = "USER_AUTHORITIES", indexes = {@Index(name = "USER_AUTHORITIES_IDX", columnNames = {"AUTHORITY"})})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserAuthority extends BaseModelObject implements GrantedAuthority {

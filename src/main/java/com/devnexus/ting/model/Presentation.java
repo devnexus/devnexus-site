@@ -52,7 +52,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author Gunnar Hillert
  */
 @Entity
-@org.hibernate.annotations.Table(appliesTo = "PRESENTATIONS", indexes = {@Index(name = "PRESENTATION_IDX", columnNames = {"TITLE"})})
+//@org.hibernate.annotations.Table(indexes = {@Index(name = "PRESENTATION_IDX", columnNames = {"TITLE"})})
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Presentation extends BaseModelObject implements Comparable<Presentation> {
