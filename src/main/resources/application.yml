@@ -1,7 +1,8 @@
 server:
   port: 8090
   servlet-path: /
-  session-timeout: 1200
+  session:
+    timeout: 1200
   compression:
     enabled: true
     mime-types: application/json,application/xml,text/html,text/xml,text/plain

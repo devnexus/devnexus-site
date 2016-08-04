@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,11 +39,28 @@ public class CfpSubmissionRepositoryImpl implements CfpSubmissionRepositoryCusto
 		final List<CfpSubmission> cfpSubmissions = this.entityManager
 				.createQuery("select distinct cfp from CfpSubmission cfp "
 						+ "    join cfp.event e "
-						+ "    join fetch cfp.speakers s "
+						+ "    join fetch cfp.cfpSubmissionSpeakers s "
 						+ "where e.id = :eventId "
 						+ "order by s.lastName ASC", CfpSubmission.class)
 			 .setParameter("eventId", eventId)
 			 .getResultList();
+
+		return cfpSubmissions;
+	}
+
+	@Override
+	public List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId) {
+		final List<CfpSubmission> cfpSubmissions = this.entityManager
+				.createQuery("select distinct cfp from CfpSubmission cfp "
+						+ "    join cfp.event e "
+						+ "    join cfp.createdByUser u "
+						+ "    join fetch cfp.cfpSubmissionSpeakers s "
+						+ "where e.id = :eventId "
+						+ "and u.id = :userId "
+						+ "order by s.lastName ASC", CfpSubmission.class)
+			.setParameter("userId", userId)
+			.setParameter("eventId", eventId)
+			.getResultList();
 
 		return cfpSubmissions;
 	}

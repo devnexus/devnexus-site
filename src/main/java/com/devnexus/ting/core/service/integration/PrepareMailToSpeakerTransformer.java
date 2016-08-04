@@ -59,7 +59,7 @@ public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 			.setFrom(fromUser)
 			.setSubject("DevNexus 2016 - CFP - " + cfpSubmission.getSpeakersAsString(false));
 
-		for (CfpSubmissionSpeaker submissionSpeaker : cfpSubmission.getSpeakers()) {
+		for (CfpSubmissionSpeaker submissionSpeaker : cfpSubmission.getCfpSubmissionSpeakers()) {
 			email.addTo(submissionSpeaker.getEmail());
 		}
 
@@ -81,7 +81,7 @@ public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 		context.put("topic", cfpSubmission.getTopic());
 		context.put("title", cfpSubmission.getTitle());
 		context.put("sessionRecordingApproved", cfpSubmission.isSessionRecordingApproved() ? "Yes" : "No");
-		context.put("speakers", cfpSubmission.getSpeakers());
+		context.put("speakers", cfpSubmission.getCfpSubmissionSpeakers());
 
 		Writer writer = new StringWriter();
 		MustacheFactory mf = new DefaultMustacheFactory();

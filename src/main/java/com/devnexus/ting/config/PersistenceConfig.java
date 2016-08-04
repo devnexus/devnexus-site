@@ -80,6 +80,7 @@ public class PersistenceConfig {
 			com.devnexus.ting.model.SpeakerList.class,
 			com.devnexus.ting.model.ScheduleItemType.class,
 			com.devnexus.ting.model.CfpSubmission.class,
+			com.devnexus.ting.model.CfpSubmissionSpeaker.class,
 			com.devnexus.ting.model.CfpSubmissionList.class,
 			com.devnexus.ting.model.TicketGroup.class
 		);

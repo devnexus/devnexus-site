@@ -57,7 +57,6 @@ import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
@@ -590,10 +589,15 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
-    @Cacheable("getCurrentEvent")
+    //FIXME
+    //@Cacheable("getCurrentEvent")
     @Transactional(readOnly = true)
     public Event getCurrentEvent() {
-        return eventDao.getCurrentEvent();
+        final Event currentEvent = eventDao.getCurrentEvent();
+    	if (currentEvent == null) {
+    		throw new IllegalStateException("No current event found.");
+    	}
+        return currentEvent;
     }
 
     @Override
@@ -713,9 +717,20 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
+    public List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId) {
+        return cfpSubmissionRepository.getCfpSubmissionsForUserAndEvent(userId, eventId);
+    }
+
+    @Override
     @Transactional
     public CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission) {
         return cfpSubmissionRepository.save(cfpSubmission);
+    }
+
+    @Override
+    @Transactional
+    public CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker) {
+        return cfpSubmissionSpeakerRepository.save(cfpSubmissionSpeaker);
     }
 
     @Override
@@ -1000,7 +1015,15 @@ public class BusinessServiceImpl implements BusinessService {
         return cfpSubmissionSpeaker;
     }
 
-    @Override
+    /* (non-Javadoc)
+	 * @see com.devnexus.ting.core.service.BusinessService#getCfpSubmissionSpeakersForUserAndEvent(com.devnexus.ting.model.User, com.devnexus.ting.model.Event)
+	 */
+	@Override
+	public List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event) {
+		return cfpSubmissionSpeakerRepository.getCfpSubmissionSpeakersForUserAndEvent(user, event);
+	}
+
+	@Override
     public ScheduleItem getScheduleItem(Long scheduleItemId) {
         return scheduleItemDao.findOne(scheduleItemId);
     }

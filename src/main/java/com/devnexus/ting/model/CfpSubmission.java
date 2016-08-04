@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2014 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -61,13 +59,17 @@ public class CfpSubmission extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	private Event event;
 
-	@Valid
+	@ManyToOne
+	@XmlTransient
+	@JsonIgnore
+	private User createdByUser;
+
+	@ManyToMany(fetch=FetchType.LAZY)
 	@OrderBy("lastName ASC")
-	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="cfpSubmission")
-	private List<CfpSubmissionSpeaker>speakers = new ArrayList<CfpSubmissionSpeaker>(0);
+	private List<CfpSubmissionSpeaker>cfpSubmissionSpeakers = new ArrayList<CfpSubmissionSpeaker>(0);
 
 	@NotEmpty
 	@Size(max=255)
@@ -118,7 +120,7 @@ public class CfpSubmission extends BaseModelObject {
 	 */
 	@Override
 	public String toString() {
-		return "CfpSubmission [event=" + event + ", # speakers=" + speakers.size()
+		return "CfpSubmission [event=" + event + ", # speakers=" + cfpSubmissionSpeakers.size()
 				+ ", title=" + title + ", topic=" + topic
 				+ ", sessionRecordingApproved=" + sessionRecordingApproved
 				+ ", presentationType=" + presentationType + ", skillLevel="
@@ -205,12 +207,12 @@ public class CfpSubmission extends BaseModelObject {
 	/**
 	 * @return the speakers
 	 */
-	public List<CfpSubmissionSpeaker> getSpeakers() {
-		return speakers;
+	public List<CfpSubmissionSpeaker> getCfpSubmissionSpeakers() {
+		return cfpSubmissionSpeakers;
 	}
 
 	public CfpSubmissionSpeaker getSpeakerById(Long id) {
-		for (CfpSubmissionSpeaker speaker : this.speakers) {
+		for (CfpSubmissionSpeaker speaker : this.cfpSubmissionSpeakers) {
 			if (speaker.getId() != null && speaker.getId().equals(id)) {
 				return speaker;
 			}
@@ -222,7 +224,7 @@ public class CfpSubmission extends BaseModelObject {
 	 * @return the speakers
 	 */
 	public boolean speakerRequiresTravelCostReimburment() {
-		for (CfpSubmissionSpeaker speaker : this.speakers) {
+		for (CfpSubmissionSpeaker speaker : this.cfpSubmissionSpeakers) {
 			if (speaker.isMustReimburseTravelCost()) {
 				return true;
 			}
@@ -233,7 +235,7 @@ public class CfpSubmission extends BaseModelObject {
 	public String getSpeakerLocation() {
 		final Set<String> speakerLocations = new HashSet<String>();
 
-		for (CfpSubmissionSpeaker speaker : this.speakers) {
+		for (CfpSubmissionSpeaker speaker : this.cfpSubmissionSpeakers) {
 			speakerLocations.add(speaker.getLocation());
 		}
 
@@ -243,13 +245,13 @@ public class CfpSubmission extends BaseModelObject {
 	/**
 	 * @param speakers the speakers to set
 	 */
-	public void setSpeakers(List<CfpSubmissionSpeaker> speakers) {
-		this.speakers = speakers;
+	public void setCfpSubmissionSpeakers(List<CfpSubmissionSpeaker> speakers) {
+		this.cfpSubmissionSpeakers = speakers;
 	}
 
 	public String getSpeakersAsString(boolean firstNameOnly) {
 		final StringBuilder stringBuilder = new StringBuilder();
-		final Iterator<CfpSubmissionSpeaker> speakerIterator = this.getSpeakers().iterator();
+		final Iterator<CfpSubmissionSpeaker> speakerIterator = this.getCfpSubmissionSpeakers().iterator();
 
 		boolean isFirst = true;
 
@@ -275,6 +277,19 @@ public class CfpSubmission extends BaseModelObject {
 		return stringBuilder.toString();
 	}
 
+	/**
+	 * @return the createdByUser
+	 */
+	public User getCreatedByUser() {
+		return createdByUser;
+	}
+
+	/**
+	 * @param createdByUser the createdByUser to set
+	 */
+	public void setCreatedByUser(User createdByUser) {
+		this.createdByUser = createdByUser;
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -352,7 +367,7 @@ public class CfpSubmission extends BaseModelObject {
 	public Long getSpeakerIdForCfpSpeakerId(Long cfpSubmissionSpeakerId) {
 		Assert.notNull(cfpSubmissionSpeakerId, "cfpSubmissionSpeakerId must not be null.");
 
-		for (CfpSubmissionSpeaker speaker : this.getSpeakers()) {
+		for (CfpSubmissionSpeaker speaker : this.getCfpSubmissionSpeakers()) {
 			if (cfpSubmissionSpeakerId.equals(speaker.getId())) {
 				return speaker.getSpeaker().getId();
 			}

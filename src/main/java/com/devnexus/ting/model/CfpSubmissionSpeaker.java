@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,13 @@
 package com.devnexus.ting.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.Valid;
@@ -28,10 +33,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
+import org.hibernate.annotations.Filters;
 import org.hibernate.annotations.ParamDef;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -58,12 +66,17 @@ public class CfpSubmissionSpeaker extends Person {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
-        @JsonIgnore
-	private CfpSubmission cfpSubmission;
+	@JsonIgnore
+	private Event event;
+
+	@ManyToOne
+	@XmlTransient
+	@JsonIgnore
+	private User createdByUser;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	@Cascade(CascadeType.ALL)
 	@Valid
 	private CfpSpeakerImage cfpSpeakerImage;
@@ -87,25 +100,21 @@ public class CfpSubmissionSpeaker extends Person {
 	@Size(max=255)
 	private String tshirtSize;
 
+	@Filters({
+		@Filter(name = "presentationFilter", condition = "EVENT = (select e.ID from EVENTS e where e.CURRENT = 'true')"),
+		@Filter(name = "presentationFilterEventId", condition = "EVENT = :eventId")
+	})
+	@ManyToMany(fetch=FetchType.LAZY, mappedBy="cfpSubmissionSpeakers")
+	@XmlTransient
+	@JsonIgnore
+	@BatchSize(size=20)
+	private List<CfpSubmission>cfpSubmissions = new ArrayList<CfpSubmission>(0);
+
 	public CfpSubmissionSpeaker() {
 	}
 
 	public CfpSubmissionSpeaker(Long id) {
 		this.id = id;
-	}
-
-	/**
-	 * @return the cfpSubmission
-	 */
-	public CfpSubmission getCfpSubmission() {
-		return cfpSubmission;
-	}
-
-	/**
-	 * @param cfpSubmission the cfpSubmission to set
-	 */
-	public void setCfpSubmission(CfpSubmission cfpSubmission) {
-		this.cfpSubmission = cfpSubmission;
 	}
 
 	/**
@@ -194,12 +203,54 @@ public class CfpSubmissionSpeaker extends Person {
 		this.cfpSpeakerImage = cfpSpeakerImage;
 	}
 
+	/**
+	 * @return the event
+	 */
+	public Event getEvent() {
+		return event;
+	}
+
+	/**
+	 * @param event the event to set
+	 */
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+	/**
+	 * @return the cfpSubmissions
+	 */
+	public List<CfpSubmission> getCfpSubmissions() {
+		return cfpSubmissions;
+	}
+
+	/**
+	 * @param cfpSubmissions the cfpSubmissions to set
+	 */
+	public void setCfpSubmissions(List<CfpSubmission> cfpSubmissions) {
+		this.cfpSubmissions = cfpSubmissions;
+	}
+
+	/**
+	 * @return the createdByUser
+	 */
+	public User getCreatedByUser() {
+		return createdByUser;
+	}
+
+	/**
+	 * @param createdByUser the createdByUser to set
+	 */
+	public void setCreatedByUser(User createdByUser) {
+		this.createdByUser = createdByUser;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "CfpSubmissionSpeaker [cfpSubmission=" + cfpSubmission
+		return "CfpSubmissionSpeaker [" + super.toString()
 				+ ", email=" + email + ", location=" + location
 				+ ", mustReimburseTravelCost=" + mustReimburseTravelCost
 				+ ", phone=" + phone + ", tshirtSize=" + tshirtSize + "]";

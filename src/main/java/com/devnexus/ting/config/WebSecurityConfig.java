@@ -35,6 +35,7 @@ import org.springframework.social.security.SpringSocialConfigurer;
 
 import com.devnexus.ting.core.applicationlistener.SecurityEventListener;
 import com.devnexus.ting.model.User;
+import com.devnexus.ting.security.RoleAwareSimpleUrlAuthenticationSuccessHandler;
 
 /**
  * @author Gunnar Hillert
@@ -61,9 +62,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		HttpSecurity httpSecurity = http
 		.csrf().disable() //TODO Refactor login form
-		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER").and()
-		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER").and()
-		.authorizeRequests().antMatchers("/s/admin/**").hasAuthority("ROLE_ADMIN").and()
+		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER", "ROLE_APP_USER").and()
+		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER", "ROLE_APP_USER").and()
+		.authorizeRequests().antMatchers("/s/admin/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
+		.authorizeRequests().antMatchers("/s/cfp/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
 		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and();
 
@@ -71,7 +73,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
 		}
 
-		final SimpleUrlAuthenticationSuccessHandler successHandler = new SimpleUrlAuthenticationSuccessHandler();
+		final RoleAwareSimpleUrlAuthenticationSuccessHandler successHandler = new RoleAwareSimpleUrlAuthenticationSuccessHandler();
 		successHandler.setUseReferer(false);
 		successHandler.setTargetUrlParameter("target");
 		successHandler.setDefaultTargetUrl("/s/admin/index");
@@ -83,7 +85,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll();
 
 		http.apply(new SpringSocialConfigurer()
-			.postLoginUrl("/s/schedule"));
+			.postLoginUrl("/s/cfp/index"));
 	}
 
 	@Override

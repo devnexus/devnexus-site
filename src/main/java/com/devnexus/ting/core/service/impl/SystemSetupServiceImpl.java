@@ -21,10 +21,14 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.cloud.Cloud;
+import org.springframework.cloud.CloudException;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.stereotype.Service;
@@ -62,6 +66,9 @@ import com.devnexus.ting.repository.UserAuthorityRepository;
 public class SystemSetupServiceImpl implements SystemSetupService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SystemSetupServiceImpl.class);
+
+	@Autowired(required=false)
+	private Cloud cloud;
 
 	@Autowired
 	private SchemaMigrationRepository schemaMigrationRepository;
@@ -109,7 +116,7 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 	private void loadAndRestoreSeedData() {
 
 		User user = new User();
-                user.setId(1024l);
+		user.setId(1024l);
 		user.setPassword("devnexus");
 		user.setUsername("admin");
 		user.setFirstName("admin");
@@ -163,6 +170,14 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 
 			if (environment.acceptsProfiles(SpringContextMode.DemoContextConfiguration.getCode())) {
 				setupDemoData();
+			}
+			if (cloud != null) {
+				try {
+					cloud.getSingletonServiceConnector(DataSource.class, null);
+				}
+				catch (CloudException e) {
+					setupDemoData();
+				}
 			}
 	}
 
@@ -1023,6 +1038,26 @@ public class SystemSetupServiceImpl implements SystemSetupService {
 		scheduleItemClosing.setEvent(event);
 
 		scheduleItemDao.save(scheduleItemClosing);
+
+		//~~~~ CFP Demo User
+
+		User cfpUser = new User();
+		cfpUser.setId(1025l);
+		cfpUser.setPassword("cfp");
+		cfpUser.setUsername("cfp");
+		cfpUser.setFirstName("King");
+		cfpUser.setLastName("Kamehamehe");
+		cfpUser.setEmail("info@ajug.org");
+
+		final User persistedCfpUser;
+
+		try {
+			persistedCfpUser = userService.addUser(cfpUser);
+		} catch (DuplicateUserException e) {
+			throw new IllegalStateException(e);
+		}
+
+		userAuthorityDao.save(new UserAuthority(persistedCfpUser, AuthorityType.APP_USER));
 	}
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -235,6 +235,7 @@ public interface BusinessService {
 	List<Evaluation> getEvaluationsForEvent(Long eventId);
 
 	List<CfpSubmission> getCfpSubmissions(Long eventId);
+	List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId);
 
 	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);
 
@@ -312,11 +313,15 @@ public interface BusinessService {
 	Speaker getSpeakerWithPicture(Long speakerId);
 
 	Speaker getSpeakerFilteredForEvent(Long speakerId, Event event);
-        
+
         /**
-         * 
+         *
          * @return a list of user schedule items
          * @throws UserNotLoggedInException if a user isn't logged in.
          */
         List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) throws UserNotLoggedInException;
+
+		CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker);
+
+		List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
 }

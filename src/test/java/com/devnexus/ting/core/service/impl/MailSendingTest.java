@@ -62,7 +62,7 @@ public class MailSendingTest {
 		final CfpSubmissionSpeaker cfpSubmissionSpeaker = new CfpSubmissionSpeaker();
 		final CfpSubmission cfpSubmission = new CfpSubmission();
 
-		cfpSubmissionSpeaker.setCfpSubmission(cfpSubmission);
+		cfpSubmissionSpeaker.getCfpSubmissions().add(cfpSubmission);
 
 		cfpSubmissionSpeaker.setBio("This is my great **bio**.");
 		cfpSubmissionSpeaker.setEmail("speaker@devnexus.com");
@@ -75,7 +75,7 @@ public class MailSendingTest {
 		cfpSubmissionSpeaker.setTwitterId("twitterId");
 		cfpSubmissionSpeaker.setEmail("test@hillert.com");
 
-		cfpSubmission.getSpeakers().add(cfpSubmissionSpeaker);
+		cfpSubmission.getCfpSubmissionSpeakers().add(cfpSubmissionSpeaker);
 		cfpSubmission.setDescription("My *abstract* rocks!");
 		cfpSubmission.setPresentationType(PresentationType.BREAKOUT);
 		cfpSubmission.setSessionRecordingApproved(true);

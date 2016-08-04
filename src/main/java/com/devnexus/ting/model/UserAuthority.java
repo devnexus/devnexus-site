@@ -69,9 +69,9 @@ public class UserAuthority extends BaseModelObject implements GrantedAuthority {
 		this.user = user;
 	}
 
-//	public AuthorityType getAuthority() {
-//		return authority;
-//	}
+	public AuthorityType getAuthorityType() {
+		return authority;
+	}
 
 	public void setAuthorityType(AuthorityType roleType) {
 		this.authority = roleType;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,19 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.devnexus.ting.repository;
+package com.devnexus.ting.web.form;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.model.Event;
-import com.devnexus.ting.model.User;
 
 /**
  *
  * @author Gunnar Hillert
  *
  */
-public interface CfpSubmissionSpeakerRepository extends BaseRepository<CfpSubmissionSpeaker, Long>, CfpSubmissionSpeakerRepositoryCustom {
+public class CfpSubmissionSpeakerForm extends CfpSubmissionSpeaker {
+
+	private static final long serialVersionUID = 1L;
+	private MultipartFile pictureFile;
+
+	public void setPictureFile(MultipartFile file) {
+		this.pictureFile = file;
+	}
+
+	public MultipartFile getPictureFile() {
+		return pictureFile;
+	}
+
 
 }
