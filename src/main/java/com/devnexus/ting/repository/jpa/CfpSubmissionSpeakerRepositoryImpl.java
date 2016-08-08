@@ -51,5 +51,17 @@ public class CfpSubmissionSpeakerRepositoryImpl implements CfpSubmissionSpeakerR
 		.getResultList();
 	}
 
-
+	@Override
+	public CfpSubmissionSpeaker getSingleCfpSubmissionSpeakerForUserAndEvent(Long cfpSubmissionSpeakerId, Long userId, Long eventId) {
+		return this.entityManager
+		.createQuery("select o from CfpSubmissionSpeaker o "
+				+ "where o.createdByUser.id = :userId "
+				+ "and o.event.id = :eventId "
+				+ "and o.id = :cfpSubmissionSpeakerId",
+				CfpSubmissionSpeaker.class)
+		.setParameter("userId", userId)
+		.setParameter("eventId", eventId)
+		.setParameter("cfpSubmissionSpeakerId", cfpSubmissionSpeakerId)
+		.getSingleResult();
+	}
 }

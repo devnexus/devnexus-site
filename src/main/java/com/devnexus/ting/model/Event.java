@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,12 +25,16 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.util.Assert;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  *
@@ -53,9 +58,11 @@ public class Event extends BaseModelObject {
 
 	private boolean current;
 
+	@JsonIgnore
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="event")
 	private Set<Presentation>presentations = new HashSet<Presentation>(0);
 
+	@JsonIgnore
 	@ManyToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
 	private Set<Speaker>speakers = new HashSet<Speaker>(0);
 
@@ -63,8 +70,13 @@ public class Event extends BaseModelObject {
 	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Room>rooms = new HashSet<Room>(0);
 
+	@JsonIgnore
 	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="event")
 	private Set<Sponsor>sponsors = new HashSet<Sponsor>(0);
+
+	@OneToMany(mappedBy="event", targetEntity=ConferenceDay.class,
+	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+	private Set<ConferenceDay>conferenceDays = new HashSet<ConferenceDay>(0);
 
 	@Override
 	public String toString() {
@@ -189,6 +201,14 @@ public class Event extends BaseModelObject {
 
 	public void setSponsors(Set<Sponsor> sponsors) {
 		this.sponsors = sponsors;
+	}
+
+	public Set<ConferenceDay> getConferenceDays() {
+		return conferenceDays;
+	}
+
+	public void setConferenceDays(Set<ConferenceDay> conferenceDays) {
+		this.conferenceDays = conferenceDays;
 	}
 
 	public boolean hasSpeaker(Long speakerId) {

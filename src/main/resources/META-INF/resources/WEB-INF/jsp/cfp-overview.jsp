@@ -41,30 +41,41 @@
 			<div class="col-md-8 col-md-offset-2">
 
 				<p>
-					In order to sumbmit session proposals, you must login using
+					In order to submit session proposals, you must login using
 					your Google credentials. Once logged in, you will be able
 					to create speakers (e.g. yourself) and one or more session
 					abstracts.
 				</p>
 
-				<a href="${ctx}/s/cfp/index" class="btn  btn-info  btn-block">Login</a>
+<%-- 				<form class="form-horizontal" role="form" action="<c:url value="/auth/google" />" method="POST">
+					<div class="form-group">
+						<div class="col-md-12">
+							<button type="submit" class="btn  btn-primary  btn-block">Sign in with Google</button>
+							<input type="hidden" name="scope"
+								value="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"/>
+						</div>
+					</div>
+				</form> --%>
 
-				<h2>When will the CFP close?</h2>
-				<p>The CFP will close on <strong>15th November 2015</strong>.</p>
-				<h2>When will I get notified whether I got accepted or not?</h2>
-				<p>We will notify you by <strong>December 1, 2015</strong>.</p>
-				<h2>When will the schedule be ready?</h2>
-				<p>A draft schedule will be ready on <strong>December 1, 2015</strong>.</p>
-				<h2>When is the Workshop day?</h2>
-				<p>The workshop day is on <strong>February 15</strong>. We will have 5 rooms available,
+				<p>The CFP will open <strong>August 15, 2016</strong>.</p>
+
+				<h2 style="margin-top: 2em;" class="text-center">FAQ</h2>
+				<h4>When will the CFP close?</h4>
+				<p>The CFP will close on <strong>November 1, 2016</strong>.</p>
+				<h4>When will I get notified whether I got accepted or not?</h4>
+				<p>We will notify you by <strong>November 15, 2016</strong>.</p>
+				<h4>When will the schedule be ready?</h4>
+				<p>A draft schedule will be ready on <strong>November 15, 2016</strong>.</p>
+				<h4>When is the Workshop day?</h4>
+				<p>The workshop day is on <strong>February 20, 2017</strong>. We will have 5 rooms available,
 				each accommodating 25-35 attendees.</p>
-				<h2>How long are the sessions for the main conference?</h2>
+				<h4>How long are the sessions for the main conference?</h4>
 				<p>
-					The main conference days are <strong>February 16 &amp; 17</strong>. Breakout sessions
+					The main conference days are <strong>February 21 &amp; 22, 2017</strong>. Breakout sessions
 					(normal sessions) are <strong>75 minutes</strong> each. Keynotes
 					are <strong>60 minutes</strong>.
 				</p>
-				<h2>Do we cover travel expenses?</h2>
+				<h4>Do we cover travel expenses?</h4>
 				<p>
 					We make that determination on a case-by-case basis. For speakers
 					that are not affiliated with large organizations, we often do.
@@ -74,7 +85,7 @@
 					As we grow, we started to loosen the restrictions a bit but
 					we rather still do the determination on a case by case basis.
 				﻿</p>
-				<h2>I have more questions...</h2>
+				<h4>I have more questions...</h4>
 				<p>
 					Please don't hesitate and contact us with any other questions
 					you may have at:</p>

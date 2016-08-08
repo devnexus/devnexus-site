@@ -28,5 +28,6 @@ public interface CfpSubmissionRepositoryCustom {
 
 	List<CfpSubmission> getCfpSubmissions(Long eventId);
 	List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId);
+	CfpSubmission getSingleCfpSubmissionForUserAndEvent(Long cfpSubmissionId, Long userId, Long eventId);
 
 }

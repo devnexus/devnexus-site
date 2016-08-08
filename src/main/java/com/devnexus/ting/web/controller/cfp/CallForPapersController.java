@@ -464,15 +464,40 @@ public class CallForPapersController {
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/cfp/index";
 		}
+
+		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+		final Event event = businessService.getCurrentEvent();
 		if (request.getParameter("delete") != null) {
-			//businessService.deleteCfpSubmissionS(cfpSubmission.getId());
+
+			final List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissionsForUserAndEvent(user.getId(), event.getId());
+
+			boolean canDelete = false;
+
+			for (CfpSubmission cfpSubmission : cfpSubmissions) {
+				for (CfpSubmissionSpeaker speaker : cfpSubmission.getCfpSubmissionSpeakers()) {
+					if (speaker.getId().equals(cfpSubmissionSpeakerId)) {
+						canDelete = false;
+						break;
+					}
+				}
+			}
+
+			if (canDelete) {
+				businessService.deleteCfpSubmissionSpeakerForUser(cfpSubmissionSpeakerId, event.getId(), user.getId());
+			}
+			else {
+				bindingResult.addError(new ObjectError("cfpSubmissionSpeaker", "Cannot delete speaker. The speaker is still associated with an abstract."));
+				prepareReferenceData(model);
+				return "/cfp/edit-cfp-speaker";
+			}
 			redirectAttributes.addFlashAttribute("successMessage",
 					String.format("The speaker '%s' was deleted successfully.", cfpSubmissionSpeaker.getFirstLastName()));
 			return "redirect:/s/cfp/index";
 		}
 
 		if (bindingResult.hasErrors()) {
-			return "/edit-speaker";
+			prepareReferenceData(model);
+			return "/cfp/edit-cfp-speaker";
 		}
 
 
@@ -484,11 +509,8 @@ public class CallForPapersController {
 			prepareReferenceData(model);
 			return "/cfp/speaker";
 		}
-
-		//FIXME - query for user
+//FIXME
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerFromDb = businessService.getCfpSubmissionSpeakerWithPicture(cfpSubmissionSpeakerId);
-		final Event event = businessService.getCurrentEvent();
-		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
 
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerToSave = new CfpSubmissionSpeaker();
 
@@ -531,9 +553,11 @@ public class CallForPapersController {
 		}
 
 		final CfpSubmission cfpSubmissionFromDb = businessService.getCfpSubmission(cfpId);
+		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+		final Event event = businessService.getCurrentEvent();
 
 		if (request.getParameter("delete") != null) {
-			businessService.deleteCfpSubmission(cfpSubmissionFromDb.getId());
+			businessService.deleteCfpSubmissionForUser(cfpSubmissionFromDb.getId(), user.getId(), event.getId());
 			return "redirect:/s/cfp/index";
 		}
 
@@ -550,8 +574,7 @@ public class CallForPapersController {
 		cfpSubmissionFromDb.setTitle(cfpSubmission.getTitle());
 		cfpSubmissionFromDb.setTopic(cfpSubmission.getTopic());
 
-		final Event event = businessService.getCurrentEvent();
-		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+
 		final List<CfpSubmissionSpeaker> cfpSubmissionSpeakersFromDb = businessService.getCfpSubmissionSpeakersForUserAndEvent(user, event);
 
 		cfpSubmissionFromDb.getCfpSubmissionSpeakers().clear();

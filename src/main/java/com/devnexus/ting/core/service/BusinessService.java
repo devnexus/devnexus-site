@@ -324,4 +324,8 @@ public interface BusinessService {
 		CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker);
 
 		List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
+
+		void deleteCfpSubmissionSpeakerForUser(Long cfpSubmissionSpeakerId, Long userId, Long eventId);
+
+		void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long eventId, Long userId);
 }

@@ -65,4 +65,22 @@ public class CfpSubmissionRepositoryImpl implements CfpSubmissionRepositoryCusto
 		return cfpSubmissions;
 	}
 
+	@Override
+	public CfpSubmission getSingleCfpSubmissionForUserAndEvent(Long cfpSubmissionId, Long userId, Long eventId) {
+		final CfpSubmission cfpSubmission = this.entityManager
+				.createQuery("select distinct cfp from CfpSubmission cfp "
+						+ "    join cfp.event e "
+						+ "    join cfp.createdByUser u "
+						+ "    join fetch cfp.cfpSubmissionSpeakers s "
+						+ "where e.id = :eventId "
+						+ "and u.id = :userId "
+						+ "and cfp.id = :cfpSubissionId "
+						+ "order by s.lastName ASC", CfpSubmission.class)
+			.setParameter("userId", userId)
+			.setParameter("eventId", eventId)
+			.setParameter("cfpSubissionId", cfpSubmissionId)
+			.getSingleResult();
+
+		return cfpSubmission;
+	}
 }

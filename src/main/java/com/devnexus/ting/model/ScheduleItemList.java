@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ScheduleItemList implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private Event event;
+
 	private Integer numberOfSessions;
 	private Integer numberOfKeynoteSessions;
 	private Integer numberOfBreakoutSessions;
@@ -196,6 +198,39 @@ public class ScheduleItemList implements Serializable {
 
 	public boolean isBreakoutItem(ScheduleItem item) {
 		return ScheduleItemType.SESSION.equals(item.getScheduleItemType());
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+	public ConferenceDay findConferenceDayForDate(Date date, int index) {
+		ConferenceDay conferenceDayToReturn = null;
+		for (ConferenceDay conferenceDay : event.getConferenceDays()) {
+			if (date.equals(conferenceDay.getDay())) {
+				conferenceDayToReturn = conferenceDay;
+			}
+		}
+
+		if (conferenceDayToReturn == null) {
+
+			conferenceDayToReturn = new ConferenceDay();
+			conferenceDayToReturn.setDay(date);
+
+			if(index == 0) {
+				conferenceDayToReturn.setDescription("<a href=\"workshop-instructions\">Workshop Instructions (DevNexus 2016)</a>");
+				conferenceDayToReturn.setName("Workshop Day");
+			}
+			else {
+				conferenceDayToReturn.setName("Conference Day " + index);
+			}
+		}
+
+		return conferenceDayToReturn;
 	}
 
 	public List<ScheduleItem> findRegistrationItemsOnDate(Date search) {

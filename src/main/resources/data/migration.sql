@@ -84,3 +84,26 @@ cfp_submission_speakers: created_by_user --> created_by_user_id
 cfp_submissions: created_by_user --> created_by_user_id
 
 ALTER TABLE public.cfp_submission_speakers DROP COLUMN cfp_submission;
+
+-- Aug 5 2016
+
+CREATE TABLE public.conference_days
+(
+  id bigint NOT NULL,
+  created_date timestamp without time zone NOT NULL,
+  updated_date timestamp without time zone,
+  day date NOT NULL,
+  version integer NOT NULL,
+  name character varying(255) NOT NULL,
+  event_id bigint NOT NULL,
+  description character varying(10000),
+  CONSTRAINT conference_days_pkey PRIMARY KEY (id),
+  CONSTRAINT conference_days_events_id_fk FOREIGN KEY (event_id)
+      REFERENCES public.events (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.conference_days
+  OWNER TO devnexus;

@@ -69,17 +69,12 @@
 
 	<c:forEach items="${scheduleItemList.days}" var="date" varStatus="dateStatus">
 
-			<!-- Example row of columns -->
-			<c:choose>
-				<c:when test="${dateStatus.index eq 0}">
-					<h1 class="text-center">Workshop Day</h1>
-					<p class="text-center"><a href="${ctx}/s/workshop-instructions">Workshop Instructions (DevNexus 2016)</a></p>
-				</c:when>
-				<c:otherwise>
-					<h1 class="text-center">Conference Day ${dateStatus.index}</h1>
-				</c:otherwise>
-			</c:choose>
+			<c:set var="conferenceDay" value="${scheduleItemList.findConferenceDayForDate(date, dateStatus.index)}"></c:set>
 
+			<h1 class="text-center">${conferenceDay.name}</h1>
+			<c:if test="${not empty conferenceDay}">
+				<p class="text-center">${conferenceDay.description}</p>
+			</c:if>
 			<h4 class="text-center"><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${date}"/></h4>
 			<div class="header-item-container">
 				<div class="row row-centered">

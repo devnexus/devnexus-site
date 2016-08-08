@@ -50,6 +50,7 @@ public class ScheduleController {
 
 		if (event != null) {
 			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+			scheduleItemList.setEvent(event);
 			model.addAttribute("scheduleItemList", scheduleItemList);
 		}
 		else {

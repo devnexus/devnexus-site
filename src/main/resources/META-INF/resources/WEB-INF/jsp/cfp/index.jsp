@@ -134,3 +134,5 @@
 	</sec:authorize>
 	</div>
 </div>
+
+<%@ include file="/WEB-INF/jsp/cfp/cfp-include-modal.jsp"%>

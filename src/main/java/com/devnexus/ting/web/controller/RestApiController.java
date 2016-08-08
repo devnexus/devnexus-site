@@ -100,6 +100,12 @@ public class RestApiController {
         }
     }
 
+    @RequestMapping(path = "/events", method = RequestMethod.GET)
+    public List<Event> events() {
+        final List<Event> events = businessService.getAllEventsOrderedByName();
+        return events;
+    }
+
     @RequestMapping(path = "/{eventKey}/schedule", method = RequestMethod.GET)
     public ScheduleItemList schedule(@PathVariable("eventKey") String eventKey) {
 

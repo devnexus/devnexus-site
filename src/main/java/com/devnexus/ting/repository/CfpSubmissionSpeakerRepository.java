@@ -15,11 +15,7 @@
  */
 package com.devnexus.ting.repository;
 
-import java.util.List;
-
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
-import com.devnexus.ting.model.Event;
-import com.devnexus.ting.model.User;
 
 /**
  *

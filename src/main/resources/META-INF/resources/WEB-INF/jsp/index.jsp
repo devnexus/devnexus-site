@@ -118,7 +118,7 @@
 				<div class="row centered">
                                     <div class="col-md-8 col-md-offset-2"style="margin-bottom: 1em;">
 					<!-- Begin MailChimp Signup Form -->
-                                        
+
                                         <style type="text/css">
                                                 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
                                                 /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -129,7 +129,7 @@
                                             <div id="mc_embed_signup_scroll">
                                                 <h2>Join our mailing list to stay up to date!</h2>
                                         <div class="mc-field-group">
-                                                
+
                                                 <input type="email" placeholder="E-Mail Address" style="width:100%" value="" name="EMAIL" class="required email input-control" id="mce-EMAIL">
                                         </div>
                                                 <div id="mce-responses" class="clear">
@@ -138,7 +138,7 @@
                                                 </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0b3b17489713c9e7c62595dd3_a1fba8f26f" tabindex="-1" value=""></div>
                                                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class=" btn btn-primary btn-block">
-                                            
+
                                             </div>
                                         </form>
                                         </div>
@@ -148,36 +148,7 @@
 				</div>
 				<div class="row centered">
 					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-                                            <a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" class="btn  btn-info  btn-block"><h2>Sponsor DevNexus!</h2></a>
-					</div>
-				</div> --%>
-				<div class="row centered">
-					<div class="col-md-4 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${ctx}/s/workshop-instructions" class="btn btn-primary btn-block">Workshop Instructions</a>
-					</div>
-					<div class="col-md-4 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${ctx}/s/map" class="btn btn-primary btn-block">Floor Plans</a>
-					</div>
-					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${ctx}/s/schedule" class="btn btn-primary btn-block">Schedule</a>
-					</div>
-					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${ctx}/s/evaluations/add" class="btn btn-primary btn-block">Evaluations</a>
-					</div>
-				</div>
-				<div class="row centered">
-					<div class="col-md-4 col-md-offset-4 col-xs-12 text-center" style="margin-bottom: 1em;">
-						<strong>WIFI Info</strong>
-						<table class="table table-bordered">
-							<tr>
-								<td>Network Name</td>
-								<td>devnexus</td>
-							</tr>
-							<tr>
-								<td>Password</td>
-								<td>awesome16</td>
-							</tr>
-						</table>
+						<a href="${ctx}/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div>
 				<div class="row" style="margin-bottom: 20px;">

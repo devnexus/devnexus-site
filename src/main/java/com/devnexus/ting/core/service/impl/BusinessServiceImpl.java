@@ -112,910 +112,922 @@ import com.devnexus.ting.web.controller.UserNotLoggedInException;
 @Service("businessService")
 public class BusinessServiceImpl implements BusinessService {
 
-    /**
-     * Initialize Logging.
-     */
-    private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
-
-    @Autowired
-    private CfpSubmissionRepository cfpSubmissionRepository;
-    @Autowired
-    private CfpSubmissionSpeakerRepository cfpSubmissionSpeakerRepository;
-    @Autowired
-    private EvaluationRepository evaluationDao;
-    @Autowired
-    private EventRepository eventDao;
-    @Autowired
-    private RegistrationRepository registrationDao;
-    @Autowired
-    private PayPalRepository payPalDao;
-    @Autowired
-    private EventSignupRepository eventSignupDao;
-    @Autowired
-    private TicketGroupRepository ticketGroupDao;
-    @Autowired
-    private OrganizerRepository organizerDao;
-    @Autowired
-    private PresentationRepository presentationDao;
-    @Autowired
-    private PresentationTagRepository presentationTagDao;
-    @Autowired
-    private RoomRepository roomDao;
-    @Autowired
-    private ScheduleItemRepository scheduleItemDao;
-    @Autowired
-    private SpeakerRepository speakerDao;
-    @Autowired
-    private SponsorRepository sponsorDao;
-    @Autowired
-    private TrackRepository trackDao;
-    @Autowired
-    private UserCalendarRepository userCalendarDao;
-    @Autowired
-    private ApplicationCacheRepository applicationCacheDao;
-
-    @Autowired
-    private MessageChannel mailChannel;
-
-    @Autowired
-    private MessageChannel registrationMailChannel;
-
-    private final TransactionTemplate transactionTemplate;
-
-    @Autowired
-    private MailSettings mailSettings;
-
-    @Autowired
-    public BusinessServiceImpl(PlatformTransactionManager transactionManager) {
-        super();
-        Assert.notNull(transactionManager, "The 'transactionManager' argument must not be null.");
-        this.transactionTemplate = new TransactionTemplate(transactionManager);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    @CacheEvict(value = {"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries = true)
-    public void deleteEvent(Event event) {
-        Assert.notNull(event, "The provided event must not be null.");
-        Assert.notNull(event.getId(), "Id must not be Null for event " + event);
-
-        LOGGER.debug("Deleting Event {}", event);
-        eventDao.delete(event);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void deleteOrganizer(Organizer organizerFromDb) {
-
-        Assert.notNull(organizerFromDb, "The provided organizer must not be null.");
-        Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
-
-        LOGGER.debug("Deleting Organizer {}", organizerFromDb);
-        organizerDao.delete(organizerFromDb);
-    }
-
-    @CacheEvict(value = "sponsors", allEntries = true)
-    @Override
-    @Transactional
-    public void deleteSponsor(Sponsor sponsorFromDb) {
-        Assert.notNull(sponsorFromDb, "The provided sponsor must not be null.");
-        Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
-
-        LOGGER.debug("Deleting Sponsor {}", sponsorFromDb);
-        sponsorDao.delete(sponsorFromDb);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void deletePresentation(Presentation presentation) {
-
-        Assert.notNull(presentation, "The provided presentation must not be null.");
-        Assert.notNull(presentation.getId(), "Id must not be Null for presentation " + presentation);
-
-        LOGGER.debug("Deleting Presentation {}", presentation);
-
-        presentationDao.delete(presentation);
-
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void deleteSpeaker(Speaker speaker) {
-
-        Assert.notNull(speaker, "The provided speaker must not be null.");
-        Assert.notNull(speaker.getId(), "Id must not be Null for speaker " + speaker);
-
-        LOGGER.debug("Deleting Speaker {}", speaker);
-
-        speakerDao.delete(speaker);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Event> getAllEventsOrderedByName() {
-        return eventDao.getAllEventsOrderedByName();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Cacheable("getAllNonCurrentEvents")
-    public List<Event> getAllNonCurrentEvents() {
-        return eventDao.getAllNonCurrentEvents();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Organizer> getAllOrganizers() {
-        return organizerDao.getAllOrganizers();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Presentation> getAllPresentations() {
-        return presentationDao.findAll();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Speaker> getAllSpeakersOrderedByName() {
-        return speakerDao.getAllSpeakersOrderedByName();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Event getEvent(Long id) {
-        return eventDao.findOne(id);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Event getEventByEventKey(String eventKey) {
-        return eventDao.getByEventKey(eventKey);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Organizer getOrganizer(final Long organizerId) {
-        return organizerDao.getOne(organizerId);
-    }
-
-    @Override
-    public Sponsor getSponsor(Long sponsorId) {
-        return sponsorDao.getOne(sponsorId);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public Organizer getOrganizerWithPicture(Long organizerId) {
-        return organizerDao.getOrganizerWithPicture(organizerId);
-    }
-
-    @Override
-    public Sponsor getSponsorWithPicture(final Long sponsorId) {
-
-        final Sponsor sponsor = transactionTemplate.execute(new TransactionCallback<Sponsor>() {
-            public Sponsor doInTransaction(TransactionStatus status) {
-                return sponsorDao.getSponsorWithPicture(sponsorId);
-            }
-        });
-
-        return sponsor;
-    }
-
-    @Override
-    @Transactional
-    public List<Organizer> getAllOrganizersWithPicture() {
-        return organizerDao.getOrganizersWithPicture();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional(readOnly = false)
-    public Presentation getPresentation(Long id) {
-        return presentationDao.getOne(id);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Presentation> getPresentationsForCurrentEvent() {
-        List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
-        Collections.sort(list);
-        return list;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Presentation> getPresentationsForEventOrderedByName(Long eventId) {
-        List<Presentation> list = presentationDao.getPresentationsForEventOrderedByName(eventId);
-        return list;
-    }
-
-    @Override
-    public List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId) {
-        List<Presentation> list = presentationDao.getPresentationsForEventOrderedByTrack(eventId);
-        return list;
-    }
-
-    @Override
-    public List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId) {
-        List<Presentation> list = presentationDao.getPresentationsForEventOrderedByRoom(eventId);
-        return list;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Speaker getSpeaker(Long speakerId) {
-        return speakerDao.getOne(speakerId);
-    }
-
-    @Override
-    @Transactional
-    public Speaker getSpeakerWithPicture(Long speakerId) {
-        return speakerDao.getSpeakerWithPicture(speakerId);
-    }
-
-    @Override
-    @Transactional
-    public Speaker getSpeakerFilteredForEvent(Long speakerId, Event event) {
-        return speakerDao.getSpeakerFilteredForEvent(speakerId, event);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional(readOnly = false)
-    public byte[] getSpeakerImage(Long speakerId) {
-
-        Assert.notNull(speakerId, "SpeakerId must not be null.");
-
-        final Speaker speaker = getSpeaker(speakerId);
-
-        final byte[] speakerPicture;
-
-        if (speaker == null || speaker.getPicture() == null) {
-            speakerPicture = SystemInformationUtils.getSpeakerImage(null);
-        } else {
-            speakerPicture = speaker.getPicture().getFileData();
-        }
-
-        return speakerPicture;
-
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Speaker> getSpeakersForCurrentEvent() {
-
-        final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
-            public List<Speaker> doInTransaction(TransactionStatus status) {
-                return speakerDao.getSpeakersForCurrentEvent();
-            }
-        });
-
-        return speakers;
-
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Cacheable("getSpeakersForEvent")
-    public List<Speaker> getSpeakersForEvent(Long eventId) {
-
-        final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
-            public List<Speaker> doInTransaction(TransactionStatus status) {
-                return speakerDao.getSpeakersForEvent(eventId);
-            }
-        });
-
-        return speakers;
-
-    }
-
-    @Override
-    public List<Room> getRoomsForEvent(Long eventId) {
-        return roomDao.getRoomsForEvent(eventId);
-    }
-
-    @Override
-    public List<Track> getTracksForEvent(Long eventId) {
-        return trackDao.getTracksForEvent(eventId);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    @CacheEvict(value = {"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries = true)
-    public void saveEvent(Event event) {
-        eventDao.save(event);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public Organizer saveOrganizer(Organizer organizer) {
-        return organizerDao.save(organizer);
-    }
-
-    @Override
-    @Transactional
-    @CacheEvict(value = "sponsors", allEntries = true)
-    public Sponsor saveSponsor(Sponsor sponsor) {
-        return sponsorDao.save(sponsor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public Presentation savePresentation(Presentation presentation) {
-        return presentationDao.save(presentation);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    @CacheEvict(value = "getSpeakersForEvent", allEntries = true)
-    public Speaker saveSpeaker(Speaker speaker) {
-        return speakerDao.save(speaker);
-    }
-
-    @Override
-    @Transactional
-    @CacheEvict(value = "getSpeakersForEvent", allEntries = true)
-    public Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker) {
-        final Speaker savedSpeaker = speakerDao.save(speaker);
-        final Event currentEvent = this.getCurrentEvent();
-
-        if (!currentEvent.hasSpeaker(savedSpeaker.getId())) {
-            LOGGER.info(String.format("Adding speaker '%s' to event '%s'",
-                    speaker.getFirstLastName(),
-                    currentEvent.getId()));
-            currentEvent.getSpeakers().add(savedSpeaker);
-            this.saveEvent(currentEvent);
-        }
-        return savedSpeaker;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public ApplicationCache updateApplicationCacheManifest() {
-
-        final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
-
-        if (applicationCacheList.isEmpty()) {
-            ApplicationCache applicationCache = new ApplicationCache();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
-            return savedApplicationCache;
-        } else if (applicationCacheList.size() > 1) {
-            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
-        } else {
-            ApplicationCache applicationCache = applicationCacheList.iterator().next();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            return applicationCacheDao.save(applicationCache);
-        }
-
-    }
-
-    @Override
-    @Transactional
-    public ApplicationCache getApplicationCacheManifest() {
-        final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
-
-        if (applicationCacheList.isEmpty()) {
-            ApplicationCache applicationCache = new ApplicationCache();
-            applicationCache.setUpdatedDate(new Date());
-            applicationCache.setUuid(UUID.randomUUID().toString());
-            ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
-            return savedApplicationCache;
-        } else if (applicationCacheList.size() > 1) {
-            throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
-        } else {
-            return applicationCacheList.iterator().next();
-        }
-    }
-
-    @Override
-    public FileData getPresentationFileData(final Long presentationId) {
-
-        final Presentation presentation = transactionTemplate.execute(new TransactionCallback<Presentation>() {
-            public Presentation doInTransaction(TransactionStatus status) {
-                return presentationDao.getOneWithSlide(presentationId);
-            }
-        });
-
-        if (presentation == null) {
-            return null;
-        }
-
-        FileData fileData = presentation.getPresentationFile();
-        return fileData;
-    }
-
-    @Override
-    //FIXME
-    //@Cacheable("getCurrentEvent")
-    @Transactional(readOnly = true)
-    public Event getCurrentEvent() {
-        final Event currentEvent = eventDao.getCurrentEvent();
-    	if (currentEvent == null) {
-    		throw new IllegalStateException("No current event found.");
-    	}
-        return currentEvent;
-    }
-
-    @Override
-    public Room getRoom(Long id) {
-        return roomDao.getOne(id);
-    }
-
-    @Override
-    public ScheduleItemList getScheduleForEvent(Long eventId) {
-
-        final List<ScheduleItem> scheduleItems = scheduleItemDao.getScheduleForEvent(eventId);
-
-        final ScheduleItemList scheduleItemList = new ScheduleItemList();
-        scheduleItemList.setScheduleItems(scheduleItems);
-
-        ScheduleItem currentScheduleItem = null;
-
-        String hourOfDay = null;
-
-        final SortedSet<Date> days = new TreeSet<Date>();
-
-        int numberOfSessions = 0;
-        int numberOfKeynoteSessions = 0;
-        int numberOfBreakoutSessions = 0;
-        int numberOfUnassignedSessions = 0;
-
-        int numberOfBreaks = 0;
-
-        Set<Long> speakerIds = new HashSet<Long>();
-        Set<Long> roomIds = new HashSet<Long>();
-
-        for (ScheduleItem scheduleItem : scheduleItems) {
-
-            roomIds.add(scheduleItem.getRoom().getId());
-
-            final Date fromTime = scheduleItem.getFromTime();
-            final Date dayOfConference = CalendarUtils.getCalendarWithoutTime(fromTime).getTime();
-            days.add(dayOfConference);
-
-            if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
-                    || ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
-
-                numberOfSessions++;
-
-                if (scheduleItem.getPresentation() != null) {
-                    for (Speaker speaker : scheduleItem.getPresentation().getSpeakers()) {
-                        speakerIds.add(speaker.getId());
-                    }
-                } else {
-                    numberOfUnassignedSessions++;
-                }
-
-                if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())) {
-                    numberOfKeynoteSessions++;
-
-                }
-
-                if (ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
-                    numberOfBreakoutSessions++;
-                }
-
-            }
-
-            if (ScheduleItemType.BREAK.equals(scheduleItem.getScheduleItemType())) {
-                numberOfBreaks++;
-            }
-
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(fromTime);
-
-            String loopHour = cal.get(Calendar.HOUR_OF_DAY) + "_" + cal.get(Calendar.MINUTE);
-
-            if (hourOfDay == null || !hourOfDay.equals(loopHour)) {
-                currentScheduleItem = scheduleItem;
-                hourOfDay = loopHour;
-            } else {
-                currentScheduleItem.setRowspan(currentScheduleItem.getRowspan() + 1);
-            }
-
-        }
-
-        scheduleItemList.setDays(days);
-        scheduleItemList.setNumberOfBreakoutSessions(numberOfBreakoutSessions);
-        scheduleItemList.setNumberOfBreaks(numberOfBreaks);
-        scheduleItemList.setNumberOfSessions(numberOfSessions);
-        scheduleItemList.setNumberOfKeynoteSessions(numberOfKeynoteSessions);
-        scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
-        scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
-        scheduleItemList.setNumberOfRooms(roomIds.size());
-        return scheduleItemList;
-    }
-
-    @Override
-    @Transactional
-    public Evaluation saveEvaluation(Evaluation evaluation) {
-        return evaluationDao.save(evaluation);
-    }
-
-    @Override
-    public List<Evaluation> getEvaluationsForCurrentEvent() {
-        return evaluationDao.getEvaluationsForCurrentEvent();
-    }
-
-    @Override
-    public List<Evaluation> getEvaluationsForEvent(Long eventId) {
-        return evaluationDao.getEvaluationsForEvent(eventId);
-    }
-
-    @Override
-    public void removeEvaluation(Long evaluationId) {
-        evaluationDao.delete(evaluationId);
-    }
-
-    @Override
-    public List<CfpSubmission> getCfpSubmissions(Long eventId) {
-        return cfpSubmissionRepository.getCfpSubmissions(eventId);
-    }
-
-    @Override
-    public List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId) {
-        return cfpSubmissionRepository.getCfpSubmissionsForUserAndEvent(userId, eventId);
-    }
-
-    @Override
-    @Transactional
-    public CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission) {
-        return cfpSubmissionRepository.save(cfpSubmission);
-    }
-
-    @Override
-    @Transactional
-    public CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker) {
-        return cfpSubmissionSpeakerRepository.save(cfpSubmissionSpeaker);
-    }
-
-    @Override
-    public CfpSubmission saveAndNotifyCfpSubmission(final CfpSubmission cfpSubmission) {
-        final BusinessService businessService = this;
-        final CfpSubmission savedCfpSubmission = transactionTemplate.execute(new TransactionCallback<CfpSubmission>() {
-            public CfpSubmission doInTransaction(TransactionStatus status) {
-                return businessService.saveCfpSubmission(cfpSubmission);
-            }
-        });
-
-        if (mailSettings.isEmailEnabled()) {
-            mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
-        }
-
-        return savedCfpSubmission;
-    }
-
-    @Override
-    public CfpSubmission getCfpSubmission(Long cfpId) {
-        return this.cfpSubmissionRepository.getOne(cfpId);
-    }
-
-    @Override
-    public Track getTrack(Long id) {
-        return trackDao.getOne(id);
-    }
-
-    @Override
-    public PresentationTag getPresentationTag(String tagName) {
-        return presentationTagDao.getPresentationTag(tagName);
-    }
-
-    @Override
-    public PresentationTag savePresentationTag(PresentationTag presentationTag) {
-        return presentationTagDao.save(presentationTag);
-    }
-
-    @Override
-    public Map<PresentationTag, Long> getTagCloud(Long eventId) {
-        return presentationTagDao.getPresentationTagCountForEvent(eventId);
-    }
-
-    @Override
-    public List<Presentation> findPresentations(
-            PresentationSearchQuery presentationSearchQuery) {
-        return presentationDao.findPresentations(presentationSearchQuery);
-    }
-
-    @Transactional
-    @Override
-    public void deleteCfpSubmission(Long id) {
-        cfpSubmissionRepository.delete(id);
-    }
-
-    @Transactional
-    @Override
-    public Set<PresentationTag> processPresentationTags(String tagsAsText) {
-
-        final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
-
-        if (!tagsAsText.trim().isEmpty()) {
-            Set<String> tags = StringUtils.commaDelimitedListToSet(tagsAsText);
-
-            for (String tag : tags) {
-                if (tag != null) {
-
-                    final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
-                    PresentationTag tagFromDb = this.getPresentationTag(massagedTagName);
-
-                    if (tagFromDb == null) {
-                        PresentationTag presentationTag = new PresentationTag();
-                        presentationTag.setName(massagedTagName);
-                        tagFromDb = this.savePresentationTag(presentationTag);
-                    }
-
-                    presentationTagsToSave.add(tagFromDb);
-                }
-            }
-        }
-
-        return presentationTagsToSave;
-    }
-
-    @Override
-    public List<Sponsor> getSponsorsForEvent(Long id) {
-        return sponsorDao.getSponsorsForEvent(id);
-    }
-
-    @Cacheable("sponsors")
-    @Override
-    public SponsorList getSponsorListForEvent(Long id, boolean large) {
-
-        final List<Sponsor> sponsors = this.getSponsorsForEvent(id);
-
-        final SponsorList sponsorList = new SponsorList();
-
-        for (Sponsor sponsor : sponsors) {
-
-            FileData imageData = this.getSponsorWithPicture(sponsor.getId()).getLogo();
-
-            final int size;
-
-            if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 180;
-            } else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 140;
-            } else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 110;
-            } else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 110;
-            } else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 110;
-            } else if (SponsorLevel.DEV_LOUNGE.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 180;
-            } else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 110;
-            } else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
-                size = large ? 360 : 180;
-            } else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
-                size = large ? 920 : 460;
-            } else {
-                throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
-            }
-
-            if (imageData != null) {
-                ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
-                BufferedImage image;
-                try {
-                    image = ImageIO.read(bais);
-                    final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
-                    final ByteArrayOutputStream out = new ByteArrayOutputStream();
-                    ImageIO.write(scaled, "PNG", out);
-
-                    byte[] bytes = out.toByteArray();
-
-                    final String base64bytes = Base64.encodeBase64String(bytes);
-                    final String src = "data:image/png;base64," + base64bytes;
-                    sponsorList.addSponsor(sponsor, src);
-                } catch (IOException e) {
-                    LOGGER.error("Error while processing logo for sponsor " + sponsor.getName(), e);
-                }
-            }
-        }
-
-        return sponsorList;
-    }
-
-    @Override
-    public EventSignup getEventSignup() {
-        return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
-    }
-
-    @Override
-    public TicketGroup getTicketGroup(Long ticketGroup) {
-        return ticketGroupDao.findOne(ticketGroup);
-    }
-
-    @Override
-    public RegistrationDetails getRegistrationForm(String registrationKey) {
-        return registrationDao.findByKey(registrationKey);
-    }
-
-    @Override
-    @Transactional
-    public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
-        return registrationDao.createRegistrationPendingPayment(registerForm);
-    }
-
-    @Override
-    @Transactional
-    public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
-        registrationDao.saveAndFlush(registerForm);
-        payPalDao.saveAndFlush(payment);
-        if (mailSettings.isEmailEnabled()) {
-            registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
-        }
-    }
-
-    @Override
-    public void resendRegistrationEmail(RegistrationDetails registerForm) {
-        if (mailSettings.isEmailEnabled()) {
-            registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
-        }
-    }
-
-    @Override
-    public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
-        Dashboard dashboard = new Dashboard();
-
-        List<RegistrationDetails> orders = registrationDao.findPurchasedForEvent(signUp.getEvent());
-        orders.sort((order1, order2) -> {
-            return order1.getCreatedDate().compareTo(order2.getCreatedDate());
-        });
-
-        orders.stream().forEach((order) -> {
-            dashboard.addOrder(order);
-        });
-
-        orders = registrationDao.findIncompletePaypalOrdersForEvent(signUp.getEvent());
-        orders.sort((order1, order2) -> {
-            return order1.getCreatedDate().compareTo(order2.getCreatedDate());
-        });
-
-        orders.stream().forEach((order) -> {
-            dashboard.addInCompletePaypalOrders(order);
-        });
-
-        orders = registrationDao.findOrdersRequestingInvoiceForEvent(signUp.getEvent());
-        orders.sort((order1, order2) -> {
-            return order1.getCreatedDate().compareTo(order2.getCreatedDate());
-        });
-
-        orders.stream().forEach((order) -> {
-            dashboard.addOrdersRequestingInvoice(order);
-        });
-
-        Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
-        Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
-
-        for (RegistrationDetails order : dashboard.getOrders()) {
-            for (TicketOrderDetail ticketOrder : order.getOrderDetails()) {
-                Long ticketGroupId = ticketOrder.getTicketGroup();
-                ticketIdToGroup.computeIfAbsent(ticketGroupId, (id) -> {
-                    return getTicketGroup(id);
-                });
-                TicketGroup group = ticketIdToGroup.get(ticketGroupId);
-                int count = ticketGroupCount.getOrDefault(group, 0);
-                ticketGroupCount.put(group, count + 1);
-            }
-        }
-
-        for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {
-            dashboard.addSale(entry.getKey(), entry.getValue());
-        }
-
-        return dashboard;
-    }
-
-    @Override
-    public List findRegistrations(String email, String name, EventSignup signUp) {
-
-        List<List> results = new ArrayList<>();
-
-        if (name != null && !name.isEmpty()) {
-            String[] names = name.split(" ");
-            results.addAll(registrationDao.findOrdersWithContactName(names, signUp));
-        }
-        if (email != null && !email.isEmpty()) {
-            results.addAll(registrationDao.findOrdersWithContactEmail(email, signUp));
-        }
-
-        return new ArrayList<>(results);
-
-    }
-
-    @Override
-    @Transactional
-    public void updateRegistration(RegistrationDetails originalForm) {
-        registrationDao.saveAndFlush(originalForm);
-    }
-
-    @Override
-    public List<RegistrationDetails> findRegistrationsForEvent(Event eventKey) {
-        return registrationDao.findAllForEvent(eventKey);
-    }
-
-    @Override
-    public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event) {
-        return registrationDao.findPurchasedForEvent(event);
-    }
-
-    @Override
-    public CfpSubmissionSpeaker getCfpSubmissionSpeaker(Long speakerId) {
-        return cfpSubmissionSpeakerRepository.findOne(speakerId);
-    }
-
-    @Override
-    @Transactional
-    public CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId) {
-        CfpSubmissionSpeaker cfpSubmissionSpeaker = cfpSubmissionSpeakerRepository.getCfpSubmissionSpeakerWithPicture(speakerId);
-        return cfpSubmissionSpeaker;
-    }
-
-    /* (non-Javadoc)
+	/**
+	 * Initialize Logging.
+	 */
+	private static final Logger LOGGER = LoggerFactory.getLogger(BusinessServiceImpl.class);
+
+	@Autowired
+	private CfpSubmissionRepository cfpSubmissionRepository;
+	@Autowired
+	private CfpSubmissionSpeakerRepository cfpSubmissionSpeakerRepository;
+	@Autowired
+	private EvaluationRepository evaluationDao;
+	@Autowired
+	private EventRepository eventDao;
+	@Autowired
+	private RegistrationRepository registrationDao;
+	@Autowired
+	private PayPalRepository payPalDao;
+	@Autowired
+	private EventSignupRepository eventSignupDao;
+	@Autowired
+	private TicketGroupRepository ticketGroupDao;
+	@Autowired
+	private OrganizerRepository organizerDao;
+	@Autowired
+	private PresentationRepository presentationDao;
+	@Autowired
+	private PresentationTagRepository presentationTagDao;
+	@Autowired
+	private RoomRepository roomDao;
+	@Autowired
+	private ScheduleItemRepository scheduleItemDao;
+	@Autowired
+	private SpeakerRepository speakerDao;
+	@Autowired
+	private SponsorRepository sponsorDao;
+	@Autowired
+	private TrackRepository trackDao;
+	@Autowired
+	private UserCalendarRepository userCalendarDao;
+	@Autowired
+	private ApplicationCacheRepository applicationCacheDao;
+
+	@Autowired
+	private MessageChannel mailChannel;
+
+	@Autowired
+	private MessageChannel registrationMailChannel;
+
+	private final TransactionTemplate transactionTemplate;
+
+	@Autowired
+	private MailSettings mailSettings;
+
+	@Autowired
+	public BusinessServiceImpl(PlatformTransactionManager transactionManager) {
+		super();
+		Assert.notNull(transactionManager, "The 'transactionManager' argument must not be null.");
+		this.transactionTemplate = new TransactionTemplate(transactionManager);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	@CacheEvict(value = {"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries = true)
+	public void deleteEvent(Event event) {
+		Assert.notNull(event, "The provided event must not be null.");
+		Assert.notNull(event.getId(), "Id must not be Null for event " + event);
+
+		LOGGER.debug("Deleting Event {}", event);
+		eventDao.delete(event);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public void deleteOrganizer(Organizer organizerFromDb) {
+
+		Assert.notNull(organizerFromDb, "The provided organizer must not be null.");
+		Assert.notNull(organizerFromDb.getId(), "Id must not be Null for organizer " + organizerFromDb);
+
+		LOGGER.debug("Deleting Organizer {}", organizerFromDb);
+		organizerDao.delete(organizerFromDb);
+	}
+
+	@CacheEvict(value = "sponsors", allEntries = true)
+	@Override
+	@Transactional
+	public void deleteSponsor(Sponsor sponsorFromDb) {
+		Assert.notNull(sponsorFromDb, "The provided sponsor must not be null.");
+		Assert.notNull(sponsorFromDb.getId(), "Id must not be Null for sponsor " + sponsorFromDb);
+
+		LOGGER.debug("Deleting Sponsor {}", sponsorFromDb);
+		sponsorDao.delete(sponsorFromDb);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public void deletePresentation(Presentation presentation) {
+
+		Assert.notNull(presentation, "The provided presentation must not be null.");
+		Assert.notNull(presentation.getId(), "Id must not be Null for presentation " + presentation);
+
+		LOGGER.debug("Deleting Presentation {}", presentation);
+
+		presentationDao.delete(presentation);
+
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public void deleteSpeaker(Speaker speaker) {
+
+		Assert.notNull(speaker, "The provided speaker must not be null.");
+		Assert.notNull(speaker.getId(), "Id must not be Null for speaker " + speaker);
+
+		LOGGER.debug("Deleting Speaker {}", speaker);
+
+		speakerDao.delete(speaker);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Event> getAllEventsOrderedByName() {
+		return eventDao.getAllEventsOrderedByName();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Cacheable("getAllNonCurrentEvents")
+	public List<Event> getAllNonCurrentEvents() {
+		return eventDao.getAllNonCurrentEvents();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Organizer> getAllOrganizers() {
+		return organizerDao.getAllOrganizers();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Presentation> getAllPresentations() {
+		return presentationDao.findAll();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Speaker> getAllSpeakersOrderedByName() {
+		return speakerDao.getAllSpeakersOrderedByName();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Event getEvent(Long id) {
+		return eventDao.findOne(id);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Event getEventByEventKey(String eventKey) {
+		return eventDao.getByEventKey(eventKey);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Organizer getOrganizer(final Long organizerId) {
+		return organizerDao.getOne(organizerId);
+	}
+
+	@Override
+	public Sponsor getSponsor(Long sponsorId) {
+		return sponsorDao.getOne(sponsorId);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public Organizer getOrganizerWithPicture(Long organizerId) {
+		return organizerDao.getOrganizerWithPicture(organizerId);
+	}
+
+	@Override
+	public Sponsor getSponsorWithPicture(final Long sponsorId) {
+
+		final Sponsor sponsor = transactionTemplate.execute(new TransactionCallback<Sponsor>() {
+			public Sponsor doInTransaction(TransactionStatus status) {
+				return sponsorDao.getSponsorWithPicture(sponsorId);
+			}
+		});
+
+		return sponsor;
+	}
+
+	@Override
+	@Transactional
+	public List<Organizer> getAllOrganizersWithPicture() {
+		return organizerDao.getOrganizersWithPicture();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional(readOnly = false)
+	public Presentation getPresentation(Long id) {
+		return presentationDao.getOne(id);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Presentation> getPresentationsForCurrentEvent() {
+		List<Presentation> list = presentationDao.getPresentationsForCurrentEvent();
+		Collections.sort(list);
+		return list;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Presentation> getPresentationsForEventOrderedByName(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByName(eventId);
+		return list;
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForEventOrderedByTrack(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByTrack(eventId);
+		return list;
+	}
+
+	@Override
+	public List<Presentation> getPresentationsForEventOrderedByRoom(Long eventId) {
+		List<Presentation> list = presentationDao.getPresentationsForEventOrderedByRoom(eventId);
+		return list;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Speaker getSpeaker(Long speakerId) {
+		return speakerDao.getOne(speakerId);
+	}
+
+	@Override
+	@Transactional
+	public Speaker getSpeakerWithPicture(Long speakerId) {
+		return speakerDao.getSpeakerWithPicture(speakerId);
+	}
+
+	@Override
+	@Transactional
+	public Speaker getSpeakerFilteredForEvent(Long speakerId, Event event) {
+		return speakerDao.getSpeakerFilteredForEvent(speakerId, event);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional(readOnly = false)
+	public byte[] getSpeakerImage(Long speakerId) {
+
+		Assert.notNull(speakerId, "SpeakerId must not be null.");
+
+		final Speaker speaker = getSpeaker(speakerId);
+
+		final byte[] speakerPicture;
+
+		if (speaker == null || speaker.getPicture() == null) {
+			speakerPicture = SystemInformationUtils.getSpeakerImage(null);
+		} else {
+			speakerPicture = speaker.getPicture().getFileData();
+		}
+
+		return speakerPicture;
+
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List<Speaker> getSpeakersForCurrentEvent() {
+
+		final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
+			public List<Speaker> doInTransaction(TransactionStatus status) {
+				return speakerDao.getSpeakersForCurrentEvent();
+			}
+		});
+
+		return speakers;
+
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Cacheable("getSpeakersForEvent")
+	public List<Speaker> getSpeakersForEvent(Long eventId) {
+
+		final List<Speaker> speakers = transactionTemplate.execute(new TransactionCallback<List<Speaker>>() {
+			public List<Speaker> doInTransaction(TransactionStatus status) {
+				return speakerDao.getSpeakersForEvent(eventId);
+			}
+		});
+
+		return speakers;
+
+	}
+
+	@Override
+	public List<Room> getRoomsForEvent(Long eventId) {
+		return roomDao.getRoomsForEvent(eventId);
+	}
+
+	@Override
+	public List<Track> getTracksForEvent(Long eventId) {
+		return trackDao.getTracksForEvent(eventId);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	@CacheEvict(value = {"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries = true)
+	public void saveEvent(Event event) {
+		eventDao.save(event);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public Organizer saveOrganizer(Organizer organizer) {
+		return organizerDao.save(organizer);
+	}
+
+	@Override
+	@Transactional
+	@CacheEvict(value = "sponsors", allEntries = true)
+	public Sponsor saveSponsor(Sponsor sponsor) {
+		return sponsorDao.save(sponsor);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public Presentation savePresentation(Presentation presentation) {
+		return presentationDao.save(presentation);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	@CacheEvict(value = "getSpeakersForEvent", allEntries = true)
+	public Speaker saveSpeaker(Speaker speaker) {
+		return speakerDao.save(speaker);
+	}
+
+	@Override
+	@Transactional
+	@CacheEvict(value = "getSpeakersForEvent", allEntries = true)
+	public Speaker saveSpeakerAndAddToEventIfNecessary(Speaker speaker) {
+		final Speaker savedSpeaker = speakerDao.save(speaker);
+		final Event currentEvent = this.getCurrentEvent();
+
+		if (!currentEvent.hasSpeaker(savedSpeaker.getId())) {
+			LOGGER.info(String.format("Adding speaker '%s' to event '%s'",
+					speaker.getFirstLastName(),
+					currentEvent.getId()));
+			currentEvent.getSpeakers().add(savedSpeaker);
+			this.saveEvent(currentEvent);
+		}
+		return savedSpeaker;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@Transactional
+	public ApplicationCache updateApplicationCacheManifest() {
+
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
+
+		if (applicationCacheList.isEmpty()) {
+			ApplicationCache applicationCache = new ApplicationCache();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+			return savedApplicationCache;
+		} else if (applicationCacheList.size() > 1) {
+			throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+		} else {
+			ApplicationCache applicationCache = applicationCacheList.iterator().next();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			return applicationCacheDao.save(applicationCache);
+		}
+
+	}
+
+	@Override
+	@Transactional
+	public ApplicationCache getApplicationCacheManifest() {
+		final List<ApplicationCache> applicationCacheList = applicationCacheDao.findAll();
+
+		if (applicationCacheList.isEmpty()) {
+			ApplicationCache applicationCache = new ApplicationCache();
+			applicationCache.setUpdatedDate(new Date());
+			applicationCache.setUuid(UUID.randomUUID().toString());
+			ApplicationCache savedApplicationCache = applicationCacheDao.save(applicationCache);
+			return savedApplicationCache;
+		} else if (applicationCacheList.size() > 1) {
+			throw new IllegalStateException("ApplicationCacheList should only contain 1 elements but found " + applicationCacheList.size());
+		} else {
+			return applicationCacheList.iterator().next();
+		}
+	}
+
+	@Override
+	public FileData getPresentationFileData(final Long presentationId) {
+
+		final Presentation presentation = transactionTemplate.execute(new TransactionCallback<Presentation>() {
+			public Presentation doInTransaction(TransactionStatus status) {
+				return presentationDao.getOneWithSlide(presentationId);
+			}
+		});
+
+		if (presentation == null) {
+			return null;
+		}
+
+		FileData fileData = presentation.getPresentationFile();
+		return fileData;
+	}
+
+	@Override
+	//FIXME
+	//@Cacheable("getCurrentEvent")
+	@Transactional(readOnly = true)
+	public Event getCurrentEvent() {
+		final Event currentEvent = eventDao.getCurrentEvent();
+		if (currentEvent == null) {
+			throw new IllegalStateException("No current event found.");
+		}
+		return currentEvent;
+	}
+
+	@Override
+	public Room getRoom(Long id) {
+		return roomDao.getOne(id);
+	}
+
+	@Override
+	public ScheduleItemList getScheduleForEvent(Long eventId) {
+
+		final List<ScheduleItem> scheduleItems = scheduleItemDao.getScheduleForEvent(eventId);
+
+		final ScheduleItemList scheduleItemList = new ScheduleItemList();
+		scheduleItemList.setScheduleItems(scheduleItems);
+
+		ScheduleItem currentScheduleItem = null;
+
+		String hourOfDay = null;
+
+		final SortedSet<Date> days = new TreeSet<Date>();
+
+		int numberOfSessions = 0;
+		int numberOfKeynoteSessions = 0;
+		int numberOfBreakoutSessions = 0;
+		int numberOfUnassignedSessions = 0;
+
+		int numberOfBreaks = 0;
+
+		Set<Long> speakerIds = new HashSet<Long>();
+		Set<Long> roomIds = new HashSet<Long>();
+
+		for (ScheduleItem scheduleItem : scheduleItems) {
+
+			roomIds.add(scheduleItem.getRoom().getId());
+
+			final Date fromTime = scheduleItem.getFromTime();
+			final Date dayOfConference = CalendarUtils.getCalendarWithoutTime(fromTime).getTime();
+			days.add(dayOfConference);
+
+			if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())
+					|| ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
+
+				numberOfSessions++;
+
+				if (scheduleItem.getPresentation() != null) {
+					for (Speaker speaker : scheduleItem.getPresentation().getSpeakers()) {
+						speakerIds.add(speaker.getId());
+					}
+				} else {
+					numberOfUnassignedSessions++;
+				}
+
+				if (ScheduleItemType.KEYNOTE.equals(scheduleItem.getScheduleItemType())) {
+					numberOfKeynoteSessions++;
+
+				}
+
+				if (ScheduleItemType.SESSION.equals(scheduleItem.getScheduleItemType())) {
+					numberOfBreakoutSessions++;
+				}
+
+			}
+
+			if (ScheduleItemType.BREAK.equals(scheduleItem.getScheduleItemType())) {
+				numberOfBreaks++;
+			}
+
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(fromTime);
+
+			String loopHour = cal.get(Calendar.HOUR_OF_DAY) + "_" + cal.get(Calendar.MINUTE);
+
+			if (hourOfDay == null || !hourOfDay.equals(loopHour)) {
+				currentScheduleItem = scheduleItem;
+				hourOfDay = loopHour;
+			} else {
+				currentScheduleItem.setRowspan(currentScheduleItem.getRowspan() + 1);
+			}
+
+		}
+
+		scheduleItemList.setDays(days);
+		scheduleItemList.setNumberOfBreakoutSessions(numberOfBreakoutSessions);
+		scheduleItemList.setNumberOfBreaks(numberOfBreaks);
+		scheduleItemList.setNumberOfSessions(numberOfSessions);
+		scheduleItemList.setNumberOfKeynoteSessions(numberOfKeynoteSessions);
+		scheduleItemList.setNumberOfUnassignedSessions(numberOfUnassignedSessions);
+		scheduleItemList.setNumberOfSpeakersAssigned(speakerIds.size());
+		scheduleItemList.setNumberOfRooms(roomIds.size());
+		return scheduleItemList;
+	}
+
+	@Override
+	@Transactional
+	public Evaluation saveEvaluation(Evaluation evaluation) {
+		return evaluationDao.save(evaluation);
+	}
+
+	@Override
+	public List<Evaluation> getEvaluationsForCurrentEvent() {
+		return evaluationDao.getEvaluationsForCurrentEvent();
+	}
+
+	@Override
+	public List<Evaluation> getEvaluationsForEvent(Long eventId) {
+		return evaluationDao.getEvaluationsForEvent(eventId);
+	}
+
+	@Override
+	public void removeEvaluation(Long evaluationId) {
+		evaluationDao.delete(evaluationId);
+	}
+
+	@Override
+	public List<CfpSubmission> getCfpSubmissions(Long eventId) {
+		return cfpSubmissionRepository.getCfpSubmissions(eventId);
+	}
+
+	@Override
+	public List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId) {
+		return cfpSubmissionRepository.getCfpSubmissionsForUserAndEvent(userId, eventId);
+	}
+
+	@Override
+	@Transactional
+	public CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission) {
+		return cfpSubmissionRepository.save(cfpSubmission);
+	}
+
+	@Override
+	@Transactional
+	public CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker) {
+		return cfpSubmissionSpeakerRepository.save(cfpSubmissionSpeaker);
+	}
+
+	@Override
+	public CfpSubmission saveAndNotifyCfpSubmission(final CfpSubmission cfpSubmission) {
+		final BusinessService businessService = this;
+		final CfpSubmission savedCfpSubmission = transactionTemplate.execute(new TransactionCallback<CfpSubmission>() {
+			public CfpSubmission doInTransaction(TransactionStatus status) {
+				return businessService.saveCfpSubmission(cfpSubmission);
+			}
+		});
+
+		if (mailSettings.isEmailEnabled()) {
+			mailChannel.send(MessageBuilder.withPayload(cfpSubmission).build());
+		}
+
+		return savedCfpSubmission;
+	}
+
+	@Override
+	public CfpSubmission getCfpSubmission(Long cfpId) {
+		return this.cfpSubmissionRepository.getOne(cfpId);
+	}
+
+	@Override
+	public Track getTrack(Long id) {
+		return trackDao.getOne(id);
+	}
+
+	@Override
+	public PresentationTag getPresentationTag(String tagName) {
+		return presentationTagDao.getPresentationTag(tagName);
+	}
+
+	@Override
+	public PresentationTag savePresentationTag(PresentationTag presentationTag) {
+		return presentationTagDao.save(presentationTag);
+	}
+
+	@Override
+	public Map<PresentationTag, Long> getTagCloud(Long eventId) {
+		return presentationTagDao.getPresentationTagCountForEvent(eventId);
+	}
+
+	@Override
+	public List<Presentation> findPresentations(
+			PresentationSearchQuery presentationSearchQuery) {
+		return presentationDao.findPresentations(presentationSearchQuery);
+	}
+
+	@Transactional
+	@Override
+	public void deleteCfpSubmission(Long id) {
+		cfpSubmissionRepository.delete(id);
+	}
+
+	@Override
+	public void deleteCfpSubmissionSpeakerForUser(Long cfpSubmissionSpeakerId, Long eventId, Long userId) {
+		final CfpSubmissionSpeaker cfpSubmissionSpeakerToDelete = cfpSubmissionSpeakerRepository.getSingleCfpSubmissionSpeakerForUserAndEvent(cfpSubmissionSpeakerId, userId, eventId);
+		cfpSubmissionSpeakerRepository.delete(cfpSubmissionSpeakerToDelete);
+	}
+
+	@Override
+	public void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long userId, Long eventId) {
+		final CfpSubmission cfpSubmissionToDelete = cfpSubmissionRepository.getSingleCfpSubmissionForUserAndEvent(cfpSubmissionId, userId, eventId);
+		cfpSubmissionRepository.delete(cfpSubmissionToDelete);
+	}
+
+	@Transactional
+	@Override
+	public Set<PresentationTag> processPresentationTags(String tagsAsText) {
+
+		final Set<PresentationTag> presentationTagsToSave = new HashSet<>();
+
+		if (!tagsAsText.trim().isEmpty()) {
+			Set<String> tags = StringUtils.commaDelimitedListToSet(tagsAsText);
+
+			for (String tag : tags) {
+				if (tag != null) {
+
+					final String massagedTagName = tag.trim().toLowerCase(Locale.ENGLISH);
+					PresentationTag tagFromDb = this.getPresentationTag(massagedTagName);
+
+					if (tagFromDb == null) {
+						PresentationTag presentationTag = new PresentationTag();
+						presentationTag.setName(massagedTagName);
+						tagFromDb = this.savePresentationTag(presentationTag);
+					}
+
+					presentationTagsToSave.add(tagFromDb);
+				}
+			}
+		}
+
+		return presentationTagsToSave;
+	}
+
+	@Override
+	public List<Sponsor> getSponsorsForEvent(Long id) {
+		return sponsorDao.getSponsorsForEvent(id);
+	}
+
+	@Cacheable("sponsors")
+	@Override
+	public SponsorList getSponsorListForEvent(Long id, boolean large) {
+
+		final List<Sponsor> sponsors = this.getSponsorsForEvent(id);
+
+		final SponsorList sponsorList = new SponsorList();
+
+		for (Sponsor sponsor : sponsors) {
+
+			FileData imageData = this.getSponsorWithPicture(sponsor.getId()).getLogo();
+
+			final int size;
+
+			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 180;
+			} else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 140;
+			} else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			} else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			} else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			} else if (SponsorLevel.DEV_LOUNGE.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 180;
+			} else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 110;
+			} else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
+				size = large ? 360 : 180;
+			} else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
+				size = large ? 920 : 460;
+			} else {
+				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
+			}
+
+			if (imageData != null) {
+				ByteArrayInputStream bais = new ByteArrayInputStream(imageData.getFileData());
+				BufferedImage image;
+				try {
+					image = ImageIO.read(bais);
+					final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
+					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+					ImageIO.write(scaled, "PNG", out);
+
+					byte[] bytes = out.toByteArray();
+
+					final String base64bytes = Base64.encodeBase64String(bytes);
+					final String src = "data:image/png;base64," + base64bytes;
+					sponsorList.addSponsor(sponsor, src);
+				} catch (IOException e) {
+					LOGGER.error("Error while processing logo for sponsor " + sponsor.getName(), e);
+				}
+			}
+		}
+
+		return sponsorList;
+	}
+
+	@Override
+	public EventSignup getEventSignup() {
+		return eventSignupDao.getByEventKey(eventDao.getCurrentEvent().getEventKey());
+	}
+
+	@Override
+	public TicketGroup getTicketGroup(Long ticketGroup) {
+		return ticketGroupDao.findOne(ticketGroup);
+	}
+
+	@Override
+	public RegistrationDetails getRegistrationForm(String registrationKey) {
+		return registrationDao.findByKey(registrationKey);
+	}
+
+	@Override
+	@Transactional
+	public RegistrationDetails createPendingRegistrationForm(RegistrationDetails registerForm) {
+		return registrationDao.createRegistrationPendingPayment(registerForm);
+	}
+
+	@Override
+	@Transactional
+	public void saveAndEmailPaidRegistration(RegistrationDetails registerForm, PayPalPayment payment) {
+		registrationDao.saveAndFlush(registerForm);
+		payPalDao.saveAndFlush(payment);
+		if (mailSettings.isEmailEnabled()) {
+			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
+		}
+	}
+
+	@Override
+	public void resendRegistrationEmail(RegistrationDetails registerForm) {
+		if (mailSettings.isEmailEnabled()) {
+			registrationMailChannel.send(MessageBuilder.withPayload(registerForm).build());
+		}
+	}
+
+	@Override
+	public Dashboard generateDashBoardForSignUp(EventSignup signUp) {
+		Dashboard dashboard = new Dashboard();
+
+		List<RegistrationDetails> orders = registrationDao.findPurchasedForEvent(signUp.getEvent());
+		orders.sort((order1, order2) -> {
+			return order1.getCreatedDate().compareTo(order2.getCreatedDate());
+		});
+
+		orders.stream().forEach((order) -> {
+			dashboard.addOrder(order);
+		});
+
+		orders = registrationDao.findIncompletePaypalOrdersForEvent(signUp.getEvent());
+		orders.sort((order1, order2) -> {
+			return order1.getCreatedDate().compareTo(order2.getCreatedDate());
+		});
+
+		orders.stream().forEach((order) -> {
+			dashboard.addInCompletePaypalOrders(order);
+		});
+
+		orders = registrationDao.findOrdersRequestingInvoiceForEvent(signUp.getEvent());
+		orders.sort((order1, order2) -> {
+			return order1.getCreatedDate().compareTo(order2.getCreatedDate());
+		});
+
+		orders.stream().forEach((order) -> {
+			dashboard.addOrdersRequestingInvoice(order);
+		});
+
+		Map<Long, TicketGroup> ticketIdToGroup = new HashMap<>();
+		Map<TicketGroup, Integer> ticketGroupCount = new HashMap<>();
+
+		for (RegistrationDetails order : dashboard.getOrders()) {
+			for (TicketOrderDetail ticketOrder : order.getOrderDetails()) {
+				Long ticketGroupId = ticketOrder.getTicketGroup();
+				ticketIdToGroup.computeIfAbsent(ticketGroupId, (id) -> {
+					return getTicketGroup(id);
+				});
+				TicketGroup group = ticketIdToGroup.get(ticketGroupId);
+				int count = ticketGroupCount.getOrDefault(group, 0);
+				ticketGroupCount.put(group, count + 1);
+			}
+		}
+
+		for (Map.Entry<TicketGroup, Integer> entry : ticketGroupCount.entrySet()) {
+			dashboard.addSale(entry.getKey(), entry.getValue());
+		}
+
+		return dashboard;
+	}
+
+	@Override
+	public List findRegistrations(String email, String name, EventSignup signUp) {
+
+		List<List> results = new ArrayList<>();
+
+		if (name != null && !name.isEmpty()) {
+			String[] names = name.split(" ");
+			results.addAll(registrationDao.findOrdersWithContactName(names, signUp));
+		}
+		if (email != null && !email.isEmpty()) {
+			results.addAll(registrationDao.findOrdersWithContactEmail(email, signUp));
+		}
+
+		return new ArrayList<>(results);
+
+	}
+
+	@Override
+	@Transactional
+	public void updateRegistration(RegistrationDetails originalForm) {
+		registrationDao.saveAndFlush(originalForm);
+	}
+
+	@Override
+	public List<RegistrationDetails> findRegistrationsForEvent(Event eventKey) {
+		return registrationDao.findAllForEvent(eventKey);
+	}
+
+	@Override
+	public List<RegistrationDetails> findPaidRegistrationsForEvent(Event event) {
+		return registrationDao.findPurchasedForEvent(event);
+	}
+
+	@Override
+	public CfpSubmissionSpeaker getCfpSubmissionSpeaker(Long speakerId) {
+		return cfpSubmissionSpeakerRepository.findOne(speakerId);
+	}
+
+	@Override
+	@Transactional
+	public CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId) {
+		CfpSubmissionSpeaker cfpSubmissionSpeaker = cfpSubmissionSpeakerRepository.getCfpSubmissionSpeakerWithPicture(speakerId);
+		return cfpSubmissionSpeaker;
+	}
+
+	/* (non-Javadoc)
 	 * @see com.devnexus.ting.core.service.BusinessService#getCfpSubmissionSpeakersForUserAndEvent(com.devnexus.ting.model.User, com.devnexus.ting.model.Event)
 	 */
 	@Override
@@ -1024,20 +1036,20 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-    public ScheduleItem getScheduleItem(Long scheduleItemId) {
-        return scheduleItemDao.findOne(scheduleItemId);
-    }
+	public ScheduleItem getScheduleItem(Long scheduleItemId) {
+		return scheduleItemDao.findOne(scheduleItemId);
+	}
 
-    @Override
-    public List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) {
+	@Override
+	public List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) {
 
-        if (user == null || !(user instanceof User)) {
-            throw new UserNotLoggedInException("User is not logged in");
-        }
+		if (user == null || !(user instanceof User)) {
+			throw new UserNotLoggedInException("User is not logged in");
+		}
 
-        final Event event = getCurrentEvent();
+		final Event event = getCurrentEvent();
 
-        return userCalendarDao.getUserScheduleItems((User) user, event);
-    }
+		return userCalendarDao.getUserScheduleItems((User) user, event);
+	}
 
 }

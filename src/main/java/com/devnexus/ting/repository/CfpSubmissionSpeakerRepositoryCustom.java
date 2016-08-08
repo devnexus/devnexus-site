@@ -25,4 +25,5 @@ public interface CfpSubmissionSpeakerRepositoryCustom {
 
 	CfpSubmissionSpeaker getCfpSubmissionSpeakerWithPicture(Long speakerId);
 	List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
+	CfpSubmissionSpeaker getSingleCfpSubmissionSpeakerForUserAndEvent(Long cfpSubmissionSpeakerId, Long userId, Long eventId);
 }
