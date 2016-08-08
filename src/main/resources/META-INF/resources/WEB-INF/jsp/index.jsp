@@ -183,7 +183,7 @@
 						<i class="fa fa-group"></i>
 					</div><!--//icon-->
 					<div class="content">
-						<p class="lead counter-stat">1800</p>
+						<p class="lead counter-stat">2000</p>
 						<p class="lead counter-commits">DEVELOPERS</p>
 					</div><!--//content-->
 				</div>

@@ -65,12 +65,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.authorizeRequests().antMatchers("/s/admin/cfp**").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER", "ROLE_APP_USER").and()
 		.authorizeRequests().antMatchers("/s/admin/index").hasAnyAuthority("ROLE_ADMIN", "ROLE_CFP_REVIEWER", "ROLE_APP_USER").and()
 		.authorizeRequests().antMatchers("/s/admin/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
-		.authorizeRequests().antMatchers("/s/cfp/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
+		.authorizeRequests().antMatchers("/s/cfp/index**", "/s/cfp/speaker**", "/s/cfp/abstract**", "/s/cfp/add-cfp-success**")
+			.hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
 		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and();
 
 		if (environment.getRequiredProperty("server.ssl.enabled", Boolean.class)) {
 			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
+			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/cfp/**").requiresSecure().and();
 		}
 
 		final RoleAwareSimpleUrlAuthenticationSuccessHandler successHandler = new RoleAwareSimpleUrlAuthenticationSuccessHandler();
