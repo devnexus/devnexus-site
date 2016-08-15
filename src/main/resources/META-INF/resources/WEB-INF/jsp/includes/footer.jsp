@@ -17,7 +17,7 @@
 							<ul class="footer-social">
 								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
 								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}/static/2016/files/promo/devnexus-2016-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
+								<li class=""><a href="${ctx}/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
 								<li class="" style="margin-top: 1em;">
 									<a title="Facebook" href="https://www.facebook.com/devnexus" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-facebook"></span></a>
 									<a title="Youtube" href="https://www.youtube.com/devnexus-conference" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-youtube"></span></a>
@@ -28,7 +28,7 @@
 					</div>
 					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
 						<div id="tweet2" class="footer-widget">
-							<h3 class="footer-title">DEVNEXUS 2016</h3>
+							<h3 class="footer-title">DEVNEXUS 2017</h3>
 							<ul class="footer-social">
 								<li class=""><a href="${scheduleUrl}">Schedule</a></li>
 								<li class=""><a href="${speakersUrl}">Speakers</a></li>

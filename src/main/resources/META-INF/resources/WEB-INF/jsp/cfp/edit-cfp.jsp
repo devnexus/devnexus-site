@@ -163,8 +163,8 @@
 		<hr/>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="10"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
-				<button type="submit" class="btn btn-success" lang="save" tabindex="9"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="9"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="10"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
 				<button type="submit" class="btn btn-danger" name="delete" tabindex="11"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
 			</div>
 		</div>
@@ -213,6 +213,29 @@
 						.attr("name", "delete");
 						form.append($(input));
 						form.trigger('submit');
+					});
+				});
+				$('button[name="delete"]').on('click', function(e){
+					var form=$(this).closest('form');
+					e.preventDefault();
+					$('#confirm').modal({
+						backdrop: 'static', keyboard: false
+					})
+					.one('click', '#delete', function() {
+						var input = $("<input>")
+						.attr("type", "hidden")
+						.attr("name", "delete");
+						form.append($(input));
+						form.trigger('submit');
+					});
+				});
+				$("#cfpForm").each(function(){
+					$(this).find(':input').keydown(function( event ) {
+						if ( event.which == 13 ) {
+							event.preventDefault();
+							console.log("Submitting form ...");
+							$("#cfpForm").submit();
+						}
 					});
 				});
 			});

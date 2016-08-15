@@ -63,7 +63,7 @@
 		<div class="form-group${errorClass}">
 			<label for="title" class="col-lg-2 control-label">Presentation Title*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="title" id="title" tabindex="7"/>
+				<form:input cssClass="form-control" path="title" id="title" tabindex="1"/>
 				<form:errors path="title" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -74,7 +74,7 @@
 		<div class="form-group${errorClass}">
 			<label for="description" class="col-lg-2 control-label">Abstract*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="description" id="description" tabindex="8" rows="10" maxLength="10000"/>
+				<form:textarea cssClass="form-control" path="description" id="description" tabindex="2" rows="10" maxLength="10000"/>
 				<form:errors path="description" cssClass="fieldError"/>
 				<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
 				Markdown</a> is supported for the abstract.</span>
@@ -87,7 +87,7 @@
 		<div class="form-group${errorClass}">
 			<label for="topic" class="col-lg-2 control-label">Topic*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="topic" id="topic" tabindex="9"/>
+				<form:input cssClass="form-control" path="topic" id="topic" tabindex="3"/>
 				<form:errors path="topic" cssClass="fieldError"/>
 				<span class="help-block">For example: Java/JavaEE/Spring, Data, HTML5, Agile, Mobile, Cloud ...</span>
 			</div>
@@ -100,7 +100,7 @@
 		<div class="form-group${errorClass}">
 			<label for="skill-level" class="col-lg-2 control-label">Skill Level*</label>
 			<div class="col-lg-10">
-				<form:select cssClass="form-control" path="skillLevel" id="skill-level" tabindex="10">
+				<form:select cssClass="form-control" path="skillLevel" id="skill-level" tabindex="4">
 					<form:option value="" label="Please Select a Skill Level" />
 					<form:options items="${skillLevels}" itemLabel="name" itemValue="id"/>
 				</form:select>
@@ -115,7 +115,7 @@
 			<label for="skill-level" class="col-lg-2 control-label">Presentation Type*</label>
 			<div class="col-lg-10">
 				<form:select cssClass="form-control" path="presentationType" id="presentation-type"
-					tabindex="11">
+					tabindex="5">
 					<form:option value="" label="Please Select a Presentation Type" />
 					<form:options items="${presentationTypes}" itemLabel="name" itemValue="id"/>
 				</form:select>
@@ -130,7 +130,7 @@
 			<div class="col-lg-offset-2 col-lg-10">
 				<div class="checkbox">
 					<label>
-						<form:checkbox path="sessionRecordingApproved" id="sessionRecordingApproved" tabindex="16"/> Can we record your session?
+						<form:checkbox path="sessionRecordingApproved" id="sessionRecordingApproved" tabindex="6"/> Can we record your session?
 					</label>
 				</div>
 				<form:errors path="sessionRecordingApproved" cssClass="fieldError"/>
@@ -148,7 +148,7 @@
 		<div class="form-group${errorClass}">
 			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="slotPreference" id="slotPreference" tabindex="17" rows="5" maxLength="1000"/>
+				<form:textarea cssClass="form-control" path="slotPreference" id="slotPreference" tabindex="7" rows="5" maxLength="1000"/>
 				<form:errors path="slotPreference" cssClass="fieldError"/>
 				<span class="help-block">E.g. Can you only present on one day or have other time-contraints?...</span>
 			</div>
@@ -157,14 +157,14 @@
 		<div class="form-group">
 			<label class="col-lg-2 control-label">Speakers</label>
 			<div class="col-lg-offset-2 col-lg-10">
-				<form:checkboxes element="div" path="cfpSubmissionSpeakers" items="${speakers}" itemValue="id" itemLabel="firstLastName" tabindex="18"/>
+				<form:checkboxes element="div" path="cfpSubmissionSpeakers" items="${speakers}" itemValue="id" itemLabel="firstLastName" tabindex="8"/>
 			</div>
 		</div>
 		<hr/>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="20"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
-				<button type="submit" class="btn btn-success" lang="save" tabindex="19"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Add</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="9"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="10"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Add</button>
 			</div>
 		</div>
 
@@ -187,6 +187,15 @@
 					alwaysShow: true
 				});
 
+				$("#cfpForm").each(function(){
+					$(this).find(':input').keydown(function( event ) {
+						if ( event.which == 13 ) {
+							event.preventDefault();
+							console.log("Submitting form ...");
+							$("#cfpForm").submit();
+						}
+					});
+				});
 			});
 		</script>
 </content>

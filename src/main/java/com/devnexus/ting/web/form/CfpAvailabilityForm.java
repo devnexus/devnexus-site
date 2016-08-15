@@ -32,10 +32,10 @@ public class CfpAvailabilityForm {
 	private ConferenceDay conferenceDay;
 	private CfpSpeakerAvailability availabilitySelection;
 
-	@DateTimeFormat(pattern="kk:mm")
+	@DateTimeFormat(pattern="HH:mm")
 	private LocalTime startTime;
 
-	@DateTimeFormat(pattern="kk:mm")
+	@DateTimeFormat(pattern="HH:mm")
 	private LocalTime endTime;
 
 	public ConferenceDay getConferenceDay() {

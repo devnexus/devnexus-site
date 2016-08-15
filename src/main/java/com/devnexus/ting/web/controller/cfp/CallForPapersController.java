@@ -34,6 +34,11 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.connect.Connection;
+import org.springframework.social.connect.ConnectionRepository;
+import org.springframework.social.connect.UserProfile;
+import org.springframework.social.connect.UsersConnectionRepository;
+import org.springframework.social.google.api.Google;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -83,6 +88,9 @@ public class CallForPapersController {
 
 	@Autowired
 	private CfpSettings cfpSettings;
+
+	@Autowired
+	private ConnectionRepository connectionRepository;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
@@ -144,6 +152,20 @@ public class CallForPapersController {
 		final Event event = businessService.getCurrentEvent();
 		final CfpSubmissionSpeakerForm speakerForm = new CfpSubmissionSpeakerForm();
 
+		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
+		final List<CfpSubmissionSpeaker> cfpSubmissionSpeakers = businessService.getCfpSubmissionSpeakersForUserAndEvent(user, event);
+
+		//FIXME
+		Connection<Google> connection = connectionRepository.findPrimaryConnection(Google.class);
+
+		if (cfpSubmissionSpeakers.isEmpty() && connection != null) {
+			final UserProfile userProfile  = connection.fetchUserProfile();
+			speakerForm.setFirstName(userProfile.getFirstName());
+			speakerForm.setLastName(userProfile.getLastName());
+			speakerForm.setEmail(userProfile.getEmail());
+			speakerForm.setGooglePlusId(userProfile.getUsername());
+		}
+
 		for (ConferenceDay conferenceDay : event.getConferenceDays()) {
 			final CfpAvailabilityForm availabilityForm = new CfpAvailabilityForm();
 			availabilityForm.setConferenceDay(conferenceDay);
@@ -180,6 +202,32 @@ public class CallForPapersController {
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/cfp/index";
+		}
+
+		if (!cfpSubmissionSpeaker.isAvailableEntireEvent()) {
+			int index = 0;
+			for (CfpAvailabilityForm availabilityForm : cfpSubmissionSpeaker.getAvailabilityDays()) {
+
+				if (availabilityForm.getAvailabilitySelection() == null) {
+					bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index++ + "].availabilitySelection", "Please make a selection regarding your availability."));
+				}
+
+				if (CfpSpeakerAvailability.PARTIAL_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					if (availabilityForm.getStartTime() == null) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].startTime", "Please provide a start time."));
+					}
+					if (availabilityForm.getEndTime() == null) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].endTime", "Please provide an end time."));
+					}
+
+					if (availabilityForm.getStartTime() != null
+							&& availabilityForm.getEndTime() != null
+							&& !availabilityForm.getStartTime().isBefore(availabilityForm.getEndTime())) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].endTime", "Please ensure that the end time is after the start time."));
+					}
+				}
+				index++;
+			}
 		}
 
 		if (bindingResult.hasErrors()) {
@@ -590,6 +638,32 @@ public class CallForPapersController {
 			redirectAttributes.addFlashAttribute("successMessage",
 					String.format("The speaker '%s' was deleted successfully.", cfpSubmissionSpeaker.getFirstLastName()));
 			return "redirect:/s/cfp/index";
+		}
+
+		if (!cfpSubmissionSpeaker.isAvailableEntireEvent()) {
+			int index = 0;
+			for (CfpAvailabilityForm availabilityForm : cfpSubmissionSpeaker.getAvailabilityDays()) {
+
+				if (availabilityForm.getAvailabilitySelection() == null) {
+					bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index++ + "].availabilitySelection", "Please make a selection regarding your availability."));
+				}
+
+				if (CfpSpeakerAvailability.PARTIAL_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					if (availabilityForm.getStartTime() == null) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].startTime", "Please provide a start time."));
+					}
+					if (availabilityForm.getEndTime() == null) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].endTime", "Please provide an end time."));
+					}
+
+					if (availabilityForm.getStartTime() != null
+							&& availabilityForm.getEndTime() != null
+							&& !availabilityForm.getStartTime().isBefore(availabilityForm.getEndTime())) {
+						bindingResult.addError(new FieldError("cfpSubmissionSpeaker", "availabilityDays[" + index + "].endTime", "Please ensure that the end time is after the start time."));
+					}
+				}
+				index++;
+			}
 		}
 
 		if (bindingResult.hasErrors()) {

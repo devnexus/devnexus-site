@@ -7,6 +7,7 @@
 		</div>
 	</div>
 </div>
+
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 
@@ -34,7 +35,7 @@
 		<div class="form-group${errorClass}">
 			<label for="title" class="col-lg-2 control-label">Presentation Title*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="title" id="title" />
+				<form:input cssClass="form-control" path="title" id="title"/>
 				<form:errors path="title" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -141,27 +142,27 @@
 		</div>
 
 		<h3>Speaker Details</h3>
-		<c:forEach items="${cfpSubmission.speakers}" var="speaker" varStatus="status">
-			<form:hidden path="speakers[${status.index}].id"/>
+		<c:forEach items="${cfpSubmission.cfpSubmissionSpeakers}" var="speaker" varStatus="status">
+			<form:hidden path="cfpSubmissionSpeakers[${status.index}].id"/>
 			<h4>Speaker ${status.index+1}</h4>
-			<spring:bind path="speakers[${status.index}].firstName">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].firstName">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].firstName" class="col-lg-2 control-label">First Name*</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].firstName" id="speakers[${status.index}].firstName" maxlength="255"/>
-					<form:errors path="speakers[${status.index}].firstName" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].firstName" id="speakers[${status.index}].firstName" maxlength="255"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].firstName" cssClass="fieldError"/>
 				</div>
 			</div>
-			<spring:bind path="speakers[${status.index}].lastName">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].lastName">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].lastName" class="col-lg-2 control-label">Last Name*</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].lastName" id="speakers[${status.index}].lastName" maxlength="255"/>
-					<form:errors path="speakers[${status.index}].lastName" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].lastName" id="speakers[${status.index}].lastName" maxlength="255"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].lastName" cssClass="fieldError"/>
 				</div>
 			</div>
 			<p>
@@ -169,24 +170,24 @@
 				now and the conference. However, on the days of the conference, it is important
 				that we can reach you via cell phone, just in case emergencies arise.
 			</p>
-			<spring:bind path="speakers[${status.index}].email">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].email">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].email" class="col-lg-2 control-label">Email*</label>
 				<div class="col-lg-10">
-					<form:input type="email" cssClass="form-control" path="speakers[${status.index}].email" id="speakers[${status.index}].email"/>
-					<form:errors path="speakers[${status.index}].email" cssClass="fieldError"/>
+					<form:input type="email" cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].email" id="speakers[${status.index}].email"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].email" cssClass="fieldError"/>
 				</div>
 			</div>
-			<spring:bind path="speakers[${status.index}].location">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].location">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].location" class="col-lg-2 control-label">Location*</label>
 				<div class="col-lg-10">
-					<form:input type="text" cssClass="form-control" path="speakers[${status.index}].location" id="speakers[${status.index}].location" tabindex="4"/>
-					<form:errors path="speakers[${status.index}].location" cssClass="fieldError"/>
+					<form:input type="text" cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].location" id="speakers[${status.index}].location" tabindex="4"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].location" cssClass="fieldError"/>
 					<span class="help-block">Where do you live?</span>
 				</div>
 			</div>
@@ -195,32 +196,32 @@
 				<div class="col-lg-offset-2 col-lg-10">
 					<div class="checkbox">
 						<label>
-							<form:checkbox path="speakers[${status.index}].mustReimburseTravelCost" id="speakers[${status.index}].mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
+							<form:checkbox path="cfpSubmissionSpeakers[${status.index}].mustReimburseTravelCost" id="speakers[${status.index}].mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
 						</label>
 					</div>
-					<form:errors path="speakers[${status.index}].mustReimburseTravelCost" cssClass="fieldError"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].mustReimburseTravelCost" cssClass="fieldError"/>
 				</div>
 			</div>
-			<spring:bind path="speakers[${status.index}].phone">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].phone">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].phone" class="col-lg-2 control-label">Cell Phone*</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].phone" id="speakers[${status.index}].phone"/>
-					<form:errors path="speakers[${status.index}].phone" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].phone" id="speakers[${status.index}].phone"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].phone" cssClass="fieldError"/>
 					<span class="help-block">In case we need to urgently reach you during the conference.</span>
 				</div>
 			</div>
 
-			<spring:bind path="speakers[${status.index}].bio">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].bio">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].biotext" class="col-lg-2 control-label">Bio*</label>
 				<div class="col-lg-10">
-					<form:textarea cssClass="form-control" path="speakers[${status.index}].bio" id="speakers[${status.index}].biotext" rows="10" maxlength="10000"/>
-					<form:errors path="speakers[${status.index}].bio" cssClass="fieldError"/>
+					<form:textarea cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].bio" id="speakers[${status.index}].biotext" rows="10" maxlength="10000"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].bio" cssClass="fieldError"/>
 					<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
 					Markdown</a> is supported for the bio.</span>
 				</div>
@@ -228,60 +229,60 @@
 
 			<h5>Social links</h5>
 
-			<spring:bind path="speakers[${status.index}].twitterId">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].twitterId">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].twitterId" class="col-lg-2 control-label">Twitter Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].twitterId" id="speakers[${status.index}].twitterId" maxlength="255"/>
-					<form:errors path="speakers[${status.index}].twitterId" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].twitterId" id="speakers[${status.index}].twitterId" maxlength="255"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].twitterId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the Twitter ID, not a URL.</span>
 				</div>
 			</div>
 
-			<spring:bind path="speakers[${status.index}].googlePlusId">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].googlePlusId">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].googlePlusId" class="col-lg-2 control-label">Google Plus Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].googlePlusId" id="speakers[${status.index}].googlePlusId" maxlength="255"/>
-					<form:errors path="speakers[${status.index}].googlePlusId" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].googlePlusId" id="speakers[${status.index}].googlePlusId" maxlength="255"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].googlePlusId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the Google Plus ID, not a URL, e.g.: 104285850599215045327</span>
 				</div>
 			</div>
 
-			<spring:bind path="speakers[${status.index}].linkedInId">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].linkedInId">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].linkedInId" class="col-lg-2 control-label">LinkedIn Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].linkedInId" id="speakers[${status.index}].linkedInId" maxlength="255"/>
-					<form:errors path="speakers[${status.index}].linkedInId" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].linkedInId" id="speakers[${status.index}].linkedInId" maxlength="255"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].linkedInId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
 				</div>
 			</div>
-			<spring:bind path="speakers[${status.index}].lanyrdId">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].lanyrdId">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].lanyrdId" id="speakers[${status.index}].lanyrdId" maxlength="255" tabindex="14"/>
-					<form:errors path="speakers[${status.index}].lanyrdId" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].lanyrdId" id="speakers[${status.index}].lanyrdId" maxlength="255" tabindex="14"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].lanyrdId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
 				</div>
 			</div>
-			<spring:bind path="speakers[${status.index}].githubId">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].githubId">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].githubId" class="col-lg-2 control-label">GithubId Username</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].githubId" id="speakers[${status.index}].githubId" maxlength="255" tabindex="14"/>
-					<form:errors path="speakers[${status.index}].githubId" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].githubId" id="speakers[${status.index}].githubId" maxlength="255" tabindex="14"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].githubId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the GitHub username, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
 				</div>
 			</div>
@@ -289,14 +290,14 @@
 			<h5>Swag</h5>
 			<p style="clear: left;">Please let us know your T-shirt size, you we can ensure we have the right size.</p>
 
-			<spring:bind path="speakers[${status.index}].tshirtSize">
+			<spring:bind path="cfpSubmissionSpeakers[${status.index}].tshirtSize">
 				<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 			</spring:bind>
 			<div class="form-group${errorClass}">
 				<label for="speakers[${status.index}].tshirtSize" class="col-lg-2 control-label">T-Shirt Size*</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="speakers[${status.index}].tshirtSize" id="speakers[${status.index}].tshirtSize"/>
-					<form:errors path="speakers[${status.index}].tshirtSize" cssClass="fieldError"/>
+					<form:input cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].tshirtSize" id="speakers[${status.index}].tshirtSize"/>
+					<form:errors path="cfpSubmissionSpeakers[${status.index}].tshirtSize" cssClass="fieldError"/>
 					<span class="help-block">E.g. S, M, L etc.</span>
 				</div>
 			</div>

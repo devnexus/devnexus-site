@@ -84,7 +84,7 @@
 
 					</td>
 					<td>
-						<c:forEach var="speaker" items="${cfp.speakers}">
+						<c:forEach var="speaker" items="${cfp.cfpSubmissionSpeakers}">
 							<p><c:out value="${speaker.lastName}"/>, <c:out value="${speaker.firstName}"/> <a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/speaker-image/${speaker.id}">Image</a><p>
 						</c:forEach>
 					</td>

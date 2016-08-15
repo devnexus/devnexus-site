@@ -88,8 +88,8 @@
 		</div>
 
 		<h3>Speaker Details</h3>
-		<c:forEach items="${cfpSubmission.speakers}" var="speaker" varStatus="status">
-			<form:hidden path="speakers[${status.index}].id"/>
+		<c:forEach items="${cfpSubmission.cfpSubmissionSpeakers}" var="speaker" varStatus="status">
+			<form:hidden path="cfpSubmissionSpeakers[${status.index}].id"/>
 
 			<div class="row">
 				<div class="col-md-8"><h4 style="margin-top: 0"><h4>Speaker ${status.index+1}</h4></div>
@@ -103,7 +103,7 @@
 			<div class="form-group">
 				<label for="cfpSubmissionStatusType" class="col-lg-2 control-label">Use existing speaker</label>
 				<div class="col-lg-10">
-					<form:select cssClass="form-control" path="speakers[${status.index}].speaker.id" id="cfpSubmissionStatusTypes"
+					<form:select cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].speaker.id" id="cfpSubmissionStatusTypes"
 						itemValue="status.key">
 						<form:option value="-1" label="Create New Speaker" />
 						<form:options items="${allSpeakers}" itemLabel="fullName" itemValue="id"/>
@@ -143,7 +143,7 @@
 				<div class="col-lg-offset-2 col-lg-10">
 					<div class="checkbox">
 						<label>
-							<form:checkbox path="speakers[${status.index}].mustReimburseTravelCost" id="speakers[${status.index}].mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
+							<form:checkbox path="cfpSubmissionSpeakers[${status.index}].mustReimburseTravelCost" id="speakers[${status.index}].mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
 						</label>
 					</div>
 				</div>

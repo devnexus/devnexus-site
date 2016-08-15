@@ -17,6 +17,7 @@ package com.devnexus.ting.core.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.connect.UserProfile;
@@ -50,24 +51,40 @@ public final class SimpleConnectionSignUp implements ConnectionSignUp {
 	@Override
 	public String execute(Connection<?> connection) {
 		final UserProfile profile = connection.fetchUserProfile();
-		final User user = new User();
+
+		User user;
+		boolean isUpdate;
+
+		try {
+			user = (User) this.userService.loadUserByUsername(connection.getKey().toString());
+			isUpdate = true;
+		}
+		catch (UsernameNotFoundException e) {
+			user = new User();
+			isUpdate = false;
+		}
+
 		user.setFirstName(profile.getFirstName());
 		user.setEmail(profile.getEmail());
 		user.setLastName(profile.getLastName());
 		user.setUsername(connection.getKey().toString());
 		user.setPassword(null);
-
 		user.getUserAuthorities().add(new UserAuthority(user, AuthorityType.APP_USER));
 
-		final User createdUser;
-		try {
-			createdUser = this.userService.addUser(user);
+		if (isUpdate) {
+			this.userService.updateUser(user);
 		}
-		catch (DuplicateUserException e) {
-			LOGGER.error("User {} already exists. Exception: {}", user.getUsername(), e.getMessage());
-			return null;
+		else {
+			final User createdUser;
+			try {
+				createdUser = this.userService.addUser(user);
+			}
+			catch (DuplicateUserException e) {
+				LOGGER.error("User {} already exists. Exception: {}", user.getUsername(), e.getMessage());
+				return null;
+			}
+			LOGGER.info("User {} with Id {} created.", createdUser.getUsername(), user.getId());
 		}
-		LOGGER.info("User {} with Id {} created.", createdUser.getUsername(), user.getId());
 		return user.getUserId();
 	}
 

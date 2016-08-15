@@ -69,7 +69,7 @@
 		<div class="form-group${errorClass}">
 			<label for="firstName" class="col-lg-2 control-label">First Name*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="firstName" id="firstName" maxlength="255" tabindex="1"/>
+				<form:input cssClass="form-control" path="firstName" id="firstName" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="firstName" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 		<div class="form-group${errorClass}">
 			<label for="lastName" class="col-lg-2 control-label">Last Name*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="lastName" id="lastName" maxlength="255" tabindex="2"/>
+				<form:input cssClass="form-control" path="lastName" id="lastName" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="lastName" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -96,7 +96,7 @@
 		<div class="form-group${errorClass}">
 			<label for="email" class="col-lg-2 control-label">Email*</label>
 			<div class="col-lg-10">
-				<form:input type="email" cssClass="form-control" path="email" id="email" tabindex="3"/>
+				<form:input type="email" cssClass="form-control" path="email" id="email" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="email" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -107,7 +107,7 @@
 		<div class="form-group${errorClass}">
 			<label for="company" class="col-lg-2 control-label">Company*</label>
 			<div class="col-lg-10">
-				<form:input type="text" cssClass="form-control" path="company" id="company" tabindex="4"/>
+				<form:input type="text" cssClass="form-control" path="company" id="company" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="company" cssClass="fieldError"/>
 			</div>
 		</div>
@@ -118,7 +118,7 @@
 		<div class="form-group${errorClass}">
 			<label for="location" class="col-lg-2 control-label">Location*</label>
 			<div class="col-lg-10">
-				<form:input type="text" cssClass="form-control" path="location" id="location" tabindex="4"/>
+				<form:input type="text" cssClass="form-control" path="location" id="location" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="location" cssClass="fieldError"/>
 				<span class="help-block">Where do you live?</span>
 			</div>
@@ -128,7 +128,7 @@
 			<div class="col-lg-offset-2 col-lg-10">
 				<div class="checkbox">
 					<label>
-						<form:checkbox path="mustReimburseTravelCost" id="mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
+						<form:checkbox path="mustReimburseTravelCost" id="mustReimburseTravelCost" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/> Please check if you require travel cost reimbursement.
 					</label>
 				</div>
 				<form:errors path="mustReimburseTravelCost" cssClass="fieldError"/>
@@ -152,7 +152,7 @@
 		<div class="form-group">
 			<label for="pictureFile" class="col-lg-2 control-label">Picture*</label>
 			<div class="col-lg-10">
-				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="7"/>
+				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<span class="help-block">The absolute minimum size of the picture should be 360px x 360px.</span>
 				<span class="help-block">
 				<a href="${ctx}${baseSiteUrl}/cfp/speaker-image/${cfpSubmissionSpeaker.id}">Your Image</a></span>
@@ -165,7 +165,7 @@
 		<div class="form-group${errorClass}">
 			<label for="biotext" class="col-lg-2 control-label">Bio*</label>
 			<div class="col-lg-10">
-				<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="8" rows="10" maxlength="10000"/>
+				<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="${cfpSubmissionSpeaker.tabIndex()}" rows="10" maxlength="10000"/>
 				<form:errors path="bio" cssClass="fieldError"/>
 				<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
 				Markdown</a> is supported for the bio.</span>
@@ -180,7 +180,7 @@
 		<div class="form-group${errorClass}">
 			<label for="twitterId" class="col-lg-2 control-label">Twitter Id</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="9"/>
+				<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="twitterId" cssClass="fieldError"/>
 				<span class="help-block">Please provide just the Twitter ID, not a URL.</span>
 			</div>
@@ -192,7 +192,7 @@
 		<div class="form-group${errorClass}">
 			<label for="googlePlusId" class="col-lg-2 control-label">Google Plus Id</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="10"/>
+				<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="googlePlusId" cssClass="fieldError"/>
 				<span class="help-block">Please provide just the Google Plus ID, not a URL, e.g.: 104285850599215045327</span>
 			</div>
@@ -204,7 +204,7 @@
 		<div class="form-group${errorClass}">
 			<label for="linkedInId" class="col-lg-2 control-label">LinkedIn Id</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="11"/>
+				<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="linkedInId" cssClass="fieldError"/>
 				<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
 			</div>
@@ -215,7 +215,7 @@
 		<div class="form-group${errorClass}">
 			<label for="lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="12"/>
+				<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="lanyrdId" cssClass="fieldError"/>
 				<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
 			</div>
@@ -224,9 +224,9 @@
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
 		<div class="form-group${errorClass}">
-			<label for="githubId" class="col-lg-2 control-label">GithubId Username</label>
+			<label for="githubId" class="col-lg-2 control-label">Github Username</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="13"/>
+				<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="githubId" cssClass="fieldError"/>
 				<span class="help-block">Please provide just the GitHub username, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
 			</div>
@@ -240,7 +240,7 @@
  		<div class="form-group${errorClass}">
 			<label for="tshirtSize" class="col-lg-2 control-label">T-Shirt Size*</label>
 			<div class="col-lg-10">
-				<form:input cssClass="form-control" path="tshirtSize" id="tshirtSize" tabindex="14"/>
+				<form:input cssClass="form-control" path="tshirtSize" id="tshirtSize" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 				<form:errors path="tshirtSize" cssClass="fieldError"/>
 				<span class="help-block">E.g. S, M, L etc.</span>
 			</div>
@@ -258,7 +258,7 @@
 				<div class="col-lg-offset-2 col-lg-10">
 					<div class="checkbox">
 						<label>
-							<form:checkbox path="availableEntireEvent" id="availableEntireEvent" tabindex="13"/>
+							<form:checkbox path="availableEntireEvent" id="availableEntireEvent" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 							I am available <strong>ANY DAY</strong> for <strong>ANY TIME-SLOT</strong>!
 						</label>
 					</div>
@@ -275,7 +275,7 @@
 					<div class="col-lg-offset-2 col-lg-10">
 						<div class="radio">
 							<label>
-								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="ANY_TIME"/>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="ANY_TIME" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 								I am fully available that day. Schedule me for any time-slot.
 							</label>
 						</div>
@@ -284,7 +284,7 @@
 					<div class="col-lg-offset-2 col-lg-10">
 						<div class="radio">
 							<label>
-								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="NO_AVAILABILITY"/>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="NO_AVAILABILITY" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 								Sorry, I am not available that day at all.
 							</label>
 						</div>
@@ -293,7 +293,7 @@
 					<div class="col-lg-offset-2 col-lg-4">
 						<div class="radio">
 							<label>
-								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="PARTIAL_AVAILABILITY"/>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="PARTIAL_AVAILABILITY" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 								I am partially available
 							</label>
 						</div>
@@ -303,7 +303,7 @@
 						<div class="input-group">
 						<span class="input-group-addon">From</span>
 						<form:input cssClass="form-control" path="availabilityDays[${status.index}].startTime" id="availability_${status.index}.startTime"
-							placeholder="e.g. 13:45" tabindex="14"/>
+							placeholder="e.g. 13:45" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 						</div>
 						<form:errors path="availabilityDays[${status.index}].startTime" cssClass="fieldError"/>
 					</div>
@@ -311,7 +311,7 @@
 						<div class="input-group">
 							<span class="input-group-addon">To</span>
 							<form:input cssClass="form-control" path="availabilityDays[${status.index}].endTime" id="availability_${status.index}.endTime"
-							placeholder="e.g. 14:45" tabindex="15"/>
+							placeholder="e.g. 14:45" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
 						</div>
 						<form:errors path="tshirtSize" cssClass="fieldError"/>
 					</div>
@@ -320,9 +320,9 @@
 		</fieldset>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="16"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
-				<button type="submit" class="btn btn-success" lang="save" tabindex="15"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
-				<button type="submit" class="btn btn-danger" name="delete" tabindex="17"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="${cfpSubmissionSpeaker.tabIndex()}"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="${cfpSubmissionSpeaker.tabIndex()}"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save</button>
+				<button type="submit" class="btn btn-danger" name="delete" tabindex="${cfpSubmissionSpeaker.tabIndex()}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
 			</div>
 		</div>
 
@@ -392,20 +392,28 @@
 						}
 					});
 				</c:forEach>
-			});
-
-			$('button[name="delete"]').on('click', function(e){
-				var form=$(this).closest('form');
-				e.preventDefault();
-				$('#confirm').modal({
-					backdrop: 'static', keyboard: false
-				})
-				.one('click', '#delete', function() {
-					var input = $("<input>")
-					.attr("type", "hidden")
-					.attr("name", "delete");
-					form.append($(input));
-					form.trigger('submit');
+				$('button[name="delete"]').on('click', function(e){
+					var form=$(this).closest('form');
+					e.preventDefault();
+					$('#confirm').modal({
+						backdrop: 'static', keyboard: false
+					})
+					.one('click', '#delete', function() {
+						var input = $("<input>")
+						.attr("type", "hidden")
+						.attr("name", "delete");
+						form.append($(input));
+						form.trigger('submit');
+					});
+				});
+				$("#cfpForm").each(function(){
+					$(this).find(':input').keydown(function( event ) {
+						if ( event.which == 13 ) {
+							event.preventDefault();
+							console.log("Submitting form ...");
+							$("#cfpForm").submit();
+						}
+					});
 				});
 			});
 		</script>

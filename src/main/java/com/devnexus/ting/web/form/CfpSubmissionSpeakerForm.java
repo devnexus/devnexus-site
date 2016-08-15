@@ -50,4 +50,8 @@ public class CfpSubmissionSpeakerForm extends CfpSubmissionSpeaker {
 		this.availabilityDays = availabilityDays;
 	}
 
+	private int tabIndex = 1;
+	public String tabIndex() {
+		return String.valueOf(tabIndex++);
+	}
 }

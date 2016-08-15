@@ -59,7 +59,7 @@
 
 				<div class="row centered">
 					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a class="btn btn-primary btn-block" href="${ctx}/s/cfp/index">Login using Google</a>
+						<a class="btn btn-primary btn-block" href="${ctx}/s/cfp/index">Login with Google to Submit or Manage Sessions</a>
 					</div>
 				</div>
 
