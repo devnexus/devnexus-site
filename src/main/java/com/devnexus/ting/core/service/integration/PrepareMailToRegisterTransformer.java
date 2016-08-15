@@ -57,7 +57,7 @@ public class PrepareMailToRegisterTransformer extends BaseMailTransformer {
 			.setHtml(renderedHtmlTemplate)
 			.setFrom(fromUser)
 			.addTo(registrationDetails.getContactEmailAddress())
-			.setSubject("DevNexus 2016 - Registration Confirmed");
+			.setSubject("DevNexus 2017 - Registration Confirmed");
 
 		for (TicketOrderDetail order : registrationDetails.getOrderDetails()) {
 			if (!order.getEmailAddress().equals(registrationDetails.getContactEmailAddress())) {

@@ -18,10 +18,12 @@ package com.devnexus.ting.web.controller.cfp;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
@@ -53,12 +55,16 @@ import com.devnexus.ting.core.service.UserService;
 import com.devnexus.ting.model.CfpSpeakerImage;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionSpeakerConferenceDay;
 import com.devnexus.ting.model.CfpSubmissionStatusType;
+import com.devnexus.ting.model.ConferenceDay;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.PresentationType;
 import com.devnexus.ting.model.SkillLevel;
 import com.devnexus.ting.model.User;
+import com.devnexus.ting.model.cfp.CfpSpeakerAvailability;
 import com.devnexus.ting.security.SecurityFacade;
+import com.devnexus.ting.web.form.CfpAvailabilityForm;
 import com.devnexus.ting.web.form.CfpSubmissionForm;
 import com.devnexus.ting.web.form.CfpSubmissionSpeakerForm;
 
@@ -134,9 +140,17 @@ public class CallForPapersController {
 			return "cfp-closed";
 		}
 
-		final CfpSubmissionSpeaker speaker = new CfpSubmissionSpeaker();
+		//FIXME
+		final Event event = businessService.getCurrentEvent();
+		final CfpSubmissionSpeakerForm speakerForm = new CfpSubmissionSpeakerForm();
 
-		model.addAttribute("cfpSubmissionSpeaker", speaker);
+		for (ConferenceDay conferenceDay : event.getConferenceDays()) {
+			final CfpAvailabilityForm availabilityForm = new CfpAvailabilityForm();
+			availabilityForm.setConferenceDay(conferenceDay);
+			speakerForm.getAvailabilityDays().add(availabilityForm);
+		}
+
+		model.addAttribute("cfpSubmissionSpeaker", speakerForm);
 		prepareReferenceData(model);
 
 		return "cfp/cfp-speaker";
@@ -188,6 +202,7 @@ public class CallForPapersController {
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerToSave = new CfpSubmissionSpeaker();
 
 		cfpSubmissionSpeakerToSave.setEmail(cfpSubmissionSpeaker.getEmail());
+		cfpSubmissionSpeakerToSave.setCompany(cfpSubmissionSpeaker.getCompany());
 		cfpSubmissionSpeakerToSave.setBio(cfpSubmissionSpeaker.getBio());
 		cfpSubmissionSpeakerToSave.setFirstName(cfpSubmissionSpeaker.getFirstName());
 		cfpSubmissionSpeakerToSave.setGithubId(cfpSubmissionSpeaker.getGithubId());
@@ -204,8 +219,48 @@ public class CallForPapersController {
 		cfpSubmissionSpeakerToSave.setEvent(eventFromDb);
 		cfpSubmissionSpeakerToSave.setCreatedByUser(user);
 
-		LOGGER.info(cfpSubmissionSpeakerToSave.toString());
-		businessService.saveCfpSubmissionSpeaker(cfpSubmissionSpeakerToSave);
+		final List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays = new ArrayList<>();
+
+		if (cfpSubmissionSpeaker.isAvailableEntireEvent()) {
+			cfpSubmissionSpeakerToSave.setAvailableEntireEvent(cfpSubmissionSpeaker.isAvailableEntireEvent());
+		}
+		else {
+
+			cfpSubmissionSpeakerToSave.setAvailableEntireEvent(cfpSubmissionSpeaker.isAvailableEntireEvent());
+
+			final SortedSet<ConferenceDay> conferenceDays = eventFromDb.getConferenceDays();
+
+			for (CfpAvailabilityForm availabilityForm : cfpSubmissionSpeaker.getAvailabilityDays()) {
+				ConferenceDay conferenceDayToUse = null;
+				for (ConferenceDay conferenceDay : conferenceDays) {
+					if (conferenceDay.getId().equals(availabilityForm.getConferenceDay().getId())) {
+						conferenceDayToUse = conferenceDay;
+					}
+				}
+				if (conferenceDayToUse == null) {
+					throw new IllegalStateException("Did not find conference day for id " + availabilityForm.getConferenceDay().getId());
+				}
+				System.out.println(conferenceDayToUse.getId());
+				final CfpSubmissionSpeakerConferenceDay conferenceDay = new CfpSubmissionSpeakerConferenceDay();
+
+				conferenceDay.setConferenceDay(conferenceDayToUse);
+				conferenceDay.setCfpSubmissionSpeaker(cfpSubmissionSpeakerToSave);
+				if (CfpSpeakerAvailability.ANY_TIME.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.ANY_TIME);
+				}
+				else if (CfpSpeakerAvailability.NO_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.NO_AVAILABILITY);
+				}
+				else if (CfpSpeakerAvailability.PARTIAL_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.PARTIAL_AVAILABILITY);
+					conferenceDay.setStartTime(availabilityForm.getStartTime());
+					conferenceDay.setEndTime(availabilityForm.getEndTime());
+				}
+				cfpSubmissionSpeakerConferenceDays.add(conferenceDay);
+			}
+		}
+
+		businessService.saveCfpSubmissionSpeaker(cfpSubmissionSpeakerToSave, cfpSubmissionSpeakerConferenceDays);
 
 		redirectAttributes.addFlashAttribute("successMessage",
 				String.format("The speaker '%s' was added successfully.", cfpSubmissionSpeakerToSave.getFirstLastName()));
@@ -287,6 +342,7 @@ public class CallForPapersController {
 		cfpSubmission.setEvent(event);
 
 		model.addAttribute("cfpSubmission", cfpSubmission);
+
 		prepareReferenceData(model);
 
 		final User user = (User) userService.loadUserByUsername(securityFacade.getUsername());
@@ -423,8 +479,49 @@ public class CallForPapersController {
 			throw new IllegalArgumentException(String.format("CfpSubmissionSpeaker with id %s is not a valid speaker for the associated user.", cfpSubmissionSpeakerId));
 		}
 
+		final CfpSubmissionSpeakerForm speakerForm = new CfpSubmissionSpeakerForm();
+		speakerForm.setAvailableEntireEvent(cfpSubmissionSpeaker.isAvailableEntireEvent());
+		speakerForm.setBio(cfpSubmissionSpeaker.getBio());
+		speakerForm.setEmail(cfpSubmissionSpeaker.getEmail());
+		speakerForm.setCompany(cfpSubmissionSpeaker.getCompany());
+		speakerForm.setFirstName(cfpSubmissionSpeaker.getFirstName());
+		speakerForm.setGithubId(cfpSubmissionSpeaker.getGithubId());
+		speakerForm.setGooglePlusId(cfpSubmissionSpeaker.getGooglePlusId());
+		speakerForm.setId(cfpSubmissionSpeaker.getId());
+		speakerForm.setLanyrdId(cfpSubmissionSpeaker.getLanyrdId());
+		speakerForm.setLastName(cfpSubmissionSpeaker.getLastName());
+		speakerForm.setLinkedInId(cfpSubmissionSpeaker.getLinkedInId());
+		speakerForm.setLocation(cfpSubmissionSpeaker.getLocation());
+		speakerForm.setMustReimburseTravelCost(cfpSubmissionSpeaker.isMustReimburseTravelCost());
+		speakerForm.setPhone(cfpSubmissionSpeaker.getPhone());
+		speakerForm.setTshirtSize(cfpSubmissionSpeaker.getTshirtSize());
+		speakerForm.setTwitterId(cfpSubmissionSpeaker.getTwitterId());
+
+		for (ConferenceDay conferenceDay : event.getConferenceDays()) {
+			CfpSubmissionSpeakerConferenceDay cfpSubmissionSpeakerConferenceDayToUse = null;
+			for (CfpSubmissionSpeakerConferenceDay cfpSubmissionSpeakerConferenceDay : cfpSubmissionSpeaker.getCfpSubmissionSpeakerConferenceDays()) {
+				if (conferenceDay.getId().equals(cfpSubmissionSpeakerConferenceDay.getConferenceDay().getId())) {
+					cfpSubmissionSpeakerConferenceDayToUse = cfpSubmissionSpeakerConferenceDay;
+				}
+			}
+
+			if (cfpSubmissionSpeakerConferenceDayToUse == null) {
+				final CfpAvailabilityForm availabilityForm = new CfpAvailabilityForm();
+				availabilityForm.setConferenceDay(conferenceDay);
+				speakerForm.getAvailabilityDays().add(availabilityForm);
+			}
+			else {
+				final CfpAvailabilityForm availabilityForm = new CfpAvailabilityForm();
+				availabilityForm.setAvailabilitySelection(cfpSubmissionSpeakerConferenceDayToUse.getCfpSpeakerAvailabilty());
+				availabilityForm.setConferenceDay(cfpSubmissionSpeakerConferenceDayToUse.getConferenceDay());
+				availabilityForm.setStartTime(cfpSubmissionSpeakerConferenceDayToUse.getStartTime());
+				availabilityForm.setEndTime(cfpSubmissionSpeakerConferenceDayToUse.getEndTime());
+				speakerForm.getAvailabilityDays().add(availabilityForm);
+			}
+		}
+
 		prepareReferenceData(model);
-		model.addAttribute("cfpSubmissionSpeaker", cfpSubmissionSpeaker);
+		model.addAttribute("cfpSubmissionSpeaker", speakerForm);
 		model.addAttribute("event", event);
 
 		return "/cfp/edit-cfp-speaker";
@@ -471,7 +568,7 @@ public class CallForPapersController {
 
 			final List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissionsForUserAndEvent(user.getId(), event.getId());
 
-			boolean canDelete = false;
+			boolean canDelete = true;
 
 			for (CfpSubmission cfpSubmission : cfpSubmissions) {
 				for (CfpSubmissionSpeaker speaker : cfpSubmission.getCfpSubmissionSpeakers()) {
@@ -512,9 +609,8 @@ public class CallForPapersController {
 //FIXME
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerFromDb = businessService.getCfpSubmissionSpeakerWithPicture(cfpSubmissionSpeakerId);
 
-		final CfpSubmissionSpeaker cfpSubmissionSpeakerToSave = new CfpSubmissionSpeaker();
-
 		cfpSubmissionSpeakerFromDb.setEmail(cfpSubmissionSpeaker.getEmail());
+		cfpSubmissionSpeakerFromDb.setCompany(cfpSubmissionSpeaker.getCompany());
 		cfpSubmissionSpeakerFromDb.setBio(cfpSubmissionSpeaker.getBio());
 		cfpSubmissionSpeakerFromDb.setFirstName(cfpSubmissionSpeaker.getFirstName());
 		cfpSubmissionSpeakerFromDb.setGithubId(cfpSubmissionSpeaker.getGithubId());
@@ -528,17 +624,56 @@ public class CallForPapersController {
 		cfpSubmissionSpeakerFromDb.setMustReimburseTravelCost(cfpSubmissionSpeaker.isMustReimburseTravelCost());
 		cfpSubmissionSpeakerFromDb.setTshirtSize(cfpSubmissionSpeaker.getTshirtSize());
 
+		final List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays = new ArrayList<>();
+
+		if (cfpSubmissionSpeaker.isAvailableEntireEvent()) {
+			cfpSubmissionSpeakerFromDb.setAvailableEntireEvent(cfpSubmissionSpeaker.isAvailableEntireEvent());
+		}
+		else {
+
+			cfpSubmissionSpeakerFromDb.setAvailableEntireEvent(cfpSubmissionSpeaker.isAvailableEntireEvent());
+
+			final SortedSet<ConferenceDay> conferenceDays = event.getConferenceDays();
+
+			for (CfpAvailabilityForm availabilityForm : cfpSubmissionSpeaker.getAvailabilityDays()) {
+				ConferenceDay conferenceDayToUse = null;
+				for (ConferenceDay conferenceDay : conferenceDays) {
+					if (conferenceDay.getId().equals(availabilityForm.getConferenceDay().getId())) {
+						conferenceDayToUse = conferenceDay;
+					}
+				}
+				if (conferenceDayToUse == null) {
+					throw new IllegalStateException("Did not find conference day for id " + availabilityForm.getConferenceDay().getId());
+				}
+				System.out.println(conferenceDayToUse.getId());
+				final CfpSubmissionSpeakerConferenceDay conferenceDay = new CfpSubmissionSpeakerConferenceDay();
+
+				conferenceDay.setConferenceDay(conferenceDayToUse);
+				conferenceDay.setCfpSubmissionSpeaker(cfpSubmissionSpeakerFromDb);
+				if (CfpSpeakerAvailability.ANY_TIME.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.ANY_TIME);
+				}
+				else if (CfpSpeakerAvailability.NO_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.NO_AVAILABILITY);
+				}
+				else if (CfpSpeakerAvailability.PARTIAL_AVAILABILITY.equals(availabilityForm.getAvailabilitySelection())) {
+					conferenceDay.setCfpSpeakerAvailability(CfpSpeakerAvailability.PARTIAL_AVAILABILITY);
+					conferenceDay.setStartTime(availabilityForm.getStartTime());
+					conferenceDay.setEndTime(availabilityForm.getEndTime());
+				}
+				cfpSubmissionSpeakerConferenceDays.add(conferenceDay);
+			}
+		}
+
 		if (cfpSpeakerImage != null) {
 			cfpSubmissionSpeakerFromDb.setCfpSpeakerImage(cfpSpeakerImage);
 		}
 
-		LOGGER.info(cfpSubmissionSpeakerToSave.toString());
-
-		businessService.saveCfpSubmissionSpeaker(cfpSubmissionSpeakerFromDb);
+		businessService.saveCfpSubmissionSpeaker(cfpSubmissionSpeakerFromDb, cfpSubmissionSpeakerConferenceDays);
 
 		redirectAttributes.addFlashAttribute("successMessage",
 				String.format("The speaker '%s' was edited successfully.", cfpSubmissionSpeakerFromDb.getFirstLastName()));
-		return "redirect:/s/admin/{eventKey}/cfps";
+		return "redirect:/s/cfp/index";
 	}
 
 	@RequestMapping(value="/abstract/{cfpId}", method=RequestMethod.POST)

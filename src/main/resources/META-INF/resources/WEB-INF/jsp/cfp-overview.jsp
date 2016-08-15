@@ -57,7 +57,11 @@
 					</div>
 				</form> --%>
 
-				<p>The CFP will open <strong>August 15, 2016</strong>.</p>
+				<div class="row centered">
+					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
+						<a class="btn btn-primary btn-block" href="${ctx}/s/cfp/index">Login using Google</a>
+					</div>
+				</div>
 
 				<h2 style="margin-top: 2em;" class="text-center">FAQ</h2>
 				<h4>When will the CFP close?</h4>

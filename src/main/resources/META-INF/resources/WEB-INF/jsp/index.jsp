@@ -151,6 +151,11 @@
 						<a href="${ctx}/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
 					</div>
 				</div>
+				<div class="row centered">
+					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
+						<a class="btn btn-primary btn-block" href="${ctx}/s/cfp">The CFP is Open - Submit your Abstracts!</a>
+					</div>
+				</div>
 				<div class="row" style="margin-bottom: 20px;">
 					<div class="col-sm-2 col-sm-offset-4 text-center">
 						<a href="https://play.google.com/store/apps/details?id=org.devnexus" target="_blank">

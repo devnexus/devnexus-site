@@ -186,6 +186,6 @@ public class ConferenceDay extends BaseModelObject implements Comparable<Confere
 
 	@Override
 	public int compareTo(final ConferenceDay other) {
-		return ComparisonChain.start().compare(other.day, day).result();
+		return ComparisonChain.start().compare(day, other.day).result();
 	}
 }

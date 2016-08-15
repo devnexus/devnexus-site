@@ -101,6 +101,17 @@
 			</div>
 		</div>
 
+		<spring:bind path="cfpSubmissionSpeaker.company">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="company" class="col-lg-2 control-label">Company*</label>
+			<div class="col-lg-10">
+				<form:input type="text" cssClass="form-control" path="company" id="company" tabindex="4"/>
+				<form:errors path="company" cssClass="fieldError"/>
+			</div>
+		</div>
+
 		<spring:bind path="cfpSubmissionSpeaker.location">
 			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
 		</spring:bind>
@@ -233,10 +244,78 @@
 			</div>
 		</div>
 		<h3 style="clear: left;">Your Availability</h3>
-		<p style="clear: left;">Are there days or time your won't be able to speak?</p>
+		<p>In order to make the creation of the schedule as smooth as possible,
+			we would like to ask you about your your availability during the conference</p>
+		<p>It would help us tremendously if you are available for the entire (main) conference
+		and if you are submitting sessions for the workshop, then of course you should be available
+		for it as well. Nevertheless, we do understand that you might have other obligations
+		but please be as flexible as possible.</p>
 
-
-
+		<fieldset>
+			<div class="form-group${errorClass}">
+				<div class="col-lg-offset-2 col-lg-10">
+					<div class="checkbox">
+						<label>
+							<form:checkbox path="availableEntireEvent" id="availableEntireEvent" tabindex="13"/>
+							I am available <strong>ANY DAY</strong> for <strong>ANY TIME-SLOT</strong>!
+						</label>
+					</div>
+					<form:errors path="availableEntireEvent" cssClass="fieldError"/>
+				</div>
+			</div>
+		</fieldset>
+		<hr/>
+		<fieldset id="dayAvailability">
+			<c:forEach items="${cfpSubmissionSpeaker.availabilityDays}" var="availability" varStatus="status">
+				<form:hidden path="availabilityDays[${status.index}].conferenceDay.id"/>
+				<h4 class="text-center"><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${availability.conferenceDay.day}"/> - ${availability.conferenceDay.name}</h4>
+				<div class="form-group${errorClass}">
+					<div class="col-lg-offset-2 col-lg-10">
+						<div class="radio">
+							<label>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="ANY_TIME"/>
+								I am fully available that day. Schedule me for any time-slot.
+							</label>
+						</div>
+						<form:errors path="availableEntireEvent" cssClass="fieldError"/>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<div class="radio">
+							<label>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="NO_AVAILABILITY"/>
+								Sorry, I am not available that day at all.
+							</label>
+						</div>
+						<form:errors path="availableEntireEvent" cssClass="fieldError"/>
+					</div>
+					<div class="col-lg-offset-2 col-lg-4">
+						<div class="radio">
+							<label>
+								<form:radiobutton path="availabilityDays[${status.index}].availabilitySelection" value="PARTIAL_AVAILABILITY"/>
+								I am partially available
+							</label>
+						</div>
+						<form:errors path="availableEntireEvent" cssClass="fieldError"/>
+					</div>
+					<div class="col-lg-3">
+						<div class="input-group">
+						<span class="input-group-addon">From</span>
+						<form:input cssClass="form-control" path="availabilityDays[${status.index}].startTime" id="availability_${status.index}.startTime"
+							placeholder="e.g. 13:45" tabindex="14"/>
+						</div>
+						<form:errors path="availabilityDays[${status.index}].startTime" cssClass="fieldError"/>
+					</div>
+					<div class="col-lg-3">
+						<div class="input-group">
+							<span class="input-group-addon">To</span>
+							<form:input cssClass="form-control" path="availabilityDays[${status.index}].endTime" id="availability_${status.index}.endTime"
+							placeholder="e.g. 14:45" tabindex="15"/>
+						</div>
+						<form:errors path="tshirtSize" cssClass="fieldError"/>
+					</div>
+				</div>
+			</c:forEach>
+		</fieldset>
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
 				<button type="submit" class="btn btn-default" name="cancel" tabindex="20"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
@@ -261,7 +340,39 @@
 				$('textarea').maxlength({
 					alwaysShow: true
 				});
+				$("#availableEntireEvent").change(function() {
 
+					if(this.checked) {
+						$("#dayAvailability").find("input").prop("disabled", true);
+					}
+					else {
+						$("#dayAvailability").find("input").prop("disabled", false);
+					}
+				});
+
+				if($("#availableEntireEvent").prop('checked')) {
+					$("#dayAvailability").find("input").prop("disabled", true);
+				}
+				else {
+					$("#dayAvailability").find("input").prop("disabled", false);
+				}
+				<c:forEach items="${cfpSubmissionSpeaker.availabilityDays}" var="availability" varStatus="status">
+					$('input[type=radio][name=availabilityDays\\[${status.index}\\]\\.availabilitySelection]').on('change', function() {
+						console.log($(this).val())
+						switch($(this).val()) {
+							case 'PARTIAL_AVAILABILITY':
+								console.log($("#availability_${status.index}\\.startTime"))
+								$("#availability_${status.index}\\.startTime").prop("disabled", false);
+								$("#availability_${status.index}\\.startTime").focus()
+								$("#availability_${status.index}\\.endTime").prop("disabled", false);
+								break;
+							default:
+								$("#availability_${status.index}\\.startTime").prop("disabled", true);
+								$("#availability_${status.index}\\.endTime").prop("disabled", true);
+								break;
+						}
+					});
+				</c:forEach>
 			});
 		</script>
 </content>

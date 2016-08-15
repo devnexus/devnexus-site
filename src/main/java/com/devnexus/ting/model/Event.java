@@ -15,9 +15,10 @@
  */
 package com.devnexus.ting.model;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -25,8 +26,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.OrderBy;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -76,7 +76,8 @@ public class Event extends BaseModelObject {
 
 	@OneToMany(mappedBy="event", targetEntity=ConferenceDay.class,
 	fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-	private Set<ConferenceDay>conferenceDays = new HashSet<ConferenceDay>(0);
+	@OrderBy("day DESC")
+	private SortedSet<ConferenceDay>conferenceDays = new TreeSet<ConferenceDay>();
 
 	@Override
 	public String toString() {
@@ -203,11 +204,11 @@ public class Event extends BaseModelObject {
 		this.sponsors = sponsors;
 	}
 
-	public Set<ConferenceDay> getConferenceDays() {
+	public SortedSet<ConferenceDay> getConferenceDays() {
 		return conferenceDays;
 	}
 
-	public void setConferenceDays(Set<ConferenceDay> conferenceDays) {
+	public void setConferenceDays(SortedSet<ConferenceDay> conferenceDays) {
 		this.conferenceDays = conferenceDays;
 	}
 

@@ -22,6 +22,7 @@ import java.util.Set;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionSpeakerConferenceDay;
 import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
@@ -321,11 +322,12 @@ public interface BusinessService {
          */
         List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) throws UserNotLoggedInException;
 
-		CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker);
+		CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker, List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays);
 
 		List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
 
 		void deleteCfpSubmissionSpeakerForUser(Long cfpSubmissionSpeakerId, Long userId, Long eventId);
 
 		void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long eventId, Long userId);
+
 }

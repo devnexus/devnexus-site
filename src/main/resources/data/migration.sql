@@ -107,3 +107,41 @@ WITH (
 );
 ALTER TABLE public.conference_days
   OWNER TO devnexus;
+
+-- Aug 11, 2016
+
+ALTER TABLE public.cfp_submission_speakers ADD COLUMN available_entire_event boolean;
+
+UPDATE cfp_submission_speakers
+SET available_entire_event = true
+
+ALTER TABLE public.cfp_submission_speakers ALTER COLUMN available_entire_event SET NOT NULL;
+
+-- Aug 12 2016
+
+CREATE TABLE cfp_submission_speaker_conference_days
+(
+  id bigint NOT NULL,
+  conference_day_id bigint NOT NULL,
+  cfp_submission_speaker_id bigint NOT NULL,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  cfp_speaker_availability character varying(30),
+  start_time time,
+  end_time time,
+  CONSTRAINT pk_cfp_submission_speaker_conference_days PRIMARY KEY (id),
+  CONSTRAINT fk_cfp_submission_speaker_conference_days_cf_days FOREIGN KEY (conference_day_id)
+      REFERENCES public.conference_days (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT fk_cfp_submission_speaker_conference_days_cfp_speakers FOREIGN KEY (cfp_submission_speaker_id)
+      REFERENCES public.cfp_submission_speakers (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE cfp_submission_speaker_conference_days
+  OWNER TO devnexus;
+  
+ALTER TABLE public.cfp_submission_speakers ADD COLUMN company character varying(255);

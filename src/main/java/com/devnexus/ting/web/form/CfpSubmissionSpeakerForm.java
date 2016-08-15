@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.web.form;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -31,6 +32,7 @@ public class CfpSubmissionSpeakerForm extends CfpSubmissionSpeaker {
 
 	private static final long serialVersionUID = 1L;
 	private MultipartFile pictureFile;
+	private List<CfpAvailabilityForm> availabilityDays = new ArrayList<>();
 
 	public void setPictureFile(MultipartFile file) {
 		this.pictureFile = file;
@@ -40,5 +42,12 @@ public class CfpSubmissionSpeakerForm extends CfpSubmissionSpeaker {
 		return pictureFile;
 	}
 
+	public List<CfpAvailabilityForm> getAvailabilityDays() {
+		return availabilityDays;
+	}
+
+	public void setAvailabilityDays(List<CfpAvailabilityForm> availabilityDays) {
+		this.availabilityDays = availabilityDays;
+	}
 
 }

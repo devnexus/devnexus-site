@@ -43,7 +43,7 @@
 <div class="row">
 	<div class="col-md-10 col-md-offset-1" style="padding-top: 4em;">
 		<p>Welcome <sec:authentication property="principal.firstName"/>
-		(Logged-in since: <sec:authentication property="principal.lastLoginDate"/>) | <a href="${ctx}${baseSiteUrl}/logout">Logout</a></p>
+		<%-- (Logged-in since: <sec:authentication property="principal.lastLoginDate"/>) --%> | <a href="${ctx}${baseSiteUrl}/logout">Logout</a></p>
 
 		<c:if test="${not empty successMessage}">
 			<div class="row" style="margin-top: 2em;">
@@ -61,7 +61,7 @@
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th>Action</th><th>Name</th><th>Location</th>
+								<th>Action</th><th>Name</th><th>Company</th><th>Location</th>
 							</tr>
 						</thead>
 						<c:choose>
@@ -77,6 +77,7 @@
 											<a href="${ctx}${baseSiteUrl}/cfp/speaker/${speaker.id}" class="btn btn-default" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
 										</td>
 										<td>${speaker.firstLastName}</td>
+										<td>${speaker.company}</td>
 										<td>${speaker.location}</td>
 									</tr>
 								</c:forEach>

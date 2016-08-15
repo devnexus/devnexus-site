@@ -60,6 +60,7 @@ import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
+import com.devnexus.ting.model.CfpSubmissionSpeakerConferenceDay;
 import com.devnexus.ting.model.Dashboard;
 import com.devnexus.ting.model.Evaluation;
 import com.devnexus.ting.model.Event;
@@ -86,6 +87,7 @@ import com.devnexus.ting.model.UserScheduleItem;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.repository.ApplicationCacheRepository;
 import com.devnexus.ting.repository.CfpSubmissionRepository;
+import com.devnexus.ting.repository.CfpSubmissionSpeakerConferenceDayRepository;
 import com.devnexus.ting.repository.CfpSubmissionSpeakerRepository;
 import com.devnexus.ting.repository.EvaluationRepository;
 import com.devnexus.ting.repository.EventRepository;
@@ -121,6 +123,10 @@ public class BusinessServiceImpl implements BusinessService {
 	private CfpSubmissionRepository cfpSubmissionRepository;
 	@Autowired
 	private CfpSubmissionSpeakerRepository cfpSubmissionSpeakerRepository;
+
+	@Autowired
+	private CfpSubmissionSpeakerConferenceDayRepository cfpSubmissionSpeakerConferenceDayRepository;
+
 	@Autowired
 	private EvaluationRepository evaluationDao;
 	@Autowired
@@ -729,7 +735,29 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	@Transactional
-	public CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker) {
+	public CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker, List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays) {
+
+		cfpSubmissionSpeaker.getCfpSubmissionSpeakerConferenceDays().clear();
+
+		if (cfpSubmissionSpeakerConferenceDays != null) {
+			for (CfpSubmissionSpeakerConferenceDay dayToSave : cfpSubmissionSpeakerConferenceDays) {
+				CfpSubmissionSpeakerConferenceDay existing = cfpSubmissionSpeakerConferenceDayRepository.getCfpSubmissionSpeakerConferenceDayForDayAndSpeaker(
+						dayToSave.getCfpSubmissionSpeaker().getId(),
+						dayToSave.getConferenceDay().getId());
+
+				if (existing == null) {
+					existing = new CfpSubmissionSpeakerConferenceDay();
+					existing.setConferenceDay(dayToSave.getConferenceDay());
+					existing.setCfpSubmissionSpeaker(cfpSubmissionSpeaker);
+				}
+
+				existing.setStartTime(dayToSave.getStartTime());
+				existing.setEndTime(dayToSave.getEndTime());
+				existing.setCfpSpeakerAvailability(dayToSave.getCfpSpeakerAvailabilty());
+
+				cfpSubmissionSpeaker.getCfpSubmissionSpeakerConferenceDays().add(existing);
+			}
+		}
 		return cfpSubmissionSpeakerRepository.save(cfpSubmissionSpeaker);
 	}
 

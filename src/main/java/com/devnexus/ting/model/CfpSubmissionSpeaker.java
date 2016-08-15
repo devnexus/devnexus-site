@@ -15,15 +15,17 @@
  */
 package com.devnexus.ting.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -34,8 +36,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.FilterDefs;
@@ -43,6 +43,8 @@ import org.hibernate.annotations.Filters;
 import org.hibernate.annotations.ParamDef;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * The persistent class for CFP speakers.
@@ -74,10 +76,9 @@ public class CfpSubmissionSpeaker extends Person {
 	@JsonIgnore
 	private User createdByUser;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	@XmlTransient
 	@JsonIgnore
-	@Cascade(CascadeType.ALL)
 	@Valid
 	private CfpSpeakerImage cfpSpeakerImage;
 
@@ -88,9 +89,14 @@ public class CfpSubmissionSpeaker extends Person {
 
 	@NotEmpty
 	@Size(max=255)
+	private String company;
+
+	@NotEmpty
+	@Size(max=255)
 	private String location;
 
 	private boolean mustReimburseTravelCost;
+	private boolean availableEntireEvent;
 
 	@NotEmpty
 	@Size(max=255)
@@ -109,6 +115,9 @@ public class CfpSubmissionSpeaker extends Person {
 	@JsonIgnore
 	@BatchSize(size=20)
 	private List<CfpSubmission>cfpSubmissions = new ArrayList<CfpSubmission>(0);
+
+	@OneToMany(orphanRemoval=true, cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="cfpSubmissionSpeaker")
+	private Set<CfpSubmissionSpeakerConferenceDay>cfpSubmissionSpeakerConferenceDays = new HashSet<CfpSubmissionSpeakerConferenceDay>(0);
 
 	public CfpSubmissionSpeaker() {
 	}
@@ -157,6 +166,14 @@ public class CfpSubmissionSpeaker extends Person {
 	 */
 	public void setMustReimburseTravelCost(boolean mustReimburseTravelCost) {
 		this.mustReimburseTravelCost = mustReimburseTravelCost;
+	}
+
+	public boolean isAvailableEntireEvent() {
+		return availableEntireEvent;
+	}
+
+	public void setAvailableEntireEvent(boolean availableEntireEvent) {
+		this.availableEntireEvent = availableEntireEvent;
 	}
 
 	/**
@@ -245,6 +262,15 @@ public class CfpSubmissionSpeaker extends Person {
 		this.createdByUser = createdByUser;
 	}
 
+	public Set<CfpSubmissionSpeakerConferenceDay> getCfpSubmissionSpeakerConferenceDays() {
+		return cfpSubmissionSpeakerConferenceDays;
+	}
+
+	public void setCfpSubmissionSpeakerConferenceDays(
+			Set<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays) {
+		this.cfpSubmissionSpeakerConferenceDays = cfpSubmissionSpeakerConferenceDays;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -254,6 +280,14 @@ public class CfpSubmissionSpeaker extends Person {
 				+ ", email=" + email + ", location=" + location
 				+ ", mustReimburseTravelCost=" + mustReimburseTravelCost
 				+ ", phone=" + phone + ", tshirtSize=" + tshirtSize + "]";
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
 	}
 
 }
