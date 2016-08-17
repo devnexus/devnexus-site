@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,13 +25,17 @@ import java.util.List;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.tomcat.util.http.fileupload.FileUploadBase.FileSizeLimitExceededException;
+import org.apache.tomcat.util.http.fileupload.FileUploadBase.SizeLimitExceededException;
 import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.MultipartProperties;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
@@ -39,7 +43,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.util.WebUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.BusinessService;
@@ -67,6 +74,7 @@ public class SiteController {
 	@Autowired private BusinessService businessService;
 
 	@Autowired private TwitterService twitterService;
+	@Autowired private MultipartProperties multipartProperties;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SiteController.class);
 
@@ -81,6 +89,37 @@ public class SiteController {
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
 		model.addAttribute("sponsorList", sponsorList);
 		return "index";
+	}
+
+	@RequestMapping("/s/handleGlobaleErrors")
+	public String onUploadError(HttpServletRequest request, final Model model, RedirectAttributes redirectAttributes) {
+
+		final Object errorExceptionObject = request.getAttribute(WebUtils.ERROR_EXCEPTION_ATTRIBUTE);
+
+		if (errorExceptionObject instanceof MultipartException) {
+			final MultipartException multipartException = (MultipartException) errorExceptionObject;
+			final Throwable rootCause = multipartException.getRootCause();
+			String errorMessage = "";
+			if (rootCause instanceof SizeLimitExceededException ||
+					rootCause instanceof FileSizeLimitExceededException) {
+				errorMessage = String.format(
+					  "The file that you are trying to upload is unfortunately too big. Uploaded files cannot be bigger than <strong>%s</strong>."
+					+ " Please go back and upload a smaller image file.", multipartProperties.getMaxFileSize());
+			}
+			else {
+				errorMessage = (String) request.getAttribute(WebUtils.ERROR_MESSAGE_ATTRIBUTE);
+			}
+			redirectAttributes.addFlashAttribute("error", errorMessage);
+			return "redirect:/s/uploadError";
+		}
+		else {
+			return "error/error";
+		}
+	}
+
+	@RequestMapping("/s/uploadError")
+	public String onUploadError2(HttpServletRequest request, final Model model) {
+		return "uploadError";
 	}
 
 	@RequestMapping({"/s/manager"})

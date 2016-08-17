@@ -8,10 +8,6 @@ server:
     mime-types: application/json,application/xml,text/html,text/xml,text/plain
   ssl:
     enabled: false
-multipart:
-  enabled: true
-  max-file-size: 5Mb
-  max-request-size: 10Mb
 security:
   enable-csrf: false
 devnexus:
@@ -49,6 +45,11 @@ devnexus:
   cfp:
     state: open # open | closed
 spring:
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 5Mb
+      max-request-size: 10Mb
   datasource:
     url: jdbc:h2:mem:devnexus_demo
     username: sa

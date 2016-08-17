@@ -17,6 +17,7 @@ package com.devnexus.ting;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.TimeZone;
 
 import javax.servlet.descriptor.JspConfigDescriptor;
 import javax.servlet.descriptor.JspPropertyGroupDescriptor;
@@ -27,6 +28,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.valves.RemoteIpValve;
+import org.apache.coyote.http11.AbstractHttp11Protocol;
 import org.apache.tomcat.util.descriptor.web.ErrorPage;
 import org.apache.tomcat.util.descriptor.web.JspConfigDescriptorImpl;
 import org.apache.tomcat.util.descriptor.web.JspPropertyGroup;
@@ -37,20 +39,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.boot.context.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.boot.context.embedded.tomcat.TomcatContextCustomizer;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.cache.CacheBuilder;
-import java.util.TimeZone;
-import org.springframework.context.annotation.Primary;
 
 /**
  * Main entry point for the DevNexus application.
@@ -112,13 +114,10 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 			final TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory = (TomcatEmbeddedServletContainerFactory) container;
 			tomcatEmbeddedServletContainerFactory.addContextCustomizers(
 					new TomcatContextCustomizer() {
+
 						@Override
 						public void customize(Context context) {
 							context.addWelcomeFile("index.jsp");
-
-							final ErrorPage throwableErrorPage = new ErrorPage();
-							throwableErrorPage.setExceptionType("java.lang.Throwable");
-							throwableErrorPage.setLocation("/WEB-INF/jsp/error/error.jsp");
 
 							final ErrorPage errorPage403 = new ErrorPage();
 							errorPage403.setErrorCode(403);
@@ -135,7 +134,6 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 							context.addErrorPage(errorPage500);
 							context.addErrorPage(errorPage404);
 							context.addErrorPage(errorPage403);
-							context.addErrorPage(throwableErrorPage);
 
 							final Collection<JspPropertyGroupDescriptor> jspPropertyGroups = new ArrayList<>();
 							final Collection<TaglibDescriptor> taglibs = new ArrayList<>();
@@ -157,9 +155,18 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 							}
 						}
 			});
+
+			tomcatEmbeddedServletContainerFactory.addConnectorCustomizers(new TomcatConnectorCustomizer() {
+				@Override
+				public void customize(Connector connector) {
+					((AbstractHttp11Protocol<?>) connector.getProtocolHandler()).setMaxSwallowSize(-1);
+				}
+			});
+
 			tomcatEmbeddedServletContainerFactory.addAdditionalTomcatConnectors(createConnector());
 			tomcatEmbeddedServletContainerFactory.addContextValves(createRemoteIpValves());
 		}
+		container.addErrorPages(new org.springframework.boot.web.servlet.ErrorPage(Throwable.class, "/s/handleGlobaleErrors"));
 	}
 
 	private static RemoteIpValve createRemoteIpValves() {

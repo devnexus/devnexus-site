@@ -34,10 +34,10 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.MultipartProperties;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.UserProfile;
-import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.google.api.Google;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -85,6 +85,7 @@ public class CallForPapersController {
 	@Autowired private SecurityFacade securityFacade;
 
 	@Autowired private Validator validator;
+	@Autowired private MultipartProperties multipartProperties;
 
 	@Autowired
 	private CfpSettings cfpSettings;
@@ -95,6 +96,8 @@ public class CallForPapersController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CallForPapersController.class);
 
 	private void prepareReferenceData(ModelMap model) {
+
+		model.addAttribute("maxFileSize", multipartProperties.getMaxFileSize());
 
 		final Event currentEvent = businessService.getCurrentEvent();
 		model.addAttribute("currentEvent", currentEvent);
@@ -678,7 +681,7 @@ public class CallForPapersController {
 
 		if (bindingResult.hasErrors()) {
 			prepareReferenceData(model);
-			return "/cfp/speaker";
+			return "/cfp/edit-cfp-speaker";
 		}
 //FIXME
 		final CfpSubmissionSpeaker cfpSubmissionSpeakerFromDb = businessService.getCfpSubmissionSpeakerWithPicture(cfpSubmissionSpeakerId);

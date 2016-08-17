@@ -153,7 +153,7 @@
 			<label for="pictureFile" class="col-lg-2 control-label">Picture*</label>
 			<div class="col-lg-10">
 				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="${cfpSubmissionSpeaker.tabIndex()}"/>
-				<span class="help-block">The absolute minimum size of the picture should be 360px x 360px.</span>
+				<span class="help-block">The absolute minimum size of the picture should be 360px x 360px. The maximum permissible file-size is ${maxFileSize}.</span>
 			</div>
 		</div>
 
