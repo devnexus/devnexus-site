@@ -120,6 +120,12 @@
 					<form:options items="${presentationTypes}" itemLabel="name" itemValue="id"/>
 				</form:select>
 				<form:errors path="presentationType" cssClass="fieldError" />
+				<span class="help-block">The <strong>Workshop</strong> type is for full-length (8h)
+					workshops on the dedicated workshop day. If you like to provide
+					workshop-like sessions during the main conference, please use the
+					<strong>Breakout</strong> session-type. If you need more than the default 75min, submit multiple
+					abstracts as <strong>Breakout</strong> session and label
+					them e.g. <strong>Part 1</strong>, <strong>Part 2</strong> etc.</span>
 			</div>
 		</div>
 
@@ -230,7 +236,7 @@
 					});
 				});
 				$("#cfpForm").each(function(){
-					$(this).find(':input').keydown(function( event ) {
+					$(this).find(':input:not(textarea)').keydown(function( event ) {
 						if ( event.which == 13 ) {
 							event.preventDefault();
 							console.log("Submitting form ...");

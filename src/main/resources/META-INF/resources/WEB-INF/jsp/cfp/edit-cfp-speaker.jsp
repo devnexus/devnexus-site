@@ -407,7 +407,7 @@
 					});
 				});
 				$("#cfpForm").each(function(){
-					$(this).find(':input').keydown(function( event ) {
+					$(this).find(':input:not(textarea)').keydown(function( event ) {
 						if ( event.which == 13 ) {
 							event.preventDefault();
 							console.log("Submitting form ...");

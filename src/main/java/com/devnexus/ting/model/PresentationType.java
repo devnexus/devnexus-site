@@ -4,20 +4,22 @@ import org.springframework.util.Assert;
 
 public enum PresentationType {
 
-	BREAKOUT(100L, "Breakout"),
-	KEYNOTE( 200L, "Keynote"),
-	WORKSHOP( 300L, "Workshop");
+	BREAKOUT(100L, "Breakout", "75min"),
+	KEYNOTE( 200L, "Keynote", "60min"),
+	WORKSHOP( 300L, "Workshop", "Full Day, 8h");
 
 	private Long id;
 	private String name;
+	private String description;
 
 	/**
 	 * Constructor.
 	 *
 	 */
-	PresentationType(final Long id, final String name) {
+	PresentationType(final Long id, final String name, final String description) {
 		this.id = id;
 		this.name = name;
+		this.description = description;
 	}
 
 	public Long getId() {
@@ -26,6 +28,14 @@ public enum PresentationType {
 
 	public String getName() {
 		return name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getNameWithDescription() {
+		return name + " (" + description + ")";
 	}
 
 	public static PresentationType fromId(Long presentationTypeId) {

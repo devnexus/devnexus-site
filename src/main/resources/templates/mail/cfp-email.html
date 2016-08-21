@@ -170,7 +170,7 @@
 				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Abstract</strong></td>
 			</tr>
 			<tr>
-				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top">{{description}}</td>
+				<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top">{{{descriptionHtml}}}</td>
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top"><strong>Topic:</strong> {{topic}}</td>
@@ -178,7 +178,7 @@
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
 					<strong>Skill Level</strong>: {{skillLevel}}<br/>
-					<strong>Presentation Type</strong>: {{presentationType}}
+					<strong>Presentation Type</strong>: {{presentationType}}<br/>
 					<strong>Can we record your session</strong>? {{sessionRecordingApproved}}<br/>
 				</td>
 			</tr>
@@ -190,7 +190,7 @@
 			</tr>
 {{#speakers}}
 			<tr>
-				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top"><strong>Speakers</strong></td>
+				<td style=" line-height: 150%; padding: 20px 0;font-size: 20px;" valign="top"><strong>Speaker(s)</strong></td>
 			</tr>
 			<tr>
 				<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">
@@ -220,7 +220,7 @@
 					<td style=" line-height: 150%; padding: 0 0 10px;font-size: 16px;" valign="top"><strong>Bio</strong></td>
 			</tr>
 			<tr>
-					<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">{{bio}}</td>
+					<td style=" line-height: 150%; padding: 0 0 20px;font-size: 16px;" valign="top">{{{bioAsHtml}}}</td>
 			</tr>
 {{/speakers}}
 			<tr>

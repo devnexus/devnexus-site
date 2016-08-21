@@ -46,11 +46,11 @@ public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 	@Transformer
 	public GenericEmail prepareMailToSpeaker(CfpSubmission cfpSubmission) {
 
-		String templateHtml = SystemInformationUtils.getCfpHtmlEmailTemplate();
-		String templateText = SystemInformationUtils.getCfpTextEmailTemplate();
+		final String templateHtml = SystemInformationUtils.getCfpHtmlEmailTemplate();
+		final String templateText = SystemInformationUtils.getCfpTextEmailTemplate();
 
-		String renderedHtmlTemplate = applyMustacheTemplate(cfpSubmission, templateHtml);
-		String renderedTextTemplate = applyMustacheTemplate(cfpSubmission, templateText);
+		final String renderedHtmlTemplate = applyMustacheTemplate(cfpSubmission, templateHtml);
+		final String renderedTextTemplate = applyMustacheTemplate(cfpSubmission, templateText);
 
 		final GenericEmail email = new GenericEmail();
 
@@ -75,7 +75,8 @@ public class PrepareMailToSpeakerTransformer extends BaseMailTransformer {
 
 		context.put("salutation", cfpSubmission.getSpeakersAsString(true));
 		context.put("description", cfpSubmission.getDescription());
-		context.put("presenationType", cfpSubmission.getPresentationType().getName());
+		context.put("descriptionHtml", cfpSubmission.getDescriptionAsHtml());
+		context.put("presentationType", cfpSubmission.getPresentationType().getNameWithDescription());
 		context.put("skillLevel", cfpSubmission.getSkillLevel().getName());
 		context.put("comments", cfpSubmission.getSlotPreference());
 		context.put("topic", cfpSubmission.getTopic());
