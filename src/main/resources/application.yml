@@ -51,7 +51,7 @@ spring:
       max-file-size: 5Mb
       max-request-size: 10Mb
   datasource:
-    url: jdbc:h2:mem:devnexus_demo
+    url: jdbc:h2:mem:devnexus_demo;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password: sa
     driver-class-name: org.h2.Driver

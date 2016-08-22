@@ -15,36 +15,32 @@
  */
 package com.devnexus.ting.core.service.impl;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.core.env.Environment;
-import org.springframework.integration.support.MessageBuilder;
-import org.springframework.messaging.MessageChannel;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import com.devnexus.ting.DevNexusApplication;
-import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
 import com.devnexus.ting.common.SpringProfile;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.PresentationType;
 import com.devnexus.ting.model.SkillLevel;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.env.Environment;
+import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  *
  * @author Gunnar Hillert
  *
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(
-		initializers=IntegrationTestApplicationContextInitializer.class,
-		classes={DevNexusApplication.class})
-@ActiveProfiles(SpringProfile.MAIL_ENABLED)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = DevNexusApplication.class)
+@ActiveProfiles({SpringProfile.MAIL_ENABLED,SpringProfile.SMTP_ENABLED})
 @Ignore
 public class MailSendingTest {
 
@@ -73,7 +69,7 @@ public class MailSendingTest {
 		cfpSubmissionSpeaker.setPhone("555-555-5555");
 		cfpSubmissionSpeaker.setTshirtSize("XXXXL");
 		cfpSubmissionSpeaker.setTwitterId("twitterId");
-		cfpSubmissionSpeaker.setEmail("test@hillert.com");
+		cfpSubmissionSpeaker.setEmail("xaymaca@gmail.com");
 
 		cfpSubmission.getCfpSubmissionSpeakers().add(cfpSubmissionSpeaker);
 		cfpSubmission.setDescription("My *abstract* rocks!");
