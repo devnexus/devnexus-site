@@ -21,7 +21,7 @@ Build Status:
 	$ mvn clean package
 	$ java -jar target/devnexus.jar
 
-The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8080/`
+The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8090/`
 
 ## Production Mode - Standalone
 
@@ -59,7 +59,7 @@ devnexus:
   websocket:
     enabled: true
   server:
-    address: http://localhost:8080/ting
+    address: http://localhost:8090/ting
     https:
       enabled: false
 # registration.state = open | closed | soldout | hide
@@ -133,7 +133,7 @@ For sending mail notifications, the app uses SendGrid:
 http://docs.run.pivotal.io/marketplace/services/sendgrid.html
 https://github.com/sendgrid/sendgrid-java
 
-## Pittfalls
+## Pitfalls
 
 ### Running Postgres on Mac
 
