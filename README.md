@@ -21,7 +21,7 @@ Build Status:
 	$ mvn clean package
 	$ java -jar target/devnexus.jar
 
-The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8080/`
+The DevNexus application should successfully startup using demo settings. Open your browser at `http://localhost:8090/`
 
 ## Production Mode - Standalone
 
@@ -59,7 +59,7 @@ devnexus:
   websocket:
     enabled: true
   server:
-    address: http://localhost:8080/ting
+    address: http://localhost:8090/ting
     https:
       enabled: false
 # registration.state = open | closed | soldout | hide
