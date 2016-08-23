@@ -133,7 +133,7 @@ For sending mail notifications, the app uses SendGrid:
 http://docs.run.pivotal.io/marketplace/services/sendgrid.html
 https://github.com/sendgrid/sendgrid-java
 
-## Pittfalls
+## Pitfalls
 
 ### Running Postgres on Mac
 
