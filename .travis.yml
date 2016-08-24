@@ -1,3 +1,13 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
+deploy:
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: xaymaca@gmail.com
+  password:
+    secure: mdWM/WbF/qDluetbCzZIp+OiCoYI7LVzYrQbVSnYCqEb761Tr5Y+38J26JZWI4+LZpoJvuMiXVQBCIXlnfVS+3vD8neIZWK31Xx1aj4sPTDL45Oy2lApnlyvX03cg7e7WYcHf9JtmmivkjFR571XGb2Wo0mqhS0T0MA/7oh4iBVK/i1NM7O8hMl3xdqhXAf+zkJpLvHR1rR0g7ybc1Mzd27IQtg80TyxvaDfJ/NDbPlmnPpKsVHjTeEof4SAzqlgYtVNIw5KV4N+KCm7LgS08EwQQJWrEce2I5LqzPmivEzfAHBu1hQMKsqzD7RPhwoDNuy23t6cq2EoPMTALF7wtYFhIDBMtBMXzBKPmZi8SAm+GNZkI3fPOsfgEO+vQ2oDkrKz4zqiKlXAkMR0HGzMRw+6+R03oEeybSpSrBPvaTJJs+HH1I0JaZwjqZPo3gNUksKesu+f6I668VDw6UGfN6K2HQihl15EFo5Gi4oPvr+kFLDOxpOKXpmI7Vtfdfm9/nkjvKzjFJEz4qiut1ZCvyOZZXXvJikq6J44OZo0GsSHOm7kkVj5L0VoVKlXyrxh3CF713kUU0tE7L8Dim+DamaXB4Mf/YxkWr4DlnHnrBz+zDJ8Yjaa4jaLrfAaCyrtaBA6WDw2sjPd30kgxWgqaQ/Hylkicdgcs0+TtBOJ7S8=
+  organization: xaymaca-studios
+  space: development
+  on:
+    repo: vinny2020/devnexus-site
