@@ -3,6 +3,7 @@ jdk:
 - oraclejdk8
 deploy:
   provider: cloudfoundry
+  edge: true
   api: https://api.run.pivotal.io
   username: xaymaca@gmail.com
   password:
