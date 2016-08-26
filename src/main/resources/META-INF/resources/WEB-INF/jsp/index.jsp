@@ -308,13 +308,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<div id="goiXzB0rMEQ" class="video-container">
+					<div id="vkT3Rc2tmrc" class="video-container">
 						<img src="${ctx}/assets/img/video_thumb.png"/>
 					</div>
 					<div id="video-play-button" class="play"></div>
 				</div>
 				<div class="col-md-5 col-md-push-1 col-sm-6">
-					<h1 class="video-title">See some of the fun from DEVNEXUS 2014</h1>
+					<h1 class="video-title">Enjoy our DevNexus 2017 Promo Video</h1>
 					<p class="info"> MARK YOUR CALENDARS FEBRUARY 20-22 2017</p>
 
 				</div>
