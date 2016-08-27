@@ -15,6 +15,12 @@
  */
 package com.devnexus.ting.core.dao;
 
+import com.devnexus.ting.DevNexusApplication;
+import com.devnexus.ting.core.service.SystemSetupService;
+import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.core.service.exception.DuplicateUserException;
+import com.devnexus.ting.model.User;
+import com.devnexus.ting.repository.UserRepository;
 import org.jasypt.digest.StringDigester;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,30 +29,18 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.devnexus.ting.DevNexusApplication;
-import com.devnexus.ting.common.IntegrationTestApplicationContextInitializer;
-import com.devnexus.ting.core.service.SystemSetupService;
-import com.devnexus.ting.core.service.UserService;
-import com.devnexus.ting.core.service.exception.DuplicateUserException;
-import com.devnexus.ting.model.User;
-import com.devnexus.ting.repository.UserRepository;
 
 /**
  * @author Gunnar Hillert
  */
 @SuppressWarnings("deprecation")
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(
-		initializers=IntegrationTestApplicationContextInitializer.class,
-		classes={DevNexusApplication.class})
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = DevNexusApplication.class)
 @Transactional(readOnly=false)
-@WebAppConfiguration
 public class SecurityServicesTest {
 
 	@Autowired private SystemSetupService systemSetupService;
