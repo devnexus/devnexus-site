@@ -72,11 +72,16 @@
         <c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
         <c:url var="socialUrl" value="${baseSiteUrl}/social"/>
         <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
+        <c:url var="conferenceInfoUrl" value="${baseSiteUrl}/sponsors"/>
         <c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
         <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
         <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
-
+        <c:url var="facebookUrl" value="https://www.facebook.com/devnexus"/>
+        <c:url var="twitterUrl" value="https://www.twitter.com/devnexus"/>
+        <c:url var="instagramUrl" value="https://www.instagram.com/devnexus/"/>
+        <c:url var="googlePlusUrl" value="https://plus.google.com/+devnexus-conference"/>
+        
         <section class="hero">
             <div>
                 <ul class="list-inline hero-social">
@@ -279,7 +284,7 @@
                 <div class="col-xs-12">
                     <h1>Space Is <span class="trump">Limited</span></h1>
                     <p>Register for Dev Nexus today to reserve your spot at Dev Nexus 2017.</p>
-                    <a class="btn btn-register" href="register.html">REGISTER</a>
+                    <a class="btn btn-register" href="${registrationUrl}">REGISTER</a>
                 </div>
             </div>
 
@@ -366,7 +371,7 @@
                             <h3 class="panel-title">Panel title</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
                             <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
                         </div>
                     </div>
@@ -379,7 +384,7 @@
                             <h3 class="panel-title">Panel title</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
                             <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
                         </div>
                     </div>
@@ -392,7 +397,7 @@
                             <h3 class="panel-title">Panel title</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
                             <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
                         </div>
                     </div>
@@ -496,7 +501,7 @@
                 <h1>Have a <span class="trump">Question</span></h1>
                 <button class="btn hero-btn-register">CONTACT US</button>
             </div>
-         
+
             <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
 
             <!-- javascipt -->
