@@ -1,557 +1,529 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width" />
 
-		<title>${contextEvent.title} | Main</title>
+        <title>${contextEvent.title} | Main</title>
 
-		<meta property="og:title" content="DevNexus 2017">
-		<meta property="og:type" content="company">
-		<meta property="og:site_name" content="DevNexus">
-		<meta property="og:url" content="http://devnexus.com/s/index">
-		<meta property="og:image" content="">
-		<meta property="og:image" content="">
-		<meta content='devnexus, conference, tech conference, southeast, 2017, atlanta conference' name='keywords' />
-		<meta property="og:description" content="">
+        <meta property="og:title" content="DevNexus 2017">
+        <meta property="og:type" content="company">
+        <meta property="og:site_name" content="DevNexus">
+        <meta property="og:url" content="http://devnexus.com/s/index">
+        <meta property="og:image" content="">
+        <meta property="og:image" content="">
+        <meta content='devnexus, conference, tech conference, southeast, 2017, atlanta conference' name='keywords' />
+        <meta property="og:description" content="">
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="shortcut icon" href="${ctx}/favicon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="${ctx}/favicon.png">
 
-		<!-- vendor CSS -->
-		<link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
+        <!-- vendor CSS -->
+        <link rel="stylesheet" type="text/css" href="${ctx}/wro/all.css" />
 
-		<!-- fonts: external links -->
-		<link href='//fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+        <!-- fonts: external links -->
+        <link href='//fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
-		<style type="text/css">
-			#chart-tooltip {
-				position: absolute;
-				width: 400px;
-				height: auto;
-				padding: 5px;
-				z-index: 9999999;
-				background-color: #ffffff;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				border-radius: 4px;
-				-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-				pointer-events: none;
-			}
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            #chart-tooltip {
+                position: absolute;
+                width: 400px;
+                height: auto;
+                padding: 5px;
+                z-index: 9999999;
+                background-color: #ffffff;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+                pointer-events: none;
+            }
 
-			#chart-tooltip.hidden {
-				display: none;
-			}
+            #chart-tooltip.hidden {
+                display: none;
+            }
 
-			#chart-tooltip p {
-				margin: 0;
-				font-family: sans-serif;
-				font-size: 16px;
-				line-height: 20px;
-			}
-		</style>
-	</head>
-<body>
-	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
-	<c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
-	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
-	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
-	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
-	<c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
-	<c:url var="socialUrl" value="${baseSiteUrl}/social"/>
-	<c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
-	<c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
-	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
-	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
-	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
+            #chart-tooltip p {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <c:url var="homeUrl" value="${baseSiteUrl}/index"/>
+        <c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
+        <c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
+        <c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
+        <c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
+        <c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
+        <c:url var="socialUrl" value="${baseSiteUrl}/social"/>
+        <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
+        <c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
+        <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
+        <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
+        <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
 
-	<%@ include file="/WEB-INF/jsp/includes/navigation.jsp" %>
+        <section class="hero">
+            <div>
+                <ul class="list-inline hero-social">
+                    <li><a href="#"><img src="${ctx}/assets/img/facebook-logo-button.png"/></a></li>
+                    <li><a href="#"><img src="${ctx}/assets/img/twitter-logo-button.png"/></a></li>
+                    <li><a href="#"><img src="${ctx}/assets/img/instagram-logo.png"/></a></li>
+                    <li><a href="#"><img src="${ctx}/assets/img/google-plus-1.png"/></a></li>
+                </ul>
 
-	<div id="chart-tooltip" class="hidden">
-		<p><strong><span id="value">123</span> Attendees</strong></p>
-		<p><span id="session-title">title</span></p>
-		<p><span id="session-speaker">speaker</span></p>
-	</div>
-	<!-- Intro Header -->
-	<section id="index--intro" class="module parallax index--parallax-1">
-		<div class="container header">
-			<div class="row intro-body">
-				<div class="col-md-8 col-md-offset-2">
-					<img class="logo" src="${assetsUrl}/img/DevNexus_logo_large.png" alt="DevNexus Logo">
-					<p class="intro-text">THE PROFESSIONAL DEVELOPERS CONFERENCE<br>ATLANTA, GA - FEBRUARY 20-22, 2017</p>
-					<div class="icon">
-						<i class="fa fa fa-twitter"></i>
-					</div><!--//icon-->
-					<p class="intro-text"><a href="https://twitter.com/devnexus">#devnexus</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
+                <ul class="list-inline hero-date-location">
+                    <li><img src="${ctx}/assets/img/calendar.png"/> 20-22.FEB</li>
+                    <li><img src="${ctx}/assets/img/location.png"/> ATLANTA, GA</li>
+                </ul>
 
-	<!-- intro -->
-	<section id="about" class="white">
-		<div class="container">
-				<div class="row centered">
-					<div class="col-md-10 col-md-offset-1">
-						<div id="tagline">Join the <span>&lt;dev/&gt;</span>olution.</div>
-					</div>
-					<div class="col-md-8 col-md-offset-2">
-						<p class="lead">MARK YOUR CALENDARS FEBRUARY 20-22 2017!
-							Our eleventh DevNexus will be at the Georgia World Congress Center in Downtown Atlanta, GA.
-							We are looking forward to hosting our largest event yet and can’t wait for you to join.
-							Check out out <a href="past-conferences">previous years’</a> content, bookmark this site to stay
-							up to date, or <a href="manager">learn to convince your manager to let you come.</a></p>
-					</div>
-				</div>
-				<div class="row centered">
-                                    <div class="col-md-8 col-md-offset-2"style="margin-bottom: 1em;">
-					<!-- Begin MailChimp Signup Form -->
+                <h1><img src="${ctx}/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
+                <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
 
-                                        <style type="text/css">
-                                                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                                                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                                                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                                        </style>
-                                        <div id="mc_embed_signup">
-                                        <form action="//ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=a1fba8f26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                            <div id="mc_embed_signup_scroll">
-                                                <h2>Join our mailing list to stay up to date!</h2>
-                                        <div class="mc-field-group">
+                <a class="btn hero-btn-register" href="register.html">REGISTER NOW</a>
 
-                                                <input type="email" placeholder="E-Mail Address" style="width:100%" value="" name="EMAIL" class="required email input-control" id="mce-EMAIL">
-                                        </div>
-                                                <div id="mce-responses" class="clear">
-                                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0b3b17489713c9e7c62595dd3_a1fba8f26f" tabindex="-1" value=""></div>
-                                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class=" btn btn-primary btn-block">
+            </div>
+        </section>
 
-                                            </div>
-                                        </form>
-                                        </div>
-                                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                                        <!--End mc_embed_signup-->
-                                    </div>
-				</div>
-				<div class="row centered">
-					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a href="${ctx}/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn btn-primary btn-block">Sponsor DevNexus!</a>
-					</div>
-				</div>
-				<div class="row centered">
-					<div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-bottom: 1em;">
-						<a class="btn btn-primary btn-block" href="${ctx}/s/cfp">The CFP is Open - Submit your Abstracts!</a>
-					</div>
-				</div>
-				<div class="row" style="margin-bottom: 20px;">
-					<div class="col-sm-2 col-sm-offset-4 text-center">
-						<a href="https://play.google.com/store/apps/details?id=org.devnexus" target="_blank">
-							<img alt="Get the DevNexus app for your Android phone"
-								src="${ctx}/assets/img/appstore-logos/google-play_en_app_rgb_wo_60.png">
-						</a>
-					</div>
-					<div class="col-sm-2 text-center">
-						<a href="https://itunes.apple.com/de/app/devnexus/id963526236?l=en&mt=8" target="_blank">
-							<img alt="Get the DevNexus app for your iPhone or iPad"
-								style="margin-top: 10px; margin-bottom: 10px;"
-										src="${ctx}/assets/img/appstore-logos/Download_on_the_App_Store_Badge_US-UK_135x40.svg">
-						</a>
-					</div>
-				</div>
-<!-- 				<div class="row" style="margin-top: 1em;">
-					<div id="d3chart" class="col-md-10 col-md-offset-1">
-					</div>
-				</div> -->
-		</div>
-	</section>
-	<!-- /intro -->
 
-	<!-- stats -->
-	<section id="stats" class="module parallax index--parallax-2">
-		<div class="container">
-			<div class="row scrollpoint sp-effect3">
-				<div class="item col-md-3 text-center">
-					<div class="icon animated fadeInUp delayp1">
-						<i class="fa fa-group"></i>
-					</div><!--//icon-->
-					<div class="content">
-						<p class="lead counter-stat">2000</p>
-						<p class="lead counter-commits">DEVELOPERS</p>
-					</div><!--//content-->
-				</div>
-				<div class="item col-md-3 text-center">
-					<div class="icon animated fadeInUp delayp1">
-						<i class="fa fa-cogs"></i>
-					</div><!--//icon-->
-					<div class="content">
-						<p class="lead counter-stat">9</p>
-						<p class="lead counter-commits">WORKSHOPS</p>
-					</div><!--//content-->
-				</div>
-				<div class="item col-md-3 text-center">
-					<div class="icon animated fadeInUp delayp1">
-						<i class="fa fa-arrows"></i>
-					</div><!--//icon-->
-					<div class="content">
-						<p class="lead counter-stat">13</p>
-						<p class="lead counter-commits">TRACKS</p>
-					</div><!--//content-->
-				</div>
-				<div class="item col-md-3 text-center">
-					<div class="icon animated fadeInUp delayp1">
-						<i class="fa fa-university"></i>
-					</div><!--//icon-->
-					<div class="content">
-						<p class="lead counter-stat">120+</p>
-						<p class="lead counter-commits">PRESENTATIONS</p>
-					</div><!--//content-->
-				</div>
-			</div>
-		</div>
-	</section>
+        <%@ include file="/WEB-INF/jsp/includes/navigation.jsp" %>
 
-	<!-- featured -->
-	<section id="featured" class="white">
-		<div class="top-intro scissors">
-			<h4 class="section-title decorated"><span>Featured Tracks</span></h4>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/chart.png" alt="Chart">
-						<h3 class="lead">DATA + INTEGRATION</h3>
-						<p>
-						Whether your data is big or small, you need to make it
-						‘play nicely’ with everything else. Whether you SQL or you
-						NoSQL, you’ll find what you need here, along with the
-						techniques and tools to make your data welcome wherever
-						it goes!</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/java.png" alt="Cup of Java">
-						<h3 class="lead">JAVA/JAVAEE/SPRING</h3>
-						<p>
-						We like the language, but we love the platform. Whatever
-						your flavor of Java (SE, EE, Spring), whether you need to
-						refactor or build new, we’ll deliver the new features,
-						tools and techniques you need to elevate your skills!</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/code.png" alt="Code">
-						<h3 class="lead">HTML5 + JAVASCRIPT</h3>
-						<p>Overwhelmed by the exploding numbers of .js frameworks
-						in this soup du jour of modern web development? Need to
-						understand how HTML5 brings native capabilities to the
-						browser? Whatever you need, we’ve got it here!</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/chat.png" alt="Chat">
-						<h3 class="lead">ALTERNATIVE LANGUAGES</h3>
-						<p>
-						Guess what? Java isn’t the only language to run on the
-						JVM—shocker, right? Meet Scala, Kotlin, Ceylon, Xtend,
-						Groovy, Clojure, Fantom and about a gazillion more. Find
-						out what all the cool kids are into and why!</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/network.png" alt="Network">
-						<h3 class="lead">AGILE + TOOLS</h3>
-						<p>
-						How far down the Agile rabbit hole have you gone? Whether
-						you’re ‘Agile-ish’ or ‘full-on Scrum’ with pair programming
-						and bells and whistles, come learn from the best about
-						how to open up a can of worms!</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="icon-box text-center">
-					<img src="${assetsUrl}/img/phone.png" alt="Phone">
-						<h3 class="lead">MOBILE</h3>
-						<p>
-						Designing for mobile first is the hottest ticket in
-						town—even in web development. So whether you roll with
-						hardcore Objective C, Java with Android SDK, or a dev
-						framework like PhoneGap, Titanium or Xamarin—we’ve got
-						you covered!</p>
-					</div>
-				</div>
-			</div>
-		<!-- ./row -->
-		</div><!-- /.container -->
-	</section>
+        <div class="container-fluid" >
 
-	<section id="video" class="bkgDarkGrey">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<div id="J7XpqF8rHS8" class="video-container">
-						<img src="${ctx}/assets/img/video_thumb.png"/>
-					</div>
-					<div id="video-play-button" class="play"></div>
-				</div>
-				<div class="col-md-5 col-md-push-1 col-sm-6">
-					<h1 class="video-title">Enjoy our DevNexus 2017 Promo Video</h1>
-					<p class="info"> MARK YOUR CALENDARS FEBRUARY 20-22 2017</p>
 
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="row marketing-panel">
+                <div class="col-md-3 what-is">
+                    <div>
+                        <h1>WHAT IS DEVNEXUS?</h1>
+                        <ul class="list-unstyled">
+                            <li>PROFESSIONAL</li>
+                            <li>DEVELOPERS</li>
+                            <li>CONFERENCE</li>
+                        </ul>
+                        <p>Find out what makes DEVNEXUS special from attendees at the 2016 event.</p>
+                    </div>
+                </div>
+                <div class="col-md-9 preview">
+                    <a class="center-block" href="#">
+                        <img class="img-responsive center-block play-button" src="${ctx}/assets/img/play-button.png" alt="Play Promo Video"/>
+                    </a>
+                </div>
+            </div>
 
-	<section id="travel" class="white">
-		<div class="top-intro travel">
-		<h4 class="section-title decorated"><span>Travel</span></h4>
-		</div>
-		<div class="container">
-			<div class="row travel-row-spacing">
-				<h4 class="travel-address"><a href="https://www.google.com/maps/place/Georgia+World+Congress+Center/@33.76042,-84.3980223,17z/data=!4m2!3m1!1s0x0000000000000000:0x0072f65a339b8777">Georgia World Congress Center | 285 Andrew Young International Blvd NW, Atlanta, GA 30303
-						| 404-223-4000</a></h4>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="copy">
+                        <p>The goal of the Dev Nexus Conference is to ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                    </div>
+                </div>
+            </div>
 
-			</div>
-			<div class="row travel-row-spacing">
-				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<a href="http://www.gwcc.com/" target="_blank"><img class="img-feature img-responsive" src="${assetsUrl}/img/gwcc.jpg" alt="Georgia World Congress Center"></a>
-				</div>
-				<div class="col-md-5 col-md-push-1 col-sm-6">
-					<p>
-					The Georgia World Congress Center website includes <a href="http://www.gwcc.com/directions/Default.aspx" target="_blank">directions to the conference center</a> from several directions as well as the airport.</p>
-					<p>
-					<a href="http://itsmarta.com/" target="_blank">MARTA</a>, Atlanta’s public transportation  system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.</p>
-				</div>
-			</div>
-			<div class="row travel-row-spacing">
-				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<h4 class="travel-address">Georgia World Congress Center is accessible from several nearby hotels</h4>
-				</div>
-			</div>
-			<div class="row travel-row-spacing">
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="http://www.omnihotels.com/hotels/atlanta-cnn-center" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/omni.jpg" alt="Omni Hotel"><div>Omni Hotel</div></a>
+            <div class="row stats">
 
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="http://embassysuites3.hilton.com/en/hotels/georgia/embassy-suites-atlanta-at-centennial-olympic-park-ATLESES/index.html" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/embassy.jpg" alt="Embassy Suites"><div>Embassy Suites</div></a>
-<!--						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>-->
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="http://hiltongardeninn3.hilton.com/en/hotels/georgia/hilton-garden-inn-atlanta-downtown-ATLDOGI/index.html" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/hilton.jpg" alt="Hilton Garden Inn"><div>Hilton Garden Inn</div></a>
-					</div>
-				</div>
-			</div><div class="row travel-row-spacing">
-				<div class="col-md-10 col-sm-10 col-md-push-1">
-					<h4 class="travel-address">Downtown Atlanta features many attractions if you plan to extend your stay</h4>
-				</div>
-			</div>
-			<div class="row travel-row-spacing">
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="https://www.civilandhumanrights.org/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/civilrights.jpg" alt="Center for Civil and Human Rights"><div>Center for Civil and Human Rights</div></a>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="${ctx}/assets/img/multiple-users-silhouette.png"/>
+                    <p>1700</p>
+                    <img src="${ctx}/assets/img/line.png"/>
+                    <br>
+                    <p class="trump">DEVELOPERS</p>
+                </div>
 
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="http://www.cfbhall.com/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/college_fhof.jpg" alt="College Football Hall of Fame"><div>College Football Hall of Fame</div></a>
-<!--						<div><a class="travel-directions-link" href="http://bit.ly/gDzY9N">Get Directions</a></div>-->
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="text-center">
-						<a class="travel-directions-link" href="http://www.georgiaaquarium.org/" title="Visit Website" target="_blank"><img src="${assetsUrl}/img/index/aquarium.jpg" alt="Georgia Aquarium"><div>Georgia Aquarium</div></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="${ctx}/assets/img/settings.png"/>
+                    <p>9</p>
+                    <img src="${ctx}/assets/img/line.png"/>
+                    <br>
+                    <p class="trump">WORKSHOPS</p>
+                </div>
 
-	<section id="sponsors">
-		<div class="row" style="margin-left: 0; margin-right: 0;">
-			<div class="col-md-8 col-md-push-2">
-				<c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
-					<c:choose>
-						<c:when test="${sponsor.sponsorLevel.name ne sponsorLevel}">
-							<c:if test="${not status.first}"></div></c:if>
-							<c:set value="${sponsor.sponsorLevel.name}" var="sponsorLevel"/>
-							<div class="top-intro sponsors ${sponsor.sponsorLevel.cssStyleClass}">
-								<h4 class="decorated"><span>
-									<c:choose>
-										<c:when test="${sponsorList.sponsorLevelCount.get(sponsor.sponsorLevel) > 1}">
-											${sponsorLevel}s
-										</c:when>
-										<c:otherwise>
-											${sponsorLevel}
-										</c:otherwise>
-									</c:choose>
-								</span></h4>
-								<a href="${sponsor.link}"><img src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
-							<c:if test="${status.last}"></div></c:if>
-						</c:when>
-						<c:otherwise>
-							<a href="${sponsor.link}"><img src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}" title="${sponsor.name}"></a>
-						</c:otherwise>
-					</c:choose>
-				</c:forEach>
-			</div>
-		</div>
-	</section>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="${ctx}/assets/img/folder.png"/>
+                    <p>13</p>
+                    <img src="${ctx}/assets/img/line.png"/>
+                    <br>
+                    <p class="trump">TRACKS</p>
+                </div>
 
-	<!-- questions -->
-	<section class="white">
-		<div class="top-intro questions">
-			<h4>Questions?</h4>
-			<h3>Contact us at info@ajug.org</h3>
-		</div>
-	</section>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="${ctx}/assets/img/microphone.png"/>
+                    <p>120</p>
+                    <img src="${ctx}/assets/img/line.png"/>
+                    <br>
+                    <p class="trump">PRESENTATIONS</p>
+                </div>
 
-	<%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
+            </div><!-- stats -->
 
-	<!-- javascipt -->
-	<script src="${ctx}/wro/all.js"></script>
-	<%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
-			<script src="${assetsUrl}/js/jquery.modernizr.js"></script>
-			<script src="${assetsUrl}/js/jquery.easing.min.js"></script>
-			<script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
-	<script>
-		"use strict";
-		(function(i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function() {
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-						m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            <div class="row">
 
-		ga('create', 'UA-44984422-1', 'devnexus.com');
-		ga('send', 'pageview');
+                <h1 class="featured-header">
+                    FEATURED SPEAKERS
+                </h1>
 
-		$(function() {
-			$(".video-container").each(function() {
-				var videoId = this.id;
-				$(document).delegate('#video-play-button', 'click', function() {
-					var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
-					var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url})
-					$('#' + videoId).html(iframe).addClass('loaded');
-					$('#video-play-button').hide();
-				});
-			});
+                <div class="speakers">
 
-			$("#tagline").fitText().fitText(1.05);
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-			var container = d3.select("#d3chart")
 
-			var width = $("#d3chart").width();
-			var height = 120
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-			var svg = container.append("svg");
-			svg.attr("height", height);
-			svg.attr("width", width);
-			svg.attr("viewBox", "0 0 " + width + " " + height);
-			svg.attr("perserveAspectRatio", "xMinYMid");
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-			$(window).on("resize", function() {
-				svg.attr("width", $("#d3chart").width());
-				svg.attr("height", 120);
-			});
 
-			var barWidth = 4;
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-			function processData(data) {
 
-				var maxValue = d3.max(data, function(el) {
-					return parseInt(el.attendees)
-				});
-				var minValue = d3.min(data, function(el) {
-					return parseInt(el.attendees)
-				});
-				var meanValue = d3.mean(data, function(el) {
-					return parseInt(el.attendees)
-				});
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-				var xScale = d3.scale.linear().domain([0, data.length]).range([0, width]);
-				var yScale = d3.scale.linear().domain([0, maxValue]).range([0, height]);
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-				svg.selectAll('rect').data(data).enter()
-				.append('rect')
-				.attr('width', barWidth)
-				.attr('height', function(d) {
-					return yScale(d.attendees);
-				})
-				.attr("x", function(d, i) {return xScale(i)})
-				.attr("y", function(d, i) {return height - yScale(d.attendees)})
-				.style("fill", function(d, i) {return d.color})
 
-				.on("mouseover", function(d) {
-					d3.select(this).style("fill", "orange");
-					d3.select("#chart-tooltip")
-					.style("left", $('#d3chart').offset().left + ($('#d3chart').width() / 2) - ($('#chart-tooltip').width() / 2) + "px")
-					.style("top", $('#d3chart').offset().top + "px")
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-					d3.select("#value").text(d.attendees);
-					d3.select("#session-title").text(d.session_title);
-					d3.select("#session-speaker").text(d.speaker);
-					d3.select("#chart-tooltip")
-					.style("opacity", 0)
-					.classed("hidden", false)
-					.transition()
-					.duration(250)
-					.style("opacity", 1);
-				})
-				.on("mouseout", function(d) {
-					d3.select("#chart-tooltip")
-					.transition()
-					.duration(250)
-					.style("opacity", 0)
-					d3.select(this)
-					.transition()
-					.duration(250)
-					.style("fill", function(d,i) {return d.color});
-				})
-				.style("opacity", 1)
-				.append("title").text(function(d) {
-					return d.session_title + ': ' + d.attendees + ' attendees.';
-				});
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Franklin Kennedy</h3>
+                                <p>Job Title</p>
+                                <p>Company</p>
+                            </div>
+                        </div>
+                    </div>
 
-			}
 
-			d3.csv('${ctx}/static/2015/devnexus-stats.csv', function(data) {
-				processData(data);
-			});
+                </div><!-- speakers -->
 
-		});
+                <button class="btn btn-square btn-square btn-speakers center-block">SEE ALL SPEAKERS</button>
+            </div>
 
-	</script>
-</body>
+
+            <div class="row call-to-action space">
+                <div class="col-xs-12">
+                    <h1>Space Is <span class="trump">Limited</span></h1>
+                    <p>Register for Dev Nexus today to reserve your spot at Dev Nexus 2017.</p>
+                    <a class="btn btn-register" href="register.html">REGISTER</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <h1 class="featured-header">
+                    FEATURED SESSIONS
+                </h1>
+
+                <div class="speakers sessions">
+
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <div class="caption">
+                                <h3>Presentation Name</h3>
+                                <p>Speaker name</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div><!-- sessions -->
+
+                <button class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</button>
+
+            </div><!-- ends session row -->
+
+            <div class="row tickets">
+
+
+                <h1 class="featured-header">TICKETS</h1>
+
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="pull-right">$162</p>
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="pull-right">$162</p>
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="pull-right">$162</p>
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a class="btn btn-register" href="register.html">BUY NOW</a>
+                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div><!-- ends tickets row -->
+
+
+            <div class="row call-to-action boss">
+                <div class="col-xs-12">
+                    <h1>Need To Convince Your <span class="trump">Boss</span>?</h1>
+                    <button class="btn hero-btn-register">HERE IS HOW</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="sponsors">
+                    <div class="row featured-header">
+                        <p>
+                            SPONSORS
+                        </p>
+                    </div>
+                    <div class="row sponsor-section">
+                        <div class="col-lg-2">
+                            Platinum
+                        </div>
+                        <div class="col-lg-10">
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row sponsor-section">
+                        <div class="col-lg-2">
+                            Gold
+                        </div>
+                        <div class="col-lg-10">
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                            <a href="#">
+                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center-block">
+                    <button class="btn btn-square btn-speakers center-block">SEE ALL SPONSORS</button>
+                </div>
+            </div>
+
+            <div class="row call-to-action become-sponsor">
+                <div class="col-xs-12">
+                    <h1>Become a <span class="trump">Sponsor</span></h1>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium</p>
+                    <button class="btn hero-btn-register">LET US KNOW</button>
+                </div>
+            </div>
+
+            <div class="row call-to-action question">
+                <h1>Have a <span class="trump">Question</span></h1>
+                <button class="btn hero-btn-register">CONTACT US</button>
+            </div>
+         
+            <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
+
+            <!-- javascipt -->
+            <script src="${ctx}/wro/all.js"></script>
+            <%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
+                            <script src="${assetsUrl}/js/jquery.modernizr.js"></script>
+                            <script src="${assetsUrl}/js/jquery.easing.min.js"></script>
+                            <script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
+            <script>
+                "use strict";
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-44984422-1', 'devnexus.com');
+                ga('send', 'pageview');
+                $('#nav').affix({
+                    offset: {top: $('#nav').offset().top}
+                });
+            </script>
+    </body>
 </html>

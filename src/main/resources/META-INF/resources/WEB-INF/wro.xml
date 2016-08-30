@@ -1,10 +1,10 @@
 <groups xmlns="http://www.isdc.ro/wro">
     <group name="all_css">
-        <css>classpath:less/main.less</css>
+        <css>classpath:less/index.less</css>
         <css>classpath:META-INF/resources/assets/css/vendor/animate.css</css>
     </group>
     <group name="all">
-        <css>classpath:less/main.less</css>
+        <css>classpath:less/index.less</css>
         <css>classpath:META-INF/resources/assets/css/vendor/animate.css</css>
         <js>classpath:META-INF/resources/assets/js/jquery1.11.1.min.js</js>
         <js>classpath:META-INF/resources/assets/js/jquery.modernizr.js</js>
