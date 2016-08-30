@@ -144,5 +144,7 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 					break;
 			}
 		}
+                //TODO: Make this a configured thing.
+                applicationContext.getEnvironment().addActiveProfile(SpringProfile.DEVELOPMENT_ENABLED);
 	}
 }

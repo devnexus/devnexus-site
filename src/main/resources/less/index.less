@@ -1,0 +1,728 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "../node_modules/bootstrap-less/bootstrap/index.less";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #282828;
+    font-size: 16px;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 100px;
+    background-color: #f6921e;
+    color: #fff;
+}
+
+/* Hero area ============= */
+
+.hero {
+    color: #fff;
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.6)),
+        url('../img/hero.jpg');
+    background-size: 100% 100%, cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 100px 10px;
+    border-bottom: 1px solid #fff;
+}
+.hero div{
+    margin: 0 auto;
+}
+
+.hero ul{
+    margin-bottom: 50px;
+}
+
+
+/* Social btns */
+.hero-social li{
+    margin: 0 15px;
+}
+
+/* Hero date and location */
+
+.hero-date-location li{
+    margin: 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fafafa;
+}
+.hero-date-location img{
+    margin-right: 30px;
+}
+
+/* LOGO */
+.hero h1{
+    max-width: 965px;
+    height: auto;
+}
+.hero h1 img{
+    width: 100%;
+}
+
+
+.hero h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin: 40px 0 50px 0;
+}
+
+.hero h2 span{
+    color:#6fa133;
+}
+
+.hero-btn-register {
+    height:65px;
+    width:360px;
+    line-height: 65px;
+    padding: 0;
+}
+
+
+/* NavBar ============= */
+
+.navbar{
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    margin: 0;
+    z-index: 100;
+    border-radius: 0;
+    padding: 30px;
+}
+
+.header {
+    height: 120px;
+    background-color: #282828;
+    padding: 32px 40px 32px 40px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    z-index: 100;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-link a, .nav-link button, .nav-link a.btn {
+    margin-right: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-nav li a.btn,.navbar-nav li a.btn:hover {
+    color: #fff;
+    background-color: #f6921e;    
+    font-size: 17px;    
+}
+
+.btn-register {
+    width: 167px;
+    height: 56px;
+    margin-left: 20px;
+    border-radius: 100px;
+    background-color: #f6921e;
+}
+
+.border {
+    border-left : solid 1px #979797;
+    border-right : solid 1px #979797;
+}
+
+.border-bottom {
+    border-bottom : solid 1px #979797;
+}
+
+
+/* What is =============== */
+
+.marketing-panel {
+    font-size: 28px;
+    background-color: #91b565;
+    letter-spacing: 1.6px;
+    color: #fff;
+}
+.what-is{
+    display: flex;
+    align-items: center;
+    height: 700px;
+}
+.what-is div{
+    padding:0 60px;
+}
+
+.what-is h1{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.what-is ul{
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* TODO: Review this preview box when you have a real video. */
+.preview {
+    overflow: hidden;
+    height: 700px;
+    padding: 0;
+    background-image: url(../img/screen-shot-2016-06-29-at-104433-a-m.jpg) ;
+    background-size: cover
+}
+
+.play-button {
+    margin-top: 283px;
+}
+
+/* Copy section ====================== */
+
+.copy {
+    font-size: 24px;
+    text-align: center;
+    margin: 80px 180px;
+}
+
+.stats {
+    background-image: url(../img/people-midpage.jpg);
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 420px;
+}
+
+.stats div {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    background-color: transparent;
+    line-height: 1.1;
+    border:0;
+
+}
+
+.trump {
+    color: #f6921e;
+}
+
+.stats div .trump {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #f6921e;
+    line-height: 1.1
+}
+
+.featured-header {
+    margin: 80px 0px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Speakers =============== */
+
+.speakers:after {
+    content: " ";
+    display: table;
+}
+
+.speakers:after {
+    clear: both;
+}
+
+.speakers .thumbnail{
+    margin-bottom: 40px;
+}
+
+.speakers .thumbnail, .speakers .caption{
+    padding:0;
+    border: none;
+}
+.speakers .thumbnail img{
+    width: 100%;
+}
+
+.speakers p{
+    margin-bottom: 5px;
+}
+
+.btn.btn-square {
+    border-radius: 0;
+    margin: 20px auto 70px auto;
+}
+
+.btn-speakers {
+    background-color: #6c9c31;
+    width: 80%;
+    font-size: 28px;
+    padding: 48px 100px;
+    color: #FFF;
+}
+
+/* call to action ============*/
+.call-to-action {
+    text-align: center;
+    color: #fff;
+    background: #cdddb9;
+    border-bottom: solid 1px #979797;
+}
+.space{
+    background-image: url(../img/limited_space.jpg);
+    background-size: cover;
+    text-align: center;
+}
+.call-to-action h1 {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 70px auto 20px auto;
+}
+
+.call-to-action p {
+    margin-bottom: 20px;
+}
+
+.call-to-action button, .call-to-action a.btn {
+    margin-bottom: 70px;
+}
+
+.call-to-action .trump {
+    color: #f6921e;
+}
+
+
+/* Sessions ============ */
+
+
+.sessions .thumbnail{
+    position: relative;
+}
+
+.sessions .caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(148,183,105,.72);
+    color: #fff;
+    padding: 28px;
+    font-size: 26px;
+}
+
+.sessions .caption h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* tickets ================= */
+
+.tickets {
+    background-image: url(../img/background-tickets.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70px;
+}
+
+.tickets .featured-header{
+    color: #fff;
+}
+
+.tickets .panel{
+    border-radius: 0;
+    border: none;
+}
+
+.tickets .panel-heading{
+    border-radius: 0;
+    background: #6c9c31;
+    padding: 24px 60px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tickets .panel-title{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tickets .panel-body button, .tickets .panel-body a.btn {
+    float: right;
+    margin: 0 60px 50px 40px;
+
+}
+
+
+.sponsor-section {
+    font-size: 24px;
+    border-bottom : solid 1px #979797;
+    margin : 20px;
+}
+
+.sponsor-section a {
+    margin: 0 40px 24px 40px;
+    float: left;
+}
+
+
+.become-sponsor {
+    background-image: url(../img/become-sponsor-bg.jpg);
+    background-size: cover;
+}
+
+
+.question {
+    background-color: #282828;
+}
+
+.footer {
+    background-color: #282828;
+    border: solid 1px #979797;
+}
+
+.footer ul {
+    margin: 50px
+}
+
+.footer .text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.43;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #666666;
+    text-transform: uppercase;
+}
+/* Registration page ============= */
+
+.register h2 {
+    background-color: #91b565;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #282828;
+    padding: 24px 0;
+    margin: 30px 40px
+}
+
+.register .ticket-detail header  {
+    margin: 30px 40px;
+}
+.register .ticket-detail header h1 {
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.register .ticket-detail header p {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.register .tickets {
+
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70px;
+}
+
+.register .tickets .panel{
+    border-radius: 0;
+    border: 1px #979797 solid;
+    margin-top: 60px;
+}
+
+.register .tickets .panel .panel-heading{
+    background-color: #282828;
+    text-transform: uppercase
+}
+
+
+/* conference-information == */
+
+.conference-information {
+    margin: 40px; 
+    background-color: #fff;
+
+}
+
+.conference-information p {
+    margin: 40px 0; 
+    font-size: 24px;
+}
+
+
+.conference-information .information-card h1 {
+    margin: 20px 0; 
+}
+
+.conference-information .information-card img {
+    margin: 20px 0; 
+    width: 100%;
+}
+
+.conference-information section, .conference-information div {
+    background-color: #fff;
+    border: 0;
+}
+
+.conference-information a.btn{
+    height:65px;
+    width:360px;
+    vertical-align: middle;
+    line-height: 65px;
+    padding: 0;
+}
+
+/* Schedule customizations */
+
+.schedule-config .btn {
+    width: 360px;
+    height: 65px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.schedule-config .featured-header {
+    margin-bottom: 40px;
+}
+
+.schedule-config .row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.schedule-config .btn.customize {
+    background-color: #dd4e42;
+    margin-right: 40px;
+}
+
+.schedule-config .btn.download {
+    background-color: #6c9c31;
+    margin-left: 40px;
+}
+
+.schedule-config .btn .badge {
+    background: transparent;
+}
+
+.schedule-config .btn .icon {
+    margin-right: 10px;
+    height: 4em;
+
+}
+
+
+.schedule-config #schedule-type-filter .btn {
+    border-radius: 0;
+    width:250px;
+}
+
+
+
+@media(max-width: @screen-sm) {
+
+    .schedule-config #schedule-type-filter .btn {
+        border-radius: 0;
+        width: 150px;
+        font-size: 11pt;
+    }
+
+}
+
+@media(max-width: @screen-xs) {
+
+    .schedule-config #schedule-type-filter .btn {
+        border-radius: 0;
+        width: 125px;
+        font-size: 11pt;
+    }
+
+}
+
+.schedule-config #schedule-type-filter .btn.unselected {
+    border-radius: 0;
+    background-color: white;
+    color: #f6921e;
+}
+
+.schedule-config #schedule-day-filter .btn-group {
+    display: block;
+    margin: 0 40px;
+}
+
+.schedule-config #schedule-day-filter .btn {
+    height: auto;
+}
+
+.schedule-config #schedule-day-filter .btn span.big { 
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.schedule-config #schedule-day-filter .btn.unselected span.little {
+    font-size: 16.6px;
+    font-weight: 600;
+    text-align: center;
+    color: #abb3bc;
+
+}
+
+.schedule-config #schedule-day-filter .btn span.little {
+    font-size: 16.6px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+
+.schedule-config #schedule-day-filter .btn {
+    border-radius: 0;
+    width:33%;
+}
+
+.schedule-config #schedule-day-filter .btn.unselected  {
+    border-radius: 0;
+    width:33%;
+    background-color: white;
+    color: #f6921e;
+}
+
+.schedule-config .sub-filter .btn-group{
+    display: block;
+    margin: 0 40px;
+}
+
+.schedule-config .sub-filter .btn {
+    border-radius: 0;
+    width:33%;
+    background-color: white;
+    color: #f6921e;
+    text-align: left;
+}
+
+
+@media(max-width: @screen-sm) {
+    .schedule-config .sub-filter .btn {
+        border-radius: 0;
+        width:100%;
+        background-color: white;
+        color: #f6921e;
+        text-align: left;
+    }
+
+}
+
+
+
+.schedule-config .sub-filter .btn .caret {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+.schedule-config .sub-filter .dropdown-menu {
+    border-radius: 0;
+    width:33%;
+    background-color: white;
+    color: #f6921e;
+    text-align: left;
+}
+
+.schedule-config .sub-filter .dropdown-menu li a{
+    background-color: white;
+    color: #f6921e;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.schedule .schedule-header {
+    margin: 40px 22px 0 22px;
+    background-color: black;
+}
+
+.schedule h2 {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0
+}
+
+@media(max-width: @screen-sm) {
+    .schedule .schedule-row {
+        margin: 0px 22px 0 22px;
+        text-align: left;
+        border: 1px solid;
+    }    
+    
+    .schedule .schedule-row .small {
+        font-size: 16px;
+    }    
+    
+    .schedule .schedule-row .text-center{
+        text-align: left;
+    }   
+    
+    .schedule-config .sub-filter .dropdown-menu {
+        width: 100%;
+    }    
+}
+
+@media(min-width: @screen-sm) {
+
+
+
+    .schedule .schedule-row {
+        margin: 0 22px;
+        border: 1px solid;
+        border-bottom: 0px;
+        overflow: hidden;
+        height: 5em;
+
+    }
+    .schedule div.schedule-row:last-child {
+        border-bottom: 1px solid;
+    }
+
+    .schedule .schedule-row div {
+        border-right: 1px solid;
+        padding:  1em;
+        height: 100%
+            /*        margin-bottom: -99999px;
+                    padding-bottom: 99999px;*/
+
+    }
+    .schedule .schedule-row div:last-of-type{
+        border-right: 0px;
+        padding-right: 22px;
+    }
+}
+
+.schedule-boss {
+    margin-top: 35px;
+}
