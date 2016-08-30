@@ -24,6 +24,7 @@ package com.devnexus.ting.common;
 public final class SpringProfile {
 
 	public static final String MAIL_ENABLED       = "mail-enabled";
+        public static final String DEVELOPMENT_ENABLED       = "development-enabled";
 	public static final String SENDGRID_ENABLED   = "sendgrid-enabled";
 	public static final String SENDGRID_DISABLED  = "!sendgrid-enabled";
 	public static final String SMTP_ENABLED   = "smtp-enabled";
