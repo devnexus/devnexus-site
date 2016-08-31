@@ -454,69 +454,6 @@
                     </c:choose>
                 </c:forEach>
 
-
-                <div class="row sponsor-section">
-                    <div class="col-lg-2">
-                        Platinum
-                    </div>
-                    <div class="col-lg-10">
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                    </div>
-                </div>
-                <div class="row sponsor-section">
-                    <div class="col-lg-2">
-                        Gold
-                    </div>
-                    <div class="col-lg-10">
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                        <a href="#">
-                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="row center-block">
                 <button class="btn btn-square btn-speakers center-block">SEE ALL SPONSORS</button>
