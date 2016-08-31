@@ -39,6 +39,7 @@ import com.devnexus.ting.web.form.RegisterForm;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 import java.util.Objects;
+import javax.persistence.JoinColumn;
 import javax.validation.Valid;
 import org.hibernate.validator.constraints.Email;
 
@@ -74,7 +75,7 @@ public class RegistrationDetails extends BaseModelObject {
     private String contactEmailAddress;
 
     @ManyToOne
-    //@JoinColumn(name="EVENT_ID")
+    @JoinColumn(name="EVENT")
     @XmlTransient
     @JsonIgnore
     private Event event;

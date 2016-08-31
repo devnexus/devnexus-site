@@ -37,6 +37,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.JoinColumn;
 
 /**
  * The persistent class for the speakers database table.
@@ -77,7 +78,7 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 	private Integer roomOrder;
 
 	@ManyToOne
-	//@JoinColumn(name="EVENT_ID")
+	@JoinColumn(name="EVENT")
 	@NotNull
 	@XmlTransient
         @JsonIgnore
