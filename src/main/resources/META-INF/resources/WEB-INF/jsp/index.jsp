@@ -81,7 +81,7 @@
         <c:url var="twitterUrl" value="https://www.twitter.com/devnexus"/>
         <c:url var="instagramUrl" value="https://www.instagram.com/devnexus/"/>
         <c:url var="googlePlusUrl" value="https://plus.google.com/+devnexus-conference"/>
-        
+
         <section class="hero">
             <div>
                 <ul class="list-inline hero-social">
@@ -276,7 +276,7 @@
 
                 </div><!-- speakers -->
 
-                <button class="btn btn-square btn-square btn-speakers center-block">SEE ALL SPEAKERS</button>
+                <a href="${speakersUrl}" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SPEAKERS</a>
             </div>
 
 
@@ -355,7 +355,7 @@
 
                 </div><!-- sessions -->
 
-                <button class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</button>
+                <a href="${sessionsUrl}"class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
 
             </div><!-- ends session row -->
 
@@ -410,7 +410,7 @@
             <div class="row call-to-action boss">
                 <div class="col-xs-12">
                     <h1>Need To Convince Your <span class="trump">Boss</span>?</h1>
-                    <button class="btn hero-btn-register">HERE IS HOW</button>
+                    <a href="manager" class="btn hero-btn-register">HERE IS HOW</a>
                 </div>
             </div>
 
@@ -421,114 +421,148 @@
                             SPONSORS
                         </p>
                     </div>
-                    <div class="row sponsor-section">
-                        <div class="col-lg-2">
-                            Platinum
-                        </div>
-                        <div class="col-lg-10">
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+
+                    <c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
+                        <c:choose>
+                            <c:when test="${sponsor.sponsorLevel.name ne sponsorLevel}">
+                                <c:if test="${not status.first}"></div></c:if>
+                                <c:set value="${sponsor.sponsorLevel.name}" var="sponsorLevel"/>
+                            <div class="row sponsor-section">
+                                <div class="col-lg-2">
+                                    <c:choose>
+                                        <c:when test="${sponsorList.sponsorLevelCount.get(sponsor.sponsorLevel) > 1}">
+                                            ${sponsorLevel}s
+                                        </c:when>
+                                        <c:otherwise>
+                                            ${sponsorLevel}
+                                        </c:otherwise>
+                                    </c:choose>
+                                </div>
+
+                                <a href="${sponsor.link}">
+                                    <img title="${sponsor.name}" class="img-responsive" src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}"/>
+                                </a>
+
+
+                                <c:if test="${status.last}"></div></c:if>
+                            </c:when>
+                            <c:otherwise>
+                            <a href="${sponsor.link}">
+                                <img title="${sponsor.name}" class="img-responsive" src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}"/>
                             </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                        </div>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+
+
+                <div class="row sponsor-section">
+                    <div class="col-lg-2">
+                        Platinum
                     </div>
-                    <div class="row sponsor-section">
-                        <div class="col-lg-2">
-                            Gold
-                        </div>
-                        <div class="col-lg-10">
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                            <a href="#">
-                                <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
-                            </a>
-                        </div>
+                    <div class="col-lg-10">
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
                     </div>
                 </div>
-                <div class="row center-block">
-                    <button class="btn btn-square btn-speakers center-block">SEE ALL SPONSORS</button>
+                <div class="row sponsor-section">
+                    <div class="col-lg-2">
+                        Gold
+                    </div>
+                    <div class="col-lg-10">
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                        <a href="#">
+                            <img class="img-responsive" src="${ctx}/assets/img/sponsor.png" alt="Sponsor"/>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="row call-to-action become-sponsor">
-                <div class="col-xs-12">
-                    <h1>Become a <span class="trump">Sponsor</span></h1>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium</p>
-                    <button class="btn hero-btn-register">LET US KNOW</button>
-                </div>
+            <div class="row center-block">
+                <button class="btn btn-square btn-speakers center-block">SEE ALL SPONSORS</button>
             </div>
+        </div>
 
-            <div class="row call-to-action question">
-                <h1>Have a <span class="trump">Question</span></h1>
-                <button class="btn hero-btn-register">CONTACT US</button>
+        <div class="row call-to-action become-sponsor">
+            <div class="col-xs-12">
+                <h1>Become a <span class="trump">Sponsor</span></h1>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium</p>
+                <button class="btn hero-btn-register">LET US KNOW</button>
             </div>
+        </div>
 
-            <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
+        <div class="row call-to-action question">
+            <h1>Have a <span class="trump">Question</span></h1>
+            <button class="btn hero-btn-register">CONTACT US</button>
+        </div>
 
-            <!-- javascipt -->
-            <script src="${ctx}/wro/all.js"></script>
-            <%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
-                            <script src="${assetsUrl}/js/jquery.modernizr.js"></script>
-                            <script src="${assetsUrl}/js/jquery.easing.min.js"></script>
-                            <script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
-            <script>
-                "use strict";
-                (function (i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
 
-                ga('create', 'UA-44984422-1', 'devnexus.com');
-                ga('send', 'pageview');
-                $('#nav').affix({
-                    offset: {top: $('#nav').offset().top}
-                });
-            </script>
+        <!-- javascipt -->
+        <script src="${ctx}/wro/all.js"></script>
+        <%-- 	<script src="${assetsUrl}/js/jquery1.11.1.min.js"></script>
+                        <script src="${assetsUrl}/js/jquery.modernizr.js"></script>
+                        <script src="${assetsUrl}/js/jquery.easing.min.js"></script>
+                        <script src="${assetsUrl}/js/bootstrap.min.js"></script> --%>
+        <script>
+            "use strict";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-44984422-1', 'devnexus.com');
+            ga('send', 'pageview');
+            $('#nav').affix({
+                offset: {top: $('#nav').offset().top}
+            });
+        </script>
     </body>
 </html>
