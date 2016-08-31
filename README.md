@@ -120,6 +120,50 @@ When interacting with Cloud Foundry, you may consider using the command line too
 
 https://github.com/cloudfoundry/cli
 
+#### Cloud Foundry Production Deployment
+
+```bash
+$ cf login
+$ cf delete devnexus
+$ cf delete devnexus-old
+$ cf delete-orphaned-routes
+$ cf rename devnexus-prod devnexus-old
+```
+Assuming, you correctly pushed `DevNexus` to CF using `mvn cf:push`, you should
+be able to access the app under `devnexus-staging.cfapps.io`.
+
+Health status for the stagin app:
+
+```bash
+$ cf app devnexus
+```
+
+Verify that the app works at `devnexus-staging.cfapps.io`.
+
+ Let's move the staging application into production.
+
+Create the routes:
+
+```bash
+$ cf rename devnexus devnexus-prod
+$ cf map-route   devnexus-prod devnexus.com
+$ cf map-route   devnexus-prod devnexus.com --hostname www
+$ cf map-route   devnexus-prod devnexus.org
+$ cf map-route   devnexus-prod devnexus.org --hostname www
+$ cf map-route   devnexus-prod cfapps.io --hostname devnexus
+$ cf unmap-route devnexus-prod cfapps.io --hostname devnexus-staging
+```
+
+Remove the routes of the old DevNexus app:
+
+```bash
+$ cf unmap-route devnexus-old devnexus.com
+$ cf unmap-route devnexus-old devnexus.org
+$ cf unmap-route devnexus-old devnexus.com --hostname www
+$ cf unmap-route devnexus-old devnexus.org --hostname www
+$ cf unmap-route devnexus-old cfapps.io    --hostname devnexus
+```
+
 ### Postgres
 
 When accessing Postgres with pgAdmin in Cloud environments the following tip might be useful:
