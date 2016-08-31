@@ -10,6 +10,7 @@ import java.util.TreeSet;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -33,7 +34,7 @@ public class EventSignup extends BaseModelObject {
 
     
     @ManyToOne
-    //@JoinColumn(name="EVENT_ID")
+    @JoinColumn(name="EVENT")
     @NotNull
     @XmlTransient
     @JsonIgnore
