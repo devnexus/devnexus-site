@@ -135,6 +135,11 @@ public class SiteController {
 		return "privacy-policy";
 	}
 
+        @RequestMapping("/s/conference-info")
+	public String conferenceInfo() {
+		return "conference-info";
+	}
+        
 	@RequestMapping("/s/about")
 	public String about() {
 		return "about";
