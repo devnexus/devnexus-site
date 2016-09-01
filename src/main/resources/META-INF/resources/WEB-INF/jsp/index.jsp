@@ -72,8 +72,8 @@
         <c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
         <c:url var="socialUrl" value="${baseSiteUrl}/social"/>
         <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
-        <c:url var="conferenceInfoUrl" value="${baseSiteUrl}/sponsors"/>
-        <c:url var="registrationUrl" value="${baseSiteUrl}/register-overview"/>
+        <c:url var="conferenceInfoUrl" value="${baseSiteUrl}/conference-info"/>
+        <c:url var="registrationUrl" value="${baseSiteUrl}/register"/>
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
         <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
         <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
