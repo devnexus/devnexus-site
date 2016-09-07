@@ -28,9 +28,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Display speakers.
@@ -41,68 +44,84 @@ import com.devnexus.ting.model.SpeakerList;
 @Controller
 public class SpeakerController {
 
-	@Autowired private BusinessService businessService;
+    @Autowired
+    private BusinessService businessService;
 
-	@RequestMapping(value="/s/speakers", method = RequestMethod.GET)
-	public String getSpeakersForCurrentEvent(Model model, @RequestParam(value="image", defaultValue="false") boolean image) {
-		Event currentEvent = businessService.getCurrentEvent();
-		prepareSpeakers(currentEvent, model);
-		return "speakers";
-	}
+    @RequestMapping(value = "/s/speakers", method = RequestMethod.GET)
+    public String getSpeakersForCurrentEvent(Model model, @RequestParam(value = "image", defaultValue = "false") boolean image) {
+        Event currentEvent = businessService.getCurrentEvent();
+        prepareSpeakers(currentEvent, model);
+        return "speakers";
+    }
 
-	@RequestMapping("/s/{eventKey}/speakers")
-	public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
-		final Event event = businessService.getEventByEventKey(eventKey);
-		model.addAttribute("contextEvent", event);
-		prepareSpeakers(event, model);
-		return "speakers";
-	}
+    @RequestMapping("/s/{eventKey}/speakers")
+    public String getSpeakersForEvent(@PathVariable("eventKey") String eventKey, Model model) {
+        final Event event = businessService.getEventByEventKey(eventKey);
+        model.addAttribute("contextEvent", event);
+        prepareSpeakers(event, model);
+        return "speakers";
+    }
 
-	@RequestMapping("/s/speakers/{speakerId}")
-	public String getSpeakerDetails(@PathVariable("speakerId") Long speakerId, Model model) {
-		final Event event = businessService.getCurrentEvent();
-		prepareSpeaker(event, speakerId, model);
-		return "speaker-details";
-	}
+    @RequestMapping("/s/speakers/{speakerId}")
+    public String getSpeakerDetails(@PathVariable("speakerId") Long speakerId, Model model) {
+        final Event event = businessService.getCurrentEvent();
+        prepareSpeaker(event, speakerId, model);
+        return "speaker-details";
+    }
 
-	@RequestMapping("/s/{eventKey}/speakers/{speakerId}")
-	public String getSpeakerDetailsForEvent(@PathVariable("eventKey") String eventKey, @PathVariable("speakerId") Long speakerId, Model model) {
-		final Event event = businessService.getEventByEventKey(eventKey);
-		model.addAttribute("contextEvent", event);
-		prepareSpeaker(event, speakerId, model);
-		return "speaker-details";
-	}
+    @RequestMapping("/s/{eventKey}/speakers/{speakerId}")
+    public String getSpeakerDetailsForEvent(@PathVariable("eventKey") String eventKey, @PathVariable("speakerId") Long speakerId, Model model) {
+        final Event event = businessService.getEventByEventKey(eventKey);
+        model.addAttribute("contextEvent", event);
+        prepareSpeaker(event, speakerId, model);
+        return "speaker-details";
+    }
 
-	private void prepareSpeaker(Event event, Long speakerId, Model model) {
-		model.addAttribute("event", event);
-		final Speaker speaker = businessService.getSpeakerFilteredForEvent(speakerId, event);
-		model.addAttribute("speaker", speaker);
-	}
+    private void prepareSpeaker(Event event, Long speakerId, Model model) {
+        model.addAttribute("event", event);
+        final Speaker speaker = businessService.getSpeakerFilteredForEvent(speakerId, event);
+        model.addAttribute("speaker", speaker);
+    }
 
-	private void prepareSpeakers(Event event, Model model) {
-		model.addAttribute("event", event);
-		SpeakerList speakers = new SpeakerList();
-		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
-		model.addAttribute("speakerList",speakers);
-		int columnLength = (int)(speakers.getSpeakers().size() / 4);
+    private void prepareSpeakers(Event event, Model model) {
+        model.addAttribute("event", event);
+        SpeakerList speakers = new SpeakerList();
 
-		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
-	}
+        speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
+        Map<Long, CfpSubmissionSpeaker> cfpSpeakers = new HashMap<>(speakers.getNumberOfSpeakers());
 
-	@RequestMapping(value="/s/speakers/{speakerId}.jpg", method=RequestMethod.GET)
-	public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
+        speakers.getSpeakers().forEach((speaker) -> {
+            if (speaker.getCfpSpeakerId() != null) {
+                CfpSubmissionSpeaker cfpSpeaker = businessService.getCfpSubmissionSpeaker(speaker.getCfpSpeakerId());
+                if (cfpSpeaker == null ) {
+                    cfpSpeaker = new CfpSubmissionSpeaker();
+                }
+                cfpSpeakers.put(speaker.getId(), cfpSpeaker);
+            } else {
+                cfpSpeakers.put(speaker.getId(), new CfpSubmissionSpeaker());
+            }
+        });
 
-		byte[] speakerImage = businessService.getSpeakerImage(speakerId);
+        model.addAttribute("trackList", businessService.getTracksForEvent(event.getId()));
+        model.addAttribute("speakerList", speakers);
+        model.addAttribute("cfpSpeakersMap", cfpSpeakers);
 
-		try {
-			org.apache.commons.io.IOUtils.write(speakerImage, response.getOutputStream());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    }
 
-		response.setContentType("image/jpg");
+    @RequestMapping(value = "/s/speakers/{speakerId}.jpg", method = RequestMethod.GET)
+    public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
 
-	}
+        byte[] speakerImage = businessService.getSpeakerImage(speakerId);
+
+        try {
+            org.apache.commons.io.IOUtils.write(speakerImage, response.getOutputStream());
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        response.setContentType("image/jpg");
+
+    }
 
 }
