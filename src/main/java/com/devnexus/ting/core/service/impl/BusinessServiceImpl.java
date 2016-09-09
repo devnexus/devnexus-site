@@ -34,6 +34,7 @@ import java.util.TreeSet;
 import java.util.UUID;
 
 import javax.imageio.ImageIO;
+import javax.persistence.NoResultException;
 
 import org.apache.commons.codec.binary.Base64;
 import org.imgscalr.Scalr;
@@ -42,6 +43,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.stereotype.Service;
@@ -57,6 +59,7 @@ import com.devnexus.ting.common.CalendarUtils;
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.core.service.support.EventNotFoundException;
 import com.devnexus.ting.model.ApplicationCache;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
@@ -301,8 +304,19 @@ public class BusinessServiceImpl implements BusinessService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Event getEventByEventKey(String eventKey) {
-		return eventDao.getByEventKey(eventKey);
+	public Event getEventByEventKey(String eventKey) throws EventNotFoundException {
+
+		final Event event;
+
+		try {
+			event = eventDao.getByEventKey(eventKey);
+		}
+		catch (EmptyResultDataAccessException e) {
+			throw new EventNotFoundException(
+				String.format("The Event '%s' does not exist.", eventKey));
+		}
+
+		return event;
 	}
 
 	/**
@@ -478,6 +492,15 @@ public class BusinessServiceImpl implements BusinessService {
 	@Transactional
 	@CacheEvict(value = {"getCurrentEvent", "getAllNonCurrentEvents"}, allEntries = true)
 	public void saveEvent(Event event) {
+		if (event.isCurrent()) {
+			event.setCurrent(false);
+			final Event currentEvent = eventDao.getCurrentEvent();
+			if (currentEvent != null) {
+				currentEvent.setCurrent(false);
+				eventDao.save(currentEvent);
+			}
+			event.setCurrent(true);
+		}
 		eventDao.save(event);
 	}
 

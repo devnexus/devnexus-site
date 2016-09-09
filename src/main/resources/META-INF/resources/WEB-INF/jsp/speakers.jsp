@@ -55,7 +55,7 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="top-intro travel">
 							<h4 class="section-white-title decorated"><span>Speakers</span></h4>
-							<h5 class="intro-white-lead">Tap into the expertise of ${fn:length(speakerList.speakers)} thought-leaders.</h5>
+							<h5 class="intro-white-lead">Tap into the expertise of over 100 thought-leaders.</h5>
 						</div>
 					</div>
 				</div>
@@ -63,27 +63,42 @@
 	</section>
 	<!-- /intro -->
 
-	<section id="speaker" class="bg-light-gray" style="margin-top: 2em; ">
-		<div class="col-lg-10 col-lg-offset-1">
-		<div class="row centered"
-			><c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status"
-			><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 speaker-div masonryitem"
-					style="">
-				<a href="${ctx}${baseSiteUrl}/speakers/${speaker.id}">
-				<div class="speaker-div-inner">
-					<div id="${speaker.firstName}_${speaker.lastName}"
-						class="speaker-member text-center" style="margin-bottom: 5px; margin-top: 5px">
-						<img src="${speaker.pictureSerialized}" class="img-responsive img-circle" alt="">
-						<h4 class="text-center"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
+	<c:choose>
+		<c:when test="${not empty speakerList.speakers}">
+			<section id="speaker" class="bg-light-gray" style="margin-top: 2em; ">
+				<div class="col-lg-10 col-lg-offset-1">
+				<div class="row centered"
+					><c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status"
+					><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 speaker-div masonryitem"
+							style="">
+						<a href="${ctx}${baseSiteUrl}/speakers/${speaker.id}">
+						<div class="speaker-div-inner">
+							<div id="${speaker.firstName}_${speaker.lastName}"
+								class="speaker-member text-center" style="margin-bottom: 5px; margin-top: 5px">
+								<img src="${speaker.pictureSerialized}" class="img-responsive img-circle" alt="">
+								<h4 class="text-center"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
+							</div>
+				</div></a></div></c:forEach></div>
 				</div>
-		</div></a></div></c:forEach></div>
-		</div>
-	</section>
-
+			</section>
+		</c:when>
+		<c:otherwise>
+			<section class="bg-light-gray">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<h2>Speakers will be announced soon!</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+		</c:otherwise>
+	</c:choose>
 <content tag='bottom'>
 	<script type="text/javascript">
 
 		$(document).ready(function() {
+			<c:if test="${not empty speakerList.speakers}">
 			var $container = $('#speaker');
 
 			function resizeSpeakerDivs() {
@@ -120,7 +135,7 @@
 				});
 				$('#speaker').css('opacity', '1');
 			});
-
+			</c:if>
 		});
 	</script>
 </content>

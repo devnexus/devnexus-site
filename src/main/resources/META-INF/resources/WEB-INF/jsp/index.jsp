@@ -308,7 +308,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
-					<div id="vkT3Rc2tmrc" class="video-container">
+					<div id="J7XpqF8rHS8" class="video-container">
 						<img src="${ctx}/assets/img/video_thumb.png"/>
 					</div>
 					<div id="video-play-button" class="play"></div>
