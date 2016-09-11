@@ -21,8 +21,6 @@ import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CouponCode;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.EventSignup;
-import com.devnexus.ting.model.PayPalPayment;
-import com.devnexus.ting.model.PaypalLink;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.SpeakerList;
@@ -31,29 +29,22 @@ import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.web.form.RegisterForm;
 import com.devnexus.ting.web.form.SignupRegisterView;
 import com.devnexus.ting.web.payment.PayPalSession;
-import com.google.api.client.repackaged.com.google.common.base.Strings;
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Item;
 import com.paypal.api.payments.ItemList;
-import com.paypal.api.payments.Links;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
-import com.paypal.base.rest.PayPalRESTException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -82,6 +73,21 @@ public class RegisterController {
 
     @RequestMapping(value = "/s/register-overview", method = RequestMethod.GET)
     public String getRegistrationOverview(Model model) {
+
+        EventSignup signUp = businessService.getEventSignup();
+
+        prepareHeader(signUp.getEvent(), model);
+
+        List<TicketGroup> invididualTicketGroups = signUp.getGroups().stream().filter((TicketGroup group) -> {
+            return group.getMinPurchase() == 1;
+        }).collect(Collectors.toList());
+        List<TicketGroup> groupTicketGroups = signUp.getGroups().stream().filter((TicketGroup group) -> {
+            return group.getMinPurchase() > 1;
+        }).collect(Collectors.toList());
+
+        model.addAttribute("invididualTicketGroups", invididualTicketGroups);
+        model.addAttribute("groupTicketGroups", groupTicketGroups);
+
         return "register-overview";
     }
 
@@ -163,7 +169,6 @@ public class RegisterController {
 //        return "register2";
 //
 //    }
-
     @RequestMapping(value = "/s/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
     @ResponseBody
     public String getCodedPrice(Model model, @PathVariable("ticketGroupId") final Long ticketGroupId,
@@ -192,7 +197,6 @@ public class RegisterController {
 //        return "register2";
 //
 //    }
-
 //    @RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.GET)
 //    public String confirmPayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
 //
@@ -268,7 +272,6 @@ public class RegisterController {
 //            return "confirmRegistration";
 //        }
 //    }
-
 //    @RequestMapping(value = "/s/registerPageTwo", method = RequestMethod.POST)
 //    public String validateDetailsForm(HttpServletRequest request, Model model, @Valid RegistrationDetails registerForm, BindingResult result) {
 //
@@ -361,7 +364,6 @@ public class RegisterController {
 //        }
 //
 //    }
-
     private void prepareHeader(Event event, Model model) {
         final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
 

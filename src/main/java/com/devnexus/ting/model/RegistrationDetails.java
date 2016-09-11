@@ -75,7 +75,7 @@ public class RegistrationDetails extends BaseModelObject {
     private String contactEmailAddress;
 
     @ManyToOne
-    @JoinColumn(name="EVENT")
+    @JoinColumn(name="EVENT_ID")
     @XmlTransient
     @JsonIgnore
     private Event event;

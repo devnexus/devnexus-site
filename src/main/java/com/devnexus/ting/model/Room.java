@@ -78,7 +78,7 @@ public class Room extends BaseModelObject implements Comparable<Room> {
 	private Integer roomOrder;
 
 	@ManyToOne
-	@JoinColumn(name="EVENT")
+	@JoinColumn(name="EVENT_ID")
 	@NotNull
 	@XmlTransient
         @JsonIgnore

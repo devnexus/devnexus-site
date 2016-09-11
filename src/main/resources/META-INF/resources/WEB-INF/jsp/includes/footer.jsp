@@ -1,5 +1,5 @@
 
-<div class="row footer">
+<div class=" footer">
     <div >
         <img  class="center-block" style="margin-top: 40px;padding-left: 50px" src="${ctx}/assets/img/devnexus-logo.png" alt="logo"/>
     </div>
