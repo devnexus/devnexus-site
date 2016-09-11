@@ -21,6 +21,8 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.annotations.SortNatural;
 
 /**
+ * The event sign up is all tickets available for a single Event.
+ * 
 * @author Summers Pittman
 */
 @Entity
@@ -34,7 +36,7 @@ public class EventSignup extends BaseModelObject {
 
     
     @ManyToOne
-    @JoinColumn(name="EVENT")
+    @JoinColumn(name="EVENT_ID")
     @NotNull
     @XmlTransient
     @JsonIgnore
