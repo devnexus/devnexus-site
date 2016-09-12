@@ -59,9 +59,9 @@
             <div class="ticket-detail">
                 <header>
 
-                    <c:if test="${empty invididualTicketGroups}">
+                    <c:if test="${empty groupTicketGroups}">
                         <p>
-                            Stay tuned!  We will have tickets available soon!
+                            Stay tuned!  We will have group tickets available soon!
                         </p>    
                     </c:if> 
                 </header>
