@@ -144,7 +144,7 @@
     </div>
 
 </section>
-<jsp:include page="includes/questions.jsp"/>
+
 
 <content tag='bottom'>
     <script type="text/javascript">
