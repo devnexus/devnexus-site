@@ -126,18 +126,16 @@
             </c:forEach>
 
 
-            <div class="form-group">
+            <div class="form-group total row">
 
-                <label for="total-cost" class="col-lg-2 control-label">Final Price: </label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="total-cost" name="total-cost"  disabled="disabled" value="$0.00"/>
-                </div>
-            </div>
 
-            <div class="form-group">
-                <div class="col-lg-offset-4 col-lg-10">
-                    <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Continue to Complete Registration</button>
-                </div>
+
+                <span for="total-cost" class="col-lg-2 control-label">Order Total: </span>
+
+                <span id="total-cost" name="total-cost"  >$0.00</span>
+
+                <button type="submit" class="btn btn-default right btn-primary" lang="save" tabindex="19">Complete Registration</button>
+
             </div>
 
         </form:form> 
@@ -145,7 +143,7 @@
 
     </div>
 
-</section>>
+</section>
 <jsp:include page="includes/questions.jsp"/>
 
 <content tag='bottom'>
@@ -165,13 +163,13 @@
                 $('.ticket-count').each(function (i, el) {
                     cost += (el.selectedIndex * $('.ticket-cost')[i].value);
                 });
-                $('#total-cost').val("$" + cost + ".00");
+                $('#total-cost').text("$" + cost + ".00");
             });
 
 
             $('.coupon-code').change(function (el) {
                 couponCode = $(el.target).val();
-                ticketGroupId = $(el.target).siblings().val();
+                ticketGroupId = $(el.target).prev().val();
                 console.log(couponCode + " " + ticketGroupId);
                 jQuery.ajax("/s/lookupCouponCode/" + ticketGroupId + "/" + couponCode, {
                     success: function (data) {
@@ -180,7 +178,7 @@
                         $('.ticket-count').each(function (i, el) {
                             cost += (el.selectedIndex * $('.ticket-cost')[i].value);
                         });
-                        $('#total-cost').val("$" + cost + ".00");
+                        $('#total-cost').text("$" + cost + ".00");
                     }
                 });
             });
@@ -198,7 +196,7 @@
                         $('.ticket-count').each(function (i, el) {
                             cost += (el.selectedIndex * $('.ticket-cost')[i].value);
                         });
-                        $('#total-cost').val("$" + cost + ".00");
+                        $('#total-cost').text("$" + cost + ".00");
                     }
                 });
             });

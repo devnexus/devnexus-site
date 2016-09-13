@@ -29,6 +29,7 @@ import com.devnexus.ting.model.TicketOrderDetail;
 import com.devnexus.ting.web.form.RegisterForm;
 import com.devnexus.ting.web.form.SignupRegisterView;
 import com.devnexus.ting.web.payment.PayPalSession;
+import com.google.common.base.Strings;
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Item;
 import com.paypal.api.payments.ItemList;
@@ -41,10 +42,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -120,55 +124,56 @@ public class RegisterController {
         return "view-registration";
     }
 
-//    @RequestMapping(value = "/s/register", method = RequestMethod.POST)
-//    public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
-//
-//        Event currentEvent = businessService.getCurrentEvent();
-//        EventSignup eventSignup = businessService.getEventSignup();
-//        prepareHeader(currentEvent, model);
-//        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
-//
-//        int totalTickets = 0;
-//
-//        for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
-//            RegisterForm.TicketGroupRegistration ticketReg = registerForm.getTicketGroupRegistrations().get(i);
-//            TicketGroup ticketGroup = businessService.getTicketGroup(ticketReg.getTicketGroupId());
-//            ticketReg.setGroup(ticketGroup);
-//            if (ticketReg.getTicketCount() > 0 && ticketReg.getTicketCount() < ticketGroup.getMinPurchase()) {
-//                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You need to buy more tickets."));
-//            }
-//
-//            totalTickets += ticketReg.getTicketCount();
-//
-//            if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(ticketReg.getCouponCode())) {
-//                if (!hasCode(ticketGroup.getCouponCodes(), ticketReg.getCouponCode())) {
-//                    result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].couponCode", "Invalid Coupon Code."));
-//                }
-//            }
-//        }
-//
-//
-//        if ( totalTickets == 0 ) {
-//            for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
-//                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You must purchase a ticket to continue."));
-//            }
-//        }
-//
-//        if (result.hasErrors()) {
-//            model.addAttribute("registerForm", registerForm);
-//            return "register";
-//        }
-//
-//        RegistrationDetails registerFormPageTwo = new RegistrationDetails();
-//        registerFormPageTwo.copyPageOne(registerForm);
-//
-//        registerFormPageTwo.setFinalCost(getTotal(registerFormPageTwo));
-//
-//        model.addAttribute("registrationDetails", registerFormPageTwo);
-//
-//        return "register2";
-//
-//    }
+    @RequestMapping(value = "/s/register", method = RequestMethod.POST)
+    public String validateInitialFormAndPrepareDetailsForm(Model model, @Valid RegisterForm registerForm, BindingResult result) {
+
+        Event currentEvent = businessService.getCurrentEvent();
+        EventSignup eventSignup = businessService.getEventSignup();
+        prepareHeader(currentEvent, model);
+        model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
+
+        int totalTickets = 0;
+
+        for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
+            RegisterForm.TicketGroupRegistration ticketReg = registerForm.getTicketGroupRegistrations().get(i);
+            TicketGroup ticketGroup = businessService.getTicketGroup(ticketReg.getTicketGroupId());
+            ticketReg.setGroup(ticketGroup);
+            if (ticketReg.getTicketCount() > 0 && ticketReg.getTicketCount() < ticketGroup.getMinPurchase()) {
+                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You need to buy more tickets."));
+            }
+
+            totalTickets += ticketReg.getTicketCount();
+
+            if (ticketGroup.getCouponCodes() != null && ticketGroup.getCouponCodes().size() > 0 && !Strings.isNullOrEmpty(ticketReg.getCouponCode())) {
+                if (!hasCode(ticketGroup.getCouponCodes(), ticketReg.getCouponCode())) {
+                    result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].couponCode", "Invalid Coupon Code."));
+                }
+            }
+        }
+
+
+        if ( totalTickets == 0 ) {
+            for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
+                result.addError(new FieldError("registerForm", "ticketGroupRegistrations[" + i + "].ticketCount", "You must purchase a ticket to continue."));
+            }
+        }
+
+        if (result.hasErrors()) {
+            model.addAttribute("registerForm", registerForm);
+            return "register";
+        }
+
+        RegistrationDetails registerFormPageTwo = new RegistrationDetails();
+        registerFormPageTwo.copyPageOne(registerForm);
+
+        registerFormPageTwo.setFinalCost(getTotal(registerFormPageTwo));
+
+        model.addAttribute("registrationDetails", registerFormPageTwo);
+
+        return "register2";
+
+    }
+
     @RequestMapping(value = "/s/lookupCouponCode/{ticketGroupId}/{couponCode}", method = RequestMethod.GET)
     @ResponseBody
     public String getCodedPrice(Model model, @PathVariable("ticketGroupId") final Long ticketGroupId,
