@@ -47,6 +47,7 @@
 <body>
 	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
 	<c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
+        <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
 	<c:url var="scheduleUrl" value="${baseSiteUrl}/schedule"/>
 	<c:url var="organizersUrl" value="${baseSiteUrl}/organizers"/>
@@ -57,6 +58,7 @@
 	<c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
+	<c:url var="conferenceInfoUrl" value="${baseSiteUrl}/conference-info"/>
 
 	<%@ include file="/WEB-INF/jsp/includes/navigation.jsp" %>
 

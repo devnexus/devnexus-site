@@ -159,6 +159,8 @@ public class SiteController {
 	public String codeOfConduct() {
 		return "code-of-conduct";
 	}
+        
+        
 
 	@RequestMapping("/s/workshop-instructions")
 	public String workshopInstructions() {

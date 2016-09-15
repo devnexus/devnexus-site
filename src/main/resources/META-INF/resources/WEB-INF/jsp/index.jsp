@@ -77,6 +77,7 @@
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
         <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
         <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
+        <c:url var="codeOfConductUrl" value="${baseSiteUrl}/conference-info"/>
         <c:url var="facebookUrl" value="https://www.facebook.com/devnexus"/>
         <c:url var="twitterUrl" value="https://www.twitter.com/devnexus"/>
         <c:url var="instagramUrl" value="https://www.instagram.com/devnexus/"/>
@@ -183,11 +184,11 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Gupta_Arun.png" alt="Arun Gupta">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Arun Gupta</h3>
+                                <p>VP of developer advocacy</p>
+                                <p>Couchbase</p>
                             </div>
                         </div>
                     </div>
@@ -195,34 +196,22 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Markus_Eisele.jpg" alt="Markus Eisele">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Markus Eisele</h3>
+                                <p>Java Champion</p>
+                                <p>Lightbend, Inc.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Deane_Jeremy.jpg" alt="Jeremy Deane">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
-                            <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Jeremy Deane</h3>
+                                <p>Software Engineering Aficionado</p>
+                                <p>&nbsp;</p>
                             </div>
                         </div>
                     </div>
@@ -230,22 +219,11 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/VanCura_Heather.png" alt="Heather VanCura">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
-                            <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Heather VanCura</h3>
+                                <p>Community Builder, Java Connoisseur</p>
+                                <p>Women & Girls in Tech, Open Source, Fitness</p>
                             </div>
                         </div>
                     </div>
@@ -253,22 +231,45 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Jaeckel_Marlene.png" alt="Marlene Jaeckel">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Marlene Jaeckel</h3>
+                                <p>Founder</p>
+                                <p>Polyglot Programming</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/ray_tsang.jpg" alt="Ray Tsang">
                             <div class="caption">
-                                <h3>Franklin Kennedy</h3>
-                                <p>Job Title</p>
-                                <p>Company</p>
+                                <h3>Ray Tsang</h3>
+                                <p>Developer Advocate</p>
+                                <p>Google Cloud Platform</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/matt_rasible.jpg" alt="Matt Raible">
+                            <div class="caption">
+                                <h3>Matt Raible</h3>
+                                <p>Web Architecture Consultant</p>
+                                <p>Raible Designs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="${ctx}/assets/img/burr_sutter.jpg" alt="Burr Sutter">
+                            <div class="caption">
+                                <h3>Burr Sutter</h3>
+                                <p>Sr Product Manager</p>
+                                <p>Red Hat</p>
                             </div>
                         </div>
                     </div>
