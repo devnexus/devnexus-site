@@ -45,24 +45,6 @@
         </p>
     </section>
 
-    <section class="col-lg-6 col-md-12 information-card">
-        <h1>
-            HOTELS
-        </h1>
-        <img src="${ctx}/assets/img/omni-hotel-at-cnn-center-01.jpg" alt="omni hotel at cnn center">
-        <h2>
-            OMNI HOTEL AT CNN CENTER
-        </h2>
-        <p>
-            This upscale high-rise hotel in the CNN Center is a 7-minute walk from the Georgia Aquarium. <br>
-            <br>
-            Elegant rooms with city views offer Wi-Fi (fee), flat-screen TVs and desks, plus coffeemakers and 24-hour room service. Some suites add fridges and sitting areas, while others feature separate living/dining areas and kitchenettes. A Coca Cola-themed suite is also available.
-
-
-        </p>
-        <a class="btn" href="#">BOOK NOW</a>
-    </section>
-
 
     <section class="col-lg-6 col-md-12 information-card">
         <h1>
@@ -77,6 +59,5 @@
             <br>
             Classic suites include microwaves, minifridges and coffeemakers, plus WiFi (fee), flat-screen TVs and separate living areas with pull-out sofas. Upgraded suites offer dining tables; some add terraces with views.<br>
         </p>
-        <a class="btn" href="#">BOOK NOW</a>
     </section>
 </section>
