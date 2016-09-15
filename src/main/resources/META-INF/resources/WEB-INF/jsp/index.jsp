@@ -293,62 +293,63 @@
             <div class="row">
 
                 <h1 class="featured-header">
-                    FEATURED SESSIONS
+                    WORKSHOPS
                 </h1>
 
                 <div class="speakers sessions">
 
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Deane_Jeremy.jpg" alt="Enterprise Messaging Foundations">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Enterprise Messaging Foundations</h3>
+                                <p>Jeremy Deane</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Anandan_Sabby.jpg" alt="Microservices based Streaming and Batch Data Processing">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Microservices based Streaming and Batch Data Processing</h3>
+                                <p>Sabby Anandan, Glenn Renfro</p>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Benevides.png" alt="Hands-on with Docker, Kubernetes and OpenShift">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Hands-on with Docker, Kubernetes and OpenShift</h3>
+                                <p>Rafael Benevides, Burr Sutter, Ray Tsang</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/Jaeckel_Marlene.png" alt="Learn about Wearables">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Learn about Wearables</h3>
+                                <p>Lance Gleason, Marlene Jaeckel</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/nick_raboy.jpg" alt="Full Stack Development with Java and NoSQL">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Full Stack Development with Java and NoSQL</h3>
+                                <p>Nic Raboy</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/head.jpg" alt="Franklin">
+                            <img class="img-responsive" src="${ctx}/assets/img/VenkatSubramaniam.jpg" alt="Building Reactive Applications">
                             <div class="caption">
-                                <h3>Presentation Name</h3>
-                                <p>Speaker name</p>
+                                <h3>Building Reactive Applications</h3>
+                                <p>Venkat Subramaniam</p>
                             </div>
                         </div>
                     </div>
@@ -363,17 +364,17 @@
             <div class="row tickets">
 
 
-                <h1 class="featured-header">TICKETS</h1>
+                <h1 class="featured-header">TICKET TYPES</h1>
 
                 <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <p class="pull-right">$162</p>
-                            <h3 class="panel-title">Panel title</h3>
+                            <p class="pull-right"></p>
+                            <h3 class="panel-title">MAIN CONFERENCE PASS</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
-                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <p>The main conference pass allows a single person to attend DevNexus 2017.  This includes both days, lunch, access to all breakout sessions and keynotes, and the DevNexus Happy Hour.  This does NOT include a workshop day pass.</p>
                         </div>
                     </div>
                 </div>
@@ -381,12 +382,12 @@
                 <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <p class="pull-right">$162</p>
-                            <h3 class="panel-title">Panel title</h3>
+                            <p class="pull-right"></p>
+                            <h3 class="panel-title">WORKSHOP PASS</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
-                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <p>If you wish to attend a workshop, you must purchase a workshop pass.  This pass allows you to attend a day of hands on training at one of our workshops.  The workshop pass also includes a main conference pass for a single person.</p>
                         </div>
                     </div>
                 </div>
@@ -394,12 +395,12 @@
                 <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <p class="pull-right">$162</p>
-                            <h3 class="panel-title">Panel title</h3>
+                            <p class="pull-right"></p>
+                            <h3 class="panel-title">GROUP RATES</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">BUY NOW</a>
-                            <p>Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket Bacon ipsum dolor amet pork belly ham hock turkey tri-tip bresaola pastrami boudin, fatback bacon jerky jowl pig drumstick brisket</p>
+                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <p>Group rates are available for groups of five or more.  Group rates are available for both the workshop pass and the main conference pass.</p>
                         </div>
                     </div>
                 </div>
@@ -473,6 +474,12 @@
             <h1>Have a <span class="trump">Question</span></h1>
             <button class="btn hero-btn-register">CONTACT US</button>
         </div>
+
+        <style>
+            .footer {
+                margin: 1px -15px;
+            }
+        </style>
 
         <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
 
