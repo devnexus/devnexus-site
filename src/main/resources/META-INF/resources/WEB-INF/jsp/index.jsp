@@ -124,9 +124,9 @@
                         <p>Find out what makes DEVNEXUS special from attendees at the 2016 event.</p>
                     </div>
                 </div>
-                <div class="col-md-9 preview">
-                    <a class="center-block" href="#">
-                        <img class="img-responsive center-block play-button" src="${ctx}/assets/img/play-button.png" alt="Play Promo Video"/>
+                <div  id="goiXzB0rMEQ" class="col-md-9 video-container preview">
+                    <a class="center-block" href="javascript:return false;">
+                        <img id="video-play-button" class="play img-responsive center-block play-button" src="${ctx}/assets/img/play-button.png" alt="Play Promo Video"/>
                     </a>
                 </div>
             </div>
@@ -466,8 +466,8 @@
         <div class="row call-to-action become-sponsor">
             <div class="col-xs-12">
                 <h1>Become a <span class="trump">Sponsor</span></h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium</p>
-                <button class="btn hero-btn-register">LET US KNOW</button>
+                
+                <a href="https://devnexus.com/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn hero-btn-register">LEARN MORE</a>
             </div>
         </div>
 
@@ -509,6 +509,20 @@
             $('#nav').affix({
                 offset: {top: $('#nav').offset().top}
             });
+            
+            $(function() {
+			$(".video-container").each(function() {
+				var videoId = this.id;
+				$(document).delegate('#video-play-button', 'click', function() {
+					var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
+					var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, style:"height:100%;width:100%"});
+                                        
+					$('#' + videoId).html(iframe).addClass('loaded');
+					$('#video-play-button').hide();
+				});
+			});
+                    });
+            
         </script>
     </body>
 </html>
