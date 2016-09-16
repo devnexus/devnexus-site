@@ -77,7 +77,7 @@
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
         <c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
         <c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
-        <c:url var="codeOfConductUrl" value="${baseSiteUrl}/conference-info"/>
+        <c:url var="cfpUrl" value="${baseSiteUrl}/cfp"/>
         <c:url var="facebookUrl" value="https://www.facebook.com/devnexus"/>
         <c:url var="twitterUrl" value="https://www.twitter.com/devnexus"/>
         <c:url var="instagramUrl" value="https://www.instagram.com/devnexus/"/>
@@ -100,7 +100,8 @@
                 <h1><img src="${ctx}/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
                 <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
 
-                <a class="btn hero-btn-register" href="register.html">REGISTER NOW</a>
+                <a class="btn hero-btn-register" style="background-color: #6fa133" href="${cfpUrl}">CALL FOR PAPERS</a><br/><br/>
+                <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER NOW</a>
 
             </div>
         </section>
