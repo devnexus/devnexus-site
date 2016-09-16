@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="copy">
-                        <p>The goal of the Dev Nexus Conference is to ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                        <p>The goal of the Dev Nexus Conference is to connect developers from all over the world, provide affordable education, and promote Open Source values.</p>
                     </div>
                 </div>
             </div>
