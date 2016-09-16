@@ -38,7 +38,6 @@ public final class PayPalSession {
 
     private long expires_on = 0;
 
-    private static final ConcurrentHashMap<String, PayPalSession> CLIENT_MAP = new ConcurrentHashMap<>();
     private String accessToken;
     private APIContext apiContext;
     private OAuthTokenCredential oAuthCredential;
