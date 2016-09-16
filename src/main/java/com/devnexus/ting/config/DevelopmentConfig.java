@@ -19,6 +19,7 @@ import ro.isdc.wro.http.ConfigurableWroFilter;
  * @author summers
  */
 @Configuration
+@Profile({SpringProfile.DEVELOPMENT_ENABLED})
 @ImportResource("classpath:spring/spring-development-context.xml")
 public class DevelopmentConfig {
 

@@ -144,7 +144,8 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 					break;
 			}
 		}
-                //TODO: Make this a configured thing.
-                applicationContext.getEnvironment().addActiveProfile(SpringProfile.DEVELOPMENT_ENABLED);
+                if (environment.getProperty("DEVELOPMENT_MODE",Boolean.class, Boolean.FALSE)) {
+                    applicationContext.getEnvironment().addActiveProfile(SpringProfile.DEVELOPMENT_ENABLED);
+                }
 	}
 }
