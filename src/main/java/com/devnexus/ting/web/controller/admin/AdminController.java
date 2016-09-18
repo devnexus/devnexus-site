@@ -16,6 +16,8 @@
 package com.devnexus.ting.web.controller.admin;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -56,10 +58,12 @@ import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.CfpSubmissionStatusType;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Presentation;
+import com.devnexus.ting.model.ScheduleItem;
+import com.devnexus.ting.model.ScheduleItemList;
 import com.devnexus.ting.model.Speaker;
-import com.devnexus.ting.model.User;
 import com.devnexus.ting.security.SecurityFacade;
 import com.devnexus.ting.web.controller.admin.support.CsvRejectedSpeakerBean;
+import com.devnexus.ting.web.controller.admin.support.CsvScheduleItemBean;
 import com.devnexus.ting.web.controller.admin.support.CsvSpeakerBean;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheStats;
@@ -277,8 +281,10 @@ public class AdminController {
 	public String changeEvent(@ModelAttribute("event") Event event,
 			BindingResult bindingResult,
 			ModelMap model) {
-		model.addAttribute("eventKey", businessService.getEvent(event.getId()).getEventKey());
-		return "redirect:/s/admin/{eventKey}/index";
+		final String eventKey = businessService.getEvent(event.getId()).getEventKey();
+		//model.addAttribute("eventKey",
+		//model.put("eventKey", "aaaaa");
+		return "redirect:/s/admin/" + eventKey + "/index";
 	}
 
 	@RequestMapping({"/s/admin/update-application-cache"})
