@@ -66,26 +66,50 @@ body{
     width: 100%;
 }
 
+@media(min-width: @screen-md) { 
+    .hero h2{
+        font-size: 48px;
+        font-weight: 700;
+        margin: 40px 0 50px 0;
+    }
+}
 
-.hero h2{
-    font-size: 48px;
-    font-weight: 700;
-    margin: 40px 0 50px 0;
+@media(max-width: @screen-sm) { 
+    .hero h2{
+        font-size: 38px;
+        font-weight: 700;
+        margin: 60px 0 80px 0;
+    }
 }
 
 .hero h2 span{
     color:#6fa133;
 }
 
-.hero-btn-register {
-    height:65px;
-    width:360px;
-    line-height: 65px;
-    padding: 0;
+
+@media(min-width: @screen-md) { 
+
+    .hero-btn-register {
+        height:65px;
+        width:360px;
+        line-height: 65px;
+        padding: 0;
+    }
+
 }
 
+@media(max-width: @screen-md) { 
 
+    .hero-btn-register {
+        height:65px;
+        width:100%;
+        margin: 0 -15px;
+        border-radius: 0;
+        line-height: 65px;
+        padding: 0;
+    }
 
+}
 
 .navbar{
     background-color: #282828;
@@ -95,6 +119,13 @@ body{
     z-index: 100;
     border-radius: 0;
     padding: 30px;
+}
+
+@media(max-width: @screen-md) { 
+    .navbar{
+        top: 0px;
+        position: relative;
+    }
 }
 
 .header {
@@ -146,53 +177,116 @@ body{
     border-bottom : solid 1px #979797;
 }
 
+@media(max-width: @screen-md) { 
+    .marketing-panel {
+        font-size: 15px;
+        background-color: #91b565;
+        letter-spacing: 1.6px;
+        color: #fff;
+    }
+
+    .what-is{
+        display: flex;
+        align-items: center;
+        height: 350px;
+    }
+    .what-is div{
+        padding:10px 15px;
+    }
+
+    .what-is h1{
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    .what-is ul {
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .what-is p {
+        font-size: 20px;
+    }
 
 
-
-.marketing-panel {
-    font-size: 28px;
-    background-color: #91b565;
-    letter-spacing: 1.6px;
-    color: #fff;
-}
-.what-is{
-    display: flex;
-    align-items: center;
-    height: 700px;
-}
-.what-is div{
-    padding:0 60px;
-}
-
-.what-is h1{
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 40px;
-}
-.what-is ul{
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-
-
-.preview {
-    overflow: hidden;
-    height: 700px;
-    padding: 0;
-    background-image: url(../assets/img/video_thumb.png) ;
-    background-size: cover
-}
-
-.play-button {
-    margin-top: 283px;
+    .what-is ul li{
+        display: inline;
+        font-size: 25px;
+        font-weight: 700;
+    }
 }
 
+@media(min-width: @screen-md) { 
+    .marketing-panel {
+        font-size: 28px;
+        background-color: #91b565;
+        letter-spacing: 1.6px;
+        color: #fff;
+    }
+    .what-is{
+        display: flex;
+        align-items: center;
+        height: 700px;
+    }
+    .what-is div{
+        padding:0 60px;
+    }
 
-.copy {
-    font-size: 24px;
-    text-align: center;
-    margin: 80px 180px;
+    .what-is h1{
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    .what-is ul{
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
 }
+
+@media(min-width: @screen-md) { 
+
+    .preview {
+        overflow: hidden;
+        height: 700px;
+        padding: 0;
+        background-image: url(../assets/img/video_thumb.png) ;
+        background-size: cover
+    }
+
+    .play-button {
+        margin-top: 283px;
+    }
+
+    .copy {
+        font-size: 24px;
+        text-align: center;
+        margin: 80px 180px;
+    }
+}
+
+@media(max-width: @screen-md) { 
+
+    .preview {
+        overflow: hidden;
+        height: 350px;
+        padding: 0;
+        background-image: url(../assets/img/video_thumb.png) ;
+        background-size: cover
+    }
+
+
+    .play-button {
+        margin-top: 140px;
+    }
+    .copy {
+        font-size: 24px;
+        text-align: center;
+        margin: 80px 15px;
+    }
+}
+
+
 
 .stats {
     background-image: url(../assets/img/people-midpage.jpg);
@@ -259,7 +353,7 @@ body{
 }
 .speakers.sessions .thumbnail img{
     width: 100%;
-    
+
 }
 
 .speakers p{
@@ -270,13 +364,29 @@ body{
     border-radius: 0;
     margin: 20px auto 70px auto;
 }
+@media(max-width: @screen-md) { 
 
-.btn-speakers {
-    background-color: #6c9c31;
-    width: 80%;
-    font-size: 28px;
-    padding: 48px 100px;
-    color: #FFF;
+    .btn.btn-square.btn-speakers {
+        background-color: #6c9c31;
+        width: 100%;
+        font-size: 28px;
+        padding: 28px 50px;
+        color: #FFF;
+        margin-bottom: 0;
+    }
+
+}
+
+@media(min-width: @screen-md) { 
+
+    .btn-speakers {
+        background-color: #6c9c31;
+        width: 80%;
+        font-size: 28px;
+        padding: 48px 100px;
+        color: #FFF;
+    }
+
 }
 
 .call-to-action {
@@ -296,12 +406,57 @@ body{
     margin: 70px auto 20px auto;
 }
 
-.call-to-action p {
-    margin-bottom: 20px;
+
+@media(max-width: @screen-md) { 
+
+    .call-to-action.boss h1 {
+        font-weight: 700;
+        font-size: 45px;
+        margin: 70px 65pt 40px 65pt;
+    }
+
+    .call-to-action button, .call-to-action a.btn {
+        margin-bottom: 0px;
+        width: 100%;
+        border-radius: 0;
+        left: 0;
+        position: absolute;
+        margin-left: 0px; 
+    }
+
+    .call-to-action p {
+        margin-bottom: 60px;
+        font-size: 15pt
+    }
+    
+    .row.call-to-action  h1 {
+        margin-bottom: 45px;
+    }
+    
+    .row.call-to-action.question {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    
 }
 
-.call-to-action button, .call-to-action a.btn {
-    margin-bottom: 70px;
+@media(min-width: @screen-md) { 
+
+
+    .call-to-action h1 {
+        font-weight: 700;
+        font-size: 36px;
+        margin: 70px auto 20px auto;
+    }
+
+
+    .call-to-action p {
+        margin-bottom: 20px;
+    }
+    .call-to-action button, .call-to-action a.btn {
+        margin-bottom: 70px;
+    }
+
 }
 
 .call-to-action .trump {
@@ -398,7 +553,7 @@ body{
 .conference-information .sponsors img {
     margin-bottom : 40px;
     margin-right : 40px;
-        
+
 }
 
 .sponsors .decorated {
@@ -911,7 +1066,7 @@ body{
 
 .register h4{
     margin-top: 100px;
-        margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .cfp h4 {
