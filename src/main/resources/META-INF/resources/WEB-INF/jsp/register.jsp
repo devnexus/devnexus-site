@@ -128,8 +128,6 @@
 
             <div class="form-group total row">
 
-
-
                 <span for="total-cost" class="col-lg-2 control-label">Order Total: </span>
 
                 <span id="total-cost" name="total-cost"  >$0.00</span>
