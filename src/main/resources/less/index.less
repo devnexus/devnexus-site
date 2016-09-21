@@ -428,16 +428,16 @@ body{
         margin-bottom: 60px;
         font-size: 15pt
     }
-    
+
     .row.call-to-action  h1 {
         margin-bottom: 45px;
     }
-    
+
     .row.call-to-action.question {
         margin-top: 45px;
         margin-bottom: 45px;
     }
-    
+
 }
 
 @media(min-width: @screen-md) { 
@@ -960,10 +960,20 @@ body{
 
 
 //Reg checkout
-.register form {
-    margin-left: 100px;
-    margin-right: 100px;
+
+@media(max-width: @screen-md) { 
+    .register form {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
+@media(min-width: @screen-md) { 
+    .register form {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
 
 .register form label {
     font-size: 20px;
@@ -979,13 +989,24 @@ body{
     font-size: 20px;
     font-weight: normal
 }
-
-.register form h4 {
-    text-transform: uppercase;
-    font-size: 24px;
-    color: #282828;
-    margin-bottom: 50px;
+@media(max-width: @screen-md) { 
+    .register form h4 {
+        text-transform: uppercase;
+        font-size: 24px;
+        color: #282828;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
 }
+@media(min-width: @screen-md) { 
+    .register form h4 {
+        text-transform: uppercase;
+        font-size: 24px;
+        color: #282828;
+        margin-bottom: 50px;
+    }
+}
+
 
 .register form .ticket-selection {
     text-transform: none;
@@ -1009,44 +1030,100 @@ body{
     margin-bottom: 10px;
 }
 
-.register .form-group .ticket-count {
-    width:100px;
-    height:75px;
+@media(min-width: @screen-md) { 
+    .register .form-group .ticket-count {
+        width:100px;
+        height:75px;
 
+    }
 }
 
-.register .form-group.total  {
-    background-color: #d8d8d8;
-    border: solid 1px #979797;
-    padding:60px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+@media(max-width: @screen-md) { 
+    .register .form-group .ticket-count {
+        height:75px;
+    }
 }
 
-.register .form-group.total span{
-    float: left;
-    font-size: 24px;
-    width: auto;
-    text-transform: uppercase;
-    padding: 0;
-    margin-right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    line-height: 80px;
-    height:90px;
+@media(min-width: @screen-md) { 
+    .register .form-group.total  {
+        background-color: #d8d8d8;
+        border: solid 1px #979797;
+        padding:60px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .register .form-group.total span{
+        float: left;
+        font-size: 24px;
+        width: auto;
+        text-transform: uppercase;
+        padding: 0;
+        margin-right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        line-height: 80px;
+        height:90px;
+    }
+
+    .register .form-group.total button{
+        border-radius: 0;
+        font-size: 24px;
+        width: auto;
+        text-transform: uppercase;
+        background-color: black;
+        color:white;
+        float: right;
+        padding:30px 60px;
+    }
 }
 
-.register .form-group.total button{
-    border-radius: 0;
-    font-size: 24px;
-    width: auto;
-    text-transform: uppercase;
-    background-color: black;
-    color:white;
-    float: right;
-    padding:30px 60px;
+@media(max-width: @screen-md) { 
+    .register .form-group.total  {
+        background-color: #d8d8d8;
+        border: solid 1px #979797;
+        padding:10px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    .register .form-group.total span{
+        
+        font-size: 16px;
+        width: auto;
+        text-transform: uppercase;
+        padding: 0;
+        margin-right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        line-height: 40px;
+        height:45px;
+    }
+
+    .register .form-group.total button {
+        border-radius: 0;
+        font-size: 16px;
+        width: 75%;
+        text-transform: uppercase;
+        background-color: black;
+        margin: 0 auto;
+        color:white;
+        padding:15px 30px;
+    }
+    
+    .register .form-group.total .paypal-image {
+        border-radius: 0;
+        font-size: 16px;
+        width: auto;
+        text-transform: uppercase;
+        margin: 0 auto;
+        color:white;
+        padding:15px 30px;
+    }
 }
+
+
 
 .register h3 span.checkout{
     font-weight:bolder;
