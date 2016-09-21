@@ -18,7 +18,7 @@
 
 	<title><sitemesh:write property='title'/></title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=.75">
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="${ctx}/favicon.png">

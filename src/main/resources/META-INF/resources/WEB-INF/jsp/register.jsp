@@ -44,37 +44,43 @@
                 <form:errors path="contactPhoneNumber" cssClass="fieldError"/>
             </div>
 
-            <div class="row ticket-selection">
-                <div class="col-lg-6 ticket-header form-group">
+            <div class="row ticket-selection hidden-xs hidden-sm">
+                <div class="col-md-6 ticket-header form-group">
                     Ticket Type
                 </div>
-                <div class="col-lg-2 ticket-header form-group">
+                <div class="col-md-2 ticket-header form-group">
                     Unit Price
                 </div>
-                <div class="col-lg-2 ticket-header form-group">
+                <div class="col-md-2 ticket-header form-group">
                     Quantity
                 </div>
-                <div class="col-lg-2 ticket-header form-group">
+                <div class="col-md-2 ticket-header form-group">
                     Coupon Code
                 </div>
             </div>
 
+            <div  class="row ticket-selection visible-xs visible-sm hidden-md">
+                <div class="col-xs-12 ticket-header form-group">
+                    &nbsp;
+                </div>
+            </div>
+            
             <c:forEach items="${signupRegisterView.groups}" var="ticketGroup" varStatus="ticketGroupStatus">
                 <form:hidden path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketGroupId" id="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketGroupId" />
-                <div class="row ticket-selection">
-                    <div class="col-lg-6 form-group${errorClass}">
+                <div class="row ticket-selection ">
+                    
+                    <div class="col-md-6 form-group${errorClass}">
                         <h4><c:out value="${ticketGroup.label}"/> </h4>
                         <c:out value="${ticketGroup.descriptionAsHtml}" escapeXml="false"/>
-
                     </div>
-                    <div class="col-lg-2 form-group${errorClass} cost" style="display:table-cell; vertical-align: middle">
+                    <div class="col-md-2 form-group${errorClass} cost" style="display:table-cell; vertical-align: middle">
                         <h4>&nbsp;</h4>
                         <input type="hidden" id="ticket-cost-${ticketGroup.id}" class="ticket-cost" value="<c:out value="${ticketGroup.price}"/>" disabled />
-                        <c:out value="${ticketGroup.formattedPrice}"/>
+                        <span class="hidden-md visible-xs visible-sm">Price :</span><c:out value="${ticketGroup.formattedPrice}"/>
 
                     </div>
-                    <div class="col-lg-2 form-group${errorClass}"><h4>&nbsp;</h4>
-                        <spring:bind path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount">
+                    <div class="col-md-2 col-sm-12  form-group${errorClass}"><h4>&nbsp;</h4>
+                        <span class="hidden-md visible-xs visible-sm">Quantity :</span><spring:bind path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount">
                             <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                         </spring:bind>
                         <form:select cssClass="form-control ticket-count" path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" id="ticket-count" tabindex="10">
@@ -113,8 +119,9 @@
                         </form:select>
                         <form:errors path="ticketGroupRegistrations[${ticketGroupStatus.index}].ticketCount" cssClass="fieldError" />
                     </div>
-                    <div class="col-lg-2 form-group${errorClass}">
+                    <div class="col-md-2 form-group${errorClass}">
                         <h4>&nbsp;</h4>
+                        <span class="hidden-md visible-xs visible-sm">Coupon Code :</span>
                         <spring:bind path="ticketGroupRegistrations[${ticketGroupStatus.index}].couponCode">
                             <c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
                         </spring:bind>
@@ -128,7 +135,7 @@
 
             <div class="form-group total row">
 
-                <span for="total-cost" class="col-lg-2 control-label">Order Total: </span>
+                <span for="total-cost" class="col-md-2 control-label">Order Total: </span>
 
                 <span id="total-cost" name="total-cost"  >$0.00</span>
 
