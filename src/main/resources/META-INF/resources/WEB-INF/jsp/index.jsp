@@ -124,7 +124,7 @@
                         <p>Find out what makes DEVNEXUS special from attendees at the 2016 event.</p>
                     </div>
                 </div>
-                <div  id="goiXzB0rMEQ" class="col-md-9 video-container preview">
+                <div  id="J7XpqF8rHS8" class="col-md-9 video-container preview">
                     <a class="center-block" href="javascript:return false;">
                         <img id="video-play-button" class="play img-responsive center-block play-button" src="${ctx}/assets/img/play-button.png" alt="Play Promo Video"/>
                     </a>
