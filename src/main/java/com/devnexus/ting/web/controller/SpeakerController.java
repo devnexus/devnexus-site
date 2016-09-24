@@ -16,6 +16,8 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
@@ -41,10 +44,12 @@ import com.devnexus.ting.model.SpeakerList;
 @Controller
 public class SpeakerController {
 
-	@Autowired private BusinessService businessService;
+	@Autowired
+	private BusinessService businessService;
 
-	@RequestMapping(value="/s/speakers", method = RequestMethod.GET)
-	public String getSpeakersForCurrentEvent(Model model, @RequestParam(value="image", defaultValue="false") boolean image) {
+	@RequestMapping(value = "/s/speakers", method = RequestMethod.GET)
+	public String getSpeakersForCurrentEvent(Model model,
+			@RequestParam(value = "image", defaultValue = "false") boolean image) {
 		Event currentEvent = businessService.getCurrentEvent();
 		prepareSpeakers(currentEvent, model);
 		return "speakers";
@@ -66,7 +71,8 @@ public class SpeakerController {
 	}
 
 	@RequestMapping("/s/{eventKey}/speakers/{speakerId}")
-	public String getSpeakerDetailsForEvent(@PathVariable("eventKey") String eventKey, @PathVariable("speakerId") Long speakerId, Model model) {
+	public String getSpeakerDetailsForEvent(@PathVariable("eventKey") String eventKey,
+			@PathVariable("speakerId") Long speakerId, Model model) {
 		final Event event = businessService.getEventByEventKey(eventKey);
 		model.addAttribute("contextEvent", event);
 		prepareSpeaker(event, speakerId, model);
@@ -82,14 +88,29 @@ public class SpeakerController {
 	private void prepareSpeakers(Event event, Model model) {
 		model.addAttribute("event", event);
 		SpeakerList speakers = new SpeakerList();
-		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
-		model.addAttribute("speakerList",speakers);
-		int columnLength = (int)(speakers.getSpeakers().size() / 4);
 
-		model.addAttribute("columnLength", columnLength < 1 ? 1 : columnLength);
+		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
+		Map<Long, CfpSubmissionSpeaker> cfpSpeakers = new HashMap<>(speakers.getNumberOfSpeakers());
+
+		speakers.getSpeakers().forEach((speaker) -> {
+			if (speaker.getCfpSpeakerId() != null) {
+				CfpSubmissionSpeaker cfpSpeaker = businessService.getCfpSubmissionSpeaker(speaker.getCfpSpeakerId());
+				if (cfpSpeaker == null) {
+					cfpSpeaker = new CfpSubmissionSpeaker();
+				}
+				cfpSpeakers.put(speaker.getId(), cfpSpeaker);
+			} else {
+				cfpSpeakers.put(speaker.getId(), new CfpSubmissionSpeaker());
+			}
+		});
+
+		model.addAttribute("trackList", businessService.getTracksForEvent(event.getId()));
+		model.addAttribute("speakerList", speakers);
+		model.addAttribute("cfpSpeakersMap", cfpSpeakers);
+
 	}
 
-	@RequestMapping(value="/s/speakers/{speakerId}.jpg", method=RequestMethod.GET)
+	@RequestMapping(value = "/s/speakers/{speakerId}.jpg", method = RequestMethod.GET)
 	public void getSpeakerPicture(@PathVariable("speakerId") Long speakerId, HttpServletResponse response) {
 
 		byte[] speakerImage = businessService.getSpeakerImage(speakerId);

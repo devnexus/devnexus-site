@@ -46,7 +46,6 @@ import com.devnexus.ting.model.UserScheduleItem;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 import com.devnexus.ting.web.controller.UserNotLoggedInException;
 
-
 /**
  * The central service layer of Ting.
  *
@@ -59,26 +58,38 @@ public interface BusinessService {
 	Evaluation saveEvaluation(Evaluation evaluation);
 
 	/**
-	 * Delete the provided {@link Event}. The Id of the {@link Event} must be set.
-	 * @param event The {@link Event} to delete. Must not be null.
+	 * Delete the provided {@link Event}. The Id of the {@link Event} must be
+	 * set.
+	 * 
+	 * @param event
+	 *            The {@link Event} to delete. Must not be null.
 	 */
 	void deleteEvent(Event event);
 
 	/**
-	 * Delete the provided {@link Organizer}. The Id of the {@link Organizer} must be set.
-	 * @param organizerFromDb The {@link Organizer} to delete. Must not be null.
+	 * Delete the provided {@link Organizer}. The Id of the {@link Organizer}
+	 * must be set.
+	 * 
+	 * @param organizerFromDb
+	 *            The {@link Organizer} to delete. Must not be null.
 	 */
 	void deleteOrganizer(Organizer organizerFromDb);
 
 	/**
-	 * Delete the provided {@link Presentation}. The Id of the {@link Presentation} must be set.
-	 * @param presentation The {@link Presentation} to delete. Must not be null.
+	 * Delete the provided {@link Presentation}. The Id of the
+	 * {@link Presentation} must be set.
+	 * 
+	 * @param presentation
+	 *            The {@link Presentation} to delete. Must not be null.
 	 */
 	void deletePresentation(Presentation presentation);
 
 	/**
-	 * Delete the provided {@link Speaker}. The Id of the {@link Speaker} must be set.
-	 * @param presentation The {@link Speaker} to delete. Must not be null.
+	 * Delete the provided {@link Speaker}. The Id of the {@link Speaker} must
+	 * be set.
+	 * 
+	 * @param presentation
+	 *            The {@link Speaker} to delete. Must not be null.
 	 */
 	void deleteSpeaker(Speaker speaker);
 
@@ -105,6 +116,7 @@ public interface BusinessService {
 	 * @return
 	 */
 	List<Presentation> getAllPresentations();
+
 	/**
 	 * Returns a list of all Speakers ordered by name.
 	 *
@@ -203,8 +215,8 @@ public interface BusinessService {
 	Speaker saveSpeaker(Speaker speaker);
 
 	/**
-	 * Retrieves an {@link Organizer} with pictures (eagerly) if the picture
-	 * is available.
+	 * Retrieves an {@link Organizer} with pictures (eagerly) if the picture is
+	 * available.
 	 *
 	 * @param organizerId
 	 * @return
@@ -229,13 +241,14 @@ public interface BusinessService {
 
 	ScheduleItemList getScheduleForEvent(Long eventId);
 
-	ScheduleItem     getScheduleItem(Long scheduleItemId);
+	ScheduleItem getScheduleItem(Long scheduleItemId);
 
 	List<Evaluation> getEvaluationsForCurrentEvent();
 
 	List<Evaluation> getEvaluationsForEvent(Long eventId);
 
 	List<CfpSubmission> getCfpSubmissions(Long eventId);
+
 	List<CfpSubmission> getCfpSubmissionsForUserAndEvent(Long userId, Long eventId);
 
 	CfpSubmission saveCfpSubmission(CfpSubmission cfpSubmission);
@@ -256,8 +269,7 @@ public interface BusinessService {
 
 	Map<PresentationTag, Long> getTagCloud(Long eventId);
 
-	List<Presentation> findPresentations(
-			PresentationSearchQuery presentationSearchQuery);
+	List<Presentation> findPresentations(PresentationSearchQuery presentationSearchQuery);
 
 	List<Presentation> getPresentationsForEventOrderedByName(Long eventId);
 
@@ -315,22 +327,24 @@ public interface BusinessService {
 
 	Speaker getSpeakerFilteredForEvent(Long speakerId, Event event);
 
-        /**
-         *
-         * @return a list of user schedule items
-         * @throws UserNotLoggedInException if a user isn't logged in.
-         */
-        List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) throws UserNotLoggedInException;
+	/**
+	 *
+	 * @return a list of user schedule items
+	 * @throws UserNotLoggedInException
+	 *             if a user isn't logged in.
+	 */
+	List<UserScheduleItem> getUserScheduleItemsForCurrentEventForUser(User user) throws UserNotLoggedInException;
 
-		CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker, List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays);
+	CfpSubmissionSpeaker saveCfpSubmissionSpeaker(CfpSubmissionSpeaker cfpSubmissionSpeaker,
+			List<CfpSubmissionSpeakerConferenceDay> cfpSubmissionSpeakerConferenceDays);
 
-		List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
+	List<CfpSubmissionSpeaker> getCfpSubmissionSpeakersForUserAndEvent(User user, Event event);
 
-		void deleteCfpSubmissionSpeakerForUser(Long cfpSubmissionSpeakerId, Long userId, Long eventId);
+	void deleteCfpSubmissionSpeakerForUser(Long cfpSubmissionSpeakerId, Long userId, Long eventId);
 
-		void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long eventId, Long userId);
+	void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long eventId, Long userId);
 
-		ScheduleItem saveScheduleItem(ScheduleItem scheduleItem);
+	ScheduleItem saveScheduleItem(ScheduleItem scheduleItem);
 
-		void deleteAllScheduleItems(Long id);
+	void deleteAllScheduleItems(Long id);
 }

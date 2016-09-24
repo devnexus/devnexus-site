@@ -20,6 +20,7 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -28,84 +29,87 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author Summers Pittman
+ *
+ */
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CouponCode extends BaseModelObject {
 
-    @XmlTransient
-    @Transient
-    @JsonIgnore
-    public static final CouponCode EMPTY = new CouponCode();
+	@XmlTransient
+	@Transient
+	@JsonIgnore
+	public static final CouponCode EMPTY = new CouponCode();
 
-    @XmlTransient
-    @NotNull
-    @JsonIgnore
-    private String code;
+	@XmlTransient
+	@NotNull
+	@JsonIgnore
+	private String code;
 
-    @ManyToOne
-    @XmlTransient
-    @NotNull
-    @JsonIgnore
-    private TicketGroup ticketGroup;
+	@ManyToOne
+	@XmlTransient
+	@NotNull
+	@JoinColumn(name = "TICKET_GROUP")
+	@JsonIgnore
+	private TicketGroup ticketGroup;
 
+	@NotNull
+	private BigDecimal price;
 
-    @NotNull
-    private BigDecimal price;
+	public String getCode() {
+		return code;
+	}
 
-    public String getCode() {
-        return code;
-    }
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public TicketGroup getTicketGroup() {
+		return ticketGroup;
+	}
 
-    public TicketGroup getTicketGroup() {
-        return ticketGroup;
-    }
+	public void setTicketGroup(TicketGroup ticketGroup) {
+		this.ticketGroup = ticketGroup;
+	}
 
-    public void setTicketGroup(TicketGroup ticketGroup) {
-        this.ticketGroup = ticketGroup;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 3;
+		hash = 37 * hash + Objects.hashCode(this.code);
+		hash = 37 * hash + Objects.hashCode(this.price);
+		return hash;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.code);
-        hash = 37 * hash + Objects.hashCode(this.price);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final CouponCode other = (CouponCode) obj;
-        if (!Objects.equals(this.code, other.code)) {
-            return false;
-        }
-        if (!Objects.equals(this.price, other.price)) {
-            return false;
-        }
-        return true;
-    }
-
-
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final CouponCode other = (CouponCode) obj;
+		if (!Objects.equals(this.code, other.code)) {
+			return false;
+		}
+		if (!Objects.equals(this.price, other.price)) {
+			return false;
+		}
+		return true;
+	}
 
 }

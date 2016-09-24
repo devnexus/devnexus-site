@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2015 the original author or authors.
+ * Copyright 2014-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,24 +19,26 @@ package com.devnexus.ting.common;
  * Keeps track of all Spring application context profiles being used.
  *
  * @author Gunnar Hillert
+ * @author Summers Pittman
  *
  */
 public final class SpringProfile {
 
-	public static final String MAIL_ENABLED       = "mail-enabled";
-	public static final String SENDGRID_ENABLED   = "sendgrid-enabled";
-	public static final String SENDGRID_DISABLED  = "!sendgrid-enabled";
-	public static final String SMTP_ENABLED   = "smtp-enabled";
-	public static final String SMTP_DISABLED  = "!smtp-enabled";
+	public static final String MAIL_ENABLED         = "mail-enabled";
+	public static final String DEVELOPMENT_ENABLED  = "development-enabled";
+	public static final String SENDGRID_ENABLED     = "sendgrid-enabled";
+	public static final String SENDGRID_DISABLED    = "!sendgrid-enabled";
+	public static final String SMTP_ENABLED         = "smtp-enabled";
+	public static final String SMTP_DISABLED        = "!smtp-enabled";
 	public static final String AMAZON_SES_ENABLED   = "amazon-ses-enabled";
 	public static final String AMAZON_SES_DISABLED  = "!amazon-ses-enabled";
-	public static final String MAIL_DISABLED      = "!mail-enabled";
-	public static final String TWITTER_ENABLED    = "twitter-enabled";
-	public static final String PAYPAL_ENABLED     = "paypal-enabled";
-	public static final String PAYPAL_LIVE        = "paypal-live";
-	public static final String PAYPAL_SANDBOX     = "paypal-sandbox";
-	public static final String WEBSOCKET_ENABLED  = "websocket-enabled";
-	public static final String WEBSOCKET_DISABLED = "!websocket-enabled";
+	public static final String MAIL_DISABLED        = "!mail-enabled";
+	public static final String TWITTER_ENABLED      = "twitter-enabled";
+	public static final String PAYPAL_ENABLED       = "paypal-enabled";
+	public static final String PAYPAL_LIVE          = "paypal-live";
+	public static final String PAYPAL_SANDBOX       = "paypal-sandbox";
+	public static final String WEBSOCKET_ENABLED    = "websocket-enabled";
+	public static final String WEBSOCKET_DISABLED   = "!websocket-enabled";
 
 	public static final String CLOUD = "cloud";
 	public static final String DEMO = "demo";

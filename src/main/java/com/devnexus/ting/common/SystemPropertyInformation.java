@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.common;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -84,7 +85,7 @@ public enum SystemPropertyInformation {
 
 	public static List<SystemPropertyInformation> getSystemPropertyValuesAsList() {
 
-		final List<SystemPropertyInformation>systemPropertyValues = CollectionUtils.getArrayList();
+		final List<SystemPropertyInformation>systemPropertyValues = new ArrayList<>();
 
 		for (SystemPropertyInformation systemProperty : SystemPropertyInformation.values()) {
 			systemPropertyValues.add(systemProperty);

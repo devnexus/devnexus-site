@@ -10,5 +10,5 @@ package com.devnexus.ting.repository;
  * @author summers
  */
 public interface PayPalRepositoryCustom {
-    
+
 }

@@ -44,4 +44,3 @@ public class AmazonSettings {
 	}
 
 }
-

@@ -89,21 +89,24 @@ public final class SystemInformationUtils {
 			apphome.setAppHomePath(null);
 			apphome.setAppHomeSource(AppHomeSource.CLOUD);
 
-		} else  if (StringUtils.isNotBlank(System
+		}
+		else  if (StringUtils.isNotBlank(System
 				.getProperty(Apphome.APP_HOME_DIRECTORY))) {
 
 			apphome.setAppHomePath(System
 					.getProperty(Apphome.APP_HOME_DIRECTORY));
 			apphome.setAppHomeSource(AppHomeSource.SYSTEM_PROPERTY);
 
-		} else if (StringUtils.isNotBlank(System
+		}
+		else if (StringUtils.isNotBlank(System
 				.getenv(Apphome.APP_HOME_DIRECTORY))) {
 
 			apphome.setAppHomePath(System
 					.getenv(Apphome.APP_HOME_DIRECTORY));
 			apphome.setAppHomeSource(AppHomeSource.ENVIRONMENT_VARIABLE);
 
-		} else {
+		}
+		else {
 
 			final String userHomeDirectiory = System.getProperty("user.home");
 
@@ -139,7 +142,8 @@ public final class SystemInformationUtils {
 		Resource resource = new FileSystemResource(getConfigFile(filePath));
 		try {
 			return PropertiesLoaderUtils.loadProperties(resource);
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException("Error loading properties.", e);
 		}
 
@@ -149,7 +153,8 @@ public final class SystemInformationUtils {
 
 		if (existsConfigFile(filePath)) {
 			return SpringContextMode.ProductionContextConfiguration;
-		} else {
+		}
+		else {
 			return SpringContextMode.DemoContextConfiguration;
 		}
 
@@ -215,11 +220,13 @@ public final class SystemInformationUtils {
 		if (image.isFile() && image.exists()) {
 			try {
 				return new FileInputStream(image);
-			} catch (FileNotFoundException e) {
+			}
+			catch (FileNotFoundException e) {
 				return SystemInformationUtils.class
 						.getResourceAsStream("/data/images/image_not_available.jpg");
 			}
-		} else {
+		}
+		else {
 			return SystemInformationUtils.class
 					.getResourceAsStream("/data/images/image_not_available.jpg");
 		}
@@ -236,7 +243,8 @@ public final class SystemInformationUtils {
 
 		try {
 			return IOUtils.toByteArray(is);
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 
@@ -252,12 +260,13 @@ public final class SystemInformationUtils {
 
 		try {
 			return IOUtils.toByteArray(is);
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 	}
 
-        public static String getCfpTextEmailTemplate() {
+		public static String getCfpTextEmailTemplate() {
 
 		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-email.txt");
 
@@ -265,7 +274,8 @@ public final class SystemInformationUtils {
 
 		try {
 			template = IOUtils.toString(is, Charset.forName("UTF-8"));
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 
@@ -281,7 +291,8 @@ public final class SystemInformationUtils {
 
 		try {
 			template = IOUtils.toString(is, Charset.forName("UTF-8"));
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 
@@ -296,7 +307,8 @@ public final class SystemInformationUtils {
 
 		try {
 			template = IOUtils.toString(is, Charset.forName("UTF-8"));
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 
@@ -311,7 +323,8 @@ public final class SystemInformationUtils {
 
 		try {
 			template = IOUtils.toString(is, Charset.forName("UTF-8"));
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(e);
 		}
 
@@ -350,20 +363,23 @@ public final class SystemInformationUtils {
 
 			try {
 				image.createNewFile();
-			} catch (IOException e1) {
+			}
+			catch (IOException e1) {
 				throw new IllegalStateException("Unable to create File: " + image.getName());
 			}
 		FileOutputStream out;
 		try {
 			out = new FileOutputStream(image);
-		} catch (FileNotFoundException e) {
+		}
+		catch (FileNotFoundException e) {
 			throw new IllegalStateException(
 			"File not found.", e);
 		}
 
 		try {
 			org.apache.commons.io.IOUtils.copy(is, out);
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new IllegalStateException(
 					"Problem copying streams.", e);
 		}
@@ -385,8 +401,9 @@ public final class SystemInformationUtils {
 		if (presentationFile.isFile() && presentationFile.exists()) {
 			try {
 				return new FileInputStream(presentationFile);
-			} catch (FileNotFoundException e) {
-			   throw new IllegalStateException(String.format("Not a valid file at '%s'.", filePath));
+			}
+			catch (FileNotFoundException e) {
+				throw new IllegalStateException(String.format("Not a valid file at '%s'.", filePath));
 			}
 		}
 

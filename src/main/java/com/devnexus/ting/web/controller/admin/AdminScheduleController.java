@@ -49,14 +49,12 @@ import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
 
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationList;
 import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.ScheduleItemList;
-import com.devnexus.ting.model.User;
 import com.devnexus.ting.web.controller.admin.support.CsvScheduleItemBean;
 import com.devnexus.ting.web.controller.cfp.CallForPapersController;
 import com.devnexus.ting.web.form.UploadScheduleForm;

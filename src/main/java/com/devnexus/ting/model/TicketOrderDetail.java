@@ -37,268 +37,264 @@ import org.hibernate.validator.constraints.NotEmpty;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TicketOrderDetail extends BaseModelObject implements Comparable<TicketOrderDetail> {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @NotNull
-    @Size(max = 255)
-    private String firstName;
-    
-    @NotNull
-    @Size(max = 255)
-    private String lastName;
-    
-    @NotNull
-    @Size(max = 255)
-    @Email
-    private String emailAddress;
+	@NotNull
+	@Size(max = 255)
+	private String firstName;
 
-    @Size(min = 1, max = 255)
-    @NotNull
-    private String city;
-    
-    @Size(min = 1, max = 255)
-    @NotNull
-    private String state;
-    
-    @Size(min = 1, max = 255)
-    @NotNull
-    private String country;
+	@NotNull
+	@Size(max = 255)
+	private String lastName;
 
-    @Size(min = 1, max = 255)
-    @NotNull
-    private String jobTitle;
+	@NotNull
+	@Size(max = 255)
+	@Email
+	private String emailAddress;
 
-    @Size(min = 1, max = 255)
-    @NotNull
-    private String company;
+	@Size(min = 1, max = 255)
+	@NotNull
+	private String city;
 
-    @Size(max = 255)
-    private String tShirtSize;
-    @Size(max = 255)
-    private String vegetarian;
+	@Size(min = 1, max = 255)
+	@NotNull
+	private String state;
 
-    @Size(max = 255)
-    private String sponsorMayContact = "true";
-    
-    @NotEmpty
-    @Size(max = 255)
-    private String label;
-    
-    @NotNull
-    private Long ticketGroup;
+	@Size(min = 1, max = 255)
+	@NotNull
+	private String country;
 
-    private String couponCode;
-    
-    @ManyToOne
-    @XmlTransient
-    @JsonIgnore
-    private RegistrationDetails registration;
+	@Size(min = 1, max = 255)
+	@NotNull
+	private String jobTitle;
 
-    public TicketOrderDetail(RegisterForm.TicketGroupRegistration ticketRegistration) {
-        this.ticketGroup = ticketRegistration.getTicketGroupId();
-        this.couponCode = ticketRegistration.getCouponCode();
-        this.label = ticketRegistration.getGroup().label;
-    }
-    
-    public TicketOrderDetail() {
-    }
+	@Size(min = 1, max = 255)
+	@NotNull
+	private String company;
 
+	@Size(max = 255)
+	private String tShirtSize;
+	@Size(max = 255)
+	private String vegetarian = "false";
 
-    public String getFirstName() {
-        return firstName;
-    }
+	@Size(max = 255)
+	private String sponsorMayContact = "true";
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	@NotEmpty
+	@Size(max = 255)
+	private String label;
 
-    public String getLastName() {
-        return lastName;
-    }
+	@NotNull
+	private Long ticketGroup;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	private String couponCode;
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+	@ManyToOne
+	@XmlTransient
+	@JsonIgnore
+	private RegistrationDetails registration;
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+	public TicketOrderDetail(RegisterForm.TicketGroupRegistration ticketRegistration) {
+		this.ticketGroup = ticketRegistration.getTicketGroupId();
+		this.couponCode = ticketRegistration.getCouponCode();
+		this.label = ticketRegistration.getGroup().label;
+	}
 
-    public String getCity() {
-        return city;
-    }
+	public TicketOrderDetail() {
+	}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getState() {
-        return state;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setState(String state) {
-        this.state = state;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public String getCountry() {
-        return country;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
+	public String getEmailAddress() {
+		return emailAddress;
+	}
 
-    public String getJobTitle() {
-        return jobTitle;
-    }
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getCompany() {
-        return company;
-    }
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public String gettShirtSize() {
-        return tShirtSize;
-    }
+	public void setState(String state) {
+		this.state = state;
+	}
 
-    public void settShirtSize(String tShirtSize) {
-        this.tShirtSize = tShirtSize;
-    }
+	public String getCountry() {
+		return country;
+	}
 
-    public String getVegetarian() {
-        return vegetarian;
-    }
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
-    public void setVegetarian(String vegetarian) {
-        this.vegetarian = vegetarian;
-    }
+	public String getJobTitle() {
+		return jobTitle;
+	}
 
-    public RegistrationDetails getRegistration() {
-        return registration;
-    }
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
 
-    public void setRegistration(RegistrationDetails registration) {
-        this.registration = registration;
-    }
+	public String getCompany() {
+		return company;
+	}
 
-    @Override
-    public int compareTo(TicketOrderDetail o) {
-        if (lastName.equals(o.lastName)) {
-            return firstName.compareTo(o.firstName);
-        }
-        return lastName.compareTo(o.lastName);
-    }
+	public void setCompany(String company) {
+		this.company = company;
+	}
 
-    public String getSponsorMayContact() {
-        return sponsorMayContact;
-    }
+	public String gettShirtSize() {
+		return tShirtSize;
+	}
 
-    public void setSponsorMayContact(String sponsorMayContact) {
-        this.sponsorMayContact = sponsorMayContact;
-    }
+	public void settShirtSize(String tShirtSize) {
+		this.tShirtSize = tShirtSize;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.firstName);
-        hash = 53 * hash + Objects.hashCode(this.lastName);
-        hash = 53 * hash + Objects.hashCode(this.emailAddress);
-        hash = 53 * hash + Objects.hashCode(this.city);
-        hash = 53 * hash + Objects.hashCode(this.state);
-        hash = 53 * hash + Objects.hashCode(this.country);
-        hash = 53 * hash + Objects.hashCode(this.jobTitle);
-        hash = 53 * hash + Objects.hashCode(this.tShirtSize);
-        hash = 53 * hash + Objects.hashCode(this.vegetarian);
-        hash = 53 * hash + Objects.hashCode(this.sponsorMayContact);
-        hash = 53 * hash + Objects.hashCode(this.ticketGroup);
-        hash = 53 * hash + Objects.hashCode(this.couponCode);
-        return hash;
-    }
+	public String getVegetarian() {
+		return vegetarian;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final TicketOrderDetail other = (TicketOrderDetail) obj;
-        if (!Objects.equals(this.firstName, other.firstName)) {
-            return false;
-        }
-        if (!Objects.equals(this.lastName, other.lastName)) {
-            return false;
-        }
-        if (!Objects.equals(this.emailAddress, other.emailAddress)) {
-            return false;
-        }
-        if (!Objects.equals(this.city, other.city)) {
-            return false;
-        }
-        if (!Objects.equals(this.state, other.state)) {
-            return false;
-        }
-        if (!Objects.equals(this.country, other.country)) {
-            return false;
-        }
-        if (!Objects.equals(this.jobTitle, other.jobTitle)) {
-            return false;
-        }
-        if (!Objects.equals(this.company, other.company)) {
-            return false;
-        }
-        if (!Objects.equals(this.vegetarian, other.vegetarian)) {
-            return false;
-        }
-        if (!Objects.equals(this.sponsorMayContact, other.sponsorMayContact)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketGroup, other.ticketGroup)) {
-            return false;
-        }
-        if (!Objects.equals(this.couponCode, other.couponCode)) {
-            return false;
-        }
-        return true;
-    }
+	public void setVegetarian(String vegetarian) {
+		this.vegetarian = vegetarian;
+	}
 
-    public String getLabel() {
-        return label;
-    }
+	public RegistrationDetails getRegistration() {
+		return registration;
+	}
 
-    public void setLabel(String label) {
-        this.label = label;
-    }
+	public void setRegistration(RegistrationDetails registration) {
+		this.registration = registration;
+	}
 
+	@Override
+	public int compareTo(TicketOrderDetail o) {
+		if (lastName.equals(o.lastName)) {
+			return firstName.compareTo(o.firstName);
+		}
+		return lastName.compareTo(o.lastName);
+	}
 
-    public Long getTicketGroup() {
-        return ticketGroup;
-    }
+	public String getSponsorMayContact() {
+		return sponsorMayContact;
+	}
 
-    public void setTicketGroup(Long ticketGroup) {
-        this.ticketGroup = ticketGroup;
-    }
+	public void setSponsorMayContact(String sponsorMayContact) {
+		this.sponsorMayContact = sponsorMayContact;
+	}
 
-    public String getCouponCode() {
-        return couponCode;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 5;
+		hash = 53 * hash + Objects.hashCode(this.firstName);
+		hash = 53 * hash + Objects.hashCode(this.lastName);
+		hash = 53 * hash + Objects.hashCode(this.emailAddress);
+		hash = 53 * hash + Objects.hashCode(this.city);
+		hash = 53 * hash + Objects.hashCode(this.state);
+		hash = 53 * hash + Objects.hashCode(this.country);
+		hash = 53 * hash + Objects.hashCode(this.jobTitle);
+		hash = 53 * hash + Objects.hashCode(this.tShirtSize);
+		hash = 53 * hash + Objects.hashCode(this.vegetarian);
+		hash = 53 * hash + Objects.hashCode(this.sponsorMayContact);
+		hash = 53 * hash + Objects.hashCode(this.ticketGroup);
+		hash = 53 * hash + Objects.hashCode(this.couponCode);
+		return hash;
+	}
 
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final TicketOrderDetail other = (TicketOrderDetail) obj;
+		if (!Objects.equals(this.firstName, other.firstName)) {
+			return false;
+		}
+		if (!Objects.equals(this.lastName, other.lastName)) {
+			return false;
+		}
+		if (!Objects.equals(this.emailAddress, other.emailAddress)) {
+			return false;
+		}
+		if (!Objects.equals(this.city, other.city)) {
+			return false;
+		}
+		if (!Objects.equals(this.state, other.state)) {
+			return false;
+		}
+		if (!Objects.equals(this.country, other.country)) {
+			return false;
+		}
+		if (!Objects.equals(this.jobTitle, other.jobTitle)) {
+			return false;
+		}
+		if (!Objects.equals(this.company, other.company)) {
+			return false;
+		}
+		if (!Objects.equals(this.vegetarian, other.vegetarian)) {
+			return false;
+		}
+		if (!Objects.equals(this.sponsorMayContact, other.sponsorMayContact)) {
+			return false;
+		}
+		if (!Objects.equals(this.ticketGroup, other.ticketGroup)) {
+			return false;
+		}
+		if (!Objects.equals(this.couponCode, other.couponCode)) {
+			return false;
+		}
+		return true;
+	}
 
-    
-    
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
+
+	public Long getTicketGroup() {
+		return ticketGroup;
+	}
+
+	public void setTicketGroup(Long ticketGroup) {
+		this.ticketGroup = ticketGroup;
+	}
+
+	public String getCouponCode() {
+		return couponCode;
+	}
+
+	public void setCouponCode(String couponCode) {
+		this.couponCode = couponCode;
+	}
+
 }

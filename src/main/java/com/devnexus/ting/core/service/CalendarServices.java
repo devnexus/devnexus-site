@@ -57,9 +57,9 @@ public interface CalendarServices {
 	 * @param scheduleItem Must Not be Null
 	 */
 	void removeScheduleItemFromUserSchedule(User user, ScheduleItem scheduleItem);
-        
-        /**
-	 * This method replaces a schedule completely.  
+
+	/**
+	 * This method replaces a schedule completely.
 	 *
 	 * @param user Must Not be Null
 	 * @param scheduleItems Must Not be Null

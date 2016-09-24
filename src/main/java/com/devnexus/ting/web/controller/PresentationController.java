@@ -35,7 +35,6 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationList;
-import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.Track;
 import com.devnexus.ting.model.support.PresentationSearchQuery;
 

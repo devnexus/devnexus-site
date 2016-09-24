@@ -15,6 +15,7 @@
  */
 package com.devnexus.ting.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,8 +23,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import com.devnexus.ting.common.CollectionUtils;
 
 /**
  *
@@ -37,23 +36,23 @@ public class Backup {
 
 	@XmlElementWrapper(name = "events")
 	@XmlElement(name = "event")
-	private List<Event> events = CollectionUtils.getArrayList();
+	private List<Event> events = new ArrayList<>();
 
 	@XmlElementWrapper(name = "organizers")
 	@XmlElement(name = "organizer")
-	private List<Organizer>   organizers    = CollectionUtils.getArrayList();
+	private List<Organizer> organizers = new ArrayList<>();
 
 	@XmlElementWrapper(name = "presentations")
 	@XmlElement(name = "presentation")
-	private List<Presentation>     presentations      = CollectionUtils.getArrayList();
+	private List<Presentation> presentations = new ArrayList<>();
 
 	@XmlElementWrapper(name = "speakers")
 	@XmlElement(name = "speaker")
-	private List<Speaker>     speakers     = CollectionUtils.getArrayList();
+	private List<Speaker> speakers = new ArrayList<>();
 
 	@XmlElementWrapper(name = "users")
 	@XmlElement(name = "user")
-	private List<User>      users       = CollectionUtils.getArrayList();
+	private List<User> users= new ArrayList<>();
 
 
 	//~~~~~Getters and Setters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

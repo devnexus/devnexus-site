@@ -40,4 +40,3 @@ public class CfpSettings {
 		OPEN, CLOSED
 	}
 }
-

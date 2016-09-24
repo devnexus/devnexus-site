@@ -1,58 +1,21 @@
-	<!-- footer -->
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="footer-wrapper container">
-			<div class="row">
-				<div class="sidebar footer-sidebar clearfix">
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget first footer-widget">
-						<div id="meta" class="footer-widget">
-							<img src="${assetsUrl}/img/DevNexus_logo_small.png" alt="DevNexus logo small">
-							<ul class="footer-social">
-								<li class=""><a href="https://twitter.com/devnexus" target="_blank"><i class="fa fa-twitter"></i>#devnexus</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet" class="footer-widget">
-							<h3 class="footer-title">Learn More</h3>
-							<ul class="footer-social">
-								<li class=""><a href="${organizersUrl}" target="_blank">Organizers</a></li>
-								<li class=""><a href="${pastConferencesUrl}">Past Conferences</a></li>
-								<li class=""><a href="${ctx}/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" target="_blank">Sponsorship (PDF)</a></li>
-								<li class="" style="margin-top: 1em;">
-									<a title="Facebook" href="https://www.facebook.com/devnexus" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-facebook"></span></a>
-									<a title="Youtube" href="https://www.youtube.com/devnexus-conference" target="_blank" style="margin-right: 1em;"><span class="fa fa-2x fa-youtube"></span></a>
-									<a title="Flickr" href="https://www.flickr.com/search/?text=devnexus&sort=date-taken-desc" target="_blank"><span class="fa fa-2x fa-flickr"></span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget footer-widget">
-						<div id="tweet2" class="footer-widget">
-							<h3 class="footer-title">DEVNEXUS 2017</h3>
-							<ul class="footer-social">
-								<li class=""><a href="${scheduleUrl}">Schedule</a></li>
-								<li class=""><a href="${speakersUrl}">Speakers</a></li>
-								<li class=""><a href="${presentationsUrl}">Presentations</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-3 col-md-3 widget-1 footer-widget last footer-widget">
-						<div id="get_touch" class="widget widget_get_touch">
-<!--							<a><button class="btn btn-primary btn-block registerButton" disabled="disabled">¡Sold Out!</button></a>-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10-offset-1 legal">
-					<p>&copy; 2004-2016 <a href="http://www.ajug.org/">Atlanta Java Users Group</a> (AJUG)
-						<a href="${privacyPolicyUrl}"><span class="label">Privacy Policy</span></a>
-						<a href="${codeOfConductUrl}"><span class="label">Code of Conduct</span></a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- /footer -->
+
+<div class=" footer">
+    <div >
+        <img  class="center-block" style="margin-top: 40px;padding-left: 50px" src="${ctx}/assets/img/devnexus-logo.png" alt="logo"/>
+    </div>
+    <div style="text-align: center;margin-top: 40px">
+
+        <a href="${speakersUrl}" class="text">speakers</a>
+        <a href="${scheduleUrl}" class="text">schedule</a>
+        <a href="${conferenceInfoUrl}" class="text">conference info</a>
+        <a href="${codeOfConductUrl}" class="text">code of conduct</a>
+        <a href="${privacyPolicyUrl}" class="text">privacy policy</a>
+        <a href="${organizersUrl}" class="text">organizers</a>
+    </div>
+    <div style="text-align: center;margin: 40px">
+        <a href="${facebookUrl}" style="margin: 10px" ><img src="${ctx}/assets/img/facebook-logo-button.png"/></a>
+        <a href="${twitterUrl}" style="margin: 10px"><img src="${ctx}/assets/img/twitter-logo-button.png"/></a>
+        <a href="${instagramUrl}" style="margin: 10px"><img src="${ctx}/assets/img/instagram-logo.png"/></a>
+        <a href="${googlePlusUrl}" style="margin: 10px"><img src="${ctx}/assets/img/google-plus-1.png"/></a>
+    </div>
+</div>

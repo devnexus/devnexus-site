@@ -17,6 +17,11 @@ package com.devnexus.ting.web.form;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+/**
+ *
+ * @author Gunnar Hillert
+ *
+ */
 public class UserChangePasswordForm {
 
 	@NotEmpty

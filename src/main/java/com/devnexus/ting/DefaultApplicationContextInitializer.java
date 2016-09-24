@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2015 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,7 @@ import com.devnexus.ting.config.support.MailSettings.EmailProvider;
 /**
  *
  * @author Gunnar Hillert
+ * @author Summers Pittman
  *
  */
 public class DefaultApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
@@ -76,12 +77,12 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 			final YamlPropertySourceLoader yamlPropertySourceLoader = new YamlPropertySourceLoader();
 
 			final String productionPropertySourceLocation;
-                        final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
-                        if (apphome.getAppHomeSource() == AppHomeSource.USER_DIRECTORY) {
-                             productionPropertySourceLocation = "file:" + apphome.getAppHomePath() + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
-                        } else {
-                            productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
-                        }
+						final Apphome apphome = SystemInformationUtils.retrieveBasicSystemInformation();
+						if (apphome.getAppHomeSource() == AppHomeSource.USER_DIRECTORY) {
+							 productionPropertySourceLocation = "file:" + apphome.getAppHomePath() + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
+						} else {
+							productionPropertySourceLocation = "file:" + tingHome + File.separator + SystemInformationUtils.TING_CONFIG_FILENAME;
+						}
 
 			try {
 				propertySource = yamlPropertySourceLoader.load("devnexus-standalone", new DefaultResourceLoader().getResource(productionPropertySourceLocation), null);
@@ -143,6 +144,9 @@ public class DefaultApplicationContextInitializer implements ApplicationContextI
 					applicationContext.getEnvironment().addActiveProfile(SpringProfile.PAYPAL_SANDBOX);
 					break;
 			}
+		}
+		if (environment.getProperty("DEVELOPMENT_MODE",Boolean.class, Boolean.FALSE)) {
+			applicationContext.getEnvironment().addActiveProfile(SpringProfile.DEVELOPMENT_ENABLED);
 		}
 	}
 }
