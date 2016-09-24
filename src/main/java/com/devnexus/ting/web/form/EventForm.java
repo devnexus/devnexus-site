@@ -20,6 +20,11 @@ import javax.validation.constraints.NotNull;
 
 import com.devnexus.ting.model.Event;
 
+/**
+ *
+ * @author Gunnar Hillert
+ *
+ */
 public class EventForm {
 
 	@Valid @NotNull

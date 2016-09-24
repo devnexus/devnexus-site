@@ -48,7 +48,7 @@ public class Sponsor extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	private Event event;
 
 	@NotEmpty

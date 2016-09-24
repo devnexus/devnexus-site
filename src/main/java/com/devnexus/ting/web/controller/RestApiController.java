@@ -54,212 +54,212 @@ import com.devnexus.ting.model.TrackList;
 @RequestMapping("/api")
 public class RestApiController {
 
-    @Autowired
-    private BusinessService businessService;
+	@Autowired
+	private BusinessService businessService;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RestApiController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(RestApiController.class);
 
-    @RequestMapping(path = "/presentations", method = RequestMethod.GET)
-    public PresentationList presentationsForCurrentEvent() {
+	@RequestMapping(path = "/presentations", method = RequestMethod.GET)
+	public PresentationList presentationsForCurrentEvent() {
 
-        PresentationList list = new PresentationList();
+		PresentationList list = new PresentationList();
 
-        List<Presentation> presentations = businessService.getPresentationsForCurrentEvent();
-        list.setPresentations(presentations);
-        return list;
+		List<Presentation> presentations = businessService.getPresentationsForCurrentEvent();
+		list.setPresentations(presentations);
+		return list;
 
-    }
+	}
 
-    @RequestMapping(path = "/{eventKey}/presentations", method = RequestMethod.GET)
-    public PresentationList presentations(@PathVariable("eventKey") String eventKey) {
+	@RequestMapping(path = "/{eventKey}/presentations", method = RequestMethod.GET)
+	public PresentationList presentations(@PathVariable("eventKey") String eventKey) {
 
-        final Event event = businessService.getEventByEventKey(eventKey);
-        if (event != null) {
-            PresentationList list = new PresentationList();
+		final Event event = businessService.getEventByEventKey(eventKey);
+		if (event != null) {
+			PresentationList list = new PresentationList();
 
-            List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
-            list.setPresentations(presentations);
-            return list;
-        } else {
-            LOGGER.warn("No current event available.");
-            return null;
-        }
-    }
+			List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
+			list.setPresentations(presentations);
+			return list;
+		} else {
+			LOGGER.warn("No current event available.");
+			return null;
+		}
+	}
 
-    @RequestMapping(path = "/schedule", method = RequestMethod.GET)
-    public ScheduleItemList scheduleForCurrentEvent() {
+	@RequestMapping(path = "/schedule", method = RequestMethod.GET)
+	public ScheduleItemList scheduleForCurrentEvent() {
 
-        final Event event = businessService.getCurrentEvent();
+		final Event event = businessService.getCurrentEvent();
 
-        if (event != null) {
-            final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-            return scheduleItemList;
-        } else {
-            LOGGER.warn("No current event available.");
-            return null;
-        }
-    }
+		if (event != null) {
+			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+			return scheduleItemList;
+		} else {
+			LOGGER.warn("No current event available.");
+			return null;
+		}
+	}
 
-    @RequestMapping(path = "/events", method = RequestMethod.GET)
-    public List<Event> events() {
-        final List<Event> events = businessService.getAllEventsOrderedByName();
-        return events;
-    }
+	@RequestMapping(path = "/events", method = RequestMethod.GET)
+	public List<Event> events() {
+		final List<Event> events = businessService.getAllEventsOrderedByName();
+		return events;
+	}
 
-    @RequestMapping(path = "/{eventKey}/schedule", method = RequestMethod.GET)
-    public ScheduleItemList schedule(@PathVariable("eventKey") String eventKey) {
+	@RequestMapping(path = "/{eventKey}/schedule", method = RequestMethod.GET)
+	public ScheduleItemList schedule(@PathVariable("eventKey") String eventKey) {
 
-        final Event event = businessService.getEventByEventKey(eventKey);
-        if (event != null) {
-            final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
-            return scheduleItemList;
-        } else {
-            LOGGER.warn("No current event available.");
-            return null;
-        }
-    }
+		final Event event = businessService.getEventByEventKey(eventKey);
+		if (event != null) {
+			final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+			return scheduleItemList;
+		} else {
+			LOGGER.warn("No current event available.");
+			return null;
+		}
+	}
 
-    @RequestMapping(path = "/organizers", method = RequestMethod.GET)
-    public List<Organizer> getOrganizers() {
+	@RequestMapping(path = "/organizers", method = RequestMethod.GET)
+	public List<Organizer> getOrganizers() {
 
-        return businessService.getAllOrganizersWithPicture();
+		return businessService.getAllOrganizersWithPicture();
 
-    }
+	}
 
-    @RequestMapping(value = "/organizers/{organizerId}.jpg", method = RequestMethod.GET)
-    public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
+	@RequestMapping(value = "/organizers/{organizerId}.jpg", method = RequestMethod.GET)
+	public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {
 
-        final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
+		final Organizer organizer = businessService.getOrganizerWithPicture(organizerId);
 
-        final byte[] organizerPicture;
+		final byte[] organizerPicture;
 
-        if (organizer == null || organizer.getPicture() == null) {
-            organizerPicture = SystemInformationUtils.getOrganizerImage(null);
-            response.setContentType("image/jpg");
-        } else {
-            organizerPicture = organizer.getPicture().getFileData();
-            response.setContentType(organizer.getPicture().getType());
-        }
+		if (organizer == null || organizer.getPicture() == null) {
+			organizerPicture = SystemInformationUtils.getOrganizerImage(null);
+			response.setContentType("image/jpg");
+		} else {
+			organizerPicture = organizer.getPicture().getFileData();
+			response.setContentType(organizer.getPicture().getType());
+		}
 
-        try {
-            org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
+		try {
+			org.apache.commons.io.IOUtils.write(organizerPicture, response.getOutputStream());
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
 
-    }
+	}
 
-    @RequestMapping(value = "/sponsors/{sponsorId}.jpg", method = RequestMethod.GET)
-    public void getSponsorPicture(@PathVariable("sponsorId") Long sponsorId, HttpServletResponse response) {
+	@RequestMapping(value = "/sponsors/{sponsorId}.jpg", method = RequestMethod.GET)
+	public void getSponsorPicture(@PathVariable("sponsorId") Long sponsorId, HttpServletResponse response) {
 
-        final Sponsor sponsor = businessService.getSponsorWithPicture(sponsorId);
+		final Sponsor sponsor = businessService.getSponsorWithPicture(sponsorId);
 
-        final byte[] sponsorPicture;
+		final byte[] sponsorPicture;
 
-        if (sponsor == null || sponsor.getLogo() == null) {
-            sponsorPicture = SystemInformationUtils.getOrganizerImage(null);
-            response.setContentType("image/jpg");
-        } else {
-            sponsorPicture = sponsor.getLogo().getFileData();
-            response.setContentType(sponsor.getLogo().getType());
-        }
+		if (sponsor == null || sponsor.getLogo() == null) {
+			sponsorPicture = SystemInformationUtils.getOrganizerImage(null);
+			response.setContentType("image/jpg");
+		} else {
+			sponsorPicture = sponsor.getLogo().getFileData();
+			response.setContentType(sponsor.getLogo().getType());
+		}
 
-        try {
-            org.apache.commons.io.IOUtils.write(sponsorPicture, response.getOutputStream());
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-    }
+		try {
+			org.apache.commons.io.IOUtils.write(sponsorPicture, response.getOutputStream());
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+	}
 
-    @RequestMapping(path = "/{eventKey}/sponsors", method = RequestMethod.GET)
-    public SponsorList getSponsorsForEvent(@PathVariable("eventKey") String eventKey) {
-        final Event event = businessService.getEventByEventKey(eventKey);
-        return businessService.getSponsorListForEvent(event.getId(), true);
-    }
+	@RequestMapping(path = "/{eventKey}/sponsors", method = RequestMethod.GET)
+	public SponsorList getSponsorsForEvent(@PathVariable("eventKey") String eventKey) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		return businessService.getSponsorListForEvent(event.getId(), true);
+	}
 
-    @RequestMapping(path = "/sponsors", method = RequestMethod.GET)
-    public SponsorList getSponsors() {
-        final Event event = businessService.getCurrentEvent();
-        return businessService.getSponsorListForEvent(event.getId(), true);
-    }
+	@RequestMapping(path = "/sponsors", method = RequestMethod.GET)
+	public SponsorList getSponsors() {
+		final Event event = businessService.getCurrentEvent();
+		return businessService.getSponsorListForEvent(event.getId(), true);
+	}
 
-    @RequestMapping(path = "/{eventKey}/speakers", method = RequestMethod.GET)
-    public List<Speaker> getSpeakersForEvent(@PathVariable("eventKey") String eventKey) {
-        final Event event = businessService.getEventByEventKey(eventKey);
-        return businessService.getSpeakersForEvent(event.getId());
-    }
+	@RequestMapping(path = "/{eventKey}/speakers", method = RequestMethod.GET)
+	public List<Speaker> getSpeakersForEvent(@PathVariable("eventKey") String eventKey) {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		return businessService.getSpeakersForEvent(event.getId());
+	}
 
-    @RequestMapping(path = "/speakers", method = RequestMethod.GET)
-    public List<Speaker> getSpeakers() {
-        final Event event = businessService.getCurrentEvent();
-        return businessService.getSpeakersForEvent(event.getId());
-    }
+	@RequestMapping(path = "/speakers", method = RequestMethod.GET)
+	public List<Speaker> getSpeakers() {
+		final Event event = businessService.getCurrentEvent();
+		return businessService.getSpeakersForEvent(event.getId());
+	}
 
-    @RequestMapping(path = "/{eventKey}/tracks", method = RequestMethod.GET)
-    public TrackList getTracksForEventKey(@PathVariable("eventKey") final String eventKey) {
-        return prepareTrackData(businessService.getEventByEventKey(eventKey));
-    }
+	@RequestMapping(path = "/{eventKey}/tracks", method = RequestMethod.GET)
+	public TrackList getTracksForEventKey(@PathVariable("eventKey") final String eventKey) {
+		return prepareTrackData(businessService.getEventByEventKey(eventKey));
+	}
 
-    @RequestMapping(path = "/tracks", method = RequestMethod.GET)
-    public TrackList getTracksForCurrentEvent() {
-        return prepareTrackData(businessService.getCurrentEvent());
-    }
+	@RequestMapping(path = "/tracks", method = RequestMethod.GET)
+	public TrackList getTracksForCurrentEvent() {
+		return prepareTrackData(businessService.getCurrentEvent());
+	}
 
-    public TrackList prepareTrackData(Event event) {
-        final TrackList trackList = new TrackList();
-        trackList.setTracks(businessService.getTracksForEvent(event.getId()));
+	public TrackList prepareTrackData(Event event) {
+		final TrackList trackList = new TrackList();
+		trackList.setTracks(businessService.getTracksForEvent(event.getId()));
 
-        final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
-        int unassigned = 0;
-        for (Presentation presentation : presentations) {
-            if (presentation.getTrack() == null) {
-                unassigned++;
-            }
-        }
-        trackList.setUnassignedSessions(unassigned);
-        return trackList;
-    }
+		final List<Presentation> presentations = businessService.getPresentationsForEventOrderedByName(event.getId());
+		int unassigned = 0;
+		for (Presentation presentation : presentations) {
+			if (presentation.getTrack() == null) {
+				unassigned++;
+			}
+		}
+		trackList.setUnassignedSessions(unassigned);
+		return trackList;
+	}
 
-    @RequestMapping(path = "/{eventKey}/tags", method = RequestMethod.GET)
-    public Map<PresentationTag, Long> getTracksForEventKey(@PathVariable("eventKey") final String eventKey,
-            final Model model) {
+	@RequestMapping(path = "/{eventKey}/tags", method = RequestMethod.GET)
+	public Map<PresentationTag, Long> getTracksForEventKey(@PathVariable("eventKey") final String eventKey,
+			final Model model) {
 
-        final Event event = businessService.getEventByEventKey(eventKey);
+		final Event event = businessService.getEventByEventKey(eventKey);
 
-        final Map<PresentationTag, Long> tagCloud = businessService.getTagCloud(event.getId());
+		final Map<PresentationTag, Long> tagCloud = businessService.getTagCloud(event.getId());
 
-        return tagCloud;
-    }
+		return tagCloud;
+	}
 
-    @RequestMapping(path = "/tags", method = RequestMethod.GET)
-    public Map<PresentationTag, Long> getTagCloudForCurrentEvent() {
+	@RequestMapping(path = "/tags", method = RequestMethod.GET)
+	public Map<PresentationTag, Long> getTagCloudForCurrentEvent() {
 
-        final Event event = businessService.getCurrentEvent();
+		final Event event = businessService.getCurrentEvent();
 
-        final Map<PresentationTag, Long> tagCloud = businessService.getTagCloud(event.getId());
+		final Map<PresentationTag, Long> tagCloud = businessService.getTagCloud(event.getId());
 
-        return tagCloud;
-    }
+		return tagCloud;
+	}
 
-    @RequestMapping(path = "/{eventKey}/rooms", method = RequestMethod.GET)
-    public RoomList getRoomsForEventKey(@PathVariable("eventKey") final String eventKey) {
+	@RequestMapping(path = "/{eventKey}/rooms", method = RequestMethod.GET)
+	public RoomList getRoomsForEventKey(@PathVariable("eventKey") final String eventKey) {
 
-        final Event event = businessService.getEventByEventKey(eventKey);
+		final Event event = businessService.getEventByEventKey(eventKey);
 
-        final RoomList roomList = new RoomList();
-        roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
+		final RoomList roomList = new RoomList();
+		roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
 
-        return roomList;
-    }
+		return roomList;
+	}
 
-    @RequestMapping(path = "/rooms", method = RequestMethod.GET)
-    public RoomList getRoomsForCurrentEvent() {
+	@RequestMapping(path = "/rooms", method = RequestMethod.GET)
+	public RoomList getRoomsForCurrentEvent() {
 
-        final Event event = businessService.getCurrentEvent();
+		final Event event = businessService.getCurrentEvent();
 
-        final RoomList roomList = new RoomList();
-        roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
+		final RoomList roomList = new RoomList();
+		roomList.setRooms(businessService.getRoomsForEvent(event.getId()));
 
-        return roomList;
-    }
+		return roomList;
+	}
 }

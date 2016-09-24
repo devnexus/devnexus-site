@@ -52,181 +52,176 @@ import org.hibernate.validator.constraints.Email;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegistrationDetails extends BaseModelObject {
 
-    /**
-     * serialVersionUID.
-     */
-    private static final long serialVersionUID = 1071233976549394025L;
+	/**
+	 * serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1071233976549394025L;
 
-    public enum PaymentState {
+	public enum PaymentState {
 
-        NONE, REQUIRES_INVOICE, PAYPAL_CREATED, PAID, REFUNDED, CANCELLED, ERROR, INVOICED
-    };
+		NONE, REQUIRES_INVOICE, PAYPAL_CREATED, PAID, REFUNDED, CANCELLED, ERROR, INVOICED
+	};
 
-    @NotNull
-    private String contactName;
+	@NotNull
+	private String contactName;
 
-    @NotNull
-    private String contactPhoneNumber;
+	@NotNull
+	private String contactPhoneNumber;
 
-    private BigDecimal finalCost = BigDecimal.ZERO;
-    
-    @NotNull
-    @Email
-    private String contactEmailAddress;
+	private BigDecimal finalCost = BigDecimal.ZERO;
 
-    @ManyToOne
-    @JoinColumn(name="EVENT_ID")
-    @XmlTransient
-    @JsonIgnore
-    private Event event;
+	@NotNull
+	@Email
+	private String contactEmailAddress;
 
-    @Column(unique = true)
-    private String registrationFormKey;
+	@ManyToOne
+	@JoinColumn(name = "EVENT_ID")
+	@XmlTransient
+	@JsonIgnore
+	private Event event;
 
-    @Transient
-    private String invoice;
+	@Column(unique = true)
+	private String registrationFormKey;
 
-    @Enumerated(EnumType.STRING)
-    private PaymentState paymentState = PaymentState.NONE;
+	@Transient
+	private String invoice;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER, orphanRemoval = true)
-    @Valid
-    private List<TicketOrderDetail> orderDetails = new ArrayList<>();
+	@Enumerated(EnumType.STRING)
+	private PaymentState paymentState = PaymentState.NONE;
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "registration", targetEntity = TicketOrderDetail.class, fetch = FetchType.EAGER, orphanRemoval = true)
+	@Valid
+	private List<TicketOrderDetail> orderDetails = new ArrayList<>();
 
-    public List<TicketOrderDetail> getOrderDetails() {
-        return orderDetails;
-    }
+	public List<TicketOrderDetail> getOrderDetails() {
+		return orderDetails;
+	}
 
-    public void setOrderDetails(List<TicketOrderDetail> orderDetails) {
-        this.orderDetails = orderDetails;
-    }
+	public void setOrderDetails(List<TicketOrderDetail> orderDetails) {
+		this.orderDetails = orderDetails;
+	}
 
-    public String getInvoice() {
-        return invoice;
-    }
+	public String getInvoice() {
+		return invoice;
+	}
 
-    public void setInvoice(String invoice) {
-        this.invoice = invoice;
-    }
+	public void setInvoice(String invoice) {
+		this.invoice = invoice;
+	}
 
-    public String getRegistrationFormKey() {
-        return registrationFormKey;
-    }
+	public String getRegistrationFormKey() {
+		return registrationFormKey;
+	}
 
-    public void setRegistrationFormKey(String registrationFormKey) {
-        this.registrationFormKey = registrationFormKey;
-    }
+	public void setRegistrationFormKey(String registrationFormKey) {
+		this.registrationFormKey = registrationFormKey;
+	}
 
-    public Event getEvent() {
-        return event;
-    }
+	public Event getEvent() {
+		return event;
+	}
 
-    public void setEvent(Event event) {
-        this.event = event;
-    }
+	public void setEvent(Event event) {
+		this.event = event;
+	}
 
-    public PaymentState getPaymentState() {
-        return paymentState;
-    }
+	public PaymentState getPaymentState() {
+		return paymentState;
+	}
 
-    public void setPaymentState(PaymentState paymentState) {
-        this.paymentState = paymentState;
-    }
+	public void setPaymentState(PaymentState paymentState) {
+		this.paymentState = paymentState;
+	}
 
-    public String getContactName() {
-        return contactName;
-    }
+	public String getContactName() {
+		return contactName;
+	}
 
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
 
-    public String getContactEmailAddress() {
-        return contactEmailAddress;
-    }
+	public String getContactEmailAddress() {
+		return contactEmailAddress;
+	}
 
-    public void setContactEmailAddress(String contactEmailAddress) {
-        this.contactEmailAddress = contactEmailAddress;
-    }
+	public void setContactEmailAddress(String contactEmailAddress) {
+		this.contactEmailAddress = contactEmailAddress;
+	}
 
-    public String getContactPhoneNumber() {
-        return contactPhoneNumber;
-    }
+	public String getContactPhoneNumber() {
+		return contactPhoneNumber;
+	}
 
-    public void setContactPhoneNumber(String contactPhoneNumber) {
-        this.contactPhoneNumber = contactPhoneNumber;
-    }
+	public void setContactPhoneNumber(String contactPhoneNumber) {
+		this.contactPhoneNumber = contactPhoneNumber;
+	}
 
-    public BigDecimal getFinalCost() {
-        return finalCost == null?BigDecimal.ZERO:finalCost;
-    }
+	public BigDecimal getFinalCost() {
+		return finalCost == null ? BigDecimal.ZERO : finalCost;
+	}
 
-    public void setFinalCost(BigDecimal finalCost) {
-        this.finalCost = finalCost;
-    }
+	public void setFinalCost(BigDecimal finalCost) {
+		this.finalCost = finalCost;
+	}
 
-    
-    
-    public void copyPageOne(RegisterForm registerForm) {
-        setContactEmailAddress(registerForm.getContactEmailAddress());
-        setContactPhoneNumber(registerForm.getContactPhoneNumber());
-        setContactName(registerForm.getContactName());
-        registerForm.getTicketGroupRegistrations().forEach(ticketRegistration -> {
-            IntStream.range(0, ticketRegistration.getTicketCount()).forEach(ignore -> {
-                orderDetails.add(new TicketOrderDetail(ticketRegistration));
-            });
-        });
-        
-    }
+	public void copyPageOne(RegisterForm registerForm) {
+		setContactEmailAddress(registerForm.getContactEmailAddress());
+		setContactPhoneNumber(registerForm.getContactPhoneNumber());
+		setContactName(registerForm.getContactName());
+		registerForm.getTicketGroupRegistrations().forEach(ticketRegistration -> {
+			IntStream.range(0, ticketRegistration.getTicketCount()).forEach(ignore -> {
+				orderDetails.add(new TicketOrderDetail(ticketRegistration));
+			});
+		});
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.contactName);
-        hash = 67 * hash + Objects.hashCode(this.contactPhoneNumber);
-        hash = 67 * hash + Objects.hashCode(this.finalCost);
-        hash = 67 * hash + Objects.hashCode(this.contactEmailAddress);
-        hash = 67 * hash + Objects.hashCode(this.registrationFormKey);
-        hash = 67 * hash + Objects.hashCode(this.invoice);
-        hash = 67 * hash + Objects.hashCode(this.paymentState);
-        return hash;
-    }
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final RegistrationDetails other = (RegistrationDetails) obj;
-        if (!Objects.equals(this.contactName, other.contactName)) {
-            return false;
-        }
-        if (!Objects.equals(this.contactPhoneNumber, other.contactPhoneNumber)) {
-            return false;
-        }
-        if (!Objects.equals(this.finalCost, other.finalCost)) {
-            return false;
-        }
-        if (!Objects.equals(this.contactEmailAddress, other.contactEmailAddress)) {
-            return false;
-        }
-        if (!Objects.equals(this.registrationFormKey, other.registrationFormKey)) {
-            return false;
-        }
-        
-        if (!Objects.equals(this.invoice, other.invoice)) {
-            return false;
-        }
-        if (this.paymentState != other.paymentState) {
-            return false;
-        }
-        return true;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 3;
+		hash = 67 * hash + Objects.hashCode(this.contactName);
+		hash = 67 * hash + Objects.hashCode(this.contactPhoneNumber);
+		hash = 67 * hash + Objects.hashCode(this.finalCost);
+		hash = 67 * hash + Objects.hashCode(this.contactEmailAddress);
+		hash = 67 * hash + Objects.hashCode(this.registrationFormKey);
+		hash = 67 * hash + Objects.hashCode(this.invoice);
+		hash = 67 * hash + Objects.hashCode(this.paymentState);
+		return hash;
+	}
 
-    
-    
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final RegistrationDetails other = (RegistrationDetails) obj;
+		if (!Objects.equals(this.contactName, other.contactName)) {
+			return false;
+		}
+		if (!Objects.equals(this.contactPhoneNumber, other.contactPhoneNumber)) {
+			return false;
+		}
+		if (!Objects.equals(this.finalCost, other.finalCost)) {
+			return false;
+		}
+		if (!Objects.equals(this.contactEmailAddress, other.contactEmailAddress)) {
+			return false;
+		}
+		if (!Objects.equals(this.registrationFormKey, other.registrationFormKey)) {
+			return false;
+		}
+
+		if (!Objects.equals(this.invoice, other.invoice)) {
+			return false;
+		}
+		if (this.paymentState != other.paymentState) {
+			return false;
+		}
+		return true;
+	}
+
 }

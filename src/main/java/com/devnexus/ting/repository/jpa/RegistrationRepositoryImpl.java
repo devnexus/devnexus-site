@@ -33,76 +33,102 @@ import java.util.List;
 import org.springframework.util.StringUtils;
 
 /**
-*
-* @author Summers Pittman
-*/
+ *
+ * @author Summers Pittman
+ */
 @Repository("registrationDao")
 public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom {
 
-    @PersistenceContext
-    private EntityManager entityManager;
-    
-    @Override
-    @Transactional
-    public RegistrationDetails createRegistrationPendingPayment(RegistrationDetails pendingRegistration) {
-     
-        pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
-        
-        while(!entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", pendingRegistration.getRegistrationFormKey()).getResultList().isEmpty()) {
-            pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
-        };
-        
-        entityManager.persist(pendingRegistration);
-        entityManager.flush();
-        return pendingRegistration;
-    }
+	@PersistenceContext
+	private EntityManager entityManager;
 
-    @Override
-    public RegistrationDetails findByKey(String registrationKey) {
-        return (RegistrationDetails) entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey").setParameter("registrationFormKey", registrationKey).getSingleResult();
-    }
+	@Override
+	@Transactional
+	public RegistrationDetails createRegistrationPendingPayment(RegistrationDetails pendingRegistration) {
 
+		pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
 
-    @Override
-    public List<RegistrationDetails> findPurchasedForEvent(Event event) {
-        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)").setParameter("PAID", RegistrationDetails.PaymentState.PAID).setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED).setParameter("eventId", event.getId()).getResultList();
-    }
+		while (!entityManager.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey")
+				.setParameter("registrationFormKey", pendingRegistration.getRegistrationFormKey()).getResultList()
+				.isEmpty()) {
+			pendingRegistration.setRegistrationFormKey(UUID.randomUUID().toString());
+		}
+		;
 
-    @Override
-    public List<RegistrationDetails> findAllForEvent(Event event) {
-        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId").setParameter("eventId", event.getId()).getResultList();
-    }
+		entityManager.persist(pendingRegistration);
+		entityManager.flush();
+		return pendingRegistration;
+	}
 
-    
-    
-    @Override
-    public List<RegistrationDetails> findIncompletePaypalOrdersForEvent(Event event) {
-        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAYPAL_PENDING)").setParameter("PAYPAL_PENDING", RegistrationDetails.PaymentState.PAYPAL_CREATED).setParameter("eventId", event.getId()).getResultList();
-    }
+	@Override
+	public RegistrationDetails findByKey(String registrationKey) {
+		return (RegistrationDetails) entityManager
+				.createQuery("from RegistrationDetails where registrationFormKey = :registrationFormKey")
+				.setParameter("registrationFormKey", registrationKey).getSingleResult();
+	}
 
-    @Override
-    public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event) {
-        return entityManager.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)").setParameter("REQUIRES_INVOICE", RegistrationDetails.PaymentState.REQUIRES_INVOICE).setParameter("eventId", event.getId()).getResultList();
-    }
+	@Override
+	public List<RegistrationDetails> findPurchasedForEvent(Event event) {
+		return entityManager
+				.createQuery(
+						"from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)")
+				.setParameter("PAID", RegistrationDetails.PaymentState.PAID)
+				.setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED)
+				.setParameter("eventId", event.getId()).getResultList();
+	}
 
-    @Override
-    public List findOrdersWithContactEmail(String email, EventSignup signUp) {
-        List<Object[]> results = entityManager.createQuery("from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)").setParameter("event_id", signUp.getEvent().getId()).setParameter("email", email).setParameter("ticket_email", email).getResultList();
-        List detailsFromEmail = new ArrayList();
-        results.stream().forEach(objects -> {detailsFromEmail.addAll(Arrays.asList(objects));});
-        return detailsFromEmail;
-    }
+	@Override
+	public List<RegistrationDetails> findAllForEvent(Event event) {
+		return entityManager.createQuery("from RegistrationDetails where event.id = :eventId")
+				.setParameter("eventId", event.getId()).getResultList();
+	}
 
-    @Override
-    public List findOrdersWithContactName(String[] namesA, EventSignup signUp) {
-        String fullName = StringUtils.arrayToDelimitedString(namesA, " ");
-        List names = Arrays.asList(namesA);
-        List<Object[]> resultList = entityManager.createQuery("from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))").setParameter("event_id", signUp.getEvent().getId()).setParameter("name", "%" + fullName + "%").setParameter("first_names", names).setParameter("last_names", names).getResultList();
-        
-        List detailsFromEmail = new ArrayList();
-        resultList.stream().forEach(objects -> {detailsFromEmail.addAll(Arrays.asList(objects));});
-        
-        return detailsFromEmail;
-    }
-    
+	@Override
+	public List<RegistrationDetails> findIncompletePaypalOrdersForEvent(Event event) {
+		return entityManager
+				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAYPAL_PENDING)")
+				.setParameter("PAYPAL_PENDING", RegistrationDetails.PaymentState.PAYPAL_CREATED)
+				.setParameter("eventId", event.getId()).getResultList();
+	}
+
+	@Override
+	public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event) {
+		return entityManager
+				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)")
+				.setParameter("REQUIRES_INVOICE", RegistrationDetails.PaymentState.REQUIRES_INVOICE)
+				.setParameter("eventId", event.getId()).getResultList();
+	}
+
+	@Override
+	public List findOrdersWithContactEmail(String email, EventSignup signUp) {
+		List<Object[]> results = entityManager
+				.createQuery(
+						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)")
+				.setParameter("event_id", signUp.getEvent().getId()).setParameter("email", email)
+				.setParameter("ticket_email", email).getResultList();
+		List detailsFromEmail = new ArrayList();
+		results.stream().forEach(objects -> {
+			detailsFromEmail.addAll(Arrays.asList(objects));
+		});
+		return detailsFromEmail;
+	}
+
+	@Override
+	public List findOrdersWithContactName(String[] namesA, EventSignup signUp) {
+		String fullName = StringUtils.arrayToDelimitedString(namesA, " ");
+		List names = Arrays.asList(namesA);
+		List<Object[]> resultList = entityManager
+				.createQuery(
+						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))")
+				.setParameter("event_id", signUp.getEvent().getId()).setParameter("name", "%" + fullName + "%")
+				.setParameter("first_names", names).setParameter("last_names", names).getResultList();
+
+		List detailsFromEmail = new ArrayList();
+		resultList.stream().forEach(objects -> {
+			detailsFromEmail.addAll(Arrays.asList(objects));
+		});
+
+		return detailsFromEmail;
+	}
+
 }

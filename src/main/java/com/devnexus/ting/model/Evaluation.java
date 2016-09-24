@@ -45,7 +45,7 @@ public class Evaluation extends BaseModelObject {
 	@ManyToOne
 	@NotNull
 	@XmlTransient
-        @JsonIgnore
+	@JsonIgnore
 	private Event event;
 
 	@Size(max=10000)

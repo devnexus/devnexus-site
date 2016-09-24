@@ -15,19 +15,20 @@
  */
 package com.devnexus.ting.web.form;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.validator.constraints.Email;
+
 import com.devnexus.ting.model.BaseModelObject;
 import com.devnexus.ting.model.TicketGroup;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-import javax.validation.constraints.Size;
-import org.hibernate.validator.constraints.Email;
 
 /**
  *
@@ -37,155 +38,148 @@ import org.hibernate.validator.constraints.Email;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RegisterForm extends BaseModelObject {
 
-    /**
-     * serialVersionUID.
-     */
-    private static final long serialVersionUID = 1071233976549394025L;
+	/**
+	 * serialVersionUID.
+	 */
+	private static final long serialVersionUID = 1071233976549394025L;
 
-    @NotNull
-    @Size(min = 1, max = 255)
-    private String contactName;
+	@NotNull
+	@Size(min = 1, max = 255)
+	private String contactName;
 
-    @NotNull
-    @Email
-    @Size(min = 1, max = 255)
-    private String contactEmailAddress;
+	@NotNull
+	@Email
+	@Size(min = 1, max = 255)
+	private String contactEmailAddress;
 
-    @NotNull
-    @Size(min = 1, max = 255)
-    private String contactPhoneNumber;
+	@NotNull
+	@Size(min = 1, max = 255)
+	private String contactPhoneNumber;
 
-    private List<TicketGroupRegistration> ticketGroupRegistrations = new ArrayList<>();
+	private List<TicketGroupRegistration> ticketGroupRegistrations = new ArrayList<>();
 
-    public RegisterForm(List<TicketGroup> groups) {
-        groups.stream().forEach((group) -> {ticketGroupRegistrations.add(new TicketGroupRegistration(group));});
-    }
+	public RegisterForm(List<TicketGroup> groups) {
+		groups.stream().forEach((group) -> {
+			ticketGroupRegistrations.add(new TicketGroupRegistration(group));
+		});
+	}
 
-    
-    public RegisterForm() {
-    }
+	public RegisterForm() {
+	}
 
+	public String getContactName() {
+		return contactName;
+	}
 
-    public String getContactName() {
-        return contactName;
-    }
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
 
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
+	public String getContactEmailAddress() {
+		return contactEmailAddress;
+	}
 
-    public String getContactEmailAddress() {
-        return contactEmailAddress;
-    }
+	public void setContactEmailAddress(String contactEmailAddress) {
+		this.contactEmailAddress = contactEmailAddress;
+	}
 
-    public void setContactEmailAddress(String contactEmailAddress) {
-        this.contactEmailAddress = contactEmailAddress;
-    }
+	public String getContactPhoneNumber() {
+		return contactPhoneNumber;
+	}
 
-    public String getContactPhoneNumber() {
-        return contactPhoneNumber;
-    }
+	public void setContactPhoneNumber(String contactPhoneNumber) {
+		this.contactPhoneNumber = contactPhoneNumber;
+	}
 
-    public void setContactPhoneNumber(String contactPhoneNumber) {
-        this.contactPhoneNumber = contactPhoneNumber;
-    }
+	public List<TicketGroupRegistration> getTicketGroupRegistrations() {
+		return ticketGroupRegistrations;
+	}
 
-    public List<TicketGroupRegistration> getTicketGroupRegistrations() {
-        return ticketGroupRegistrations;
-    }
+	public void setTicketGroupRegistrations(List<TicketGroupRegistration> ticketGroupRegistrations) {
+		this.ticketGroupRegistrations = ticketGroupRegistrations;
+	}
 
-    public void setTicketGroupRegistrations(List<TicketGroupRegistration> ticketGroupRegistrations) {
-        this.ticketGroupRegistrations = ticketGroupRegistrations;
-    }
+	public final static class TicketGroupRegistration {
 
-    
-    
-    public final static class TicketGroupRegistration {
-        
-        private Integer ticketCount = 0;
-        
-        @NotNull
-        private Long ticketGroupId;
-        
-        private String couponCode = "";
+		private Integer ticketCount = 0;
 
-        private TicketGroup group;
-        
-        public TicketGroupRegistration(TicketGroup group) {
-            this.ticketGroupId = group.getId();
-            this.group = group;
-        }
+		@NotNull
+		private Long ticketGroupId;
 
-        public TicketGroupRegistration() {
-        }
+		private String couponCode = "";
 
-        
-        public Integer getTicketCount() {
-            return ticketCount;
-        }
+		private TicketGroup group;
 
-        public void setTicketCount(Integer ticketCount) {
-            this.ticketCount = ticketCount;
-        }
+		public TicketGroupRegistration(TicketGroup group) {
+			this.ticketGroupId = group.getId();
+			this.group = group;
+		}
 
-        public Long getTicketGroupId() {
-            return ticketGroupId;
-        }
+		public TicketGroupRegistration() {
+		}
 
-        public void setTicketGroupId(Long ticketGroupId) {
-            this.ticketGroupId = ticketGroupId;
-        }
+		public Integer getTicketCount() {
+			return ticketCount;
+		}
 
-        public String getCouponCode() {
-            return couponCode;
-        }
+		public void setTicketCount(Integer ticketCount) {
+			this.ticketCount = ticketCount;
+		}
 
-        public void setCouponCode(String couponCode) {
-            this.couponCode = couponCode;
-        }
+		public Long getTicketGroupId() {
+			return ticketGroupId;
+		}
 
-        public TicketGroup getGroup() {
-            return group;
-        }
+		public void setTicketGroupId(Long ticketGroupId) {
+			this.ticketGroupId = ticketGroupId;
+		}
 
-        public void setGroup(TicketGroup group) {
-            this.group = group;
-        }
+		public String getCouponCode() {
+			return couponCode;
+		}
 
-        
-        
-        @Override
-        public int hashCode() {
-            int hash = 3;
-            hash = 79 * hash + Objects.hashCode(this.ticketCount);
-            hash = 79 * hash + Objects.hashCode(this.ticketGroupId);
-            hash = 79 * hash + Objects.hashCode(this.couponCode);
-            return hash;
-        }
+		public void setCouponCode(String couponCode) {
+			this.couponCode = couponCode;
+		}
 
-        @Override
-        public boolean equals(Object obj) {
-            if (obj == null) {
-                return false;
-            }
-            if (getClass() != obj.getClass()) {
-                return false;
-            }
-            final TicketGroupRegistration other = (TicketGroupRegistration) obj;
-            if (!Objects.equals(this.ticketCount, other.ticketCount)) {
-                return false;
-            }
-            if (!Objects.equals(this.ticketGroupId, other.ticketGroupId)) {
-                return false;
-            }
-            if (!Objects.equals(this.couponCode, other.couponCode)) {
-                return false;
-            }
-            return true;
-        }
-        
-        
-        
-    }
-    
+		public TicketGroup getGroup() {
+			return group;
+		}
+
+		public void setGroup(TicketGroup group) {
+			this.group = group;
+		}
+
+		@Override
+		public int hashCode() {
+			int hash = 3;
+			hash = 79 * hash + Objects.hashCode(this.ticketCount);
+			hash = 79 * hash + Objects.hashCode(this.ticketGroupId);
+			hash = 79 * hash + Objects.hashCode(this.couponCode);
+			return hash;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (obj == null) {
+				return false;
+			}
+			if (getClass() != obj.getClass()) {
+				return false;
+			}
+			final TicketGroupRegistration other = (TicketGroupRegistration) obj;
+			if (!Objects.equals(this.ticketCount, other.ticketCount)) {
+				return false;
+			}
+			if (!Objects.equals(this.ticketGroupId, other.ticketGroupId)) {
+				return false;
+			}
+			if (!Objects.equals(this.couponCode, other.couponCode)) {
+				return false;
+			}
+			return true;
+		}
+
+	}
+
 }

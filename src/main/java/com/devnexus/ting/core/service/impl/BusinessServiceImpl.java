@@ -34,7 +34,6 @@ import java.util.TreeSet;
 import java.util.UUID;
 
 import javax.imageio.ImageIO;
-import javax.persistence.NoResultException;
 
 import org.apache.commons.codec.binary.Base64;
 import org.imgscalr.Scalr;
