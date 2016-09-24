@@ -10,6 +10,7 @@ import java.util.TreeSet;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -20,6 +21,8 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.annotations.SortNatural;
 
 /**
+ * The event sign up is all tickets available for a single Event.
+ * 
 * @author Summers Pittman
 */
 @Entity
@@ -33,7 +36,7 @@ public class EventSignup extends BaseModelObject {
 
     
     @ManyToOne
-    //@JoinColumn(name="EVENT_ID")
+    @JoinColumn(name="EVENT_ID")
     @NotNull
     @XmlTransient
     @JsonIgnore

@@ -4,138 +4,49 @@
 <% pageContext.setAttribute("keynoteType", PresentationType.KEYNOTE); %>
 
 <head>
-	<title>${contextEvent.title} | Speakers</title>
+    <title>${contextEvent.title} | Speakers</title>
 
-	<style type="text/css">
-		#speaker {
-			opacity: 0.0;
-		}
-		.centered {
-			text-align: center;
-		}
-		.centered > div {
-			float: none;
-			display: inline-block;
-		}
 
-		.speaker-div-inner {
-			margin: 5px 20px;
-			border-radius: 8px;
-			-webkit-border-radius: 8px;
-			-moz-border-radius: 8px;
-			-o-border-radius: 8px;
-
-			border-color: rgba(123,173,52,0);;
-			border-style: solid;
-			border-width: 2px;
-
-			transition: all 0.2s;
-			-webkit-transition: all 0.2s;
-			-moz-transition: all 0.2s;
-			-o-transition: all 0.2s;
-			-ms-transition: all 0.2s;
-		}
-
-		.speaker-div-inner:HOVER, .speaker-div-inner:FOCUS {
-			border-color: rgba(123,173,52,1);
-
-			transition: all 0.2s;
-			-webkit-transition: all 0.2s;
-			-moz-transition: all 0.2s;
-			-o-transition: all 0.2s;
-			-ms-transition: all 0.2s;
-		}
-	</style>
 </head>
 
-	<!-- intro -->
-	<section id="about" class="module parallax parallax-3">
-		<div class="container header">
-				<div class="row centered">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="top-intro travel">
-							<h4 class="section-white-title decorated"><span>Speakers</span></h4>
-							<h5 class="intro-white-lead">Tap into the expertise of over 100 thought-leaders.</h5>
-						</div>
-					</div>
-				</div>
-		</div>
-	</section>
-	<!-- /intro -->
+<body>
+    <section class="container-fluid speakers" >
+        <h1 class="featured-header">Speakers</h1>
+        <c:if test="${not empty speakerList.speakers}">
+            <div class="row track-filter" >
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Track <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <c:if test="${empty trackList}">
+                            <li><a href="#">We are still preparing tracks.</a></li>
+                            </c:if>
+                            <c:forEach items="${trackList}" var="track" varStatus="status">
 
-	<c:choose>
-		<c:when test="${not empty speakerList.speakers}">
-			<section id="speaker" class="bg-light-gray" style="margin-top: 2em; ">
-				<div class="col-lg-10 col-lg-offset-1">
-				<div class="row centered"
-					><c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status"
-					><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 speaker-div masonryitem"
-							style="">
-						<a href="${ctx}${baseSiteUrl}/speakers/${speaker.id}">
-						<div class="speaker-div-inner">
-							<div id="${speaker.firstName}_${speaker.lastName}"
-								class="speaker-member text-center" style="margin-bottom: 5px; margin-top: 5px">
-								<img src="${speaker.pictureSerialized}" class="img-responsive img-circle" alt="">
-								<h4 class="text-center"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
-							</div>
-				</div></a></div></c:forEach></div>
-				</div>
-			</section>
-		</c:when>
-		<c:otherwise>
-			<section class="bg-light-gray">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center">
-							<h2>Speakers will be announced soon!</h2>
-						</div>
-					</div>
-				</div>
-			</section>
-		</c:otherwise>
-	</c:choose>
-<content tag='bottom'>
-	<script type="text/javascript">
+                            <li><a href="#">${track.name}</a></li>
+                            </c:forEach>
+                    </ul>
+                </div>
+            </div>
+        </c:if>
+        <div class="row">
+            <c:if test="${empty speakerList.speakers}">
+                <h1 class="featured-header">We are currently evaluating CFPs and will have speakers ready soon.</h1>
+            </c:if>
 
-		$(document).ready(function() {
-			<c:if test="${not empty speakerList.speakers}">
-			var $container = $('#speaker');
+            <c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
 
-			function resizeSpeakerDivs() {
-				var speakerDivMaxHeight = 0;
-
-				$('.speaker-div').each(function () {
-					$(this).outerHeight('auto');
-					var height = $(this).outerHeight();
-					if (height > speakerDivMaxHeight) {
-						speakerDivMaxHeight = height;
-					}
-				}).promise().done(function (item) {
-					$('.speaker-div').each(function () {
-						$(this).outerHeight(speakerDivMaxHeight);
-					});
-				});
-			}
-
-			$container.imagesLoaded(function () {
-
-
-				var hash = window.location.hash;
-				console.log('Hash is: ' + hash);
-				if (!(hash === '')) {
-					var el = $(hash);
-					console.log('Scroll: ', el);
-					$('html, body').animate({scrollTop: el.offset().top - 100}, 'fast');
-				}
-				resizeSpeakerDivs();
-				$container.masonry({
-					itemSelector: '.masonryitem',
-					columnWidth: '.masonryitem',
-					isAnimated: true
-				});
-				$('#speaker').css('opacity', '1');
-			});
-			</c:if>
-		});
-	</script>
-</content>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail" id="${speaker.firstName}_${speaker.lastName}">
+                        <img class="img-responsive" src="${speaker.pictureSerialized}" alt="${speaker.firstName} ${speaker.lastName}">
+                        <div class="caption">
+                            <h3>${speaker.firstName} ${speaker.lastName}</h3>
+                            <p>${cfpSpeakersMap[speaker.id].company}</p>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </section>
+</body>

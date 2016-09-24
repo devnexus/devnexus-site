@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.devnexus.ting.common.TingUtil;
-import org.springframework.util.StringUtils;
+import javax.persistence.JoinColumn;
 
 /**
  * A purchase group is a collection if Items of which only one may be purchased.
@@ -59,7 +59,7 @@ public class TicketGroup extends BaseModelObject implements Comparable<TicketGro
     }
 
     @ManyToOne
-    //@JoinColumn(name="EVENT_ID")
+    @JoinColumn(name="EVENT")
     @NotNull
     @XmlTransient
     private Event event;
@@ -69,6 +69,7 @@ public class TicketGroup extends BaseModelObject implements Comparable<TicketGro
     protected String label;
 
     @ManyToOne
+    @JoinColumn(name="EVENT_SIGNUP")
     @XmlTransient
     protected EventSignup eventSignup;
 

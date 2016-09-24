@@ -3,44 +3,9 @@
 
 <title>${contextEvent.title} | Submit CFP</title>
 
-<!-- intro -->
-<section id="about" class="module parallax parallax-3">
-	<div class="container header">
-		<div class="row centered">
-			<div class="col-md-10 col-md-offset-1">
-				 <div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Call for Papers 2017!</span></h4>
-					<h5 class="intro-white-lead">
-						Thank you for your interest in DevNexus 2017!
-					</h5>
-					<p>
-						We would love to review your session proposals for the South-East's
-						largest developer conference. We are planning to cover a wide variety of topics around:
-					</p>
-					<ul class="list-inline">
-						<li>Java/JavaEE/Spring</li>
-						<li>HTML5 + JavaScript</li>
-						<li>Data + Integration</li>
-						<li>Alternative JVM Languages</li>
-						<li>User Experience</li>
-						<li>Cloud</li>
-						<li>Agile + Tools</li>
-						<li>Mobile</li>
-						<li>Security</li>
-					</ul>
-					<div class="text-center">
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cfpFAQ">
-						FAQ
-					</button></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /intro -->
 
 <div class="row">
+    <h1 class="featured-header">PROPOSE SESSION</h1>
 	<div class="col-md-8 col-md-offset-2" style="padding-top: 4em;">
 
 	<spring:bind path="cfpSubmission.*">

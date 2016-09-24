@@ -3,9 +3,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 	<!-- questions -->
-	<section class="white">
-		<div class="top-intro questions">
-			<h4>Questions?</h4>
-			<h3>Contact us at info@ajug.org</h3>
-		</div>
-	</section>
+	<div class="row call-to-action question">
+            <h1>Have a <span class="trump">Question</span></h1>
+            <a href="mailto:info@ajug.org" title="info@ajug.org" class="btn hero-btn-register">CONTACT US</a>
+        </div>
