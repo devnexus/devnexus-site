@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,22 +15,18 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
-import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import javax.validation.Validator;
 
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,14 +49,15 @@ import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
 
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.model.CfpSpeakerImage;
+import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Presentation;
 import com.devnexus.ting.model.PresentationList;
+import com.devnexus.ting.model.Room;
 import com.devnexus.ting.model.ScheduleItem;
 import com.devnexus.ting.model.ScheduleItemList;
+import com.devnexus.ting.model.User;
 import com.devnexus.ting.web.controller.admin.support.CsvScheduleItemBean;
-import com.devnexus.ting.web.controller.admin.support.CsvSpeakerBean;
 import com.devnexus.ting.web.controller.cfp.CallForPapersController;
 import com.devnexus.ting.web.form.UploadScheduleForm;
 
@@ -139,7 +136,8 @@ public class AdminScheduleController {
 				csvScheduleItemBean.setPresentationId(scheduleItem.getPresentation().getId());
 			}
 			else {
-				csvScheduleItemBean.setPresentationId(-1L);
+				LOGGER.warn("Null presentation for " + scheduleItem.getId());
+				//csvScheduleItemBean.setPresentationId(-1L);
 			}
 
 			if (scheduleItem.getRoom() != null) {
@@ -169,7 +167,7 @@ public class AdminScheduleController {
 					"roomId"
 			};
 
-			final CellProcessor[] processors = CsvSpeakerBean.getProcessors();
+			final CellProcessor[] processors = CsvScheduleItemBean.getExportProcessors();
 
 			beanWriter.writeHeader(header);
 
@@ -205,7 +203,9 @@ public class AdminScheduleController {
 	}
 
 	@RequestMapping(value="/{eventKey}/upload-schedule", method=RequestMethod.POST)
-	public String uploadScheduleForEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response,
+	public String uploadScheduleForEvent(
+			@PathVariable("eventKey") String eventKey,
+			HttpServletResponse response,
 			@Valid @ModelAttribute("uploadScheduleForm") UploadScheduleForm uploadScheduleForm,
 			BindingResult bindingResult,
 			ModelMap model,
@@ -219,12 +219,30 @@ public class AdminScheduleController {
 		final Event event = businessService.getEventByEventKey(eventKey);
 
 		final MultipartFile scheduleFile = uploadScheduleForm.getScheduleFile();
-		processScheduleCsv(scheduleFile, bindingResult);
-		return "redirect:/s/admin/index";
+		final List<ScheduleItem> scheduleItems = processScheduleCsv(event, scheduleFile, bindingResult);
+
+		if (bindingResult.hasErrors()) {
+			return "admin/schedule/upload-schedule";
+		}
+
+		final List<ScheduleItem> savedScheduleItems = new ArrayList<>();
+
+		if (uploadScheduleForm.isReplaceAll()) {
+			businessService.deleteAllScheduleItems(event.getId());
+		}
+
+		for (ScheduleItem scheduleItem : scheduleItems) {
+			savedScheduleItems.add(businessService.saveScheduleItem(scheduleItem));
+		}
+
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("Imported '%s' scheduleItems.", savedScheduleItems.size()));
+
+		return "redirect:/s/admin/{eventKey}/index";
 
 	}
 
-	private List<ScheduleItem> processScheduleCsv(MultipartFile scheduleCsv, BindingResult bindingResult) {
+	private List<ScheduleItem> processScheduleCsv(Event event, MultipartFile scheduleCsv, BindingResult bindingResult) {
 		List<ScheduleItem> scheduleItems = new ArrayList<>();
 		byte[] scheduleCsvData = null;
 
@@ -247,22 +265,59 @@ public class AdminScheduleController {
 
 				// the header elements are used to map the values to the bean (names must match)
 				final String[] header = beanReader.getHeader(true);
-				final CellProcessor[] processors = CsvScheduleItemBean.getProcessors();
+				final CellProcessor[] processors = CsvScheduleItemBean.getImportProcessors();
 
 				CsvScheduleItemBean scheduleItemBean;
 				while( (scheduleItemBean = beanReader.read(CsvScheduleItemBean.class, header, processors)) != null ) {
-					System.out.println(String.format("lineNo=%s, rowNo=%s, customer=%s", beanReader.getLineNumber(),
-					beanReader.getRowNumber(), scheduleItemBean));
-					final ScheduleItem scheduleItem = new ScheduleItem();
-//					scheduleItem.setEvent(null);
-//					scheduleItem.setId(id);
-//					scheduleItem.setFromTime();
-//					scheduleItem.setPresentation(presentation);
-//					scheduleItem.setRoom(room);
-//					scheduleItem.setScheduleItemType(scheduleItemType);
-//					scheduleItem.setTitle(title);
-//					scheduleItem.setToTime(toTime);
-//					scheduleItem.set
+					final ScheduleItem scheduleItem;
+
+					if (scheduleItemBean.getId() != null) {
+						scheduleItem = businessService.getScheduleItem(scheduleItemBean.getId());
+						if (scheduleItem == null) {
+							LOGGER.error(String.format("Schedule Item with Id '%s' does not exist.", scheduleItemBean.getId()));
+							bindingResult.addError(new FieldError("uploadScheduleForm", "scheduleFile", String.format("Schedule Item with Id '%s' does not exist.", scheduleItemBean.getId())));
+							continue;
+						}
+					}
+					else {
+						scheduleItem = new ScheduleItem();
+					}
+
+					if (scheduleItemBean.getEventId() != null) {
+						if (event.getId().equals(scheduleItemBean.getEventId())) {
+							scheduleItem.setEvent(event);
+						}
+						else {
+							throw new IllegalArgumentException("Event ID did not match.");
+						}
+					}
+					else {
+						scheduleItem.setEvent(event);
+					}
+
+					scheduleItem.setFromTime(scheduleItemBean.getFromTime());
+					scheduleItem.setToTime(scheduleItemBean.getToTime());
+					scheduleItem.setScheduleItemType(scheduleItemBean.getType());
+					scheduleItem.setTitle(scheduleItemBean.getTitle());
+
+					if (scheduleItemBean.getPresentationId() != null) {
+						final Presentation presentation = businessService.getPresentation(scheduleItemBean.getPresentationId());
+						scheduleItem.setPresentation(presentation);
+					}
+					else {
+						scheduleItem.setPresentation(null);
+					}
+
+					if (scheduleItemBean.getRoomId() != null) {
+						final Room room = businessService.getRoom(scheduleItemBean.getRoomId());
+						scheduleItem.setRoom(room);
+					}
+					else {
+						scheduleItem.setRoom(null);
+					}
+
+					scheduleItems.add(scheduleItem);
+
 				}
 			}
 			catch (IOException e) {
@@ -281,7 +336,7 @@ public class AdminScheduleController {
 			}
 		}
 
-		return null;
+		return scheduleItems;
 	}
 
 }

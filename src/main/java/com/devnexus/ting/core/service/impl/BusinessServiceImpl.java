@@ -1103,4 +1103,16 @@ public class BusinessServiceImpl implements BusinessService {
 		return userCalendarDao.getUserScheduleItems((User) user, event);
 	}
 
+	@Transactional
+	@Override
+	public ScheduleItem saveScheduleItem(ScheduleItem scheduleItem) {
+		return scheduleItemDao.save(scheduleItem);
+	}
+
+	@Override
+	public void deleteAllScheduleItems(Long eventId) {
+		final List<ScheduleItem> scheduleItems = scheduleItemDao.getScheduleForEvent(eventId);
+		scheduleItemDao.delete(scheduleItems);
+	}
+
 }

@@ -25,6 +25,15 @@ import org.springframework.web.multipart.MultipartFile;
 public class UploadScheduleForm {
 
 	private MultipartFile scheduleFile;
+	private boolean replaceAll;
+
+	public boolean isReplaceAll() {
+		return replaceAll;
+	}
+
+	public void setReplaceAll(boolean replaceAll) {
+		this.replaceAll = replaceAll;
+	}
 
 	public MultipartFile getScheduleFile() {
 		return scheduleFile;

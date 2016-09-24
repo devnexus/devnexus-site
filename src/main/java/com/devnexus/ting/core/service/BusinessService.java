@@ -330,4 +330,7 @@ public interface BusinessService {
 
 		void deleteCfpSubmissionForUser(Long cfpSubmissionId, Long eventId, Long userId);
 
+		ScheduleItem saveScheduleItem(ScheduleItem scheduleItem);
+
+		void deleteAllScheduleItems(Long id);
 }

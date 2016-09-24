@@ -18,6 +18,7 @@ package com.devnexus.ting.web.controller.admin.support;
 import java.util.Date;
 import java.util.Locale;
 
+import org.supercsv.cellprocessor.FmtDate;
 import org.supercsv.cellprocessor.Optional;
 import org.supercsv.cellprocessor.ParseDate;
 import org.supercsv.cellprocessor.ParseLong;
@@ -33,15 +34,31 @@ import com.devnexus.ting.model.ScheduleItemType;
  */
 public class CsvScheduleItemBean {
 
-	public static CellProcessor[] getProcessors() {
+	public static CellProcessor[] getExportProcessors() {
+
+		final CellProcessor[] processors = new CellProcessor[] {
+				new Optional(new ParseLong()), // Id
+				new NotNull(new ParseLong()),  // event_id
+				new NotNull(new FmtDate("yyyy-MM-dd HH:mm")),  // fromTime
+				new NotNull(new FmtDate("yyyy-MM-dd HH:mm")),  // toTime //new ParseDate("yyyy-MM-dd HH:mm", false, Locale.ENGLISH)
+				new NotNull(),  // type
+				new NotNull(), // title
+				new Optional(new ParseLong()), // presentation_id
+				new Optional(new ParseLong())  // room_id
+		};
+
+		return processors;
+	}
+
+	public static CellProcessor[] getImportProcessors() {
 
 		final CellProcessor[] processors = new CellProcessor[] {
 				new Optional(new ParseLong()), // Id
 				new NotNull(new ParseLong()),  // event_id
 				new NotNull(new ParseDate("yyyy-MM-dd HH:mm", false, Locale.ENGLISH)),  // fromTime
-				new NotNull(new ParseDate("yyyy-MM-dd HH:mm", false, Locale.ENGLISH)),  // toTime
+				new NotNull(new ParseDate("yyyy-MM-dd HH:mm", false, Locale.ENGLISH)),  // toTime //
 				new NotNull(),  // type
-				new Optional(), // title
+				new NotNull(), // title
 				new Optional(new ParseLong()), // presentation_id
 				new Optional(new ParseLong())  // room_id
 		};
@@ -99,6 +116,9 @@ public class CsvScheduleItemBean {
 		this.title = title;
 	}
 	public Long getPresentationId() {
+		if (this.presentationId == null) {
+			System.out.println(123);
+		}
 		return presentationId;
 	}
 	public void setPresentationId(Long presentationId) {

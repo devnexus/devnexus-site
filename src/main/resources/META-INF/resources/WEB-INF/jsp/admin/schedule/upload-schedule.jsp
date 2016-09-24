@@ -9,7 +9,7 @@
 		<div class="row centered">
 			<div class="col-md-10 col-md-offset-1">
 				 <div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Upload Schedule</span></h4>
+					<h4 class="section-white-title decorated"><span>Upload Schedule for ${contextEvent.title}</span></h4>
 				</div>
 			</div>
 		</div>
@@ -38,8 +38,14 @@
 		</div>
 
 		<p>
-			Please ...
+			Please select a valid CSV file.
 		</p>
+		<pre>
+id,eventId,fromTime,toTime,type,title,presentationId,roomId
+8691,8666,2016-02-15 09:00,2016-02-15 17:30,SESSION,Update Session with room and presentation,123,123
+,8666,2016-02-15 09:00,2016-02-15 17:30,SESSION,New Session without room,123,
+,8666,2016-02-15 09:00,2016-02-15 17:30,SESSION,New Session with neither room not presentations,,
+		</pre>
 		<div class="form-group">
 			<label for="scheduleFile" class="col-lg-2 control-label">Schedule CSV*</label>
 			<div class="col-lg-10">
@@ -47,11 +53,21 @@
 				<span class="help-block">Text CSV File.</span>
 			</div>
 		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<div class="checkbox">
+					<label>
+						<form:checkbox path="replaceAll" id="replaceAll" tabindex="2"/> Check to replace existing Schedule Items.
+					</label>
+				</div>
+				<form:errors path="replaceAll" cssClass="fieldError"/>
+			</div>
+		</div>
 
 		<div class="form-group">
 			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel" tabindex="2"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
-				<button type="submit" class="btn btn-success" lang="save" tabindex="3"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Upload</button>
+				<button type="submit" class="btn btn-default" name="cancel" tabindex="3"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				<button type="submit" class="btn btn-success" lang="save" tabindex="4"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Upload</button>
 			</div>
 		</div>
 		<p>Fields denoted with * are mandatory.
