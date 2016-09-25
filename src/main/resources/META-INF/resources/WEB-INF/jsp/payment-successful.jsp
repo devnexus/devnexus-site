@@ -11,7 +11,7 @@
     <div class="row ">
 
         <img src="${ctx}/assets/img/success.png" class="center-block" title="Success"/>
-        <p style="text-align: center">Thank you for your order. We look forward to seeing you at DevNexus on February 20th!</p>
+        <p style="text-align: center">Thank you for your order. We look forward to seeing you at DevNexus 2017!</p>
 
     </div>
 </section>
