@@ -62,6 +62,11 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Date;
+import org.joda.time.Interval;
 
 /**
  *
@@ -90,10 +95,15 @@ public class RegisterController {
 
         prepareHeader(signUp.getEvent(), model);
 
-        List<TicketGroup> invididualTicketGroups = signUp.getGroups().stream().filter((TicketGroup group) -> {
+        List<TicketGroup> currentTickets = signUp.getGroups().stream().filter((TicketGroup group) -> {
+            Date now = new Date();
+            return (now.after(group.getOpenDate()) && now.before(group.getCloseDate()));
+        }).collect(Collectors.toList());
+        
+        List<TicketGroup> invididualTicketGroups = currentTickets.stream().filter((TicketGroup group) -> {
             return group.getMinPurchase() == 1;
         }).collect(Collectors.toList());
-        List<TicketGroup> groupTicketGroups = signUp.getGroups().stream().filter((TicketGroup group) -> {
+        List<TicketGroup> groupTicketGroups = currentTickets.stream().filter((TicketGroup group) -> {
             return group.getMinPurchase() > 1;
         }).collect(Collectors.toList());
 
