@@ -6,32 +6,17 @@
 <head>
 	<title>${contextEvent.title} | Speaker Details for ${speaker.firstLastName}</title>
 </head>
-
-	<!-- intro -->
-	<section id="about" class="module parallax parallax-3">
-		<div class="container header">
-				<div class="row centered">
-					<div class="col-md-10 col-md-offset-1">
-						 <div class="top-intro travel">
-							<h4 class="section-white-title decorated"><span>Speaker Details</span></h4>
-						</div>
-					</div>
-				</div>
-		</div>
-	</section>
-	<!-- /intro -->
-
-	<section id="speaker" class="bg-light-gray" style="margin-top: 2em; text-align: left; padding-bottom: 0">
+    <section id="speaker" class="bg-light-gray" style="margin-top: 2em; text-align: left; padding-bottom: 0">
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
 				<div id="${speaker.firstName}_${speaker.lastName}" class="speaker-member">
-					<img src="${speaker.pictureSerialized}" class="img-responsive img-circle" alt="">
+					<img src="${speaker.pictureSerialized}" class="img-responsive " alt="">
 					<h4 class="text-center"><c:out value="${speaker.firstName}"/> <c:out value="${speaker.lastName}"/></h4>
 					<c:if test="${!empty speaker.presentations}">
-						<ul>
+                                            <ul style="list-style-type: none">
 						<c:forEach var="presentation" items="${speaker.presentations}" varStatus="loop">
 							<li class="text-center">
-								<a href="${siteUrl}/presentations#id-${presentation.id}"><c:out
+								<a href="${siteUrl}/presentations/${presentation.id}"><c:out
 									 value="${presentation.title}"/></a>
 								<c:if test="${presentation.presentationType == keynoteType}">
 									(Keynote)

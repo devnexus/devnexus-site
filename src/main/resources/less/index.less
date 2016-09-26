@@ -347,13 +347,13 @@ body{
     border: none;
 }
 .speakers .thumbnail img{
-    width: 425px;
-    height: 425px;
+    width: 360px;
+    height: 360px;
     object-fit: cover;
+    margin-left: 0;
 }
 .speakers.sessions .thumbnail img{
     width: 100%;
-
 }
 
 .speakers p{
@@ -467,7 +467,7 @@ body{
     position: relative;
 }
 
-.sessions .caption{
+.sessions .caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -478,14 +478,17 @@ body{
     font-size: 26px;
 }
 
-.sessions .caption h3{
+.sessions .caption h3 {
+    
     font-size: 28px;
     font-weight: 700;
 }
-
-
-
-
+.sessions .caption img {
+    object-fit: contain;
+    width: 240px;
+    height: 240px;
+}
+    
 .tickets {
     background-image: url(../assets/img/background-tickets.jpg);
     background-repeat: no-repeat;

@@ -5,15 +5,14 @@
 
 <head>
     <title>${contextEvent.title} | Speakers</title>
-
-
 </head>
 
 <body>
     <section class="container-fluid speakers" >
         <h1 class="featured-header">Speakers</h1>
+        
         <c:if test="${not empty speakerList.speakers}">
-            <div class="row track-filter" >
+<!--            <div class="row track-filter" >
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Track <span class="caret"></span>
@@ -28,7 +27,7 @@
                             </c:forEach>
                     </ul>
                 </div>
-            </div>
+            </div>-->
         </c:if>
         <div class="row">
             <c:if test="${empty speakerList.speakers}">
@@ -42,7 +41,7 @@
                         <img class="img-responsive" src="${speaker.pictureSerialized}" alt="${speaker.firstName} ${speaker.lastName}">
                         <div class="caption">
                             <h3>${speaker.firstName} ${speaker.lastName}</h3>
-                            <p>${cfpSpeakersMap[speaker.id].company}</p>
+                            <p>${cfpSpeakersMap[speaker.id].company}&nbsp;</p>
                         </div>
                     </div>
                 </div>

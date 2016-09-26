@@ -12,9 +12,11 @@
             REGISTER
         </h1>
         <section>
-            <h2>
-                INDIVIDUAL
-            </h2>
+            <c:if test="${not empty groupTicketGroups}">
+                <h2>
+                    INDIVIDUAL
+                </h2>
+            </c:if>
             <div class="ticket-detail">
                 <header>
                     <c:if test="${empty invididualTicketGroups}">
@@ -53,9 +55,12 @@
         </section>
 
         <section>
-            <h2>
-                GROUP
-            </h2>
+            <c:if test="${not empty groupTicketGroups}">
+
+                <h2>
+                    GROUP
+                </h2>
+            </c:if>
             <div class="ticket-detail">
                 <header>
 

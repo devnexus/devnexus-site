@@ -32,7 +32,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-link"><a href="${speakersUrl}">SPEAKERS</a></li>
-                <li class="nav-link"><a href="${scheduleUrl}">SCHEDULE</a></li>
+                <li class="nav-link"><a href="${presentationsUrl}">PRESENTATIONS</a></li>
                 <li class="nav-link"><a href="${sponsorsUrl}">SPONSORS</a></li>
                 <li class="nav-link"><a href="${conferenceInfoUrl}">CONFERENCE INFO</a></li>
                 <li class="nav-link"><a class="btn btn-register" href="${registrationUrl}">REGISTER</a></li>

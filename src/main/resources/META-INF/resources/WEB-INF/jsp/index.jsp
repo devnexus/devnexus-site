@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="copy">
-                        <p>The goal of the Dev Nexus Conference is to connect developers from all over the world, provide affordable education, and promote Open Source values.</p>
+                        <p>The goal of the Devnexus Conference is to connect developers from all over the world, provide affordable education, and promote Open Source values.</p>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/multiple-users-silhouette.png"/>
-                    <p>1700</p>
+                    <p>2000</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">DEVELOPERS</p>
@@ -151,7 +151,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/settings.png"/>
-                    <p>9</p>
+                    <p>10</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">WORKSHOPS</p>
@@ -159,7 +159,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/folder.png"/>
-                    <p>13</p>
+                    <p>14</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">TRACKS</p>
@@ -167,7 +167,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/microphone.png"/>
-                    <p>120</p>
+                    <p>120+</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">PRESENTATIONS</p>

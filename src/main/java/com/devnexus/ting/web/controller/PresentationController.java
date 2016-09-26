@@ -108,6 +108,12 @@ public class PresentationController {
 		return "presentations-by-" + order;
 	}
 
+        @RequestMapping(value="/s/{eventKey}/presentations/{presentationId}") 
+        public String getPresentation(@PathVariable("eventKey") final String eventKey, @PathVariable("presentationId") Long presentationId, final Model model) {
+            model.addAttribute("presentation", businessService.getPresentation(presentationId));
+            return "presentation-details";
+        }
+        
 	@RequestMapping(value="/s/presentations/{presentationId}/slides", method=RequestMethod.GET)
 	public void getPresentationSlides(@PathVariable("presentationId") Long presentationId, HttpServletResponse response) {
 
