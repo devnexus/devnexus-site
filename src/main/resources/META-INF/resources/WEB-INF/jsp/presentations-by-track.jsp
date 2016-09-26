@@ -48,7 +48,7 @@
                         </c:forEach>
                     </div>
                     <div class="caption" style="position: initial; height: 120px;padding: 15px;padding: 15px">
-                        <a href="${ctx}/s/${contextEvent.eventKey}presentations/${presentation.id}" style="color: white" title="${presentation.title}">
+                        <a href="${ctx}/s/${contextEvent.eventKey}/presentations/${presentation.id}" style="color: white" title="${presentation.title}">
                             <h3 style="font-size: 18px">${presentation.title}</h3>
                         </a>
                     </div>
