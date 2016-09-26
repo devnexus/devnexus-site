@@ -27,7 +27,7 @@
 
         <div class="row">
             <c:forEach items="${presentation.speakers}" var="speaker" varStatus="speakerStatus">
-                <div class="col-sm-6 col-lg-3 col-sm-offset-1">        
+                <div class="col-sm-6 col-lg-3 col-sm-offset-3">        
                     <A href="${ctx}/s/speakers/${speaker.id}">
                         <c:if test="${speaker.picture != null}">
                             <img style="margin: 20px;float:left;width:200px;height:200px;display: inline" src="${ctx}${baseSiteUrl}/speakers/${speaker.id}.jpg" title="${speaker.firstLastName}"/>

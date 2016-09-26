@@ -358,7 +358,7 @@
 
                 </div><!-- sessions -->
 
-                <a href="${sessionsUrl}"class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
+                <a href="${presentationsUrl}"class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
 
             </div><!-- ends session row -->
 
@@ -428,7 +428,7 @@
                     <c:forEach items="${sponsorList.sponsors}" var="sponsor" varStatus="status">
                         <c:choose>
                             <c:when test="${sponsor.sponsorLevel.name ne sponsorLevel}">
-                                <c:if test="${not status.first}"></div></c:if>
+                                <c:if test="${not status.first}"></div></div></c:if>
                                 <c:set value="${sponsor.sponsorLevel.name}" var="sponsorLevel"/>
                             <div class="row sponsor-section">
                                 <div class="col-lg-2">
@@ -441,13 +441,13 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </div>
-
+                                <div class="col-lg-10">    
                                 <a href="${sponsor.link}">
                                     <img title="${sponsor.name}" class="img-responsive" src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}"/>
                                 </a>
 
 
-                                <c:if test="${status.last}"></div></c:if>
+                                    <c:if test="${status.last}"></div></div></c:if>
                             </c:when>
                             <c:otherwise>
                             <a href="${sponsor.link}">
@@ -458,8 +458,8 @@
                 </c:forEach>
 
             </div>
-            <div class="row center-block">
-                <button class="btn btn-square btn-speakers center-block">SEE ALL SPONSORS</button>
+            <div class="row center-block" style="width: 100%">
+                <a href="${sponsorsUrl}" class="btn btn-square btn-speakers" style="float:none;width: 100%">SEE ALL SPONSORS</a>
             </div>
         </div>
 
