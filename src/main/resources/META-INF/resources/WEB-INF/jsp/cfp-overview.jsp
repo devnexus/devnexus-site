@@ -4,7 +4,7 @@
 <title>${contextEvent.title} | Submit CFP</title>
 
 <section class="container-fluid conference-information cfp" >
-    <h1 class="featured-header">CALL FOR PAPAERS 2017</h1>
+    <h1 class="featured-header">CALL FOR PAPERS 2017</h1>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
