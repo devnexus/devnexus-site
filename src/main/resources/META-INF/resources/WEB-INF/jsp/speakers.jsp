@@ -30,9 +30,9 @@
             </div>-->
         </c:if>
         <div class="row">
-            <c:if test="${empty speakerList.speakers}">
-                <h1 class="featured-header">We are currently evaluating CFPs and will have speakers ready soon.</h1>
-            </c:if>
+            
+            <h1 class="featured-header" style="margin: 15px 0">CFP IS STILL OPEN, SUBMIT BEFORE NOV 1</h1>
+            <h3  style="margin: 25px 0">Many more sessions to come! Interested in presenting? <a href="${ctx}/s/cfp">Submit here</a></h3>
 
             <c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
 
