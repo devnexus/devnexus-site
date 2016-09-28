@@ -32,7 +32,7 @@
         <div class="row">
             
             <h1 class="featured-header" style="margin: 15px 0">CFP IS STILL OPEN, SUBMIT BEFORE NOV 1</h1>
-            <h3  style="margin: 25px 0">Many more sessions to come! Interested in presenting? <a href="${ctx}/s/cfp">Submit here</a></h3>
+            <h3  style="text-align: center; margin: 25px 0">Many more sessions to come! Interested in presenting? <a href="${ctx}/s/cfp">Submit here</a></h3>
 
             <c:forEach items="${speakerList.speakers}" var="speaker" varStatus="status">
 
