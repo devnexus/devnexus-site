@@ -24,6 +24,7 @@ import javax.validation.Valid;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.MultipartProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -52,6 +53,7 @@ import com.devnexus.ting.model.SpeakerList;
 public class SpeakerController {
 
 	@Autowired private BusinessService businessService;
+	@Autowired private MultipartProperties multipartProperties;
 
 	@RequestMapping(value="/s/admin/speakers", method=RequestMethod.GET)
 	public String getAllSpeakers(ModelMap model, HttpServletRequest request) {
@@ -86,6 +88,8 @@ public class SpeakerController {
 
 		final List<Event> events = businessService.getAllEventsOrderedByName();
 		model.addAttribute("events", events);
+		model.addAttribute("maxFileSize", multipartProperties.getMaxFileSize());
+
 		final Speaker speakerForm = new Speaker();
 		model.addAttribute("speaker", speakerForm);
 		return "/admin/add-speaker";
@@ -97,6 +101,7 @@ public class SpeakerController {
 		final List<Event> events = businessService.getAllEventsOrderedByName();
 
 		model.addAttribute("events", events);
+		model.addAttribute("maxFileSize", multipartProperties.getMaxFileSize());
 
 		Speaker speakerForm = businessService.getSpeaker(speakerId);
 
@@ -134,6 +139,7 @@ public class SpeakerController {
 
 		speakerFromDb.setFirstName(speakerForm.getFirstName());
 		speakerFromDb.setLastName(speakerForm.getLastName());
+		speakerFromDb.setCompany(speakerForm.getCompany());
 
 
 		if (pictureFile != null && pictureFile.getSize() > 0) {
@@ -165,7 +171,7 @@ public class SpeakerController {
 
 		redirectAttributes.addFlashAttribute("successMessage",
 				String.format("The speaker '%s' was edited successfully.", speakerFromDb.getFirstLastName()));
-		
+
 		return "redirect:/s/admin/{eventKey}/speakers";
 	}
 
@@ -173,9 +179,9 @@ public class SpeakerController {
 	public String addSpeaker(@RequestParam MultipartFile pictureFile, @Valid Speaker speakerForm, BindingResult result, HttpServletRequest request, RedirectAttributes redirectAttributes) {
 
 		Event currentEvent = this.businessService.getCurrentEvent();
-		
+
 		redirectAttributes.addAttribute("eventKey", currentEvent.getEventKey());
-		
+
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/{eventKey}/speakers";
 		}
@@ -206,7 +212,7 @@ public class SpeakerController {
 		}
 
 		final Speaker savedSpeaker = businessService.saveSpeaker(speakerForm);
-		
+
 		redirectAttributes.addFlashAttribute("successMessage",
 				String.format("The speaker '%s' was added successfully.", savedSpeaker.getFirstLastName()));
 

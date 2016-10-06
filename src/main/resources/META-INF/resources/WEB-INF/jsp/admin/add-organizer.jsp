@@ -45,6 +45,17 @@
 			</div>
 		</div>
 
+		<spring:bind path="organizer.company">
+			<c:set var="errorClass" value="${(not empty status.errorMessage) ? ' has-error' : ''}"/>
+		</spring:bind>
+		<div class="form-group${errorClass}">
+			<label for="company" class="col-lg-2 control-label">Company</label>
+			<div class="col-lg-10">
+				<form:input cssClass="form-control" path="company" id="company" maxlength="255" tabindex="3"/>
+				<form:errors path="company" cssClass="fieldError"/>
+			</div>
+		</div>
+
 		<div class="form-group">
 			<c:if test="${organizer.picture != null}">
 				<div class="col-lg-10 col-lg-offset-2">
@@ -53,7 +64,7 @@
 			</c:if>
 			<label for="pictureFile" class="col-lg-2 control-label">Picture</label>
 			<div class="col-lg-10">
-				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="3"/>
+				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="4"/>
 				<span class="help-block">Should be 100px x 133px.</span>
 			</div>
 		</div>
@@ -63,7 +74,7 @@
 			<div class="form-group${errorClass}">
 				<label for="biotext" class="col-lg-2 control-label">Bio</label>
 				<div class="col-lg-10">
-					<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="4" rows="10" maxlength="10000"/>
+					<form:textarea cssClass="form-control" path="bio" id="biotext" tabindex="5" rows="10" maxlength="10000"/>
 					<form:errors path="bio" cssClass="fieldError"/>
 					<span class="help-block"><a href="http://daringfireball.net/projects/markdown/" target="_blank">
 					Markdown</a> is supported for the bio.</span>
@@ -75,7 +86,7 @@
 			<div class="form-group${errorClass}">
 				<label for="twitterId" class="col-lg-2 control-label">Twitter Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="12"/>
+					<form:input cssClass="form-control" path="twitterId" id="twitterId" maxlength="255" tabindex="6"/>
 					<form:errors path="twitterId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the Twitter ID, not a URL.</span>
 				</div>
@@ -87,7 +98,7 @@
 			<div class="form-group${errorClass}">
 				<label for="googlePlusId" class="col-lg-2 control-label">Google Plus Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="13"/>
+					<form:input cssClass="form-control" path="googlePlusId" id="googlePlusId" maxlength="255" tabindex="7"/>
 					<form:errors path="googlePlusId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the Google Plus ID, not a URL, e.g.: 104285850599215045327</span>
 				</div>
@@ -99,7 +110,7 @@
 			<div class="form-group${errorClass}">
 				<label for="linkedInId" class="col-lg-2 control-label">LinkedIn Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="14"/>
+					<form:input cssClass="form-control" path="linkedInId" id="linkedInId" maxlength="255" tabindex="8"/>
 					<form:errors path="linkedInId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://www.linkedin.com/in/<strong>hillert</strong></span>
 				</div>
@@ -111,7 +122,7 @@
 			<div class="form-group${errorClass}">
 				<label for="lanyrdId" class="col-lg-2 control-label">Lanyrd Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="15"/>
+					<form:input cssClass="form-control" path="lanyrdId" id="lanyrdId" maxlength="255" tabindex="9"/>
 					<form:errors path="lanyrdId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): http://lanyrd.com/profile/<strong>ghillert</strong>/</span>
 				</div>
@@ -123,7 +134,7 @@
 			<div class="form-group${errorClass}">
 				<label for="githubId" class="col-lg-2 control-label">GitHub Id</label>
 				<div class="col-lg-10">
-					<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="16"/>
+					<form:input cssClass="form-control" path="githubId" id="githubId" maxlength="255" tabindex="10"/>
 					<form:errors path="githubId" cssClass="fieldError"/>
 					<span class="help-block">Please provide just the username in your public profile URL, e.g. (in bold): https://github.com/<strong>ghillert</strong></span>
 				</div>
@@ -135,16 +146,16 @@
 			<div class="form-group${errorClass}">
 				<label for="sortOrder" class="col-lg-2 control-label">Sort Order*</label>
 				<div class="col-lg-10">
-					<form:input type="number" cssClass="form-control" path="sortOrder" id="sortOrder" maxlength="255" tabindex="2"/>
+					<form:input type="number" cssClass="form-control" path="sortOrder" id="sortOrder" maxlength="255" tabindex="11"/>
 					<form:errors path="sortOrder" cssClass="fieldError"/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-default" lang="save" tabindex="19">Add/Save</button>
-					<button type="submit" class="btn btn-default" lang="delete" tabindex="20">Delete</button>
-					<button type="submit" class="btn btn-default" name="cancel" tabindex="21">Cancel</button>
+					<button type="submit" class="btn btn-default" lang="save" tabindex="12">Add/Save</button>
+					<button type="submit" class="btn btn-default" lang="delete" tabindex="13">Delete</button>
+					<button type="submit" class="btn btn-default" name="cancel" tabindex="14">Cancel</button>
 				</div>
 			</div>
 		</form:form>

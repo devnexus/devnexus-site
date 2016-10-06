@@ -16,8 +16,6 @@
 package com.devnexus.ting.web.controller;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,7 +28,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devnexus.ting.core.service.BusinessService;
-import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
@@ -87,26 +84,12 @@ public class SpeakerController {
 
 	private void prepareSpeakers(Event event, Model model) {
 		model.addAttribute("event", event);
-		SpeakerList speakers = new SpeakerList();
+		final SpeakerList speakers = new SpeakerList();
 
 		speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
-		Map<Long, CfpSubmissionSpeaker> cfpSpeakers = new HashMap<>(speakers.getNumberOfSpeakers());
-
-		speakers.getSpeakers().forEach((speaker) -> {
-			if (speaker.getCfpSpeakerId() != null) {
-				CfpSubmissionSpeaker cfpSpeaker = businessService.getCfpSubmissionSpeaker(speaker.getCfpSpeakerId());
-				if (cfpSpeaker == null) {
-					cfpSpeaker = new CfpSubmissionSpeaker();
-				}
-				cfpSpeakers.put(speaker.getId(), cfpSpeaker);
-			} else {
-				cfpSpeakers.put(speaker.getId(), new CfpSubmissionSpeaker());
-			}
-		});
 
 		model.addAttribute("trackList", businessService.getTracksForEvent(event.getId()));
 		model.addAttribute("speakerList", speakers);
-		model.addAttribute("cfpSpeakersMap", cfpSpeakers);
 
 	}
 

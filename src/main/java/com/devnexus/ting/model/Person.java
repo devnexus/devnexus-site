@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,6 +53,9 @@ public abstract class Person extends BaseModelObject {
 	@NotEmpty
 	@Size(max=255)
 	protected String lastName;
+
+	@Size(max=255)
+	protected String company;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@XmlTransient
@@ -159,6 +162,14 @@ public abstract class Person extends BaseModelObject {
 
 	public void setGithubId(String githubId) {
 		this.githubId = githubId;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
 	}
 
 	@JsonIgnore

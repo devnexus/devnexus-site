@@ -44,7 +44,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -84,7 +83,6 @@ public class CallForPapersController {
 	@Autowired private UserService userService;
 	@Autowired private SecurityFacade securityFacade;
 
-	@Autowired private Validator validator;
 	@Autowired private MultipartProperties multipartProperties;
 
 	@Autowired

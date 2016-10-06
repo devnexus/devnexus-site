@@ -145,3 +145,9 @@ ALTER TABLE cfp_submission_speaker_conference_days
   OWNER TO devnexus;
   
 ALTER TABLE public.cfp_submission_speakers ADD COLUMN company character varying(255);
+
+-- Oct 6 2016
+
+ALTER TABLE public.speakers   ADD COLUMN company character varying(255);
+ALTER TABLE public.organizers ADD COLUMN company character varying(255);
+

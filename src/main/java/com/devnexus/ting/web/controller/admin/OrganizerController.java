@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2013 the original author or authors.
+ * Copyright 2002-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import javax.validation.Validator;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,8 +47,6 @@ import com.devnexus.ting.model.Organizer;
 public class OrganizerController {
 
 	@Autowired private BusinessService businessService;
-
-	@Autowired private Validator validator;
 
 	@RequestMapping(value="/s/admin/organizers", method=RequestMethod.GET)
 	public String getOrganizers(ModelMap model, HttpServletRequest request) {
@@ -107,6 +104,7 @@ public class OrganizerController {
 		organizerFromDb.setBio(organizerForm.getBio());
 		organizerFromDb.setFirstName(organizerForm.getFirstName());
 		organizerFromDb.setLastName(organizerForm.getLastName());
+		organizerFromDb.setCompany(organizerForm.getCompany());
 
 		organizerFromDb.setGooglePlusId(organizerForm.getGooglePlusId());
 		organizerFromDb.setLinkedInId(organizerForm.getLinkedInId());
@@ -129,18 +127,16 @@ public class OrganizerController {
 				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
 				pictureData.setFileSize(pictureFile.getSize());
 				pictureData.setFileModified(new Date());
-				pictureData.setType(pictureFile.getContentType());
 				pictureData.setName(pictureFile.getOriginalFilename());
 
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new IllegalStateException("Error while processing image for speaker " + organizerForm.getFirstLastName(), e);
 			}
 
-			organizerFromDb.setPicture(pictureData);
+			organizerForm.setPicture(pictureData);
 
-			String message = "File '" + pictureData.getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
+			String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
+			redirectAttributes.addFlashAttribute("successMessage", message);
 		}
 
 		businessService.saveOrganizer(organizerFromDb);
@@ -151,7 +147,10 @@ public class OrganizerController {
 	}
 
 	@RequestMapping(value="/s/admin/organizer", method=RequestMethod.POST)
-	public String addOrganizer(@RequestParam MultipartFile pictureFile, @Valid Organizer organizerForm, BindingResult result, HttpServletRequest request) {
+	public String addOrganizer(@RequestParam MultipartFile pictureFile,
+			@Valid Organizer organizerForm, BindingResult result,
+			HttpServletRequest request,
+			RedirectAttributes redirectAttributes) {
 
 		if (request.getParameter("cancel") != null) {
 			return "redirect:/s/admin/organizers";
@@ -163,32 +162,31 @@ public class OrganizerController {
 
 		if (pictureFile != null && pictureFile.getSize() > 0) {
 
-			 final FileData pictureData = new FileData();
+			final FileData pictureData = new FileData();
 
-			 try {
+			try {
 
-				 pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
-				 pictureData.setFileSize(pictureFile.getSize());
-				 pictureData.setFileModified(new Date());
-				 pictureData.setName(pictureFile.getOriginalFilename());
+				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
+				pictureData.setFileSize(pictureFile.getSize());
+				pictureData.setFileModified(new Date());
+				pictureData.setName(pictureFile.getOriginalFilename());
 
-			 } catch (IOException e) {
-				 // TODO Auto-generated catch block
-				 e.printStackTrace();
-			 }
+			} catch (IOException e) {
+				throw new IllegalStateException("Error while processing image for speaker " + organizerForm.getFirstLastName(), e);
+			}
 
-			 organizerForm.setPicture(pictureData);
+			organizerForm.setPicture(pictureData);
 
-			//TODO
-			//String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
-			//FlashMap.setSuccessMessage(message);
+			String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
+			redirectAttributes.addFlashAttribute("successMessage", message);
 
 		}
 
-		//TODO
 		Organizer savedOrganizer = businessService.saveOrganizer(organizerForm);
 
-		//FlashMap.setSuccessMessage("The organizer was added successfully.");
+		redirectAttributes.addFlashAttribute("successMessage",
+				String.format("The organizer '%s' was added successfully.", savedOrganizer.getFirstLastName()));
+
 		return "redirect:/s/admin/organizers";
 	}
 

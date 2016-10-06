@@ -10,7 +10,7 @@
 <body>
     <section class="container-fluid speakers" >
         <h1 class="featured-header">Speakers</h1>
-        
+
         <c:if test="${not empty speakerList.speakers}">
 <!--            <div class="row track-filter" >
                 <div class="btn-group">
@@ -30,7 +30,7 @@
             </div>-->
         </c:if>
         <div class="row">
-            
+
             <h1 class="featured-header" style="margin: 15px 0">CFP IS STILL OPEN, SUBMIT BEFORE NOV 1</h1>
             <h3  style="text-align: center; margin: 25px 0">Many more sessions to come! Interested in presenting? <a href="${ctx}/s/cfp">Submit here</a></h3>
 
@@ -41,7 +41,7 @@
                         <img class="img-responsive" src="${speaker.pictureSerialized}" alt="${speaker.firstName} ${speaker.lastName}">
                         <div class="caption">
                             <h3>${speaker.firstName} ${speaker.lastName}</h3>
-                            <p>${cfpSpeakersMap[speaker.id].company}&nbsp;</p>
+                            <p>${speaker.company}&nbsp;</p>
                         </div>
                     </div>
                 </div>

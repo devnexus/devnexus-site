@@ -1,6 +1,9 @@
 #!/bin/bash          
 echo Moving Staging to Prod
 
+cf delete devnexus-old
+cf delete-orphaned-routes
+cf rename devnexus-prod devnexus-old
 cf rename devnexus devnexus-prod
 cf map-route   devnexus-prod devnexus.com
 cf map-route   devnexus-prod devnexus.com --hostname www
