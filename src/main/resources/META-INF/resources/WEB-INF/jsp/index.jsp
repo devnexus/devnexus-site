@@ -441,7 +441,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </div>
-                                <div class="col-lg-10">    
+                                <div class="col-lg-10">
                                 <a href="${sponsor.link}">
                                     <img title="${sponsor.name}" class="img-responsive" src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}"/>
                                 </a>
@@ -466,7 +466,7 @@
         <div class="row call-to-action become-sponsor">
             <div class="col-xs-12">
                 <h1>Become a <span class="trump">Sponsor</span></h1>
-                
+
                 <a href="https://devnexus.com/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn hero-btn-register">LEARN MORE</a>
             </div>
         </div>
@@ -509,20 +509,28 @@
             $('#nav').affix({
                 offset: {top: $('#nav').offset().top}
             });
-            
+            $('#nav').on('affix.bs.affix', function () {
+                var navHeight = $('#nav').outerHeight(true);
+                $('.marketing-panel').css('margin-top', navHeight);
+            });
+
+            $('#nav').on('affix-top.bs.affix', function () {
+                $('.marketing-panel').css('margin-top', 0);
+            });
+
             $(function() {
 			$(".video-container").each(function() {
 				var videoId = this.id;
 				$(document).delegate('#video-play-button', 'click', function() {
 					var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
 					var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, style:"height:100%;width:100%"});
-                                        
+
 					$('#' + videoId).html(iframe).addClass('loaded');
 					$('#video-play-button').hide();
 				});
 			});
                     });
-            
+
         </script>
     </body>
 </html>
