@@ -86,14 +86,14 @@
         <section class="hero">
             <div>
                 <ul class="list-inline hero-social">
-                    <li><a href="#"><img src="${ctx}/assets/img/facebook-logo-button.png"/></a></li>
-                    <li><a href="#"><img src="${ctx}/assets/img/twitter-logo-button.png"/></a></li>
-                    <li><a href="#"><img src="${ctx}/assets/img/instagram-logo.png"/></a></li>
-                    <li><a href="#"><img src="${ctx}/assets/img/google-plus-1.png"/></a></li>
+                    <li><a href="https://www.facebook.com/atlantajug/" target="_blank"><img src="${ctx}/assets/img/facebook-logo-button.png"/></a></li>
+                    <li><a href="https://twitter.com/devnexus" target="_blank"><img src="${ctx}/assets/img/twitter-logo-button.png"/></a></li>
+                    <li><a href="https://www.flickr.com/search/?sort=date-taken-desc&safe_search=1&text=devnexus&view_all=1" target="_blank"><img src="${ctx}/assets/img/instagram-logo.png"/></a></li>
+                    <li><a href="https://plus.google.com/+devnexus-conference" target="_blank"><img src="${ctx}/assets/img/google-plus-1.png"/></a></li>
                 </ul>
 
                 <ul class="list-inline hero-date-location">
-                    <li><img src="${ctx}/assets/img/calendar.png"/> 20-22.FEB</li>
+                    <li><img src="${ctx}/assets/img/calendar.png"/> 22-24 FEB</li>
                     <li><img src="${ctx}/assets/img/location.png"/> ATLANTA, GA</li>
                 </ul>
 

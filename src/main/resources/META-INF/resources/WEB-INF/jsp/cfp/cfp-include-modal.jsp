@@ -17,11 +17,11 @@
 				<h4>When will the schedule be ready?</h4>
 				<p>A draft schedule will be ready on <strong>November 15, 2016</strong>.</p>
 				<h4>When is the Workshop day?</h4>
-				<p>The workshop day is on <strong>February 20, 2017</strong>. We will have 5 rooms available,
+				<p>The workshop day is on <strong>February 22, 2017</strong>. We will have 5 rooms available,
 				each accommodating 25-35 attendees.</p>
 				<h4>How long are the sessions for the main conference?</h4>
 				<p>
-					The main conference days are <strong>February 21 &amp; 22, 2017</strong>. Breakout sessions
+					The main conference days are <strong>February 23 &amp; 24, 2017</strong>. Breakout sessions
 					(normal sessions) are <strong>75 minutes</strong> each. Keynotes
 					are <strong>60 minutes</strong>.
 				</p>
