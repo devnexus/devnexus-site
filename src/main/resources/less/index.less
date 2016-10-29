@@ -15,13 +15,14 @@ body{
 }
 
 .btn {
-    font-size: 20px;
     font-weight: 700;
     border-radius: 100px;
     background-color: #f6921e;
     color: #fff;
 }
-
+.btn-default {
+    font-size: 20px;
+}
 .hero {
     color: #fff;
     background-image:
@@ -66,7 +67,7 @@ body{
     width: 100%;
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .hero h2{
         font-size: 48px;
         font-weight: 700;
@@ -74,7 +75,7 @@ body{
     }
 }
 
-@media(max-width: @screen-sm) { 
+@media(max-width: @screen-sm) {
     .hero h2{
         font-size: 38px;
         font-weight: 700;
@@ -90,7 +91,7 @@ body{
     color: white;
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
 
     .hero-btn-register {
         height:65px;
@@ -101,7 +102,7 @@ body{
 
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
 
     .hero-btn-register {
         height:65px;
@@ -124,7 +125,7 @@ body{
     padding: 30px;
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .navbar{
         top: 0px;
         position: relative;
@@ -159,8 +160,8 @@ body{
 
 .navbar-nav li a.btn,.navbar-nav li a.btn:hover {
     color: #fff;
-    background-color: #f6921e;    
-    font-size: 17px;    
+    background-color: #f6921e;
+    font-size: 17px;
 }
 
 .btn-register {
@@ -180,7 +181,7 @@ body{
     border-bottom : solid 1px #979797;
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .marketing-panel {
         font-size: 15px;
         background-color: #91b565;
@@ -219,7 +220,7 @@ body{
     }
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .marketing-panel {
         font-size: 28px;
         background-color: #91b565;
@@ -247,7 +248,7 @@ body{
 
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
 
     .preview {
         overflow: hidden;
@@ -268,7 +269,7 @@ body{
     }
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
 
     .preview {
         overflow: hidden;
@@ -367,7 +368,7 @@ body{
     border-radius: 0;
     margin: 20px auto 70px auto;
 }
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
 
     .btn.btn-square.btn-speakers {
         background-color: #6c9c31;
@@ -380,7 +381,7 @@ body{
 
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
 
     .btn-speakers {
         background-color: #6c9c31;
@@ -410,7 +411,7 @@ body{
 }
 
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
 
     .call-to-action.boss h1 {
         font-weight: 700;
@@ -424,7 +425,7 @@ body{
         border-radius: 0;
         left: 0;
         position: absolute;
-        margin-left: 0px; 
+        margin-left: 0px;
     }
 
     .call-to-action p {
@@ -443,7 +444,7 @@ body{
 
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
 
 
     .call-to-action h1 {
@@ -482,7 +483,7 @@ body{
 }
 
 .sessions .caption h3 {
-    
+
     font-size: 28px;
     font-weight: 700;
 }
@@ -491,7 +492,7 @@ body{
     width: 240px;
     height: 240px;
 }
-    
+
 .tickets {
     background-image: url(../assets/img/background-tickets.jpg);
     background-repeat: no-repeat;
@@ -645,7 +646,7 @@ body{
 
 
 .conference-information {
-    margin: 40px; 
+    margin: 40px;
     background-color: #fff;
 
 }
@@ -658,17 +659,17 @@ body{
 }
 
 .conference-information p {
-    margin: 40px 0; 
+    margin: 40px 0;
     font-size: 24px;
 }
 
 
 .conference-information .information-card h1 {
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
 .conference-information .information-card img {
-    margin: 20px 0; 
+    margin: 20px 0;
     width: 100%;
 }
 
@@ -768,7 +769,7 @@ body{
     height: auto;
 }
 
-.schedule-config #schedule-day-filter .btn span.big { 
+.schedule-config #schedule-day-filter .btn span.big {
     font-size: 50px;
     font-weight: 600;
     text-align: center;
@@ -870,19 +871,19 @@ body{
         margin: 0px 22px 0 22px;
         text-align: left;
         border: 1px solid;
-    }    
+    }
 
     .schedule .schedule-row .small {
         font-size: 16px;
-    }    
+    }
 
     .schedule .schedule-row .text-center{
         text-align: left;
-    }   
+    }
 
     .schedule-config .sub-filter .dropdown-menu {
         width: 100%;
-    }    
+    }
 }
 
 @media(min-width: @screen-sm) {
@@ -917,11 +918,11 @@ body{
 }
 
 .speakers {
-    margin: 40px; 
+    margin: 40px;
 }
 
 .speakers .track-filter .btn {
-    border-radius: 0;   
+    border-radius: 0;
     background-color: #fff;
     width: 535px;
     color: #4a4a4a;
@@ -967,13 +968,13 @@ body{
 
 //Reg checkout
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .register form {
         margin-left: 15px;
         margin-right: 15px;
     }
 }
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .register form {
         margin-left: 100px;
         margin-right: 100px;
@@ -988,14 +989,14 @@ body{
 
 }
 
-.register form input, 
+.register form input,
 .register form select {
     height:80px;
     border-radius: 0;
     font-size: 20px;
     font-weight: normal
 }
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .register form h4 {
         text-transform: uppercase;
         font-size: 24px;
@@ -1004,7 +1005,7 @@ body{
         margin-top: 15px;
     }
 }
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .register form h4 {
         text-transform: uppercase;
         font-size: 24px;
@@ -1021,7 +1022,7 @@ body{
 
 .register form .ticket-selection .cost{
     background-color: transparent;
-    border: none;    
+    border: none;
     font-size: 20px;
 }
 
@@ -1036,7 +1037,7 @@ body{
     margin-bottom: 10px;
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .register .form-group .ticket-count {
         width:100px;
         height:75px;
@@ -1044,13 +1045,13 @@ body{
     }
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .register .form-group .ticket-count {
         height:75px;
     }
 }
 
-@media(min-width: @screen-md) { 
+@media(min-width: @screen-md) {
     .register .form-group.total  {
         background-color: #d8d8d8;
         border: solid 1px #979797;
@@ -1084,7 +1085,7 @@ body{
     }
 }
 
-@media(max-width: @screen-md) { 
+@media(max-width: @screen-md) {
     .register .form-group.total  {
         background-color: #d8d8d8;
         border: solid 1px #979797;
@@ -1094,7 +1095,7 @@ body{
         text-align: center;
     }
     .register .form-group.total span{
-        
+
         font-size: 16px;
         width: auto;
         text-transform: uppercase;
@@ -1117,7 +1118,7 @@ body{
         color:white;
         padding:15px 30px;
     }
-    
+
     .register .form-group.total .paypal-image {
         border-radius: 0;
         font-size: 16px;

@@ -9,6 +9,13 @@
 
 <title>Manage Call for Paper Submissions</title>
 
+
+	<style type="text/css">
+		.secondary-row td {
+			border-top: 0 !important;
+		}
+	</style>
+
 <!-- intro -->
 <section id="about" class="module parallax parallax-3">
 	<div class="container header">
@@ -23,6 +30,14 @@
 	</div>
 </section>
 <!-- /intro -->
+
+<c:if test="${not empty successMessage}">
+	<div class="row" style="margin-top: 2em;">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="alert alert-success text-center" role="alert"><c:out value="${successMessage}"></c:out></div>
+		</div>
+	</div>
+</c:if>
 
 <div class="row" style="margin-top: 1em;">
 	<div class="col-md-10 col-md-offset-1">
@@ -56,7 +71,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Action</th><th>Name</th><th>Title</th><th>Topic</th><th>Type</th><th>Skill Level</th><th>Status</th><th>Cost</th><th>Location(s)</th>
+					<th></th><th>Actions</th><th>Name</th><th>Title</th><th>Type</th><th>Skill Level</th><th>Status</th><th>Cost</th><th>Location(s)</th>
 				</tr>
 			</thead>
 
@@ -75,13 +90,14 @@
 				</c:choose>
 
 				<tr id="cfp_${cfp.id}" class="${cfpStatusClass}">
-					<td style="width: 150px;">
-						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-default" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
+					<td rowspan="2" style="vertical-align: middle;">
 						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
-							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-default" title="Accept"><span class="glyphicon glyphicon-ok"></span></a>
 							<form:checkbox path="cfpIds" value="${cfp.id}"/>
 						</c:if>
-
+					</td>
+					<td style="width: 120px; vertical-align: middle;">
+						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}" class="btn btn-sm" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
+						<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/review" class="btn btn-sm" title="Review"><span class="glyphicon glyphicon-star"></span></a>
 					</td>
 					<td>
 						<c:forEach var="speaker" items="${cfp.cfpSubmissionSpeakers}">
@@ -89,7 +105,6 @@
 						</c:forEach>
 					</td>
 					<td><c:out value="${cfp.title}"/></td>
-					<td><small><c:out value="${cfp.topic}"/></small></td>
 					<td><c:out value="${cfp.presentationType}"/></td>
 					<td><c:out value="${cfp.skillLevel}"/></td>
 					<td><c:out value="${cfp.status}"/></td>
@@ -98,6 +113,25 @@
 						<c:if test="${not empty cfp.slotPreference}"><span class="glyphicon glyphicon-info-sign text-success"></span></c:if>
 					</td>
 					<td><c:out value="${cfp.speakerLocation}"/></td>
+				</tr>
+				<tr class="secondary-row ${cfpStatusClass}">
+					<td style="width: 120px;">
+						<c:if test="${cfp.status == pendingCfpStatus or empty cfp.status}">
+							<a href="${ctx}${baseSiteUrl}/admin/${event.eventKey}/cfps/${cfp.id}/accept" class="btn btn-sm" title="Accept"><span class="glyphicon glyphicon-ok"></span></a>
+						</c:if>
+					</td>
+					<td colspan="2"><small><c:out value="${cfp.topic}"/></small></td>
+					<td colspan="2">Rating:
+						<c:choose>
+							<c:when test="${not empty cfp.rating}"><c:out value="${cfp.rating}"/>/10 (${fn:length(cfp.cfpSubmissionReviews)} review(s))</c:when>
+							<c:otherwise>N/A</c:otherwise>
+						</c:choose>
+					</td>
+					<td></td>
+					<td>
+
+					</td>
+					<td><c:out value="${cfp.speakerCompany}"/></td>
 				</tr>
 			</c:forEach>
 		</table>

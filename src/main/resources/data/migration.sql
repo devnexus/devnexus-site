@@ -143,11 +143,37 @@ WITH (
 );
 ALTER TABLE cfp_submission_speaker_conference_days
   OWNER TO devnexus;
-  
+
 ALTER TABLE public.cfp_submission_speakers ADD COLUMN company character varying(255);
 
 -- Oct 6 2016
 
 ALTER TABLE public.speakers   ADD COLUMN company character varying(255);
 ALTER TABLE public.organizers ADD COLUMN company character varying(255);
+
+-- Oct 23, 2016
+
+CREATE TABLE public.cfp_submission_reviews
+(
+  id bigint NOT NULL,
+  created_date timestamp without time zone,
+  updated_date timestamp without time zone,
+  version integer,
+  comment character varying(10000),
+  rating integer,
+  cfp_submission_id bigint,
+  created_by_user_id bigint,
+  CONSTRAINT cfp_submission_reviews_pkey PRIMARY KEY (id),
+  CONSTRAINT fk_cfp_submissions_reviews_users FOREIGN KEY (created_by_user_id)
+      REFERENCES public.users (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT fk_cfp_submissions FOREIGN KEY (cfp_submission_id)
+      REFERENCES public.cfp_submissions (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.cfp_submission_reviews
+  OWNER TO devnexus;
 

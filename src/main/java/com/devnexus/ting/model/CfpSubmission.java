@@ -15,16 +15,20 @@
  */
 package com.devnexus.ting.model;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -107,6 +111,10 @@ public class CfpSubmission extends BaseModelObject {
 			@Parameter(name = "identifierMethod", value = "getKey"),
 			@Parameter(name = "valueOfMethod", value = "fromKey") })
 	private CfpSubmissionStatusType status;
+
+	@JsonIgnore
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.LAZY, mappedBy="cfpSubmission")
+	private Set<CfpSubmissionReview>cfpSubmissionReviews = new HashSet<>(0);
 
 	public CfpSubmission() {
 	}
@@ -240,6 +248,36 @@ public class CfpSubmission extends BaseModelObject {
 		}
 
 		return StringUtils.collectionToCommaDelimitedString(speakerLocations);
+	}
+
+	public String getSpeakerCompany() {
+		final Set<String> speakerCompanies = new HashSet<String>();
+
+		for (CfpSubmissionSpeaker speaker : this.cfpSubmissionSpeakers) {
+			speakerCompanies.add(speaker.getCompany());
+		}
+
+		return StringUtils.collectionToCommaDelimitedString(speakerCompanies);
+	}
+
+	public Double getRating() {
+		final List<Integer> ratings = new ArrayList<>();
+
+		for (CfpSubmissionReview review : this.cfpSubmissionReviews) {
+			ratings.add(review.getRating());
+		}
+
+		OptionalDouble averageRating = ratings.stream().mapToDouble(a -> a).average();
+
+		return averageRating.orElse(0d);
+	}
+
+	public Set<CfpSubmissionReview> getCfpSubmissionReviews() {
+		return cfpSubmissionReviews;
+	}
+
+	public void setCfpSubmissionReviews(Set<CfpSubmissionReview> cfpSubmissionReviews) {
+		this.cfpSubmissionReviews = cfpSubmissionReviews;
 	}
 
 	/**

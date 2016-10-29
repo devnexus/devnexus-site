@@ -3,14 +3,14 @@
 <div class="jumbotron call" style="margin-bottom:50px">
 	<div class="container">
 		<div id="banner">
-			<h1><strong>Accept CFP</strong></h1>
+			<h1><strong>Review CFP</strong></h1>
 		</div>
 	</div>
 </div>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 
-	<spring:bind path="cfpSubmission.*">
+	<spring:bind path="cfpSubmissionReview.*">
 		<c:if test="${not empty status.errorMessages}">
 			<div class="alert alert-danger fade in"
 				><a href="#" data-dismiss="alert" class="close">&times;</a>
@@ -21,45 +21,44 @@
 		</c:if>
 	</spring:bind>
 
-	<form:form id="cfpForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmission" enctype="multipart/form-data">
+	<form:form id="cfpSubmissionReviewForm" class="form-horizontal" role="form" method="post" modelAttribute="cfpSubmissionReview" enctype="multipart/form-data">
 
-		<form:hidden path="event.id"/>
-		<form:hidden path="id"/>
+		<form:hidden path="cfpSubmission.id"/>
 
 		<h3>Presentation</h3>
 
 		<div class="form-group">
 			<label for="title" class="col-lg-2 control-label">Presentation Title</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.title}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.title}"/></p>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="description" class="col-lg-2 control-label">Abstract</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.description}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.description}"/></p>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="topic" class="col-lg-2 control-label">Topic</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.topic}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.topic}"/></p>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="skill-level" class="col-lg-2 control-label">Skill Level</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.skillLevel.name}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.skillLevel.name}"/></p>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="skill-level" class="col-lg-2 control-label">Presentation Type</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.presentationType.name}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.presentationType.name}"/></p>
 			</div>
 		</div>
 
@@ -67,7 +66,7 @@
 			<div class="col-lg-offset-2 col-lg-10">
 				<div class="checkbox">
 					<label>
-						<form:checkbox disabled="true" path="sessionRecordingApproved" id="sessionRecordingApproved"/> Can we record your session?
+						<form:checkbox disabled="true" path="cfpSubmission.sessionRecordingApproved" id="sessionRecordingApproved"/> Can we record your session?
 					</label>
 				</div>
 			</div>
@@ -76,20 +75,19 @@
 		<div class="form-group">
 			<label for="slotPreference" class="col-lg-2 control-label">Slot Preference or Comments</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.slotPreference}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.slotPreference}"/></p>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="cfpSubmissionStatusType" class="col-lg-2 control-label">Status</label>
 			<div class="col-lg-10">
-				<p class="form-control-static"><c:out value="${cfpSubmission.status.name}"/></p>
+				<p class="form-control-static"><c:out value="${cfpSubmissionReview.cfpSubmission.status.name}"/></p>
 			</div>
 		</div>
 
 		<h3>Speaker Details</h3>
-		<c:forEach items="${cfpSubmission.cfpSubmissionSpeakers}" var="speaker" varStatus="status">
-			<form:hidden path="cfpSubmissionSpeakers[${status.index}].id"/>
+		<c:forEach items="${cfpSubmissionReview.cfpSubmission.cfpSubmissionSpeakers}" var="speaker" varStatus="status">
 
 			<div class="row">
 				<div class="col-md-8"><h4 style="margin-top: 0"><h4>Speaker ${status.index+1}</h4></div>
@@ -98,18 +96,6 @@
 				<button type="submit" class="btn btn-danger" value="${status.index}" name="removeSpeaker" tabindex="20" title="Remove Speaker">
 					<span class="glyphicon glyphicon-trash"></span></button>
 				</c:if></div>
-			</div>
-
-			<div class="form-group">
-				<label for="cfpSubmissionStatusType" class="col-lg-2 control-label">Use existing speaker</label>
-				<div class="col-lg-10">
-					<form:select cssClass="form-control" path="cfpSubmissionSpeakers[${status.index}].speaker.id" id="cfpSubmissionStatusTypes"
-						itemValue="status.key">
-						<form:option value="-1" label="Create New Speaker" />
-						<form:options items="${allSpeakers}" itemLabel="fullName" itemValue="id"/>
-					</form:select>
-					<form:errors path="presentationType" cssClass="fieldError" />
-				</div>
 			</div>
 
 			<div class="form-group">
@@ -140,12 +126,9 @@
 			</div>
 
 			<div class="form-group${errorClass}">
-				<div class="col-lg-offset-2 col-lg-10">
-					<div class="checkbox">
-						<label>
-							<form:checkbox path="cfpSubmissionSpeakers[${status.index}].mustReimburseTravelCost" id="speakers[${status.index}].mustReimburseTravelCost" tabindex="5"/> Please check if you require travel cost reimbursement.
-						</label>
-					</div>
+				<label class="col-lg-2 control-label">Must reimburse travel</label>
+				<div class="col-lg-10">
+					<p class="form-control-static"><c:out value="${speaker.mustReimburseTravelCost}"/></p>
 				</div>
 			</div>
 
@@ -213,34 +196,13 @@
 			</div>
 		</c:forEach>
 
-		<div class="form-group">
-			<div class="col-lg-offset-2 col-lg-10">
-				<button type="submit" class="btn btn-default" name="cancel">Cancel</button>
-				<button type="submit" class="btn btn-default" lang="save">Accept</button>
-			</div>
-		</div>
-	</form:form>
-	</div>
-</div>
+		<hr>
 
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-
-		<spring:bind path="evaluation.*">
-			<c:if test="${not empty status.errorMessages}">
-				<div class="alert alert-danger fade in"
-					><a href="#" data-dismiss="alert" class="close">&times;</a>
-					<c:forEach var="error" items="${status.errorMessages}"
-						><c:out value="${error}" escapeXml="false"/><br/>
-					</c:forEach>
-				</div>
-			</c:if>
-		</spring:bind>
-
-		<form:form id="evaluationForm" method="post" modelAttribute="evaluation">
-			<form:hidden path="event.id"/>
-			<div class="form-group text-center">
-				<h3>How likely are you to recommend this CFP?</h3>
+		<div class="form-group text-center">
+				<h3><c:out value="${cfpSubmissionReview.createdByUser.firstName}"/>, how would you rate this CFP?</h3>
+				<p>
+					<c:if test="${isUpdate}">You have previously rated this CFP already, but please feel free to update your rating.</c:if>
+				</p>
 				<div class="stars text-center">
 					<input type="hidden" id="rating" name="rating"/>
 					<div id="raty" style="font-size: 1.0rem; margin-left: auto; margin-right: auto;"></div>
@@ -248,7 +210,17 @@
 				</div>
 			</div>
 			<div class="form-group text-center">
-				<h3>Please let us know the main reasons you provided the score above.</h3>
+				<h3>Please <strong>
+				<c:choose>
+					<c:when test="${isUpdate}">
+						update
+					</c:when>
+					<c:otherwise>
+						add
+					</c:otherwise>
+				</c:choose>
+				</strong>your comment(s) below
+				</h3>
 				<form:textarea cssClass="form-control" path="comment" id="slotPreference" tabindex="2" rows="5" maxLength="1000"/>
 				<form:errors path="comment" cssClass="fieldError" />
 			</div>
@@ -257,9 +229,49 @@
 					<button type="submit" class="btn btn-default" lang="save" tabindex="19">Submit</button>
 				</div>
 			</div>
-		</form:form>
+	</form:form>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h3>${fn:length(cfpSubmissionReview.cfpSubmission.cfpSubmissionReviews)} Existing Review(s)</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<c:forEach items="${cfpSubmissionReview.cfpSubmission.cfpSubmissionReviews}" var="cfpSubmissionReview">
+			<div class="row">
+				<div class="col-md-2">
+					User
+				</div>
+				<div class="col-md-10">
+					<c:out value="${cfpSubmissionReview.createdByUser.firstName}"/>
+					<c:out value="${cfpSubmissionReview.createdByUser.lastName}"/>
+					(<c:out value="${cfpSubmissionReview.createdByUser.username}"/>)
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					Rating
+				</div>
+				<div class="col-md-2">
+					<c:out value="${cfpSubmissionReview.rating}"/> / 10
+				</div>
+				<div class="col-md-8">
+					<div id="raty-${cfpSubmissionReview.id}" style="font-size: 1.0rem; margin-left: auto; margin-right: 0;"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="border: 1px solid #eeeeee; padding: 1em;">
+					<c:out value="${cfpSubmissionReview.comment}"/>
+				</div>
+			</div>
+			<hr>
+		</c:forEach>
+	</div>
+</div>
+
 <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -307,6 +319,21 @@
 			starOn  : '${ctx}/assets/img/evaluations/staron.png'
 			});
 
+		<c:if test="${isUpdate}">
+			$('#raty').raty('score', ${cfpSubmissionReview.rating});
+		</c:if>
+		<c:forEach items="${cfpSubmissionReview.cfpSubmission.cfpSubmissionReviews}" var="cfpSubmissionReview">
+			$('#raty-${cfpSubmissionReview.id}').raty({
+				number: 10,
+				size: 27,
+				readOnly: true,
+				score: ${cfpSubmissionReview.rating},
+				hints: ['lousy', 'pretty bad', 'poor', 'meh' , 'average', 'ok', 'good', 'very good', 'awesome', 'it rocks'],
+				targetType: 'score',
+				starOff : '${ctx}/assets/img/evaluations/staroff.png',
+				starOn  : '${ctx}/assets/img/evaluations/staron.png'
+			});
+		</c:forEach>
 	});
 <!--
 	$(function(){
