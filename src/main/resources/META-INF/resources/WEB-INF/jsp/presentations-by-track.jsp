@@ -18,8 +18,7 @@
         </c:choose>
     </h1>
     <div class="row">
-        <h1 class="featured-header" style="margin: 15px 0">CFP IS STILL OPEN, SUBMIT BEFORE NOV 1</h1>
-        <h3  style="margin: 25px 0; text-align: center">Many more sessions to come! Interested in presenting? <a href="${ctx}/s/cfp">Submit here</a></h3>
+        
         <c:forEach items="${presentationList.presentations}" var="presentation" varStatus="status">
             <c:choose>
                 <c:when test="${empty presentation.track}">

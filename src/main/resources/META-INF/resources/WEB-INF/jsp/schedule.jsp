@@ -21,7 +21,7 @@
 
 <section class="container-fluid schedule" >
     <div class="conference-information">
-        <p style="text-align: center">We are still accepting sessions and preparing our schedule for 2017.  Please join our mailing list to be informed of updates.</p>
+        <p style="text-align: center">We are preparing our schedule for 2017.  Please join our mailing list to be informed of updates.</p>
     </div>    
     <div class="col-md-8 col-md-offset-2">
 
