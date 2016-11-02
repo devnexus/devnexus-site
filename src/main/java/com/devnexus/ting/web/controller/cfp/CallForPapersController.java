@@ -776,7 +776,6 @@ public class CallForPapersController {
 		}
 
 		cfpSubmissionFromDb.setDescription(cfpSubmission.getDescription());
-		cfpSubmissionFromDb.setStatus(cfpSubmission.getStatus());
 		cfpSubmissionFromDb.setPresentationType(cfpSubmission.getPresentationType());
 		cfpSubmissionFromDb.setSessionRecordingApproved(cfpSubmission.isSessionRecordingApproved());
 		cfpSubmissionFromDb.setSkillLevel(cfpSubmission.getSkillLevel());
