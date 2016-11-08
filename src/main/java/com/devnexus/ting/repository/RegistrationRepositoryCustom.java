@@ -34,8 +34,8 @@ public interface RegistrationRepositoryCustom {
 
 	public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event);
 
-	public List findOrdersWithContactEmail(String email, EventSignup signUp);
+	public List<RegistrationDetails> findOrdersWithContactEmail(String email, EventSignup signUp);
 
-	public List findOrdersWithContactName(String[] names, EventSignup signUp);
+	public List<RegistrationDetails> findOrdersWithContactName(String[] names, EventSignup signUp);
 
 }

@@ -72,6 +72,7 @@
         <c:url var="aboutUrl" value="${baseSiteUrl}/about"/>
         <c:url var="socialUrl" value="${baseSiteUrl}/social"/>
         <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
+        <c:url var="sponsorExhibitorKitUrl" value="${baseSiteUrl}/sponsor-exhibitor-kit"/>
         <c:url var="conferenceInfoUrl" value="${baseSiteUrl}/conference-info"/>
         <c:url var="registrationUrl" value="${baseSiteUrl}/register"/>
         <c:url var="pastConferencesUrl" value="${baseSiteUrl}/past-conferences"/>
@@ -466,8 +467,10 @@
         <div class="row call-to-action become-sponsor">
             <div class="col-xs-12">
                 <h1>Become a <span class="trump">Sponsor</span></h1>
-
                 <a href="https://devnexus.com/static/2017/files/promo/devnexus-2017-sponsorship-options.pdf" class="btn hero-btn-register">LEARN MORE</a>
+            </div>
+            <div class="col-xs-12">
+                <a href="${sponsorExhibitorKitUrl}" class="btn hero-btn-register">Exhibitor Kit</a>
             </div>
         </div>
 

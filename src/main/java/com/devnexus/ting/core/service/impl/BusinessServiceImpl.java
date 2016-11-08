@@ -16,6 +16,7 @@
 package com.devnexus.ting.core.service.impl;
 
 import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImageOp;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -36,7 +37,6 @@ import java.util.UUID;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.codec.binary.Base64;
-import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,6 +107,7 @@ import com.devnexus.ting.repository.TicketGroupRepository;
 import com.devnexus.ting.repository.TrackRepository;
 import com.devnexus.ting.repository.UserCalendarRepository;
 import com.devnexus.ting.web.controller.UserNotLoggedInException;
+import com.twelvemonkeys.image.ResampleOp;
 
 /**
  *
@@ -507,9 +508,13 @@ public class BusinessServiceImpl implements BusinessService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	@Transactional
 	public Organizer saveOrganizer(Organizer organizer) {
-		return organizerDao.save(organizer);
+		final Organizer savedOrganizer = transactionTemplate.execute(new TransactionCallback<Organizer>() {
+			public Organizer doInTransaction(TransactionStatus status) {
+				return organizerDao.save(organizer);
+			}
+		});
+		return savedOrganizer;
 	}
 
 	@Override
@@ -923,7 +928,10 @@ public class BusinessServiceImpl implements BusinessService {
 				BufferedImage image;
 				try {
 					image = ImageIO.read(bais);
-					final BufferedImage scaled = Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, size);
+
+					BufferedImageOp resampler = new ResampleOp(size, size, ResampleOp.FILTER_LANCZOS);
+					BufferedImage scaled = resampler.filter(image, null);
+
 					final ByteArrayOutputStream out = new ByteArrayOutputStream();
 					ImageIO.write(scaled, "PNG", out);
 
@@ -1033,9 +1041,9 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	@Override
-	public List findRegistrations(String email, String name, EventSignup signUp) {
+	public List<RegistrationDetails> findRegistrations(String email, String name, EventSignup signUp) {
 
-		List<List> results = new ArrayList<>();
+		List<RegistrationDetails> results = new ArrayList<>();
 
 		if (name != null && !name.isEmpty()) {
 			String[] names = name.split(" ");
@@ -1045,7 +1053,7 @@ public class BusinessServiceImpl implements BusinessService {
 			results.addAll(registrationDao.findOrdersWithContactEmail(email, signUp));
 		}
 
-		return new ArrayList<>(results);
+		return results;
 
 	}
 

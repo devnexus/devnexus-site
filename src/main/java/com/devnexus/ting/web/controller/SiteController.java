@@ -16,6 +16,7 @@
 package com.devnexus.ting.web.controller;
 
 import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImageOp;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -31,7 +32,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.tomcat.util.http.fileupload.FileUploadBase.FileSizeLimitExceededException;
 import org.apache.tomcat.util.http.fileupload.FileUploadBase.SizeLimitExceededException;
-import org.imgscalr.Scalr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +60,7 @@ import com.devnexus.ting.model.SpeakerList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
 import com.devnexus.ting.model.TwitterMessage;
+import com.twelvemonkeys.image.ResampleOp;
 
 /**
  * Main DevNexus Site Controller - Contains various simple controllers for various
@@ -139,7 +140,7 @@ public class SiteController {
 	public String conferenceInfo() {
 		return "conference-info";
 	}
-        
+
 	@RequestMapping("/s/about")
 	public String about() {
 		return "about";
@@ -159,8 +160,6 @@ public class SiteController {
 	public String codeOfConduct() {
 		return "code-of-conduct";
 	}
-        
-        
 
 	@RequestMapping("/s/workshop-instructions")
 	public String workshopInstructions() {
@@ -242,8 +241,9 @@ public class SiteController {
 					final BufferedImage imageToReturn;
 					image = ImageIO.read(bais);
 
-					if (image.getWidth() != 140 && image.getHeight() != 140) {
-						imageToReturn =  Scalr.resize(image, Scalr.Method.ULTRA_QUALITY, Scalr.Mode.FIT_EXACT, 140, 140);
+					if (image.getWidth() != 310 && image.getHeight() != 360) {
+						BufferedImageOp resampler = new ResampleOp(310, 360, ResampleOp.FILTER_LANCZOS);
+						imageToReturn = resampler.filter(image, null);
 					}
 					else {
 						imageToReturn = image;
@@ -344,6 +344,11 @@ public class SiteController {
 
 		return "social";
 
+	}
+
+	@RequestMapping("/s/sponsor-exhibitor-kit")
+	public String sponsorExhibitorKit() {
+		return "sponsor-exhibitor-kit";
 	}
 
 	@MessageExceptionHandler

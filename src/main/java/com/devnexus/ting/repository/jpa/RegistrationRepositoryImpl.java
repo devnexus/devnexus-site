@@ -71,7 +71,7 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 	public List<RegistrationDetails> findPurchasedForEvent(Event event) {
 		return entityManager
 				.createQuery(
-						"from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)")
+						"from RegistrationDetails where event.id = :eventId and (paymentState=:PAID or paymentState=:INVOICED)", RegistrationDetails.class)
 				.setParameter("PAID", RegistrationDetails.PaymentState.PAID)
 				.setParameter("INVOICED", RegistrationDetails.PaymentState.INVOICED)
 				.setParameter("eventId", event.getId()).getResultList();
@@ -79,14 +79,14 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 
 	@Override
 	public List<RegistrationDetails> findAllForEvent(Event event) {
-		return entityManager.createQuery("from RegistrationDetails where event.id = :eventId")
+		return entityManager.createQuery("from RegistrationDetails where event.id = :eventId", RegistrationDetails.class)
 				.setParameter("eventId", event.getId()).getResultList();
 	}
 
 	@Override
 	public List<RegistrationDetails> findIncompletePaypalOrdersForEvent(Event event) {
 		return entityManager
-				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAYPAL_PENDING)")
+				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:PAYPAL_PENDING)", RegistrationDetails.class)
 				.setParameter("PAYPAL_PENDING", RegistrationDetails.PaymentState.PAYPAL_CREATED)
 				.setParameter("eventId", event.getId()).getResultList();
 	}
@@ -94,19 +94,20 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 	@Override
 	public List<RegistrationDetails> findOrdersRequestingInvoiceForEvent(Event event) {
 		return entityManager
-				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)")
+				.createQuery("from RegistrationDetails where event.id = :eventId and (paymentState=:REQUIRES_INVOICE)", RegistrationDetails.class)
 				.setParameter("REQUIRES_INVOICE", RegistrationDetails.PaymentState.REQUIRES_INVOICE)
 				.setParameter("eventId", event.getId()).getResultList();
 	}
 
 	@Override
-	public List findOrdersWithContactEmail(String email, EventSignup signUp) {
-		List<Object[]> results = entityManager
+	public List<RegistrationDetails> findOrdersWithContactEmail(String email, EventSignup signUp) {
+		List<RegistrationDetails> results = entityManager
 				.createQuery(
-						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)")
+						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)",
+						RegistrationDetails.class)
 				.setParameter("event_id", signUp.getEvent().getId()).setParameter("email", email)
 				.setParameter("ticket_email", email).getResultList();
-		List detailsFromEmail = new ArrayList();
+		List<RegistrationDetails> detailsFromEmail = new ArrayList<>();
 		results.stream().forEach(objects -> {
 			detailsFromEmail.addAll(Arrays.asList(objects));
 		});
@@ -114,16 +115,17 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 	}
 
 	@Override
-	public List findOrdersWithContactName(String[] namesA, EventSignup signUp) {
+	public List<RegistrationDetails> findOrdersWithContactName(String[] namesA, EventSignup signUp) {
 		String fullName = StringUtils.arrayToDelimitedString(namesA, " ");
-		List names = Arrays.asList(namesA);
-		List<Object[]> resultList = entityManager
+		List<String> names = Arrays.asList(namesA);
+		List<RegistrationDetails> resultList = entityManager
 				.createQuery(
-						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))")
+						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))",
+						RegistrationDetails.class)
 				.setParameter("event_id", signUp.getEvent().getId()).setParameter("name", "%" + fullName + "%")
 				.setParameter("first_names", names).setParameter("last_names", names).getResultList();
 
-		List detailsFromEmail = new ArrayList();
+		List<RegistrationDetails> detailsFromEmail = new ArrayList<>();
 		resultList.stream().forEach(objects -> {
 			detailsFromEmail.addAll(Arrays.asList(objects));
 		});
