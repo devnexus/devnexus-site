@@ -19,52 +19,271 @@
 
 </section>
 
-<section class="container-fluid schedule" >
-    <div class="conference-information">
-        <p style="text-align: center">We are preparing our schedule for 2017.  Please join our mailing list to be informed of updates.</p>
-    </div>    
-    <div class="col-md-8 col-md-offset-2">
+<section class="container-fluid schedule schedule-config" >
+    <h1 class="featured-header">
+        SCHEDULE
+        <span class="visible-xs visible-sm" style="float: right; padding-right: 40px;">
+            <a style="font-size: 10pt; color: rgb(220, 78, 65);vertical-align: middle" href="#">Customize</a>
+        </span>
+    </h1>
 
-        <div class="col-md-8 col-md-offset-2"style="margin-bottom: 1em;">
-
-            <!-- Begin MailChimp Signup Form -->
-
-            <style type="text/css">
-                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-            </style>
-            <div id="mc_embed_signup">
-                <form action="//ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=a1fba8f26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll" class="conference-information ">
-
-                        <div class="mc-field-group">
-
-                            <input style="height:80px;font-size: 20px;border-radius: 0;font-weight: normal;width:100%" type="email" placeholder="E-Mail Address" value="" name="EMAIL" class="required email input-control" id="mce-EMAIL">
-                        </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0b3b17489713c9e7c62595dd3_a1fba8f26f" tabindex="-1" value=""></div>
-                        <input style="margin-top: 50px; color: white;background-color: black;border-radius: 0"type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class=" btn btn-primary btn-block">
-
-                    </div>
-                </form>
-            </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function ($) {
-                    window.fnames = new Array();
-                    window.ftypes = new Array();
-                    fnames[0] = 'EMAIL';
-                    ftypes[0] = 'email';
-                    fnames[1] = 'FNAME';
-                    ftypes[1] = 'text';
-                    fnames[2] = 'LNAME';
-                    ftypes[2] = 'text';
-                }(jQuery));
-                var $mcj = jQuery.noConflict(true);</script>
-            <!--End mc_embed_signup-->
+    <div class="row hidden-xs">
+        <div class="text-center">
+            <button class="btn customize"><span class="badge"><img src="/assets/img/google-plus-2.png" class="icon"/></span>custom schedule</button>
+            <button class="btn download">download</button>  
         </div>
     </div>
+
+    <div class="row hidden-xs" id="schedule-day-filter">
+        <div class="text-center">
+            <div class="btn-group" role="group" >
+                <button type="button" class="btn btn-default "><span class="big">Day 1</span><br><span class="little">02/20/2017</span></button>
+                <button type="button" class="btn btn-default unselected "><span class="big">Day 2</span><br><span class="little">02/21/2017</span></button>
+                <button type="button" class="btn btn-default unselected"><span class="big">Day 3</span><br><span class="little">02/22/2017</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row visible-xs sub-filter" id="schedule-day-dropdown-filter">
+
+        <div class="btn-group" >
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Day 1 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Day 1</a></li>
+                <li><a href="#">Day 2</a></li>
+                <li><a href="#">Day 3</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container-fluid schedule" >
+
+
+    <c:set value="" var="loopStartTime"/>
+    <c:set value="" var="loopDay"/>
+
+    <c:forEach items="${scheduleItemList.scheduleItems}" var="scheduleItem">
+
+        <fmt:formatDate pattern="H_m_s" value="${scheduleItem.fromTime}" var="currentStartTime"/>
+        <fmt:formatDate pattern="d"     value="${scheduleItem.fromTime}" var="currentDay"/>
+        <!-- check is we are are a day boundary and create new table -->
+        <c:if test="${empty loopDay or (currentDay != loopDay)}">
+
+            <c:if test="${not empty loopDay}">
+            </div>
+        </c:if>
+        <div class="row">
+            <div class="row text-center row-eq-height schedule-header">
+                <h2><fmt:formatDate pattern="EEEE MMMM d, yyyy" value="${scheduleItem.fromTime}"/></h2>
+            </div>
+
+        </c:if>
+        <!-- end check is we are are a day boundary and create new table -->
+
+
+        <c:choose>
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeRegistration}">
+                <div class="row schedule-row">
+                    <div class="col-sm-8 col-xs-12 name">
+                        <c:out value="${scheduleItem.title}"/><br>
+                    </div>
+                    
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+            </c:when>
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeAdminsitrative}">
+                <div class="row schedule-row">
+                    <div class="col-sm-8 col-xs-12 name">
+                        <c:out value="${scheduleItem.title}"/><br>
+                    </div>
+                    
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+            </c:when>
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeBreak}">
+                <div class="row schedule-row">
+                    <div class="col-sm-8 col-xs-12 name">
+                        <c:out value="${scheduleItem.title}"/><br>
+                    </div>
+                    
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+            </c:when>
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeSession}">
+
+                <c:if test="${scheduleItem.rowspan > 1}">
+                    </div>
+                    <div class="row">
+                    <div class=" breakouts row text-center row-eq-height schedule-header">
+                        <h2>Breakouts <fmt:formatDate pattern="hh:mm a" value="${scheduleItem.fromTime}"/></h2>
+                    </div>
+                    
+                </c:if>
+
+                <div class="row schedule-row">
+                    <div class="col-sm-6 col-xs-12 name">
+                        <c:choose>
+                            <c:when test="${not empty scheduleItem.presentation}">
+                                <c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+                                <a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
+                            </c:when>
+                            <c:otherwise>
+                                <c:out value="${scheduleItem.title}" default="N/A"/>
+                            </c:otherwise>
+                        </c:choose><br>
+                        <span class="small">
+                            <c:choose>
+                                <c:when test="${not empty scheduleItem.presentation.speakers}">
+                                    <c:forEach var="speaker" items="${scheduleItem.presentation.speakers}" varStatus="speakerStatus">
+                                        <c:if test="${speakerStatus.index ne 0}">,</c:if>
+
+                                        ${speaker.firstName} ${speaker.lastName}
+                                    </c:forEach>
+                                </c:when>
+                                <c:otherwise>
+                                    N/A
+                                </c:otherwise>
+                            </c:choose>
+                        </span>
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <c:if test="${not empty scheduleItem.room.track}">
+                            <p><c:out value="${scheduleItem.room.track}"/></p>
+                        </c:if>
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+
+            </c:when>
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeKeynote}">
+                
+                <div class="row schedule-row keynote">
+                    <div class="col-sm-6 col-xs-12 name">
+                        <c:choose>
+                            <c:when test="${not empty scheduleItem.presentation}">
+                                <c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+                                <a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
+                            </c:when>
+                            <c:otherwise>
+                                <c:out value="${scheduleItem.title}" default="N/A"/>
+                            </c:otherwise>
+                        </c:choose><br>
+                        <span class="small">
+                            <c:choose>
+                                <c:when test="${not empty scheduleItem.presentation.speakers}">
+                                    <c:forEach var="speaker" items="${scheduleItem.presentation.speakers}" varStatus="speakerStatus">
+                                        <c:if test="${speakerStatus.index ne 0}">,</c:if>
+
+                                        ${speaker.firstName} ${speaker.lastName}
+                                    </c:forEach>
+                                </c:when>
+                                <c:otherwise>
+                                    N/A
+                                </c:otherwise>
+                            </c:choose>
+                        </span>
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <c:if test="${not empty scheduleItem.room.track}">
+                            <p><c:out value="${scheduleItem.room.track}"/></p>
+                        </c:if>
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+
+            </c:when>
+        </c:choose>
+
+
+        <c:set var="loopDay" value="${currentDay}" />
+
+    </c:forEach>
+
+    <c:if test="${not empty loopDay}">
+    </div>
+</c:if>
+
+
+<div class="row">
+    <div class="row text-center row-eq-height schedule-header">
+        <h2>BREAKOUT #1</h2>
+    </div>
+
+    <div class="row schedule-row">
+        <div class="col-sm-6 col-xs-12 name">
+            FirstName LastName<br>
+            <span class="small">Name of Presentaion</span>
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Track
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Room Location
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            00:00AM - 00:00AM
+        </div>
+    </div>
+    <div class="row schedule-row">
+        <div class="col-sm-6 col-xs-12 name">
+            FirstName LastName<br>
+            <span class="small">Name of Presentaion</span>
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Track
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Room Location
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            00:00AM - 00:00AM
+        </div>
+    </div>
+    <div class="row schedule-row">
+        <div class="col-sm-6 col-xs-12 name">
+            FirstName LastName<br>
+            <span class="small">Name of Presentaion</span>
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Track
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            Room Location
+        </div>
+        <div class="col-sm-2 col-xs-12 text-center">
+            00:00AM - 00:00AM
+        </div>
+    </div>
+</div>
 
 </section>
