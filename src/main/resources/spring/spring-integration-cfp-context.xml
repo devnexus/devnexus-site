@@ -14,6 +14,12 @@
 								ref="prepareMailToSpeakerTransformer">
 		</int:transformer>
 
+		<int:transformer id="prepareAcceptedSessionMailToSpeaker"
+								input-channel="acceptedSessionMailChannel"
+								output-channel="sendMailChannel"
+								ref="prepareAcceptedSessionMailToSpeakerTransformer">
+		</int:transformer>
+
 		<int:transformer id="prepareMailToRegister"
 								input-channel="registrationMailChannel"
 								output-channel="sendMailChannel"

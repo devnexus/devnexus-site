@@ -1,0 +1,38 @@
+Dear {{{salutation}}},
+
+We have some great news and are delighted to let you know that we have accepted
+your submission for DevNexus 2017 and look forward to hosting you in Atlanta in
+February. Please visit https://devnexus.com/s/speakers and check that all the
+information that we have about your session, bio and other links are correct and
+current.
+
+We will email you important logistic information in the next two weeks, please
+be on the lookout for it! It will contain info about the speaker dinner, hotel
+booking info, and other logistics.
+
+Please contact us at info@ajug.org if you have any questions.
+
+On behalf of the Atlanta Java Users Group and DevNexus organizing committee,
+thank you so much for your participation and for helping to make this such a great
+community event!!
+
+Your accepted session:
+======================
+
+Title: {{{title}}}
+
+{{#speakers}}
+======================
+Speaker
+======================
+
+First Name:       {{{firstName}}}
+Last Name:        {{{lastName}}}
+
+{{/speakers}}
+
+Thanks a million!
+
+Cheers,
+
+The DevNexus organizers

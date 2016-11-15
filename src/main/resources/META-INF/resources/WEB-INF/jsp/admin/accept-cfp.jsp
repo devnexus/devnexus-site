@@ -223,43 +223,6 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-8 col-md-offset-2">
-
-		<spring:bind path="evaluation.*">
-			<c:if test="${not empty status.errorMessages}">
-				<div class="alert alert-danger fade in"
-					><a href="#" data-dismiss="alert" class="close">&times;</a>
-					<c:forEach var="error" items="${status.errorMessages}"
-						><c:out value="${error}" escapeXml="false"/><br/>
-					</c:forEach>
-				</div>
-			</c:if>
-		</spring:bind>
-
-		<form:form id="evaluationForm" method="post" modelAttribute="evaluation">
-			<form:hidden path="event.id"/>
-			<div class="form-group text-center">
-				<h3>How likely are you to recommend this CFP?</h3>
-				<div class="stars text-center">
-					<input type="hidden" id="rating" name="rating"/>
-					<div id="raty" style="font-size: 1.0rem; margin-left: auto; margin-right: auto;"></div>
-					<form:errors path="rating" cssClass="fieldError"/>
-				</div>
-			</div>
-			<div class="form-group text-center">
-				<h3>Please let us know the main reasons you provided the score above.</h3>
-				<form:textarea cssClass="form-control" path="comment" id="slotPreference" tabindex="2" rows="5" maxLength="1000"/>
-				<form:errors path="comment" cssClass="fieldError" />
-			</div>
-			<div class="form-group">
-				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-default" lang="save" tabindex="19">Submit</button>
-				</div>
-			</div>
-		</form:form>
-	</div>
-</div>
 <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -295,17 +258,6 @@
 		$('textarea').maxlength({
 			alwaysShow: true
 		});
-
-		$('#raty').raty({
-			number: 10,
-			size: 27,
-			target : '#rating',
-			targetKeep  : true,
-			hints: ['lousy', 'pretty bad', 'poor', 'meh' , 'average', 'ok', 'good', 'very good', 'awesome', 'it rocks'],
-			targetType: 'score',
-			starOff : '${ctx}/assets/img/evaluations/staroff.png',
-			starOn  : '${ctx}/assets/img/evaluations/staron.png'
-			});
 
 	});
 <!--

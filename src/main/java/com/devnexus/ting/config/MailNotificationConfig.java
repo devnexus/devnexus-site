@@ -35,6 +35,7 @@ import com.devnexus.ting.config.support.AmazonSettings;
 import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.integration.AmazonSesSender;
 import com.devnexus.ting.core.service.integration.GenericEmailToMimeMessageTransformer;
+import com.devnexus.ting.core.service.integration.PrepareAcceptedSessionMailToSpeakerTransformer;
 import com.devnexus.ting.core.service.integration.PrepareMailToRegisterTransformer;
 import com.devnexus.ting.core.service.integration.PrepareMailToSpeakerTransformer;
 import com.devnexus.ting.core.service.integration.SendgridSender;
@@ -66,9 +67,23 @@ public class MailNotificationConfig {
 	}
 
 	@Bean
+	public QueueChannel acceptedSessionMailChannel() {
+		return new QueueChannel();
+	}
+
+	@Bean
 	@Profile({SpringProfile.MAIL_ENABLED})
 	public PrepareMailToSpeakerTransformer prepareMailToSpeakerTransformer() {
 		PrepareMailToSpeakerTransformer transformer = new PrepareMailToSpeakerTransformer();
+		transformer.setCcUser(mailSettings.getUser().getCc());
+		transformer.setFromUser(mailSettings.getUser().getFrom());
+		return transformer;
+	}
+
+	@Bean
+	@Profile({SpringProfile.MAIL_ENABLED})
+	public PrepareAcceptedSessionMailToSpeakerTransformer prepareAcceptedSessionMailToSpeakerTransformer() {
+		PrepareAcceptedSessionMailToSpeakerTransformer transformer = new PrepareAcceptedSessionMailToSpeakerTransformer();
 		transformer.setCcUser(mailSettings.getUser().getCc());
 		transformer.setFromUser(mailSettings.getUser().getFrom());
 		return transformer;

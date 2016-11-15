@@ -93,7 +93,7 @@ public class OrganizerController {
 			return "/admin/add-organizer";
 		}
 
-		final Organizer organizerFromDb = businessService.getOrganizer(organizerId);
+		final Organizer organizerFromDb = businessService.getOrganizerWithPicture(organizerId);
 
 		if (request.getParameter("delete") != null) {
 			businessService.deleteOrganizer(organizerFromDb);
@@ -123,7 +123,7 @@ public class OrganizerController {
 			}
 
 			try {
-
+				pictureData.getId();
 				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
 				pictureData.setFileSize(pictureFile.getSize());
 				pictureData.setFileModified(new Date());

@@ -25,6 +25,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.Assert;
@@ -33,6 +35,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.devnexus.ting.config.support.MailSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
@@ -53,6 +56,12 @@ public class AcceptCfpController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AcceptCfpController.class);
 
 	@Autowired private BusinessService businessService;
+
+	@Autowired
+	private MailSettings mailSettings;
+
+	@Autowired
+	private MessageChannel acceptedSessionMailChannel;
 
 	private void prepareReferenceData(ModelMap model) {
 
@@ -159,7 +168,11 @@ public class AcceptCfpController {
 				"Presentation added with id '%s'.", savedPresentation.getId()));
 
 		cfpSubmissionFromDb.setStatus(CfpSubmissionStatusType.ACCEPTED);
-		businessService.saveCfpSubmission(cfpSubmissionFromDb);
+		final CfpSubmission acceptedCfpSubmission = businessService.saveCfpSubmission(cfpSubmissionFromDb);
+
+		if (mailSettings.isEmailEnabled()) {
+			acceptedSessionMailChannel.send(MessageBuilder.withPayload(acceptedCfpSubmission).build());
+		}
 
 		//FlashMap.setSuccessMessage("The speaker was edited successfully.");
 		return "redirect:/s/admin/{eventKey}/cfps";

@@ -331,6 +331,38 @@ public final class SystemInformationUtils {
 		return template;
 	}
 
+	public static String getAcceptedSessionHtmlEmailTemplate() {
+
+		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-accepted-email.html");
+
+		final String template;
+
+		try {
+			template = IOUtils.toString(is, Charset.forName("UTF-8"));
+		}
+		catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+		return template;
+	}
+
+	public static String getAcceptedSessionTextEmailTemplate() {
+
+		final InputStream is = SystemInformationUtils.class.getResourceAsStream("/templates/mail/cfp-accepted-email.txt");
+
+		final String template;
+
+		try {
+			template = IOUtils.toString(is, Charset.forName("UTF-8"));
+		}
+		catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+
+		return template;
+	}
+
 	/**
 	 *
 	 * @return
