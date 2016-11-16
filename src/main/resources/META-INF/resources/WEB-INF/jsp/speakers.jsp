@@ -38,7 +38,7 @@
                     <div class="thumbnail" id="${speaker.firstName}_${speaker.lastName}">
                         <img class="img-responsive" src="${speaker.pictureSerialized}" alt="${speaker.firstName} ${speaker.lastName}">
                         <div class="caption">
-                            <h3>${speaker.firstName} ${speaker.lastName}</h3>
+                            <h3><a href="speakers/${speaker.id}">${speaker.firstName} ${speaker.lastName}</a></h3>
                             <p>${speaker.company}&nbsp;</p>
                         </div>
                     </div>
