@@ -2,9 +2,7 @@ Dear {{{salutation}}},
 
 We have some great news and are delighted to let you know that we have accepted
 your submission for DevNexus 2017 and look forward to hosting you in Atlanta in
-February. Please visit https://devnexus.com/s/speakers and check that all the
-information that we have about your session, bio and other links are correct and
-current.
+February.
 
 We will email you important logistic information in the next two weeks, please
 be on the lookout for it! It will contain info about the speaker dinner, hotel
