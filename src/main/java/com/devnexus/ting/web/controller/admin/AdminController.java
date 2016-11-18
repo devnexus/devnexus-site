@@ -15,15 +15,22 @@
  */
 package com.devnexus.ting.web.controller.admin;
 
+import java.awt.image.BufferedImage;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Validator;
@@ -48,9 +55,14 @@ import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.io.CsvBeanWriter;
 import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
+import org.zeroturnaround.zip.ByteSource;
+import org.zeroturnaround.zip.ZipEntrySource;
+import org.zeroturnaround.zip.ZipUtil;
+import org.zeroturnaround.zip.commons.IOUtils;
 
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.core.service.UserService;
+import com.devnexus.ting.model.CfpSpeakerImage;
 import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.CfpSubmissionSpeaker;
 import com.devnexus.ting.model.CfpSubmissionStatusType;
@@ -108,6 +120,68 @@ public class AdminController {
 		}
 		model.addAttribute("cacheStats", cacheStats);
 		return "/admin/index";
+	}
+
+	@RequestMapping("/s/admin/{eventKey}/download-cfp-speaker-images")
+	public void downloadCfpSpeakerImagesForEvent(@PathVariable("eventKey") String eventKey, HttpServletResponse response)
+			throws IOException {
+		final Event event = businessService.getEventByEventKey(eventKey);
+		final String zipFileName = event.getEventKey() + "-accepted-speaker-images.zip";
+
+		final List<CfpSubmission> cfpSubmissions = businessService.getCfpSubmissions(event.getId());
+
+		final Set<CfpSubmissionSpeaker> speakersWithPictures = new HashSet<>();
+
+		for (CfpSubmission cfpSubmission : cfpSubmissions) {
+
+			if (!CfpSubmissionStatusType.ACCEPTED.equals(cfpSubmission.getStatus())) {
+				for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getCfpSubmissionSpeakers()) {
+					CfpSubmissionSpeaker cfpSubmissionSpeakerWithPicture = businessService.getCfpSubmissionSpeakerWithPicture(cfpSubmissionSpeaker.getId());
+					if (cfpSubmissionSpeakerWithPicture.getCfpSpeakerImage() != null) {
+						speakersWithPictures.add(cfpSubmissionSpeakerWithPicture);
+					}
+
+				}
+			}
+		}
+
+		response.setContentType("application/octet-stream");
+
+		final String headerKey = "Content-Disposition";
+		final String headerValue = String.format("attachment; filename=\"%s\"", zipFileName);
+		response.setHeader(headerKey, headerValue);
+
+		List<ZipEntrySource> entries = new ArrayList<>();
+
+		for (CfpSubmissionSpeaker cfpSubmissionSpeaker : speakersWithPictures) {
+			CfpSpeakerImage image = cfpSubmissionSpeaker.getCfpSpeakerImage();
+
+			ByteArrayInputStream bais = new ByteArrayInputStream(image.getFileData());
+			BufferedImage bufferedImage = ImageIO.read(bais);
+
+			final String suffix;
+			if ("image/png".equals(image.getType())) {
+				suffix = ".png";
+			}
+			else {
+				suffix = ".jpg";
+			}
+
+			final ZipEntrySource entry = new ByteSource(cfpSubmissionSpeaker.getId() + "_"
+					+ cfpSubmissionSpeaker.getFirstName() + "_" + cfpSubmissionSpeaker.getLastName()
+					+ "_" + bufferedImage.getWidth() + "x" + bufferedImage.getWidth() + suffix, image.getFileData());
+
+			entries.add(entry);
+		}
+
+		OutputStream out = null;
+		try {
+			out = new BufferedOutputStream(response.getOutputStream());
+			ZipUtil.pack(entries.toArray(new ZipEntrySource[entries.size()]), out);
+		}
+		finally {
+			IOUtils.closeQuietly(out);
+		}
 	}
 
 	@RequestMapping("/s/admin/{eventKey}/download-accepted-speakers")

@@ -24,7 +24,8 @@ import org.springframework.util.Assert;
  */
 public enum SponsorLevel {
 
-	PLATINUM(100L, "Platinum Sponsor", "sponsorsPlatium"),
+	UNOBTAINIUM(50L, "Unobtanium Sponsor", "sponsorsUnobtainium"),
+	PLATINUM(100L, "Platinum Sponsor", "sponsorsPlatinum"),
 	GOLD( 200L, "Gold Sponsor", "sponsorsGold"),
 	SILVER( 300L, "Silver Sponsor", "sponsorsSilver"),
 	MEDIA_PARTNER(350L, "Media Partner", "sponsorsMediaPartner"),

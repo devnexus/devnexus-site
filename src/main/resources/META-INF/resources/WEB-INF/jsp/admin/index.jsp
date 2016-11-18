@@ -75,6 +75,7 @@
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-accepted-speakers">Download Accepted Speakers (CSV)</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-rejected-speakers">Download Rejected Speakers (CSV)</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-schedule">Download Schedule (CSV)</a></li>
+						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/download-cfp-speaker-images">Download All CFP Speaker Images of Accepted Speakers (ZIP)</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/upload-schedule">Upload Schedule (CSV)</a></li>
 					</sec:authorize>
 					<sec:authorize access="hasRole('CFP_REVIEWER') or hasRole('ADMIN')">
