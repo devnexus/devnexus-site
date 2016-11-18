@@ -225,6 +225,9 @@ public class Presentation extends BaseModelObject implements Comparable<Presenta
 	}
 
 	public String getTagsAsText() {
+                if (tagsAsText == null || tagsAsText.isEmpty()) {
+                    convertPresentationTagsToText();
+                }
 		return tagsAsText;
 	}
 

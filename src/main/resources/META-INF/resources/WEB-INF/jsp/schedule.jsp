@@ -14,7 +14,7 @@
 
 <section class="container-fluid schedule-config" >
     <h1 class="featured-header">
-        SCHEDULE COMING SOON
+        We are currently finalizing the schedule.
     </h1>
 
 </section>
@@ -27,7 +27,7 @@
         </span>
     </h1>
 
-    <div class="row hidden-xs">
+<!--    <div class="row hidden-xs">
         <div class="text-center">
             <button class="btn customize"><span class="badge"><img src="/assets/img/google-plus-2.png" class="icon"/></span>custom schedule</button>
             <button class="btn download">download</button>  
@@ -57,7 +57,7 @@
             </ul>
         </div>
 
-    </div>
+    </div>-->
 
 <!--    <div class="row sub-filter" >
          Single button 
@@ -248,3 +248,4 @@
 
 
 </section>
+<br/>
