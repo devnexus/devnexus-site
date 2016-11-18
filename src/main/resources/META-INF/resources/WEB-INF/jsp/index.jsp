@@ -304,7 +304,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/Deane_Jeremy.jpg" alt="Enterprise Messaging Foundations">
                             <div class="caption">
-                                <h3>Enterprise Messaging Foundations</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15528">Enterprise Messaging Foundations</a></h3>
                                 <p>Jeremy Deane</p>
                             </div>
                         </div>
@@ -313,7 +313,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/Anandan_Sabby.jpg" alt="Microservices based Streaming and Batch Data Processing">
                             <div class="caption">
-                                <h3>Microservices based Streaming and Batch Data Processing</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15480">Microservices based Streaming and Batch Data Processing</a></h3>
                                 <p>Sabby Anandan, Glenn Renfro</p>
 
                             </div>
@@ -323,7 +323,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/Benevides.png" alt="Hands-on with Docker, Kubernetes and OpenShift">
                             <div class="caption">
-                                <h3>Hands-on with Docker, Kubernetes and OpenShift</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15489">Hands-on with Docker, Kubernetes and OpenShift</a></h3>
                                 <p>Rafael Benevides, Burr Sutter, Ray Tsang</p>
                             </div>
                         </div>
@@ -332,7 +332,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/Jaeckel_Marlene.png" alt="Learn about Wearables">
                             <div class="caption">
-                                <h3>Learn about Wearables</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15485">Learn about Wearables</a></h3>
                                 <p>Lance Gleason, Marlene Jaeckel</p>
                             </div>
                         </div>
@@ -341,7 +341,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/nick_raboy.jpg" alt="Full Stack Development with Java and NoSQL">
                             <div class="caption">
-                                <h3>Full Stack Development with Java and NoSQL</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15486">Full Stack Development with Java and NoSQL</a></h3>
                                 <p>Nic Raboy</p>
                             </div>
                         </div>
@@ -350,7 +350,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/VenkatSubramaniam.jpg" alt="Building Reactive Applications">
                             <div class="caption">
-                                <h3>Building Reactive Applications</h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15529"Building Reactive Applications</a></h3>
                                 <p>Venkat Subramaniam</p>
                             </div>
                         </div>
