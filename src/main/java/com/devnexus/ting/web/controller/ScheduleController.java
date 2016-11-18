@@ -46,6 +46,7 @@ public class ScheduleController {
 
 	private String prepareSchedule(Event event, final Model model) {
 		model.addAttribute("event", event);
+                model.addAttribute("tracks", businessService.getTracksForEvent(event.getId()));
 		model.addAttribute("contextEvent", event);
 
 		if (event != null) {
