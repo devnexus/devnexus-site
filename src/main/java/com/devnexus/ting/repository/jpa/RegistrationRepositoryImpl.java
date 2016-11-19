@@ -103,7 +103,7 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 	public List<RegistrationDetails> findOrdersWithContactEmail(String email, EventSignup signUp) {
 		List<RegistrationDetails> results = entityManager
 				.createQuery(
-						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)",
+						"select details from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactEmailAddress = :email or orderDetails.emailAddress = :ticket_email)",
 						RegistrationDetails.class)
 				.setParameter("event_id", signUp.getEvent().getId()).setParameter("email", email)
 				.setParameter("ticket_email", email).getResultList();
@@ -120,7 +120,7 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 		List<String> names = Arrays.asList(namesA);
 		List<RegistrationDetails> resultList = entityManager
 				.createQuery(
-						"from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))",
+						"select details from RegistrationDetails details inner join details.orderDetails orderDetails where details.event.id = :event_id and (details.contactName LIKE :name or orderDetails.firstName in (:first_names) or orderDetails.lastName in (:last_names))",
 						RegistrationDetails.class)
 				.setParameter("event_id", signUp.getEvent().getId()).setParameter("name", "%" + fullName + "%")
 				.setParameter("first_names", names).setParameter("last_names", names).getResultList();
