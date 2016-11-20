@@ -36,6 +36,15 @@
 				<span class="help-block">If the field "Registration Reference" in the uploaded file matches an existing registration, replace the old values with these values.</span>
 			</div>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="sendEmail" class="col-lg-2 control-label">Send Registration Email</label>
+                        <form:select cssClass="" path="sendEmail" id="sendEmail" >
+                            <form:option value="true">Yes</form:option>
+                            <form:option value="false">No</form:option>                
+                        </form:select>
+                        
+                    </div>
                         
                     <div class="row hidden-xs">
                         <div class="text-center">

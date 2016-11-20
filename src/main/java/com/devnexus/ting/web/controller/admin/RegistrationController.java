@@ -352,9 +352,10 @@ public class RegistrationController {
                                 detail.setRegistration(tempRegistration);
                             });
                             details = tempRegistration;
-                            businessService.updateRegistration(details);
+                            
+                            businessService.updateRegistration(details, uploadForm.getSendEmail());
                         } catch (EmptyResultDataAccessException ignore) {
-                            businessService.updateRegistration(details);
+                            businessService.updateRegistration(details, uploadForm.getSendEmail());
                         }
                     } else {
                         try {
@@ -362,7 +363,7 @@ public class RegistrationController {
                             hasErrors = true;
                             bindingResult.addError(new ObjectError("registrationFile", "Registration with this key exists, please check \"Replace Registrations\"."));
                         } catch (EmptyResultDataAccessException ignore) {
-                            businessService.updateRegistration(details);
+                            businessService.updateRegistration(details, uploadForm.getSendEmail());
                         }
                     }
 
@@ -556,7 +557,7 @@ public class RegistrationController {
             detail.setRegistration(originalForm);
         });
 
-        businessService.updateRegistration(originalForm);
+        businessService.updateRegistration(originalForm, false);
 
         return "redirect:/s/admin";
     }

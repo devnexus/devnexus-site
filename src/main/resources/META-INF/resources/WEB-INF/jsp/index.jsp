@@ -101,7 +101,7 @@
                 <h1><img src="${ctx}/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
                 <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
 
-                <a class="btn hero-btn-register" style="background-color: #D73224" href="#">CFP CLOSED</a><br/><br/>
+                
                 <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER NOW</a>
 
             </div>
