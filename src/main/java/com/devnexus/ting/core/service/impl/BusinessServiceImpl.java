@@ -901,7 +901,9 @@ public class BusinessServiceImpl implements BusinessService {
 
 			final int size;
 
-			if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
+			if (SponsorLevel.UNOBTAINIUM.equals(sponsor.getSponsorLevel())) {
+				size = large ? 920 : 460;
+			} else if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
 				size = large ? 360 : 180;
 			} else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
 				size = large ? 360 : 140;
