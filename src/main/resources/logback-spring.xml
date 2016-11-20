@@ -42,7 +42,7 @@
 		<level value="INFO"/>
 	</logger>
 	<logger name="ro.isdc.wro">
-		<level value="DEBUG"/>
+		<level value="ERROR"/>
 	</logger>
 
 	<logger name="org.springframework.security">

@@ -116,6 +116,8 @@
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/dashboard">Dashboard</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/reporting">Reporting</a></li>
 						<li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/editRegistration">Edit Registrations</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/groupRegistration">Create Group Registrations</a></li>
+                                                <li><a href="${ctx}${baseSiteUrl}/admin/${eventKey}/uploadRegistration">Upload Group Registrations</a></li>
 					</sec:authorize>
 				</ul>
 			</div>

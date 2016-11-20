@@ -129,7 +129,7 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryCustom 
 		resultList.stream().forEach(objects -> {
 			detailsFromEmail.addAll(Arrays.asList(objects));
 		});
-
+                
 		return detailsFromEmail;
 	}
 
