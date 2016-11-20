@@ -432,7 +432,7 @@
                                 <c:if test="${not status.first}"></div></div></c:if>
                                 <c:set value="${sponsor.sponsorLevel.name}" var="sponsorLevel"/>
                             <div class="row sponsor-section">
-                                <div class="col-lg-2">
+                                <div class="col-md-2">
                                     <c:choose>
                                         <c:when test="${sponsorList.sponsorLevelCount.get(sponsor.sponsorLevel) > 1}">
                                             ${sponsorLevel}s
@@ -442,7 +442,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </div>
-                                <div class="col-lg-10">
+                                <div class="col-md-10">
                                 <a href="${sponsor.link}">
                                     <img title="${sponsor.name}" class="img-responsive" src="${sponsorList.logos[sponsor.id]}" alt="${sponsor.name}"/>
                                 </a>

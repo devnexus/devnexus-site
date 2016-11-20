@@ -65,7 +65,7 @@
 			<label for="pictureFile" class="col-lg-2 control-label">Picture</label>
 			<div class="col-lg-10">
 				<input id="pictureFile" type="file" cssClass="form-control" name="pictureFile" tabindex="4"/>
-				<span class="help-block">Should be 100px x 133px.</span>
+				<span class="help-block">Should be 310px x 360px.</span>
 			</div>
 		</div>
 			<spring:bind path="organizer.bio">

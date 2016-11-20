@@ -134,7 +134,7 @@ public class AdminController {
 
 		for (CfpSubmission cfpSubmission : cfpSubmissions) {
 
-			if (!CfpSubmissionStatusType.ACCEPTED.equals(cfpSubmission.getStatus())) {
+			if (CfpSubmissionStatusType.ACCEPTED.equals(cfpSubmission.getStatus())) {
 				for (CfpSubmissionSpeaker cfpSubmissionSpeaker : cfpSubmission.getCfpSubmissionSpeakers()) {
 					CfpSubmissionSpeaker cfpSubmissionSpeakerWithPicture = businessService.getCfpSubmissionSpeakerWithPicture(cfpSubmissionSpeaker.getId());
 					if (cfpSubmissionSpeakerWithPicture.getCfpSpeakerImage() != null) {
@@ -167,9 +167,11 @@ public class AdminController {
 				suffix = ".jpg";
 			}
 
-			final ZipEntrySource entry = new ByteSource(cfpSubmissionSpeaker.getId() + "_"
-					+ cfpSubmissionSpeaker.getFirstName() + "_" + cfpSubmissionSpeaker.getLastName()
-					+ "_" + bufferedImage.getWidth() + "x" + bufferedImage.getWidth() + suffix, image.getFileData());
+			final ZipEntrySource entry = new ByteSource(
+					cfpSubmissionSpeaker.getFirstName() + "_" + cfpSubmissionSpeaker.getLastName()
+					+ "_" + bufferedImage.getWidth() + "x" + bufferedImage.getWidth() + "_"
+					+ cfpSubmissionSpeaker.getId()
+					+ suffix, image.getFileData());
 
 			entries.add(entry);
 		}

@@ -902,23 +902,23 @@ public class BusinessServiceImpl implements BusinessService {
 			final int size;
 
 			if (SponsorLevel.UNOBTAINIUM.equals(sponsor.getSponsorLevel())) {
-				size = large ? 920 : 460;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.PLATINUM.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 180;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.GOLD.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 140;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.SILVER.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 110;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.BADGE.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 110;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 110;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.DEV_LOUNGE.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 180;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.LANYARD.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 110;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
-				size = large ? 360 : 180;
+				size = large ? 360 : 158;
 			} else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
 				size = large ? 920 : 460;
 			} else {
@@ -931,7 +931,10 @@ public class BusinessServiceImpl implements BusinessService {
 				try {
 					image = ImageIO.read(bais);
 
-					BufferedImageOp resampler = new ResampleOp(size, size, ResampleOp.FILTER_LANCZOS);
+					int height  = size;
+					int width   = height * image.getWidth() / image.getHeight();
+
+					BufferedImageOp resampler = new ResampleOp(width, height, ResampleOp.FILTER_LANCZOS);
 					BufferedImage scaled = resampler.filter(image, null);
 
 					final ByteArrayOutputStream out = new ByteArrayOutputStream();
