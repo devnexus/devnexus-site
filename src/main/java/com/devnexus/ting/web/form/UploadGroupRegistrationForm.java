@@ -15,6 +15,7 @@ public class UploadGroupRegistrationForm {
     
     private MultipartFile registrationFile;
     private Boolean overrideRegistration = Boolean.FALSE;
+    private Boolean sendEmail = Boolean.FALSE;
 
     public MultipartFile getRegistrationFile() {
         return registrationFile;
@@ -30,6 +31,14 @@ public class UploadGroupRegistrationForm {
 
     public void setOverrideRegistration(Boolean overrideRegistration) {
         this.overrideRegistration = overrideRegistration;
+    }
+
+    public Boolean getSendEmail() {
+        return sendEmail;
+    }
+
+    public void setSendEmail(Boolean sendEmail) {
+        this.sendEmail = sendEmail;
     }
     
     

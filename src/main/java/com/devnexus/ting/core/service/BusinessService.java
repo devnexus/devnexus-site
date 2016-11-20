@@ -309,7 +309,7 @@ public interface BusinessService {
 
 	List findRegistrations(String email, String name, EventSignup signUp);
 
-	void updateRegistration(RegistrationDetails originalForm);
+	void updateRegistration(RegistrationDetails originalForm, boolean emailAttendees);
 
 	List<RegistrationDetails> findRegistrationsForEvent(Event event);
 

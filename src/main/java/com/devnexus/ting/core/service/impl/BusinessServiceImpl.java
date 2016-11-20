@@ -1059,8 +1059,11 @@ public class BusinessServiceImpl implements BusinessService {
 
 	@Override
 	@Transactional
-	public void updateRegistration(RegistrationDetails originalForm) {
+	public void updateRegistration(RegistrationDetails originalForm, boolean emailAttendees) {
 		registrationDao.saveAndFlush(originalForm);
+                if (emailAttendees) {
+                    resendRegistrationEmail(originalForm);
+                }
 	}
 
 	@Override
