@@ -61,6 +61,14 @@
                 font-size: 16px;
                 line-height: 20px;
             }
+            .row {
+            	margin-left: 0;
+            	margin-right: 0;
+            }
+            .footer {
+            	margin-left: 0;
+            	margin-right: 0;
+            }
         </style>
     </head>
     <body>
@@ -101,7 +109,7 @@
                 <h1><img src="${ctx}/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
                 <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
 
-                
+
                 <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER NOW</a>
 
             </div>
@@ -110,7 +118,7 @@
 
         <%@ include file="/WEB-INF/jsp/includes/navigation.jsp" %>
 
-        <div class="container-fluid" >
+        <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
 
 
             <div class="row marketing-panel">
@@ -287,7 +295,7 @@
                 <div class="col-xs-12">
                     <h1>Space Is <span class="trump">Limited</span></h1>
                     <p>Register for Dev Nexus today to reserve your spot at Dev Nexus 2017.</p>
-                    <a class="btn btn-register" href="${registrationUrl}">REGISTER</a>
+                    <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER</a>
                 </div>
             </div>
 
@@ -350,7 +358,7 @@
                         <div class="thumbnail">
                             <img class="img-responsive" src="${ctx}/assets/img/VenkatSubramaniam.jpg" alt="Building Reactive Applications">
                             <div class="caption">
-                                <h3><a href="${ctx}/s/devnexus2017/presentations/15529"Building Reactive Applications</a></h3>
+                                <h3><a href="${ctx}/s/devnexus2017/presentations/15529">Building Reactive Applications</a></h3>
                                 <p>Venkat Subramaniam</p>
                             </div>
                         </div>
@@ -476,14 +484,8 @@
 
         <div class="row call-to-action question">
             <h1>Have a <span class="trump">Question</span></h1>
-            <button class="btn hero-btn-register">CONTACT US</button>
+            <a class="btn hero-btn-register" href="mailto:info@ajug.org?subject=DevNexus 2017 - Question">CONTACT US</a>
         </div>
-
-        <style>
-            .footer {
-                margin: 1px -15px;
-            }
-        </style>
 
         <%@ include file="/WEB-INF/jsp/includes/footer.jsp" %>
 
