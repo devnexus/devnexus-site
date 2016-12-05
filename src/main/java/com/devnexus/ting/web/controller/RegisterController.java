@@ -18,6 +18,7 @@ package com.devnexus.ting.web.controller;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,11 +63,6 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.Date;
-import org.joda.time.Interval;
 
 /**
  *
@@ -99,7 +95,7 @@ public class RegisterController {
             Date now = new Date();
             return (now.after(group.getOpenDate()) && now.before(group.getCloseDate()));
         }).collect(Collectors.toList());
-        
+
         List<TicketGroup> invididualTicketGroups = currentTickets.stream().filter((TicketGroup group) -> {
             return group.getMinPurchase() == 1;
         }).collect(Collectors.toList());
@@ -254,6 +250,11 @@ public class RegisterController {
 
     }
 
+    @RequestMapping(value = "/s/payment-successful", method = RequestMethod.GET)
+    public String paymentSuccessFul() {
+        return "payment-successful";
+    }
+
     @RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.POST)
     public String executePayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("payerId") String payerId, Model model) {
 
@@ -279,7 +280,7 @@ public class RegisterController {
         }
         businessService.saveAndEmailPaidRegistration(registerForm, payPalPayment);
 
-        return "payment-successful";
+        return "redirect:/s/payment-successful";
 
         } catch (PayPalRESTException payPalRESTException) {
             Event currentEvent = businessService.getCurrentEvent();

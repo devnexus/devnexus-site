@@ -467,11 +467,11 @@
                 </c:forEach>
 
             </div>
-            <div class="row center-block" style="width: 100%">
-                <a href="${sponsorsUrl}" class="btn btn-square btn-speakers" style="float:none;width: 100%">SEE ALL SPONSORS</a>
-            </div>
-        </div>
 
+        </div>
+		<div class="row">
+			<a href="${sponsorsUrl}" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SPONSORS</a>
+		</div>
         <div class="row call-to-action become-sponsor">
             <div class="col-xs-12">
                 <h1>Become a <span class="trump">Sponsor</span></h1>

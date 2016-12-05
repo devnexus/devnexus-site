@@ -27,7 +27,6 @@ import org.springframework.util.StringUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.impl.GenericEmail;
-import com.devnexus.ting.model.CfpSubmission;
 import com.devnexus.ting.model.RegistrationDetails;
 import com.devnexus.ting.model.TicketOrderDetail;
 import com.github.mustachejava.DefaultMustacheFactory;
@@ -35,7 +34,7 @@ import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
 
 /**
- * Converts a {@link CfpSubmission} and converts it to a {@link GenericEmail}.
+ * Converts {@link RegistrationDetails} to a {@link GenericEmail}.
  *
  * @author Gunnar Hillert
  *

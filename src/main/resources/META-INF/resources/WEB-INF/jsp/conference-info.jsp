@@ -12,9 +12,11 @@
         <h2 class="center-block travel-address"><a href="https://www.google.com/maps/place/Georgia+World+Congress+Center/@33.76042,-84.3980223,17z/data=!4m2!3m1!1s0x0000000000000000:0x0072f65a339b8777">Georgia World Congress Center | 285 Andrew Young International Blvd NW, Atlanta, GA 30303
                 | 404-223-4000</a></h2>
         <p>
-            The Georgia World Congress Center website includes directions to the conference center from several directions as well as the airport.
+            The Georgia World Congress Center website includes directions to the
+            conference center from several directions as well as the airport.
 
-            MARTA, Atlanta’s public transportation system, may be used to reach the conference, and the nearest train stop adjacent to the GWCC.
+            MARTA, Atlanta’s public transportation system, may be used to reach
+            the conference, and the nearest train stop adjacent to the GWCC.
         </p>
     </div>
     <section class="col-lg-6 col-md-12 information-card">
@@ -26,29 +28,39 @@
             GEORGIA WORLD CONGRESS CENTER
         </h2>
         <p>
-            The Georgia World Congress Center (GWCC) is located in downtown Atlanta at 285 Andrew Young Boulevard NW, adjacent to Centennial Olympic Park, the Georgia Dome, CNN Center and Phillips Arena. The Georgia World Congress Center is the third-largest convention center in the United States.
+            The Georgia World Congress Center (GWCC) is located in downtown Atlanta
+            at 285 Andrew Young Boulevard NW, adjacent to Centennial Olympic Park,
+            the Georgia Dome, CNN Center and Phillips Arena.
+		</p>
+		<p>
+            The Georgia World Congress Center is the third-largest convention center
+            in the United States.
         </p>
     </section>
-
     <section class="col-lg-6 col-md-12 information-card">
         <h1>
             PARKING AND TRANSPORTATION
         </h1>
         <img src="${ctx}/assets/img/parking.jpg" alt="PARKING AND TRANSPORTATION">
         <h2>
-            TRANSPORTATION TO THE CONFERENCE
+            TRANSPORTATION TO THE EVENT
         </h2>
         <p>
-            The Georgia World Congress Center Authority operates three surface lots and two parking decks on campus managed by AAA Parking. There are over 5,600 parking spaces to make visiting the GWCCA convenient for guests. Lots are gated with an attendant on duty during all show/event hours. GWCCA Public Safety patrols the lots and decks. Emergency vehicle assistance is available for motorists in distress.<br><br>
-            Public transportation is serviced by the Dome/GWCC/Phillips Arena/CNN Center MARTA station.<br><br>
-            Uber and Lift are also recommended forms of transportation.<br><br>
+            The Georgia World Congress Center Authority operates three surface lots
+            and two parking decks on campus managed by AAA Parking. There are over
+            5,600 parking spaces to make visiting the GWCCA
+            convenient for guests. Lots are gated with an attendant on duty during
+            all show/event hours. GWCCA Public Safety patrols the lots and decks.
+            Emergency vehicle assistance is available for motorists in distress.
+            <br><br>
+            Public transportation is serviced by the Dome/GWCC/Phillips Arena/CNN
+            Center <a target="_BLANK" href="http://www.itsmarta.com/">MARTA</a> station.
+            Uber and Lift are also recommended forms of transportation.
         </p>
     </section>
-
-
     <section class="col-lg-6 col-md-12 information-card">
         <h1>
-            &nbsp;
+            LODGING
         </h1>
         <img src="${ctx}/assets/img/embassy.jpg" alt="EMBASSY SUITES CENTENNIAL OLYMPIC">
         <h2>
@@ -59,5 +71,10 @@
             <br>
             Classic suites include microwaves, minifridges and coffeemakers, plus WiFi (fee), flat-screen TVs and separate living areas with pull-out sofas. Upgraded suites offer dining tables; some add terraces with views.<br>
         </p>
+        <p>
+            We would like to extend a special group rate to DevNexus attendees with
+            Group Name: <strong>DEVNEXUS</strong> and Group Code: <strong>DEV</strong>.
+        </p>
+        <a class="btn hero-btn-register" target="_BLANK" href="http://embassysuites.hilton.com/en/es/groups/personalized/A/ATLESES-DEV-20170221/index.jhtml?WT.mc_id=POG">BOOK NOW</a>
     </section>
 </section>

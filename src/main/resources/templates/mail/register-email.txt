@@ -6,17 +6,22 @@ CONGRATULATIONS.... you are on your way to DevNexus 2017, Atlanta's premier prof
  * DevNexus 2017 conference registration will entitle the named holder entrance to the two-day conference on 23-24 February 2017.
  * DevNexus 2017 workshop registration will entitle the named holder entrance to the workshops on 22 February 2017.
  * The content of DevNexus 2017 is subject to change without notification.
- * Places may be resold and are transferrable by contacting the organizer until 1 February 2017.
+ * Places may be resold and are transferable by contacting the organizer until 1 February 2017.
  * If you require a refund, please send an email to refunds@ajug.org including your Order ID. No refunds will be issued after February 1st 2017.
 
 The Atlanta Java Users Group will not be liable for any direct or indirect damage of any nature arising out of the cancellation of the conference.
 
-Have a question? Contact the organizer at vince.mayers@gmail.com
+Are you looking for a hotel or have transportation questions?
+Please review our Conference Info page for details at:
+
+https://www.devnexus.com/s/conference-info
+
+Do you have further questions? Contact the organizers at info@ajug.org
 
 Order Summary
 
-Order Id : {{orderId}}
-Order Link : https://www.devnexus.com/s/register/{{orderId}}
+Order Id: {{orderId}}
+Order Link: https://www.devnexus.com/s/register/{{orderId}}
 =======================================
 Order Details
 =======================================
@@ -34,5 +39,6 @@ T-Shirt Size:     {{{tShirtSize}}}
 
 Total : ${{{finalPrice}}}
 
-Cheers
-Vincent
+Cheers,
+
+The DevNexus Team
