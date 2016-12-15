@@ -13,9 +13,11 @@ import org.springframework.web.servlet.View;
 public class BulkRegistrationFormView implements View {
 
     private final Workbook wb;
+    private final String filename;
 
-    public BulkRegistrationFormView(Workbook wb) {
+    public BulkRegistrationFormView(Workbook wb, String filename) {
         this.wb = wb;
+        this.filename = filename;
     }
 
     @Override
@@ -26,7 +28,7 @@ public class BulkRegistrationFormView implements View {
     @Override
     public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setContentType(getContentType());
-        response.setHeader("Content-Disposition", "filename=\"registrationForm.xlsx\"");
+        response.setHeader("Content-Disposition", "filename=\"" + filename + "\"");
         wb.write(response.getOutputStream());
     }
     

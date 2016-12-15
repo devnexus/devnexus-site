@@ -434,7 +434,7 @@ public class RegistrationController {
             dataValidation.setSuppressDropDownArrow(true);
             sheet.addValidationData(dataValidation);
 
-            model.setView(new BulkRegistrationFormView(wb));
+            model.setView(new BulkRegistrationFormView(wb, form.getContactName().replace(" ", "_") + "RegistrationFile.xlsx"));
         } else {
             model.setViewName("/admin/group-registration");
         }
