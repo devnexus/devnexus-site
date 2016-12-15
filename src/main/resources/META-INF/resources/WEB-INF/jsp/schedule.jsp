@@ -183,8 +183,8 @@
                         </span>
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <c:if test="${not empty scheduleItem.room.track}">
-                            <p><c:out value="${scheduleItem.room.track}"/></p>
+                        <c:if test="${not empty scheduleItem.presentation && not empty scheduleItem.presentation.track}">
+                            <p><c:out value="${scheduleItem.presentation.track.name}"/></p>
                         </c:if>
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
