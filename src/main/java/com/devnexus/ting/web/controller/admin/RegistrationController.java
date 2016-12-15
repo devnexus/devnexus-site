@@ -139,7 +139,7 @@ public class RegistrationController {
                         new SimpleDateFormat(csvSettings.getDateFormat()))) {
             String[] header = {"First Name", "Last Name", "Email Address", "City", "State", "County", "Job Title",
                 "Company", "T Shirt Size", "Vegetarian Meal", "Allow Sponsor To Contact", "Purchase Date",
-                "Ticket Type", "Payment state"};
+                "Ticket Type", "Payment state", "Contact Email", "Contact Name", "Contact Phone"};
 
             csvWriter.writeHeader(header);
 

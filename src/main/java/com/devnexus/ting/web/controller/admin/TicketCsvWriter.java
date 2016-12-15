@@ -66,7 +66,7 @@ class TicketCsvWriter extends AbstractCsvWriter implements ICsvBeanWriter {
 				detail.getState(), detail.getCountry(), detail.getJobTitle(), detail.getCompany(),
 				detail.gettShirtSize(), detail.getVegetarian(), detail.getSponsorMayContact(),
 				dateFormat.format(detail.getCreatedDate()), detail.getLabel(),
-				detail.getRegistration().getPaymentState().name());
+				detail.getRegistration().getPaymentState().name(), detail.getRegistration().getContactEmailAddress(), detail.getRegistration().getContactName(),detail.getRegistration().getContactPhoneNumber());
 	}
 
 	/**
