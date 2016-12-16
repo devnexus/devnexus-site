@@ -12,7 +12,7 @@
 	<c:url var="privacyPolicyUrl" value="${baseSiteUrl}/privacy-policy"/>
 	<c:url var="codeOfConductUrl" value="${baseSiteUrl}/code-of-conduct"/>
 	<c:url var="conferenceInfoUrl" value="${baseSiteUrl}/conference-info"/>
-        
+
 <nav class="navbar navbar-inverse" id="nav">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,7 +32,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-link"><a href="${speakersUrl}">SPEAKERS</a></li>
-                <li class="nav-link"><a href="${presentationsUrl}">PRESENTATIONS</a></li>
+                <li class="nav-link"><a href="${scheduleUrl}">SCHEDULE</a></li>
                 <li class="nav-link"><a href="${sponsorsUrl}">SPONSORS</a></li>
                 <li class="nav-link"><a href="${conferenceInfoUrl}">CONFERENCE INFO</a></li>
                 <li class="nav-link"><a class="btn btn-register" href="${registrationUrl}">REGISTER</a></li>
