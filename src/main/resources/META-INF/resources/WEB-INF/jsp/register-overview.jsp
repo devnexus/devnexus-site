@@ -22,8 +22,8 @@
                     <c:if test="${empty invididualTicketGroups}">
                         <p>
                             Stay tuned!  We will have tickets available soon!
-                        </p>    
-                    </c:if> 
+                        </p>
+                    </c:if>
 
 
                 </header>
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <a class="btn btn-register" href="register.html">BUY NOW</a>
-                                        ${ticket.description}
+                                        ${ticket.descriptionAsHtml}
                                     </div>
                                 </div>
                             </div>
@@ -67,8 +67,8 @@
                     <c:if test="${empty groupTicketGroups}">
                         <p>
                             Stay tuned!  We will have group tickets available soon!
-                        </p>    
-                    </c:if> 
+                        </p>
+                    </c:if>
                 </header>
 
                 <c:if test="${ not empty groupTicketGroups}">
@@ -86,15 +86,28 @@
                                     </div>
                                     <div class="panel-body">
                                         <a class="btn btn-register" href="register.html">BUY NOW</a>
-                                        ${ticket.description}
+                                        ${ticket.descriptionAsHtml}
                                     </div>
                                 </div>
                             </div>
 
                         </c:forEach>
 
+							<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p class="pull-right">$645</p>
+                                        <h3 class="panel-title">WORKSHOP/CONFERENCE COMBO PASS (FEB 22-24)</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a class="btn btn-register"
+                                           href="mailto:info@ajug.org?subject=DevNexus+Workshop+Conference+Combo+Pass+(Group)">EMAIL US</a>
+                                        Contact us to purchase group passes for the workshop/conference combo pass.
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                </c:if>  
+                </c:if>
             </div>
         </section>
     </section>
