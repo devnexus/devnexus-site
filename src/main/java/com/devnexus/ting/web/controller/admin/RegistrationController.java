@@ -54,6 +54,7 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.NoResultException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -185,10 +186,9 @@ public class RegistrationController {
 
         EventSignup signUp = eventSignupRepository.getByEventKey(eventKey);
         model.getModelMap().addAttribute("event", signUp.getEvent());
-        
+
         if (bindingResult.hasErrors()) {
 
-            
             model.getModelMap().addAttribute("registerForm", uploadForm);
             model.setViewName("/admin/upload-registration");
         } else {
@@ -328,9 +328,9 @@ public class RegistrationController {
                             detail.setSponsorMayContact(sponsorMessages.getStringCellValue().equalsIgnoreCase("no") ? "false" : "true");
                             detail.setState(state.getStringCellValue());
                             detail.setTicketGroup(Long.parseLong(ticketType.getStringCellValue().split("-\\|-")[1].trim()));
-                            
+
                             detail.setLabel(businessService.getTicketGroup(detail.getTicketGroup()).getLabel());
-                            
+
                             detail.settShirtSize(tshirtSize.getStringCellValue());
                             detail.setVegetarian(vegetarian.getStringCellValue().equalsIgnoreCase("no") ? "false" : "true");
                             detail.setRegistration(details);
@@ -344,15 +344,17 @@ public class RegistrationController {
                     if (uploadForm.getOverrideRegistration()) {
                         try {
                             RegistrationDetails tempRegistration = businessService.getRegistrationForm(registrationReferenceCell.getStringCellValue());
-                            tempRegistration.getOrderDetails().forEach((oldDetail) -> {oldDetail.setRegistration(null);});
+                            tempRegistration.getOrderDetails().forEach((oldDetail) -> {
+                                oldDetail.setRegistration(null);
+                            });
                             tempRegistration.getOrderDetails().clear();
                             tempRegistration.getOrderDetails().addAll(details.getOrderDetails());
-                            
+
                             tempRegistration.getOrderDetails().forEach((detail) -> {
                                 detail.setRegistration(tempRegistration);
                             });
                             details = tempRegistration;
-                            
+
                             businessService.updateRegistration(details, uploadForm.getSendEmail());
                         } catch (EmptyResultDataAccessException ignore) {
                             businessService.updateRegistration(details, uploadForm.getSendEmail());
@@ -371,6 +373,8 @@ public class RegistrationController {
 
             } catch (Exception ex) {
                 hasErrors = true;
+                Logger.getAnonymousLogger().log(Level.SEVERE, ex.getMessage(), ex);
+
                 bindingResult.addError(new ObjectError("registrationFile", ex.getMessage()));
             }
             if (hasErrors) {
@@ -405,36 +409,26 @@ public class RegistrationController {
         model.getModelMap().addAttribute("registerForm", form);
 
         if (!result.hasErrors()) {
-            Workbook wb = WorkbookFactory.create(getClass().getResourceAsStream("/forms/registration_form.xlsx"));
-            Sheet sheet = wb.getSheetAt(0);
-            XSSFDataValidationHelper validationHelper = new XSSFDataValidationHelper((XSSFSheet) sheet);
-            Row contactNameRow = sheet.getRow(0);
-            Row contactEmailRow = sheet.getRow(1);
-            Row contactPhoneRow = sheet.getRow(2);
-            Row registrationReferenceRow = sheet.getRow(3);
+            Workbook workbook = WorkbookFactory.create(getClass().getResourceAsStream("/forms/registration_form.xlsx"));
+            Sheet formSheet = workbook.getSheetAt(0);
+            Sheet ticketTypeSheet = workbook.createSheet("ticket_types");
 
-            String[] ticketTypes = signUp.getGroups().stream()
-                    .filter((TicketGroup group) -> {
-                        Calendar today = Calendar.getInstance();
-                        return today.after(toCal(group.getOpenDate())) && today.before(toCal(group.getCloseDate()));
-                    })
-                    .map((TicketGroup group) -> {
-                        return String.format("%s -|-%d", group.getLabel(), group.getId());
-                    })
-                    .toArray(String[]::new);
+            Row contactNameRow = formSheet.getRow(0);
+            Row contactEmailRow = formSheet.getRow(1);
+            Row contactPhoneRow = formSheet.getRow(2);
+            Row registrationReferenceRow = formSheet.getRow(3);
+
+            String[] ticketTypes = formatTicketTypes(signUp);
+            addTicketTypesToSheet(ticketTypes, ticketTypeSheet);
 
             contactNameRow.createCell(1).setCellValue(form.getContactName());
             contactEmailRow.createCell(1).setCellValue(form.getContactEmailAddress());
             contactPhoneRow.createCell(1).setCellValue(form.getContactPhoneNumber());
             registrationReferenceRow.createCell(1).setCellValue(UUID.randomUUID().toString());
 
-            CellRangeAddressList ticketCellAddress = new CellRangeAddressList(7, 100, 6, 7);
-            DataValidationConstraint constraint = validationHelper.createExplicitListConstraint(ticketTypes);
-            DataValidation dataValidation = validationHelper.createValidation(constraint, ticketCellAddress);
-            dataValidation.setSuppressDropDownArrow(true);
-            sheet.addValidationData(dataValidation);
+            createTicketTypeDropDown(formSheet, ticketTypeSheet, ticketTypes);
 
-            model.setView(new BulkRegistrationFormView(wb, form.getContactName().replace(" ", "_") + "RegistrationFile.xlsx"));
+            model.setView(new BulkRegistrationFormView(workbook, form.getContactName().replace(" ", "_") + "RegistrationFile.xlsx"));
         } else {
             model.setViewName("/admin/group-registration");
         }
@@ -634,6 +628,39 @@ public class RegistrationController {
         Calendar toReturn = Calendar.getInstance();
         toReturn.setTime(openDate);
         return toReturn;
+    }
+
+    private String[] formatTicketTypes(EventSignup signUp) {
+        return signUp.getGroups().stream()
+                .filter((TicketGroup group) -> {
+                    Calendar today = Calendar.getInstance();
+                    return today.after(toCal(group.getOpenDate())) && today.before(toCal(group.getCloseDate()));
+                })
+                .map((TicketGroup group) -> {
+                    return String.format("%s -|-%d\\n", group.getLabel(), group.getId());
+                })
+                .toArray(String[]::new);
+    }
+
+    private void addTicketTypesToSheet(String[] ticketTypes, Sheet ticketTypeSheet) {
+        for (int i = 0, length = ticketTypes.length; i < length; i++) {
+            String ticketType = ticketTypes[i];
+            Row row = ticketTypeSheet.createRow(i);
+            Cell cell = row.createCell(0);
+            cell.setCellValue(ticketType);
+        }
+    }
+
+    private void createTicketTypeDropDown(Sheet formSheet, Sheet ticketTypeSheet, String[] ticketTypes) {
+        XSSFDataValidationHelper validationHelper = new XSSFDataValidationHelper((XSSFSheet) formSheet);
+        CellRangeAddressList ticketCellAddress = new CellRangeAddressList(7, 100, 6, 7);
+
+        DataValidationConstraint constraint =validationHelper.createFormulaListConstraint(ticketTypeSheet.getSheetName() + "!$A$1:$A$" + ticketTypes.length);
+
+//        constraint = validationHelper.createExplicitListConstraint(ticketTypes);
+        DataValidation dataValidation = validationHelper.createValidation(constraint, ticketCellAddress);
+        dataValidation.setSuppressDropDownArrow(true);
+        formSheet.addValidationData(dataValidation);
     }
 
 }
