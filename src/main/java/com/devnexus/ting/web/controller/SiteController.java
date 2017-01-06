@@ -56,6 +56,7 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.OrganizerList;
+import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
@@ -267,6 +268,15 @@ public class SiteController {
 		return "organizers";
 
 	}
+
+	@RequestMapping("/s/organizers/{organizerId}")
+	public String getSpeakerDetailsForEvent(
+			@PathVariable("organizerId") Long organizerId, Model model) {
+		final Organizer organizer = businessService.getOrganizer(organizerId);
+		model.addAttribute("organizer", organizer);
+		return "organizer-details";
+	}
+
 
 	@RequestMapping(value="/s/organizers/{organizerId}.jpg", method=RequestMethod.GET)
 	public void getOrganizerPicture(@PathVariable("organizerId") Long organizerId, HttpServletResponse response) {

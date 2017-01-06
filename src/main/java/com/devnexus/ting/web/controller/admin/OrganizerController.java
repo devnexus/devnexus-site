@@ -123,20 +123,19 @@ public class OrganizerController {
 			}
 
 			try {
-				pictureData.getId();
+
 				pictureData.setFileData(IOUtils.toByteArray(pictureFile.getInputStream()));
 				pictureData.setFileSize(pictureFile.getSize());
 				pictureData.setFileModified(new Date());
 				pictureData.setName(pictureFile.getOriginalFilename());
+				pictureData.setType(pictureFile.getContentType());
 
 			} catch (IOException e) {
-				throw new IllegalStateException("Error while processing image for speaker " + organizerForm.getFirstLastName(), e);
+				throw new IllegalStateException("Error while processing image for organizer " + organizerForm.getFirstLastName(), e);
 			}
 
-			organizerForm.setPicture(pictureData);
+			organizerFromDb.setPicture(pictureData);
 
-			String message = "File '" + organizerForm.getPicture().getName() + "' uploaded successfully";
-			redirectAttributes.addFlashAttribute("successMessage", message);
 		}
 
 		businessService.saveOrganizer(organizerFromDb);

@@ -324,7 +324,12 @@ public class BusinessServiceImpl implements BusinessService {
 	 */
 	@Override
 	public Organizer getOrganizer(final Long organizerId) {
-		return organizerDao.getOne(organizerId);
+		final Organizer organizer = transactionTemplate.execute(new TransactionCallback<Organizer>() {
+			public Organizer doInTransaction(TransactionStatus status) {
+				return organizerDao.getOne(organizerId);
+			}
+		});
+		return organizer;
 	}
 
 	@Override
@@ -920,7 +925,7 @@ public class BusinessServiceImpl implements BusinessService {
 			} else if (SponsorLevel.COCKTAIL_HOUR.equals(sponsor.getSponsorLevel())) {
 				size = large ? 360 : 158;
 			} else if (SponsorLevel.MEDIA_PARTNER.equals(sponsor.getSponsorLevel())) {
-				size = large ? 920 : 460;
+				size = large ? 360 : 158;
 			} else {
 				throw new IllegalStateException("Unsupported SponsorLevel " + sponsor.getSponsorLevel());
 			}

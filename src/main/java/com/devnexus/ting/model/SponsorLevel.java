@@ -28,7 +28,7 @@ public enum SponsorLevel {
 	PLATINUM(100L, "Platinum Sponsor", "sponsorsPlatinum"),
 	GOLD( 200L, "Gold Sponsor", "sponsorsGold"),
 	SILVER( 300L, "Silver Sponsor", "sponsorsSilver"),
-	MEDIA_PARTNER(350L, "Media Partner", "sponsorsMediaPartner"),
+	MEDIA_PARTNER(350L, "Media & Community Partner", "sponsorsMediaPartner"),
 	COCKTAIL_HOUR( 400L, "Cocktail Hour Sponsor", "sponsorsCocktail"),
 	BADGE( 370L, "Badge Sponsor", "sponsorsBadge"),
 	LANYARD( 375L, "Lanyard Sponsor", "sponsorsLanyard"),
