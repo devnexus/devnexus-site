@@ -653,11 +653,10 @@ public class RegistrationController {
 
     private void createTicketTypeDropDown(Sheet formSheet, Sheet ticketTypeSheet, String[] ticketTypes) {
         XSSFDataValidationHelper validationHelper = new XSSFDataValidationHelper((XSSFSheet) formSheet);
-        CellRangeAddressList ticketCellAddress = new CellRangeAddressList(7, 100, 6, 7);
+        CellRangeAddressList ticketCellAddress = new CellRangeAddressList(7, 100, 6, 6);
 
         DataValidationConstraint constraint =validationHelper.createFormulaListConstraint(ticketTypeSheet.getSheetName() + "!$A$1:$A$" + ticketTypes.length);
 
-//        constraint = validationHelper.createExplicitListConstraint(ticketTypes);
         DataValidation dataValidation = validationHelper.createValidation(constraint, ticketCellAddress);
         dataValidation.setSuppressDropDownArrow(true);
         formSheet.addValidationData(dataValidation);
