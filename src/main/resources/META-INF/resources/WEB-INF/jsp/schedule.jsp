@@ -113,7 +113,7 @@
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                        <span class="time"><fmt:formatDate pattern="h:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
                     </div>
                 </div>
             </c:when>
@@ -127,7 +127,7 @@
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                        <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
                     </div>
                 </div>
             </c:when>
@@ -141,7 +141,7 @@
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                        <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
                     </div>
                 </div>
             </c:when>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="row">
                     <div class=" breakouts row text-center row-eq-height schedule-header">
-                        <h2>Breakouts <fmt:formatDate pattern="hh:mm a" value="${scheduleItem.fromTime}"/></h2>
+                        <h2>Breakouts <fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}"/></h2>
                     </div>
 
                 </c:if>
@@ -160,7 +160,7 @@
                     <div class="col-sm-6 col-xs-12 name">
                         <c:choose>
                             <c:when test="${not empty scheduleItem.presentation}">
-                                <c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+                                <c:url var="presentationUrl" value="${baseSiteUrl}/${event.eventKey}/presentations/${scheduleItem.presentation.id}"/>
                                 <a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
                             </c:when>
                             <c:otherwise>
@@ -191,7 +191,7 @@
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                        <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
                     </div>
                 </div>
 
@@ -202,7 +202,7 @@
                     <div class="col-sm-8 col-xs-12 name">
                         <c:choose>
                             <c:when test="${not empty scheduleItem.presentation}">
-                                <c:url var="presentationUrl" value="${baseSiteUrl}/presentations#id-${scheduleItem.presentation.id}"/>
+                                <c:url var="presentationUrl" value="${baseSiteUrl}/${event.eventKey}/presentations/${scheduleItem.presentation.id}"/>
                                 <a href="${presentationUrl}"><c:out value="${scheduleItem.presentation.title}"/></a>
                             </c:when>
                             <c:otherwise>
@@ -229,7 +229,7 @@
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="hh:mm" value="${scheduleItem.toTime}" /></span>
+                        <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
                     </div>
                 </div>
 
