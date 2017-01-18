@@ -39,7 +39,7 @@
     </section>
     <section class="col-lg-6 col-md-12 information-card">
         <h1>
-            PARKING AND TRANSPORTATION
+            PARKING &amp; TRANSPORTATION
         </h1>
         <img src="${ctx}/assets/img/parking.jpg" alt="PARKING AND TRANSPORTATION">
         <h2>
