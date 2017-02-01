@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
-import ro.isdc.wro.http.ConfigurableWroFilter;
+//import ro.isdc.wro.http.ConfigurableWroFilter;
 
 /**
  *
@@ -33,18 +33,18 @@ import ro.isdc.wro.http.ConfigurableWroFilter;
 @ImportResource("classpath:spring/spring-development-context.xml")
 public class DevelopmentConfig {
 
-	@Inject
-	private ConfigurableWroFilter filter;
-
-	@Bean
-	@Profile({ SpringProfile.DEVELOPMENT_ENABLED })
-	public FilterRegistrationBean configureWroFilter() {
-		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-
-		registrationBean.setFilter(filter);
-		registrationBean.addUrlPatterns("/wro/*");
-		registrationBean.setOrder(Integer.MAX_VALUE);
-		return registrationBean;
-	}
+//	@Inject
+//	private ConfigurableWroFilter filter;
+//
+//	@Bean
+//	@Profile({ SpringProfile.DEVELOPMENT_ENABLED })
+//	public FilterRegistrationBean configureWroFilter() {
+//		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+//
+//		registrationBean.setFilter(filter);
+//		registrationBean.addUrlPatterns("/wro/*");
+//		registrationBean.setOrder(Integer.MAX_VALUE);
+//		return registrationBean;
+//	}
 
 }

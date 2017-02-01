@@ -35,7 +35,7 @@
                 <li class="nav-link"><a href="${scheduleUrl}">SCHEDULE</a></li>
                 <li class="nav-link"><a href="${sponsorsUrl}">SPONSORS</a></li>
                 <li class="nav-link"><a href="${conferenceInfoUrl}">CONFERENCE INFO</a></li>
-                <li class="nav-link"><a class="btn btn-register" href="${registrationUrl}">REGISTER</a></li>
+                <li class="nav-link"><a class="btn btn-register disabled" href="#">SOLD OUT</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

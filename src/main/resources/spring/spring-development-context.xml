@@ -10,15 +10,15 @@
     <!--
     Enable development specific filters such as WRO
     -->
-    
-    <beans profile="development-enabled">
+
+    <!-- <beans profile="development-enabled">
         <bean id="wroFilter" class="ro.isdc.wro.http.ConfigurableWroFilter">
             <property name="properties" ref="wroProperties"/>
         </bean>
 
-        <bean id="wroProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">  
-            <property name="location" value="classpath:META-INF/resources/WEB-INF/wro.properties" />  
-        </bean>  
-    </beans>
+        <bean id="wroProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+            <property name="location" value="classpath:META-INF/resources/WEB-INF/wro.properties" />
+        </bean>
+    </beans> -->
 
 </beans>

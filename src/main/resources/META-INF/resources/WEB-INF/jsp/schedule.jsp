@@ -11,15 +11,22 @@
 
 <title>${contextEvent.title} | Schedule</title>
 
-
-<section class="container-fluid schedule-config" >
-    <h1 class="featured-header">
-        We are currently finalizing the schedule.
-    </h1>
-
+<section class="container-fluid" >
+	<div class="row" style="margin-top: 1em;">
+		<div class="col-xs-10 col-xs-offset-1 text-center">
+<%-- 			<sec:authorize access="isAuthenticated()">
+				<a class="btn btn-default" href="${ctx}${baseSiteUrl}/logout"><i class="fa fa-sign-out"></i> Logout <sec:authentication property="principal.firstName"/></a>
+				<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/user-schedule"><i class="fa fa-user"></i> View User Schedule</a>
+			</sec:authorize>
+			<sec:authorize access="!isAuthenticated()">
+				<a class="btn btn-default btn-social btn-google" href="/auth/google?scope=profile"><i class="fa fa-google"></i> Login with Google to create Custom Schedule</a>
+			</sec:authorize> --%>
+			<a class="btn btn-default" href="${ctx}/s/${event.eventKey}/schedule.pdf"><i class="fa fa-file-pdf-o"></i> Download Full Schedule as PDF</a>
+		</div>
+	</div>
 </section>
-
 <section class="container-fluid schedule schedule-config" >
+
     <h1 class="featured-header">
         SCHEDULE
         <span class="visible-xs visible-sm" style="float: right; padding-right: 40px;">
@@ -30,7 +37,7 @@
 <!--    <div class="row hidden-xs">
         <div class="text-center">
             <button class="btn customize"><span class="badge"><img src="/assets/img/google-plus-2.png" class="icon"/></span>custom schedule</button>
-            <button class="btn download">download</button>  
+            <button class="btn download">download</button>
         </div>
     </div>
 
@@ -60,7 +67,7 @@
     </div>-->
 
 <!--    <div class="row sub-filter" >
-         Single button 
+         Single button
         <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Show All <span class="caret"></span>
@@ -77,7 +84,7 @@
 
 </section>
 
-<section class="container-fluid schedule" >
+<section class="container-fluid schedule" style="margin-bottom: 1em;">
 
 
     <c:set value="" var="loopStartTime"/>
@@ -104,7 +111,7 @@
 
         <c:choose>
             <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeRegistration}">
-                <div class="row schedule-row">
+                <div class="row schedule-row" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
                     <div class="col-sm-8 col-xs-12 name">
                         <c:out value="${scheduleItem.title}"/><br>
                     </div>
@@ -118,7 +125,7 @@
                 </div>
             </c:when>
             <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeAdminsitrative}">
-                <div class="row schedule-row">
+                <div class="row schedule-row" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
                     <div class="col-sm-8 col-xs-12 name">
                         <c:out value="${scheduleItem.title}"/><br>
                     </div>
@@ -132,7 +139,7 @@
                 </div>
             </c:when>
             <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeBreak}">
-                <div class="row schedule-row">
+                <div class="row schedule-row" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
                     <div class="col-sm-8 col-xs-12 name">
                         <c:out value="${scheduleItem.title}"/><br>
                     </div>
@@ -156,7 +163,7 @@
 
                 </c:if>
 
-                <div class="row schedule-row">
+                <div class="row schedule-row" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
                     <div class="col-sm-6 col-xs-12 name">
                         <c:choose>
                             <c:when test="${not empty scheduleItem.presentation}">
@@ -172,7 +179,6 @@
                                 <c:when test="${not empty scheduleItem.presentation.speakers}">
                                     <c:forEach var="speaker" items="${scheduleItem.presentation.speakers}" varStatus="speakerStatus">
                                         <c:if test="${speakerStatus.index ne 0}">,</c:if>
-
                                         ${speaker.firstName} ${speaker.lastName}
                                     </c:forEach>
                                 </c:when>
@@ -183,22 +189,45 @@
                         </span>
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
-                        <c:if test="${not empty scheduleItem.presentation && not empty scheduleItem.presentation.track}">
-                            <p><c:out value="${scheduleItem.presentation.track.name}"/></p>
-                        </c:if>
+                        <c:choose>
+                            <c:when test="${not empty scheduleItem.presentation && not empty scheduleItem.presentation.track}">
+                                <p><c:out value="${scheduleItem.presentation.track.name}"/></p>
+                            </c:when>
+                            <c:when test="${empty scheduleItem.presentation && not empty scheduleItem.room}">
+                                <p><c:out value="${scheduleItem.room.track}"/></p>
+                            </c:when>
+                        </c:choose>
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
                         ${scheduleItem.room.name}
                     </div>
                     <div class="col-sm-2 col-xs-12 text-center">
                         <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
+						<sec:authorize access="isAuthenticated()">
+							<c:choose>
+								<c:when test="${session.favorite}">
+									<a style="position: absolute; top: 0; right: 0" class="session-favorite is-favorite"
+										data-schedule-item-id="${scheduleItem.id}" data-is-favorite="${scheduleItem.favorite}"
+										href="#" title="Remove as favorite">
+										<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									</a>
+								</c:when>
+								<c:otherwise>
+									<a style="position: absolute; top: 0; right: 0" class="session-favorite"
+										data-schedule-item-id="${scheduleItem.id}" data-is-favorite="${scheduleItem.favorite}"
+										href="#" title="Add as favorite">
+										<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									</a>
+								</c:otherwise>
+							</c:choose>
+						</sec:authorize>
                     </div>
                 </div>
 
             </c:when>
             <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeKeynote}">
 
-                <div class="row schedule-row keynote">
+                <div class="row schedule-row keynote" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
                     <div class="col-sm-8 col-xs-12 name">
                         <c:choose>
                             <c:when test="${not empty scheduleItem.presentation}">
@@ -234,6 +263,23 @@
                 </div>
 
             </c:when>
+
+            <c:when test="${scheduleItem.scheduleItemType == scheduleItemTypeEveningReception}">
+
+                <div class="row schedule-row" style="background: linear-gradient(-90deg, ${scheduleItem.room.color}, ${scheduleItem.room.color}) repeat-y; background-size: 10px 10px;">
+                    <div class="col-sm-8 col-xs-12 name">
+                        <c:out value="${scheduleItem.title}"/><br>
+                    </div>
+
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        ${scheduleItem.room.name}
+                    </div>
+                    <div class="col-sm-2 col-xs-12 text-center">
+                        <span class="time"><fmt:formatDate pattern="h:mm" value="${scheduleItem.fromTime}" /></span> - <span class="time"><fmt:formatDate pattern="h:mm a" value="${scheduleItem.toTime}" /></span>
+                    </div>
+                </div>
+            </c:when>
+
         </c:choose>
 
 
@@ -248,4 +294,44 @@
 
 
 </section>
-<br/>
+
+<content tag='bottom'>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('body').on('click', 'a.session-favorite', function() {
+				var element = $(this);
+				var favorite = element.data('is-favorite');
+				var scheduleItemId = element.data('schedule-item-id');
+				if (!favorite) {
+					console.log('Add schedule item Id: ' + scheduleItemId + ' as favorite.');
+					$.ajax({
+						method: "POST",
+						url: "${ctx}/s/${event.eventKey}/usercalendar/" + scheduleItemId,
+						data: {}
+					})
+					.done(function( msg ) {
+						console.log( "Added: ", msg );
+						element.addClass('is-favorite');
+						element.attr('title', 'Remove as favorite');
+						element.data('is-favorite', true);
+					});
+				}
+				else {
+					console.log('Remove schedule item Id: ' + scheduleItemId + ' as favorite.');
+					$.ajax({
+						method: "DELETE",
+						url: "${ctx}/s/${event.eventKey}/usercalendar/" + scheduleItemId,
+						data: {}
+					})
+					.done(function( msg ) {
+						console.log( "Removed: " + msg );
+						element.removeClass('is-favorite')
+						element.attr('title', 'Add as favorite')
+						element.data('is-favorite', false);
+					});
+				}
+				return false;
+			});
+		});
+	</script>
+</content>

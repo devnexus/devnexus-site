@@ -4,25 +4,12 @@
 
 <title>${contextEvent.title} | Rooms</title>
 
-<!-- intro -->
-<section id="rooms" class="module parallax parallax-3">
-	<div class="container header">
-		<div class="row centered">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>Rooms</span></h4>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /intro -->
-
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
+		<h1 class="featured-header">Rooms</h1>
 		<table class="table table-hover">
 			<thead>
-				<tr><th></th><th class="text-center"></th><th></th><th class="text-center" colspan="2"># of Session Slots</th></tr>
+				<tr><th></th><th></th><th class="text-center"></th><th></th><th class="text-center" colspan="2"># of Session Slots</th></tr>
 				<tr><th>&nbsp;</th><th>Rooms</th><th class="text-center">Capacity</th><th>Track</th><th class="text-center">Assigned</th><th class="text-center">Total</th></tr>
 			</thead>
 			<tbody>

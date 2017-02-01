@@ -34,42 +34,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        <style type="text/css">
-            #chart-tooltip {
-                position: absolute;
-                width: 400px;
-                height: auto;
-                padding: 5px;
-                z-index: 9999999;
-                background-color: #ffffff;
-                -webkit-border-radius: 4px;
-                -moz-border-radius: 4px;
-                border-radius: 4px;
-                -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-                pointer-events: none;
-            }
-
-            #chart-tooltip.hidden {
-                display: none;
-            }
-
-            #chart-tooltip p {
-                margin: 0;
-                font-family: sans-serif;
-                font-size: 16px;
-                line-height: 20px;
-            }
-            .row {
-            	margin-left: 0;
-            	margin-right: 0;
-            }
-            .footer {
-            	margin-left: 0;
-            	margin-right: 0;
-            }
-        </style>
     </head>
     <body>
         <c:url var="homeUrl" value="${baseSiteUrl}/index"/>
@@ -110,7 +74,7 @@
                 <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
 
 
-                <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER NOW</a>
+                <a class="btn hero-btn-register disabled" href="#" >REGISTRATION CLOSED</a>
 
             </div>
         </section>
@@ -160,7 +124,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/settings.png"/>
-                    <p>10</p>
+                    <p>12</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">WORKSHOPS</p>
@@ -168,7 +132,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/folder.png"/>
-                    <p>14</p>
+                    <p>15</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">TRACKS</p>
@@ -176,7 +140,7 @@
 
                 <div class="col-lg-3 col-sm-6">
                     <img src="${ctx}/assets/img/microphone.png"/>
-                    <p>120+</p>
+                    <p>150</p>
                     <img src="${ctx}/assets/img/line.png"/>
                     <br>
                     <p class="trump">PRESENTATIONS</p>
@@ -194,11 +158,11 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Gupta_Arun.png" alt="Arun Gupta">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/neal-ford.jpg" alt="Neal Ford">
                             <div class="caption">
-                                <h3>Arun Gupta</h3>
-                                <p>VP of developer advocacy</p>
-                                <p>Couchbase</p>
+                                <h3>Neal Ford</h3>
+                                <p>Software Architect</p>
+                                <p>ThoughtWorks</p>
                             </div>
                         </div>
                     </div>
@@ -206,7 +170,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Markus_Eisele.jpg" alt="Markus Eisele">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/markus-eisele.jpg" alt="Markus Eisele">
                             <div class="caption">
                                 <h3>Markus Eisele</h3>
                                 <p>Java Champion</p>
@@ -217,7 +181,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Deane_Jeremy.jpg" alt="Jeremy Deane">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/jeremy-deane.jpg" alt="Jeremy Deane">
                             <div class="caption">
                                 <h3>Jeremy Deane</h3>
                                 <p>Software Engineering Aficionado</p>
@@ -229,7 +193,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/VanCura_Heather.png" alt="Heather VanCura">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/heather-vancura.jpg" alt="Heather VanCura">
                             <div class="caption">
                                 <h3>Heather VanCura</h3>
                                 <p>Community Builder, Java Connoisseur</p>
@@ -241,7 +205,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Jaeckel_Marlene.png" alt="Marlene Jaeckel">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/marlene-jaeckel.jpg" alt="Marlene Jaeckel">
                             <div class="caption">
                                 <h3>Marlene Jaeckel</h3>
                                 <p>Founder</p>
@@ -252,7 +216,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/ray_tsang.jpg" alt="Ray Tsang">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/ray-tsang.jpg" alt="Ray Tsang">
                             <div class="caption">
                                 <h3>Ray Tsang</h3>
                                 <p>Developer Advocate</p>
@@ -264,7 +228,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/matt_rasible.jpg" alt="Matt Raible">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/matt-raible.jpg" alt="Matt Raible">
                             <div class="caption">
                                 <h3>Matt Raible</h3>
                                 <p>Web Architecture Consultant</p>
@@ -275,7 +239,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/burr_sutter.jpg" alt="Burr Sutter">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/burr-sutter.jpg" alt="Burr Sutter">
                             <div class="caption">
                                 <h3>Burr Sutter</h3>
                                 <p>Sr Product Manager</p>
@@ -294,8 +258,8 @@
             <div class="row call-to-action space">
                 <div class="col-xs-12">
                     <h1>Space Is <span class="trump">Limited</span></h1>
-                    <p>Register for Dev Nexus today to reserve your spot at Dev Nexus 2017.</p>
-                    <a class="btn hero-btn-register" href="${registrationUrl}">REGISTER</a>
+                    <p>Register for DevNexus today to reserve your spot at DevNexus 2017.</p>
+                    <a class="btn hero-btn-register disabled" href="#">REGISTRATION CLOSED</a>
                 </div>
             </div>
 
@@ -310,7 +274,7 @@
 
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Deane_Jeremy.jpg" alt="Enterprise Messaging Foundations">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/jeremy-deane.jpg" alt="Enterprise Messaging Foundations">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15528">Enterprise Messaging Foundations</a></h3>
                                 <p>Jeremy Deane</p>
@@ -319,7 +283,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Anandan_Sabby.jpg" alt="Microservices based Streaming and Batch Data Processing">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/sabby-anandan.jpg" alt="Microservices based Streaming and Batch Data Processing">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15480">Microservices based Streaming and Batch Data Processing</a></h3>
                                 <p>Sabby Anandan, Glenn Renfro</p>
@@ -329,7 +293,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Benevides.png" alt="Hands-on with Docker, Kubernetes and OpenShift">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/rafael-benevides.jpg" alt="Hands-on with Docker, Kubernetes and OpenShift">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15489">Hands-on with Docker, Kubernetes and OpenShift</a></h3>
                                 <p>Rafael Benevides, Burr Sutter, Ray Tsang</p>
@@ -338,7 +302,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/Jaeckel_Marlene.png" alt="Learn about Wearables">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/marlene-jaeckel.jpg" alt="Learn about Wearables">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15485">Learn about Wearables</a></h3>
                                 <p>Lance Gleason, Marlene Jaeckel</p>
@@ -347,7 +311,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/nick_raboy.jpg" alt="Full Stack Development with Java and NoSQL">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/nic-raboy.jpg" alt="Full Stack Development with Java and NoSQL">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15486">Full Stack Development with Java and NoSQL</a></h3>
                                 <p>Nic Raboy</p>
@@ -356,7 +320,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="thumbnail">
-                            <img class="img-responsive" src="${ctx}/assets/img/VenkatSubramaniam.jpg" alt="Building Reactive Applications">
+                            <img class="img-responsive" src="${ctx}/assets/img/featured-speakers/venkat-subramaniam.jpg" alt="Building Reactive Applications">
                             <div class="caption">
                                 <h3><a href="${ctx}/s/devnexus2017/presentations/15529">Building Reactive Applications</a></h3>
                                 <p>Venkat Subramaniam</p>
@@ -383,7 +347,7 @@
                             <h3 class="panel-title">MAIN CONFERENCE PASS</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <a class="btn btn-register disabled" href="#">SOLD OUT</a>
                             <p>The main conference pass allows a single person to attend DevNexus 2017.  This includes both days, lunch, access to all breakout sessions and keynotes, and the DevNexus Happy Hour.  This does NOT include a workshop day pass.</p>
                         </div>
                     </div>
@@ -396,7 +360,7 @@
                             <h3 class="panel-title">WORKSHOP PASS</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <a class="btn btn-register disabled" href="#">SOLD OUT</a>
                             <p>If you wish to attend a workshop, you must purchase a workshop pass.  This pass allows you to attend a day of hands on training at one of our workshops.  The workshop pass also includes a main conference pass for a single person.</p>
                         </div>
                     </div>
@@ -409,7 +373,7 @@
                             <h3 class="panel-title">GROUP RATES</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-register" href="${registrationUrl}">LEARN MORE</a>
+                            <a class="btn btn-register disabled" href="#">SOLD OUT</a>
                             <p>Group rates are available for groups of five or more.  Group rates are available for both the workshop pass and the main conference pass.</p>
                         </div>
                     </div>

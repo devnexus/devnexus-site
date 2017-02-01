@@ -96,8 +96,8 @@
 							<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <p class="pull-right">$635</p>
-                                        <h3 class="panel-title">WORKSHOP/CONFERENCE COMBO PASS (FEB 22-24)</h3>
+                                        <p class="pull-right">$695</p>
+                                        <h3 class="panel-title">LATE WORKSHOP/CONFERENCE COMBO PASS (FEB 22-24)</h3>
                                     </div>
                                     <div class="panel-body">
                                         <a class="btn btn-register"

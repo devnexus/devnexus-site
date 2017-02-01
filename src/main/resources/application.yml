@@ -5,7 +5,7 @@ server:
     timeout: 1200
   compression:
     enabled: true
-    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    mime-types: application/json,application/xml,text/html,text/html,text/xml,text/plain,text/css,application/javascript
   ssl:
     enabled: false
 security:
