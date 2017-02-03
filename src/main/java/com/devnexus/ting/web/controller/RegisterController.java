@@ -39,6 +39,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.common.SpringProfile;
+import com.devnexus.ting.config.support.CfpSettings;
+import com.devnexus.ting.config.support.RegistrationSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CouponCode;
 import com.devnexus.ting.model.Event;
@@ -76,11 +78,17 @@ public class RegisterController {
     @Autowired
     private Environment environment;
 
+    
+
     private enum PaymentMethod {
 
         PAYPAL, INVOICE
     };
 
+    @Autowired
+    private RegistrationSettings registrationSettings;
+
+    
     @Autowired
     private BusinessService businessService;
 
@@ -91,6 +99,10 @@ public class RegisterController {
 
         prepareHeader(signUp.getEvent(), model);
 
+        if (registrationNotOpen()) {
+            return "closed";
+        }
+        
         List<TicketGroup> currentTickets = signUp.getGroups().stream().filter((TicketGroup group) -> {
             Date now = new Date();
             return (now.after(group.getOpenDate()) && now.before(group.getCloseDate()));
@@ -115,6 +127,10 @@ public class RegisterController {
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
 
+        if (registrationNotOpen()) {
+            return "closed";
+        }
+        
         SignupRegisterView signupView = new SignupRegisterView(eventSignup);
 
         model.addAttribute("signupRegisterView", signupView);
@@ -146,6 +162,10 @@ public class RegisterController {
         prepareHeader(currentEvent, model);
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
 
+        if (registrationNotOpen()) {
+            return "closed";
+        }
+        
         int totalTickets = 0;
 
         for (int i = 0; i < registerForm.getTicketGroupRegistrations().size(); i++) {
@@ -213,6 +233,10 @@ public class RegisterController {
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registrationDetails", registerForm);
 
+        if (registrationNotOpen()) {
+            return "closed";
+        }
+        
         return "register2";
 
     }
@@ -224,6 +248,11 @@ public class RegisterController {
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
         prepareHeader(currentEvent, model);
+        
+        if (registrationNotOpen()) {
+            return "closed";
+        }
+        
         model.addAttribute("signupRegisterView", new SignupRegisterView(eventSignup));
         model.addAttribute("registrationDetails", registerForm);
         model.addAttribute("registrationKey", registrationKey);
@@ -488,4 +517,8 @@ public class RegisterController {
         return ticketPrice;
     }
 
+    private boolean registrationNotOpen() {
+        return !RegistrationSettings.RegistrationState.OPEN.equals(registrationSettings.getState());
+    }
+    
 }
