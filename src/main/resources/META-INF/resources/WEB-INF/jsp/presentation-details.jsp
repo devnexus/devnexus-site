@@ -60,10 +60,8 @@
 				</c:if>
 				<c:if test="${!empty presentation.scheduleItem}">
 					<div style="color: white">
-						<strong style="color: white">Time:</strong>
-						<fmt:formatDate pattern="h:mm a" value="${presentation.scheduleItem.fromTime}" />
-						-
-						<fmt:formatDate pattern="h:mm a" value="${presentation.scheduleItem.toTime}" />
+						<strong style="color: white">Time Slot:</strong>
+						<fmt:formatDate pattern="EE M/d, h:mm a" value="${presentation.scheduleItem.fromTime}" />
 					</div>
 				</c:if>
 
