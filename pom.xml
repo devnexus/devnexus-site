@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.0.RELEASE</version>
+		<version>1.5.1.RELEASE</version>
 	</parent>
 	<groupId>com.devnexus</groupId>
 	<artifactId>devnexus-site</artifactId>
@@ -137,17 +137,17 @@
 				<version>1.7.7</version>
 				<executions>
 					<execution>
-                                        	<phase>compile</phase>
+						<phase>compile</phase>
 						<goals>
 							<goal>run</goal>
-						</goals>					
-                                        </execution>
+						</goals>
+					</execution>
 				</executions>
 				<configuration>
 					<wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
-					<destinationFolder>${basedir}/src/main/resources/META-INF/resources/wro/</destinationFolder>
-					<wroFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.xml</wroFile>
-					<extraConfigFile>${basedir}/src/main/resources/META-INF/resources/WEB-INF/wro.properties</extraConfigFile>
+					<destinationFolder>${basedir}/src/main/resources/webroot/wro/</destinationFolder>
+					<wroFile>${basedir}/src/main/resources/webroot/WEB-INF/wro.xml</wroFile>
+					<extraConfigFile>${basedir}/src/main/resources/webroot/WEB-INF/wro.properties</extraConfigFile>
 					<parallelProcessing>true</parallelProcessing>
 				</configuration>
 			</plugin>
@@ -178,17 +178,22 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 
 		<!-- Cloud Foundry -->
@@ -313,8 +318,15 @@
 			<version>2.4</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>apache-jsp</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>apache-jstl</artifactId>
+			<version>${jetty.version}</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>org.jasypt</groupId>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2016 the original author or authors.
+ * Copyright 2002-2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.tomcat.util.http.fileupload.FileUploadBase.FileSizeLimitExceededException;
-import org.apache.tomcat.util.http.fileupload.FileUploadBase.SizeLimitExceededException;
+//import org.apache.tomcat.util.http.fileupload.FileUploadBase.FileSizeLimitExceededException;
+//import org.apache.tomcat.util.http.fileupload.FileUploadBase.SizeLimitExceededException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,10 +43,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.util.WebUtils;
 
 import com.devnexus.ting.common.SystemInformationUtils;
 import com.devnexus.ting.core.service.BusinessService;
@@ -56,7 +54,6 @@ import com.devnexus.ting.model.Event;
 import com.devnexus.ting.model.FileData;
 import com.devnexus.ting.model.Organizer;
 import com.devnexus.ting.model.OrganizerList;
-import com.devnexus.ting.model.Speaker;
 import com.devnexus.ting.model.SpeakerList;
 import com.devnexus.ting.model.Sponsor;
 import com.devnexus.ting.model.SponsorList;
@@ -85,6 +82,11 @@ public class SiteController {
 		return new ModelAndView("redirect:/swagger-ui.html");
 	}
 
+	@RequestMapping({"/"})
+	public String redirectToIndex() {
+		return "redirect:/s/index";
+	}
+
 	@RequestMapping({"/s/index", "/s/"})
 	public String index(final Model model) {
 		final Event event = businessService.getCurrentEvent();
@@ -95,28 +97,7 @@ public class SiteController {
 
 	@RequestMapping("/s/handleGlobaleErrors")
 	public String onUploadError(HttpServletRequest request, final Model model, RedirectAttributes redirectAttributes) {
-
-		final Object errorExceptionObject = request.getAttribute(WebUtils.ERROR_EXCEPTION_ATTRIBUTE);
-
-		if (errorExceptionObject instanceof MultipartException) {
-			final MultipartException multipartException = (MultipartException) errorExceptionObject;
-			final Throwable rootCause = multipartException.getRootCause();
-			String errorMessage = "";
-			if (rootCause instanceof SizeLimitExceededException ||
-					rootCause instanceof FileSizeLimitExceededException) {
-				errorMessage = String.format(
-					  "The file that you are trying to upload is unfortunately too big. Uploaded files cannot be bigger than <strong>%s</strong>."
-					+ " Please go back and upload a smaller image file.", multipartProperties.getMaxFileSize());
-			}
-			else {
-				errorMessage = (String) request.getAttribute(WebUtils.ERROR_MESSAGE_ATTRIBUTE);
-			}
-			redirectAttributes.addFlashAttribute("error", errorMessage);
-			return "redirect:/s/uploadError";
-		}
-		else {
-			return "error/error";
-		}
+		return "error/error";
 	}
 
 	@RequestMapping("/s/uploadError")

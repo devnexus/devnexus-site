@@ -4,7 +4,6 @@
         <img  class="center-block" style="margin-top: 40px;padding-left: 50px;width:auto;height: auto" src="${ctx}/assets/img/devnexus-logo.png" alt="logo"/>
     </div>
     <div style="text-align: center;margin-top: 40px">
-
         <a href="${speakersUrl}" class="text">speakers</a>
         <a href="${scheduleUrl}" class="text">schedule</a>
         <a href="${conferenceInfoUrl}" class="text">conference info</a>
@@ -12,6 +11,9 @@
         <a href="${privacyPolicyUrl}" class="text">privacy policy</a>
         <a href="${organizersUrl}" class="text">organizers</a>
         <a href="${pastConferencesUrl}" class="text">past conferences</a>
+    </div>
+    <div style="text-align: center;margin-top: 5px">
+        <a href="${aboutUrl}" class="text">We are open-source</a>
     </div>
     <div style="text-align: center;margin: 40px">
         <a class=";width:auto;height: auto" href="${facebookUrl}" style="margin: 10px" ><img style=";width:auto;height: auto" src="${ctx}/assets/img/facebook-logo-button.png"/></a>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 the original author or authors.
+ * Copyright 2016-2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,39 +15,32 @@
  */
 package com.devnexus.ting;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.TimeZone;
 
-import javax.servlet.descriptor.JspConfigDescriptor;
-import javax.servlet.descriptor.JspPropertyGroupDescriptor;
-import javax.servlet.descriptor.TaglibDescriptor;
-
-import org.apache.catalina.Container;
-import org.apache.catalina.Context;
-import org.apache.catalina.Wrapper;
-import org.apache.catalina.connector.Connector;
-import org.apache.catalina.valves.RemoteIpValve;
-import org.apache.coyote.http11.AbstractHttp11Protocol;
-import org.apache.tomcat.util.descriptor.web.ErrorPage;
-import org.apache.tomcat.util.descriptor.web.JspConfigDescriptorImpl;
-import org.apache.tomcat.util.descriptor.web.JspPropertyGroup;
-import org.apache.tomcat.util.descriptor.web.JspPropertyGroupDescriptorImpl;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.handler.gzip.GzipHandler;
+import org.eclipse.jetty.util.resource.Resource;
+import org.eclipse.jetty.webapp.WebAppContext;
 import org.jboss.aerogear.unifiedpush.SenderClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.jetty.JettyServerCustomizer;
+import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.multipart.MultipartException;
 
 import com.devnexus.ting.core.applicationlistener.ContextRefreshedEventListener;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -66,6 +59,8 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 
 	@Autowired
 	private Environment environment;
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(DevNexusApplication.class);
 
 	@Autowired
 	MessageSource messageSource;
@@ -110,76 +105,32 @@ public class DevNexusApplication implements EmbeddedServletContainerCustomizer {
 
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
-		if(container instanceof TomcatEmbeddedServletContainerFactory) {
-			final TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory = (TomcatEmbeddedServletContainerFactory) container;
-			tomcatEmbeddedServletContainerFactory.addContextCustomizers(
-					new TomcatContextCustomizer() {
-
-						@Override
-						public void customize(Context context) {
-							context.addWelcomeFile("index.jsp");
-
-							final ErrorPage errorPage403 = new ErrorPage();
-							errorPage403.setErrorCode(403);
-							errorPage403.setLocation("/WEB-INF/jsp/error/403.jsp");
-
-							final ErrorPage errorPage404 = new ErrorPage();
-							errorPage404.setErrorCode(404);
-							errorPage404.setLocation("/WEB-INF/jsp/error/404.jsp");
-
-							final ErrorPage errorPage500 = new ErrorPage();
-							errorPage500.setErrorCode(500);
-							errorPage500.setLocation("/WEB-INF/jsp/error/500.jsp");
-
-							context.addErrorPage(errorPage500);
-							context.addErrorPage(errorPage404);
-							context.addErrorPage(errorPage403);
-
-							final Collection<JspPropertyGroupDescriptor> jspPropertyGroups = new ArrayList<>();
-							final Collection<TaglibDescriptor> taglibs = new ArrayList<>();
-
-							final JspPropertyGroup group = new JspPropertyGroup();
-							group.addUrlPattern("*.jsp");
-							group.setPageEncoding("UTF-8");
-
-							final JspPropertyGroupDescriptor descriptor = new JspPropertyGroupDescriptorImpl(group);
-
-							jspPropertyGroups.add(descriptor);
-
-							final JspConfigDescriptor jspConfigDescriptor = new JspConfigDescriptorImpl(jspPropertyGroups, taglibs);
-							context.setJspConfigDescriptor(jspConfigDescriptor);
-
-							Container jsp = context.findChild("jsp");
-							if (jsp instanceof Wrapper) {
-								((Wrapper)jsp).addInitParameter("development", "false");
-							}
-						}
-			});
-
-			tomcatEmbeddedServletContainerFactory.addConnectorCustomizers(new TomcatConnectorCustomizer() {
+		if (container instanceof JettyEmbeddedServletContainerFactory) {
+			final JettyEmbeddedServletContainerFactory jetty = (JettyEmbeddedServletContainerFactory) container;
+			final JettyServerCustomizer customizer = new JettyServerCustomizer() {
 				@Override
-				public void customize(Connector connector) {
-					((AbstractHttp11Protocol<?>) connector.getProtocolHandler()).setMaxSwallowSize(-1);
+				public void customize(Server server) {
+					final Handler handler = server.getHandler();
+					final WebAppContext webAppContext;
+					if (handler instanceof GzipHandler) {
+						webAppContext = (WebAppContext)((GzipHandler) handler).getHandler();
+					}
+					else if (handler instanceof WebAppContext) {
+						webAppContext = (WebAppContext) handler;
+					}
+					else {
+						throw new java.lang.IllegalStateException(handler.toString());
+					}
+					webAppContext.setBaseResource(Resource.newClassPathResource("webroot"));
 				}
-			});
-
-			tomcatEmbeddedServletContainerFactory.addAdditionalTomcatConnectors(createConnector());
-			tomcatEmbeddedServletContainerFactory.addContextValves(createRemoteIpValves());
+			};
+			jetty.addServerCustomizers(customizer);
+			jetty.addErrorPages(
+				new ErrorPage(HttpStatus.NOT_FOUND, "/WEB-INF/jsp/error/404.jsp"),
+				new ErrorPage(HttpStatus.FORBIDDEN, "/WEB-INF/jsp/error/403.jsp"),
+				new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/s/handleGlobaleErrors"),
+				new ErrorPage(MultipartException.class, "/s/handleGlobaleErrors"),
+				new ErrorPage("/s/handleGlobaleErrors"));
 		}
-		container.addErrorPages(new org.springframework.boot.web.servlet.ErrorPage(Throwable.class, "/s/handleGlobaleErrors"));
 	}
-
-	private static RemoteIpValve createRemoteIpValves() {
-		RemoteIpValve remoteIpValve = new RemoteIpValve();
-		remoteIpValve.setRemoteIpHeader("x-forwarded-for");
-		remoteIpValve.setProtocolHeader("x-forwarded-proto");
-		return remoteIpValve;
-	}
-
-	private static Connector createConnector() {
-		Connector connector = new Connector("AJP/1.3");
-		connector.setPort(8099);
-		return connector;
-	}
-
 }

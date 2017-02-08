@@ -41,9 +41,9 @@ devnexus:
     publicKey:
     privateKey:
   registration:
-    state: open # open | closed | soldout | hide
+    state: closed # open | closed | soldout | hide
   cfp:
-    state: open # open | closed
+    state: closed # open | closed
 spring:
   http:
     multipart:

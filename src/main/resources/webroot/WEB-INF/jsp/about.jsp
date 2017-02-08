@@ -40,27 +40,11 @@
 	</style>
 </head>
 
-<!-- intro -->
-<section id="about" class="module parallax parallax-3">
-	<div class="container header">
-		<div class="row centered">
-			<div class="col-md-10 col-md-offset-1">
-				 <div class="top-intro travel">
-					<h4 class="section-white-title decorated"><span>About DevNexus</span></h4>
-					<h5 class="intro-white-lead">DevNexus runs in the Cloud and is Open Source.</h5>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /intro -->
-
-<section id="speaker" class="bg-light-gray">
+<section class="container-fluid conference-information" >
+	<h1 class="featured-header">We are Open Source</h1>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-
-				<h2>Open Source</h2>
 
 				<div class="row">
 					<div class="col-xs-4"><a href="http://opensource.org/" target="_blank"><img src="${ctx}/assets/img/tech-logos/open-source-110.png" alt="Open Source Initiative" title="Open Source Initiative"></a></div>
@@ -71,7 +55,7 @@
 					<div class="col-xs-8">The application is hosted on GitHub at: <a href="https://github.com/devnexus/devnexus-site" target="_blank">https://github.com/devnexus/devnexus-site</a>.</div>
 				</div>
 
-				<h2>Are you running in the Cloud?</h2>
+				<h2 class="text-center">Are you running in the Cloud?</h2>
 					<p>
 						DevNexus runs in the cloud allowing us to focus on what is important: planning and executing an awesome conference.
 						As PaaS platform, we are using:
@@ -88,16 +72,16 @@
 						<li>Fault tolerance</li>
 						<li>Ability to scale up instances with the push of a button</li>
 					</ul>
-				<h2>Show me your Stack</h2>
+				<h2 class="text-center">Show me your Stack</h2>
 				<div class="row">
 					<div class="col-xs-12">
-					<p>
-						Some of the technologies we use are:
-					</p>
+							<p>
+								Some of the technologies we use are:
+							</p>
 
 						<div class="row tech-logos">
 							<div class="col-md-12">
-								<a href="http://tomcat.apache.org/"                     target="_blank"><img src="${ctx}/assets/img/tech-logos/tomcat-110.png"             alt="Apache Tomcat"      title="Apache Tomcat"></a>
+								<a href="http://www.eclipse.org/jetty/"                 target="_blank"><img src="${ctx}/assets/img/tech-logos/jetty-110.png"              alt="Jetty"              title="Jetty"></a>
 								<a href="http://www.postgresql.org/"                    target="_blank"><img src="${ctx}/assets/img/tech-logos/postgres-110.png"           alt="PostgreSQL"         title="PostgreSQL"></a>
 								<a href="http://hibernate.org/"                         target="_blank"><img src="${ctx}/assets/img/tech-logos/hibernate-110.png"          alt="Hibernate"          title="Hibernate"></a>
 								<a href="http://redis.io/"                              target="_blank"><img src="${ctx}/assets/img/tech-logos/redis-110.png"              alt="Redis"              title="Redis"></a>
@@ -112,17 +96,17 @@
 					</div>
 				</div>
 
-				<h2>We are giving back to the OSS Community</h2>
+				<h2 class="text-center">We are giving back to the OSS Community</h2>
 
 				<div class="row">
-					<div class="col-xs-4"><a href="http://junit.org/junit-lambda.html" target="_blank"><img src="${ctx}/assets/img/tech-logos/junit-lambda-110.png" alt="Junit Lambda" title="Junit Lambda"></a></div>
-					<div class="col-xs-8">The <a href="http://www.ajug.org/"
+					<div class="col-xs-2"><a href="http://junit.org/junit-lambda.html" target="_blank"><img style="margin-top: 40px;" src="${ctx}/assets/img/tech-logos/junit-lambda-110.png" alt="Junit Lambda" title="Junit Lambda"></a></div>
+					<div class="col-xs-10"><p>The <a href="http://www.ajug.org/"
 					target="_blank">Atlanta Java Users Group</a> and DevNexus
 					have been one of the earliest major <a href="http://junit.org/junit-lambda-contributors.html" target="_blank">
 					<strong>Crowdfunding Campaign Contributors</strong></a>  for the <strong>JUnit Lambda</strong> project.
 					<a href="http://junit.org/" target="_blank">JUnit</a> is one of the globe's most heavily used testing libraries.
 					We want to support the efforts of creating the next major version
-					of JUnit, enabling it to support Java 8 features (including Lambdas) among other features.</div>
+					of JUnit, enabling it to support Java 8 features (including Lambdas) among other features.</p></div>
 				</div>
 			</div>
 		</div>
