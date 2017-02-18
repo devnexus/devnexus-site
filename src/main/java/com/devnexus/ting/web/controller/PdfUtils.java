@@ -141,11 +141,23 @@ public class PdfUtils {
 
 	final Map<Float, String> rectangles = new HashMap<>();
 
-	public void print(String line, String color ) throws IOException {
+	public void print(float offset, String line, String color ) throws IOException {
 		createNewPageIfNecessary();
 		LOGGER.info("Adding color '"+ color +"' for heightCounter: " + heightCounter + " " + line + "; Line Offset: " + distanceFromZero);
 		rectangles.put(this.heightCounter, color);
-		contents.showText(line);
+		print(offset, line);
+	}
+
+	public void print(String line, boolean bold) throws IOException {
+		if (bold) {
+			this.contents.setFont(headerFont, baseFontSize);
+		}
+
+		print(line);
+
+		if (bold) {
+			this.contents.setFont(baseFont, baseFontSize);
+		}
 	}
 
 	public void print(String line) throws IOException {
@@ -193,8 +205,12 @@ public class PdfUtils {
 	}
 
 	public void println(String line) throws IOException {
+		println(line, false);
+	}
+
+	public void println(String line, boolean bold) throws IOException {
 		createNewPageIfNecessary();
-		print(line);
+		print(line, bold);
 		LOGGER.info(heightCounter + " " + line + "; Line Offset: " + distanceFromZero);
 		this.heightCounter -= this.currentLeading;
 

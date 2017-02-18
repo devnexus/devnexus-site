@@ -17,6 +17,8 @@ package com.devnexus.ting.config;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.MultipartProperties;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -24,6 +26,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.WebUtils;
+
+import com.devnexus.ting.web.controller.ScheduleController;
 
 /**
  * Global Exception Handler
@@ -33,7 +37,7 @@ import org.springframework.web.util.WebUtils;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 	@Autowired
 	private MultipartProperties multipartProperties;
 
@@ -54,8 +58,8 @@ public class GlobalExceptionHandler {
 			RedirectAttributes redirectAttributes) throws Exception {
 
 		String errorMessage = (String) request.getAttribute(WebUtils.ERROR_MESSAGE_ATTRIBUTE);
-
+		LOGGER.error("Caught Global Error", exception);
 		redirectAttributes.addFlashAttribute("error", errorMessage);
-		return "redirect:/s/uploadError";
+		return "redirect:/s/handleGlobaleErrors";
 	}
 }

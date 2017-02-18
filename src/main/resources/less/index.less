@@ -862,6 +862,22 @@ body{
     padding: 10px 0
 }
 
+.schedule-favorite-cell {
+	font-size: 250%;
+}
+.schedule-favorite-cell .is-favorite {
+	color: #f6921e;
+}
+.schedule-favorite-cell .session-favorite:active {
+	color: #f6921e;
+}
+.schedule-favorite-cell .session-favorite:hover {
+	color: #f6921e;
+}
+.schedule-favorite-cell .session-favorite:focus {
+	color: #f6921e;
+}
+
 @media(max-width: @screen-sm) {
     .schedule .schedule-row {
         margin: 0px 22px 0 22px;
@@ -883,6 +899,10 @@ body{
 }
 
 @media(min-width: @screen-sm) {
+
+	.schedule-favorite-cell {
+		padding: 2px !important;
+	}
 
     .schedule .schedule-row {
         margin: 0 22px;

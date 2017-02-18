@@ -152,7 +152,7 @@ public class ScheduleController {
 
 			for (Date conferenceDay : scheduleItemList.getDays()) {
 				pdfUtils.println();
-				pdfUtils.println(dateFormat.format(conferenceDay));
+				pdfUtils.println(dateFormat.format(conferenceDay), true);
 				pdfUtils.println();
 				Date fromTimeslot = null;
 
@@ -160,12 +160,12 @@ public class ScheduleController {
 
 					if (fromTimeslot == null || !fromTimeslot.equals(scheduleItem.getFromTime())) {
 						fromTimeslot = scheduleItem.getFromTime();
-						pdfUtils.print(timeFormat.format(fromTimeslot) + " – " + timeFormat.format(scheduleItem.getToTime()));
+						pdfUtils.print(timeFormat.format(fromTimeslot) + " - " + timeFormat.format(scheduleItem.getToTime()));
 					}
 
 					final String title = scheduleItem.getPresentation() != null ? scheduleItem.getPresentation().getTitle() : scheduleItem.getTitle();
 
-					pdfUtils.print(105f, scheduleItem.getRoom().getName());
+					pdfUtils.print(105f, scheduleItem.getRoom().getName(), scheduleItem.getRoom().getColor());
 
 					if (scheduleItem.getPresentation() != null
 							&& scheduleItem.getPresentation().getTrack() != null
@@ -190,14 +190,18 @@ public class ScheduleController {
 					if (fromTimeslot == null || !fromTimeslot.equals(scheduleItem.getFromTime())) {
 						fromTimeslot = scheduleItem.getFromTime();
 						pdfUtils.println();
-						pdfUtils.println(timeFormat.format(fromTimeslot) + " – " + timeFormat.format(scheduleItem.getToTime()));
+						pdfUtils.println(timeFormat.format(fromTimeslot) + " - " + timeFormat.format(scheduleItem.getToTime()), true);
 						pdfUtils.println();
 					}
 
-					pdfUtils.print(scheduleItem.getRoom().getName(), scheduleItem.getRoom().getColor());
+					pdfUtils.print(0, scheduleItem.getRoom().getName(), scheduleItem.getRoom().getColor());
 
 					if (scheduleItem.getPresentation() != null && scheduleItem.getPresentation().getTrack() != null) {
-						pdfUtils.print(105f, scheduleItem.getPresentation().getTrack().getName());
+						String trackname = scheduleItem.getPresentation().getTrack().getName();
+						if (trackname.length() > 25) {
+							trackname = trackname.substring(0, 25).trim() + "…";
+						}
+						pdfUtils.print(105f, trackname);
 						pdfUtils.print(150f, "");
 					}
 					else {

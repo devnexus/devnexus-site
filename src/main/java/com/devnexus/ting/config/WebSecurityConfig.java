@@ -69,7 +69,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				"/s/cfp/add-cfp-success**", "/s/cfp/speaker/**")
 			.hasAnyAuthority("ROLE_ADMIN", "ROLE_APP_USER").and()
 		.authorizeRequests().antMatchers("/**").permitAll().anyRequest().anonymous().and()
-		.logout().logoutSuccessUrl("/s/index").logoutUrl("/s/logout").permitAll().and();
+		.logout().logoutSuccessUrl("/s/schedule").logoutUrl("/s/logout").permitAll().and();
 
 		if (environment.getRequiredProperty("server.ssl.enabled", Boolean.class)) {
 			httpSecurity = httpSecurity.requiresChannel().antMatchers("/s/admin/**").requiresSecure().and();
@@ -88,7 +88,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll();
 
 		http.apply(new SpringSocialConfigurer()
-			.postLoginUrl("/s/cfp/index"));
+			.postLoginUrl("/s/schedule"));
 	}
 
 	@Override

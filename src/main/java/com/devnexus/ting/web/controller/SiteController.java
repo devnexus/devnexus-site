@@ -97,7 +97,7 @@ public class SiteController {
 
 	@RequestMapping("/s/handleGlobaleErrors")
 	public String onUploadError(HttpServletRequest request, final Model model, RedirectAttributes redirectAttributes) {
-		return "error/error";
+		return "globalError";
 	}
 
 	@RequestMapping("/s/uploadError")
