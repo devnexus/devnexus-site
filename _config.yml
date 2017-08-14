@@ -24,7 +24,7 @@ github_username:
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-devolution
+theme: 
 plugins:
   - jekyll-feed
 

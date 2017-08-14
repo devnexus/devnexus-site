@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="hero">
+  <div>
+    <ul class="list-inline hero-date-location">
+      {% assign dates = page.dates | default: "00-99 XXX" %}
+      <li><img src="/assets/img/calendar.png"/>{{ dates | escape }}</li>
+      <li><img src="/assets/img/location.png"/>ATLANTA, GA</li>
+    </ul>
+    <h1><img src="/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
+    <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
+    <a class="btn hero-btn-register {{ page.registration.status }}" href="#" >{{ page.registration.text | escape }}</a>
+   </div>
+</section>
