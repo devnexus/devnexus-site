@@ -121,6 +121,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-theme-cayman (0.0.4)
       jekyll (~> 3.3)
+    jekyll-theme-devolution (0.1.0)
+      jekyll (~> 3.5)
     jekyll-theme-dinky (0.0.4)
       jekyll (~> 3.3)
     jekyll-theme-hacker (0.0.4)
@@ -200,7 +202,7 @@ DEPENDENCIES
   github-pages (= 148)
   jekyll (= 3.5.1)
   jekyll-feed (~> 0.6)
-  minima (~> 2.0)
+  jekyll-theme-devolution (~> 0.1)
   tzinfo-data
 
 BUNDLED WITH
