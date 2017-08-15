@@ -14,9 +14,7 @@ description: 'SouthEast''s largest developer conference.
 '
 baseurl: 
 url: 
-twitter_username: devnexus
-github_username: 
 markdown: kramdown
-theme: 
+theme: jekyll-theme-devnexus 
 plugins:
 - jekyll-feed

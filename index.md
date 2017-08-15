@@ -1,8 +1,10 @@
 ---
 layout: home
-dates: 22-24 FEB
+dates: 00-99 XXX
 registration:
-  text: Will Open Sep 2017
+  text: Will open September 2017
   status: disabled
+facebook_target: xxxx
+twitter_target: xxxx
+google_target: xxxxx
 ---
-
