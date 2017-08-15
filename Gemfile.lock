@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:lauramoore/jekyll-theme-devolution.git
+  remote: https://github.com/lauramoore/jekyll-theme-devolution.git
   revision: b5ba65b79e17b71b9d16d1612c2c9736ba9747e8
   branch: master
   specs:
