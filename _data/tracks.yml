@@ -1,0 +1,28 @@
+- id: java
+  title: Java
+- id: alt-lang
+  title: JVM Languages
+- id: archictecture
+  title: Architecture
+- id: tools
+  title: Patterns & Design
+- id: frameworks
+  title: Dev Frameworks
+- id: security
+  title: Security
+- id: performance
+  title: Performance
+- id: web
+  title: Web
+- id: javascript
+  title: Javascript
+- id: mobile
+  title: Mobile
+- id: cloud
+  title: Cloud
+- id: microservices
+  title: Microservices
+- id: serverless
+  title: Serverless / FaaS
+- id: agile
+  title: Agile

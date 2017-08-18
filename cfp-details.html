@@ -22,20 +22,9 @@ new-cfp-url: http://cfp.connect-js.com/en/ct2017/cfp/session/new
   <li style=''>Once you've signed up on the CFP site, click 'Create New Event'. Make sure you also mark your availability.</li>
   <li style=''> Select the track accordingly in the CFP system:
     <ul>
-      <li style=''>JavaScript</li>
-      <li style=''>Core Java</li>
-      <li style=''>Microservices</li>
-      <li style=''>Architecture</li>
-      <li style=''>Mobile</li>
-      <li style=''>Design & UI & UX</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
-      <li style=''>etc</li>
+      {% for item in site.data.tracks %}
+           <li style=''>{{ item.title }}</li>
+      {% endfor %}
     </ul>
   </li>
   <li style=''>Presentations (lectures) are <strong>70 mins</strong> + 5 min for questions.
