@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/lauramoore/jekyll-theme-devolution.git
-  revision: b5ba65b79e17b71b9d16d1612c2c9736ba9747e8
-  branch: master
-  specs:
-    jekyll-theme-devolution (0.1.0)
-      jekyll (~> 3.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,7 +49,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.5.1)
   jekyll-feed (~> 0.6)
-  jekyll-theme-devolution!
   tzinfo-data
 
 BUNDLED WITH

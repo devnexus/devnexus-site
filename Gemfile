@@ -10,9 +10,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "3.5.1"
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-#gem "jekyll-theme-devolution", "~> 0.1"
-gem 'jekyll-theme-devolution', git: 'https://github.com/lauramoore/jekyll-theme-devolution.git', branch: 'master'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"

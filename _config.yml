@@ -15,6 +15,6 @@ description: 'SouthEast''s largest developer conference.
 baseurl: 
 url: 
 markdown: kramdown
-theme: jekyll-theme-devolution 
+theme: 
 plugins:
 - jekyll-feed
