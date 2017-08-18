@@ -8,3 +8,4 @@ facebook_target: atlantajug
 twitter_target: devnexus
 google_target: devnexus-conference
 ---
+{% include marketing-video.html %}
