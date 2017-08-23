@@ -5,16 +5,17 @@ collections:
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
+  tracks:
+    title: Tracks
+    output: false
+  organizers:
     output: true
+    permalink: /:collection/:path
 email: info@ajug.org
-description: 'SouthEast''s largest developer conference.
-
-'
-baseurl: 
-url: 
+description: SouthEast's largest developer conference.
+baseurl:
+url:
 markdown: kramdown
-theme: 
+theme:
 plugins:
 - jekyll-feed
