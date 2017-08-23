@@ -4,9 +4,9 @@ order: 1
 first_name: Gunnar
 last_name: Hillert
 company:
-twitter: https://twitter.com/ghillert
-linkedin: https://www.linkedin.com/in/hillert
-github: https://github.com/ghillert
+twitter: ghillert
+linkedin: hillert
+github: ghillert
 layout: bio
 ---
 As a Staff Engineer for Pivotal, Gunnar is a core committer for the Spring Integration and Spring Cloud Data Flow open source projects and has also contributed to the Cloud Foundry project. He has been a member of the Spring team for over 4 years. Furthermore, Gunnar was the the president of the Atlanta Java Users Group 2010-2016 and is co-organizer for the DevNexus developer conference that attracted 1800 developers in 2016. A native of Berlin, Germany, and after spending 15 years in Atlanta, Gunnar now resides in Holualoa, Hawai‘i.
