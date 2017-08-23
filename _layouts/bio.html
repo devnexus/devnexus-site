@@ -1,9 +1,52 @@
 ---
 layout: default
 ---
+---
 {% include navigation.html %}
-<div class="container-fluid {{ page.theme | default: "conference-info"}}" >
-{{ content }}
-</div>
-
+<section id="speaker" class="bg-light-gray details"
+	style="margin-top: 2em; text-align: left; padding-bottom: 0">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div id="{{page.first_name}}_{{page.last_name}}" class="speaker-member row">
+				<img src="/assets/img/organizers/{{page.first_name}}-{{page.last_name}}.jpeg"
+					class="img-responsive col-xs-3 col-xs-offset-1" alt="">
+				<h4>
+					{{page.first_name}}
+					{{page.last_name}}
+				</h4>
+				{% if page.twitter %}
+					<div>
+						<span class="fa fa-twitter"></span>
+						<a href="https://twitter.com/{{page.twitter}}"
+							target="_blank">{{page.twitter}}</a>
+					</div>
+			 {% endif %}
+				{% if page.linkedin %}
+					<div>
+						<span class="fa fa-linkedin"></span>
+						<a
+							href="https://www.linkedin.com/in/{{page.linkedin}}"
+							target="_blank">{{page.linkedin}}</a>
+					</div>
+				{% endif %}
+				{% if page.github %}
+					<div>
+						<span class="fa fa-github"></span>
+						<a
+							href="https://github.com/{{page.github}}"
+							target="_blank">{{page.github}}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 ">
+			<div class="biography-header">Biography</div>
+			<div class="biography-body">
+         {{ content }}
+      </div>
+		</div>
+	</div>
+</section>
 {% include footer.html %}

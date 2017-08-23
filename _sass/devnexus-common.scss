@@ -739,46 +739,6 @@ index--parallax {
 	top: inherit;
 }
 
-/* Speakers */
-
-.speaker-member .presentation-title {
-	color: #7bad34;
-}
-a.speaker-link {
-	color: #f79331;
-	text-decoration: none;
-}
-.speaker-link:hover {
-	color: #f9ad62;
-	-webkit-transition: color .25s ease-in-out;
-	-moz-transition: color .25s ease-in-out;
-	-ms-transition: color .25s ease-in-out;
-	-o-transition: color .25s ease-in-out;
-	transition: color .25s ease-in-out;
-}
-
-.speaker-member {
-	margin-bottom: 1em;
-}
-
-.speaker-member img {
-	margin: 0 auto;
-	border: 7px solid #fff;
-}
-
-.speaker-member h4 {
-	margin-top: 25px;
-	margin-bottom: 0;
-	text-transform: none;
-}
-
-.speaker-member p {
-	margin-top: 0;
-}
-.speaker-member ul {
-	padding: 0;
-}
-
 /* unsorted */
 .questions h4 {
 	color: #f7931d;
