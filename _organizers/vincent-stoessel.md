@@ -1,5 +1,6 @@
 ---
 title: Vincent Stoessel
+order: 5
 first_name: Vincent
 last_name: Stoessel
 company:

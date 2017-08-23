@@ -1,5 +1,6 @@
 ---
 title: Gunnar Hillert
+order: 1
 first_name: Gunnar
 last_name: Hillert
 company:

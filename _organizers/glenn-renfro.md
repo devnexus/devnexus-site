@@ -1,5 +1,6 @@
 ---
 title: Glenn Renfro
+order: 8
 first_name: Glenn
 last_name: Renfro
 company:

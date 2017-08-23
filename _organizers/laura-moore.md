@@ -1,5 +1,6 @@
 ---
 title: Laura Moore
+order: 9
 first_name: Laura
 last_name: Moore
 company:

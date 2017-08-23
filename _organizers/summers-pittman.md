@@ -1,5 +1,6 @@
 ---
 title: Summers Pittman
+order: 4
 first_name: Summers
 last_name: Pittman
 company:

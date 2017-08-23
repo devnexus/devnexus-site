@@ -1,5 +1,6 @@
 ---
 title: Bruce Petro
+order: 7
 first_name: Bruce
 last_name: Petro
 company:

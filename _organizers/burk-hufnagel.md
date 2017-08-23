@@ -1,5 +1,6 @@
 ---
 title: Burk Hufnagel
+order: 6
 first_name: Burk
 last_name: Hufnagel
 company:

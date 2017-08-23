@@ -1,5 +1,6 @@
 ---
 title: Vincent Mayers
+order: 2
 first_name: Vincent
 last_name: Mayers
 company:
