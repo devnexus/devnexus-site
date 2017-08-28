@@ -1,0 +1,27 @@
+- id: devcon2004
+  title: DevCon 2004
+- id: devcon2005
+  title: DevCon 2005
+- id: devcon2006
+  title: DevCon 2006
+- id: devcon2009
+  title: DevCon 2009
+- id: devnexus2010
+  title: DevNexus 2010
+- id: devnexus2011
+  title: DevNexus 2011
+- id: devnexus2012
+  title: DevNexus 2012
+  recordings: http://devnexus.com/static/2012/audio/
+- id: devnexus2013
+  title: DevNexus2013
+  recordings: http://www.infoq.com/devnexus/
+- id: devnexus2014
+  title: DevNexus 2014
+- id: devnexus2015
+  title: DevNexus 2015
+  recordings: https://www.youtube.com/channel/UCQweMZq2VAZqPisncB3ZgTw
+- id: devnexus2016
+  title: DevNexus 2016
+- id: devnexus2017
+  title: DevNexus 2017

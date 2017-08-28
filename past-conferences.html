@@ -1,0 +1,32 @@
+---
+title: Past Conferences
+layout: info
+---
+
+<section class="container-fluid conference-information">
+	<h1 class="featured-header">Past Conferences</h1>
+
+
+{% for _year in site.data.archives reversed %}
+	<div id="event" class="col-md-4">
+		<div class="row ">
+			<div class="col-md-12">
+				<h3 class="title">
+					{{_year.title}}
+				</h3>
+				<ul>
+					<li><a
+					href="/archive/{{_year.id}}/speakers.html">Speakers</a></li>
+					<li><a
+					href="/archive/{{_year.id}}/presentations.html">Presentations</a></li>
+					{% if _year.recordings %}
+					<li><a
+					href="{{_year.recordings}}">Recordings</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+
+</section>
