@@ -2,9 +2,6 @@
 title: DevNexus 2018
 timezone: UTC
 collections:
-  posts:
-    title: Posts
-    output: true
   tracks:
     title: Tracks
     output: false
@@ -17,8 +14,6 @@ baseurl:
 url:
 markdown: kramdown
 theme:
-plugins:
-- jekyll-feed
 defaults:
   -
    scope:
