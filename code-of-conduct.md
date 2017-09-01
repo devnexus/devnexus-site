@@ -1,11 +1,14 @@
 ---
 layout: info-fluid
 ---
-{::options parse_block_html="true" /}
-<h1 class="featured-header">Code of Conduct</h1>
+
+
+# Code of Conduct
+{: .featured-header}
+
 <sub>Adapted from the JSConf Code Of Conduct (http://jsconf.com/codeofconduct.html)</sub>
 
-All delegates, speakers, sponsors and volunteers at any Connect.Tech event are required to agree with the following code of conduct. Organizers will enforce this code throughout the event.
+All delegates, speakers, sponsors and volunteers at any DevNexus event are required to agree with the following code of conduct. Organizers will enforce this code throughout the event.
 
 ### The Quick Version
 
@@ -21,7 +24,7 @@ Sponsors are also subject to the anti-harassment policy. In particular, sponsors
 
 If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified by a clearly marked "STAFF" shirt.
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified by a clearly marked “STAFF” shirt.
 
 Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
 
