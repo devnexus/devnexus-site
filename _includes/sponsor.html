@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12">
+    <div class=" row top-intro sponsors">
+    <div class="col-sm-12 col-md-3">
+       <h4 class="decorated"><span>{{include.level-name}}</span></h4>
+     </div>
+     {% for sponsor in include.sponsors %}
+     <div class="col-sm-12 col-md-9">
+        <a href="{{sponsor.link}}">
+        <img src="/assets/img/{{sponsor.id}}.png" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
+     </div>
+     {%endfor%}
+ </div>
