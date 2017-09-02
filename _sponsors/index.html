@@ -1,8 +1,11 @@
 ---
 layout: info-fluid
 ---
-{% assign devlounge = site.sponsors | where:"level", "dev-lounge" %}
+
 <section>
 <h1 class="featured-header">SPONSORS</h1>
-{% include sponsor.html sponsors=devlounge level-name="Dev Lounge Sponsor"%}
+{% for sponsorLevel in site.data.sponsorlevels %}
+{% assign sponsorsInLevel = site.sponsors | where:"level", sponsorLevel.category %}
+{% include sponsor.html sponsors=sponsorsInLevel level-name=sponsorLevel.title %}
+{% endfor %}
 </section>
