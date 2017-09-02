@@ -667,23 +667,14 @@ h4.section-title {
 	line-height: 14px;
 }
 
-.sponsorsUnobtainium img,
-.sponsorsPlatinum img,
-.sponsorsGold img,
-.sponsorsSilver img,
-.sponsorsMediaPartner img,
-.sponsorsBadge img,
-.sponsorsLanyard img,
-.sponsorsDevLounge img,
-.sponsorsCocktail img {
-	background-color: #ffffff;
-}
 
-.sponsors h4 {
+.sponsors {
+	h4 {
 	margin: 40px 0;
 	font-size: 1.75em;
-}
-.sponsors img {
+  }
+  img {
+	background-color: #ffffff;
 	margin: 5px 20px;
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -699,9 +690,8 @@ h4.section-title {
 	-moz-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	-ms-transition: all 0.2s;
-}
-
-.sponsors img:HOVER, .sponsors img:FOCUS {
+ }
+ img:HOVER, img:FOCUS {
 	border-color: rgba(123,173,52,1);
 
 	transition: all 0.2s;
@@ -709,6 +699,7 @@ h4.section-title {
 	-moz-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	-ms-transition: all 0.2s;
+ }
 }
 
 .sponsors-row-spacing {
@@ -719,7 +710,7 @@ h4.section-title {
 
 section.module.parallax-3 {
 	height: 100%;
-	background-image: url(../assets/img/devnexusBackgroundMiddle.jpg);
+	background-image: url(/assets/img/devnexusBackgroundMiddle.jpg);
 }
 
 section.module.parallax {
@@ -740,12 +731,14 @@ index--parallax {
 }
 
 /* unsorted */
-.questions h4 {
+.questions {
+	h4 {
 	color: #f7931d;
 	font-size: 2.75em;
-}
-.questions h3 {
+ }
+ h3 {
 	font-size: 2.8em;
+}
 }
 
 
@@ -755,10 +748,10 @@ input.email {
 
 .list-inline{
 	display:block;
-}
-.list-inline li{
+ li {
 	display:inline-block;
 	color: #f79331;
+ }
 }
 
 .bg-light-gray {
