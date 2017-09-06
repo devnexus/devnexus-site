@@ -12,3 +12,14 @@ google_target: devnexus-conference
 <h1 class="top-intro"><a href="cfp-details.html">Call For Papers Is Open</a></h1>
 </div>
 {% include marketing-video.html %}
+<div class="row">
+<div class="sponsors col-xs-12">
+    <div class="row featured-header">
+      <p>Sponsors</p>
+    </div>
+    {% for sponsorLevel in site.data.sponsorlevels %}
+    {% assign sponsorsInLevel = site.sponsors | where:"level", sponsorLevel.category %}
+    {% include sponsor-thumb.html sponsors=sponsorsInLevel level-name=sponsorLevel.title %}
+    {% endfor %}
+</div>
+</div>

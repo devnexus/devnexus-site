@@ -700,6 +700,10 @@ h4.section-title {
 		-o-transition: all 0.2s;
 		-ms-transition: all 0.2s;
 	}
+	.thumb {
+		max-width: 158px;
+		max-height: 158px;
+	}
 }
 
 .sponsors-row-spacing {
