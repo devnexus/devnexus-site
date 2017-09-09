@@ -133,20 +133,20 @@ ul.footer-social .fa {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background: #384452;
-}
-#footerwrap p {
-	color: #bfc9d3;
-}
-#footerwrap h4 {
-	color: white;
-}
-#footerwrap i {
-	font-size: 30px;
-	color: #bfc9d3;
-	padding-right: 25px;
-}
-#footerwrap i:hover {
-	color: #00b3fe;
+  p {
+	  color: #bfc9d3;
+  }
+  h4 {
+	  color: white;
+  }
+  i {
+	  font-size: 30px;
+	  color: #bfc9d3;
+	  padding-right: 25px;
+  }
+  i:hover {
+	  color: #00b3fe;
+  }
 }
 .footer-wrapper a, .footer-wrapper a:visited, span.gc-cs-link {
 	text-decoration: none;
@@ -165,23 +165,20 @@ ul.footer-social .fa {
 .footer {
     background-color: #282828;
     border: solid 1px #979797;
+    ul {
+      margin: 50px
+    }
+   .text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.43;
+      letter-spacing: 3px;
+      text-align: center;
+      color: #666666;
+      text-transform: uppercase;
+  }
 }
-
-.footer ul {
-    margin: 50px
-}
-
-.footer .text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.43;
-    letter-spacing: 3px;
-    text-align: center;
-    color: #666666;
-    text-transform: uppercase;
-}
-
 .legal {
 	padding-top: 15px;
 	text-align: center;

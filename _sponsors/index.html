@@ -5,8 +5,5 @@ title: DevNexus Sponsors
 
 <section>
 <h1 class="featured-header">SPONSORS</h1>
-{% for sponsorLevel in site.data.sponsorlevels %}
-{% assign sponsorsInLevel = site.sponsors | where:"level", sponsorLevel.category %}
-{% include sponsor.html sponsors=sponsorsInLevel level-name=sponsorLevel.title %}
-{% endfor %}
+{% include sponsor-listing.md rendering="sponsor.html" %}
 </section>
