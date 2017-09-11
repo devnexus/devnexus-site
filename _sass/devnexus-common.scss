@@ -384,23 +384,6 @@ section.module.parallax.content {
 
 }
 
-#schedule {margin-bottom: 30px;}
-#schedule #one-fourth {width: 100%; margin-bottom: 24px;padding:5px 15px;text-align: left; color: #fff;}
-#schedule #one-fourth h3, #schedule #one-fourth p {color: #fff; margin: 15px 0;}
-#schedule #one-fourth h3 {font-size: 18px;}
-#schedule .row #one-fourth div a {color: white; text-decoration: underline}
-#schedule #one-fourth.track-1 {background-color:#630d1a}
-#schedule #one-fourth.track-102 {background-color:#44b75c}
-#schedule #one-fourth.track-2 {background-color:#fd8c2a}
-#schedule #one-fourth.track-3 {background-color:#7bb7cd}
-#schedule #one-fourth.track-4 {background-color:#dbaa2e}
-#schedule #one-fourth.track-5 {background-color:#297ca5}
-#schedule #one-fourth.track-6 {background-color:#d14928}
-#schedule #one-fourth.track-7 {background-color:#455159}
-#schedule #one-fourth.track-8 {background-color:#A2285E}
-#schedule #one-fourth.track-9 {background-color:#FF5D40}
-#schedule #one-fourth.track-10 {background-color:#6A237E}
-#schedule #one-fourth.track-11 {background-color:#589800}
 
 .row-centered {
 	text-align:center;
@@ -433,18 +416,6 @@ section.module.parallax.content {
 
 .header-item-container .header-item {
 	color: #519d55;
-}
-
-.schedule-item, .header-item, .registration-item {
-	border-radius:4px;-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	-webkit-box-shadow: 1px 1px 2px 0px rgba(50,50,50,0.25);
-	-moz-box-shadow:    1px 1px 2px 0px rgba(50,50,50,0.25);
-	box-shadow:         1px 1px 2px 0px rgba(50,50,50,0.25);
-}
-
-.schedule-item-session {
-	border-top: 1px dotted rgba(255,255,255,0.3);
 }
 
 .ribbon {
@@ -620,12 +591,19 @@ h4.section-title {
 	-ms-transition: all 0.2s;
 }
 
-#sponsors {
-	background-color: #eeeeee;
-}
+
 #featured h3 {
 	border-bottom: 3px solid #7bad34;
 }
+
+.featured-header {
+    margin: 80px 0px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 
 #stats {
 	background-repeat: no-repeat;
@@ -668,47 +646,6 @@ h4.section-title {
 }
 
 
-.sponsors {
-	h4 {
-		margin: 40px 0;
-		font-size: 1.75em;
-	}
-	img {
-		background-color: #ffffff;
-		margin: 5px 20px;
-		border-radius: 8px;
-		-webkit-border-radius: 8px;
-		-moz-border-radius: 8px;
-		-o-border-radius: 8px;
-
-		border-color: rgba(123,173,52,0);;
-		border-style: solid;
-		border-width: 2px;
-
-		transition: all 0.2s;
-		-webkit-transition: all 0.2s;
-		-moz-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		-ms-transition: all 0.2s;
-	}
-	img:HOVER, img:FOCUS {
-		border-color: rgba(123,173,52,1);
-
-		transition: all 0.2s;
-		-webkit-transition: all 0.2s;
-		-moz-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		-ms-transition: all 0.2s;
-	}
-	.thumb {
-		max-width: 158px;
-		max-height: 158px;
-	}
-}
-
-.sponsors-row-spacing {
-	margin: 15px 0 15px 0;
-}
 
 /* */
 

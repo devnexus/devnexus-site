@@ -1,9 +1,9 @@
-<div>
+<div class="row sponsor-section">
   <div class="col-md-2">
   {{include.level-name}}
   </div>
   {% for sponsor in include.sponsors %}
-  <div class="col-md-10 thumb">
+  <div class="col-md-10">
   <a href="{{sponsor.link}}"><img class="img-responsive" src="/assets/img/{{sponsor.id}}.png" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
   </div>
   {%endfor%}

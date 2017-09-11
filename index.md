@@ -12,9 +12,11 @@ google_target: devnexus-conference
 <h1 class="top-intro"><a href="cfp-details.html">Call For Papers Is Open</a></h1>
 </div>
 {% include marketing-video.html %}
-<section class="sponsors">
-    <div class="featured-header">
-      <p>Sponsors</p>
-    </div>
-    {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
-</section>
+<div class="row">
+<div>
+      <div class="row featured-header">
+        <p>Sponsors</p>
+      </div>
+      {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
+</div>
+</div>
