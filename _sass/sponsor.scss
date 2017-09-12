@@ -4,35 +4,16 @@
 .sponsors {
 	h4 {
 		margin: 40px 0;
-		font-size: 1.75em;
+		font-size: 24px;
 	}
 	img {
-		background-color: #ffffff;
-		margin: 5px 20px;
-
-    border-radius: 8px;
-		-webkit-border-radius: 8px;
-		-moz-border-radius: 8px;
-		-o-border-radius: 8px;
-
-		border-color: rgba(123,173,52,0);;
-		border-style: solid;
-		border-width: 2px;
-
-		transition: all 0.2s;
-		-webkit-transition: all 0.2s;
-		-moz-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		-ms-transition: all 0.2s;
+    border: solid 1px #282828;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px;
 	}
 	img:HOVER, img:FOCUS {
 		border-color: rgba(123,173,52,1);
-
-		transition: all 0.2s;
-		-webkit-transition: all 0.2s;
-		-moz-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		-ms-transition: all 0.2s;
 	}
 }
 .sponsors-row-spacing {

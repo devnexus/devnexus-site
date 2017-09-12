@@ -62,11 +62,12 @@ a:active {
 a img {
 	border: 0;
 }
-
 /* Typography */
 body, button, input, select, textarea {
-	color: #3e434a;
-	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #282828;
+	font-size: 16px;
 	line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
