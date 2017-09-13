@@ -2,9 +2,9 @@
   <div class="col-md-2">
   {{include.level-name}}
   </div>
-  {% for sponsor in include.sponsors %}
   <div class="col-md-10">
+  {% for sponsor in include.sponsors %}
   <a href="{{sponsor.link}}"><img class="img-responsive" src="{{sponsor.logo_image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
-  </div>
   {%endfor%}
+  </div>
 </div>

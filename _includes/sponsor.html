@@ -4,11 +4,11 @@
            <div class="col-sm-12 col-md-3">
                <h4 class="decorated"><span>{{include.level-name}}</span></h4>
            </div>
-           {% for sponsor in include.sponsors %}
            <div class="col-sm-12 col-md-9">
-            <a href="{{sponsor.link}}"><img class="img-responsive" src="{{sponsor.logo_image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
+             {% for sponsor in include.sponsors %}
+              <a href="{{sponsor.link}}"><img class="img-responsive" src="{{sponsor.logo_image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
+            {%endfor%}
            </div>
-           {%endfor%}
       </div>
     </div>
 </div>
