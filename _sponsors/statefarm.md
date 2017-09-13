@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Statefarm
-link: 'http://'
-logo_image:
+link: 'http://www.statefarm.com'
+logo_image: /uploads/statefarm.png
 ---
+
+
+![](/uploads/versions/statefarm---x----360-360x---.png)
