@@ -17,6 +17,8 @@ baseurl:
 url:
 markdown: kramdown
 theme:
+_editor:
+  default_path: /about/
 defaults:
   -
    scope:
@@ -24,3 +26,10 @@ defaults:
      type: "pages"
    values:
      layout: "archive"
+_options:
+  logo_image:
+    width: 360
+    height: 360
+    resize_style: "cover"
+    mime_type: "image/png"
+    expandable: false
