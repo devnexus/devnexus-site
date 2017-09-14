@@ -1,7 +1,9 @@
 ---
 collection: sponsors
-level:
+level: Silver
 name: Smartsheet
-link: 'http://'
-logo_image:
+link: 'http://smartsheet.com'
+logo_image: /uploads/smartsheet-001.png
 ---
+
+
