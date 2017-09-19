@@ -1,6 +1,6 @@
 ---
 collection: sponsors
-level: Silver
+level: silver
 name: Fusion Reactor
 link: 'https://www.fusion-reactor.com/'
 logo_image: /uploads/fusion-r-001.png
