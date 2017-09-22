@@ -1,0 +1,10 @@
+{
+  "bob_burger": {
+    "name": "Bob Burger",
+    "bio:": "I like cats and Chuck Norris jokes.  I've been a fry cook for 20 years"
+  },
+  "phil_a_mingon": {
+    "name": "Phil A. Mingon",
+    "bio": "I only eat at Michelin rated restaurants or obscure holes-in-the-wall you've never heard of"
+  }
+}
