@@ -1,0 +1,14 @@
+<div class="row text-center">
+    {% for speaker in include.speakers %}
+      <div style="width: 150px; display: inline-block;">
+        {% if speaker.image_url %}
+          <img class="img-responsive img-circle" src="speaker.image_url" alt="${speaker.name}"/>
+        {% endif%}
+        <h4>
+          <a href="/speakers/#{{speaker.id}}}">
+            {{speaker.name}}
+          </a>
+        </h4>
+      </div>
+    {% endfor %}
+</div>

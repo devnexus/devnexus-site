@@ -1,0 +1,30 @@
+{
+  "food_safety_and_you": {
+    "speakers": ["bob_burger"],
+    "title": "Food Saftey and You",
+    "track": "tools",
+    "level": "introduction",
+    "tags": ["regulations", "how-to", "safety", "hamburger"],
+    "abstract": "Only you can prevent Salmonella",
+    "slot": "01_10:00"
+  },
+  "the_best_meal_i_ever_had": {
+    "speakers": ["phil_a_mingon"],
+    "title": "The best meal I ever had",
+    "track": "keynote",
+    "level": "introduction",
+    "tags": ["steak", "best-practices"],
+    "abstract": "The best meal i ever had has lots to teach about building great
+    customer experiences, use my knowledge to turn you into a superstar!",
+    "slot": "01_09:00"
+  },
+  "after_dinner_coffee_pairings_for_steak": {
+    "speakers": ["phil_a_mingon", "bob_burger"],
+    "title": "After Dinner Coffee Pairings For Beef",
+    "track": "java",
+    "level": "advanced",
+    "tags": ["steak", "hamburger", "beef", "coffee"],
+    "abstract": "Let a great meal last until the last second, cup that is...",
+    "slot": "02_14:00"
+  }
+}
