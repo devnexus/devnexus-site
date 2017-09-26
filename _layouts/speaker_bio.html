@@ -1,0 +1,59 @@
+---
+layout: info
+---
+<section id="speaker" class="bg-light-gray details"
+	style="margin-top: 2em; text-align: left; padding-bottom: 0">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="speaker-member row">
+				{% if page.image_url %}
+				<img src="{{page.image_url}}"
+					class="img-responsive col-xs-3 col-xs-offset-1" alt="">
+				{% endif %}
+				<h4>
+					{{ page.nombre }}
+				</h4>
+				{% if page.twitter %}
+					<div>
+						<span class="fa fa-twitter"></span>
+						<a href="https://twitter.com/{{page.twitter}}"
+							target="_blank">{{page.twitter}}</a>
+					</div>
+			 {% endif %}
+				{% if page.linkedin %}
+					<div>
+						<span class="fa fa-linkedin"></span>
+						<a
+							href="https://www.linkedin.com/in/{{page.linkedin}}"
+							target="_blank">{{page.linkedin}}</a>
+					</div>
+				{% endif %}
+				{% if page.github %}
+					<div>
+						<span class="fa fa-github"></span>
+						<a
+							href="https://github.com/{{page.github}}"
+							target="_blank">{{page.github}}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 ">
+			<div class="biography-header">Biography</div>
+			<div class="biography-body">
+         {{ page.bio }}
+      </div>
+		</div>
+	</div>
+	{% for preso in page.presentations %}
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 ">
+			<div class="presentation-header">
+				<a href="/presentations/{{preso.link}}">{{ preso.title }}</a>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+</section>

@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Bob Burger",
+    "image_url": "http://www.animatedimages.org/data/media/1003/animated-bob-the-builder-image-0030.gif",
+    "bio": "I like cats and Chuck Norris jokes.  I've been a fry cook for 20 years",
+    "twitter": "b_b",
+    "presentations": [{"title": "Food Saftey and You",
+                          "link": "food-safety-and-you"},
+                        {"title": "After Dinner Coffee Pairings For Beef",
+                          "link": "after-dinner-coffee-pairings-for-beef"}]
+  },
+  {
+    "nombre": "Phil A. Mingon",
+    "bio": "I only eat at Michelin rated restaurants or obscure holes-in-the-wall you've never heard of",
+    "presentations": [{"title": "The best meal I ever had",
+                        "link": "the-best-meal-i-ever-had"},
+                      {"title": "After Dinner Coffee Pairings For Beef",
+                        "link": "after-dinner-coffee-pairings-for-beef"}]
+  }
+]
