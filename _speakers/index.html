@@ -1,0 +1,10 @@
+---
+title: 2107 Speakers
+layout: info
+---
+{% assign speakers = site.data.speakers02 %}
+{% for speaker in speakers %}
+<div>
+  {% include speaker_thumb.html details=speaker %}
+</div>
+{% endfor %}

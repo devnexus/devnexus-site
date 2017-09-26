@@ -2,6 +2,9 @@
 title: DevNexus 2018
 timezone: UTC
 collections:
+  speakers:
+    title: Speakers
+    output: true
   sponsors:
     title: Sponsors
     output: true
