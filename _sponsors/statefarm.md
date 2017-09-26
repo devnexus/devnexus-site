@@ -1,6 +1,6 @@
 ---
 collection: sponsors
-level: silver
+level: gold
 name: Statefarm
 link: 'http://www.statefarm.com'
 logo_image: /uploads/statefarm.png
