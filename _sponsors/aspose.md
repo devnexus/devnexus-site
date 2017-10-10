@@ -1,7 +1,9 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Aspose
-link: 'http://'
-logo_image:
+link: 'http://aspose.com'
+logo_image: /uploads/aspose-001-1.png
 ---
+
+
