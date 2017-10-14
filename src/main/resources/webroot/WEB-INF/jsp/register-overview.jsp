@@ -66,7 +66,7 @@
 
                     <c:if test="${empty groupTicketGroups}">
                         <p>
-                            Stay tuned!  We will have group tickets available soon!
+<!--                            Stay tuned!  We will have group tickets available soon!-->
                         </p>
                     </c:if>
                 </header>

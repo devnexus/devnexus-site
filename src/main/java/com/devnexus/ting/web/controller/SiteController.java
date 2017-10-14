@@ -92,7 +92,7 @@ public class SiteController {
 		final Event event = businessService.getCurrentEvent();
 		final SponsorList sponsorList = businessService.getSponsorListForEvent(event.getId(), false);
 		model.addAttribute("sponsorList", sponsorList);
-		return "index";
+		return "redirect:/s/register-overview";
 	}
 
 	@RequestMapping("/s/handleGlobaleErrors")

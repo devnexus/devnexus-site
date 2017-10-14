@@ -39,7 +39,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.devnexus.ting.common.SpringProfile;
-import com.devnexus.ting.config.support.CfpSettings;
 import com.devnexus.ting.config.support.RegistrationSettings;
 import com.devnexus.ting.core.service.BusinessService;
 import com.devnexus.ting.model.CouponCode;
@@ -65,6 +64,9 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -240,15 +242,19 @@ public class RegisterController {
         return "register2";
 
     }
+    @Transactional
     @RequestMapping(value = "/s/executeRegistration/{registrationKey}", method = RequestMethod.GET)
     public String confirmPayment(@PathVariable("registrationKey") final String registrationKey, @RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, Model model) {
 
-        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
 
+        Logger.getAnonymousLogger().log(Level.SEVERE, "Execute registration2" + payerId);     
+        RegistrationDetails registerForm = businessService.getRegistrationForm(registrationKey);
+Logger.getAnonymousLogger().log(Level.SEVERE, "Execute registration2" + payerId);     
         Event currentEvent = businessService.getCurrentEvent();
         EventSignup eventSignup = businessService.getEventSignup();
+        Logger.getAnonymousLogger().log(Level.SEVERE, "Execute registration3" + payerId);        
         prepareHeader(currentEvent, model);
-        
+        Logger.getAnonymousLogger().log(Level.SEVERE, "Execute registration4" + payerId);        
         if (registrationNotOpen()) {
             return "closed";
         }
@@ -406,7 +412,7 @@ public class RegisterController {
                 registerForm.setPaymentState(RegistrationDetails.PaymentState.PAYPAL_CREATED);
                 registerForm.setFinalCost(getTotal(registerForm));
                 registerForm = businessService.createPendingRegistrationForm(registerForm);
-                String baseUrl = String.format("%s://%s:%d/", request.getScheme(), request.getServerName(), request.getServerPort());
+                String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
                 Payment createdPayment = runPayPal(registerForm, baseUrl);
                 return "redirect:" + createdPayment.getLinks().stream().filter(link -> {
                     return link.getRel().equals("approval_url");
@@ -418,11 +424,11 @@ public class RegisterController {
 
     }
     private void prepareHeader(Event event, Model model) {
-        final ScheduleItemList scheduleItemList = businessService.getScheduleForEvent(event.getId());
+        final ScheduleItemList scheduleItemList = new ScheduleItemList();//businessService.getScheduleForEvent(event.getId());
 
         model.addAttribute("event", event);
         SpeakerList speakers = new SpeakerList();
-        speakers.setSpeakers(businessService.getSpeakersForEvent(event.getId()));
+        speakers.setSpeakers(new ArrayList<>());
         model.addAttribute("speakerList", speakers);
 
         model.addAttribute("scheduleItemList", scheduleItemList);

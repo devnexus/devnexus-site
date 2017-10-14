@@ -12,7 +12,7 @@
 				<p style="text-align: center"><strong>Thank you for your order!</strong> We look forward to seeing you at DevNexus 2017!</p>
 				<p>Are you looking for a hotel or have transportation questions?
 				<p>Please review our <strong>Conference Info</strong> page for details:</p>
-				<a class="btn hero-btn-register" href="${baseSiteUrl}/conference-info">Conference Info</a>
+				<a class="btn hero-btn-register" href="https://devnexus.com/conference-info">Conference Info</a>
 			</div>
 	</div>
 </section>

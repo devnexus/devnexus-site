@@ -1,4 +1,4 @@
-	<c:url var="homeUrl" value="${baseSiteUrl}/index"/>
+	<c:url var="homeUrl" value="https://devnexus.com"/>
 	<c:url var="speakersUrl" value="${baseSiteUrl}/speakers"/>
         <c:url var="sponsorsUrl" value="${baseSiteUrl}/sponsors"/>
 	<c:url var="presentationsUrl" value="${baseSiteUrl}/presentations"/>
@@ -28,7 +28,7 @@
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-link"><a href="${speakersUrl}">SPEAKERS</a></li>
@@ -37,6 +37,6 @@
                 <li class="nav-link"><a href="${conferenceInfoUrl}">CONFERENCE INFO</a></li>
                 <li class="nav-link"><a class="btn btn-register disabled" href="#">SOLD OUT</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div> /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
