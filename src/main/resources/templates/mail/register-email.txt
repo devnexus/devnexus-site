@@ -15,7 +15,7 @@ Do you have further questions? Contact the organizers at info@ajug.org.
 Order Summary
 
 Order Id: {{orderId}}
-Order Link: https://www.devnexus.com/s/register/{{orderId}}
+Order Link: https://devnexus2018.ajug.org/s/register/{{orderId}}
 =======================================
 Order Details
 =======================================
