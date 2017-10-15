@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 
 <head>
-    <title>${contextEvent.title} |  DevNexus 2017</title>
+    <title>${contextEvent.title} |  DevNexus 2018</title>
 </head>
 <body>
     <section class="container-fluid register" >

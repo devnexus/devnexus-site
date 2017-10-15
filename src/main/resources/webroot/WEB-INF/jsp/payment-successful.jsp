@@ -9,7 +9,7 @@
 	<div class="row ">
 		<div class="col-xs-12 text-center">
 				<img src="${ctx}/assets/img/success.png" class="center-block" title="Success"/>
-				<p style="text-align: center"><strong>Thank you for your order!</strong> We look forward to seeing you at DevNexus 2017!</p>
+				<p style="text-align: center"><strong>Thank you for your order!</strong> We look forward to seeing you at DevNexus 2018!</p>
 				<p>Are you looking for a hotel or have transportation questions?
 				<p>Please review our <strong>Conference Info</strong> page for details:</p>
 				<a class="btn hero-btn-register" href="https://devnexus.com/conference-info">Conference Info</a>
