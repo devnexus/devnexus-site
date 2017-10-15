@@ -1,9 +1,9 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: Oracle
-link: 'http://'
-logo_image:
+link: 'http://developer.oracle.com'
+logo_image: /uploads/oracle-001.png
 ---
 
 
