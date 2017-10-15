@@ -15,13 +15,10 @@ google_target: devnexus-conference
 <h1 class="top-intro"><a href="cfp-details.html">Call For Papers Is Open</a></h1>
 </div>
 
-{% include marketing-video.html %}&lt;div class="row"&gt;
-
-<div>
+{% include marketing-video.html %}
+<div class="row">
       <div class="row featured-header">
         <p>Sponsors</p>
       </div>
       {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
-
-&lt;/div&gt;
