@@ -15,6 +15,9 @@ email: info@ajug.org
 description: SouthEast's largest developer conference.
 baseurl:
 url:
+links:
+   cfp: https://cfp.devnexus.com/en/dn2018/cfp/session/new
+   register: https://devnexus2018.ajug.org/s/register-overview
 markdown: kramdown
 theme:
 _editor:

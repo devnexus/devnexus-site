@@ -11,9 +11,7 @@ google_target: devnexus-conference
 ---
 
 
-<div class="navbar">
-<h1 class="top-intro"><a href="cfp-details.html">Call For Papers Is Open</a></h1>
-</div>
+{% include navigation.html %}
 
 {% include marketing-video.html %}
 <div class="row">
