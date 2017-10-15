@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: Registration will open October 15 2017
+  text: REGISTER FOR EARLY BIRD PASSES HERE
   status: disabled
 facebook_target: atlantajug
 twitter_target: devnexus
