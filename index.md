@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: REGISTER FOR EARLY BIRD PASSES HERE
+  text: REGISTER FOR EARLY BIRD PASS HERE
   status: enabled
 facebook_target: atlantajug
 twitter_target: devnexus
