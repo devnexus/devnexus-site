@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Mulesoft
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/mulesoft-001-1.png
 ---
+
+
+![](/uploads/versions/mulesoft-001-1---x----600-600x---.png)
