@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Mulesoft
-link:
+link: http://mulesoft.com
 logo_image: /uploads/mulesoft-001-1.png
 ---
 
