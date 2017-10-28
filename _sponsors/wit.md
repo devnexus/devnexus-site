@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: WIT
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/wit-001.png
 ---
 
 
