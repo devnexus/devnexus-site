@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: WIT
-link:
+link: https://www.mywit.org/
 logo_image: /uploads/wit-001.png
 ---
 
