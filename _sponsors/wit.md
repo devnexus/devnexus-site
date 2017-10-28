@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: WIT
-link: https://www.witi.com/atlanta/
+link:
 logo_image: /uploads/wit-001.png
 ---
 
