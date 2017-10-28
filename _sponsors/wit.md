@@ -2,7 +2,7 @@
 collection: sponsors
 level:
 name: WIT
-link:
+link: https://www.witi.com/atlanta/
 logo_image: /uploads/wit-001.png
 ---
 
