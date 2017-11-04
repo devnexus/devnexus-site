@@ -1,9 +1,9 @@
 ---
 collection: sponsors
-level:
+level: name
 name: Firefox
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/ffox-001.jpeg
 ---
 
 
