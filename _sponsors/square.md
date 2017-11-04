@@ -1,7 +1,9 @@
 ---
 collection: sponsors
-level: www.squareup.com
+level: silver
 name: Square
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/squr-001.png
 ---
+
+
