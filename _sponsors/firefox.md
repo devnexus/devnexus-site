@@ -2,7 +2,7 @@
 collection: sponsors
 level: name
 name: Firefox
-link:
+link: https://www.mozilla.org/en-US/firefox/
 logo_image: /uploads/ffox-001.jpeg
 ---
 
