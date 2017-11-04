@@ -1,9 +1,9 @@
 ---
 collection: sponsors
-level:
+level: platinum
 name: RedHat
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/rh-001.png
 ---
 
 
