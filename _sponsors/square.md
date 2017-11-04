@@ -1,6 +1,6 @@
 ---
 collection: sponsors
-level:
+level: www.squareup.com
 name: Square
 link: 'http://'
 logo_image:
