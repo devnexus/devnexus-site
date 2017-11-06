@@ -2,8 +2,9 @@
 collection: sponsors
 level: platinum
 name: RedHat
-link: 'http://redhat.com'
-logo_image: /uploads/rh-001.png
+link:
+logo_image: /uploads/rho-001.png
 ---
 
 
+![](/uploads/versions/rho-001---x----360-360x---.png)
