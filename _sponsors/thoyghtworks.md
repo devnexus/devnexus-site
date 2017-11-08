@@ -2,7 +2,7 @@
 collection: sponsors
 level: platinum
 name: ThoyghtWorks
-link:
+link: http://thoughtworks.com
 logo_image: /uploads/tw-001.png
 ---
 
