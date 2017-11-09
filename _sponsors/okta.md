@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: OKTA
-link:
+link: https://developer.okta.com/
 logo_image: /uploads/okta-001.png
 ---
 
