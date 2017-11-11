@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Cox
-link:
+link: https://jobs.coxenterprises.com/
 logo_image: /uploads/cox-001.png
 ---
 
