@@ -1,0 +1,10 @@
+{% assign preso = include.details %}
+<div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="thumbnail">
+         <img class="img-responsive" src="{{preso.author_img}}" alt="{{preso.title}}">
+         <div class="caption">
+             <h3><a href="{{preso.url}}">{{preso.title}}</a></h3>
+            <p>{{preso.authors}}</p>
+        </div>
+     </div>
+</div>
