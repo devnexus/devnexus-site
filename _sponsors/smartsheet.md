@@ -1,6 +1,5 @@
 ---
 collection: sponsors
-<<<<<<< HEAD
 level: gold
 name: SmartSheet
 link: 'http://smartsheet.com'
