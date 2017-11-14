@@ -1,3 +1,8 @@
+PATH
+  remote: _plugins/jekyll-cfp
+  specs:
+    jekyll-cfp (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -23,21 +28,21 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.14.0)
+    kramdown (1.15.0)
     liquid (4.0.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    pathutil (0.14.0)
+    pathutil (0.16.0)
       forwardable-extended (~> 2.6)
-    public_suffix (3.0.0)
+    public_suffix (3.0.1)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.5.1)
+    sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -48,6 +53,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.5.1)
+  jekyll-cfp (= 0.1.0)!
   jekyll-feed (~> 0.6)
   tzinfo-data
 

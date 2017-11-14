@@ -39,8 +39,3 @@ _options:
     resize_style: "cover"
     mime_type: "image/png"
     expandable: false
-page_gen:
-  - data: "promo_events"
-    template: "preso_details"
-    name: "id"
-    dir: "presentations"
