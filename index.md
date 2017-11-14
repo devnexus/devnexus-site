@@ -13,4 +13,10 @@ google_target: devnexus-conference
 
 {% include navigation.html %}
 
-{% include marketing-video.html %}&lt;div class="row"&gt;      &lt;div class="row featured-header"&gt;        &lt;p&gt;Sponsors&lt;/p&gt;      &lt;/div&gt;      {% include sponsor-listing.md rendering="sponsor-thumb.html" %}&lt;/div&gt;
+{% include marketing-video.html %}
+<div class="row">
+      <div class="row featured-header">
+        <p>Sponsors</p>
+      </div>
+      {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
+</div>
