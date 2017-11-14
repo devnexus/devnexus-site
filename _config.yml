@@ -40,7 +40,7 @@ _options:
     mime_type: "image/png"
     expandable: false
 page_gen:
-  - data: "speakers02"
-    template: "speaker_bio"
-    name: "nombre"
-    dir: "speakers"
+  - data: "promo_events"
+    template: "preso_details"
+    name: "id"
+    dir: "presentations"
