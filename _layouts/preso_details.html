@@ -13,7 +13,7 @@ layout: info
 				<h4>{{page.title}}</h4>
 					<div>
 						<strong style="color: white">Track:</strong>
-						<span>{{page.track}}</span>
+						<span>{{page.track | escape }}</span>
 					</div>
 				  
 			</div>
@@ -24,7 +24,7 @@ layout: info
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="presentation-header">Abstract</div>
 			<div class="biography-body">
-				{{page.abstract}}
+				{{page.abstract | escape}}
 			</div>
 		</div>
 	</div>
@@ -32,9 +32,9 @@ layout: info
     {% for speaker in page.persons %}
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1 ">
-				<div class="biography-header">{{speaker.full_public_name}}</div>
+				<div class="biography-header">{{speaker.full_public_name | escape }}</div>
 				<div class="presentation-body">
-					{{speaker.abstract}}
+					{{speaker.abstract | escape}}
 				</div>
 			</div>
 		</div>

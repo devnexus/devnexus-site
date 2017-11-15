@@ -25,8 +25,8 @@ google_target: devnexus-conference
              <div class="thumbnail">
                  <img class="img-responsive" src="https://cfp.devnexus.com{{ lead.avatar_path }}" alt="{{ event.title }}" >
                  <div class="caption">
-                     <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
-                     <p>{{ lead.full_public_name }}</p>
+                     <h3><a href="{{ event.url }}">{{ event.title | escape }}</a></h3>
+                     <p>{{ lead.full_public_name | escape }}</p>
                 </div>
              </div>
         </div>
