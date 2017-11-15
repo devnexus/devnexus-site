@@ -10,7 +10,7 @@ module Jekyll
               workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
               for event in workshop_data do
                   event['layout'] = 'preso_details'
-                 filtered_persons = event['persons'].map{ |p| p.select{|k,v| ["full_public_name", "abstract"].include?(k) }}
+                 filtered_persons = event['persons'].map{ |p| p.select{|k,v| ["full_public_name", "abstract", "avatar_path"].include?(k) }}
                  event['persons'] = filtered_persons
                  File.write( "_events/#{event['id']}.md", YAML.dump(event)+"\r\n---\r\n" )
               end
