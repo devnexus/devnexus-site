@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: REGISTER NOW
+  text: Tickets Available Now!
   status: enabled
   link:
 facebook_target: atlantajug
