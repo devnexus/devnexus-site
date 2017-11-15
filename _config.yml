@@ -5,6 +5,9 @@ collections:
   speakers:
     title: Speakers
     output: true
+  events:
+     output: true
+     permalink: /presentations/:path  
   sponsors:
     title: Sponsors
     output: true
