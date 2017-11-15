@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: EARLY BIRD EXPIRES TODAY - NOVEMBER 14
+  text: REGISTER NOW
   status: enabled
   link:
 facebook_target: atlantajug
