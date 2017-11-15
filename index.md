@@ -2,9 +2,9 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: REGISTER FOR EARLY BIRD PASS HERE
+  text: EARLY BIRD EXPIRES TODAY - NOVEMBER 14
   status: enabled
-  link: https://devnexus2018.ajug.org/s/register-overview
+  link:
 facebook_target: atlantajug
 twitter_target: devnexus
 google_target: devnexus-conference
