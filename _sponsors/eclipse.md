@@ -2,9 +2,9 @@
 collection: sponsors
 level: silver
 name: Eclipse
-link: www.eclipse.org
-logo_image: /uploads/eclipse2014-rgb.png
+link:
+logo_image:
 ---
 
 
-![](/uploads/versions/eclipse2014-rgb---x----1958-461x---.png)
+![](/uploads/versions/ecl-001---x----360-360x---.png)
