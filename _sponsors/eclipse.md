@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Eclipse
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/eclipse2014-rgb.png
 ---
+
+
+![](/uploads/versions/eclipse2014-rgb---x----1958-461x---.png)
