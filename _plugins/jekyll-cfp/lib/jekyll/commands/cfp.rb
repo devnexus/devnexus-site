@@ -19,10 +19,13 @@ module Jekyll
          filtered_persons = filter_attributes(event['persons'], "full_public_name", "abstract", "avatar_path")
          event['persons'] = filtered_persons
          abstract = event.delete('abstract')
-         File.write( "_events/#{event['id']}.md", YAML.dump(event)+"\r\n---\r\n"+abstract)
-        end
+         write_item("events", event, abstract)
+        end 
         def filter_attributes(data, *props)
            return data.map{|p| p.select{ |k,v| props.include?(k) }}
+        end
+        def write_item(collection, item, abstract)
+          File.write( "_#{collection}/#{item['id']}.md", YAML.dump(item)+"\r\n---\r\n"+abstract)
         end
       end
     end
