@@ -9,13 +9,20 @@ module Jekyll
               event_data = JSON.parse(event_data_file)
               workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
               for event in workshop_data do
-                  event['layout'] = 'preso_details'
-                 filtered_persons = event['persons'].map{ |p| p.select{|k,v| ["full_public_name", "abstract", "avatar_path"].include?(k) }}
-                 event['persons'] = filtered_persons
-                 File.write( "_events/#{event['id']}.md", YAML.dump(event)+"\r\n---\r\n" )
+                  process_event(event)
               end
             end
           end
+        end
+        def process_event(event)
+         event['layout'] = 'preso_details'
+         filtered_persons = filter_attributes(event['persons'], "full_public_name", "abstract", "avatar_path")
+         event['persons'] = filtered_persons
+         abstract = event.delete('abstract')
+         File.write( "_events/#{event['id']}.md", YAML.dump(event)+"\r\n---\r\n"+abstract)
+        end
+        def filter_attributes(data, *props)
+           return data.map{|p| p.select{ |k,v| props.include?(k) }}
         end
       end
     end
