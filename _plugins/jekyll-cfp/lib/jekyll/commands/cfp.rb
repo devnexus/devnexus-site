@@ -17,15 +17,22 @@ module Jekyll
         def process_event(event)
          event['layout'] = 'preso_details'
          filtered_persons = filter_attributes(event['persons'], "full_public_name", "abstract", "avatar_path")
+         full_path_persons = filtered_persons.map{|p_item| full_path_avatar(p_item)}
+
          event['persons'] = filtered_persons
          abstract = event.delete('abstract')
          write_item("events", event, abstract)
-        end 
+        end
         def filter_attributes(data, *props)
            return data.map{|p| p.select{ |k,v| props.include?(k) }}
         end
         def write_item(collection, item, abstract)
           File.write( "_#{collection}/#{item['id']}.md", YAML.dump(item)+"\r\n---\r\n"+abstract)
+        end
+        def full_path_avatar(person)
+          img_path = person['avatar_path']
+          person['avatar_path'] = "https://cfp.devnexus.com#{img_path}"
+          return person
         end
       end
     end

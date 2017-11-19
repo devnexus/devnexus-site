@@ -23,7 +23,7 @@ google_target: devnexus-conference
      	{% assign lead = event.persons[0] %}
         <div class="col-sm-6 col-md-4 col-lg-4">
              <div class="thumbnail">
-                 <img class="img-responsive" src="https://cfp.devnexus.com{{ lead.avatar_path }}" alt="{{ event.title }}" >
+                 <img class="img-responsive" src="{{ lead.avatar_path }}" alt="{{ event.title }}" >
                  <div class="caption">
                      <h3><a href="{{ event.url }}">{{ event.title | escape }}</a></h3>
                      <p>{{ lead.full_public_name | escape }}</p>
