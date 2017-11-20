@@ -18,19 +18,7 @@ google_target: devnexus-conference
 {% assign workshops = site.events %}
 <div class="row">
     <h1 class="featured-header">WORKSHOPS</h1>
-     <div class="speakers sessions">
-     	{% for event in workshops %}
-     	{% assign lead = event.persons[0] %}
-        <div class="col-sm-6 col-md-4 col-lg-4">
-             <div class="thumbnail">
-                 <img class="img-responsive" src="{{ lead.avatar_path }}" alt="{{ event.title }}" >
-                 <div class="caption">
-                     <h3><a href="{{ event.url }}">{{ event.title | escape }}</a></h3>
-                     <p>{{ lead.full_public_name | escape }}</p>
-                </div>
-             </div>
-        </div>
-        {% endfor %}           
+     {% include event_thumb_background_face.html collection=workshops %}         
 
     </div><!-- sessions -->
 <!--
