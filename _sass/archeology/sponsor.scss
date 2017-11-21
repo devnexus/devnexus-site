@@ -1,0 +1,41 @@
+#sponsors {
+	background-color: #eeeeee;
+}
+.sponsors {
+	h4 {
+		margin: 40px 0;
+		font-size: 24px;
+	}
+	img {
+    border: solid 1px #282828;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px;
+	}
+	img:HOVER, img:FOCUS {
+		border-color: rgba(123,173,52,1);
+	}
+}
+.sponsors-row-spacing {
+	margin: 15px 0 15px 0;
+}
+
+.sponsor-section {
+    font-size: 24px;
+    border-bottom: solid 1px #979797;
+    margin: 20px;
+
+    a {
+      margin: 0 40px 24px 40px;
+      float: left;
+      max-width: 200px;
+  		max-height: 200px;
+    }
+
+    img {
+      border: solid 1px #282828;
+      vertical-align: middle;
+      text-align: center;
+      padding: 20px;
+    }
+}

@@ -3,11 +3,13 @@ title: DevNexus 2018
 timezone: UTC
 collections:
   speakers:
-    title: Speakers
+    title: Speakers 2018
     output: true
+    permalink: /:collection/:path
   events:
+     title: Presentations 2018
      output: true
-     permalink: /presentations/:path  
+     permalink: /presentations/:path
   sponsors:
     title: Sponsors
     output: true
@@ -15,6 +17,7 @@ collections:
     title: Tracks
     output: false
   organizers:
+    title: Organizers
     output: true
     permalink: /:collection/:path
 email: info@ajug.org

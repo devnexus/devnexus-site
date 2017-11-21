@@ -1,8 +1,6 @@
----
----
 <div class="speakers sessions">
  {% for event in include.collection %}
- {% assign lead = event.persons[0] %}
+ {% assign lead = event.primary %}
    <div class="col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
             <img class="img-responsive" src="{{ lead.avatar_path }}" alt="{{ event.title }}" >

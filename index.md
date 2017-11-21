@@ -18,7 +18,7 @@ google_target: devnexus-conference
 {% assign workshops = site.events %}
 <div class="row">
     <h1 class="featured-header">WORKSHOPS</h1>
-     {% include event_thumb_background_face.html collection=workshops %}         
+     {% include event_thumb_speaker_background.html collection=workshops %}         
 
     </div><!-- sessions -->
 <!--

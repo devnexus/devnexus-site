@@ -1,0 +1,15 @@
+
+ {% for event in include.collection %}
+ {% assign lead = event.primary %}
+ <div class="featured boxed col-sm-6 col-md-4 col-lg-4">
+   <div class="row speaker">
+           <img class="col-6" src="{{lead.avatar_path}}" title="{{lead.full_public_name}}">
+           <h3 class="col-6 pull-right">{{lead.full_public_name}}</h3>
+   </div>
+   <div class="row session">
+    <a href="{{event.url}}" title="{{event.title}}">
+ 			  <h3>{{event.title}}</h3>
+    </a>
+  </div>
+</div>
+{% endfor %}

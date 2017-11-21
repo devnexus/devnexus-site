@@ -2,4 +2,4 @@
 layout: info
 ---
 {% assign allevents = site.events %}
-{% include event_thumb_background_face.html collection=allevents %}
+{% include event_thumb_speaker_background.html collection=allevents %}

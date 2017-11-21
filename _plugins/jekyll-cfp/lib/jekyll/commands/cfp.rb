@@ -8,17 +8,30 @@ module Jekyll
               event_data_file = File.read("_cfp/promo_events.json")
               event_data = JSON.parse(event_data_file)
               workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
+              people = {};
               for event in workshop_data do
-                  process_event(event)
+                  person_details = event.delete 'persons'
+                  #correct relative avatar paths
+                  full_path_persons = person_details.map{|p_item| full_path_avatar(p_item)}
+                  process_event(event, full_path_persons)
+                  for person in full_path_persons do
+                    people.store(person['id'], person)
+                  end
+              end
+              for person in people.values do
+                abstract = person.delete 'abstract'
+                public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name"].include?(k)}
+                write_item("speakers", public_items, abstract)
               end
             end
           end
         end
-        def process_event(event)
+        def process_event(event, persons)
          event['layout'] = 'preso_details'
-         filtered_persons = filter_attributes(event['persons'], "full_public_name", "abstract", "avatar_path")
-         full_path_persons = filtered_persons.map{|p_item| full_path_avatar(p_item)}
-
+         #keeping keys to person records for later rendering
+         filtered_persons = filter_attributes(persons, "full_public_name", "id")
+         primary_person = persons[0].select{ |k,v| ["full_public_name", "id", "avatar_path"].include?(k)}
+         event['primary'] = primary_person
          event['persons'] = filtered_persons
          abstract = event.delete('abstract')
          write_item("events", event, abstract)
