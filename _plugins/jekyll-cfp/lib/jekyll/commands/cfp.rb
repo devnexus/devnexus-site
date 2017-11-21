@@ -15,12 +15,15 @@ module Jekyll
                   full_path_persons = person_details.map{|p_item| full_path_avatar(p_item)}
                   process_event(event, full_path_persons)
                   for person in full_path_persons do
+                    #TODO - eventually will have more than one event per person...
+                    person['event'] = { :id => event['id'], :title => event['title']}
                     people.store(person['id'], person)
                   end
               end
               for person in people.values do
                 abstract = person.delete 'abstract'
-                public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name"].include?(k)}
+                public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name", "event"].include?(k)}
+                public_items['title'] = person['full_public_name']
                 write_item("speakers", public_items, abstract)
               end
             end
