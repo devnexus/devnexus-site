@@ -1,9 +1,10 @@
-{% assign speaker =  site.speakers | where:"id", include.id %}
+
 <div class="row">
   <div class="col-sm-10 col-sm-offset-1 ">
-    <div class="biography-header">{{speaker.full_public_name | escape }}</div>
+    <div class="biography-header">{{ include.speaker.full_public_name }}</div>
     <div class="presentation-body">
-      {{speaker.output}}
+      {% assign item = site.speakers | where: "full_public_name", include.speaker.full_public_name %}
+      {{ item[0].content }}
     </div>
   </div>
 </div>

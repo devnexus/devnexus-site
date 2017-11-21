@@ -24,6 +24,7 @@ module Jekyll
                 abstract = person.delete 'abstract'
                 public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name", "event"].include?(k)}
                 public_items['title'] = person['full_public_name']
+                public_items['layout'] = "speaker_bio"
                 write_item("speakers", public_items, abstract)
               end
             end

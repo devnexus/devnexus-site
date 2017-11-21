@@ -30,7 +30,7 @@ layout: info
 	</div>
 
     {% for speaker in page.persons %}
-		  {% include speaker_bio.html id=speaker.id %}
+		  {% include speaker_bio.html speaker=speaker %}
     {% endfor %}
 
 </section>

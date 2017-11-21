@@ -6,12 +6,12 @@ layout: info
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<div class="speaker-member row">
-				{% if page.image_url %}
-				<img src="{{page.image_url}}"
+				{% if page.avatar_path %}
+				<img src="{{page.avatar_path}}"
 					class="img-responsive col-xs-3 col-xs-offset-1" alt="">
 				{% endif %}
 				<h4>
-					{{ page.nombre }}
+					{{ page.full_public_name }}
 				</h4>
 				{% if page.twitter %}
 					<div>
@@ -43,17 +43,17 @@ layout: info
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="biography-header">Biography</div>
 			<div class="biography-body">
-         {{ page.bio }}
+         {{ content }}
       </div>
 		</div>
 	</div>
-	{% for preso in page.presentations %}
+	{% if page.event %}
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="presentation-header">
-				<a href="/presentations/{{preso.link}}">{{ preso.title }}</a>
+				<a href="/presentations/{{page.event[":id"]}}">{{ page.event[":title"] }}</a>
 			</div>
 		</div>
 	</div>
-{% endfor %}
+	{% endif %}
 </section>
