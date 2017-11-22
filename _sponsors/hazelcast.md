@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: Hazelcast
-link:
+link: http://hazelcast.com
 logo_image: /uploads/hcast-001.png
 ---
 
