@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Slalom
-link: htp://slalom.com
+link: http://slalom.com
 logo_image: /uploads/slalom-001.png
 ---
 
