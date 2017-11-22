@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: Couchbase
-link:
+link: https://www.couchbase.com/
 logo_image: /uploads/couchb-001.png
 ---
 
