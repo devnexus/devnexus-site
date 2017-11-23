@@ -10,13 +10,9 @@ primary:
   full_public_name: Daniel Hinojosa
   avatar_path: /uploads/himojosa.jpg
 persons:
-  - id: 848
-    full_public_name: Rafael Benevides
-  - id: 836
-    full_public_name: Burr Sutter
-  - id: 915
-    full_public_name: Edson Yanaga
+  - id: 1080
+    full_public_name: Daniel Hinojosa
 ---
 
 
-In this full-day workshop, we will introduce you to Apache Spark from the ground up. Spark has a Scala, Java, and Python API. This workshop will use Scala for its static typed structure but also it's conciseness and less noise.&nbsp;
+In this full-day workshop, we will introduce you to Apache Spark from the ground up. Spark has a Scala, Java, and Python API. This workshop will use Scala for its static typed structure but also it's conciseness and less noise.
