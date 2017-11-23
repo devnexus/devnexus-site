@@ -2,7 +2,7 @@
 collection: sponsors
 level: platinum
 name: RedHT
-link:
+link: http://redhat.com
 logo_image: /uploads/rht-001.png
 ---
 
