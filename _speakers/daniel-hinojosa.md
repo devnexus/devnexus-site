@@ -1,12 +1,12 @@
 ---
-id: 1005
-full_public_name: Donald Raab
+id: 1058
+full_public_name: Daiel Hinojosa
 avatar_path: >-
   https://cfp.devnexus.com/system/avatars/1005/large/PZjOBoO9_400x400.jpeg?1510755909
-twitter_name: '@TheDonRaab'
+twitter_name: '@dhinojosa'
 event:
-  ':id': 1630
-  ':title': 'Eclipse Collections Kata: Fun way to learn a collections framework'
+  ':id': 1945
+  ':title': 'Apache Spark Workshop'
 title: Daniel Hinojosa
 layout: speaker_bio
 ---
