@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: platinum
 name: RedHT
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/rht-001.png
 ---
+
+
+![](/uploads/versions/rht-001---x----360-360x---.png)
