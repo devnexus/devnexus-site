@@ -1,8 +1,8 @@
 ---
 collection: sponsors
 level: platinum
-name: RedHat
-link: https://www.openshift.com/
+name: RedHat - Openshift
+link:
 logo_image: /uploads/rho-001.png
 ---
 
