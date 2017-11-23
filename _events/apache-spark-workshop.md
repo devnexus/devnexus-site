@@ -6,7 +6,7 @@ trackid: 82
 type: workshop
 layout: preso_details
 primary:
-  id: 848
+  id: 1080
   full_public_name: Daniel Hinojosa
   avatar_path: /uploads/himojosa.jpg
 persons:
