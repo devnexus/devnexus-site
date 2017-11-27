@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Thompson Technologies
-link:
+link: http://www.thompsontechnologies.com
 logo_image: /uploads/ttech-001.png
 ---
 
