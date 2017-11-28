@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: OCI
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/oci-001.png
 ---
+
+
+![](/uploads/versions/oci-001---x----360-360x---.png)
