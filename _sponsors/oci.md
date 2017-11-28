@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: OCI
-link:
+link: https://objectcomputing.com/
 logo_image: /uploads/oci-001.png
 ---
 
