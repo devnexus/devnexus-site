@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Incomm
-link:
+link: http://www.incomm.com/our-company/Pages/default.aspx?go2Id=careers-anchor
 logo_image: /uploads/incomm-001.png
 ---
 
