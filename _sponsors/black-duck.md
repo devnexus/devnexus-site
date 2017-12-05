@@ -1,7 +1,7 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: Black Duck
-link: 'http://'
+link:
 logo_image:
 ---
