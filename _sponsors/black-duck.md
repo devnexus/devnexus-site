@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: Black Duck
-link:
+link: https://www.blackducksoftware.com/
 logo_image: /uploads/blakd-001-1.png
 ---
 
