@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: MongoDB
-link:
+link: https://www.mongodb.com/
 logo_image: /uploads/mdb-001.png
 ---
 
