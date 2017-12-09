@@ -54,7 +54,11 @@ module Jekyll
            return data.map{|p| p.select{ |k,v| props.include?(k) }}
         end
         def write_item(collection, item, abstract)
-          File.write( "_#{collection}/#{item['id']}.md", YAML.dump(item)+"\r\n---\r\n"+abstract)
+          filename = "_#{collection}/#{item['id']}.md"
+          #don't overwrite existing files to preserve CMS edits
+          if !(File.file?(filename))
+             File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
+          end
         end
         def full_path_avatar(person)
           img_path = person['avatar_path']
