@@ -1,0 +1,103 @@
+$room-color-auditorim: #edce1e;
+$room-color-workshop: #6c7070;
+$room-color-java: #6ec7e8;
+$room-color-altlang: #a6c4e7;
+$room-color-architecture: #a84617;
+$room-color-tools: #faa21b;
+$room-color-frameworks: #5b903f;
+$room-color-security: #2a2d7c;
+$room-color-performance: #836cb0;
+$room-color-javascript: #127e9c;
+$room-color-mobile: #4879bc;
+$room-color-cloud: #8b2246;
+$room-color-microservices: #e77ea5;
+$room-color-serverless: #8ec741;
+$room-color-agile: #c32381;
+$room-color-unobtanium: #ffbb00;
+$room-color-web: #015351;
+
+@mixin caption {
+  position: initial;
+  height: 80px;
+  padding: 5px 15px 5px 15px;
+}
+.track-thumbnail {
+    a {
+      color: white;
+    }
+    h3 {
+      font-size: 18px
+    }
+    div.frame{
+      border: 1px gray solid;
+      box-shadow: 1px 1px 5px black;
+      border-radius: 0;
+      //height: 285px;
+      overflow:
+      hidden
+    }
+    .keynote {
+      @include caption;
+      background-color: $room-color-auditorim;
+    }
+    .workshop {
+      @include caption;
+      background-color: $room-color-workshop;
+    }
+    .java {
+      @include caption;
+      background-color: $room-color-java;
+    }
+    .alt-lang {
+      @include caption;
+      background-color: $room-color-altlang;
+    }
+    .archictecture {
+      @include caption;
+      background-color: $room-color-architecture;
+    }
+    .tools {
+      @include caption;
+      background-color: $room-color-tools;
+    }
+    .frameworks {
+      @include caption;
+      background-color: $room-color-frameworks;
+    }
+    .security {
+      @include caption;
+      background-color: $room-color-security;
+    }
+    .performance {
+      @include caption;
+      background-color: $room-color-performance;
+    }
+    .javascript {
+      @include caption;
+      background-color: $room-color-javascript;
+    }
+    .mobile {
+      @include caption;
+      background-color: $room-color-mobile;
+    }
+    .cloud {
+      @include caption;
+      background-color: $room-color-cloud;
+    }
+    .microservices{
+      @include caption;
+      background-color: $room-color-microservices;
+    }
+    .serverless{
+      @include caption;
+      background-color: $room-color-serverless;
+    }
+    .agile {
+      @include caption;
+      background-color: $room-color-agile;
+    }
+    .web {
+      @include caption;
+      background-color: $room-color-web;
+    }
+}

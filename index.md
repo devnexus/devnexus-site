@@ -15,7 +15,7 @@ google_target: devnexus-conference
 
 {% include marketing-video.html %}
 
-{% assign workshops = site.events | where:"trackid","82"%}
+{% assign workshops = site.events | where:"trackid","82" %}
 <div class="row">
     <h1 class="featured-header">WORKSHOPS</h1>
      {% include event_thumb_speaker_background.html collection=workshops %}         

@@ -1,28 +1,48 @@
+- id: keynote
+  title: Keynotes
+  trackid: 83
+- id: workshop
+  title: Workshops
+  trackid: 82
 - id: java
   title: Java
+  trackid: 55
 - id: alt-lang
   title: JVM Languages
+  trackid: 56
 - id: archictecture
   title: Architecture
+  trackid: 57
 - id: tools
   title: Patterns & Design
+  trackid: 58
 - id: frameworks
-  title: Dev Frameworks
+  title: Frameworks
+  trackid: 59
 - id: security
   title: Security
+  trackid: 60
 - id: performance
   title: Performance
+  trackid: 61
 - id: web
   title: Web
+  trackid: 62
 - id: javascript
   title: Javascript
+  trackid: 63
 - id: mobile
   title: Mobile
+  trackid: 64
 - id: cloud
   title: Cloud
+  trackid: 65
 - id: microservices
   title: Microservices
+  trackid: 66
 - id: serverless
   title: Serverless / FaaS
+  trackid: 67
 - id: agile
   title: Agile
+  trackid: 68

@@ -1,5 +1,13 @@
 ---
 layout: info
+permalink: /presentations/index.html
 ---
-{% assign allevents = site.events %}
-{% include event_thumb_speaker_background.html collection=allevents %}
+{% for track in site.data.tracks %}
+{% assign events = site.events | where:"trackid", track.trackid %}
+<h1 class="featured-header"><span>— {{ track.title }} —</span></h1>
+<div class="row">
+{% for event in events %}
+ {% include presentation_thumb.html details=event track=track.id %}
+{% endfor %}
+</div>
+{% endfor %}

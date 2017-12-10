@@ -1,10 +1,18 @@
 {% assign preso = include.details %}
-<div class="col-sm-6 col-md-4 col-lg-4">
-    <div class="thumbnail">
-         <img class="img-responsive" src="{{preso.author_img}}" alt="{{preso.title}}">
-         <div class="caption">
-             <h3><a href="{{preso.url}}">{{preso.title}}</a></h3>
-            <p>{{preso.authors}}</p>
+<div class="col-sm-6 col-md-6 col-lg-4 track-thumbnail">
+		<div class="frame">
+      <a href="{{preso.url}}"  title="{{preso.title}}">
+        <div class="caption" class="{{include.track}}">
+          <h3>{{preso.title}}</h3>
         </div>
-     </div>
+      </a>
+        {% for speaker in preso.speakers %}
+				<div style="margin-left: 15px;margin-right: 15px; margin-top: 5px;">
+					<a href="/speakers/{{speaker.id}}.html">
+						<!-- <img style="width:72px;height:72px;display: inline; margin-bottom: 5px" src="" title="title"> -->
+						<h3 style="display: inline">{{speaker.full_public_name}}</h3>
+					</a>
+				</div>
+        {% endfor %}
+		</div>
 </div>
