@@ -1,8 +1,12 @@
 .thumb {
-  padding: 5px;
+  width: 258px;
+  max-height: 258px;
+  display: block;
+  overflow: hidden;
   img {
-    width: 128px;
-    height: auto;
+    height: 128px;
+    width: auto;
+    overflow: hidden;
   }
   h3 {
     width: 128px;
