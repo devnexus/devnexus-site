@@ -1,5 +1,5 @@
 ---
-layout: info
+layout: info-fluid
 permalink: /presentations/index.html
 ---
 {% for track in site.data.tracks %}
