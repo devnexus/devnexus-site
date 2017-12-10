@@ -48,8 +48,8 @@ layout: info
 		</div>
 	</div>
 	{% if page.talks %}
-	{% for event in page.talks %}
-	{% include event_abstract.html event=event %}
-	{% endfor %}
+	  {% for e in page.talks %}
+	    {% include event_abstract.html event=e %}
+	  {% endfor %}
 	{% endif %}
 </section>
