@@ -2,7 +2,6 @@ require "jekyll/cfp/version"
 
 module Jekyll
   module Cfp
-    # Your code goes here...
   end
 end
 

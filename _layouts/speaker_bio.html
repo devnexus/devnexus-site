@@ -47,13 +47,9 @@ layout: info
       </div>
 		</div>
 	</div>
-	{% if page.event %}
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 ">
-			<div class="presentation-header">
-				<a href="/presentations/{{page.event[":id"]}}">{{ page.event[":title"] }}</a>
-			</div>
-		</div>
-	</div>
+	{% if page.events %}
+	{% for event in page.events %}
+	{% include event_abstract.html event=event %}
+	{% endfor %}
 	{% endif %}
 </section>

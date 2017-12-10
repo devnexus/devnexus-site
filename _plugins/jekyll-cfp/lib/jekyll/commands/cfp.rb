@@ -14,6 +14,10 @@ module Jekyll
             end
           end
         end
+        def speakers(people, person_details)
+          captured = people | person_details
+          new_people = person_details - people
+        end
         def process_event_collection(cfp_data)
           people = {};
           for event in cfp_data do
@@ -21,16 +25,19 @@ module Jekyll
               #correct relative avatar paths
               full_path_persons = person_details.map{|p_item| full_path_avatar(p_item)}
               process_event(event, full_path_persons)
+              event_link = { :id => event['id'], :title => event['title']}
               for person in full_path_persons do
-                #TODO - eventually will have more than one event per person...
-                person['event'] = { :id => event['id'], :title => event['title']}
-                people.store(person['id'], person)
+                person_record = people.fetch(person['id'], person)
+                person_events = person_record.fetch('events', [])
+                person_record['events'] = person_events
+                person_events.push(event_link)
+                people.store(person['id'], person_record)
               end
           end
           Jekyll.logger.info("Collected #{people.values.length} presenters with events")
           for person in people.values do
             abstract = person.delete 'abstract'
-            public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name", "event"].include?(k)}
+            public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name", "events"].include?(k)}
             public_items['title'] = person['full_public_name']
             public_items['layout'] = "speaker_bio"
             write_item("speakers", public_items, abstract)
@@ -56,9 +63,9 @@ module Jekyll
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['id']}.md"
           #don't overwrite existing files to preserve CMS edits
-          if !(File.file?(filename))
-             File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
-          end
+          #if !(File.file?(filename))
+          File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
+          #end
         end
         def full_path_avatar(person)
           img_path = person['avatar_path']
