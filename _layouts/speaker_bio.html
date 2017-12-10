@@ -47,8 +47,8 @@ layout: info
       </div>
 		</div>
 	</div>
-	{% if page.events %}
-	{% for event in page.events %}
+	{% if page.talks %}
+	{% for event in page.talks %}
 	{% include event_abstract.html event=event %}
 	{% endfor %}
 	{% endif %}
