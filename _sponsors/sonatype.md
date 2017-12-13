@@ -1,9 +1,9 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Sonatype
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/sona-001.png
 ---
 
 
