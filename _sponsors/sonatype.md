@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Sonatype
-link:
+link: https://www.sonatype.com/
 logo_image: /uploads/sona-001.png
 ---
 
