@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: Pivotal
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/pivotal-001.png
 ---
+
+
+![](/uploads/versions/pivotal-001---x----360-360x---.png)
