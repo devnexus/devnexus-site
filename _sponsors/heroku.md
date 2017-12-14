@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: Heroku
-link: 'http://'
+link:
 logo_image:
 ---
+
+
+![](/uploads/versions/heroku-001---x----360-360x---.png)
