@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: Heroku
-link:
+link: https://www.heroku.com/
 logo_image: /uploads/heroku-001.png
 ---
 
