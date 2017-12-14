@@ -1,7 +1,10 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: vmware
-link: 'http://'
+link:
 logo_image:
 ---
+
+
+![](/uploads/versions/vmware-001---x----360-360x---.png)
