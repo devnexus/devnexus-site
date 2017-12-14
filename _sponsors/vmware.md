@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: vmware
-link:
+link: https://www.air-watch.com/
 logo_image: /uploads/vmware-001.png
 ---
 
