@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Tomitribe
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/tt-devn-001.png
 ---
 
 
