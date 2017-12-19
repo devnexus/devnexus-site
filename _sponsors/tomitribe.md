@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: happy
 name: Tomitribe
-link:
+link: www.tomitribe.com
 logo_image: /uploads/tt-devn-001.png
 ---
 
