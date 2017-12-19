@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: vmware
-link:
+link: http://www.vmware.com/
 logo_image: /uploads/VM.001.png
 ---
 
