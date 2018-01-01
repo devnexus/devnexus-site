@@ -10,6 +10,9 @@ module Jekyll
               #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
               events = event_data['events']
               Jekyll.logger.info("Reading #{events.length} events from cfp")
+              stored_speaker_file = File.read("_data/speakers.yml")
+              stored_speaker_data = YAML.load(stored_speaker_file)
+              Jekyll.logger.info(stored_speaker_data)
               process_event_collection(events);
             end
           end
