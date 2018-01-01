@@ -13,7 +13,7 @@ layout: info
 					class="img-responsive col-xs-3 col-xs-offset-1" alt="">
 				{% endif %}
 				<h4>
-					{{ page.full_public_name }}
+					{{ speaker_assets.name }}
 				</h4>
 				{% if page.twitter %}
 					<div>
@@ -49,8 +49,8 @@ layout: info
       </div>
 		</div>
 	</div>
-	{% if page.talks %}
-	  {% for e in page.talks %}
+	{% if page.events %}
+	  {% for e in page.events %}
 	    {% include event_abstract.html event=e %}
 	  {% endfor %}
 	{% endif %}
