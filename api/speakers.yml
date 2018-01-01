@@ -1,0 +1,9 @@
+---
+layout: null
+---
+{% for speaker in site.speakers %}
+
+{{ speaker.slug}}:
+    avatar_path : {{speaker.avatar_path}}
+    name : {{speaker.full_public_name}}
+{% endfor %}
