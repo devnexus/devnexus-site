@@ -15,7 +15,7 @@ module Jekyll
               #Jekyll.logger.info(stored_speaker_data)
               updated_speaker_data = process_event_collection(stored_speaker_data, events);
               updated_speaker_yaml = YAML.dump(updated_speaker_data)
-              Jekyll.logger.info(updated_speaker_yaml)
+              #Jekyll.logger.info(updated_speaker_yaml)
               File.write("_data/speakers.yml", updated_speaker_yaml)
 
             end
@@ -25,6 +25,17 @@ module Jekyll
           captured = people | person_details
           new_people = person_details - people
         end
+        def correct_speaker_data(speaker_db, person_details)
+          speaker_record = speaker_db.fetch(person_details['id'], nil)
+          if(speaker_record)
+            #TODO - update any cfp sourced images?
+            #Jekyll.logger.info("found")
+          else
+            new_record = { "avatar_path" => person_details['avatar_path'], "name" => person_details['full_public_name']}
+            speaker_db.store(person_details['id'], new_record)
+            #Jekyll.logger.info("new>>> #{speaker_db.fetch(person_details['id'])}")
+          end
+        end
         def process_event_collection(speaker_db, cfp_data)
           people = {};
           for event in cfp_data do
@@ -32,7 +43,7 @@ module Jekyll
               #correct relative avatar paths
               full_path_persons = person_details.map{|p_item| full_path_avatar(p_item)}
               process_event(event, full_path_persons)
-              event_link = { :id => event['id'], :title => event['title']}
+              event_link = event.select{ |k,v| ["id", "title"].include?(k)}
               for person in full_path_persons do
                 person_record = people.fetch(person['id'], person)
                 person_events = person_record.fetch('events', [])
@@ -44,10 +55,11 @@ module Jekyll
           Jekyll.logger.info("Collected #{people.values.length} presenters with events")
           for person in people.values do
             abstract = person.delete 'abstract'
-            public_items = person.select{ |k,v| ["full_public_name", "id", "avatar_path", "twitter_name", "events"].include?(k)}
+            public_items = person.select{ |k,v| ["full_public_name", "id", "twitter_name", "events"].include?(k)}
             public_items['title'] = person['full_public_name']
             public_items['layout'] = "speaker_bio"
             write_item("speakers", public_items, abstract)
+            correct_speaker_data(speaker_db, person)
           end
           return speaker_db
         end
@@ -58,7 +70,7 @@ module Jekyll
          #keeping keys to person records for later rendering
          filtered_persons = filter_attributes(persons, "full_public_name", "id")
          if (persons && persons.length > 0)
-            primary_person = persons[0].select{ |k,v| ["full_public_name", "id", "avatar_path"].include?(k)}
+            primary_person = persons[0].select{ |k,v| ["id"].include?(k)}
             event['primary'] = primary_person
          end
          event['persons'] = filtered_persons
