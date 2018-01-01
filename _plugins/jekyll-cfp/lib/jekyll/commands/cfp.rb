@@ -12,8 +12,12 @@ module Jekyll
               Jekyll.logger.info("Reading #{events.length} events from cfp")
               stored_speaker_file = File.read("_data/speakers.yml")
               stored_speaker_data = YAML.load(stored_speaker_file)
-              Jekyll.logger.info(stored_speaker_data)
-              process_event_collection(events);
+              #Jekyll.logger.info(stored_speaker_data)
+              updated_speaker_data = process_event_collection(stored_speaker_data, events);
+              updated_speaker_yaml = YAML.dump(updated_speaker_data)
+              Jekyll.logger.info(updated_speaker_yaml)
+              File.write("_data/speakers.yml", updated_speaker_yaml)
+
             end
           end
         end
@@ -21,7 +25,7 @@ module Jekyll
           captured = people | person_details
           new_people = person_details - people
         end
-        def process_event_collection(cfp_data)
+        def process_event_collection(speaker_db, cfp_data)
           people = {};
           for event in cfp_data do
               person_details = event.delete 'persons'
@@ -45,6 +49,7 @@ module Jekyll
             public_items['layout'] = "speaker_bio"
             write_item("speakers", public_items, abstract)
           end
+          return speaker_db
         end
         def process_event(event, persons)
          #Jekyll.logger.info(event)
