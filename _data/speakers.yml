@@ -2,9 +2,11 @@
 1005:
   avatar_path: https://cfp.devnexus.com/system/avatars/1005/large/PZjOBoO9_400x400.jpeg?1510755909
   name: Donald Raab
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1005/large/PZjOBoO9_400x400.jpeg?1510755909
 1008:
   avatar_path: https://cfp.devnexus.com/system/avatars/1008/large/venkat.001.jpeg?1510755501
   name: Venkat Subramaniam
+  hd_avatar_path: "/uploads/venkat.jpeg"
 1018:
   avatar_path: "/SMP.png"
   name: Sean M Phillips
@@ -17,6 +19,7 @@
 1041:
   avatar_path: https://cfp.devnexus.com/system/avatars/1041/large/simonbrown.jpg?1510592530
   name: Simon Brown
+  hd_avatar_path: /uploads/simon-brown.jpg
 1042:
   avatar_path: https://cfp.devnexus.com/system/avatars/1042/large/Untitled-1.png?1510934112
   name: Erik Rahtjen
@@ -26,15 +29,18 @@
 1052:
   avatar_path: https://cfp.devnexus.com/system/avatars/1052/large/Avatar-150x150.jpeg?1510677584
   name: Jorge Morales
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1052/large/Avatar-150x150.jpeg?1510677584
 1058:
   avatar_path: "/NS.png"
   name: Nathaniel Schutta
+  hd_avatar_path: "/uploads/schutta.jpeg"
 1071:
   avatar_path: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/04e/00b/212072f.jpg
   name: Rob Curry
 1080:
   avatar_path: https://cfp.devnexus.com/system/avatars/1080/large/kvuYjMde_400x400.jpg?1511203285
   name: Daniel Hinojosa
+  hd_avatar_path: "/uploads/himojosa.jpg"
 1083:
   avatar_path: https://cfp.devnexus.com/system/avatars/1083/large/247032_10150611073575580_4897903_n.jpg?1511136831
   name: Craig Walls
@@ -74,6 +80,7 @@
 420:
   avatar_path: "/uploads/KK.png"
   name: Ken Kousen
+  hd_avatar_path: "/uploads/kousen.jpeg"
 425:
   avatar_path: https://cfp.devnexus.com/system/avatars/425/large/bolot_headshot_800.png?1470087835
   name: Bolot Kerimbaev
@@ -92,6 +99,7 @@
 480:
   avatar_path: https://cfp.devnexus.com/system/avatars/480/large/gerardsans.jpg?1510698190
   name: Gerard Sans
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/480/large/gerardsans.jpg?1510698190
 486:
   avatar_path: https://cfp.devnexus.com/system/avatars/486/large/Profile_Public.jpg?1484401803
   name: AMahdy Abdelaziz
@@ -131,6 +139,7 @@
 711:
   avatar_path: "/NF.png"
   name: Neal Ford
+  hd_avatar_path: "/uploads/neal_ford.jpeg"
 712:
   avatar_path: "/MH.png"
   name: Mark Heckler
@@ -164,6 +173,7 @@
 734:
   avatar_path: "/uploads/SMA.png"
   name: Stephane Maldini
+  hd_avatar_path: "/uploads/734.jpeg"
 742:
   avatar_path: https://cfp.devnexus.com/system/avatars/742/large/dm-17.jpg?1511234883
   name: Dan Mcghan
@@ -221,6 +231,7 @@
 792:
   avatar_path: https://cfp.devnexus.com/system/avatars/792/large/reza_mini_headshot.jpg?1506188605
   name: Reza Rahman
+  hd_avatar_path: "/uploads/reza.jpeg"
 796:
   avatar_path: https://cfp.devnexus.com/system/avatars/796/large/profile.jpg?1510604717
   name: Rob Winch
@@ -281,6 +292,7 @@
 848:
   avatar_path: https://cfp.devnexus.com/system/avatars/848/large/rafaesf.jpg?1506798287
   name: Rafael Benevides
+  hd_avatar_path: "/uploads/rafael-1.jpeg"
 849:
   avatar_path: https://cfp.devnexus.com/system/avatars/849/large/jtong-2016-3000px.jpg?1506801838
   name: Jen Tong
@@ -332,6 +344,7 @@
 883:
   avatar_path: https://cfp.devnexus.com/system/avatars/883/large/2017-black-and-white.jpeg?1510619579
   name: Jeanne Boyarsky
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/883/large/2017-black-and-white.jpeg?1510619579
 884:
   avatar_path: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAQTAAAAJGUwZGI0NThmLTcyMDUtNDU3OC05NzE4LTNkY2Y0ZmQxMTc0Yw.jpg
   name: Nikhil Nanivadekar
@@ -380,6 +393,7 @@
 938:
   avatar_path: https://cfp.devnexus.com/system/avatars/938/large/kirk-thumb.jpg?1510757491
   name: Kirk Pepperdine
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/938/large/kirk-thumb.jpg?1510757491
 940:
   avatar_path: https://cfp.devnexus.com/system/avatars/940/large/PaulAnderson.jpg?1510720434
   name: Paul Anderson
@@ -404,6 +418,7 @@
 995:
   avatar_path: https://cfp.devnexus.com/system/avatars/995/large/Me.jpg?1509416622
   name: Felipe Gutierrez
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/995/large/Me.jpg?1509416622
 11:
   avatar_path: https://cfp.devnexus.com/system/avatars/11/large/vincentm.jpg?1406565331
   name: Vincent Mayers
@@ -423,11 +438,13 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1144/large/download.jpeg?1513024701
   name: Roy Russo
 1078:
-  avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/KK.png"
   name: Kenneth Kousen
+  hd_avatar_path: "/uploads/kousen.jpeg"
 1084:
   avatar_path: https://cfp.devnexus.com/system/avatars/1084/large/sgauder.jpg?1511194016
   name: Sebastian Gauder
 1015:
   avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/headshot-2.jpg?1510076642
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/headshot-2.jpg?1510076642
   name: Ben Hale
