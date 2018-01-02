@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: JFrog
-link:
+link: http://jfrog.com
 logo_image: /uploads/jfrg-001.png
 ---
 
