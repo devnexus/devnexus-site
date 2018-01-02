@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: JFrog
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/jfrg-001.png
 ---
 
 
