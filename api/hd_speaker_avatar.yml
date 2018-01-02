@@ -1,0 +1,8 @@
+---
+layout: null
+---
+{% assign workshops = site.events | where:"trackid","82" %}
+{% for event in workshops %}
+{{ event.primary.id }}:
+  hd_avatar_path: {{ event.primary.avatar_path }}
+{% endfor %}
