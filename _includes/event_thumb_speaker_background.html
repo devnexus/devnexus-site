@@ -1,12 +1,13 @@
 <div class="speakers sessions">
  {% for event in include.collection %}
  {% assign lead = event.primary %}
+ {% assign lead_details = site.data.speakers[lead.id] %}
    <div class="col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
-            <img class="img-responsive" src="{{ lead.avatar_path }}" alt="{{ event.title }}" >
+            <img class="img-responsive" src="{{ lead_details.avatar_path }}" alt="{{ event.title }}" >
             <div class="caption">
                 <h3><a href="{{ event.url }}">{{ event.title | escape }}</a></h3>
-                <p>{{ lead.full_public_name | escape }}</p>
+                <p>{{ lead_details.name | escape }}</p>
            </div>
         </div>
    </div>
