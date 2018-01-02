@@ -1,6 +1,0 @@
----
-layout: null
----
-{% for speaker in site.data.speakers[1005] %}
-{{ speaker }}
-{% endfor %}
