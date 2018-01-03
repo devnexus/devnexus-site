@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Stable Kernel
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/skcc-001-1.png
 ---
 
 
