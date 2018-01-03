@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Stable Kernel
-link:
+link: https://stablekernel.com/
 logo_image: /uploads/skcc-001-1.png
 ---
 
