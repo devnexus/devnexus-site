@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: OneTrust
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/ontr-001.png
 ---
 
 
