@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Home Depot
-link:
+link: https://careers.homedepot.com/
 logo_image: /uploads/thd-001.png
 ---
 
