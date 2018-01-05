@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: OneTrust
-link:
+link: https://onetrust.com/
 logo_image: /uploads/ontr-001.png
 ---
 
