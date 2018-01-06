@@ -3,6 +3,6 @@
 {% assign end = include.end %}
 <h1> {{start}} to {{end}}</h1>
 <div>
-  {%assign eventDetails = events[0] %}
-  {% include presentation_thumb.html details=eventDetails track='java' %}
+  {% assign event = site.events | where: "slug", events['Core Java'].id | first %}
+  {% include schedule_event.html details=event track="java" %}
 </div>
