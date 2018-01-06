@@ -19,7 +19,7 @@ module Jekyll
             schedule_data_file = File.read("_cfp/full_schedule.json")
             _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
             #Jekyll.logger.info(_data_in)
-            days = _data_in.map{ |d| {}.merge( :index => d['index'], :events => collect_rooms(d['rooms'])) }
+            days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
             Jekyll.logger.info("Gathered #{days.length} schedule days")
             _schedule_yaml = YAML.dump(days)
             File.write("_data/schedule.yml", _schedule_yaml)

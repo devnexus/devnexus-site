@@ -1,6 +1,6 @@
 ---
-- :index: 0
-  :events:
+- index: 0
+  events:
   - id: 1892
     start: '09:00'
     room: Core Java
@@ -46,8 +46,8 @@
   - id: 1861
     start: '09:00'
     room: Web
-- :index: 1
-  :events:
+- index: 1
+  events:
   - id: 1895
     start: '10:00'
     room: Core Java
@@ -306,8 +306,8 @@
   - id: 1457
     start: '15:45'
     room: Web
-- :index: 2
-  :events:
+- index: 2
+  events:
   - id: 1667
     start: '10:00'
     room: Core Java
