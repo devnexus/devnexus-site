@@ -5,21 +5,32 @@ module Jekyll
         def init_with_program(prog)
           prog.command(:cfp) do |c|
             c.action do |args, options|
-              event_data_file = File.read("_cfp/promo_events.json")
-              event_data = JSON.parse(event_data_file)
-              #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
-              events = event_data['events']
-              Jekyll.logger.info("Reading #{events.length} events from cfp")
-              stored_speaker_file = File.read("_data/speakers.yml")
-              stored_speaker_data = YAML.load(stored_speaker_file)
-              #Jekyll.logger.info(stored_speaker_data)
-              updated_speaker_data = process_event_collection(stored_speaker_data, events);
-              updated_speaker_yaml = YAML.dump(updated_speaker_data)
-              #Jekyll.logger.info(updated_speaker_yaml)
-              File.write("_data/speakers.yml", updated_speaker_yaml)
-
+              if("events".eql?(args[0]))
+                process_event_data()
+              elsif("schedule".eql?(args[0]))
+                process_schedule_data()
+              else
+                Jekyll.logger.info("I do not understand #{args}")
+              end
             end
           end
+        end
+        def process_schedule_data()
+            Jekyll.logger.info("todo")
+        end
+        def process_event_data()
+          event_data_file = File.read("_cfp/promo_events.json")
+          event_data = JSON.parse(event_data_file)
+          #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
+          events = event_data['events']
+          Jekyll.logger.info("Reading #{events.length} events from cfp")
+          stored_speaker_file = File.read("_data/speakers.yml")
+          stored_speaker_data = YAML.load(stored_speaker_file)
+          #Jekyll.logger.info(stored_speaker_data)
+          updated_speaker_data = process_event_collection(stored_speaker_data, events);
+          updated_speaker_yaml = YAML.dump(updated_speaker_data)
+          #Jekyll.logger.info(updated_speaker_yaml)
+          File.write("_data/speakers.yml", updated_speaker_yaml)
         end
         def speakers(people, person_details)
           captured = people | person_details
