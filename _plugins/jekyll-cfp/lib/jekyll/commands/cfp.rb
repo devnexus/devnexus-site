@@ -17,9 +17,23 @@ module Jekyll
         end
         def process_schedule_data()
             schedule_data_file = File.read("_cfp/full_schedule.json")
-            _data = JSON.parse(schedule_data_file)
-            Jekyll.logger.info(_data)
-            days = _data['days']
+            _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
+            #Jekyll.logger.info(_data_in)
+            days = _data_in.map{ |d| {}.merge( :index => d['index'], :events => collect_rooms(d['rooms'])) }
+            Jekyll.logger.info("Gathered #{days.length} schedule days")
+            _schedule_yaml = YAML.dump(days)
+            File.write("_data/schedule.yml", _schedule_yaml)
+        end
+        def collect_rooms(room_event_data)
+          #Jekyll.logger.info(room_event_data)
+          _data = room_event_data.reduce([]){ |hash, (k,v)| hash.concat(collect_room_events(k, v)) }
+          Jekyll.logger.info(_data)
+          return _data
+        end
+        def collect_room_events(room, array_of_events)
+           times =  array_of_events.map{ |e| e.select{ |k,v| ["id", "start"].include?(k)}.merge("room" => room) }
+           #Jekyll.logger.info(times)
+           return times
         end
         def process_event_data()
           event_data_file = File.read("_cfp/promo_events.json")

@@ -7,5 +7,5 @@ day0:
     "Core Java":
       id: 1892
 ---
-{% assign eventList = page.day0[0] %}
+{% assign eventList = page.day0 | first %}
 {% include schedule_block.html events=eventList.rooms start='9:00' end='5:00' %}
