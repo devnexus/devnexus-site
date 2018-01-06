@@ -12,7 +12,8 @@
 {% assign agile = include.events  | where: "room", "Agile" | first %}
 {% assign architecture = include.events  | where: "room", "Architecture" | first %}
 {% assign cloud = include.events  | where: "room", "Core Cloud" | first %}
-{% assign web = include.events  | where: "room", " Web" | first %}
+{% assign web = include.events  | where: "room", "Web" | first %}
+{% assign room15 = include.events | where: "room", "Room 15" | first %}
 
 {% assign event = site.events | where: "slug", java.id | first %}
 {% include schedule_event.html details=event track="java" %}
@@ -41,7 +42,7 @@
 {% assign event = site.events | where: "slug", serverless.id | first %}
 {% include schedule_event.html details=event track="serverless" %}
 
-{% assign event = site.events | where: "slug", room15.id | first %}
+{% assign event = site.events | where: "slug", web.id | first %}
 {% include schedule_event.html details=event track="web" %}
 
 {% assign event = site.events | where: "slug", frameworks.id | first %}
@@ -55,3 +56,8 @@
 
 {% assign event = site.events | where: "slug", cloud.id | first %}
 {% include schedule_event.html details=event track="cloud" %}
+
+{% if room15 %}
+{% assign event = site.events | where: "slug", room15.id | first %}
+{% include schedule_event.html details=event track="workshop" %}
+{% endif %}
