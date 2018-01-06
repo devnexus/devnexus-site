@@ -19,7 +19,7 @@
 1041:
   avatar_path: https://cfp.devnexus.com/system/avatars/1041/large/simonbrown.jpg?1510592530
   name: Simon Brown
-  hd_avatar_path: /uploads/simon-brown.jpg
+  hd_avatar_path: "/uploads/simon-brown.jpg"
 1042:
   avatar_path: https://cfp.devnexus.com/system/avatars/1042/large/Untitled-1.png?1510934112
   name: Erik Rahtjen

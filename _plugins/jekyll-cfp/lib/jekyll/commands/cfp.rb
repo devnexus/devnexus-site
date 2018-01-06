@@ -16,7 +16,10 @@ module Jekyll
           end
         end
         def process_schedule_data()
-            Jekyll.logger.info("todo")
+            schedule_data_file = File.read("_cfp/full_schedule.json")
+            _data = JSON.parse(schedule_data_file)
+            Jekyll.logger.info(_data)
+            days = _data['days']
         end
         def process_event_data()
           event_data_file = File.read("_cfp/promo_events.json")

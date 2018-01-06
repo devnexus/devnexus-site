@@ -1,0 +1,8 @@
+{% assign events = include.events %}
+{% assign start = include.start %}
+{% assign end = include.end %}
+<h1> {{start}} to {{end}}</h1>
+<div>
+  {%assign eventDetails = events[0] %}
+  {% include presentation_thumb.html details=eventDetails track='java' %}
+</div>
