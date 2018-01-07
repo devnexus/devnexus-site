@@ -21,6 +21,63 @@ $room-color-web: #015351;
   height: 80px;
   padding: 5px 15px 5px 15px;
 }
+
+@mixin room ($color) {
+  background-color: fade-out($color, .75);
+  border-left: 10px solid $color;
+}
+
+.schedule-row {
+  .keynote {
+    @include room($room-color-auditorim);
+  }
+  .workshop {
+    @include room($room-color-workshop);
+  }
+  .java {
+    @include room($room-color-java);
+  }
+  .alt-lang {
+    @include room($room-color-altlang);
+  }
+  .archictecture {
+    @include room($room-color-architecture);
+  }
+  .tools {
+    @include room($room-color-tools);
+  }
+  .frameworks {
+    @include room($room-color-frameworks);
+  }
+  .security {
+    @include room($room-color-security);
+  }
+  .performance {
+    @include room($room-color-performance);
+  }
+  .javascript {
+    @include room($room-color-javascript);
+  }
+  .mobile {
+    @include room($room-color-mobile);
+  }
+  .cloud {
+    @include room($room-color-cloud);
+  }
+  .microservices{
+    @include room($room-color-microservices);
+  }
+  .serverless{
+    @include room($room-color-serverless);
+  }
+  .agile {
+    @include room($room-color-agile);
+  }
+  .web {
+    @include room ($room-color-web);
+  }
+
+}
 .track-thumbnail {
     a {
       color: white;
