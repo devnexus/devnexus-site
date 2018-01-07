@@ -23,7 +23,7 @@ $room-color-web: #015351;
 }
 
 @mixin room ($color) {
-  background-color: fade-out($color, .75);
+  background-color: fade-out($color, .90);
   border-left: 10px solid $color;
 }
 

@@ -1,48 +1,63 @@
-- id: keynote
+keynote:
   title: Keynotes
   trackid: 83
-- id: workshop
+  room: Sydney Marcus
+workshop:
   title: Workshops
   trackid: 82
-- id: java
+java:
   title: Java
   trackid: 55
-- id: alt-lang
+  room: 412
+alt-lang:
   title: JVM Languages
   trackid: 56
-- id: archictecture
+  room: 402
+archictecture:
   title: Architecture
   trackid: 57
-- id: tools
+  room: 403
+tools:
   title: Patterns & Design
   trackid: 58
-- id: frameworks
+  room: 315
+frameworks:
   title: Frameworks
   trackid: 59
-- id: security
+  room: 302
+security:
   title: Security
   trackid: 60
-- id: performance
+  room: 313
+performance:
   title: Performance
   trackid: 61
-- id: web
+  room: 301
+web:
   title: Web
   trackid: 62
-- id: javascript
+  room: 314
+javascript:
   title: Javascript
   trackid: 63
-- id: mobile
+  room: 411
+mobile:
   title: Mobile
   trackid: 64
-- id: cloud
+  room: 405
+cloud:
   title: Cloud
   trackid: 65
-- id: microservices
+  room: 305
+microservices:
   title: Microservices
   trackid: 66
-- id: serverless
+  room: 312
+serverless:
   title: Serverless / FaaS
   trackid: 67
-- id: agile
+  room: 404
+agile:
   title: Agile
   trackid: 68
+  room: 311

@@ -1,11 +1,16 @@
 {% assign preso = include.details %}
-<div class="row schedule-row">
-		<div class="col-sm-6 col-xs-12 name {{include.track}}">
+<div class="row schedule-row frame">
+		<div class="col-sm-6 col-xs-12 {{include.track}}">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
+				<br/>
 				<span class="small">
-				{% for speakerid in preso.speakers %}
-					 {{ speakerid }}
+				{% for speaker in preso.persons %}
+					 <a href="/speakers/{{speaker.id}}">{{ speaker.full_public_name }}</a>
 				{% endfor %}
-				</span>
-		</div>
+			</span>
+			<br/>
+			<span class="small pull-right">
+				 {{site.data.tracks[include.track].title}}
+			</span>
+	  </div>
 </div>
