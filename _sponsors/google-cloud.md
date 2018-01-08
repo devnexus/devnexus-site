@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: gold
 name: Google Cloud
-link:
+link: https://cloud.google.com/
 logo_image: /uploads/gc-001.png
 ---
 
