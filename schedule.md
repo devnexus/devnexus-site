@@ -58,11 +58,11 @@ layout: info-fluid
 <h3>9:00</h3>
 {% include schedule_event.html details=day3_keynote room="keynote" %}
 
-{% assign day3_1000 = day2.events | where: "start", "10:00" %}
+{% assign day3_1000 = day3.events | where: "start", "10:00" %}
 <h3>10:00</h3>
 {% include schedule_block.html events=day3_1000 %}
 
-{% assign day3_1115= day2.events | where: "start", "11:15" %}
+{% assign day3_1115= day3.events | where: "start", "11:15" %}
 <h3>11:15</h3>
 {% include schedule_block.html events=day3_1115 %}
 
@@ -71,15 +71,15 @@ layout: info-fluid
 <h3>12:00</h3>
 {% include schedule_event.html details=day3_lunch room="lunch" %}
 
-{% assign day3_1315= day2.events | where: "start", "13:15" %}
+{% assign day3_1315= day3.events | where: "start", "13:15" %}
 <h3>13:15</h3>
 {% include schedule_block.html events=day3_1315 %}
 
-{% assign day3_1430= day2.events | where: "start", "14:30" %}
+{% assign day3_1430= day3.events | where: "start", "14:30" %}
 <h3>14:30</h3>
 {% include schedule_block.html events=day3_1430 %}
 
-{% assign day3_1545= day2.events | where: "start", "15:45" %}
+{% assign day3_1545= day3.events | where: "start", "15:45" %}
 <h3>15:45</h3>
 {% include schedule_block.html events=day3_1545 %}
 
