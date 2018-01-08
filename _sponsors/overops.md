@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: OverOps
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/over-001.jpeg
 ---
 
 
