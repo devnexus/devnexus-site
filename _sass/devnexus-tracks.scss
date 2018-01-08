@@ -31,6 +31,7 @@ $room-color-exhibit: #ed1e24;
 }
 
 .schedule-row {
+  align-content: center;
   .keynote {
     @include room($room-color-auditorim);
   }
