@@ -15,6 +15,7 @@ $room-color-serverless: #8ec741;
 $room-color-agile: #c32381;
 $room-color-unobtanium: #ffbb00;
 $room-color-web: #015351;
+$room-color-exhibit: #ed1e24;
 
 @mixin caption {
   position: initial;
@@ -75,6 +76,12 @@ $room-color-web: #015351;
   }
   .web {
     @include room ($room-color-web);
+  }
+  .lunch {
+    @include room($room-color-exhibit);
+  }
+  .happy-hour {
+    @include room($room-color-exhibit);
   }
 
 }

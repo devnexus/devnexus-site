@@ -1,94 +1,75 @@
 lunch:
-  id: lunch
   title: Lunch
-  trackid: 00
-  room: Vendor Stage
-nighthacking:
-  id: nighthacking
+  trackid: 01
+  room: Exhibit Area
+happy-hour:
   title: Happy Hour
-  trackid: 01
-  room: Vendor Stage
+  trackid: 02
+  room: Exhibit Area
 after-party:
-  id: after-party
   title: After Party
-  trackid: 01
+  trackid: 03
   room: Joystick Gamebar
 keynote:
-  id: day3_keynote
   title: Keynotes
   trackid: 83
   room: Sydney Marcus
 workshop:
-  id: workshop
   title: Workshops
   trackid: 82
 java:
-  id: java
   title: Java
   trackid: 55
   room: 412
 alt-lang:
-  id: alt-lang
   title: JVM Languages
   trackid: 56
   room: 402
 archictecture:
-  id: architecture
   title: Architecture
   trackid: 57
   room: 403
 tools:
-  id: tools
   title: Patterns & Design
   trackid: 58
   room: 315
 frameworks:
-  id: frameworks
   title: Frameworks
   trackid: 59
   room: 302
 security:
-  id: security
   title: Security
   trackid: 60
   room: 313
 performance:
-  id: performance
   title: Performance
   trackid: 61
   room: 301
 web:
-  id: web
   title: Web
   trackid: 62
   room: 314
 javascript:
-  id: Javascript
   title: Javascript
   trackid: 63
   room: 411
 mobile:
-  id: mobile
   title: Mobile
   trackid: 64
   room: 405
 cloud:
-  id: cloud
   title: Cloud
   trackid: 65
   room: 305
 microservices:
-  id: microservices
   title: Microservices
   trackid: 66
   room: 312
 serverless:
-  id: serverless
   title: Serverless / FaaS
   trackid: 67
   room: 404
 agile:
-  id: agile
   title: Agile
   trackid: 68
   room: 311
