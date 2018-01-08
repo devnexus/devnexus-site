@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: OverOps
-link:
+link: https://www.overops.com/
 logo_image: /uploads/over-001.jpeg
 ---
 
