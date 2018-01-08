@@ -15,50 +15,49 @@
 {% assign web = include.events  | where: "room", "Web" | first %}
 {% assign room15 = include.events | where: "room", "Room 15" | first %}
 
-
 {% assign event = site.events | where: "slug", altLang.id | first %}
-{% include schedule_event.html details=event track="alt-lang" %}
+{% include schedule_event.html details=event room="alt-lang" track=include.track %}
 
 {% assign event = site.events | where: "slug", architecture.id | first %}
-{% include schedule_event.html details=event track="archictecture" %}
+{% include schedule_event.html details=event room="archictecture" track=include.track %}
 
 {% assign event = site.events | where: "slug", serverless.id | first %}
-{% include schedule_event.html details=event track="serverless" %}
+{% include schedule_event.html details=event room="serverless" track=include.track %}
 
 {% assign event = site.events | where: "slug", mobile.id | first %}
-{% include schedule_event.html details=event track="mobile" %}
+{% include schedule_event.html details=event room="mobile" track=include.track%}
 
 {% assign event = site.events | where: "slug", js.id | first %}
-{% include schedule_event.html details=event track="javascript" %}
+{% include schedule_event.html details=event room="javascript" track=include.track%}
 
 {% assign event = site.events | where: "slug", java.id | first %}
-{% include schedule_event.html details=event track="java" %}
+{% include schedule_event.html details=event room="java" track=include.track%}
 
 {% assign event = site.events | where: "slug", performance.id | first %}
-{% include schedule_event.html details=event track="performance" %}
+{% include schedule_event.html details=event room="performance" track=include.track%}
 
 {% assign event = site.events | where: "slug", frameworks.id | first %}
-{% include schedule_event.html details=event track="frameworks" %}
+{% include schedule_event.html details=event room="frameworks" track=include.track%}
 
 {% assign event = site.events | where: "slug", cloud.id | first %}
-{% include schedule_event.html details=event track="cloud" %}
+{% include schedule_event.html details=event room="cloud" track=include.track%}
 
 {% assign event = site.events | where: "slug", agile.id | first %}
-{% include schedule_event.html details=event track="agile" %}
+{% include schedule_event.html details=event room="agile" track=include.track%}
 
 {% assign event = site.events | where: "slug", microservices.id | first %}
-{% include schedule_event.html details=event track="microservices" %}
+{% include schedule_event.html details=event room="microservices" track=include.track %}
 
 {% assign event = site.events | where: "slug", security.id | first %}
-{% include schedule_event.html details=event track="security" %}
+{% include schedule_event.html details=event room="security" track=include.track%}
 
 {% assign event = site.events | where: "slug", web.id | first %}
-{% include schedule_event.html details=event track="web" %}
+{% include schedule_event.html details=event room="web" track=include.track%}
 
 {% assign event = site.events | where: "slug", patterns.id | first %}
-{% include schedule_event.html details=event track="tools" %}
+{% include schedule_event.html details=event room="tools" track=include.track%}
 
 {% if room15 %}
 {% assign event = site.events | where: "slug", room15.id | first %}
-{% include schedule_event.html details=event track="workshop" %}
+{% include schedule_event.html details=event room="workshop" %}
 {% endif %}
