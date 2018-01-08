@@ -21,56 +21,56 @@ workshop:
 java:
   title: Java
   trackid: 55
-  room: 412
+  room: A412
 alt-lang:
   title: JVM Languages
   trackid: 56
-  room: 402
+  room: A402
 archictecture:
   title: Architecture
   trackid: 57
-  room: 403
+  room: A403
 tools:
   title: Patterns & Design
   trackid: 58
-  room: 315
+  room: A315
 frameworks:
   title: Frameworks
   trackid: 59
-  room: 302
+  room: A302
 security:
   title: Security
   trackid: 60
-  room: 313
+  room: A313
 performance:
   title: Performance
   trackid: 61
-  room: 301
+  room: A301
 web:
   title: Web
   trackid: 62
-  room: 314
+  room: A314
 javascript:
   title: Javascript
   trackid: 63
-  room: 411
+  room: A411
 mobile:
   title: Mobile
   trackid: 64
-  room: 405
+  room: A405
 cloud:
   title: Cloud
   trackid: 65
-  room: 305
+  room: A305
 microservices:
   title: Microservices
   trackid: 66
-  room: 312
+  room: A312
 serverless:
   title: Serverless / FaaS
   trackid: 67
-  room: 404
+  room: A404
 agile:
   title: Agile
   trackid: 68
-  room: 311
+  room: A311
