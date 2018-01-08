@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Google Cloud
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/gc-001.png
 ---
 
 
