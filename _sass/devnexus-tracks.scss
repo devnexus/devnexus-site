@@ -26,6 +26,8 @@ $room-color-exhibit: #ed1e24;
 @mixin room ($color) {
   background-color: fade-out($color, .90);
   border-left: 10px solid $color;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
 }
 
 .schedule-row {
