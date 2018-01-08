@@ -3,6 +3,7 @@ layout: info-fluid
 permalink: /presentations/index.html
 tracks:
 - keynote
+- workshop
 - java
 - alt-lang
 - archictecture
