@@ -1,3 +1,6 @@
+require "net/https"
+require "uri"
+
 module Jekyll
   module Commands
     class Cfp < Command
