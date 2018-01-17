@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Sentry
-link:
+link: http://sentry.io/
 logo_image: /uploads/sentry-001.png
 ---
 
