@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Sentry
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/sentry-001.png
 ---
 
 
