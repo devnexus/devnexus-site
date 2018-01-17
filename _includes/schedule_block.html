@@ -14,6 +14,7 @@
 {% assign cloud = include.events  | where: "room", "Core Cloud" | first %}
 {% assign web = include.events  | where: "room", "Web" | first %}
 {% assign room15 = include.events | where: "room", "Room 15" | first %}
+{% assign sidneyMarcus = include.events | where: "room", "Sidney Marcus" | first %}
 
 {% assign event = site.events | where: "slug", altLang.id | first %}
 {% include schedule_event.html details=event room="alt-lang" track=include.track %}
@@ -60,4 +61,9 @@
 {% if room15 %}
 {% assign event = site.events | where: "slug", room15.id | first %}
 {% include schedule_event.html details=event room="workshop" %}
+{% endif %}
+
+{% if sidneyMarcus %}
+{% assign event = site.events | where: "slug", sidneyMarcus.id | first %}
+{% include schedule_event.html details=event room="keynote" track=event.track %}
 {% endif %}
