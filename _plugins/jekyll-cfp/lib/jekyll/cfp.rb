@@ -6,3 +6,4 @@ module Jekyll
 end
 
 require "jekyll/commands/cfp.rb"
+require "jekyll/commands/speakers.rb"
