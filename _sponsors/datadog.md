@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Datadog
-link:
+link: www.datadog.com
 logo_image: /uploads/datadog-001.png
 ---
 
