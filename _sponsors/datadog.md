@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Datadog
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/datadog-001.png
 ---
 
 
