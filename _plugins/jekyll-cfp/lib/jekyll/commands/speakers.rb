@@ -17,7 +17,7 @@ class Speakers
   # people in that event.  This does not de-dup people.
   def people_from_events(event_arr)
      all_people = event_arr.collect do |e|
-         e['people'].collect do |sp| sp.merge({ "events" => [ e["id"]] }) end
+         e['persons'].collect do |sp| sp.merge({ "events" => [ e["id"]] }) end
      end
      return all_people.flatten
   end
@@ -31,7 +31,9 @@ class Speakers
       end
   end
   def collect_people_events(event_arr)
-     event_people = people_from_events(event_arr)
-     organize_people(event_people, @data)
+    no_data =  (event_arr.nil? || event_arr.empty?)
+    return if (no_data)
+    event_people = people_from_events(event_arr)
+    organize_people(event_people, @data)
   end
 end

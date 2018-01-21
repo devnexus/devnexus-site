@@ -11,7 +11,7 @@ class SpeakersTest < Minitest::Test
   def test_collects_1_event_1_speaker
      speakers = Speakers.new()
      event_arr = [{ "id" => 1,
-                    "people" => [
+                    "persons" => [
                        { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"}
                     ]
                   }]
@@ -22,7 +22,7 @@ class SpeakersTest < Minitest::Test
   def test_1_event_2_speakers
      speakers = Speakers.new()
      event_arr = [{ "id" => 1,
-                    "people" => [
+                    "persons" => [
                        { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"},
                        { "id" => 12, "abstract" => "bar", "img" => "/bar", "full_public_name" => "Bar B"}
                     ]
@@ -34,13 +34,13 @@ class SpeakersTest < Minitest::Test
   def test_2_events_2_speakers_1_common
      speakers = Speakers.new()
      event_arr = [{ "id" => 1,
-                    "people" => [
+                    "persons" => [
                        { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"},
                        { "id" => 12, "abstract" => "bar", "img" => "/bar", "full_public_name" => "Bar B"}
                     ]
                   },
                   {"id" => 2,
-                      "people" => [
+                      "persons" => [
                           { "id" => 14, "abstract" => "Boo", "img" => "/boo", "full_public_name" => "D Boo"},
                           { "id" => 13, "abstract" => "baz", "img" => "/baz", "full_public_name" => "C Baz"}
                         ]
@@ -62,12 +62,12 @@ class SpeakersTest < Minitest::Test
   def test_combine_events_to_persons
     speakers = Speakers.new()
     event_arr = [{ "id" => 1,
-                   "people" => [
+                   "persons" => [
                       { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"}
                    ]
                  },
                  {"id" => 2,
-                     "people" => [
+                     "persons" => [
                          { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"},
                        ]
                   }]
@@ -76,5 +76,20 @@ class SpeakersTest < Minitest::Test
     assert_equal 1, results.size()
     p_eleven = results[11]
     assert_equal([1, 2], p_eleven["events"])
+    event_arr_next = [{ "id" => 3,
+                   "persons" => [
+                      { "id" => 12, "abstract" => "bar", "img" => "/bar", "full_public_name" => "Bar B"}
+                   ]
+                 },
+                 {"id" => 4,
+                     "persons" => [
+                         { "id" => 11, "abstract" => "foo", "img" => "/foo", "full_public_name" => "Foo A"},
+                       ]
+                  }]
+    speakers.collect_people_events(event_arr_next)
+    results_next = speakers.data()
+    assert_equal 2, results_next.size()
+    p_eleven_next = results[11]
+    assert_equal([1, 2, 4], p_eleven_next["events"])
   end
 end
