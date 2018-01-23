@@ -1,14 +1,14 @@
 lunch:
   title: Lunch
-  trackid: 01
+  trackid: 1
   room: Exhibit Area
 happy-hour:
   title: Happy Hour
-  trackid: 02
+  trackid: 2
   room: Exhibit Area
 after-party:
   title: After Party
-  trackid: 03
+  trackid: 3
   room: Joystick Gamebar
 keynote:
   title: Keynotes
@@ -17,7 +17,7 @@ keynote:
 workshop:
   title: Workshops
   trackid: 82
-  room: Room 15
+  room: A316
 java:
   title: Java
   trackid: 55
