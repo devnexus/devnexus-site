@@ -17,6 +17,14 @@ keynote:
 workshop:
   title: Workshops
   trackid: 82
+  room: TBD
+A303:
+  title: Workshops
+  trackid: 82
+  room: A303
+A316:
+  title: Workshops
+  trackid: 82
   room: A316
 java:
   title: Java
