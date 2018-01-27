@@ -53,25 +53,26 @@ module Jekyll
           end
         end
         def process_event(event, persons)
-         #Jekyll.logger.info(event)
-         #Jekyll.logger.info(persons)
-         event['layout'] = 'preso_details'
+         event_header = { "id" => event["id"],
+                         "title" => event["title"],
+                         "layout" => "preso_details",
+                        "track" => event['track'].downcase }
          #keeping keys to person records for later rendering
          filtered_persons = filter_attributes(persons, "full_public_name", "id")
          if (persons && persons.length > 0)
             primary_person = persons[0].select{ |k,v| ["id"].include?(k)}
-            event['primary'] = primary_person
+            event_header['primary'] = primary_person
          end
-         event['persons'] = filtered_persons
-         abstract = event.delete('abstract')
-         write_item("events", event, abstract)
+         event_header['persons'] = filtered_persons
+         write_item("events", event_header, event['abstract'])
         end
         def filter_attributes(data, *props)
+          Jekyll.logger.info(data)
            return data.map{|p| p.select{ |k,v| props.include?(k) }}
         end
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['id']}.md"
-          Jekyll.logger.info("#{filename}\n#{item}")
+          #Jekyll.logger.info("#{filename}\n#{item}")
           #don't overwrite existing files to preserve CMS edits
           #if !(File.file?(filename))
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)

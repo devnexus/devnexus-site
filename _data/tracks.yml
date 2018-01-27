@@ -1,76 +1,95 @@
 lunch:
   title: Lunch
   trackid: 01
+  trackkey: lunch
   room: Exhibit Area
 happy-hour:
   title: Happy Hour
   trackid: 02
+  trackkey: happy-hour
   room: Exhibit Area
 after-party:
   title: After Party
   trackid: 03
+  trackkey: after-party
   room: Joystick Gamebar
 keynote:
   title: Keynotes
   trackid: 83
+  trackkey: keynote or 2nd stage
   room: Sidney Marcus
 workshop:
   title: Workshops
   trackid: 82
+  trackkey: workshop
   room: Room 15
 java:
   title: Java
   trackid: 55
+  trackkey: java
   room: A412
 alt-lang:
   title: JVM Languages
+  trackkey: jvm languages
   trackid: 56
   room: A402
 archictecture:
   title: Architecture
+  trackkey: architecture
   trackid: 57
   room: A403
 tools:
   title: Patterns & Design
+  trackkey: patterns & design
   trackid: 58
   room: A315
 frameworks:
   title: Frameworks
   trackid: 59
+  trackkey: frameworks
   room: A302
 security:
   title: Security
   trackid: 60
+  trackkey: security
   room: A313
 performance:
   title: Performance
   trackid: 61
+  trackkey: performance
   room: A301
 web:
   title: Web
   trackid: 62
+  trackkey: web
   room: A314
 javascript:
   title: Javascript
   trackid: 63
+  trackkey: javascript
   room: A411
 mobile:
   title: Mobile
   trackid: 64
+  trackkey: mobile
   room: A405
 cloud:
   title: Cloud
   trackid: 65
+  trackkey: core cloud
   room: A305
 microservices:
   title: Microservices
   trackid: 66
+  trackkey: microservices
   room: A312
 serverless:
   title: Serverless / FaaS
   trackid: 67
+  trackkey: serverless and cloud
   room: A404
 agile:
   title: Agile
+  trackkey: agile
   trackid: 68
   room: A311

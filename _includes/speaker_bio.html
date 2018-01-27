@@ -3,8 +3,8 @@
   <div class="col-sm-10 col-sm-offset-1 ">
     <div class="biography-header">{{ include.speaker.full_public_name }}</div>
     <div class="presentation-body">
-      {% assign item = site.speakers | where: "full_public_name", include.speaker.full_public_name %}
-      {{ item[0].content }}
+      {% assign item = site.speakers | where: "full_public_name", include.speaker.full_public_name | first%}
+      {{ item.content }}
     </div>
   </div>
 </div>
