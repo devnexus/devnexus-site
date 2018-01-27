@@ -22,7 +22,17 @@ workshop:
   title: Workshops
   trackid: 82
   trackkey: workshop
-  room: Room 15
+  room: TBD
+A303:
+  title: Workshops
+  trackid: 82
+  room: A303
+  trackkey: workshop
+A316:
+  title: Workshops
+  trackid: 82
+  room: A316
+  trackkey: workshop
 java:
   title: Java
   trackid: 55
