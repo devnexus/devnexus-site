@@ -19,6 +19,7 @@ class Speakers
      all_people = event_arr.collect do |e|
          e['persons'].collect do |sp| sp.merge({ "events" => [ e["id"]] }) end
      end
+     #puts(all_people)
      return all_people.flatten
   end
   # take an array of people and de-dup, keeping all events
@@ -31,6 +32,7 @@ class Speakers
       end
   end
   def collect_people_events(event_arr)
+    #puts(event_arr)
     no_data =  (event_arr.nil? || event_arr.empty?)
     return if (no_data)
     event_people = people_from_events(event_arr)

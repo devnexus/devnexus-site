@@ -13,7 +13,7 @@ module Jekyll
               else
                 Jekyll.logger.info("I do not understand #{args}")
               end
-              #persist_speakers()
+              persist_speakers()
             end
           end
         end
@@ -33,7 +33,6 @@ module Jekyll
           #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
           events = event_data['events']
           Jekyll.logger.info("Reading #{events.length} events from cfp")
-          @speakers.collect_people_events(events)
           process_event_collection(events);
         end
         def collect_rooms(room_event_data)
@@ -42,13 +41,12 @@ module Jekyll
           return _data
         end
         def collect_room_events(room, array_of_events)
-           @speakers.collect_people_events(array_of_events)
            times =  array_of_events.map{ |e| e.select{ |k,v| ["id", "start"].include?(k)}.merge("room" => room) }
-           #Jekyll.logger.info(times)
-           return times
            process_event_collection(array_of_events)
+           return times
         end
         def process_event_collection(cfp_data)
+          @speakers.collect_people_events(cfp_data)
           for event in cfp_data do
               person_details = event.delete 'persons'
               process_event(event, person_details)
@@ -73,6 +71,7 @@ module Jekyll
         end
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['id']}.md"
+          Jekyll.logger.info("#{filename}\n#{item}")
           #don't overwrite existing files to preserve CMS edits
           #if !(File.file?(filename))
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
@@ -82,27 +81,27 @@ module Jekyll
         def persist_speakers()
           stored_speaker_file = File.read("_data/speakers.yml")
           stored_speaker_data = YAML.load(stored_speaker_file)
-          #Jekyll.logger.info(stored_speaker_data)
-          for person in @speakers.data().values do
-            abstract = person.delete 'abstract'
-            public_items = person.select{ |k,v| ["full_public_name", "id", "twitter_name", "events"].include?(k)}
-            public_items['title'] = person['full_public_name']
+          for person in @speakers.data() do
+            abstract = person[1].delete 'abstract'
+            public_items = person[1].select{ |k,v| ["full_public_name", "id", "twitter_name", "events"].include?(k)}
+            public_items['title'] = public_items['full_public_name']
             public_items['layout'] = "speaker_bio"
+            public_items['id'] = person[0]
             write_item("speakers", public_items, abstract)
-            correct_speaker_data(stored_speaker_data, person)
+            correct_speaker_data(stored_speaker_data, person[0], person[1])
           end
           updated_speaker_yaml = YAML.dump(stored_speaker_data)
           #Jekyll.logger.info(updated_speaker_yaml)
           File.write("_data/speakers.yml", updated_speaker_yaml)
         end
-        def correct_speaker_data(speaker_db, person_details)
-          speaker_record = speaker_db.fetch(person_details['id'], nil)
+        def correct_speaker_data(speaker_db, id, person_details)
+          speaker_record = speaker_db.fetch(id, nil)
           if(speaker_record)
             #TODO - update any cfp sourced images?
             #Jekyll.logger.info("found")
           else
             new_record = { "avatar_path" => person_details['avatar_path'], "name" => person_details['full_public_name']}
-            speaker_db.store(person_details['id'], new_record)
+            speaker_db.store(id, new_record)
             #Jekyll.logger.info("new>>> #{speaker_db.fetch(person_details['id'])}")
           end
         end
