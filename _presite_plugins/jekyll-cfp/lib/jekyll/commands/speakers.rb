@@ -5,9 +5,10 @@ class Speakers
       @data = {}
   end
   def full_path_avatar(person)
-      img_path = person['avatar_path']
-      person['avatar_path'] = "#{@img_host}#{img_path}"
-      return person
+      img_path = "#{@img_host}#{person['avatar_path']}"
+      return  { "avatar_path" => img_path,
+               "hd_avatar_path" => img_path,
+                "name" => person["full_public_name"] }        
   end
   def count()
     return @data.size()

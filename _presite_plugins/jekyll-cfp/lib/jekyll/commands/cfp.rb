@@ -101,8 +101,7 @@ module Jekyll
             #TODO - update any cfp sourced images?
             #Jekyll.logger.info("found")
           else
-            new_record = { "avatar_path" => person_details['avatar_path'], "name" => person_details['full_public_name']}
-            speaker_db.store(id, new_record)
+            speaker_db.store(id, @speakers.full_path_avatar(person_details))
             #Jekyll.logger.info("new>>> #{speaker_db.fetch(person_details['id'])}")
           end
         end

@@ -124,9 +124,6 @@
 688:
   avatar_path: https://cfp.devnexus.com/system/avatars/688/large/15035732_1310991748965002_2689404947618856960_n.jpg?1503360504
   name: Todd Sharp
-692:
-  avatar_path: https://cfp.devnexus.com/system/avatars/692/large/girish_100_x_100.jpg?1505522112
-  name: Niranjan Dhomse
 699:
   avatar_path: https://cfp.devnexus.com/system/avatars/699/large/glenn.jpeg?1504215166
   name: Glenn Renfro
@@ -425,9 +422,6 @@
 7:
   avatar_path: https://cfp.devnexus.com/system/avatars/7/large/profile-pic-09-11-2011.jpg?1406354223
   name: Pratik Patel
-1149:
-  avatar_path: https://cfp.devnexus.com
-  name: David Blevins
 1147:
   avatar_path: https://cfp.devnexus.com/system/avatars/1147/large/18905_10153002948318877_4986522001590787689_n.jpg?1513106255
   name: Bruno Borges
@@ -454,9 +448,6 @@
 1152:
   avatar_path: https://cfp.devnexus.com/system/avatars/1152/large/Rob_Gordick.jpg?1513343246
   name: Rob Gordick
-1157:
-  avatar_path: https://cfp.devnexus.com
-  name: Tim Begin
 801:
   avatar_path: https://cfp.devnexus.com/system/avatars/801/large/zZ8CXo3P_400x400.jpg?1506689151
   name: Marius Bogoevici
@@ -473,9 +464,27 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1154/large/jeff.png?1513694318
   avatar_path: https://cfp.devnexus.com/system/avatars/1154/large/jeff.png?1513694318
   name: Jeff Brown
+1168:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1168/large/20160830_101234-01.jpg?1516981887
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1168/large/20160830_101234-01.jpg?1516981887
+  name: Avanti Nagalia
 1163:
-  avatar_path: "/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578"
+  avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
   name: Brian Fox
+1149:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: David Blevins
 1164:
-  avatar_path: "/system/avatars/1164/large/square-head-jan-2018.png?1516716652"
+  avatar_path: https://cfp.devnexus.com/system/avatars/1164/large/square-head-jan-2018.png?1516716652
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1164/large/square-head-jan-2018.png?1516716652
   name: Scott Malkie
+1157:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: Tim Begin
+692:
+  avatar_path: https://cfp.devnexus.com/system/avatars/692/large/Kevin_Goldstein_Headshot.png?1513179413
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/692/large/Kevin_Goldstein_Headshot.png?1513179413
+  name: Kevin Goldstein
