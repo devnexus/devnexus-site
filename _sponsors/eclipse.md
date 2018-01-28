@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Eclipse
-link:
+link: https://www.eclipse.org/org/foundation/
 logo_image: /uploads/ecl-001.png
 ---
 
