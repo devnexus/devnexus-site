@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Datadog
-link: www.datadog.com
+link: https://www.datadoghq.com/
 logo_image: /uploads/datadog-001.png
 ---
 
