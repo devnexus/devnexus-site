@@ -2,7 +2,7 @@
 collection: sponsors
 level: gold
 name: Pivotal
-link:
+link: https://pivotal.io/
 logo_image: /uploads/pivotal.001.jpeg
 ---
 
