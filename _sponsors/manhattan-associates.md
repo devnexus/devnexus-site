@@ -2,7 +2,7 @@
 collection: sponsors
 level: platinum
 name: Manhattan Associates
-link: 'http://manh.com'
+link: 'www.manh.com'
 logo_image: /uploads/manh-001.png
 ---
 
