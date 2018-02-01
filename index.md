@@ -5,9 +5,6 @@ registration:
   text: Tickets Available Now!
   status: enabled
   link:
-facebook_target: atlantajug
-twitter_target: devnexus
-google_target: devnexus-conference
 ---
 
 
