@@ -9,4 +9,8 @@ linkedin: laurakmoore
 github: lauramoore
 layout: bio
 ---
-Laura has 17 years experience in enterprise web applications at companies such as UPS, BlackBerry, Equifax, and The Home Depot. She credits AJUG as a key source of inspiration over the years. She is currently working on Smart Building Technologies with AutomatedLogic.
+Designer, Coder, Tester, Maintainer and Troubleshooter for the modern, integrated enterprise application ecosystem since 2000.
+
+Laura loves nothing more than exploring ideas great and small, whether that’s the latest product feature or marketing plan, the latest trending topic on the blog-o-sphere, or the implications of a technology choice in my current application and society at large.
+
+She currently works for UTC-CCS in what she likes to call "big-iron" IoT; delivering integrated smart building systems using Java and Web based tools to talk with and manage embedded devices.
