@@ -78,7 +78,7 @@
   - id: 1500
     start: '13:15'
     room: JavaScript
-  - id: 1727
+  - id: 2104
     start: '14:30'
     room: JavaScript
   - id: 1930
@@ -385,6 +385,9 @@
     room: Mobile
   - id: 1288
     start: '14:30'
+    room: Mobile
+  - id: 2109
+    start: '15:45'
     room: Mobile
   - id: 1453
     start: '10:00'
