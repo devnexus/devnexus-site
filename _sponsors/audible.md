@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: happy hour
 name: Audible
-link:
+link: https://www.audible.com/
 logo_image: /uploads/audible-001.jpeg
 ---
 
