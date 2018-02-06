@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Audible
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/audible-001.jpeg
 ---
 
 
