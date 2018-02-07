@@ -1,0 +1,36 @@
+---
+title: Preparing for your Workshop
+layout: info-fluid
+---
+<section id="speaker" class="bg-light-gray details">
+<div class="biography-header">
+      Download and Install Early
+</div>
+<div class="biography-body">
+         <p>In order to maximize your learning time,  do your setup before you
+         arrive on Wednesday.  The conference pays for wi-fi,  however it is
+         a public network and not intended to to download all of maven,
+         github, and npm!</p>
+
+         <p>Also, we do not guarantee assistance with specific install / setup
+         issues on the day of the workshop, the speaker will progress as fast
+         as the majority of the class allows and you will be left behind.</p>
+
+         <p>If you do encounter specific problems with any of these instructions...
+         Reach out to ...  and if it cannot be resolved with help before hand
+         we find someone to help day of.</p>
+  <div>
+<div>
+  <div class="biography-header">
+        Instructions By Workshop
+  </div>
+      {% assign collection = site.event-instructions | sort: 'title' %}
+      {% for event in collection %}
+        <div class="boxed">
+         <a href="{{event.url}}" title="{{event.title}}">
+      			  <h3>{{event.title}}</h3>
+         </a>
+       </div>
+     {% endfor %}
+
+  </section>
