@@ -2,8 +2,8 @@
 collection: sponsors
 level:
 name: Daugherty
-link: 'http://'
-logo_image:
+link:
+logo_image: /uploads/dbs-001.jpeg
 ---
 
 
