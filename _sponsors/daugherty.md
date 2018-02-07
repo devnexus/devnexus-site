@@ -1,8 +1,8 @@
 ---
 collection: sponsors
-level:
+level: silver
 name: Daugherty
-link:
+link: https://www.daugherty.com/
 logo_image: /uploads/dbs-001.jpeg
 ---
 
