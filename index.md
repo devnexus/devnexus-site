@@ -2,8 +2,8 @@
 layout: home
 dates: Feb 21-23 2018
 registration:
-  text: Tickets Available Now!
-  status: enabled
+  text: SOLD OUT!
+  status: disabled
   link:
 ---
 
