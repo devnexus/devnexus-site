@@ -3,7 +3,7 @@ layout: home
 dates: Feb 21-23 2018
 registration:
   text: SOLD OUT!
-  status: enabled
+  status: disabled
   link:
 ---
 
