@@ -26,7 +26,7 @@ baseurl:
 url:
 links:
    cfp: https://cfp.devnexus.com/en/dn2018/cfp/session/new
-   register: https://devnexus2018.ajug.org/s/register-overview
+   register: https://devnexus2018.ajug.org/s/register.html
 markdown: kramdown
 theme:
 _editor:
