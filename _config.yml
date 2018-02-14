@@ -9,7 +9,11 @@ collections:
   events:
      title: Presentations 2018
      output: true
-     permalink: /presentations/:path
+     permalink: /presentations/:path/
+  event-instructions:
+     title: Workshop Prep 2018
+     output: true
+     permalink: /presentations/:path/instructions
   sponsors:
     title: Sponsors
     output: true
@@ -38,6 +42,13 @@ defaults:
      type: "pages"
    values:
      layout: "archive"
+  -
+   scope:
+     path: ""
+     type: "event-instructions"
+   values:
+     layout: "workshop_instructions"
+
 _options:
   logo_image:
     width: 360
