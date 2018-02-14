@@ -7,30 +7,35 @@ layout: info-fluid
       Download and Install Early
 </div>
 <div class="biography-body">
-         <p>In order to maximize your learning time,  do your setup before you
-         arrive on Wednesday.  The conference pays for wi-fi,  however it is
-         a public network and not intended to to download all of maven,
-         github, and npm!</p>
+  <p class="small">In order to maximize your learning time, setup before you
+    arrive on Wednesday.  The conference wi-fi is
+    a public network and we cannot guarantee speed while downloading
+    all of maven, github and npm.</p>
 
-         <p>Also, we do not guarantee assistance with specific install / setup
-         issues on the day of the workshop, the speaker will progress as fast
-         as the majority of the class allows and you will be left behind.</p>
-
-         <p>If you do encounter specific problems with any of these instructions...
-         Reach out to ...  and if it cannot be resolved with help before hand
-         we find someone to help day of.</p>
-  <div>
+  <p class="small">We cannot guarantee assistance with specific install / setup
+      issues on the day of the workshop. However, we do have an active and
+      helpful community.  Please post your questions early, and more than likely
+      someone will be able to help.
+      <ul>
+        <li><a href="https://www.facebook.com/{{site.data.social.facebook_target}}/" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com/{{site.data.social.twitter_target}}" target="_blank">Twitter</a></li>
+        <li><a href="https://plus.google.com/+{{site.data.social.google_target}}" target="_blank">Google+</a></li>
+        <li><a href="https://www.ajug.org/mailing-lists" target="_blank">ajug-members@ajug.org</a></li>
+      </ul>
+</p>
+</div>
 <div>
   <div class="biography-header">
         Instructions By Workshop
   </div>
       {% assign collection = site.event-instructions | sort: 'title' %}
       {% for event in collection %}
-        <div class="boxed">
+        <p>
          <a href="{{event.url}}" title="{{event.title}}">
-      			  <h3>{{event.title}}</h3>
+      			  <h4>{{event.title}}</h4>
          </a>
-       </div>
+         <hr/>
+       </p>
      {% endfor %}
 
   </section>
