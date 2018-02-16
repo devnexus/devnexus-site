@@ -2,7 +2,7 @@
 collection: sponsors
 level: silver
 name: Daugherty
-link:
+link: https://www.daugherty.com/
 logo_image: /uploads/DBS.001.png
 ---
 
