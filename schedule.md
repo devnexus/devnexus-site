@@ -87,3 +87,15 @@ layout: info-fluid
 {% assign day3_close= site.events | where: "slug", day3_1645.id | first %}
 <h3>16:45</h3>
 {% include schedule_event.html details=day3_close room="keynote" %}
+
+{% assign afterparty = site.events | where: "slug", "2113" | first %}
+<h3>19:00</h3>
+<div class="row schedule-row">
+		<div class="col-sm-6 col-xs-12 workshop">
+				<a href="{{afterparty.url}}">{{afterparty.title | escape}}</a>
+				<br/>
+			<span class="small pull-right">
+				 JoyStick Gamebar
+			</span>
+	  </div>
+</div>

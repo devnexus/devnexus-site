@@ -56,7 +56,7 @@ module Jekyll
          event_header = { "id" => event["id"],
                          "title" => event["title"],
                          "layout" => "preso_details",
-                        "track" => event['track'].downcase }
+                        "track" => event['track']&.downcase }
          #keeping keys to person records for later rendering
          filtered_persons = filter_attributes(persons, "full_public_name", "id")
          if (persons && persons.length > 0)
