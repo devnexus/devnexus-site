@@ -28,12 +28,6 @@
   - id: 1819
     start: '09:00'
     room: Serverless and Cloud
-  - id: 1630
-    start: '09:00'
-    room: A316
-  - id: 2088
-    start: '09:00'
-    room: A303
   - id: 1945
     start: '09:00'
     room: Frameworks
@@ -78,13 +72,13 @@
   - id: 1500
     start: '13:15'
     room: JavaScript
-  - id: 2066
+  - id: 1391
     start: '14:30'
     room: JavaScript
   - id: 1930
     start: '15:45'
     room: JavaScript
-  - id: 1391
+  - id: 2109
     start: '17:00'
     room: JavaScript
   - id: 1915
@@ -156,7 +150,7 @@
   - id: 1884
     start: '15:45'
     room: Patterns & Design
-  - id: 1370
+  - id: 1275
     start: '17:00'
     room: Patterns & Design
   - id: 1505
@@ -213,11 +207,29 @@
   - id: 2054
     start: '17:00'
     room: Serverless and Cloud
+  - id: 2062
+    start: '08:00'
+    room: Sidney Marcus
   - id: 1875
     start: '09:00'
     room: Sidney Marcus
+  - id: 2120
+    start: '11:00'
+    room: Nighthacking
   - id: 1382
     start: '12:00'
+    room: Nighthacking
+  - id: 2121
+    start: '13:00'
+    room: Nighthacking
+  - id: 2122
+    start: '14:15'
+    room: Nighthacking
+  - id: 2123
+    start: '15:30'
+    room: Nighthacking
+  - id: 2127
+    start: '16:45'
     room: Nighthacking
   - id: 1922
     start: '18:00'
@@ -386,7 +398,7 @@
   - id: 1288
     start: '14:30'
     room: Mobile
-  - id: 2109
+  - id: 2066
     start: '15:45'
     room: Mobile
   - id: 1453
@@ -401,7 +413,7 @@
   - id: 1372
     start: '14:30'
     room: Patterns & Design
-  - id: 1275
+  - id: 1370
     start: '15:45'
     room: Patterns & Design
   - id: 1882
@@ -458,8 +470,23 @@
   - id: 2113
     start: '19:00'
     room: Sidney Marcus
+  - id: 2119
+    start: '09:45'
+    room: Nighthacking
+  - id: 2116
+    start: '11:00'
+    room: Nighthacking
   - id: 1665
     start: '12:00'
+    room: Nighthacking
+  - id: 2128
+    start: '13:00'
+    room: Nighthacking
+  - id: 2117
+    start: '14:15'
+    room: Nighthacking
+  - id: 2118
+    start: '15:30'
     room: Nighthacking
   - id: 1297
     start: '10:00'

@@ -473,8 +473,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
   name: Brian Fox
 1149:
-  avatar_path: '/blevins.jpg'
-  hd_avatar_path: '/blevins.jpg'
+  avatar_path: "/blevins.jpg"
+  hd_avatar_path: "/blevins.jpg"
   name: David Blevins
 1164:
   avatar_path: https://cfp.devnexus.com/system/avatars/1164/large/square-head-jan-2018.png?1516716652
