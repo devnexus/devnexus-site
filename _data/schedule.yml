@@ -72,13 +72,13 @@
   - id: 1327
     start: '10:00'
     room: JavaScript
-  - id: 1730
+  - id: 2104
     start: '11:15'
     room: JavaScript
   - id: 1500
     start: '13:15'
     room: JavaScript
-  - id: 2104
+  - id: 2066
     start: '14:30'
     room: JavaScript
   - id: 1930
@@ -90,7 +90,7 @@
   - id: 1915
     start: '10:00'
     room: Microservices
-  - id: 1475
+  - id: 1506
     start: '11:15'
     room: Microservices
   - id: 1497
@@ -261,7 +261,7 @@
   - id: 1899
     start: '10:00'
     room: Architecture
-  - id: 1297
+  - id: 1591
     start: '11:15'
     room: Architecture
   - id: 1440
@@ -455,10 +455,13 @@
   - id: 2061
     start: '16:45'
     room: Sidney Marcus
+  - id: 2113
+    start: '19:00'
+    room: Sidney Marcus
   - id: 1665
     start: '12:00'
     room: Nighthacking
-  - id: 1591
+  - id: 1297
     start: '10:00'
     room: Frameworks
   - id: 1446
@@ -491,13 +494,13 @@
   - id: 1489
     start: '10:00'
     room: Architecture
-  - id: 1384
+  - id: 1692
     start: '11:15'
     room: Architecture
   - id: 1361
     start: '13:15'
     room: Architecture
-  - id: 1692
+  - id: 1384
     start: '14:30'
     room: Architecture
   - id: 1464

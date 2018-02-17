@@ -101,7 +101,7 @@
   name: Gerard Sans
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/480/large/gerardsans.jpg?1510698190
 486:
-  avatar_path: https://cfp.devnexus.com/system/avatars/486/large/Profile_Public.jpg?1484401803
+  avatar_path: "/AA.jpeg"
   name: AMahdy Abdelaziz
 531:
   avatar_path: https://cfp.devnexus.com/system/avatars/531/large/MarcusHellberg-square.jpeg?1492464669
@@ -496,3 +496,15 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1170/large/Eric_Bottard_3.JPG?1517566792
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1170/large/Eric_Bottard_3.JPG?1517566792
   name: Eric Bottard
+1150:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1150/large/SK.Headshots.2015-12.jpg?1513695413
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1150/large/SK.Headshots.2015-12.jpg?1513695413
+  name: Alex Nachlas
+762:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: windust
+1174:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
+  name: Oleg Šelajev
