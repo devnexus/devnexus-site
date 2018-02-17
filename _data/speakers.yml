@@ -101,7 +101,7 @@
   name: Gerard Sans
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/480/large/gerardsans.jpg?1510698190
 486:
-  avatar_path: "/AA.jpeg"
+  avatar_path: "/AA.jpg"
   name: AMahdy Abdelaziz
 531:
   avatar_path: https://cfp.devnexus.com/system/avatars/531/large/MarcusHellberg-square.jpeg?1492464669
@@ -473,8 +473,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
   name: Brian Fox
 1149:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: '/blevins.jpg'
+  hd_avatar_path: '/blevins.jpg'
   name: David Blevins
 1164:
   avatar_path: https://cfp.devnexus.com/system/avatars/1164/large/square-head-jan-2018.png?1516716652
@@ -501,9 +501,9 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1150/large/SK.Headshots.2015-12.jpg?1513695413
   name: Alex Nachlas
 762:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
-  name: windust
+  avatar_path: https://pbs.twimg.com/profile_images/2704139144/c859ec9be32acb8b4b1e7724b0dce608_400x400.png
+  hd_avatar_path: https://pbs.twimg.com/profile_images/2704139144/c859ec9be32acb8b4b1e7724b0dce608_400x400.png
+  name: Freddy Guime
 1174:
   avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
