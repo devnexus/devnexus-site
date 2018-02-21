@@ -149,9 +149,6 @@
 717:
   avatar_path: https://cfp.devnexus.com/system/avatars/717/large/5002468.jpeg?1504576048
   name: Jared Rhodes
-718:
-  avatar_path: "/LG.png"
-  name: Leigh Griffin
 719:
   avatar_path: https://cfp.devnexus.com/system/avatars/719/large/Photo.jpg?1505238438
   name: Veer Muchandi
@@ -508,3 +505,11 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
   name: Oleg Šelajev
+718:
+  avatar_path: "/LG.png"
+  hd_avatar_path: "LG.png"
+  name: Leigh Griffin
+923:
+  avatar_path: https://cfp.devnexus.com/system/avatars/923/large/1f65fd8.jpg?1519228483
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/923/large/1f65fd8.jpg?1519228483
+  name: Joseph Ottinger
