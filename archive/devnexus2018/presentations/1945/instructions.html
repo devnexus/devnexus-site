@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Apache Spark Workshop</title>
+  <meta name="description" content="For this workshop please have this ready: Laptop JDK 8 installed IDE like Intelli Community Edition git Clone https://github.com/dhinojosa/spark-training">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/presentations/1945/instructions">
+  <link rel="alternate" type="application/rss+xml" title="DevNexus 2018" href="/feed.xml">
+
+  <!-- fonts: external links -->
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+
+  <nav class="navbar navbar-inverse" id="nav">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/assets/img/devnexus-logo.png" alt="DevNexus"/>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-link"><a href="/sponsors">SPONSORS</a></li>
+                <li class="nav-link"><a href="/past-conferences">PAST CONFERENCES</a></li>
+                <li class="nav-link"><a href="https://www.recallact.com/ajug">RECORDINGS</a></li>
+                <li class="nav-link"><a href="https://twitter.com/devnexus">ANNOUNCEMENTS</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid conference-information" >
+<section style="col-offest-1 col-10">
+	  <p>For this workshop please have this ready:</p>
+<ul>
+  <li>Laptop</li>
+  <li>JDK 8 installed</li>
+  <li>IDE like Intelli Community Edition</li>
+  <li>git</li>
+  <li>Clone <a href="https://github.com/dhinojosa/spark-training">https://github.com/dhinojosa/spark-training</a></li>
+</ul>
+
+</section>
+</div>
+
+</div>
+
+<div class="footer">
+    <div >
+        <img  class="center-block" style="margin-top: 40px;padding-left: 50px;width:auto;height: auto" src="/assets/img/devnexus-logo.png" alt="logo"/>
+    </div>
+    <div style="text-align: center;margin-top: 40px">
+      <!--
+        <a href="/speakers" class="text">speakers</a>
+        <a href="/schedules" class="text">schedule</a>
+      -->
+        <!-- a href="/conference-info" class="text">conference info</a --> 
+        <a href="/code-of-conduct" class="text">code of conduct</a>
+        <a href="/privacy-policy" class="text">privacy policy</a>
+        <a href="/organizers" class="text">organizers</a>
+        <a href="/past-conferences" class="text">past conferences</a>
+    </div>
+    <div style="text-align: center;margin-top: 5px">
+        <a href="/we-are-opensource" class="text">We are open-source</a>
+    </div>
+    <div style="text-align: center;margin-top: 5px">
+       <ul class="list-inline hero-social">
+  <li><a href="https://www.facebook.com/atlantajug/" target="_blank"><img src="/assets/img/facebook-logo-button.png"/></a></li>
+  <li><a href="https://twitter.com/devnexus" target="_blank"><img src="/assets/img/twitter-logo-button.png"/></a></li>
+  <li><a href="https://www.flickr.com/search/?sort=date-taken-desc&safe_search=1&text=devnexus" view_all="1" target="_blank"><img src="/assets/img/instagram-logo.png"/></a></li>
+  <li><a href="https://plus.google.com/+devnexus-conference" target="_blank"><img src="/assets/img/google-plus-1.png"/></a></li>
+</ul>
+
+    </div>
+</div>
+
+
+  <!-- javascipt -->
+  <script src="/assets/js/all.js"></script>
+
+  <script>
+  "use strict";
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-44984422-1', 'devnexus.com');
+  ga('send', 'pageview');
+  /*
+  $('#nav').affix({
+    offset: {top: $('#nav').offset().top}
+  });
+  $('#nav').on('affix.bs.affix', function () {
+    var navHeight = $('#nav').outerHeight(true);
+    $('.marketing-panel').css('margin-top', navHeight);
+  });
+  $('#nav').on('affix-top.bs.affix', function () {
+    $('.marketing-panel').css('margin-top', 0);
+  });
+  */
+  $(function() {
+    $(".video-container").each(function() {
+      var videoId = this.id;
+      $(document).delegate('#video-play-button', 'click', function() {
+        var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
+        var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, style:"height:100%;width:100%"});
+
+        $('#' + videoId).html(iframe).addClass('loaded');
+        $('#video-play-button').hide();
+      });
+    });
+  });
+
+  </script>
+  <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+
+</body>
+</html>
