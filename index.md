@@ -13,8 +13,9 @@ registration:
 
 
 <div class="row">
-      <div class="row featured-header">
+      <div class="featured-header">
         <p>Thank you 2018 Sponsors</p>
-      </div>
+        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2019?</a>
+      </div>  
       {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
