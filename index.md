@@ -1,8 +1,8 @@
 ---
 layout: home
-dates: Feb 2019
+dates: March 6-8 2019
 registration:
-  text: Registration Opens Fall 2018
+  text: Registration and CFP Open Aug 1 2018
   status: disabled
   link:
 ---
