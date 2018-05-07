@@ -1,17 +1,17 @@
 ---
-title: DevNexus 2018
+title: DevNexus 2019
 timezone: UTC
 collections:
   speakers:
-    title: Speakers 2018
+    title: Speakers 2019
     output: true
     permalink: /:collection/:path
   events:
-     title: Presentations 2018
+     title: Presentations 2019
      output: true
      permalink: /presentations/:path/
   event-instructions:
-     title: Workshop Prep 2018
+     title: Workshop Prep 2019
      output: true
      permalink: /presentations/:path/instructions
   sponsors:
@@ -29,8 +29,8 @@ description: SouthEast's largest developer conference.
 baseurl:
 url:
 links:
-   cfp: https://cfp.devnexus.com/en/dn2018/cfp/session/new
-   register: https://devnexus2018.ajug.org/s/register.html
+   cfp: https://cfp.devnexus.com/en/dn2019/cfp/session/new
+   register: https://devnexus2019.ajug.org/s/register.html
 markdown: kramdown
 theme:
 _editor:

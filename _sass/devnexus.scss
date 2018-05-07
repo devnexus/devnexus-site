@@ -13,3 +13,8 @@
     height: 128px;
   }
 }
+.level-height{
+  @media (min-width: 768px) {
+      height: 120px;
+  }
+}
