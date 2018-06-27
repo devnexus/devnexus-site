@@ -19,11 +19,11 @@
   input.email {font-family:inherit; font-size: 15px; display:block;
               width: 50%;
               padding:0 0.4em; margin:auto;
-              min-height:32px; min-width:130px;
+              min-height:32px; min-width:300px;
               -webkit-border-radius: 3px;
               -moz-border-radius: 3px;
               border-radius: 3px;}
-  input.button {display:block; width:30%; margin:auto; min-width:90px; background-color:$action-button-color; }
+  input.button {display:block; width:30%; margin:auto; min-width:150px; background-color:$action-button-color; }
 }
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
 #mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
