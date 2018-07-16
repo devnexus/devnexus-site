@@ -2,7 +2,7 @@
 layout: page-fluid
 new-cfp-url: 'https://cfp.devnexus.com/en/dn2019/cfp/session/new'
 theme: cfp
-tracks:
+cfp_tracks:
   - title: Java
     description: The Java langugage, JVM, Modules
   - title: Alternative JVM Languages
@@ -69,7 +69,7 @@ tracks:
   <li>Break apart longer sessions into multiple presentations PARTS I, II, etc.</li>
    <li> Select the track accordingly in the CFP system:
      <table class="table table-striped">
-       {% for item in page.tracks %}
+       {% for item in page.cfp_tracks %}
             <tr><td class="title">{{ item.title }}</td><td class="details">{{ item.description }}</td></tr>
        {% endfor %}
      </table>
