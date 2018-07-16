@@ -1,0 +1,10 @@
+.cfp-tracks{
+  @extend table;
+
+  .title {
+    min-width: 30%;
+  }
+  .details {
+    width: 70%;
+  }
+}

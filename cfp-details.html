@@ -1,38 +1,84 @@
 ---
 layout: page-fluid
-new-cfp-url: 'https://cfp.devnexus.com/en/dn2018/cfp/session/new'
+new-cfp-url: 'https://cfp.devnexus.com/en/dn2019/cfp/session/new'
 theme: cfp
+tracks:
+  - title: Java
+    description: The Java langugage, JVM, Modules
+  - title: Alternative JVM Languages
+    description: Kotlin, Groovy, Scala ...
+  - title: Frameworks
+    description: Spring, JEE, JAX-RS, Grails
+  - title: Tools
+    description: DevOps, CI/CD, IDE
+  - title: Architecture
+    description: Clean Code, Communication, Patterns
+  - title: Cloud
+    description: IoT, Containers
+  - title: Microservices
+    description: Micro Kernels, Discovery, REST
+  - title: Serverless
+    description: BaaS, FaaS, Data
+  - title: Security
+    description: Recognizing the bad guys, keeping them out.
+  - title: Peformance
+    description: How to make your applications run smaller, faster, reliably
+  - title: Javascript
+    description: Javascript, npm, node
+  - title: Agile
+    description: Incremental development, team dynamics, developer techniques
+  - title: Mobile
+    description: Swift, Android,
+  - title: Web
+    description: Browser as a platform, UI/UX, CSS, HTML,
+
 ---
 <section>
-  <h1 class="featured-header"> DEADLINE: OCTOBER 1!</h1>
   <h2>The Devnexus 2018 call for proposals is now open!</h2>
+  <h1 class="featured-header"> DEADLINE: OCTOBER 1!</h1>
   <div>
-  <ul>
-    The conference will be in Atlanta, GA on February 21-23.
-    <li>Workshop day is <strong>February 21.</strong></li>
-    <li>Main conference days are <strong>February 22, 23.</strong></li>
+    <p>When and Where is the conference?<p>
+    <ul>
+    <li>The conference will be in <strong>Atlanta, GA</strong> on March 6-8.</li>
+    <li>Workshop day is <strong>March 6.</strong></li>
+    <li>Main conference days are <strong>March 7,8 .</strong></li>
+    </ul>
+  </div>
+  <div>
+    <p>When will I know if I'm accepted?</p>
+    <ul>
     <li> Notifications for acceptance will go out on a rolling basis; submit early and often!</li>
     <li> Rejection notices will go out on October 30 or earlier.</li>
-  </ul>
+    </ul>
   <h4>We look forward to reviewing your submissions!</h4>
 </div>
-
-<h1>PLEASE TAKE 30 SECONDS TO REVIEW THESE GUIDELINES!</h1>
-
-<div class='list-style'>
-  <li style=''>Once you've signed up on the CFP site, click 'Create New Event'. Make sure you also mark your availability.</li>
-  <li style=''> Select the track accordingly in the CFP system:
-    <ul>
-      {% for item in site.data.tracks %}
-           <li style=''>{{ item.title }}</li>
-      {% endfor %}
-    </ul>
-  </li>
-  <li style=''>Presentations (lectures) are <strong>70 mins</strong> + 5 min for questions.
-    <ul>
-     <li>Break apart longer sessions into PARTS I, II, etc.</li>
-     <li>Longer, deep dive sessions, are given priority.</li>
-   </ul>
+<div>
+  <p> How do I submit a session?</p>
+  <ul>
+  <li>Register on the CFP site</li>
+  <li> Sign In, Click 'Create New Event'.</li>
+  <li><strong>Make sure you also mark your availability.</strong></li>
+  </ul>
+</div>
+<div>
+  <p>What types of sessions are you looking for?</p>
+  <ul>
+  <li>Workshops are full-day (9 - 5), on March 6</li>
+  <li>Presentations (lectures) are <strong>70 mins</strong> + 5 min for questions.</li>
+  <li>Longer, deep dive sessions, are given priority.</li>
+  <li>Break apart longer sessions into multiple presentations PARTS I, II, etc.</li>
+   <li> Select the track accordingly in the CFP system:
+     <table class="table table-striped">
+       {% for item in page.tracks %}
+            <tr><td class="title">{{ item.title }}</td><td class="details">{{ item.description }}</td></tr>
+       {% endfor %}
+     </table>
+   </li>
+ </ul>
+<div>
+<div>
+  <p> Will you cover travel and / or lodging?</p>
+  <ul>
   <li style=''>As we are a low-cost community conference, we have limited resources for covering presenter travel. Please ask your company if they can cover your travel first.
      <ul>
        <li>Please mark accordingly if need travel reimbursement (see below).</li>
@@ -40,6 +86,7 @@ theme: cfp
        <li>If you need to change this flag, please email us first!</li>
     </ul>
   <li style=''>Please email {{site.email}} if you have any questions.</li>
+</ul>
   </div>
   <hr/>
 
