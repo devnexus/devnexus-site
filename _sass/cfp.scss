@@ -1,3 +1,4 @@
+@import "bootstrap/mixins/_buttons";
 .cfp-tracks{
   @extend table;
 
@@ -7,4 +8,11 @@
   .details {
     width: 70%;
   }
+}
+.cfp {
+  .action {
+     @include button-variant(#cece19, #000000, #2dbe27);
+     padding: .5em;
+     width: auto;
+   }
 }

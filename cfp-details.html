@@ -4,38 +4,40 @@ new-cfp-url: 'https://cfp.devnexus.com/en/dn2019/cfp/session/new'
 theme: cfp
 tracks:
   - title: Java
-    description: The Java langugage, JVM, Modules
+    description: using the core libraries and features, design considerations.
   - title: Alternative JVM Languages
-    description: Kotlin, Groovy, Scala ...
-  - title: Frameworks
-    description: Spring, JEE, JAX-RS, Grails
-  - title: Tools
-    description: DevOps, CI/CD, IDE
+    description: Groovy, Scala, Javscript, ColdFusion, Jython ...
+  - title: Frameworks & Tools
+    description: How to save time and effort (Spring, Vert.x, Gradle, Maven...)
   - title: Architecture
-    description: Clean Code, Communication, Patterns
-  - title: Cloud
-    description: IoT, Containers
-  - title: Microservices
-    description: Micro Kernels, Discovery, REST
-  - title: Serverless
-    description: BaaS, FaaS, Data
-  - title: Security
-    description: Recognizing the bad guys, keeping them out.
-  - title: Peformance
-    description: How to make your applications run smaller, faster, reliably
+    description: effective code, design, communication, and patterns
+  - title: Cloud Platform Tools
+    description: deploying, running, monitoring, securing applications on cloud platforms
+  - title: Cloud Platform Applications
+    description: designing, building, testing for Microservices, Serverless, As-A-Service
+    title: Security
+    description: recognizing the bad guys, keeping them out.
+  - title: Performance
+    description: how to make applications run smaller, faster, reliably
   - title: Javascript
-    description: Javascript, npm, node
+    description: core language, tools, frameworks, front end, back end
   - title: Agile
-    description: Incremental development, team dynamics, developer techniques
+    description: product development, team dynamics, process and techniques
   - title: Mobile
-    description: Swift, Android,
+    description: Swift, Android, Cordova and native frameworks (Ionic, React)
   - title: Web
-    description: Browser as a platform, UI/UX, CSS, HTML,
+    description: the browser as a platform, UI/UX, CSS, HTML, Sass, LeSS
 
 ---
-<section>
-  <h2>The Devnexus 2018 call for proposals is now open!</h2>
-  <h1 class="featured-header"> DEADLINE: OCTOBER 1!</h1>
+<section class="row">
+  <div class="col-sm-4">
+    <h3>The Devnexus 2019 call for proposals:</h3>
+     <h1>OCTOBER 1 DEADLINE!</h1>
+      <a href="/code-of-conduct.html" class="action btn-block btn-warning"> &gt; Read the DevNexus Code Of Conduct</a>
+      <a class="action btn-block btn-success" href="{{ page.new-cfp-url }}"> &gt; Submit a session!</a>
+      <h4>We look forward to reviewing your submissions!</h4>
+  </div>
+  <div class="col-sm-8">
   <div>
     <p>When and Where is the conference?<p>
     <ul>
@@ -50,7 +52,6 @@ tracks:
     <li> Notifications for acceptance will go out on a rolling basis; submit early and often!</li>
     <li> Rejection notices will go out on October 30 or earlier.</li>
     </ul>
-  <h4>We look forward to reviewing your submissions!</h4>
 </div>
 <div>
   <p> How do I submit a session?</p>
@@ -88,13 +89,5 @@ tracks:
   <li style=''>Please email {{site.email}} if you have any questions.</li>
 </ul>
   </div>
-  <hr/>
-
-  <h1><a href="/code-of-conduct.html" style='color:#000000;text-align:center;'> Read the DevNexus Code Of Conduct Here </a></h1>
-  <hr/>
-
-  <h1>
-    <a style='color:#000000;text-align:center;' href="{{ page.new-cfp-url }}">Click here to submit a session!</a>
-  </h1>
-  <br />
+</div>
 </section>
