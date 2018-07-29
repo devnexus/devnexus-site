@@ -4,7 +4,7 @@ new-cfp-url: 'https://cfp.devnexus.com/en/dn2019/cfp/session/new'
 theme: cfp
 cfp_tracks:
   - title: Java
-    description: core language, SE, JDK, modules, JUnit.
+    description: core language, SE, JDK, modularity, what's next?
   - title: 2GM
     description: Groovy, Grails, Micronaut
   - title: Alternative JVM Languages
@@ -28,8 +28,7 @@ cfp_tracks:
   - title: Web
     description: the browser as a platform, UI/UX, CSS, HTML, Sass, LeSS
   - title: Practices / other tech
-    descrption: important topics outside of the current hotness.
-
+    description: important topics outside of the current hotness.
 ---
 <section class="row">
   <div class="col-sm-4">
@@ -74,7 +73,7 @@ cfp_tracks:
    <li> Select the track accordingly in the CFP system:
      <table class="table table-striped">
        {% for item in page.cfp_tracks %}
-            <tr><td class="title">{{ item.title }}</td><td class="details">{{ item.description }}</td></tr>
+            <tr><td class="title">{{ item.title | escape }}</td><td class="details">{{ item.description | escape }}</td></tr>
        {% endfor %}
      </table>
    </li>
