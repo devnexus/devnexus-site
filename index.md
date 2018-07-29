@@ -6,9 +6,6 @@ registration:
   status: enabled
   link:
 ---
-<div class="navbar">
-<h1 class="top-intro"><a href="cfp-details.html">Call For Papers Is Open</a></h1>
-</div>
 {% include navigation-before-cfp.html %}
 
 {% include marketing-video.html %}
