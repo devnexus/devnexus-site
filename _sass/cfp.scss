@@ -1,0 +1,24 @@
+@import "bootstrap/mixins/_buttons";
+.cfp-tracks{
+  @extend table;
+
+  .title {
+    min-width: 30%;
+  }
+  .details {
+    width: 70%;
+  }
+}
+.cfp {
+  .action-conduct {
+     @include button-variant($action-button-color, #000000, #000000);
+     padding: .5em;
+     width: auto;
+   }
+   .action-submit {
+      @include button-variant($tm-dev-color, #000000,  #000000);
+      padding: .5em;
+      width: auto;
+      font-weight: bold;
+    }
+}

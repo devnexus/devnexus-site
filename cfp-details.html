@@ -1,38 +1,86 @@
 ---
 layout: page-fluid
-new-cfp-url: 'https://cfp.devnexus.com/en/dn2018/cfp/session/new'
 theme: cfp
+cfp_tracks:
+  - title: Java
+    description: core language, SE, JDK, modularity, what's next?
+  - title: 2GM
+    description: Groovy, Grails, Micronaut
+  - title: Alternative JVM Languages
+    description: Kotlin, Scala, Javscript, ColdFusion, Android ...
+  - title: Frameworks
+    description: Spring, Vert.x, JHipster, Lightbend, Jakarta(EE)
+  - title: Tools
+    description: Build and testing automation, IDE tips and tricks
+  - title: Architecture
+    description: effective code, design, communication, and patterns
+  - title: Cloud Services
+    description: Kube, Istio, Mesh
+  - title: Cloud Applications
+    description: Microservices, Functionless
+    title: Security
+    description: recognizing the bad guys, keeping them out.
+  - title: Javascript
+    description: ECMA, NPM, Gulp, Webpack, Angular, React, Vue, Ember...
+  - title: Agile
+    description: product development, team dynamics, process and techniques
+  - title: Web
+    description: the browser as a platform, UI/UX, CSS, HTML, Sass, LeSS
+  - title: Practices / other tech
+    description: important topics outside of the current hotness.
 ---
-<section>
-  <h1 class="featured-header"> DEADLINE: OCTOBER 1!</h1>
-  <h2>The Devnexus 2018 call for proposals is now open!</h2>
+<section class="row">
+  <div class="col-sm-4">
+    <h3>The Devnexus 2019 call for proposals:</h3>
+     <h1>SEPTEMBER 15 DEADLINE!</h1>
+      <a href="/code-of-conduct.html" class="action-conduct btn-block btn-warning"> &gt; Read the DevNexus Code Of Conduct</a>
+      <a class="action-submit btn-block btn-success" href="{{ site.links.cfp }}"> &gt; Submit a session!</a>
+      <h4>We look forward to reviewing your submissions!</h4>
+  </div>
+  <div class="col-sm-8">
   <div>
-  <ul>
-    The conference will be in Atlanta, GA on February 21-23.
-    <li>Workshop day is <strong>February 21.</strong></li>
-    <li>Main conference days are <strong>February 22, 23.</strong></li>
-    <li> Notifications for acceptance will go out on a rolling basis; submit early and often!</li>
-    <li> Rejection notices will go out on October 30 or earlier.</li>
-  </ul>
-  <h4>We look forward to reviewing your submissions!</h4>
-</div>
-
-<h1>PLEASE TAKE 30 SECONDS TO REVIEW THESE GUIDELINES!</h1>
-
-<div class='list-style'>
-  <li style=''>Once you've signed up on the CFP site, click 'Create New Event'. Make sure you also mark your availability.</li>
-  <li style=''> Select the track accordingly in the CFP system:
+    <p>When and Where is the conference?<p>
     <ul>
-      {% for item in site.data.tracks %}
-           <li style=''>{{ item.title }}</li>
-      {% endfor %}
+    <li>The conference will be in <strong>Atlanta, GA at the COBB GALLERIA CENTRE</strong> on March 6-8. PLEASE NOTE THAT THIS IS A DIFFERENT VENUE FROM THE 2018 EVENT</li>
+    <li>Workshop day is <strong>March 6.</strong></li>
+    <li>Main conference days are <strong>March 7,8 .</strong></li>
     </ul>
-  </li>
-  <li style=''>Presentations (lectures) are <strong>70 mins</strong> + 5 min for questions.
+  </div>
+  <div>
+    <p>When will I know if I'm accepted?</p>
     <ul>
-     <li>Break apart longer sessions into PARTS I, II, etc.</li>
-     <li>Longer, deep dive sessions, are given priority.</li>
-   </ul>
+    <li> Notifications for acceptance will go out on a rolling basis; submit early and often!</li>
+    <li> Rejection notices will go out on October 1 or earlier.</li>
+    </ul>
+</div>
+<div>
+  <p> How do I submit a session?</p>
+  <ul>
+  <li>Register on the CFP site</li>
+  <li> Sign In, Click 'Create New Event'.</li>
+  <li><strong>Make sure you also mark your availability.</strong></li>
+  </ul>
+</div>
+<div>
+  <p>What types of sessions are you looking for?</p>
+  <ul>
+  <li>Workshops are full-day (9 - 5), on March 6</li>
+  <li>Presentations (lectures) are <strong>50 mins</strong> + 5 min for questions.</li>
+  <li>Longer, deep dive sessions, are given priority.</li>
+  <li>Break apart longer sessions into multiple presentations PARTS I, II, etc.</li>
+  <li>A mix of skill levels (Beginners, Seasoned, Expert)</li>
+   <li> Select the track accordingly in the CFP system:
+     <table class="table table-striped">
+       {% for item in page.cfp_tracks %}
+            <tr><td class="title">{{ item.title | escape }}</td><td class="details">{{ item.description | escape }}</td></tr>
+       {% endfor %}
+     </table>
+   </li>
+ </ul>
+<div>
+<div>
+  <p> Will you cover travel and / or lodging?</p>
+  <ul>
   <li style=''>As we are a low-cost community conference, we have limited resources for covering presenter travel. Please ask your company if they can cover your travel first.
      <ul>
        <li>Please mark accordingly if need travel reimbursement (see below).</li>
@@ -40,14 +88,7 @@ theme: cfp
        <li>If you need to change this flag, please email us first!</li>
     </ul>
   <li style=''>Please email {{site.email}} if you have any questions.</li>
+</ul>
   </div>
-  <hr/>
-
-  <h1><a href="/code-of-conduct.html" style='color:#000000;text-align:center;'> Read the DevNexus Code Of Conduct Here </a></h1>
-  <hr/>
-
-  <h1>
-    <a style='color:#000000;text-align:center;' href="{{ page.new-cfp-url }}">Click here to submit a session!</a>
-  </h1>
-  <br />
+</div>
 </section>

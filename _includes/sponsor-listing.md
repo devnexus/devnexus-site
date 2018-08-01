@@ -1,4 +1,7 @@
 {% for sponsorLevel in site.data.sponsorlevels %}
-{% assign sponsorsInLevel = site.sponsors | where:"level", sponsorLevel.category %}
+{% assign sponsorsInLevel = site.data.sponsors | where:'sponsorlevel', sponsorLevel.category %}
+{% assign total = sponsorsInLevel | size %}
+{% unless total == 0 %}
 {% include {{ include.rendering }} sponsors=sponsorsInLevel level-name=sponsorLevel.title %}
+{% endunless %}
 {% endfor %}

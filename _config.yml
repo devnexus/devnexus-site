@@ -29,8 +29,8 @@ description: SouthEast's largest developer conference.
 baseurl:
 url:
 links:
-   cfp: https://cfp.devnexus.com/en/dn2019/cfp/session/new
-   register: https://devnexus2019.ajug.org/s/register.html
+   cfp: https://cfp.connectevents.io/en/dn2019/cfp/session/new
+   register: https://tickets.connectevents.io/events/devnexus2019/
 markdown: kramdown
 theme:
 _editor:
