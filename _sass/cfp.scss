@@ -10,9 +10,15 @@
   }
 }
 .cfp {
-  .action {
-     @include button-variant(#cece19, #000000, #2dbe27);
+  .action-conduct {
+     @include button-variant($action-button-color, #000000, #000000);
      padding: .5em;
      width: auto;
    }
+   .action-submit {
+      @include button-variant($tm-dev-color, #000000,  #000000);
+      padding: .5em;
+      width: auto;
+      font-weight: bold;
+    }
 }
