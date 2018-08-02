@@ -25,6 +25,7 @@ email: info@ajug.org
 description: SouthEast's largest developer conference.
 baseurl:
 url:
+uploads_dir: "/assets/img"
 links:
    cfp: https://cfp.connectevents.io/en/dn2019/cfp/session/new
    register: https://tickets.connectevents.io/events/devnexus2019/
@@ -47,9 +48,18 @@ defaults:
      layout: "workshop_instructions"
 
 _options:
-  sponsor_image_path:
+  logo_image:
     width: 360
     height: 360
     resize_style: "cover"
     expandable: false
     uploads_dir: /assets/img/sponsors/
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "assets/img/sponsors"
+    values:
+      sponsor: true
