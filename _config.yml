@@ -47,8 +47,9 @@ defaults:
      layout: "workshop_instructions"
 
 _options:
-  s_image_path:
+  sponsor_image_path:
     width: 360
     height: 360
     resize_style: "cover"
     expandable: false
+    uploads_dir: /assets/img/sponsors/
