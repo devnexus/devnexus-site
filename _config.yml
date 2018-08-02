@@ -50,7 +50,7 @@ defaults:
      layout: "workshop_instructions"
 
 _options:
-  logo_image:
+  sponsor_image_path:
     width: 360
     height: 360
     resize_style: "cover"
