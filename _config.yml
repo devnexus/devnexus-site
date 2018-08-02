@@ -17,9 +17,6 @@ collections:
   tracks:
     title: Tracks
     output: false
-  sponsors:
-    title: Sponsors
-    output: false
   organizers:
     title: Organizers
     output: true
