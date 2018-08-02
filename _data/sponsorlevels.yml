@@ -1,16 +1,18 @@
+- category:
+  title: Diamond
 - category: platinum
   title: Platinum Sponsors
-- category: dev-lounge
+- category:
   title: Dev Lounge Sponsor
-- category: gold
+- category:
   title: Gold Sponsors
-- category: silver
+- category:
   title: Silver Sponsors
-- category: happy
+- category:
   title: Happy Hour Sponsor
-- category: lanyard
+- category:
   title: Lanyard Sponsor
-- category: name
+- category:
   title: Name Badge Sponsor
-- category: media
+- category:
   title: Media Partner
