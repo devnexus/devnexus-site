@@ -14,9 +14,6 @@ collections:
      title: Workshop Prep 2019
      output: true
      permalink: /presentations/:path/instructions
-  sponsors:
-    title: Sponsors
-    output: true
   tracks:
     title: Tracks
     output: false
