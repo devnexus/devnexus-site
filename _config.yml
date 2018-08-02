@@ -51,5 +51,4 @@ _options:
     width: 360
     height: 360
     resize_style: "cover"
-    mime_type: "image/png"
     expandable: false
