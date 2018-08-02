@@ -14,9 +14,6 @@ collections:
      title: Workshop Prep 2019
      output: true
      permalink: /presentations/:path/instructions
-  sponsors:
-    title: Sponsors
-    output: true
   tracks:
     title: Tracks
     output: false
@@ -28,6 +25,7 @@ email: info@ajug.org
 description: SouthEast's largest developer conference.
 baseurl:
 url:
+uploads_dir: "/uploads"
 links:
    cfp: https://cfp.connectevents.io/en/dn2019/cfp/session/new
    register: https://tickets.connectevents.io/events/devnexus2019/
@@ -54,5 +52,16 @@ _options:
     width: 360
     height: 360
     resize_style: "cover"
-    mime_type: "image/png"
     expandable: false
+    uploads_dir: /assets/img/sponsors/
+_defaults:
+  logo_image: "/assets/img/sponsor.png"
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "assets/img/sponsors"
+    values:
+      sponsor: true

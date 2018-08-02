@@ -6,7 +6,7 @@
            </div>
            <div class="col-sm-12 col-md-9">
              {% for sponsor in include.sponsors %}
-              <a href="{{sponsor.link}}"><img class="img-responsive" src="{{sponsor.logo_image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
+              <a href="{{sponsor.home_path_url}}"><img class="img-responsive" src="{{sponsor.logo_image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}"></a>
             {%endfor%}
            </div>
       </div>

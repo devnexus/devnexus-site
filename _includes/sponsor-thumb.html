@@ -4,9 +4,11 @@
   {{include.level-name}}
   </div>
   <div class="col-md-10">
-  <a href="{{sponsor.link}}"><img class="img-responsive"
+    {% for sponsor in include.sponsors %}
+  <a href="{{sponsor.home_page}}"><img class="img-responsive"
                                   src="{{sponsor.logo_image}}"
                                   alt="{{sponsor.name}}"
                                   title="{{sponsor.name}}"></a>
+    {% endfor %}
   </div>
 </div>
