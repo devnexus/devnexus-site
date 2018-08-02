@@ -17,6 +17,9 @@ collections:
   tracks:
     title: Tracks
     output: false
+  sponsors:
+    title: Sponsors
+    output: false
   organizers:
     title: Organizers
     output: true
@@ -54,8 +57,9 @@ _options:
     resize_style: "cover"
     expandable: false
     uploads_dir: /assets/img/sponsors/
+_defaults:
+  logo_image: "/assets/img/sponsor.png"
 defaults:
-  logo_image: /assets/img/sponsor.png
   - scope:
       path: "assets/img"
     values:
