@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% include navigation-before.cfp.html %}
+{% include {{site.active-header}} %}
 <div class="{{ page.theme | default: "conference-information"}}" >
 {{ content }}
 </div>

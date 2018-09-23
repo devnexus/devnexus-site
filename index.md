@@ -6,7 +6,7 @@ registration:
   status: enabled
   link:
 ---
-{% include navigation-before-cfp.html %}
+{% include {{ site.active-header }} %}
 
 {% include marketing-video.html %}
 

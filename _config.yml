@@ -1,6 +1,7 @@
 ---
 title: DevNexus 2019
 timezone: UTC
+active-header: navigation-before-schedule.html
 collections:
   speakers:
     title: Speakers 2019
@@ -29,6 +30,8 @@ uploads_dir: "/uploads"
 links:
    cfp: https://cfp.connectevents.io/en/dn2019/cfp/session/new
    register: https://tickets.connectevents.io/events/devnexus2019/
+   announcements: https://twitter.com/devnexus
+   recordings: https://www.recallact.com/ajug
 markdown: kramdown
 theme:
 _editor:
