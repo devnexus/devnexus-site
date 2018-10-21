@@ -37,19 +37,23 @@ theme:
 _editor:
   default_path: /about/
 defaults:
-  -
-   scope:
-     path: "archive"
-     type: "pages"
-   values:
-     layout: "archive"
-  -
-   scope:
+  - scope:
+      path: "archive"
+    values:
+      layout: "archive"
+  - scope:
      path: ""
      type: "event-instructions"
-   values:
+    values:
      layout: "workshop_instructions"
-
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "assets/img/sponsors"
+    values:
+      sponsor: true
 _options:
   logo_image:
     width: 360
@@ -59,12 +63,3 @@ _options:
     uploads_dir: /assets/img/sponsors/
 _defaults:
   logo_image: "/assets/img/sponsor.png"
-defaults:
-  - scope:
-      path: "assets/img"
-    values:
-      image: true
-  - scope:
-      path: "assets/img/sponsors"
-    values:
-      sponsor: true
