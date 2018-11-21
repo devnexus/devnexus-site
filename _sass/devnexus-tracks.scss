@@ -1,16 +1,16 @@
 $room-color-auditorim: #edce1e;
 $room-color-workshop: #6c7070;
-$room-color-java: #6ec7e8;
-$room-color-altlang: #a6c4e7;
+$room-color-core-java: rgb(0, 117, 143);
+$room-color-java-platform: rgb(242, 145, 17);
 $room-color-architecture: #a84617;
 $room-color-tools: #faa21b;
 $room-color-frameworks: #5b903f;
 $room-color-security: #2a2d7c;
-$room-color-performance: #836cb0;
+$room-color-ggm: rgb(58, 148, 217);
 $room-color-javascript: #127e9c;
-$room-color-mobile: #4879bc;
-$room-color-cloud: #8b2246;
-$room-color-microservices: #e77ea5;
+$room-color-practices-other: #4879bc;
+$room-color-cloud-technology: #8b2246;
+$room-color-cloud-infrastructure: #e77ea5;
 $room-color-serverless: #8ec741;
 $room-color-agile: #c32381;
 $room-color-unobtanium: #ffbb00;
@@ -38,11 +38,11 @@ $room-color-exhibit: #ed1e24;
   .workshop {
     @include room($room-color-workshop);
   }
-  .java {
-    @include room($room-color-java);
+  .core-java {
+    @include room($room-color-core-java);
   }
-  .alt-lang {
-    @include room($room-color-altlang);
+  .java-platform {
+    @include room($room-color-java-platform);
   }
   .archictecture {
     @include room($room-color-architecture);
@@ -56,23 +56,20 @@ $room-color-exhibit: #ed1e24;
   .security {
     @include room($room-color-security);
   }
-  .performance {
-    @include room($room-color-performance);
+  .ggm {
+    @include room($room-color-ggm);
   }
   .javascript {
     @include room($room-color-javascript);
   }
-  .mobile {
-    @include room($room-color-mobile);
+  .practices-other {
+    @include room($room-color-practices-other);
   }
-  .cloud {
-    @include room($room-color-cloud);
+  .cloud-technology {
+    @include room($room-color-cloud-technology);
   }
-  .microservices{
-    @include room($room-color-microservices);
-  }
-  .serverless{
-    @include room($room-color-serverless);
+  .cloud-infrastructure{
+    @include room($room-color-cloud-infrastructure);
   }
   .agile {
     @include room($room-color-agile);
@@ -111,13 +108,13 @@ $room-color-exhibit: #ed1e24;
       @include caption;
       background-color: $room-color-workshop;
     }
-    .java {
+    .core-java {
       @include caption;
-      background-color: $room-color-java;
+      background-color: $room-color-core-java;
     }
-    .alt-lang {
+    .java-platform {
       @include caption;
-      background-color: $room-color-altlang;
+      background-color: $room-color-java-platform;
     }
     .archictecture {
       @include caption;
@@ -135,29 +132,25 @@ $room-color-exhibit: #ed1e24;
       @include caption;
       background-color: $room-color-security;
     }
-    .performance {
+    .ggm {
       @include caption;
-      background-color: $room-color-performance;
+      background-color: $room-color-ggm;
     }
     .javascript {
       @include caption;
       background-color: $room-color-javascript;
     }
-    .mobile {
+    .practices-other{
       @include caption;
-      background-color: $room-color-mobile;
+      background-color: $room-color-practices-other;
     }
-    .cloud {
+    .cloud-technology{
       @include caption;
-      background-color: $room-color-cloud;
+      background-color: $room-color-cloud-technology;
     }
-    .microservices{
+    .cloud-infrastructure{
       @include caption;
-      background-color: $room-color-microservices;
-    }
-    .serverless{
-      @include caption;
-      background-color: $room-color-serverless;
+      background-color: $room-color-cloud-infrastructure;
     }
     .agile {
       @include caption;

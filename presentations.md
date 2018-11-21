@@ -2,21 +2,20 @@
 layout: info-fluid
 permalink: /presentations/index.html
 tracks:
-- keynote
+# - keynote
 - workshop
-- java
-- alt-lang
+- ggm
+- core-java
+- java-platform
 - archictecture
 - tools
 - frameworks
 - security
-- performance
 - web
 - javascript
-- mobile
-- cloud
-- microservices
-- serverless
+- practices-other
+- cloud-technology
+- cloud-infrastructure
 - agile
 ---
 {% for track in page.tracks %}
