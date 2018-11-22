@@ -20,7 +20,7 @@ tracks:
 ---
 {% for track in page.tracks %}
 {% assign track_data = site.data.tracks[track] %}
-{% assign events = site.events | where:"track", track_data.trackkey %}
+{% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
 {% if events %}
 <h1 class="featured-header"><span>— {{ track_data.title | escape }} —</span></h1>
 <div class="row">
