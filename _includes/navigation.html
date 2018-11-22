@@ -20,7 +20,11 @@
                 <li class="nav-link"><a href="/presentations">TRACKS</a></li>
                 <li class="nav-link"><a href="/sponsors">SPONSORS</a></li>
                 <li class="nav-link"><a href="/conference-info">CONFERENCE INFO</a></li>
-                <li class="nav-link"><a class="btn btn-register disabled" href="{{site.links.register}}">SOLD OUT</a></li>
+                {% if site.registration == "open" %}
+                <li class="nav-link"><a class="btn btn-register" href="{{site.links.register}}">REGISTER!</a></li>
+                {% else %}
+                <li class="nav-link"><a class="btn btn-register disabled">SOLD OUT</a></li>
+                {% endif %}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
