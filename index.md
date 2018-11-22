@@ -12,8 +12,12 @@ registration:
 {% include marketing-video.html %}
 
 <div class="row">
+<!--
       <div class="featured-header">
         <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2019?</a>
       </div>
-      {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
+-->
+<a name="sponsorlist"></a>
+<h1 class="featured-header">2019 SPONSORS</h1>    
+{% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
