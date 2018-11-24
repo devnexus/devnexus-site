@@ -8267,14 +8267,12 @@ body {
   border: none;
 }
 .speakers .thumbnail img {
-  width: 360px;
+  width: 180px;
   height: 360px;
   object-fit: cover;
   margin-left: 0;
 }
-.speakers.sessions .thumbnail img {
-  width: 100%;
-}
+
 .speakers p {
   margin-bottom: 5px;
 }
@@ -8371,12 +8369,23 @@ body {
   width: 100%;
   background: rgba(148, 183, 105, 0.72);
   color: #fff;
-  padding: 28px;
   font-size: 26px;
-}
-.sessions .caption h3 {
-  font-size: 28px;
-  font-weight: 700;
+  min-height: 55%;
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: inherit;
+    min-height: 25%;
+    width: 100%;
+    padding: 6px;
+  }
+  p {
+    margin-bottom: 5px;
+    text-align: right;
+  }
 }
 .sessions .caption img {
   object-fit: contain;
