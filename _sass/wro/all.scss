@@ -8267,7 +8267,7 @@ body {
   border: none;
 }
 .speakers .thumbnail img {
-  width: 180px;
+  width: 50%;
   height: 360px;
   object-fit: cover;
   margin-left: 0;
@@ -8370,7 +8370,7 @@ body {
   background: rgba(148, 183, 105, 0.72);
   color: #fff;
   font-size: 26px;
-  min-height: 55%;
+  min-height: 45%;
   h3 {
     font-size: 28px;
     font-weight: 700;
@@ -8378,13 +8378,14 @@ body {
     bottom: 0;
     right: 0;
     background-color: inherit;
-    min-height: 25%;
+    min-height: 30%;
     width: 100%;
     padding: 6px;
   }
   p {
     margin-bottom: 5px;
     text-align: right;
+    padding-right: 5px;
   }
 }
 .sessions .caption img {
