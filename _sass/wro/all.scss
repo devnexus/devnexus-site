@@ -8951,6 +8951,8 @@ body {
 }
 #speaker img {
   margin: 0 80px 80px 60px;
+  max-width: 360px;
+  min-width: 180px;
 }
 #speaker .speaker-member span {
   color: white;
