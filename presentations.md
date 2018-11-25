@@ -2,26 +2,25 @@
 layout: info-fluid
 permalink: /presentations/index.html
 tracks:
-- keynote
+# - keynote
 - workshop
-- java
-- alt-lang
+- ggm
+- core-java
+- java-platform
 - archictecture
 - tools
 - frameworks
 - security
-- performance
 - web
 - javascript
-- mobile
-- cloud
-- microservices
-- serverless
+- practices-other
+- cloud-technology
+- cloud-infrastructure
 - agile
 ---
 {% for track in page.tracks %}
 {% assign track_data = site.data.tracks[track] %}
-{% assign events = site.events | where:"track", track_data.trackkey %}
+{% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
 {% if events %}
 <h1 class="featured-header"><span>— {{ track_data.title | escape }} —</span></h1>
 <div class="row">

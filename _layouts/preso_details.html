@@ -1,4 +1,5 @@
 ---
+layout: info
 ---
 {% assign track = site.data.tracks | where: "trackkey", page.track | first %}
 <section id="speaker" class="bg-light-gray details container"
@@ -21,9 +22,14 @@
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="presentation-header">
 				Abstract
-				{% if page.track == 'workshop' %}
+				{% if page.instructions == true %}
 				<span class="pull-right presentation-header">
 					<a href="/presentations/{{page.slug}}/instructions">Setup Instructions</a>
+				</span>
+				{% endif %}
+				{% if page.slides %}
+				<span class="pull-right presentation-header">
+					<a href="{{ page.slides }}">Slides</a>
 				</span>
 				{% endif %}
 			</div>

@@ -1,4 +1,5 @@
 ---
+layout: page
 ---
 {% assign speaker_id = page.slug | plus: 0 %}
 {% assign speaker_assets = site.data.speakers[speaker_id] %}
@@ -49,7 +50,8 @@
 		</div>
 	</div>
 	{% if page.events %}
-	  {% for e in page.events %}
+	  {% assign ordered_events = page.events | sort %}
+	  {% for e in ordered_events %}
 	    {% include event_abstract.html event=e %}
 	  {% endfor %}
 	{% endif %}

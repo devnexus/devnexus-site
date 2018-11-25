@@ -1,105 +1,100 @@
 lunch:
   title: Lunch
-  trackid: 01
+  trackid: 00
   trackkey: lunch
   room: Exhibit Area
 happy-hour:
   title: Happy Hour
-  trackid: 02
+  trackid: 00
   trackkey: happy-hour
   room: Exhibit Area
 after-party:
   title: After Party
-  trackid: 03
+  trackid: 00
   trackkey: after-party
   room: Joystick Gamebar
 keynote:
   title: Keynotes
-  trackid: 83
+  trackid: 00
   trackkey: keynote or 2nd stage
   room: Sidney Marcus
-workshop:
-  title: Workshops
-  trackid: 82
-  trackkey: workshop
-  room: TBD
 A303:
   title: Workshops
-  trackid: 82
+  trackid: 00
   room: A303
-  trackkey: workshop
+  trackkey: workshop-a303
 A316:
   title: Workshops
-  trackid: 82
+  trackid: 00
   room: A316
+  trackkey: workshop-a316
+workshop:
+  title: Workshops
+  trackid: 139
   trackkey: workshop
-java:
-  title: Java
-  trackid: 55
-  trackkey: java
+  room: TBD
+core-java:
+  title: Core Java
+  trackid: 113
+  trackkey: core java
   room: A412
-alt-lang:
-  title: JVM Languages
-  trackkey: jvm languages
-  trackid: 56
+java-platform:
+  title: Java Platform
+  trackkey: java platform
+  trackid: 114
   room: A402
 archictecture:
   title: Architecture
   trackkey: architecture
-  trackid: 57
+  trackid: 117
   room: A403
 tools:
-  title: Patterns & Design
-  trackkey: patterns & design
-  trackid: 58
+  title: Tools and Techniques
+  trackkey: tools and techniques
+  trackid: 116
+  room: A315
+ggm:
+  title: 2GM
+  trackkey: 2gm
+  trackid: 125
   room: A315
 frameworks:
   title: Frameworks
-  trackid: 59
+  trackid: 115
   trackkey: frameworks
   room: A302
 security:
   title: Security
-  trackid: 60
+  trackid: 120
   trackkey: security
   room: A313
-performance:
-  title: Performance
-  trackid: 61
-  trackkey: performance
-  room: A301
 web:
   title: Web
-  trackid: 62
+  trackid: 124
   trackkey: web
   room: A314
 javascript:
   title: Javascript
-  trackid: 63
+  trackid: 121
   trackkey: javascript
   room: A411
-mobile:
-  title: Mobile
-  trackid: 64
-  trackkey: mobile
+practices-other:
+  title: Practices and Other Tech
+  trackid: 123
+  trackkey: practices and other tech
   room: A405
-cloud:
-  title: Cloud
-  trackid: 65
-  trackkey: core cloud
+cloud-technology:
+  title: Cloud Technolgy
+  trackid: 118
+  trackkey: cloud technology
   room: A305
-microservices:
-  title: Microservices
-  trackid: 66
-  trackkey: microservices
+cloud-infrastructure:
+  title: Cloud Infrastructure (microservices and serverless)
+  trackid: 119
+  trackkey: cloud infrastructure (microservices and serverless)
   room: A312
-serverless:
-  title: Serverless / FaaS
-  trackid: 67
-  trackkey: serverless and cloud
-  room: A404
 agile:
   title: Agile
   trackkey: agile
-  trackid: 68
+  trackid: 122
   room: A311

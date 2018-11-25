@@ -1,7 +1,8 @@
 ---
 title: DevNexus 2019
 timezone: UTC
-active-header: navigation-before-schedule.html
+active-header: navigation.html
+registration: open
 collections:
   speakers:
     title: Speakers 2019
