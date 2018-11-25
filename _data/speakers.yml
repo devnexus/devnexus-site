@@ -506,8 +506,8 @@
   hd_avatar_path: https://pbs.twimg.com/profile_images/2704139144/c859ec9be32acb8b4b1e7724b0dce608_400x400.png
   name: Freddy Guime
 1174:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1174/large/oleg-devoxx-face.jpg?1518181811
+  avatar_path: "/uploads/olegs.001.jpeg"
+  hd_avatar_path: "/uploads/olegs.001.jpeg"
   name: Oleg Šelajev
 718:
   avatar_path: "/LG.png"
