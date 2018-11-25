@@ -10,7 +10,7 @@ layout: page
 			<div class="speaker-member row">
 				{% if speaker_assets.avatar_path %}
 				<img src="{{speaker_assets.avatar_path}}"
-					class="img-responsive col-xs-3 col-xs-offset-1" alt="">
+					class="img-responsive col-xs-3 col-xs-offset-1" alt="{{speaker_assets.name}}">
 				{% endif %}
 				<h4>
 					{{ speaker_assets.name }}
