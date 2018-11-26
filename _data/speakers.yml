@@ -654,8 +654,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1572/large/kevin.hoyt.jpg?1537302000
   name: Kevin Hoyt
 588:
-  avatar_path: https://cfp.devnexus.com/system/avatars/588/large/mattraible.jpg?1523027696
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/588/large/mattraible.jpg?1523027696
+  avatar_path: "/uploads/mattr.001.jpeg"
+  hd_avatar_path: "/uploads/mattr.001.jpeg"
   name: Matt Raible
 1413:
   avatar_path: https://cfp.devnexus.com/system/avatars/1413/large/dd_devoxx_head_1000.jpeg?1533912517
