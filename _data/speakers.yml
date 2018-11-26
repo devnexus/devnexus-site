@@ -618,12 +618,12 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1434/large/Bio2.jpg?1536189679
   name: Gerald Venzl
 1589:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/jamesw.001.jpeg" 
+  hd_avatar_path: "/uploads/jamesw.001.jpeg"
   name: James Ward
 1541:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/ericm.001.jpeg"
+  hd_avatar_path: "/uploads/ericm.001.jpeg"
   name: Eric Mizell, VP of Solution Engineering at OverOps
 895:
   avatar_path: https://cfp.devnexus.com/system/avatars/895/large/id_5_big.jpg?1542011331
@@ -662,8 +662,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1413/large/dd_devoxx_head_1000.jpeg?1533912517
   name: David Delabassée
 1433:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/drewt.001.jpeg"
+  hd_avatar_path: "/uploads/drewt.001.jpeg"
   name: Drew Tolliver
 1458:
   avatar_path: https://cfp.devnexus.com/system/avatars/1458/large/nn-alexandra-west-1x1-large.jpg?1541776094
@@ -718,17 +718,17 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1175/large/profile-face.png?1537069779
   name: Ruth Yakubu
 1580:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/julienv.001.jpeg"
+  hd_avatar_path: "/uploads/julienv.001.jpeg"
   name: Julien Vehent
 1714:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
+  avatar_path: "/uploads/graemer.001.jpeg"
+  hd_avatar_path: "/uploads/graemer.001.jpeg"
   name: Graeme Rocher
 1612:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1612/large/DanHeidinga_small.jpg?1538358515
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1612/large/DanHeidinga_small.jpg?1538358515
-  name: Dan Heidinga
+  avatar_path: "/uploads/danh.001.jpeg"
+  hd_avatar_path: "/uploads/danh.001.jpeg"
+  name: Dan Heidinga 
 1597:
   avatar_path: https://cfp.devnexus.com/system/avatars/1597/large/20626272_10111628576840611_5725042854231210125_o.jpg?1538771799
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1597/large/20626272_10111628576840611_5725042854231210125_o.jpg?1538771799
