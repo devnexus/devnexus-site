@@ -11,7 +11,7 @@ branding:
 partner:
   img: /assets/img/2gm/devnexus-2gm-logo-large.png
   alt: DevNexus2GM
-  home: /2gm-home/
+  home: /2gm-home
 ---
 
 {% include {{ site.active-header }} %}
