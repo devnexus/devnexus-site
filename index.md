@@ -5,6 +5,13 @@ registration:
   text: Register Here
   status: enabled
   link:
+branding:
+  img: /assets/img/dev-nexus-logo-large.png
+  alt: Devnexus
+partner:
+  img: /assets/img/2gm/devnexus-2gm-logo-large.png
+  alt: DevNexus2GM
+  home: /2gm-home/
 ---
 
 {% include {{ site.active-header }} %}
