@@ -8017,8 +8017,9 @@ body {
   height: auto;
 }
 .hero .co-branding {
+  max-width: 480px;
   img {
-    max-width: 480px;
+    width: 100%;
     height: auto;
   }
 }
