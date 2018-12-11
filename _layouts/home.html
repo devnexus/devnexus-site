@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <section class="hero">
   <div>
     {% include inline-social.html %}
@@ -9,10 +10,14 @@ layout: default
       <li><img src="/assets/img/calendar.png"/>{{ dates | escape }}</li>
       <li><img src="/assets/img/location.png"/>ATLANTA, GA</li>
     </ul>
-    <h1><img src="/assets/img/dev-nexus-logo-large.png" alt="DevNexus"/></h1>
+    <h1><img src="{{page.branding.img}}" alt="{{page.branding.alt}}"/></h1>
     <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
     <a class="btn hero-btn-register {{ page.registration.status }}" href="{{site.links.register}}">{{page.registration.text | escape}}</a>
-    <h1><img src="/assets/img/2gm/devnexus2gm-blue.png" alt="DevNexus2GM"/></h1>
+    {% if page.partner %}
+    <h3 class="co-branding center-block">
+    <a href="{{page.partner.home}}"><img src="{{page.partner.img}}" alt="{{page.partner.alt}}"/></a>
+    </h3>
+    {% endif %}
    </div>
 </section>
 <div class="container-fluid" style="padding-left: 0; padding-right: 0;">

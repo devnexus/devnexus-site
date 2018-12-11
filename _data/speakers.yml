@@ -255,9 +255,8 @@
   hd_avatar_path: https://pbs.twimg.com/profile_images/1584838643/StevePoole_400x400.png
   name: Steve Poole
 817:
-  avatar_path: https://cfp.devnexus.com/system/avatars/817/large/AAEAAQAAAAAAAANRAAAAJGE5NGQ1Njc4LWNlZjgtNDdjNi1hMWUyLTcxNjEyNWZhMjQ2Zg.jpg?1510599151
-  name: Emily Jiang
   avatar_path: "/uploads/emilyj.001.jpeg"
+  name: Emily Jiang
   hd_avatar_path: "/uploads/emilyj.001.jpeg"
 818:
   avatar_path: https://cfp.devnexus.com/system/avatars/818/large/Experience_032.jpg?1511108826
@@ -371,7 +370,7 @@
   name: Justin Lee
 915:
   avatar_path: "/EY.png"
-  hd_avatar_path: "https://pbs.twimg.com/profile_images/931349213216169984/R48Yocuq_400x400.jpg"
+  hd_avatar_path: https://pbs.twimg.com/profile_images/931349213216169984/R48Yocuq_400x400.jpg
   name: Edson Yanaga
 916:
   avatar_path: https://cfp.devnexus.com/system/avatars/916/large/mr.jpg?1507762886
@@ -618,7 +617,7 @@
   hd_avatar_path: "/uploads/geraldv.001.jpeg"
   name: Gerald Venzl
 1589:
-  avatar_path: "/uploads/jamesw.001.jpeg" 
+  avatar_path: "/uploads/jamesw.001.jpeg"
   hd_avatar_path: "/uploads/jamesw.001.jpeg"
   name: James Ward
 1541:
@@ -728,7 +727,7 @@
 1612:
   avatar_path: "/uploads/danh.001.jpeg"
   hd_avatar_path: "/uploads/danh.001.jpeg"
-  name: Dan Heidinga 
+  name: Dan Heidinga
 1597:
   avatar_path: https://cfp.devnexus.com/system/avatars/1597/large/20626272_10111628576840611_5725042854231210125_o.jpg?1538771799
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1597/large/20626272_10111628576840611_5725042854231210125_o.jpg?1538771799
@@ -751,7 +750,7 @@
   name: Valarie Regas
 1554:
   avatar_path: https://cfp.devnexus.com/system/avatars/1554/large/032D6541-B75B-4C3C-B80F-746F8ADD79A2.jpeg?1537057260
-  hd_avatar_path: "https://pbs.twimg.com/profile_images/958539395409371137/Ir_jldLs_400x400.jpg"
+  hd_avatar_path: https://pbs.twimg.com/profile_images/958539395409371137/Ir_jldLs_400x400.jpg
   name: Jeremy Pullen
 931:
   avatar_path: "/uploads/albertos.001.jpeg"
