@@ -1,40 +1,40 @@
-company,sl,logo_image,home_page
-Thompson Technologies,gold,,https://thompsontechnologies.com/
-RedHat,diamond,,https://developers.redhat.com/
-Lightbend,gold,,https://www.lightbend.com/
-Lightbend,namebadge,,https://www.lightbend.com/
-Technology Association of Georgia,community,/assets/img/tag.001.jpeg,https://www.tagonline.org/
-HYPEPOTAMUS,media,/assets/img/hype.001.jpeg,https://hypepotamus.com/
-Fusion Reactor,silver,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com/
-Bettercloud,gold,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
-Manhattan Associates,platinum,/assets/img/MahnattanAssocs.001.jpeg,https://www.manh.com/
-Azul Systems,silver,/uploads/azul.001.jpeg,https://www.azul.com/
-Daugherty Business Solutions,silver,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
-Vaadin,silver,/assets/img/vaadin2.png,https://vaadin.com/
-Aspose,silver,/assets/img/aspose.001.jpeg,https://www.aspose.com/
-Object Computing,silver,/assets/img/OCI.001.jpeg,https://objectcomputing.com/
-Hazelcast,gold,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
-Mulesoft,silver,/uploads/mulesoft-001-1.png,https://www.mulesoft.com/
-Heroku,gold,/uploads/heroku-001.png,http://www.heroku.com/java
-Okta,gold,/assets/img/okta.001.jpeg,https://www.okta.com/
-The Home Depiot,platinum,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
-Oracle,gold,/uploads/oracle-001.png,https://developer.oracle.com/home
-MongoDB,silver,/assets/img/mongodb.001.jpeg,https://www.mongodb.com/
-VMWare,gold,/assets/img/vmware.001.jpeg,https://www.vmware.com/
-Confluent,gold,/uploads/confluent-001.jpeg,https://www.confluent.io/
-bugsnag,silver,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
-ThoughtWorks,silver,/assets/img/TWks.001.jpeg,https://www.thoughtworks.com/
-twilio,gold,/assets/img/twilio.001.jpeg,https://www.twilio.com/
-OverOps,gold,/assets/img/overops.001.jpeg,https://www.overops.com/
-OneTrust,silver,/assets/img/onetrust.001.jpeg,https://www.onetrust.com/
-Hedera Hashgraph,gold,/assets/img/hedera.001.jpeg,https://www.hedera.com/
-GitHub,silver,/assets/img/github.001.jpeg,https://github.com/
-DATADOG,gold,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
-RingCentral,silver,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
-GSquared,silver,/assets/img/Gsquared.001.jpeg,http://www.gsquaredgroup.com/
-Clever Cloud,silver,/assets/img/clevercloud.001.jpeg,https://www.clever-cloud.com/en/
-Sonatype,silver,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
-Oracle,lanyard,/assets/img/oracle.001.jpeg,https://developer.oracle.com/home
-WWC,community,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
-Technologists of Color,community,/assets/img/toc.001.jpeg,http://www.techsofcolor.org/
-"Women in Technology",community,/assets/img/wit.001.jpeg,https://www.mywit.org/
+"company","sl","logo_image","home_page"
+"Thompson Technologies","gold","","https://thompsontechnologies.com/"
+"RedHat","diamond","","https://developers.redhat.com/"
+"Lightbend","gold","","https://www.lightbend.com/"
+"Lightbend","namebadge","","https://www.lightbend.com/"
+"Technology Association of Georgia","community","/assets/img/tag.001.jpeg","https://www.tagonline.org/"
+"HYPEPOTAMUS","media","/assets/img/hype.001.jpeg","https://hypepotamus.com/"
+"Fusion Reactor","silver","/assets/img/Fusion R.001.jpeg","http://www.fusion-reactor.com/"
+"Bettercloud","gold","/assets/img/bettercloud.001.jpeg","https://www.bettercloud.com/"
+"Manhattan Associates","platinum","/assets/img/MahnattanAssocs.001.jpeg","https://www.manh.com/"
+"Azul Systems","silver","/uploads/azul.001.jpeg","https://www.azul.com/"
+"Daugherty Business Solutions","silver","/assets/img/DBS.001.jpeg","https://www.daugherty.com/"
+"Vaadin","silver","/assets/img/vaadin2.png","https://vaadin.com/"
+"Aspose","silver","/assets/img/aspose.001.jpeg","https://www.aspose.com/"
+"Object Computing","silver","/assets/img/OCI.001.jpeg","https://objectcomputing.com/"
+"Hazelcast","gold","/assets/img/hazelcast.001.jpeg","https://hazelcast.com/"
+"Mulesoft","silver","/uploads/mulesoft-001-1.png","https://www.mulesoft.com/"
+"Heroku","gold","/uploads/heroku-001.png","http://www.heroku.com/java"
+"Okta","gold","/assets/img/okta.001.jpeg","https://www.okta.com/"
+"The Home Depiot","platinum","/assets/img/thd.001.jpeg","https://careers.homedepot.com/career-areas/technology-careers/"
+"Oracle","gold","/uploads/oracle-001.png","https://developer.oracle.com/home"
+"MongoDB","silver","/assets/img/mongodb.001.jpeg","https://www.mongodb.com/"
+"VMWare","gold","/assets/img/vmware.001.jpeg","https://www.vmware.com/"
+"Confluent","gold","/uploads/confluent-001.jpeg","https://www.confluent.io/"
+"bugsnag","silver","/assets/img/bugsnaglogo.001.jpeg","https://www.bugsnag.com/"
+"ThoughtWorks","silver","/assets/img/TWks.001.jpeg","https://www.thoughtworks.com/"
+"twilio","gold","/assets/img/twilio.001.jpeg","https://www.twilio.com/"
+"OverOps","gold","/assets/img/overops.001.jpeg","https://www.overops.com/"
+"OneTrust","silver","/assets/img/onetrust.001.jpeg","https://www.onetrust.com/"
+"Hedera Hashgraph","gold","/assets/img/hedera.001.jpeg","https://www.hedera.com/"
+"GitHub","silver","/assets/img/github.001.jpeg","https://github.com/"
+"DATADOG","gold","/assets/img/DD.001.jpeg","https://www.datadoghq.com/"
+"RingCentral","silver","/assets/img/rc.001.jpeg","https://www.ringcentral.com/"
+"GSquared","silver","/assets/img/Gsquared.001.jpeg","http://www.gsquaredgroup.com/"
+"Clever Cloud","silver","/assets/img/clevercloud.001.jpeg","https://www.clever-cloud.com/en/"
+"Sonatype","silver","/assets/img/sonatype.001.jpeg","https://www.sonatype.com/"
+"Oracle","lanyard","/assets/img/oracle.001.jpeg","https://developer.oracle.com/home"
+"WWC","community","/assets/img/WWC.001.jpeg","https://www.womenwhocode.com/atlanta"
+"Technologists of Color","community","/assets/img/toc.001.jpeg","http://www.techsofcolor.org/"
+"Women in Technology,"community","/assets/img/wit.001.jpeg","https://www.mywit.org/"
