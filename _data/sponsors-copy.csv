@@ -2,7 +2,7 @@ name,sponsorlevel,logo_image,home_page
 Thompson Technologies,gold,,https://thompsontechnologies.com/
 RedHat,diamond,,https://developers.redhat.com/
 Lightbend,gold,,https://www.lightbend.com/
-Lightbend,namebadge,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
+Lightbend,namebadge,,https://www.lightbend.com/
 Technology Association of Georgia,community,/assets/img/tag.001.jpeg,https://www.tagonline.org/
 HYPEPOTAMUS,media,/assets/img/hype.001.jpeg,https://hypepotamus.com/
 Fusion Reactor,silver,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com/
@@ -37,4 +37,4 @@ Sonatype,silver,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
 Oracle,lanyard,/assets/img/oracle.001.jpeg,https://developer.oracle.com/home
 WWC,community,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
 Technologists of Color,community,/assets/img/toc.001.jpeg,http://www.techsofcolor.org/
-Women in Technology,community,/assets/img/wit.001.jpeg,https://www.mywit.org/
+"Women in Technology",community,/assets/img/wit.001.jpeg,https://www.mywit.org/
