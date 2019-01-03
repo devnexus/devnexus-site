@@ -438,10 +438,6 @@
 1084:
   avatar_path: https://cfp.devnexus.com/system/avatars/1084/large/sgauder.jpg?1511194016
   name: Sebastian Gauder
-1015:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/headshot-2.jpg?1510076642
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/headshot-2.jpg?1510076642
-  name: Ben Hale
 1156:
   avatar_path: https://cfp.devnexus.com/system/avatars/1156/large/AOB3guut_400x400.jpg?1514996930
   name: Kelsey Hightower
@@ -520,10 +516,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1560/large/IMG_0001.jpg?1542807585
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1560/large/IMG_0001.jpg?1542807585
   name: Chris Thalinger
-1415:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1415/large/IMG_0280.JPG?1535120982
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1415/large/IMG_0280.JPG?1535120982
-  name: M. Jeff Wilson
 740:
   avatar_path: https://cfp.devnexus.com/system/avatars/740/large/joker2017.jpg?1542660013
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/740/large/joker2017.jpg?1542660013
@@ -576,10 +568,6 @@
   avatar_path: "/uploads/sangs.001.jpeg"
   hd_avatar_path: "/uploads/sangs.001.jpeg"
   name: Sang Shin
-1185:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1185/large/BioPic.png?1520006512
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1185/large/BioPic.png?1520006512
-  name: Jennifer Reif
 1460:
   avatar_path: https://cfp.devnexus.com/system/avatars/1460/large/steve-champion-300.jpg?1535093552
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1460/large/steve-champion-300.jpg?1535093552
@@ -608,10 +596,6 @@
   avatar_path: "/uploads/randalld.001.jpeg"
   hd_avatar_path: "/uploads/randalld.001.jpeg"
   name: Randall Degges
-1390:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1390/large/avatar-sqr.jpg?1533314106
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1390/large/avatar-sqr.jpg?1533314106
-  name: Elder Moraes
 1434:
   avatar_path: "/uploads/geraldv.001.jpeg"
   hd_avatar_path: "/uploads/geraldv.001.jpeg"
@@ -776,11 +760,27 @@
   avatar_path: "/uploads/kevins.001.jpeg"
   hd_avatar_path: "/uploads/kevins.001.jpeg"
   name: Kevin Sutter
-1455:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
-  name: Danny James
 1439:
   avatar_path: https://cfp.devnexus.com/system/avatars/1439/large/001berglund-5-square.jpg?1534547229
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1439/large/001berglund-5-square.jpg?1534547229
   name: Tim Berglund
+1455:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: Danny James
+1415:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1415/large/profile-small.jpeg?1543266766
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1415/large/profile-small.jpeg?1543266766
+  name: M. Jeff Wilson
+1015:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/Headshot-4.jpg?1545171511
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1015/large/Headshot-4.jpg?1545171511
+  name: Ben Hale
+1185:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1185/large/Bio_pic_presenting_crop.jpg?1543263561
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1185/large/Bio_pic_presenting_crop.jpg?1543263561
+  name: Jennifer Reif
+1390:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1390/large/avatar-500x500.jpg?1544468107
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1390/large/avatar-500x500.jpg?1544468107
+  name: Elder Moraes
