@@ -49,6 +49,5 @@ registration:
   <h1 class="text-center"> DevNexus Sessions  March 6-8 </h1>
   </div>
     {% include event_thumb_speaker_background.html collection=events %}
-    </div>
-  </div>
+    </div> <!--this one -->
 </section>
