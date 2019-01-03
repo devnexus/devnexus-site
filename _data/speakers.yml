@@ -557,8 +557,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1493/large/anthony_square_400px.png?1535939712
   name: Anthony Dahanne
 1658:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1658/large/ryan-round.png?1538883740
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1658/large/ryan-round.png?1538883740
+  avatar_path: "/uploads/RyanVanderwerf.001.jpeg"
+  hd_avatar_path: "/uploads/RyanVanderwerf.001.jpeg"
   name: Ryan Vanderwerf
 1389:
   avatar_path: https://cfp.devnexus.com/system/avatars/1389/large/edson_yanaga.png?1533308310
@@ -589,8 +589,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1181/large/MarkHecklerProfilePic.jpg?1533228955
   name: Mark Heckler
 1662:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1662/large/Screen_Shot_2018-01-02_at_7.57.52_PM.png?1539104097
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1662/large/Screen_Shot_2018-01-02_at_7.57.52_PM.png?1539104097
+  avatar_path: "/uploads/JamesKleeh.001.jpeg"
+  hd_avatar_path: "/uploads/JamesKleeh.001.jpeg"
   name: James Kleeh
 1446:
   avatar_path: https://cfp.devnexus.com/system/avatars/1446/large/face.jpg?1542217438
@@ -776,11 +776,11 @@
   avatar_path: "/uploads/kevins.001.jpeg"
   hd_avatar_path: "/uploads/kevins.001.jpeg"
   name: Kevin Sutter
-1658:
-  avatar_path: "/uploads/RyanVanderwerf.001.jpeg"
-  hd_avatar_path: "/uploads/RyanVanderwerf.001.jpeg"
-  name: Ryan Vanderwerf
-1662:
-  avatar_path: "/uploads/JamesKleeh.001.jpeg"
-  hd_avatar_path: "/uploads/JamesKleeh.001.jpeg"
-  name: James Kleeh
+1455:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: Danny James
+1439:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1439/large/001berglund-5-square.jpg?1534547229
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1439/large/001berglund-5-square.jpg?1534547229
+  name: Tim Berglund
