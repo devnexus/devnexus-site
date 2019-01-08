@@ -1,565 +1,442 @@
 ---
 - index: 0
-  events:
-  - id: 1892
-    start: '09:00'
-    room: Core Java
-  - id: 1397
-    start: '09:00'
-    room: JavaScript
-  - id: 1712
-    start: '09:00'
-    room: Microservices
-  - id: 1759
-    start: '09:00'
-    room: JVM Languages
-  - id: 1862
-    start: '09:00'
-    room: Mobile
-  - id: 1863
-    start: '09:00'
-    room: Patterns & Design
-  - id: 1867
-    start: '09:00'
-    room: Performance
-  - id: 1871
-    start: '09:00'
-    room: Security
-  - id: 1819
-    start: '09:00'
-    room: Serverless and Cloud
-  - id: 1945
-    start: '09:00'
-    room: Frameworks
-  - id: 1911
-    start: '09:00'
-    room: Agile
-  - id: 1348
-    start: '09:00'
-    room: Architecture
-  - id: 1858
-    start: '09:00'
-    room: Core Cloud
-  - id: 1861
-    start: '09:00'
-    room: Web
+  events: []
 - index: 1
   events:
-  - id: 1895
+  - id: 3513
+    start: '10:00'
+    room: 2GM
+  - id: 3342
+    start: '11:20'
+    room: 2GM
+  - id: 3507
+    start: '13:20'
+    room: 2GM
+  - id: 3509
+    start: '14:40'
+    room: 2GM
+  - id: 3512
+    start: '16:00'
+    room: 2GM
+  - id: 3026
+    start: '10:00'
+    room: Agile
+  - id: 2883
+    start: '11:20'
+    room: Agile
+  - id: 2821
+    start: '13:20'
+    room: Agile
+  - id: 2675
+    start: '14:40'
+    room: Agile
+  - id: 3231
+    start: '16:00'
+    room: Agile
+  - id: 2808
+    start: '10:00'
+    room: Architecture
+  - id: 3152
+    start: '11:20'
+    room: Architecture
+  - id: 2806
+    start: '13:20'
+    room: Architecture
+  - id: 3044
+    start: '14:40'
+    room: Architecture
+  - id: 3050
+    start: '16:00'
+    room: Architecture
+  - id: 2776
+    start: '10:00'
+    room: Cloud Infra
+  - id: 2913
+    start: '11:20'
+    room: Cloud Infra
+  - id: 3165
+    start: '13:20'
+    room: Cloud Infra
+  - id: 3092
+    start: '14:40'
+    room: Cloud Infra
+  - id: 2941
+    start: '16:00'
+    room: Cloud Infra
+  - id: 3218
+    start: '10:00'
+    room: Cloud Tech
+  - id: 3220
+    start: '11:20'
+    room: Cloud Tech
+  - id: 2601
+    start: '13:20'
+    room: Cloud Tech
+  - id: 3559
+    start: '14:40'
+    room: Cloud Tech
+  - id: 3203
+    start: '16:00'
+    room: Cloud Tech
+  - id: 2716
     start: '10:00'
     room: Core Java
-  - id: 1705
-    start: '11:15'
+  - id: 3242
+    start: '11:20'
     room: Core Java
-  - id: 1903
-    start: '13:15'
+  - id: 3552
+    start: '13:20'
     room: Core Java
-  - id: 1897
-    start: '14:30'
+  - id: 3314
+    start: '14:40'
     room: Core Java
-  - id: 1704
-    start: '15:45'
+  - id: 3015
+    start: '16:00'
     room: Core Java
-  - id: 1617
-    start: '17:00'
-    room: Core Java
-  - id: 1327
+  - id: 2621
     start: '10:00'
-    room: JavaScript
-  - id: 2104
-    start: '11:15'
-    room: JavaScript
-  - id: 1500
-    start: '13:15'
-    room: JavaScript
-  - id: 1391
-    start: '14:30'
-    room: JavaScript
-  - id: 1930
-    start: '15:45'
-    room: JavaScript
-  - id: 2109
-    start: '17:00'
-    room: JavaScript
-  - id: 1915
-    start: '10:00'
-    room: Microservices
-  - id: 1506
-    start: '11:15'
-    room: Microservices
-  - id: 1497
-    start: '13:15'
-    room: Microservices
-  - id: 1409
-    start: '14:30'
-    room: Microservices
-  - id: 1426
-    start: '15:45'
-    room: Microservices
-  - id: 1371
-    start: '17:00'
-    room: Microservices
-  - id: 1952
-    start: '10:00'
-    room: JVM Languages
-  - id: 1450
-    start: '11:15'
-    room: JVM Languages
-  - id: 1346
-    start: '13:15'
-    room: JVM Languages
-  - id: 1932
-    start: '14:30'
-    room: JVM Languages
-  - id: 1914
-    start: '15:45'
-    room: JVM Languages
-  - id: 1947
-    start: '17:00'
-    room: JVM Languages
-  - id: 1447
-    start: '10:00'
-    room: Mobile
-  - id: 1423
-    start: '11:15'
-    room: Mobile
-  - id: 1865
-    start: '13:15'
-    room: Mobile
-  - id: 2051
-    start: '14:30'
-    room: Mobile
-  - id: 1295
-    start: '15:45'
-    room: Mobile
-  - id: 1594
-    start: '17:00'
-    room: Mobile
-  - id: 1430
-    start: '10:00'
-    room: Patterns & Design
-  - id: 1492
-    start: '11:15'
-    room: Patterns & Design
-  - id: 1515
-    start: '13:15'
-    room: Patterns & Design
-  - id: 1857
-    start: '14:30'
-    room: Patterns & Design
-  - id: 1884
-    start: '15:45'
-    room: Patterns & Design
-  - id: 1275
-    start: '17:00'
-    room: Patterns & Design
-  - id: 1505
-    start: '10:00'
-    room: Performance
-  - id: 1760
-    start: '11:15'
-    room: Performance
-  - id: 1480
-    start: '13:15'
-    room: Performance
-  - id: 1629
-    start: '14:30'
-    room: Performance
-  - id: 1675
-    start: '15:45'
-    room: Performance
-  - id: 1609
-    start: '17:00'
-    room: Performance
-  - id: 1293
-    start: '10:00'
-    room: Security
-  - id: 1448
-    start: '11:15'
-    room: Security
-  - id: 2090
-    start: '13:15'
-    room: Security
-  - id: 1349
-    start: '14:30'
-    room: Security
-  - id: 1534
-    start: '15:45'
-    room: Security
-  - id: 1551
-    start: '17:00'
-    room: Security
-  - id: 1753
-    start: '10:00'
-    room: Serverless and Cloud
-  - id: 1943
-    start: '11:15'
-    room: Serverless and Cloud
-  - id: 1374
-    start: '13:15'
-    room: Serverless and Cloud
-  - id: 1556
-    start: '14:30'
-    room: Serverless and Cloud
-  - id: 1555
-    start: '15:45'
-    room: Serverless and Cloud
-  - id: 2054
-    start: '17:00'
-    room: Serverless and Cloud
-  - id: 2062
-    start: '08:00'
-    room: Sidney Marcus
-  - id: 1875
+    room: Frameworks
+  - id: 3071
+    start: '11:20'
+    room: Frameworks
+  - id: 3296
+    start: '13:20'
+    room: Frameworks
+  - id: 2976
+    start: '14:40'
+    room: Frameworks
+  - id: 3020
+    start: '16:00'
+    room: Frameworks
+  - id: 3740
+    start: '07:30'
+    room: Java Platform
+  - id: 3727
     start: '09:00'
-    room: Sidney Marcus
-  - id: 2120
+    room: Java Platform
+  - id: 3545
+    start: '10:00'
+    room: Java Platform
+  - id: 3730
     start: '11:00'
-    room: Nighthacking
-  - id: 1382
-    start: '12:00'
-    room: Nighthacking
-  - id: 2121
-    start: '13:00'
-    room: Nighthacking
-  - id: 2122
-    start: '14:15'
-    room: Nighthacking
-  - id: 2123
-    start: '15:30'
-    room: Nighthacking
-  - id: 2127
-    start: '16:45'
-    room: Nighthacking
-  - id: 1922
+    room: Java Platform
+  - id: 3546
+    start: '11:20'
+    room: Java Platform
+  - id: 3737
+    start: '12:20'
+    room: Java Platform
+  - id: 2867
+    start: '13:20'
+    room: Java Platform
+  - id: 3731
+    start: '14:20'
+    room: Java Platform
+  - id: 2924
+    start: '14:40'
+    room: Java Platform
+  - id: 3732
+    start: '15:40'
+    room: Java Platform
+  - id: 3232
+    start: '16:00'
+    room: Java Platform
+  - id: 3733
+    start: '17:00'
+    room: Java Platform
+  - id: 3728
+    start: '17:10'
+    room: Java Platform
+  - id: 3739
     start: '18:00'
-    room: Nighthacking
-  - id: 1557
+    room: Java Platform
+  - id: 2951
     start: '10:00'
-    room: Frameworks
-  - id: 1707
-    start: '11:15'
-    room: Frameworks
-  - id: 1403
-    start: '13:15'
-    room: Frameworks
-  - id: 2056
-    start: '14:30'
-    room: Frameworks
-  - id: 1553
-    start: '15:45'
-    room: Frameworks
-  - id: 1292
-    start: '17:00'
-    room: Frameworks
-  - id: 1944
+    room: JavaScript
+  - id: 3371
+    start: '11:20'
+    room: JavaScript
+  - id: 3355
+    start: '13:20'
+    room: JavaScript
+  - id: 3506
+    start: '14:40'
+    room: JavaScript
+  - id: 2850
+    start: '16:00'
+    room: JavaScript
+  - id: 2778
     start: '10:00'
-    room: Agile
-  - id: 1308
-    start: '11:15'
-    room: Agile
-  - id: 1578
-    start: '13:15'
-    room: Agile
-  - id: 1659
-    start: '14:30'
-    room: Agile
-  - id: 1568
-    start: '15:45'
-    room: Agile
-  - id: 1510
-    start: '17:00'
-    room: Agile
-  - id: 1899
+    room: Practices
+  - id: 2785
+    start: '11:20'
+    room: Practices
+  - id: 2920
+    start: '13:20'
+    room: Practices
+  - id: 3120
+    start: '14:40'
+    room: Practices
+  - id: 2828
+    start: '16:00'
+    room: Practices
+  - id: 2641
     start: '10:00'
-    room: Architecture
-  - id: 1591
-    start: '11:15'
-    room: Architecture
-  - id: 1440
-    start: '13:15'
-    room: Architecture
-  - id: 1921
-    start: '14:30'
-    room: Architecture
-  - id: 1907
-    start: '15:45'
-    room: Architecture
-  - id: 1355
-    start: '17:00'
-    room: Architecture
-  - id: 1661
+    room: Security
+  - id: 2982
+    start: '11:20'
+    room: Security
+  - id: 2860
+    start: '13:20'
+    room: Security
+  - id: 2957
+    start: '14:40'
+    room: Security
+  - id: 3311
+    start: '16:00'
+    room: Security
+  - id: 3262
     start: '10:00'
-    room: Core Cloud
-  - id: 1732
-    start: '11:15'
-    room: Core Cloud
-  - id: 1528
-    start: '13:15'
-    room: Core Cloud
-  - id: 1508
-    start: '14:30'
-    room: Core Cloud
-  - id: 1620
-    start: '15:45'
-    room: Core Cloud
-  - id: 1625
-    start: '17:00'
-    room: Core Cloud
-  - id: 1484
+    room: Tools - Techniques
+  - id: 2795
+    start: '11:20'
+    room: Tools - Techniques
+  - id: 2805
+    start: '13:20'
+    room: Tools - Techniques
+  - id: 3150
+    start: '14:40'
+    room: Tools - Techniques
+  - id: 2917
+    start: '16:00'
+    room: Tools - Techniques
+  - id: 3244
     start: '10:00'
     room: Web
-  - id: 1281
-    start: '11:15'
+  - id: 2900
+    start: '11:20'
     room: Web
-  - id: 1476
-    start: '13:15'
+  - id: 3380
+    start: '13:20'
     room: Web
-  - id: 1755
-    start: '14:30'
+  - id: 3282
+    start: '14:40'
     room: Web
-  - id: 1457
-    start: '15:45'
-    room: Web
-  - id: 1717
-    start: '17:00'
+  - id: 2858
+    start: '16:00'
     room: Web
 - index: 2
   events:
-  - id: 1667
+  - id: 3511
+    start: '10:00'
+    room: 2GM
+  - id: 3350
+    start: '11:20'
+    room: 2GM
+  - id: 3346
+    start: '13:10'
+    room: 2GM
+  - id: 3514
+    start: '14:40'
+    room: 2GM
+  - id: 3345
+    start: '16:00'
+    room: 2GM
+  - id: 3063
+    start: '10:00'
+    room: Agile
+  - id: 3558
+    start: '11:20'
+    room: Agile
+  - id: 3076
+    start: '13:10'
+    room: Agile
+  - id: 2813
+    start: '14:40'
+    room: Agile
+  - id: 2739
+    start: '16:00'
+    room: Agile
+  - id: 2996
+    start: '10:00'
+    room: Architecture
+  - id: 2599
+    start: '11:20'
+    room: Architecture
+  - id: 2907
+    start: '13:10'
+    room: Architecture
+  - id: 2636
+    start: '14:40'
+    room: Architecture
+  - id: 2624
+    start: '16:00'
+    room: Architecture
+  - id: 3293
+    start: '10:00'
+    room: Cloud Infra
+  - id: 2816
+    start: '11:20'
+    room: Cloud Infra
+  - id: 2771
+    start: '13:10'
+    room: Cloud Infra
+  - id: 3058
+    start: '14:40'
+    room: Cloud Infra
+  - id: 2619
+    start: '16:00'
+    room: Cloud Infra
+  - id: 3037
+    start: '10:00'
+    room: Cloud Tech
+  - id: 3023
+    start: '11:20'
+    room: Cloud Tech
+  - id: 3254
+    start: '13:10'
+    room: Cloud Tech
+  - id: 2893
+    start: '14:40'
+    room: Cloud Tech
+  - id: 3305
+    start: '16:00'
+    room: Cloud Tech
+  - id: 2695
     start: '10:00'
     room: Core Java
-  - id: 1574
-    start: '11:15'
+  - id: 3127
+    start: '11:20'
     room: Core Java
-  - id: 1902
-    start: '13:15'
+  - id: 2822
+    start: '13:10'
     room: Core Java
-  - id: 1479
-    start: '14:30'
+  - id: 2933
+    start: '14:40'
     room: Core Java
-  - id: 1449
-    start: '15:45'
+  - id: 3193
+    start: '16:00'
     room: Core Java
-  - id: 1282
+  - id: 3278
     start: '10:00'
-    room: JavaScript
-  - id: 1716
-    start: '11:15'
-    room: JavaScript
-  - id: 1545
-    start: '13:15'
-    room: JavaScript
-  - id: 1579
-    start: '14:30'
-    room: JavaScript
-  - id: 1581
-    start: '15:45'
-    room: JavaScript
-  - id: 1565
-    start: '10:00'
-    room: Microservices
-  - id: 1342
-    start: '11:15'
-    room: Microservices
-  - id: 1731
-    start: '13:15'
-    room: Microservices
-  - id: 1598
-    start: '14:30'
-    room: Microservices
-  - id: 1549
-    start: '15:45'
-    room: Microservices
-  - id: 1301
-    start: '10:00'
-    room: JVM Languages
-  - id: 2064
-    start: '11:15'
-    room: JVM Languages
-  - id: 1887
-    start: '13:15'
-    room: JVM Languages
-  - id: 1701
-    start: '14:30'
-    room: JVM Languages
-  - id: 1338
-    start: '15:45'
-    room: JVM Languages
-  - id: 1332
-    start: '10:00'
-    room: Mobile
-  - id: 1747
-    start: '11:15'
-    room: Mobile
-  - id: 1635
-    start: '13:15'
-    room: Mobile
-  - id: 1288
-    start: '14:30'
-    room: Mobile
-  - id: 2066
-    start: '15:45'
-    room: Mobile
-  - id: 1453
-    start: '10:00'
-    room: Patterns & Design
-  - id: 1993
-    start: '11:15'
-    room: Patterns & Design
-  - id: 1844
-    start: '13:15'
-    room: Patterns & Design
-  - id: 1372
-    start: '14:30'
-    room: Patterns & Design
-  - id: 1370
-    start: '15:45'
-    room: Patterns & Design
-  - id: 1882
-    start: '10:00'
-    room: Performance
-  - id: 1610
-    start: '11:15'
-    room: Performance
-  - id: 1611
-    start: '13:15'
-    room: Performance
-  - id: 1344
-    start: '14:30'
-    room: Performance
-  - id: 1602
-    start: '15:45'
-    room: Performance
-  - id: 1442
-    start: '10:00'
-    room: Security
-  - id: 1294
-    start: '11:15'
-    room: Security
-  - id: 1431
-    start: '13:15'
-    room: Security
-  - id: 1658
-    start: '14:30'
-    room: Security
-  - id: 1276
-    start: '15:45'
-    room: Security
-  - id: 2049
-    start: '10:00'
-    room: Serverless and Cloud
-  - id: 2050
-    start: '11:15'
-    room: Serverless and Cloud
-  - id: 1596
-    start: '13:15'
-    room: Serverless and Cloud
-  - id: 1279
-    start: '14:30'
-    room: Serverless and Cloud
-  - id: 1394
-    start: '15:45'
-    room: Serverless and Cloud
-  - id: 2073
+    room: Frameworks
+  - id: 3292
+    start: '11:20'
+    room: Frameworks
+  - id: 3366
+    start: '13:10'
+    room: Frameworks
+  - id: 3256
+    start: '14:40'
+    room: Frameworks
+  - id: 2788
+    start: '16:00'
+    room: Frameworks
+  - id: 3741
+    start: '08:00'
+    room: Java Platform
+  - id: 3729
     start: '09:00'
-    room: Sidney Marcus
-  - id: 2061
-    start: '16:45'
-    room: Sidney Marcus
-  - id: 2113
-    start: '19:00'
-    room: Sidney Marcus
-  - id: 2119
-    start: '09:45'
-    room: Nighthacking
-  - id: 2116
+    room: Java Platform
+  - id: 3199
+    start: '10:00'
+    room: Java Platform
+  - id: 3734
     start: '11:00'
-    room: Nighthacking
-  - id: 1665
-    start: '12:00'
-    room: Nighthacking
-  - id: 2128
-    start: '13:00'
-    room: Nighthacking
-  - id: 2117
-    start: '14:15'
-    room: Nighthacking
-  - id: 2118
-    start: '15:30'
-    room: Nighthacking
-  - id: 1297
+    room: Java Platform
+  - id: 2665
+    start: '11:20'
+    room: Java Platform
+  - id: 3738
+    start: '12:20'
+    room: Java Platform
+  - id: 3515
+    start: '13:10'
+    room: Java Platform
+  - id: 3735
+    start: '14:20'
+    room: Java Platform
+  - id: 3237
+    start: '14:40'
+    room: Java Platform
+  - id: 3736
+    start: '15:40'
+    room: Java Platform
+  - id: 3211
+    start: '16:00'
+    room: Java Platform
+  - id: 3523
     start: '10:00'
-    room: Frameworks
-  - id: 1446
-    start: '11:15'
-    room: Frameworks
-  - id: 1263
-    start: '13:15'
-    room: Frameworks
-  - id: 1703
-    start: '14:30'
-    room: Frameworks
-  - id: 1638
-    start: '15:45'
-    room: Frameworks
-  - id: 1981
+    room: JavaScript
+  - id: 3284
+    start: '11:20'
+    room: JavaScript
+  - id: 3030
+    start: '13:10'
+    room: JavaScript
+  - id: 3351
+    start: '14:40'
+    room: JavaScript
+  - id: 3742
+    start: '16:00'
+    room: JavaScript
+  - id: 3136
     start: '10:00'
-    room: Agile
-  - id: 1303
-    start: '11:15'
-    room: Agile
-  - id: 1411
-    start: '13:15'
-    room: Agile
-  - id: 1699
-    start: '14:30'
-    room: Agile
-  - id: 2074
-    start: '15:45'
-    room: Agile
-  - id: 1489
+    room: Practices
+  - id: 3216
+    start: '11:20'
+    room: Practices
+  - id: 3182
+    start: '13:10'
+    room: Practices
+  - id: 3148
+    start: '14:40'
+    room: Practices
+  - id: 3052
+    start: '16:00'
+    room: Practices
+  - id: 3008
     start: '10:00'
-    room: Architecture
-  - id: 1692
-    start: '11:15'
-    room: Architecture
-  - id: 1361
-    start: '13:15'
-    room: Architecture
-  - id: 1384
-    start: '14:30'
-    room: Architecture
-  - id: 1464
-    start: '15:45'
-    room: Architecture
-  - id: 2089
+    room: Security
+  - id: 3180
+    start: '11:20'
+    room: Security
+  - id: 3574
+    start: '13:10'
+    room: Security
+  - id: 3306
+    start: '14:40'
+    room: Security
+  - id: 3061
+    start: '16:00'
+    room: Security
+  - id: 2943
     start: '10:00'
-    room: Core Cloud
-  - id: 1310
-    start: '11:15'
-    room: Core Cloud
-  - id: 1455
-    start: '13:15'
-    room: Core Cloud
-  - id: 1793
-    start: '14:30'
-    room: Core Cloud
-  - id: 1919
-    start: '15:45'
-    room: Core Cloud
-  - id: 2065
+    room: Tools - Techniques
+  - id: 3281
+    start: '11:20'
+    room: Tools - Techniques
+  - id: 3122
+    start: '13:10'
+    room: Tools - Techniques
+  - id: 2964
+    start: '14:40'
+    room: Tools - Techniques
+  - id: 3090
+    start: '16:00'
+    room: Tools - Techniques
+  - id: 3177
     start: '10:00'
     room: Web
-  - id: 1700
-    start: '11:15'
+  - id: 2848
+    start: '11:20'
     room: Web
-  - id: 1460
-    start: '13:15'
+  - id: 2877
+    start: '13:10'
     room: Web
-  - id: 1694
-    start: '14:30'
+  - id: 2698
+    start: '14:40'
     room: Web
-  - id: 1333
-    start: '15:45'
+  - id: 3179
+    start: '16:00'
     room: Web
