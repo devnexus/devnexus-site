@@ -234,7 +234,7 @@
     start: '11:20'
     room: 2GM
   - id: 3346
-    start: '13:10'
+    start: '13:20'
     room: 2GM
   - id: 3514
     start: '14:40'
@@ -249,7 +249,7 @@
     start: '11:20'
     room: Agile
   - id: 3076
-    start: '13:10'
+    start: '13:20'
     room: Agile
   - id: 2813
     start: '14:40'
@@ -264,7 +264,7 @@
     start: '11:20'
     room: Architecture
   - id: 2907
-    start: '13:10'
+    start: '13:20'
     room: Architecture
   - id: 2636
     start: '14:40'
@@ -279,7 +279,7 @@
     start: '11:20'
     room: Cloud Infra
   - id: 2771
-    start: '13:10'
+    start: '13:20'
     room: Cloud Infra
   - id: 3058
     start: '14:40'
@@ -294,7 +294,7 @@
     start: '11:20'
     room: Cloud Tech
   - id: 3254
-    start: '13:10'
+    start: '13:20'
     room: Cloud Tech
   - id: 2893
     start: '14:40'
@@ -309,7 +309,7 @@
     start: '11:20'
     room: Core Java
   - id: 2822
-    start: '13:10'
+    start: '13:20'
     room: Core Java
   - id: 2933
     start: '14:40'
@@ -324,7 +324,7 @@
     start: '11:20'
     room: Frameworks
   - id: 3366
-    start: '13:10'
+    start: '13:20'
     room: Frameworks
   - id: 3256
     start: '14:40'
@@ -351,7 +351,7 @@
     start: '12:20'
     room: Java Platform
   - id: 3515
-    start: '13:10'
+    start: '13:20'
     room: Java Platform
   - id: 3735
     start: '14:20'
@@ -365,6 +365,12 @@
   - id: 3211
     start: '16:00'
     room: Java Platform
+  - id: 3745
+    start: '17:00'
+    room: Java Platform
+  - id: 3746
+    start: '19:30'
+    room: Java Platform
   - id: 3523
     start: '10:00'
     room: JavaScript
@@ -372,7 +378,7 @@
     start: '11:20'
     room: JavaScript
   - id: 3030
-    start: '13:10'
+    start: '13:20'
     room: JavaScript
   - id: 3351
     start: '14:40'
@@ -387,7 +393,7 @@
     start: '11:20'
     room: Practices
   - id: 3182
-    start: '13:10'
+    start: '13:20'
     room: Practices
   - id: 3148
     start: '14:40'
@@ -402,7 +408,7 @@
     start: '11:20'
     room: Security
   - id: 3574
-    start: '13:10'
+    start: '13:20'
     room: Security
   - id: 3306
     start: '14:40'
@@ -417,7 +423,7 @@
     start: '11:20'
     room: Tools - Techniques
   - id: 3122
-    start: '13:10'
+    start: '13:20'
     room: Tools - Techniques
   - id: 2964
     start: '14:40'
@@ -432,7 +438,7 @@
     start: '11:20'
     room: Web
   - id: 2877
-    start: '13:10'
+    start: '13:20'
     room: Web
   - id: 2698
     start: '14:40'

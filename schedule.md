@@ -68,9 +68,9 @@ layout: info-fluid
 <h3>12:20</h3>
 {% include schedule_event.html details=day3_lunch room="lunch" %}
 
-{% assign day3_1310= day3.events | where: "start", "13:10" %}
-<h3>13:10</h3>
-{% include schedule_block.html events=day3_1310 %}
+{% assign day3_1320= day3.events | where: "start", "13:20" %}
+<h3>13:20</h3>
+{% include schedule_block.html events=day3_1320 %}
 
 {% assign day3_1440= day3.events | where: "start", "14:40" %}
 <h3>14:40</h3>
@@ -80,14 +80,19 @@ layout: info-fluid
 <h3>16:00</h3>
 {% include schedule_block.html events=day3_1600 %}
 
-{% assign afterparty = site.events | where: "slug", "2113" | first %}
-<h3>19:00</h3>
+{% assign day3_1700 = day3.events | where: "start", "17:00" | first %}
+{% assign day3_close= site.events | where: "slug", day3_1700.id | first %}
+<h3>17:00</h3>
+{% include schedule_event.html details=day3_close room="keynote" %}
+
+{% assign afterparty = site.events | where: "slug", "3746" | first %}
+<h3>19:30</h3>
 <div class="row schedule-row">
 		<div class="col-sm-6 col-xs-12 workshop">
 				<a href="{{afterparty.url}}">{{afterparty.title | escape}}</a>
 				<br/>
 			<span class="small pull-right">
-				 JoyStick Gamebar
+				 Exhibition Hall
 			</span>
 	  </div>
 </div>
