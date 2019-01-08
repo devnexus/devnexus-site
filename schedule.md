@@ -24,7 +24,7 @@ layout: info-fluid
 <h3>11:20</h3>
 {% include schedule_block.html events=day2_1120 %}
 
-{% assign day2_1200 = day2.events | where: "start", "12:20" | first %}
+{% assign day2_1220 = day2.events | where: "start", "12:20" | first %}
 {% assign day2_lunch= site.events | where: "slug", day2_1220.id | first %}
 <h3>12:20</h3>
 {% include schedule_event.html details=day2_lunch room="lunch" %}
@@ -63,8 +63,8 @@ layout: info-fluid
 <h3>11:20</h3>
 {% include schedule_block.html events=day3_1120 %}
 
-{% assign day3_1200= day3.events | where: "start", "12:20" | first %}
-{% assign day3_lunch= site.events | where: "slug", day3_1200.id | first %}
+{% assign day3_1220= day3.events | where: "start", "12:20" | first %}
+{% assign day3_lunch= site.events | where: "slug", day3_1220.id | first %}
 <h3>12:20</h3>
 {% include schedule_event.html details=day3_lunch room="lunch" %}
 
