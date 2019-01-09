@@ -2,7 +2,7 @@ lunch:
   title: Lunch
   trackid: 00
   trackkey: lunch
-  room: Exhibit Area
+  room: Exhibition Hall B
 happy-hour:
   title: Happy Hour
   trackid: 00
@@ -17,7 +17,7 @@ keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote or 2nd stage
-  room: Exhibition Hall
+  room: Exhibition Hall B
 A303:
   title: Workshops
   trackid: 00
@@ -42,7 +42,7 @@ java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: ???
+  room: Exhibition Hall A
 archictecture:
   title: Architecture
   trackkey: architecture
