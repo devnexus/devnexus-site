@@ -1,13 +1,18 @@
 ---
 layout: info-fluid
 ---
-{% assign day0 = site.data.schedule | where: "index", 0  | first %}
+{% comment %}{% assign day0 = site.data.schedule | where: "index", 0  | first %}{% endcomment %}
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <h1>Wednesday March 6 </h1>
-<h6>* Workshop Ticket Required</h6>
+{% comment %}<h6>* Workshop Ticket Required</h6> {% endcomment %}
 <h3>9:00 - 17:00</h3>
-{% include schedule_block.html events=day0.events track="workshop" %}
+{% comment %}{% include schedule_block.html events=day0.events track="workshop" %}{% endcomment %}
+
+{% assign workshops = site.events | where:"track","workshop" %}
+ {% for event in workshops %}
+ {% include schedule_workshop.html details=event %}
+ {% endfor %}
 
 <h1> Thursday March 7</h1>
 
