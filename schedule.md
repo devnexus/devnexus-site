@@ -5,7 +5,7 @@ layout: info-fluid
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <h1>Wednesday March 6 </h1>
-{% comment %}<h6>* Workshop Ticket Required</h6> {% endcomment %}
+<h6>* Workshop Ticket Required</h6>
 <h3>9:00 - 17:00</h3>
 {% comment %}{% include schedule_block.html events=day0.events track="workshop" %}{% endcomment %}
 
