@@ -13,6 +13,11 @@
 {% assign web = include.events  | where: "room", "Web" | first %}
 
 
+{% if java-platform %}
+{% assign event = site.events | where: "slug", java-platform.id | first %}
+{% include schedule_event.html details=event room="java-platform" track=include.track %}
+{% endif %}
+
 {% if architecture %}
 {% assign event = site.events | where: "slug", architecture.id | first %}
 {% include schedule_event.html details=event room="archictecture" track=include.track %}
@@ -71,11 +76,6 @@
 {% if web %}
 {% assign event = site.events | where: "slug", web.id | first %}
 {% include schedule_event.html details=event room="web" track=include.track %}
-{% endif %}
-
-{% if java-platform %}
-{% assign event = site.events | where: "slug", java-platform.id | first %}
-{% include schedule_event.html details=event room="java-platform" track=include.track %}
 {% endif %}
 
 {% if A316 %}
