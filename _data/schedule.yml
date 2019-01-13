@@ -81,7 +81,7 @@
   - id: 2716
     start: '10:00'
     room: Core Java
-  - id: 3242
+  - id: 3127
     start: '11:20'
     room: Core Java
   - id: 3552
@@ -165,7 +165,7 @@
   - id: 2850
     start: '16:00'
     room: JavaScript
-  - id: 2778
+  - id: 3148
     start: '10:00'
     room: Practices
   - id: 2785
@@ -305,8 +305,8 @@
   - id: 2695
     start: '10:00'
     room: Core Java
-  - id: 3127
-    start: '11:20'
+  - id: 3242
+    start: '11:00'
     room: Core Java
   - id: 2822
     start: '13:20'
@@ -395,7 +395,7 @@
   - id: 3182
     start: '13:20'
     room: Practices
-  - id: 3148
+  - id: 2778
     start: '14:40'
     room: Practices
   - id: 3052
