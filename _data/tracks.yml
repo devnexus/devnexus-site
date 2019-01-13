@@ -2,7 +2,7 @@ lunch:
   title: Lunch
   trackid: 00
   trackkey: lunch
-  room: Exhibit Area
+  room: Exhibition Hall B
 happy-hour:
   title: Happy Hour
   trackid: 00
@@ -17,7 +17,7 @@ keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote or 2nd stage
-  room: Sidney Marcus
+  room: Exhibition Hall A
 A303:
   title: Workshops
   trackid: 00
@@ -37,64 +37,64 @@ core-java:
   title: Core Java
   trackid: 113
   trackkey: core java
-  room: A412
+  room: 104
 java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: A402
+  room: Exhibition Hall A
 archictecture:
   title: Architecture
   trackkey: architecture
   trackid: 117
-  room: A403
+  room: Ballroom A
 tools:
   title: Tools and Techniques
   trackkey: tools and techniques
   trackid: 116
-  room: A315
+  room: 106
 ggm:
   title: 2GM
   trackkey: 2gm
   trackid: 125
-  room: A315
+  room: 115
 frameworks:
   title: Frameworks
   trackid: 115
   trackkey: frameworks
-  room: A302
+  room: Ballroom F
 security:
   title: Security
   trackid: 120
   trackkey: security
-  room: A313
+  room: Ballroom C
 web:
   title: Web
   trackid: 124
   trackkey: web
-  room: A314
+  room: 102
 javascript:
   title: Javascript
   trackid: 121
   trackkey: javascript
-  room: A411
+  room: Ballroom E
 practices-other:
   title: Practices and Other Tech
   trackid: 123
   trackkey: practices and other tech
-  room: A405
+  room: 103
 cloud-technology:
   title: Cloud Technolgy
   trackid: 118
   trackkey: cloud technology
-  room: A305
+  room: Ballroom D
 cloud-infrastructure:
-  title: Cloud Infrastructure (microservices and serverless)
+  title: Cloud Infrastructure
   trackid: 119
   trackkey: cloud infrastructure (microservices and serverless)
-  room: A312
+  room: Ballroom B
 agile:
   title: Agile
   trackkey: agile
   trackid: 122
-  room: A311
+  room: 105
