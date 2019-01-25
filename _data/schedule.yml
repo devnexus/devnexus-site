@@ -65,19 +65,19 @@
     room: Cloud Infra
   - id: 3218
     start: '10:00'
-    room: Cloud Tech
-  - id: 3220
+    room: 'Cloud Tech '
+  - id: 3037
     start: '11:20'
-    room: Cloud Tech
+    room: 'Cloud Tech '
   - id: 2601
     start: '13:20'
-    room: Cloud Tech
+    room: 'Cloud Tech '
   - id: 3559
     start: '14:40'
-    room: Cloud Tech
+    room: 'Cloud Tech '
   - id: 3203
     start: '16:00'
-    room: Cloud Tech
+    room: 'Cloud Tech '
   - id: 2716
     start: '10:00'
     room: Core Java
@@ -168,10 +168,10 @@
   - id: 3148
     start: '10:00'
     room: Practices
-  - id: 2785
+  - id: 3182
     start: '11:20'
     room: Practices
-  - id: 2920
+  - id: 2785
     start: '13:20'
     room: Practices
   - id: 3120
@@ -287,7 +287,7 @@
   - id: 2619
     start: '16:00'
     room: Cloud Infra
-  - id: 3037
+  - id: 3220
     start: '10:00'
     room: Cloud Tech
   - id: 3023
@@ -302,11 +302,11 @@
   - id: 3305
     start: '16:00'
     room: Cloud Tech
-  - id: 2695
+  - id: 3193
     start: '10:00'
     room: Core Java
   - id: 3242
-    start: '11:00'
+    start: '11:20'
     room: Core Java
   - id: 2822
     start: '13:20'
@@ -314,7 +314,7 @@
   - id: 2933
     start: '14:40'
     room: Core Java
-  - id: 3193
+  - id: 2695
     start: '16:00'
     room: Core Java
   - id: 3278
@@ -392,7 +392,7 @@
   - id: 3216
     start: '11:20'
     room: Practices
-  - id: 3182
+  - id: 2920
     start: '13:20'
     room: Practices
   - id: 2778
