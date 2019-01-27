@@ -289,19 +289,19 @@
     room: Cloud Infra
   - id: 3220
     start: '10:00'
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3023
     start: '11:20'
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3254
     start: '13:20'
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 2893
     start: '14:40'
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3305
     start: '16:00'
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3193
     start: '10:00'
     room: Core Java
