@@ -2,7 +2,7 @@
 layout: info-fluid
 permalink: /presentations/index.html
 tracks:
-# - keynote
+#- keynote
 - workshop
 - ggm
 - core-java

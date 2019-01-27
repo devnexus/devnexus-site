@@ -16,7 +16,7 @@ after-party:
 keynote:
   title: Keynotes
   trackid: 00
-  trackkey: keynote or 2nd stage
+  trackkey: keynote
   room: Exhibition Hall A
 A303:
   title: Workshops
