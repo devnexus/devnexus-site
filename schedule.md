@@ -46,6 +46,11 @@ layout: info-fluid
 <h3>16:00</h3>
 {% include schedule_block.html events=day2_1600 %}
 
+{% assign day2_1710 = day2.events | where: "start", "17:10" | first %}
+{% assign day2_k2= site.events | where: "slug", day2_1710.id | first %}
+<h3>17:10</h3>
+{% include schedule_event.html details=day2_k2 room="keynote" %}
+
 
 {% assign day2_1800 = day2.events | where: "start", "18:00" | first %}
 {% assign day2_night= site.events | where: "slug", day2_1800.id | first %}
