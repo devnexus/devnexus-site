@@ -1,8 +1,18 @@
 lunch:
   title: Lunch
   trackid: 00
-  trackkey: lunch
+  trackkey: other
   room: Exhibition Hall B
+break:
+  title: Break
+  trackid: 00
+  trackkey: other
+  room: Exhibition Hall A
+breakfast:
+  title: Registration & Breakfast
+  trackid: 00
+  trackkey: other
+  room: Exhibition Hall A
 happy-hour:
   title: Happy Hour
   trackid: 00

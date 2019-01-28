@@ -80,6 +80,12 @@ $room-color-exhibit: #ed1e24;
   .lunch {
     @include room($room-color-exhibit);
   }
+  .break {
+    @include room($room-color-exhibit);
+  }
+  .breakfast {
+    @include room($room-color-exhibit);
+  }
   .happy-hour {
     @include room($room-color-exhibit);
   }
