@@ -7,22 +7,22 @@ break:
   title: Break
   trackid: 00
   trackkey: other
-  room: Exhibition Hall A
+  room: Sponsor Lounge
 breakfast:
   title: Registration & Breakfast
   trackid: 00
   trackkey: other
-  room: Exhibition Hall A
+  room: Sponsor Lounge
 happy-hour:
   title: Happy Hour
   trackid: 00
   trackkey: happy-hour
-  room: Exhibit Area
+  room: Sponsor Lounge
 after-party:
   title: After Party
   trackid: 00
   trackkey: after-party
-  room: Joystick Gamebar
+  room: Sponsor Lounge
 keynote:
   title: Keynotes
   trackid: 00
