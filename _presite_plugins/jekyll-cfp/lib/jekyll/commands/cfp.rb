@@ -41,7 +41,7 @@ module Jekyll
           return _data
         end
         def collect_room_events(room, array_of_events)
-           times =  array_of_events.map{ |e| e.select{ |k,v| ["id", "start", "track"].include?(k)}.merge("room" => room) }
+           times =  array_of_events.map{ |e| e.select{ |k,v| ["id", "start", "track"].include?(k)}.merge("room" => room.strip) }
            process_event_collection(array_of_events)
            return times
         end
