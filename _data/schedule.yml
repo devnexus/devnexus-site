@@ -86,23 +86,23 @@
   - id: 3218
     start: '10:00'
     track: Cloud Technology
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3037
     start: '11:20'
     track: Cloud Technology
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 2601
     start: '13:20'
     track: Cloud Technology
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3559
     start: '14:40'
     track: Cloud Technology
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 3203
     start: '16:00'
     track: Cloud Technology
-    room: 'Cloud Tech '
+    room: Cloud Tech
   - id: 2716
     start: '10:00'
     track: Core Java
@@ -147,7 +147,7 @@
     start: '07:30'
     track: Other
     room: Java Platform
-  - id: 3727
+  - id: 3728
     start: '09:00'
     track: Keynote
     room: Java Platform
@@ -191,7 +191,7 @@
     start: '17:00'
     track: Other
     room: Java Platform
-  - id: 3728
+  - id: 3727
     start: '17:10'
     track: Keynote
     room: Java Platform
