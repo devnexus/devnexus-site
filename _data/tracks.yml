@@ -1,22 +1,32 @@
 lunch:
   title: Lunch
   trackid: 00
-  trackkey: lunch
+  trackkey: other
   room: Exhibition Hall B
+break:
+  title: Break
+  trackid: 00
+  trackkey: other
+  room: Sponsor Lounge
+breakfast:
+  title: Registration & Breakfast
+  trackid: 00
+  trackkey: other
+  room: Sponsor Lounge
 happy-hour:
   title: Happy Hour
   trackid: 00
   trackkey: happy-hour
-  room: Exhibit Area
+  room: Sponsor Lounge
 after-party:
   title: After Party
   trackid: 00
   trackkey: after-party
-  room: Joystick Gamebar
+  room: Sponsor Lounge
 keynote:
   title: Keynotes
   trackid: 00
-  trackkey: keynote or 2nd stage
+  trackkey: keynote
   room: Exhibition Hall A
 A303:
   title: Workshops

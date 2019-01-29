@@ -1,0 +1,13 @@
+{% assign all = include.details %}
+{% assign event = include.details[include.item] %}
+{% assign event_slug = site.events | where: "slug", event.id | first %}
+<h3>{{event.start}}</h3>
+<div class="row schedule-row">
+		<div class="col-sm-6 col-xs-12 {{include.room}}">
+				{{event_slug.title | escape}}
+      <br/>
+			<span class="small pull-right">
+				 {{site.data.tracks[include.room].room}}
+			</span>
+	  </div>
+</div>

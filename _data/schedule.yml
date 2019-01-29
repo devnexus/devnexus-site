@@ -5,444 +5,591 @@
   events:
   - id: 3513
     start: '10:00'
+    track: 2GM
     room: 2GM
   - id: 3342
     start: '11:20'
+    track: 2GM
     room: 2GM
   - id: 3507
     start: '13:20'
+    track: 2GM
     room: 2GM
   - id: 3509
     start: '14:40'
+    track: 2GM
     room: 2GM
   - id: 3512
     start: '16:00'
+    track: 2GM
     room: 2GM
   - id: 3026
     start: '10:00'
+    track: Agile
     room: Agile
   - id: 2883
     start: '11:20'
+    track: Agile
     room: Agile
   - id: 2821
     start: '13:20'
+    track: Agile
     room: Agile
   - id: 2675
     start: '14:40'
+    track: Agile
     room: Agile
   - id: 3231
     start: '16:00'
+    track: Agile
     room: Agile
   - id: 2808
     start: '10:00'
+    track: Architecture
     room: Architecture
   - id: 3152
     start: '11:20'
+    track: Architecture
     room: Architecture
   - id: 2806
     start: '13:20'
+    track: Architecture
     room: Architecture
   - id: 3044
     start: '14:40'
+    track: Architecture
     room: Architecture
   - id: 3050
     start: '16:00'
+    track: Architecture
     room: Architecture
   - id: 2776
     start: '10:00'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 2913
     start: '11:20'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 3165
     start: '13:20'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 3092
     start: '14:40'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 2941
     start: '16:00'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 3218
     start: '10:00'
-    room: Cloud Tech
+    track: Cloud Technology
+    room: 'Cloud Tech '
   - id: 3037
     start: '11:20'
-    room: Cloud Tech
+    track: Cloud Technology
+    room: 'Cloud Tech '
   - id: 2601
     start: '13:20'
-    room: Cloud Tech
+    track: Cloud Technology
+    room: 'Cloud Tech '
   - id: 3559
     start: '14:40'
-    room: Cloud Tech
+    track: Cloud Technology
+    room: 'Cloud Tech '
   - id: 3203
     start: '16:00'
-    room: Cloud Tech
+    track: Cloud Technology
+    room: 'Cloud Tech '
   - id: 2716
     start: '10:00'
+    track: Core Java
     room: Core Java
   - id: 3127
     start: '11:20'
+    track: Core Java
     room: Core Java
   - id: 3552
     start: '13:20'
+    track: Core Java
     room: Core Java
   - id: 3314
     start: '14:40'
+    track: Core Java
     room: Core Java
   - id: 3015
     start: '16:00'
+    track: Core Java
     room: Core Java
   - id: 2621
     start: '10:00'
+    track: Frameworks
     room: Frameworks
   - id: 3071
     start: '11:20'
+    track: Frameworks
     room: Frameworks
   - id: 3296
     start: '13:20'
+    track: Frameworks
     room: Frameworks
   - id: 2976
     start: '14:40'
+    track: Frameworks
     room: Frameworks
   - id: 3020
     start: '16:00'
+    track: Frameworks
     room: Frameworks
   - id: 3740
     start: '07:30'
+    track: Other
     room: Java Platform
   - id: 3727
     start: '09:00'
+    track: Keynote
     room: Java Platform
   - id: 3545
     start: '10:00'
+    track: Java Platform
     room: Java Platform
   - id: 3730
     start: '11:00'
+    track: Other
     room: Java Platform
   - id: 3546
     start: '11:20'
+    track: Java Platform
     room: Java Platform
   - id: 3737
     start: '12:20'
+    track: Other
     room: Java Platform
   - id: 2867
     start: '13:20'
+    track: Java Platform
     room: Java Platform
   - id: 3731
     start: '14:20'
+    track: Other
     room: Java Platform
   - id: 2924
     start: '14:40'
+    track: Java Platform
     room: Java Platform
   - id: 3732
     start: '15:40'
+    track: Other
     room: Java Platform
   - id: 3232
     start: '16:00'
+    track: Java Platform
     room: Java Platform
   - id: 3733
     start: '17:00'
+    track: Other
     room: Java Platform
   - id: 3728
     start: '17:10'
+    track: Keynote
     room: Java Platform
   - id: 3739
     start: '18:00'
+    track: Other
     room: Java Platform
   - id: 2951
     start: '10:00'
+    track: JavaScript
     room: JavaScript
   - id: 3371
     start: '11:20'
+    track: JavaScript
     room: JavaScript
   - id: 3355
     start: '13:20'
+    track: JavaScript
     room: JavaScript
   - id: 3506
     start: '14:40'
+    track: JavaScript
     room: JavaScript
   - id: 2850
     start: '16:00'
+    track: JavaScript
     room: JavaScript
   - id: 3148
     start: '10:00'
+    track: Practices and other tech
     room: Practices
   - id: 3182
     start: '11:20'
+    track: Practices and other tech
     room: Practices
   - id: 2785
     start: '13:20'
+    track: Practices and other tech
     room: Practices
   - id: 3120
     start: '14:40'
+    track: Practices and other tech
     room: Practices
   - id: 2828
     start: '16:00'
+    track: Practices and other tech
     room: Practices
   - id: 2641
     start: '10:00'
+    track: Security
     room: Security
   - id: 2982
     start: '11:20'
+    track: Security
     room: Security
   - id: 2860
     start: '13:20'
+    track: Security
     room: Security
   - id: 2957
     start: '14:40'
+    track: Security
     room: Security
   - id: 3311
     start: '16:00'
+    track: Security
     room: Security
   - id: 3262
     start: '10:00'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 2795
     start: '11:20'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 2805
     start: '13:20'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3150
     start: '14:40'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 2917
     start: '16:00'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3244
     start: '10:00'
+    track: Web
     room: Web
   - id: 2900
     start: '11:20'
+    track: Web
     room: Web
   - id: 3380
     start: '13:20'
+    track: Web
     room: Web
   - id: 3282
     start: '14:40'
+    track: Web
     room: Web
   - id: 2858
     start: '16:00'
+    track: Web
     room: Web
 - index: 2
   events:
   - id: 3511
     start: '10:00'
+    track: 2GM
     room: 2GM
   - id: 3350
     start: '11:20'
+    track: 2GM
     room: 2GM
   - id: 3346
     start: '13:20'
+    track: 2GM
     room: 2GM
   - id: 3514
     start: '14:40'
+    track: 2GM
     room: 2GM
   - id: 3345
     start: '16:00'
+    track: 2GM
     room: 2GM
   - id: 3063
     start: '10:00'
+    track: Agile
     room: Agile
   - id: 3558
     start: '11:20'
+    track: Agile
     room: Agile
   - id: 3076
     start: '13:20'
+    track: Agile
     room: Agile
   - id: 2813
     start: '14:40'
+    track: Agile
     room: Agile
   - id: 2739
     start: '16:00'
+    track: Agile
     room: Agile
   - id: 2996
     start: '10:00'
+    track: Architecture
     room: Architecture
   - id: 2599
     start: '11:20'
+    track: Architecture
     room: Architecture
   - id: 2907
     start: '13:20'
+    track: Architecture
     room: Architecture
   - id: 2636
     start: '14:40'
+    track: Architecture
     room: Architecture
   - id: 2624
     start: '16:00'
+    track: Architecture
     room: Architecture
   - id: 3293
     start: '10:00'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 2816
     start: '11:20'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 2771
     start: '13:20'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 3058
     start: '14:40'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 2619
     start: '16:00'
+    track: Cloud Infrastructure (Microservices and Serverless)
     room: Cloud Infra
   - id: 3220
     start: '10:00'
+    track: Cloud Technology
     room: Cloud Tech
   - id: 3023
     start: '11:20'
+    track: Cloud Technology
     room: Cloud Tech
   - id: 3254
     start: '13:20'
+    track: Cloud Technology
     room: Cloud Tech
   - id: 2893
     start: '14:40'
+    track: Cloud Technology
     room: Cloud Tech
   - id: 3305
     start: '16:00'
+    track: Cloud Technology
     room: Cloud Tech
   - id: 3193
     start: '10:00'
+    track: Core Java
     room: Core Java
   - id: 3242
     start: '11:20'
+    track: Core Java
     room: Core Java
   - id: 2822
     start: '13:20'
+    track: Core Java
     room: Core Java
   - id: 2933
     start: '14:40'
+    track: Core Java
     room: Core Java
   - id: 2695
     start: '16:00'
+    track: Core Java
     room: Core Java
   - id: 3278
     start: '10:00'
+    track: Frameworks
     room: Frameworks
   - id: 3292
     start: '11:20'
+    track: Frameworks
     room: Frameworks
   - id: 3366
     start: '13:20'
+    track: Frameworks
     room: Frameworks
   - id: 3256
     start: '14:40'
+    track: Frameworks
     room: Frameworks
   - id: 2788
     start: '16:00'
+    track: Frameworks
     room: Frameworks
   - id: 3741
     start: '08:00'
+    track: Other
     room: Java Platform
   - id: 3729
     start: '09:00'
+    track: Keynote
     room: Java Platform
   - id: 3199
     start: '10:00'
+    track: Java Platform
     room: Java Platform
   - id: 3734
     start: '11:00'
+    track: Other
     room: Java Platform
   - id: 2665
     start: '11:20'
+    track: Java Platform
     room: Java Platform
   - id: 3738
     start: '12:20'
+    track: Other
     room: Java Platform
   - id: 3515
     start: '13:20'
+    track: Java Platform
     room: Java Platform
   - id: 3735
     start: '14:20'
+    track: Other
     room: Java Platform
   - id: 3237
     start: '14:40'
+    track: Java Platform
     room: Java Platform
   - id: 3736
     start: '15:40'
+    track: Other
     room: Java Platform
   - id: 3211
     start: '16:00'
+    track: Java Platform
     room: Java Platform
   - id: 3745
     start: '17:00'
+    track: Other
     room: Java Platform
   - id: 3746
     start: '19:30'
+    track: Other
     room: Java Platform
   - id: 3523
     start: '10:00'
+    track: JavaScript
     room: JavaScript
   - id: 3284
     start: '11:20'
+    track: JavaScript
     room: JavaScript
   - id: 3030
     start: '13:20'
+    track: JavaScript
     room: JavaScript
   - id: 3351
     start: '14:40'
+    track: JavaScript
     room: JavaScript
   - id: 3742
     start: '16:00'
+    track: JavaScript
     room: JavaScript
   - id: 3136
     start: '10:00'
+    track: Practices and other tech
     room: Practices
   - id: 3216
     start: '11:20'
+    track: Practices and other tech
     room: Practices
   - id: 2920
     start: '13:20'
+    track: Practices and other tech
     room: Practices
   - id: 2778
     start: '14:40'
+    track: Practices and other tech
     room: Practices
   - id: 3052
     start: '16:00'
+    track: Practices and other tech
     room: Practices
   - id: 3008
     start: '10:00'
+    track: Security
     room: Security
   - id: 3180
     start: '11:20'
+    track: Security
     room: Security
   - id: 3574
     start: '13:20'
+    track: Security
     room: Security
   - id: 3306
     start: '14:40'
+    track: Security
     room: Security
   - id: 3061
     start: '16:00'
+    track: Security
     room: Security
   - id: 2943
     start: '10:00'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3281
     start: '11:20'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3122
     start: '13:20'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 2964
     start: '14:40'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3090
     start: '16:00'
+    track: Tools and Techniques
     room: Tools - Techniques
   - id: 3177
     start: '10:00'
+    track: Web
     room: Web
   - id: 2848
     start: '11:20'
+    track: Web
     room: Web
   - id: 2877
     start: '13:20'
+    track: Web
     room: Web
   - id: 2698
     start: '14:40'
+    track: Web
     room: Web
   - id: 3179
     start: '16:00'
+    track: Web
     room: Web
