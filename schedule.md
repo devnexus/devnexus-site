@@ -14,7 +14,7 @@ layout: info-fluid
  {% include schedule_workshop.html details=event %}
 {% endfor %}
 
-<h1> Thursday March 7</h1>
+<h1 class="day"> Thursday March 7</h1>
 {% assign day2_other = day2.events | where: "track", "Other" | sort: "start" %}
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 
@@ -65,7 +65,7 @@ layout: info-fluid
 {% include schedule_event.html details=day2_night room="happy-hour" %}
 
 
-<h1> Friday March 8</h1>
+<h1 class="day"> Friday March 8</h1>
 {% assign day3_other = day3.events | where: "track", "Other" | sort: "start" %}
 
 {% include schedule_break.html details=day3_other item=0 room="breakfast" %}

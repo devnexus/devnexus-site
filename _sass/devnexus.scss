@@ -23,3 +23,14 @@ $action-button-color: #f6921e;
       height: 120px;
   }
 }
+@media print {
+  .footer {
+    display: none;
+  }
+  a:after {
+    display: none;
+  }
+  .day {
+    page-break-before: always;
+  }
+}
