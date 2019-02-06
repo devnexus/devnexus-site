@@ -4,9 +4,21 @@ layout: info-fluid
 {% comment %}{% assign day0 = site.data.schedule | where: "index", 0  | first %}{% endcomment %}
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
-<h1>Wednesday March 6 </h1>
+<div class="row">
+<div class="col-xs-8">
+<h1>Wednesday March 6</h1>
 <h6>* Workshop Ticket Required</h6>
 <h3>9:00 - 17:00</h3>
+</div>
+<div class="col-xs-4 box">
+  <div class="ribbon">
+    <span><a href="/assets/img/galleria-map.png">ROOM MAP</a></span>
+  </div>
+</div>  
+</div>
+
+
+
 {% comment %}{% include schedule_block.html events=day0.events track="workshop" %}{% endcomment %}
 
 {% assign workshops = site.events | where:"track","workshop" %}
@@ -118,4 +130,5 @@ layout: info-fluid
 				 Exhibition Hall
 			</span>
 	  </div>
+</div>
 </div>
