@@ -131,4 +131,3 @@ layout: info-fluid
 			</span>
 	  </div>
 </div>
-</div>
