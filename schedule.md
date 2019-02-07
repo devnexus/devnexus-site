@@ -4,9 +4,21 @@ layout: info-fluid
 {% comment %}{% assign day0 = site.data.schedule | where: "index", 0  | first %}{% endcomment %}
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
-<h1>Wednesday March 6 </h1>
+<div class="row">
+<div class="col-xs-8">
+<h1>Wednesday March 6</h1>
 <h6>* Workshop Ticket Required</h6>
 <h3>9:00 - 17:00</h3>
+</div>
+<div class="col-xs-4 box">
+  <div class="ribbon">
+    <span><a href="/assets/img/galleria-map.png">ROOM MAP</a></span>
+  </div>
+</div>  
+</div>
+
+
+
 {% comment %}{% include schedule_block.html events=day0.events track="workshop" %}{% endcomment %}
 
 {% assign workshops = site.events | where:"track","workshop" %}
@@ -14,7 +26,7 @@ layout: info-fluid
  {% include schedule_workshop.html details=event %}
 {% endfor %}
 
-<h1> Thursday March 7</h1>
+<h1 class="day"> Thursday March 7</h1>
 {% assign day2_other = day2.events | where: "track", "Other" | sort: "start" %}
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 
@@ -65,7 +77,7 @@ layout: info-fluid
 {% include schedule_event.html details=day2_night room="happy-hour" %}
 
 
-<h1> Friday March 8</h1>
+<h1 class="day"> Friday March 8</h1>
 {% assign day3_other = day3.events | where: "track", "Other" | sort: "start" %}
 
 {% include schedule_break.html details=day3_other item=0 room="breakfast" %}
