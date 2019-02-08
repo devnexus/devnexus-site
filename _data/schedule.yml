@@ -23,7 +23,7 @@
     start: '16:00'
     track: 2GM
     room: 2GM
-  - id: 3026
+  - id: 2959
     start: '10:00'
     track: Agile
     room: Agile
@@ -123,7 +123,7 @@
     start: '16:00'
     track: Core Java
     room: Core Java
-  - id: 2621
+  - id: 3901
     start: '10:00'
     track: Frameworks
     room: Frameworks
@@ -299,6 +299,26 @@
     start: '16:00'
     track: Web
     room: Web
+  - id: 3920
+    start: '10:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3919
+    start: '11:20'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3833
+    start: '13:20'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3823
+    start: '14:40'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3271
+    start: '16:00'
+    track: Unobtanium
+    room: Unobtanium
 - index: 2
   events:
   - id: 3511
@@ -593,3 +613,23 @@
     start: '16:00'
     track: Web
     room: Web
+  - id: 3821
+    start: '10:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3921
+    start: '11:20'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3317
+    start: '13:20'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 3794
+    start: '14:40'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 2975
+    start: '16:00'
+    track: Unobtanium
+    room: Unobtanium

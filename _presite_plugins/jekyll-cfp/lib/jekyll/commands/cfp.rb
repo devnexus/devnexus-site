@@ -1,3 +1,4 @@
+require 'net/http'
 module Jekyll
   module Commands
     class Cfp < Command
@@ -18,7 +19,10 @@ module Jekyll
           end
         end
         def process_schedule_data()
-            schedule_data_file = File.read("_cfp/full_schedule.json")
+           url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
+            uri = URI(url)
+            #schedule_data_file = File.read("_cfp/full_schedule.json")
+            schedule_data_file = Net::HTTP.get(uri)
             _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
             #Jekyll.logger.info(_data_in)
             days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
