@@ -1,19 +1,20 @@
-$room-color-auditorim: #edce1e;
+//$room-color-auditorim: #edce1e; //yellow
+$room-color-auditorim: #f6921e;
 $room-color-workshop: #6c7070;
-$room-color-core-java: rgb(0, 117, 143);
-$room-color-java-platform: rgb(242, 145, 17);
+$room-color-core-java:  #8bbc0f;
+$room-color-java-platform:  #f6921e; //#406F34;
 $room-color-architecture: #a84617;
-$room-color-tools: #faa21b;
+$room-color-tools: #FA7713;
 $room-color-frameworks: #5b903f;
 $room-color-security: #2a2d7c;
-$room-color-ggm: rgb(58, 148, 217);
-$room-color-javascript: #127e9c;
-$room-color-practices-other: #4879bc;
+$room-color-ggm: #0d86e2;
+$room-color-javascript:  #127e9c;
+$room-color-practices-other: #4331e2;
 $room-color-cloud-technology: #8b2246;
-$room-color-cloud-infrastructure: #e77ea5;
+$room-color-cloud-infrastructure: #6328E7;
 $room-color-serverless: #8ec741;
-$room-color-agile: #c32381;
-$room-color-unobtanium: #ffbb00;
+$room-color-agile: #C30772;
+$room-color-unobtanium: #1668ba;
 $room-color-web: #015351;
 $room-color-exhibit: #ed1e24;
 
@@ -88,6 +89,9 @@ $room-color-exhibit: #ed1e24;
   }
   .happy-hour {
     @include room($room-color-exhibit);
+  }
+  .unobtanium {
+    @include room($room-color-unobtanium);
   }
 
 }
@@ -165,5 +169,9 @@ $room-color-exhibit: #ed1e24;
     .web {
       @include caption;
       background-color: $room-color-web;
+    }
+    .unobtanium {
+      @include caption;
+      background-color: $room-color-unobtanium;
     }
 }

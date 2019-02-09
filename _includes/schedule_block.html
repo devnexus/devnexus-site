@@ -11,6 +11,7 @@
 {% assign security  = include.events  | where: "room", "Security" | first %}
 {% assign tools-tech = include.events  | where: "room", "Tools - Techniques" | first %}
 {% assign web = include.events  | where: "room", "Web" | first %}
+{% assign unobtanium = include.events  | where: "room", "Unobtanium" | first %}
 
 
 {% if java-platform %}
@@ -51,6 +52,11 @@
 {% if 2gm %}
 {% assign event = site.events | where: "slug", 2gm.id | first %}
 {% include schedule_event.html details=event room="ggm" track=include.track %}
+{% endif %}
+
+{% if unobtanium %}
+{% assign event = site.events | where: "slug", unobtanium.id | first %}
+{% include schedule_event.html details=event room="unobtanium" track=include.track %}
 {% endif %}
 
 {% if tools-tech %}
