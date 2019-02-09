@@ -19,7 +19,7 @@ module Jekyll
           end
         end
         def process_schedule_data()
-           url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
+            url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
             uri = URI(url)
             #schedule_data_file = File.read("_cfp/full_schedule.json")
             schedule_data_file = Net::HTTP.get(uri)
@@ -32,7 +32,10 @@ module Jekyll
             #now we can print all the people
         end
         def process_event_data()
-          event_data_file = File.read("_cfp/promo_events.json")
+          # event_data_file = File.read("_cfp/promo_events.json")
+          url = 'https://cfp.devnexus.com/en/dn2019/public/promo_events.json'
+          uri = URI(url)
+          event_data_file = Net::HTTP.get(uri)
           event_data = JSON.parse(event_data_file)
           #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
           events = event_data['events']
