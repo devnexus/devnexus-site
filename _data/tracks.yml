@@ -7,7 +7,7 @@ lunch:
   title: Lunch
   trackid: 00
   trackkey: other
-  room: Exhibition Hall B
+  room: Exhibition Hall A
 break:
   title: Break
   trackid: 00
@@ -32,7 +32,7 @@ keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote
-  room: Exhibition Hall A
+  room: Exhibition Hall B
 A303:
   title: Workshops
   trackid: 00
@@ -57,7 +57,7 @@ java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: Exhibition Hall A
+  room: Exhibition Hall B
 archictecture:
   title: Architecture
   trackkey: architecture
