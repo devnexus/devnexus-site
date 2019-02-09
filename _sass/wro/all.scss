@@ -8961,6 +8961,11 @@ body {
   max-width: 360px;
   min-width: 180px;
 }
+#speaker .img-responsive {
+  margin: unset;
+  max-width: 360px;
+  min-width: unset;
+}
 #speaker .speaker-member span {
   color: white;
   margin-right: 10px;

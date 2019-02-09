@@ -2,9 +2,10 @@
 layout: info-fluid
 permalink: /presentations/index.html
 tracks:
-#- keynote
+- keynote
 - workshop
 - ggm
+- unobtanium
 - core-java
 - java-platform
 - archictecture
