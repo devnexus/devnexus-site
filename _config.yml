@@ -1,5 +1,6 @@
 ---
 safe: true
+ignore: ['_presite_plugins']
 title: DevNexus 2019
 timezone: UTC
 active-header: navigation.html
