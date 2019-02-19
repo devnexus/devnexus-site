@@ -1,3 +1,9 @@
+PATH
+  remote: _presite_plugins/jekyll-cfp
+  specs:
+    jekyll-cfp (0.1.1)
+      jekyll (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.6.3)
+  jekyll-cfp (= 0.1.1)!
   tzinfo-data
 
 BUNDLED WITH
