@@ -792,18 +792,10 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/803/large/my-headshot.jpg?1548792965
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/803/large/my-headshot.jpg?1548792965
   name: Chris DeMars
-1455:
-  avatar_path: "/uploads/anonymous-avatar.jpeg"
-  hd_avatar_path: "/uploads/anonymous-avatar.jpeg"
-  name: Danny James
 565:
   avatar_path: https://cfp.devnexus.com/system/avatars/565/large/ClaireMoss.jpg?1493514383
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/565/large/ClaireMoss.jpg?1493514383
   name: Claire Moss
-1499:
-  avatar_path: "/uploads/anonymous-avatar.jpeg"
-  hd_avatar_path: "/uploads/anonymous-avatar.jpeg"
-  name: cheryl spruce
 1928:
   avatar_path: https://cfp.devnexus.com/system/avatars/1928/large/greg.jpeg?1549662001
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1928/large/greg.jpeg?1549662001
@@ -812,10 +804,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/937/large/me-ye-restaurant-atlanta-250.png?1508189960
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/937/large/me-ye-restaurant-atlanta-250.png?1508189960
   name: Hugh McKee
-1876:
-  avatar_path: "/uploads/anonymous-avatar.jpeg"
-  hd_avatar_path: "/uploads/anonymous-avatar.jpeg"
-  name: Erin Schnabel
 1613:
   avatar_path: https://cfp.devnexus.com/system/avatars/1613/large/codeportraitPicture-45.png?1548772663
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1613/large/codeportraitPicture-45.png?1548772663
@@ -844,3 +832,23 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1645/large/IMG_6889.jpg?1538609730
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1645/large/IMG_6889.jpg?1538609730
   name: Mo Haghighi
+1499:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1499/large/cheryl_profile_pic.png?1550090931
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1499/large/cheryl_profile_pic.png?1550090931
+  name: cheryl spruce
+1876:
+  avatar_path: https://cfp.devnexus.com
+  hd_avatar_path: https://cfp.devnexus.com
+  name: Erin Schnabel
+1455:
+  avatar_path: "/uploads/anonymous-avatar.jpeg"
+  hd_avatar_path: "/uploads/anonymous-avatar.jpeg"
+  name: Danny James
+1853:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1853/large/headshot.png?1549659871
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1853/large/headshot.png?1549659871
+  name: James Strong
+737:
+  avatar_path: https://cfp.devnexus.com/system/avatars/737/large/briheadshot.jpg?1504729974
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/737/large/briheadshot.jpg?1504729974
+  name: brianbenz@brianbenz.com
