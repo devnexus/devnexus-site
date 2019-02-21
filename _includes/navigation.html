@@ -22,9 +22,9 @@
                 <li class="nav-link"><a href="/#sponsorlist">SPONSORS</a></li>
                 <li class="nav-link"><a href="/conference-info">CONFERENCE INFO</a></li>
                 {% if site.registration == "open" %}
-                <li class="nav-link"><a class="btn btn-register" href="{{site.links.register}}">REGISTER!</a></li>
+                <li class="nav-link"><a class="btn btn-register" disabled">SOLD OUT</a></li>
                 {% else %}
-                <li class="nav-link"><a class="btn btn-register disabled">SOLD OUT</a></li>
+                <li class="nav-link"><a class="btn btn-register" disabled">SOLD OUT</a></li>
                 {% endif %}
             </ul>
         </div><!-- /.navbar-collapse -->
