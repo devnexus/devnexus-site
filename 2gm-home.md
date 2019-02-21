@@ -2,18 +2,19 @@
 layout: home
 dates: March 6-8 2019
 title: Devnexus-2GM 2019
-excerpt: Special Devnexus track on learning to use Groovy, Grails, Micronaut
+excerpt: 'Special Devnexus track on learning to use Groovy, Grails, Micronaut'
 branding:
   img: /assets/img/2gm/devnexus-2gm-logo-large.png
   alt: Devnexus-2GM
 partner:
-    img: /assets/img/dev-nexus-logo-large.png
-    alt: DevNexus
-    home: /
+  img: /assets/img/dev-nexus-logo-large.png
+  alt: DevNexus
+  home: /
 registration:
-    text: Register Here
-    status: enabled
+  text: SOLD OUT!
+  status: disabled
 ---
+
 {% include {{ site.active-header }} %}
 
 <section class="row">
