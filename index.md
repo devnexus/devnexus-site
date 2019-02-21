@@ -2,8 +2,8 @@
 layout: home
 dates: March 6-8 2019
 registration:
-  text: Register Here
-  status: enabled
+  text: SOLD OUT!
+  status: disabled
   link:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
