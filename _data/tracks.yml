@@ -28,6 +28,11 @@ after-party:
   trackid: 00
   trackkey: after-party
   room: Sponsor Lounge
+wit:
+  title: Women In Technology
+  trackid: 00
+  trackkey: wit
+  room: Ballroom A  
 keynote:
   title: Keynotes
   trackid: 00
