@@ -147,6 +147,10 @@
     start: '07:30'
     track: Other
     room: Java Platform
+  - id: wit
+    start: '08:00'
+    track: wit
+    room: Architecture
   - id: 3728
     start: '09:00'
     track: Keynote

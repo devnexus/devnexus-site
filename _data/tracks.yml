@@ -7,7 +7,7 @@ lunch:
   title: Lunch
   trackid: 00
   trackkey: other
-  room: Exhibition Hall A
+  room: Exhibition Hall A/B
 break:
   title: Break
   trackid: 00
@@ -28,11 +28,16 @@ after-party:
   trackid: 00
   trackkey: after-party
   room: Sponsor Lounge
+wit:
+  title: Women In Technology
+  trackid: 00
+  trackkey: wit
+  room: Ballroom A  
 keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote
-  room: Exhibition Hall B
+  room: Exhibition Hall D
 A303:
   title: Workshops
   trackid: 00
@@ -57,7 +62,7 @@ java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: Exhibition Hall B
+  room: Exhibition Hall D
 archictecture:
   title: Architecture
   trackkey: architecture

@@ -30,6 +30,10 @@ layout: info-fluid
 {% assign day2_other = day2.events | where: "track", "Other" | sort: "start" %}
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 
+{% assign day2_wit = site.events | where: "track", "wit" | first %}
+<h3>8:00</h3>
+{% include schedule_event.html details=day2_wit room="wit"%}
+
 {% assign day2_0900 = day2.events | where: "start", "09:00" | first %}
 {% assign day2_keynote= site.events | where: "slug", day2_0900.id | first %}
 <h3>9:00</h3>

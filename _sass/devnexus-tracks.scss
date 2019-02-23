@@ -48,6 +48,9 @@ $room-color-exhibit: #ed1e24;
   .archictecture {
     @include room($room-color-architecture);
   }
+  .wit {
+    @include room($room-color-architecture);
+  }
   .tools {
     @include room($room-color-tools);
   }
@@ -127,6 +130,10 @@ $room-color-exhibit: #ed1e24;
       background-color: $room-color-java-platform;
     }
     .archictecture {
+      @include caption;
+      background-color: $room-color-architecture;
+    }
+    .wit {
       @include caption;
       background-color: $room-color-architecture;
     }
