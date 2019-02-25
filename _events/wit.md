@@ -10,4 +10,4 @@ Join the amazing Heather VanCura, Director of the JCP, for Code ‘n Coffee! Hea
 
 This session is open to anyone attending Devnexus who is interested in learning how to take your career to the next level. Over the next few weeks we’ll be tweeting out more information on panelists and what to expect, as we countdown the days to Devnexus. Look for the hashtag - #CodeNCoffee - and follow @groundbreakers for more news on who you’ll see on the stage with Heather.
 
-RSVP: http://bit.ly/CodeNCoffee  to secure your seat and special gift!
+ [RSVP: http://bit.ly/CodeNCoffee to secure your seat and special gift!](http://bit.ly/CodeNCoffee)
