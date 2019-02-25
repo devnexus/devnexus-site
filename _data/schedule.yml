@@ -147,10 +147,6 @@
     start: '07:30'
     track: Other
     room: Java Platform
-  - id: wit
-    start: '08:00'
-    track: wit
-    room: Architecture
   - id: 3728
     start: '09:00'
     track: Keynote
@@ -171,7 +167,7 @@
     start: '12:20'
     track: Other
     room: Java Platform
-  - id: 2867
+  - id: 2665
     start: '13:20'
     track: Java Platform
     room: Java Platform
@@ -481,7 +477,7 @@
     start: '11:00'
     track: Other
     room: Java Platform
-  - id: 2665
+  - id: 2867
     start: '11:20'
     track: Java Platform
     room: Java Platform
