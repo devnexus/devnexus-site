@@ -10,7 +10,7 @@ branding:
   alt: Devnexus
 partner:
   img: /assets/img/2gm/devnexus-2gm-logo-large.png
-  alt: DevNexus2GM
+  alt: Devnexus2GM
   home: /2gm-home
 ---
 
