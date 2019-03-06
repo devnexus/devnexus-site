@@ -19,6 +19,41 @@
 {% include schedule_event.html details=event room="java-platform" track=include.track %}
 {% endif %}
 
+{% if web %}
+{% assign event = site.events | where: "slug", web.id | first %}
+{% include schedule_event.html details=event room="web" track=include.track %}
+{% endif %}
+
+{% if practices %}
+{% assign event = site.events | where: "slug", practices.id | first %}
+{% include schedule_event.html details=event room="practices-other" track=include.track %}
+{% endif %}
+
+{% if core-java %}
+{% assign event = site.events | where: "slug", core-java.id | first %}
+{% include schedule_event.html details=event room="core-java" track=include.track %}
+{% endif %}
+
+{% if agile %}
+{% assign event = site.events | where: "slug", agile.id | first %}
+{% include schedule_event.html details=event room="agile" track=include.track %}
+{% endif %}
+
+{% if tools-tech %}
+{% assign event = site.events | where: "slug", tools-tech.id | first %}
+{% include schedule_event.html details=event room="tools" track=include.track %}
+{% endif %}
+
+{% if unobtanium %}
+{% assign event = site.events | where: "slug", unobtanium.id | first %}
+{% include schedule_event.html details=event room="unobtanium" track=include.track %}
+{% endif %}
+
+{% if 2gm %}
+{% assign event = site.events | where: "slug", 2gm.id | first %}
+{% include schedule_event.html details=event room="ggm" track=include.track %}
+{% endif %}
+
 {% if architecture %}
 {% assign event = site.events | where: "slug", architecture.id | first %}
 {% include schedule_event.html details=event room="archictecture" track=include.track %}
@@ -49,41 +84,7 @@
 {% include schedule_event.html details=event room="frameworks" track=include.track %}
 {% endif %}
 
-{% if 2gm %}
-{% assign event = site.events | where: "slug", 2gm.id | first %}
-{% include schedule_event.html details=event room="ggm" track=include.track %}
-{% endif %}
-
-{% if unobtanium %}
-{% assign event = site.events | where: "slug", unobtanium.id | first %}
-{% include schedule_event.html details=event room="unobtanium" track=include.track %}
-{% endif %}
-
-{% if tools-tech %}
-{% assign event = site.events | where: "slug", tools-tech.id | first %}
-{% include schedule_event.html details=event room="tools" track=include.track %}
-{% endif %}
-
-{% if agile %}
-{% assign event = site.events | where: "slug", agile.id | first %}
-{% include schedule_event.html details=event room="agile" track=include.track %}
-{% endif %}
-
-{% if core-java %}
-{% assign event = site.events | where: "slug", core-java.id | first %}
-{% include schedule_event.html details=event room="core-java" track=include.track %}
-{% endif %}
-
-{% if practices %}
-{% assign event = site.events | where: "slug", practices.id | first %}
-{% include schedule_event.html details=event room="practices-other" track=include.track %}
-{% endif %}
-
-{% if web %}
-{% assign event = site.events | where: "slug", web.id | first %}
-{% include schedule_event.html details=event room="web" track=include.track %}
-{% endif %}
-
+{% comment %}
 {% if A316 %}
 {% assign event = site.events | where: "slug", A316.id | first %}
 {% include schedule_event.html details=event room="A316" track=include.track %}
@@ -93,3 +94,4 @@
 {% assign event = site.events | where: "slug", A303.id | first %}
 {% include schedule_event.html details=event room="A303" track=include.track %}
 {% endif %}
+{% endcomment %}
