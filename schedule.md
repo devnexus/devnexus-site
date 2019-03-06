@@ -5,8 +5,10 @@ layout: info-fluid
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <div class="row">
-<div>
- <h1 class="day"> Thursday March 7</h1>
+<div class="col-xs-8">
+<h1 class="day"> Thursday March 7</h1>
+</div>
+<div class="col-xs-4 box">
   <div class="ribbon">
     <span><a href="/assets/img/galleria-map.png">ROOM MAP</a></span>
   </div>
