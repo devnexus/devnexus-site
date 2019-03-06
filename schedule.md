@@ -6,27 +6,14 @@ layout: info-fluid
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <div class="row">
 <div class="col-xs-8">
-<h1>Wednesday March 6</h1>
-<h6>* Workshop Ticket Required</h6>
-<h3>9:00 - 17:00</h3>
+<h1 class="day"> Thursday March 7</h1>
 </div>
 <div class="col-xs-4 box">
   <div class="ribbon">
     <span><a href="/assets/img/galleria-map.png">ROOM MAP</a></span>
   </div>
-</div>  
 </div>
-
-
-
-{% comment %}{% include schedule_block.html events=day0.events track="workshop" %}{% endcomment %}
-
-{% assign workshops = site.events | where:"track","workshop" %}
- {% for event in workshops %}
- {% include schedule_workshop.html details=event %}
-{% endfor %}
-
-<h1 class="day"> Thursday March 7</h1>
+</div>
 {% assign day2_other = day2.events | where: "track", "Other" | sort: "start" %}
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 

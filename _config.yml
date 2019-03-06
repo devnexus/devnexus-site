@@ -3,7 +3,7 @@ safe: true
 exclude: ['_presite_plugins']
 title: DevNexus 2019
 timezone: UTC
-active-header: navigation.html
+active-header: navigation_pwa.html
 registration: open
 collections:
   speakers:
