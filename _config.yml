@@ -1,9 +1,9 @@
 ---
 safe: true
 exclude: ['_presite_plugins']
-title: DevNexus 2019
+title: DevNexus 2020
 timezone: UTC
-active-header: navigation_pwa.html
+active-header: navigation-post-show.html
 registration: open
 collections:
   speakers:
@@ -31,8 +31,8 @@ baseurl:
 url:
 uploads_dir: "/uploads"
 links:
-   cfp: https://cfp.connectevents.io/en/dn2019/cfp/session/new
-   register: https://tickets.connectevents.io/events/devnexus2019/
+   cfp: https://cfp.connectevents.io/en/dn2020/cfp/session/new
+   register: https://tickets.connectevents.io/events/devnexus2020/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
 markdown: kramdown

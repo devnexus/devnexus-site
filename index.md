@@ -1,17 +1,13 @@
 ---
 layout: home
-dates: March 6-8 2019
+dates: Feb 2020
 registration:
-  text: SOLD OUT!
+  text: Registration Opens Oct 2019
   status: disabled
   link:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
-partner:
-  img: /assets/img/2gm/devnexus-2gm-logo-large.png
-  alt: Devnexus2GM
-  home: /2gm-home
 ---
 
 {% include {{ site.active-header }} %}
@@ -19,12 +15,10 @@ partner:
 {% include marketing-video.html %}
 
 <div class="row">
-<!--
       <div class="featured-header">
-        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2019?</a>
+        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2020?</a>
       </div>
--->
 <a name="sponsorlist"></a>
-<h1 class="featured-header">2019 SPONSORS</h1>    
+<h1 class="featured-header"> THANK YOU 2019 SPONSORS</h1>    
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
