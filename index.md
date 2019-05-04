@@ -1,6 +1,6 @@
 ---
 layout: home
-dates: Feb 2020
+dates: Feb 19-21 2020
 registration:
   text: Registration Opens Oct 2019
   status: disabled
