@@ -121,10 +121,12 @@ $room-color-exhibit: #ed1e24;
       @include caption;
       background-color: $room-color-workshop;
     }
+    .java,
     .core-java {
       @include caption;
       background-color: $room-color-core-java;
     }
+    .alt-lang,
     .java-platform {
       @include caption;
       background-color: $room-color-java-platform;
@@ -137,14 +139,17 @@ $room-color-exhibit: #ed1e24;
       @include caption;
       background-color: $room-color-architecture;
     }
+    .mobile,
     .tools {
       @include caption;
       background-color: $room-color-tools;
     }
+    .serverless,
     .frameworks {
       @include caption;
       background-color: $room-color-frameworks;
     }
+    .performance,
     .security {
       @include caption;
       background-color: $room-color-security;
@@ -157,14 +162,17 @@ $room-color-exhibit: #ed1e24;
       @include caption;
       background-color: $room-color-javascript;
     }
+    .performance,
     .practices-other{
       @include caption;
       background-color: $room-color-practices-other;
     }
+    .cloud,
     .cloud-technology{
       @include caption;
       background-color: $room-color-cloud-technology;
     }
+    .microservices,
     .cloud-infrastructure{
       @include caption;
       background-color: $room-color-cloud-infrastructure;
