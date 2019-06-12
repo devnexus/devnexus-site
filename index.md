@@ -16,7 +16,6 @@ branding:
 
 <div class="row">
 <a name="sponsorlist"></a>
-<h1 class="featured-header"> THANK YOU 2019 SPONSORS</h1>    
       <div class="featured-header">
         <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2020?</a>
       </div>
