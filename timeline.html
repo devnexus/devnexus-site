@@ -1,9 +1,31 @@
 ---
 permalink: /timeline
 layout: page
+dates:
+- day: July 1
+  summary: 2020 Kickoff
+- day: September 1
+  summary: Begin Acceptance
+- day: October 1
+  summary: CFP Close
+- day: November 1
+  summary: Schedule Announced
+- day: January 1
+  summary: Late Registration
+- day: February 20
+  summary: Workshop Day
+- day: February 21
+  summary: Main Event
+- day: February 22
+  summary: Main Event
 ---
 <section id="timeline">
-   <div class="tlevent tlleft">
+{% for item in page.dates %}
+   {% capture thecycle %} {% cycle 'tlleft', 'tlright'%} {% endcapture %}
+   <div class="tlevent {{thecycle}}">
+      <div>{{item.day}}</div>
+      <div>{{item.summary}}</div>
    </div>   
+{% endfor %}
 </section>
 
