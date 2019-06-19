@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 19-21 2020
 registration:
-  text: Call for Papers opens July 1
+  text: CALL FOR PAPERS/REGISTRATION OPENS JULY 1
   status: disabled
   link:
 branding:
