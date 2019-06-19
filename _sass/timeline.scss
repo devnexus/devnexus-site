@@ -27,7 +27,7 @@
    &:after {
      content: '';
      position: absolute;
-     width: 6px;
+     width: 3px;
      background-color: white;
      top: 0;
      bottom: 0;
@@ -35,7 +35,7 @@
      margin-left: -3px;
    }
  .tlevent {
-   padding: 10px 40px;
+   padding: 10px 60px;
    position: relative;
    background-color: inherit;
    width: 50%;
@@ -46,36 +46,42 @@
  .tldate {
    left: 50%;
    &:after {
-     left: -16px;
+     left: -18px;
    }	   
  }	 
 
- .tlleft {
+ .left {
    left: 0;
    &:before {
      @include card-pointer;	   
-     right: 30px;
+     right: 50px;
      border-width: 10px 0 10px 10px;
      border-color: transparent transparent transparent white;
    }
  }
- .tlright {
+ .right {
    left: 50%;
    &:before {
      @include card-pointer;	   
-     left: 30px;
+     left: 50px;
      border-width: 10px 10px 10px 0;
      border-color: transparent white transparent transparent;
     }
     &:after {
-      left: -16px;	    
+      left: -18px;	    
     }
   }   
-  .tldetail{
-     padding: 20px 30px;
+  .detail{
+     padding: 10px 10px;
      background-color: white;
      position: relative;
      border-radius: 6px;
+     div {
+        padding: 5px;
+     }
+     .title {
+        font-weight: bold;
+     }	
   }
  
 }
