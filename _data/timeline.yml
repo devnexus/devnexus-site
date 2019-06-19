@@ -1,6 +1,3 @@
----
-permalink: /timeline
-layout: page
 dates:
 - day: "July 1 - 2020 Kickoff"
   summary: "Open Call for Papers, Sponsor Sales, Super Early Registration"
@@ -18,16 +15,3 @@ dates:
   summary: "Main Event"
 - day: "February 21"
   summary: "Main Event"
----
-<section id="timeline">
-{% for item in page.dates %}
-   {% capture thecycle %} {% cycle 'left', 'right'%} {% endcapture %}
-   <div class="tlevent {{thecycle}}">
-      <div class="detail">	   
-        <div class="title">{{item.day}}</div>
-        <div>{{item.summary}}</div>
-      </div>
-   </div>   
-{% endfor %}
-</section>
-

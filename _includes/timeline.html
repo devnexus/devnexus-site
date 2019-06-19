@@ -1,17 +1,12 @@
+<section id="timeline">
+{% for item in site.data.timeline.dates %}
+   {% capture thecycle %} {% cycle 'left', 'right'%} {% endcapture %}
+   <div class="tlevent {{thecycle}}">
+      <div class="detail">	   
+        <div class="title">{{item.day}}</div>
+        <div>{{item.summary}}</div>
+      </div>
+   </div>   
+{% endfor %}
+</section>
 
-<div data-v-bd89d464="" class="v-timeline-item theme--light">
-   <div class="v-timeline-item__dot v-timeline-item__dot--large">
-      <div class="v-timeline-item__inner-dot black"></div>
-  </div>
-  <div class="v-timeline-item__body"> 
-     <div data-v-bd89d464="" class="elevation-2 v-card v-sheet theme--light">
-        <div data-v-bd89d464="" class="v-card__title headline">2019 Kickoff</div>
-        <div data-v-bd89d464="" class="v-card__text">
-            <h3 data-v-bd89d464="">Call for Papers, super early bird ticket sales, sponsor sales, scholarship program all open</h3>
-        </div>
-     </div>
-  </div>
-  <div class="v-timeline-item__opposite">
-     <span data-v-bd89d464=""><h1 data-v-bd89d464="" class="time-line-date">March 1</h1></span>
-  </div>
- </div>
