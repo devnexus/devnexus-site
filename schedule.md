@@ -118,7 +118,7 @@ layout: info-fluid
 				<a href="{{afterparty.url}}">{{afterparty.title | escape}}</a>
 				<br/>
 			<span class="small pull-right">
-				 Exhibition Hall
+			   427 Edgewood Ave. SE Atlanta GA 30312
 			</span>
 	  </div>
 </div>
