@@ -6,7 +6,7 @@ registration:
   status: disabled
   link:
 branding:
-  img: /assets/img/dev2020.png
+  img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 ---
 
