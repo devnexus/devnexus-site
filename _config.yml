@@ -3,7 +3,7 @@ safe: true
 exclude: ['_presite_plugins']
 title: DevNexus 2020
 timezone: UTC
-active-header: navigation-post-show.html
+active-header: navigation-before-cfp.html
 registration: open
 collections:
   speakers:
