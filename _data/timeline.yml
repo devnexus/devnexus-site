@@ -1,17 +1,17 @@
 dates:
-- day: "July 1 - 2020 Kickoff"
-  summary: "Open Call for Papers, Sponsor Sales, Super Early Registration"
-- day: "September 1"
-  summary: "Begin Speaker Acceptance, Early Bird Registration"
-- day: "October 1"
-  summary: "CFP Closes! (but you've already submitted right?)"
-- day: "November 1"
-  summary: "Schedule Announced"
-- day: "January 1"
-  summary: "Late Registration, prices jump!"
-- day: "February 19"
-  summary: "Workshop Day"
-- day: "February 20"
-  summary: "Main Event"
-- day: "February 21"
-  summary: "Main Event"
+  - day: July 1 - 2020 Kickoff
+    summary: 'Open Call for Papers, Sponsor Sales, Early Registration'
+  - day: September 1
+    summary: 'Begin Speaker Acceptance,'
+  - day: October 1
+    summary: CFP Closes! (but you've already submitted right?)
+  - day: November 1
+    summary: Schedule Announced
+  - day: December 18
+    summary: 'Late Registration, prices jump!'
+  - day: February 19
+    summary: Workshop Day
+  - day: February 20
+    summary: Main Event
+  - day: February 21
+    summary: Main Event
