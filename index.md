@@ -9,9 +9,9 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 ---
-<div class="featured-header">
-  <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Is Open</a></h1>
-</div>
+  <div class="featured-header">
+    <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Is Open</a></h1>
+  </div>
 
 {% include {{ site.active-header }} %}
 
