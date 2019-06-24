@@ -43,13 +43,6 @@
      @include timeline-dot;
    }
  }
- .tldate {
-   left: 50%;
-   &:after {
-     left: -18px;
-   }	   
- }	 
-
  .left {
    left: 0;
    &:before {
@@ -83,5 +76,32 @@
         font-weight: bold;
      }	
   }
- 
+ @media screen and (max-width: 450px) {
+   &:after { 
+     left: 10%;
+   }
+  .right {
+      left: 0%;
+    &:after {
+	left: 18px;
+    }
+   }
+   .left {
+       left: 0%;
+       &:after {
+	 left: 18px;
+       }
+   }
+   .tlevent {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    &:before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+     }
+   }
+  }
 }

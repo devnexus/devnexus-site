@@ -21,7 +21,7 @@ branding:
       </div>
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
-<div class="row">
+<div>
 <a name="timeline"></a>
 {% include timeline.html %}
 </div>
