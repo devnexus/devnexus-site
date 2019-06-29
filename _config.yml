@@ -26,7 +26,7 @@ collections:
     output: true
     permalink: /:collection/:path
 email: info@ajug.org
-description: SouthEast's largest developer conference.
+description: Largest Java Conference in the USA.
 baseurl:
 url:
 uploads_dir: "/uploads"
