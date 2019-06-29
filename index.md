@@ -2,8 +2,8 @@
 layout: home
 dates: Feb 19-21 2020
 registration:
-  text: CALL FOR PAPERS/REGISTRATION OPENS JULY 1
-  status: disabled
+  text: REGISTER FOR EARLY BIRD PASS HERE
+  status: enabled
   link:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
