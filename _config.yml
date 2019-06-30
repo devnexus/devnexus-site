@@ -3,7 +3,7 @@ safe: true
 exclude: ['_presite_plugins']
 title: DevNexus 2020
 timezone: UTC
-active-header: navigation-post-show.html
+active-header: navigation-before-cfp.html
 registration: open
 collections:
   speakers:
@@ -26,13 +26,13 @@ collections:
     output: true
     permalink: /:collection/:path
 email: info@ajug.org
-description: SouthEast's largest developer conference.
+description: Largest Java Conference in the USA.
 baseurl:
 url:
 uploads_dir: "/uploads"
 links:
-   cfp: https://cfp.connectevents.io/en/dn2020/cfp/session/new
-   register: https://tickets.connectevents.io/events/devnexus2020/
+   cfp: https://cfp.devnexus.com/en/dn2020/cfp/session/new
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2020/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
 markdown: kramdown

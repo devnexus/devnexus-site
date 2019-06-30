@@ -1,0 +1,107 @@
+@mixin timeline-dot {
+     content: '';
+     position: absolute;
+     width: 35px;
+     height: 35px;
+     right: -17px;
+     background-color: #f6921e;
+     border: 4px solid white;
+     top: 15px;
+     border-radius: 50%;
+     z-index: 1;
+}
+@mixin card-pointer {
+     content: " ";
+     height: 0;
+     position: absolute;
+     top: 22px;
+     width: 0;
+     z-index: 1;
+     border: medium solid white;
+}
+#timeline {
+   position: relative;
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: black;
+   &:after {
+     content: '';
+     position: absolute;
+     width: 3px;
+     background-color: white;
+     top: 0;
+     bottom: 0;
+     left: 50%;
+     margin-left: -3px;
+   }
+ .tlevent {
+   padding: 10px 60px;
+   position: relative;
+   background-color: inherit;
+   width: 50%;
+   &:after {
+     @include timeline-dot;
+   }
+ }
+ .left {
+   left: 0;
+   &:before {
+     @include card-pointer;	   
+     right: 50px;
+     border-width: 10px 0 10px 10px;
+     border-color: transparent transparent transparent white;
+   }
+ }
+ .right {
+   left: 50%;
+   &:before {
+     @include card-pointer;	   
+     left: 50px;
+     border-width: 10px 10px 10px 0;
+     border-color: transparent white transparent transparent;
+    }
+    &:after {
+      left: -18px;	    
+    }
+  }   
+  .detail{
+     padding: 10px 10px;
+     background-color: white;
+     position: relative;
+     border-radius: 6px;
+     div {
+        padding: 5px;
+     }
+     .title {
+        font-weight: bold;
+     }	
+  }
+ @media screen and (max-width: 450px) {
+   &:after { 
+     left: 10%;
+   }
+  .right {
+      left: 0%;
+    &:after {
+	left: 18px;
+    }
+   }
+   .left {
+       left: 0%;
+       &:after {
+	 left: 18px;
+       }
+   }
+   .tlevent {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    &:before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+     }
+   }
+  }
+}

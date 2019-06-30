@@ -1,0 +1,12 @@
+<section id="timeline">
+{% for item in site.data.timeline.dates %}
+   {% capture thecycle %} {% cycle 'left', 'right'%} {% endcapture %}
+   <div class="tlevent {{thecycle}}">
+      <div class="detail">	   
+        <div class="title">{{item.day}}</div>
+        <div>{{item.summary}}</div>
+      </div>
+   </div>   
+{% endfor %}
+</section>
+
