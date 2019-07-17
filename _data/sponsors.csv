@@ -1,5 +1,4 @@
 name,sponsorlevel,logo_image,home_page
-Delta,silver,/assets/img/delta.001.jpeg,https://www.delta.com/us/en/careers/overview
 Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
 Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
@@ -8,6 +7,7 @@ Clever Cloud,,/assets/img/clevercloud.001.jpeg,https://www.clever-cloud.com/en/
 Confluent,,/uploads/confluent-001.jpeg,https://www.confluent.io/
 CSI,,/assets/img/CSI.001.jpeg,https://thecsicompanies.com/
 DATADOG,,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
+Delta,silver,/assets/img/delta.001.jpeg,https://www.delta.com/us/en/careers/overview
 Devnexus,,/assets/img/dev.001.jpeg,https://devnexus.com/
 Daugherty Business Solutions,,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
 Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com/
