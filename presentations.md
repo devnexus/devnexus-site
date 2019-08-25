@@ -4,7 +4,6 @@ permalink: /presentations/index.html
 tracks:
 - keynote
 - workshop
-- ggm
 - unobtanium
 - core-java
 - java-platform
