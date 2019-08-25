@@ -9,10 +9,11 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 ---
+{% if site.cfp-is-open %}
   <div class="featured-header">
     <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Is Open</a></h1>
   </div>
-
+{% endif %}
 {% include {{ site.active-header }} %}
 
 {% include marketing-video.html %}
