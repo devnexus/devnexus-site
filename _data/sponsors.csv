@@ -1,4 +1,5 @@
 name,sponsorlevel,logo_image,home_page
+AdoptOpenJDK,silver,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
 Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
@@ -7,6 +8,7 @@ Clever Cloud,,/assets/img/clevercloud.001.jpeg,https://www.clever-cloud.com/en/
 Confluent,,/uploads/confluent-001.jpeg,https://www.confluent.io/
 CSI,,/assets/img/CSI.001.jpeg,https://thecsicompanies.com/
 DATADOG,,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
+Delta,silver,/assets/img/sponsors/delta2.jpeg,https://www.delta.com/us/en/careers/overview
 Devnexus,,/assets/img/dev.001.jpeg,https://devnexus.com/
 Daugherty Business Solutions,,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
 Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com/
@@ -17,8 +19,10 @@ Hazelcast,,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
 Hedera Hashgraph,,/assets/img/hedera.001.jpeg,https://www.hedera.com/
 Heroku,,/uploads/heroku-001.png,http://www.heroku.com/java
 HYPEPOTAMUS,,/assets/img/hype.001.jpeg,https://hypepotamus.com/
+ICE,silver,/assets/img/ICE.001.jpeg,https://www.intercontinentalexchange.com/about
 IBM,,/assets/img/IBM.001.jpeg,https://developer.ibm.com/
 JakartaEE,,/assets/img/jee.001.jpeg,https://jakarta.ee/
+JETBRAINS,silver,/assets/img/jetbrains.001.png,https://www.jetbrains.com/
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 Manhattan Associates,,/assets/img/MahnattanAssocs.001.jpeg,https://www.manh.com/
@@ -31,6 +35,7 @@ Okta,,/assets/img/okta.001.jpeg,https://www.okta.com/
 OneTrust,,/assets/img/onetrust.001.jpeg,https://www.onetrust.com/
 Oracle,,/uploads/oracle-001.png,https://developer.oracle.com/home
 Oracle,,/assets/img/oracle.001.jpeg,https://developer.oracle.com/home
+OSI,silver,/assets/img/OSIw.001.png,https://opensource.org/
 OverOps,,/assets/img/overops.001.jpeg,https://www.overops.com/
 Payara,,/assets/img/payara.001.jpeg,https://www.payara.fish/
 Pivotal,,/uploads/pivotal-001.jpeg,https://pivotal.io/
