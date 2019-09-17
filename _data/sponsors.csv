@@ -1,7 +1,9 @@
 name,sponsorlevel,logo_image,home_page
+AJUG,community,/assets/img/ajug.001.jpeg,https://ajug.org/
 AdoptOpenJDK,silver,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
-Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com/
+Azul Systems,silver,/uploads/azul.001.jpeg,https://www.azul.com
+Bellsoft,silver,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
 bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
 Clever Cloud,,/assets/img/clevercloud.001.jpeg,https://www.clever-cloud.com/en/
@@ -11,7 +13,8 @@ DATADOG,,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
 Delta,silver,/assets/img/sponsors/delta2.jpeg,https://www.delta.com/us/en/careers/overview
 Devnexus,,/assets/img/dev.001.jpeg,https://devnexus.com/
 Daugherty Business Solutions,,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
-Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com/
+Eclipse Foundation,silver,/assets/img/eclipse.001.jpeg,https://www.eclipse.org/
+Fusion Reactor,silver,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com
 GitHub,,/assets/img/github.001.jpeg,https://github.com/
 GSquared,,/assets/img/Gsquared.001.jpeg,http://www.gsquaredgroup.com/
 Hazelcast,,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
@@ -37,8 +40,9 @@ Oracle,,/uploads/oracle-001.png,https://developer.oracle.com/home
 Oracle,,/assets/img/oracle.001.jpeg,https://developer.oracle.com/home
 OSI,silver,/assets/img/OSIw.001.png,https://opensource.org/
 OverOps,,/assets/img/overops.001.jpeg,https://www.overops.com/
-Payara,,/assets/img/payara.001.jpeg,https://www.payara.fish/
-Pivotal,,/uploads/pivotal-001.jpeg,https://pivotal.io/
+Payara2,lunch,/assets/img/payara2.001.jpeg,https://www.payara.fish/
+Payara,silver,/assets/img/payara.001.jpeg,https://www.payara.fish
+Pivotal,gold,/uploads/pivotal-001.jpeg,https://pivotal.io
 RedHat,,/assets/img/RH.001.jpeg,https://developers.redhat.com/
 RingCentral,,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
 Sentry,,/assets/img/sentry.001.jpeg,https://sentry.io/welcome/
@@ -46,9 +50,9 @@ Slalom,,/uploads/slalom-001.jpeg,https://www.slalom.com/
 Snyk,,/assets/img/snyk.001.jpeg,https://snyk.io/
 Sonatype,,/assets/img/sonatypenew.001.jpeg,https://www.sonatype.com/
 Sonatype,,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
-Technologists of Color,,/assets/img/toc.001.jpeg,http://www.techsofcolor.org/
+Technologists of Color,community,/assets/img/toc.001.jpeg,http://www.techsofcolor.org
 Technology Association of Georgia,,/assets/img/tag.001.jpeg,https://www.tagonline.org/
-The Home Depiot,,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
+The Home Depiot,platinum,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
 Thompson Technologies,,/assets/img/tt.001.jpeg,https://thompsontechnologies.com/
 ThoughtWorks,,/assets/img/TWks.001.jpeg,https://www.thoughtworks.com/
 Tomitribe,,/assets/img/tribe.001.jpeg,https://www.tomitribe.com/
@@ -57,4 +61,4 @@ twilio,,/assets/img/twilio.001.jpeg,https://www.twilio.com/
 Vaadin,,/assets/img/vaadin2.png,https://vaadin.com/
 VMWare,,/assets/img/vmware.001.jpeg,https://www.vmware.com/
 Women in Technology,,/assets/img/wit.001.jpeg,https://www.mywit.org/
-WWC,,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
+WWC,community,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
