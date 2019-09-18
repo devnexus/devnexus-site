@@ -51,7 +51,7 @@ A316:
 workshop:
   title: Workshops
   trackid: 139
-  trackkey: workshop
+  trackkey: full day workshops (wednesday only)
   room: TBD
 core-java:
   title: Core Java
@@ -89,9 +89,9 @@ security:
   trackkey: security
   room: Ballroom C
 web:
-  title: Web
+  title: Web and Front-end
   trackid: 124
-  trackkey: web
+  trackkey: web and front-end
   room: 102
 javascript:
   title: Javascript
@@ -111,7 +111,7 @@ cloud-technology:
 cloud-infrastructure:
   title: Cloud Infrastructure
   trackid: 119
-  trackkey: cloud infrastructure (microservices and serverless)
+  trackkey: cloud infrastructure
   room: Ballroom B
 agile:
   title: Agile
