@@ -4,6 +4,7 @@ order: 9
 first_name: Caitlin
 last_name: Mahoney
 company:
+twitter: caitmm43
 linkedin: caitmahoney43
 layout: bio
 ---
