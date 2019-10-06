@@ -19,7 +19,7 @@ branding:
 
 {% include marketing-video.html %}
 
-{% include workshops_promo.html %}
+{% include workshops_promo.html %} 
 
 <div class="row">
 <a name="sponsorlist"></a>
