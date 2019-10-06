@@ -1,0 +1,7 @@
+{% assign workshops = site.events | where:"track","full day workshops (wednesday only)" %}
+<div class="row">
+    <h1 class="featured-header">WORKSHOPS</h1>
+     {% include event_thumb_speaker_background.html collection=workshops %}
+     </div>
+     <a href="/presentations" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
+ </div>

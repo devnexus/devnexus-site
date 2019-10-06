@@ -19,6 +19,8 @@ branding:
 
 {% include marketing-video.html %}
 
+{% include workshops_promo.html %}
+
 <div class="row">
 <a name="sponsorlist"></a>
       <div class="featured-header">
