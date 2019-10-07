@@ -1040,10 +1040,8 @@
   hd_avatar_path:  https://cfp.devnexus.com/system/avatars/2247/large/radcortez-high.jpg?1565911635
   name: Roberto Cortez
 '2248':
-  avatar_path:
-    https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
-  hd_avatar_path
-    https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
+  avatar_path: https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
   name: Gene Gotimer
 '2254':
   avatar_path: 'https://cfp.devnexus.com'
