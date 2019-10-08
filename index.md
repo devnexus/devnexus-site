@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 19-21 2020
 registration:
-  text: REGISTER FOR EARLY BIRD PASS HERE
+  text: REGISTER NOW
   status: enabled
   link:
 branding:
