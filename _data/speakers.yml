@@ -40,8 +40,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/816/large/icon.png?1565420763
   name: Steve Poole
 1037:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1037/large/brian_oco.jpg?1565333544
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1037/large/brian_oco.jpg?1565333544
+  avatar_path: /uploads/brianv.001.jpeg
+  hd_avatar_path: /uploads/brianv.001.jpeg
   name: Brian Vermeer
 716:
   avatar_path: https://cfp.devnexus.com/system/avatars/716/large/ezl_bitso_smallcrop.png?1562256509
@@ -323,8 +323,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/2169/large/hanno-at-vda-2019-cropped-filtered.jpg?1564587546
   name: Hanno Embregts
 1149:
-  avatar_path: /uploads/blevins.jpg
-  hd_avatar_path: /uploads/blevins.jpg
+  avatar_path: /blevins.jpg
+  hd_avatar_path: /blevins.jpg
   name: David Blevins
 1438:
   avatar_path: https://cfp.devnexus.com
