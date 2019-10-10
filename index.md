@@ -2,13 +2,14 @@
 layout: home
 dates: Feb 19-21 2020
 registration:
-  text: REGISTER NOW
+  text: REGISTER HERE
   status: enabled
   link:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 ---
+
 {% if site.cfp-is-open %}
   <div class="featured-header">
     <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Is Open</a></h1>
@@ -32,3 +33,4 @@ branding:
 <a name="timeline"></a>
 {% include timeline.html %}
 </div>
+
