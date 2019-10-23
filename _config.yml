@@ -3,19 +3,19 @@ safe: true
 exclude: ['_presite_plugins']
 title: DevNexus 2020
 timezone: UTC
-active-header: navigation-before-cfp.html
+active-header: navigation_sessions.html
 registration: open
 collections:
   speakers:
-    title: Speakers 2019
+    title: Speakers 2020
     output: true
     permalink: /:collection/:path
   events:
-     title: Presentations 2019
+     title: Presentations 2020
      output: true
      permalink: /presentations/:path/
   event-instructions:
-     title: Workshop Prep 2019
+     title: Workshop Prep 2020
      output: true
      permalink: /presentations/:path/instructions
   tracks:

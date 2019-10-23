@@ -8,21 +8,33 @@ module Jekyll
           prog.command(:cfp) do |c|
             c.action do |args, options|
               if("events".eql?(args[0]))
-                process_event_data()
+		 process_event_data(args[1])
               elsif("schedule".eql?(args[0]))
-                process_schedule_data()
+	         process_schedule_data(args[1])
               else
-                Jekyll.logger.info("I do not understand #{args}")
+                Jekyll.logger.info(" supported choices events or schedule:  #{args}")
               end
               persist_speakers()
             end
           end
         end
-        def process_schedule_data()
+	def fetch_data(path)
+           uri = URI(path)
+           return Net::HTTP.get(uri)
+        end
+	def read_data(path)
+	   return File.read(path)
+        end
+	def datasrc(path, format = "file")
+	   if ("fetch".eql?(format))
+	      return fetch_data(path)
+           else	      
+              return read_data(path)
+	   end
+	end
+        def process_schedule_data(path)
             url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
-            uri = URI(url)
-            #schedule_data_file = File.read("_cfp/full_schedule.json")
-            schedule_data_file = Net::HTTP.get(uri)
+            schedule_data_file = datasrc(path, "file") 
             _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
             #Jekyll.logger.info(_data_in)
             days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
@@ -31,14 +43,14 @@ module Jekyll
             File.write("_data/schedule.yml", _schedule_yaml)
             #now we can print all the people
         end
-        def process_event_data()
-          # event_data_file = File.read("_cfp/promo_events.json")
+        def process_event_data( path )
           url = 'https://cfp.devnexus.com/en/dn2019/public/promo_events.json'
-          uri = URI(url)
-          event_data_file = Net::HTTP.get(uri)
+          event_data_file = datasrc(path, "file")
+	  #Jekyll.logger.info(event_data_file)
           event_data = JSON.parse(event_data_file)
           #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
           events = event_data['events']
+	  #puts(events)
           Jekyll.logger.info("Reading #{events.length} events from cfp")
           process_event_collection(events);
         end
@@ -74,7 +86,7 @@ module Jekyll
          write_item("events", event_header, event['abstract'])
         end
         def filter_attributes(data, *props)
-          Jekyll.logger.info(data)
+          #Jekyll.logger.info(data)
            return data.map{|p| p.select{ |k,v| props.include?(k) }}
         end
         def write_item(collection, item, abstract)
@@ -87,8 +99,12 @@ module Jekyll
         end
 
         def persist_speakers()
-          stored_speaker_file = File.read("_data/speakers.yml")
-          stored_speaker_data = YAML.load(stored_speaker_file)
+          stored_speaker_file = File.read("_data/speakers.yml") 
+	  #Jekyll.logger.info("speakers file #{stored_speaker_file}")
+          stored_speaker_data = YAML.load(stored_speaker_file)	  
+	  if (stored_speaker_data == nil) 
+             stored_speaker_data = Hash.new
+          end			  
           for person in @speakers.data() do
             abstract = person[1].delete 'abstract'
             public_items = person[1].select{ |k,v| ["full_public_name", "id", "twitter_name", "events"].include?(k)}
