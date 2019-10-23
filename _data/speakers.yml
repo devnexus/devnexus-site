@@ -132,8 +132,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1500/large/AdarshShah-1400pixels.jpg?1537059281
   name: Adarsh Shah
 1037:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1037/large/1569586529926_fact_1.jpg?1570377740
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1037/large/1569586529926_fact_1.jpg?1570377740
+  avatar_path: "/uploads/brianv.001.jpeg"
+  hd_avatar_path: "/uploads/brianv.001.jpeg"
   name: Brian Vermeer
 439:
   avatar_path: https://cfp.devnexus.com/system/avatars/439/large/mike-headshot-2.png?1544211553
@@ -260,8 +260,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/688/large/15035732_1310991748965002_2689404947618856960_n.jpg?1503360504
   name: Todd Sharp
 1078:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1078/large/kousen_photo_jun2018.jpg?1551796842
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1078/large/kousen_photo_jun2018.jpg?1551796842
+  avatar_path: "/uploads/kousen.jpeg"
+  hd_avatar_path: "/uploads/kousen.jpeg"
   name: Kenneth Kousen
 2248:
   avatar_path: https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
@@ -288,8 +288,8 @@
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/882/large/sebastian4.jpg?1536818345
   name: Sebastian Daschner
 915:
-  avatar_path: https://cfp.devnexus.com/system/avatars/915/large/edson_yanaga.jpg?1507757067
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/915/large/edson_yanaga.jpg?1507757067
+  avatar_path: "/EY.png"
+  hd_avatar_path: "/EY.png"
   name: Edson Yanaga
 817:
   avatar_path: https://cfp.devnexus.com/system/avatars/817/large/Emily-photo.png?1565795958
@@ -485,7 +485,7 @@
   name: Sean M Phillips
 1008:
   avatar_path: https://cfp.devnexus.com/system/avatars/1008/large/venkat.001.jpeg?1510755501
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1008/large/venkat.001.jpeg?1510755501
+  hd_avatar_path: "/uploads/venkat.jpeg"
   name: Venkat Subramaniam
 901:
   avatar_path: https://cfp.devnexus.com/system/avatars/901/large/profil1.png?1507666487
@@ -522,15 +522,11 @@
 905:
   avatar_path: https://avatars2.githubusercontent.com/u/5373549?s=460&v=4
   name: Rustam Mehmandarov
-1083:  
-  avatar_path: https://cfp.devnexus.com/system/avatars/1083/large/247032_10150611073575580_4897903_n.jpg?1511136831
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1083/large/247032_10150611073575580_4897903_n.jpg?1511136831
-  name: Craig Walls
 897:
   avatar_path: https://pbs.twimg.com/profile_images/627871640/photo_joel_tosi.jpg_2084533766_400x400.jpg
   name: Joel Tosi
 1149:
-  avatar_path: /blevins.jpg
+  avatar_path: "/blevins.jpg"
   name: David Blevins
 2168:
   avatar_path: "/JJAsghar.jpeg"
@@ -539,27 +535,11 @@
 843:
   avatar_path: https://pbs.twimg.com/profile_images/2704139144/c859ec9be32acb8b4b1e7724b0dce608_400x400.png
   name: Freddy Guime
-1037:
-  avatar_path: "/uploads/brianv.001.jpeg"
-  hd_avatar_path: "/uploads/brianv.001.jpeg"
-  name: Brian Vermeer
-1078:
-  avatar_path: "/uploads/kousen.jpeg"
-  hd_avatar_path: "/uploads/kousen.jpeg"
-  name: Kenneth Kousen
-915:
-  avatar_path: "/EY.png"
-  hd_avatar_path: "/EY.png"
-  name: Edson Yanaga
-2248:  
-  avatar_path: https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/2248/large/GeneGotimer_white_1000.jpg?1565915736
-  name: Gene Gotimer
 1058:
   avatar_path: "/NS.png"
   hd_avatar_path: "/NS.png"
   name: Nathaniel Schutta
-1008:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1008/large/venkat.001.jpeg?1510755501
-  hd_avatar_path: "/uploads/venkat.jpeg"
-  name: Venkat Subramaniam
+1434:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1434/large/Bio2.jpg?1536189679
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1434/large/Bio2.jpg?1536189679
+  name: Gerald Venzl
