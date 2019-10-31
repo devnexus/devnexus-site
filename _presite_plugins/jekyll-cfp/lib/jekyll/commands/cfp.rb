@@ -5,49 +5,60 @@ module Jekyll
       class << self
         def init_with_program(prog)
           @speakers = Speakers.new()
-          prog.command(:cfp) do |c|
+          prog.syntax 
+          pcmd = prog.command(:cfp) do |c|
+            c.syntax "cfp <subcommand> [options]"
+            c.description "ingest cfp data for site content"
+            c.option 'file', '-f FILE', '--file FILE', 'local json data file instead of pulling directly from cfp'
             c.action do |args, options|
-              if("events".eql?(args[0]))
-		 process_event_data(args[1])
-              elsif("schedule".eql?(args[0]))
-	         process_schedule_data(args[1])
+            end
+          end
+          pcmd.command(:events) do |e|
+            url = 'https://cfp.devnexus.com/en/dn2020/public/promo_events.json'
+            e.description "process promo_events.json"
+            e.action do |args, options|
+               if (options['file'])
+                 process_event_data(read_data (options['file']) )
+               else
+                 process_event_data(fetch_data(url))
+               end
+               persist_speakers()
+            end
+          end
+          pcmd.command(:schedule) do |s|
+            s.description "process full_schedule.json"
+            s.action do |args, options|
+              url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
+              if (options['file'])
+                process_schedule_data(read_data (options['file']) )
               else
-                Jekyll.logger.info(" supported choices events or schedule:  #{args}")
+                process_schedule_data(fetch_data(url))
               end
               persist_speakers()
             end
-          end
+          end  
         end
-	def fetch_data(path)
-           uri = URI(path)
-           return Net::HTTP.get(uri)
-        end
-	def read_data(path)
-	   return File.read(path)
-        end
-	def datasrc(path, format = "file")
-	   if ("fetch".eql?(format))
-	      return fetch_data(path)
-           else	      
-              return read_data(path)
-	   end
-	end
-        def process_schedule_data(path)
-            url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
-            schedule_data_file = datasrc(path, "file") 
-            _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
-            #Jekyll.logger.info(_data_in)
-            days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
-            Jekyll.logger.info("Gathered #{days.length} schedule days")
-            _schedule_yaml = YAML.dump(days)
-            File.write("_data/schedule.yml", _schedule_yaml)
-            #now we can print all the people
-        end
-        def process_event_data( path )
-          url = 'https://cfp.devnexus.com/en/dn2019/public/promo_events.json'
-          event_data_file = datasrc(path, "file")
+	  def fetch_data(path)
+      uri = URI(path)
+      return Net::HTTP.get(uri)
+    end
+	  def read_data(path)
+	    return File.read(path)
+    end
+    def process_schedule_data(schedule_data)
+      #
+      schedule_data_file = read_data(schedule_data)
+      _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
+      #Jekyll.logger.info(_data_in)
+      days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
+      Jekyll.logger.info("Gathered #{days.length} schedule days")
+      _schedule_yaml = YAML.dump(days)
+      File.write("_data/schedule.yml", _schedule_yaml)
+      #now we can print all the people
+    end
+   def process_event_data( event_data )
 	  #Jekyll.logger.info(event_data_file)
-          event_data = JSON.parse(event_data_file)
+          event_data = JSON.parse(event_data)
           #workshop_data = event_data['events'].select{|item|"workshop" == item['track']}
           events = event_data['events']
 	  #puts(events)
