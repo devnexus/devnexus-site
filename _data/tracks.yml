@@ -58,6 +58,11 @@ core-java:
   trackid: 113
   trackkey: core java
   room: 104
+open-java:
+  title: Open Java
+  trackid: 113
+  trackkey: open-java
+  room: 104  
 java-platform:
   title: Java Platform
   trackkey: java platform

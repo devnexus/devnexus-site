@@ -28,7 +28,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://cfp.devnexus.com/en/dn2019/public/full_schedule.json'
+              url = 'https://cfp.devnexus.com/en/dn2020/public/full_schedule.json'
               if (options['file'])
                 process_schedule_data(read_data (options['file']) )
               else
@@ -46,10 +46,8 @@ module Jekyll
 	    return File.read(path)
     end
     def process_schedule_data(schedule_data)
-      #
-      schedule_data_file = read_data(schedule_data)
-      _data_in = JSON.parse(schedule_data_file)['schedule']['conference']['days']
-      #Jekyll.logger.info(_data_in)
+      _data_in = JSON.parse(schedule_data)['schedule']['conference']['days']
+      Jekyll.logger.info(_data_in)
       days = _data_in.map{ |d| {}.merge( 'index'=> d['index'], 'events' => collect_rooms(d['rooms'])) }
       Jekyll.logger.info("Gathered #{days.length} schedule days")
       _schedule_yaml = YAML.dump(days)
