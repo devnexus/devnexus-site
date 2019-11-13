@@ -6,6 +6,15 @@ layout: info-fluid
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <div class="row">
 <div class="col-xs-8">
+<h1 class="day"> Wednesday Feb 19</h1>
+<h6>* Workshop Ticket Required</h6>
+<h3>9:00 - 17:00</h3>
+</div>
+ {% assign workshops = site.events | where:"track","full day workshops (wednesday only)" %}
+ {% for event in workshops %}
+ {% include schedule_workshop.html details=event %}
+ {% endfor %}
+<div class="col-xs-8">
 <h1 class="day"> Thursday Feb 20</h1>
 </div>
 {% comment %}
