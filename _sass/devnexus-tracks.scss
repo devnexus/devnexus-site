@@ -1,15 +1,15 @@
 //$room-color-auditorim: #edce1e; //yellow
 $room-color-auditorim: #f6921e;
 $room-color-workshop: #6c7070;
-$room-color-core-java:  #8bbc0f;
-$room-color-java-platform:  #f6921e; //#406F34;
+$room-color-core-java:  #00A566;
+$room-color-java-platform:  #019875; //#406F34;
 $room-color-architecture: #a84617;
-$room-color-tools: #FA7713;
+$room-color-tools: #d46a43;
 $room-color-frameworks: #5b903f;
 $room-color-security: #2a2d7c;
 $room-color-ggm: #0d86e2;
 $room-color-javascript:  #127e9c;
-$room-color-practices-other: #4331e2;
+$room-color-practices-other: #bb671c;
 $room-color-cloud-technology: #8b2246;
 $room-color-cloud-infrastructure: #6328E7;
 $room-color-serverless: #8ec741;
@@ -17,6 +17,8 @@ $room-color-agile: #C30772;
 $room-color-unobtanium: #1668ba;
 $room-color-web: #015351;
 $room-color-exhibit: #ed1e24;
+$room-color-open-java: #2e8856;
+$room-color-jvm-languages: #007a4b;
 
 @mixin caption {
   position: initial;
@@ -95,6 +97,12 @@ $room-color-exhibit: #ed1e24;
   }
   .unobtanium {
     @include room($room-color-unobtanium);
+  }
+  .open-java {
+    @include room($room-color-open-java);
+  }
+  .jvm-languages {
+    @include room($room-color-jvm-languages);
   }
 
 }
@@ -188,5 +196,13 @@ $room-color-exhibit: #ed1e24;
     .unobtanium {
       @include caption;
       background-color: $room-color-unobtanium;
+    }
+    .open-java {
+      @include caption;
+      background-color: $room-color-open-java;
+    }
+    .jvm-languages {
+      @include caption;
+      background-color: $room-color-jvm-languages;
     }
 }

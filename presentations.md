@@ -7,12 +7,14 @@ tracks:
 #- unobtanium
 - core-java
 - java-platform
+- open-java
 - archictecture
 - tools
 - frameworks
+- jvm-languages
+- javascript
 - security
 - web
-- javascript
 - practices-other
 - cloud-technology
 - cloud-infrastructure
