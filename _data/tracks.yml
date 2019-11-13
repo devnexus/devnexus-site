@@ -3,6 +3,12 @@ unobtanium:
   trackid: 00
   trackkey: unobtanium
   room: 114
+ggm:
+  title: 2GM
+  trackkey: 2gm
+  trackid: 125
+  room: 115
+# admin tracks  
 lunch:
   title: Lunch
   trackid: 00
@@ -37,7 +43,7 @@ keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote
-  room: Exhibition Hall D
+  room: Keynote Room
 A303:
   title: Workshops
   trackid: 00
@@ -48,78 +54,82 @@ A316:
   trackid: 00
   room: A316
   trackkey: workshop-a316
+# program tracks
 workshop:
   title: Workshops
   trackid: 139
   trackkey: full day workshops (wednesday only)
   room: TBD
-core-java:
-  title: Core Java
-  trackid: 113
-  trackkey: core java
-  room: 104
-open-java:
-  title: Open Java
-  trackid: 113
-  trackkey: open-java
-  room: 104  
-java-platform:
-  title: Java Platform
-  trackkey: java platform
-  trackid: 114
-  room: Exhibition Hall D
-archictecture:
-  title: Architecture
-  trackkey: architecture
-  trackid: 117
-  room: Ballroom A
-tools:
-  title: Tools and Techniques
-  trackkey: tools and techniques
-  trackid: 116
-  room: 106
-ggm:
-  title: 2GM
-  trackkey: 2gm
-  trackid: 125
-  room: 115
-frameworks:
-  title: Frameworks
-  trackid: 115
-  trackkey: frameworks
-  room: Ballroom F
-security:
-  title: Security
-  trackid: 120
-  trackkey: security
-  room: Ballroom C
-web:
-  title: Web and Front-end
-  trackid: 124
-  trackkey: web and front-end
-  room: 102
-javascript:
-  title: Javascript
-  trackid: 121
-  trackkey: javascript
-  room: Ballroom E
-practices-other:
-  title: Practices and Other Tech
-  trackid: 123
-  trackkey: practices and other tech
-  room: 103
-cloud-technology:
-  title: Cloud Technolgy
-  trackid: 118
-  trackkey: cloud technology
-  room: Ballroom D
-cloud-infrastructure:
-  title: Cloud Infrastructure
-  trackid: 119
-  trackkey: cloud infrastructure
-  room: Ballroom B
 agile:
   title: Agile
   trackkey: agile
   trackid: 122
   room: 105
+archictecture:
+  title: Architecture
+  trackkey: architecture
+  trackid: 117
+  room: Ballroom A
+cloud-infrastructure:
+  title: Cloud Infrastructure
+  trackid: 119
+  trackkey: cloud infrastructure
+  room: Ballroom B
+cloud-technology:
+  title: Cloud Technolgy
+  trackid: 118
+  trackkey: cloud technology
+  room: Ballroom D
+core-java:
+  title: Core Java
+  trackid: 113
+  trackkey: core java
+  room: 104
+frameworks:
+  title: Frameworks
+  trackid: 115
+  trackkey: frameworks
+  room: Ballroom F
+java-platform:
+  title: Java Platform
+  trackkey: java platform
+  trackid: 114
+  room: Exhibition Hall D
+javascript:
+  title: Javascript
+  trackid: 121
+  trackkey: javascript
+  room: Ballroom E
+jvm-languages:
+  title: JVM Languages
+  trackid: 121
+  trackkey: jvm languages
+  room: Ballroom E
+open-java:
+  title: Open Java
+  trackid: 113
+  trackkey: open java
+  room: 104 
+practices-other:
+  title: Practices and Other Tech
+  trackid: 123
+  trackkey: practices and other tech
+  room: 103
+security:
+  title: Security
+  trackid: 120
+  trackkey: security
+  room: Ballroom C
+tools:
+  title: Tools and Techniques
+  trackkey: tools and techniques
+  trackid: 116
+  room: 106
+web:
+  title: Web and Front-end
+  trackid: 124
+  trackkey: web and front-end
+  room: 102
+
+
+

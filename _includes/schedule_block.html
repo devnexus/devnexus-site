@@ -25,13 +25,18 @@
 {% endif %}
 
 {% if open-java %}
-{% assign event = site.events | where: "slug", java-platform.id | first %}
+{% assign event = site.events | where: "slug", open-java.id | first %}
 {% include schedule_event.html details=event room="open-java" track=include.track %}
 {% endif %}
 
 {% if javascript %}
 {% assign event = site.events | where: "slug", javascript.id | first %}
 {% include schedule_event.html details=event room="javascript" track=include.track %}
+{% endif %}
+
+{% if jvmlang %}
+{% assign event = site.events | where: "slug", jvmlang.id | first %}
+{% include schedule_event.html details=event room="jvm-languages" track=include.track %}
 {% endif %}
 
 {% if practices %}
