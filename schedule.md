@@ -3,6 +3,7 @@ layout: info-fluid
 ---
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
+{% assign day2_other = day2.events | where: "track", "admin" | sort: "start" %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 <div class="row">
 <div class="col-xs-8">
@@ -34,53 +35,40 @@ layout: info-fluid
 {% endcomment %}
 </div>
 
-{% comment %}
-{% assign day2_other = day2.events | where: "track", "Other" | sort: "start" %}
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
-
-{% assign day2_wit = site.events | where: "track", "wit" | first %}
-<h3>8:00</h3>
-{% include schedule_event.html details=day2_wit room="wit"%}
-
-
-{% assign day2_0900 = day2.events | where: "start", "09:00" | first %}
-{% assign day2_keynote= site.events | where: "slug", day2_0900.id | first %}
-<h3>9:00</h3>
-{% include schedule_event.html details=day2_keynote room="keynote" %}
-{% endcomment %}
+{% include schedule_break.html details=day2_other item=1 room="keynote" %}
+{% include schedule_break.html details=day2_other item=2 room="keynote" %}
+{% include schedule_break.html details=day2_other item=3 room="break" %}
 
 {% assign day2_10 = day2.events | where: "start", "10:20" %}
 <h3>10:20</h3>
 {% include schedule_block.html events=day2_10 %}
 
-{% comment %}{% include schedule_break.html details=day2_other item=1 room="break" %}{% endcomment %}
-
 {% assign day2_11= day2.events | where: "start", "11:20" %}
 <h3>11:20</h3>
 {% include schedule_block.html events=day2_11 %}
 
-{% comment %}{% include schedule_break.html details=day2_other item=2 room="lunch" %}{% endcomment %}
+{% include schedule_break.html details=day2_other item=4 room="lunch" %}
 
 {% assign day2_13= day2.events | where: "start", "13:10" %}
 <h3>13:10</h3>
 {% include schedule_block.html events=day2_13 %}
 
-{% comment %}{% include schedule_break.html details=day2_other item=3 room="break" %}{% endcomment %}
-
 {% assign day2_14= day2.events | where: "start", "14:10" %}
 <h3>14:10</h3>
 {% include schedule_block.html events=day2_14 %}
 
-{% comment %}{% include schedule_break.html details=day2_other item=4 room="break" %} {% endcomment %}
+{% include schedule_break.html details=day2_other item=5 room="break" %}
 
 {% assign day2_15= day2.events | where: "start", "15:30" %}
 <h3>15:30</h3>
 {% include schedule_block.html events=day2_15 %}
 
-{% comment %}{% include schedule_break.html details=day2_other item=5 room="break" %}{% endcomment %}
-{% comment %}
+{% include schedule_break.html details=day2_other item=6 room="keynote" %}
+{% include schedule_break.html details=day2_other item=7 room="keynote" %}
+{% include schedule_break.html details=day2_other item=8 room="break" %}
 
-{% assign day2_1710 = day2.events | where: "start", "17:10" | first %}
+{% comment %}
 {% assign day2_k2= site.events | where: "slug", day2_1710.id | first %}
 <h3>17:10</h3>
 {% include schedule_event.html details=day2_k2 room="keynote" %}
