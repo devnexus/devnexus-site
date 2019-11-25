@@ -14,6 +14,14 @@ layout: info-fluid
  {% for event in workshops %}
  {% include schedule_workshop.html details=event %}
  {% endfor %}
+
+ {% assign wed_other = day0.events | where:"track","admin" %}
+ {% for event in wed_other %}
+ <h3>{{event.start}}</h3>
+ {% assign edetails = site.events | where: "slug", event.id | first%}
+ {% include schedule_event.html details=edetails track="community" %}
+ {% endfor %}
+ 
 <div class="col-xs-8">
 <h1 class="day"> Thursday Feb 20</h1>
 </div>
