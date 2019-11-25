@@ -20,6 +20,20 @@ tracks:
 - cloud-infrastructure
 - agile
 ---
+{% comment %}
+{% assign adminevents = site.data.schedule[1].events | concat: site.data.schedule[2].events  %}
+{% assign keynotes = adminevents | where: "room", "Keynote Room" %}
+{% if keynotes %}
+<h1 class="featured-header"><span>— Keynotes —</span></h1>
+<div class="row">
+{% for keyevent in keynotes %}
+{% assign eventdetail = site.events | where: "slug", keyevent.id | first %}
+ {% include presentation_thumb.html details=eventdetail track="keynote" %}
+{% endfor %}
+</div>
+{% endif %}
+{% endcomment %}
+
 {% for track in page.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
