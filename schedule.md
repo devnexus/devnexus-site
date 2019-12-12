@@ -4,8 +4,10 @@ layout: info-fluid
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
 {% assign day2 = site.data.schedule | where: "index", 1  | first %}
 {% assign day2_other = day2.events | where: "track", "admin" | sort: "start" %}
+{% assign day2_keynote = day2.events | where: "track", "Keynote" | sort: "start" %}
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 {% assign day3_other = day3.events | where: "track", "admin" | sort: "start" %}
+{% assign day3_keynote = day3.events | where: "track", "Keynote" | sort: "start" %}
 <div class="row">
 <div class="col-xs-8">
 <h1 class="day"> Wednesday Feb 19</h1>
@@ -38,8 +40,8 @@ layout: info-fluid
 
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 {% include schedule_break.html details=day2_other item=1 room="keynote" %}
-{% include schedule_break.html details=day2_other item=2 room="keynote" %}
-{% include schedule_break.html details=day2_other item=3 room="break" %}
+{% include schedule_keynote.html details=day2_keynote item=0 room="keynote" %}
+{% include schedule_break.html details=day2_other item=2 room="break" %}
 
 {% assign day2_10 = day2.events | where: "start", "10:20" %}
 <h3>10:20</h3>
@@ -49,7 +51,7 @@ layout: info-fluid
 <h3>11:20</h3>
 {% include schedule_block.html events=day2_11 %}
 
-{% include schedule_break.html details=day2_other item=4 room="lunch" %}
+{% include schedule_break.html details=day2_other item=3 room="lunch" %}
 
 {% assign day2_13= day2.events | where: "start", "13:10" %}
 <h3>13:10</h3>
@@ -59,20 +61,27 @@ layout: info-fluid
 <h3>14:10</h3>
 {% include schedule_block.html events=day2_14 %}
 
-{% include schedule_break.html details=day2_other item=5 room="break" %}
+{% include schedule_break.html details=day2_other item=4 room="break" %}
 
 {% assign day2_15= day2.events | where: "start", "15:30" %}
 <h3>15:30</h3>
 {% include schedule_block.html events=day2_15 %}
 
-{% include schedule_break.html details=day2_other item=6 room="keynote" %}
-{% include schedule_break.html details=day2_other item=7 room="keynote" %}
-{% include schedule_break.html details=day2_other item=8 room="happy-hour" %}
+{% include schedule_keynote.html details=day2_keynote item=1 room="keynote" %}
+{% include schedule_keynote.html details=day2_keynote item=2 room="keynote" %}
+
+<h3>17:40</h3>
+{% assign offheap = site.events | where: "slug", 4810 | first %}
+{% include schedule_event.html details=offheap track="happy-hour" room="break" %}
+
+{% include schedule_break.html details=day2_other item=5 track="happy-hour" room="break" %}
+
+
 
 <h1 class="day"> Friday Feb 21</h1>
 {% include schedule_break.html details=day3_other item=0 room="breakfast" %}
-{% include schedule_break.html details=day3_other item=1 room="keynote" %}
-{% include schedule_break.html details=day3_other item=2 room="break" %}
+{% include schedule_keynote.html details=day3_keynote item=0 room="keynote" %}
+{% include schedule_break.html details=day3_other item=1 room="break" %}
 
 {% assign day3_10 = day3.events | where: "start", "10:20" %}
 <h3>10:20</h3>
@@ -82,7 +91,7 @@ layout: info-fluid
 <h3>11:20</h3>
 {% include schedule_block.html events=day3_11 %}
 
-{% include schedule_break.html details=day3_other item=3 room="lunch" %}
+{% include schedule_break.html details=day3_other item=2 room="lunch" %}
 
 {% assign day3_13= day3.events | where: "start", "13:10" %}
 <h3>13:10</h3>
@@ -92,13 +101,13 @@ layout: info-fluid
 <h3>14:10</h3>
 {% include schedule_block.html events=day3_14 %}
 
-{% include schedule_break.html details=day3_other item=4 room="break" %}
+{% include schedule_break.html details=day3_other item=3 room="break" %}
 
 {% assign day3_15 = day3.events | where: "start", "15:30" %}
 <h3>15:30</h3>
 {% include schedule_block.html events=day3_15 %}
 
-{% include schedule_break.html details=day3_other item=5 room="keynote" %}
+{% include schedule_break.html details=day3_other item=4 room="keynote" %}
 
-{% include schedule_break.html details=day3_other item=6 room="afterparty" %}
+{% include schedule_break.html details=day3_other item=5 room="after-party" %}
 
