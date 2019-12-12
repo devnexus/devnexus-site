@@ -45,10 +45,14 @@
     start: '09:00'
     track: Full day Workshops (Wednesday Only)
     room: Room 11
+  - id: 5378
+    start: '09:00'
+    track: Full day Workshops (Wednesday Only)
+    room: Room 12
   - id: 5361
     start: '10:00'
     track: admin
-    room: Room 12
+    room: Room 13
 - index: 1
   events:
   - id: 5055
@@ -107,7 +111,7 @@
     start: '14:10'
     track: Cloud Infrastructure
     room: Room 3
-  - id: 4891
+  - id: 4784
     start: '15:30'
     track: Cloud Infrastructure
     room: Room 3
@@ -359,17 +363,17 @@
     start: '09:00'
     track: admin
     room: Keynote Room
-  - id: 5364
+  - id: 5382
     start: '09:10'
-    track: admin
+    track: Keynote
     room: Keynote Room
-  - id: 5366
+  - id: 5383
     start: '16:40'
-    track: admin
+    track: Keynote
     room: Keynote Room
-  - id: 5367
+  - id: 4817
     start: '17:10'
-    track: admin
+    track: Keynote
     room: Keynote Room
 - index: 2
   events:
@@ -413,7 +417,7 @@
     start: '15:30'
     track: Architecture
     room: Room 2
-  - id: 4784
+  - id: 4891
     start: '10:20'
     track: Cloud Infrastructure
     room: Room 3
@@ -661,9 +665,9 @@
     start: '15:10'
     track: admin
     room: Foyer
-  - id: 5368
+  - id: 5348
     start: '09:00'
-    track: admin
+    track: Keynote
     room: Keynote Room
   - id: 5355
     start: '16:30'

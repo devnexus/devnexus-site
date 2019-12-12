@@ -95,6 +95,9 @@ $room-color-jvm-languages: #007a4b;
   .happy-hour {
     @include room($room-color-exhibit);
   }
+  .after-party {
+    @include room($room-color-exhibit);
+  }
   .unobtanium {
     @include room($room-color-unobtanium);
   }

@@ -25,7 +25,7 @@ breakfast:
   trackkey: other
   room: Sponsor Lounge
 happy-hour:
-  title: Happy Hour
+  title: Sponsor Lounge
   trackid: 00
   trackkey: happy-hour
   room: Sponsor Lounge
@@ -33,7 +33,7 @@ after-party:
   title: After Party
   trackid: 00
   trackkey: after-party
-  room: Sponsor Lounge
+  room: After Party
 wit:
   title: '#CodeNCoffee'
   trackid: 00
