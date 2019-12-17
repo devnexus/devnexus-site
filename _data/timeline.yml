@@ -4,11 +4,13 @@ dates:
   - day: August 15
     summary: CFP Closes! (And you've already submitted right?)
   - day: September 1
-    summary: 'Begin Speaker Acceptance'
+    summary: Begin Speaker Acceptance
   - day: November 15
     summary: Schedule Announced
   - day: December 18
     summary: 'Late Registration, prices jump!'
+  - day: February 5
+    summary: Registration Closes
   - day: February 19
     summary: Workshop Day
   - day: February 20
