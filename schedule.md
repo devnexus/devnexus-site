@@ -72,7 +72,7 @@ layout: info-fluid
 
 <h3>17:40</h3>
 {% assign offheap = site.events | where: "slug", 4810 | first %}
-{% include schedule_event.html details=offheap track="happy-hour" room="break" %}
+{% include schedule_event.html details=offheap track="off-heap" room="off-heap" %}
 
 {% include schedule_break.html details=day2_other item=5 track="happy-hour" room="break" %}
 

@@ -2,7 +2,7 @@ unobtanium:
   title: Unobtanium
   trackid: 00
   trackkey: unobtanium
-  room: 114
+  room: 316
 ggm:
   title: 2GM
   trackkey: 2gm
@@ -13,7 +13,7 @@ lunch:
   title: Lunch
   trackid: 00
   trackkey: other
-  room: Exhibition Hall A/B
+  room: Level 1
 break:
   title: Break
   trackid: 00
@@ -29,6 +29,11 @@ happy-hour:
   trackid: 00
   trackkey: happy-hour
   room: Sponsor Lounge
+off-heap:
+    title: Stage
+    trackid: 00
+    trackkey: happy-hour
+    room: Level 3
 after-party:
   title: After Party
   trackid: 00
@@ -43,16 +48,16 @@ keynote:
   title: Keynotes
   trackid: 00
   trackkey: keynote
-  room: Keynote Room
+  room: Auditorium
 A303:
   title: Workshops
   trackid: 00
-  room: A303
+  room: 303
   trackkey: workshop-a303
 A316:
   title: Workshops
   trackid: 00
-  room: A316
+  room: 316
   trackkey: workshop-a316
 # program tracks
 workshop:
@@ -64,72 +69,72 @@ agile:
   title: Agile
   trackkey: agile
   trackid: 122
-  room: 105
+  room: 314
 archictecture:
   title: Architecture
   trackkey: architecture
   trackid: 117
-  room: Ballroom A
+  room: 412
 cloud-infrastructure:
   title: Cloud Infrastructure
   trackid: 119
   trackkey: cloud infrastructure
-  room: Ballroom B
+  room: 302
 cloud-technology:
   title: Cloud Technolgy
   trackid: 118
   trackkey: cloud technology
-  room: Ballroom D
+  room: 405
 core-java:
   title: Core Java
   trackid: 113
   trackkey: core java
-  room: 104
+  room: 411
 frameworks:
   title: Frameworks
   trackid: 115
   trackkey: frameworks
-  room: Ballroom F
+  room: 311
 java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: Exhibition Hall D
+  room: 312
 javascript:
   title: Javascript
   trackid: 121
   trackkey: javascript
-  room: Ballroom E
+  room: 303
 jvm-languages:
   title: JVM Languages
   trackid: 121
   trackkey: jvm languages
-  room: Ballroom E
+  room: 403
 open-java:
   title: Open Java
   trackid: 113
   trackkey: open java
-  room: 104 
+  room: 402 
 practices-other:
   title: Practices and Other Tech
   trackid: 123
   trackkey: practices and other tech
-  room: 103
+  room: 305
 security:
   title: Security
   trackid: 120
   trackkey: security
-  room: Ballroom C
+  room: 404
 tools:
   title: Tools and Techniques
   trackkey: tools and techniques
   trackid: 116
-  room: 106
+  room: 313
 web:
   title: Web and Front-end
   trackid: 124
   trackkey: web and front-end
-  room: 102
+  room: 315
 
 
 

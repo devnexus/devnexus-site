@@ -107,6 +107,9 @@ $room-color-jvm-languages: #007a4b;
   .jvm-languages {
     @include room($room-color-jvm-languages);
   }
+  .off-heap {
+    @include room($room-color-ggm);
+  }
 
 }
 .track-thumbnail {
@@ -207,5 +210,9 @@ $room-color-jvm-languages: #007a4b;
     .jvm-languages {
       @include caption;
       background-color: $room-color-jvm-languages;
+    }
+    .off-heap {
+      @include caption;
+      background-color: $room-color-ggm;
     }
 }
