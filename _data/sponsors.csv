@@ -16,8 +16,10 @@ bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
 cju,jug,/assets/img/cju.png,https://cjug.org/
 Clever Cloud,silver,/assets/img/clever cloud.001.jpeg,https://www.clever-cloud.com/en/
 clt,jug,/assets/img/clt.png,https://cjug.org/
+Cockroach Labs,silver,/assets/img/crlabs.001.jpeg,https://www.cockroachlabs.com/
 Codefreah,silver,/assets/img/codefresh.001.jpeg,https://codefresh.io/
 Confluent,,/uploads/confluent-001.jpeg,https://www.confluent.io/
+couchbase,gold,/assets/img/couchbase.001.jpeg,https://www.couchbase.com/
 CSI,,/assets/img/CSI.001.jpeg,https://thecsicompanies.com/
 DATADOG,gold,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
 Daugherty Business Solutions,gold,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
@@ -50,7 +52,7 @@ IllinoisJUG,community,/assets/img/ILJUG.001.jpeg,http://www.illinoisjug.org/
 InsightDI,silver,/assets/img/INSIGHTDI.001.jpeg,https://www.insight.com/en_US/what-we-do/digital-innovation.html
 JakartaEE,,/assets/img/jee.001.jpeg,https://jakarta.ee/
 jax,jug,/assets/img/jjx.png,https://www.meetup.com/Jacksonville-JAVA-User-Group-JaxJUG/
-jbi,jug,/assets/img/jbi.jpg,https://www.java.no/
+jbi,jug,/assets/img/javaBin.jpg,https://www.java.no/eng.html#
 jdu,jug,/assets/img/jdu.png,https://jduchessgt.org/
 JETBRAINS,silver,/assets/img/jetbrains.001.png,https://www.jetbrains.com/
 JFrog,platinum,/assets/img/jfrog.001.jpeg,https://jfrog.com/
@@ -58,6 +60,7 @@ JFrog1,opensource,/assets/img/jfrog.001.jpeg,https://jfrog.com/
 JFrogName,namebadge,/assets/img/jfrog.001.jpeg,https://jfrog.com/
 jmu,jug,/assets/img/jmu.png,https://www.javamug.org
 jph,jug,/assets/img/jph.png,https://www.facebook.com/Java-User-Group-Port-Harcourt-1436358619990281/
+jrebel,gold,/assets/img/jrebel.001.jpeg,https://www.jrebel.com/
 jup,jug,/assets/img/jup.png,http://www.javaup.org.mx/
 knox,jug,/assets/img/knox.png,https://knoxjava.org/
 lat,jug,/assets/img/laj.png,https://twitter.com/latjug?lang=en
@@ -67,6 +70,7 @@ mal,jug,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
 Manhattan Associates,,/assets/img/MahnattanAssocs.001.jpeg,https://www.manh.com/
 mdk,jug,/assets/img/mdj.png,https://jugmsk.timepad.ru/events/
 med,jug,/assets/img/med.png,https://medellinjug.org
+mex,jug,/assets/img/mex.jpg,http://www.javamexico.org/
 Microsoft Azure,silver,/assets/img/msft.001.jpeg,https://azure.microsoft.com/en-us/resources/join-the-azure-developer-community/?ocid=AID2428618
 mon,jug,/assets/img/mon.png,http://www.montreal-jug.org
 MongoDB,,/assets/img/mongodb.001.jpeg,https://www.mongodb.com/
@@ -117,6 +121,8 @@ utr,jug,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
 Vaadin,silver,/assets/img/vaadin2.png,https://vaadin.com/
 vju,jug,/assets/img/vju.png,https://virtualjug.com/
 VMWare,,/assets/img/vmware.001.jpeg,https://www.vmware.com/
+Wavefront,gold,/assets/img/Wavefront.001.jpeg,https://www.wavefront.com/
+WhiteSource,silver,/assets/img/whitesource.png,https://www.whitesourcesoftware.com/
 Women in Technology,,/assets/img/wit.001.jpeg,https://www.mywit.org/
 WWC,community,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
 yoppworks,gold,/assets/img/yopp.001.jpeg,https://yoppworks.com/?utm_source=sponsor&utm_medium=click&utm_campaign=devnexus
