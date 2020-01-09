@@ -567,10 +567,6 @@
   avatar_path: https://cfp.devnexus.com
   hd_avatar_path: https://cfp.devnexus.com
   name: Dave Krause
-1030:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1030/large/joshlong.jpg?1574701635
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1030/large/joshlong.jpg?1574701635
-  name: Josh Long
 701:
   avatar_path: https://cfp.devnexus.com/system/avatars/701/large/Todd_2019_500x500.jpg?1574782459
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/701/large/Todd_2019_500x500.jpg?1574782459
@@ -599,3 +595,7 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1398/large/rajang.jpeg?1578266102
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1398/large/rajang.jpeg?1578266102
   name: Rajan Gupta
+1030:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1030/large/josh-1.jpg?1578266263
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1030/large/josh-1.jpg?1578266263
+  name: Josh Long
