@@ -1,4 +1,5 @@
 name,sponsorlevel,logo_image,home_page
+AdoptOpenJDK,opensource,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 AdoptOpenJDK,silver,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 AJUG,community,/assets/img/ajug.001.jpeg,https://ajug.org/
 ajugjug,jug,/assets/img/aju.png,http://ajug.org
@@ -92,7 +93,6 @@ OverOps,gold,/assets/img/overops.001.jpeg,https://www.overops.com/
 Payara,silver,/assets/img/payara.001.jpeg,https://www.payara.fish
 Payara2,lunch,/assets/img/payara2.001.jpeg,https://www.payara.fish/
 per,jug,/assets/img/per.png,http://perujug.org
-Pivotal,gold,/uploads/pivotal logo.001.png,https://pivotal.io
 RedHat,diamond,/assets/img/Red Hat2.001.png,https://developers.redhat.com/
 ric,jug,/assets/img/ric.png,https://www.meetup.com/Richmond-Java-Users-Group/
 RingCentral,gold,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
@@ -105,6 +105,7 @@ Snyk,,/assets/img/snyk.001.jpeg,https://snyk.io/
 Sonatype,opensource,/assets/img/sonatypenew.001.jpeg,https://www.sonatype.com/
 Sonatype,silver,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
 sou,jug,/assets/img/sou.png,https://soujava.org.br/
+stl,jug,/assets/img/stl.png,https://www.meetup.com/GatewayJUG/
 svj,jug,/assets/img/svj.png,https://www.meetup.com/svjugfx/
 svu,jug,/assets/img/svu.png,https://www.meetup.com/sv-jug/
 swj,jug,/assets/img/swj.png,https://www.meetup.com/South-West-Java/
@@ -121,6 +122,7 @@ utr,jug,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
 Vaadin,silver,/assets/img/vaadin2.png,https://vaadin.com/
 vju,jug,/assets/img/vju.png,https://virtualjug.com/
 VMWare,,/assets/img/vmware.001.jpeg,https://www.vmware.com/
+VMWare Tanzu,gold,/assets/img/Tanzu2.001.jpeg,https://cloud.vmware.com/tanzu
 Wavefront,gold,/assets/img/Wavefront.001.jpeg,https://www.wavefront.com/
 WhiteSource,silver,/assets/img/whitesource.png,https://www.whitesourcesoftware.com/
 Women in Technology,,/assets/img/wit.001.jpeg,https://www.mywit.org/
