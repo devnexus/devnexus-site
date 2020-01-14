@@ -1,6 +1,6 @@
 unobtanium:
   title: Unobtanium
-  trackid: 00
+  trackid: 0
   trackkey: unobtanium
   room: 316
 ggm:
@@ -8,58 +8,56 @@ ggm:
   trackkey: 2gm
   trackid: 125
   room: 115
-# admin tracks  
 lunch:
   title: Lunch
-  trackid: 00
+  trackid: 0
   trackkey: other
   room: Level 1
 break:
   title: Break
-  trackid: 00
+  trackid: 0
   trackkey: other
   room: Sponsor Lounge
 breakfast:
   title: Registration & Breakfast
-  trackid: 00
+  trackid: 0
   trackkey: other
   room: Sponsor Lounge
 happy-hour:
   title: Sponsor Lounge
-  trackid: 00
+  trackid: 0
   trackkey: happy-hour
   room: Sponsor Lounge
 off-heap:
-    title: Stage
-    trackid: 00
-    trackkey: happy-hour
-    room: Level 3
+  title: Stage
+  trackid: 0
+  trackkey: happy-hour
+  room: Level 3
 after-party:
   title: After Party
-  trackid: 00
+  trackid: 0
   trackkey: after-party
   room: After Party
 wit:
   title: '#CodeNCoffee'
-  trackid: 00
+  trackid: 0
   trackkey: wit
-  room: Ballroom A  
+  room: Ballroom A
 keynote:
   title: Keynotes
-  trackid: 00
+  trackid: 0
   trackkey: keynote
   room: Auditorium
 A303:
   title: Workshops
-  trackid: 00
+  trackid: 0
   room: 303
   trackkey: workshop-a303
 A316:
   title: Workshops
-  trackid: 00
+  trackid: 0
   room: 316
   trackkey: workshop-a316
-# program tracks
 workshop:
   title: Workshops
   trackid: 139
@@ -69,12 +67,12 @@ agile:
   title: Agile
   trackkey: agile
   trackid: 122
-  room: 314
+  room: 312
 archictecture:
   title: Architecture
   trackkey: architecture
   trackid: 117
-  room: 412
+  room: Sidney Marcus Auditorium
 cloud-infrastructure:
   title: Cloud Infrastructure
   trackid: 119
@@ -89,17 +87,17 @@ core-java:
   title: Core Java
   trackid: 113
   trackkey: core java
-  room: 411
+  room: 305
 frameworks:
   title: Frameworks
   trackid: 115
   trackkey: frameworks
-  room: 311
+  room: 314
 java-platform:
   title: Java Platform
   trackkey: java platform
   trackid: 114
-  room: 312
+  room: 315/316
 javascript:
   title: Javascript
   trackid: 121
@@ -109,32 +107,29 @@ jvm-languages:
   title: JVM Languages
   trackid: 121
   trackkey: jvm languages
-  room: 403
+  room: 311
 open-java:
   title: Open Java
   trackid: 113
   trackkey: open java
-  room: 402 
+  room: 412
 practices-other:
   title: Practices and Other Tech
   trackid: 123
   trackkey: practices and other tech
-  room: 305
+  room: 402/403
 security:
   title: Security
   trackid: 120
   trackkey: security
-  room: 404
+  room: 405
 tools:
   title: Tools and Techniques
   trackkey: tools and techniques
   trackid: 116
-  room: 313
+  room: 404
 web:
   title: Web and Front-end
   trackid: 124
   trackkey: web and front-end
-  room: 315
-
-
-
+  room: 304
