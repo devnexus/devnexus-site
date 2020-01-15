@@ -117,12 +117,12 @@ practices-other:
   title: Practices and Other Tech
   trackid: 123
   trackkey: practices and other tech
-  room: 402/403
+  room: '405'
 security:
   title: Security
   trackid: 120
   trackkey: security
-  room: 405
+  room: 403
 tools:
   title: Tools and Techniques
   trackkey: tools and techniques
