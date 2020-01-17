@@ -211,7 +211,7 @@
     start: '14:10'
     track: JavaScript
     room: Room 8
-  - id: 4436
+  - id: 4961
     start: '15:30'
     track: JavaScript
     room: Room 8
@@ -283,11 +283,11 @@
     start: '11:20'
     track: Security
     room: Room 12
-  - id: 4678
+  - id: 4546
     start: '13:10'
     track: Security
     room: Room 12
-  - id: 4546
+  - id: 4678
     start: '14:10'
     track: Security
     room: Room 12
@@ -509,6 +509,10 @@
     start: '14:10'
     track: Java Platform
     room: Room 7
+  - id: 5386
+    start: '15:30'
+    track: Java Platform
+    room: Room 7
   - id: 5107
     start: '10:20'
     track: JavaScript
@@ -521,7 +525,7 @@
     start: '13:10'
     track: JavaScript
     room: Room 8
-  - id: 4961
+  - id: 4436
     start: '14:10'
     track: JavaScript
     room: Room 8
