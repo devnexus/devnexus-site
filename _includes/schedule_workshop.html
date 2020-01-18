@@ -1,4 +1,4 @@
-{% assign preso = include.details %}
+{% assign preso = site.events | where: "slug", include.details.id | first %}
 <div class="row schedule-row">
 		<div class="col-sm-6 col-xs-12 workshop">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
@@ -11,7 +11,7 @@
 			 </span>
 			 <span class="small pull-right">
  				*&nbsp;
- 				 {{site.data.tracks[include.room].room}}
+ 				 {{site.data.cfp_rooms_to_gwwc[include.details.room]}}
  			</span>
 	  </div>
 </div>

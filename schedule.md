@@ -14,7 +14,7 @@ layout: info-fluid
 <h6>* Workshop Ticket Required</h6>
 <h3>9:00 - 17:00</h3>
 </div>
- {% assign workshops = site.events | where:"track","full day workshops (wednesday only)" %}
+ {% assign workshops = day0.events | where:"track","Full day Workshops (Wednesday Only)" %}
  {% for event in workshops %}
  {% include schedule_workshop.html details=event %}
  {% endfor %}
