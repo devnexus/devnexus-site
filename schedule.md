@@ -16,7 +16,8 @@ layout: info-fluid
 </div>
  {% assign workshops = day0.events | where:"track","Full day Workshops (Wednesday Only)" %}
  {% for event in workshops %}
- {% include schedule_workshop.html details=event %}
+ {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
+ {% include schedule_workshop.html details=event room=_room %}
  {% endfor %}
 
  {% assign wed_other = day0.events | where:"track","admin" %}
