@@ -14,7 +14,7 @@ layout: info-fluid
   <h6>* Workshop Ticket Required</h6>
   <h3>9:00 - 17:00</h3>
 </div>  
-<div class="col-xs-4 col-sm-2 box">
+<div class="col-xs-4 box">
   <div class="ribbon">
     <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
   </div>
@@ -37,7 +37,7 @@ layout: info-fluid
 <div class="col-xs-8">
   <h1 class="day"> Thursday Feb 20</h1>
 </div>
-<div class="col-xs-4 col-sm-2 box">
+<div class="col-xs-4 box">
   <div class="ribbon">
     <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
   </div>
@@ -87,7 +87,7 @@ layout: info-fluid
 <div class="col-xs-8">
   <h1 class="day"> Friday Feb 21</h1>
 </div>
-<d<div class="col-xs-4 col-sm-2 box">
+<div class="col-xs-4 col-sm-2 box">
   <div class="ribbon">
     <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
   </div>
