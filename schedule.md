@@ -13,7 +13,7 @@ layout: info-fluid
 <div class="row">
 <div class="col-xs-12">
  <div class="col-xs-8">
-  <h1 class="day"> Wednesday Feb 19</h1>
+  <h2 class="day"> Wednesday Feb 19</h2>
   <h6>* Workshop Ticket Required</h6>
   <h3>9:00 - 17:00</h3>
   </div>  
@@ -39,7 +39,7 @@ layout: info-fluid
  <div class="row new-day">
  <div class="col-xs-12">
    <div class="col-xs-8">
-     <h1 class="day"> Thursday Feb 20</h1>
+     <h2 class="day"> Thursday Feb 20</h2>
    </div>
    <div class="col-xs-4 col-sm-2 box no-print">
     <div class="ribbon">
@@ -89,7 +89,7 @@ layout: info-fluid
 <div class="row new-day">
 <div class="col-xs-12">
 <div class="col-xs-8">
-  <h1 class="day"> Friday Feb 21</h1>
+  <h2 class="day"> Friday Feb 21</h2>
 </div>
 <div class="col-xs-4 col-sm-2 box no-print">
   <div class="ribbon">
