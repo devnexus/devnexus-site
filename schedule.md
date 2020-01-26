@@ -8,18 +8,21 @@ layout: info-fluid
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 {% assign day3_other = day3.events | where: "track", "admin" | sort: "start" %}
 {% assign day3_keynote = day3.events | where: "track", "Keynote" | sort: "start" %}
+
+<input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
 <div class="row">
+<div class="col-xs-12">
  <div class="col-xs-8">
   <h1 class="day"> Wednesday Feb 19</h1>
   <h6>* Workshop Ticket Required</h6>
   <h3>9:00 - 17:00</h3>
-</div>  
-<div class="col-xs-4 box">
-  <div class="ribbon">
-    <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+  </div>  
+  <div class="col-xs-4 col-sm-2 box no-print">
+    <div class="ribbon">
+     <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+    </div>
   </div>
 </div>
-
  {% assign workshops = day0.events | where:"track","Full day Workshops (Wednesday Only)" %}
  {% for event in workshops %}
  {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
@@ -32,18 +35,18 @@ layout: info-fluid
  {% assign edetails = site.events | where: "slug", event.id | first%}
  {% include schedule_event.html details=edetails track="community" %}
  {% endfor %}
-
- <div class="row">
-<div class="col-xs-8">
-  <h1 class="day"> Thursday Feb 20</h1>
+ </div> 
+ <div class="row new-day">
+ <div class="col-xs-12">
+   <div class="col-xs-8">
+     <h1 class="day"> Thursday Feb 20</h1>
+   </div>
+   <div class="col-xs-4 col-sm-2 box no-print">
+    <div class="ribbon">
+      <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+    </div>
+   </div>
 </div>
-<div class="col-xs-4 box">
-  <div class="ribbon">
-    <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
-  </div>
-</div>
-</div>
-
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
 {% include schedule_break.html details=day2_other item=1 room="keynote" %}
 {% include schedule_keynote.html details=day2_keynote item=0 room="keynote" %}
@@ -81,19 +84,19 @@ layout: info-fluid
 {% include schedule_event.html details=offheap track="off-heap" room="off-heap" %}
 
 {% include schedule_break.html details=day2_other item=5 track="happy-hour" room="break" %}
+</div> 
 
-
-<div class="row">
+<div class="row new-day">
+<div class="col-xs-12">
 <div class="col-xs-8">
   <h1 class="day"> Friday Feb 21</h1>
 </div>
-<div class="col-xs-4 col-sm-2 box">
+<div class="col-xs-4 col-sm-2 box no-print">
   <div class="ribbon">
     <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
   </div>
 </div>
 </div>
-
 {% include schedule_break.html details=day3_other item=0 room="breakfast" %}
 {% include schedule_keynote.html details=day3_keynote item=0 room="keynote" %}
 {% include schedule_break.html details=day3_other item=1 room="break" %}
@@ -125,4 +128,4 @@ layout: info-fluid
 {% include schedule_break.html details=day3_other item=4 room="keynote" %}
 
 {% include schedule_break.html details=day3_other item=5 room="after-party" %}
-
+</div>
