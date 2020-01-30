@@ -12,7 +12,7 @@
 {% assign practices = include.events  | where: "track", "Practices and other tech" | first %}
 {% assign tools-tech = include.events  | where: "track", "Tools and techniques" | first %}
 {% assign web = include.events  | where: "track", "Web and Front-end" | first %}
-{% assign unobtainium = include.events  | where: "track", "Unobtanium" | first %}
+{% assign unobtanium = include.events  | where: "track", "Unobtanium" | first %}
 
 {% if architecture %}
 {% assign event = site.events | where: "slug", architecture.id | first %}
@@ -57,7 +57,7 @@
 
 {% if unobtanium %}
 {% assign event = site.events | where: "slug", unobtanium.id | first %}
-{% include schedule_event.html details=event room="unobtainium" track=include.track %}
+{% include schedule_event.html details=event room="unobtanium"  track=include.track %}
 {% endif %}
 
 {% if frameworks %}
