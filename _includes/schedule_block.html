@@ -55,9 +55,9 @@
 {% include schedule_event.html details=event room="agile" track=include.track %}
 {% endif %}
 
-{% if unobtanium %}
-{% assign event = site.events | where: "slug", unobtanium.id | first %}
-{% include schedule_event.html details=event room="unobtainium" track=include.track %}
+{% if unobtainium %}
+{% assign event = site.events | where: "slug", unobtainium.id | first %}
+{% include schedule_event.html details=event room="unobtainium"  track=include.track %}
 {% endif %}
 
 {% if frameworks %}

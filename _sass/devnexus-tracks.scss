@@ -98,7 +98,7 @@ $room-color-jvm-languages: #007a4b;
   .after-party {
     @include room($room-color-exhibit);
   }
-  .unobtanium {
+  .unobtainium {
     @include room($room-color-unobtanium);
   }
   .open-java {
@@ -199,7 +199,7 @@ $room-color-jvm-languages: #007a4b;
       @include caption;
       background-color: $room-color-web;
     }
-    .unobtanium {
+    .unobtainium {
       @include caption;
       background-color: $room-color-unobtanium;
     }
