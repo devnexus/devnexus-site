@@ -1,6 +1,7 @@
 name,sponsorlevel,logo_image,home_page
 AdoptOpenJDK,opensource,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 AdoptOpenJDK,silver,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
+ADP,silver,/assets/img/adp.png,https://jobs.adp.com/teams-roles/technology/
 AJUG,community,/assets/img/ajug.001.jpeg,https://ajug.org/
 ajugjug,jug,/assets/img/aju.png,http://ajug.org
 ank,jug,/assets/img/ank.png,https://twitter.com/ankarajug?lang=en
@@ -14,7 +15,7 @@ Bellsoft,silver,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
 Blackrock,gold,/assets/img/blackrock.001.jpeg,https://careers.blackrock.com/
 bog,jug,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
-bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/ 
+bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
 cju,jug,/assets/img/cju.png,https://cjug.org/
 Clever Cloud,silver,/assets/img/clever cloud.001.jpeg,https://www.clever-cloud.com/en/
 clt,jug,/assets/img/clt.png,https://cjug.org/
@@ -78,6 +79,7 @@ mon,jug,/assets/img/mon.png,http://www.montreal-jug.org
 MongoDB,,/assets/img/mongodb.001.jpeg,https://www.mongodb.com/
 mor,jug,/assets/img/mor.png,https://twitter.com/moroccojug
 Mulesoft,,/uploads/mulesoft.001.jpeg,https://www.mulesoft.com/
+Narwhal,gold,/assets/img/nrwl.png,http://nrwl.io/
 Netflix,silver,/assets/img/netflix.001.png,https://jobs.netflix.com/search?q=engineering
 Nexmo,gold,/assets/img/NEXMO.001.jpeg,https://developer.nexmo.com/
 nic,jug,/assets/img/ncj.png,http://javanicaragua.org
@@ -114,6 +116,7 @@ svu,jug,/assets/img/svu.png,https://www.meetup.com/sv-jug/
 swj,jug,/assets/img/swj.png,https://www.meetup.com/South-West-Java/
 Technologists of Color,community,/assets/img/toc.001.jpeg,http://www.techsofcolor.org
 Technology Association of Georgia,,/assets/img/tag.001.jpeg,https://www.tagonline.org/
+TekSystems,silver,/assets/img/teksystems.png,https://www.teksystems.com/en/careers/become-a-consultant
 The Home Depiot,platinum,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
 Thompson Technologies,,/assets/img/tt.001.jpeg,https://thompsontechnologies.com/
 ThoughtWorks,gold,/assets/img/TWks.001.jpeg,https://www.thoughtworks.com/
