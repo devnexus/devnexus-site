@@ -84,7 +84,7 @@ module Jekyll
          event_header = { "id" => event["id"],
                          "title" => event["title"],
                          "layout" => "preso_details",
-                        "track" => event['track']&.downcase }
+                        "track" => event['track']&.downcase}
          #keeping keys to person records for later rendering
          filtered_persons = filter_attributes(persons, "full_public_name", "id")
          if (persons && persons.length > 0)
@@ -120,6 +120,7 @@ module Jekyll
             public_items['title'] = public_items['full_public_name']
             public_items['layout'] = "speaker_bio"
             public_items['id'] = person[0]
+            public_items['order'] = public_items['events'].size  #speakers with more talks first
             write_item("speakers", public_items, abstract)
             correct_speaker_data(stored_speaker_data, person[0], person[1])
           end
