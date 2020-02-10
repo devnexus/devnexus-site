@@ -2,8 +2,8 @@
 layout: home
 dates: Feb 19-21 2020
 registration:
-  text: REGISTER HERE
-  status: enabled
+  text: SOLD OUT
+  status: disabled
   link:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
