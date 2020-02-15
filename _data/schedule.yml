@@ -143,9 +143,9 @@
     start: '11:20'
     track: Core Java
     room: Room 5
-  - id: 4825
+  - id: 4729
     start: '13:10'
-    track: Core Java
+    track: Tools and techniques
     room: Room 5
   - id: 5139
     start: '14:10'
@@ -235,6 +235,10 @@
     start: '15:30'
     track: JVM Languages
     room: Room 9
+  - id: 5494
+    start: '08:00'
+    track: Open Java
+    room: Room 10
   - id: 4668
     start: '10:20'
     track: Open Java
@@ -311,9 +315,9 @@
     start: '14:10'
     track: Tools and techniques
     room: Room 13
-  - id: 4729
+  - id: 4825
     start: '15:30'
-    track: Tools and techniques
+    track: Core Java
     room: Room 13
   - id: 4519
     start: '10:20'
@@ -517,7 +521,7 @@
     start: '15:30'
     track: Frameworks
     room: Room 6
-  - id: 4721
+  - id: 4773
     start: '10:20'
     track: Java Platform
     room: Room 7
@@ -529,11 +533,11 @@
     start: '13:10'
     track: Java Platform
     room: Room 7
-  - id: 4773
+  - id: 5386
     start: '14:10'
     track: Java Platform
     room: Room 7
-  - id: 5386
+  - id: 4721
     start: '15:30'
     track: Java Platform
     room: Room 7

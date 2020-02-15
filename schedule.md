@@ -8,6 +8,7 @@ layout: info-fluid
 {% assign day3 = site.data.schedule | where: "index", 2  | first %}
 {% assign day3_other = day3.events | where: "track", "admin" | sort: "start" %}
 {% assign day3_keynote = day3.events | where: "track", "Keynote" | sort: "start" %}
+{% assign wit = day2.events | where: "start", "08:00" %}
 
 <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
 <div class="row">
@@ -48,6 +49,7 @@ layout: info-fluid
    </div>
 </div>
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
+{% include schedule_keynote.html details=wit item=0 room="wit" %}
 {% include schedule_break.html details=day2_other item=1 room="keynote" %}
 {% include schedule_keynote.html details=day2_keynote item=0 room="keynote" %}
 {% include schedule_break.html details=day2_other item=2 room="break" %}
