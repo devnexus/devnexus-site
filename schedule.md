@@ -11,6 +11,9 @@ layout: info-fluid
 {% assign wit = day2.events | where: "start", "08:00" %}
 
 <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
+<div class="row no-print">
+<b> Tell us what you think:</b> <a href="https://schedule.devnexus.com">schedule.devnexus.com</a>
+</div>
 <div class="row">
 <div class="col-xs-12">
  <div class="col-xs-8">
