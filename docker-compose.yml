@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+
+  jekyll:
+    image: jekyll/jekyll:3.6
+    volumes:
+    - .:/srv/jekyll
+    command: /bin/sh -c "bundle install && exec jekyll s" 
+    ports:
+      - "4000:4000"
+    environment:
+      JEKYLL_UID: 1001
+      JEKYLL_GID: 1001
