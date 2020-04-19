@@ -4,3 +4,5 @@ _site
 assets/wro
 _cfp
 gwccred.pdf
+.vscode
+*.swp

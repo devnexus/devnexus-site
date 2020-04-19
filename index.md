@@ -8,12 +8,22 @@ registration:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
+cfp:
+  announce: true
+  view: future 
 ---
 
-{% if site.cfp-is-open %}
+{% if page.cfp.announce %}
+{% case page.cfp.view %}
+  {% when "open" %}
   <div class="featured-header">
     <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Is Open</a></h1>
   </div>
+  {% else %}
+  <div class="featured-header">
+    <h1 class="top-intro"><a href="/call-for-papers">Call For Papers Opens JUL 1 2020</a></h1>
+  </div>
+{% endcase %}  
 {% endif %}
 
 {% include {{ site.active-header }} %}
