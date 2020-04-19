@@ -2,7 +2,7 @@
 layout: home
 dates: Feb 17-19 2021
 registration:
-  text: OPENS JUL 1st
+  text: Registration Opens Jul 1 2020
   status: disabled
   link:
 branding:
