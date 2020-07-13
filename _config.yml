@@ -5,7 +5,6 @@ title: Devnexus 2021
 timezone: UTC
 active-header: navigation-post-show.html
 registration: closed
-cfp-is-open: true
 collections:
   speakers:
     title: Speakers 2021
