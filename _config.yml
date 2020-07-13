@@ -32,8 +32,8 @@ baseurl:
 url:
 uploads_dir: "/uploads"
 links:
-   cfp: https://cfp.devnexus.com/en/dn2020/cfp/session/new
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2020/
+   cfp: https://cfp.connectevents.io/en/dn2021/cfp/session/new 
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2021/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
 markdown: kramdown
