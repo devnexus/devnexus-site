@@ -21,7 +21,7 @@ cfp:
   </div>
   {% else %}
   <div class="featured-header">
-    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES AUG 24)</a></h1>
+    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (SEPTEMBER 1)</a></h1>
   </div>
 {% endcase %}  
 {% endif %}
