@@ -4,7 +4,7 @@ dates:
   - day: August 15
     summary: CFP Closes! (And you've already submitted right?)
   - day: September 1
-    summary: Begin Speaker Acceptance
+    summary: 'CFP Closes, Begin Speaker Acceptance'
   - day: November 15
     summary: Schedule Announced
   - day: December 18
@@ -13,7 +13,3 @@ dates:
     summary: Registration Closes
   - day: February 17
     summary: Conference day
-  - day: February 18
-    summary: Main Event
-  - day: February 19
-    summary: Main Event
