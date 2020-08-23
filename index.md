@@ -4,7 +4,7 @@ dates: Feb 17 2021
 registration:
   text: Register here for Free
   status: enabled
-  link: https://www.accelevents.com/e/devnexus#Agenda
+  link: href="https://www.accelevents.com/e/devnexus#Agenda" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
