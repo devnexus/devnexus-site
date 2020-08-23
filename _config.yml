@@ -33,7 +33,7 @@ url:
 uploads_dir: "/uploads"
 links:
    cfp: https://cfp.connectevents.io/en/dn2021/cfp/session/new 
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2021/
+   register: https://www.accelevents.com/e/devnexus#Agenda
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
 markdown: kramdown
