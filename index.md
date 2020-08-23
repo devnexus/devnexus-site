@@ -1,10 +1,10 @@
 ---
 layout: home
-dates: Feb 17-19 2021
+dates: Feb 17 2021
 registration:
-  text: Registration Opens July 13 2020
-  status: disabled
-  link:
+  text: Register here for Free
+  status: enabled
+  link: https://www.accelevents.com/e/devnexus#Agenda
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
