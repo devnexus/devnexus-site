@@ -20,6 +20,9 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@devnexus" />
   <meta name="twitter:creator" content="@atlantajug" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta name="twitter:image" content="https://devnexus.com/assets/img/dev.001.jpeg" />
 
   <!-- fonts: external links -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
