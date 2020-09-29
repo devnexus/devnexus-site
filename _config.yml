@@ -36,6 +36,11 @@ links:
    register: https://www.accelevents.com/e/devnexus#Agenda
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
+twitter_card:
+  default_image: https://devnexus.com/assets/img/dev.001.jpeg
+  type: summary
+  site: "@devnexus"
+  creator:  "@atlantajug"
 markdown: kramdown
 theme:
 _editor:
