@@ -17,12 +17,12 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@devnexus" />
-  <meta name="twitter:creator" content="@atlantajug" />
+  <meta name="twitter:card" content="{{site.twitter_card.type}}" />
+  <meta name="twitter:site" content="{{site.twitter_card.site}}" />
+  <meta name="twitter:creator" content="{{site.twitter_card.creator}}" />
   <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
-  <meta name="twitter:image" content="https://devnexus.com/assets/img/dev.001.jpeg" />
+  <meta name="twitter:image" content="{{page.twitter_card_image | default: site.twitter_card.default_image }}" />
 
   <!-- fonts: external links -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
