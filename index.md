@@ -37,7 +37,7 @@ cfp:
 <div class="row">
 <a name="sponsorlist"></a>
       <div class="featured-header">
-        <h1>Devnexus 2021 Sponsors</h1>
+        <h1>Thank You  2021 Sponsors</h1>
         <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2021?</a>
       </div>
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
