@@ -9,7 +9,7 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 cfp:
-  announce: true
+  announce: false
   view: open 
 ---
 
