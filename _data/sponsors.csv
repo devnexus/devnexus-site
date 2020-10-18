@@ -1,141 +1,141 @@
 name,sponsorlevel,logo_image,home_page
-AdoptOpenJDK,opensource,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
-AdoptOpenJDK,silver,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
-ADP,silver,/assets/img/adp.png,https://jobs.adp.com/teams-roles/technology/
-AJUG,community,/assets/img/ajug.001.jpeg,https://ajug.org/
-ajugjug,jug,/assets/img/aju.png,http://ajug.org
-ank,jug,/assets/img/ank.png,https://twitter.com/ankarajug?lang=en
-Apace Software Foundation,silver,/assets/img/asf.001.jpeg,https://www.apache.org/
-Aspose,silver,/assets/img/aspose.001.jpeg,https://www.aspose.com/
-Azul Systems,opensource,/assets/img/Azul Systems.001.jpeg,https://www.azul.com/
-Azul Systems,silver,/uploads/azul.001.jpeg,https://www.azul.com
-Ban,jug,/assets/img/ban.png,http://bangalorejug.org/
-bcn,jug,/assets/img/bcn.png,https://www.barcelonajug.org/
-Bellsoft,silver,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
+AdoptOpenJDK,,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
+AdoptOpenJDK,,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
+ADP,,/assets/img/adp.png,https://jobs.adp.com/teams-roles/technology/
+AJUG,,/assets/img/ajug.001.jpeg,https://ajug.org/
+ajugjug,,/assets/img/aju.png,http://ajug.org
+ank,,/assets/img/ank.png,https://twitter.com/ankarajug?lang=en
+Apace Software Foundation,,/assets/img/asf.001.jpeg,https://www.apache.org/
+Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
+Azul Systems,,/assets/img/Azul Systems.001.jpeg,https://www.azul.com/
+Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com
+Ban,,/assets/img/ban.png,http://bangalorejug.org/
+bcn,,/assets/img/bcn.png,https://www.barcelonajug.org/
+Bellsoft,,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
-Blackrock,gold,/assets/img/blackrock.001.jpeg,https://careers.blackrock.com/
-bog,jug,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
+Blackrock,,/assets/img/blackrock.001.jpeg,https://careers.blackrock.com/
+bog,,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
 bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
-cju,jug,/assets/img/cju.png,https://cjug.org/
-Clever Cloud,silver,/assets/img/clever cloud.001.jpeg,https://www.clever-cloud.com/en/
-clt,jug,/assets/img/clt.png,https://cjug.org/
-Cockroach Labs,silver,/assets/img/crlabs.png,https://www.cockroachlabs.com/
-Codefreah,silver,/assets/img/codefresh.001.jpeg,https://codefresh.io/
+cju,,/assets/img/cju.png,https://cjug.org/
+Clever Cloud,,/assets/img/clever cloud.001.jpeg,https://www.clever-cloud.com/en/
+clt,,/assets/img/clt.png,https://cjug.org/
+Cockroach Labs,,/assets/img/crlabs.png,https://www.cockroachlabs.com/
+Codefreah,,/assets/img/codefresh.001.jpeg,https://codefresh.io/
 Confluent,,/uploads/confluent-001.jpeg,https://www.confluent.io/
-couchbase,gold,/assets/img/couchbase.001.jpeg,https://www.couchbase.com/
+couchbase,,/assets/img/couchbase.001.jpeg,https://www.couchbase.com/
 CSI,,/assets/img/CSI.001.jpeg,https://thecsicompanies.com/
-DATADOG,gold,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
-Daugherty Business Solutions,gold,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
-Delta,silver,/assets/img/sponsors/delta2.jpeg,https://www.delta.com/us/en/careers/overview
-Devnexus,opensource,/assets/img/dev brandmark.001.jpeg,https://devnexus.com/
-Devopspeakeasy,community,/assets/img/speak.001.jpeg,https://twitter.com/devopsspeakeasy
-dom,jug,/assets/img/dom.png,https://twitter.com/JavaDominicano
-dwl,jug,/assets/img/del.png,https://www.meetup.com/Delhi-NCR-JUG/
-Eclipse Foundation,silver,/assets/img/eclipse.001.jpeg,https://www.eclipse.org/
-ecu,jug,/assets/img/ecu.png,www.ecuadorjug.org
-Elastic,gold,/assets/img/elastic.001.png,https://www.elastic.co/
-Fusion Reactor,silver,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com
-gdl,jug,/assets/img/gdl.png,https://www.facebook.com/gdljug/
+DATADOG,,/assets/img/DD.001.jpeg,https://www.datadoghq.com/
+Daugherty Business Solutions,,/assets/img/DBS.001.jpeg,https://www.daugherty.com/
+Delta,,/assets/img/sponsors/delta2.jpeg,https://www.delta.com/us/en/careers/overview
+Devnexus,,/assets/img/dev brandmark.001.jpeg,https://devnexus.com/
+Devopspeakeasy,,/assets/img/speak.001.jpeg,https://twitter.com/devopsspeakeasy
+dom,,/assets/img/dom.png,https://twitter.com/JavaDominicano
+dwl,,/assets/img/del.png,https://www.meetup.com/Delhi-NCR-JUG/
+Eclipse Foundation,,/assets/img/eclipse.001.jpeg,https://www.eclipse.org/
+ecu,,/assets/img/ecu.png,www.ecuadorjug.org
+Elastic,,/assets/img/elastic.001.png,https://www.elastic.co/
+Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com
+gdl,,/assets/img/gdl.png,https://www.facebook.com/gdljug/
 GitHub,,/assets/img/github.001.jpeg,https://github.com/
-Google,devlounge,/assets/img/googlecloud.001.jpeg,http://cloud.google.com/
-Gradle,gold,/assets/img/gradle.001.jpeg,http://www.gradle.com/
+Google,,/assets/img/googlecloud.001.jpeg,http://cloud.google.com/
+Gradle,,/assets/img/gradle.001.jpeg,http://www.gradle.com/
 GSquared,,/assets/img/Gsquared.001.jpeg,http://www.gsquaredgroup.com/
-gua,jug,/assets/img/gua.png,http://guate-jug.net/
-Hazelcast,gold,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
-Hazelcast,opensource,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
+gua,,/assets/img/gua.png,http://guate-jug.net/
+Hazelcast,,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
+Hazelcast,,/assets/img/hazelcast.001.jpeg,https://hazelcast.com/
 Hedera Hashgraph,,/assets/img/hedera.001.jpeg,https://www.hedera.com/
-Heroku stacked,platinum,/assets/img/Heroku stacked.001.jpeg,https://heroku.com/java
+Heroku stacked,,/assets/img/Heroku stacked.001.jpeg,https://heroku.com/java
 Heroku,,/uploads/heroku-001.png,http://www.heroku.com/java
 HYPEPOTAMUS,,/assets/img/hype.001.jpeg,https://hypepotamus.com/
-IBM,unobtanium,/assets/img/IBM.001.jpeg,https://developer.ibm.com/open/
-ICE,silver,/assets/img/ICE.001.jpeg,https://www.intercontinentalexchange.com/about
-icpc,community,/assets/img/icpc.001.jpeg,https://icpcnac2020.cc.gatech.edu/
-ill,jug,/assets/img/ILJUG.001.jpeg,http://www.illinoisjug.org/
-IllinoisJUG,community,/assets/img/ILJUG.001.jpeg,http://www.illinoisjug.org/
-InsightDI,silver,/assets/img/INSIGHTDI.001.jpeg,https://www.insight.com/en_US/what-we-do/digital-innovation.html
+IBM,,/assets/img/IBM.001.jpeg,https://developer.ibm.com/open/
+ICE,,/assets/img/ICE.001.jpeg,https://www.intercontinentalexchange.com/about
+icpc,,/assets/img/icpc.001.jpeg,https://icpcnac2020.cc.gatech.edu/
+ill,,/assets/img/ILJUG.001.jpeg,http://www.illinoisjug.org/
+IllinoisJUG,,/assets/img/ILJUG.001.jpeg,http://www.illinoisjug.org/
+InsightDI,,/assets/img/INSIGHTDI.001.jpeg,https://www.insight.com/en_US/what-we-do/digital-innovation.html
 JakartaEE,,/assets/img/jee.001.jpeg,https://jakarta.ee/
-jax,jug,/assets/img/jjx.png,https://www.meetup.com/Jacksonville-JAVA-User-Group-JaxJUG/
-jbi,jug,/assets/img/javaBin.jpg,https://www.java.no/eng.html#
-jdu,jug,/assets/img/jdu.png,https://jduchessgt.org/
-JETBRAINS,silver,/assets/img/jetbrains.001.png,https://www.jetbrains.com/
-JFrog,platinum,/assets/img/jfrog.001.jpeg,https://jfrog.com/
-JFrog1,opensource,/assets/img/jfrog.001.jpeg,https://jfrog.com/
-JFrogName,namebadge,/assets/img/jfrog.001.jpeg,https://jfrog.com/
-jmu,jug,/assets/img/jmu.png,https://www.javamug.org
-jph,jug,/assets/img/jph.png,https://www.facebook.com/Java-User-Group-Port-Harcourt-1436358619990281/
-jrebel,gold,/assets/img/jrebel.001.jpeg,https://www.jrebel.com/
-jup,jug,/assets/img/jup.png,http://www.javaup.org.mx/
-knox,jug,/assets/img/knox.png,https://knoxjava.org/
-lat,jug,/assets/img/laj.png,https://twitter.com/latjug?lang=en
+jax,,/assets/img/jjx.png,https://www.meetup.com/Jacksonville-JAVA-User-Group-JaxJUG/
+jbi,,/assets/img/javaBin.jpg,https://www.java.no/eng.html#
+jdu,,/assets/img/jdu.png,https://jduchessgt.org/
+JETBRAINS,,/assets/img/jetbrains.001.png,https://www.jetbrains.com/
+JFrog,,/assets/img/jfrog.001.jpeg,https://jfrog.com/
+JFrog1,,/assets/img/jfrog.001.jpeg,https://jfrog.com/
+JFrogName,,/assets/img/jfrog.001.jpeg,https://jfrog.com/
+jmu,,/assets/img/jmu.png,https://www.javamug.org
+jph,,/assets/img/jph.png,https://www.facebook.com/Java-User-Group-Port-Harcourt-1436358619990281/
+jrebel,,/assets/img/jrebel.001.jpeg,https://www.jrebel.com/
+jup,,/assets/img/jup.png,http://www.javaup.org.mx/
+knox,,/assets/img/knox.png,https://knoxjava.org/
+lat,,/assets/img/laj.png,https://twitter.com/latjug?lang=en
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
-mal,jug,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
+mal,,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
 Manhattan Associates,,/assets/img/MahnattanAssocs.001.jpeg,https://www.manh.com/
-mdk,jug,/assets/img/mdj.png,https://jugmsk.timepad.ru/events/
-med,jug,/assets/img/med.png,https://medellinjug.org
-mex,jug,/assets/img/mex.jpg,http://www.javamexico.org/
-Microsoft Azure,silver,/assets/img/msft.001.jpeg,https://azure.microsoft.com/en-us/resources/join-the-azure-developer-community/?ocid=AID2428618
-mon,jug,/assets/img/mon.png,http://www.montreal-jug.org
+mdk,,/assets/img/mdj.png,https://jugmsk.timepad.ru/events/
+med,,/assets/img/med.png,https://medellinjug.org
+mex,,/assets/img/mex.jpg,http://www.javamexico.org/
+Microsoft Azure,,/assets/img/msft.001.jpeg,https://azure.microsoft.com/en-us/resources/join-the-azure-developer-community/?ocid=AID2428618
+mon,,/assets/img/mon.png,http://www.montreal-jug.org
 MongoDB,,/assets/img/mongodb.001.jpeg,https://www.mongodb.com/
-mor,jug,/assets/img/mor.png,https://twitter.com/moroccojug
+mor,,/assets/img/mor.png,https://twitter.com/moroccojug
 Mulesoft,,/uploads/mulesoft.001.jpeg,https://www.mulesoft.com/
-Narwhal,gold,/assets/img/nrwl.png,http://nrwl.io/
-Netflix,silver,/assets/img/netflix.001.png,https://jobs.netflix.com/search?q=engineering
-Nexmo,gold,/assets/img/NEXMO.001.jpeg,https://developer.nexmo.com/
-nic,jug,/assets/img/ncj.png,http://javanicaragua.org
-nyc,jug,/assets/img/nyc.png,http://www.javasig.com
-Object Computing,gold,/assets/img/OBJECT COMPUTING.001.jpeg,https://objectcomputing.com/products/micronaut
-OFFHEAP,community,/assets/img/heap.001.jpeg,https://www.javaoffheap.com/
-Okta,gold,/assets/img/okta bright blue.001.jpeg,http://developer.okta.com/
-Okta,opensource,/assets/img/okta bright blue.001.jpeg,https://developer.okta.com/
+Narwhal,,/assets/img/nrwl.png,http://nrwl.io/
+Netflix,,/assets/img/netflix.001.png,https://jobs.netflix.com/search?q=engineering
+Nexmo,,/assets/img/NEXMO.001.jpeg,https://developer.nexmo.com/
+nic,,/assets/img/ncj.png,http://javanicaragua.org
+nyc,,/assets/img/nyc.png,http://www.javasig.com
+Object Computing,,/assets/img/OBJECT COMPUTING.001.jpeg,https://objectcomputing.com/products/micronaut
+OFFHEAP,,/assets/img/heap.001.jpeg,https://www.javaoffheap.com/
+Okta,,/assets/img/okta bright blue.001.jpeg,http://developer.okta.com/
+Okta,,/assets/img/okta bright blue.001.jpeg,https://developer.okta.com/
 OneTrust,,/assets/img/onetrust.001.jpeg,https://www.onetrust.com/
-optomi,silver,/assets/img/optomi.jpeg,http://optomi.com/
-Oracle,lanyard,/assets/img/Oracle new.001.jpeg,http://developer.oracle.com/
-Oracle,platinum,/uploads/Oracle new.001.jpeg,http://developer.oracle.com/
-OSI,silver,/assets/img/OSIw.001.png,https://opensource.org/
-OSI,opensource,/assets/img/OSIw.001.png,https://opensource.org/
-OverOps,gold,/assets/img/overops.001.jpeg,https://www.overops.com/
-Payara,silver,/assets/img/payara.001.jpeg,https://www.payara.fish
-Payara2,lunch,/assets/img/payara2.001.jpeg,https://www.payara.fish/
-peru,jug,/assets/img/per.png,https://jugpe.com.br/
-pit,jug,/assets/img/pit-01.png,https://www.meetup.com/The-Pittsburgh-Java-Meetup-Group/
-RedHat,diamond,/assets/img/Red Hat2.001.png,https://developers.redhat.com/
-ric,jug,/assets/img/ric.png,https://www.meetup.com/Richmond-Java-Users-Group/
-RingCentral,gold,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
-ruj,jug,/assets/img/rus.png,https://jug.ru/
-sea,jug,/assets/img/sej.002.jpeg,https://www.seajug.org/
-Sentry,gold,/assets/img/sentry.001.jpeg,https://sentry.io/welcome/
-sev,jug,/assets/img/sev.png,http://meetup.com/svqjug
-Slalom,silver,/uploads/slalom-001.jpeg,https://www.slalom.com/
+optomi,,/assets/img/optomi.jpeg,http://optomi.com/
+Oracle,,/assets/img/Oracle new.001.jpeg,http://developer.oracle.com/
+Oracle,,/uploads/Oracle new.001.jpeg,http://developer.oracle.com/
+OSI,,/assets/img/OSIw.001.png,https://opensource.org/
+OSI,,/assets/img/OSIw.001.png,https://opensource.org/
+OverOps,,/assets/img/overops.001.jpeg,https://www.overops.com/
+Payara,,/assets/img/payara.001.jpeg,https://www.payara.fish
+Payara2,,/assets/img/payara2.001.jpeg,https://www.payara.fish/
+peru,,/assets/img/per.png,https://jugpe.com.br/
+pit,,/assets/img/pit-01.png,https://www.meetup.com/The-Pittsburgh-Java-Meetup-Group/
+RedHat,,/assets/img/Red Hat2.001.png,https://developers.redhat.com/
+ric,,/assets/img/ric.png,https://www.meetup.com/Richmond-Java-Users-Group/
+RingCentral,,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
+ruj,,/assets/img/rus.png,https://jug.ru/
+sea,,/assets/img/sej.002.jpeg,https://www.seajug.org/
+Sentry,,/assets/img/sentry.001.jpeg,https://sentry.io/welcome/
+sev,,/assets/img/sev.png,http://meetup.com/svqjug
+Slalom,,/uploads/slalom-001.jpeg,https://www.slalom.com/
 Snyk,,/assets/img/snyk.001.jpeg,https://snyk.io/
-Sonatype,opensource,/assets/img/sonatypenew.001.jpeg,https://www.sonatype.com/
-Sonatype,silver,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
-sou,jug,/assets/img/sou.png,https://soujava.org.br/
-stl,jug,/assets/img/stl.png,https://www.meetup.com/GatewayJUG/
-svj,jug,/assets/img/svj.png,https://www.meetup.com/svjugfx/
-svu,jug,/assets/img/svu.png,https://www.meetup.com/sv-jug/
-swj,jug,/assets/img/swj.png,https://www.meetup.com/South-West-Java/
-Technologists of Color,community,/assets/img/toc.001.jpeg,http://www.techsofcolor.org
+Sonatype,,/assets/img/sonatypenew.001.jpeg,https://www.sonatype.com/
+Sonatype,,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
+sou,,/assets/img/sou.png,https://soujava.org.br/
+stl,,/assets/img/stl.png,https://www.meetup.com/GatewayJUG/
+svj,,/assets/img/svj.png,https://www.meetup.com/svjugfx/
+svu,,/assets/img/svu.png,https://www.meetup.com/sv-jug/
+swj,,/assets/img/swj.png,https://www.meetup.com/South-West-Java/
+Technologists of Color,,/assets/img/toc.001.jpeg,http://www.techsofcolor.org
 Technology Association of Georgia,,/assets/img/tag.001.jpeg,https://www.tagonline.org/
-TekSystems,silver,/assets/img/teksystems.png,https://www.teksystems.com/en/careers/become-a-consultant
-terminus,silver,/assets/img/terminus.png,https://terminus.com/
-The Home Depiot,platinum,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
+TekSystems,,/assets/img/teksystems.png,https://www.teksystems.com/en/careers/become-a-consultant
+terminus,,/assets/img/terminus.png,https://terminus.com/
+The Home Depiot,,/assets/img/thd.001.jpeg,https://careers.homedepot.com/career-areas/technology-careers/
 Thompson Technologies,,/assets/img/tt.001.jpeg,https://thompsontechnologies.com/
-ThoughtWorks,gold,/assets/img/TWks.001.jpeg,https://www.thoughtworks.com/
-Tidelift,lunch,/assets/img/titelift-01.png,https://tidelift.com/
-Tomitribe,opensource,/assets/img/tribe.001.jpeg,https://www.tomitribe.com/
+ThoughtWorks,,/assets/img/TWks.001.jpeg,https://www.thoughtworks.com/
+Tidelift,,/assets/img/titelift-01.png,https://tidelift.com/
+Tomitribe,,/assets/img/tribe.001.jpeg,https://www.tomitribe.com/
 TSYS,,/assets/img/tsys.001.jpeg,http://www.tsys.com/careers
-twilio,silver,/assets/img/twilio.jpg,https://www.twilio.com/
-uju,jug,/assets/img/uju.png,http://ujug.org/
-ultimate software,silver,/assets/img/ultimate.png,www.ultimatesoftware.com/careers
-utr,jug,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
-Vaadin,silver,/assets/img/vaadin2.png,https://vaadin.com/
-vju,jug,/assets/img/vju.png,https://virtualjug.com/
+twilio,,/assets/img/twilio.jpg,https://www.twilio.com/
+uju,,/assets/img/uju.png,http://ujug.org/
+ultimate software,,/assets/img/ultimate.png,www.ultimatesoftware.com/careers
+utr,,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
+Vaadin,,/assets/img/vaadin2.png,https://vaadin.com/
+vju,,/assets/img/vju.png,https://virtualjug.com/
 VMWare,,/assets/img/vmware.001.jpeg,https://www.vmware.com/
-VMWare Tanzu,gold,/assets/img/Tanzu2.001.jpeg,https://cloud.vmware.com/tanzu
-Wavefront,gold,/assets/img/Wavefront.001.jpeg,https://www.wavefront.com/
-WhiteSource,silver,/assets/img/whitesource.png,https://www.whitesourcesoftware.com/
+VMWare Tanzu,,/assets/img/Tanzu2.001.jpeg,https://cloud.vmware.com/tanzu
+Wavefront,,/assets/img/Wavefront.001.jpeg,https://www.wavefront.com/
+WhiteSource,,/assets/img/whitesource.png,https://www.whitesourcesoftware.com/
 Women in Technology,,/assets/img/wit.001.jpeg,https://www.mywit.org/
-WWC,community,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
-yoppworks,gold,/assets/img/yopp.001.jpeg,https://yoppworks.com/?utm_source=sponsor&utm_medium=click&utm_campaign=devnexus
-z10SSRRR,opensource,/assets/img/ossrrr4web.001.jpeg,https://ajug.typeform.com/to/HT7p8V
+WWC,,/assets/img/WWC.001.jpeg,https://www.womenwhocode.com/atlanta
+yoppworks,,/assets/img/yopp.001.jpeg,https://yoppworks.com/?utm_source=sponsor&utm_medium=click&utm_campaign=devnexus
+z10SSRRR,,/assets/img/ossrrr4web.001.jpeg,https://ajug.typeform.com/to/HT7p8V
