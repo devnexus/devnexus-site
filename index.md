@@ -10,7 +10,7 @@ branding:
   alt: Devnexus
 cfp:
   announce: false
-  view: open 
+  view: announce 
 ---
 
 {% if page.cfp.announce %}
