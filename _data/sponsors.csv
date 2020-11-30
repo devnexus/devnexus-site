@@ -3,20 +3,20 @@ AdoptOpenJDK,,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 AdoptOpenJDK,,/assets/img/AOJDK.001.jpeg,https://adoptopenjdk.net/
 ADP,,/assets/img/adp.png,https://jobs.adp.com/teams-roles/technology/
 AJUG,,/assets/img/ajug.001.jpeg,https://ajug.org/
-ajugjug,,/assets/img/aju.png,http://ajug.org
+ajugjug,jug,/assets/img/aju.png,http://ajug.org
 ank,,/assets/img/ank.png,https://twitter.com/ankarajug?lang=en
 Apace Software Foundation,,/assets/img/asf.001.jpeg,https://www.apache.org/
 Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
 Azul Systems,,/assets/img/Azul Systems.001.jpeg,https://www.azul.com/
 Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com
 Ban,,/assets/img/ban.png,http://bangalorejug.org/
-bcn,,/assets/img/bcn.png,https://www.barcelonajug.org/
+bcn,,/assets/img/bcn-01.png,https://www.barcelonajug.org/
 Bellsoft,,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
 Blackrock,,/assets/img/blackrock.001.jpeg,https://careers.blackrock.com/
 bog,,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
 bugsnag,,/assets/img/bugsnaglogo.001.jpeg,https://www.bugsnag.com/
-cju,,/assets/img/cju.png,https://cjug.org/
+cju,jug,/assets/img/cjug-01.png,https://cjug.org/
 Clever Cloud,,/assets/img/clever cloud.001.jpeg,https://www.clever-cloud.com/en/
 clt,,/assets/img/clt.png,https://cjug.org/
 Cockroach Labs,,/assets/img/crlabs.png,https://www.cockroachlabs.com/
@@ -29,13 +29,13 @@ Daugherty Business Solutions,,/assets/img/DBS.001.jpeg,https://www.daugherty.com
 Delta,,/assets/img/sponsors/delta2.jpeg,https://www.delta.com/us/en/careers/overview
 Devnexus,,/assets/img/dev brandmark.001.jpeg,https://devnexus.com/
 Devopspeakeasy,,/assets/img/speak.001.jpeg,https://twitter.com/devopsspeakeasy
-dom,,/assets/img/dom.png,https://twitter.com/JavaDominicano
+dom,jug,/assets/img/dom.png,https://twitter.com/JavaDominicano
 dwl,,/assets/img/del.png,https://www.meetup.com/Delhi-NCR-JUG/
 Eclipse Foundation,,/assets/img/eclipse.001.jpeg,https://www.eclipse.org/
 ecu,,/assets/img/ecu.png,www.ecuadorjug.org
 Elastic,,/assets/img/elastic.001.png,https://www.elastic.co/
 Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com
-gdl,,/assets/img/gdl.png,https://www.facebook.com/gdljug/
+gdl,jug,/assets/img/gdl.png,https://www.facebook.com/gdljug/
 GitHub,,/assets/img/github.001.jpeg,https://github.com/
 Google,,/assets/img/googlecloud.001.jpeg,http://cloud.google.com/
 Gradle,,/assets/img/gradle.001.jpeg,http://www.gradle.com/
@@ -69,11 +69,11 @@ knox,,/assets/img/knox.png,https://knoxjava.org/
 lat,,/assets/img/laj.png,https://twitter.com/latjug?lang=en
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
-mal,,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
+mal,jug,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
 Manhattan Associates,,/assets/img/MahnattanAssocs.001.jpeg,https://www.manh.com/
 mdk,,/assets/img/mdj.png,https://jugmsk.timepad.ru/events/
-med,,/assets/img/med.png,https://medellinjug.org
-mex,,/assets/img/mex.jpg,http://www.javamexico.org/
+med,jug,/assets/img/med.png,https://medellinjug.org
+mex,jug,/assets/img/mex.jpg,http://www.javamexico.org/
 Microsoft Azure,,/assets/img/msft.001.jpeg,https://azure.microsoft.com/en-us/resources/join-the-azure-developer-community/?ocid=AID2428618
 mon,,/assets/img/mon.png,http://www.montreal-jug.org
 MongoDB,,/assets/img/mongodb.001.jpeg,https://www.mongodb.com/
@@ -83,7 +83,7 @@ Narwhal,,/assets/img/nrwl.png,http://nrwl.io/
 Netflix,,/assets/img/netflix.001.png,https://jobs.netflix.com/search?q=engineering
 Nexmo,,/assets/img/NEXMO.001.jpeg,https://developer.nexmo.com/
 nic,,/assets/img/ncj.png,http://javanicaragua.org
-nyc,,/assets/img/nyc.png,http://www.javasig.com
+nyc,jug,/assets/img/nyc.png,http://www.javasig.com
 Object Computing,,/assets/img/OBJECT COMPUTING.001.jpeg,https://objectcomputing.com/products/micronaut
 OFFHEAP,,/assets/img/heap.001.jpeg,https://www.javaoffheap.com/
 Okta,,/assets/img/okta bright blue.001.jpeg,http://developer.okta.com/
@@ -97,13 +97,13 @@ OSI,,/assets/img/OSIw.001.png,https://opensource.org/
 OverOps,,/assets/img/overops.001.jpeg,https://www.overops.com/
 Payara,,/assets/img/payara.001.jpeg,https://www.payara.fish
 Payara2,,/assets/img/payara2.001.jpeg,https://www.payara.fish/
-peru,,/assets/img/per.png,https://jugpe.com.br/
+peru,jug,/assets/img/per.png,https://jugpe.com.br/
 pit,,/assets/img/pit-01.png,https://www.meetup.com/The-Pittsburgh-Java-Meetup-Group/
 RedHat,gold,/assets/img/Red Hat2.001.png,https://developers.redhat.com/
 ric,,/assets/img/ric.png,https://www.meetup.com/Richmond-Java-Users-Group/
 RingCentral,,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
 ruj,,/assets/img/rus.png,https://jug.ru/
-sea,,/assets/img/sej.002.jpeg,https://www.seajug.org/
+sea,jug,/assets/img/sej.002.jpeg,https://www.seajug.org/
 Sentry,,/assets/img/sentry.001.jpeg,https://sentry.io/welcome/
 sev,,/assets/img/sev.png,http://meetup.com/svqjug
 Slalom,,/uploads/slalom-001.jpeg,https://www.slalom.com/
@@ -111,9 +111,9 @@ Snyk,,/assets/img/snyk.001.jpeg,https://snyk.io/
 Sonatype,platinum,/assets/img/sonatypenew.001.jpeg,https://www.sonatype.com/
 Sonatype,,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
 sou,jug,/assets/img/sou.png,https://soujava.org.br/
-stl,,/assets/img/stl.png,https://www.meetup.com/GatewayJUG/
+stl,jug,/assets/img/stl.png,https://www.meetup.com/GatewayJUG/
 svj,,/assets/img/svj.png,https://www.meetup.com/svjugfx/
-svu,,/assets/img/svu.png,https://www.meetup.com/sv-jug/
+svu,jug,/assets/img/svu.png,https://www.meetup.com/sv-jug/
 swj,,/assets/img/swj.png,https://www.meetup.com/South-West-Java/
 Technologists of Color,,/assets/img/toc.001.jpeg,http://www.techsofcolor.org
 Technology Association of Georgia,,/assets/img/tag.001.jpeg,https://www.tagonline.org/
@@ -130,7 +130,7 @@ uju,,/assets/img/uju.png,http://ujug.org/
 ultimate software,,/assets/img/ultimate.png,www.ultimatesoftware.com/careers
 utr,,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
 Vaadin,,/assets/img/vaadin2.png,https://vaadin.com/
-vju,,/assets/img/vju.png,https://virtualjug.com/
+vju,jug,/assets/img/vju.png,https://virtualjug.com/
 VMWare,,/assets/img/vmware.001.jpeg,https://www.vmware.com/
 VMWare Tanzu,,/assets/img/Tanzu2.001.jpeg,https://cloud.vmware.com/tanzu
 Wavefront,,/assets/img/Wavefront.001.jpeg,https://www.wavefront.com/
