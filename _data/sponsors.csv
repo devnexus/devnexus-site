@@ -76,6 +76,7 @@ jmu,,/assets/img/jmu.png,https://www.javamug.org
 jph,,/assets/img/jph.png,https://www.facebook.com/Java-User-Group-Port-Harcourt-1436358619990281/
 jrebel,silver,/assets/img/jrebel.001.jpeg,https://www.jrebel.com/
 jup,jug,/assets/img/jup.png,http://www.javaup.org.mx/
+kcjug,jug,/assets/img/kcjug-01.png,https://www.meetup.com/KansasCityJUG/
 knox,jug,/assets/img/knox.png,https://knoxjava.org/
 lat,,/assets/img/laj.png,https://twitter.com/latjug?lang=en
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
@@ -98,6 +99,8 @@ Narwhal,,/assets/img/nrwl.png,http://nrwl.io/
 Netflix,,/assets/img/netflix.001.png,https://jobs.netflix.com/search?q=engineering
 Nexmo,,/assets/img/NEXMO.001.jpeg,https://developer.nexmo.com/
 nic,,/assets/img/ncj.png,http://javanicaragua.org
+serbian JUG,jug,/assets/img/nisjug-01.png,https://nisjug.org/
+nljug,jug,/assets/img/nljug-01.png,https://nljug.org/
 nyc,jug,/assets/img/nyc.png,http://www.javasig.com
 Object Computing,,/assets/img/OBJECT COMPUTING.001.jpeg,https://objectcomputing.com/products/micronaut
 OFFHEAP,,/assets/img/heap.001.jpeg,https://www.javaoffheap.com/
@@ -120,7 +123,7 @@ RingCentral,,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
 ruj,,/assets/img/rus.png,https://jug.ru/
 sea,jug,/assets/img/sej.002.jpeg,https://www.seajug.org/
 Sentry,,/assets/img/sentry.001.jpeg,https://sentry.io/welcome/
-sev,,/assets/img/sev.png,http://meetup.com/svqjug
+sev,jug,/assets/img/sev.png,http://meetup.com/svqjug
 Slalom,,/uploads/slalom-001.jpeg,https://www.slalom.com/
 Snyk,,/assets/img/snyk.001.jpeg,https://snyk.io/
 Sonatype,,/assets/img/sonatype.001.jpeg,https://www.sonatype.com/
@@ -143,6 +146,7 @@ Tomitribe,,/assets/img/tribe.001.jpeg,https://www.tomitribe.com/
 TSYS,,/assets/img/tsys.001.jpeg,http://www.tsys.com/careers
 twilio,gold,/assets/img/twilio.jpg,https://www.twilio.com/
 uju,,/assets/img/uju.png,http://ujug.org/
+ukraine jug,jug,/assets/img/ukraine-01.png,https://www.meetup.com/JUG_UA/
 ultimate software,,/assets/img/ultimate.png,www.ultimatesoftware.com/careers
 utr,,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
 Vaadin,,/assets/img/vaadin2.png,https://vaadin.com/
