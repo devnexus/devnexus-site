@@ -16,7 +16,7 @@ bcn,jug,/assets/img/bcn-01.png,https://www.barcelonajug.org/
 Bellsoft,,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
 Blackrock,,/assets/img/blackrock.001.jpeg,https://careers.blackrock.com/
-bog,,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
+bog,jug,/assets/img/bog.png,https://www.meetup.com/es/Bogota-JVM-Meetup/
 bordeaux,jug,/uploads/bord-01.png,http://bordeauxjug.org/
 boulder,jug,/uploads/boulder-01.png,https://www.meetup.com/BoulderJavaUsersGroup/
 brighton,jug,/uploads/brighton.png,https://www.meetup.com/Brighton-Java/
@@ -38,7 +38,7 @@ Devopspeakeasy,,/assets/img/speak.001.jpeg,https://twitter.com/devopsspeakeasy
 dom,jug,/assets/img/dom.png,https://twitter.com/JavaDominicano
 dwl,,/assets/img/del.png,https://www.meetup.com/Delhi-NCR-JUG/
 Eclipse Foundation,,/assets/img/eclipse.001.jpeg,https://www.eclipse.org/
-ecu,,/assets/img/ecu.png,www.ecuadorjug.org
+ecu,jug,/assets/img/ecu.png,www.ecuadorjug.org
 egypt,jug,/uploads/egypt-01.png,https://www.facebook.com/EGJUG/
 Elastic,,/assets/img/elastic.001.png,https://www.elastic.co/
 Fusion Reactor,,/assets/img/Fusion R.001.jpeg,http://www.fusion-reactor.com
