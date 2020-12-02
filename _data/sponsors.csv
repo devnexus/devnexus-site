@@ -11,7 +11,7 @@ Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
 Aspose,,/assets/img/aspose.001.jpeg,https://www.aspose.com/
 Azul Systems,,/assets/img/Azul Systems.001.jpeg,https://www.azul.com/
 Azul Systems,,/uploads/azul.001.jpeg,https://www.azul.com
-Ban,,/assets/img/ban.png,http://bangalorejug.org/
+Ban,jug,/assets/img/ban.png,http://bangalorejug.org/
 bcn,jug,/assets/img/bcn-01.png,https://www.barcelonajug.org/
 Bellsoft,,/assets/img/bellsoft.001.jpeg,https://bell-sw.com/
 Bettercloud,,/assets/img/bettercloud.001.jpeg,https://www.bettercloud.com/
@@ -84,6 +84,7 @@ lat,,/assets/img/laj.png,https://twitter.com/latjug?lang=en
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 Lightbend,,/assets/img/lightbend.001.jpeg,https://www.lightbend.com/
 london,jug,/uploads/london-01.png,https://londonjavacommunity.co.uk/
+madridJUG,jug,/uploads/madrid-1.png,https://www.meetup.com/MadridJUG/
 madrid,jug,/uploads/madrid groovy-01.png,
 mal,jug,/assets/img/mal.png,https://www.meetup.com/Javaforum-Malmo/
 manchester,jug,/uploads/manchester-01.png,https://www.meetup.com/ManchesterUK-Java-Community/
@@ -120,6 +121,7 @@ Payara,,/assets/img/payara.001.jpeg,https://www.payara.fish
 Payara2,,/assets/img/payara2.001.jpeg,https://www.payara.fish/
 peru,jug,/assets/img/per.png,https://jugpe.com.br/
 pit,,/assets/img/pit-01.png,https://www.meetup.com/The-Pittsburgh-Java-Meetup-Group/
+port,jug,/uploads/port-harcourt.png,https://www.facebook.com/Java-User-Group-Port-Harcourt-1436358619990281/
 RedHat,gold,/assets/img/Red Hat2.001.png,https://developers.redhat.com/
 ric,,/assets/img/ric.png,https://www.meetup.com/Richmond-Java-Users-Group/
 RingCentral,,/assets/img/rc.001.jpeg,https://www.ringcentral.com/
@@ -150,7 +152,7 @@ Tidelift,,/assets/img/titelift-01.png,https://tidelift.com/
 Tomitribe,,/assets/img/tribe.001.jpeg,https://www.tomitribe.com/
 TSYS,,/assets/img/tsys.001.jpeg,http://www.tsys.com/careers
 twilio,gold,/assets/img/twilio.jpg,https://www.twilio.com/
-uju,,/assets/img/uju.png,http://ujug.org/
+uju,jug,/assets/img/uju.png,http://ujug.org/
 ukraine jug,jug,/assets/img/ukraine-01.png,https://www.meetup.com/JUG_UA/
 ultimate software,,/assets/img/ultimate.png,www.ultimatesoftware.com/careers
 utr,,/assets/img/utr.png,https://www.meetup.com/Utrecht-Java-User-Group/
