@@ -4,7 +4,7 @@ dates: Feb 17 2021
 registration:
   text: Register here for Free
   status: enabled
-  link: href="https://www.accelevents.com/e/devnexus#Agenda" 
+  link: href="https://www.eventbrite.com/e/devnexus-2021-tickets-132807499807" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
