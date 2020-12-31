@@ -30,6 +30,8 @@ cfp:
 
 {% include marketing-video.html %}
 
+{% include keynotes_promo.html %} 
+
 {% comment %}
  {% include workshops_promo.html %} 
 {% endcomment %} 
