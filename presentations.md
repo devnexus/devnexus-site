@@ -2,9 +2,9 @@
 layout: info-fluid
 permalink: /presentations/index.html
 tracks:
-#- keynote
+- keynote
 - workshop
-#- unobtanium
+- unobtanium
 - core-java
 - java-platform
 - open-java
@@ -21,7 +21,6 @@ tracks:
 - agile
 ---
 {% comment %}
-{% assign adminevents = site.data.schedule[1].events | concat: site.data.schedule[2].events  %}
 {% assign keynotes = adminevents | where: "room", "Keynote Room" %}
 {% if keynotes %}
 <h1 class="featured-header"><span>— Keynotes —</span></h1>

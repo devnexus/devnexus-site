@@ -18,7 +18,36 @@ Notes:
 * prior to schedule, CFP data is protected by login.  Download and use --file option early on.
 
 Steps to archive a year
-* TODO: remember how to do this!
+1.  Change and commit _config.yml so that site uses post conference header.
+```
+active-header: navigation-post-show.html
+registration: closed
+```
+
+2. repath collection output to new archive location and run jekyll
+collections:
+  speakers:
+    title: Speakers 2020
+    output: true
+    permalink: archive/devnexus2020/:collection/:path
+  events:
+     title: Presentations 2020
+     output: true
+     permalink: archive/devnexus2020/presentations/:path/
+  event-instructions:
+     title: Workshop Prep 2020
+     output: true
+     permalink: archive/devnexus2020/presentations/:path/instructions
+
+```
+
+2. Move generated files so that they become archive source files
+* mv _site/devnexus2020  archive/
+* mv _site/presentations/index.html  archive/devnexus2020/presentations
+* mv _site/speakers/index.html  archive/devnexus2020/speakers
+
+3. remove contents from _events, _speakers, _event-instruction folders
+4. restore _config.yml (git checkout _config.yml )
 
 Steps to Prepare a new year
 * Update the _presite_plugins/jekyll_cfp/lib/jekyll/commands/cfp.rb file with CFP uris

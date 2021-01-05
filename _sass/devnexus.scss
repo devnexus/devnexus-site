@@ -30,8 +30,11 @@ $action-button-color: #f6921e;
   a:after {
     display: none;
   }
-  .day {
+  .new-day {
     page-break-before: always;
+  }
+  .no-print {
+     display: none;
   }
 }
 

@@ -1,14 +1,15 @@
 ---
 layout: info
+title: Devnexus Organizers
 permalink: /organizers/index.html
 ---
 <h1 class="featured-header">Organizers</h1>
 <div class="row">
   {% assign organizerList = site.organizers | sort: 'order'%}
   {% for organizer in organizerList %}
-  <div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="col-sm-12 col-md-4">
     <div class="thumbnail" id="{{organizer.first_name}}_{{organizer.last_name}}">
-      <img class="img-responsive" src="/assets/img/{{ organizer.url | prepend: organizer.baseurl }}.jpeg"
+      <img class="img-responsive" src="/assets/img{{ organizer.url | prepend: organizer.baseurl | downcase }}.jpeg"
                                    alt="{{organizer.first_name}} {{organizer.last_name}}">
       <div class="caption">
         <h3><a href="{{ organizer.url | prepend: organizer.baseurl }}">{{organizer.first_name}} {{organizer.last_name}}</a></h3>

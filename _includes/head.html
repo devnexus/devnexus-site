@@ -1,4 +1,11 @@
 <head>
+  <!-- Google Tag Manager -->
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WLXXPHQ');</script>
+  
+  <!-- End Google Tag Manager -->
+  
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +16,13 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <meta name="twitter:card" content="{{site.twitter_card.type}}" />
+  <meta name="twitter:site" content="{{site.twitter_card.site}}" />
+  <meta name="twitter:creator" content="{{site.twitter_card.creator}}" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta name="twitter:image" content="{{page.twitter_card_image | default: site.twitter_card.default_image }}" />
 
   <!-- fonts: external links -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>

@@ -14,7 +14,7 @@ module Jekyll
             end
           end
           pcmd.command(:events) do |e|
-            url = 'https://cfp.devnexus.com/en/dn2020/public/promo_events.json'
+            url = 'https://cfp.devnexus.com/en/dn2021/public/promo_events.json'
             e.description "process promo_events.json"
             e.action do |args, options|
                if (options['file'])
@@ -28,7 +28,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://cfp.devnexus.com/en/dn2020/public/full_schedule.json'
+              url = 'https://cfp.devnexus.com/en/dn2021/public/full_schedule.json'
               if (options['file'])
                 process_schedule_data(read_data (options['file']) )
               else
@@ -84,7 +84,7 @@ module Jekyll
          event_header = { "id" => event["id"],
                          "title" => event["title"],
                          "layout" => "preso_details",
-                        "track" => event['track']&.downcase }
+                        "track" => event['track']&.downcase}
          #keeping keys to person records for later rendering
          filtered_persons = filter_attributes(persons, "full_public_name", "id")
          if (persons && persons.length > 0)
@@ -106,35 +106,38 @@ module Jekyll
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
           #end
         end
-
+        
         def persist_speakers()
+          stored_speaker_data = Hash.new  
           stored_speaker_file = File.read("_data/speakers.yml") 
-	  #Jekyll.logger.info("speakers file #{stored_speaker_file}")
-          stored_speaker_data = YAML.load(stored_speaker_file)	  
-	  if (stored_speaker_data == nil) 
-             stored_speaker_data = Hash.new
-          end			  
-          for person in @speakers.data() do
+          if !stored_speaker_file.empty?
+            stored_speaker_data = YAML.load(stored_speaker_file)
+            Jekyll.logger.info("speakers file #{stored_speaker_file}")
+        end   	
+       Jekyll.logger.info("speakers yaml #{stored_speaker_data}")        
+      for person in @speakers.data() do
             abstract = person[1].delete 'abstract'
             public_items = person[1].select{ |k,v| ["full_public_name", "id", "twitter_name", "events"].include?(k)}
             public_items['title'] = public_items['full_public_name']
             public_items['layout'] = "speaker_bio"
             public_items['id'] = person[0]
+            #public_items['order'] = public_items['events'].size  #speakers with more talks first
             write_item("speakers", public_items, abstract)
             correct_speaker_data(stored_speaker_data, person[0], person[1])
+            Jekyll.logger.info("added person #{person[0]}")
           end
           updated_speaker_yaml = YAML.dump(stored_speaker_data)
-          #Jekyll.logger.info(updated_speaker_yaml)
+          Jekyll.logger.info(updated_speaker_yaml)
           File.write("_data/speakers.yml", updated_speaker_yaml)
         end
         def correct_speaker_data(speaker_db, id, person_details)
-          speaker_record = speaker_db.fetch(id, nil)
-          if(speaker_record)
-            #TODO - update any cfp sourced images?
-            #Jekyll.logger.info("found")
+          Jekyll.logger.info("arguments: 1 #{speaker_db} 2 #{id} 3 #{person_details} ")
+          if speaker_db.has_key?(id) 
+             #TODO - update any cfp sourced images?
+             Jekyll.logger.info("found #{id}")
           else
             speaker_db.store(id, @speakers.full_path_avatar(person_details))
-            #Jekyll.logger.info("new>>> #{speaker_db.fetch(person_details['id'])}")
+            Jekyll.logger.info("new>>> #{speaker_db.fetch(id, "new not found")}")
           end
         end
         def speakers(people, person_details)

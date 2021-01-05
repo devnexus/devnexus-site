@@ -12,16 +12,11 @@
 {% assign practices = include.events  | where: "track", "Practices and other tech" | first %}
 {% assign tools-tech = include.events  | where: "track", "Tools and techniques" | first %}
 {% assign web = include.events  | where: "track", "Web and Front-end" | first %}
+{% assign unobtanium = include.events  | where: "track", "Unobtanium" | first %}
 
-
-{% if core-java %}
-{% assign event = site.events | where: "slug", core-java.id | first %}
-{% include schedule_event.html details=event room="core-java" track=include.track %}
-{% endif %}
-
-{% if java-platform %}
-{% assign event = site.events | where: "slug", java-platform.id | first %}
-{% include schedule_event.html details=event room="java-platform" track=include.track %}
+{% if architecture %}
+{% assign event = site.events | where: "slug", architecture.id | first %}
+{% include schedule_event.html details=event room="archictecture" track=include.track %}
 {% endif %}
 
 {% if open-java %}
@@ -29,14 +24,9 @@
 {% include schedule_event.html details=event room="open-java" track=include.track %}
 {% endif %}
 
-{% if javascript %}
-{% assign event = site.events | where: "slug", javascript.id | first %}
-{% include schedule_event.html details=event room="javascript" track=include.track %}
-{% endif %}
-
-{% if jvmlang %}
-{% assign event = site.events | where: "slug", jvmlang.id | first %}
-{% include schedule_event.html details=event room="jvm-languages" track=include.track %}
+{% if cloud-tech %}
+{% assign event = site.events | where: "slug", cloud-tech.id | first %}
+{% include schedule_event.html details=event room="cloud-technology" track=include.track %}
 {% endif %}
 
 {% if practices %}
@@ -49,24 +39,25 @@
 {% include schedule_event.html details=event room="tools" track=include.track %}
 {% endif %}
 
+{% if security %}
+{% assign event = site.events | where: "slug", security.id | first %}
+{% include schedule_event.html details=event room="security" track=include.track %}
+{% endif %}
+
+{% comment %} end A4 {% endcomment %}
+{% if jvmlang %}
+{% assign event = site.events | where: "slug", jvmlang.id | first %}
+{% include schedule_event.html details=event room="jvm-languages" track=include.track %}
+{% endif %}
+
 {% if agile %}
 {% assign event = site.events | where: "slug", agile.id | first %}
 {% include schedule_event.html details=event room="agile" track=include.track %}
 {% endif %}
 
-{% if architecture %}
-{% assign event = site.events | where: "slug", architecture.id | first %}
-{% include schedule_event.html details=event room="archictecture" track=include.track %}
-{% endif %}
-
-{% if cloud-infra %}
-{% assign event = site.events | where: "slug", cloud-infra.id | first %}
-{% include schedule_event.html details=event room="cloud-infrastructure" track=include.track %}
-{% endif %}
-
-{% if cloud-tech %}
-{% assign event = site.events | where: "slug", cloud-tech.id | first %}
-{% include schedule_event.html details=event room="cloud-technology" track=include.track %}
+{% if unobtanium %}
+{% assign event = site.events | where: "slug", unobtanium.id | first %}
+{% include schedule_event.html details=event room="unobtanium"  track=include.track %}
 {% endif %}
 
 {% if frameworks %}
@@ -74,25 +65,41 @@
 {% include schedule_event.html details=event room="frameworks" track=include.track %}
 {% endif %}
 
-{% if security %}
-{% assign event = site.events | where: "slug", security.id | first %}
-{% include schedule_event.html details=event room="security" track=include.track %}
+{% if java-platform %}
+{% assign event = site.events | where: "slug", java-platform.id | first %}
+{% include schedule_event.html details=event room="java-platform" track=include.track %}
 {% endif %}
 
+{% if cloud-infra %}
+{% assign event = site.events | where: "slug", cloud-infra.id | first %}
+{% include schedule_event.html details=event room="cloud-infrastructure" track=include.track %}
+{% endif %}
+
+{% if javascript %}
+{% assign event = site.events | where: "slug", javascript.id | first %}
+{% include schedule_event.html details=event room="javascript" track=include.track %}
+{% endif %}
 
 {% if web %}
 {% assign event = site.events | where: "slug", web.id | first %}
 {% include schedule_event.html details=event room="web" track=include.track %}
 {% endif %}
 
-{% comment %}
-{% if A316 %}
-{% assign event = site.events | where: "slug", A316.id | first %}
-{% include schedule_event.html details=event room="A316" track=include.track %}
+{% if core-java %}
+{% assign event = site.events | where: "slug", core-java.id | first %}
+{% include schedule_event.html details=event room="core-java" track=include.track %}
 {% endif %}
 
-{% if A303 %}
-{% assign event = site.events | where: "slug", A303.id | first %}
-{% include schedule_event.html details=event room="A303" track=include.track %}
-{% endif %}
-{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
