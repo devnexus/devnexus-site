@@ -1,11 +1,7 @@
 {% assign preso = include.details %}
-{% if include.track %}
-   {% assign track = include.track %}
-{% else %}
-    {% assign track = include.room %}
-{% endif %}
+{% assign color = include.room | replace: ' ', '-' | downcase %}
 <div class="row schedule-row">
-		<div class="col-sm-6 col-xs-12 {{track}}">
+		<div class="col-sm-6 col-xs-12 {{color}}">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
 				<br/>
 				<span class="small">
@@ -15,8 +11,7 @@
 			 </span>
 			<br/>
 			<span class="small pull-right">
-				 {{site.data.tracks[track].title}} - 
-				 {{site.data.tracks[include.room].room}}
+				 {{include.room}}
 			</span>
 	  </div>
 </div>

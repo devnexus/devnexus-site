@@ -14,7 +14,7 @@ cfp:
 ---
 
 {% if page.cfp.announce %}
-{% case page.cfp.view %}
+{% case page.cfp.view %}s{% include keynotes_promo.html %} peakers/
   {% when "open" %}
   <div class="featured-header">
     <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES OCT 1)</a></h1>
@@ -30,9 +30,7 @@ cfp:
 
 {% include marketing-video.html %}
 
-{% comment %}
 {% include keynotes_promo.html %} 
-{% endcomment %}
 
 {% comment %}
  {% include workshops_promo.html %} 

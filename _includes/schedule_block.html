@@ -9,32 +9,32 @@
 
 {% if room-0 %}
 {% assign event = site.events | where: "slug", room-0.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-0.room track=event.track %}
 {% endif %}
 
 {% if room-1 %}
 {% assign event = site.events | where: "slug", room-1.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-1.room %}
 {% endif %}
 
 {% if room-2 %}
 {% assign event = site.events | where: "slug", room-2.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-2.room %}
 {% endif %}
 
 {% if room-3 %}
 {% assign event = site.events | where: "slug", room-3.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-3.room  %}
 {% endif %}
 
 {% if room-4 %}
 {% assign event = site.events | where: "slug", room-4.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-4.room %}
 {% endif %}
 
 {% if room-5 %}
 {% assign event = site.events | where: "slug", room-5.id | first %}
-{% include schedule_event.html details=event room=include.room track=include.track %}
+{% include schedule_event.html details=event room=room-5.room %}
 {% endif %}
 
 
