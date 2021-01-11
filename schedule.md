@@ -6,18 +6,19 @@ layout: info-fluid
 
 <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
 <div class="row no-print">
-<b> Tell us what you think:</b> <a href="https://schedule.devnexus.com">schedule.devnexus.com</a>
 </div>
  <div class="row new-day">
  <div class="col-xs-12">
    <div class="col-xs-8">
      <h2 class="day"> Wednesday Feb 17</h2>
    </div>
+   {% comment %}
    <div class="col-xs-4 col-sm-2 box no-print">
     <div class="ribbon">
       <span><a href="/assets/img/conference_map.png">Online Lobby</a></span>
     </div>
    </div>
+   {% endcomment %}
 </div>
 
 {% for block in event_blocks %}
