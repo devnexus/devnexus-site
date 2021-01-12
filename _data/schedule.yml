@@ -1,731 +1,215 @@
 ---
 - index: 0
   events:
-  - id: 5092
+  - id: 5865
     start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 1
-  - id: 5286
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 2
-  - id: 4563
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 3
-  - id: 4680
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 4
-  - id: 4526
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 5
-  - id: 4570
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 6
-  - id: 4976
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 7
-  - id: 4609
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 8
-  - id: 4750
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 9
-  - id: 4934
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 10
-  - id: 5072
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 11
-  - id: 5378
-    start: '09:00'
-    track: Full day Workshops (Wednesday Only)
-    room: Room 12
-  - id: 5361
-    start: '10:00'
-    track: admin
-    room: Room 13
-- index: 1
-  events:
-  - id: 5055
-    start: '10:20'
-    track: Agile
-    room: Room 1
-  - id: 4906
-    start: '11:20'
-    track: Agile
-    room: Room 1
-  - id: 4692
-    start: '13:10'
-    track: Agile
-    room: Room 1
-  - id: 4479
-    start: '14:10'
-    track: Agile
-    room: Room 1
-  - id: 5004
-    start: '15:30'
-    track: Agile
-    room: Room 1
-  - id: 4935
-    start: '10:20'
-    track: Architecture
-    room: Room 2
-  - id: 4794
-    start: '11:20'
-    track: Architecture
-    room: Room 2
-  - id: 4447
-    start: '13:10'
-    track: Architecture
-    room: Room 2
-  - id: 4916
-    start: '14:10'
-    track: Architecture
-    room: Room 2
-  - id: 4461
-    start: '15:30'
-    track: Architecture
-    room: Room 2
-  - id: 5017
-    start: '10:20'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4734
-    start: '11:20'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4914
-    start: '13:10'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4936
-    start: '14:10'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4784
-    start: '15:30'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4552
-    start: '10:20'
-    track: Cloud Technology
-    room: Room 4
-  - id: 5043
-    start: '11:20'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4611
-    start: '13:10'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4631
-    start: '14:10'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4643
-    start: '15:30'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4565
-    start: '10:20'
-    track: Core Java
-    room: Room 5
-  - id: 4470
-    start: '11:20'
-    track: Core Java
-    room: Room 5
-  - id: 4729
-    start: '13:10'
-    track: Core Java
-    room: Room 5
-  - id: 5139
-    start: '14:10'
-    track: Core Java
-    room: Room 5
-  - id: 4652
-    start: '15:30'
-    track: Core Java
-    room: Room 5
-  - id: 5071
-    start: '10:20'
-    track: Frameworks
-    room: Room 6
-  - id: 4623
-    start: '11:20'
-    track: Frameworks
-    room: Room 6
-  - id: 4838
-    start: '13:10'
-    track: Frameworks
-    room: Room 6
-  - id: 4790
-    start: '14:10'
-    track: Frameworks
-    room: Room 6
-  - id: 4512
-    start: '15:30'
-    track: Frameworks
-    room: Room 6
-  - id: 4958
-    start: '10:20'
-    track: Java Platform
-    room: Room 7
-  - id: 4493
-    start: '11:20'
-    track: Java Platform
-    room: Room 7
-  - id: 4492
-    start: '13:10'
-    track: Java Platform
-    room: Room 7
-  - id: 5095
-    start: '14:10'
-    track: Java Platform
-    room: Room 7
-  - id: 4937
-    start: '15:30'
-    track: Java Platform
-    room: Room 7
-  - id: 4419
-    start: '10:20'
-    track: JavaScript
-    room: Room 8
-  - id: 4545
-    start: '11:20'
-    track: JavaScript
-    room: Room 8
-  - id: 4659
-    start: '13:10'
-    track: JavaScript
-    room: Room 8
-  - id: 4520
-    start: '14:10'
-    track: JavaScript
-    room: Room 8
-  - id: 4961
-    start: '15:30'
-    track: JavaScript
-    room: Room 8
-  - id: 4689
-    start: '10:20'
-    track: JVM Languages
-    room: Room 9
-  - id: 5094
-    start: '11:20'
-    track: JVM Languages
-    room: Room 9
-  - id: 4927
-    start: '13:10'
-    track: JVM Languages
-    room: Room 9
-  - id: 4426
-    start: '14:10'
-    track: JVM Languages
-    room: Room 9
-  - id: 4928
-    start: '15:30'
-    track: JVM Languages
-    room: Room 9
-  - id: 5494
-    start: '08:00'
-    track: Open Java
-    room: Room 10
-  - id: 4668
-    start: '10:20'
-    track: Open Java
-    room: Room 10
-  - id: 4747
-    start: '11:20'
-    track: Open Java
-    room: Room 10
-  - id: 4682
-    start: '13:10'
-    track: Open Java
-    room: Room 10
-  - id: 4876
-    start: '14:10'
-    track: Open Java
-    room: Room 10
-  - id: 4840
-    start: '15:30'
-    track: Open Java
-    room: Room 10
-  - id: 4417
-    start: '10:20'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4804
-    start: '11:20'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4956
-    start: '13:10'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4762
-    start: '14:10'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4893
-    start: '15:30'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4602
-    start: '10:20'
-    track: Security
-    room: Room 12
-  - id: 5084
-    start: '11:20'
-    track: Security
-    room: Room 12
-  - id: 4546
-    start: '13:10'
-    track: Security
-    room: Room 12
-  - id: 4678
-    start: '14:10'
-    track: Security
-    room: Room 12
-  - id: 4698
-    start: '15:30'
-    track: Security
-    room: Room 12
-  - id: 4654
-    start: '10:20'
-    track: Tools and techniques
-    room: Room 13
-  - id: 5058
-    start: '11:20'
-    track: Tools and techniques
-    room: Room 13
-  - id: 5048
-    start: '13:10'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4781
-    start: '14:10'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4825
-    start: '15:30'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4519
-    start: '10:20'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4837
-    start: '11:20'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4699
-    start: '13:10'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4594
-    start: '14:10'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4613
-    start: '15:30'
-    track: Web and Front-end
-    room: Room 14
-  - id: 5461
-    start: '10:20'
-    track: Unobtanium
-    room: Room 15
-  - id: 4755
-    start: '11:20'
-    track: Unobtanium
-    room: Room 15
-  - id: 5463
-    start: '13:10'
-    track: Unobtanium
-    room: Room 15
-  - id: 5460
-    start: '14:10'
-    track: Unobtanium
-    room: Room 15
-  - id: 5459
-    start: '15:30'
-    track: Unobtanium
-    room: Room 15
-  - id: 5353
-    start: '07:30'
-    track: admin
-    room: Foyer
-  - id: 5356
-    start: '10:00'
-    track: admin
-    room: Foyer
-  - id: 5362
-    start: '12:20'
-    track: admin
-    room: Foyer
-  - id: 5358
-    start: '15:10'
-    track: admin
-    room: Foyer
-  - id: 4810
-    start: '17:40'
-    track: JVM Languages
-    room: Foyer
-  - id: 5352
-    start: '17:50'
-    track: admin
-    room: Foyer
-  - id: 5365
-    start: '09:00'
-    track: admin
-    room: Keynote Room
-  - id: 5382
-    start: '09:10'
     track: Keynote
-    room: Keynote Room
-  - id: 5383
+    room: Java Platform
+  - id: 5754
+    start: '09:45'
+    track: Java Platform
+    room: Java Platform
+  - id: 6037
+    start: '10:30'
+    track: Java Platform
+    room: Java Platform
+  - id: 6041
+    start: '11:25'
+    track: Java Platform
+    room: Java Platform
+  - id: 6063
+    start: '12:10'
+    track: Core Java
+    room: Java Platform
+  - id: 6087
+    start: '13:00'
+    track: 
+    room: Java Platform
+  - id: 6048
+    start: '13:45'
+    track: Java Platform
+    room: Java Platform
+  - id: 5947
+    start: '14:30'
+    track: Java Platform
+    room: Java Platform
+  - id: 5960
+    start: '15:15'
+    track: Java Platform
+    room: Java Platform
+  - id: 6025
+    start: '16:00'
+    track: Core Java
+    room: Java Platform
+  - id: 6134
     start: '16:40'
     track: Keynote
-    room: Keynote Room
-  - id: 4817
-    start: '17:10'
-    track: Keynote
-    room: Keynote Room
+    room: Java Platform
+  - id: 6136
+    start: '17:20'
+    track: 
+    room: Java Platform
+  - id: 5838
+    start: '09:45'
+    track: Agile
+    room: Agile and Architecture
+  - id: 5840
+    start: '10:30'
+    track: Agile
+    room: Agile and Architecture
+  - id: 5696
+    start: '11:25'
+    track: Agile
+    room: Agile and Architecture
+  - id: 5687
+    start: '12:10'
+    track: Architecture
+    room: Agile and Architecture
+  - id: 5825
+    start: '13:45'
+    track: Architecture
+    room: Agile and Architecture
+  - id: 5958
+    start: '14:30'
+    track: Agile
+    room: Agile and Architecture
+  - id: 5996
+    start: '15:15'
+    track: Architecture
+    room: Agile and Architecture
+  - id: 5906
+    start: '16:00'
+    track: Architecture
+    room: Agile and Architecture
+  - id: 5978
+    start: '09:45'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 5770
+    start: '10:30'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 5890
+    start: '11:25'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 5834
+    start: '12:10'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 5850
+    start: '13:45'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 5801
+    start: '14:30'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6077
+    start: '15:15'
+    track: Cloud Infrastructure
+    room: Cloud Technology
+  - id: 6075
+    start: '16:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6011
+    start: '09:45'
+    track: Practices and other tech
+    room: Security and Practices
+  - id: 6033
+    start: '10:30'
+    track: Practices and other tech
+    room: Security and Practices
+  - id: 5747
+    start: '11:25'
+    track: Practices and other tech
+    room: Security and Practices
+  - id: 6024
+    start: '12:10'
+    track: Practices and other tech
+    room: Security and Practices
+  - id: 5843
+    start: '13:45'
+    track: Security
+    room: Security and Practices
+  - id: 5998
+    start: '14:30'
+    track: Security
+    room: Security and Practices
+  - id: 5950
+    start: '15:15'
+    track: Security
+    room: Security and Practices
+  - id: 5994
+    start: '16:00'
+    track: Security
+    room: Security and Practices
+  - id: 5893
+    start: '09:45'
+    track: Tools and techniques
+    room: Web and Security
+  - id: 6072
+    start: '10:30'
+    track: Tools and techniques
+    room: Web and Security
+  - id: 5985
+    start: '11:25'
+    track: Tools and techniques
+    room: Web and Security
+  - id: 6042
+    start: '12:10'
+    track: Web and Front-end
+    room: Web and Security
+  - id: 6019
+    start: '13:45'
+    track: Web and Front-end
+    room: Web and Security
+  - id: 5975
+    start: '14:30'
+    track: JavaScript
+    room: Web and Security
+  - id: 5956
+    start: '15:15'
+    track: Web and Front-end
+    room: Web and Security
+  - id: 6135
+    start: '16:00'
+    track: JavaScript
+    room: Web and Security
+  - id: 6023
+    start: '09:45'
+    track: JVM Languages
+    room: Java Frameworks
+  - id: 5895
+    start: '10:30'
+    track: Core Java
+    room: Java Frameworks
+  - id: 5897
+    start: '11:25'
+    track: Frameworks
+    room: Java Frameworks
+  - id: 6052
+    start: '12:10'
+    track: Frameworks
+    room: Java Frameworks
+  - id: 6086
+    start: '13:45'
+    track: Frameworks
+    room: Java Frameworks
+  - id: 5767
+    start: '14:30'
+    track: Frameworks
+    room: Java Frameworks
+  - id: 6058
+    start: '15:15'
+    track: Frameworks
+    room: Java Frameworks
+  - id: 6031
+    start: '16:00'
+    track: Frameworks
+    room: Java Frameworks
+- index: 1
+  events: []
 - index: 2
-  events:
-  - id: 5027
-    start: '10:20'
-    track: Agile
-    room: Room 1
-  - id: 5022
-    start: '11:20'
-    track: Agile
-    room: Room 1
-  - id: 5003
-    start: '13:10'
-    track: Agile
-    room: Room 1
-  - id: 5019
-    start: '14:10'
-    track: Agile
-    room: Room 1
-  - id: 4882
-    start: '15:30'
-    track: Agile
-    room: Room 1
-  - id: 4814
-    start: '10:20'
-    track: Architecture
-    room: Room 2
-  - id: 4636
-    start: '11:20'
-    track: Architecture
-    room: Room 2
-  - id: 4964
-    start: '13:10'
-    track: Architecture
-    room: Room 2
-  - id: 4592
-    start: '14:10'
-    track: Architecture
-    room: Room 2
-  - id: 5052
-    start: '15:30'
-    track: Architecture
-    room: Room 2
-  - id: 4891
-    start: '10:20'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4819
-    start: '11:20'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 4518
-    start: '13:10'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 5013
-    start: '14:10'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 5050
-    start: '15:30'
-    track: Cloud Infrastructure
-    room: Room 3
-  - id: 5040
-    start: '10:20'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4930
-    start: '11:20'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4960
-    start: '13:10'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4812
-    start: '14:10'
-    track: Cloud Technology
-    room: Room 4
-  - id: 5384
-    start: '15:30'
-    track: Cloud Technology
-    room: Room 4
-  - id: 4670
-    start: '10:20'
-    track: Core Java
-    room: Room 5
-  - id: 4818
-    start: '11:20'
-    track: Core Java
-    room: Room 5
-  - id: 4849
-    start: '13:10'
-    track: Core Java
-    room: Room 5
-  - id: 4502
-    start: '14:10'
-    track: Core Java
-    room: Room 5
-  - id: 4676
-    start: '15:30'
-    track: Core Java
-    room: Room 5
-  - id: 4823
-    start: '10:20'
-    track: Frameworks
-    room: Room 6
-  - id: 4853
-    start: '11:20'
-    track: Frameworks
-    room: Room 6
-  - id: 4892
-    start: '13:10'
-    track: Frameworks
-    room: Room 6
-  - id: 4619
-    start: '14:10'
-    track: Frameworks
-    room: Room 6
-  - id: 4907
-    start: '15:30'
-    track: Frameworks
-    room: Room 6
-  - id: 4773
-    start: '10:20'
-    track: Java Platform
-    room: Room 7
-  - id: 4883
-    start: '11:20'
-    track: Java Platform
-    room: Room 7
-  - id: 4931
-    start: '13:10'
-    track: Java Platform
-    room: Room 7
-  - id: 5386
-    start: '14:10'
-    track: Java Platform
-    room: Room 7
-  - id: 4721
-    start: '15:30'
-    track: Java Platform
-    room: Room 7
-  - id: 5107
-    start: '10:20'
-    track: JavaScript
-    room: Room 8
-  - id: 4621
-    start: '11:20'
-    track: JavaScript
-    room: Room 8
-  - id: 4695
-    start: '13:10'
-    track: JavaScript
-    room: Room 8
-  - id: 4436
-    start: '14:10'
-    track: JavaScript
-    room: Room 8
-  - id: 4999
-    start: '15:30'
-    track: JavaScript
-    room: Room 8
-  - id: 5093
-    start: '10:20'
-    track: JVM Languages
-    room: Room 9
-  - id: 4798
-    start: '11:20'
-    track: JVM Languages
-    room: Room 9
-  - id: 4730
-    start: '13:10'
-    track: JVM Languages
-    room: Room 9
-  - id: 4799
-    start: '14:10'
-    track: JVM Languages
-    room: Room 9
-  - id: 4514
-    start: '15:30'
-    track: JVM Languages
-    room: Room 9
-  - id: 4457
-    start: '10:20'
-    track: Open Java
-    room: Room 10
-  - id: 5014
-    start: '11:20'
-    track: Open Java
-    room: Room 10
-  - id: 5136
-    start: '13:10'
-    track: Open Java
-    room: Room 10
-  - id: 4633
-    start: '14:10'
-    track: Open Java
-    room: Room 10
-  - id: 4688
-    start: '15:30'
-    track: Open Java
-    room: Room 10
-  - id: 4538
-    start: '10:20'
-    track: Practices and other tech
-    room: Room 11
-  - id: 5480
-    start: '11:20'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4753
-    start: '13:10'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4895
-    start: '14:10'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4811
-    start: '15:30'
-    track: Practices and other tech
-    room: Room 11
-  - id: 4944
-    start: '10:20'
-    track: Security
-    room: Room 12
-  - id: 4586
-    start: '11:20'
-    track: Security
-    room: Room 12
-  - id: 5046
-    start: '13:10'
-    track: Security
-    room: Room 12
-  - id: 4856
-    start: '14:10'
-    track: Security
-    room: Room 12
-  - id: 4634
-    start: '15:30'
-    track: Security
-    room: Room 12
-  - id: 4637
-    start: '10:20'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4769
-    start: '11:20'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4691
-    start: '13:10'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4945
-    start: '14:10'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4954
-    start: '15:30'
-    track: Tools and techniques
-    room: Room 13
-  - id: 4975
-    start: '10:20'
-    track: Web and Front-end
-    room: Room 14
-  - id: 5145
-    start: '11:20'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4995
-    start: '13:10'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4576
-    start: '14:10'
-    track: Web and Front-end
-    room: Room 14
-  - id: 4498
-    start: '15:30'
-    track: Web and Front-end
-    room: Room 14
-  - id: 5468
-    start: '10:20'
-    track: Unobtanium
-    room: Room 15
-  - id: 5467
-    start: '11:20'
-    track: Unobtanium
-    room: Room 15
-  - id: 5466
-    start: '13:10'
-    track: Unobtanium
-    room: Room 15
-  - id: 5464
-    start: '14:10'
-    track: Unobtanium
-    room: Room 15
-  - id: 5465
-    start: '15:30'
-    track: Unobtanium
-    room: Room 15
-  - id: 5354
-    start: '08:00'
-    track: admin
-    room: Foyer
-  - id: 5357
-    start: '10:00'
-    track: admin
-    room: Foyer
-  - id: 5363
-    start: '12:20'
-    track: admin
-    room: Foyer
-  - id: 5359
-    start: '15:10'
-    track: admin
-    room: Foyer
-  - id: 5348
-    start: '09:00'
-    track: Keynote
-    room: Keynote Room
-  - id: 5355
-    start: '16:30'
-    track: admin
-    room: Keynote Room
-  - id: 5360
-    start: '19:20'
-    track: admin
-    room: Keynote Room
+  events: []

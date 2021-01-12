@@ -1,0 +1,7 @@
+{% assign keynotes = site.events | where:"track","keynote" %}
+<div class="row">
+    <h1 class="featured-header">KEYNOTE SPEAKERS</h1>
+     {% include event_thumb_speaker_background.html collection=keynotes %}
+     </div>
+     <a href="/schedule" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
+ </div>

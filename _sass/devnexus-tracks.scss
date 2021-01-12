@@ -59,6 +59,9 @@ $room-color-jvm-languages: #007a4b;
   .frameworks {
     @include room($room-color-frameworks);
   }
+  .java-frameworks {
+    @include room($room-color-tools);
+  }
   .security {
     @include room($room-color-security);
   }
@@ -71,6 +74,9 @@ $room-color-jvm-languages: #007a4b;
   .practices-other {
     @include room($room-color-practices-other);
   }
+  .security-and-practices {
+    @include room($room-color-practices-other);
+  }
   .cloud-technology {
     @include room($room-color-cloud-technology);
   }
@@ -80,7 +86,13 @@ $room-color-jvm-languages: #007a4b;
   .agile {
     @include room($room-color-agile);
   }
+  .agile-and-architecture {
+    @include room($room-color-agile);
+  }
   .web {
+    @include room ($room-color-web);
+  }
+  .web-and-security {
     @include room ($room-color-web);
   }
   .lunch {
