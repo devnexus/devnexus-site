@@ -8271,8 +8271,8 @@ body {
 }
 .speakers .thumbnail,
 .speakers .caption {
-  padding: 0;
   border: none;
+  min-block-size: 500px;
 }
 .speakers .thumbnail img {
   width: 100%;
