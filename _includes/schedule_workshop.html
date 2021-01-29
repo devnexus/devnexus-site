@@ -10,8 +10,7 @@
 				{% endfor %}
 			 </span>
 			 <span class="small pull-right">
- 				*&nbsp;
- 				{{ include.room }}
+ 				{{ include.duration | remove: "0" }} hours
  			</span>
 	  </div>
 </div>
