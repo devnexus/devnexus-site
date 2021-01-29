@@ -28,10 +28,13 @@ layout: info-fluid
 
 {% assign class_events = site.data.schedule | where: "index", 1  | first %}
 {% assign class_blocks = class_events.events | group_by: "start" %}
-
+<div class="row no-print">
+   <hr/>
+</div>
  <div class="row new-day">
  <div class="col-xs-12">
    <div class="col-xs-8">
+     <a name="workshops"></a>
      <h2 class="day"> Thursday Feb 18: Workshops</h2>
      <h3> <a href="{{ site.links.register }}">*** Limited Seating! Buy Tickets <u>Here</u> ***</a> </h3>
    </div>
