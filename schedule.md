@@ -36,11 +36,11 @@ layout: info-fluid
    <div class="col-xs-8">
      <a name="workshops"></a>
      <h2 class="day"> Thursday Feb 18: Workshops</h2>
-     <h3> <a href="{{ site.links.register }}">*** Limited Seating! Buy Tickets <u>Here</u> ***</a> </h3>
+     <h3> <a href="/workshopinstructions"> Setup Instructions</a> </h3>
    </div>
    <div class="col-xs-4 col-sm-2 box no-print">
     <div class="ribbon">
-      <span><a href="{{site.links.register}}">$49.00</a></span>
+      <span><a href="/workshopinstructions">Get Ready</a></span>
     </div>
    </div>
 </div>
