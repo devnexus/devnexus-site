@@ -36,7 +36,7 @@ layout: info-fluid
    <div class="col-xs-8">
      <a name="workshops"></a>
      <h2 class="day"> Thursday Feb 18: Workshops</h2>
-     <h3> <a href="/workshopinstructions"> Setup Instructions</a> </h3>
+     <h3>*** Workshop ticket holders only. *** </h3>
    </div>
    <div class="col-xs-4 col-sm-2 box no-print">
     <div class="ribbon">
