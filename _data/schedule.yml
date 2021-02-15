@@ -59,7 +59,7 @@
   - id: 6136
     start: '17:20'
     duration: '01:30'
-    track: 
+    track:
     room: Java Platform
   - id: 5838
     start: '09:45'
@@ -266,47 +266,47 @@
   - id: 6158
     start: '09:00'
     duration: '04:00'
-    track: 
+    track:
     room: Java Platform
   - id: 6160
     start: '13:30'
     duration: '04:00'
-    track: 
+    track:
     room: Java Platform
   - id: 6149
     start: '09:00'
     duration: '04:00'
-    track: 
+    track:
     room: Agile and Architecture
   - id: 6150
     start: '13:30'
     duration: '04:00'
-    track: 
+    track:
     room: Agile and Architecture
   - id: 6157
     start: '09:00'
     duration: '04:00'
-    track: 
+    track:
     room: Cloud Technology
   - id: 6156
     start: '13:30'
     duration: '04:00'
-    track: 
+    track:
     room: Cloud Technology
   - id: 6159
     start: '09:00'
     duration: '08:00'
-    track: 
+    track:
     room: Security and Practices
   - id: 6155
     start: '09:00'
-    duration: '08:00'
-    track: 
+    duration: '04:00'
+    track:
     room: Web and Security
   - id: 6154
     start: '13:30'
     duration: '04:00'
-    track: 
+    track:
     room: Java Frameworks
 - index: 2
   events: []
