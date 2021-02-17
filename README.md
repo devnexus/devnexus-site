@@ -1,6 +1,6 @@
 #devnexus-site
 
-This project is the jekyll static site generator for for the [Devnexus Conference](https://devnexus.com) held every
+This project is the jekyll static site generator for the [Devnexus Conference](https://devnexus.com) held every
 year in Atlanta, GA.
 
 To run the site and see data on standard port 4000
