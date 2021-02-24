@@ -2,8 +2,8 @@
 layout: home
 dates: Feb 17 2021
 registration:
-  text: Register here for Free
-  status: enabled
+  text: See you next year
+  status: disabled
   link: href="https://www.eventbrite.com/e/devnexus-2021-tickets-132807499807" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
@@ -40,12 +40,14 @@ cfp:
 <a name="sponsorlist"></a>
       <div class="featured-header">
         <h1>Thank You  2021 Sponsors</h1>
-        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2021?</a>
+        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2022?</a>
       </div>
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
 <div>
+{% comment %}
 <a name="timeline"></a>
 {% include timeline.html %}
 </div>
+{% endcomment %}
 
