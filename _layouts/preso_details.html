@@ -22,16 +22,17 @@ layout: info
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="presentation-header">
 				Abstract
-				{% if page.instructions == true %}
 				<span class="pull-right presentation-header">
-					<a href="/presentations/{{page.slug}}/instructions">Setup Instructions</a>
-				</span>
+				{% if page.recording %}
+					<a href="{{ page.recording }}">Recording</a>
 				{% endif %}
 				{% if page.slides %}
-				<span class="pull-right presentation-header">
-					<a href="{{ page.slides }}">Slides</a>
-				</span>
+					&nbsp;|&nbsp;<a href="{{ page.slides }}">Slides</a>
 				{% endif %}
+				{% if page.instructions == true %}
+					<a href="/presentations/{{page.slug}}/instructions">Setup Instructions</a>
+				{% endif %}
+				</span>
 			</div>
 			<div class="biography-body">
 				{{content}}
