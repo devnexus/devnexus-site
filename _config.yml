@@ -1,22 +1,22 @@
 ---
 safe: true
 exclude: ['_presite_plugins', 'README.md']
-title: Devnexus 2021
+title: Devnexus 2022
 timezone: UTC
 active-header: navigation-post-show.html
 cfp-is-open: true
 registration: closed
 collections:
   speakers:
-    title: Speakers 2021
+    title: Speakers 2022
     output: true
     permalink: /:collection/:path
   events:
-     title: Presentations 2021
+     title: Presentations 2022
      output: true
      permalink: /presentations/:path/
   event-instructions:
-     title: Workshop Prep 2021
+     title: Workshop Prep 2022
      output: true
      permalink: /presentations/:path/instructions
   tracks:
@@ -32,8 +32,8 @@ baseurl:
 url:
 uploads_dir: "/uploads"
 links:
-   cfp: https://cfp.connectevents.io/en/dn2021/cfp/session/new 
-   register: https://www.eventbrite.com/e/devnexus-2021-tickets-132807499807
+   cfp: https://cfp.connectevents.io/en/dn2022/cfp/session/new 
+   register: https://www.eventbrite.com/e/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
 twitter_card:

@@ -1,6 +1,6 @@
 ---
 layout: home
-dates: Feb 17 2021
+dates: Apr 11-13 2022
 registration:
   text: See you next year
   status: disabled
@@ -14,7 +14,7 @@ cfp:
 ---
 
 {% if page.cfp.announce %}
-{% case page.cfp.view %}s{% include keynotes_promo.html %} peakers/
+{% case page.cfp.view %}
   {% when "open" %}
   <div class="featured-header">
     <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES OCT 1)</a></h1>
@@ -30,9 +30,8 @@ cfp:
 
 {% include marketing-video.html %}
 
-{% include keynotes_promo.html %} 
-
 {% comment %}
+{% include keynotes_promo.html %} 
  {% include workshops_promo.html %} 
 {% endcomment %} 
 
