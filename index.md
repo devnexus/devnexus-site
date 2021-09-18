@@ -2,22 +2,22 @@
 layout: home
 dates: Apr 11-13 2022
 registration:
-  text: See you next year
+  text: Registration Opening Soon!
   status: disabled
   link: href="https://www.eventbrite.com/e/devnexus-2021-tickets-132807499807" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
 cfp:
-  announce: false
-  view: announce 
+  announce: true
+  view: open 
 ---
 
 {% if page.cfp.announce %}
 {% case page.cfp.view %}
   {% when "open" %}
   <div class="featured-header">
-    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES OCT 1)</a></h1>
+    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES Nov 8, 2021)</a></h1>
   </div>
   {% else %}
   <div class="featured-header">
@@ -44,9 +44,7 @@ cfp:
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
 <div>
-{% comment %}
 <a name="timeline"></a>
 {% include timeline.html %}
 </div>
-{% endcomment %}
 
