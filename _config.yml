@@ -5,7 +5,7 @@ title: Devnexus 2022
 timezone: UTC
 active-header: navigation-before-cfp.html
 cfp-is-open: true
-registration: open
+registration: closed
 collections:
   speakers:
     title: Speakers 2022
@@ -36,6 +36,7 @@ links:
    register: https://www.eventbrite.com/e/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
+   reg_maillist: https://ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=51e5b6d965
 twitter_card:
   default_image: https://devnexus.com/assets/img/dev.001.jpeg
   type: summary
