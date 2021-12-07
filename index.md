@@ -1,6 +1,6 @@
 ---
 layout: home
-dates: Apr 11-13 2022
+dates: Apr 12-14 2022
 registration:
   text: Registration Opening Soon!
   status: disabled
