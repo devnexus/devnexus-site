@@ -2,9 +2,9 @@
 layout: home
 dates: Apr 12-14 2022
 registration:
-  text: Registration Opening Soon!
-  status: disabled
-  link: href="https://www.eventbrite.com/e/devnexus-2021-tickets-132807499807" 
+  text: REGISTRATION OPEN!
+  status: enabled
+  link: href="https://reg.connectevents.io/ConnectEvents/devnexus2022/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus
