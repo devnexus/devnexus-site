@@ -7,7 +7,7 @@ registration:
   link: href="https://reg.connectevents.io/ConnectEvents/devnexus2022/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus
+  alt: Devnexus 2022
 cfp:
   announce: true
   view: open 
