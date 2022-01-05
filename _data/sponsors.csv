@@ -1,9 +1,11 @@
 name,sponsorlevel,logo_image,home_page
+CircleCI,gold,/uploads/circleci-2.png,https://circleci.com/?utm_medium=devRelConference&utm_source=DevNexus2022
 couchbase,gold,/uploads/couchb-001.png,https://www.couchbase.com/
 Elastic,silver,/uploads/elastic-01.png,https://www.elastic.co/
 Daugherty Business Solutions,silver,/uploads/DBS.001.png,https://careers.daugherty.com/
 Genuine Parts,gold,/uploads/geniune-parts-1.png,https://www.genpt.com/
 Intercontinental Exchange,silver,/uploads/ice-01.png,https://www.theice.com/careers
+Hazelcast,gold,/uploads/hazelcast-1.png,https://hazelcast.com/
 JFrog,devlounge,/uploads/jfrg-001.png,https://jfrog.com/
 MuleSoft,gold,/uploads/mulesoft-1.png,(http://mulesoft.com
 Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
@@ -11,4 +13,3 @@ Rollbar,gold,/uploads/rollbar-2.png,https://try.rollbar.com/devnexus-2022/?utm_c
 Styra,platinum,/uploads/styra-1.png,styra.com
 SUSE,gold,/uploads/suse-01.png,www.suse.com
 Vaadin,silver,/uploads/vaadin-001-1.png,https://vaadin.com/
-Hazelcast,gold,/uploads/hazelcast-1.png,https://hazelcast.com/
