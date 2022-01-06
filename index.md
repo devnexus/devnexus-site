@@ -9,8 +9,8 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2022
 cfp:
-  announce: true
-  view: open 
+  announce: false
+  view: closed 
 ---
 
 {% if page.cfp.announce %}
