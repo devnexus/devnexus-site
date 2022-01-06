@@ -14,7 +14,7 @@ module Jekyll
             end
           end
           pcmd.command(:events) do |e|
-            url = 'https://cfp.devnexus.com/en/dn2021/public/promo_events.json'
+            url = 'https://cfp.devnexus.com/en/dn2022/public/promo_events.json'
             e.description "process promo_events.json"
             e.action do |args, options|
                if (options['file'])
@@ -28,7 +28,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://cfp.devnexus.com/en/dn2021/public/full_schedule.json'
+              url = 'https://cfp.devnexus.com/en/dn2022/public/full_schedule.json'
               if (options['file'])
                 process_schedule_data(read_data (options['file']) )
               else
@@ -100,10 +100,11 @@ module Jekyll
         end
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['id']}.md"
-          #Jekyll.logger.info("#{filename}\n#{item}")
+          Jekyll.logger.info("#{filename}\n#{item}")
           #don't overwrite existing files to preserve CMS edits
           #if !(File.file?(filename))
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
+          Jekyll.logger.info("#{filename}  written")
           #end
         end
         
