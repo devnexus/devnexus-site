@@ -85,19 +85,6 @@ web:
 {% endfor %}
 
 
-<h1 class="featured-header"><span>— Half Day Tracks —</span></h1>
-
-<h1 class="featured-header"><span>AGILE </span><h1>
-{% for track in page.agile.tracks %}
-{% assign track_data = site.data.tracks[track] %}
-{% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
-<div class="row">
-{% for event in events %}
- {% include presentation_thumb.html details=event track="agile" %}
-{% endfor %}
-</div>
-{% endfor %}
-
 <h1 class="featured-header"><span>ARCHITECTURE</span><h1>
 {% for track in page.archictecture.tracks %}
 {% assign track_data = site.data.tracks[track] %}
