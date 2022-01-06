@@ -1,6 +1,6 @@
 require 'json'
 require 'net/http'
-dataurl = URI('https://cfp.devnexus.com/en/dn2020/public/promo_events.json')
+dataurl = URI('https://cfp.devnexus.com/en/dn2022/public/promo_events.json')
 event_data_file = Net::HTTP.get(dataurl)
 event_data = JSON.parse(event_data_file)
 events = event_data['events'].select{|item|"Full day Workshops (Wednesday Only)" == item['track']}
