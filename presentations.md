@@ -98,7 +98,7 @@ web:
 </div>
 {% endfor %}
 
-<h1 class="featured-header"><span>ARCHITECTIRE</span><h1>
+<h1 class="featured-header"><span>ARCHITECTURE</span><h1>
 {% for track in page.archictecture.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
