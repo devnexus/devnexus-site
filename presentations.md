@@ -9,7 +9,6 @@ java:
  tracks:
    - core-java
    - java-platform
-   - open-java
 cloud:
   tracks:
    - cloud-technology
