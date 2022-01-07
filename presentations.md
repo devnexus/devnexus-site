@@ -49,7 +49,6 @@ web:
 </div>
 {% endif %}
 
-<h1 class="featured-header"><span>— Full Day Tracks —</span></h1>
 
 <h1 class="featured-header"><span>JAVA</span></h1>
 {% for track in page.java.tracks %}
