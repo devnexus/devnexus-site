@@ -65,6 +65,7 @@ web:
 {% for track in page.cloud.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h1>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="cloud-technology" %}
