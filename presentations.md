@@ -54,14 +54,12 @@ web:
 {% for track in page.java.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
-{% if !events.empty? %}
 <h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="java" %}
 {% endfor %}
 </div>
-{% endif %}
 {% endfor %}
 
 <h1 class="featured-header"><span>CLOUD</span></h1>
