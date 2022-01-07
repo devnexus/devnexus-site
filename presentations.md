@@ -54,6 +54,7 @@ web:
 {% for track in page.java.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="java" %}
@@ -65,7 +66,7 @@ web:
 {% for track in page.cloud.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
-<h2 class="featured-header"><span>{{track_data.title}}</span></h1>
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="cloud-technology" %}
@@ -77,6 +78,7 @@ web:
 {% for track in page.jvm-frameworks.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="frameworks" %}
@@ -89,6 +91,7 @@ web:
 {% for track in page.archictecture.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="archictecture" %}
@@ -100,6 +103,7 @@ web:
 {% for track in page.practices.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="practices-other" %}
@@ -111,6 +115,7 @@ web:
 {% for track in page.security.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="security" %}
@@ -122,6 +127,7 @@ web:
 {% for track in page.tools.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="tools" %}
@@ -133,6 +139,7 @@ web:
 {% for track in page.web.tracks %}
 {% assign track_data = site.data.tracks[track] %}
 {% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
 <div class="row">
 {% for event in events %}
  {% include presentation_thumb.html details=event track="web" %}
