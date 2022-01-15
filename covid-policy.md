@@ -91,4 +91,3 @@ If we can figure this out, details for this will be emailed to attendees so that
 <b>How can I take a COVID test that meets the conference requirements?</b><br/>
 You can bring proof of a negative Covid test taken within two days of the conference. There will also be a health team on-site that must administer and verify the test. The cost to the attendee will be the pass-through cost of what we buy them at per day (reminder - unvaccinated persons must produce a negative test result). Vaccinated persons only need to show their proof of vaccination and do not need a daily test.
 </p>
-</section>

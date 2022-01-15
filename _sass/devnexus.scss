@@ -1,6 +1,16 @@
 
-body {
+html, body {
   overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+@media (max-width: 992px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 }
 
 $tm-dev-color: #6fa133;;
