@@ -15,7 +15,7 @@ cloud:
    - cloud-infrastructure
 jvm-frameworks:
   tracks:
-   - jvm-languages
+   #- jvm-languages
    - frameworks 
 agile:
  tracks: 
