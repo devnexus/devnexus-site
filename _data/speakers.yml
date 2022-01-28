@@ -55,10 +55,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/2583/large/Tobias-Dunn-Krahn-headshot.png?1600811703
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/2583/large/Tobias-Dunn-Krahn-headshot.png?1600811703
   name: Tobias Dunn-Krahn
-1520:
-  avatar_path: https://cfp.devnexus.com/system/avatars/1520/large/BenScott.JPG?1595861083
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1520/large/BenScott.JPG?1595861083
-  name: Ben Scott
 2549:
   avatar_path: https://cfp.devnexus.com/system/avatars/2549/large/vanya_picture.jpg?1595243158
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/2549/large/vanya_picture.jpg?1595243158
@@ -215,10 +211,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/1413/large/Delabassee_square_copy.png?1582003751
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1413/large/Delabassee_square_copy.png?1582003751
   name: David Delabassée
-1571:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
-  name: YK Chang
 1570:
   avatar_path: https://cfp.devnexus.com/system/avatars/1570/large/_b305924_copy_2.jpg?1565876053
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/1570/large/_b305924_copy_2.jpg?1565876053
@@ -535,10 +527,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/3192/large/edwin.jpg?1641542299
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/3192/large/edwin.jpg?1641542299
   name: Edwin Derks
-3193:
-  avatar_path: https://cfp.devnexus.com/system/avatars/3193/large/han_solo_square_500x500.png?1641535104
-  hd_avatar_path: https://cfp.devnexus.com/system/avatars/3193/large/han_solo_square_500x500.png?1641535104
-  name: Gerrit Grunwald
 2658:
   avatar_path: https://cfp.devnexus.com/system/avatars/2658/large/IMG_2034_1x1crop_512.jpg?1641534145
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/2658/large/IMG_2034_1x1crop_512.jpg?1641534145
@@ -583,10 +571,6 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/3269/large/whitney_Cropped_(1).jpg?1640368558
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/3269/large/whitney_Cropped_(1).jpg?1640368558
   name: Whitney Lee
-3231:
-  avatar_path: https://cfp.devnexus.com
-  hd_avatar_path: https://cfp.devnexus.com
-  name: Hillmer Chona
 3324:
   avatar_path: https://cfp.devnexus.com/system/avatars/3324/large/foto-zelf-afstuderen-close-up.jpeg?1636536145
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/3324/large/foto-zelf-afstuderen-close-up.jpeg?1636536145
@@ -599,3 +583,31 @@
   avatar_path: https://cfp.devnexus.com/system/avatars/818/large/ys.jpg?1642122988
   hd_avatar_path: https://cfp.devnexus.com/system/avatars/818/large/ys.jpg?1642122988
   name: Yoel Spotts
+3177:
+  avatar_path: https://cfp.devnexus.com/system/avatars/3177/large/MarkusKett.png?1625818440
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/3177/large/MarkusKett.png?1625818440
+  name: Markus Kett
+1163:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1163/large/fox-2016-1-sq-200.jpg?1516304578
+  name: Brian Fox
+3236:
+  avatar_path: https://cfp.devnexus.com/system/avatars/3236/large/headshot_2.jpeg?1634234616
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/3236/large/headshot_2.jpeg?1634234616
+  name: Justin Reock
+807:
+  avatar_path: https://cfp.devnexus.com/system/avatars/807/large/gravatar.jpeg?1566324963
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/807/large/gravatar.jpeg?1566324963
+  name: Brian Demers
+1520:
+  avatar_path: https://cfp.devnexus.com/system/avatars/1520/large/profileJPG.JPG?1627319925
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/1520/large/profileJPG.JPG?1627319925
+  name: Ben Scott
+3231:
+  avatar_path: https://cfp.devnexus.com/system/avatars/3231/large/hillmer.jpeg?1643385002
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/3231/large/hillmer.jpeg?1643385002
+  name: Hillmer Chona
+3193:
+  avatar_path: https://cfp.devnexus.com/system/avatars/3193/large/gerrit.jpeg?1643385143
+  hd_avatar_path: https://cfp.devnexus.com/system/avatars/3193/large/gerrit.jpeg?1643385143
+  name: Gerrit Grunwald 
