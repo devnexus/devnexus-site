@@ -30,10 +30,10 @@ cfp:
 
 {% include marketing-video.html %}
 
-{% comment %}
+
 {% include keynotes_promo.html %} 
- {% include workshops_promo.html %} 
-{% endcomment %} 
+{% include workshops_promo.html %} 
+
 
 <div class="row">
 <a name="sponsorlist"></a>

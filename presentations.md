@@ -1,9 +1,10 @@
 ---
 layout: info-fluid
 permalink: /presentations/index.html
-tracks:
 # keynote
-# workshop
+workshop:
+ tracks:
+  - workshop
 # unobtanium
 java:
  tracks:
@@ -48,6 +49,15 @@ web:
 </div>
 {% endif %}
 
+{% assign workshops = site.events | where: "track", "full day workshops" %}
+{% if workshops %}
+<h1 class="featured-header"><span>— Workshops —</span></h1>
+<div class="row">
+{% for wsevent in workshops %}
+ {% include presentation_thumb.html details=wsevent track="workshop" %}
+{% endfor %}
+</div>
+{% endif %}
 
 <h1 class="featured-header"><span>JAVA</span></h1>
 {% for track in page.java.tracks %}
