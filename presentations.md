@@ -36,7 +36,7 @@ practices:
 web:
  tracks:
   - web
-  - javascript      
+#  - javascript      
 ---
 
 {% assign keynotes = site.events | where: "track", "keynote" %}
