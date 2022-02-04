@@ -1,6 +1,7 @@
 name,sponsorlevel,logo_image,home_page
 Azul,gold,/uploads/azul-2.png,https://www.azul.com/?utm_medium=event&utm_campaign=infl-events&utm_source=event&utm_content=Devnexus&utm_term=
 CircleCI,gold,/uploads/circleci-2.png,https://circleci.com/?utm_medium=devRelConference&utm_source=DevNexus2022
+confluent,diamond,/uploads/confluent-1.png,https://www.confluent.io/
 Couchbase,gold,/uploads/couchb-001.png,https://www.couchbase.com/
 Datadog,gold,/uploads/datadog-1.png,https://www.datadoghq.com/
 Daugherty Business Solutions,silver,/uploads/DBS.001.png,https://careers.daugherty.com/
@@ -11,6 +12,7 @@ IBM,diamond,/uploads/ibm-1.png,https://www.ibm.com/us-en?ar=1
 Intercontinental Exchange,silver,/uploads/ice-01.png,https://www.theice.com/careers
 Ippon Technologies,silver,/uploads/ippon-2.png,https://us.ippon.tech/
 JFrog,devlounge,/uploads/jfrg-001.png,https://jfrog.com/
+Microsoft,platinum,/uploads/microsoft-1.png,www.microsoft.com
 MuleSoft,gold,/uploads/mulesoft-1.png,(http://mulesoft.com
 Okta,cafe,/uploads/okta-1.png,https://developer.okta.com/
 Oracle,platinum,/uploads/oracle-1.png,http://developer.oracle.com/
@@ -21,3 +23,4 @@ Styra,platinum,/uploads/styra-1.png,styra.com
 SUSE,gold,/uploads/suse-01.png,www.suse.com
 Tidelift,silver,/uploads/tidelift-1.png,https://tidelift.com/
 Vaadin,silver,/uploads/vaadin-001-1.png,https://vaadin.com/
+vmware,gold,/uploads/vmware-1.png,https://tanzu.vmware.com/tanzu
