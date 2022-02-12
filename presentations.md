@@ -71,6 +71,7 @@ web:
 </div>
 {% endfor %}
 
+
 <h1 class="featured-header"><span>CLOUD</span></h1>
 {% for track in page.cloud.tracks %}
 {% assign track_data = site.data.tracks[track] %}
@@ -95,6 +96,17 @@ web:
 </div>
 {% endfor %}
 
+<h1 class="featured-header"><span>AGILE</span></h1>
+{% for track in page.agile.tracks %}
+{% assign track_data = site.data.tracks[track] %}
+{% assign events = site.events | where:"track", track_data.trackkey | sort: 'title' %}
+<h2 class="featured-header"><span>{{track_data.title}}</span></h2>
+<div class="row">
+{% for event in events %}
+ {% include presentation_thumb.html details=event track="agile" %}
+{% endfor %}
+</div>
+{% endfor %}
 
 <h1 class="featured-header"><span>ARCHITECTURE</span><h1>
 {% for track in page.archictecture.tracks %}
