@@ -16,13 +16,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-link"><a href="https://schedule.devnexus.com">FEEDBACK</a></li>
+                <!-- <li class="nav-link"><a href="https://schedule.devnexus.com">FEEDBACK</a></li> -->
+                <li class="nav-link"><a href="{{site.links.announcements}}">ANNOUNCEMENTS</a></li>
+                <li class="nav-link"><a href="/conference-info">CONFERENCE INFO</a></li>
                 <li class="nav-link"><a href="/speakers/">SPEAKERS</a></li>
                 <li class="nav-link"><a href="/schedule">SCHEDULE</a></li>
-                <li class="nav-link"><a href="/schedule#workshops">WORKSHOPS</a></li>
+                <li class="nav-link"><a href="/presentations/">PRESENTATIONS</a></li>
                 <li class="nav-link"><a href="/#sponsorlist">SPONSORS</a></li>
                 <li class="nav-link"><a href="/covid/">COVID POLICY</a></li>
-                <li class="nav-link"><a href="/conference-info">CONFERENCE INFO</a></li>
                 {% if site.registration == "open" %}
                 <li class="nav-link"><a class="btn btn-register" href="{{site.links.register}}">REGISTER!</a></li>
                 {% else %}
