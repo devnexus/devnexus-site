@@ -5,7 +5,9 @@ permalink: /presentations/index.html
 workshop:
  tracks:
   - workshop
-# unobtanium
+unobtanium:
+  tracks:
+    - unobtanium
 java:
  tracks:
    - core-java
@@ -55,6 +57,16 @@ web:
 <div class="row">
 {% for wsevent in workshops %}
  {% include presentation_thumb.html details=wsevent track="workshop" %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% assign unobtanium = site.events | where: "track", "unobtanium" %}
+{% if unobtanium %}
+<h1 class="featured-header"><span>— Unobtanium —</span></h1>
+<div class="row">
+{% for keyevent in unobtanium %}
+ {% include presentation_thumb.html details=keyevent track="unobtanium" %}
 {% endfor %}
 </div>
 {% endif %}
