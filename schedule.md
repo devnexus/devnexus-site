@@ -38,8 +38,128 @@ layout: info-fluid
     </div>
    </div>
 </div>
+
+{% assign day1 = site.data.schedule | where: "index", 1  | first %}
+{% assign keynotes = day1.events | where:"track","Keynote" %}
+{% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
+
+
+<div class="col-xs-12">
+<h1>TODO Add Registration at 7:30</h1>
+</div>
+
+{% assign day1_10 = day1.events | where: "start", "10:00" %}
+<h3>10:00</h3>
+{% include schedule_block.html events=day1_10 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Break at 11:00</h1>
+</div>
+
+{% assign day1_11 = day1.events | where: "start", "11:20" %}
+<h3>11:20</h3>
+{% include schedule_block.html events=day1_11 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Lunch at 12:20</h1>
+</div>
+
+{% assign day1_13 = day1.events | where: "start", "13:20" %}
+<h3>13:20</h3>
+{% include schedule_block.html events=day1_13 %}
+
+{% assign day1_14 = day1.events | where: "start", "14:20" %}
+<h3>14:20</h3>
+{% include schedule_block.html events=day1_14 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Break at 15:20</h1>
+</div>
+
+
+{% assign day1_15 = day1.events | where: "start", "15:40" %}
+<h3>15:40</h3>
+{% include schedule_block.html events=day1_15 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Devnation Opening at 16:50</h1>
+</div>
+
+<div class="col-xs-12">
+<h1>TODO Add Venkat at 17:00</h1>
+</div>
+
+<div class="col-xs-12">
+<h1>TODO Add Quarkus at 18:00</h1>
+</div>
+
+<div class="col-xs-12">
+<h1>TODO Add Off-Heap at 18:20</h1>
+</div>
+
+
+ <div class="row new-day">
+ <div class="col-xs-12">
+   <div class="col-xs-8">
+     <h2 class="day"> Wednesday Apr 14 - Main Conference</h2>
+   </div>
+   <div class="col-xs-4 col-sm-2 box no-print">
+    <div class="ribbon">
+      <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+    </div>
+   </div>
+</div>
+
+{% assign day2 = site.data.schedule | where: "index", 2  | first %}
+{% assign keynotes2 = day2.events | where:"track","Keynote" %}
+{% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
+
+
+{% assign day2_10 = day2.events | where: "start", "10:00" %}
+<h3>10:00</h3>
+{% include schedule_block.html events=day2_10 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Break at 11:00</h1>
+</div>
+
+{% assign day2_11 = day2.events | where: "start", "11:20" %}
+<h3>11:20</h3>
+{% include schedule_block.html events=day2_11 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Lunch at 12:20</h1>
+</div>
+
+{% assign day1_13 = day2.events | where: "start", "13:20" %}
+<h3>13:20</h3>
+{% include schedule_block.html events=day2_13 %}
+
+{% assign day2_14 = day2.events | where: "start", "14:20" %}
+<h3>14:20</h3>
+{% include schedule_block.html events=day2_14 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Break at 15:20</h1>
+</div>
+
+
+{% assign day2_15 = day2.events | where: "start", "15:40" %}
+<h3>15:40</h3>
+{% include schedule_block.html events=day2_15 %}
+
+<div class="col-xs-12">
+<h1>TODO Add Raffle 16:40</h1>
+</div>
+
+<div class="col-xs-12">
+<h1>TODO Add Party at 19:30</h1>
+</div>
+
+
+<!-- 
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}
-{% include schedule_keynote.html details=wit item=0 room="wit" %}
+
 {% include schedule_break.html details=day2_other item=1 room="keynote" %}
 {% include schedule_keynote.html details=day2_keynote item=0 room="keynote" %}
 {% include schedule_break.html details=day2_other item=2 room="break" %}
@@ -76,4 +196,4 @@ layout: info-fluid
 {% include schedule_event.html details=offheap track="off-heap" room="off-heap" %}
 
 {% include schedule_break.html details=day2_other item=5 track="happy-hour" room="break" %}
-</div> 
+</div>  -->

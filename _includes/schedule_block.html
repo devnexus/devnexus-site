@@ -1,11 +1,15 @@
-{% assign room-0 = include.events  | where: "room", "Java Platform" | first %}
-{% assign room-1 = include.events  | where: "room", "Java Frameworks" | first %}
-{% assign room-2 = include.events  | where: "room", "Cloud Technology" | first %}
-{% assign room-3 = include.events  | where: "room", "Agile and Architecture" | first %}
-{% assign room-4 = include.events  | where: "room", "Security and Practices" | first %}
-{% assign room-5 = include.events  | where: "room", "Web and Security" | first %}
-
-
+{% assign room-0 = include.events  | where: "room", "Unobtanium" | first %}
+{% assign room-1 = include.events  | where: "room", "Java Platform" | first %}
+{% assign room-2 = include.events  | where: "room", "Practices and other tech" | first %}
+{% assign room-3 = include.events  | where: "room", "Cloud Technology" | first %}
+{% assign room-4 = include.events  | where: "room", "Agile" | first %}
+{% assign room-5 = include.events  | where: "room", "Security" | first %}
+{% assign room-6 = include.events  | where: "room", "Web and Front-end" | first %}
+{% assign room-7 = include.events  | where: "room", "Tools and techniques" | first %}
+{% assign room-8 = include.events  | where: "room", "Core Java" | first %}
+{% assign room-9 = include.events  | where: "room", "Cloud Infrastructure" | first %}
+{% assign room-10 = include.events  | where: "room", "Architecture" | first %}
+{% assign room-11 = include.events  | where: "room", "Frameworks" | first %}
 
 {% if room-0 %}
 {% assign event = site.events | where: "slug", room-0.id | first %}
@@ -35,6 +39,38 @@
 {% if room-5 %}
 {% assign event = site.events | where: "slug", room-5.id | first %}
 {% include schedule_event.html details=event room=room-5.room %}
+{% endif %}
+
+{% if room-6 %}
+{% assign event = site.events | where: "slug", room-6.id | first %}
+{% include schedule_event.html details=event room=room-6.room %}
+{% endif %}
+
+{% if room-7 %}
+{% assign event = site.events | where: "slug", room-7.id | first %}
+{% include schedule_event.html details=event room=room-7.room %}
+{% endif %}
+
+{% if room-8 %}
+{% assign event = site.events | where: "slug", room-8.id | first %}
+{% include schedule_event.html details=event room=room-8.room %}
+{% endif %}
+
+
+{% if room-9 %}
+{% assign event = site.events | where: "slug", room-9.id | first %}
+{% include schedule_event.html details=event room=room-9.room %}
+{% endif %}
+
+
+{% if room-10 %}
+{% assign event = site.events | where: "slug", room-10.id | first %}
+{% include schedule_event.html details=event room=room-10.room %}
+{% endif %}
+
+{% if room-11 %}
+{% assign event = site.events | where: "slug", room-11.id | first %}
+{% include schedule_event.html details=event room=room-11.room %}
 {% endif %}
 
 
