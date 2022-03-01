@@ -1,8 +1,45 @@
 ---
 layout: info-fluid
 ---
-{% assign day0 = site.data.schedule | where: "index", 0  | first %}
 
+<script>
+
+function applyFilter() {
+  
+  let dates = ['apr12', 'apr13','apr14']
+  
+  let times = ['until09',
+               'until11',
+               'until13',
+               'until15',
+               'until20'
+              ];
+
+  let tracks = ['unobtanium', 
+               'agile',
+              'architecture',
+              'cloud-infrastructure',
+              'cloud-technology',
+              'core-java',
+              'frameworks',
+              'java-platform',
+              'security',
+              'web-and-front-end',
+              'admin']
+
+  $("input.form-check-input").each(function(t,e){
+    console.log(e.id +"&&"+ e.checked)
+    if (e.id && e.checked) {
+        $('div.' + e.id).hide();
+    } else {
+      $('div.' + e.id).show();
+    }
+  })
+}
+
+</script>
+
+{% assign day0 = site.data.schedule | where: "index", 0  | first %}
 <div class="row schedule-container">
   <div class="col-sm-4 col-md-3 row schedule-filters">
     <a href="#schedule-filter" style="color: #eee" data-toggle="collapse">
@@ -23,19 +60,19 @@ layout: info-fluid
       </a>
       <div id="date-filter" class="collapse in">
         <div >
-          <input class="form-check-input " type="checkbox" id="apr12">
+          <input class="form-check-input " type="checkbox" id="apr12" value="apr12" onChange="applyFilter()">
             <label class="form-check-label" for="apr12">
               Apr 12 2022
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="apr13">
+          <input class="form-check-input " type="checkbox" id="apr13" value="apr13" onChange="applyFilter()">
             <label class="form-check-label" for="apr13">
               Apr 13 2022
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="apr14">
+          <input class="form-check-input " type="checkbox" id="apr14" value="apr14" onChange="applyFilter()">
             <label class="form-check-label" for="apr14">
               Apr 14 2022
             </label>
@@ -52,6 +89,12 @@ layout: info-fluid
         {% for track in tracks %}
             {% include schedule_filter_track_item.html data=track  %}
         {% endfor %}
+        <div >
+            <input class="form-check-input " type="checkbox" id="track-admin" value="admin" onChange="applyFilter()">
+            <label class="form-check-label" for="track-admin">
+              Misc
+            </label>
+        </div>
       </div>
       
       <a href="#time-filter" style="color: #eee" data-toggle="collapse">
@@ -62,31 +105,31 @@ layout: info-fluid
       </a>
       <div id="time-filter" class="collapse in">
         <div >
-          <input class="form-check-input " type="checkbox" id="until9">
-            <label class="form-check-label" for="until9">
+          <input class="form-check-input " type="checkbox" id="until09" value="until09" onChange="applyFilter()">
+            <label class="form-check-label" for="until09">
               00:00-09:00
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="until1">
-            <label class="form-check-label" for="until1">
+          <input class="form-check-input " type="checkbox" id="until11" value="until11" onChange="applyFilter()">
+            <label class="form-check-label" for="until11">
               09:00-11:00
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="until13">
+          <input class="form-check-input " type="checkbox" id="until13" value="until13" onChange="applyFilter()">
             <label class="form-check-label" for="until13">
               11:00-13:00
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="until15">
+          <input class="form-check-input " type="checkbox" id="until15" value="until15" onChange="applyFilter()">
             <label class="form-check-label" for="until15">
               13:00-15:00
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="until20">
+          <input class="form-check-input " type="checkbox" id="until20" value="until20" onChange="applyFilter()">
             <label class="form-check-label" for="until20">
               15:00-20:00
             </label>
@@ -100,7 +143,7 @@ layout: info-fluid
        <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
     </div>
 
-    <div class="row new-day">
+    <div class="row new-day apr12">
       <div class="col-xs-12">
         <div class="col-xs-12">
           <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
@@ -108,7 +151,7 @@ layout: info-fluid
               <span><a href="/workshopinstructions">Get Ready</a></span>
             </div>
           </div>
-          <h2 class="day"> Tuesday Apr 12 - Workshops </h2>
+          <h2 class="day "> Tuesday Apr 12 - Workshops </h2>
           <h3>*** Workshop ticket holders only. ***</h3>
         </div>  
         
@@ -120,7 +163,7 @@ layout: info-fluid
     {% endfor %}
     </div>
 
-    <div class="row new-day">
+    <div class="row new-day apr13">
       <div class="col-xs-12">
         <div class="col-xs-12">          
           <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
@@ -181,8 +224,9 @@ layout: info-fluid
 
         {% assign offheap = day1.events | where: "start", "18:20" %}
         {% include schedule_break.html details=offheap item=0 room="security" %}
-
-    <div class="row new-day">
+    </div>
+    
+    <div class="row new-day apr14">
     <div class="col-xs-12">
       <div class="col-xs-12">
         <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">

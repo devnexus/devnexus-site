@@ -12,12 +12,13 @@
   <script src="/assets/js/all.js"></script>
 
   <script>
-    $(document).ready(function(){
+  $(document).ready(function(){
       $("#scheduleSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $(".schedule-row").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
+      
   });
 });
 </script>
