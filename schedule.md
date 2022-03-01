@@ -3,159 +3,232 @@ layout: info-fluid
 ---
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
 
-<input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
-
-<div class="row no-print">
-</div>
-
-<div class="row new-day">
-  <div class="col-xs-12">
-    <div class="col-xs-8">
-      <h2 class="day"> Tuesday Apr 12 - Workshops </h2>
-      <h3>*** Workshop ticket holders only. ***</h3>
-    </div>  
-    <div class="col-xs-4 col-sm-2 box no-print">
-      <div class="ribbon">
-        <span><a href="/workshopinstructions">Get Ready</a></span>
-      </div>
+<div class="row schedule-container">
+  <div class="col-sm-2 row schedule-filters">
+    <div class="filter-by-header">
+        <span>Filter By</span>
+        <button type="button" class="btn btn-sm pull-right" aria-label="Left Align">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <span class="sr-only">Collapse</span>
+        </button>  
+    </div>
+    <div class="row">
+      <a href="#">Clear Filters</a>
+    </div>
+    <div class="filter-by-section-header">
+        <span>Date</span>
+        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <span class="sr-only">Collapse</span>
+        </button>         
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="apr12">
+        <label class="form-check-label" for="apr12">
+          Apr 12 2022
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="apr13">
+        <label class="form-check-label" for="apr13">
+          Apr 13 2022
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="apr14">
+        <label class="form-check-label" for="apr14">
+          Apr 14 2022
+        </label>
+    </div>
+    <div class="filter-by-section-header">
+        <span>Track</span>
+        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <span class="sr-only">Collapse</span>
+        </button>         
+    </div>
+    
+    {% assign tracks = site.data.tracks %}
+    {% for track in tracks %}
+        {% include schedule_filter_track_item.html data=track  %}
+    {% endfor %}
+    
+     <div class="filter-by-section-header">
+        <span>Time</span>
+        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <span class="sr-only">Collapse</span>
+        </button>         
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="until9">
+        <label class="form-check-label" for="until9">
+          00:00-09:00
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="until1">
+        <label class="form-check-label" for="until1">
+          09:00-11:00
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="until13">
+        <label class="form-check-label" for="until13">
+          11:00-13:00
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="until15">
+        <label class="form-check-label" for="until15">
+          13:00-15:00
+        </label>
+    </div>
+    <div >
+       <input class="form-check-input " type="checkbox" id="until20">
+        <label class="form-check-label" for="until20">
+          15:00-20:00
+        </label>
     </div>
   </div>
- {% assign workshops = day0.events | where:"track","Full day Workshops" %}
- {% for event in workshops %}
- {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
- {% include schedule_workshop.html details=event room=_room track="workshop" %}
- {% endfor %}
-</div>
-
- <div class="row new-day">
- <div class="col-xs-12">
-   <div class="col-xs-8">
-     <h2 class="day"> Wednesday Apr 13 - Main Conference</h2>
-   </div>
-   <div class="col-xs-4 col-sm-2 box no-print">
-    <div class="ribbon">
-      <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+  <div class="row col-sm-10">
+    <div class="row">
+       <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
     </div>
-   </div>
-</div>
 
-{% assign day1 = site.data.schedule | where: "index", 1  | first %}
-{% assign keynotes = day1.events | where:"track","Keynote" %}
-{% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
-
-
-<div class="col-xs-12">
-<h1>TODO Add Registration at 7:30</h1>
-</div>
-
-{% assign day1_10 = day1.events | where: "start", "10:00" %}
-<h3>10:00</h3>
-{% include schedule_block.html events=day1_10 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Break at 11:00</h1>
-</div>
-
-{% assign day1_11 = day1.events | where: "start", "11:20" %}
-<h3>11:20</h3>
-{% include schedule_block.html events=day1_11 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Lunch at 12:20</h1>
-</div>
-
-{% assign day1_13 = day1.events | where: "start", "13:20" %}
-<h3>13:20</h3>
-{% include schedule_block.html events=day1_13 %}
-
-{% assign day1_14 = day1.events | where: "start", "14:20" %}
-<h3>14:20</h3>
-{% include schedule_block.html events=day1_14 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Break at 15:20</h1>
-</div>
-
-
-{% assign day1_15 = day1.events | where: "start", "15:40" %}
-<h3>15:40</h3>
-{% include schedule_block.html events=day1_15 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Devnation Opening at 16:50</h1>
-</div>
-
-<div class="col-xs-12">
-<h1>TODO Add Venkat at 17:00</h1>
-</div>
-
-<div class="col-xs-12">
-<h1>TODO Add Quarkus at 18:00</h1>
-</div>
-
-<div class="col-xs-12">
-<h1>TODO Add Off-Heap at 18:20</h1>
-</div>
-
-
- <div class="row new-day">
- <div class="col-xs-12">
-   <div class="col-xs-8">
-     <h2 class="day"> Wednesday Apr 14 - Main Conference</h2>
-   </div>
-   <div class="col-xs-4 col-sm-2 box no-print">
-    <div class="ribbon">
-      <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+    <div class="row new-day">
+      <div class="col-xs-12">
+        <div class="col-xs-12">
+          <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
+            <div class="ribbon">
+              <span><a href="/workshopinstructions">Get Ready</a></span>
+            </div>
+          </div>
+          <h2 class="day"> Tuesday Apr 12 - Workshops </h2>
+          <h3>*** Workshop ticket holders only. ***</h3>
+        </div>  
+        
+      </div>
+    {% assign workshops = day0.events | where:"track","Full day Workshops" %}
+    {% for event in workshops %}
+    {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
+    {% include schedule_workshop.html details=event room=_room track="workshop" %}
+    {% endfor %}
     </div>
-   </div>
+
+    <div class="row new-day">
+      <div class="col-xs-12">
+        <div class="col-xs-12">          
+          <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
+            <div class="ribbon">
+              <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+            </div>
+          </div>
+          <h2 class="day"> Wednesday Apr 13 - Main Conference</h2>
+        </div>
+      </div>
+
+    {% assign day1 = site.data.schedule | where: "index", 1  | first %}
+    {% assign misc = day1.events | where:"track","admin"  %}
+
+        
+    {% assign keynotes = day1.events | where:"track","Keynote" %}
+    
+    {% include schedule_break.html details=misc item=0 room="breakfast" %}
+    
+    {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
+
+    {% assign day1_10 = day1.events | where: "start", "10:00" %}
+    <h3>10:00</h3>
+    {% include schedule_block.html events=day1_10 %}
+
+    {% include schedule_break.html details=misc item=1 room="breakfast" %}
+
+    {% assign day1_11 = day1.events | where: "start", "11:20" %}
+    <h3>11:20</h3>
+    {% include schedule_block.html events=day1_11 %}
+
+    {% include schedule_break.html details=misc item=2 room="breakfast" %}
+
+
+    {% assign day1_13 = day1.events | where: "start", "13:20" %}
+    <h3>13:20</h3>
+    {% include schedule_block.html events=day1_13 %}
+
+    {% assign day1_14 = day1.events | where: "start", "14:20" %}
+    <h3>14:20</h3>
+    {% include schedule_block.html events=day1_14 %}
+
+    {% include schedule_break.html details=misc item=3 room="breakfast" %}
+
+
+
+    {% assign day1_15 = day1.events | where: "start", "15:40" %}
+    <h3>15:40</h3>
+    {% include schedule_block.html events=day1_15 %}
+
+    {% include schedule_keynote.html details=keynotes item=1 room="keynote" %}
+
+
+        {% include schedule_keynote.html details=keynotes item=2 room="keynote" %}
+
+        {% include schedule_break.html details=misc item=4 room="breakfast" %}
+
+
+        {% assign offheap = day1.events | where: "start", "18:20" %}
+        {% include schedule_break.html details=offheap item=0 room="security" %}
+
+    <div class="row new-day">
+    <div class="col-xs-12">
+      <div class="col-xs-12">
+        <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
+            <div class="ribbon">
+              <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
+            </div>
+          </div>
+        <h2 class="day"> Wednesday Apr 14 - Main Conference</h2>
+      </div>
+    </div>
+
+    {% assign day2 = site.data.schedule | where: "index", 2  | first %}
+    {% assign keynotes2 = day2.events | where:"track","Keynote" %}
+    {% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
+    {% assign misc2 = day2.events | where:"track","admin" | sort:"start" %}
+
+    {% assign day2_10 = day2.events | where: "start", "10:00" %}
+    <h3>10:00</h3>
+    {% include schedule_block.html events=day2_10 %}
+
+    {% include schedule_break.html details=misc2 item=0 room="breakfast" %}
+
+
+    {% assign day2_11 = day2.events | where: "start", "11:20" %}
+    <h3>11:20</h3>
+    {% include schedule_block.html events=day2_11 %}
+
+    {% include schedule_break.html details=misc2 item=1 room="breakfast" %}
+
+    {% assign day2_13 = day2.events | where: "start", "13:20" %}
+    <h3>13:20</h3>
+    {% include schedule_block.html events=day2_13 %}
+
+    {% assign day2_14 = day2.events | where: "start", "14:20" %}
+    <h3>14:20</h3>
+    {% include schedule_block.html events=day2_14 %}
+
+    {% include schedule_break.html details=misc2 item=2 room="breakfast" %}
+
+
+    {% assign day2_15 = day2.events | where: "start", "15:40" %}
+    <h3>15:40</h3>
+    {% include schedule_block.html events=day2_15 %}
+
+        {% include schedule_keynote.html details=misc2 item=3 room="keynote" %}
+
+        {% include schedule_keynote.html details=misc2 item=4 room="keynote" %}
+
+  </div>
 </div>
-
-{% assign day2 = site.data.schedule | where: "index", 2  | first %}
-{% assign keynotes2 = day2.events | where:"track","Keynote" %}
-{% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
-
-
-{% assign day2_10 = day2.events | where: "start", "10:00" %}
-<h3>10:00</h3>
-{% include schedule_block.html events=day2_10 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Break at 11:00</h1>
-</div>
-
-{% assign day2_11 = day2.events | where: "start", "11:20" %}
-<h3>11:20</h3>
-{% include schedule_block.html events=day2_11 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Lunch at 12:20</h1>
-</div>
-
-{% assign day1_13 = day2.events | where: "start", "13:20" %}
-<h3>13:20</h3>
-{% include schedule_block.html events=day2_13 %}
-
-{% assign day2_14 = day2.events | where: "start", "14:20" %}
-<h3>14:20</h3>
-{% include schedule_block.html events=day2_14 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Break at 15:20</h1>
-</div>
-
-
-{% assign day2_15 = day2.events | where: "start", "15:40" %}
-<h3>15:40</h3>
-{% include schedule_block.html events=day2_15 %}
-
-<div class="col-xs-12">
-<h1>TODO Add Raffle 16:40</h1>
-</div>
-
-<div class="col-xs-12">
-<h1>TODO Add Party at 19:30</h1>
-</div>
-
 
 <!-- 
 {% include schedule_break.html details=day2_other item=0 room="breakfast" %}

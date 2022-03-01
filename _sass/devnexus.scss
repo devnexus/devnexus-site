@@ -104,3 +104,29 @@ $action-button-color: #f6921e;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #79A70A;
 }
+
+.schedule-container .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row div.filter-by-header {
+  line-height: 2;
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: #EEE;
+  padding: 2px;
+  background-color: #f6921e;
+}
+
+.row div.filter-by-section-header .btn {
+  background-color: #79A70A;
+}
+.row div.filter-by-section-header {
+  line-height: 2;
+  padding: 2px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: #EEE;
+  background-color: #79A70A;
+}

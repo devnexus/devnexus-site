@@ -1,7 +1,7 @@
 {% assign preso = include.details %}
 {% assign color = include.room | replace: ' ', '-' | downcase %}
 <div class="row schedule-row">
-		<div class="col-sm-6 col-xs-12 {{color}}">
+		<div class="col-xs-12 {{color}}">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
 				<br/>
 				<span class="small">
