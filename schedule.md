@@ -4,94 +4,98 @@ layout: info-fluid
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
 
 <div class="row schedule-container">
-  <div class="col-sm-2 row schedule-filters">
-    <div class="filter-by-header">
-        <span>Filter By</span>
-        <button type="button" class="btn btn-sm pull-right" aria-label="Left Align">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <span class="sr-only">Collapse</span>
-        </button>  
-    </div>
-    <div class="row">
-      <a href="#">Clear Filters</a>
-    </div>
-    <div class="filter-by-section-header">
-        <span>Date</span>
-        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <span class="sr-only">Collapse</span>
-        </button>         
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="apr12">
-        <label class="form-check-label" for="apr12">
-          Apr 12 2022
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="apr13">
-        <label class="form-check-label" for="apr13">
-          Apr 13 2022
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="apr14">
-        <label class="form-check-label" for="apr14">
-          Apr 14 2022
-        </label>
-    </div>
-    <div class="filter-by-section-header">
-        <span>Track</span>
-        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <span class="sr-only">Collapse</span>
-        </button>         
-    </div>
-    
-    {% assign tracks = site.data.tracks %}
-    {% for track in tracks %}
-        {% include schedule_filter_track_item.html data=track  %}
-    {% endfor %}
-    
-     <div class="filter-by-section-header">
-        <span>Time</span>
-        <button type="button" class="btn btn-sm pull-right" aria-label="Collapse">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <span class="sr-only">Collapse</span>
-        </button>         
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="until9">
-        <label class="form-check-label" for="until9">
-          00:00-09:00
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="until1">
-        <label class="form-check-label" for="until1">
-          09:00-11:00
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="until13">
-        <label class="form-check-label" for="until13">
-          11:00-13:00
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="until15">
-        <label class="form-check-label" for="until15">
-          13:00-15:00
-        </label>
-    </div>
-    <div >
-       <input class="form-check-input " type="checkbox" id="until20">
-        <label class="form-check-label" for="until20">
-          15:00-20:00
-        </label>
-    </div>
+  <div class="col-sm-4 col-md-3 row schedule-filters">
+    <a href="#schedule-filter" style="color: #eee" data-toggle="collapse">
+      <div class="filter-by-header">
+            <span>Filter By</span>
+            <span class="glyphicon glyphicon-plus  pull-right btn-sm" aria-hidden="true"></span>
+      </div>
+    </a>
+    <div id="schedule-filter" class="collapse in">
+      <div class="row">
+        <a href="#">Clear Filters</a>
+      </div>
+      <a href="#date-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Date</span>
+              <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span> 
+        </div>
+      </a>
+      <div id="date-filter" class="collapse in">
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr12">
+            <label class="form-check-label" for="apr12">
+              Apr 12 2022
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr13">
+            <label class="form-check-label" for="apr13">
+              Apr 13 2022
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr14">
+            <label class="form-check-label" for="apr14">
+              Apr 14 2022
+            </label>
+        </div>
+      </div>
+      <a href="#track-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Track</span>
+            <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span>
+        </div>
+      </a>
+      <div id="track-filter" class="collapse in">
+        {% assign tracks = site.data.tracks %}
+        {% for track in tracks %}
+            {% include schedule_filter_track_item.html data=track  %}
+        {% endfor %}
+      </div>
+      
+      <a href="#time-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Time</span>
+            <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span>
+        </div>
+      </a>
+      <div id="time-filter" class="collapse in">
+        <div >
+          <input class="form-check-input " type="checkbox" id="until9">
+            <label class="form-check-label" for="until9">
+              00:00-09:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until1">
+            <label class="form-check-label" for="until1">
+              09:00-11:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until13">
+            <label class="form-check-label" for="until13">
+              11:00-13:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until15">
+            <label class="form-check-label" for="until15">
+              13:00-15:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until20">
+            <label class="form-check-label" for="until20">
+              15:00-20:00
+            </label>
+        </div>
+      </div><!--time filter collapse -->
+      </div><!-- global filter collapse -->
   </div>
-  <div class="row col-sm-10">
+  
+  <div class="row col-sm-8 col-md-9">
     <div class="row">
        <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
     </div>

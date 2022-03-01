@@ -8527,10 +8527,22 @@ h2.featured-header {
   background-color: #282828;
   text-transform: uppercase;
 }
-.conference-information {
-  margin: 40px;
-  background-color: #fff;
+
+@media (max-width: 768px) {
+  .conference-information {
+    margin: 10px;
+    background-color: #fff;
+  }
 }
+
+@media (min-width: 768px) {
+  .conference-information {
+    margin: 40px;
+    background-color: #fff;
+  }
+}
+
+
 .conference-information .travel-address {
   text-align: center;
   margin: 20px auto;
