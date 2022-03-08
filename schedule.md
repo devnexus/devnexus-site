@@ -22,6 +22,8 @@ function applyFilter() {
 
   let tracks = ['unobtanium', 
                'agile',
+               'keynote',
+               'breakfast',
               'architecture',
               'cloud-infrastructure',
               'cloud-technology',
@@ -32,12 +34,11 @@ function applyFilter() {
               'java-platform',
               'security',
               'web-and-front-end',
-              'admin','misc']
+              'keynote']
   let trackFilters = []
   
   //Collect the checked filters
   $("input.form-check-input").each(function(t,e){
-    console.log(e.id +"&&"+ e.checked)
     if (e.id && e.checked) {
         if (dates.indexOf(e.id) >= 0) {
           dateFilters.push(e.id);
@@ -89,6 +90,51 @@ function applyFilter() {
         }
       });
     
+   //If there are no tracks at a timeslot, hide timeslot   
+   let fineTimes = [
+     'apr130730',
+     'apr130900',
+     'apr131000',
+     'apr131100',
+     'apr131120',
+     'apr131220',
+     'apr131320',
+     'apr131420',
+     'apr131520',
+     'apr131540',
+     'apr131650',
+     'apr131700',
+     'apr131800',
+     'apr131820',
+     'apr140900',
+     'apr141000',
+     'apr141100',
+     'apr141120',
+     'apr141220',
+     'apr141320',
+     'apr141420',
+     'apr141520',
+     'apr141540'
+   ];
+
+   fineTimes.forEach(fineTime => {
+     let showTime = false;
+     $('div.' + fineTime).show()
+     tracks.forEach(track => {
+       
+       console.log(('div.' + fineTime + ' div.' + track))
+       console.log($('div.' + fineTime + ' div.' + track).is(":visible"))
+        if (($('div.' + fineTime + ' div.' + track).is(":visible"))) {
+          showTime = true;
+        }
+     })
+     
+     if (showTime) {
+       $('div.' + fineTime).show()
+     } else {
+       $('div.' + fineTime).hide()
+     }
+   })
 }
 
 function resetFilters() {
@@ -97,6 +143,7 @@ function resetFilters() {
   });
   applyFilter();
 }
+
 </script>
 
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
@@ -145,18 +192,25 @@ function resetFilters() {
         </div>
       </a>
       <div id="track-filter" class="collapse in">
+      <div >
+            <input class="form-check-input " type="checkbox" id="keynote" value="keynote" onChange="applyFilter()">
+            <label class="form-check-label" for="keynote">
+              Keynotes
+            </label>
+        </div>
         {% assign tracks = site.data.tracks %}
         {% for track in tracks %}
             {% include schedule_filter_track_item.html data=track  %}
         {% endfor %}
         <div >
-            <input class="form-check-input " type="checkbox" id="track-admin" value="admin" onChange="applyFilter()">
-            <label class="form-check-label" for="track-admin">
-              Misc
+            <input class="form-check-input " type="checkbox" id="breakfast" value="breakfast" onChange="applyFilter()">
+            <label class="form-check-label" for="breakfast">
+              Food & Admin
             </label>
         </div>
       </div>
       
+
       <a href="#time-filter" style="color: #eee" data-toggle="collapse">
         <div class="filter-by-section-header">
             <span>Time</span>
@@ -242,55 +296,72 @@ function resetFilters() {
 
     <div class="until09">
       {% assign keynotes = day1.events | where:"track","Keynote" %}
-      {% include schedule_break.html details=misc item=0 room="breakfast" %}
-      {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
+      <div class="apr130730">
+        {% include schedule_break.html details=misc item=0 room="breakfast" %}
+      </div>
+      <div class="apr130900">
+        {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
+      </div>
     </div>
     <div class="until11">
       {% assign day1_10 = day1.events | where: "start", "10:00" %}
-      <h3>10:00</h3>
-      {% include schedule_block.html events=day1_10 %}
-
-      {% include schedule_break.html details=misc item=1 room="breakfast" %}
+      <div class="apr131000">
+        <h3>10:00</h3>
+        {% include schedule_block.html events=day1_10 %}
+      </div>
+      <div class="apr131100">
+        {% include schedule_break.html details=misc item=1 room="breakfast" %}
+      </div>
     </div>
     <div class="until13">
       {% assign day1_11 = day1.events | where: "start", "11:20" %}
-      <h3>11:20</h3>
-      {% include schedule_block.html events=day1_11 %}
-
-      {% include schedule_break.html details=misc item=2 room="breakfast" %}
+      <div class="apr131120">
+        <h3>11:20</h3>
+        {% include schedule_block.html events=day1_11 %}
+      </div>
+      <div class="apr131220">
+        {% include schedule_break.html details=misc item=2 room="breakfast" %}
+      </div>
     </div>
 
 <div class="until15">
     
     {% assign day1_13 = day1.events | where: "start", "13:20" %}
-    <h3>13:20</h3>
-    {% include schedule_block.html events=day1_13 %}
-
+    <div class="apr131320">
+      <h3>13:20</h3>
+      {% include schedule_block.html events=day1_13 %}
+    </div>
     {% assign day1_14 = day1.events | where: "start", "14:20" %}
+    <div class="apr131420">
     <h3>14:20</h3>
     {% include schedule_block.html events=day1_14 %}
+    </div>
 </div>
 <div class="until20">
-
-    {% include schedule_break.html details=misc item=3 room="breakfast" %}
-
+    <div class="apr131520">
+      {% include schedule_break.html details=misc item=3 room="breakfast" %}
+    </div>
 
 
     {% assign day1_15 = day1.events | where: "start", "15:40" %}
+    <div class="apr131540">
     <h3>15:40</h3>
     {% include schedule_block.html events=day1_15 %}
-
-    {% include schedule_keynote.html details=keynotes item=1 room="keynote" %}
-
-
-        {% include schedule_keynote.html details=keynotes item=2 room="keynote" %}
-
-        {% include schedule_break.html details=misc item=4 room="breakfast" %}
-
-
-        {% assign offheap = day1.events | where: "start", "18:20" %}
-        {% include schedule_break.html details=offheap item=0 room="security" %}
     </div>
+    <div class="apr131650">
+      {% include schedule_keynote.html details=keynotes item=1 room="keynote" %}
+    </div>
+    <div class="apr131700">
+      {% include schedule_keynote.html details=keynotes item=2 room="keynote" %}
+    </div>
+    <div class="apr131800">
+      {% include schedule_break.html details=misc item=4 room="breakfast" %}
+    </div>
+    <div class="apr131820">
+      {% assign offheap = day1.events | where: "start", "18:20" %}
+      {% include schedule_break.html details=offheap item=0 room="security" %}
+    </div>
+</div>
     </div>
     <div class="row new-day apr14">
     <div class="col-xs-12">
@@ -307,86 +378,63 @@ function resetFilters() {
     <div class="until09">
       {% assign day2 = site.data.schedule | where: "index", 2  | first %}
       {% assign keynotes2 = day2.events | where:"track","Keynote" %}
-      {% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
+      <div class="apr140900">
+        {% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
+      </div>
       {% assign misc2 = day2.events | where:"track","admin" | sort:"start" %}
     </div>
 
     <div class="until11">
     
       {% assign day2_10 = day2.events | where: "start", "10:00" %}
+      <div class="apr141000">
       <h3>10:00</h3>
       {% include schedule_block.html events=day2_10 %}    
+      </div>
+      <div class="apr141100">
       {% include schedule_break.html details=misc2 item=0 room="breakfast" %}
+      </div>
     </div>
     <div class="until13">
     {% assign day2_11 = day2.events | where: "start", "11:20" %}
-    <h3>11:20</h3>
-    {% include schedule_block.html events=day2_11 %}
-
-    {% include schedule_break.html details=misc2 item=1 room="breakfast" %}
+    <div class="apr141120">
+      <h3>11:20</h3>
+      {% include schedule_block.html events=day2_11 %}
+    </div>
+    <div class="apr141220">
+      {% include schedule_break.html details=misc2 item=1 room="breakfast" %}
+    </div>
 </div>
 <div class="until15">
     {% assign day2_13 = day2.events | where: "start", "13:20" %}
+    <div class="apr141320">
     <h3>13:20</h3>
     {% include schedule_block.html events=day2_13 %}
-
+    </div>
     {% assign day2_14 = day2.events | where: "start", "14:20" %}
+    <div class="apr141420">
     <h3>14:20</h3>
     {% include schedule_block.html events=day2_14 %}
+    </div>
 </div>
 <div class="until20">
-
-    {% include schedule_break.html details=misc2 item=2 room="breakfast" %}
-
+    <div class="apr141520">
+      {% include schedule_break.html details=misc2 item=2 room="breakfast" %}
+    </div>
 
     {% assign day2_15 = day2.events | where: "start", "15:40" %}
-    <h3>15:40</h3>
-    {% include schedule_block.html events=day2_15 %}
-
+    <div class="apr141540">
+      <h3>15:40</h3>
+      {% include schedule_block.html events=day2_15 %}
+    </div>
+  
+      <div class="apr141640">
         {% include schedule_keynote.html details=misc2 item=3 room="keynote" %}
+      </div>
+      <div class="apr141930">
+      {% include schedule_keynote.html details=misc2 item=4 room="keynote" %}
+      </div>
+    </div>
 
-        {% include schedule_keynote.html details=misc2 item=4 room="keynote" %}
-</div>
   </div>
 </div>
-
-<!-- 
-{% include schedule_break.html details=day2_other item=0 room="breakfast" %}
-
-{% include schedule_break.html details=day2_other item=1 room="keynote" %}
-{% include schedule_keynote.html details=day2_keynote item=0 room="keynote" %}
-{% include schedule_break.html details=day2_other item=2 room="break" %}
-
-{% assign day2_10 = day2.events | where: "start", "10:20" %}
-<h3>10:20</h3>
-{% include schedule_block.html events=day2_10 %}
-
-{% assign day2_11= day2.events | where: "start", "11:20" %}
-<h3>11:20</h3>
-{% include schedule_block.html events=day2_11 %}
-
-{% include schedule_break.html details=day2_other item=3 room="lunch" %}
-
-{% assign day2_13= day2.events | where: "start", "13:10" %}
-<h3>13:10</h3>
-{% include schedule_block.html events=day2_13 %}
-
-{% assign day2_14= day2.events | where: "start", "14:10" %}
-<h3>14:10</h3>
-{% include schedule_block.html events=day2_14 %}
-
-{% include schedule_break.html details=day2_other item=4 room="break" %}
-
-{% assign day2_15= day2.events | where: "start", "15:30" %}
-<h3>15:30</h3>
-{% include schedule_block.html events=day2_15 %}
-
-{% include schedule_keynote.html details=day2_keynote item=1 room="keynote" %}
-{% include schedule_keynote.html details=day2_keynote item=2 room="keynote" %}
-
-<h3>17:40</h3>
-{% assign offheap = site.events | where: "slug", 4810 | first %}
-{% include schedule_event.html details=offheap track="off-heap" room="off-heap" %}
-
-{% include schedule_break.html details=day2_other item=5 track="happy-hour" room="break" %}
-</div>  -->

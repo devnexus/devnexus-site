@@ -13,6 +13,13 @@
 
   <script>
   $(document).ready(function(){
+
+    $(window).resize(function(){
+      togglePanel();
+    });
+
+    togglePanel();
+
       $("#scheduleSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $(".schedule-row").filter(function() {
@@ -20,6 +27,17 @@
       });
       
   });
+
+
+  function togglePanel() {
+   var w = $(window).width();
+   if (w <= 768) {
+      $('#schedule-filter').removeClass('in');
+   } else {
+      $('#schedule-filter').addClass('in');
+   }
+}
+
 });
 </script>
 
