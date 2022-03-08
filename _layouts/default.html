@@ -13,12 +13,16 @@
 
   <script>
   $(document).ready(function(){
-
+    //These control the schedule filter on the schedule page
     $(window).resize(function(){
       togglePanel();
     });
 
     togglePanel();
+    window.setTimeout(()=>{if (typeof applyFilter !== 'undefined') {
+      applyFilter();
+    }},1)
+    
 
       $("#scheduleSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();

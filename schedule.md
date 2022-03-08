@@ -121,9 +121,6 @@ function applyFilter() {
      let showTime = false;
      $('div.' + fineTime).show()
      tracks.forEach(track => {
-       
-       console.log(('div.' + fineTime + ' div.' + track))
-       console.log($('div.' + fineTime + ' div.' + track).is(":visible"))
         if (($('div.' + fineTime + ' div.' + track).is(":visible"))) {
           showTime = true;
         }
