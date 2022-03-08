@@ -5,38 +5,98 @@ layout: info-fluid
 <script>
 
 function applyFilter() {
-  
+  let filterDates = false;
+  let filterTracks = false;
+  let filterTimes = false;
+
   let dates = ['apr12', 'apr13','apr14']
-  
+  let dateFilters = []
+
   let times = ['until09',
                'until11',
                'until13',
                'until15',
                'until20'
               ];
+  let timeFilters = []
 
   let tracks = ['unobtanium', 
                'agile',
               'architecture',
               'cloud-infrastructure',
               'cloud-technology',
+              'tools-and-techniques',
               'core-java',
+              'practices-and-other-tech',
               'frameworks',
               'java-platform',
               'security',
               'web-and-front-end',
-              'admin']
-
+              'admin','misc']
+  let trackFilters = []
+  
+  //Collect the checked filters
   $("input.form-check-input").each(function(t,e){
     console.log(e.id +"&&"+ e.checked)
     if (e.id && e.checked) {
-        $('div.' + e.id).hide();
-    } else {
-      $('div.' + e.id).show();
-    }
-  })
+        if (dates.indexOf(e.id) >= 0) {
+          dateFilters.push(e.id);
+        } else if  (tracks.indexOf(e.id) >= 0) {
+          trackFilters.push(e.id);
+        } else if  (times.indexOf(e.id) >= 0) {
+          timeFilters.push(e.id);
+        } 
+    } 
+  });
+    
+    //Apply filters
+    times.forEach(element => {
+        if (timeFilters.length > 0 ) {
+          if (timeFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });
+
+    
+    //Apply filters
+    tracks.forEach(element => {
+        if (trackFilters.length > 0 ) {
+          if (trackFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });;
+    
+    
+      dates.forEach(element => {
+        if (dateFilters.length > 0 ) {
+          if (dateFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });
+    
 }
 
+function resetFilters() {
+  $("input.form-check-input").each(function(t,e){
+    e.checked = false;
+  });
+  applyFilter();
+}
 </script>
 
 {% assign day0 = site.data.schedule | where: "index", 0  | first %}
@@ -50,7 +110,7 @@ function applyFilter() {
     </a>
     <div id="schedule-filter" class="collapse in">
       <div class="row">
-        <a href="#">Clear Filters</a>
+        <a href="#" onClick="resetFilters()">Clear Filters</a>
       </div>
       <a href="#date-filter" style="color: #eee" data-toggle="collapse">
         <div class="filter-by-section-header">
@@ -156,11 +216,13 @@ function applyFilter() {
         </div>  
         
       </div>
-    {% assign workshops = day0.events | where:"track","Full day Workshops" %}
-    {% for event in workshops %}
-    {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
-    {% include schedule_workshop.html details=event room=_room track="workshop" %}
-    {% endfor %}
+      <div class="until09">
+        {% assign workshops = day0.events | where:"track","Full day Workshops" %}
+        {% for event in workshops %}
+          {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
+          {% include schedule_workshop.html details=event room=_room track="workshop" %}
+        {% endfor %}
+      </div>
     </div>
 
     <div class="row new-day apr13">
@@ -178,26 +240,28 @@ function applyFilter() {
     {% assign day1 = site.data.schedule | where: "index", 1  | first %}
     {% assign misc = day1.events | where:"track","admin"  %}
 
-        
-    {% assign keynotes = day1.events | where:"track","Keynote" %}
+    <div class="until09">
+      {% assign keynotes = day1.events | where:"track","Keynote" %}
+      {% include schedule_break.html details=misc item=0 room="breakfast" %}
+      {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
+    </div>
+    <div class="until11">
+      {% assign day1_10 = day1.events | where: "start", "10:00" %}
+      <h3>10:00</h3>
+      {% include schedule_block.html events=day1_10 %}
+
+      {% include schedule_break.html details=misc item=1 room="breakfast" %}
+    </div>
+    <div class="until13">
+      {% assign day1_11 = day1.events | where: "start", "11:20" %}
+      <h3>11:20</h3>
+      {% include schedule_block.html events=day1_11 %}
+
+      {% include schedule_break.html details=misc item=2 room="breakfast" %}
+    </div>
+
+<div class="until15">
     
-    {% include schedule_break.html details=misc item=0 room="breakfast" %}
-    
-    {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
-
-    {% assign day1_10 = day1.events | where: "start", "10:00" %}
-    <h3>10:00</h3>
-    {% include schedule_block.html events=day1_10 %}
-
-    {% include schedule_break.html details=misc item=1 room="breakfast" %}
-
-    {% assign day1_11 = day1.events | where: "start", "11:20" %}
-    <h3>11:20</h3>
-    {% include schedule_block.html events=day1_11 %}
-
-    {% include schedule_break.html details=misc item=2 room="breakfast" %}
-
-
     {% assign day1_13 = day1.events | where: "start", "13:20" %}
     <h3>13:20</h3>
     {% include schedule_block.html events=day1_13 %}
@@ -205,6 +269,8 @@ function applyFilter() {
     {% assign day1_14 = day1.events | where: "start", "14:20" %}
     <h3>14:20</h3>
     {% include schedule_block.html events=day1_14 %}
+</div>
+<div class="until20">
 
     {% include schedule_break.html details=misc item=3 room="breakfast" %}
 
@@ -225,7 +291,7 @@ function applyFilter() {
         {% assign offheap = day1.events | where: "start", "18:20" %}
         {% include schedule_break.html details=offheap item=0 room="security" %}
     </div>
-    
+    </div>
     <div class="row new-day apr14">
     <div class="col-xs-12">
       <div class="col-xs-12">
@@ -238,24 +304,28 @@ function applyFilter() {
       </div>
     </div>
 
-    {% assign day2 = site.data.schedule | where: "index", 2  | first %}
-    {% assign keynotes2 = day2.events | where:"track","Keynote" %}
-    {% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
-    {% assign misc2 = day2.events | where:"track","admin" | sort:"start" %}
+    <div class="until09">
+      {% assign day2 = site.data.schedule | where: "index", 2  | first %}
+      {% assign keynotes2 = day2.events | where:"track","Keynote" %}
+      {% include schedule_keynote.html details=keynotes2 item=0 room="keynote" %}
+      {% assign misc2 = day2.events | where:"track","admin" | sort:"start" %}
+    </div>
 
-    {% assign day2_10 = day2.events | where: "start", "10:00" %}
-    <h3>10:00</h3>
-    {% include schedule_block.html events=day2_10 %}
-
-    {% include schedule_break.html details=misc2 item=0 room="breakfast" %}
-
-
+    <div class="until11">
+    
+      {% assign day2_10 = day2.events | where: "start", "10:00" %}
+      <h3>10:00</h3>
+      {% include schedule_block.html events=day2_10 %}    
+      {% include schedule_break.html details=misc2 item=0 room="breakfast" %}
+    </div>
+    <div class="until13">
     {% assign day2_11 = day2.events | where: "start", "11:20" %}
     <h3>11:20</h3>
     {% include schedule_block.html events=day2_11 %}
 
     {% include schedule_break.html details=misc2 item=1 room="breakfast" %}
-
+</div>
+<div class="until15">
     {% assign day2_13 = day2.events | where: "start", "13:20" %}
     <h3>13:20</h3>
     {% include schedule_block.html events=day2_13 %}
@@ -263,6 +333,8 @@ function applyFilter() {
     {% assign day2_14 = day2.events | where: "start", "14:20" %}
     <h3>14:20</h3>
     {% include schedule_block.html events=day2_14 %}
+</div>
+<div class="until20">
 
     {% include schedule_break.html details=misc2 item=2 room="breakfast" %}
 
@@ -274,7 +346,7 @@ function applyFilter() {
         {% include schedule_keynote.html details=misc2 item=3 room="keynote" %}
 
         {% include schedule_keynote.html details=misc2 item=4 room="keynote" %}
-
+</div>
   </div>
 </div>
 
