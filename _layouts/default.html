@@ -12,13 +12,36 @@
   <script src="/assets/js/all.js"></script>
 
   <script>
-    $(document).ready(function(){
+  $(document).ready(function(){
+    //These control the schedule filter on the schedule page
+    $(window).resize(function(){
+      togglePanel();
+    });
+
+    togglePanel();
+    window.setTimeout(()=>{if (typeof applyFilter !== 'undefined') {
+      applyFilter();
+    }},1)
+    
+
       $("#scheduleSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $(".schedule-row").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
+      
   });
+
+
+  function togglePanel() {
+   var w = $(window).width();
+   if (w <= 768) {
+      $('#schedule-filter').removeClass('in');
+   } else {
+      $('#schedule-filter').addClass('in');
+   }
+}
+
 });
 </script>
 

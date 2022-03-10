@@ -1,7 +1,722 @@
 ---
 - index: 0
-  events: []
+  events:
+  - id: 6893
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Web and Front-end
+  - id: 7021
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Java Platform
+  - id: 6937
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Frameworks
+  - id: 7031
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Core Java
+  - id: 7022
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Cloud Technology
+  - id: 7023
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Cloud Infrastructure
+  - id: 7040
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Architecture
+  - id: 7041
+    start: '09:00'
+    duration: '08:00'
+    track: Full day Workshops
+    room: Agile
 - index: 1
-  events: []
+  events:
+  - id: 7095
+    start: '10:00'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 7091
+    start: '11:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6781
+    start: '13:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6847
+    start: '14:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6951
+    start: '15:40'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6689
+    start: '10:00'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6654
+    start: '11:20'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6679
+    start: '13:20'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6610
+    start: '14:20'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6646
+    start: '15:40'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6881
+    start: '10:00'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6522
+    start: '11:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6620
+    start: '13:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6537
+    start: '14:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6683
+    start: '15:40'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6899
+    start: '18:20'
+    duration: '01:00'
+    track:
+    room: Security
+  - id: 7007
+    start: '10:00'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6710
+    start: '11:20'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6729
+    start: '13:20'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6974
+    start: '14:20'
+    duration: '00:20'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6841
+    start: '15:40'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 7009
+    start: '09:00'
+    duration: '01:00'
+    track: Keynote
+    room: Keynote Room
+  - id: 7114
+    start: '16:50'
+    duration: '00:10'
+    track: Keynote
+    room: Keynote Room
+  - id: 7006
+    start: '17:00'
+    duration: '00:50'
+    track: Keynote
+    room: Keynote Room
+  - id: 7115
+    start: '07:30'
+    duration: '01:30'
+    track: admin
+    room: Foyer
+  - id: 7117
+    start: '11:00'
+    duration: '00:20'
+    track: admin
+    room: Foyer
+  - id: 7120
+    start: '12:20'
+    duration: '01:00'
+    track: admin
+    room: Foyer
+  - id: 7118
+    start: '15:20'
+    duration: '00:20'
+    track: admin
+    room: Foyer
+  - id: 7123
+    start: '18:00'
+    duration: '01:30'
+    track: admin
+    room: Foyer
+  - id: 6916
+    start: '10:00'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6868
+    start: '11:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6943
+    start: '13:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6855
+    start: '14:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6744
+    start: '15:40'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6987
+    start: '10:00'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6832
+    start: '11:20'
+    duration: '00:30'
+    track: Java Platform
+    room: Java Platform
+  - id: 6829
+    start: '13:20'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6825
+    start: '14:20'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6730
+    start: '15:40'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6784
+    start: '10:00'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6963
+    start: '11:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 7003
+    start: '13:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6968
+    start: '14:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6769
+    start: '15:40'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6668
+    start: '10:00'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 7005
+    start: '11:20'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6484
+    start: '13:20'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6485
+    start: '14:20'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6828
+    start: '15:40'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6678
+    start: '10:00'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6894
+    start: '11:20'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6860
+    start: '13:20'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6971
+    start: '14:20'
+    duration: '00:50'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6598
+    start: '15:40'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6947
+    start: '10:00'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6892
+    start: '11:20'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 7004
+    start: '13:20'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6969
+    start: '14:20'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6846
+    start: '15:40'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6791
+    start: '10:00'
+    duration: '00:40'
+    track: Architecture
+    room: Architecture
+  - id: 6539
+    start: '11:20'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6540
+    start: '13:20'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 7008
+    start: '14:20'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 7010
+    start: '15:40'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6790
+    start: '10:00'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6576
+    start: '11:20'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6467
+    start: '13:20'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6580
+    start: '14:20'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6708
+    start: '15:40'
+    duration: '00:40'
+    track: Agile
+    room: Agile
 - index: 2
-  events: []
+  events:
+  - id: 7088
+    start: '10:00'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6750
+    start: '11:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 7092
+    start: '13:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 7089
+    start: '14:20'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 7096
+    start: '15:40'
+    duration: '01:00'
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6479
+    start: '10:00'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6476
+    start: '11:20'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6660
+    start: '13:20'
+    duration: '00:30'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6848
+    start: '14:20'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6517
+    start: '15:40'
+    duration: '01:00'
+    track: Tools and techniques
+    room: Tools and techniques
+  - id: 6998
+    start: '10:00'
+    duration: '00:30'
+    track: Security
+    room: Security
+  - id: 6862
+    start: '11:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6880
+    start: '13:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6867
+    start: '14:20'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6782
+    start: '15:40'
+    duration: '01:00'
+    track: Security
+    room: Security
+  - id: 6956
+    start: '10:00'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6672
+    start: '11:20'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 7087
+    start: '13:20'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6812
+    start: '14:20'
+    duration: '01:00'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6836
+    start: '15:40'
+    duration: '00:50'
+    track: Practices and other tech
+    room: Practices and other tech
+  - id: 6827
+    start: '09:00'
+    duration: '01:00'
+    track: Keynote
+    room: Keynote Room
+  - id: 7121
+    start: '12:20'
+    duration: '01:00'
+    track: admin
+    room: Keynote Room
+  - id: 7122
+    start: '16:40'
+    duration: '00:20'
+    track: admin
+    room: Keynote Room
+  - id: 7116
+    start: '11:00'
+    duration: '00:20'
+    track: admin
+    room: Foyer
+  - id: 7119
+    start: '15:20'
+    duration: '00:20'
+    track: admin
+    room: Foyer
+  - id: 7124
+    start: '19:30'
+    duration: '02:00'
+    track: admin
+    room: Foyer
+  - id: 6802
+    start: '10:00'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6913
+    start: '11:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6788
+    start: '13:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6472
+    start: '14:20'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6570
+    start: '15:40'
+    duration: '01:00'
+    track: Web and Front-end
+    room: Web and Front-end
+  - id: 6941
+    start: '10:00'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6527
+    start: '11:20'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6503
+    start: '13:20'
+    duration: '00:50'
+    track: Java Platform
+    room: Java Platform
+  - id: 6900
+    start: '14:20'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6712
+    start: '15:40'
+    duration: '01:00'
+    track: Java Platform
+    room: Java Platform
+  - id: 6478
+    start: '10:00'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6933
+    start: '11:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6859
+    start: '13:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6692
+    start: '14:20'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 6794
+    start: '15:40'
+    duration: '01:00'
+    track: Frameworks
+    room: Frameworks
+  - id: 7011
+    start: '10:00'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 7012
+    start: '11:20'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6890
+    start: '13:20'
+    duration: '01:00'
+    track: Core Java
+    room: Core Java
+  - id: 6886
+    start: '14:20'
+    duration: '00:30'
+    track: Core Java
+    room: Core Java
+  - id: 6839
+    start: '15:40'
+    duration: '00:50'
+    track: Core Java
+    room: Core Java
+  - id: 6967
+    start: '10:00'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6765
+    start: '11:20'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6697
+    start: '13:20'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6870
+    start: '14:20'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6884
+    start: '15:40'
+    duration: '01:00'
+    track: Cloud Technology
+    room: Cloud Technology
+  - id: 6523
+    start: '10:00'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6965
+    start: '11:20'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6735
+    start: '13:20'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6591
+    start: '14:20'
+    duration: '00:40'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6639
+    start: '15:40'
+    duration: '01:00'
+    track: Cloud Infrastructure
+    room: Cloud Infrastructure
+  - id: 6530
+    start: '10:00'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6581
+    start: '11:20'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6567
+    start: '13:20'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6500
+    start: '14:20'
+    duration: '00:50'
+    track: Architecture
+    room: Architecture
+  - id: 6898
+    start: '15:40'
+    duration: '01:00'
+    track: Architecture
+    room: Architecture
+  - id: 6915
+    start: '10:00'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6611
+    start: '11:20'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6887
+    start: '13:20'
+    duration: '00:40'
+    track: Agile
+    room: Agile
+  - id: 6482
+    start: '14:20'
+    duration: '01:00'
+    track: Agile
+    room: Agile
+  - id: 6483
+    start: '15:40'
+    duration: '01:00'
+    track: Agile
+    room: Agile

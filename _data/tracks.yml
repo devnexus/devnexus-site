@@ -44,6 +44,11 @@ wit:
   trackkey: wit
   room: 412
 keynote:
+  title: Keynote
+  trackid: 0
+  trackkey: keynote
+  room: Sidney Marcus Auditorium
+keynotes:
   title: Keynotes
   trackid: 0
   trackkey: keynote

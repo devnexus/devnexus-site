@@ -1,6 +1,6 @@
 {% assign preso = site.events | where: "slug", include.details.id | first %}
 <div class="row schedule-row">
-		<div class="col-sm-6 col-xs-12 workshop">
+		<div class=" col-xs-12 workshop">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
 
 				<br/>
@@ -10,7 +10,7 @@
 				{% endfor %}
 			 </span>
 			 <span class="small pull-right">
- 				{{ include.duration | remove: "0" }} hours
+ 				{{ include.details.duration | remove: "0"| remove: ":" }} hours
  			</span>
 	  </div>
 </div>
