@@ -46,28 +46,28 @@
   - id: 7095
     start: '10:00'
     duration: '01:00'
-    track: Unobtanium
-    room: Unobtanium
+    track: Red Hat DevNation
+    room: Red Hat DevNation
   - id: 7091
     start: '11:20'
     duration: '01:00'
-    track: Unobtanium
-    room: Unobtanium
+    track: Red Hat DevNation
+    room: Red Hat DevNation
   - id: 6781
     start: '13:20'
     duration: '01:00'
-    track: Unobtanium
-    room: Unobtanium
+    track: Red Hat DevNation
+    room: Red Hat DevNation
   - id: 6847
     start: '14:20'
     duration: '01:00'
-    track: Unobtanium
-    room: Unobtanium
+    track: Red Hat DevNation
+    room: Red Hat DevNation
   - id: 6951
     start: '15:40'
     duration: '01:00'
-    track: Unobtanium
-    room: Unobtanium
+    track: Red Hat DevNation
+    room: Red Hat DevNation
   - id: 6689
     start: '10:00'
     duration: '01:00'
