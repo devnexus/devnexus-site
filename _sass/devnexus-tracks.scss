@@ -38,6 +38,9 @@ $room-color-jvm-languages: #007a4b;
   .keynote {
     @include room($room-color-auditorim);
   }
+  .red-hat-devnation {
+	@include room(#D70022);  
+  }  
   .workshop {
     @include room($room-color-workshop);
   }
@@ -50,10 +53,16 @@ $room-color-jvm-languages: #007a4b;
   .archictecture {
     @include room($room-color-architecture);
   }
+  .architecture {
+    @include room($room-color-architecture);
+  }
   .wit {
     @include room($room-color-architecture);
   }
   .tools {
+    @include room($room-color-tools);
+  }
+  .tools-and-techniques {
     @include room($room-color-tools);
   }
   .frameworks {
@@ -74,6 +83,9 @@ $room-color-jvm-languages: #007a4b;
   .practices-other {
     @include room($room-color-practices-other);
   }
+  .practices-and-other-tech {
+    @include room($room-color-practices-other);
+  }
   .security-and-practices {
     @include room($room-color-practices-other);
   }
@@ -90,6 +102,9 @@ $room-color-jvm-languages: #007a4b;
     @include room($room-color-agile);
   }
   .web {
+    @include room ($room-color-web);
+  }
+  .web-and-front-end {
     @include room ($room-color-web);
   }
   .web-and-security {
