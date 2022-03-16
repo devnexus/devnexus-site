@@ -368,7 +368,7 @@ function resetFilters() {
               <span><a href="/assets/img/conference_map.png">ROOM MAP</a></span>
             </div>
           </div>
-        <h2 class="day"> Wednesday Apr 14 - Main Conference</h2>
+        <h2 class="day"> Thursday Apr 14 - Main Conference</h2>
       </div>
     </div>
 
