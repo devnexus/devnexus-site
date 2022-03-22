@@ -1,5 +1,6 @@
 {% assign preso = include.details %}
 {% assign color = include.room | replace: ' ', '-' | replace: 'admin', 'keynote' | downcase %}
+{% assign location = site.data.tracks[include.track] %}
 <div class="row schedule-row {{preso.track}}">
 		<div class="col-xs-12 {{color}}">
 				<a href="{{preso.url}}">{{preso.title | escape}}</a>
@@ -11,7 +12,7 @@
 			 </span>
 			<br/>
 			<span class="small pull-right">
-				 {{include.room}}
+				{{location.title}} | {{ location.room }}
 			</span>
 	  </div>
 </div>

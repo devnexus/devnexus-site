@@ -46,28 +46,28 @@
   - id: 7095
     start: '10:00'
     duration: '01:00'
-    track: Red Hat DevNation
-    room: Red Hat DevNation
+    track: Unobtanium
+    room: Unobtanium
   - id: 7091
     start: '11:20'
     duration: '01:00'
-    track: Red Hat DevNation
-    room: Red Hat DevNation
+    track: Unobtanium
+    room: Unobtanium
   - id: 6781
     start: '13:20'
     duration: '01:00'
-    track: Red Hat DevNation
-    room: Red Hat DevNation
-  - id: 6847
+    track: Unobtanium
+    room: Unobtanium
+  - id: 6750
     start: '14:20'
     duration: '01:00'
-    track: Red Hat DevNation
-    room: Red Hat DevNation
+    track: Unobtanium
+    room: Unobtanium
   - id: 6951
     start: '15:40'
     duration: '01:00'
-    track: Red Hat DevNation
-    room: Red Hat DevNation
+    track: Unobtanium
+    room: Unobtanium
   - id: 6689
     start: '10:00'
     duration: '01:00'
@@ -121,7 +121,7 @@
   - id: 6899
     start: '18:20'
     duration: '01:00'
-    track:
+    track: admin
     room: Security
   - id: 7007
     start: '10:00'
@@ -298,7 +298,7 @@
     duration: '01:00'
     track: Cloud Technology
     room: Cloud Technology
-  - id: 6860
+  - id: 6967
     start: '13:20'
     duration: '01:00'
     track: Cloud Technology
@@ -318,19 +318,19 @@
     duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
-  - id: 6892
+  - id: 7004
     start: '11:20'
     duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
-  - id: 7004
+  - id: 6892
     start: '13:20'
     duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
-  - id: 6969
+  - id: 6591
     start: '14:20'
-    duration: '01:00'
+    duration: '00:40'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
   - id: 6846
@@ -373,7 +373,7 @@
     duration: '01:00'
     track: Agile
     room: Agile
-  - id: 6467
+  - id: 6531
     start: '13:20'
     duration: '01:00'
     track: Agile
@@ -395,7 +395,7 @@
     duration: '01:00'
     track: Unobtanium
     room: Unobtanium
-  - id: 6750
+  - id: 6847
     start: '11:20'
     duration: '01:00'
     track: Unobtanium
@@ -450,7 +450,7 @@
     duration: '01:00'
     track: Security
     room: Security
-  - id: 6880
+  - id: 6782
     start: '13:20'
     duration: '01:00'
     track: Security
@@ -460,7 +460,7 @@
     duration: '01:00'
     track: Security
     room: Security
-  - id: 6782
+  - id: 6880
     start: '15:40'
     duration: '01:00'
     track: Security
@@ -615,12 +615,7 @@
     duration: '00:30'
     track: Core Java
     room: Core Java
-  - id: 6839
-    start: '15:40'
-    duration: '00:50'
-    track: Core Java
-    room: Core Java
-  - id: 6967
+  - id: 6860
     start: '10:00'
     duration: '01:00'
     track: Cloud Technology
@@ -660,9 +655,9 @@
     duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
-  - id: 6591
+  - id: 6969
     start: '14:20'
-    duration: '00:40'
+    duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
   - id: 6639
@@ -685,10 +680,10 @@
     duration: '01:00'
     track: Architecture
     room: Architecture
-  - id: 6500
+  - id: 7143
     start: '14:20'
-    duration: '00:50'
-    track: Architecture
+    duration: '01:00'
+    track: Core Java
     room: Architecture
   - id: 6898
     start: '15:40'
