@@ -190,11 +190,17 @@ function resetFilters() {
       </a>
       <div id="track-filter" class="collapse in">
       <div >
-            <input class="form-check-input " type="checkbox" id="keynote" value="keynote" onChange="applyFilter()">
-            <label class="form-check-label" for="keynote">
-              Keynotes
-            </label>
+        <input class="form-check-input " type="checkbox" id="keynote" value="keynote" onChange="applyFilter()">
+        <label class="form-check-label" for="keynote">
+          Keynotes
+        </label>
         </div>
+      <div >
+        <input class="form-check-input " type="checkbox" id="unobtanium" value="unobtanium" onChange="applyFilter()">
+        <label class="form-check-label" for="unobtanium">
+          Red Hat DevNation Day
+        </label>
+      </div>
         {% assign tracks = site.data.tracks %}
         {% for track in tracks %}
             {% include schedule_filter_track_item.html data=track  %}
@@ -289,12 +295,13 @@ function resetFilters() {
       </div>
 
     {% assign day1 = site.data.schedule | where: "index", 1  | first %}
-    {% assign misc = day1.events | where:"track","admin"  %}
+    {% assign misc = day1.events | where:"track","admin" | sort:"start" %}
 
     <div class="until09">
       {% assign keynotes = day1.events | where:"track","Keynote" %}
       <div class="apr130730">
         {% include schedule_break.html details=misc item=0 room="breakfast" %}
+        {% include schedule_break.html details=misc item=1 room="breakfast" %}
       </div>
       <div class="apr130900">
         {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
@@ -307,7 +314,7 @@ function resetFilters() {
         {% include schedule_block.html events=day1_10 %}
       </div>
       <div class="apr131100">
-        {% include schedule_break.html details=misc item=1 room="breakfast" %}
+        {% include schedule_break.html details=misc item=2 room="breakfast" %}
       </div>
     </div>
     <div class="until13">
@@ -317,7 +324,7 @@ function resetFilters() {
         {% include schedule_block.html events=day1_11 %}
       </div>
       <div class="apr131220">
-        {% include schedule_break.html details=misc item=2 room="breakfast" %}
+        {% include schedule_break.html details=misc item=3 room="breakfast" %}
       </div>
     </div>
 
@@ -336,7 +343,7 @@ function resetFilters() {
 </div>
 <div class="until20">
     <div class="apr131520">
-      {% include schedule_break.html details=misc item=3 room="breakfast" %}
+      {% include schedule_break.html details=misc item=4 room="breakfast" %}
     </div>
 
 
@@ -352,9 +359,10 @@ function resetFilters() {
       {% include schedule_keynote.html details=keynotes item=2 room="keynote" %}
     </div>
     <div class="apr131800">
-      {% include schedule_break.html details=misc item=4 room="breakfast" %}
+      {% include schedule_break.html details=misc item=5 room="breakfast" %}
     </div>
     <div class="apr131820">
+      {% include schedule_break.html details=misc item=6 room="breakfast" %}
       {% assign offheap = day1.events | where: "start", "18:20" %}
       {% include schedule_break.html details=offheap item=0 room="security" %}
     </div>

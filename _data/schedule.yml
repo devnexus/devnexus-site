@@ -1,6 +1,11 @@
 ---
 - index: 0
   events:
+  - id: 7147
+    start: '17:00'
+    duration: '01:30'
+    track: admin
+    room: Foyer
   - id: 6893
     start: '09:00'
     duration: '08:00'
@@ -93,6 +98,11 @@
     duration: '01:00'
     track: Tools and techniques
     room: Tools and techniques
+  - id: 7146
+    start: '07:50'
+    duration: '00:50'
+    track: admin
+    room: Security
   - id: 6881
     start: '10:00'
     duration: '01:00'
@@ -147,6 +157,11 @@
     start: '15:40'
     duration: '01:00'
     track: Practices and other tech
+    room: Practices and other tech
+  - id: 7148
+    start: '18:20'
+    duration: '01:00'
+    track: admin
     room: Practices and other tech
   - id: 7009
     start: '09:00'
