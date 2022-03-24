@@ -73,6 +73,11 @@
     duration: '01:00'
     track: Unobtanium
     room: Unobtanium
+  - id: 6899
+    start: '18:20'
+    duration: '01:00'
+    track: admin
+    room: Unobtanium
   - id: 6689
     start: '10:00'
     duration: '01:00'
@@ -128,11 +133,6 @@
     duration: '01:00'
     track: Security
     room: Security
-  - id: 6899
-    start: '18:20'
-    duration: '01:00'
-    track: admin
-    room: Security
   - id: 7007
     start: '10:00'
     duration: '01:00'
@@ -157,11 +157,6 @@
     start: '15:40'
     duration: '01:00'
     track: Practices and other tech
-    room: Practices and other tech
-  - id: 7148
-    start: '18:20'
-    duration: '01:00'
-    track: admin
     room: Practices and other tech
   - id: 7009
     start: '09:00'
@@ -227,6 +222,11 @@
     start: '15:40'
     duration: '01:00'
     track: Web and Front-end
+    room: Web and Front-end
+  - id: 7148
+    start: '18:20'
+    duration: '01:00'
+    track: admin
     room: Web and Front-end
   - id: 6987
     start: '10:00'
@@ -338,11 +338,6 @@
     duration: '01:00'
     track: Cloud Infrastructure
     room: Cloud Infrastructure
-  - id: 6892
-    start: '13:20'
-    duration: '01:00'
-    track: Cloud Infrastructure
-    room: Cloud Infrastructure
   - id: 6591
     start: '14:20'
     duration: '00:40'
@@ -396,11 +391,6 @@
   - id: 6580
     start: '14:20'
     duration: '01:00'
-    track: Agile
-    room: Agile
-  - id: 6708
-    start: '15:40'
-    duration: '00:40'
     track: Agile
     room: Agile
 - index: 2
