@@ -4,7 +4,7 @@
   - id: 7147
     start: '17:00'
     duration: '01:30'
-    track: admin
+    track: Full day Workshops
     room: Foyer
   - id: 6893
     start: '09:00'
@@ -48,7 +48,7 @@
     room: Agile
 - index: 1
   events:
-  - id: 7095
+  - id: 6750
     start: '10:00'
     duration: '01:00'
     track: Unobtanium
@@ -63,7 +63,7 @@
     duration: '01:00'
     track: Unobtanium
     room: Unobtanium
-  - id: 6750
+  - id: 7095
     start: '14:20'
     duration: '01:00'
     track: Unobtanium
@@ -392,6 +392,11 @@
     start: '14:20'
     duration: '01:00'
     track: Agile
+    room: Agile
+  - id: 7150
+    start: '15:40'
+    duration: '01:00'
+    track: Architecture
     room: Agile
 - index: 2
   events:
