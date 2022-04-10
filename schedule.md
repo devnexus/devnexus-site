@@ -274,6 +274,7 @@ function resetFilters() {
         
       </div>
       <div class="until09">
+        <h3>09:00</h3>
         {% assign workshops = day0.events | where:"track","Full day Workshops" %}
         {% for event in workshops %}
           {% assign _room = site.data.cfp_rooms_to_gwwc[event.room]  %}
