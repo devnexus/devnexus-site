@@ -23,24 +23,24 @@
       applyFilter();
     }},1)
     
-
-      $("#scheduleSearch").on("keyup", function() {
+      
+    $("#scheduleSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $(".schedule-row").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-      
-  });
+      });  
+    });
 
+   
 
-  function togglePanel() {
-   var w = $(window).width();
-   if (w <= 768) {
-      $('#schedule-filter').removeClass('in');
-   } else {
-      $('#schedule-filter').addClass('in');
-   }
-}
+    function togglePanel() {
+      var w = $(window).width();
+      if (w <= 768) {
+          $('#schedule-filter').removeClass('in');
+      } else {
+          $('#schedule-filter').addClass('in');
+      }
+    }
 
 });
 </script>
@@ -78,5 +78,48 @@
   </script>
   <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
 
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+<script>
+  const config = {
+                    apiKey: "AIzaSyAGXFdfUIBvhYINhsHeoCgnwOGCviZUTRE",
+                    authDomain: "devnexus2022-c3389.firebaseapp.com",
+                    projectId: "devnexus2022-c3389",
+                    storageBucket: "devnexus2022-c3389.appspot.com",
+                    messagingSenderId: "847677623047",
+                    appId: "1:847677623047:web:5550c2454ea1a0d8fc13a2"
+                  };
+
+        const app = firebase.initializeApp(config);
+        const db = app.firestore();
+
+        $(document).ready(function(){
+              //used on feedback page to enable button
+             $('input[name="rating"]').click(i => {
+                $("#submit").removeClass("disabled");
+                $("#submit").click(submitFeedback)
+              })
+
+              function submitFeedback() {
+                const rating = $('input[name="rating"]:checked').val();
+                const title = $('#talkTitle').val();
+                const comment = $('#comment').val();
+                $("#submit").addClass("disabled");
+                $("#submit").click(function(){});
+                $("#submit").text("Sending...")
+                return db.collection("feedback").doc(title).set({feedback: firebase.firestore.FieldValue.arrayUnion( {
+                          comment: comment,
+                          rating: rating
+                        })}, {merge: true}
+                      ).then(()=>{
+                        $("#submit").text("Submitted!")
+                      })
+                      /* eslint-disable-next-line no-console */
+                      .catch((err)=> console.log(err)); 
+                
+              }
+        });
+</script>
 </body>
 </html>

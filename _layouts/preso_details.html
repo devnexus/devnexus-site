@@ -2,6 +2,7 @@
 layout: info
 ---
 {% assign track = site.data.tracks | where: "trackkey", page.track | first %}
+
 <section id="speaker" class="bg-light-gray details container"
 	style="margin-top: 2em; text-align: left; padding-bottom: 0">
 	<div class="row">
@@ -43,5 +44,31 @@ layout: info
     {% for speaker in page.persons %}
 		  {% include speaker_bio.html speaker=speaker %}
     {% endfor %}
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 ">
+			<div class="feedback-header">
+				Feedback
+				<span class="pull-right presentation-header"></span>
+			</div>
+			<div class="feedback-body">
+				<form>
+					<textarea rows="4" id="comment" placeholder="Tell us what you think.  (optional)" class=" form-control form-control-lg" style="height: 76px;"></textarea>
+					<input type="hidden" id="talkTitle" value="{{page.title}}"/>
+					<fieldset style="margin-top: 10px;">
+						<span class="star-rating star-5">
+							<input type="radio" name="rating" value="1"><i></i>
+							<input type="radio" name="rating" value="2"><i></i>
+							<input type="radio" name="rating" value="3"><i></i>
+							<input type="radio" name="rating" value="4"><i></i>
+							<input type="radio" name="rating" value="5"><i></i>
+						  </span>
+					  <span class="pull-right">
+							<a class="btn disabled" style="margin: 10px;" id="submit">SUBMIT</a> 
+					  </span>
+					</fieldset>
+				  </form>
+			</div>
+		</div>
+	</div>
 
 </section>

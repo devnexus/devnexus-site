@@ -34,6 +34,7 @@ uploads_dir: "/uploads"
 links:
    cfp: https://cfp.connectevents.io/en/dn2022/cfp/session/new 
    register: https://reg.connectevents.io/ConnectEvents/devnexus2022/
+   signIn: https://reg.connectevents.io/ConnectEvents/devnexus2022/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
    reg_maillist: https://ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=51e5b6d965
