@@ -2,8 +2,8 @@
 layout: home
 dates: Apr 12-14 2022
 registration:
-  text: REGISTRATION OPEN!
-  status: enabled
+  text: SOLD OUT!
+  status: disabled
   link: href="https://reg.connectevents.io/ConnectEvents/devnexus2022/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
