@@ -9,4 +9,4 @@ linkedin:
 github:
 layout: bio
 ---
-Summers is a Sr. Java developer for Red Hat. He works primarily on the AeroGear-Android libraries. He holds a BS in Computer Science and a MS in Human Computer Interaction from Georgia Tech. He maintains a blog at [blog.sagaoftherealms.net](http://blog.sagaoftherealms.net).
+Summers is an Android Developer Relations Engineer at Google, maintainer of the DevNexus and AJUG websites, AJUG board member, gaymer, dog dad, and husband. He's lived in midtown Atlanta for most of the last 18 years. 
