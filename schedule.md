@@ -302,7 +302,7 @@ function resetFilters() {
       {% assign keynotes = day1.events | where:"track","Keynote" %}
       <div class="apr130730">
         {% include schedule_break.html details=misc item=0 room="breakfast" %}
-        {% include schedule_break.html details=misc item=1 room="breakfast" %}
+        {% include schedule_break.html details=misc item=1 room="open-java" %}
       </div>
       <div class="apr130900">
         {% include schedule_keynote.html details=keynotes item=0 room="keynote" %}
