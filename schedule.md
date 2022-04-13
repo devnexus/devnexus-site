@@ -366,7 +366,7 @@ function resetFilters() {
             {% assign jeypardy = day1.events | where: "id", "7148" %}
       {% include schedule_break.html details=jeypardy  item=0 room="breakfast" %}
       {% assign offheap = day1.events | where: "start", "18:20" %}
-      {% include schedule_break.html details=offheap item=0 room="security" %}
+      {% include schedule_break.html details=offheap item=0 room="frameworks" %}
     </div>
 </div>
     </div>
