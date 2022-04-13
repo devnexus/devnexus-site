@@ -108,7 +108,7 @@
                 $("#submit").addClass("disabled");
                 $("#submit").off("click");
                 $("#submit").text("Sending...")
-                return db.collection("feedback").doc(title).set({feedback: firebase.firestore.FieldValue.arrayUnion( {
+                return db.collection("feedback").doc(title.replace('"','').replace("/",'')).set({feedback: firebase.firestore.FieldValue.arrayUnion( {
                           id: generateUUID(),
                           comment: comment,
                           rating: rating
