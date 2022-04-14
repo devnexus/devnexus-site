@@ -364,7 +364,7 @@ function resetFilters() {
     </div>
     <div class="apr131820">
             {% assign jeypardy = day1.events | where: "id", "7148" %}
-      {% include schedule_break.html details=jeypardy  item=0 room="web" %}
+      {% include schedule_break.html details=jeypardy  item=0 room="webx" %}
       {% assign offheap = day1.events | where: "start", "18:20" %}
       {% include schedule_break.html details=offheap item=0 room="frameworks" %}
     </div>
@@ -439,7 +439,20 @@ function resetFilters() {
         {% include schedule_keynote.html details=misc2 item=3 room="keynote" %}
       </div>
       <div class="apr141930">
-      {% include schedule_keynote.html details=misc2 item=4 room="keynote" %}
+      <h3>19:30</h3>
+      <div class="row schedule-row admin">
+		<div class="col-xs-12 keynote">
+				<a href="/presentations/7124/">Conference After Party - Moxy Hotel Lounge Midtown</a>
+				<br>
+				<span class="small">
+				
+			 </span>
+			<br>
+			<span class="small pull-right">
+				Moxy Hotel Lounge Midtown | 48 13th St NE
+			</span>
+	  </div>
+</div>
       </div>
     </div>
 
