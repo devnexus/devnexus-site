@@ -1,23 +1,23 @@
 ---
 layout: home
-dates: Apr 12-14 2022
+dates: Apr 2023
 registration:
-  text: SOLD OUT!
+  text: Open Soon!
   status: disabled
   link: href="https://reg.connectevents.io/ConnectEvents/devnexus2022/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2022
+  alt: Devnexus 2023
 cfp:
-  announce: false
-  view: closed 
+  announce: true
+  view: open 
 ---
 
 {% if page.cfp.announce %}
 {% case page.cfp.view %}
   {% when "open" %}
   <div class="featured-header">
-    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES NOV 15, 2021)</a></h1>
+    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES NOV 15, 2022)</a></h1>
   </div>
   {% else %}
   <div class="featured-header">
@@ -30,16 +30,15 @@ cfp:
 
 {% include marketing-video.html %}
 
-
+{% comment %}
 {% include keynotes_promo.html %} 
 {% include workshops_promo.html %} 
-
+{% endcomment %}
 
 <div class="row">
 <a name="sponsorlist"></a>
       <div class="featured-header">
-        <h1>Thank You  2022 Sponsors</h1>
-        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2022?</a>
+        <a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2023?</a>
       </div>
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
