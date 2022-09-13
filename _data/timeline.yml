@@ -5,5 +5,9 @@ dates:
     summary: 'CFP Closes, Begin Speaker Acceptance'
   - day: January 31, 2023
     summary: Speakers and Sessions announced
-  - day: April, 2023
-    summary: Conference 
+  - day: April 4, 2023
+    summary: Workshop Day 
+  - day: April 5, 2023
+    summary: Conference Day 1
+  - day: April 6, 2023
+    summary: Conference Day 2        

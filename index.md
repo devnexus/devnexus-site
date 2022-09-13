@@ -1,10 +1,10 @@
 ---
 layout: home
-dates: Apr 2023
+dates: Apr 4-6 2023
 registration:
   text: Open Soon!
   status: disabled
-  link: href="https://reg.connectevents.io/ConnectEvents/devnexus2022/" 
+  link: href="https://reg.connectevents.io/ConnectEvents/devnexus2023/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2023
