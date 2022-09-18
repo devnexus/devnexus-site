@@ -2,8 +2,8 @@
 layout: home
 dates: Apr 4-6 2023
 registration:
-  text: Open Soon!
-  status: disabled
+  text: REGISTER HERE
+  status: enabled
   link: href="https://reg.connectevents.io/ConnectEvents/devnexus2023/" 
 branding:
   img: /assets/img/dev-nexus-logo-large.png
