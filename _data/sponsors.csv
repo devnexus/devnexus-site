@@ -1,4 +1,5 @@
 name,sponsorlevel,logo_image,home_page
-Red Hat,unobtanium,/uploads/Red-Hat-01.png,"https://developers.redhat.com/"
-Couchbase,gold,/uploads/couchb-001.png,"https://www.couchbase.com/"
-Suse,gold,/uploads/suse-01.png,"https://www.suse.com/"
+Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
+Couchbase,gold,/uploads/couchb-001.png,https://www.couchbase.com/
+ICE,gold,/uploads/ice-01.png,https://www.theice.com/index
+Suse,gold,/uploads/suse-01.png,https://www.suse.com/
