@@ -17,7 +17,7 @@ cfp:
 {% case page.cfp.view %}
   {% when "open" %}
   <div class="featured-header">
-    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES NOV 15, 2022)</a></h1>
+    <h1 class="top-intro"><a href="/call-for-papers">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS (CLOSES NOV 22, 2022)</a></h1>
   </div>
   {% else %}
   <div class="featured-header">
