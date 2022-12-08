@@ -1,12 +1,13 @@
 name,sponsorlevel,logo_image,home_page
-Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
-IBM,diamond,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
-Intel,diamond,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 Couchbase,gold,/uploads/couchb-001.png,https://www.couchbase.com/
 Eclipse Foundation,silver,/eclipse.png,https://www.eclipse.org/org/foundation/
+Elastic,silver,/uploads/elastic-01.png,https://www.elastic.co/
 ICE,gold,/uploads/ice-01.png,https://www.theice.com/index
+IBM,diamond,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
+Intel,diamond,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 kong,silver,/uploads/kong-1.png,https://konghq.com/
 Ledgent,gold,/uploads/ledgent-1.png,https://www.ledgenttech.com
 payara,silver,/uploads/payara-1.png,https://www.payara.fish/
+Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
 SonarSource,platinum,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
 Suse,gold,/uploads/suse-01.png,https://www.suse.com/
