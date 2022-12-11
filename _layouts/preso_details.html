@@ -1,7 +1,8 @@
 ---
 layout: info
 ---
-{% assign track = site.data.tracks | where: "trackkey", page.track | first %}
+{% assign trackCategory = page.categories | where: "name", "Track"| first %}
+{% assign track= trackCategory.CategoryItems[0].name %}
 
 <section id="speaker" class="bg-light-gray details container"
 	style="margin-top: 2em; text-align: left; padding-bottom: 0">
@@ -14,7 +15,7 @@ layout: info
 				<h4>{{page.title}}</h4>
 					<div>
 						<strong style="color: white">Track:</strong>
-						<span>{{ track.title }}</span>
+						<span>{{ page.track }}</span>
 					</div>
 			</div>
 	</div>
@@ -31,18 +32,18 @@ layout: info
 					&nbsp;|&nbsp;<a href="{{ page.slides }}">Slides</a>
 				{% endif %}
 				{% if page.instructions == true %}
-					<a href="/presentations/{{page.slug}}/instructions">Setup Instructions</a>
+					<a href="/sessions/{{page.slug}}/instructions">Setup Instructions</a>
 				{% endif %}
 				</span>
 			</div>
 			<div class="biography-body">
-				{{content}}
+				 {{ page.description }}
 			</div>
 		</div>
 	</div>
 
-    {% for speaker in page.persons %}
-		  {% include speaker_bio.html speaker=speaker %}
+    {% for speaker in page.speakers %}
+	    {% include speaker_bio.html speaker=speaker.id %}
     {% endfor %}
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 ">

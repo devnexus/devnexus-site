@@ -1,8 +1,7 @@
 ---
 layout: page
 ---
-{% assign speaker_id = page.slug | plus: 0 %}
-{% assign speaker_assets = site.data.speakers[speaker_id] %}
+{% assign speaker = site.data.speakers[page.speaker] %}
 <section id="speaker" class="bg-light-gray details"
 	style="margin-top: 2em; text-align: left; padding-bottom: 0">
 	<div class="row">

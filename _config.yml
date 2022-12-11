@@ -63,8 +63,13 @@ defaults:
       image: true
   - scope:
       path: "assets/img/sponsors"
-    values:
+    values: 
       sponsor: true
+  - scope:
+       path: ""
+       type: "events"
+    values:
+      layout: "preso_details"   
 _options:
   logo_image:
     width: 360

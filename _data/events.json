@@ -1,0 +1,4157 @@
+[
+  {
+    "groupId": null,
+    "groupName": "All",
+    "sessions": [
+      {
+        "questionAnswers": [],
+        "id": "403691",
+        "title": "A Community Approach to OSS Distribution",
+        "description": "There are a variety of different attacks on the open source supply chain, including exploitation of zero day vulnerabilities, injection of malicious code or back-doors, and typo-squatting of popular libraries. And the systems that we rely upon for the distribution of OSS were not designed with a security mindset to prevent these sorts of attacks. There has to be a better way for open source authors and maintainers to securely deliver their packages to end users!\r\n\r\nEnter Pyrsia, a new software distribution system that is decentralized, community-driven, foundation governed, and built with a security first focus. In this presentation we will talk about how Pyrsia is designed, how you can use it to distribute and consume software packages, and how you can get involved in the Pyrsia community to grow the library of OSS software available freely and securely for all.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0793b99f-1282-4674-9d21-f88e30c8232e",
+            "name": "Stephen Chin"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "398029",
+        "title": "A tale of two cities: blocking code vs. non-blocking code",
+        "description": "We don’t have to exert much mental effort when writing blocking code, but this has drawbacks. Non-blocking code, on the other hand, could be used to increase application throughput. This is why non-blocking code is recommended in many scenarios. Over the last two decades, many approaches have been introduced to writing code that does not block.\r\n\r\nIn this session, we will look into those options that are available to us. To begin, I’ll go over the evolution of the Java concurrency model since its inception with the vanilla thread. Then I will introduce Future/Callable, and CompletableFuture, briefly go over reactive programming, and finally conclude with the Project Loom that was added in Java 19.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+            "name": "Bazlur Rahman"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "387130",
+        "title": "Accessibility Auditing: Getting Started with Accessibility",
+        "description": "This workshop is for people that are just starting or want to get started learning accessibility and how to audit. Or for the people that are in Accessibility that want a refresher or are looking to change their workflows. \r\n\r\nThe overall points an attendee should take away and learn from this workshop are:\r\n\r\nDifferences between auditing websites and mobile apps;\r\nWhat to look for when auditing;\r\nThe WCAG guidelines and best practices;\r\nTools to use and how to use them;\r\nDifferences between automated and manual testing;\r\nDocumentation of audits and scoring them for clients;\r\nUsing the data to make sites more accessible;\r\nWorkflows and toolkits that make for efficient auditing.\r\n\r\nBy the time the workshop has ended, the attendee should be able to go out and audit websites for accessibility.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "5a2864c6-5fc4-4ca3-bf60-839888286167",
+            "name": "Todd Libby"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143441,
+                "name": "workshop"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386428",
+        "title": "Apache Pulsar Development 101 with Java",
+        "description": "In this session I will get you started with real-time cloud native streaming programming with Java.  \r\n\r\nWe will start off with a gentle introduction to Apache Pulsar and setting up your first easy standalone cluster.   We will then l show you how to produce and consume message to Pulsar using several different Java libraries including native Java client, websockets, MQTT and even Kafka.   \r\n\r\nAfter this session you will building real-time streaming and messaging applications with Java.  We will also touch on Apache Spark and Apache Flink.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c381b261-dbae-4dcc-8ebd-2a9cb18b2ed7",
+            "name": "Timothy Spann"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403607",
+        "title": "BDD from the Trenches",
+        "description": "Have you tried Behavior Driven Development and not gotten the expected results? Does the team get bogged down in arguments about whether a statement is a \"given\" or a \"when\"? Are you trying to understand scenarios that run multiple pages in length? Do your specifications break when the development team refactors the UI? \r\n\r\nThis talk will present BDD best practices learned by working with multiple teams over several years to avoid overly complex and brittle specifications, prevent BDD from being yet another source of \"truth\", and other obstacles that may prevent your teams from getting the full value out of the BDD practice",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "eaa23bbd-1207-432d-8c52-eed0035f0ddf",
+            "name": "M. Jeff Wilson"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "401643",
+        "title": "Best of Both Worlds: Apache Pulsar and Apache Kafka",
+        "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e2712384-1dff-4eb7-8dbf-77e621e4d274",
+            "name": "Mary Grygleski"
+          },
+          {
+            "id": "ec42564c-c50a-4ec4-87a9-aa3e7197376d",
+            "name": "Ko Turk"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "410180",
+        "title": "Beyond REST and CRUD: Integration patterns in Microservices",
+        "description": "The flow of information and events through distributed systems goes well beyond HTTP, REST, and JSON. In this talk, we’ll use Apache Camel to explore integration patterns that add flexibility and resilience to your evolving architecture.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f6c77911-6612-4b72-9832-63409826e785",
+            "name": "Erin Schnabel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405884",
+        "title": "Bootiful Spring Boot 3",
+        "description": "Spring Boot 3 is here and with it come a whole host of new opportunities and possibilities. Join me, Spring Developer Advocate Josh Long and we'll look at the amazing new features in Spring Boot 3 that make it the best choice for cloud native applications",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+            "name": "Josh Long"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "396330",
+        "title": "Building Streaming Data Pipelines with Apache Kafka",
+        "description": "Data is everywhere. It's being produced by almost everything around you. In order for businesses to be competitive, they need to build resilient, scalable systems that can efficiently tap into and react to this ever-increasing volume of data. \r\n\r\nEnter: streaming data pipelines. Apache Kafka is a distributed event streaming platform that allows you to move and transform data in real-time. Throughout this workshop, you’ll build up a solid foundation and understanding of Kafka, learning the basic building blocks of the technology, its components, as well as how to produce and consume data. From there, you’ll get hands-on experience ingesting data from external systems into Kafka using Kafka Connect, joining and transforming Kafka data in real-time with ksqlDB stream processing, and using Kafka Connect to move data to downstream systems.\r\n\r\nBy the end of the workshop, you'll understand the value of real-time data and have everything you need to start building your own streaming data pipeline.\r\n\r\nNote: This workshop will utilize a free Confluent Cloud account for hosting Kafka clusters, stream processing, and schema registry. Participants require some programming knowledge.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ea7292a0-1a85-4830-af21-00c9484c19fe",
+            "name": "Danica Fine"
+          },
+          {
+            "id": "e0ac75bf-0c24-47fe-a067-14aa9a29c78a",
+            "name": "Amanda Gilbert"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143441,
+                "name": "workshop"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "396329",
+        "title": "Calculating the Value of Pie: Real-Time Survey Analysis With Apache Kafka®",
+        "description": "These days, it’s difficult to keep up with friends and family, even more so when important things are involved––like pie. Do you find yourself wishing that you could quickly and efficiently poll your loved ones, peers, and colleagues for their pastry preferences? Look no further. This talk explores how to create an interactive, real-time survey bot with Telegram and Apache Kafka® and how to analyze the survey responses using ksqlDB.\r\n\r\nKafka Producers and Consumers are the main ingredients that come together to make an interactive Telegram bot that issues on-demand surveys to friends and family. Survey responses are written to Kafka in real-time where ksqlDB helps to measure, mix, and knead the data––serving up a fresh and delicious result that we can consume immediately! In this session, you’ll see the entire pipeline from start to finish, learning how to think about data and use schemas, how to configure Producers and Consumers, and how to use ksqlDB for both stateless and stateful processing. \r\n\r\nCome along to see how this recipe for real-time survey analysis comes together––and how you, too, can calculate the value of pie!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ea7292a0-1a85-4830-af21-00c9484c19fe",
+            "name": "Danica Fine"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405414",
+        "title": "CAPES aren't just for super heroes... They're for you too!",
+        "description": "CAPES is an acronym for the top soft skills needed in technology today; Communication/Collaboration, Adaptability, perseverance, Empathy and self-awareness. Because hard skills generally create revenue, we hire individuals based on their technical skills but we fail for identify how the lack of soft skill can negatively impact the company's ledger. \r\nThis 50 minute session will define the 5 soft skills most prominent in technology today, detail the pros and cons of soft skills in the workplace, list ways that soft skills can help you in your career and identify ways we can improve these skills in our everyday lives. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
+            "name": "Najae Stevenson"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "392307",
+        "title": "CI/CD Pipelines : What, Why, How?",
+        "description": "To avoid getting caught up in notions of “the right tool” it is important to understand the core concepts of continuous integration (CI) and continuous delivery or continuous deployment (CD). Choosing the right tool should be a consequence of defining the right goals, metrics and processes to automate. In this session we will explore common ideas that must be present in commercial and open source solutions to monitor, automate, verify and deliver software. \r\nFor example: Tasks, Steps, Runs, End-to-end automation, Workflows, Tool orchestration, Release cycles, among others. \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "a4d893c0-72e9-4c3c-a8fa-92ce9c2d95d6",
+            "name": "Ixchel Ruiz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407878",
+        "title": "Cooking Recipes, Coding, an IDE and YOU",
+        "description": "Tasks from our everyday lives, such as cooking, involve initiating and accomplishing multiple sub-tasks. Over time, we usually master or improve upon these processes with practice. Let’s apply these two concepts;  a cooking recipe and hands-on coding experience, to learn more about Java’s Future and CompletableFuture API, important \"utensils\" to cater to asynchronous or non-blocking needs in Java.\r\n\r\nIn this session, we’ll walk through centuries old Indian recipe ‘Paneer Tikka Masala’- a dish cherished by folk across the globe. In the talk, we’ll draw a parallel between the challenges of our recipe’s parts which involve asynchronicity and non-blocking activities, and how Java's APIs can address them in similar situations in your application code.\r\n\r\nLearning these concepts using Coding Katas, together we will fix failing code, hands-on, and learn how to work with Java’s CompletableFuture. By following a trail of TODOs and HINTs in the code, and an accompanying README, all integrated in the same project, you’ll experience the code, rather than just watching a deck, in an Integrated Development Environment!\r\n\r\nIf you are a library or an API author, this talk may inspire you to create Code Katas to help others understand and correctly use your libraries/API.\r\n\r\nWith this session you’ll learn how to make Paneer Tikka Masala and while learning new or better ways to use Java asynchronous and non-blocking APIs.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "16e1da1a-8902-415a-badf-f021d7b888ec",
+            "name": "Mala Gupta"
+          },
+          {
+            "id": "ab1b8b69-f449-4df9-b391-243a391b9d01",
+            "name": "Chandra Guntur"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "397644",
+        "title": "Creating a Modern Web App Using Spring Boot and Vue.js with JHipster",
+        "description": "In this talk, I will demonstrate how JHipster can be used to generate in few minutes a modern Web app that uses Spring Boot and Vue.js. JHipster will provide everything you need to start a complete modern Web app and take it to production in a very short amount of time. On top of that, the back-end is built as a high-performance and robust Java stack with Spring Boot. More details can be found here: https://www.jhipster.tech/.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
+            "name": "Théo Lebrun"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405724",
+        "title": "Cross-Platform Cloud CI/CD",
+        "description": "More and more teams are leveraging cross-platform development for their web, mobile PWA, iOS, and Android applications. However, if you are still leveraging traditional CI/CD or manual deployment processes, you can still experience release delays and different DX and UX across platforms. A unified system for cross-platform builds and deploys can prevent knowledge silos, speed up releases, and ensure an efficient process no matter what the platform. This talk will cover the considerations when building a CI/CD system to manage web and mobile deployments, and options for implementing a cross-platform CI/CD solution in the cloud.\r\n\r\nWhat you'll learn:\r\n- How web, Android, and iOS deployments are different\r\n- The specific factors to consider when building a cross-platform CI/CD strategy\r\n- Options for implementing a cloud CI/Cd strategy for all your deployments across multiple platforms",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
+            "name": "Cecelia Martinez"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "408351",
+        "title": "Data Focused programming with Pattern Matching in Java",
+        "description": "Data is at the heart of most applications. For ages, Java developers have been using conditions to determine whether an instance is of a specific type - to extract its components. Though this sounds obvious and harmless, Pattern Matching has revolutionized how you achieve this in your everyday code in a concise and focused way.\r\n\r\nWorking with its syntax seems simple and straightforward. Pattern Matching can be used with operators like instanceof, and constructs like switch statements and expressions. But, don't let this simplicity deceive you. Its real power lies in understanding the semantics of working with Patterns like Type Patterns, Parenthesized Patterns, Record Patterns and others to write declarative and data-focused code to create powerful, declarative and composable data navigation and processing. \r\n\r\nIn this live-coded talk, the attendees will learn about the issues with their existing code, create concise and clear data-focused queries, and modify existing code bases to avail benefits of Pattern Matching.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "16e1da1a-8902-415a-badf-f021d7b888ec",
+            "name": "Mala Gupta"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "394738",
+        "title": "Deep Dive MicroProfile 6.0 with Jakarta EE 10 Core Profile",
+        "description": "Both MicroProfile and Jakarta EE are cloud native API standards for developing portable microservices. \r\n\r\nJakarta EE 10 Core Profile was the new profile in Jakarta EE 10. The new shining hot-in-the-press MicroProfile 6.0 has already fully embraced Jakarta EE 10 Core Profile. Apart from this, MicroProfile 6.0 also provided some major updates from MicroProfile Metrics, which enabled the adoption of Micrometer and MicroProfile Telemetry that consumed OpenTelemetry. Come to this session to learn all about the observibility standard for your microservices with a live demo on Open Liberty.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 151786,
+                "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "409898",
+        "title": "Demystifying The Dreaded A/B Test",
+        "description": "The A/B test! We've all thought it: \"What's the point? How much configuration do we need?\" If you're familiar with the scientific method, those steps carve out the path to experimentation and A/B testing. Everyone loves a good hypothesis right? I know I do. Melding the world of science and software can help alleviate the stresses of experiments and help to maximize impact of every feature. In this talk we will journey through what an A/B test is, defining goals for A/B testing your app, and rolling out features based on successful experiments.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "730a789f-e2a8-483d-91bc-6e794f1b44d5",
+            "name": "Chris DeMars"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405697",
+        "title": "Developer Productivity - clean | secure | fast",
+        "description": "The old maxim of you can have it working or on time but not both is often applied to software development.\r\nSomehow though we’ve reached the stage where we are expected to deliver functioning code on time - all the time. Isn’t that what Agile and DevOps etc are all about?   Productivity is king after all.\r\nNow though we’ve got to deal with an increased focus on security - can we add that in and still deliver as before or does something break?\r\nIn this session we’ll introduce you to several ways to deal with the challenge. From better understanding of the problem to new thoughts about how we work.  We’ll help you think differently about productivity and show you how to take the first steps towards have your cake and eating it too",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
+            "name": "Steve Poole"
+          },
+          {
+            "id": "52ebf7a2-e626-4170-9570-75902ef8e4e8",
+            "name": "Justin Reock"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386424",
+        "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
+        "description": "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used to deal with `edge security` , direct integration with IDPs using different libraries, also dealing with certificates, SSL, securing the point of entrance to our system, and after that.... well, if you are in the system is because you are allowed to ...... or not ?\r\n\r\nNowadays CVEs, massive attacks, are common .... for sure you remember some recent cases ....don't you ?\r\n\r\nSo, the idea of protecting only the most external layer of our system , based on the idea that nobody can be in the system if that gate has not been successfully passed, is no longer valid.\r\n\r\nIn this session I will share my knowledge on protecting K8s and VMs clusters following the ZeroTrust approach, covering concepts like : Zero Trust security, SSL transport, Observability, Authz and Authn , and everything without touching a single line of our Java ( Quarkus ) microservices and how to change that configuration without telling a word to the app developer.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
+            "name": "Jonathan Vila"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "397499",
+        "title": "Empowering Developers to Embrace Security",
+        "description": "In this talk, I will show you why it is important to empower developers to make secure decisions from the beginning. Good communication and collaboration between security and development teams will improve developer adoption. We need to combine a collaborative culture with the right process and the right tooling to enable developers to build their applications more securely.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "50e931e4-bda7-4065-b4c4-5083683497e6",
+            "name": "Brian Vermeer"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "387120",
+        "title": "Enhancing Java applications for the cloud",
+        "description": "Are you in the process of modernizing your business from a monolith to an agile micro-service oriented model in the cloud? Or is your application already cloud-native? There are different performance concerns that need to be taken into account when deploying to the cloud in comparison to traditional deployments. With serverless and FaaS models, startup time and memory footprint play a big role, as it determines the cost of deploying to the cloud. Come to this session to learn more about how technologies like checkpoint/restore and remote JIT compilation can help boost startup time and reduce memory footprint to minimize your costs. You'll also learn how these features integrate seamlessly with existing container technologies for simple, secure and predictable deployments. Whether you are a cloud veteran or a new comer, there will be lots to learn!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d7993bab-ecad-4202-8a76-61b64f27cbf6",
+            "name": "Tobi Ajila"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "406508",
+        "title": "Escaping the Legacy Trap - a proven method for application modernization",
+        "description": "You're facing a big, multi-year re-write of your core applications. How do you start? This talk will explain one method used by large organizations, SWIFT. Sadly, older applications and services too often slow down and stop business innovation. Yet, 76% of executives said they are too invested in legacy applications to change. They’re caught in the legacy trap! Organizations simply can’t figure out how to prioritize this invisible work over adding new features and apps. But today, there’s no room to avoid modernizing core systems if your business wants to keep up. No more new features can be added to software and no more progress can be made on transformation journeys until this fear is faced. Come hear how people are escaping the legacy trap. This talk is based on the book by Coté and Marc Zotter, The Legacy Trap.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "645d7f63-231c-497c-97c6-2e2fc1aa0521",
+            "name": "Michael Coté"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405891",
+        "title": "Event sourcing - the good parts",
+        "description": "Event sourcing can be very appealing for the auditability and replay capabilities it provides. However, when used without care, it can paralyze application development, especially after the original team members move on to other things and are replaced by new team members that were not there when history was written.  \r\n\r\nHow can we make efficient use of this pattern to leverage its benefits without being slowed down by the drawbacks? In this talk we will present our experience using it to develop trading engines at the Intercontinental Exchange, and the tradeoffs we made to keep it from slowing us down. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "151da54f-2f49-4c42-82f8-ac4abd56b3df",
+            "name": "Juan Bustamante"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "400429",
+        "title": "Five ways open source will slow you down",
+        "description": "Software is changing the world - and even other planets. An ever-growing part of software is “open source”. But it hasn’t always been that way! And “doing something open source” is definitely no guarantee for success. There are numerous ways in which you can use open-source software and be worse off than if you did not.\r\n\r\nJoin me in this talk to find out how not to leverage open-source software in your organisation and your projects. Find out why reading the documentation may not always be your best bet, or how a workaround may eventually work against you. By investigating 5 ways in which you can fail, we can learn valuable lessons on what to do instead.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "42e68026-7d32-4cf7-8b71-84cfe2096cc2",
+            "name": "Maarten Mulders"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "400159",
+        "title": "From Java 17 to 21 and beyond: Loom, Amber and Valhalla",
+        "description": "The two years realese cadence of LTS versions gives the entire Java ecosystem the opportunity to accelerate. It also brings the new features Java has to offer faster, so that developers can improve applications readability, maintainability as well as development productivity. \r\nThis presentation covers three of the new features of the JDK: Amber, Loom and Valhalla. Amber is about bringing pattern matching to the Java language. It's currently added bit by bit: records, pattern matching for instanceof, for switch, and record pattern matching. Loom offers a new concurrent programming model. With Loom, you can write your code in a synchronous way, without any callback, and execute it asynchronously, with all the performances benefits you may expect. It is a preview feature of the JDK 19. Valhalla brings a new kind of objects to the language, so that you do not have to choose between performances and abstraction. Valhalla will add user defined primitive types to the Java language as well value types.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9f032fb0-7350-4101-b2b1-559ab6e614d6",
+            "name": "José Paumard"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "388011",
+        "title": "From Monolith to (µ)Services. What happens with my Data?",
+        "description": "Rewriting systems from a monolithic architecture to a services architecture is a common task nowadays to make applications easier to maintain, deploy, and release. This migration should not be a big bang rewrite where you directly switch from the old application to the new one. Instead, it is an incremental process during which functionalities are extracted one at a time into separate services.\r\n \r\nThe Strangler Fig Pattern describes a method whereby a new system is slowly and incrementally growing over the top of an old system. Along the way, the whole system is continuously monitored such that old parts can be removed after the new services show correct behavior. The theory is pretty clear, and in services where no persistence is needed, it's considerably easier, but things become way more complex as soon as data is involved.\r\n \r\nCome to this session to learn how Kafka and Debezium, through Change Data Capture and the Strangler Fig pattern, can help you migrate from monoliths to a (micro)services architecture confidently even though databases are involved.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
+            "name": "Alex Soto"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "388955",
+        "title": "From Your Perspective",
+        "description": "There are countless practical applications of 3D transforms.  Too often 3D is a buzzword for a large, flashy framework, and not a simpler way to present information.  Behind complex linear algebra is simple intuition that you already have and can use.  In this presentation, I will review the ideas of matrix transforms without the headache.  Everyone, from academic to beginner will have a clearer understanding of the world, both virtual and real.\r\n\r\nIn this talk we review the tiny bits of math that masquerade as magic so that everyone feels like they gained superpowers.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "56225543-85a5-428d-9ab7-3556a051296d",
+            "name": "Gant Laborde"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405331",
+        "title": "Full-stack reactive with Spring Boot & React",
+        "description": "As Java developers, we know the benefits of type-safety when building apps. The problem? Usually, that type-safety ends when we leave the server. What if it didn't have to be that way?\r\n\r\nIn this presentation, you'll learn how to build a full-stack reactive web app through live code examples. We'll use Spring Boot and Java on the backend and React with TypeScript on the frontend, connecting the two with the new Hilla framework from Vaadin.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6c93de4e-0f8c-45bd-b76b-ba868aa81ca7",
+            "name": "Marcus Hellberg"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "397626",
+        "title": "Functional Kotlin",
+        "description": "A brief introduction to functional programming constructs in the Kotlin language. The audience will walk away with an idea of how they can using functional programming ideas in their code today to make their code and their tests cleaner and easier to understand.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "bfc36fe5-4d43-4394-98fe-a5374fc17616",
+            "name": "John Burns"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386447",
+        "title": "Getting started with Azure Spring Apps",
+        "description": "Azure Spring Apps makes it easy to deploy Spring Boot applications to Azure without any code changes. The service manages the infrastructure of Spring applications so developers can focus on their code. After this session, attendees should be able to:\r\n* Efficiently migrate existing Spring apps\r\n* Modernize apps with Spring Cloud patterns\r\n* Develop and deploy rapidly without containerization dependencies",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6375582a-11f3-4a89-b783-6e5869a1a217",
+            "name": "Jared Rhodes"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407468",
+        "title": "Going Beyond Test-Driven Development",
+        "description": "Test-Driven Development (TDD) is a simple three-step practice, and its practitioners regularly deliver higher-quality code in less time. So why aren't we all doing it? Unfortunately, most programmers find it difficult to adopt the TDD process as it is usually taught. But, what if there was an easier way?\r\nIn this session, you will learn how to avoid the limitations caused by the way TDD is usually taught, and how to avoid the most common problems developers have with writing automated tests. You will also learn how to leverage the process to minimize the time you spend debugging -- which leaves you with more time for the fun parts.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7d933c95-3f49-48a4-852b-7fc30aa8b977",
+            "name": "Burk Hufnagel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403207",
+        "title": "GraphQL from the Ground Up",
+        "description": "REST has become a standard for services on the internet, but it isn't without its drawbacks. GraphQL is a query language from Facebook that's caught on to address many of these issues. It provides API consumers with better visibility and more control over their data.\r\n\r\nWhere REST has endpoints and status codes, GraphQL has queries, mutations, types, and richer errors. It allows you to ask for precisely the data you need, to batch requests for parallel server processing, and even returns partial results in the face of downstream failures.\r\n\r\nIn this talk, we will explain our experience adopting GraphQL at New Relic. We will discuss the challenges and solutions we found - including the smaller community using GraphQL outside of the Javascript ecosystem, how we learned to think differently about the data we expose, and why you might consider adopting it yourself. We will also showcase the open-source libraries that we created to help both our own services and those of the wider community.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0eed983b-888c-4214-8ec6-bfdfe4d9e718",
+            "name": "Jason Clark"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "402728",
+        "title": "Hands-on introduction to OpenTelemetry tracing",
+        "description": "Tracking a request’s flow across different components in distributed systems is essential. With the rise of microservices, their importance has risen to critical levels. Some proprietary tools for tracking have been used already: Jaeger and Zipkin naturally come to mind.\r\n\r\nObservability is built on three pillars: logging, metrics, and tracing. OpenTelemetry is a joint effort to bring an open standard to them. Jaeger and Zipkin joined the effort so that they are now OpenTelemetry compatible.\r\n\r\nIn this talk, I’ll describe the above in more detail and showcase a (simple) use case to demo how you could benefit from OpenTelemetry in your distributed architecture.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9c904945-768e-4597-b942-6be90cf4d731",
+            "name": "Nicolas Fränkel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "390580",
+        "title": "I Can Do THAT in a Browser? Improving User Experience with Lesser Known Native JS APIs",
+        "description": "Did you know that you can access your user's geolocation coordinates via JavaScript? What about accessing a device's battery status, orientation, accelerometer, and gyroscope? Or connecting to a Bluetooth device. How about pulling data from an external device via a Serial or WebUSB? Are you aware of the Fullscreen  or the GamePad API? Have an e-commerce app or an app that processes microtransactions? Does it use the PaymentRequest API? There are tons of really cool APIs that you might not be aware of. Or maybe you are aware of them, but you're just not sure how to use them to improve your application? In this session, I'll introduce you to some of the lesser known APIs that are available in most modern web browsers. I'll also show you some demos that I've created with these APIs to show you how they can actually be used to make engaging experiences that keep your users happy and keep them coming back to your site. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "886d1d0c-c615-48f7-acac-e833f4950134",
+            "name": "Todd Sharp"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "391375",
+        "title": "If it isn't hot, it doesn't deliver: Apache Pinot, Food Delivery and why real-time analytics matter.",
+        "description": "The world IS data these days, and users need access to fresh data, delivered with low latency. Real-time analytics, specifically with Apache Pinot, is what makes it possible for Doordash to put fresh, reliable data into their users hands, and make sure the burger one orders arrives when expected, and is still hot! Developers looking to up their data game can expect great things from Pinot.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
+            "name": "Valarie Regas"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "391533",
+        "title": "Jakarta EE and MicroProfile Highlights",
+        "description": "Jakarta EE and MicroProfile are powerful platforms for developing applications and microservices. Attendees of this session will learn important features of Jakarta EE and MicroProfile through a number of examples, using a hands on approach, correlating usage of the APIs to real-life scenarios. The examples presented will showcase both established and recently released features of Jakarta EE 10 and MicroProfile 6. The focus will be on some of the most important features from a variety of specifications, ranging from Jakarta Faces to Jakarta WebSockets and MicroProfile Config. The demo’s provide an overview of each, including how specifications complement each other. In order to run these examples, we will use server-side resources using Payara, and development of microservices with Payara Micro and Docker. \r\nAttendees will walk away with a solid understanding of some of the most important features of Jakarta EE and MicroProfile.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f14ddeb2-c686-416a-8e51-a95f7467b413",
+            "name": "Josh Juneau"
+          },
+          {
+            "id": "1acc6fe1-fb77-411b-acbb-fef29174c780",
+            "name": "Edwin Derks"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 151786,
+                "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "387237",
+        "title": "Jakarta EE for Spring Developers",
+        "description": "**Jakarta EE 9** changed its package namespace from `javax.*` to `jakarta.*`. This may sound like a trivial change that mostly affects Jakarta EE. So, why should Spring developers care?\r\n\r\nAs it turns out, the namespace changes ripple throughout the entire Java ecosystem. And Spring is no exception. Spring Framework 6 and Spring Boot 3 raise their baseline to Jakarta EE 9 API level which is supported by Tomcat 10 and Jetty 11 for example.\r\n\r\nAttending this session will teach you how to make this migration as smoothly as possible. A live coding demo will take you through the steps involved, and point out where to pay special attention.\r\n\r\nWe will also briefly examine some of the changes introduced in **Jakarta EE 10** that will prepare you for what to expect from Spring 6.x. Some pointers to what we can expect from **Jakarta EE 11** will also be given.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "cdc2288a-56cf-40ec-bc39-ca5d9fb59b27",
+            "name": "Ivar Grimstad"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 151786,
+                "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405717",
+        "title": "JAKARTAEE or Spring? Real world testimonies",
+        "description": "You are starting a new project and you need to choose between languages and frameworks but you face one of the toughest decisions about going with the Spring family or the JakartaEE ecosystem. \r\nIn this session we will discuss how each one can fit in different situations with pros and cons and give you tips to help you choose the right tool for the right problem using real world scenarios from our 10+years of experience developing enterprise applications with java. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "075dec80-03a6-4fbc-8639-ef32a4df06d1",
+            "name": "Jose Diaz"
+          },
+          {
+            "id": "14c0c531-8f58-4be9-a878-c38517d03afe",
+            "name": "Jorge Cajas"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 151786,
+                "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407592",
+        "title": "Java's Hidden Gems: Tools and Libraries",
+        "description": "This session is a whirlwind tour of many lesser known, but very interesting, Java tools and libraries. We'll have a sneak peak at dozens of tools to improve security, builds, architecture, tests and other areas. After this session you'll surely have learned something new, which you can further investigate whenever you want to apply it.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "40f1ba35-ae97-44c2-bf43-eeac071c02a3",
+            "name": "Johan Janssen"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "408284",
+        "title": "Journey to cloud : leave no Java workload behind",
+        "description": "The shift towards cloud and container technologies is driving a number of innovations in the Java ecosystem. With the growing importance of startup time and memory footprint, features developed in the Eclipse OpenJ9 JVM like remote JIT servers and using CRIU to snapshot/restore Java applications are increasingly relevant for modern Java deployments. You may have read about or watched a talk about these exciting new technologies, but in this talk we're going to pull together the full landscape for you. We'll explain how snapshot/restore and JIT servers and all the other performance and footprint enhancements developed at OpenJ9 fit together as a compelling and cooperative solution to optimize Java for the cloud. Come to this talk to learn more about our vision and strategy for the future of Java performance, where no Java workload is left behind in the journey to the cloud.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b4c877b4-1e95-47a6-ac29-e75cf6719cda",
+            "name": "Vijay Sundaresan"
+          },
+          {
+            "id": "d646eb1d-f4a3-41fe-9d99-9eac7abf2789",
+            "name": "Mark Stoodley"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403939",
+        "title": "Just Code isn't enough, A successful project needs more....",
+        "description": "We’ve been working in evolving organizations with their projects and in the banking industry arise brand new digital transformation areas with cloud-native journeys. At this talk, we will share the importance of a healthy culture and soft skills beyond to have great coders. We modernize and improve our teams (and eventually an organization’s) to increase velocity for delivering software-based projects. Let us show you how we improve and influence people, processes, and eventual technology decisions.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9b9cb6b1-b132-4f4f-8bbc-155e31958220",
+            "name": "Alberto Salazar"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403128",
+        "title": "Knative Core Concepts! And Spiders!",
+        "description": "Although Knative has been community-maintained since 2018, there has been buzz around the project lately because Knative has recently been accepted to the Cloud Native Computing Foundation (CNCF) as an incubating project.\r\n\r\nCool! But what is Knative, exactly?\r\n\r\nSimply put, Knative is a technology that streamlines and enhances the way that applications run on Kubernetes.\r\n\r\nThis talk is for people who are excited about this value proposition and want to dig deeper. How does it work? What components are at play? In what ways is running an app on Knative superior to running it directly on Kubernetes?\r\n\r\nInstead of presenting slides, Whitney will diagram the fundamental concepts of Knative, explaining how they work in simple, relatable terms. She will then drive deeper understanding with a live coding demo that gives context to the main points. With spiders and rainbows. You know, a real-life, straightforward, run-of-the-mill use case.\r\n\r\nAttend this talk to gain a high-level understanding of Knative, its main components, and how it simplifies and improves the way that apps run on Kubernetes.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "3f4d3de3-3518-49b8-9e41-ce9a02d43c24",
+            "name": "Whitney Lee"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "389808",
+        "title": "Kontain Your Spring",
+        "description": "Although Java originally promised write once, run anywhere, it failed to fully deliver on that promise. As developers, we can develop, test, and build our applications into WAR or executable JAR files and then toss them over the wall to a Java application server and Java runtime that we have no control over, giving us zero confidence that the application will behave the same as when we tested it.\r\n\r\nContainers fulfill the write-once, run anywhere promise that Java wasn't able to, by packaging the runtime and even the operating system along with our application, giving greater control and confidence that the application will function the same anywhere it is run. Additionally, containers afford several other benefits, including easy scaling, efficiency in terms of resource utilization, and security by isolating containers from their host system and from other containers.\r\n\r\nWhile deploying Spring applications in containers has always been possible, Spring Boot makes it easier to containerize our applications and run them in container architectures such as Kubernetes. Spring Boot's support for containerization includes two options: Creating containers based on buildpacks or using layers as a means of modularizing and reducing the size of our application deployments. Moreover, new components in the Spring ecosystem can make your Spring applications Kubernetes-savvy so that they can take advantage of what a containerized architecture has to offer.\r\n\r\nIn this example-driven session, we're going to look at how to create and deploy Spring applications as container images and deploy them into a Kubernetes cluster. Along the way, we'll also get to know a few of the most useful tools that a Spring developer can employ in their development workflow when building containerized Spring applications. We'll also see how to apply patterns of Spring Cloud--such as configuration, service discovery, and gateways--using native Kubernetes facilities instead of Spring Cloud components. And we'll look at how components of the Spring ecosystem can work with your Spring applications to enable them to thrive in a Kubernetes cluster.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6baa8ae0-aa56-42e3-8ab8-6c511a55c2bc",
+            "name": "Craig Walls"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "391966",
+        "title": "Leading Edge! Changing the Java World with Loom, Panama, and More",
+        "description": "So many new toys! Over the past several years, JVM engineers have quietly started to land the largest and most important features in the history of Java. Project Loom brings \"virtual threads\", lightweight userland concurrency and massive horizontal scaling. Project Panama brings native function and memory support, blurring the lines between Java and native languages like C. And there's even more coming soon. We'll explore how JVM languages like JRuby can leverage these and other features, and talk about what the future holds.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "18750f5d-4f1f-4ecb-b220-e5d3a4e03814",
+            "name": "Charles Nutter"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405559",
+        "title": "Learn Kubernetes the Java way",
+        "description": "Are you a Java developer making the first steps with cloud based technologies? Is learning Kubernetes the hard way a bit too... hard? \r\nWorry not! In this session, we'll go over the fundamentals of k8s to make your journey into using it simpler and more enjoyable. \r\n\r\nIn a true Java fashion we'll start with a Factory... kidding! with a test-driven exploration of what k8s is, its concepts and capabilities and learn why it's such a powerful tool.\r\n\r\nWe'll write tests that spin real k8s clusters with Testcontainers, explore what happens inside, break the assumptions, and truly get that first hands-on experience that'll make you both confident and a bit dangerous at working with this 10-letter staple of the clouds.\r\n\r\nPS. there will be yaml, but as little as possible, pinky promise!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "3ef92880-b80a-4305-b75c-35650d1259c8",
+            "name": "Oleg Šelajev"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "401508",
+        "title": "Let's get Functional: The fast path to smart serverless with Spring Cloud Function & Azure Functions",
+        "description": "So-called \"serverless\" may be the least accurate tech name in history, although there are countless worthy contenders for that (dis)honor. And while functions may not have a perfectly precise definition in terms of size or scope, we're far more likely to reach general agreement on functions - their purpose, scope, pros/cons, and utility - than we are to ever locate those missing servers. :)\r\n\r\nIn this session, the presenter examines what makes a capability or set of capabilities ideal candidate(s) for development and deployment as one or more functions. The presenter will then lead attendees on a Live Coding Adventure(TM) to demonstrate how to create candidate functions using the power of Spring Boot and Spring Cloud Function. Finally, we will deploy these open source functions via Azure Functions to demonstrate how to integrate everything in the cloud and reveal some potentially very welcome discoveries. Come to this session to learn how to incorporate functions into your critical systems. With great power...",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "05be364d-a57f-4e08-978d-8043d43db097",
+            "name": "Mark Heckler"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "400160",
+        "title": "Loom Virtual Threads in the JDK 20",
+        "description": "The Loom project has been under work for many years, and just delivered Virtual Threads as a preview feature in the JDK 19 and JDK 20. We now have a very precise idea of what they are and what you can do with them. Our good old Threads, created more than 25 years ago, will see a new kind of lightweight threads. This presentation shows you that creating a thread is easier and much cheaper, allowing the creation of millions of them in a single JVM. These virtual threads can be block at almost no cost. These new virtual threads bring with them new notions that will be covered in this talk. Loom threads are coming, and they will change the landscape of concurrent programming in Java.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9f032fb0-7350-4101-b2b1-559ab6e614d6",
+            "name": "José Paumard"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405804",
+        "title": "Make your container apps smarter with sidecars and actions",
+        "description": "Distributed Application Runtime (Dapr) provides open-source APIs that make your Kubernetes applications better and smarter, and help you write resilient and secure polyglot microservices. This session is almost completely demos.  I’ll show how to safely manage code updates to a polyglot application, and automated CI/CD deployment to multiple application targets with a single update via GitHub actions.  ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+            "name": "Brian Benz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "387637",
+        "title": "Mastering the Linux command line",
+        "description": "Short version: I'll show you everything you need to know about the Linux command line as a developer.\r\n\r\n\r\nLong(er) version:\r\n\r\nAs a developer, you often have to deal with Linux servers. Troubleshooting, digging through logs, editing configuration files, you name it. If you're used to working with Windows or OSX GUI's, the Linux terminal might appear fairly basic and difficult to use.\r\n\r\nBut, with some basic background knowledge and a small set of terminal commands in your toolbox, it can actually be extremely powerful and loads of fun!\r\n\r\nIn this session, I'll explain the concepts behind the Linux command line and I'll demo loads of useful stuff. You'll learn how to quickly navigate, find files, examine and search through logs, how to investigate a system under load, a bit of shell scripting, ssh tunneling and more!\r\n\r\nAt the end of this session, you'll have the chance to throw your own problems and use cases at me - I'll come up with solutions on the spot. Bring your own problems ;-)\r\n\r\nThis talk takes places entirely in the command line. No slides, no IDE, just a plain terminal window. After this session, you'll be on your way to master the Linux command line yourself!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b0eb4193-5e82-40ab-9f73-c33b6a610ba9",
+            "name": "Bert Jan Schrijver"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "408945",
+        "title": "My children will never deploy active-passive.",
+        "description": "Is your app alone and trembling in a dark, single-region with failures, latency, and retry storms closing in on every side?\r\n\r\nBuild a Spring Boot app with Spring Data Redis, deploy it to a single region backed by Azure Cache for Redis Enterprise (ACRE).  Add a global load balancer like Azure Front Door.  Deploy the same application to multiple regions, backed my multiple instances of ACRE connected in active-active configuration.  Learn why connecting to data in a different region is an anti-pattern. Demonstrate destroying an entire region to show the value of active-active level resilience. Using Terraform, Spring Boot and Azure.\r\n\r\nIn this session, you will learn a reference architecture, for modern, geo-distributed applications. You will learn how to modernize a single-region application, into a multiple-region or multi-cloud architecture. By the end of this interactive session, your apps will be able to shine bright with confidence, resiliency, and no more trembling.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+            "name": "DaShaun Carter"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "389470",
+        "title": "Natively Cloud Native - Building Agile Microservices with Micronaut",
+        "description": "This talk is a fast-paced introduction to the Micronaut framework, from creating the first app to orchestrating a microservice federation and deploying to the cloud. We will cover the basics of writing Micronaut apps, communication between services, building for resiliency, managing configuration, and deploying to a cloud provider. By the time we’re finished, you’ll have a good understanding of both the distinctives and features of the framework and be ready to start building and deploying your own apps with Micronaut. Buckle up!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4c6f7115-57be-4c51-a526-b5a7e6fa5e85",
+            "name": "Zachary Klein"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "402850",
+        "title": "Next up: Spring Security 6",
+        "description": "Holy deprecations, Batman!\r\n\r\nAside from all the great native, observability, and authorization features, SAML and OAuth enhancements, and password security improvements, the Spring Security team did a lot of clean-up, too!\r\n\r\nIn this talk, we'll start with a secured Spring Security 5.8 app, prepare it for 6.0, update, and then add features like crazy. :) We may even get to use Spring Authorization Server 1.0 in the process.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
+            "name": "Steve Riesenberg"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "402787",
+        "title": "Oberservability For Java Devs - 2023 Edition",
+        "description": "As applications move to containers and migrate to the cloud, they become ever more complex, and it's increasingly important to monitor, analyze, and diagnose their behaviour. Observability is a new way of thinking about monitoring and understanding your applications. It’s supported by a growing range of open source tools and standards - part of the new wave of technologies that modern developers need to go fully Cloud Native.\r\n\r\nJoin Ben Evans to get the state of the fundamentals of Observability in 2023. You'll learn how to achieve observability in Java using OpenTelemetry, the emerging Open Standard for Observability, and we'll meet several other related OSS libraries and tools (such as Jaeger) along the way.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6cd60db6-95a3-4541-bf0f-1311e3ad75c0",
+            "name": "Ben Evans"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "408333",
+        "title": "Observing Minecraft",
+        "description": "This talk will cover adding observability to your Java Minecraft Server. We’ll go through exporting important metrics and logs from the server to track things like player uptime and efficiency of potential mods. We’ll look into monitoring server health and alerting on issues in real time.\r\nParticipants should expect to leave knowing some observability basics and how to use the monitoring to understand system health and avoid some potential incidents.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "46d17ddc-1a74-4d59-8906-d6246ac498d4",
+            "name": "Ajuna Kyaruzi"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "390707",
+        "title": "Progressive Delivery with Kubernetes and Argo Rollouts",
+        "description": "Progressive Delivery is the process of releasing service updates in a controlled and gradual manner hence reducing risk. There are multiple ways to achieve this if you are using Kubernetes. Join me in this session to explore different deployment strategies like rolling updates, blue/green and canary releases. \r\nFinally, we'll see canary releases in action using Argo Rollouts to automate  promotion and rollback of updates based on metric analyses.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "90d4149a-7993-407f-a350-a0d7a8a04440",
+            "name": "Orlando Valdez"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "396344",
+        "title": "Properly Managing Data In React",
+        "description": "One of the biggest issues found in any large-scale application is how to properly manage data. in this talk I want to talk about the different ways engineers can build applications with appropriate levels and access.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d93d97aa-8465-4bea-99d4-ee4b967e49cf",
+            "name": "Jamal Jackson"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386492",
+        "title": "Reduce System Fragility with Terraform",
+        "description": "As infrastructure stacks grow increasingly more complex and involve an ever-growing number of services and systems there are a lot of opportunities for error and misconfiguration. To provide more system stability teams have looked to abstract configuration to its own layer of code. This concept of configuring infrastructure as code is gaining traction throughout the industry for a variety of reasons. It's fast, consistent, reduces errors, self-documentation, and did I mention it's fast? Tools such as Terraform from HashiCorp have emerged as one of the leading ways to declaratively configure technology stacks.\r\n\r\nIn this talk you'll gain an understanding of the benefits of Infrastructure as Code in general, and of using Terraform specifically. You'll be introduced to how Terraform works, what the code looks like, and how to get started.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f0f1fa39-eb24-4ab6-866c-b8645975bd75",
+            "name": "Scott McAllister"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "401665",
+        "title": "Refactor your code to Java 20",
+        "description": "All of a sudden Java is a hip language again. With every release, we get new features. But your code still looks like 2014 aka Java 1.8. Let’s change that and bring the new style to your codebase. In this session, we will take a look at “legacy” code and refactor it to gain the benefits of newer Java versions. In a live coding setting, Barry and Richard will present each other with refactoring quests to demonstrate how you can go about changing your code today.\r\n\r\nDisclaimer: You might learn about features your colleagues don't want you to know because you won’t stop talking about new Java releases 😉\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c53d0ee3-4ee1-4a19-ac0a-26a38a4c43af",
+            "name": "Richard Fichtner"
+          },
+          {
+            "id": "4c3fdc08-0216-46a1-a36f-a1b6abe6315f",
+            "name": "Barry Burd"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404191",
+        "title": "Revisiting Design Patterns after 20",
+        "description": "In 1994, the Gang of Four brought to us 23 different design patterns that helped thousands, maybe millions of developers, to design better code and share a common language. Almost three decades later, improvements in the Java language allow us to revisit most of these design patterns and propose novel ways to solve the same problems.\r\n\r\nJoin us at this talk when we perform some live refactorings of code using legacy implementations of design patterns into new code using the latest improvements of Java 20. Come and witness how Strategy, Template Method, Visitor, Command, Decorator, Builder, and other patterns can significantly benefit from modern features of Java, such as lambdas, records, switch expressions, and much more.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ab5d2f7f-05ed-4a76-b8f0-c96f3a3ba2a1",
+            "name": "Edson Yanaga"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404704",
+        "title": "Say the Words:  Modern Java with JavaFX for Rich Client UIs",
+        "description": "Wordle is a popular online game where you have up to six tries to guess a hidden five-letter word. By combining the power of the JavaFX UI toolkit with the latest Java Development Kit features, we show how to implement a version of Wordle for desktop and mobile devices (iOS and Android). \r\n\r\nLearn how to create the main UI layout with Scene Builder and use specialized UI controls with pseudo-classes for CSS styling. Understand JavaFX property binding to control UI state and use JavaFX animation for cool looking effects. We'll also use modern Java including lambdas, streams, method references, records, and enhanced switch expressions.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "df05c7b1-1adc-40f4-b999-829068fde5fb",
+            "name": "Paul Anderson"
+          },
+          {
+            "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
+            "name": "Gail Anderson"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386645",
+        "title": "Secrets of Performance Tuning Java on Kubernetes",
+        "description": "Initially, getting Java to run on Kubernetes may seem complicated, but after a few lines of YAML and a bit of work with Docker, you will wonder what all that fuss was. It is easy! Then you start looking at the performance of your Java app in one core, one GB of memory container, and this is when it all very quickly gets murky. Ops, SREs, and Java developers need to be aware of the JVM's inner works when deciding on how to resource their applications. Without this knowledge, it isn't easy to know whether it is best to scale vertically or horizontally for performance and costs. This talk will explore JVM ergonomics, CPU throttling, Garbage Collectors, and how using this knowledge can help you increase performance while reducing costs in the cloud.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e0b15676-adb2-4ea7-bb68-ca1af864a14f",
+            "name": "Bruno Borges"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403693",
+        "title": "Securing Your Software Supply Chain One Open Source Project at a Time",
+        "description": "Delivering software fast is one piece of the CI/CD puzzle, but delivering it securely is the glue that keeps your puzzle from falling apart. Software supply chain attacks are on the rise with security exploits directly targeting open source projects, central repositories, and software package managers. Now that developers are the target of security attackers, how do you protect your DevOps pipeline?\r\n\r\nThis is a problem that the Continuous Delivery Foundation (CDF)  is working to solve.. To help ensure a secure SDLC, the CDF is investing in projects that provide security solutions and in 2022 announced a new incubating project, Pyrsia. This talk will highlight the importance of securing your software supply chain at the source and how Pyrsia is working to solve this problem.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "bd6cd08c-59b8-4094-aba4-dc8a28691a79",
+            "name": "Lori Lorusso"
+          },
+          {
+            "id": "a4d893c0-72e9-4c3c-a8fa-92ce9c2d95d6",
+            "name": "Ixchel Ruiz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "391179",
+        "title": "Service Mesh for Java Developers",
+        "description": "Service Mesh is the future of application connectivity. It delivers immediate value to any architecture by increasing our application traffic's security, reliability, and observability. \r\n\r\nIt abstracts the underlying network details and provides discovery, routing, and a variety of other functionality.\r\n\r\nIn this service mesh presentation, Viktor will show you how easy it is to get started (in Kubernetes) - how to install a control plane, deploy a JVM-based demo application (using popular java frameworks like spring boot, micronaut, etc), enable traffic policies, and touch on observability.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
+            "name": "Viktor Gamov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407839",
+        "title": "Shifting Left with Kubernetes",
+        "description": "The Shift Left philosophy is a product of the Agile movement. Its practices encourage teams to test and validate software as early in the process as possible. It’s been shown that the earlier issues are found and addressed that overall quality, time to delivery, and project costs improve. As teams adopt Shift Left, one notable exception is often overlooked. That is deployment. Over the past decade, application deployment has steadily become more of a software effort. The argument can easily be made that validating application deployment, which has primarily become a software effort, is just as much a candidate for Shift Left as the application itself. With containerization continuing its rise on becoming the application deployment norm, the notion of a production-like system deployed as far left in the cycle as a developer’s workstation is a practical reality. In organizations that have adopted Kubernetes, each phase of the delivery pipeline is able to accurately replicate a production environment.\r\n\r\nIn this session, we will examine the benefits and challenges of Shifting Left by building and validating Kubernetes-based deployments. Topics include replicating production environments starting with development workstations, strategies for maintaining deployment code alongside application source code, considerations for artifact registries and repositories, and tooling that can assist at each stage.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "049f56da-dd0b-44f9-b868-1ee298129e3a",
+            "name": "Ray Elenteny"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404818",
+        "title": "Should I upgrade my Java?",
+        "description": "Java 11 was released in September 2018, and Java 17 was released in 2021. However, even today, plenty of developers still use Java 11 or even Java 8. The motivation behind this talk is to make a compelling argument for an upgrade from Java 8 or 11 to Java 17. In this session, Nikhil will showcase the new features, demonstrate improvements, provide performance comparisons, and briefly discuss upgrade strategies. At the end, you’ll be able to answer the question, “Should I upgrade my Java?”",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b1c4a924-b6db-453f-91d2-16b0fcf3bafd",
+            "name": "Nikhil Nanivadekar"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "387635",
+        "title": "Software architecture in a DevOps world",
+        "description": "Most modern software teams strive for Continuous Delivery of business impact with a DevOps mindset: you build it, you run it. With short iterations and continuous feedback loops, teams deploy new software to production daily.\r\nBut how about the role of a software architect in such a fast-paced world? With daily deployments, is there even time for software architecture? As an architect, how do you prevent being a delaying factor to the pace and success of a team? And how do you keep up?\r\n\r\nIn this session, I'll share my experiences as a software architect in the DevOps world. I'll talk about \"just enough\" architecture and moving from up front design to evolving architecture.\r\nAfter this session, you'll have practical insights and tips in how to work as an architect with a DevOps team.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b0eb4193-5e82-40ab-9f73-c33b6a610ba9",
+            "name": "Bert Jan Schrijver"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "409634",
+        "title": "Spring Cloud Gateway: What is it and What's New.",
+        "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+            "name": "Spencer Gibb"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403409",
+        "title": "Spring Cloud Stream Past, Present, and Future.",
+        "description": "Spring Cloud Stream is a framework for building highly scalable microservices connected to shared messaging systems. Together with Spring Cloud Function, Spring Cloud Task and other frameworks from the Spring Cloud portfolio, it is evolving and quickly becoming a go-to solution for users who want to spend more time concentrating on functional aspects of their microservices while guarding themselves from nonfunctional (boilerplate) concerns such as connectivity, integration, and many others. In this \"state of the union\" session (50/50 presentation/live-code), Glenn will discuss and demonstrate the current features, the recent changes and enhancements, and talk about what's coming in the future.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1d46e701-f914-4c5f-be30-cf9817d0598a",
+            "name": "Oleg Zhurakousky"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "403406",
+        "title": "Spring Modulith:  What the what?",
+        "description": "When designing software systems, architects and developers have plenty of architectural options from which to choose.  Over the last few years, we have seen the growth of Microservice-based systems. However, the idea of monolithic, modular systems has recently regained popularity.  Regardless of which architecture we choose, how can we build the individual applications that comprise our overall system such that their structure is evolvable to follow business requirements?\r\nWhat if I were to tell you there was a way for you to express these logical application modules in code so that you can build well-structured, domain-aligned Spring Boot applications?  Spring Modulith does this by providing the developer a way to declare logical modules in Spring Boot applications.  It also provides the tooling needed to write Junit tests that run structural validation tests, run integration tests for individual modules, and to document the module arrangement.  It also has features that let you implement module interactions in a loosely coupled way and then lets you observe module interactions between each other at runtime.  In this talk, we discuss the features that are available and then in a live coding demonstration show you how they work.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+            "name": "Glenn Renfro"
+          },
+          {
+            "id": "130d63c2-9b8c-4380-81f7-b2d5789259da",
+            "name": "Felipe Gutierrez"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386788",
+        "title": "Spring Recipes: A Collection of Common-Sense Solutions",
+        "description": "Over the years, Spring has evolved to solve the ever-increasing demands placed on software teams. From circuit breakers to security to queues to Kubernetes, Spring has an answer to that! But breadth can be overwhelming especially when you need to deploy to production yesterday. While knowing maybe half the battle, left unsaid is applying that knowledge to real-world situations; in other words, how do you bridge the gap between knowing Spring can do that to actually using Spring to fix your issue? With a plethora of examples, this talk will walk you through common problems in modern software development. From monitoring to testing to messaging to reactive programming, this talk will give you concrete solutions for your day-to-day needs.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+            "name": "Nathaniel Schutta"
+          },
+          {
+            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+            "name": "Dan Vega"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405551",
+        "title": "Testing cloud-native applications with ease!",
+        "description": "Many applications rely on cloud solutions like AWS, Azure, and GCP. Testing such applications could be a nightmare of spare cloud accounts or never-ending environment setups. \r\n\r\nThanks to Testcontainers, we can run all the necessary services locally and even more programmatically control their configuration and lifecycle! It means you can improve your development feedback loop locally and test your cloud-native applications without spending a penny. \r\n\r\nIn this demo-heavy session, we’ll go over typical use cases cloud-native app developers struggle to test effectively, and look at how Testcontainers features enable working with S3, DynamoDB, Lambdas, Google Spanner, and others. Testing your cloud-native applications with Localstack and GCloud modules has never been this easy and reliable. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "3ef92880-b80a-4305-b75c-35650d1259c8",
+            "name": "Oleg Šelajev"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405699",
+        "title": "The Anatomy of Java Vulnerabilities",
+        "description": "Java is everywhere. According to Oracle, it’s on 4 billion devices and counting.\r\n\r\nAs we’ve seen with vulnerabilities like Log4Shell, keeping up to date with patches is critical, but each time you do, it’s an opportunity to break your code or let a new vulnerability in.\r\n\r\nHow do you decide what to patch and what to ignore?\r\n\r\nIn this talk, you’ll learn about Java vulnerabilities in general: what a ‘vulnerability’ actually is, how they are discovered, reported, managed, assessed and fixed as well as hearing a little about the specifics of attack vectors and bad actors. \r\n\r\nUnderstanding how to choose your dependencies more wisely to reduce your exposure and keep your application working is a skill we all need to grow - start here to begin that journey.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
+            "name": "Steve Poole"
+          },
+          {
+            "id": "46674040-9656-42ec-a5b7-915c11e2727b",
+            "name": "Theresa Mammarella"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407998",
+        "title": "The Cloud Native Compiler: JIT-as-a-Service",
+        "description": "Adaptive, just in time (JIT) compilation provides a massive performance improvement to JVM-based applications compared to only using an interpreter.  The downside of this is that applications have to compile frequently used methods as the application is running.  This can lead to reduced throughput and slower response times.  Another drawback is that each time an application is started, it must perform the same analysis to identify hot spot methods and compile them.\r\n\r\nWhen running an application in the cloud, the elastic nature of resources provides the ability to change and improve the dynamics of how the JIT compiler works.\r\n\r\nIn this session, we'll look at Azul's work to move the JIT compiler into a centralized service that can be shared by many JVMs.  This provides many advantages, such as caching compiled code for instant delivery when restarting the same application or spinning up new instances of the same service.  In addition, it removes the workload from individual JVMs, allowing them to deliver more transactions per second of application work.  Finally, there is the opportunity to apply considerably more compute resources to enable complex optimizations to be used that wouldn't be practical in a single JVM.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "709043d1-5754-4459-a8d5-6dd2f5619874",
+            "name": "Simon Ritter"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "398585",
+        "title": "The Future is Serverless - with Java",
+        "description": "Serverless cloud computing provides you with an infrastructure out of the box to run your containerized Java microservices highly efficiently. With MicroProfile and GraalVM, Java integrates seamlessly with serverless infrastructure and leads to strong benefits: higher efficiency, endless scalability, high availability, and the lowest possible effort for the development, production usage, administration, and maintenance of cloud-native Java applications.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f465d18e-ff85-47b9-9997-f00a602ac48d",
+            "name": "Markus Kett"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "412303",
+        "title": "The Programmer's Guide to JDK Flight Recorder",
+        "description": "The JDK Flight Recorder (JFR) is an event-based diagnostic and profiling tool built into the JDK. JFR can provide detailed information about the performance of a JVM and Java applications running on it and help diagnose when something goes wrong in production. JFR has several powerful and flexible APIs for capturing, streaming, and filtering information. This presentation will focus on how programmers can take advantage of these APIs for testing, capturing valuable data, providing live metrics, and more! If you have been wondering how to improve the performance of your Java applications or get better insight into their internal workings, this presentation is for you!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+            "name": "Billy Korando"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "393600",
+        "title": "The Right Number of Partitions for a Kafka Topic",
+        "description": "Every technology has that key concept that people struggle to understand. With databases, is which join clause to use for fetching data from multiple tables. Containers are tricky when you have to pick a storage type given some persistence requirements. With Apache Kafka, the winner is how many partitions to set for a topic.\r\n\r\nWhy this is important? You may ask. Well, sizing Kafka partitions wrongly affects many aspects of the system, such as storage, parallelism, and durability. Worse, it may also affect how much load Kafka can handle. Hence why often the decision about how many partitions to set for a topic is handled by Ops teams, as we see this to be only an infrastructure matter. In reality, this is an architectural design decision that affects even the amount of code you write.\r\n\r\nThis session will peel off the concept of partitions and explain it from the perspective of the Kafka cluster and its clients. It will explain the formula people should use to decide how many partitions to set for a topic, and how to spot a poor decision when they see one.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f69133ba-5f6e-44e7-98e5-84b1dd108991",
+            "name": "Ricardo Ferreira"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143428,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "401494",
+        "title": "Things we've learned about better software delivery principles through a pandemic",
+        "description": "Since early 2020, software delivery has undergone quite a shift in process and practices and how we understand \"high-performing engineering teams.\" At the same time, the demands placed on our development and operations teams have continued to increase.\r\nWith anonymous data collected from over 1M+ devs, 45K+ orgs, and 250M+ workflows, we've found some interesting insights into better DevOps practices. In this session, we will seek to uncover what this unique dataset can tell us about high-performing teams, and steps to get there as a business.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "56115ae3-406f-47af-818c-20354acc07b2",
+            "name": "Jeremy Meiss"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "412296",
+        "title": "To Java 20 and Beyond!",
+        "description": "Java 17 has come and gone, but development on Java continues on! What has changed since Java 11? And what changes are being added in Java 20? Come find out!\r\n\r\nIn this presentation we will look at the key changes that have been added to Java post-8, focusing primarily on Java post-11. The large changes; the Module System and Records, quality of life improvements; var, text blocks, pattern matching, and the many performance and runtime improvements. A lot has changed in the JDK in recent releases, take this opportunity to get caught up! ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+            "name": "Billy Korando"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "388048",
+        "title": "To Production and Beyond: Observability for Modern Spring Applications",
+        "description": "You just deployed your application to prod. Congratulations! Is our mission accomplished and can we go home for the week even if it is just Tuesday? But before we pack up to go home, how will we know if we deployed a bug or if our last change caused a significant performance degradation? Also how can we know when network issues arise or if one of our dependencies goes down?\r\nIn this forward-looking presentation, we will answer these questions by looking into application observability using distributed tracing, metrics, correlated logs, and exemplars. We will explore how the latest developments in Micrometer, Spring Framework 6, Spring Boot 3, Prometheus, OpenZipkin, and OpenTelemetry will give you a better understanding about what is going on inside of your applications. \r\nWe will also discuss the future of Observability in Spring Boot and other methods of exploring your running application using Spring Boot Actuator, Spring Boot Admin and Spring HATEOAS along with related technologies like Eureka, Logbook and Swagger.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8f517aca-8293-4e1f-9360-0ce676531421",
+            "name": "Jonatan Ivanov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "402078",
+        "title": "Tuning Garbage Collection Algorithms for Cloud Java Applications",
+        "description": "The garbage collector's performance is one key feature of the overall performance of any Java application. For many applications, the only tuning required is selecting the appropriate GC algorithm and increasing the heap size. More complex applications will require additional tuning, particularly for specific GC algorithms. Join this talk to gain a better understanding of how choosing and tuning the GC influences the performance of your containerized Java application.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "086de2f4-8bfc-47ab-8f65-c623a5753fcf",
+            "name": "Ana Maria Mihalceanu"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "410150",
+        "title": "Typescript Deep Dive",
+        "description": "Mapped types, template literals, conditional types with infer: oh my! Come to this talk if you already understand how to use typescript day to day, but want to take a deeper dive and understand the more advanced topics in Typescript through real world examples and usecases.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "76cd083c-68f1-46b7-8a4e-9dd9d6d6fd08",
+            "name": "Waller Goble"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "400659",
+        "title": "Unlocked : Growing Your Skills Through Open Source Development And Civic Hacking",
+        "description": "As a developer, we want to increase our knowledge of the development world around us so that we can help grow our careers or help the world.   Many folks can grow their career through reading blogs, books, following tutorials or watching videos. But some of us need a project or community to help us attain our career growth. Where can we find these projects or the community? In this discussion, we will show you 2 paths that you can take advantage of, so that you can give to the community and grow your career. \r\nThe first path that we will discuss is how to contribute to an open-source project. This includes the who, what, and how of open source and the places where you can contribute to an open source.   Spoilers: Anyone can contribute, and you need not be a coder to contribute. \r\nThe second path we'll discuss is Civic Hacking. We will define what it is, where to get involved and cover its basic tenets:\r\n- Do what you can?\r\n- Where you can?\r\n- With what you've got?\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "a6ee49ed-a85d-43bd-8677-bced09824b2c",
+            "name": "Nerando Johnson"
+          },
+          {
+            "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+            "name": "Glenn Renfro"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405169",
+        "title": "Unlocking Value from Time Series Data with Open Source Tools in Java",
+        "description": "Join Zoe, Developer Advocate at InfluxData, for a session where she will share how to take charge of your time series data with InfluxDB open source time series platform using Java. In this session, you’ll learn how open source tools like Telegraf and InfluxDB can help you build real-time applications faster and with less effort. We will also demo how to use InfluxDB to gain visibility and insight into your time-stamped data from the edge to the cloud.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
+            "name": "Zoe Steinkamp"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404778",
+        "title": "Upgrading a Legacy Java EE App with Style",
+        "description": "In the span of several weeks, we took a legacy app that had been running in production for 12 years, moved it to git, mavenized it, upgraded from Java 6 to Java 8, and upgraded from Java EE 5 to Java EE 7. Oh, and did I mention that it uses SOAP, JSP, and JSF 1.2? We did all this with a relatively minor amount of code changes, thanks to the backward compatibility of Java 8 and Java EE. Come to this session to learn how we did it, what issues we ran into, which app server we were using, and why we didn't move to a newer JDK, Java EE 8 or Jakarta EE.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ff0a1dd3-c9f2-48e2-88a8-9c0e429251be",
+            "name": "Kito Mann"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 151786,
+                "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405943",
+        "title": "Vector Similarity Search in Spring with Redis Stack",
+        "description": "Vector Similarity Search (VSS) is no longer a feature that lives in AI/ML demos only! VSS has a wide range of applications including eCommerce, recommendation engines, chatbots, image and video search, and chemistry. In this talk, we'll learn how to implement VSS in Spring applications using Redis Stack enhanced search capabilities. We'll learn about creating embeddings for your data, learn about Vector databases, Vectorization of your data, similarity metrics, and more.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4deee821-d54c-4f81-a909-07a61689e41e",
+            "name": "Brian Sam-Bodden"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386482",
+        "title": "Vue for React Developers",
+        "description": "React is one of the most popular front end frameworks... but within the React community there are several misconceptions about Vue. Let's go through and convert a React component into a Vue component. The results might surprise a lot of React developers!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+            "name": "Alex Riviere"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143438,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407818",
+        "title": "Walking to School in the Snow or What to Do When You Aren't Building Bridges with Bricks",
+        "description": "Roman architects and engineers built colosseums, bridges and aqueducts that have lasted for millennia.  Most software applications last… not as long.\r\n\r\nThe discipline and processes of software engineering are continuously evolving to deliver faster results.  Meanwhile application architecture is undergoing a paradigm shift as the enterprise embraces the cloud.\r\n\r\nWhat does engineering discipline look like when time to market is more important than time in existence?  \r\n\r\nThis talk looks at 5 emerging architecture trends geared towards delivering business value faster and what these trends mean for developers:\r\n\r\n* Putting Architects in the Elevators\r\n* Composable Organizations\r\n* Product vs. Project Thinking\r\n* Paved Roads and Golden Paths\r\n* Data Meshes\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
+            "name": "Jeremy Davis"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143442,
+                "name": "keynote"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "406088",
+        "title": "Wargames - Java vulnerabilities and why you should care",
+        "description": "Java is great and we all spend time on making it more performant, more scalable and maintainable. But we better should also spend some time on making it more secure. With all that new Java releases and features also come new vulnerabilities and exploits. Because Java is everywhere, it has a huge attack surface which makes it interesting for hackers to search for vulnerabilities in Java and foremost in Java based applications. This sessions will explain what all these mystique acronyms like NVD, CVE, CVSS, CPU, PSU etc. mean and how they are related to Java security. It will also be shown what tools are available to you to check whether your Java application is vulnerable to known issues.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "71f3abf1-03cf-458b-b385-e10fd110e89a",
+            "name": "Gerrit Grunwald"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "393994",
+        "title": "Weathering the Cloud Storm: Building Resilient Geo-Distributed Apps with Spring Cloud",
+        "description": "Cloud availability zones and regions are not immune to outages. The zones go down regularly and regions become unavailable during natural disasters or human-caused incidents. Thus, if an availability zone or a larger area goes down, so does your application—unless the application can work across multiple geographic locations.\r\n\r\nCome and learn how to build resilient, geo-distributed Java apps that can withstand various cloud failures. Using Spring Cloud tools and components, you'll architect and deploy a geo-distributed Slack-like messenger that can span several continents, load balance requests across distant regions, and most importantly, tolerate various storms and outages in the cloud.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "13f2987c-b5e6-4a8e-a039-e97f93f20670",
+            "name": "Denis Magda"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "400416",
+        "title": "What's Cooking in Maven?",
+        "description": "It’s been over 10 years since Maven 3 saw the light, bringing initial multi-module support. Later releases brought a lot of improvements, bug fixes, and of course coloured output.\r\n\r\nBut the Maven community hasn’t been resting on their laurels. A lot of effort has gone into the future of Maven. You may have heard about Maven 4, Maven Wrapper, or Maven Daemon. Why should you care? And how will it change the way you use Maven? I will show you by using the latest snapshot builds of Maven - time will tell if that’s a brave or a stupid idea…\r\n\r\nJoin me to find out what the future of Maven has for you!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "42e68026-7d32-4cf7-8b71-84cfe2096cc2",
+            "name": "Maarten Mulders"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405373",
+        "title": "Wired! How your brain learns new (programming) languages",
+        "description": "How much do you know about the computer that you are? The computer we call “our brain”? And do you sometimes struggle with learning the new programming languages or the features of a new Java version (let’s say Java 17)? Yes?! In that case, this talk is something for you!\r\n\r\nIn this talk we’ll look at learning a new language from a Linguistic and Neurological perspective, while at the same time looking at how we can apply this in the IT setting we work in. At the end of this talk you will know how your brain stores new information and how that information can be retrieved and used. Next to that you will be given some practical tips and tricks on how to improve your own learning curve and how to help others support others who are in the process of learning.\r\n\r\nAs a previous speech-and-language therapist I would like to give you a better understanding of how we learn languages and how this knowledge can help us in the never-ending changing world of software development!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f8b7ce5e-dc08-4d77-a0d1-a6ab35198843",
+            "name": "Simone de Gijt"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405696",
+        "title": "Writing Gradle plugins that users will love",
+        "description": "One of the great things about Gradle Build Tool is that plugins are easy to write and there is a thriving ecosystem of freely available community plugins.  It's easy to find one or more plugins that implement desired functionality, however, it's hugely disappointing when a plugin provides an awesome capability, but wreaks havoc on the performance of the build, creates undesirable side effects, or doesn't work with a certain version of Gradle.  If only every Gradle plugin was written and tested well.\r\n\r\nThis talk is intended for Gradle plugin authors who want to learn how to write plugins that consumers will love to use.  We'll explore the following concerns by looking at an example plugin and discussing ways to improve it:\r\n\r\n- Plugin architecture\r\n- Task configuration avoidance\r\n- Configuration cache compatibility\r\n- Planning for and testing with the build cache\r\n- Backwards compatibility testing \r\n \r\nYou'll learn strategies for not only writing your plugin well, but keeping it healthy and well behaved as it evolves and new versions of Gradle are released.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "42e35069-046e-4273-9b92-7beaa2518ced",
+            "name": "Gary Hale"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143435,
+                "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      }
+    ],
+    "isDefault": false
+  }
+]

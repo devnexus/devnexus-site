@@ -21,10 +21,18 @@ module Jekyll
                process_event_collection(edata)
             end
           end
+          pcmd.command(:speakers) do |e|
+            url = "https://sessionize.com/api/v2/g415clv7/view/Speakers"
+            e.description "download sessionize speaker details"
+            e.action do |args, options|
+               edata = (options['file']) ? read_data(options['file']) : fetch_data(url)
+               write_data_json("speakers", edata)
+            end
+          end
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://sessionize.com/api/v2/g415clv7/view/GridSmart'
+              url = 'https://sessionize.com/api/v2/g41do5clv7/view/GridSmart'
               if (options['file'])
                 write_data_json("schedule", read_data(options['file']) )
               else
@@ -53,12 +61,14 @@ module Jekyll
               #puts(events)
               Jekyll.logger.info("Reading #{events.length} events from cfp")
               for event in events do
+                 track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
+                 event["track"] = track_category.first()["categoryItems"].first()["name"]
                  write_item("events", event, "")
               end  
         end
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['id']}.md"
-          Jekyll.logger.info("#{filename}\n#{item}")
+          #Jekyll.logger.info("#{filename}\n#{item}")
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
           Jekyll.logger.info("#{filename}  written")
         end
