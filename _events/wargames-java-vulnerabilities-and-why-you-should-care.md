@@ -1,0 +1,41 @@
+---
+questionAnswers: []
+id: '406088'
+title: Wargames - Java vulnerabilities and why you should care
+description: Java is great and we all spend time on making it more performant, more
+  scalable and maintainable. But we better should also spend some time on making it
+  more secure. With all that new Java releases and features also come new vulnerabilities
+  and exploits. Because Java is everywhere, it has a huge attack surface which makes
+  it interesting for hackers to search for vulnerabilities in Java and foremost in
+  Java based applications. This sessions will explain what all these mystique acronyms
+  like NVD, CVE, CVSS, CPU, PSU etc. mean and how they are related to Java security.
+  It will also be shown what tools are available to you to check whether your Java
+  application is vulnerable to known issues.
+startsAt: 
+endsAt: 
+isServiceSession: false
+isPlenumSession: false
+speakers:
+- id: 71f3abf1-03cf-458b-b385-e10fd110e89a
+  name: Gerrit Grunwald
+categories:
+- id: 43783
+  name: Track
+  categoryItems:
+  - id: 143434
+    name: Security
+  sort: 0
+- id: 43785
+  name: Session Format
+  categoryItems:
+  - id: 143440
+    name: session
+  sort: 2
+roomId: 
+room: 
+liveUrl: 
+recordingUrl: 
+track: Security
+slug: wargames-java-vulnerabilities-and-why-you-should-care
+
+---

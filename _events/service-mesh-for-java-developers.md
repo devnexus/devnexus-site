@@ -1,0 +1,40 @@
+---
+questionAnswers: []
+id: '391179'
+title: Service Mesh for Java Developers
+description: "Service Mesh is the future of application connectivity. It delivers
+  immediate value to any architecture by increasing our application traffic's security,
+  reliability, and observability. \r\n\r\nIt abstracts the underlying network details
+  and provides discovery, routing, and a variety of other functionality.\r\n\r\nIn
+  this service mesh presentation, Viktor will show you how easy it is to get started
+  (in Kubernetes) - how to install a control plane, deploy a JVM-based demo application
+  (using popular java frameworks like spring boot, micronaut, etc), enable traffic
+  policies, and touch on observability."
+startsAt: 
+endsAt: 
+isServiceSession: false
+isPlenumSession: false
+speakers:
+- id: 4f858987-1a60-4da8-a4a2-045824a496c7
+  name: Viktor Gamov
+categories:
+- id: 43783
+  name: Track
+  categoryItems:
+  - id: 143428
+    name: Cloud Infrastructure
+  sort: 0
+- id: 43785
+  name: Session Format
+  categoryItems:
+  - id: 143440
+    name: session
+  sort: 2
+roomId: 
+room: 
+liveUrl: 
+recordingUrl: 
+track: Cloud Infrastructure
+slug: service-mesh-for-java-developers
+
+---

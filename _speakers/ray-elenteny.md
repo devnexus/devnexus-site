@@ -1,0 +1,39 @@
+---
+id: '049f56da-dd0b-44f9-b868-1ee298129e3a'
+firstName: Ray
+lastName: Elenteny
+fullName: Ray Elenteny
+bio: With over 35 years of experience, Ray thoroughly enjoys sharing his experience
+  by helping organizations deliver high-quality applications that drive business value.
+  Ray has a passion for software engineering, and over the past ten years, Ray has
+  taken a keen interest in the cultural and technical dynamics of efficiently delivering
+  applications. Ray has been working with containers since 2014 and Kubernetes since
+  2017. For multiple years he served as an Atlanta Docker Meetup organizer. He has
+  introduced Docker and Kubernetes to multiple organizations that are using them in
+  production today. Ray has authored several articles on topics ranging from deployment
+  pipelines, building Docker images, Kubernetes as a development tool, and architectural
+  patterns for microservices in Kubernetes.
+tagLine: Solution Architect, SOLTECH, Inc.
+profilePicture: https://sessionize.com/image/2963-400o400o2-Ej8FNxEaZNxE2iTW4NesB2.jpg
+sessions:
+- id: 407839
+  name: Shifting Left with Kubernetes
+isTopSpeaker: false
+links: []
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: SOLTECH, Inc.
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@notwitteraccount"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: ray-elenteny
+
+---

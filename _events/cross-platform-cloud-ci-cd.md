@@ -1,0 +1,43 @@
+---
+questionAnswers: []
+id: '405724'
+title: Cross-Platform Cloud CI/CD
+description: "More and more teams are leveraging cross-platform development for their
+  web, mobile PWA, iOS, and Android applications. However, if you are still leveraging
+  traditional CI/CD or manual deployment processes, you can still experience release
+  delays and different DX and UX across platforms. A unified system for cross-platform
+  builds and deploys can prevent knowledge silos, speed up releases, and ensure an
+  efficient process no matter what the platform. This talk will cover the considerations
+  when building a CI/CD system to manage web and mobile deployments, and options for
+  implementing a cross-platform CI/CD solution in the cloud.\r\n\r\nWhat you'll learn:\r\n-
+  How web, Android, and iOS deployments are different\r\n- The specific factors to
+  consider when building a cross-platform CI/CD strategy\r\n- Options for implementing
+  a cloud CI/Cd strategy for all your deployments across multiple platforms"
+startsAt: 
+endsAt: 
+isServiceSession: false
+isPlenumSession: false
+speakers:
+- id: 85becfa6-8765-4c3c-b805-e393ed3dd954
+  name: Cecelia Martinez
+categories:
+- id: 43783
+  name: Track
+  categoryItems:
+  - id: 143438
+    name: Web and Front-end
+  sort: 0
+- id: 43785
+  name: Session Format
+  categoryItems:
+  - id: 143440
+    name: session
+  sort: 2
+roomId: 
+room: 
+liveUrl: 
+recordingUrl: 
+track: Web and Front-end
+slug: cross-platform-cloud-ci-cd
+
+---

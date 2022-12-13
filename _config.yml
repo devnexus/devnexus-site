@@ -10,11 +10,11 @@ collections:
   speakers:
     title: Speakers 2023
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:slug
   events:
      title: Presentations 2023
      output: true
-     permalink: /presentations/:path/
+     permalink: /presentations/:slug/
   event-instructions:
      title: Workshop Prep 2023
      output: true

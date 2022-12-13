@@ -1,0 +1,36 @@
+---
+id: 42e35069-046e-4273-9b92-7beaa2518ced
+firstName: Gary
+lastName: Hale
+fullName: Gary Hale
+bio: "Gary is a software engineer at Gradle with a passion for improving developer
+  productivity.  He is an IT generalist with over 20 years experience in software
+  development, operations, architecture and everything in between.\r\n\r\nGary has
+  worked extensively on the Gradle Build Tool itself as well as authored numerous
+  community plugins.  He has conducted dozens of training classes on Gradle build
+  tool and speaks on topics related to devops, software development and developer
+  productivity."
+tagLine: Senior Software Engineer at Gradle
+profilePicture: https://sessionize.com/image/985f-400o400o2-UPxkTNCkQPZRhtvomJFFTg.jpg
+sessions:
+- id: 405696
+  name: Writing Gradle plugins that users will love
+isTopSpeaker: false
+links: []
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: Gradle, Inc
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@ghhale"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: gary-hale
+
+---

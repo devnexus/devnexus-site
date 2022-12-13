@@ -57,10 +57,10 @@ module Jekyll
         end
         def process_speaker_collection( event_data )
           speaker_json = JSON.parse(event_data)
-          Jekyll.logger.info("Reading #{speaker_json.length} events from cfp")
+          Jekyll.logger.info("Reading #{speaker_json.length} speakers from cfp")
+          
           for speaker in speaker_json do
-             #track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
-             #event["track"] = track_category.first()["categoryItems"].first()["name"]
+             speaker["slug"] = Jekyll::Utils.slugify(speaker["fullName"])
              write_item("speakers", speaker, "")
           end  
         end
@@ -73,11 +73,12 @@ module Jekyll
               for event in events do
                  track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
                  event["track"] = track_category.first()["categoryItems"].first()["name"]
+                 event["slug"] = Jekyll::Utils.slugify(event["title"])
                  write_item("events", event, "")
               end  
         end
         def write_item(collection, item, abstract)
-          filename = "_#{collection}/#{item['id']}.md"
+          filename = "_#{collection}/#{item['slug']}.md"
           #Jekyll.logger.info("#{filename}\n#{item}")
           File.write( filename , YAML.dump(item)+"\r\n---\r\n"+abstract)
           Jekyll.logger.info("#{filename}  written")

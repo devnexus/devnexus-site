@@ -1,0 +1,41 @@
+---
+id: 6f426cb0-6261-4f79-b726-b7ffc3b028ff
+firstName: Billy
+lastName: Korando
+fullName: Billy Korando
+bio: 'Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With
+  over a decade of experience in Java, Billy brings a passion for helping developers
+  find ways to reduce tedious work, such as project initiation, deployment, testing,
+  and validation, through automation and adopting the latest features and tools in
+  the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and
+  cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java
+  users group. '
+tagLine: Java Developer Advocate
+profilePicture: https://sessionize.com/image/cfa9-400o400o2-Xbygy9uZNoqhkxKqb9HTHS.jpg
+sessions:
+- id: 412303
+  name: The Programmer's Guide to JDK Flight Recorder
+- id: 412296
+  name: To Java 20 and Beyond!
+isTopSpeaker: false
+links:
+- title: Twitter
+  url: https://twitter.com/BillyKorando
+  linkType: Twitter
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: Oracle
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@BillyKorando"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: billy-korando
+
+---

@@ -1,0 +1,36 @@
+---
+id: a6ee49ed-a85d-43bd-8677-bced09824b2c
+firstName: Nerando
+lastName: Johnson
+fullName: Nerando Johnson
+bio: Current Atlanta freeCodeCamp Organizer || Level 1.75 Developer || Fullstack Developer
+  || Role => DevOps Engineer
+tagLine: Full-stack Developer @Equity Prime Mortgage || Flatiron School Graduate ||
+  Technology Community Organizer
+profilePicture: https://sessionize.com/image/540b-400o400o2-E5jzEkBddZiVL7W22ooCco.jpg
+sessions:
+- id: 400659
+  name: 'Unlocked : Growing Your Skills Through Open Source Development And Civic
+    Hacking'
+isTopSpeaker: false
+links:
+- title: Twitter
+  url: https://twitter.com/nerajno
+  linkType: Twitter
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: EPM
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@nerajno"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: nerando-johnson
+
+---

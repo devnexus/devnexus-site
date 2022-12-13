@@ -1,0 +1,42 @@
+---
+id: 4f858987-1a60-4da8-a4a2-045824a496c7
+firstName: Viktor
+lastName: Gamov
+fullName: Viktor Gamov
+bio: "Viktor Gamov is a Principal Developer Advocate at Kong, a cloud connectivity
+  company.\r\nViktor has comprehensive expertise in building distributed systems and
+  cloud-native architectures using open source technologies.\r\nHe enjoys helping
+  architects and developers design and develop low latency, scalable, and highly available
+  systems.\r\nHe is a professional conference speaker on distributed systems, streaming
+  data, JVM, and DevOps topics. \r\nHe's regular on events including JavaOne, Devoxx,
+  OSCON, QCon, and others.\r\nHe co-authored books O'Reilly's «Enterprise Web Development»
+  and Manning's «Apache Kafka® in Action.»\r\nHe blogs at http://gamov.io and co-hosts
+  KongCast https://pod.link/kongcast.\r\nFollow Viktor on Twitter @gamussa, where
+  he posts there about gym life, food, open-source, and Kong and Cloud."
+tagLine: Principal Developer Advocate, Kong
+profilePicture: https://sessionize.com/image/a25b-400o400o2-B9Eic9FXfpQuhaJxDTpcUp.jpg
+sessions:
+- id: 391179
+  name: Service Mesh for Java Developers
+isTopSpeaker: false
+links:
+- title: Twitter
+  url: http://twitter.com/gamussa
+  linkType: Twitter
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: Kong
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@gamussa"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: viktor-gamov
+
+---

@@ -1,0 +1,45 @@
+---
+questionAnswers: []
+id: '388011'
+title: From Monolith to (µ)Services. What happens with my Data?
+description: "Rewriting systems from a monolithic architecture to a services architecture
+  is a common task nowadays to make applications easier to maintain, deploy, and release.
+  This migration should not be a big bang rewrite where you directly switch from the
+  old application to the new one. Instead, it is an incremental process during which
+  functionalities are extracted one at a time into separate services.\r\n \r\nThe
+  Strangler Fig Pattern describes a method whereby a new system is slowly and incrementally
+  growing over the top of an old system. Along the way, the whole system is continuously
+  monitored such that old parts can be removed after the new services show correct
+  behavior. The theory is pretty clear, and in services where no persistence is needed,
+  it's considerably easier, but things become way more complex as soon as data is
+  involved.\r\n \r\nCome to this session to learn how Kafka and Debezium, through
+  Change Data Capture and the Strangler Fig pattern, can help you migrate from monoliths
+  to a (micro)services architecture confidently even though databases are involved.\r\n"
+startsAt: 
+endsAt: 
+isServiceSession: false
+isPlenumSession: false
+speakers:
+- id: dedbce11-34e0-466e-a5cb-ea585688d106
+  name: Alex Soto
+categories:
+- id: 43783
+  name: Track
+  categoryItems:
+  - id: 143427
+    name: Architecture
+  sort: 0
+- id: 43785
+  name: Session Format
+  categoryItems:
+  - id: 143440
+    name: session
+  sort: 2
+roomId: 
+room: 
+liveUrl: 
+recordingUrl: 
+track: Architecture
+slug: from-monolith-to-µ-services-what-happens-with-my-data
+
+---

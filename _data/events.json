@@ -225,6 +225,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "406814",
+        "title": "Beginners guide to balance your data across Apache Kafka partitions",
+        "description": "Apache Kafka is a distributed system. At the heart of Apache Kafka is a set of brokers, which allow to store the records persistently across different topics. Topics, in turn, are split into partitions. Dividing topics into such pieces allows us to use data from multiple partitions in parallel, so that producers and consumers can work with data simultaneously and achieve higher data throughput.\r\n\r\nSuch parallelization is the key to a performant cluster, however it comes with a price. The thing is, reading from multiple partitions will eventually mess up the order of records, meaning  that the resulting order will be different from when the data was pushed into the cluster. \r\n\r\nThis happens because when consuming data from multiple partitions, the order of partitions is not guaranteed. Instead, we must rely on the order of the records within a single partition, where the data is guaranteed to maintain the original sequence. We need to use this characteristic of Apache Kafka to our advantage in those cases where the ordering of the records is important for our system.\r\n\r\nTherefore, when building our product architecture we should carefully weigh up how we will balance records across partitions and what mechanisms we will use to ensure that the sequence of the messages remains correct when data is read by multiple consumers. And even more importantly, how to achieve this and still maintain good performance.\r\n\r\nIn this talk we'll discuss mechanisms you can use to balance your data, such as keys and custom partitioners, but also practices that will help you to balance data evenly and produce and consume data efficiently.\r\n\r\nIf you are fresh to Apache Kafka, or you're looking for good practices to design your partitions and avoid common pitfalls, you'll find this session useful!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "5ecff6ff-7704-433e-a38f-a057d05eacec",
+            "name": "Olena Kutsenko"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "401643",
         "title": "Best of Both Worlds: Apache Pulsar and Apache Kafka",
         "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
@@ -677,6 +721,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "402393",
+        "title": "DAST, SAST, SCA … OMG. WTF?! Choosing the Right Security Tools for Modern Apps",
+        "description": "The word “security” can be a scary one for us DevOps folks. We want to move fast but no one wants to CI/CD security breaches into production. Security remains hard and it’s often really difficult to know how to get started.\r\n\r\nWhat tools do we really need to use to test the security of modern web apps?\r\nHow do we choose between the alphabet soup of DAST, IAST, RASP, SAST, SCA, etc?\r\nWhat value do each of these give us and when should we use them? (Or even not use them…)\r\n\r\nIn this talk Simon, creator and core maintainer of OWASP ZAP, will explain the differences (and similarities) between the different types of tools available, when we should introduce them into our development lifecycle and the challenges that we are likely to face in using them with modern web apps.\r\nHe will also talk about specific open source tools which can provide real value in this space.\r\n\r\n\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "930ecac6-9fc1-4f69-9cf6-2a8fbf04ad58",
+            "name": "Simon Bennetts"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "408351",
         "title": "Data Focused programming with Pattern Matching in Java",
         "description": "Data is at the heart of most applications. For ages, Java developers have been using conditions to determine whether an instance is of a specific type - to extract its components. Though this sounds obvious and harmless, Pattern Matching has revolutionized how you achieve this in your everyday code in a concise and focused way.\r\n\r\nWorking with its syntax seems simple and straightforward. Pattern Matching can be used with operators like instanceof, and constructs like switch statements and expressions. But, don't let this simplicity deceive you. Its real power lies in understanding the semantics of working with Patterns like Type Patterns, Parenthesized Patterns, Record Patterns and others to write declarative and data-focused code to create powerful, declarative and composable data navigation and processing. \r\n\r\nIn this live-coded talk, the attendees will learn about the issues with their existing code, create concise and clear data-focused queries, and modify existing code bases to avail benefits of Pattern Matching.",
@@ -834,6 +922,54 @@
               {
                 "id": 143433,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "402628",
+        "title": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)",
+        "description": "Scaling your services is easy when your services are stateless. However, in real life applications have to deal with state - how do you scale stateful software systems and their data? This is where it may become scary - while modern storage solutions (from Etcd to Cassandra) promise to solve this problem for us, operating these solutions may be tricky. Even if you don’t have to reimplement underlying consensus algorithms (like Paxos and Raft), you still need to understand how they work to operate, debug, and scale your systems. \r\n\r\nThis talk explains the mechanics of different consensus algorithms in everyday terms. This talk is not an academic paper: instead of providing formal proofs and scientific language, it focuses on practical aspects of consensus algorithms’ usage. It explains actionable insights in (relatively) simple words without pitching a concrete approach or technology as a magic cure.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6ca4dbda-e3ec-4bbe-b2cb-265787c1b93e",
+            "name": "Alex Borysov"
+          },
+          {
+            "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
+            "name": "Mykyta Protsenko"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
               }
             ],
             "sort": 0
@@ -1517,6 +1653,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "401231",
+        "title": "How to report a vulnerability: Responsible Disclosure for Developers",
+        "description": "Ever seen a security-related issue that you felt should be reported? Unsure of how reporting security issue is different than a regular bug? Developers of any level should know how to report a vulnerability. In this talk, we will talk about what CVEs are, some general vulnerability classifications, look at a few common ways you can report security issues, as well as look at a few common mistakes. This talk is geared toward non-security professionals.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "130a4bc5-3b04-4a0c-95e6-62fad0b4d722",
+            "name": "Brian Demers"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "390580",
         "title": "I Can Do THAT in a Browser? Improving User Experience with Lesser Known Native JS APIs",
         "description": "Did you know that you can access your user's geolocation coordinates via JavaScript? What about accessing a device's battery status, orientation, accelerometer, and gyroscope? Or connecting to a Bluetooth device. How about pulling data from an external device via a Serial or WebUSB? Are you aware of the Fullscreen  or the GamePad API? Have an e-commerce app or an app that processes microtransactions? Does it use the PaymentRequest API? There are tons of really cool APIs that you might not be aware of. Or maybe you are aware of them, but you're just not sure how to use them to improve your application? In this session, I'll introduce you to some of the lesser known APIs that are available in most modern web browsers. I'll also show you some demos that I've created with these APIs to show you how they can actually be used to make engaging experiences that keep your users happy and keep them coming back to your site. ",
@@ -1582,6 +1762,54 @@
               {
                 "id": 143435,
                 "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "407872",
+        "title": "Introducing Spring for Apache Pulsar",
+        "description": "Spring for Apache Pulsar is a library that makes it easy to create stand-alone, production-grade Spring based Applications using Apache Pulsar that you can \"just run\". \r\n\r\nIn this talk we will explore Spring for Apache Pulsar by looking at the core features that it provides. We will see how this library unlocks developer velocity via Spring Boot foundations when designing pub-sub solutions with Apache Pulsar . \r\n\r\nYou will witness a live demo where we create a basic Spring for Apache Pulsar app and evolve it from imperative -> reactive -> native. \r\n\r\nApache Pulsar is a cloud-native, multi-tenant, high-performance solution for server-to-server messaging and queuing built on the pub-sub pattern. Pulsar combines the best features of a traditional messaging system like RabbitMQ with those of a pub-sub system like Apache Kafka.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+            "name": "Chris Bono"
+          },
+          {
+            "id": "ba74fc9f-17cd-4e44-92f8-d6a697bb1486",
+            "name": "Christophe Bornet"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143431,
+                "name": "Frameworks"
               }
             ],
             "sort": 0
@@ -1698,8 +1926,8 @@
       {
         "questionAnswers": [],
         "id": "405717",
-        "title": "JAKARTAEE or Spring? Real world testimonies",
-        "description": "You are starting a new project and you need to choose between languages and frameworks but you face one of the toughest decisions about going with the Spring family or the JakartaEE ecosystem. \r\nIn this session we will discuss how each one can fit in different situations with pros and cons and give you tips to help you choose the right tool for the right problem using real world scenarios from our 10+years of experience developing enterprise applications with java. ",
+        "title": "Jakarta EE or Spring? Real world testimonies",
+        "description": "You are starting a new project and you need to choose between languages and frameworks but you face one of the toughest decisions about going with the Spring family or the Jakarta EE ecosystem. \r\nIn this session we will discuss how each one can fit in different situations with pros and cons and give you tips to help you choose the right tool for the right problem using real world scenarios from our 10+years of experience developing enterprise applications with java. ",
         "startsAt": null,
         "endsAt": null,
         "isServiceSession": false,
@@ -1837,6 +2065,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "403413",
+        "title": "JSON Data Modeling in Document Databases",
+        "description": "If you’re thinking about using a document database, it can be intimidating to start. A flexible data model gives you a lot of choices, but which way is the right way? Is a document database even the right tool? In this session we’ll go over the basics of data modeling using JSON. We’ll compare and contrast with traditional RDBMS modeling. Impact on application code will be discussed, as well as some tooling that could be helpful along the way. The examples use the free, open-source Couchbase Server document database, but the principles from this session can also be applied to CosmosDb, Mongo, RavenDb, etc.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "51971bf5-3126-4aae-9825-76a0064c8c78",
+            "name": "Matthew Groves"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "403939",
         "title": "Just Code isn't enough, A successful project needs more....",
         "description": "We’ve been working in evolving organizations with their projects and in the banking industry arise brand new digital transformation areas with cloud-native journeys. At this talk, we will share the importance of a healthy culture and soft skills beyond to have great coders. We modernize and improve our teams (and eventually an organization’s) to increase velocity for delivering software-based projects. Let us show you how we improve and influence people, processes, and eventual technology decisions.",
@@ -1858,6 +2130,50 @@
               {
                 "id": 143433,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "406344",
+        "title": "Keeping It SAST-y",
+        "description": "SAST, SCA, DAST, IAST, RASP? What is the meaning of all these security tools and what do they mean to developers? With the threat to application security ever increasing, it is more important than ever to understand how to leverage tooling effectively to be your trusty sidekick in the battle against cybercrime.\r\n\r\nIn this session, we’ll dive into static application security testing (SAST), static analysis concepts, and the strategies behind it. We’ll also discuss how to take advantage of tools to painlessly improve code security.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "46674040-9656-42ec-a5b7-915c11e2727b",
+            "name": "Theresa Mammarella"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
               }
             ],
             "sort": 0
@@ -3552,8 +3868,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 143433,
-                "name": "Practices and other tech"
+                "id": 143431,
+                "name": "Frameworks"
               }
             ],
             "sort": 0

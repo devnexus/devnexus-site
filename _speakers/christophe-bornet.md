@@ -1,0 +1,36 @@
+---
+id: ba74fc9f-17cd-4e44-92f8-d6a697bb1486
+firstName: Christophe
+lastName: Bornet
+fullName: Christophe Bornet
+bio: Christophe is a senior software engineer at DataStax. Open-Source lover, he is
+  a core team member of JHipster and OpenAPI-generator. He discovered Pulsar in 2018
+  during a R&D project he was leading at Cdiscount and since then has made various
+  contributions to it.
+tagLine: Senior Software Engineer at DataStax
+profilePicture: https://sessionize.com/image/c7ae-400o400o2-4c4ecebb-ccd7-4159-be2f-c6059d2a5467.jpg
+sessions:
+- id: 407872
+  name: Introducing Spring for Apache Pulsar
+isTopSpeaker: false
+links:
+- title: Twitter
+  url: https://twitter.com/cbornet_
+  linkType: Twitter
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: DataStax
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@cbornet_"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: christophe-bornet
+
+---

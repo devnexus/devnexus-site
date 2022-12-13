@@ -1,0 +1,40 @@
+---
+id: 4deee821-d54c-4f81-a909-07a61689e41e
+firstName: Brian
+lastName: Sam-Bodden
+fullName: Brian Sam-Bodden
+bio: 'Brian Sam-Bodden is a developer advocate at Redis as well as an author, instructor,
+  speaker, and open source contributor who has spent over twenty years crafting software
+  systems. He holds dual bachelor’s degrees from Ohio Wesleyan University in computer
+  science and physics. Brian is a frequent speaker at user groups and conferences
+  nationally and abroad and is the author of “Beginning POJOs: Spring, Hibernate,
+  JBoss and Tapestry”, co-author of the “Enterprise Java Development on a Budget:
+  Leveraging Java Open Source Technologies” and a contributor to O''Reilly''s “97
+  Things Every Project Manager Should Know”.'
+tagLine: Developer Advocate at Redis
+profilePicture: https://sessionize.com/image/ea17-400o400o2-aGYnjmLgSFmMb33LCLBw9S.jpg
+sessions:
+- id: 405943
+  name: Vector Similarity Search in Spring with Redis Stack
+isTopSpeaker: false
+links:
+- title: Twitter
+  url: https://twitter.com/bsbodden/
+  linkType: Twitter
+questionAnswers:
+- id: 43778
+  question: Company
+  questionType: Short_Text
+  answer: Redis
+  sort: 14
+  answerExtra: 
+- id: 43782
+  question: 'Twitter handle with @ ex: @prpatel'
+  questionType: Short_Text
+  answer: "@bsbodden"
+  sort: 18
+  answerExtra: 
+categories: []
+slug: brian-sam-bodden
+
+---
