@@ -69,7 +69,12 @@ defaults:
        path: ""
        type: "events"
     values:
-      layout: "preso_details"   
+      layout: "preso_details" 
+  - scope:
+       path: ""
+       type: "speakers"
+    values:
+      layout: "speaker_bio"        
 _options:
   logo_image:
     width: 360

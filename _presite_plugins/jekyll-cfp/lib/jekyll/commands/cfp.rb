@@ -27,6 +27,7 @@ module Jekyll
             e.action do |args, options|
                edata = (options['file']) ? read_data(options['file']) : fetch_data(url)
                write_data_json("speakers", edata)
+               process_speaker_collection(edata)
             end
           end
           pcmd.command(:schedule) do |s|
@@ -54,11 +55,20 @@ module Jekyll
           File.write( filename, data_in )
           Jekyll.logger.info("#{filename}  written")  
         end
+        def process_speaker_collection( event_data )
+          speaker_json = JSON.parse(event_data)
+          Jekyll.logger.info("Reading #{speaker_json.length} events from cfp")
+          for speaker in speaker_json do
+             #track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
+             #event["track"] = track_category.first()["categoryItems"].first()["name"]
+             write_item("speakers", speaker, "")
+          end  
+        end
         def process_event_collection( event_data )
               event_json = JSON.parse(event_data)
               #puts(event_json.first())
               events = event_json.first()["sessions"]
-              #puts(events)
+              #puts(events)#
               Jekyll.logger.info("Reading #{events.length} events from cfp")
               for event in events do
                  track_category = event["categories"].select{ |k,v| k["name"] == "Track" }

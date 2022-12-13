@@ -1,18 +1,17 @@
 ---
 layout: page
 ---
-{% assign speaker = site.data.speakers[page.speaker] %}
 <section id="speaker" class="bg-light-gray details"
 	style="margin-top: 2em; text-align: left; padding-bottom: 0">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<div class="speaker-member row">
-				{% if speaker_assets.avatar_path %}
-				<img src="{{speaker_assets.avatar_path}}"
-					class="img-responsive col-xs-3 col-xs-offset-1" alt="{{speaker_assets.name}}">
+				{% if speaker.profilePicture %}
+				<img src="{{page.profilePicture}}"
+					class="img-responsive col-xs-3 col-xs-offset-1" alt="{{page.fullName}}">
 				{% endif %}
 				<h4>
-					{{ speaker_assets.name }}
+					{{ page.fullName}}
 				</h4>
 				{% if page.twitter %}
 					<div>
@@ -44,14 +43,20 @@ layout: page
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="biography-header">Biography</div>
 			<div class="biography-body">
-         {{ content }}
-      </div>
+              {{ page.bio }}
+            </div>
 		</div>
-	</div>
-	{% if page.events %}
-	  {% assign ordered_events = page.events | sort %}
+	{% if page.sessions %}
+	<div class="col-sm-10 col-sm-offset-1">
+	  {% assign ordered_events = page.sessions | sort: "name" %}
 	  {% for e in ordered_events %}
-	    {% include event_abstract.html event=e %}
+	     <div class="biography-body">
+          <a href="/presentations/{{e.id}}" title="{{e.name | escape }}">
+              <h3>{{e.name | escape }}</h3>
+           </a>
+		 </div>
 	  {% endfor %}
+	</div>  
 	{% endif %}
+   </div>
 </section>

@@ -84,6 +84,48 @@
     "categories": []
   },
   {
+    "id": "6ca4dbda-e3ec-4bbe-b2cb-265787c1b93e",
+    "firstName": "Alex",
+    "lastName": "Borysov",
+    "fullName": "Alex Borysov",
+    "bio": "Alex Borysov is a staff software engineer at Netflix. He is a clean coder and a test-driven developer with solid experience building and running World-scale software systems. \r\nDuring his career, Alex developed and run machine-learning infrastructure for payments fraud detection at Google, large-scale backends at Nest, microservice architecture for World-leading social casino games, core infrastructure services for a unicorn startup in Silicon Valley with 300+ million users. \r\nHe has been a speaker on Java, open-source technologies and building reliable software systems at numerous conferences, including Devoxx, OSCON and others.",
+    "tagLine": "Staff Software Engineer at Netflix",
+    "profilePicture": "https://sessionize.com/image/58bf-400o400o2-da-e3ec-4bbe-b2cb-265787c1b93e.e4a6bf33-10e3-49b0-845e-03acf460ff13.png",
+    "sessions": [
+      {
+        "id": 402628,
+        "name": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/aiborisov",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netflix",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@aiborisov",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
     "firstName": "Alex",
     "lastName": "Riviere",
@@ -494,6 +536,48 @@
     "categories": []
   },
   {
+    "id": "130a4bc5-3b04-4a0c-95e6-62fad0b4d722",
+    "firstName": "Brian",
+    "lastName": "Demers",
+    "fullName": "Brian Demers",
+    "bio": "Brian Demers is a Developer Advocate at Okta and a PMC member for the Apache Shiro project. He spends much of his day contributing to OSS projects in the form of writing code, tutorials, blogs, and answering questions. Along with typical software development, Brian also has a passion for fast builds and automation. \r\n\r\nAway from the keyboard, Brian is a beekeeper and can likely be found playing board games.  You can find him on Twitter at https://twitter.com/briandemers.",
+    "tagLine": "Okta Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/6e05-400o400o2-RWc9UVby28C5D9gCzRWqMT.jpg",
+    "sessions": [
+      {
+        "id": 401231,
+        "name": "How to report a vulnerability: Responsible Disclosure for Developers"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/briandemers",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Okta",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@BrianDemers",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "4deee821-d54c-4f81-a909-07a61689e41e",
     "firstName": "Brian",
     "lastName": "Sam-Bodden",
@@ -776,6 +860,42 @@
     "categories": []
   },
   {
+    "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+    "firstName": "Chris",
+    "lastName": "Bono",
+    "fullName": "Chris Bono",
+    "bio": "Spring Cloud Dataflow / Stream Apps / Spring Pusar Austin, TX",
+    "tagLine": "Software Engineer - Spring Team at VMware",
+    "profilePicture": "https://sessionize.com/image/fc26-400o400o2-NXhT3zJ5p3E3D9J5AgWhUV.jpg",
+    "sessions": [
+      {
+        "id": 407872,
+        "name": "Introducing Spring for Apache Pulsar"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chris_onobc",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "730a789f-e2a8-483d-91bc-6e794f1b44d5",
     "firstName": "Chris",
     "lastName": "DeMars",
@@ -811,6 +931,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@saltnburnem",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ba74fc9f-17cd-4e44-92f8-d6a697bb1486",
+    "firstName": "Christophe",
+    "lastName": "Bornet",
+    "fullName": "Christophe Bornet",
+    "bio": "Christophe is a senior software engineer at DataStax. Open-Source lover, he is a core team member of JHipster and OpenAPI-generator. He discovered Pulsar in 2018 during a R&D project he was leading at Cdiscount and since then has made various contributions to it.",
+    "tagLine": "Senior Software Engineer at DataStax",
+    "profilePicture": "https://sessionize.com/image/c7ae-400o400o2-4c4ecebb-ccd7-4159-be2f-c6059d2a5467.jpg",
+    "sessions": [
+      {
+        "id": 407872,
+        "name": "Introducing Spring for Apache Pulsar"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/cbornet_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "DataStax",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@cbornet_",
         "sort": 18,
         "answerExtra": null
       }
@@ -1902,7 +2064,7 @@
     "sessions": [
       {
         "id": 405717,
-        "name": "JAKARTAEE or Spring? Real world testimonies"
+        "name": "Jakarta EE or Spring? Real world testimonies"
       }
     ],
     "isTopSpeaker": false,
@@ -1944,7 +2106,7 @@
     "sessions": [
       {
         "id": 405717,
-        "name": "JAKARTAEE or Spring? Real world testimonies"
+        "name": "Jakarta EE or Spring? Real world testimonies"
       }
     ],
     "isTopSpeaker": false,
@@ -2642,6 +2804,48 @@
     "categories": []
   },
   {
+    "id": "51971bf5-3126-4aae-9825-76a0064c8c78",
+    "firstName": "Matthew",
+    "lastName": "Groves",
+    "fullName": "Matthew Groves",
+    "bio": "Matthew D. Groves is a guy who loves to code.  It doesn't matter if it's C#, jQuery, or PHP: he'll submit pull requests for anything.  He has been coding professionally ever since he wrote a QuickBASIC point-of-sale app for his parent's pizza shop back in the 90s.  He currently works as a Senior Product Marketing Manager for Couchbase. His free time is spent with his family, watching the Reds, and getting involved in the developer community.  He is the author of AOP in .NET, Pro Microservices in .NET, a Pluralsight author, and a Microsoft MVP.",
+    "tagLine": "Microsoft MVP, Couchbase Product Marketing",
+    "profilePicture": "https://sessionize.com/image/d509-400o400o2-wonFrykcLo8evNhzdvr2Aq.jpg",
+    "sessions": [
+      {
+        "id": 403413,
+        "name": "JSON Data Modeling in Document Databases"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mgroves",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Couchbase",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mgroves",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "645d7f63-231c-497c-97c6-2e2fc1aa0521",
     "firstName": "Michael",
     "lastName": "Coté",
@@ -2677,6 +2881,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@cote",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
+    "firstName": "Mykyta",
+    "lastName": "Protsenko",
+    "fullName": "Mykyta Protsenko",
+    "bio": "Mykyta Protsenko is a senior software engineer at Netflix. He is passionate about all things scalable, from coding to deploying to monitoring.\r\n\r\nYou can find Mykyta speaking at a variety of conferences - OSCON, DevNexus, Devoxx (Ukraine, Belgium, United Kingdom), QCon and others.",
+    "tagLine": "Senior Software Engineer @ Netflix",
+    "profilePicture": "https://sessionize.com/image/38d4-400o400o2-LBGwx87LnYsqfp91ML1bt8.jpg",
+    "sessions": [
+      {
+        "id": 402628,
+        "name": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netflix",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mykyta_p",
         "sort": 18,
         "answerExtra": null
       }
@@ -2976,6 +3216,48 @@
     "categories": []
   },
   {
+    "id": "5ecff6ff-7704-433e-a38f-a057d05eacec",
+    "firstName": "Olena",
+    "lastName": "Kutsenko",
+    "fullName": "Olena Kutsenko",
+    "bio": "Olena is a software engineer and a developer advocate currently working at Aiven. She is passionate about open source, data, sustainable software development and team work. Her knowledge is shaped by expertise she acquired working in such companies as Nokia, HERE Technologies and AWS and now Aiven; and from the countries she was lucky to live in - Ukraine, Sweden, Spain and Germany. She is also one of Apache Kafka Catalysts.",
+    "tagLine": "Sr. Developer Advocate at aiven.io",
+    "profilePicture": "https://sessionize.com/image/ca81-400o400o2-7mNAyC2oNMYeSPsawgJ18C.jpg",
+    "sessions": [
+      {
+        "id": 406814,
+        "name": "Beginners guide to balance your data across Apache Kafka partitions"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/OlenaKutsenko",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Aiven",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@OlenaKutsenko",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "90d4149a-7993-407f-a350-a0d7a8a04440",
     "firstName": "Orlando",
     "lastName": "Valdez",
@@ -3209,6 +3491,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@stmcallister",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "930ecac6-9fc1-4f69-9cf6-2a8fbf04ad58",
+    "firstName": "Simon",
+    "lastName": "Bennetts",
+    "fullName": "Simon Bennetts",
+    "bio": "Simon Bennetts released OWASP ZAP in 2010 and since then has shepherded it to become the world's most popular web vulnerability scanner.\r\nHe is very active in OWASP and sits on the OWASP Project Committee.\r\n\r\nHe has talked about and demonstrated ZAP at conferences all over the world, including Blackhat, JavaOne, FOSDEM and OWASP AppSec EU, USA & AsiaPac.\r\nPrior to making the move into security he was a developer for 25 years and strongly believes that you cannot build secure web applications without knowing how to attack them.",
+    "tagLine": "Distinguished Engineer",
+    "profilePicture": "https://sessionize.com/image/db68-400o400o2-Jew87jSUPhekb9KCufhyCS.png",
+    "sessions": [
+      {
+        "id": 402393,
+        "name": "DAST, SAST, SCA … OMG. WTF?! Choosing the Right Security Tools for Modern Apps"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
         "sort": 18,
         "answerExtra": null
       }
@@ -3516,6 +3834,10 @@
     "tagLine": "Developer Advocate",
     "profilePicture": "https://sessionize.com/image/560a-400o400o2-NNK1AYs14qoDyfQRt6iqRj.jpg",
     "sessions": [
+      {
+        "id": 406344,
+        "name": "Keeping It SAST-y"
+      },
       {
         "id": 405699,
         "name": "The Anatomy of Java Vulnerabilities"
