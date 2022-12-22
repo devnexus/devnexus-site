@@ -19,18 +19,10 @@ $action-button-color: #f6921e;
   color: $tm-dev-color;
 }
 .thumb {
-  width: 258px;
-  max-height: 258px;
   display: block;
   overflow: hidden;
   img {
-    height: 128px;
-    width: auto;
     overflow: hidden;
-  }
-  h3 {
-    width: 128px;
-    height: 128px;
   }
 }
 .level-height{
