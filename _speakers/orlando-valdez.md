@@ -13,7 +13,10 @@ sessions:
 - id: 390707
   name: Progressive Delivery with Kubernetes and Argo Rollouts
 isTopSpeaker: false
-links: []
+links:
+- title: Twitter
+  url: https://twitter.com/orlandovaldez_
+  linkType: Twitter
 questionAnswers:
 - id: 43778
   question: Company

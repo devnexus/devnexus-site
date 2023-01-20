@@ -19,7 +19,7 @@ tagLine: Observability Lead, Red Hat Runtimes
 profilePicture: https://sessionize.com/image/b047-400o400o2-TspvYDQpLe76KJdM2uNSRC.jpg
 sessions:
 - id: 402787
-  name: Oberservability For Java Devs - 2023 Edition
+  name: Observability For Java Devs - 2023 Edition
 isTopSpeaker: false
 links: []
 questionAnswers:

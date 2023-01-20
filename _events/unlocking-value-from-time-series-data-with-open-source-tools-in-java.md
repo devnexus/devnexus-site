@@ -14,7 +14,7 @@ isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 8908ee3e-c72a-4125-b71d-98e39ce27c0b
-  name: Zoe Steinkamp
+  name: zoe Steinkamp
 categories:
 - id: 43783
   name: Track

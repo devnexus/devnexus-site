@@ -14,6 +14,8 @@ bio: Jonatan Ivanov is an enthusiastic Software Engineer, member of the Spring E
 tagLine: Staff Software Engineer - Spring Engineering Team at VMware
 profilePicture: https://sessionize.com/image/410d-400o400o2-X8WjW2zbKQ26FoYfgfFR6t.jpg
 sessions:
+- id: 417562
+  name: Spring Boot 3 Workshop
 - id: 388048
   name: 'To Production and Beyond: Observability for Modern Spring Applications'
 isTopSpeaker: false

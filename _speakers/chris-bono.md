@@ -3,7 +3,8 @@ id: 974e24f5-044f-4552-a362-fdefd445dabc
 firstName: Chris
 lastName: Bono
 fullName: Chris Bono
-bio: Spring Cloud Dataflow / Stream Apps / Spring Pusar Austin, TX
+bio: "Chris is a staff software engineer on the Spring Team at VMware. \r\nHe is focused
+  on Spring for Apache Pulsar, Spring Cloud Dataflow, and Spring Cloud Stream Applications."
 tagLine: Software Engineer - Spring Team at VMware
 profilePicture: https://sessionize.com/image/fc26-400o400o2-NXhT3zJ5p3E3D9J5AgWhUV.jpg
 sessions:

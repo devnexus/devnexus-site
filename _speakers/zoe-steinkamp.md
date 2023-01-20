@@ -1,8 +1,8 @@
 ---
 id: 8908ee3e-c72a-4125-b71d-98e39ce27c0b
-firstName: Zoe
+firstName: zoe
 lastName: Steinkamp
-fullName: Zoe Steinkamp
+fullName: zoe Steinkamp
 bio: 'Hi! My name is Zoe Steinkamp and I am a developer Advocate for influxData. I
   was a front end software engineer for over 6 years before I moved into a developer
   advocate role. I have been with InfluxDB for over 3 years and i look forward to

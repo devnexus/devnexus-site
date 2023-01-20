@@ -14,7 +14,10 @@ sessions:
 - id: 405699
   name: The Anatomy of Java Vulnerabilities
 isTopSpeaker: false
-links: []
+links:
+- title: Twitter
+  url: https://twitter.com/t_mammarella
+  linkType: Twitter
 questionAnswers:
 - id: 43778
   question: Company

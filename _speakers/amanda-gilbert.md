@@ -13,7 +13,7 @@ tagLine: 'Confluent Senior Solutions Engineer '
 profilePicture: https://sessionize.com/image/7993-400o400o2-45d2c0ab-c7d0-455e-8d5e-a9bfcfe9dd70.jpg
 sessions:
 - id: 396330
-  name: Building Streaming Data Pipelines with Apache Kafka
+  name: 'Hands-on Workshop: Building Streaming Data Pipelines with Apache Kafka'
 isTopSpeaker: false
 links: []
 questionAnswers:

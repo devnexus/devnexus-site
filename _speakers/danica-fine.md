@@ -17,10 +17,10 @@ bio: "Danica began her career as a software engineer in data visualization and w
 tagLine: Senior Developer Advocate, Confluent
 profilePicture: https://sessionize.com/image/b09f-400o400o2-HXEJCqY3Z5x442yWBeHx3U.png
 sessions:
-- id: 396330
-  name: Building Streaming Data Pipelines with Apache Kafka
 - id: 396329
   name: 'Calculating the Value of Pie: Real-Time Survey Analysis With Apache Kafka®'
+- id: 396330
+  name: 'Hands-on Workshop: Building Streaming Data Pipelines with Apache Kafka'
 isTopSpeaker: false
 links:
 - title: Twitter

@@ -13,7 +13,10 @@ sessions:
 - id: 396344
   name: Properly Managing Data In React
 isTopSpeaker: false
-links: []
+links:
+- title: Twitter
+  url: https://twitter.com/fai_agency1
+  linkType: Twitter
 questionAnswers:
 - id: 43778
   question: Company

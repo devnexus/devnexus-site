@@ -14,6 +14,8 @@ bio: "Ivar Grimstad is the Jakarta EE Developer Advocate at Eclipse Foundation. 
 tagLine: Jakarta EE Developer Advocate
 profilePicture: https://sessionize.com/image/85cf-400o400o2-nDvWdJNV4WYAHMkPbNnipY.png
 sessions:
+- id: 433296
+  name: '5 years of Jakarta EE Panel: a look into the future'
 - id: 387237
   name: Jakarta EE for Spring Developers
 isTopSpeaker: false

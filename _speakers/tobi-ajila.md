@@ -14,7 +14,10 @@ sessions:
 - id: 387120
   name: Enhancing Java applications for the cloud
 isTopSpeaker: false
-links: []
+links:
+- title: Twitter
+  url: https://twitter.com/tobi_ajila
+  linkType: Twitter
 questionAnswers:
 - id: 43778
   question: Company

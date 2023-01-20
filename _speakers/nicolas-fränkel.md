@@ -16,7 +16,7 @@ sessions:
 isTopSpeaker: false
 links:
 - title: Twitter
-  url: https://twitter.com/ajavageek
+  url: https://twitter.com/nicolas_frankel
   linkType: Twitter
 questionAnswers:
 - id: 43778

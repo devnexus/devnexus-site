@@ -19,8 +19,8 @@ categories:
 - id: 43783
   name: Track
   categoryItems:
-  - id: 143434
-    name: Security
+  - id: 143428
+    name: Cloud Infrastructure
   sort: 0
 - id: 43785
   name: Session Format
@@ -32,7 +32,7 @@ roomId:
 room: 
 liveUrl: 
 recordingUrl: 
-track: Security
+track: Cloud Infrastructure
 slug: next-up-spring-security-6
 
 ---
