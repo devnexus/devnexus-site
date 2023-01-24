@@ -7,7 +7,7 @@
         "questionAnswers": [],
         "id": "433296",
         "title": "5 years of Jakarta EE Panel: a look into the future",
-        "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond",
+        "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. ",
         "startsAt": null,
         "endsAt": null,
         "isServiceSession": false,
@@ -30,6 +30,50 @@
               {
                 "id": 151786,
                 "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "390353",
+        "title": "A Call to (GitHub) Actions!",
+        "description": "Since the dawn of ... the epoch?, engineers have been trying to automate away the boring, repetitive stuff.  These days thanks to the rise of Continuous Integration and Continuous Deployment practices, we've never had a richer set of tools.  On the flip side, it can hard to know how to wire it all up to meet your specific needs.  In this talk we'll cover some of these options using GitHub Actions and see how we can automate, and better yet reuse that automation, to make your project management one less reason to lay awake at night.  Join me as I share the lessons learned and practices developed in both my professional and personal software projects.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b45c2a2f-1a8e-42da-bd83-5e4ee168a63c",
+            "name": "Justin Lee"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0
@@ -229,6 +273,102 @@
       },
       {
         "questionAnswers": [],
+        "id": "387605",
+        "title": "Avoiding common pitfalls with modern microservices testing",
+        "description": "Have you ever wondered why your microservices break in production after all the tests have passed during CI/CD? Have you ever wondered if you’re testing too much or too little? If you want to learn about common pitfalls and how to catch them at build time rather than at runtime, this session is for you!\r\n\r\nIn this session, we’ll share some common battle scars from our experiences in the field. Additionally, we will introduce the testing pyramid and explain why it is important in helping to continuously deploy microservices independently without fear. We will demonstrate, through a test-driven development approach, how the combination of Pact contract testing combined with Quarkus developer joy can help prevent your microservices from breaking in production",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
+            "name": "Eric Deandrea"
+          },
+          {
+            "id": "4452d53b-603f-4185-beab-766a19258c0f",
+            "name": "Holly Cummins"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404340",
+        "title": "Batch Processing Cloud Apps with Java",
+        "description": "In the world of cloud-native apps, we need to deal with a large amount of data from multiple sources. This requires considerable effort to read, process, and distribute. As the number of records increases, plain Java may not be the best solution. With many out-of-the-box solutions—such as transaction management, retry, chunk processing, and several templates—the lightweight framework of Spring Batch can help. Combined with the power of Kubernetes, you can easily make your batch processing rise to the clouds. We discuss this universe and its architecture and templates—providing live code examples to demonstrate all possibilities you have on your hands.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
+            "name": "Rodrigo Graciano"
+          },
+          {
+            "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
+            "name": "Elder Moraes"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "403607",
         "title": "BDD from the Trenches",
         "description": "Have you tried Behavior Driven Development and not gotten the expected results? Does the team get bogged down in arguments about whether a statement is a \"given\" or a \"when\"? Are you trying to understand scenarios that run multiple pages in length? Do your specifications break when the development team refactors the UI? \r\n\r\nThis talk will present BDD best practices learned by working with multiple teams over several years to avoid overly complex and brittle specifications, prevent BDD from being yet another source of \"truth\", and other obstacles that may prevent your teams from getting the full value out of the BDD practice",
@@ -342,6 +482,50 @@
               {
                 "id": 143427,
                 "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "405918",
+        "title": "Best Practices for Securing Cloud Native Applications",
+        "description": "Microservices are the foundation for building your application in the cloud and, just like with legacy applications, security is of the upmost importance.  How do you properly secure a Microservice created for the Jakarta Enterprise Edition or MicroProfile specifications?  What are some best practices for authenticating users and authorizing them to access your MicroService?  Join me for an overview of Microservice security, with samples based on the Open Liberty application server.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c36dd00b-205d-4daf-aad2-c543015e4ee0",
+            "name": "Gary Picher"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143434,
+                "name": "Security"
               }
             ],
             "sort": 0
@@ -518,6 +702,50 @@
               {
                 "id": 143433,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "406621",
+        "title": "Change Data Streaming Patterns in Distributed Systems",
+        "description": "Microservices are one of the big trends in software engineering of the last few years; organizing business functionality in several self-contained, loosely coupled services that help teams work efficiently, and make the most suitable technical decisions.\r\n\r\nIn this session, we will discuss and showcase how open-source change data capture (CDC) using Debezium can help with the challenges developers often face when working with microservices.  The session will not only cover what is CDC and how Debezium works, but it will include three critical patterns, Outbox, Stranger Fig, and Saga. We will discuss these patterns in-depth and discover how they overcome the challenges when working with microservices.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "2c3d68dd-0f26-424e-9a11-9773a0dcce59",
+            "name": "Chris Cranford"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0
@@ -742,50 +970,6 @@
               {
                 "id": 143438,
                 "name": "Web and Front-end"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 43785,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 143440,
-                "name": "session"
-              }
-            ],
-            "sort": 2
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null
-      },
-      {
-        "questionAnswers": [],
-        "id": "402393",
-        "title": "DAST, SAST, SCA … OMG. WTF?! Choosing the Right Security Tools for Modern Apps",
-        "description": "The word “security” can be a scary one for us DevOps folks. We want to move fast but no one wants to CI/CD security breaches into production. Security remains hard and it’s often really difficult to know how to get started.\r\n\r\nWhat tools do we really need to use to test the security of modern web apps?\r\nHow do we choose between the alphabet soup of DAST, IAST, RASP, SAST, SCA, etc?\r\nWhat value do each of these give us and when should we use them? (Or even not use them…)\r\n\r\nIn this talk Simon, creator and core maintainer of OWASP ZAP, will explain the differences (and similarities) between the different types of tools available, when we should introduce them into our development lifecycle and the challenges that we are likely to face in using them with modern web apps.\r\nHe will also talk about specific open source tools which can provide real value in this space.\r\n\r\n\r\n",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "930ecac6-9fc1-4f69-9cf6-2a8fbf04ad58",
-            "name": "Simon Bennetts"
-          }
-        ],
-        "categories": [
-          {
-            "id": 43783,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 143434,
-                "name": "Security"
               }
             ],
             "sort": 0
@@ -1282,6 +1466,50 @@
               {
                 "id": 143433,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "435358",
+        "title": "From Code To Production - How Developer Tools Make you Successful",
+        "description": "Developer tools are often seen as an necessary evil: But they truly are key to striving, productive, and performant development. Your choice of tools decides about how fast you can build frictionless cloud and Kubernetes native applications. We take a look at the Red Hat Developer Tools portfolio and see which tool helps you where. Experience how source code moves through unit-tests, into containers, onto staging and arrives in production.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
+            "name": "Markus Eisele"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0
@@ -2266,6 +2494,50 @@
               {
                 "id": 151786,
                 "name": "Jakarta EE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "404193",
+        "title": "Java to Kubernetes for dummies",
+        "description": "Kubernetes, it looks really great. Think about the great features: scaling, reproducibility, etc. Everyone is talking about it, it's hype! So, Let's migrate our Java apps to the cloud and Kubernetes!\r\n\r\nWait a minute ... Have you seen all these YAML files? We hate YAML! It is already a full time job to maintain our Java applications but now with Kubernetes, we also have to\r\n\r\n- write and maintain Dockerfile files\r\n- write and maintain YAML files\r\n- configure and rething our existing CI/CD and deployment architecture\r\n- etc.\r\n\r\nYes during this talk, we are going to suffer 👿 ... but I promise, I will guide you, teaching you the basics of Kubenetes to move your Java apps. I will also show you a way to move your Java apps to Kubernetes with only 6 lines of XML 🤣",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0fc523c3-35a7-4604-8a8a-5ebdaaf34124",
+            "name": "Sun Tan"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0
@@ -3349,6 +3621,94 @@
       },
       {
         "questionAnswers": [],
+        "id": "386806",
+        "title": "Quarkus for Spring Developers",
+        "description": "In this session, I will show concepts and conventions familiar to Spring developers and how those same concepts and conventions can be implemented in Quarkus, all while highlighting similarities and differences between them. Additionally, I will show similarities and differences in how testing is done, highlighting Quarkus Dev Services.\r\n\r\nThis session will be mostly live coding while minimizing the amount of slides. I will introduce an existing Spring application with a full test suite and build a Quarkus equivalent version of it, live.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
+            "name": "Eric Deandrea"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "408219",
+        "title": "Quarkus Unleashed",
+        "description": "Quarkus mission is to transform your entire application, including its libraries, into an artifact that uses significantly fewer resources than traditional approaches. These can then be used to build native applications using GraalVM. To do this, you need to analyze and understand the whole \"closed world\" of the application. The best that can be achieved without the full context is partial and limited generic support. \r\n\r\nIn this session, we will unleash the power of Quarkus Extensions, and show you how to achieve all the Quarkus cool features, like hot reloading, Dev Services, or native compilation to any Java library. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "cd97bed4-f841-4e1f-94bb-43a21a06c582",
+            "name": "Roberto Cortez"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "386492",
         "title": "Reduce System Fragility with Terraform",
         "description": "As infrastructure stacks grow increasingly more complex and involve an ever-growing number of services and systems there are a lot of opportunities for error and misconfiguration. To provide more system stability teams have looked to abstract configuration to its own layer of code. This concept of configuring infrastructure as code is gaining traction throughout the industry for a variety of reasons. It's fast, consistent, reduces errors, self-documentation, and did I mention it's fast? Tools such as Terraform from HashiCorp have emerged as one of the leading ways to declaratively configure technology stacks.\r\n\r\nIn this talk you'll gain an understanding of the benefits of Infrastructure as Code in general, and of using Terraform specifically. You'll be introduced to how Terraform works, what the code looks like, and how to get started.",
@@ -4247,8 +4607,8 @@
             "name": "Session Format",
             "categoryItems": [
               {
-                "id": 143440,
-                "name": "session"
+                "id": 143441,
+                "name": "workshop"
               }
             ],
             "sort": 2
@@ -4393,6 +4753,54 @@
       },
       {
         "questionAnswers": [],
+        "id": "403933",
+        "title": "Thriving in the cloud: Venturing beyond the 12 factors",
+        "description": "Enabling applications to really thrive (and not just survive) in cloud environments can be challenging. The original 12 factor app methodology helped to lay out some of the key characteristics needed for cloud-native applications... but... as our cloud infrastructure and tooling has progressed, so too have these factors. In this workshop we'll dive into the extended and updated 15 factors needed to build cloud native applications that are able to thrive in this environment, and get hands-on with open source technologies and tools (including MicroProfile, Jakarta EE, Open Liberty, OpenJ9, and more!) that can help us achieve this.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b2f9d832-c42b-452b-bbb6-f642cd43ffea",
+            "name": "Rich Hagarty"
+          },
+          {
+            "id": "2fa6c7ec-3bda-4e4f-aba8-4a984328b9e2",
+            "name": "YK Chang"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143441,
+                "name": "workshop"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "412296",
         "title": "To Java 20 and Beyond!",
         "description": "Java 17 has come and gone, but development on Java continues on! What has changed since Java 11? And what changes are being added in Java 20? Come find out!\r\n\r\nIn this presentation we will look at the key changes that have been added to Java post-8, focusing primarily on Java post-11. The large changes; the Module System and Records, quality of life improvements; var, text blocks, pattern matching, and the many performance and runtime improvements. A lot has changed in the JDK in recent releases, take this opportunity to get caught up! ",
@@ -4481,6 +4889,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "405833",
+        "title": "Transitioning to Java 17 from 11 or 8 for Admins",
+        "description": "If you're responsible for deploying Java-based apps (as an admin or developer), you know that transitioning to a new major Java version can be painful--or you may at least fear it will be, so perhaps you/your org have dragged your feet. But new versions can also bring important benefits. \r\n\r\nWhile you can readily find resources discussing Java LANGUAGE and architecture changes between the LTS (and non-LTS) versions, sometimes it's hard for an admin or maintenance dev to sort through what matters for them (who won't be \"touching\" code): which JVM changes are inherent vs optional, which may break or impact how code/apps perform, which may improve things, and so on. This session will look at key changes of this sort for those moving to Java 17, whether from Java 11 or 8.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0f5b487b-27b9-4e7a-a296-f10ad35a7020",
+            "name": "Charlie Arehart"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "402078",
         "title": "Tuning Garbage Collection Algorithms for Cloud Java Applications",
         "description": "The garbage collector's performance is one key feature of the overall performance of any Java application. For many applications, the only tuning required is selecting the appropriate GC algorithm and increasing the heap size. More complex applications will require additional tuning, particularly for specific GC algorithms. Join this talk to gain a better understanding of how choosing and tuning the GC influences the performance of your containerized Java application.",
@@ -4546,6 +4998,50 @@
               {
                 "id": 143438,
                 "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "391064",
+        "title": "Unblock your Event-Loop using Worker Threads",
+        "description": "JavaScript’s single-threaded and event-driven design enables developers to create applications that excel at processing events and coordinating asynchronous I/O. Unfortunately these same applications stall completely if they execute CPU-bound JavaScript code that blocks the event-loop. The introduction of worker threads opens up new possibilities for executing CPU-bound JavaScript code, without impacting application responsiveness.\r\n\r\nJoin this session for a practical introduction to worker threads! We'll examine an application that suffers reduced throughput and increased latency due to CPU-bound tasks blocking the event-loop. We'll then demonstrate how worker threads can be used to address the situation, and perform load testing to prove that our updated application is significantly more responsive. \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "584538b7-7233-402d-8355-da1a0e00a384",
+            "name": "Evan Shortiss"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0
@@ -4946,6 +5442,50 @@
               {
                 "id": 143435,
                 "name": "Tools and techniques"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "386523",
+        "title": "Why You Should Be Doing Contract First API Development",
+        "description": "How do you develop APIs and services efficiently and effectively while improving software quality and team productivity? That's called contract-first API development! By using tools like OpenAPI specification and generator tooling capable of leveraging it, you can leap ahead in your development by generating lots of the boilerplate code, some of your tests, and allowing multiple parallel workstreams within your team. In this session I will show you examples of how you can fast track your API and service development today!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "07f490da-19fd-485a-bc41-27282983f163",
+            "name": "Deven Phillips"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
               }
             ],
             "sort": 0

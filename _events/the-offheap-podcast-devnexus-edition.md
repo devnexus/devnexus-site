@@ -23,8 +23,8 @@ categories:
 - id: 43785
   name: Session Format
   categoryItems:
-  - id: 143440
-    name: session
+  - id: 143441
+    name: workshop
   sort: 2
 roomId: 
 room: 

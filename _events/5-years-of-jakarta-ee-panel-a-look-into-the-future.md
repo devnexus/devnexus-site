@@ -2,8 +2,8 @@
 questionAnswers: []
 id: '433296'
 title: '5 years of Jakarta EE Panel: a look into the future'
-description: Join Jakarta EE experts as they discuss the future with version 11 and
-  beyond
+description: 'Join Jakarta EE experts as they discuss the future with version 11 and
+  beyond. '
 startsAt: 
 endsAt: 
 isServiceSession: false
