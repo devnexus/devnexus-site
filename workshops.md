@@ -4,10 +4,13 @@ permalink: /workshops/index.html
 ---
 
 {% assign workshop_events = site.events | where: "format", "workshop" | sort: "name" %}
+<h1>Full Day Workshops</h1>
 {% for session in workshop_events %}
 
-<h1 class="featured-header"><span>— {{session.name}}—</span></h1>
+<h2 class="featured-header"><a href="/presentations/{{session.slug}}">{{session.title}}</a></h2>
 <div class="row">
-         {% include presentation_thumb.html details=session track="workshop" %}
+    {% for speaker in session.speakers %}
+          {% include workshop_speaker.html data = speaker %}
+    {% endfor %}
 </div>
 {% endfor %}
