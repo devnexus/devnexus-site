@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: introducing-spring-for-apache-pulsar
 
 ---

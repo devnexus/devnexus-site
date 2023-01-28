@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: observability-for-java-devs-2023-edition
 
 ---

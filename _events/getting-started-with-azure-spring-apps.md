@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: getting-started-with-azure-spring-apps
 
 ---

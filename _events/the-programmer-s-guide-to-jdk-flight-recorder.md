@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Tools and techniques
+format: session
 slug: the-programmer-s-guide-to-jdk-flight-recorder
 
 ---

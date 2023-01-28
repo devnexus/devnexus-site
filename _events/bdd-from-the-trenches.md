@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: session
 slug: bdd-from-the-trenches
 
 ---

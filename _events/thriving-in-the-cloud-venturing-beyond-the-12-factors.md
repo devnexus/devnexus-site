@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: workshop
 slug: thriving-in-the-cloud-venturing-beyond-the-12-factors
 
 ---

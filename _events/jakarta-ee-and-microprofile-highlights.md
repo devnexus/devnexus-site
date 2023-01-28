@@ -41,6 +41,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: jakarta-ee-and-microprofile-highlights
 
 ---

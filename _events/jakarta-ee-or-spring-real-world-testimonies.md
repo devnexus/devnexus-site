@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: jakarta-ee-or-spring-real-world-testimonies
 
 ---

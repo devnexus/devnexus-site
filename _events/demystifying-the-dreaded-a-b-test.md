@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
+format: session
 slug: demystifying-the-dreaded-a-b-test
 
 ---

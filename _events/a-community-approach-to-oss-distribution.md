@@ -38,6 +38,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: a-community-approach-to-oss-distribution
 
 ---

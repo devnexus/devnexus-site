@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: deep-dive-microprofile-6-0-with-jakarta-ee-10-core-profile
 
 ---

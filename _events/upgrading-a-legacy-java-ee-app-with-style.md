@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: upgrading-a-legacy-java-ee-app-with-style
 
 ---

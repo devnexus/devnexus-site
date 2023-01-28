@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: workshop
 slug: creating-evolutionary-architecture-and-design-from-problem-to-solution-by-exploring-patterns
 
 ---

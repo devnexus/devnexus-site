@@ -31,6 +31,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: know-your-java
 
 ---

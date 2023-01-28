@@ -22,7 +22,7 @@ sessions:
 isTopSpeaker: false
 links:
 - title: Twitter
-  url: http://twitter.com/paasdev
+  url: https://twitter.com/PaaSDev
   linkType: Twitter
 questionAnswers:
 - id: 43778

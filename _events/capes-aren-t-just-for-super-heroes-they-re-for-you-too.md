@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: session
 slug: capes-aren-t-just-for-super-heroes-they-re-for-you-too
 
 ---

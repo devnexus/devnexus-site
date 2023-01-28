@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: secrets-of-performance-tuning-java-on-kubernetes
 
 ---

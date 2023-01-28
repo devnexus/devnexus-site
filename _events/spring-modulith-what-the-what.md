@@ -45,6 +45,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: spring-modulith-what-the-what
 
 ---

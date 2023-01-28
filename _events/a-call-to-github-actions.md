@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: a-call-to-github-actions
 
 ---

@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: quarkus-for-spring-developers
 
 ---

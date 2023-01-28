@@ -30,6 +30,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: beyond-rest-and-crud-integration-patterns-in-microservices
 
 ---

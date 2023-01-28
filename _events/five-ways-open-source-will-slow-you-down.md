@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: session
 slug: five-ways-open-source-will-slow-you-down
 
 ---

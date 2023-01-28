@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: let-s-take-a-look-at-how-a-jakarta-ee-cloud-native-application-should-look
 
 ---

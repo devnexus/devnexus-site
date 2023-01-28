@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: transitioning-to-java-17-from-11-or-8-for-admins
 
 ---

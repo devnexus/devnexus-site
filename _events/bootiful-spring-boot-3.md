@@ -31,6 +31,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: bootiful-spring-boot-3
 
 ---

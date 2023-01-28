@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: session
 slug: hands-on-introduction-to-opentelemetry-tracing
 
 ---

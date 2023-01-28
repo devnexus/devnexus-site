@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: dataframes-collections-and-streams-in-java
 
 ---

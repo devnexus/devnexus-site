@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: best-practices-for-securing-cloud-native-applications
 
 ---

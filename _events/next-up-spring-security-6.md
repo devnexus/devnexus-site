@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: next-up-spring-security-6
 
 ---

@@ -14,8 +14,8 @@ endsAt:
 isServiceSession: false
 isPlenumSession: false
 speakers:
-- id: 07f490da-19fd-485a-bc41-27282983f163
-  name: Deven Phillips
+- id: e5d975bd-70f4-4676-8c3c-956f2e62d0ab
+  name: Daniel Vaseekaran
 categories:
 - id: 43783
   name: Track
@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: why-you-should-be-doing-contract-first-api-development
 
 ---

@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
+format: workshop
 slug: accessibility-auditing-getting-started-with-accessibility
 
 ---

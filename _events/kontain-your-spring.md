@@ -53,6 +53,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: kontain-your-spring
 
 ---

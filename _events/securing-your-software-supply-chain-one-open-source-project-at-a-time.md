@@ -39,6 +39,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: securing-your-software-supply-chain-one-open-source-project-at-a-time
 
 ---

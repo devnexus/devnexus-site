@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
+format: session
 slug: full-stack-reactive-with-spring-boot-react
 
 ---

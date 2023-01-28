@@ -43,6 +43,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: keynote
 slug: harnessing-the-hyper-dimensional-mind-visualizing-brain-computer-interfaces
 
 ---

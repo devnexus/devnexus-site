@@ -32,6 +32,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: empowering-developers-to-embrace-security
 
 ---

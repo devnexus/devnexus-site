@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: refactor-your-code-to-java-20
 
 ---

@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: from-javax-to-jakarta-the-path-paved-with-pitfalls
 
 ---

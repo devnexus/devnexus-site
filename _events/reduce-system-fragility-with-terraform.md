@@ -38,6 +38,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: reduce-system-fragility-with-terraform
 
 ---

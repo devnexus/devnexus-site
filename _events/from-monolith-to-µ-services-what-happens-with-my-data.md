@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: session
 slug: from-monolith-to-µ-services-what-happens-with-my-data
 
 ---

@@ -39,6 +39,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: avoiding-common-pitfalls-with-modern-microservices-testing
 
 ---

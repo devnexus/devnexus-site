@@ -3,9 +3,10 @@ id: 8983937d-7fc9-4cb4-bdcf-ce009d874531
 firstName: Rodrigo
 lastName: Graciano
 fullName: Rodrigo Graciano
-bio: 'Rodrigo Graciano has over 15 years of software development experience and is
-  a Principal Software Engineer at a financial institution in NY. He is also a senior
-  member and a Leader in the NYJavaSIG, the Java User Group from NY. '
+bio: Rodrigo Graciano is a Java Champion with over 15 years of software development
+  experience and is a Principal Software Engineer at a financial institution in NY.
+  He is also a senior member and a Leader in the NYJavaSIG, the Java User Group from
+  NY.
 tagLine: 'Principal Software Engineer and NYJavaSIG Leader '
 profilePicture: https://sessionize.com/image/c15c-400o400o2-VYFRcNXCwDPN7R59Gf2poe.jpg
 sessions:

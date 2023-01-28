@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: say-the-words-modern-java-with-javafx-for-rich-client-uis
 
 ---

@@ -44,6 +44,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: workshop
 slug: hands-on-workshop-building-streaming-data-pipelines-with-apache-kafka
 
 ---

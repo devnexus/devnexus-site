@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: service-mesh-for-java-developers
 
 ---

@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: session
 slug: observing-minecraft
 
 ---

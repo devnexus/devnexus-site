@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: ci-cd-pipelines-what-why-how
 
 ---

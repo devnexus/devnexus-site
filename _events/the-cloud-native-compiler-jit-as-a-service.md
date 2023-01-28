@@ -43,6 +43,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: the-cloud-native-compiler-jit-as-a-service
 
 ---

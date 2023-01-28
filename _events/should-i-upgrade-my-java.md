@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: should-i-upgrade-my-java
 
 ---

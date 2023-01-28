@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Tools and techniques
+format: session
 slug: wired-how-your-brain-learns-new-programming-languages
 
 ---

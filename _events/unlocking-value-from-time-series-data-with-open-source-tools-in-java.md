@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Tools and techniques
+format: session
 slug: unlocking-value-from-time-series-data-with-open-source-tools-in-java
 
 ---

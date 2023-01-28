@@ -47,6 +47,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: cooking-recipes-coding-an-ide-and-you
 
 ---

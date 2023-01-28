@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: keeping-it-sast-y
 
 ---

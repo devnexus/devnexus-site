@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: natively-cloud-native-building-agile-microservices-with-micronaut
 
 ---

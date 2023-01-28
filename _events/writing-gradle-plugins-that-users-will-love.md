@@ -41,6 +41,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Tools and techniques
+format: session
 slug: writing-gradle-plugins-that-users-will-love
 
 ---

@@ -41,6 +41,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: patterns-predictions-and-prescriptions
 
 ---

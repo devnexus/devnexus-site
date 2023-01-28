@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: session
 slug: json-data-modeling-in-document-databases
 
 ---

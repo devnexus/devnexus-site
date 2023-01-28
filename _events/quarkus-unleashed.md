@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: quarkus-unleashed
 
 ---

@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: change-data-streaming-patterns-in-distributed-systems
 
 ---

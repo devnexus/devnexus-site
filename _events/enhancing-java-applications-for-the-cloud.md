@@ -38,6 +38,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: enhancing-java-applications-for-the-cloud
 
 ---

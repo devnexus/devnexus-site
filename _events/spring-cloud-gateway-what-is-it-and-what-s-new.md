@@ -32,6 +32,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: spring-cloud-gateway-what-is-it-and-what-s-new
 
 ---

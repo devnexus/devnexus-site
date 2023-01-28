@@ -32,6 +32,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: java-s-hidden-gems-tools-and-libraries
 
 ---

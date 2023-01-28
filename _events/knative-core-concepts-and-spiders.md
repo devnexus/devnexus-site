@@ -41,6 +41,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: knative-core-concepts-and-spiders
 
 ---

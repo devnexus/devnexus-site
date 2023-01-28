@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: to-production-and-beyond-observability-for-modern-spring-applications
 
 ---

@@ -41,6 +41,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: the-right-number-of-partitions-for-a-kafka-topic
 
 ---

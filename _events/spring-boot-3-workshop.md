@@ -47,6 +47,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: workshop
 slug: spring-boot-3-workshop
 
 ---

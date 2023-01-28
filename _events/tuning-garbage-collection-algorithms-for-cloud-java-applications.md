@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: tuning-garbage-collection-algorithms-for-cloud-java-applications
 
 ---

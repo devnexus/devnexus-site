@@ -39,6 +39,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: spring-recipes-a-collection-of-common-sense-solutions
 
 ---

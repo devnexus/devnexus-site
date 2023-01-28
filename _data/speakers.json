@@ -324,48 +324,6 @@
     "categories": []
   },
   {
-    "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
-    "firstName": "Bazlur",
-    "lastName": "Rahman",
-    "fullName": "Bazlur Rahman",
-    "bio": "A N M Bazlur Rahman works at Contrast Security as a Sr. Software Engineer. He has more than ten years of professional experience in the software industry, predominantly in Java and Java-related technologies. Recently, he was named a Java Champion.\r\n\r\nOutside of his regular work hours, he loves to mentor, write, speak at conferences, and contribute to open-source projects. He is the founder and current moderator of the Java User Group in Bangladesh. He has organized meetups and conferences to share Java-related knowledge with the community since 2013. He was named Most Valuable Blogger (MVP) at DZone, one of the most recognized technology publishers in the world. Besides DZone, he is an editor for the Java Queue at InfoQ, another leading technology content publisher and conference organizer, and an editor at Foojay.io, a place for friends of OpenJDK. In addition, he has published four books about the Java programming language in Bengali; they were bestsellers in Bangladesh.\r\n\r\nHe earned his bachelor's degree from the Institute of Information Technology, University of Dhaka, Bangladesh, in Information Technology, majoring in Software Engineering. He currently lives in Toronto, Canada.",
-    "tagLine": "Java Champion | Software Engineer | JUG Leader | Author | Blogger | Editor at InfoQ and Foojay.IO.",
-    "profilePicture": "https://sessionize.com/image/806b-400o400o2-6uWbfpKDpruNtv2Vb9NUS.jpg",
-    "sessions": [
-      {
-        "id": 398029,
-        "name": "A tale of two cities: blocking code vs. non-blocking code"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/bazlur_rahman",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Contract Security",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@bazlur_rahman",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "6cd60db6-95a3-4541-bf0f-1311e3ad75c0",
     "firstName": "Ben",
     "lastName": "Evans",
@@ -1218,6 +1176,84 @@
     "categories": []
   },
   {
+    "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+    "firstName": "Daniel",
+    "lastName": "Oh",
+    "fullName": "Daniel Oh",
+    "bio": "Daniel Oh is a Senior Principal Developer Advocate at Red Hat to evangelize developers for building Cloud-Native Microservices and Serverless Functions with Cloud-Native Runtimes(i.e. Quarkus, Spring Boot, Node.js) and OpenShift/Kubernetes. Daniel also continues to contribute to various cloud open-source projects and ecosystems as a CNCF ambassador for accelerating DevOps adoption in enterprises. He's speaking at lots of technical seminars, workshops, and meetups to elaborate on new emerging technologies for enterprise developers & DevOps teams.",
+    "tagLine": "Senior Principal Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/09c4-400o400o2-EGznTkriaXEpHctFxwQR9y.jpg",
+    "sessions": [
+      {
+        "id": 386951,
+        "name": "Event-driven autoscaling for Serverless Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/danieloh30",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@danieloh30",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e5d975bd-70f4-4676-8c3c-956f2e62d0ab",
+    "firstName": "Daniel",
+    "lastName": "Vaseekaran",
+    "fullName": "Daniel Vaseekaran",
+    "bio": "Daniel Vaseekaran is a Senior Consultant experienced in all aspects of Cloud Native Application Development.  Mr. Vaseekaran has worked with clients to establish best practices in developing and deploying Cloud Native Runtimes on OpenShift.  He has excellent knowledge of the entire lifecycle of software development including Domain-Driven Design, Contract First API Development, Testing Best Practices, and CI/CD Release Management.  He is a Red Hat Certified Engineer and has experience with automation and infrastructure setup tools like Ansible and Helm.  Currently he is specializing in enabling clients to use Service Mesh and Envoy to utilize better traffic control and monitoring within their Kubernetes environments.  ",
+    "tagLine": "Senior Consultant, Cloud Native Runtimes",
+    "profilePicture": "https://sessionize.com/image/c3cb-400o400o2-1c49464f-c373-4987-b7f6-f5cd6e01a711.jpg",
+    "sessions": [
+      {
+        "id": 386523,
+        "name": "Why You Should Be Doing Contract First API Development"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dvaseekara3",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
     "firstName": "DaShaun",
     "lastName": "Carter",
@@ -1295,42 +1331,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@denismagda",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "07f490da-19fd-485a-bc41-27282983f163",
-    "firstName": "Deven",
-    "lastName": "Phillips",
-    "fullName": "Deven Phillips",
-    "bio": "Deven is a Senior Consulting Engineer with Red Hat's Cloud Native Application Development Practice, a program focused on helping organizations build cloud native software to market more quickly. The practice brings together open source tools, methods, and open culture to help companies become more innovative. Deven is proficient in many popular programming languages, as well as experienced in a number of different architectural platforms. Deven specializes in Microservices, Cloud, DevOps, Design Thinking, Domain Driven Design, and Kubernetes to create solutions which delight customers.",
-    "tagLine": "Senior Innovator With Red Hat Cloud Native Application Development Practice",
-    "profilePicture": "https://sessionize.com/image/a87a-400o400o2-JCnVKorvPoc9aVUu2CpLAV.jpg",
-    "sessions": [
-      {
-        "id": 386523,
-        "name": "Why You Should Be Doing Contract First API Development"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Red Hat, Inc.",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@infosec812",
         "sort": 18,
         "answerExtra": null
       }
@@ -1647,48 +1647,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@ebullientworks",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "584538b7-7233-402d-8355-da1a0e00a384",
-    "firstName": "Evan",
-    "lastName": "Shortiss",
-    "fullName": "Evan Shortiss",
-    "bio": "Evan Shortiss is a Developer Advocate at Red Hat, where he helps developers to be successful with cloud-native technologies. He has more than ten years of development experience, with a focus on building web applications and backends using JavaScript ecosystem technologies. ",
-    "tagLine": "Developer Advocate at Red Hat",
-    "profilePicture": "https://sessionize.com/image/6ada-400o400o2-SVt5GrAcoa1Ytpm2Pt4LS9.jpg",
-    "sessions": [
-      {
-        "id": 391064,
-        "name": "Unblock your Event-Loop using Worker Threads"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/evanshortiss",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Red Hat",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@evanshortiss",
         "sort": 18,
         "answerExtra": null
       }
@@ -4258,7 +4216,7 @@
     "firstName": "Rodrigo",
     "lastName": "Graciano",
     "fullName": "Rodrigo Graciano",
-    "bio": "Rodrigo Graciano has over 15 years of software development experience and is a Principal Software Engineer at a financial institution in NY. He is also a senior member and a Leader in the NYJavaSIG, the Java User Group from NY. ",
+    "bio": "Rodrigo Graciano is a Java Champion with over 15 years of software development experience and is a Principal Software Engineer at a financial institution in NY. He is also a senior member and a Leader in the NYJavaSIG, the Java User Group from NY.",
     "tagLine": "Principal Software Engineer and NYJavaSIG Leader ",
     "profilePicture": "https://sessionize.com/image/c15c-400o400o2-VYFRcNXCwDPN7R59Gf2poe.jpg",
     "sessions": [
@@ -4897,7 +4855,7 @@
     "links": [
       {
         "title": "Twitter",
-        "url": "http://twitter.com/paasdev",
+        "url": "https://twitter.com/PaaSDev",
         "linkType": "Twitter"
       }
     ],

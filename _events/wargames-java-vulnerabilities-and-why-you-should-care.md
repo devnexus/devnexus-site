@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: wargames-java-vulnerabilities-and-why-you-should-care
 
 ---

@@ -49,6 +49,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: session
 slug: beginners-guide-to-balance-your-data-across-apache-kafka-partitions
 
 ---

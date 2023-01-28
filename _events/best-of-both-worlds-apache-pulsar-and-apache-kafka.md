@@ -35,6 +35,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: session
 slug: best-of-both-worlds-apache-pulsar-and-apache-kafka
 
 ---

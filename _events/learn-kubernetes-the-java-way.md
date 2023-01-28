@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: learn-kubernetes-the-java-way
 
 ---

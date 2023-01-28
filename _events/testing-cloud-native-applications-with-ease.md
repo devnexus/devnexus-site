@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: testing-cloud-native-applications-with-ease
 
 ---

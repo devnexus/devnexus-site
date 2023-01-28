@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: loom-virtual-threads-in-the-jdk-20
 
 ---

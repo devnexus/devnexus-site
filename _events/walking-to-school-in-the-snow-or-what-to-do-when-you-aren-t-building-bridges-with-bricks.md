@@ -38,6 +38,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Architecture
+format: keynote
 slug: walking-to-school-in-the-snow-or-what-to-do-when-you-aren-t-building-bridges-with-bricks
 
 ---

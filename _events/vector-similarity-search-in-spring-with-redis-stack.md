@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: vector-similarity-search-in-spring-with-redis-stack
 
 ---

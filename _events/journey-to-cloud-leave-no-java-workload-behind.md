@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Java Platform
+format: session
 slug: journey-to-cloud-leave-no-java-workload-behind
 
 ---

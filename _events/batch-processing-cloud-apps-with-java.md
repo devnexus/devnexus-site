@@ -38,6 +38,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Unobtanium
+format: session
 slug: batch-processing-cloud-apps-with-java
 
 ---

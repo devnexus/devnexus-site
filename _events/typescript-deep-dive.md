@@ -31,6 +31,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
+format: session
 slug: typescript-deep-dive
 
 ---

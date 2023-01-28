@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: from-java-17-to-21-and-beyond-loom-amber-and-valhalla
 
 ---

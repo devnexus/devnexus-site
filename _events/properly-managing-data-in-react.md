@@ -30,6 +30,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
+format: session
 slug: properly-managing-data-in-react
 
 ---

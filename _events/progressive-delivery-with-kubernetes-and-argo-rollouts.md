@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Technology
+format: session
 slug: progressive-delivery-with-kubernetes-and-argo-rollouts
 
 ---

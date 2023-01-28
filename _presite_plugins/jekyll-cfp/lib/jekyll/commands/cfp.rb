@@ -72,7 +72,9 @@ module Jekyll
               Jekyll.logger.info("Reading #{events.length} events from cfp")
               for event in events do
                  track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
+                 format_category = event["categories"].select{ |k,v| k["name"] == "Session Format" }
                  event["track"] = track_category.first()["categoryItems"].first()["name"]
+                 event["format"] = format_category.first()["categoryItems"].first()["name"]
                  event["slug"] = Jekyll::Utils.slugify(event["title"])
                  write_item("events", event, "")
               end  

@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Jakarta EE
+format: session
 slug: jakarta-ee-10-and-beyond
 
 ---

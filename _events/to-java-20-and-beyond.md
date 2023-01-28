@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: to-java-20-and-beyond
 
 ---

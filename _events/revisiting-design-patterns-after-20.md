@@ -37,6 +37,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: session
 slug: revisiting-design-patterns-after-20
 
 ---

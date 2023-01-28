@@ -36,6 +36,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Frameworks
+format: session
 slug: spring-cloud-stream-past-present-and-future
 
 ---

@@ -31,6 +31,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Core Java
+format: workshop
 slug: the-offheap-podcast-devnexus-edition
 
 ---

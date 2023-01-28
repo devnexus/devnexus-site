@@ -34,6 +34,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Practices and other tech
+format: session
 slug: things-we-ve-learned-about-better-software-delivery-principles-through-a-pandemic
 
 ---

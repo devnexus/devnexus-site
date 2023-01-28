@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Tools and techniques
+format: session
 slug: if-it-isn-t-hot-it-doesn-t-deliver-apache-pinot-food-delivery-and-why-real-time-analytics-matter
 
 ---

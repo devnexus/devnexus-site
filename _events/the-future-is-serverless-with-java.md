@@ -33,6 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Cloud Infrastructure
+format: session
 slug: the-future-is-serverless-with-java
 
 ---

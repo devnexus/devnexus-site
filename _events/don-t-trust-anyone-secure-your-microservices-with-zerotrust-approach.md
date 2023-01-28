@@ -40,6 +40,7 @@ room:
 liveUrl: 
 recordingUrl: 
 track: Security
+format: session
 slug: don-t-trust-anyone-secure-your-microservices-with-zerotrust-approach
 
 ---
