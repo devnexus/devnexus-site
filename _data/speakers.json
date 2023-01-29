@@ -1928,7 +1928,7 @@
     "firstName": "Gary",
     "lastName": "Picher",
     "fullName": "Gary Picher",
-    "bio": "Gary Picher has worked in the WebSphere Application Server organization of IBM for 20 years.  He is currently the WebSphere Security Architect, responsible for both the security of the application server itself, as well as ensuring that customers have all the functionality and guidance they need to secure their own installations and applications.  Prior to that, Gary spent time as the WebSphere Release Architect, where he moved WebSphere Liberty from a quarterly to 4-week delivery cycle to align better with modern DevOps practices.  Gary has also spent a decade as the team lead for the z/OS runtime component of WebSphere Application Server.",
+    "bio": "Gary Picher has worked in the WebSphere Application Server organization of IBM for 20 years.  He is currently the WebSphere Security Architect, responsible for both the security of the application server itself, as well as ensuring that customers have all the functionality and guidance they need to secure their own installations and applications.  Prior to that, Gary spent time as the WebSphere Release Architect, where he moved WebSphere Liberty from a quarterly to 4-week delivery cycle to align better with modern DevOps practices.  Gary has also spent a decade as the team lead for the z/OS runtime component of WebSphere Application Server.",
     "tagLine": "IBM WebSphere Security Architect",
     "profilePicture": "https://sessionize.com/image/5392-400o400o2-Piv9w1aKsSxd59kjHUCY6N.jpg",
     "sessions": [
@@ -1964,7 +1964,7 @@
     "firstName": "Gerrit",
     "lastName": "Grunwald",
     "fullName": "Gerrit Grunwald",
-    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
     "tagLine": "Senior Developer Advocate at Azul Systems",
     "profilePicture": "https://sessionize.com/image/347e-400o400o2-DZYSvNYq2n8gn4Qzy9FnQs.png",
     "sessions": [
@@ -2734,7 +2734,7 @@
     "firstName": "Josh",
     "lastName": "Juneau",
     "fullName": "Josh Juneau",
-    "bio": "Josh Juneau works as an application developer, system analyst, and database administrator.  He primarily develops using Java and other JVM languages.  Josh is a technical writer for OTN and Java Magazine, and has published a number of titles for Apress including: “Introducing Java EE 7”, “Java EE 8 Recipes”, and “Java 9 Recipes”.  Josh was also a co-author of “The Definitive Guide to Jython”, and “PL/SQL Recipes”.\r\n\r\nJosh is an active member of the Apache NetBeans community, and has served on the JavaOne Content Review Committee for multiple years.  Josh was a JCP Expert Group member for JSRs 372 and 378, and he is a committer for the EE4J Mojarra project.  He is an advocate of the Adopt-a-JSR program, and helps to lead the open source initiative for the Chicago Java Users Group (CJUG).  He is a regular on the Java OffHeap Podcast, and you can reach him through his Twitter handle: @javajuneau or you can follow his blog at http:http://jj-blogger.blogspot.com",
+    "bio": "Josh Juneau works as an application developer, system analyst, and database administrator.  He primarily develops using Java and other JVM languages.  Josh is a technical writer for OTN and Java Magazine, and has published a number of titles for Apress including: “Introducing Java EE 7”, “Java EE 8 Recipes”, and “Java 9 Recipes”.  Josh was also a co-author of “The Definitive Guide to Jython”, and “PL/SQL Recipes”.\r\n\r\nJosh is an active member of the Apache NetBeans community, and has served on the JavaOne Content Review Committee for multiple years.  Josh was a JCP Expert Group member for JSRs 372 and 378, and he is a committer for the EE4J Mojarra project.  He is an advocate of the Adopt-a-JSR program, and helps to lead the open source initiative for the Chicago Java Users Group (CJUG).  He is a regular on the Java OffHeap Podcast, and you can reach him through his Twitter handle: @javajuneau or you can follow his blog at http:http://jj-blogger.blogspot.com",
     "tagLine": "Jakarta EE Guru",
     "profilePicture": "https://sessionize.com/image/80cc-400o400o2-SQEs1RYgLEq5LRpA7wyWfn.jpg",
     "sessions": [
@@ -4175,7 +4175,7 @@
     "lastName": "Cortez",
     "fullName": "Roberto Cortez",
     "bio": "Roberto Cortez is a passionate Java Developer involved within the Open Source Community to help other individuals spread knowledge about Java technologies. He is a regular speaker at conferences like JavaOne, Devoxx, Devnexus, JFokus, etc. He leads the Coimbra JUG and founded the JNation Conference in Portugal. When he is not working, he hangs out with friends, plays computer games, and spends time with family.",
-    "tagLine": "Principal Software Engineer @ Redhat",
+    "tagLine": "Principal Software Engineer @ Redhat",
     "profilePicture": "https://sessionize.com/image/55cb-400o400o2-SnK6BxLPhxZqxDAAmyVFGW.jpg",
     "sessions": [
       {
