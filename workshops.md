@@ -3,6 +3,7 @@ layout: info-fluid
 permalink: /workshops/index.html
 ---
 
+
 {% assign workshop_events = site.events | where: "format", "workshop" | sort: "name" %}
 <h1>Full Day Workshops</h1>
 {% for session in workshop_events %}
