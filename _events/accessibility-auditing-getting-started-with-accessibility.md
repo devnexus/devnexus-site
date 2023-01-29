@@ -29,15 +29,15 @@ categories:
 - id: 43785
   name: Session Format
   categoryItems:
-  - id: 143441
-    name: workshop
+  - id: 143440
+    name: session
   sort: 2
 roomId: 
 room: 
 liveUrl: 
 recordingUrl: 
 track: Web and Front-end
-format: workshop
+format: session
 slug: accessibility-auditing-getting-started-with-accessibility
 
 ---

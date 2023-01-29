@@ -23,15 +23,15 @@ categories:
 - id: 43785
   name: Session Format
   categoryItems:
-  - id: 143441
-    name: workshop
+  - id: 143440
+    name: session
   sort: 2
 roomId: 
 room: 
 liveUrl: 
 recordingUrl: 
 track: Core Java
-format: workshop
+format: session
 slug: the-offheap-podcast-devnexus-edition
 
 ---
