@@ -10,6 +10,11 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2023
 ---
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1ba6a052b038947f3ba6c1eb7a922b944df7fd12
 {% assign workshop_events = site.events | where: "format", "workshop" | sort: "name" %}
 <div class="featured-header">
    <h1>Full Day Workshops</h1>
