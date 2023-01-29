@@ -2,16 +2,16 @@
 {% assign key = include.data %}
 {% assign details = site.speakers | where: "fullName", key.name | first %}
 {% assign speaker_img = details.profilePicture | "/uploads/anonymous-avatar.jpeg" %}
-<div class="row">
+<div class="row speaker">
+  <div class="col-xs-12">
+    <h3>{{ details.fullName | escape }}</h3>
+ </div>
   <div class="col-sm-2">
     <a href="/speakers/{{ details.slug }}">
-      <img class="img-responsive" src="{{speaker_img}}" alt="{{ details.fullName }}" >
-      <div class="caption">
-          <h3>{{ details.fullName | escape }}</h3>
-      </div>
-    </a>       
-  </div>
-  <div class="col-sm-10">
-    {{ details.bio | escape }}
-  </div>
+      <img class="img-responsive" src="{{speaker_img}}" alt="{{ details.fullName }}" />
+    </a>
+    </div>
+   <div class="col-sm-10">           
+     {{ details.bio | escape }}
+   </div>
 </div>

@@ -122,3 +122,11 @@ $action-button-color: #f6921e;
   color: #EEE;
   background-color: #79A70A;
 }
+.workshop-promo-row {
+  font-size: 24px;
+  border-bottom: solid 1px #979797;
+  margin: 20px;
+  .speaker {
+    margin-top: 1em;
+  }
+}
