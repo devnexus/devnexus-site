@@ -15,6 +15,8 @@ isPlenumSession: false
 speakers:
 - id: 6a38c6dc-efc8-405e-b827-932356dd3d76
   name: Steve Riesenberg
+- id: feba8c56-4b68-41e6-8d2d-b2324a5e18c8
+  name: Josh Cummings
 categories:
 - id: 43783
   name: Track

@@ -2065,6 +2065,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "439410",
+        "title": "How to Fix Your Technical Debt Dilemma",
+        "description": "When you think about 1,700 developer days (or 4.8 years of time) in the engineering world, how does that make you feel? To me, it feels like infinity. Technical debt can show up like this in an organization. It’s a backlog of issues—migrating software, cleaning up code, and fixing security vulnerabilities—that can paralyze engineering organizations and lead to burnout. And the reality of modern applications is that they naturally accrue tech debt. They are composed of large and diverse codebases and ecosystems—a supply chain of custom, third-party, and open source software. Dependencies are changing frequently and evolve at their own pace. Not updating leads to critical bugs, performance, and security issues. The key to fixing your technical debt dilemma is continuous software modernization. You’ll never get behind when maintenance work that would normally take many months of manual effort can be automated and completed with a PR in minutes. This is how developers stay energized and your business can thrive.\r\n\r\nIn this talk, I’ll introduce OpenRewrite, an open source, auto-refactoring technology that was born at Netflix in 2016. It uses sophisticated, fast code search capabilities in combination with powerful change recipes that actually fix the code. I’ll share a use case of a common issue remediation—running a recipe live that fixes the issue and executing it across 300 million lines of open source code. The recipe will be made available in open source for you to apply to your own codebase at the end of the session.\r\n\r\nKey Take-aways:\r\n\r\n* Technical debt can be reframed as continuous software modernization with robust automation that not only finds the issues, but fixes them regularly.\r\n* OpenRewrite uses a similar approach as an IDE to automate refactoring, but takes it out of single person, single repo mode, so it can be delivered in different ways. The refactoring is 100% accurate and style preserving.\r\n* You can see immediate results using the open source change recipes from OpenRewrite—just try out one recipe and get days of your time back!\r\n* Moderne has a Saas platform that works with OpenRewrite recipes to help you execute continuous software modernization at scale—across repositories simultaneously\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ac15c088-f8fe-44a8-9a82-3b92b39456e1",
+            "name": "Jonathan Schneider"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "401231",
         "title": "How to report a vulnerability: Responsible Disclosure for Developers",
         "description": "Ever seen a security-related issue that you felt should be reported? Unsure of how reporting security issue is different than a regular bug? Developers of any level should know how to report a vulnerability. In this talk, we will talk about what CVEs are, some general vulnerability classifications, look at a few common ways you can report security issues, as well as look at a few common mistakes. This talk is geared toward non-security professionals.",
@@ -3368,6 +3412,10 @@
           {
             "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
             "name": "Steve Riesenberg"
+          },
+          {
+            "id": "feba8c56-4b68-41e6-8d2d-b2324a5e18c8",
+            "name": "Josh Cummings"
           }
         ],
         "categories": [
@@ -3466,6 +3514,50 @@
               {
                 "id": 143433,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "439323",
+        "title": "Panel Session: Moving the Java Community Forward",
+        "description": "Over the last 25+ years, Java has offered developers a wealth of technical value. The technical heartbeat is strong and vibrant. But as we look towards the next 25 years and beyond, the value of Java is dependent on...YOU. It's the community who gives life to Java, ensuring it meets the needs of modern application development. For Java, the future isn't some distant dot on a calendar, the future is NOW. In this panel session, learn from some of the most recognized Java community luminaries how you can participate to ensure Java moves forward.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "51c5bfbf-09f4-4f65-ac3b-78e45742b156",
+            "name": "Sharat Chander"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143430,
+                "name": "Core Java"
               }
             ],
             "sort": 0
@@ -4866,50 +4958,6 @@
               {
                 "id": 143431,
                 "name": "Frameworks"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 43785,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 143440,
-                "name": "session"
-              }
-            ],
-            "sort": 2
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null
-      },
-      {
-        "questionAnswers": [],
-        "id": "405833",
-        "title": "Transitioning to Java 17 from 11 or 8 for Admins",
-        "description": "If you're responsible for deploying Java-based apps (as an admin or developer), you know that transitioning to a new major Java version can be painful--or you may at least fear it will be, so perhaps you/your org have dragged your feet. But new versions can also bring important benefits. \r\n\r\nWhile you can readily find resources discussing Java LANGUAGE and architecture changes between the LTS (and non-LTS) versions, sometimes it's hard for an admin or maintenance dev to sort through what matters for them (who won't be \"touching\" code): which JVM changes are inherent vs optional, which may break or impact how code/apps perform, which may improve things, and so on. This session will look at key changes of this sort for those moving to Java 17, whether from Java 11 or 8.",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "0f5b487b-27b9-4e7a-a296-f10ad35a7020",
-            "name": "Charlie Arehart"
-          }
-        ],
-        "categories": [
-          {
-            "id": 43783,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 143432,
-                "name": "Java Platform"
               }
             ],
             "sort": 0
