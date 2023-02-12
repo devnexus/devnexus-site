@@ -1,16 +1,16 @@
-{% assign preso = site.events | where: "slug", include.details.id | first %}
+{% assign preso_url = include.details.title | slugify %}
 <div class="row schedule-row">
 		<div class=" col-xs-12 workshop">
-				<a href="{{preso.url}}">{{preso.title | escape}}</a>
-
+				<a href="/presentations/{{preso_url}}">{{include.details.title | escape}}</a>
 				<br/>
 				<span class="small">
-				{% for speaker in preso.persons %}
-					 <a href="/speakers/{{speaker.id}}">{{ speaker.full_public_name }}</a>
+				{% for speaker in include.details.speakers%}
+				    {% assign speaker_url = speaker.name | slugify %}
+					 <a href="/speakers/{{speaker_url}}">{{ speaker.name }}</a>
 				{% endfor %}
 			 </span>
 			 <span class="small pull-right">
 				 {{ preso.classroom}} |	{{ include.details.duration | remove: "0"| remove: ":" }} hours
  			</span>
-	  </div>
+	    </div>
 </div>
