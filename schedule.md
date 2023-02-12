@@ -40,9 +40,10 @@ layout: info-fluid
           <h2 class="day "> Wednesday Apr 5 - Day 1 </h2>
         </div>
         {% for slot in day1_times %}
+        {% assign rooms = slot.rooms | sort: "name" %}
         <div class="until09">
           <h3>{{slot.slotStart}}</h3>
-          {% for room in slot.rooms %}
+          {% for room in rooms %}
             {% include schedule_event.html details=room.session %}
           {% endfor %}
         </div>
@@ -65,7 +66,8 @@ layout: info-fluid
         {% for slot in day2_times %}
         <div class="until09">
           <h3>{{slot.slotStart}}</h3>
-          {% for room in slot.rooms %}
+          {% assign rooms = slot.rooms | sort: "name" %}
+          {% for room in rooms %}
             {% include schedule_event.html details=room.session %}
           {% endfor %}
         </div>
