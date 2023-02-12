@@ -3,11 +3,11 @@
 {% assign location = site.data.tracks[include.track] %}
 <div class="row schedule-row {{preso.track}}">
 		<div class="col-xs-12 {{color}}">
-				<a href="{{preso.url}}">{{preso.title | escape}}</a>
+				<a href="{{preso.title | slugify }}">{{preso.title | escape}}</a>
 				<br/>
 				<span class="small">
-				{% for speaker in preso.persons %}
-					 <a href="/speakers/{{speaker.id}}">{{ speaker.full_public_name }}</a>
+				{% for speaker in preso.speakers %}
+					 <a href="/speakers/{{speaker.name | slugify }}">{{ speaker.name }}</a>
 				{% endfor %}
 			 </span>
 			<br/>
