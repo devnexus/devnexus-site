@@ -1,6 +1,12 @@
 {% assign preso = include.details %}
-{% assign color = include.room | replace: ' ', '-' | replace: 'admin', 'keynote' | downcase %}
 {% assign location = site.data.tracks[include.track] %}
+{% if preso.categories.size > 0 %}
+   {% assign color = "break" %}
+   {% assign track = preso.categories[0].categoryItems[0].name %}
+{% else %}   
+   {% assign color = "workshop" %}
+   {% assign track = "mingle" %}
+{% endif %}
 <div class="row schedule-row {{preso.track}}">
 		<div class="col-xs-12 {{color}}">
 				<a href="{{preso.title | slugify }}">{{preso.title | escape}}</a>
@@ -12,7 +18,7 @@
 			 </span>
 			<br/>
 			<span class="small pull-right">
-				{{location.title}} | {{ preso.room }}
+				{{track}} | {{ preso.room }}
 			</span>
 	  </div>
 </div>
