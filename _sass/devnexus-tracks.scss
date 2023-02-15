@@ -35,6 +35,12 @@ $room-color-jvm-languages: #007a4b;
 
 .schedule-row {
   align-content: center;
+  .foyer {
+    @include room($room-color-open-java);
+  }
+  .track {
+    @include room($room-color-frameworks);
+  }
   .keynote {
     @include room($room-color-auditorim);
   }
