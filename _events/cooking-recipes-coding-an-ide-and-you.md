@@ -20,8 +20,8 @@ description: "Tasks from our everyday lives, such as cooking, involve initiating
   and correctly use your libraries/API.\r\n\r\nWith this session you’ll learn how
   to make Paneer Tikka Masala and while learning new or better ways to use Java asynchronous
   and non-blocking APIs."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -42,12 +42,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: cooking-recipes-coding-an-ide-and-you
 
 ---

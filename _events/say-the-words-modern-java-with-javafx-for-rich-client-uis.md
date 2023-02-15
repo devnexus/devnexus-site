@@ -10,8 +10,8 @@ description: "Wordle is a popular online game where you have up to six tries to 
   for CSS styling. Understand JavaFX property binding to control UI state and use
   JavaFX animation for cool looking effects. We'll also use modern Java including
   lambdas, streams, method references, records, and enhanced switch expressions."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: say-the-words-modern-java-with-javafx-for-rich-client-uis
 
 ---

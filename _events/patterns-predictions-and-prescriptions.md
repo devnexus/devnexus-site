@@ -16,8 +16,8 @@ description: "\"One of the most interesting aspects of the world is that it can 
   explore some basic ML use cases, take a look at JSR #381 (Visual Recognition for
   Java), and then dive into issues, strategies, and the near-term and long-term directions
   of ML."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: patterns-predictions-and-prescriptions
 
 ---

@@ -8,8 +8,8 @@ description: Vector Similarity Search (VSS) is no longer a feature that lives in
   how to implement VSS in Spring applications using Redis Stack enhanced search capabilities.
   We'll learn about creating embeddings for your data, learn about Vector databases,
   Vectorization of your data, similarity metrics, and more.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: vector-similarity-search-in-spring-with-redis-stack
 
 ---

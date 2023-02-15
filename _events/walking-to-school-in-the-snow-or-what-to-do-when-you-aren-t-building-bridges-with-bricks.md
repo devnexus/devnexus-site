@@ -13,8 +13,8 @@ description: "Roman architects and engineers built colosseums, bridges and aqued
   value faster and what these trends mean for developers:\r\n\r\n* Putting Architects
   in the Elevators\r\n* Composable Organizations\r\n* Product vs. Project Thinking\r\n*
   Paved Roads and Golden Paths\r\n* Data Meshes\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143442
     name: keynote
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: keynote
 slug: walking-to-school-in-the-snow-or-what-to-do-when-you-aren-t-building-bridges-with-bricks
 
 ---

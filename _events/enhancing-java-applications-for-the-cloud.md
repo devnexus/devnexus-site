@@ -13,8 +13,8 @@ description: Are you in the process of modernizing your business from a monolith
   also learn how these features integrate seamlessly with existing container technologies
   for simple, secure and predictable deployments. Whether you are a cloud veteran
   or a new comer, there will be lots to learn!
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: enhancing-java-applications-for-the-cloud
 
 ---

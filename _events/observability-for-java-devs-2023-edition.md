@@ -11,8 +11,8 @@ description: "As applications move to containers and migrate to the cloud, they 
   in 2023. You'll learn how to achieve observability in Java using OpenTelemetry,
   the emerging Open Standard for Observability, and we'll meet several other related
   OSS libraries and tools (such as Jaeger) along the way."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: observability-for-java-devs-2023-edition
 
 ---

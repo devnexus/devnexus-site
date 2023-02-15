@@ -8,8 +8,8 @@ description: "Azure Spring Apps makes it easy to deploy Spring Boot applications
   should be able to:\r\n* Efficiently migrate existing Spring apps\r\n* Modernize
   apps with Spring Cloud patterns\r\n* Develop and deploy rapidly without containerization
   dependencies"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: getting-started-with-azure-spring-apps
 
 ---

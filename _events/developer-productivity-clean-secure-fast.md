@@ -12,8 +12,8 @@ description: "The old maxim of you can have it working or on time but not both i
   problem to new thoughts about how we work.  We’ll help you think differently about
   productivity and show you how to take the first steps towards have your cake and
   eating it too"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: developer-productivity-clean-secure-fast
 
 ---

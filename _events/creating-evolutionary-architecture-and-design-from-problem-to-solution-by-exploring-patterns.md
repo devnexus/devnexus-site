@@ -11,8 +11,8 @@ description: "Architecture is not a static representation of a system. There are
   some common and popular architectural patterns.\r\n\r\nFinally, we will take some
   example applications and discuss how to evolve architecture to meet the needs of
   those applications."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-04T09:00:00'
+endsAt: '2023-04-04T10:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143441
     name: workshop
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: workshop
 slug: creating-evolutionary-architecture-and-design-from-problem-to-solution-by-exploring-patterns
 
 ---

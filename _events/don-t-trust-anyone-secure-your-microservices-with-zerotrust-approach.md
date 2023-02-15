@@ -15,8 +15,8 @@ description: "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used t
   Observability, Authz and Authn , and everything without touching a single line of
   our Java ( Quarkus ) microservices and how to change that configuration without
   telling a word to the app developer."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: don-t-trust-anyone-secure-your-microservices-with-zerotrust-approach
 
 ---

@@ -8,8 +8,8 @@ description: "This talk will cover adding observability to your Java Minecraft S
   server health and alerting on issues in real time.\r\nParticipants should expect
   to leave knowing some observability basics and how to use the monitoring to understand
   system health and avoid some potential incidents."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: observing-minecraft
 
 ---

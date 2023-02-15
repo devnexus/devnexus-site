@@ -5,8 +5,8 @@ title: Properly Managing Data In React
 description: One of the biggest issues found in any large-scale application is how
   to properly manage data. in this talk I want to talk about the different ways engineers
   can build applications with appropriate levels and access.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,12 +25,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: properly-managing-data-in-react
 
 ---

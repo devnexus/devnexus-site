@@ -9,8 +9,8 @@ description: How do you develop APIs and services efficiently and effectively wh
   boilerplate code, some of your tests, and allowing multiple parallel workstreams
   within your team. In this session I will show you examples of how you can fast track
   your API and service development today!
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: why-you-should-be-doing-contract-first-api-development
 
 ---

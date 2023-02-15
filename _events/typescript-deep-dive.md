@@ -6,8 +6,8 @@ description: 'Mapped types, template literals, conditional types with infer: oh 
   Come to this talk if you already understand how to use typescript day to day, but
   want to take a deeper dive and understand the more advanced topics in Typescript
   through real world examples and usecases.'
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,12 +26,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: typescript-deep-dive
 
 ---

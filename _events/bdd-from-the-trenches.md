@@ -10,8 +10,8 @@ description: "Have you tried Behavior Driven Development and not gotten the expe
   multiple teams over several years to avoid overly complex and brittle specifications,
   prevent BDD from being yet another source of \"truth\", and other obstacles that
   may prevent your teams from getting the full value out of the BDD practice"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: bdd-from-the-trenches
 
 ---

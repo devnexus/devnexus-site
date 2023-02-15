@@ -15,8 +15,8 @@ description: "Java EE has been re-branded to Jakarta EE and moved to truly open 
   and more.\r\n\r\nYou should come to this session with your thinking caps on and
   your sleeves rolled up. There is much to help move forward together that really
   matters."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: jakarta-ee-10-and-beyond
 
 ---

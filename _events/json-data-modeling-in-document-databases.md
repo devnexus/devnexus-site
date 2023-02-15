@@ -10,8 +10,8 @@ description: If you’re thinking about using a document database, it can be int
   that could be helpful along the way. The examples use the free, open-source Couchbase
   Server document database, but the principles from this session can also be applied
   to CosmosDb, Mongo, RavenDb, etc.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: json-data-modeling-in-document-databases
 
 ---

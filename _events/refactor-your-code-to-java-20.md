@@ -10,8 +10,8 @@ description: "All of a sudden Java is a hip language again. With every release, 
   quests to demonstrate how you can go about changing your code today.\r\n\r\nDisclaimer:
   You might learn about features your colleagues don't want you to know because you
   won’t stop talking about new Java releases \U0001F609\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: refactor-your-code-to-java-20
 
 ---

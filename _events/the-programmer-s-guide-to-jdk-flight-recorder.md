@@ -11,8 +11,8 @@ description: The JDK Flight Recorder (JFR) is an event-based diagnostic and prof
   and more! If you have been wondering how to improve the performance of your Java
   applications or get better insight into their internal workings, this presentation
   is for you!
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: the-programmer-s-guide-to-jdk-flight-recorder
 
 ---

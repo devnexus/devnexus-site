@@ -11,8 +11,8 @@ description: Java is great and we all spend time on making it more performant, m
   like NVD, CVE, CVSS, CPU, PSU etc. mean and how they are related to Java security.
   It will also be shown what tools are available to you to check whether your Java
   application is vulnerable to known issues.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: wargames-java-vulnerabilities-and-why-you-should-care
 
 ---

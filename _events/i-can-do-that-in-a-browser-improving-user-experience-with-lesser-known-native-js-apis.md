@@ -15,8 +15,8 @@ description: 'Did you know that you can access your user''s geolocation coordina
   I''ll also show you some demos that I''ve created with these APIs to show you how
   they can actually be used to make engaging experiences that keep your users happy
   and keep them coming back to your site. '
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: i-can-do-that-in-a-browser-improving-user-experience-with-lesser-known-native-js-apis
 
 ---

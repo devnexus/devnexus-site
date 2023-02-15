@@ -9,8 +9,8 @@ description: "SAST, SCA, DAST, IAST, RASP? What is the meaning of all these secu
   this session, we’ll dive into static application security testing (SAST), static
   analysis concepts, and the strategies behind it. We’ll also discuss how to take
   advantage of tools to painlessly improve code security."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: keeping-it-sast-y
 
 ---

@@ -15,8 +15,8 @@ description: "Data is at the heart of most applications. For ages, Java develope
   this live-coded talk, the attendees will learn about the issues with their existing
   code, create concise and clear data-focused queries, and modify existing code bases
   to avail benefits of Pattern Matching."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: data-focused-programming-with-pattern-matching-in-java
 
 ---

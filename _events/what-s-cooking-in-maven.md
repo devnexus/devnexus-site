@@ -10,8 +10,8 @@ description: "It’s been over 10 years since Maven 3 saw the light, bringing in
   it change the way you use Maven? I will show you by using the latest snapshot builds
   of Maven - time will tell if that’s a brave or a stupid idea…\r\n\r\nJoin me to
   find out what the future of Maven has for you!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: what-s-cooking-in-maven
 
 ---

@@ -11,8 +11,8 @@ description: Since the dawn of ... the epoch?, engineers have been trying to aut
   project management one less reason to lay awake at night.  Join me as I share the
   lessons learned and practices developed in both my professional and personal software
   projects.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: a-call-to-github-actions
 
 ---

@@ -11,8 +11,8 @@ description: "Software is changing the world - and even other planets. An ever-g
   not always be your best bet, or how a workaround may eventually work against you.
   By investigating 5 ways in which you can fail, we can learn valuable lessons on
   what to do instead."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: five-ways-open-source-will-slow-you-down
 
 ---

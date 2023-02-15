@@ -8,8 +8,8 @@ description: "Which streaming technology is right for me? Do I need to use Apac
   to use best of both worlds. Let's compare both architectures and Java Client Implementations
   and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making
   allies?\r\nIt's up to you!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: best-of-both-worlds-apache-pulsar-and-apache-kafka
 
 ---

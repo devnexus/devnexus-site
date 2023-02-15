@@ -18,8 +18,8 @@ description: "The future of human machine teaming will harness the human mind in
   visualizations will be provided which provide insight into the brain's actions and
   how such a technology could be used for good and the betterment of mankind in the
   future. "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T09:00:00'
+endsAt: '2023-04-06T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,12 +38,10 @@ categories:
   - id: 143442
     name: keynote
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: keynote
 slug: harnessing-the-hyper-dimensional-mind-visualizing-brain-computer-interfaces
 
 ---

@@ -6,8 +6,8 @@ description: A brief introduction to functional programming constructs in the Ko
   language. The audience will walk away with an idea of how they can using functional
   programming ideas in their code today to make their code and their tests cleaner
   and easier to understand.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,12 +26,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: functional-kotlin
 
 ---

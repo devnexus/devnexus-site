@@ -13,8 +13,8 @@ description: "More and more teams are leveraging cross-platform development for 
   How web, Android, and iOS deployments are different\r\n- The specific factors to
   consider when building a cross-platform CI/CD strategy\r\n- Options for implementing
   a cloud CI/Cd strategy for all your deployments across multiple platforms"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: cross-platform-cloud-ci-cd
 
 ---

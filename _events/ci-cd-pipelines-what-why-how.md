@@ -10,8 +10,8 @@ description: "To avoid getting caught up in notions of “the right tool” it i
   to monitor, automate, verify and deliver software. \r\nFor example: Tasks, Steps,
   Runs, End-to-end automation, Workflows, Tool orchestration, Release cycles, among
   others. \r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: ci-cd-pipelines-what-why-how
 
 ---

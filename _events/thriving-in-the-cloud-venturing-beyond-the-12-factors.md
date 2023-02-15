@@ -10,8 +10,8 @@ description: Enabling applications to really thrive (and not just survive) in cl
   to build cloud native applications that are able to thrive in this environment,
   and get hands-on with open source technologies and tools (including MicroProfile,
   Jakarta EE, Open Liberty, OpenJ9, and more!) that can help us achieve this.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-04T09:00:00'
+endsAt: '2023-04-04T10:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143441
     name: workshop
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: workshop
 slug: thriving-in-the-cloud-venturing-beyond-the-12-factors
 
 ---

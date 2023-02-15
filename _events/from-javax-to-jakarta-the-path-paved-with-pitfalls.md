@@ -10,8 +10,8 @@ description: "The switch from javax to jakarta namespace is probably the biggest
   the possible options and how best companies can switch.\r\n\r\nNow that we are in
   Jakarta, the platform is evolving very quickly and ignoring the challenge isn’t
   a good bet.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: from-javax-to-jakarta-the-path-paved-with-pitfalls
 
 ---

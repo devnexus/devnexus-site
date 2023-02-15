@@ -9,8 +9,8 @@ description: "In this session I will get you started with real-time cloud native
   Java libraries including native Java client, websockets, MQTT and even Kafka.   \r\n\r\nAfter
   this session you will building real-time streaming and messaging applications with
   Java.  We will also touch on Apache Spark and Apache Flink."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: apache-pulsar-development-101-with-java
 
 ---

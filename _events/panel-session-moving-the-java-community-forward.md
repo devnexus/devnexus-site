@@ -9,8 +9,8 @@ description: Over the last 25+ years, Java has offered developers a wealth of te
   For Java, the future isn't some distant dot on a calendar, the future is NOW. In
   this panel session, learn from some of the most recognized Java community luminaries
   how you can participate to ensure Java moves forward.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: panel-session-moving-the-java-community-forward
 
 ---

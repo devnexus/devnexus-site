@@ -17,8 +17,8 @@ description: "Short version: I'll show you everything you need to know about the
   the spot. Bring your own problems ;-)\r\n\r\nThis talk takes places entirely in
   the command line. No slides, no IDE, just a plain terminal window. After this session,
   you'll be on your way to master the Linux command line yourself!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,12 +37,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: mastering-the-linux-command-line
 
 ---

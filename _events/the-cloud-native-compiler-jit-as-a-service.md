@@ -18,8 +18,8 @@ description: "Adaptive, just in time (JIT) compilation provides a massive perfor
   work.  Finally, there is the opportunity to apply considerably more compute resources
   to enable complex optimizations to be used that wouldn't be practical in a single
   JVM.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,12 +38,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: the-cloud-native-compiler-jit-as-a-service
 
 ---

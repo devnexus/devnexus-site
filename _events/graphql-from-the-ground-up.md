@@ -15,8 +15,8 @@ description: "REST has become a standard for services on the internet, but it is
   data we expose, and why you might consider adopting it yourself. We will also showcase
   the open-source libraries that we created to help both our own services and those
   of the wider community."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: graphql-from-the-ground-up
 
 ---

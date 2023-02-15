@@ -6,8 +6,8 @@ description: Spring Boot 3 is here and with it come a whole host of new opportun
   and possibilities. Join me, Spring Developer Advocate Josh Long and we'll look at
   the amazing new features in Spring Boot 3 that make it the best choice for cloud
   native applications
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,12 +26,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: bootiful-spring-boot-3
 
 ---

@@ -7,8 +7,8 @@ description: "To start, we will provide a brief history of why we built Spring C
   requests. We will also provide an update on what is new in the 2022.0 release train,
   included: observability, native support, and more. To finish, we will provide a
   road map update for 2023.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,12 +27,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: spring-cloud-gateway-what-is-it-and-what-s-new
 
 ---

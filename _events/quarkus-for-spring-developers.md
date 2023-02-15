@@ -9,8 +9,8 @@ description: "In this session, I will show concepts and conventions familiar to 
   Dev Services.\r\n\r\nThis session will be mostly live coding while minimizing the
   amount of slides. I will introduce an existing Spring application with a full test
   suite and build a Quarkus equivalent version of it, live."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: quarkus-for-spring-developers
 
 ---

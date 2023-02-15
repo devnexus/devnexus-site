@@ -9,8 +9,8 @@ description: So many new toys! Over the past several years, JVM engineers have q
   the lines between Java and native languages like C. And there's even more coming
   soon. We'll explore how JVM languages like JRuby can leverage these and other features,
   and talk about what the future holds.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: leading-edge-changing-the-java-world-with-loom-panama-and-more
 
 ---

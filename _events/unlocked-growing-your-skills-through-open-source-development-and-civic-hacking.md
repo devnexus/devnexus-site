@@ -15,8 +15,8 @@ description: "As a developer, we want to increase our knowledge of the developme
   discuss is Civic Hacking. We will define what it is, where to get involved and cover
   its basic tenets:\r\n- Do what you can?\r\n- Where you can?\r\n- With what you've
   got?\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,12 +37,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: unlocked-growing-your-skills-through-open-source-development-and-civic-hacking
 
 ---

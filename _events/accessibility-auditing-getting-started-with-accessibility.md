@@ -12,8 +12,8 @@ description: "This workshop is for people that are just starting or want to get 
   for clients;\r\nUsing the data to make sites more accessible;\r\nWorkflows and toolkits
   that make for efficient auditing.\r\n\r\nBy the time the workshop has ended, the
   attendee should be able to go out and audit websites for accessibility.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: accessibility-auditing-getting-started-with-accessibility
 
 ---

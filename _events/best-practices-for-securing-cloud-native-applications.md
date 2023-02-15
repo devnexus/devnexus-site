@@ -8,8 +8,8 @@ description: Microservices are the foundation for building your application in t
   or MicroProfile specifications?  What are some best practices for authenticating
   users and authorizing them to access your MicroService?  Join me for an overview
   of Microservice security, with samples based on the Open Liberty application server.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: best-practices-for-securing-cloud-native-applications
 
 ---

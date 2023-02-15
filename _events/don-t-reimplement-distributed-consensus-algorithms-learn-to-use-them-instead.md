@@ -14,8 +14,8 @@ description: "Scaling your services is easy when your services are stateless. Ho
   practical aspects of consensus algorithms’ usage. It explains actionable insights
   in (relatively) simple words without pitching a concrete approach or technology
   as a magic cure."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: don-t-reimplement-distributed-consensus-algorithms-learn-to-use-them-instead
 
 ---

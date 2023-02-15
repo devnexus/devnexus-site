@@ -13,8 +13,8 @@ description: "Spring for Apache Pulsar is a library that makes it easy to create
   messaging and queuing built on the pub-sub pattern. Pulsar combines the best features
   of a traditional messaging system like RabbitMQ with those of a pub-sub system like
   Apache Kafka."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: introducing-spring-for-apache-pulsar
 
 ---

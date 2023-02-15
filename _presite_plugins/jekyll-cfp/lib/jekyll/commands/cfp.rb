@@ -33,7 +33,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://sessionize.com/api/v2/g415clv7/view/GridSmart'
+              url = 'https://sessionize.com/api/v2/4oc6i6ox/view/GridSmart'
               if (options['file'])
                 write_data_json("schedule", read_data(options['file']) )
               else
@@ -66,15 +66,21 @@ module Jekyll
         end
         def process_event_collection( event_data )
               event_json = JSON.parse(event_data)
-              #puts(event_json.first())
-              events = event_json.first()["sessions"]
-              #puts(events)#
+              #puts(event_json[0]["sessions"])
+              events = event_json[0]["sessions"]
+              #puts(events)
               Jekyll.logger.info("Reading #{events.length} events from cfp")
               for event in events do
-                 track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
-                 format_category = event["categories"].select{ |k,v| k["name"] == "Session Format" }
-                 event["track"] = track_category.first()["categoryItems"].first()["name"]
-                 event["format"] = format_category.first()["categoryItems"].first()["name"]
+                 if (event["categories"]) 
+                   track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
+                   format_category = event["categories"].select{ |k,v| k["name"] == "Session Format" }
+                   if (event["track"])
+                    event["track"] = track_category.first()["categoryItems"].first()["name"]
+                   end
+                   if (event["format"]) 
+                     event["format"] = format_category.first()["categoryItems"].first()["name"]
+                   end  
+                 end
                  event["slug"] = Jekyll::Utils.slugify(event["title"])
                  write_item("events", event, "")
               end  

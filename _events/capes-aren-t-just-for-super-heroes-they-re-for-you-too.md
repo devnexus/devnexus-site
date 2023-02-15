@@ -10,8 +10,8 @@ description: "CAPES is an acronym for the top soft skills needed in technology t
   most prominent in technology today, detail the pros and cons of soft skills in the
   workplace, list ways that soft skills can help you in your career and identify ways
   we can improve these skills in our everyday lives. "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: capes-aren-t-just-for-super-heroes-they-re-for-you-too
 
 ---

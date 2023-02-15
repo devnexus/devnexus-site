@@ -9,8 +9,8 @@ description: "There are countless practical applications of 3D transforms.  Too 
   without the headache.  Everyone, from academic to beginner will have a clearer understanding
   of the world, both virtual and real.\r\n\r\nIn this talk we review the tiny bits
   of math that masquerade as magic so that everyone feels like they gained superpowers."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: from-your-perspective
 
 ---

@@ -17,8 +17,8 @@ description: "Data is everywhere. It's being produced by almost everything aroun
   own streaming data pipeline.\r\n\r\nNote: This workshop will utilize a free Confluent
   Cloud account for hosting Kafka clusters, stream processing, and schema registry.
   Participants require some programming knowledge."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-04T09:00:00'
+endsAt: '2023-04-04T10:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,12 +39,10 @@ categories:
   - id: 143441
     name: workshop
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: workshop
 slug: hands-on-workshop-building-streaming-data-pipelines-with-apache-kafka
 
 ---

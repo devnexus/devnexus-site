@@ -12,8 +12,8 @@ description: "In 1994, the Gang of Four brought to us 23 different design patter
   Visitor, Command, Decorator, Builder, and other patterns can significantly benefit
   from modern features of Java, such as lambdas, records, switch expressions, and
   much more."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: revisiting-design-patterns-after-20
 
 ---

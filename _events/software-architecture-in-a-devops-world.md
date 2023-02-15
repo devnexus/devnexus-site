@@ -12,8 +12,8 @@ description: "Most modern software teams strive for Continuous Delivery of busin
   architect in the DevOps world. I'll talk about \"just enough\" architecture and
   moving from up front design to evolving architecture.\r\nAfter this session, you'll
   have practical insights and tips in how to work as an architect with a DevOps team."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: software-architecture-in-a-devops-world
 
 ---

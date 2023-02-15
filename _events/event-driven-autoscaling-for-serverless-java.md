@@ -14,8 +14,8 @@ description: "Kubernetes makes it possible to autoscale various business use cas
   will teach you how to redesign your Kubernetes autoscaling architecture by event-driven
   metrics from Apache Kafka over standard resources (CPU, Memory) with Knative and
   KEDA integration for serverless Java using Quarkus.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
 - id: 43783
   name: Track
   categoryItems:
-  - id: 143429
-    name: Cloud Technology
+  - id: 166731
+    name: Unobtanium
   sort: 0
 - id: 43785
   name: Session Format
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: event-driven-autoscaling-for-serverless-java
 
 ---

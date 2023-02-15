@@ -10,8 +10,8 @@ description: "Both MicroProfile and Jakarta EE are cloud native API standards fo
   adoption of Micrometer and MicroProfile Telemetry that consumed OpenTelemetry. Come
   to this session to learn all about the observibility standard for your microservices
   with a live demo on Open Liberty.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: deep-dive-microprofile-6-0-with-jakarta-ee-10-core-profile
 
 ---

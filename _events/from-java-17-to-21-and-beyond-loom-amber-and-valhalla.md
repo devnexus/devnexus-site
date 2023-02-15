@@ -15,8 +15,8 @@ description: "The two years realese cadence of LTS versions gives the entire Jav
   of objects to the language, so that you do not have to choose between performances
   and abstraction. Valhalla will add user defined primitive types to the Java language
   as well value types."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
 - id: 43783
   name: Track
   categoryItems:
-  - id: 143430
-    name: Core Java
+  - id: 143432
+    name: Java Platform
   sort: 0
 - id: 43785
   name: Session Format
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: from-java-17-to-21-and-beyond-loom-amber-and-valhalla
 
 ---

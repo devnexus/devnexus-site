@@ -16,8 +16,8 @@ description: "Every technology has that key concept that people struggle to unde
   cluster and its clients. It will explain the formula people should use to decide
   how many partitions to set for a topic, and how to spot a poor decision when they
   see one."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: the-right-number-of-partitions-for-a-kafka-topic
 
 ---

@@ -18,8 +18,8 @@ description: "Spring Boot 3 is the new major revision of Spring Boot. In this wo
   Spring Boot knowledge (how to create beans and HTTP endpoints), you can learn these
   from our online guides quickly, e.g.: https://spring.io/guides/gs/rest-service/\r\n-
   Java 17 (or higher) installed\r\n- A Java IDE"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-04T09:00:00'
+endsAt: '2023-04-04T10:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -42,12 +42,10 @@ categories:
   - id: 143441
     name: workshop
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: workshop
 slug: spring-boot-3-workshop
 
 ---

@@ -12,8 +12,8 @@ description: "Delivering software fast is one piece of the CI/CD puzzle, but del
   solutions and in 2022 announced a new incubating project, Pyrsia. This talk will
   highlight the importance of securing your software supply chain at the source and
   how Pyrsia is working to solve this problem."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: securing-your-software-supply-chain-one-open-source-project-at-a-time
 
 ---

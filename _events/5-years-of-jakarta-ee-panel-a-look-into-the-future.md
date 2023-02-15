@@ -4,8 +4,8 @@ id: '433296'
 title: '5 years of Jakarta EE Panel: a look into the future'
 description: 'Join Jakarta EE experts as they discuss the future with version 11 and
   beyond. '
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,12 +26,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: 5-years-of-jakarta-ee-panel-a-look-into-the-future
 
 ---
