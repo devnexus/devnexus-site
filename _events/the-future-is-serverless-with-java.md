@@ -8,8 +8,8 @@ description: 'Serverless cloud computing provides you with an infrastructure out
   to strong benefits: higher efficiency, endless scalability, high availability, and
   the lowest possible effort for the development, production usage, administration,
   and maintenance of cloud-native Java applications.'
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: the-future-is-serverless-with-java
 
 ---

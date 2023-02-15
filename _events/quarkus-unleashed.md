@@ -10,8 +10,8 @@ description: "Quarkus mission is to transform your entire application, including
   support. \r\n\r\nIn this session, we will unleash the power of Quarkus Extensions,
   and show you how to achieve all the Quarkus cool features, like hot reloading, Dev
   Services, or native compilation to any Java library. "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: quarkus-unleashed
 
 ---

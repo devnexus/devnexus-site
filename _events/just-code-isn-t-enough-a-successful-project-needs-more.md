@@ -9,8 +9,8 @@ description: We’ve been working in evolving organizations with their projects 
   an organization’s) to increase velocity for delivering software-based projects.
   Let us show you how we improve and influence people, processes, and eventual technology
   decisions.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: just-code-isn-t-enough-a-successful-project-needs-more
 
 ---

@@ -30,8 +30,8 @@ description: "When you think about 1,700 developer days (or 4.8 years of time) i
   days of your time back!\r\n* Moderne has a Saas platform that works with OpenRewrite
   recipes to help you execute continuous software modernization at scale—across repositories
   simultaneously\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -50,12 +50,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: how-to-fix-your-technical-debt-dilemma
 
 ---

@@ -15,8 +15,8 @@ description: "Rewriting systems from a monolithic architecture to a services arc
   involved.\r\n \r\nCome to this session to learn how Kafka and Debezium, through
   Change Data Capture and the Strangler Fig pattern, can help you migrate from monoliths
   to a (micro)services architecture confidently even though databases are involved.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: from-monolith-to-µ-services-what-happens-with-my-data
 
 ---

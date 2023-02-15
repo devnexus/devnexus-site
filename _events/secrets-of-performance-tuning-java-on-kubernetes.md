@@ -12,8 +12,8 @@ description: Initially, getting Java to run on Kubernetes may seem complicated, 
   and costs. This talk will explore JVM ergonomics, CPU throttling, Garbage Collectors,
   and how using this knowledge can help you increase performance while reducing costs
   in the cloud.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: secrets-of-performance-tuning-java-on-kubernetes
 
 ---

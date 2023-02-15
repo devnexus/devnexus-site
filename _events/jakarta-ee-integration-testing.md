@@ -9,8 +9,8 @@ description: "Integration testing is difficult as you need additional systems, l
   and dependencies available in other containers.\r\n\r\nIn this session, we explore
   a few scenarios of how you can use the Testcontainers framework to test your Jakarta
   EE application, including a remote debug session of your code."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T13:30:00'
+endsAt: '2023-04-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: jakarta-ee-integration-testing
 
 ---

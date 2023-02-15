@@ -17,8 +17,8 @@ description: "These days, it’s difficult to keep up with friends and family, e
   for both stateless and stateful processing. \r\n\r\nCome along to see how this recipe
   for real-time survey analysis comes together––and how you, too, can calculate the
   value of pie!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,12 +37,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: calculating-the-value-of-pie-real-time-survey-analysis-with-apache-kafka
 
 ---

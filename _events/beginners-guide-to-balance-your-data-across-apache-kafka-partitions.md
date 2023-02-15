@@ -24,8 +24,8 @@ description: "Apache Kafka is a distributed system. At the heart of Apache Kafka
   that will help you to balance data evenly and produce and consume data efficiently.\r\n\r\nIf
   you are fresh to Apache Kafka, or you're looking for good practices to design your
   partitions and avoid common pitfalls, you'll find this session useful!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -44,12 +44,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: beginners-guide-to-balance-your-data-across-apache-kafka-partitions
 
 ---

@@ -12,8 +12,8 @@ description: "Have you ever wondered why your microservices break in production 
   demonstrate, through a test-driven development approach, how the combination of
   Pact contract testing combined with Quarkus developer joy can help prevent your
   microservices from breaking in production"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: avoiding-common-pitfalls-with-modern-microservices-testing
 
 ---

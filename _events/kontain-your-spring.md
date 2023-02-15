@@ -28,8 +28,8 @@ description: "Although Java originally promised write once, run anywhere, it fai
   and gateways--using native Kubernetes facilities instead of Spring Cloud components.
   And we'll look at how components of the Spring ecosystem can work with your Spring
   applications to enable them to thrive in a Kubernetes cluster.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -48,12 +48,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: kontain-your-spring
 
 ---

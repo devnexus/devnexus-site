@@ -9,8 +9,8 @@ description: Let's explore Rancher Desktop, a full Kubernetes development enviro
   Desktop, a FOSS project backed by SUSE. Rancher Desktop runs on Linux, Windows,
   and Mac. Developers can easily change container runtimes and Kubernetes versions
   to match deployment targets.    https://rancherdesktop.io/
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: introduction-to-rancher-desktop
 
 ---

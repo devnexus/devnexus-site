@@ -10,8 +10,8 @@ description: Jakarta EE 10 has arrived and along with Eclipse MicroProfile, it h
   this talk in which we’ll analyse the anatomy of a Jakarta EE application that’s
   geared to be cloud-native, and how these applications can benefit using standards
   to their benefit and longevity.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: let-s-take-a-look-at-how-a-jakarta-ee-cloud-native-application-should-look
 
 ---

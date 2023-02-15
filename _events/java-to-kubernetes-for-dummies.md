@@ -12,8 +12,8 @@ description: "Kubernetes, it looks really great. Think about the great features:
   we are going to suffer \U0001F47F ... but I promise, I will guide you, teaching
   you the basics of Kubenetes to move your Java apps. I will also show you a way to
   move your Java apps to Kubernetes with only 6 lines of XML \U0001F923"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: java-to-kubernetes-for-dummies
 
 ---

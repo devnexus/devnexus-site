@@ -7,8 +7,8 @@ description: In this talk, I will show you why it is important to empower develo
   between security and development teams will improve developer adoption. We need
   to combine a collaborative culture with the right process and the right tooling
   to enable developers to build their applications more securely.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,12 +27,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: empowering-developers-to-embrace-security
 
 ---

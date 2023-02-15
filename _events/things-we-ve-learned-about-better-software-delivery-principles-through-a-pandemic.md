@@ -9,8 +9,8 @@ description: "Since early 2020, software delivery has undergone quite a shift in
   250M+ workflows, we've found some interesting insights into better DevOps practices.
   In this session, we will seek to uncover what this unique dataset can tell us about
   high-performing teams, and steps to get there as a business."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: things-we-ve-learned-about-better-software-delivery-principles-through-a-pandemic
 
 ---

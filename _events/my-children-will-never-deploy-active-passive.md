@@ -15,8 +15,8 @@ description: "Is your app alone and trembling in a dark, single-region with fail
   a multiple-region or multi-cloud architecture. By the end of this interactive session,
   your apps will be able to shine bright with confidence, resiliency, and no more
   trembling."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: my-children-will-never-deploy-active-passive
 
 ---

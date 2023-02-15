@@ -12,8 +12,8 @@ description: "Many applications rely on cloud solutions like AWS, Azure, and GCP
   test effectively, and look at how Testcontainers features enable working with S3,
   DynamoDB, Lambdas, Google Spanner, and others. Testing your cloud-native applications
   with Localstack and GCloud modules has never been this easy and reliable. "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: testing-cloud-native-applications-with-ease
 
 ---

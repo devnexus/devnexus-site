@@ -11,8 +11,8 @@ description: In the world of cloud-native apps, we need to deal with a large amo
   processing rise to the clouds. We discuss this universe and its architecture and
   templates—providing live code examples to demonstrate all possibilities you have
   on your hands.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: batch-processing-cloud-apps-with-java
 
 ---

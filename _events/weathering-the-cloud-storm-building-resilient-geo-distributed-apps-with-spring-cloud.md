@@ -12,8 +12,8 @@ description: "Cloud availability zones and regions are not immune to outages. Th
   you'll architect and deploy a geo-distributed Slack-like messenger that can span
   several continents, load balance requests across distant regions, and most importantly,
   tolerate various storms and outages in the cloud."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: weathering-the-cloud-storm-building-resilient-geo-distributed-apps-with-spring-cloud
 
 ---

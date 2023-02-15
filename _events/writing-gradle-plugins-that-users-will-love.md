@@ -16,8 +16,8 @@ description: "One of the great things about Gradle Build Tool is that plugins ar
   compatibility testing \r\n \r\nYou'll learn strategies for not only writing your
   plugin well, but keeping it healthy and well behaved as it evolves and new versions
   of Gradle are released."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: writing-gradle-plugins-that-users-will-love
 
 ---

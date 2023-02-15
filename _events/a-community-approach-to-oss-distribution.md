@@ -13,8 +13,8 @@ description: "There are a variety of different attacks on the open source supply
   we will talk about how Pyrsia is designed, how you can use it to distribute and
   consume software packages, and how you can get involved in the Pyrsia community
   to grow the library of OSS software available freely and securely for all."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: a-community-approach-to-oss-distribution
 
 ---

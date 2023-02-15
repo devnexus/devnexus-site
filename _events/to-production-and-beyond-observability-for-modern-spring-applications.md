@@ -15,8 +15,8 @@ description: "You just deployed your application to prod. Congratulations! Is ou
   in Spring Boot and other methods of exploring your running application using Spring
   Boot Actuator, Spring Boot Admin and Spring HATEOAS along with related technologies
   like Eureka, Logbook and Swagger."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: to-production-and-beyond-observability-for-modern-spring-applications
 
 ---

@@ -10,8 +10,8 @@ description: "Service Mesh is the future of application connectivity. It deliver
   (in Kubernetes) - how to install a control plane, deploy a JVM-based demo application
   (using popular java frameworks like spring boot, micronaut, etc), enable traffic
   policies, and touch on observability."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T16:00:00'
+endsAt: '2023-04-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: service-mesh-for-java-developers
 
 ---

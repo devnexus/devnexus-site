@@ -11,8 +11,8 @@ description: The Loom project has been under work for many years, and just deliv
   at almost no cost. These new virtual threads bring with them new notions that will
   be covered in this talk. Loom threads are coming, and they will change the landscape
   of concurrent programming in Java.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: loom-virtual-threads-in-the-jdk-20
 
 ---

@@ -14,8 +14,8 @@ description: "Jakarta EE and MicroProfile are powerful platforms for developing 
   and development of microservices with Payara Micro and Docker. \r\nAttendees will
   walk away with a solid understanding of some of the most important features of Jakarta
   EE and MicroProfile.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: jakarta-ee-and-microprofile-highlights
 
 ---

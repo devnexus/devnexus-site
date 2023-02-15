@@ -10,8 +10,8 @@ description: "Test-Driven Development (TDD) is a simple three-step practice, and
   is usually taught, and how to avoid the most common problems developers have with
   writing automated tests. You will also learn how to leverage the process to minimize
   the time you spend debugging -- which leaves you with more time for the fun parts."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: going-beyond-test-driven-development
 
 ---

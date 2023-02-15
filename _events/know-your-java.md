@@ -6,8 +6,8 @@ description: "Many of us have significant experience in Java. Yet, from time to 
   we get tripped up by some code that we quite did not expect to behave the way it
   does.\r\n\r\nIn this presentation we will take a look at some of those and get a
   deeper understanding of the language we use everyday"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,12 +26,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: know-your-java
 
 ---

@@ -13,8 +13,8 @@ description: The shift towards cloud and container technologies is driving a num
   a compelling and cooperative solution to optimize Java for the cloud. Come to this
   talk to learn more about our vision and strategy for the future of Java performance,
   where no Java workload is left behind in the journey to the cloud.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,12 +35,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: journey-to-cloud-leave-no-java-workload-behind
 
 ---

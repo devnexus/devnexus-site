@@ -11,8 +11,8 @@ description: Spring Cloud Stream is a framework for building highly scalable mic
   "state of the union" session (50/50 presentation/live-code), Glenn will discuss
   and demonstrate the current features, the recent changes and enhancements, and talk
   about what's coming in the future.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: spring-cloud-stream-past-present-and-future
 
 ---

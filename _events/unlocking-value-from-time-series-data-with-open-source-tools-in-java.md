@@ -8,8 +8,8 @@ description: Join Zoe, Developer Advocate at InfluxData, for a session where she
   like Telegraf and InfluxDB can help you build real-time applications faster and
   with less effort. We will also demo how to use InfluxDB to gain visibility and insight
   into your time-stamped data from the edge to the cloud.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33060
+room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
-track: Tools and techniques
-format: session
 slug: unlocking-value-from-time-series-data-with-open-source-tools-in-java
 
 ---

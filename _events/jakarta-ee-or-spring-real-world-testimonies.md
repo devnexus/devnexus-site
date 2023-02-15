@@ -8,8 +8,8 @@ description: "You are starting a new project and you need to choose between lang
   one can fit in different situations with pros and cons and give you tips to help
   you choose the right tool for the right problem using real world scenarios from
   our 10+years of experience developing enterprise applications with java. "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: jakarta-ee-or-spring-real-world-testimonies
 
 ---

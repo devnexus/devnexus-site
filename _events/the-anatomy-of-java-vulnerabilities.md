@@ -12,8 +12,8 @@ description: "Java is everywhere. According to Oracle, it’s on 4 billion devic
   vectors and bad actors. \r\n\r\nUnderstanding how to choose your dependencies more
   wisely to reduce your exposure and keep your application working is a skill we all
   need to grow - start here to begin that journey.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: the-anatomy-of-java-vulnerabilities
 
 ---

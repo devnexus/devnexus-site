@@ -9,8 +9,8 @@ description: "Java 17 has come and gone, but development on Java continues on! W
   Module System and Records, quality of life improvements; var, text blocks, pattern
   matching, and the many performance and runtime improvements. A lot has changed in
   the JDK in recent releases, take this opportunity to get caught up! "
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: to-java-20-and-beyond
 
 ---

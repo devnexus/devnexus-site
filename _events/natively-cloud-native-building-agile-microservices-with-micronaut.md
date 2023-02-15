@@ -9,8 +9,8 @@ description: This talk is a fast-paced introduction to the Micronaut framework, 
   to a cloud provider. By the time we’re finished, you’ll have a good understanding
   of both the distinctives and features of the framework and be ready to start building
   and deploying your own apps with Micronaut. Buckle up!
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: natively-cloud-native-building-agile-microservices-with-micronaut
 
 ---

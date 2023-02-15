@@ -9,8 +9,8 @@ description: 'The A/B test! We''ve all thought it: "What''s the point? How much 
   of experiments and help to maximize impact of every feature. In this talk we will
   journey through what an A/B test is, defining goals for A/B testing your app, and
   rolling out features based on successful experiments.'
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33053
+room: 304 (Web)
 liveUrl: 
 recordingUrl: 
-track: Web and Front-end
-format: session
 slug: demystifying-the-dreaded-a-b-test
 
 ---

@@ -11,8 +11,8 @@ description: "Microservices are one of the big trends in software engineering of
   is CDC and how Debezium works, but it will include three critical patterns, Outbox,
   Stranger Fig, and Saga. We will discuss these patterns in-depth and discover how
   they overcome the challenges when working with microservices."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: change-data-streaming-patterns-in-distributed-systems
 
 ---

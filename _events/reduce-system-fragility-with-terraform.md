@@ -13,8 +13,8 @@ description: "As infrastructure stacks grow increasingly more complex and involv
   you'll gain an understanding of the benefits of Infrastructure as Code in general,
   and of using Terraform specifically. You'll be introduced to how Terraform works,
   what the code looks like, and how to get started."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,12 +33,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: reduce-system-fragility-with-terraform
 
 ---

@@ -9,8 +9,8 @@ description: In the span of several weeks, we took a legacy app that had been ru
   code changes, thanks to the backward compatibility of Java 8 and Java EE. Come to
   this session to learn how we did it, what issues we ran into, which app server we
   were using, and why we didn't move to a newer JDK, Java EE 8 or Jakarta EE.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28894
+room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
-track: Jakarta EE
-format: session
 slug: upgrading-a-legacy-java-ee-app-with-style
 
 ---

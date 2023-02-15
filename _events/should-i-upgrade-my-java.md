@@ -9,8 +9,8 @@ description: Java 11 was released in September 2018, and Java 17 was released in
   demonstrate improvements, provide performance comparisons, and briefly discuss upgrade
   strategies. At the end, you’ll be able to answer the question, “Should I upgrade
   my Java?”
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T16:00:00'
+endsAt: '2023-04-06T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,12 +29,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33059
+room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
-track: Java Platform
-format: session
 slug: should-i-upgrade-my-java
 
 ---

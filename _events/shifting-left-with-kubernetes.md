@@ -19,8 +19,8 @@ description: "The Shift Left philosophy is a product of the Agile movement. Its 
   include replicating production environments starting with development workstations,
   strategies for maintaining deployment code alongside application source code, considerations
   for artifact registries and repositories, and tooling that can assist at each stage.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T10:00:00'
+endsAt: '2023-04-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,12 +39,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33061
+room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
-track: Practices and other tech
-format: session
 slug: shifting-left-with-kubernetes
 
 ---

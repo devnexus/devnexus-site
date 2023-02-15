@@ -18,8 +18,8 @@ description: "The migration from monoliths to microservices is long behind us, h
   In this session we will demonstrate this through code, and even how this can work
   seamlessly with other ecosystem projects - from Helm to OPA, ArgoCD, Notary or Github
   Actions, Terraform, and AWS."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,12 +38,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33055
+room: 311 (Security)
 liveUrl: 
 recordingUrl: 
-track: Security
-format: session
 slug: minimum-viable-security-for-cloud-native-stacks
 
 ---

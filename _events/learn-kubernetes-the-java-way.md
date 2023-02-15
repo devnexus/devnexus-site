@@ -12,8 +12,8 @@ description: "Are you a Java developer making the first steps with cloud based t
   and truly get that first hands-on experience that'll make you both confident and
   a bit dangerous at working with this 10-letter staple of the clouds.\r\n\r\nPS.
   there will be yaml, but as little as possible, pinky promise!"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,12 +32,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28893
+room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
-track: Cloud Infrastructure
-format: session
 slug: learn-kubernetes-the-java-way
 
 ---

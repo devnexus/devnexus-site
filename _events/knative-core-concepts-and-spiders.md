@@ -16,8 +16,8 @@ description: "Although Knative has been community-maintained since 2018, there h
   know, a real-life, straightforward, run-of-the-mill use case.\r\n\r\nAttend this
   talk to gain a high-level understanding of Knative, its main components, and how
   it simplifies and improves the way that apps run on Kubernetes."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T11:30:00'
+endsAt: '2023-04-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: knative-core-concepts-and-spiders
 
 ---

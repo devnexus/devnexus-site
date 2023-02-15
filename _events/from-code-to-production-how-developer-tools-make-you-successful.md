@@ -8,8 +8,8 @@ description: 'Developer tools are often seen as an necessary evil: But they trul
   We take a look at the Red Hat Developer Tools portfolio and see which tool helps
   you where. Experience how source code moves through unit-tests, into containers,
   onto staging and arrives in production.'
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33056
+room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
-track: Unobtanium
-format: session
 slug: from-code-to-production-how-developer-tools-make-you-successful
 
 ---

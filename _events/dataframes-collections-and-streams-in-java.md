@@ -8,8 +8,8 @@ description: "Wanna go full Data Scientist or Collection Ninja* with Java? We've
   well as libraries like Eclipse Collections and Dataframe-EC.\r\n\r\n—--------\r\n*)
   Collection Ninja - someone who knows how to manipulate collections like wielding
   a samurai sword\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T13:30:00'
+endsAt: '2023-04-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,12 +30,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33054
+room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
-track: Core Java
-format: session
 slug: dataframes-collections-and-streams-in-java
 
 ---

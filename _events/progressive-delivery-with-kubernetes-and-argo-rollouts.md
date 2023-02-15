@@ -8,8 +8,8 @@ description: "Progressive Delivery is the process of releasing service updates i
   deployment strategies like rolling updates, blue/green and canary releases. \r\nFinally,
   we'll see canary releases in action using Argo Rollouts to automate  promotion and
   rollback of updates based on metric analyses."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,12 +28,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: progressive-delivery-with-kubernetes-and-argo-rollouts
 
 ---

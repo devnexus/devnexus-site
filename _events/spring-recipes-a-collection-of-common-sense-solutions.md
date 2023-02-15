@@ -12,8 +12,8 @@ description: Over the years, Spring has evolved to solve the ever-increasing dem
   common problems in modern software development. From monitoring to testing to messaging
   to reactive programming, this talk will give you concrete solutions for your day-to-day
   needs.
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T10:00:00'
+endsAt: '2023-04-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,12 +34,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: spring-recipes-a-collection-of-common-sense-solutions
 
 ---

@@ -18,8 +18,8 @@ description: "When designing software systems, architects and developers have pl
   you observe module interactions between each other at runtime.  In this talk, we
   discuss the features that are available and then in a live coding demonstration
   show you how they work."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T15:00:00'
+endsAt: '2023-04-05T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,12 +40,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33058
+room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
-track: Frameworks
-format: session
 slug: spring-modulith-what-the-what
 
 ---

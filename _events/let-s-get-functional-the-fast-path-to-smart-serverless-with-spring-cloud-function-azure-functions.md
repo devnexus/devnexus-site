@@ -16,8 +16,8 @@ description: "So-called \"serverless\" may be the least accurate tech name in hi
   to integrate everything in the cloud and reveal some potentially very welcome discoveries.
   Come to this session to learn how to incorporate functions into your critical systems.
   With great power..."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-05T11:30:00'
+endsAt: '2023-04-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,12 +36,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 33057
+room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
-track: Cloud Technology
-format: session
 slug: let-s-get-functional-the-fast-path-to-smart-serverless-with-spring-cloud-function-azure-functions
 
 ---

@@ -11,8 +11,8 @@ description: "Tracking a request’s flow across different components in distrib
   OpenTelemetry compatible.\r\n\r\nIn this talk, I’ll describe the above in more detail
   and showcase a (simple) use case to demo how you could benefit from OpenTelemetry
   in your distributed architecture."
-startsAt: 
-endsAt: 
+startsAt: '2023-04-06T15:00:00'
+endsAt: '2023-04-06T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,12 +31,10 @@ categories:
   - id: 143440
     name: session
   sort: 2
-roomId: 
-room: 
+roomId: 28892
+room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
-track: Architecture
-format: session
 slug: hands-on-introduction-to-opentelemetry-tracing
 
 ---
