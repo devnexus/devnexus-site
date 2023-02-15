@@ -33,6 +33,8 @@ roomId: 33059
 room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
+track: Java Platform
+format: session
 slug: should-i-upgrade-my-java
 
 ---

@@ -35,6 +35,8 @@ roomId: 33056
 room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: workshop
 slug: creating-evolutionary-architecture-and-design-from-problem-to-solution-by-exploring-patterns
 
 ---

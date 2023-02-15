@@ -33,6 +33,8 @@ roomId: 33061
 room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
+track: Practices and other tech
+format: session
 slug: just-code-isn-t-enough-a-successful-project-needs-more
 
 ---

@@ -41,6 +41,8 @@ roomId: 33061
 room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
+track: Practices and other tech
+format: session
 slug: calculating-the-value-of-pie-real-time-survey-analysis-with-apache-kafka
 
 ---

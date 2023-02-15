@@ -32,6 +32,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: session
 slug: make-your-container-apps-smarter-with-sidecars-and-actions
 
 ---

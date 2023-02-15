@@ -29,6 +29,8 @@ roomId: 33053
 room: 304 (Web)
 liveUrl: 
 recordingUrl: 
+track: Web and Front-end
+format: session
 slug: properly-managing-data-in-react
 
 ---

@@ -32,6 +32,8 @@ roomId: 33060
 room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
+track: Tools and techniques
+format: session
 slug: unlocking-value-from-time-series-data-with-open-source-tools-in-java
 
 ---

@@ -39,6 +39,8 @@ roomId: 28894
 room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
+track: Jakarta EE
+format: session
 slug: jakarta-ee-10-and-beyond
 
 ---

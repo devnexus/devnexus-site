@@ -39,6 +39,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: my-children-will-never-deploy-active-passive
 
 ---

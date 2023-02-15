@@ -38,6 +38,8 @@ roomId: 33055
 room: 311 (Security)
 liveUrl: 
 recordingUrl: 
+track: Security
+format: session
 slug: the-anatomy-of-java-vulnerabilities
 
 ---

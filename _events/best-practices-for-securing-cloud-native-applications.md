@@ -32,6 +32,8 @@ roomId: 33055
 room: 311 (Security)
 liveUrl: 
 recordingUrl: 
+track: Security
+format: session
 slug: best-practices-for-securing-cloud-native-applications
 
 ---

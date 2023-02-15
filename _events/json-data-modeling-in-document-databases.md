@@ -34,6 +34,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: json-data-modeling-in-document-databases
 
 ---

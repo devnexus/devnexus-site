@@ -39,6 +39,8 @@ roomId: 33060
 room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
+track: Tools and techniques
+format: session
 slug: wired-how-your-brain-learns-new-programming-languages
 
 ---

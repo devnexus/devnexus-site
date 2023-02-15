@@ -31,6 +31,8 @@ roomId: 33053
 room: 304 (Web)
 liveUrl: 
 recordingUrl: 
+track: Web and Front-end
+format: session
 slug: creating-a-modern-web-app-using-spring-boot-and-vue-js-with-jhipster
 
 ---

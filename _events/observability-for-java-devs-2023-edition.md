@@ -35,6 +35,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: session
 slug: observability-for-java-devs-2023-edition
 
 ---

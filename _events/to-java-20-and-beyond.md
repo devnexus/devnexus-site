@@ -33,6 +33,8 @@ roomId: 33054
 room: 305 (Core Java)
 liveUrl: 
 recordingUrl: 
+track: Core Java
+format: session
 slug: to-java-20-and-beyond
 
 ---

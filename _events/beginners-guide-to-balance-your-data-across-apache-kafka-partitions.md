@@ -48,6 +48,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: beginners-guide-to-balance-your-data-across-apache-kafka-partitions
 
 ---

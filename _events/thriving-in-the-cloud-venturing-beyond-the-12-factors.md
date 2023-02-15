@@ -36,6 +36,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: workshop
 slug: thriving-in-the-cloud-venturing-beyond-the-12-factors
 
 ---

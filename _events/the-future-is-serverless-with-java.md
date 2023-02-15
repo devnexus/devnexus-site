@@ -32,6 +32,8 @@ roomId: 28893
 room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
+track: Cloud Infrastructure
+format: session
 slug: the-future-is-serverless-with-java
 
 ---

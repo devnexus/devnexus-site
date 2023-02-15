@@ -41,6 +41,8 @@ roomId: 33061
 room: 403 (Practices and other tech)
 liveUrl: 
 recordingUrl: 
+track: Practices and other tech
+format: session
 slug: unlocked-growing-your-skills-through-open-source-development-and-civic-hacking
 
 ---

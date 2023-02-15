@@ -32,6 +32,8 @@ roomId: 33060
 room: 402 (Tools and Techniques)
 liveUrl: 
 recordingUrl: 
+track: Tools and techniques
+format: session
 slug: if-it-isn-t-hot-it-doesn-t-deliver-apache-pinot-food-delivery-and-why-real-time-analytics-matter
 
 ---

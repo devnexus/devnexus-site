@@ -38,6 +38,8 @@ roomId: 33055
 room: 311 (Security)
 liveUrl: 
 recordingUrl: 
+track: Security
+format: session
 slug: securing-your-software-supply-chain-one-open-source-project-at-a-time
 
 ---

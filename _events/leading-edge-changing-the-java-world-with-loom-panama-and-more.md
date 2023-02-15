@@ -33,6 +33,8 @@ roomId: 33059
 room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
+track: Java Platform
+format: session
 slug: leading-edge-changing-the-java-world-with-loom-panama-and-more
 
 ---

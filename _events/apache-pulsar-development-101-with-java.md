@@ -33,6 +33,8 @@ roomId: 33058
 room: 314 (Frameworks)
 liveUrl: 
 recordingUrl: 
+track: Frameworks
+format: session
 slug: apache-pulsar-development-101-with-java
 
 ---

@@ -33,7 +33,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://sessionize.com/api/v2/4oc6i6ox/view/GridSmart'
+              url = 'https://sessionize.com/api/v2/g415clv7/view/GridSmart'
               if (options['file'])
                 write_data_json("schedule", read_data(options['file']) )
               else
@@ -65,25 +65,32 @@ module Jekyll
           end  
         end
         def process_event_collection( event_data )
-              event_json = JSON.parse(event_data)
-              #puts(event_json[0]["sessions"])
-              events = event_json[0]["sessions"]
-              #puts(events)
-              Jekyll.logger.info("Reading #{events.length} events from cfp")
-              for event in events do
-                 if (event["categories"]) 
-                   track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
-                   format_category = event["categories"].select{ |k,v| k["name"] == "Session Format" }
-                   if (event["track"])
-                    event["track"] = track_category.first()["categoryItems"].first()["name"]
-                   end
-                   if (event["format"]) 
-                     event["format"] = format_category.first()["categoryItems"].first()["name"]
-                   end  
-                 end
-                 event["slug"] = Jekyll::Utils.slugify(event["title"])
-                 write_item("events", event, "")
-              end  
+          event_json = JSON.parse(event_data)
+          #puts(event_json[0]["sessions"])
+          events = event_json[0]["sessions"]
+          #puts(events)
+          Jekyll.logger.info("Reading #{events.length} events from cfp")
+          for event in events do
+             #puts(event)
+            if (! event["categories"].empty?)
+               #puts(event["categories"])
+               track_category = event["categories"].select{ |k,v| k["name"] == "Track" }
+               format_category = event["categories"].select{ |k,v| k["name"] == "Session Format" }
+               #puts("track", track_category, track_category.empty?)
+               if ( ! track_category.empty? )
+                # puts(track_category.first()["categoryItems"])
+                 event["track"] = track_category.first()["categoryItems"].first()["name"]
+                 #puts(event["track"])
+               end
+               if (! format_category.empty? ) 
+                # puts(format_category.first()["categoryItems"])
+                event["format"] = format_category.first()["categoryItems"].first()["name"]
+                # puts(event["format"])
+               end  
+             end
+             event["slug"] = Jekyll::Utils.slugify(event["title"])
+             write_item("events", event, "")
+          end  
         end
         def write_item(collection, item, abstract)
           filename = "_#{collection}/#{item['slug']}.md"

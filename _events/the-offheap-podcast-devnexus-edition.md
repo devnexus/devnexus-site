@@ -32,6 +32,8 @@ roomId: 33059
 room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
+track: Core Java
+format: session
 slug: the-offheap-podcast-devnexus-edition
 
 ---

@@ -36,6 +36,8 @@ roomId: 33059
 room: 315 (Java Platform)
 liveUrl: 
 recordingUrl: 
+track: Java Platform
+format: session
 slug: say-the-words-modern-java-with-javafx-for-rich-client-uis
 
 ---

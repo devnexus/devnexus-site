@@ -36,6 +36,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: session
 slug: weathering-the-cloud-storm-building-resilient-geo-distributed-apps-with-spring-cloud
 
 ---

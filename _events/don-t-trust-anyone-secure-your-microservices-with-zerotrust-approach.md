@@ -39,6 +39,8 @@ roomId: 33055
 room: 311 (Security)
 liveUrl: 
 recordingUrl: 
+track: Security
+format: session
 slug: don-t-trust-anyone-secure-your-microservices-with-zerotrust-approach
 
 ---

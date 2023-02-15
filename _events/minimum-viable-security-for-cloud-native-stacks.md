@@ -42,6 +42,8 @@ roomId: 33055
 room: 311 (Security)
 liveUrl: 
 recordingUrl: 
+track: Security
+format: session
 slug: minimum-viable-security-for-cloud-native-stacks
 
 ---

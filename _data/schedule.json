@@ -6539,7 +6539,7 @@
           {
             "id": "401643",
             "title": "Best of Both Worlds: Apache Pulsar and Apache Kafka",
-            "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
+            "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
             "startsAt": "2023-04-06T13:30:00",
             "endsAt": "2023-04-06T14:30:00",
             "isServiceSession": false,
@@ -10537,7 +10537,7 @@
             "session": {
               "id": "401643",
               "title": "Best of Both Worlds: Apache Pulsar and Apache Kafka",
-              "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
+              "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
               "startsAt": "2023-04-06T13:30:00",
               "endsAt": "2023-04-06T14:30:00",
               "isServiceSession": false,

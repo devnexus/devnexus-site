@@ -32,6 +32,8 @@ roomId: 33053
 room: 304 (Web)
 liveUrl: 
 recordingUrl: 
+track: Web and Front-end
+format: session
 slug: full-stack-reactive-with-spring-boot-react
 
 ---

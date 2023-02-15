@@ -38,6 +38,8 @@ roomId: 33056
 room: 312 (Unobtanium)
 liveUrl: 
 recordingUrl: 
+track: Unobtanium
+format: session
 slug: event-driven-autoscaling-for-serverless-java
 
 ---

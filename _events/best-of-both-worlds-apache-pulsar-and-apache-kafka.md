@@ -34,6 +34,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: best-of-both-worlds-apache-pulsar-and-apache-kafka
 
 ---

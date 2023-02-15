@@ -34,6 +34,8 @@ roomId: 28893
 room: 302 (Cloud Infrastructure)
 liveUrl: 
 recordingUrl: 
+track: Cloud Infrastructure
+format: session
 slug: ci-cd-pipelines-what-why-how
 
 ---

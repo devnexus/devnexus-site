@@ -40,6 +40,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: don-t-reimplement-distributed-consensus-algorithms-learn-to-use-them-instead
 
 ---

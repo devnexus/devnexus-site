@@ -35,6 +35,8 @@ roomId: 28892
 room: Sydney Marcus (Architecture)
 liveUrl: 
 recordingUrl: 
+track: Architecture
+format: session
 slug: hands-on-introduction-to-opentelemetry-tracing
 
 ---

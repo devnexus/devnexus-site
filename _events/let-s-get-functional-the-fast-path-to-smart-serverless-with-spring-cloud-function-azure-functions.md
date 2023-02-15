@@ -40,6 +40,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: session
 slug: let-s-get-functional-the-fast-path-to-smart-serverless-with-spring-cloud-function-azure-functions
 
 ---

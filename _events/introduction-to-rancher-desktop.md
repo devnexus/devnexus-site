@@ -33,6 +33,8 @@ roomId: 33057
 room: 313 (Cloud Tech)
 liveUrl: 
 recordingUrl: 
+track: Cloud Technology
+format: session
 slug: introduction-to-rancher-desktop
 
 ---

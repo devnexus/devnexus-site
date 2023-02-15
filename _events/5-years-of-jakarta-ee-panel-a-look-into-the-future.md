@@ -30,6 +30,8 @@ roomId: 28894
 room: 303 (JakartaEE)
 liveUrl: 
 recordingUrl: 
+track: Jakarta EE
+format: session
 slug: 5-years-of-jakarta-ee-panel-a-look-into-the-future
 
 ---
