@@ -12,7 +12,7 @@
 {% endif %}
 <div class="row schedule-row {{preso.track}}">
 		<div class="col-xs-12 {{color}}">
-				<a href="{{preso.title | slugify }}">{{preso.title | escape}}</a>
+				<a href="/presentations/{{preso.title | slugify }}">{{preso.title | escape}}</a>
 				<br/>
 				<span class="small">
 				{% for speaker in preso.speakers %}
