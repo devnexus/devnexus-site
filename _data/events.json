@@ -4155,7 +4155,7 @@
         "questionAnswers": [],
         "id": "401643",
         "title": "Best of Both Worlds: Apache Pulsar and Apache Kafka",
-        "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
+        "description": "Which streaming technology is right for me? Do I need to use Apache Pulsar or do I choose  Apache Kafka?\r\n\r\nThat is mostly the question, but did you also knew that you can combine them? \r\n\r\nIn this session we will show how to use best of both worlds. Let's compare both architectures and Java Client Implementations and decide what's best for you!\r\n\r\nDo you pick the battle? Or are you making allies?\r\nIt's up to you!",
         "startsAt": "2023-04-06T13:30:00",
         "endsAt": "2023-04-06T14:30:00",
         "isServiceSession": false,
@@ -5780,6 +5780,50 @@
         "categories": [],
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "450346",
+        "title": "Hands on with Azure Spring Apps Enterprise",
+        "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "05be364d-a57f-4e08-978d-8043d43db097",
+            "name": "Mark Heckler"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143441,
+                "name": "workshop"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
         "liveUrl": null,
         "recordingUrl": null
       }
