@@ -246,6 +246,48 @@
     "categories": []
   },
   {
+    "id": "1dac3645-0e7d-479b-8654-69cdfbda3745",
+    "firstName": "Arun",
+    "lastName": "Gupta",
+    "fullName": "Arun Gupta",
+    "bio": "Arun Gupta is vice president and general manager of Open Ecosystem Initiatives at Intel Corporation. He is an open source strategist, advocate, and practitioner for over two decades. He has taken companies such as Apple, Amazon, and Sun Microsystems through systemic changes to embrace open source principles, contribute and collaborate effectively.\r\n\r\nAs an elected chair of the Cloud Native Computing Foundation (CNCF) Governing Board, Arun works with CNCF leadership and member companies to grow cloud native ecosystem. He has delivered technical talks in 40+ countries, authored multiple books, and is a Docker Captain, Java Champion, and Java User Group leader. He also founded the Devoxx4Kids chapter in the U.S. and continues to promote technology education among children.\r\n\r\nArun is an avid runner, and is easily accessible at @arungupta on Twitter and at @arungupta@sfba.social on Mastodon.",
+    "tagLine": "VP/GM, Open Ecosystem ",
+    "profilePicture": "https://sessionize.com/image/80ce-400o400o2-hX9eS8CS6fkaP8BF67Gxb5.jpg",
+    "sessions": [
+      {
+        "id": 455875,
+        "name": "Five skills to force multiply your technical talent"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/arungupta",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Intel",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@arungupta",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "4c3fdc08-0216-46a1-a36f-a1b6abe6315f",
     "firstName": "Barry",
     "lastName": "Burd",
@@ -619,7 +661,7 @@
     "lastName": "Hufnagel",
     "fullName": "Burk Hufnagel",
     "bio": "Burk is a long-time programmer and software architect, with experience in multiple languages including JavaScript and Java. He’s presented at multiple conferences including ConnectTech, DevNexus, JavaOne, and Oracle Code One, and contributed to three of the “97 Things” books published by O’Reilly.\r\nBurk works as a Solution Architect for Daugherty Business Solutions where he's focused on finding ways to deliver better code in less time, and teaching others how to do the same.",
-    "tagLine": "Any sufficiently analyzed magic is indistinguishable from science!",
+    "tagLine": "Java Champion, JavaOne Rockstar, Solution Architect at Daugherty",
     "profilePicture": "https://sessionize.com/image/7d4f-400o400o2-Un7gX1r1SnUwdm4Gy7iu3R.png",
     "sessions": [
       {
@@ -754,7 +796,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/headius",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [
       {
         "id": 43778,
@@ -790,7 +838,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/chris_onobc",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [
       {
         "id": 43778,
@@ -1098,6 +1152,48 @@
     "categories": []
   },
   {
+    "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
+    "firstName": "Daniel",
+    "lastName": "Hinojosa",
+    "fullName": "Daniel Hinojosa",
+    "bio": "Daniel Hinojosa is a programmer, consultant, instructor, speaker, and author. With over 20 years of experience, he does work for private, educational, and government institutions. Daniel loves JVM languages like Java, Groovy, and Scala; but also works with non-JVM languages like Haskell, Ruby, Python, LISP, C, C++. He is an avid Pomodoro Technique Practitioner and makes every attempt to learn a new programming language every year. Daniel is the author of Testing in Scala and the video of Beginning Scala Programming Video Series for O’Reilly Publishing. For downtime, he enjoys reading, swimming, Legos, football, and cooking.",
+    "tagLine": "Independent Consultant",
+    "profilePicture": "https://sessionize.com/image/e32c-400o400o2-sQfqHJDud5MWcyY8ezmLWH.jpeg",
+    "sessions": [
+      {
+        "id": 454256,
+        "name": "Machine Learning Data Pipelines with Kafka and Tensorflow"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/dhinojosa",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "dhinojosa@evolutionnext.com",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dhinojosa [vacated]",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
     "firstName": "Daniel",
     "lastName": "Oh",
@@ -1346,7 +1442,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/yanaga",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [
       {
         "id": 43778,
@@ -1403,48 +1505,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@edwinderks",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
-    "firstName": "Elder",
-    "lastName": "Moraes",
-    "fullName": "Elder Moraes",
-    "bio": "Elder helps Java developers to build and deliver secure, available, and fast server-side applications. He is a published author of six books and a board member at SouJava, one of the biggest JUGs in the world. As a Developer Advocate, Elder shares experiences and best practices through online content and at international events like JavaOne, The Developers Conference, QCon, Oracle Code One, Campus Party, and Devnexus.",
-    "tagLine": "Developer Advocate, Red Hat",
-    "profilePicture": "https://sessionize.com/image/8bc4-400o400o2-SnCLERSTvqMRg1ThQUsF4R.png",
-    "sessions": [
-      {
-        "id": 404340,
-        "name": "Batch Processing Cloud Apps with Java"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/elderjava",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Red Hat",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@elderjava",
         "sort": 18,
         "answerExtra": null
       }
@@ -1850,7 +1910,7 @@
     "firstName": "Gary",
     "lastName": "Picher",
     "fullName": "Gary Picher",
-    "bio": "Gary Picher has worked in the WebSphere Application Server organization of IBM for 20 years.  He is currently the WebSphere Security Architect, responsible for both the security of the application server itself, as well as ensuring that customers have all the functionality and guidance they need to secure their own installations and applications.  Prior to that, Gary spent time as the WebSphere Release Architect, where he moved WebSphere Liberty from a quarterly to 4-week delivery cycle to align better with modern DevOps practices.  Gary has also spent a decade as the team lead for the z/OS runtime component of WebSphere Application Server.",
+    "bio": "Gary Picher has worked in the WebSphere Application Server organization of IBM for 20 years.  He is currently the WebSphere Security Architect, responsible for both the security of the application server itself, as well as ensuring that customers have all the functionality and guidance they need to secure their own installations and applications.  Prior to that, Gary spent time as the WebSphere Release Architect, where he moved WebSphere Liberty from a quarterly to 4-week delivery cycle to align better with modern DevOps practices.  Gary has also spent a decade as the team lead for the z/OS runtime component of WebSphere Application Server.",
     "tagLine": "IBM WebSphere Security Architect",
     "profilePicture": "https://sessionize.com/image/5392-400o400o2-Piv9w1aKsSxd59kjHUCY6N.jpg",
     "sessions": [
@@ -1886,7 +1946,7 @@
     "firstName": "Gerrit",
     "lastName": "Grunwald",
     "fullName": "Gerrit Grunwald",
-    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
     "tagLine": "Senior Developer Advocate at Azul Systems",
     "profilePicture": "https://sessionize.com/image/347e-400o400o2-DZYSvNYq2n8gn4Qzy9FnQs.png",
     "sessions": [
@@ -2740,7 +2800,7 @@
     "firstName": "Josh",
     "lastName": "Juneau",
     "fullName": "Josh Juneau",
-    "bio": "Josh Juneau works as an application developer, system analyst, and database administrator.  He primarily develops using Java and other JVM languages.  Josh is a technical writer for OTN and Java Magazine, and has published a number of titles for Apress including: “Introducing Java EE 7”, “Java EE 8 Recipes”, and “Java 9 Recipes”.  Josh was also a co-author of “The Definitive Guide to Jython”, and “PL/SQL Recipes”.\r\n\r\nJosh is an active member of the Apache NetBeans community, and has served on the JavaOne Content Review Committee for multiple years.  Josh was a JCP Expert Group member for JSRs 372 and 378, and he is a committer for the EE4J Mojarra project.  He is an advocate of the Adopt-a-JSR program, and helps to lead the open source initiative for the Chicago Java Users Group (CJUG).  He is a regular on the Java OffHeap Podcast, and you can reach him through his Twitter handle: @javajuneau or you can follow his blog at http:http://jj-blogger.blogspot.com",
+    "bio": "Josh Juneau works as an application developer, system analyst, and database administrator.  He primarily develops using Java and other JVM languages.  Josh is a technical writer for OTN and Java Magazine, and has published a number of titles for Apress including: “Introducing Java EE 7”, “Java EE 8 Recipes”, and “Java 9 Recipes”.  Josh was also a co-author of “The Definitive Guide to Jython”, and “PL/SQL Recipes”.\r\n\r\nJosh is an active member of the Apache NetBeans community, and has served on the JavaOne Content Review Committee for multiple years.  Josh was a JCP Expert Group member for JSRs 372 and 378, and he is a committer for the EE4J Mojarra project.  He is an advocate of the Adopt-a-JSR program, and helps to lead the open source initiative for the Chicago Java Users Group (CJUG).  He is a regular on the Java OffHeap Podcast, and you can reach him through his Twitter handle: @javajuneau or you can follow his blog at http:http://jj-blogger.blogspot.com",
     "tagLine": "Jakarta EE Guru",
     "profilePicture": "https://sessionize.com/image/80cc-400o400o2-SQEs1RYgLEq5LRpA7wyWfn.jpg",
     "sessions": [
@@ -3244,6 +3304,10 @@
     "tagLine": "Sultan of Spring",
     "profilePicture": "https://sessionize.com/image/1668-400o400o2-QDG3nAQ4WWUKSGcfTw7gTW.png",
     "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      },
       {
         "id": 401508,
         "name": "Let's get Functional: The fast path to smart serverless with Spring Cloud Function & Azure Functions"
@@ -4008,6 +4072,42 @@
     "categories": []
   },
   {
+    "id": "d92d283c-c3e1-481b-a7d8-7671e07d1d62",
+    "firstName": "Phil",
+    "lastName": "Webb",
+    "fullName": "Phil Webb",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 417562,
+        "name": "Spring Boot 3 Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "049f56da-dd0b-44f9-b868-1ee298129e3a",
     "firstName": "Ray",
     "lastName": "Elenteny",
@@ -4217,7 +4317,7 @@
     "lastName": "Cortez",
     "fullName": "Roberto Cortez",
     "bio": "Roberto Cortez is a passionate Java Developer involved within the Open Source Community to help other individuals spread knowledge about Java technologies. He is a regular speaker at conferences like JavaOne, Devoxx, Devnexus, JFokus, etc. He leads the Coimbra JUG and founded the JNation Conference in Portugal. When he is not working, he hangs out with friends, plays computer games, and spends time with family.",
-    "tagLine": "Principal Software Engineer @ Redhat",
+    "tagLine": "Principal Software Engineer @ Redhat",
     "profilePicture": "https://sessionize.com/image/55cb-400o400o2-SnK6BxLPhxZqxDAAmyVFGW.jpg",
     "sessions": [
       {
@@ -5015,8 +5115,8 @@
     "profilePicture": "https://sessionize.com/image/3904-400o400o2-wzTrDLRv8JYMkotBkxJhzG.jpg",
     "sessions": [
       {
-        "id": 387130,
-        "name": "Accessibility Auditing: Getting Started with Accessibility"
+        "id": 387126,
+        "name": "Deceptive Patterns & FAST"
       }
     ],
     "isTopSpeaker": false,
@@ -5083,42 +5183,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@recursivecodes",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "ce6a3092-8c36-42e8-a70a-d229300eb929",
-    "firstName": "Tommy",
-    "lastName": "Ludwig",
-    "fullName": "Tommy Ludwig",
-    "bio": "Tommy is the project lead for Micrometer, an open source library for application observability on the JVM. He is on the Spring Observability team at VMware.",
-    "tagLine": "Working on Micrometer at VMware",
-    "profilePicture": "https://sessionize.com/image/d804-400o400o2-VQ4F9Fj2Sk4ioLrKK6S89A.jpg",
-    "sessions": [
-      {
-        "id": 417562,
-        "name": "Spring Boot 3 Workshop"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "VMware",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@TommyLudwig",
         "sort": 18,
         "answerExtra": null
       }

@@ -174,11 +174,11 @@
             "name": "Jonatan Ivanov"
           },
           {
-            "id": "ce6a3092-8c36-42e8-a70a-d229300eb929",
-            "name": "Tommy Ludwig"
+            "id": "031a7caa-b3be-433e-88c3-52aab3d461a0",
+            "name": "Phil Webb"
           },
           {
-            "id": "031a7caa-b3be-433e-88c3-52aab3d461a0",
+            "id": "d92d283c-c3e1-481b-a7d8-7671e07d1d62",
             "name": "Phil Webb"
           }
         ],
@@ -213,6 +213,50 @@
       },
       {
         "questionAnswers": [],
+        "id": "450346",
+        "title": "Hands on with Azure Spring Apps Enterprise",
+        "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
+        "startsAt": "2023-04-04T09:00:00",
+        "endsAt": "2023-04-04T10:30:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "05be364d-a57f-4e08-978d-8043d43db097",
+            "name": "Mark Heckler"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143429,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143441,
+                "name": "workshop"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": 33059,
+        "room": "315 (Java Platform)",
+        "liveUrl": null,
+        "recordingUrl": null
+      },
+      {
+        "questionAnswers": [],
         "id": "c9076352-8123-4fac-a642-97419354d84b",
         "title": "Registration & Breakfast",
         "description": null,
@@ -229,15 +273,43 @@
       },
       {
         "questionAnswers": [],
-        "id": "e0270545-b6de-4d8e-8110-cdab2bed75ac",
-        "title": "Conf open and keynote",
-        "description": null,
+        "id": "455875",
+        "title": "Five skills to force multiply your technical talent",
+        "description": "Technical skills can be acquired by a wide variety of means such as getting a degree, earning a certification, or reading a tutorial. They are not sufficient, however, to be successful in a globally distributed and diverse world. Non-technical skills, aka soft skills, are the personal qualities that define how you interact with others. In a globally distributed and diverse world, soft skills are sometimes more critical and important than technical skills. These skills are needed whether you are a newbie or a veteran in the tech industry, an individual contributor or a manager. They help you to be an effective team player, inspire others in the team, and help make your team more successful. This talk explains five soft skills of communication, adaptability, conflict resolution, mindfulness, and kindness that help force multiple your team technical teams. You’ll learn how to master these skills to create an effective team environment and force multiple your technical talent. ",
         "startsAt": "2023-04-05T09:00:00",
         "endsAt": "2023-04-05T10:00:00",
-        "isServiceSession": true,
-        "isPlenumSession": true,
-        "speakers": [],
-        "categories": [],
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1dac3645-0e7d-479b-8654-69cdfbda3745",
+            "name": "Arun Gupta"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143433,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143442,
+                "name": "keynote"
+              }
+            ],
+            "sort": 2
+          }
+        ],
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
@@ -1029,17 +1101,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "402390",
-        "title": "Minimum Viable Security for Cloud Native Stacks",
-        "description": "The migration from monoliths to microservices is long behind us, however managing microservices operations at scale comes with a layer of complexity, particularly with aspects of security that still have a learning curve.  But what if all of this could be simplified and automated pretty easily?\r\n\r\nIf we think about our production microservices operations, in the same way we think about how we design and build our products, we could build and automate minimum viable security plans that we could easily bake into our config files and CI/CD processes.  Once we build this foundational framework of security, it will always be possible to iterate and evolve our security framework, for advanced layers of security that often comes with time, increased experience, and greater maturity around security.\r\n\r\nIn this talk, we will present what MVS looks like for microservices operations, how to build a cluster secured by design, continuously monitoring networking,  container internals and primitives, and access management with a least privilege principle mindset. In this session we will demonstrate this through code, and even how this can work seamlessly with other ecosystem projects - from Helm to OPA, ArgoCD, Notary or Github Actions, Terraform, and AWS.",
+        "id": "401231",
+        "title": "How to report a vulnerability: Responsible Disclosure for Developers",
+        "description": "Ever seen a security-related issue that you felt should be reported? Unsure of how reporting security issue is different than a regular bug? Developers of any level should know how to report a vulnerability. In this talk, we will talk about what CVEs are, some general vulnerability classifications, look at a few common ways you can report security issues, as well as look at a few common mistakes. This talk is geared toward non-security professionals.",
         "startsAt": "2023-04-05T11:30:00",
         "endsAt": "2023-04-05T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "f58bdf89-78d6-4baa-a6fa-9a058470699d",
-            "name": "Chris Koehnecke"
+            "id": "130a4bc5-3b04-4a0c-95e6-62fad0b4d722",
+            "name": "Brian Demers"
           }
         ],
         "categories": [
@@ -1909,17 +1981,21 @@
       },
       {
         "questionAnswers": [],
-        "id": "408945",
-        "title": "My children will never deploy active-passive.",
-        "description": "Is your app alone and trembling in a dark, single-region with failures, latency, and retry storms closing in on every side?\r\n\r\nBuild a Spring Boot app with Spring Data Redis, deploy it to a single region backed by Azure Cache for Redis Enterprise (ACRE).  Add a global load balancer like Azure Front Door.  Deploy the same application to multiple regions, backed my multiple instances of ACRE connected in active-active configuration.  Learn why connecting to data in a different region is an anti-pattern. Demonstrate destroying an entire region to show the value of active-active level resilience. Using Terraform, Spring Boot and Azure.\r\n\r\nIn this session, you will learn a reference architecture, for modern, geo-distributed applications. You will learn how to modernize a single-region application, into a multiple-region or multi-cloud architecture. By the end of this interactive session, your apps will be able to shine bright with confidence, resiliency, and no more trembling.",
+        "id": "402628",
+        "title": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)",
+        "description": "Scaling your services is easy when your services are stateless. However, in real life applications have to deal with state - how do you scale stateful software systems and their data? This is where it may become scary - while modern storage solutions (from Etcd to Cassandra) promise to solve this problem for us, operating these solutions may be tricky. Even if you don’t have to reimplement underlying consensus algorithms (like Paxos and Raft), you still need to understand how they work to operate, debug, and scale your systems. \r\n\r\nThis talk explains the mechanics of different consensus algorithms in everyday terms. This talk is not an academic paper: instead of providing formal proofs and scientific language, it focuses on practical aspects of consensus algorithms’ usage. It explains actionable insights in (relatively) simple words without pitching a concrete approach or technology as a magic cure.",
         "startsAt": "2023-04-05T15:00:00",
         "endsAt": "2023-04-05T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
-            "name": "DaShaun Carter"
+            "id": "6ca4dbda-e3ec-4bbe-b2cb-265787c1b93e",
+            "name": "Alex Borysov"
+          },
+          {
+            "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
+            "name": "Mykyta Protsenko"
           }
         ],
         "categories": [
@@ -2441,15 +2517,43 @@
       },
       {
         "questionAnswers": [],
-        "id": "4673c414-6a14-4852-8675-217cd50beb63",
-        "title": "Venkat Session II",
-        "description": null,
+        "id": "454256",
+        "title": "Machine Learning Data Pipelines with Kafka and Tensorflow",
+        "description": "An intense presentation designed to operationalize machine learning. This talk focuses on dividing specializations; data engineer and data scientist. \r\n\r\nThe data engineer ensures that data is delivered, manipulated, and harnessed. The data engineer does this to be useful for the data scientist. The data engineer is also versant in Java and Scala and will be knowledgeable in pub-subs like Kafka.\r\n\r\nThe data scientist uses that data, does their cleaning, and investigates possible patterns designing a machine learning model that we can use to either find regressions or classifications for our data. The data scientists use Python, Jupyter Notebooks, Tensorflow, and Matplotlib as their tools of choice for constructing a machine-learning model to make decisions about the data.\r\n\r\nThis presentation answers the question. How do we take that model and tie it to everything else? This workshop will use a wide array of technologies. It will set you on the path to running Machine Learning Pipelines in Kubernetes using Kafka and Tensorflow, so you can start immediately when you return to work.",
         "startsAt": "2023-04-05T16:00:00",
         "endsAt": "2023-04-05T17:00:00",
-        "isServiceSession": true,
+        "isServiceSession": false,
         "isPlenumSession": false,
-        "speakers": [],
-        "categories": [],
+        "speakers": [
+          {
+            "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
+            "name": "Daniel Hinojosa"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
@@ -2696,10 +2800,6 @@
           {
             "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
             "name": "Rodrigo Graciano"
-          },
-          {
-            "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
-            "name": "Elder Moraes"
           }
         ],
         "categories": [
@@ -2926,8 +3026,8 @@
       {
         "questionAnswers": [],
         "id": "2dec1c53-6dce-4b06-8dcf-f1d924234b69",
-        "title": "Conf Reception",
-        "description": null,
+        "title": "Conf Reception and TECH NERD TRIVIA!",
+        "description": "Gather some friends to win prizes in the first ever Devnexus team trivia!",
         "startsAt": "2023-04-05T17:00:00",
         "endsAt": "2023-04-05T18:30:00",
         "isServiceSession": true,
@@ -3049,21 +3149,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "402628",
-        "title": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)",
-        "description": "Scaling your services is easy when your services are stateless. However, in real life applications have to deal with state - how do you scale stateful software systems and their data? This is where it may become scary - while modern storage solutions (from Etcd to Cassandra) promise to solve this problem for us, operating these solutions may be tricky. Even if you don’t have to reimplement underlying consensus algorithms (like Paxos and Raft), you still need to understand how they work to operate, debug, and scale your systems. \r\n\r\nThis talk explains the mechanics of different consensus algorithms in everyday terms. This talk is not an academic paper: instead of providing formal proofs and scientific language, it focuses on practical aspects of consensus algorithms’ usage. It explains actionable insights in (relatively) simple words without pitching a concrete approach or technology as a magic cure.",
+        "id": "408945",
+        "title": "My children will never deploy active-passive.",
+        "description": "Is your app alone and trembling in a dark, single-region with failures, latency, and retry storms closing in on every side?\r\n\r\nBuild a Spring Boot app with Spring Data Redis, deploy it to a single region backed by Azure Cache for Redis Enterprise (ACRE).  Add a global load balancer like Azure Front Door.  Deploy the same application to multiple regions, backed my multiple instances of ACRE connected in active-active configuration.  Learn why connecting to data in a different region is an anti-pattern. Demonstrate destroying an entire region to show the value of active-active level resilience. Using Terraform, Spring Boot and Azure.\r\n\r\nIn this session, you will learn a reference architecture, for modern, geo-distributed applications. You will learn how to modernize a single-region application, into a multiple-region or multi-cloud architecture. By the end of this interactive session, your apps will be able to shine bright with confidence, resiliency, and no more trembling.",
         "startsAt": "2023-04-06T10:00:00",
         "endsAt": "2023-04-06T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "6ca4dbda-e3ec-4bbe-b2cb-265787c1b93e",
-            "name": "Alex Borysov"
-          },
-          {
-            "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
-            "name": "Mykyta Protsenko"
+            "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+            "name": "DaShaun Carter"
           }
         ],
         "categories": [
@@ -3185,9 +3281,9 @@
       },
       {
         "questionAnswers": [],
-        "id": "387130",
-        "title": "Accessibility Auditing: Getting Started with Accessibility",
-        "description": "This workshop is for people that are just starting or want to get started learning accessibility and how to audit. Or for the people that are in Accessibility that want a refresher or are looking to change their workflows. \r\n\r\nThe overall points an attendee should take away and learn from this workshop are:\r\n\r\nDifferences between auditing websites and mobile apps;\r\nWhat to look for when auditing;\r\nThe WCAG guidelines and best practices;\r\nTools to use and how to use them;\r\nDifferences between automated and manual testing;\r\nDocumentation of audits and scoring them for clients;\r\nUsing the data to make sites more accessible;\r\nWorkflows and toolkits that make for efficient auditing.\r\n\r\nBy the time the workshop has ended, the attendee should be able to go out and audit websites for accessibility.\r\n",
+        "id": "387126",
+        "title": "Deceptive Patterns & FAST",
+        "description": "Deceptive patterns (also widely known as \"dark patterns\") are all over the Web. I'll speak to the accessibility impact deceptive patterns and \"dark\" patterns have as well as my introduction to taking these patterns and my work in the W3C to have these published in WCAG 3.\r\n\r\nThere is a lot of work being done in the Functional Needs group of the W3C to introduce these to FAST. I'll talk about FAST, what it means to accessibility, and to users, developers, designers, and everyone in-between in the organization.\r\n\r\nI'll also introduce people to the Framework for Accessible Specification of Technologies (FAST) which advises creators of technical specifications on ensuring their technology meets the needs of users with disabilities. It primarily addresses web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.",
         "startsAt": "2023-04-06T10:00:00",
         "endsAt": "2023-04-06T11:00:00",
         "isServiceSession": false,
@@ -5461,17 +5557,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "401231",
-        "title": "How to report a vulnerability: Responsible Disclosure for Developers",
-        "description": "Ever seen a security-related issue that you felt should be reported? Unsure of how reporting security issue is different than a regular bug? Developers of any level should know how to report a vulnerability. In this talk, we will talk about what CVEs are, some general vulnerability classifications, look at a few common ways you can report security issues, as well as look at a few common mistakes. This talk is geared toward non-security professionals.",
+        "id": "402390",
+        "title": "Minimum Viable Security for Cloud Native Stacks",
+        "description": "The migration from monoliths to microservices is long behind us, however managing microservices operations at scale comes with a layer of complexity, particularly with aspects of security that still have a learning curve.  But what if all of this could be simplified and automated pretty easily?\r\n\r\nIf we think about our production microservices operations, in the same way we think about how we design and build our products, we could build and automate minimum viable security plans that we could easily bake into our config files and CI/CD processes.  Once we build this foundational framework of security, it will always be possible to iterate and evolve our security framework, for advanced layers of security that often comes with time, increased experience, and greater maturity around security.\r\n\r\nIn this talk, we will present what MVS looks like for microservices operations, how to build a cluster secured by design, continuously monitoring networking,  container internals and primitives, and access management with a least privilege principle mindset. In this session we will demonstrate this through code, and even how this can work seamlessly with other ecosystem projects - from Helm to OPA, ArgoCD, Notary or Github Actions, Terraform, and AWS.",
         "startsAt": "2023-04-06T16:00:00",
         "endsAt": "2023-04-06T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "130a4bc5-3b04-4a0c-95e6-62fad0b4d722",
-            "name": "Brian Demers"
+            "id": "f58bdf89-78d6-4baa-a6fa-9a058470699d",
+            "name": "Chris Koehnecke"
           }
         ],
         "categories": [
@@ -5785,45 +5881,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "450346",
-        "title": "Hands on with Azure Spring Apps Enterprise",
-        "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
+        "id": "768c42e5-55df-4982-8185-bfc7f1401e15",
+        "title": "Conf After Party!",
+        "description": "time to unwind with friends old and new!",
+        "startsAt": "2023-04-06T20:00:00",
+        "endsAt": "2023-04-06T23:05:00",
+        "isServiceSession": true,
         "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "05be364d-a57f-4e08-978d-8043d43db097",
-            "name": "Mark Heckler"
-          }
-        ],
-        "categories": [
-          {
-            "id": 43783,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 143429,
-                "name": "Cloud Technology"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 43785,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 143441,
-                "name": "workshop"
-              }
-            ],
-            "sort": 2
-          }
-        ],
-        "roomId": null,
-        "room": null,
+        "speakers": [],
+        "categories": [],
+        "roomId": 28892,
+        "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
         "recordingUrl": null
       }
