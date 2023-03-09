@@ -61,7 +61,7 @@ layout: info-fluid
             <span><a href="/gwcc_map.pdf">Rooms</a></span>
         </div>
         <div>
-          <h2 class="day "> Thursday Apr 5 - Day 2 </h2>
+          <h2 class="day "> Thursday Apr 6 - Day 2 </h2>
         </div>
         {% for slot in day2_times %}
         <div class="until09">
