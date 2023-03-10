@@ -1,5 +1,41 @@
 [
   {
+    "id": "020aa23a-e00d-431b-b5f1-685fba3dcb40",
+    "firstName": "Ajai",
+    "lastName": "Peddapanga",
+    "fullName": "Ajai Peddapanga",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "46d17ddc-1a74-4d59-8906-d6246ac498d4",
     "firstName": "Ajuna",
     "lastName": "Kyaruzi",
@@ -246,6 +282,42 @@
     "categories": []
   },
   {
+    "id": "073ba34b-31d2-462d-9da4-79aae9f1f3ef",
+    "firstName": "Anish",
+    "lastName": "Patel",
+    "fullName": "Anish Patel",
+    "bio": "Anish Patel is a Staff SE at VMware, focusing on organization modernization.  His past experiences include running operations for a major EdTech company, as well as an ITSP.  He also helped design the original firmware for Uber bikes.  When he is not busy working on customer problems, you'll find him on the mats at you local BJJ school.",
+    "tagLine": "Staff Solutions Engineer",
+    "profilePicture": "https://sessionize.com/image/39d5-400o400o2-Jwg6wGFTqTKk1YUMHXffTs.jpg",
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "N/A",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "1dac3645-0e7d-479b-8654-69cdfbda3745",
     "firstName": "Arun",
     "lastName": "Gupta",
@@ -256,7 +328,7 @@
     "sessions": [
       {
         "id": 455875,
-        "name": "Five skills to force multiply your technical talent"
+        "name": "KEYNOTE Five skills to force multiply your technical talent"
       }
     ],
     "isTopSpeaker": false,
@@ -1428,6 +1500,42 @@
     "categories": []
   },
   {
+    "id": "74de1e5a-c9b8-4596-9630-d30b8ff9a368",
+    "firstName": "Eddie",
+    "lastName": "Knight",
+    "fullName": "Eddie Knight",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 406344,
+        "name": "Keeping It SAST-y"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "ab5d2f7f-05ed-4a76-b8f0-c96f3a3ba2a1",
     "firstName": "Edson",
     "lastName": "Yanaga",
@@ -1593,6 +1701,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@edeandrea",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
+    "firstName": "Eric",
+    "lastName": "Manley",
+    "fullName": "Eric Manley",
+    "bio": "34 Years Industry Experience\r\nStarted Career in Application-Development\r\nArchitecture (Application & Infrastructure)\r\nLeveraged App-Dev Skills For Automation-of-Many-Things\r\nLast 12 years in Cloud/Infrastructure/Platform Automation",
+    "tagLine": "VMWare Platform Architect",
+    "profilePicture": "https://sessionize.com/image/4c60-400o400o2-NC2JPMn527d23durU7v2mJ.jpg",
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMWare",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@MEricManley",
         "sort": 18,
         "answerExtra": null
       }
@@ -3254,6 +3398,42 @@
     "categories": []
   },
   {
+    "id": "eb9a399a-f464-4d46-889d-55261c445215",
+    "firstName": "Manoj",
+    "lastName": "Singh",
+    "fullName": "Manoj Singh",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "6c93de4e-0f8c-45bd-b76b-ba868aa81ca7",
     "firstName": "Marcus",
     "lastName": "Hellberg",
@@ -3629,6 +3809,10 @@
       {
         "id": 405414,
         "name": "CAPES aren't just for super heroes... They're for you too!"
+      },
+      {
+        "id": 459309,
+        "name": "Women in Technology Breakfast"
       }
     ],
     "isTopSpeaker": false,
@@ -4036,13 +4220,13 @@
     "categories": []
   },
   {
-    "id": "031a7caa-b3be-433e-88c3-52aab3d461a0",
-    "firstName": "Phil",
+    "id": "bd435afb-3853-43c0-8dee-cbcda16f7e91",
+    "firstName": "Phillip",
     "lastName": "Webb",
-    "fullName": "Phil Webb",
-    "bio": "Phil Webb is a Spring Framework developer and co-creator of the Spring Boot project. Prior to joining VMware and relocating to California, Phil worked for a number of UK technology companies.",
-    "tagLine": "Spring Boot Lead",
-    "profilePicture": "https://sessionize.com/image/40b8-400o400o2-DLgDoAaHFD7V63j9Gcqru.jpeg",
+    "fullName": "Phillip Webb",
+    "bio": "Phil Webb is the co-creator of the Spring Boot open source project and has been serving as the project lead since its inception in 2013. Phil is employed by VMware where he is fortunate enough to be able to work full-time on open source software.",
+    "tagLine": "Spring Boot Project Lead",
+    "profilePicture": "https://sessionize.com/image/60ab-400o400o2-Tid3jieZo8BFp5eM1aK5D8.jpg",
     "sessions": [
       {
         "id": 417562,
@@ -4065,42 +4249,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@phillip_webb",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "d92d283c-c3e1-481b-a7d8-7671e07d1d62",
-    "firstName": "Phil",
-    "lastName": "Webb",
-    "fullName": "Phil Webb",
-    "bio": null,
-    "tagLine": null,
-    "profilePicture": null,
-    "sessions": [
-      {
-        "id": 417562,
-        "name": "Spring Boot 3 Workshop"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": null,
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": null,
         "sort": 18,
         "answerExtra": null
       }
@@ -4400,7 +4548,7 @@
     "firstName": "Rudy",
     "lastName": "De Busscher",
     "fullName": "Rudy De Busscher",
-    "bio": "Rudy loves to create (web) applications with the Java EE platform and MicroProfile implementations and is currently working for Payara Services Limited in the Service Team. He helps customers and advocates the Payara Products in various ways.\r\n\r\nHe is active in the IT industry for more than 20 years and is a big fan of OpenSource. He is also passionate about Web Application Security and is a member of the Java EE Security API team of Jakarta EE.",
+    "bio": "Rudy loves to create (web) applications with enterprise backend platforms like Jakarta EE and MicroProfile. Currently, he is a Developer Advocate for MicroStream. He has worked on various projects in a team for customers, contributed to various Open Source projects, and supported developers.\r\n\r\nHe is active in the IT industry for more than 20 years and is a big fan of OpenSource. He is also passionate about Web Application Security and is a member of the Java EE Security API team of Jakarta EE.",
     "tagLine": "Developer Advocate",
     "profilePicture": "https://sessionize.com/image/088d-400o400o2-PncTikzR72J8X87dyi3awx.jpg",
     "sessions": [
@@ -4484,7 +4632,7 @@
     "firstName": "Scott",
     "lastName": "McAllister",
     "fullName": "Scott McAllister",
-    "bio": "Scott McAllister is a Developer Advocate for PagerDuty. He has been building web applications in several industries for over a decade. Now he's helping others learn about a wide range of web technologies and incident management principles. When he's not coding, writing or speaking he enjoys long walks with his wife, skipping rocks with his kids, and is happy whenever Real Salt Lake, Seattle Sounders FC, Manchester City, St. Louis Cardinals, Seattle Mariners, Chicago Bulls, Seattle Storm, Seattle Seahawks, OL Reign FC, St. Louis Blues, Seattle Kraken, Barcelona, Fiorentina, Borussia Dortmund or Mainz 05 can manage a win.\r\n",
+    "bio": "Scott McAllister is a Developer Advocate for ngrok. He has been building web applications in several industries for over a decade. Now he's helping others learn about a wide range of web technologies and incident management principles. When he's not coding, writing or speaking he enjoys long walks with his wife, skipping rocks with his kids, and is happy whenever Real Salt Lake, Seattle Sounders FC, Manchester City, St. Louis Cardinals, Seattle Mariners, Chicago Bulls, Seattle Storm, Seattle Seahawks, OL Reign FC, St. Louis Blues, Seattle Kraken, Barcelona, Fiorentina, Borussia Dortmund or Mainz 05 can manage a win.\r\n",
     "tagLine": "Developer Advocate at PagerDuty",
     "profilePicture": "https://sessionize.com/image/76d7-400o400o2-Pn9oh1DNVCkN3fTo1Y4zHS.jpg",
     "sessions": [
@@ -4532,7 +4680,7 @@
     "sessions": [
       {
         "id": 404756,
-        "name": "Harnessing the Hyper-dimensional Mind: Visualizing Brain Computer Interfaces"
+        "name": "KEYNOTE Harnessing the Hyper-dimensional Mind: Visualizing Brain Computer Interfaces"
       }
     ],
     "isTopSpeaker": false,
@@ -4779,10 +4927,6 @@
       {
         "id": 405697,
         "name": "Developer Productivity - clean | secure | fast"
-      },
-      {
-        "id": 405699,
-        "name": "The Anatomy of Java Vulnerabilities"
       }
     ],
     "isTopSpeaker": false,
