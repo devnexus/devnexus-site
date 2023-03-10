@@ -7015,21 +7015,17 @@
             "recordingUrl": null
           },
           {
-            "id": "402850",
-            "title": "Next up: Spring Security 6",
-            "description": "Holy deprecations, Batman!\r\n\r\nAside from all the great native, observability, and authorization features, SAML and OAuth enhancements, and password security improvements, the Spring Security team did a lot of clean-up, too!\r\n\r\nIn this talk, we'll start with a secured Spring Security 5.8 app, prepare it for 6.0, update, and then add features like crazy. :) We may even get to use Spring Authorization Server 1.0 in the process.",
+            "id": "409634",
+            "title": "Spring Cloud Gateway: What is it and What's New.",
+            "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
             "startsAt": "2023-04-06T13:30:00",
             "endsAt": "2023-04-06T14:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
-                "name": "Steve Riesenberg"
-              },
-              {
-                "id": "feba8c56-4b68-41e6-8d2d-b2324a5e18c8",
-                "name": "Josh Cummings"
+                "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+                "name": "Spencer Gibb"
               }
             ],
             "categories": [
@@ -7105,17 +7101,21 @@
             "recordingUrl": null
           },
           {
-            "id": "409634",
-            "title": "Spring Cloud Gateway: What is it and What's New.",
-            "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
+            "id": "402850",
+            "title": "Next up: Spring Security 6",
+            "description": "Holy deprecations, Batman!\r\n\r\nAside from all the great native, observability, and authorization features, SAML and OAuth enhancements, and password security improvements, the Spring Security team did a lot of clean-up, too!\r\n\r\nIn this talk, we'll start with a secured Spring Security 5.8 app, prepare it for 6.0, update, and then add features like crazy. :) We may even get to use Spring Authorization Server 1.0 in the process.",
             "startsAt": "2023-04-06T16:00:00",
             "endsAt": "2023-04-06T17:00:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
-                "name": "Spencer Gibb"
+                "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
+                "name": "Steve Riesenberg"
+              },
+              {
+                "id": "feba8c56-4b68-41e6-8d2d-b2324a5e18c8",
+                "name": "Josh Cummings"
               }
             ],
             "categories": [
@@ -7825,49 +7825,6 @@
         "name": "311 (Security)",
         "sessions": [
           {
-            "id": "386424",
-            "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
-            "description": "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used to deal with `edge security` , direct integration with IDPs using different libraries, also dealing with certificates, SSL, securing the point of entrance to our system, and after that.... well, if you are in the system is because you are allowed to ...... or not ?\r\n\r\nNowadays CVEs, massive attacks, are common .... for sure you remember some recent cases ....don't you ?\r\n\r\nSo, the idea of protecting only the most external layer of our system , based on the idea that nobody can be in the system if that gate has not been successfully passed, is no longer valid.\r\n\r\nIn this session I will share my knowledge on protecting K8s and VMs clusters following the ZeroTrust approach, covering concepts like : Zero Trust security, SSL transport, Observability, Authz and Authn , and everything without touching a single line of our Java ( Quarkus ) microservices and how to change that configuration without telling a word to the app developer.",
-            "startsAt": "2023-04-06T10:00:00",
-            "endsAt": "2023-04-06T11:00:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
-                "name": "Jonathan Vila"
-              }
-            ],
-            "categories": [
-              {
-                "id": 43783,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 143434,
-                    "name": "Security"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 43785,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 143440,
-                    "name": "session"
-                  }
-                ],
-                "sort": 2
-              }
-            ],
-            "roomId": 33055,
-            "room": "311 (Security)",
-            "liveUrl": null,
-            "recordingUrl": null
-          },
-          {
             "id": "403691",
             "title": "A Community Approach to OSS Distribution",
             "description": "There are a variety of different attacks on the open source supply chain, including exploitation of zero day vulnerabilities, injection of malicious code or back-doors, and typo-squatting of popular libraries. And the systems that we rely upon for the distribution of OSS were not designed with a security mindset to prevent these sorts of attacks. There has to be a better way for open source authors and maintainers to securely deliver their packages to end users!\r\n\r\nEnter Pyrsia, a new software distribution system that is decentralized, community-driven, foundation governed, and built with a security first focus. In this presentation we will talk about how Pyrsia is designed, how you can use it to distribute and consume software packages, and how you can get involved in the Pyrsia community to grow the library of OSS software available freely and securely for all.",
@@ -8316,17 +8273,17 @@
             "recordingUrl": null
           },
           {
-            "id": "403128",
-            "title": "Knative Core Concepts! And Spiders!",
-            "description": "Although Knative has been community-maintained since 2018, there has been buzz around the project lately because Knative has recently been accepted to the Cloud Native Computing Foundation (CNCF) as an incubating project.\r\n\r\nCool! But what is Knative, exactly?\r\n\r\nSimply put, Knative is a technology that streamlines and enhances the way that applications run on Kubernetes.\r\n\r\nThis talk is for people who are excited about this value proposition and want to dig deeper. How does it work? What components are at play? In what ways is running an app on Knative superior to running it directly on Kubernetes?\r\n\r\nInstead of presenting slides, Whitney will diagram the fundamental concepts of Knative, explaining how they work in simple, relatable terms. She will then drive deeper understanding with a live coding demo that gives context to the main points. With spiders and rainbows. You know, a real-life, straightforward, run-of-the-mill use case.\r\n\r\nAttend this talk to gain a high-level understanding of Knative, its main components, and how it simplifies and improves the way that apps run on Kubernetes.",
+            "id": "386424",
+            "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
+            "description": "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used to deal with `edge security` , direct integration with IDPs using different libraries, also dealing with certificates, SSL, securing the point of entrance to our system, and after that.... well, if you are in the system is because you are allowed to ...... or not ?\r\n\r\nNowadays CVEs, massive attacks, are common .... for sure you remember some recent cases ....don't you ?\r\n\r\nSo, the idea of protecting only the most external layer of our system , based on the idea that nobody can be in the system if that gate has not been successfully passed, is no longer valid.\r\n\r\nIn this session I will share my knowledge on protecting K8s and VMs clusters following the ZeroTrust approach, covering concepts like : Zero Trust security, SSL transport, Observability, Authz and Authn , and everything without touching a single line of our Java ( Quarkus ) microservices and how to change that configuration without telling a word to the app developer.",
             "startsAt": "2023-04-06T11:30:00",
             "endsAt": "2023-04-06T12:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "3f4d3de3-3518-49b8-9e41-ce9a02d43c24",
-                "name": "Whitney Lee"
+                "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
+                "name": "Jonathan Vila"
               }
             ],
             "categories": [
@@ -8335,8 +8292,8 @@
                 "name": "Track",
                 "categoryItems": [
                   {
-                    "id": 143429,
-                    "name": "Cloud Technology"
+                    "id": 143434,
+                    "name": "Security"
                   }
                 ],
                 "sort": 0
@@ -9881,54 +9838,6 @@
             "index": 4
           },
           {
-            "id": 33055,
-            "name": "311 (Security)",
-            "session": {
-              "id": "386424",
-              "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
-              "description": "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used to deal with `edge security` , direct integration with IDPs using different libraries, also dealing with certificates, SSL, securing the point of entrance to our system, and after that.... well, if you are in the system is because you are allowed to ...... or not ?\r\n\r\nNowadays CVEs, massive attacks, are common .... for sure you remember some recent cases ....don't you ?\r\n\r\nSo, the idea of protecting only the most external layer of our system , based on the idea that nobody can be in the system if that gate has not been successfully passed, is no longer valid.\r\n\r\nIn this session I will share my knowledge on protecting K8s and VMs clusters following the ZeroTrust approach, covering concepts like : Zero Trust security, SSL transport, Observability, Authz and Authn , and everything without touching a single line of our Java ( Quarkus ) microservices and how to change that configuration without telling a word to the app developer.",
-              "startsAt": "2023-04-06T10:00:00",
-              "endsAt": "2023-04-06T11:00:00",
-              "isServiceSession": false,
-              "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
-                  "name": "Jonathan Vila"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 43783,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 143434,
-                      "name": "Security"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 43785,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 143440,
-                      "name": "session"
-                    }
-                  ],
-                  "sort": 2
-                }
-              ],
-              "roomId": 33055,
-              "room": "311 (Security)",
-              "liveUrl": null,
-              "recordingUrl": null
-            },
-            "index": 5
-          },
-          {
             "id": 33056,
             "name": "312 (Unobtanium)",
             "session": {
@@ -10594,17 +10503,17 @@
             "id": 33057,
             "name": "313 (Cloud Tech)",
             "session": {
-              "id": "403128",
-              "title": "Knative Core Concepts! And Spiders!",
-              "description": "Although Knative has been community-maintained since 2018, there has been buzz around the project lately because Knative has recently been accepted to the Cloud Native Computing Foundation (CNCF) as an incubating project.\r\n\r\nCool! But what is Knative, exactly?\r\n\r\nSimply put, Knative is a technology that streamlines and enhances the way that applications run on Kubernetes.\r\n\r\nThis talk is for people who are excited about this value proposition and want to dig deeper. How does it work? What components are at play? In what ways is running an app on Knative superior to running it directly on Kubernetes?\r\n\r\nInstead of presenting slides, Whitney will diagram the fundamental concepts of Knative, explaining how they work in simple, relatable terms. She will then drive deeper understanding with a live coding demo that gives context to the main points. With spiders and rainbows. You know, a real-life, straightforward, run-of-the-mill use case.\r\n\r\nAttend this talk to gain a high-level understanding of Knative, its main components, and how it simplifies and improves the way that apps run on Kubernetes.",
+              "id": "386424",
+              "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
+              "description": "Edge trusting is dead, long live Zero Trust.\r\n\r\nWe were used to deal with `edge security` , direct integration with IDPs using different libraries, also dealing with certificates, SSL, securing the point of entrance to our system, and after that.... well, if you are in the system is because you are allowed to ...... or not ?\r\n\r\nNowadays CVEs, massive attacks, are common .... for sure you remember some recent cases ....don't you ?\r\n\r\nSo, the idea of protecting only the most external layer of our system , based on the idea that nobody can be in the system if that gate has not been successfully passed, is no longer valid.\r\n\r\nIn this session I will share my knowledge on protecting K8s and VMs clusters following the ZeroTrust approach, covering concepts like : Zero Trust security, SSL transport, Observability, Authz and Authn , and everything without touching a single line of our Java ( Quarkus ) microservices and how to change that configuration without telling a word to the app developer.",
               "startsAt": "2023-04-06T11:30:00",
               "endsAt": "2023-04-06T12:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "3f4d3de3-3518-49b8-9e41-ce9a02d43c24",
-                  "name": "Whitney Lee"
+                  "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
+                  "name": "Jonathan Vila"
                 }
               ],
               "categories": [
@@ -10613,8 +10522,8 @@
                   "name": "Track",
                   "categoryItems": [
                     {
-                      "id": 143429,
-                      "name": "Cloud Technology"
+                      "id": 143434,
+                      "name": "Security"
                     }
                   ],
                   "sort": 0
@@ -10920,21 +10829,17 @@
             "id": 28893,
             "name": "302 (Cloud Infrastructure)",
             "session": {
-              "id": "402850",
-              "title": "Next up: Spring Security 6",
-              "description": "Holy deprecations, Batman!\r\n\r\nAside from all the great native, observability, and authorization features, SAML and OAuth enhancements, and password security improvements, the Spring Security team did a lot of clean-up, too!\r\n\r\nIn this talk, we'll start with a secured Spring Security 5.8 app, prepare it for 6.0, update, and then add features like crazy. :) We may even get to use Spring Authorization Server 1.0 in the process.",
+              "id": "409634",
+              "title": "Spring Cloud Gateway: What is it and What's New.",
+              "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
               "startsAt": "2023-04-06T13:30:00",
               "endsAt": "2023-04-06T14:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
-                  "name": "Steve Riesenberg"
-                },
-                {
-                  "id": "feba8c56-4b68-41e6-8d2d-b2324a5e18c8",
-                  "name": "Josh Cummings"
+                  "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+                  "name": "Spencer Gibb"
                 }
               ],
               "categories": [
@@ -12123,17 +12028,21 @@
             "id": 28893,
             "name": "302 (Cloud Infrastructure)",
             "session": {
-              "id": "409634",
-              "title": "Spring Cloud Gateway: What is it and What's New.",
-              "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
+              "id": "402850",
+              "title": "Next up: Spring Security 6",
+              "description": "Holy deprecations, Batman!\r\n\r\nAside from all the great native, observability, and authorization features, SAML and OAuth enhancements, and password security improvements, the Spring Security team did a lot of clean-up, too!\r\n\r\nIn this talk, we'll start with a secured Spring Security 5.8 app, prepare it for 6.0, update, and then add features like crazy. :) We may even get to use Spring Authorization Server 1.0 in the process.",
               "startsAt": "2023-04-06T16:00:00",
               "endsAt": "2023-04-06T17:00:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
-                  "name": "Spencer Gibb"
+                  "id": "6a38c6dc-efc8-405e-b827-932356dd3d76",
+                  "name": "Steve Riesenberg"
+                },
+                {
+                  "id": "feba8c56-4b68-41e6-8d2d-b2324a5e18c8",
+                  "name": "Josh Cummings"
                 }
               ],
               "categories": [
