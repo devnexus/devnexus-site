@@ -12,7 +12,7 @@ tagLine: NYJavaSIG Chairman
 profilePicture: https://sessionize.com/image/55e2-400o400o2-KUEe6GnWn47QnDFaFpJp1R.jpg
 sessions:
 - id: 404726
-  name: Patterns, Predictions, and Prescriptions
+  name: Patterns, Predictions, and Programming
 isTopSpeaker: false
 links: []
 questionAnswers:

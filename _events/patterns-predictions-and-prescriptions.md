@@ -1,7 +1,7 @@
 ---
 questionAnswers: []
 id: '404726'
-title: Patterns, Predictions, and Prescriptions
+title: Patterns, Predictions, and Programming
 description: "\"One of the most interesting aspects of the world is that it can be
   considered to be made up of patterns\"  -  Norbert Wiener (1940s)\r\n\r\nWe are
   entering a new and long-tail phase of software development with Machine Learning
