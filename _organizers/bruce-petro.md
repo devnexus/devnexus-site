@@ -1,12 +1,14 @@
 ---
-title: Bruce Petro
+title: Ari Waller
 order: 7
-first_name: Bruce
-last_name: Petro
+first_name: Ari
+last_name: Waller
 company:
-linkedin: brucepetro
+linkedin: ariwaller
 layout: bio
 ---
-Bruce has over 19 years experience in numerous types of software design and development experience. His focus in object oriented design and coding started with years of enterprise software experience in Smalltalk, which, of course, led into years of experience in Java applications and web projects. Current focus: Start with a more user-centered design, use agile process and always solve problems with an elegantly simple solution (which is almost never simple to do). Bruce is currently a Sr. Software Engineer at LexisNexis in Alpharetta where he is working on a number of projects. Bruce enjoys agile projects with RIA user interface designs as well as excellent OOD. In the last couple years, this has led to projects using Flex and GWT technologies.
+Ari Waller serves full-time on the Developer Relations Team as the Meetup Event Manager for JFrog.
 
-We moved to the Atlanta area about two years ago and since we live in west Cobb area, we are still trying to figure out how to drive in Atlanta without losing our sanity.
+Ari has utilized this knowledge and expertise in multiple leadership capacities while always remaining hands-on, as his passion is learning and engaging with the Technology Community Globally. Over the past few years, Ari sought to transform his platform to be authentically transparent and become an “open source” confidant for those who wanted IT career guidance. He brings his expertise and job market insight to technical professionals at meetups, boot camps, conferences, and panels in this effort.
+
+With the rest of his spare, he enjoys spending time with his wife and his many children; as well as building Star Wars Legos and watching the Atlanta Hawks. Ari graduated from Temple University in Philadelphia with a degree in Education.
