@@ -1,13 +1,15 @@
 require 'json'
 require 'net/http'
-dataurl = URI('https://cfp.devnexus.com/en/dn2022/public/promo_events.json')
+dataurl = URI('https://sessionize.com/api/v2/g415clv7/view/GridSmart')
 event_data_file = Net::HTTP.get(dataurl)
 event_data = JSON.parse(event_data_file)
-events = event_data['events'].select{|item|"Full day Workshops" == item['track']}
-#events = event_data['events']
+events = event_data[0]["rooms"]
+#puts "#{events}"
 puts "Reading #{events.length} events from cfp"
 for event in events do
-  puts "#{event["id"]},#{event["title"]}, #{event["persons"].map{ |p| p["email"]}.join(";")}"
+  session = event["sessions"][0]
+  #puts "#{session}"
+  puts "#{session["id"]},#{session["title"]}, #{session["speakers"].map{ |p| p["name"]}.join(";")}"
   #for person in event["persons"] do
     #puts "#{person["id"]}, #{person["full_public_name"]}, #{person["email"]}"
   #end 
