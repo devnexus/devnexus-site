@@ -17,7 +17,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -65,7 +66,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -109,7 +111,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -126,8 +129,12 @@
             "name": "Rich Hagarty"
           },
           {
-            "id": "2fa6c7ec-3bda-4e4f-aba8-4a984328b9e2",
-            "name": "YK Chang"
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
+          },
+          {
+            "id": "e9048ace-0399-49b3-aaf9-11d9abd8976d",
+            "name": "Cindy High"
           }
         ],
         "categories": [
@@ -157,7 +164,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -205,7 +213,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -218,10 +227,6 @@
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "05be364d-a57f-4e08-978d-8043d43db097",
-            "name": "Mark Heckler"
-          },
-          {
             "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
             "name": "Eric Manley"
           },
@@ -230,12 +235,8 @@
             "name": "Anish Patel"
           },
           {
-            "id": "020aa23a-e00d-431b-b5f1-685fba3dcb40",
+            "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
             "name": "Ajai Peddapanga"
-          },
-          {
-            "id": "eb9a399a-f464-4d46-889d-55261c445215",
-            "name": "Manoj Singh"
           }
         ],
         "categories": [
@@ -265,7 +266,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -281,7 +283,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -325,7 +328,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -369,7 +373,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -413,7 +418,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -461,7 +467,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -505,7 +512,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -553,7 +561,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -597,7 +606,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -645,7 +655,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -689,7 +700,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -737,7 +749,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -781,7 +794,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -825,7 +839,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -869,7 +884,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -885,21 +901,22 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
-        "id": "407818",
-        "title": "Walking to School in the Snow or What to Do When You Aren't Building Bridges with Bricks",
-        "description": "Roman architects and engineers built colosseums, bridges and aqueducts that have lasted for millennia.  Most software applications last… not as long.\r\n\r\nThe discipline and processes of software engineering are continuously evolving to deliver faster results.  Meanwhile application architecture is undergoing a paradigm shift as the enterprise embraces the cloud.\r\n\r\nWhat does engineering discipline look like when time to market is more important than time in existence?  \r\n\r\nThis talk looks at 5 emerging architecture trends geared towards delivering business value faster and what these trends mean for developers:\r\n\r\n* Putting Architects in the Elevators\r\n* Composable Organizations\r\n* Product vs. Project Thinking\r\n* Paved Roads and Golden Paths\r\n* Data Meshes\r\n",
+        "id": "404340",
+        "title": "Scaling Batch Applications ",
+        "description": "This talk will discuss how to scale batch applications using Spring Batch. Batch processing is a common requirement for many enterprise applications, but processing time can become a bottleneck as data volumes grow. Spring Batch provides a powerful framework for building and running batch applications that can be easily scaled. We will cover topics such as partitioning, parallel processing, and remote chunking, which can help increase throughput and reduce processing time. Additionally, we will explore best practices for designing batch jobs and using Spring Batch features effectively. By the end of the talk, attendees will have a solid understanding of using Spring Batch to scale their batch processing applications and easily handle large data volumes.",
         "startsAt": "2023-04-05T11:30:00",
         "endsAt": "2023-04-05T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
-            "name": "Jeremy Davis"
+            "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
+            "name": "Rodrigo Graciano"
           }
         ],
         "categories": [
@@ -919,8 +936,8 @@
             "name": "Session Format",
             "categoryItems": [
               {
-                "id": 143442,
-                "name": "keynote"
+                "id": 143440,
+                "name": "session"
               }
             ],
             "sort": 2
@@ -929,7 +946,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -973,7 +991,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1017,7 +1036,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1061,7 +1081,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1109,7 +1130,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1153,21 +1175,22 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "386806",
-        "title": "Quarkus for Spring Developers",
-        "description": "In this session, I will show concepts and conventions familiar to Spring developers and how those same concepts and conventions can be implemented in Quarkus, all while highlighting similarities and differences between them. Additionally, I will show similarities and differences in how testing is done, highlighting Quarkus Dev Services.\r\n\r\nThis session will be mostly live coding while minimizing the amount of slides. I will introduce an existing Spring application with a full test suite and build a Quarkus equivalent version of it, live.",
+        "id": "465275",
+        "title": "Live Coding Quarkus: Supersonic, Subatomic Kubernetes-Native Java",
+        "description": "Quarkus is a Supersonic, Subatomic Kubernetes-native Java stack built from best of breed libraries and standards.\r\n\r\nQuarkus is:\r\n* Really Fast!\r\n* Container First\r\n* Community driven\r\n* Standards based\r\n* Light weight\r\n* Built for Testing\r\n* Imperative and Reactive\r\n* Perfect for Microservices\r\n\r\nMost importantly Quarkus is built for “Developer Joy!”  \r\n\r\nCoding with Quarkus is productive and fun. Quarkus delivers an inner development loop that provides instantaneous feedback and an outer loop that makes Kubernetes easy (well, almost easy.)\r\n\r\nJoin me as I build and deploy a Quarkus application and experience the Developer Joy for yourself!  \r\n\r\nAt the end of this presentation you will know:\r\n* What Quarkus is and how it works\r\n* How to get coding quickly \r\n* How to build REST applications in minutes\r\n* How to build event-driven applications using Apache Kafka\r\n* How to deploy applications to Kubernetes\r\n* How to continuously test with real dependencies\r\n\r\nOnly 3 slides; the rest is hands on keyboard Developer Joy!\r\n",
         "startsAt": "2023-04-05T11:30:00",
         "endsAt": "2023-04-05T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
-            "name": "Eric Deandrea"
+            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
+            "name": "Jeremy Davis"
           }
         ],
         "categories": [
@@ -1197,7 +1220,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1241,7 +1265,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1285,7 +1310,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1329,7 +1355,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1373,7 +1400,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1417,7 +1445,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1433,7 +1462,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -1477,7 +1507,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1521,7 +1552,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1569,7 +1601,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1613,7 +1646,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1657,7 +1691,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1701,21 +1736,22 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "408219",
-        "title": "Quarkus Unleashed",
-        "description": "Quarkus mission is to transform your entire application, including its libraries, into an artifact that uses significantly fewer resources than traditional approaches. These can then be used to build native applications using GraalVM. To do this, you need to analyze and understand the whole \"closed world\" of the application. The best that can be achieved without the full context is partial and limited generic support. \r\n\r\nIn this session, we will unleash the power of Quarkus Extensions, and show you how to achieve all the Quarkus cool features, like hot reloading, Dev Services, or native compilation to any Java library. ",
+        "id": "386806",
+        "title": "Quarkus for Spring Developers",
+        "description": "In this session, I will show concepts and conventions familiar to Spring developers and how those same concepts and conventions can be implemented in Quarkus, all while highlighting similarities and differences between them. Additionally, I will show similarities and differences in how testing is done, highlighting Quarkus Dev Services.\r\n\r\nThis session will be mostly live coding while minimizing the amount of slides. I will introduce an existing Spring application with a full test suite and build a Quarkus equivalent version of it, live.",
         "startsAt": "2023-04-05T13:30:00",
         "endsAt": "2023-04-05T14:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "cd97bed4-f841-4e1f-94bb-43a21a06c582",
-            "name": "Roberto Cortez"
+            "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
+            "name": "Eric Deandrea"
           }
         ],
         "categories": [
@@ -1745,7 +1781,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1789,7 +1826,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1833,13 +1871,14 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
         "id": "404726",
-        "title": "Patterns, Predictions, and Prescriptions",
-        "description": "\"One of the most interesting aspects of the world is that it can be considered to be made up of patterns\"  -  Norbert Wiener (1940s)\r\n\r\nWe are entering a new and long-tail phase of software development with Machine Learning (ML).  ML, a subset of AI, is the ability of a machine to produce accurate results for a particular problem without any explicit programming.  These predictive results are derived from recognizing patterns in large data sets.  \r\n\r\nWe are effectively giving machines the ability to gain experience.\r\n\r\nThis megatrend affects our applications, software tools, data structures, systems architecture, new hardware approaches, business processes, organizational interactions, enterprise strategies, government behavior, geopolitical strengths, ethics, data privacy, etc.  In essence, ML is an inflection point for computing, enterprises, countries, humanity, and civilization.\r\n\r\nWe’ll explore some basic ML use cases, take a look at JSR #381 (Visual Recognition for Java), and then dive into issues, strategies, and the near-term and long-term directions of ML.",
+        "title": "Patterns, Predictions, and Programming ",
+        "description": "Machine Learning Tools for Java Developers - VisRec, ChatGPT, etc\r\n\r\n\"One of the most interesting aspects of the world is that it can be considered to be made up of patterns\" - Norbert Wiener (1940s).   We are entering a new and long-tail phase of software development with Machine Learning (ML). ML, a subset of AI, is the ability of a machine to produce accurate results for a particular problem without any explicit programming. These predictive results are derived from recognizing patterns in large data sets. We are effectively giving machines the ability to gain experience.  \r\n\r\n\r\nWith the new generation of “generative AI/ML” tools such as ChatGPT, DALL-E, Bard, Stable Diffusion, et al., this megatrend affects our applications, software tools, data structures, systems architecture, new hardware approaches, business processes, organizational interactions, enterprise strategies, government behavior, geopolitical strengths, ethics, data privacy, etc. In essence, ML is an inflection point for computing, enterprises, countries, humanity, and civilization. \r\n\r\n\r\nWe’ll explore some basic ML use cases, take a look at JSR #381 (Visual Recognition for Java), dive into the ChatGPT API, show some demos, and then discuss what all this means for Java developers.",
         "startsAt": "2023-04-05T13:30:00",
         "endsAt": "2023-04-05T14:30:00",
         "isServiceSession": false,
@@ -1877,7 +1916,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1921,7 +1961,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1969,7 +2010,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -1985,7 +2027,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -2033,7 +2076,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2077,7 +2121,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2121,7 +2166,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2165,7 +2211,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2209,7 +2256,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2253,21 +2301,22 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "435358",
-        "title": "From Code To Production - How Developer Tools Make you Successful",
-        "description": "Developer tools are often seen as an necessary evil: But they truly are key to striving, productive, and performant development. Your choice of tools decides about how fast you can build frictionless cloud and Kubernetes native applications. We take a look at the Red Hat Developer Tools portfolio and see which tool helps you where. Experience how source code moves through unit-tests, into containers, onto staging and arrives in production.",
+        "id": "463963",
+        "title": "Hyper-Automate your Cloud Native Journey with Kubernetes Custom Resources and Operators",
+        "description": "Kubernetes has become the de-facto orchestration platform that automates the deployment, scaling, and management of containerized microservices/applications. However, managing complex applications, including those built for multiple cloud environments, can be challenging, especially when it comes to tasks such as configuring, upgrading, and monitoring.\r\nKubernetes Operators are a powerful extension to Kubernetes that provides a way to automate the management of complex applications, including tedious DevOps and administrative operations. \r\nOperators are in fact software extensions that can be deployed on a Kubernetes cluster to monitor specific Custom Resources Definitions (CRD) defined by the admins. \r\nThey will ultimately enable developers to automate routine and repetitive tasks, simplify application management, and scale applications more efficiently.\r\nMo Haghighi, Distinguished Engineer at Discover Financial Services, will explore the advantages of Kubernetes operators for boosting developers’ productivity and how enterprises can expedite their modernisation journey and automate their multi-cloud deployment by adopting operators. ",
         "startsAt": "2023-04-05T15:00:00",
         "endsAt": "2023-04-05T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
-            "name": "Markus Eisele"
+            "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+            "name": "Mo Haghighi"
           }
         ],
         "categories": [
@@ -2297,7 +2346,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2341,7 +2391,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2389,7 +2440,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2433,7 +2485,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2477,7 +2530,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2521,7 +2575,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2565,7 +2620,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2609,7 +2665,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2653,7 +2710,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2697,7 +2755,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2745,7 +2804,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2793,21 +2853,22 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "404340",
-        "title": "Batch Processing Cloud Apps with Java",
-        "description": "In the world of cloud-native apps, we need to deal with a large amount of data from multiple sources. This requires considerable effort to read, process, and distribute. As the number of records increases, plain Java may not be the best solution. With many out-of-the-box solutions—such as transaction management, retry, chunk processing, and several templates—the lightweight framework of Spring Batch can help. Combined with the power of Kubernetes, you can easily make your batch processing rise to the clouds. We discuss this universe and its architecture and templates—providing live code examples to demonstrate all possibilities you have on your hands.",
+        "id": "391064",
+        "title": "KEDA, HPA, and VPA? An Introduction to Scaling a Event-Driven Workloads on Kubernetes",
+        "description": "Scaling modern event-driven applications that use an event-loop, such as those written using Node.js or Vert.x shouldn't be based on a single metric such as CPU usage. Code that uses blocking APIs or performs CPU-bound operations can have a significant impact on application responsiveness. Using Worker Threads can help alleviate pressure on the event-loop, but scaling out more replicas also plays an important role.\r\n\r\nJoin this session for a practical introduction to Kubernetes autoscaling, and KEDA. We'll examine an application that suffers reduced throughput and increased latency due to CPU-bound tasks blocking the event-loop. We'll then explore how Worker Threads and autoscaling features provided by Kubernetes and KEDA can keep our application both highly-available and responsive.",
         "startsAt": "2023-04-05T16:00:00",
         "endsAt": "2023-04-05T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
-            "name": "Rodrigo Graciano"
+            "id": "584538b7-7233-402d-8355-da1a0e00a384",
+            "name": "Evan Shortiss"
           }
         ],
         "categories": [
@@ -2837,7 +2898,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2881,7 +2943,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2925,23 +2988,53 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "98b6b539-ce98-4dd9-b75a-f5aa0387fab4",
-        "title": "Java Platform TBD",
-        "description": null,
+        "id": "466441",
+        "title": "Asynchronous Programming in Java using Virtual Threads",
+        "description": "Threads have been part of Java since the beginning. But, the new virtual threads, introduced as prerelease in Java 19, are different in how they're implemented and how we can benefit from them.\r\n\r\nIn this presentation we will learn about virtual threads, the problems they solve, and how to make use of them.",
         "startsAt": "2023-04-05T16:00:00",
         "endsAt": "2023-04-05T17:00:00",
-        "isServiceSession": true,
+        "isServiceSession": false,
         "isPlenumSession": false,
-        "speakers": [],
-        "categories": [],
+        "speakers": [
+          {
+            "id": "b576bdc5-c994-40f5-b1dd-e0f9f7999fa9",
+            "name": "Venkat Subramaniam"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -2985,7 +3078,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3029,7 +3123,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3045,7 +3140,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -3093,7 +3189,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3137,7 +3234,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3153,7 +3251,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -3197,7 +3296,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3241,21 +3341,22 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "392307",
-        "title": "CI/CD Pipelines : What, Why, How?",
-        "description": "To avoid getting caught up in notions of “the right tool” it is important to understand the core concepts of continuous integration (CI) and continuous delivery or continuous deployment (CD). Choosing the right tool should be a consequence of defining the right goals, metrics and processes to automate. In this session we will explore common ideas that must be present in commercial and open source solutions to monitor, automate, verify and deliver software. \r\nFor example: Tasks, Steps, Runs, End-to-end automation, Workflows, Tool orchestration, Release cycles, among others. \r\n",
+        "id": "409634",
+        "title": "Spring Cloud Gateway: What is it and What's New.",
+        "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
         "startsAt": "2023-04-06T10:00:00",
         "endsAt": "2023-04-06T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "a4d893c0-72e9-4c3c-a8fa-92ce9c2d95d6",
-            "name": "Ixchel Ruiz"
+            "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+            "name": "Spencer Gibb"
           }
         ],
         "categories": [
@@ -3285,7 +3386,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3329,7 +3431,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3373,7 +3476,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3417,7 +3521,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3461,7 +3566,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3505,7 +3611,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3549,7 +3656,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3593,7 +3701,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3641,7 +3750,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3685,7 +3795,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3729,7 +3840,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3745,7 +3857,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -3789,7 +3902,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3833,7 +3947,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3881,7 +3996,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3925,7 +4041,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -3969,7 +4086,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4013,7 +4131,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4057,7 +4176,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4101,7 +4221,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4149,7 +4270,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4193,7 +4315,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4237,7 +4360,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4281,7 +4405,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4297,7 +4422,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -4345,7 +4471,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4393,7 +4520,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4437,7 +4565,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4481,7 +4610,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4525,7 +4655,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4542,7 +4673,7 @@
             "name": "Theresa Mammarella"
           },
           {
-            "id": "74de1e5a-c9b8-4596-9630-d30b8ff9a368",
+            "id": "c3f720fd-8aec-4f6e-9fef-1e3b036457af",
             "name": "Eddie Knight"
           }
         ],
@@ -4573,7 +4704,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4617,7 +4749,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4661,7 +4794,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4705,7 +4839,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4753,7 +4888,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4797,7 +4933,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4845,7 +4982,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4861,7 +4999,8 @@
         "roomId": 33062,
         "room": "Foyer",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -4905,7 +5044,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4949,7 +5089,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -4993,7 +5134,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5037,7 +5179,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5081,7 +5224,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5094,8 +5238,8 @@
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "c36dd00b-205d-4daf-aad2-c543015e4ee0",
-            "name": "Gary Picher"
+            "id": "d646eb1d-f4a3-41fe-9d99-9eac7abf2789",
+            "name": "Mark Stoodley"
           }
         ],
         "categories": [
@@ -5125,7 +5269,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5169,7 +5314,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5213,7 +5359,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5257,7 +5404,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5301,7 +5449,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5345,7 +5494,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5389,7 +5539,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5433,21 +5584,22 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
-        "id": "409634",
-        "title": "Spring Cloud Gateway: What is it and What's New.",
-        "description": "To start, we will provide a brief history of why we built Spring Cloud Gateway. Then we will provide a primer on how the gateway works to route and filter requests. We will also provide an update on what is new in the 2022.0 release train, included: observability, native support, and more. To finish, we will provide a road map update for 2023.\r\n",
+        "id": "392307",
+        "title": "CI/CD Pipelines : What, Why, How?",
+        "description": "To avoid getting caught up in notions of “the right tool” it is important to understand the core concepts of continuous integration (CI) and continuous delivery or continuous deployment (CD). Choosing the right tool should be a consequence of defining the right goals, metrics and processes to automate. In this session we will explore common ideas that must be present in commercial and open source solutions to monitor, automate, verify and deliver software. \r\nFor example: Tasks, Steps, Runs, End-to-end automation, Workflows, Tool orchestration, Release cycles, among others. \r\n",
         "startsAt": "2023-04-06T16:00:00",
         "endsAt": "2023-04-06T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
-            "name": "Spencer Gibb"
+            "id": "a4d893c0-72e9-4c3c-a8fa-92ce9c2d95d6",
+            "name": "Ixchel Ruiz"
           }
         ],
         "categories": [
@@ -5477,7 +5629,8 @@
         "roomId": 28893,
         "room": "302 (Cloud Infrastructure)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5521,7 +5674,8 @@
         "roomId": 28894,
         "room": "303 (JakartaEE)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5565,7 +5719,8 @@
         "roomId": 33053,
         "room": "304 (Web)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5609,7 +5764,8 @@
         "roomId": 33054,
         "room": "305 (Core Java)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5653,7 +5809,8 @@
         "roomId": 33055,
         "room": "311 (Security)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5697,7 +5854,8 @@
         "roomId": 33056,
         "room": "312 (Unobtanium)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5741,7 +5899,8 @@
         "roomId": 33057,
         "room": "313 (Cloud Tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5785,7 +5944,8 @@
         "roomId": 33058,
         "room": "314 (Frameworks)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5829,7 +5989,8 @@
         "roomId": 33059,
         "room": "315 (Java Platform)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5873,7 +6034,8 @@
         "roomId": 33060,
         "room": "402 (Tools and Techniques)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5917,7 +6079,8 @@
         "roomId": 33061,
         "room": "403 (Practices and other tech)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": "Accepted"
       },
       {
         "questionAnswers": [],
@@ -5933,7 +6096,8 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
       },
       {
         "questionAnswers": [],
@@ -5949,7 +6113,98 @@
         "roomId": 28892,
         "room": "Sydney Marcus (Architecture)",
         "liveUrl": null,
-        "recordingUrl": null
+        "recordingUrl": null,
+        "status": null
+      },
+      {
+        "questionAnswers": [],
+        "id": "435358",
+        "title": "From Code To Production - How Developer Tools Make you Successful",
+        "description": "Developer tools are often seen as an necessary evil: But they truly are key to striving, productive, and performant development. Your choice of tools decides about how fast you can build frictionless cloud and Kubernetes native applications. We take a look at the Red Hat Developer Tools portfolio and see which tool helps you where. Experience how source code moves through unit-tests, into containers, onto staging and arrives in production.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
+            "name": "Markus Eisele"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 166731,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted"
+      },
+      {
+        "questionAnswers": [],
+        "id": "407818",
+        "title": "Walking to School in the Snow or What to Do When You Aren't Building Bridges with Bricks",
+        "description": "Roman architects and engineers built colosseums, bridges and aqueducts that have lasted for millennia.  Most software applications last… not as long.\r\n\r\nThe discipline and processes of software engineering are continuously evolving to deliver faster results.  Meanwhile application architecture is undergoing a paradigm shift as the enterprise embraces the cloud.\r\n\r\nWhat does engineering discipline look like when time to market is more important than time in existence?  \r\n\r\nThis talk looks at 5 emerging architecture trends geared towards delivering business value faster and what these trends mean for developers:\r\n\r\n* Putting Architects in the Elevators\r\n* Composable Organizations\r\n* Product vs. Project Thinking\r\n* Paved Roads and Golden Paths\r\n* Data Meshes\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
+            "name": "Jeremy Davis"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143427,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143442,
+                "name": "keynote"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted"
       }
     ],
     "isDefault": false

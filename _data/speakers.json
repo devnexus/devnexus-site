@@ -1,12 +1,12 @@
 [
   {
-    "id": "020aa23a-e00d-431b-b5f1-685fba3dcb40",
+    "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
     "firstName": "Ajai",
     "lastName": "Peddapanga",
     "fullName": "Ajai Peddapanga",
-    "bio": null,
-    "tagLine": null,
-    "profilePicture": null,
+    "bio": "Ajai Peddapanga is a Principal Cloud Solution Architect at Microsoft and a Technical Leader in the App Innovation space. Since 2014, he has been helping large enterprise customers build their cloud strategy, adopt Azure, and migrate data centers to Azure. A prestigious Microsoft Gold club award winner, he works closely with customer decision makers, c-suite through architect and developer on strategies for application modernization and increasing developer velocity. Prior to Microsoft, he spent 10 years as a product owner, building multi-tenent SaaS solutions for the supply chain industry. Ajai started his career as a Java Developer in 1999 and he is passionate about building large scale enterprise solutions using Java and Spring. \r\n \r\nLinkedIn — https://www.linkedin.com/in/ajaipeddapanga/\r\n",
+    "tagLine": "Principal App Innovation Architect, Microsoft",
+    "profilePicture": "https://sessionize.com/image/0cda-400o400o2-WMUMcqCmkM1chcsZH23dF3.jpg",
     "sessions": [
       {
         "id": 450346,
@@ -20,7 +20,7 @@
         "id": 43778,
         "question": "Company",
         "questionType": "Short_Text",
-        "answer": null,
+        "answer": "Microsoft",
         "sort": 14,
         "answerExtra": null
       },
@@ -28,7 +28,7 @@
         "id": 43782,
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
-        "answer": null,
+        "answer": "@ajaipeddapanga",
         "sort": 18,
         "answerExtra": null
       }
@@ -570,7 +570,7 @@
     "firstName": "Brian",
     "lastName": "Demers",
     "fullName": "Brian Demers",
-    "bio": "Brian Demers is a Developer Advocate at Okta and a PMC member for the Apache Shiro project. He spends much of his day contributing to OSS projects in the form of writing code, tutorials, blogs, and answering questions. Along with typical software development, Brian also has a passion for fast builds and automation. \r\n\r\nAway from the keyboard, Brian is a beekeeper and can likely be found playing board games.  You can find him on Twitter at https://twitter.com/briandemers.",
+    "bio": "Brian Demers is a Developer Advocate at Gradle and a PMC member for the Apache Shiro project. He spends much of his day contributing to OSS projects in the form of writing code, tutorials, blogs, and answering questions. Along with typical software development, Brian also has a passion for fast builds and automation. \r\n\r\nAway from the keyboard, Brian is a beekeeper and can likely be found playing board games.  You can find him on Twitter at https://twitter.com/briandemers.",
     "tagLine": "Okta Developer Advocate",
     "profilePicture": "https://sessionize.com/image/6e05-400o400o2-RWc9UVby28C5D9gCzRWqMT.jpg",
     "sessions": [
@@ -1094,6 +1094,48 @@
     "categories": []
   },
   {
+    "id": "e9048ace-0399-49b3-aaf9-11d9abd8976d",
+    "firstName": "Cindy",
+    "lastName": "High",
+    "fullName": "Cindy High",
+    "bio": "Cindy has worked over 20 years with application servers, Java EE and now Jakarta EE as a developer, technical lead, and architect. She is the WebSphere Application Server migration tools architect at IBM and currently works on app mod tools that help with operational and runtime modernization as well as Java SE and EE upgrades. ",
+    "tagLine": "Senior Software Engineer, IBM",
+    "profilePicture": "https://sessionize.com/image/4619-400o400o2-VxTnpkVzjH7xPAxW5QFPeU.jpg",
+    "sessions": [
+      {
+        "id": 403933,
+        "name": "Thriving in the cloud: Venturing beyond the 12 factors"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/CTHigh",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@CTHigh",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "6baa8ae0-aa56-42e3-8ab8-6c511a55c2bc",
     "firstName": "Craig",
     "lastName": "Walls",
@@ -1500,13 +1542,13 @@
     "categories": []
   },
   {
-    "id": "74de1e5a-c9b8-4596-9630-d30b8ff9a368",
+    "id": "c3f720fd-8aec-4f6e-9fef-1e3b036457af",
     "firstName": "Eddie",
     "lastName": "Knight",
     "fullName": "Eddie Knight",
-    "bio": null,
-    "tagLine": null,
-    "profilePicture": null,
+    "bio": "Eddie Knight is a Software and Cloud Engineer with a background in banking technology. His current role on Sonatype's Developer Relations team enables him to overlap his passion and job duties, as he focuses on developing secure open source software– including contributions to OpenSSF, CNCF, and maintainer for the Compliant Financial Services project in FINOS. When he isn’t working or caring for his newborn son, Eddie enjoys woodworking and creative writing.",
+    "tagLine": "Open Source Developer Advocate @ Sonatype",
+    "profilePicture": "https://sessionize.com/image/689f-400o400o2-6d7b87fa-b319-4ec3-848e-e193cd3eff24.jpg",
     "sessions": [
       {
         "id": 406344,
@@ -1514,13 +1556,19 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/the_eddieknight",
+        "linkType": "Twitter"
+      }
+    ],
     "questionAnswers": [
       {
         "id": 43778,
         "question": "Company",
         "questionType": "Short_Text",
-        "answer": null,
+        "answer": "Sonatype",
         "sort": 14,
         "answerExtra": null
       },
@@ -1528,7 +1576,7 @@
         "id": 43782,
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
-        "answer": null,
+        "answer": "@the_eddieknight",
         "sort": 18,
         "answerExtra": null
       }
@@ -1631,6 +1679,10 @@
       {
         "id": 394738,
         "name": "Deep Dive MicroProfile 6.0 with Jakarta EE 10 Core Profile"
+      },
+      {
+        "id": 403933,
+        "name": "Thriving in the cloud: Venturing beyond the 12 factors"
       }
     ],
     "isTopSpeaker": false,
@@ -1780,6 +1832,48 @@
     "categories": []
   },
   {
+    "id": "584538b7-7233-402d-8355-da1a0e00a384",
+    "firstName": "Evan",
+    "lastName": "Shortiss",
+    "fullName": "Evan Shortiss",
+    "bio": "Evan Shortiss is a Developer Advocate at Red Hat, where he helps developers to be successful with cloud-native technologies. He has more than ten years of development experience, with a focus on building web applications and backends using JavaScript ecosystem technologies. ",
+    "tagLine": "Developer Advocate at Red Hat",
+    "profilePicture": "https://sessionize.com/image/6ada-400o400o2-SVt5GrAcoa1Ytpm2Pt4LS9.jpg",
+    "sessions": [
+      {
+        "id": 391064,
+        "name": "KEDA, HPA, and VPA? An Introduction to Scaling a Event-Driven Workloads on Kubernetes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/evanshortiss",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@evanshortiss",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "9278401c-4b54-4e61-b9c2-ee65c9007dbf",
     "firstName": "Fabio",
     "lastName": "Turizo",
@@ -1862,7 +1956,7 @@
     "sessions": [
       {
         "id": 404726,
-        "name": "Patterns, Predictions, and Prescriptions"
+        "name": "Patterns, Predictions, and Programming "
       }
     ],
     "isTopSpeaker": false,
@@ -2043,42 +2137,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@ghhale",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "c36dd00b-205d-4daf-aad2-c543015e4ee0",
-    "firstName": "Gary",
-    "lastName": "Picher",
-    "fullName": "Gary Picher",
-    "bio": "Gary Picher has worked in the WebSphere Application Server organization of IBM for 20 years.  He is currently the WebSphere Security Architect, responsible for both the security of the application server itself, as well as ensuring that customers have all the functionality and guidance they need to secure their own installations and applications.  Prior to that, Gary spent time as the WebSphere Release Architect, where he moved WebSphere Liberty from a quarterly to 4-week delivery cycle to align better with modern DevOps practices.  Gary has also spent a decade as the team lead for the z/OS runtime component of WebSphere Application Server.",
-    "tagLine": "IBM WebSphere Security Architect",
-    "profilePicture": "https://sessionize.com/image/5392-400o400o2-Piv9w1aKsSxd59kjHUCY6N.jpg",
-    "sessions": [
-      {
-        "id": 405918,
-        "name": "Best Practices for Securing Cloud Native Applications"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "IBM",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@gpicher",
         "sort": 18,
         "answerExtra": null
       }
@@ -2485,6 +2543,10 @@
     "profilePicture": "https://sessionize.com/image/45c1-400o400o2-R85o17rTrwxVbJVq7916sc.jpg",
     "sessions": [
       {
+        "id": 465275,
+        "name": "Live Coding Quarkus: Supersonic, Subatomic Kubernetes-Native Java"
+      },
+      {
         "id": 407818,
         "name": "Walking to School in the Snow or What to Do When You Aren't Building Bridges with Bricks"
       }
@@ -2736,7 +2798,7 @@
     "firstName": "Jonathan",
     "lastName": "Vila",
     "fullName": "Jonathan Vila",
-    "bio": "Java Champion, Organiser at BarcelonaJUG and cofounder of the JBCNConf conference in Barcelona.\r\n\r\nWorking at Tetrate as Software Engineer, on Service Mesh and Istio on top of Kubernetes, but I have worked as a (paid) developer since the first release of The Secret of Monkey Island, about 30 years ago. Former SSE at Red Hat in Keycloak team, SSE at Ocado Technology, SSE at Netcentric.\r\nVery interested in simulated reality, psychology and Java along with management technologies.",
+    "bio": "Java Champion, Organiser at BarcelonaJUG and cofounder of the JBCNConf conference in Barcelona.\r\n\r\nDeveloper Advocate at Sonarsource Former SSE at Red Hat in Keycloak team, SSE at Ocado Technology, SSE at Netcentric.\r\nVery interested in simulated reality, psychology and Java along with management technologies.",
     "tagLine": "Java Champion, Engineer at Tetrate",
     "profilePicture": "https://sessionize.com/image/689f-400o400o2-aUyJpT1Tfdg16uhhrGNrWP.png",
     "sessions": [
@@ -3398,42 +3460,6 @@
     "categories": []
   },
   {
-    "id": "eb9a399a-f464-4d46-889d-55261c445215",
-    "firstName": "Manoj",
-    "lastName": "Singh",
-    "fullName": "Manoj Singh",
-    "bio": null,
-    "tagLine": null,
-    "profilePicture": null,
-    "sessions": [
-      {
-        "id": 450346,
-        "name": "Hands on with Azure Spring Apps Enterprise"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": null,
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": null,
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "6c93de4e-0f8c-45bd-b76b-ba868aa81ca7",
     "firstName": "Marcus",
     "lastName": "Hellberg",
@@ -3485,10 +3511,6 @@
     "profilePicture": "https://sessionize.com/image/1668-400o400o2-QDG3nAQ4WWUKSGcfTw7gTW.png",
     "sessions": [
       {
-        "id": 450346,
-        "name": "Hands on with Azure Spring Apps Enterprise"
-      },
-      {
         "id": 401508,
         "name": "Let's get Functional: The fast path to smart serverless with Spring Cloud Function & Azure Functions"
       }
@@ -3530,6 +3552,10 @@
     "tagLine": "Chief Architect for IBM Java",
     "profilePicture": "https://sessionize.com/image/9c94-400o400o2-XAc4WmWQaSdeXpiLfiPWJN.jpg",
     "sessions": [
+      {
+        "id": 405918,
+        "name": "Best Practices for Securing Cloud Native Applications"
+      },
       {
         "id": 408284,
         "name": "Journey to cloud : leave no Java workload behind"
@@ -3755,6 +3781,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": null,
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+    "firstName": "Mo",
+    "lastName": "Haghighi",
+    "fullName": "Mo Haghighi",
+    "bio": "Dr Mo Haghighi is director of engineering/distinguished engineer for Cloud Platform and Infrastructure at Discover Financial Services. His current focus is hybrid and multi-cloud strategy, application modernisation and automating application/workload migration across public and private clouds. \r\nPreviously, he held various leadership positions as a program director at IBM, where he led Developer Ecosystem and Cloud Engineering teams in 27 countries across Europe, Middle East and Africa. Prior to IBM, he was a research scientist at Intel and a Java developer at Sun Microsystems/Oracle. \r\n\r\nMo obtained a PhD in computer science, and his primary areas of expertise are distributed and edge computing, cloud native, IoT and AI, with several publications and patents in those areas.\r\n\r\nMo is a regular keynote/speaker at major developer conferences including DevOpsCon, Java/Code One, Codemotion, DevRelCon, O’Reilly, The Next Web, DevNexus, IEEE/ACM, ODSC, AiWorld, CloudConf and Pycon. ",
+    "tagLine": "Distinguished Engineer at Discover Financial Services",
+    "profilePicture": "https://sessionize.com/image/cd11-400o400o2-c2-96d9-4b4a-b2c8-99dd2efb77a7.821c48d1-543c-4922-b5b1-f9e6b8dbb291.JPEG",
+    "sessions": [
+      {
+        "id": 463963,
+        "name": "Hyper-Automate your Cloud Native Journey with Kubernetes Custom Resources and Operators"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/mohaghighi",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Discover Financial Services ",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mohaghighi",
         "sort": 18,
         "answerExtra": null
       }
@@ -4460,48 +4528,6 @@
     "categories": []
   },
   {
-    "id": "cd97bed4-f841-4e1f-94bb-43a21a06c582",
-    "firstName": "Roberto",
-    "lastName": "Cortez",
-    "fullName": "Roberto Cortez",
-    "bio": "Roberto Cortez is a passionate Java Developer involved within the Open Source Community to help other individuals spread knowledge about Java technologies. He is a regular speaker at conferences like JavaOne, Devoxx, Devnexus, JFokus, etc. He leads the Coimbra JUG and founded the JNation Conference in Portugal. When he is not working, he hangs out with friends, plays computer games, and spends time with family.",
-    "tagLine": "Principal Software Engineer @ Redhat",
-    "profilePicture": "https://sessionize.com/image/55cb-400o400o2-SnK6BxLPhxZqxDAAmyVFGW.jpg",
-    "sessions": [
-      {
-        "id": 408219,
-        "name": "Quarkus Unleashed"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/radcortez",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Red Hat",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@radcortez",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
     "firstName": "Rodrigo",
     "lastName": "Graciano",
@@ -4512,7 +4538,7 @@
     "sessions": [
       {
         "id": 404340,
-        "name": "Batch Processing Cloud Apps with Java"
+        "name": "Scaling Batch Applications "
       }
     ],
     "isTopSpeaker": false,
@@ -5170,8 +5196,8 @@
     "firstName": "Timothy",
     "lastName": "Spann",
     "fullName": "Timothy Spann",
-    "bio": "Tim Spann is a Developer Advocate @ StreamNative where he works with Apache Pulsar, Apache Flink, Apache NiFi, Apache MXNet, TensorFlow, Apache Spark, big data, the IoT, machine learning, and deep learning. Tim has over a decade of experience with the IoT, big data, distributed computing, streaming technologies, and Java programming. Previously, he was a Principal Field Engineer at Cloudera, a Senior Solutions Architect at AirisData and a senior field engineer at Pivotal. He blogs for DZone, where he is the Big Data Zone leader, and runs a popular meetup in Princeton on big data, the IoT, deep learning, streaming, NiFi, the blockchain, and Spark. Tim is a frequent speaker at conferences such as IoT Fusion, Strata, ApacheCon, Data Works Summit Berlin, DataWorks Summit Sydney, and Oracle Code NYC. He holds a BS and MS in computer science.\r\n\r\nhttps://www.datainmotion.dev/p/about-me.html\r\nhttps://dzone.com/users/297029/bunkertor.html\r\nhttps://conferences.oreilly.com/strata/strata-ny-2018/public/schedule/speaker/185963\r\n",
-    "tagLine": "Developer Advocate @ StreamNative",
+    "bio": "Tim Spann is a Developer Advocate @ Cloudera where he works with Apache Pulsar, Apache Flink, Apache NiFi, Apache MXNet, TensorFlow, Apache Spark, big data, the IoT, machine learning, and deep learning. Tim has over a decade of experience with the IoT, big data, distributed computing, streaming technologies, and Java programming. Previously, he was a Principal Field Engineer at Cloudera, a Senior Solutions Architect at AirisData and a senior field engineer at Pivotal. He blogs for DZone, where he is the Big Data Zone leader, and runs a popular meetup in Princeton on big data, the IoT, deep learning, streaming, NiFi, the blockchain, and Spark. Tim is a frequent speaker at conferences such as IoT Fusion, Strata, ApacheCon, Data Works Summit Berlin, DataWorks Summit Sydney, and Oracle Code NYC. He holds a BS and MS in computer science.\r\n\r\nhttps://www.datainmotion.dev/p/about-me.html\r\nhttps://dzone.com/users/297029/bunkertor.html\r\nhttps://conferences.oreilly.com/strata/strata-ny-2018/public/schedule/speaker/185963\r\n",
+    "tagLine": "Developer Advocate @ Cloudera",
     "profilePicture": "https://sessionize.com/image/17a1-400o400o2-WooP9UuwTmN98DQfD4HHYZ.png",
     "sessions": [
       {
@@ -5192,7 +5218,7 @@
         "id": 43778,
         "question": "Company",
         "questionType": "Short_Text",
-        "answer": "StreamNative",
+        "answer": "Cloudera",
         "sort": 14,
         "answerExtra": null
       },
@@ -5384,6 +5410,10 @@
     "tagLine": "Agile Developer, Inc.",
     "profilePicture": "https://sessionize.com/image/1ee9-400o400o2-c5-c994-40f5-b1dd-e0f9f7999fa9.7ec0ab6e-811f-440b-be84-ec01c03f63e6.jpg",
     "sessions": [
+      {
+        "id": 466441,
+        "name": "Asynchronous Programming in Java using Virtual Threads"
+      },
       {
         "id": 417984,
         "name": "Creating Evolutionary Architecture and Design: From Problem to Solution by exploring patterns"
@@ -5577,48 +5607,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@wiggitywhitney",
-        "sort": 18,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "2fa6c7ec-3bda-4e4f-aba8-4a984328b9e2",
-    "firstName": "YK",
-    "lastName": "Chang",
-    "fullName": "YK Chang",
-    "bio": "Yee-Kang (YK) Chang is an architect and developer advocate on the IBM's Java application platform team. He works on Open Liberty and contributes to various OSS projects like Eclipse LSP4Jakarta and LSP4MP. YK is keen on how we can make life easier and better for developers.",
-    "tagLine": "Architect & Developer Advocate, IBM",
-    "profilePicture": "https://sessionize.com/image/94a5-400o400o2-JJTmbhaMxHky3urHMujeHT.png",
-    "sessions": [
-      {
-        "id": 403933,
-        "name": "Thriving in the cloud: Venturing beyond the 12 factors"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/yeekangc",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 43778,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "IBM",
-        "sort": 14,
-        "answerExtra": null
-      },
-      {
-        "id": 43782,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@yeekangc",
         "sort": 18,
         "answerExtra": null
       }
