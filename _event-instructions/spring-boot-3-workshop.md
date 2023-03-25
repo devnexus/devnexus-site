@@ -11,8 +11,13 @@ speakers:
 ---
 Thank you very much for your interest in the Spring Boot 3 Workshop@Devnexus! In order to speed things up and make things easier for you, we created a repository with a readme that walks you through the setup steps and helps you to test your setup so we don't need to do these on the workshop day and we can focus more on the content we prepared.
 
-You can find the instructions in the readme file of the repo on GitHub: [https://github.com/jonatan-ivanov/dn23-boot3-workshop](https://github.com/jonatan-ivanov/dn23-boot3-workshop)
-You will need GraalVM, Java 17, Docker installed, a Java IDE and very basic Spring Boot knowledge (how to create beans and HTTP endpoints), you can learn these from our online guides quickly, e.g.: [https://spring.io/guides/gs/rest-service/](https://spring.io/guides/gs/rest-service/)
+
+You will need GraalVM, Java 17, Docker installed, a Java IDE and can find the instructions in the readme file of the repo on GitHub: 
+
+[https://github.com/jonatan-ivanov/dn23-boot3-workshop](https://github.com/jonatan-ivanov/dn23-boot3-workshop)
+
+
+ If you haven't used Spring Boot often you can learn the neccessary basics (how to create beans and HTTP endpoints), from our online guides e.g.: [https://spring.io/guides/gs/rest-service/](https://spring.io/guides/gs/rest-service/)
 
 Thanks,
 Phil and Jonatan
