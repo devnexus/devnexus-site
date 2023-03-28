@@ -135,6 +135,10 @@
           {
             "id": "e9048ace-0399-49b3-aaf9-11d9abd8976d",
             "name": "Cindy High"
+          },
+          {
+            "id": "7bac217c-0b90-4dff-a4ed-b5a7a5f0d495",
+            "name": "Harry Hoots III"
           }
         ],
         "categories": [
@@ -2491,8 +2495,8 @@
       {
         "questionAnswers": [],
         "id": "391375",
-        "title": "If it isn't hot, it doesn't deliver: Apache Pinot, Food Delivery and why real-time analytics matter.",
-        "description": "The world IS data these days, and users need access to fresh data, delivered with low latency. Real-time analytics, specifically with Apache Pinot, is what makes it possible for Doordash to put fresh, reliable data into their users hands, and make sure the burger one orders arrives when expected, and is still hot! Developers looking to up their data game can expect great things from Pinot.",
+        "title": "Mothering A Dev Team: How Wardley Maps Saved Me!",
+        "description": "Proper execution of a project is always easier with proper planning beforehand. Wardley Mapping is one of the best tools in our arsenal for seeing the road ahead clearly, and getting to where we need to be. Having learned a lot about planning while being a stay-at-home parent, Valarie has a unique take on how to manage time and resources, and especially children… I mean, coworkers.\r\n\r\nDuring this presentation we’ll cover the basics of Wardley Mapping, in the context of both an automation process, as well as a life project. Because the best tools are multitaskers, and should be able to be used for more than one purpose!",
         "startsAt": "2023-04-05T15:00:00",
         "endsAt": "2023-04-05T16:00:00",
         "isServiceSession": false,
@@ -3196,7 +3200,7 @@
         "questionAnswers": [],
         "id": "459309",
         "title": "Women in Technology Breakfast",
-        "description": "With Women's History Month being in March, we invite you to join us as we kick off April by profiling some trailblazing women in tech, we'll hear from highly successful women from different fields within the tech industry. Afterwards, we'll open up the floor for networking with panelists and attendees.",
+        "description": "Join us for breakfast with some of the amazing women in tech. Our panelists will discuss some of the advice they received throughout their careers in tech and if there is anything they wish they had done differently. \r\n\r\nBuilding a career in tech: the good, the bad and the ugly\r\n\r\n\r\n1) introductions: nam ,your first job in tech and  current role and company and one thing you love about your current job. \r\n\r\n2) Give us a recap of your “How I got into tech” story\r\n\r\n3)  What advice did you get and didn’t follow, but wish you had? OR What advice did you follow that you wish you hadn’t?\r\n\r\n4)  If you were starting out now, with all the experience and knowledge you have now, what would you do?\r\n",
         "startsAt": "2023-04-06T07:45:00",
         "endsAt": "2023-04-06T08:45:00",
         "isServiceSession": false,
@@ -3205,6 +3209,22 @@
           {
             "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
             "name": "Najae Stevenson"
+          },
+          {
+            "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
+            "name": "Cecelia Martinez"
+          },
+          {
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
+          },
+          {
+            "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
+            "name": "Valarie Regas"
+          },
+          {
+            "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
+            "name": "Gail Anderson"
           }
         ],
         "categories": [
@@ -3954,7 +3974,7 @@
         "questionAnswers": [],
         "id": "433296",
         "title": "5 years of Jakarta EE Panel: a look into the future",
-        "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. ",
+        "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, and Rudy De Busscher! \r\n",
         "startsAt": "2023-04-06T11:30:00",
         "endsAt": "2023-04-06T12:30:00",
         "isServiceSession": false,
@@ -6139,6 +6159,51 @@
               {
                 "id": 166731,
                 "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 43785,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 143440,
+                "name": "session"
+              }
+            ],
+            "sort": 2
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted"
+      },
+      {
+        "questionAnswers": [],
+        "id": "471048",
+        "title": "Performance Testing Java Applications",
+        "description": "Every so often,  you’ll read a performance benchmark (of a Java or other application), with bold claims for how well X performs compared to Y. Testing the performance of your Java application is an artform rather than engineering, and is a minefield of misconceptions, misunderstanding, and misinformation. In this session, we will review the basics and give you concrete steps to build a robust performance testbed for your application. We will be looking at this from a real-world server-side application point of view, specifically for Java apps. We’ll review common problems and how to avoid them. We’ll cover these topics while building up a performance test and running it live:\r\n\r\nDefine your goals: SLA, latency, throughput, stability\r\nTest env vs. Production env for testing\r\nThe impact of GC on Java app performance\r\nTools for setting up, driving load, and getting perf test results\r\nTesting application infrastructure like Kafka, Spark and Cassandra\r\nOperating system settings, JVM settings, memory sizing, and CPU sizing\r\nAnalyzing perf test results and finding bottlenecks that are both apparent and not obvious \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e87c804d-b551-4614-8891-007f421a683f",
+            "name": "Pratik Patel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 43783,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 143432,
+                "name": "Java Platform"
               }
             ],
             "sort": 0

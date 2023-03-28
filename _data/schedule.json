@@ -133,6 +133,10 @@
               {
                 "id": "e9048ace-0399-49b3-aaf9-11d9abd8976d",
                 "name": "Cindy High"
+              },
+              {
+                "id": "7bac217c-0b90-4dff-a4ed-b5a7a5f0d495",
+                "name": "Harry Hoots III"
               }
             ],
             "categories": [
@@ -461,6 +465,10 @@
                 {
                   "id": "e9048ace-0399-49b3-aaf9-11d9abd8976d",
                   "name": "Cindy High"
+                },
+                {
+                  "id": "7bac217c-0b90-4dff-a4ed-b5a7a5f0d495",
+                  "name": "Harry Hoots III"
                 }
               ],
               "categories": [
@@ -3153,8 +3161,8 @@
           },
           {
             "id": "391375",
-            "title": "If it isn't hot, it doesn't deliver: Apache Pinot, Food Delivery and why real-time analytics matter.",
-            "description": "The world IS data these days, and users need access to fresh data, delivered with low latency. Real-time analytics, specifically with Apache Pinot, is what makes it possible for Doordash to put fresh, reliable data into their users hands, and make sure the burger one orders arrives when expected, and is still hot! Developers looking to up their data game can expect great things from Pinot.",
+            "title": "Mothering A Dev Team: How Wardley Maps Saved Me!",
+            "description": "Proper execution of a project is always easier with proper planning beforehand. Wardley Mapping is one of the best tools in our arsenal for seeing the road ahead clearly, and getting to where we need to be. Having learned a lot about planning while being a stay-at-home parent, Valarie has a unique take on how to manage time and resources, and especially children… I mean, coworkers.\r\n\r\nDuring this presentation we’ll cover the basics of Wardley Mapping, in the context of both an automation process, as well as a life project. Because the best tools are multitaskers, and should be able to be used for more than one purpose!",
             "startsAt": "2023-04-05T15:00:00",
             "endsAt": "2023-04-05T16:00:00",
             "isServiceSession": false,
@@ -6033,8 +6041,8 @@
             "name": "402 (Tools and Techniques)",
             "session": {
               "id": "391375",
-              "title": "If it isn't hot, it doesn't deliver: Apache Pinot, Food Delivery and why real-time analytics matter.",
-              "description": "The world IS data these days, and users need access to fresh data, delivered with low latency. Real-time analytics, specifically with Apache Pinot, is what makes it possible for Doordash to put fresh, reliable data into their users hands, and make sure the burger one orders arrives when expected, and is still hot! Developers looking to up their data game can expect great things from Pinot.",
+              "title": "Mothering A Dev Team: How Wardley Maps Saved Me!",
+              "description": "Proper execution of a project is always easier with proper planning beforehand. Wardley Mapping is one of the best tools in our arsenal for seeing the road ahead clearly, and getting to where we need to be. Having learned a lot about planning while being a stay-at-home parent, Valarie has a unique take on how to manage time and resources, and especially children… I mean, coworkers.\r\n\r\nDuring this presentation we’ll cover the basics of Wardley Mapping, in the context of both an automation process, as well as a life project. Because the best tools are multitaskers, and should be able to be used for more than one purpose!",
               "startsAt": "2023-04-05T15:00:00",
               "endsAt": "2023-04-05T16:00:00",
               "isServiceSession": false,
@@ -7408,7 +7416,7 @@
           {
             "id": "433296",
             "title": "5 years of Jakarta EE Panel: a look into the future",
-            "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. ",
+            "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, and Rudy De Busscher! \r\n",
             "startsAt": "2023-04-06T11:30:00",
             "endsAt": "2023-04-06T12:30:00",
             "isServiceSession": false,
@@ -9200,7 +9208,7 @@
           {
             "id": "459309",
             "title": "Women in Technology Breakfast",
-            "description": "With Women's History Month being in March, we invite you to join us as we kick off April by profiling some trailblazing women in tech, we'll hear from highly successful women from different fields within the tech industry. Afterwards, we'll open up the floor for networking with panelists and attendees.",
+            "description": "Join us for breakfast with some of the amazing women in tech. Our panelists will discuss some of the advice they received throughout their careers in tech and if there is anything they wish they had done differently. \r\n\r\nBuilding a career in tech: the good, the bad and the ugly\r\n\r\n\r\n1) introductions: nam ,your first job in tech and  current role and company and one thing you love about your current job. \r\n\r\n2) Give us a recap of your “How I got into tech” story\r\n\r\n3)  What advice did you get and didn’t follow, but wish you had? OR What advice did you follow that you wish you hadn’t?\r\n\r\n4)  If you were starting out now, with all the experience and knowledge you have now, what would you do?\r\n",
             "startsAt": "2023-04-06T07:45:00",
             "endsAt": "2023-04-06T08:45:00",
             "isServiceSession": false,
@@ -9209,6 +9217,22 @@
               {
                 "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
                 "name": "Najae Stevenson"
+              },
+              {
+                "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
+                "name": "Cecelia Martinez"
+              },
+              {
+                "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+                "name": "Emily Jiang"
+              },
+              {
+                "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
+                "name": "Valarie Regas"
+              },
+              {
+                "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
+                "name": "Gail Anderson"
               }
             ],
             "categories": [
@@ -9777,7 +9801,7 @@
             "session": {
               "id": "459309",
               "title": "Women in Technology Breakfast",
-              "description": "With Women's History Month being in March, we invite you to join us as we kick off April by profiling some trailblazing women in tech, we'll hear from highly successful women from different fields within the tech industry. Afterwards, we'll open up the floor for networking with panelists and attendees.",
+              "description": "Join us for breakfast with some of the amazing women in tech. Our panelists will discuss some of the advice they received throughout their careers in tech and if there is anything they wish they had done differently. \r\n\r\nBuilding a career in tech: the good, the bad and the ugly\r\n\r\n\r\n1) introductions: nam ,your first job in tech and  current role and company and one thing you love about your current job. \r\n\r\n2) Give us a recap of your “How I got into tech” story\r\n\r\n3)  What advice did you get and didn’t follow, but wish you had? OR What advice did you follow that you wish you hadn’t?\r\n\r\n4)  If you were starting out now, with all the experience and knowledge you have now, what would you do?\r\n",
               "startsAt": "2023-04-06T07:45:00",
               "endsAt": "2023-04-06T08:45:00",
               "isServiceSession": false,
@@ -9786,6 +9810,22 @@
                 {
                   "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
                   "name": "Najae Stevenson"
+                },
+                {
+                  "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
+                  "name": "Cecelia Martinez"
+                },
+                {
+                  "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+                  "name": "Emily Jiang"
+                },
+                {
+                  "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
+                  "name": "Valarie Regas"
+                },
+                {
+                  "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
+                  "name": "Gail Anderson"
                 }
               ],
               "categories": [
@@ -10632,7 +10672,7 @@
             "session": {
               "id": "433296",
               "title": "5 years of Jakarta EE Panel: a look into the future",
-              "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. ",
+              "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, and Rudy De Busscher! \r\n",
               "startsAt": "2023-04-06T11:30:00",
               "endsAt": "2023-04-06T12:30:00",
               "isServiceSession": false,

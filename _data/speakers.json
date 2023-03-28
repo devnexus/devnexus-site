@@ -781,6 +781,10 @@
       {
         "id": 405724,
         "name": "Cross-Platform Cloud CI/CD"
+      },
+      {
+        "id": 459309,
+        "name": "Women in Technology Breakfast"
       }
     ],
     "isTopSpeaker": false,
@@ -1683,6 +1687,10 @@
       {
         "id": 403933,
         "name": "Thriving in the cloud: Venturing beyond the 12 factors"
+      },
+      {
+        "id": 459309,
+        "name": "Women in Technology Breakfast"
       }
     ],
     "isTopSpeaker": false,
@@ -2035,6 +2043,10 @@
       {
         "id": 404704,
         "name": "Say the Words:  Modern Java with JavaFX for Rich Client UIs"
+      },
+      {
+        "id": 459309,
+        "name": "Women in Technology Breakfast"
       }
     ],
     "isTopSpeaker": false,
@@ -2225,6 +2237,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "cppwfs",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7bac217c-0b90-4dff-a4ed-b5a7a5f0d495",
+    "firstName": "Harry",
+    "lastName": "Hoots III",
+    "fullName": "Harry Hoots III",
+    "bio": "Harry is a Software Engineer working as the team lead on the Open Liberty Kernel team and is based at IBM's RTP Laboratory in Durham, NC.  He has 25 plus years of experience working in various IBM divisions such as Global Business Services, and the IBM Cloud and Cognitive group.  Harry holds a B.S. degree in Computer Science from North Carolina State University.  Check out this blog post to learn more about Harry's activities in open source: https://openliberty.io/blog/2021/10/07/HarryHoots_MeetTheTeam.html",
+    "tagLine": "IBM Software Engineer ",
+    "profilePicture": "https://sessionize.com/image/1a3c-400o400o2-h1RAQcV7BnmpqzqwBaGhAt.jpg",
+    "sessions": [
+      {
+        "id": 403933,
+        "name": "Thriving in the cloud: Venturing beyond the 12 factors"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@HarryHoots3",
         "sort": 18,
         "answerExtra": null
       }
@@ -4324,6 +4372,48 @@
     "categories": []
   },
   {
+    "id": "e87c804d-b551-4614-8891-007f421a683f",
+    "firstName": "Pratik",
+    "lastName": "Patel",
+    "fullName": "Pratik Patel",
+    "bio": "Pratik Patel is a Java Champion, developer advocate at Azul Systems and has written 3 books on programming (Java, Cloud and OSS). An all around software and hardware nerd with experience in the healthcare, telecom, financial services, and startup sectors. He's also a co-organizer of the Atlanta Java User Group and North Atlanta JavaScript meetup, conference chairperson for Devnexus, frequent speaker at tech events, and master builder of nachos.",
+    "tagLine": "Code Hacker",
+    "profilePicture": "https://sessionize.com/image/e005-400o400o2-XdrTgSazEFnybzZ884cUPn.png",
+    "sessions": [
+      {
+        "id": 471048,
+        "name": "Performance Testing Java Applications"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/prpatel",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul ",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "prpatel",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "049f56da-dd0b-44f9-b868-1ee298129e3a",
     "firstName": "Ray",
     "lastName": "Elenteny",
@@ -5370,7 +5460,11 @@
     "sessions": [
       {
         "id": 391375,
-        "name": "If it isn't hot, it doesn't deliver: Apache Pinot, Food Delivery and why real-time analytics matter."
+        "name": "Mothering A Dev Team: How Wardley Maps Saved Me!"
+      },
+      {
+        "id": 459309,
+        "name": "Women in Technology Breakfast"
       }
     ],
     "isTopSpeaker": false,
