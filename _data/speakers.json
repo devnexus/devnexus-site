@@ -3508,6 +3508,42 @@
     "categories": []
   },
   {
+    "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
+    "firstName": "Manoj",
+    "lastName": "Singh",
+    "fullName": "Manoj Singh",
+    "bio": "Manoj Singh is a Java Champion and Senior Cloud Solution Architect at Microsoft. In his current role he helps customers design and implement innovative cloud-based solutions that drive digital transformation and business growth. His role also involves collaborating with cross-functional teams to identify opportunities for application optimization, automation, and scalability, while ensuring seamless integration with existing systems and compliance with industry best practices. Thus, enabling organizations to rapidly prototype, develop, and deploy applications that enhance user experience, streamline operations, and foster a culture of innovation. Prior to joining Microsoft, he was an Application Architect/Technical Lead/Software Engineer at Amazon, Johnson & Johnson and other companies.",
+    "tagLine": "Microsoft, Sr. Cloud Solution Architect",
+    "profilePicture": "https://sessionize.com/image/93bc-400o400o2-QsWPMneEg7w8vdR6MCz4RL.jpg",
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@manojsngh",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "6c93de4e-0f8c-45bd-b76b-ba868aa81ca7",
     "firstName": "Marcus",
     "lastName": "Hellberg",
