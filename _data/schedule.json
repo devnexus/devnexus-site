@@ -255,6 +255,10 @@
               {
                 "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
                 "name": "Manoj Singh"
+              },
+              {
+                "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
+                "name": "John Lafata"
               }
             ],
             "categories": [
@@ -587,6 +591,10 @@
                 {
                   "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
                   "name": "Manoj Singh"
+                },
+                {
+                  "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
+                  "name": "John Lafata"
                 }
               ],
               "categories": [
@@ -825,6 +833,10 @@
               {
                 "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
                 "name": "Mykyta Protsenko"
+              },
+              {
+                "id": "f2637723-b4bf-4932-924a-a89d83446afa",
+                "name": "Vadym Khodak"
               }
             ],
             "categories": [
@@ -3559,8 +3571,8 @@
           },
           {
             "id": "2dec1c53-6dce-4b06-8dcf-f1d924234b69",
-            "title": "Conf Reception and TECH NERD TRIVIA!",
-            "description": "Gather some friends to win prizes in the first ever Devnexus team trivia!",
+            "title": "Quarkus Rocks Reception Sponsored by Red Hat and TECH NERD TRIVIA!",
+            "description": "Have a great day of technical sessions. Grab a beverage and snacks while listening to our resident DJ spinning on the main stage. Relax, Recharge, and Refresh; mingle with fellow attendees and conference speakers. Gather some friends to win prizes in the first ever Devnexus team trivia!",
             "startsAt": "2023-04-05T17:00:00",
             "endsAt": "2023-04-05T18:30:00",
             "isServiceSession": true,
@@ -5565,6 +5577,10 @@
                 {
                   "id": "3f4682d0-ec9d-452d-9a96-9ed1dab0429c",
                   "name": "Mykyta Protsenko"
+                },
+                {
+                  "id": "f2637723-b4bf-4932-924a-a89d83446afa",
+                  "name": "Vadym Khodak"
                 }
               ],
               "categories": [
@@ -6753,8 +6769,8 @@
             "name": "Foyer",
             "session": {
               "id": "2dec1c53-6dce-4b06-8dcf-f1d924234b69",
-              "title": "Conf Reception and TECH NERD TRIVIA!",
-              "description": "Gather some friends to win prizes in the first ever Devnexus team trivia!",
+              "title": "Quarkus Rocks Reception Sponsored by Red Hat and TECH NERD TRIVIA!",
+              "description": "Have a great day of technical sessions. Grab a beverage and snacks while listening to our resident DJ spinning on the main stage. Relax, Recharge, and Refresh; mingle with fellow attendees and conference speakers. Gather some friends to win prizes in the first ever Devnexus team trivia!",
               "startsAt": "2023-04-05T17:00:00",
               "endsAt": "2023-04-05T18:30:00",
               "isServiceSession": true,
@@ -9318,17 +9334,17 @@
             "status": "Accepted"
           },
           {
-            "id": "412303",
-            "title": "The Programmer's Guide to JDK Flight Recorder",
-            "description": "The JDK Flight Recorder (JFR) is an event-based diagnostic and profiling tool built into the JDK. JFR can provide detailed information about the performance of a JVM and Java applications running on it and help diagnose when something goes wrong in production. JFR has several powerful and flexible APIs for capturing, streaming, and filtering information. This presentation will focus on how programmers can take advantage of these APIs for testing, capturing valuable data, providing live metrics, and more! If you have been wondering how to improve the performance of your Java applications or get better insight into their internal workings, this presentation is for you!",
+            "id": "405169",
+            "title": "Unlocking Value from Time Series Data with Open Source Tools in Java",
+            "description": "Join Zoe, Developer Advocate at InfluxData, for a session where she will share how to take charge of your time series data with InfluxDB open source time series platform using Java. In this session, you’ll learn how open source tools like Telegraf and InfluxDB can help you build real-time applications faster and with less effort. We will also demo how to use InfluxDB to gain visibility and insight into your time-stamped data from the edge to the cloud.",
             "startsAt": "2023-04-06T11:30:00",
             "endsAt": "2023-04-06T12:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
-                "name": "Billy Korando"
+                "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
+                "name": "zoe Steinkamp"
               }
             ],
             "categories": [
@@ -9406,17 +9422,17 @@
             "status": "Accepted"
           },
           {
-            "id": "405169",
-            "title": "Unlocking Value from Time Series Data with Open Source Tools in Java",
-            "description": "Join Zoe, Developer Advocate at InfluxData, for a session where she will share how to take charge of your time series data with InfluxDB open source time series platform using Java. In this session, you’ll learn how open source tools like Telegraf and InfluxDB can help you build real-time applications faster and with less effort. We will also demo how to use InfluxDB to gain visibility and insight into your time-stamped data from the edge to the cloud.",
+            "id": "412303",
+            "title": "The Programmer's Guide to JDK Flight Recorder",
+            "description": "The JDK Flight Recorder (JFR) is an event-based diagnostic and profiling tool built into the JDK. JFR can provide detailed information about the performance of a JVM and Java applications running on it and help diagnose when something goes wrong in production. JFR has several powerful and flexible APIs for capturing, streaming, and filtering information. This presentation will focus on how programmers can take advantage of these APIs for testing, capturing valuable data, providing live metrics, and more! If you have been wondering how to improve the performance of your Java applications or get better insight into their internal workings, this presentation is for you!",
             "startsAt": "2023-04-06T14:45:00",
             "endsAt": "2023-04-06T15:45:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
-                "name": "zoe Steinkamp"
+                "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+                "name": "Billy Korando"
               }
             ],
             "categories": [
@@ -11078,17 +11094,17 @@
             "id": 33060,
             "name": "402 (Tools and Techniques)",
             "session": {
-              "id": "412303",
-              "title": "The Programmer's Guide to JDK Flight Recorder",
-              "description": "The JDK Flight Recorder (JFR) is an event-based diagnostic and profiling tool built into the JDK. JFR can provide detailed information about the performance of a JVM and Java applications running on it and help diagnose when something goes wrong in production. JFR has several powerful and flexible APIs for capturing, streaming, and filtering information. This presentation will focus on how programmers can take advantage of these APIs for testing, capturing valuable data, providing live metrics, and more! If you have been wondering how to improve the performance of your Java applications or get better insight into their internal workings, this presentation is for you!",
+              "id": "405169",
+              "title": "Unlocking Value from Time Series Data with Open Source Tools in Java",
+              "description": "Join Zoe, Developer Advocate at InfluxData, for a session where she will share how to take charge of your time series data with InfluxDB open source time series platform using Java. In this session, you’ll learn how open source tools like Telegraf and InfluxDB can help you build real-time applications faster and with less effort. We will also demo how to use InfluxDB to gain visibility and insight into your time-stamped data from the edge to the cloud.",
               "startsAt": "2023-04-06T11:30:00",
               "endsAt": "2023-04-06T12:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
-                  "name": "Billy Korando"
+                  "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
+                  "name": "zoe Steinkamp"
                 }
               ],
               "categories": [
@@ -12336,17 +12352,17 @@
             "id": 33060,
             "name": "402 (Tools and Techniques)",
             "session": {
-              "id": "405169",
-              "title": "Unlocking Value from Time Series Data with Open Source Tools in Java",
-              "description": "Join Zoe, Developer Advocate at InfluxData, for a session where she will share how to take charge of your time series data with InfluxDB open source time series platform using Java. In this session, you’ll learn how open source tools like Telegraf and InfluxDB can help you build real-time applications faster and with less effort. We will also demo how to use InfluxDB to gain visibility and insight into your time-stamped data from the edge to the cloud.",
+              "id": "412303",
+              "title": "The Programmer's Guide to JDK Flight Recorder",
+              "description": "The JDK Flight Recorder (JFR) is an event-based diagnostic and profiling tool built into the JDK. JFR can provide detailed information about the performance of a JVM and Java applications running on it and help diagnose when something goes wrong in production. JFR has several powerful and flexible APIs for capturing, streaming, and filtering information. This presentation will focus on how programmers can take advantage of these APIs for testing, capturing valuable data, providing live metrics, and more! If you have been wondering how to improve the performance of your Java applications or get better insight into their internal workings, this presentation is for you!",
               "startsAt": "2023-04-06T14:45:00",
               "endsAt": "2023-04-06T15:45:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
-                  "name": "zoe Steinkamp"
+                  "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+                  "name": "Billy Korando"
                 }
               ],
               "categories": [

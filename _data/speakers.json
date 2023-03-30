@@ -2754,6 +2754,42 @@
     "categories": []
   },
   {
+    "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
+    "firstName": "John",
+    "lastName": "Lafata",
+    "fullName": "John Lafata",
+    "bio": "John LaFata is Staff Solution Engineer at VMware. John's focus is helping customers in their journey to the cloud using modern technologies through the lens of the VMware Tanzu portfolio of products in the public and private cloud.  John has rich experience from years of developing high performing enterprise applications in a variety of business verticals.",
+    "tagLine": "Staff Solution Engineer",
+    "profilePicture": "https://sessionize.com/image/fe9c-400o400o2-UNdKZFG8pM1iBM1GRaAdWh.jpg",
+    "sessions": [
+      {
+        "id": 450346,
+        "name": "Hands on with Azure Spring Apps Enterprise"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "vmware",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jlafata_",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "8f517aca-8293-4e1f-9360-0ce676531421",
     "firstName": "Jonatan",
     "lastName": "Ivanov",
@@ -5479,6 +5515,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@recursivecodes",
+        "sort": 18,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f2637723-b4bf-4932-924a-a89d83446afa",
+    "firstName": "Vadym",
+    "lastName": "Khodak",
+    "fullName": "Vadym Khodak",
+    "bio": "Vadym is a colonel of the Ukrainian Army, who took up arms to defend his country and the future of democracy. Currently, he is fighting on the frontline as a deputy commander of a battalion.\r\nIn civilian life Vadym is a software engineer at Integration.app, where he is buildings products to simplify system integration. Before that he worked on business process automation at ML startup DataRobot.",
+    "tagLine": "Colonel of the Ukrainian Army / Full Stack Software Engineer",
+    "profilePicture": "https://sessionize.com/image/cc2f-400o400o2-HVqdkVZHeEnHF82mq5TLoq.jpg",
+    "sessions": [
+      {
+        "id": 402628,
+        "name": "Don’t Reimplement Distributed Consensus Algorithms! (Learn to Use Them Instead)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 43778,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Integration.app",
+        "sort": 14,
+        "answerExtra": null
+      },
+      {
+        "id": 43782,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "Vaddimart",
         "sort": 18,
         "answerExtra": null
       }
