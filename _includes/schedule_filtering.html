@@ -18,7 +18,7 @@ function applyFilter() {
               ];
   let timeFilters = []
   let tracks = {{track_keys | jsonify }}
-  tracks.push("other")
+  tracks.push("other", "workshop"); //these don't show in list but are needed to filter
   let trackFilters = []
   
   //Collect the checked filters
