@@ -32,17 +32,13 @@ function applyFilter() {
   });
    
   if(timeFilters.length > 0 ) {
-    timeslots.forEach(element => {
-      if(timeFilters.includes(element)) {
-        times.forEach( t => {
-          if (t.key === element) {
-             t.slots.forEach(s => $('div.' + s).show());
-          } else {
-             t.slots.forEach(s => $('div.' + s).hide())
-          }
-        })
+    times.forEach( t => {
+      if(timeFilters.includes(t.key)) {
+         t.slots.forEach(s => $('div.' + s).show());
+      } else {
+         t.slots.forEach(s => $('div.' + s).hide())
       }
-    });
+    })
   } else {
     times.forEach(element => {
      element.slots.forEach(e => $('div.' + e).show());
