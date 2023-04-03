@@ -37,6 +37,62 @@ tracks:
 - 
   key: architecture
   name: Architecture  
+  
+timeslots:  
+- 
+  key: 07-30-00
+  name: Morning Socials
+  slots:
+  - 07-30-00
+  - 07-45-00
+  - 08-00-00
+- key: 09-00-00
+  name: 09:00 - 10:00
+  slots:
+  - 09-00-00
+- key: 10-00-00
+  name: 10:00 - 11:00
+  slots:
+  - 10-00-00
+  - 11-00-00
+- key: 11-30-00
+  name: 11:30 - 12:30
+  slots: 
+  - 11-00-00
+  - 11-30-00
+- key: 12-30-00
+  name: 12:30 - 13:30
+  slots: 
+  - 12-30-00
+- key: 13-30-00
+  name: 13:30 - 14:30
+  slots: 
+  - 13-30-00
+  - 14-30-00
+- key: 14-45-00
+  name: 14:45 - 15:45
+  slots: 
+  - 14-45-00
+- key: 15-00-00
+  name: 15:00 - 16:00
+  slots: 
+  - 15-00-00
+- key: 15-45-00
+  name: 15:45 - 16-45
+  slots:
+  - 15-45-00
+- key: 16-00-00
+  name: 16:00 - 17:00
+  slots:
+  - 16-00-00
+- key: 17-00-00
+  name: Evening Socials
+  slots: 
+  - 17-00-00
+  - 17-30-00
+  - 16-45-00
+  - 20-00-00
+
 ---
 
 
@@ -80,7 +136,7 @@ tracks:
         </div>
         {% for slot in day1_times %}
         {% assign rooms = slot.rooms | sort: "name" %}
-        <div class="until09">
+        <div class="{{slot.slotStart | slugify}}">
           <h3>{{slot.slotStart}}</h3>
           {% for room in rooms %}
             {% include schedule_event.html details=room.session %}
@@ -103,7 +159,7 @@ tracks:
           <h2 class="day "> Thursday Apr 6 - Day 2 </h2>
         </div>
         {% for slot in day2_times %}
-        <div class="until09">
+        <div class="{{slot.slotStart | slugify}}">
           <h3>{{slot.slotStart}}</h3>
           {% assign rooms = slot.rooms | sort: "name" %}
           {% for room in rooms %}

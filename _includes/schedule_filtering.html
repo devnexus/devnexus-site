@@ -1,5 +1,7 @@
 {% assign track_keys  = page.tracks | map: "key" | sort %}
 {% assign alltracks = page.tracks | sort: "key" %}
+{% assign times = page.timeslots | sort: "key" %}
+{% assign timefilters = times | map: "key" %}
 <script>
 
 function applyFilter() {
@@ -9,17 +11,12 @@ function applyFilter() {
 
   let dates = ['apr04', 'apr05','apr06']
   let dateFilters = []
-
-  let times = ['until09',
-               'until11',
-               'until13',
-               'until15',
-               'until20'
-              ];
+  let times = {{ times | jsonify }};
+  let timeslots = {{ timefilters | jsonify }};
   let timeFilters = []
-  let tracks = {{track_keys | jsonify }}
-  tracks.push("other", "workshop"); //these don't show in list but are needed to filter
-  let trackFilters = []
+  let tracks = {{ track_keys | jsonify }};
+  tracks.push("other", "workshop"); //these don't show in list but are needed to filtergi
+  let trackFilters = [];
   
   //Collect the checked filters
   $("input.form-check-input").each(function(t,e){
@@ -28,43 +25,48 @@ function applyFilter() {
           dateFilters.push(e.id);
         } else if  (tracks.indexOf(e.id) >= 0) {
           trackFilters.push(e.id);
-        } else if  (times.indexOf(e.id) >= 0) {
+        } else if  (timeslots.indexOf(e.id) >= 0) {
           timeFilters.push(e.id);
         } 
     } 
   });
-    
-    //Apply filters
+   
+  if(timeFilters.length > 0 ) {
+    timeslots.forEach(element => {
+      if(timeFilters.includes(element)) {
+        times.forEach( t => {
+          if (t.key === element) {
+             t.slots.forEach(s => $('div.' + s).show());
+          } else {
+             t.slots.forEach(s => $('div.' + s).hide())
+          }
+        })
+      }
+    });
+  } else {
     times.forEach(element => {
-        if (timeFilters.length > 0 ) {
-          if (timeFilters.indexOf(element) >=0) {
-            $('div.' + element).show();
-          } else {
-            $('div.' + element).hide();
-          }
-        } else {
-          $('div.' + element).show();
-        }
-      });
+     element.slots.forEach(e => $('div.' + e).show());
+    });
+  }  
 
     
     //Apply filters
-    tracks.forEach(element => {
-        if (trackFilters.length > 0 ) {
-          if (trackFilters.indexOf(element) >=0) {
+  tracks.forEach(element => {
+      if (trackFilters.length > 0 ) {
+          if (trackFilters.includes(element)) {
             $('div.' + element).show();
           } else {
             $('div.' + element).hide();
           }
-        } else {
+      } else {
           $('div.' + element).show();
-        }
-      });;
+      }
+  });
     
     
-      dates.forEach(element => {
+  dates.forEach(element => {
         if (dateFilters.length > 0 ) {
-          if (dateFilters.indexOf(element) >=0) {
+          if (dateFilters.includes(element)) {
             $('div.' + element).show();
           } else {
             $('div.' + element).hide();
@@ -72,52 +74,9 @@ function applyFilter() {
         } else {
           $('div.' + element).show();
         }
-      });
+  });
     
-   //If there are no tracks at a timeslot, hide timeslot   
-   let fineTimes = [
-     'apr050730',
-     'apr050900',
-     'apr051000',
-     'apr051100',
-     'apr051120',
-     'apr051220',
-     'apr051320',
-     'apr051420',
-     'apr051520',
-     'apr051540',
-     'apr051650',
-     'apr051700',
-     'apr051800',
-     'apr051820',
-     'apr060900',
-     'apr061000',
-     'apr061100',
-     'apr061120',
-     'apr061220',
-     'apr061320',
-     'apr061420',
-     'apr061520',
-     'apr061540'
-   ];
-
-   fineTimes.forEach(fineTime => {
-     let showTime = false;
-     $('div.' + fineTime).show()
-     tracks.forEach(track => {
-        if (($('div.' + fineTime + ' div.' + track).is(":visible"))) {
-          showTime = true;
-        }
-     })
-     
-     if (showTime) {
-       $('div.' + fineTime).show()
-     } else {
-       $('div.' + fineTime).hide()
-     }
-   })
-}
-
+}      
 function resetFilters() {
   $("input.form-check-input").each(function(t,e){
     e.checked = false;
@@ -197,36 +156,14 @@ function resetFilters() {
         </div>
       </a>
       <div id="time-filter" class="collapse in">
-        <div >
-          <input class="form-check-input " type="checkbox" id="until09" value="until09" onChange="applyFilter()">
-            <label class="form-check-label" for="until09">
-              00:00-09:00
+        {% for slot in times %}
+        <div>
+          <input class="form-check-input " type="checkbox" id="{{slot.key}}" value="{{slot.key}}" onChange="applyFilter()">
+            <label class="form-check-label" for="{{slot.key}}">
+               {{slot.name}}
             </label>
         </div>
-        <div >
-          <input class="form-check-input " type="checkbox" id="until11" value="until11" onChange="applyFilter()">
-            <label class="form-check-label" for="until11">
-              09:00-11:00
-            </label>
-        </div>
-        <div >
-          <input class="form-check-input " type="checkbox" id="until13" value="until13" onChange="applyFilter()">
-            <label class="form-check-label" for="until13">
-              11:00-13:00
-            </label>
-        </div>
-        <div >
-          <input class="form-check-input " type="checkbox" id="until15" value="until15" onChange="applyFilter()">
-            <label class="form-check-label" for="until15">
-              13:00-15:00
-            </label>
-        </div>
-        <div >
-          <input class="form-check-input " type="checkbox" id="until20" value="until20" onChange="applyFilter()">
-            <label class="form-check-label" for="until20">
-              15:00-20:00
-            </label>
-        </div>
+        {% endfor %}
       </div><!--time filter collapse -->
       </div><!-- global filter collapse -->
   </div>
