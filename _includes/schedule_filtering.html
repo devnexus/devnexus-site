@@ -18,6 +18,7 @@ function applyFilter() {
               ];
   let timeFilters = []
   let tracks = {{track_keys | jsonify }}
+  tracks.push("other")
   let trackFilters = []
   
   //Collect the checked filters
@@ -172,18 +173,6 @@ function resetFilters() {
         </div>
       </a>
       <div id="track-filter" class="collapse in">
-      <div >
-        <input class="form-check-input " type="checkbox" id="keynote" value="keynote" onChange="applyFilter()">
-        <label class="form-check-label" for="keynote">
-          Keynotes
-        </label>
-        </div>
-      <div >
-        <input class="form-check-input " type="checkbox" id="unobtanium" value="unobtanium" onChange="applyFilter()">
-        <label class="form-check-label" for="unobtanium">
-          Red Hat DevNation Day
-        </label>
-      </div>
       {% for track in alltracks %}
       <div >
           <input class="form-check-input " type="checkbox" id="{{ track.key }}" value="{{ track.key }}" onChange="applyFilter()">
@@ -193,8 +182,8 @@ function resetFilters() {
        </div>
        {% endfor %}
         <div >
-            <input class="form-check-input " type="checkbox" id="breakfast" value="breakfast" onChange="applyFilter()">
-            <label class="form-check-label" for="breakfast">
+            <input class="form-check-input " type="checkbox" id="other" value="other" onChange="applyFilter()">
+            <label class="form-check-label" for="other">
               Food & Admin
             </label>
         </div>

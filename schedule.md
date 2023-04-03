@@ -36,7 +36,7 @@ tracks:
   name: Practices and other tech
 - 
   key: architecture
-  name: Architecture
+  name: Architecture  
 ---
 
 

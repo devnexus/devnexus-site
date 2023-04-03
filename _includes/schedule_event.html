@@ -7,7 +7,8 @@
    {% else %}	
       {% assign color = "track" %}  
 	{% endif %}  
-{% else %}   
+{% else %}
+   {% assign track = "other" %}   
    {% assign color = "foyer" %}
 {% endif %}
 <div class="row schedule-row {{track | slugify}}">
