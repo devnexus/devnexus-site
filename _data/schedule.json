@@ -2630,17 +2630,17 @@
             "status": "Accepted"
           },
           {
-            "id": "410180",
-            "title": "Beyond REST and CRUD: Integration patterns in Microservices",
-            "description": "The flow of information and events through distributed systems goes well beyond HTTP, REST, and JSON. In this talk, we’ll use Apache Camel to explore integration patterns that add flexibility and resilience to your evolving architecture.",
+            "id": "403207",
+            "title": "GraphQL from the Ground Up",
+            "description": "REST has become a standard for services on the internet, but it isn't without its drawbacks. GraphQL is a query language from Facebook that's caught on to address many of these issues. It provides API consumers with better visibility and more control over their data.\r\n\r\nWhere REST has endpoints and status codes, GraphQL has queries, mutations, types, and richer errors. It allows you to ask for precisely the data you need, to batch requests for parallel server processing, and even returns partial results in the face of downstream failures.\r\n\r\nIn this talk, we will explain our experience adopting GraphQL at New Relic. We will discuss the challenges and solutions we found - including the smaller community using GraphQL outside of the Javascript ecosystem, how we learned to think differently about the data we expose, and why you might consider adopting it yourself. We will also showcase the open-source libraries that we created to help both our own services and those of the wider community.",
             "startsAt": "2023-04-05T13:30:00",
             "endsAt": "2023-04-05T14:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "f6c77911-6612-4b72-9832-63409826e785",
-                "name": "Erin Schnabel"
+                "id": "0eed983b-888c-4214-8ec6-bfdfe4d9e718",
+                "name": "Jason Clark"
               }
             ],
             "categories": [
@@ -5331,17 +5331,17 @@
             "id": 33058,
             "name": "314 (Frameworks)",
             "session": {
-              "id": "410180",
-              "title": "Beyond REST and CRUD: Integration patterns in Microservices",
-              "description": "The flow of information and events through distributed systems goes well beyond HTTP, REST, and JSON. In this talk, we’ll use Apache Camel to explore integration patterns that add flexibility and resilience to your evolving architecture.",
+              "id": "403207",
+              "title": "GraphQL from the Ground Up",
+              "description": "REST has become a standard for services on the internet, but it isn't without its drawbacks. GraphQL is a query language from Facebook that's caught on to address many of these issues. It provides API consumers with better visibility and more control over their data.\r\n\r\nWhere REST has endpoints and status codes, GraphQL has queries, mutations, types, and richer errors. It allows you to ask for precisely the data you need, to batch requests for parallel server processing, and even returns partial results in the face of downstream failures.\r\n\r\nIn this talk, we will explain our experience adopting GraphQL at New Relic. We will discuss the challenges and solutions we found - including the smaller community using GraphQL outside of the Javascript ecosystem, how we learned to think differently about the data we expose, and why you might consider adopting it yourself. We will also showcase the open-source libraries that we created to help both our own services and those of the wider community.",
               "startsAt": "2023-04-05T13:30:00",
               "endsAt": "2023-04-05T14:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "f6c77911-6612-4b72-9832-63409826e785",
-                  "name": "Erin Schnabel"
+                  "id": "0eed983b-888c-4214-8ec6-bfdfe4d9e718",
+                  "name": "Jason Clark"
                 }
               ],
               "categories": [
@@ -7440,7 +7440,7 @@
           {
             "id": "433296",
             "title": "5 years of Jakarta EE Panel: a look into the future",
-            "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, and Rudy De Busscher! \r\n",
+            "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, Andrew Pielage and Rudy De Busscher! \r\n",
             "startsAt": "2023-04-06T11:30:00",
             "endsAt": "2023-04-06T12:30:00",
             "isServiceSession": false,
@@ -8078,6 +8078,66 @@
         "id": 33055,
         "name": "311 (Security)",
         "sessions": [
+          {
+            "id": "459309",
+            "title": "Women in Technology Breakfast",
+            "description": "Building a career in tech: the good, the bad and the ugly\r\n\r\nJoin us for breakfast with some of the amazing women in tech. Our panelists will discuss some of the advice they received throughout their careers in tech and if there is anything they wish they had done differently. ",
+            "startsAt": "2023-04-06T07:45:00",
+            "endsAt": "2023-04-06T08:45:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
+                "name": "Najae Stevenson"
+              },
+              {
+                "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
+                "name": "Cecelia Martinez"
+              },
+              {
+                "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+                "name": "Emily Jiang"
+              },
+              {
+                "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
+                "name": "Valarie Regas"
+              },
+              {
+                "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
+                "name": "Gail Anderson"
+              }
+            ],
+            "categories": [
+              {
+                "id": 43783,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 166731,
+                    "name": "Unobtanium"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 43785,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 143440,
+                    "name": "session"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 33055,
+            "room": "311 (Security)",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted"
+          },
           {
             "id": "386424",
             "title": "Don't Trust anyone.... Secure your Microservices with ZeroTrust approach.",
@@ -8856,17 +8916,17 @@
             "status": "Accepted"
           },
           {
-            "id": "403207",
-            "title": "GraphQL from the Ground Up",
-            "description": "REST has become a standard for services on the internet, but it isn't without its drawbacks. GraphQL is a query language from Facebook that's caught on to address many of these issues. It provides API consumers with better visibility and more control over their data.\r\n\r\nWhere REST has endpoints and status codes, GraphQL has queries, mutations, types, and richer errors. It allows you to ask for precisely the data you need, to batch requests for parallel server processing, and even returns partial results in the face of downstream failures.\r\n\r\nIn this talk, we will explain our experience adopting GraphQL at New Relic. We will discuss the challenges and solutions we found - including the smaller community using GraphQL outside of the Javascript ecosystem, how we learned to think differently about the data we expose, and why you might consider adopting it yourself. We will also showcase the open-source libraries that we created to help both our own services and those of the wider community.",
+            "id": "410180",
+            "title": "Beyond REST and CRUD: Integration patterns in Microservices",
+            "description": "The flow of information and events through distributed systems goes well beyond HTTP, REST, and JSON. In this talk, we’ll use Apache Camel to explore integration patterns that add flexibility and resilience to your evolving architecture.",
             "startsAt": "2023-04-06T13:30:00",
             "endsAt": "2023-04-06T14:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "0eed983b-888c-4214-8ec6-bfdfe4d9e718",
-                "name": "Jason Clark"
+                "id": "f6c77911-6612-4b72-9832-63409826e785",
+                "name": "Erin Schnabel"
               }
             ],
             "categories": [
@@ -9229,66 +9289,6 @@
         "id": 33060,
         "name": "402 (Tools and Techniques)",
         "sessions": [
-          {
-            "id": "459309",
-            "title": "Women in Technology Breakfast",
-            "description": "Building a career in tech: the good, the bad and the ugly\r\n\r\nJoin us for breakfast with some of the amazing women in tech. Our panelists will discuss some of the advice they received throughout their careers in tech and if there is anything they wish they had done differently. ",
-            "startsAt": "2023-04-06T07:45:00",
-            "endsAt": "2023-04-06T08:45:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "cdb4d5d0-abf8-4f2c-a86b-fbc64cfcedd7",
-                "name": "Najae Stevenson"
-              },
-              {
-                "id": "85becfa6-8765-4c3c-b805-e393ed3dd954",
-                "name": "Cecelia Martinez"
-              },
-              {
-                "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
-                "name": "Emily Jiang"
-              },
-              {
-                "id": "d98ac233-d319-45ab-9729-41f7c4ae2a62",
-                "name": "Valarie Regas"
-              },
-              {
-                "id": "2f733d9f-145d-4b67-81ca-0a07a0b92150",
-                "name": "Gail Anderson"
-              }
-            ],
-            "categories": [
-              {
-                "id": 43783,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 166731,
-                    "name": "Unobtanium"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 43785,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 143440,
-                    "name": "session"
-                  }
-                ],
-                "sort": 2
-              }
-            ],
-            "roomId": 33060,
-            "room": "402 (Tools and Techniques)",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": "Accepted"
-          },
           {
             "id": "405373",
             "title": "Wired! How your brain learns new (programming) languages",
@@ -9820,8 +9820,8 @@
         "slotStart": "07:45:00",
         "rooms": [
           {
-            "id": 33060,
-            "name": "402 (Tools and Techniques)",
+            "id": 33055,
+            "name": "311 (Security)",
             "session": {
               "id": "459309",
               "title": "Women in Technology Breakfast",
@@ -9876,13 +9876,13 @@
                   "sort": 2
                 }
               ],
-              "roomId": 33060,
-              "room": "402 (Tools and Techniques)",
+              "roomId": 33055,
+              "room": "311 (Security)",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted"
             },
-            "index": 10
+            "index": 5
           }
         ]
       },
@@ -10696,7 +10696,7 @@
             "session": {
               "id": "433296",
               "title": "5 years of Jakarta EE Panel: a look into the future",
-              "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, and Rudy De Busscher! \r\n",
+              "description": "Join Jakarta EE experts as they discuss the future with version 11 and beyond. Beside Ivar Grimstad and Tanja Obradovic our panelists will be Emily Jiang, Jose Paumard, Mark Heckler, Andrew Pielage and Rudy De Busscher! \r\n",
               "startsAt": "2023-04-06T11:30:00",
               "endsAt": "2023-04-06T12:30:00",
               "isServiceSession": false,
@@ -11627,17 +11627,17 @@
             "id": 33058,
             "name": "314 (Frameworks)",
             "session": {
-              "id": "403207",
-              "title": "GraphQL from the Ground Up",
-              "description": "REST has become a standard for services on the internet, but it isn't without its drawbacks. GraphQL is a query language from Facebook that's caught on to address many of these issues. It provides API consumers with better visibility and more control over their data.\r\n\r\nWhere REST has endpoints and status codes, GraphQL has queries, mutations, types, and richer errors. It allows you to ask for precisely the data you need, to batch requests for parallel server processing, and even returns partial results in the face of downstream failures.\r\n\r\nIn this talk, we will explain our experience adopting GraphQL at New Relic. We will discuss the challenges and solutions we found - including the smaller community using GraphQL outside of the Javascript ecosystem, how we learned to think differently about the data we expose, and why you might consider adopting it yourself. We will also showcase the open-source libraries that we created to help both our own services and those of the wider community.",
+              "id": "410180",
+              "title": "Beyond REST and CRUD: Integration patterns in Microservices",
+              "description": "The flow of information and events through distributed systems goes well beyond HTTP, REST, and JSON. In this talk, we’ll use Apache Camel to explore integration patterns that add flexibility and resilience to your evolving architecture.",
               "startsAt": "2023-04-06T13:30:00",
               "endsAt": "2023-04-06T14:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "0eed983b-888c-4214-8ec6-bfdfe4d9e718",
-                  "name": "Jason Clark"
+                  "id": "f6c77911-6612-4b72-9832-63409826e785",
+                  "name": "Erin Schnabel"
                 }
               ],
               "categories": [
