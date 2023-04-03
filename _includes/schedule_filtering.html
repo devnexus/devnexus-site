@@ -1,7 +1,5 @@
----
-layout: info-fluid
----
-
+{% assign track_keys  = page.tracks | map: "key" | sort %}
+{% assign alltracks = page.tracks | sort: "key" %}
 <script>
 
 function applyFilter() {
@@ -19,22 +17,7 @@ function applyFilter() {
                'until20'
               ];
   let timeFilters = []
-
-  let tracks = ['unobtanium', 
-               'agile',
-               'keynote',
-               'breakfast',
-              'architecture',
-              'cloud-infrastructure',
-              'cloud-technology',
-              'tools-and-techniques',
-              'core-java',
-              'practices-and-other-tech',
-              'frameworks',
-              'java-platform',
-              'security',
-              'web-and-front-end',
-              'keynote']
+  let tracks = {{track_keys | jsonify }}
   let trackFilters = []
   
   //Collect the checked filters
@@ -201,10 +184,14 @@ function resetFilters() {
           Red Hat DevNation Day
         </label>
       </div>
-        {% assign tracks = site.data.tracks %}
-        {% for track in tracks %}
-            {% include schedule_filter_track_item.html data=track  %}
-        {% endfor %}
+      {% for track in alltracks %}
+      <div >
+          <input class="form-check-input " type="checkbox" id="{{ track.key }}" value="{{ track.key }}" onChange="applyFilter()">
+           <label class="form-check-label" for="{{ track.key}}">
+             {{ track.name }}
+           </label>
+       </div>
+       {% endfor %}
         <div >
             <input class="form-check-input " type="checkbox" id="breakfast" value="breakfast" onChange="applyFilter()">
             <label class="form-check-label" for="breakfast">

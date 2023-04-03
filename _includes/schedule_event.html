@@ -10,7 +10,7 @@
 {% else %}   
    {% assign color = "foyer" %}
 {% endif %}
-<div class="row schedule-row {{preso.track}}">
+<div class="row schedule-row {{track | slugify}}">
 		<div class="col-xs-12 {{color}}">
 				<a href="/presentations/{{preso.title | slugify }}">{{preso.title | escape}}</a>
 				<br/>

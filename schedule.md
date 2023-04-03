@@ -1,5 +1,42 @@
 ---
 layout: info-fluid
+tracks:
+- 
+  key: cloud-infrastructure
+  name: Cloud Infrastructure
+- 
+  key: jakarta-ee
+  name: JakartaEE
+- 
+  key: web-and-front-end
+  name: Web 
+- 
+  key: core-java
+  name: Core Java
+- 
+  key: security
+  name: Security
+- 
+  key: unobtanium
+  name: Unobtanium
+- 
+  key: cloud-technology
+  name: Cloud Technology
+- 
+  key: frameworks
+  name: Frameworks
+- 
+  key: java-platform
+  name: Java Platform
+- 
+  key: tools-and-techniques
+  name: Tools and Techniques
+- 
+  key: practices-and-other-tech
+  name: Practices and other tech
+- 
+  key: architecture
+  name: Architecture
 ---
 
 
