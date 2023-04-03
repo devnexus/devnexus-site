@@ -2,13 +2,15 @@
 layout: info-fluid
 ---
 
+
 {% assign schedule = site.data.schedule %}
 {% assign workshops = site.data.schedule[0] %}
 {% assign workshop_reg = workshops.timeSlots[0].rooms %}
 {% assign workshop_sessions = workshops.timeSlots[1].rooms %}
 
+{% include schedule_filtering.html %}
 
-<div class="row new-day apr12">
+<div class="row new-day apr04">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
@@ -30,7 +32,7 @@ layout: info-fluid
 
 {% assign day1 = site.data.schedule[1] %}
 {% assign day1_times = day1.timeSlots %}
-<div class="row new-day apr13">
+<div class="row new-day apr05">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
@@ -54,7 +56,7 @@ layout: info-fluid
 
 {% assign day2 = site.data.schedule[2] %}
 {% assign day2_times = day2.timeSlots %}
-<div class="row new-day apr13">
+<div class="row new-day apr06">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">

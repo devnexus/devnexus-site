@@ -1,0 +1,262 @@
+---
+layout: info-fluid
+---
+
+<script>
+
+function applyFilter() {
+  let filterDates = false;
+  let filterTracks = false;
+  let filterTimes = false;
+
+  let dates = ['apr04', 'apr05','apr06']
+  let dateFilters = []
+
+  let times = ['until09',
+               'until11',
+               'until13',
+               'until15',
+               'until20'
+              ];
+  let timeFilters = []
+
+  let tracks = ['unobtanium', 
+               'agile',
+               'keynote',
+               'breakfast',
+              'architecture',
+              'cloud-infrastructure',
+              'cloud-technology',
+              'tools-and-techniques',
+              'core-java',
+              'practices-and-other-tech',
+              'frameworks',
+              'java-platform',
+              'security',
+              'web-and-front-end',
+              'keynote']
+  let trackFilters = []
+  
+  //Collect the checked filters
+  $("input.form-check-input").each(function(t,e){
+    if (e.id && e.checked) {
+        if (dates.indexOf(e.id) >= 0) {
+          dateFilters.push(e.id);
+        } else if  (tracks.indexOf(e.id) >= 0) {
+          trackFilters.push(e.id);
+        } else if  (times.indexOf(e.id) >= 0) {
+          timeFilters.push(e.id);
+        } 
+    } 
+  });
+    
+    //Apply filters
+    times.forEach(element => {
+        if (timeFilters.length > 0 ) {
+          if (timeFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });
+
+    
+    //Apply filters
+    tracks.forEach(element => {
+        if (trackFilters.length > 0 ) {
+          if (trackFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });;
+    
+    
+      dates.forEach(element => {
+        if (dateFilters.length > 0 ) {
+          if (dateFilters.indexOf(element) >=0) {
+            $('div.' + element).show();
+          } else {
+            $('div.' + element).hide();
+          }
+        } else {
+          $('div.' + element).show();
+        }
+      });
+    
+   //If there are no tracks at a timeslot, hide timeslot   
+   let fineTimes = [
+     'apr050730',
+     'apr050900',
+     'apr051000',
+     'apr051100',
+     'apr051120',
+     'apr051220',
+     'apr051320',
+     'apr051420',
+     'apr051520',
+     'apr051540',
+     'apr051650',
+     'apr051700',
+     'apr051800',
+     'apr051820',
+     'apr060900',
+     'apr061000',
+     'apr061100',
+     'apr061120',
+     'apr061220',
+     'apr061320',
+     'apr061420',
+     'apr061520',
+     'apr061540'
+   ];
+
+   fineTimes.forEach(fineTime => {
+     let showTime = false;
+     $('div.' + fineTime).show()
+     tracks.forEach(track => {
+        if (($('div.' + fineTime + ' div.' + track).is(":visible"))) {
+          showTime = true;
+        }
+     })
+     
+     if (showTime) {
+       $('div.' + fineTime).show()
+     } else {
+       $('div.' + fineTime).hide()
+     }
+   })
+}
+
+function resetFilters() {
+  $("input.form-check-input").each(function(t,e){
+    e.checked = false;
+  });
+  applyFilter();
+}
+
+</script>
+
+{% assign day0 = site.data.schedule | where: "index", 0  | first %}
+<div class="row schedule-container">
+  <div class="col-sm-4 col-md-3 row schedule-filters">
+    <a href="#schedule-filter" style="color: #eee" data-toggle="collapse">
+      <div class="filter-by-header">
+            <span>Filter By</span>
+            <span class="glyphicon glyphicon-plus  pull-right btn-sm" aria-hidden="true"></span>
+      </div>
+    </a>
+    <div id="schedule-filter" class="collapse in">
+      <div class="row">
+        <a href="#" onClick="resetFilters()">Clear Filters</a>
+      </div>
+      <a href="#date-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Date</span>
+              <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span> 
+        </div>
+      </a>
+      <div id="date-filter" class="collapse in">
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr04" value="apr04" onChange="applyFilter()">
+            <label class="form-check-label" for="apr04">
+              Apr 04 2022
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr05" value="apr05" onChange="applyFilter()">
+            <label class="form-check-label" for="apr05">
+              Apr 05 2022
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="apr06" value="apr06" onChange="applyFilter()">
+            <label class="form-check-label" for="apr06">
+              Apr 06 2022
+            </label>
+        </div>
+      </div>
+      <a href="#track-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Track</span>
+            <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span>
+        </div>
+      </a>
+      <div id="track-filter" class="collapse in">
+      <div >
+        <input class="form-check-input " type="checkbox" id="keynote" value="keynote" onChange="applyFilter()">
+        <label class="form-check-label" for="keynote">
+          Keynotes
+        </label>
+        </div>
+      <div >
+        <input class="form-check-input " type="checkbox" id="unobtanium" value="unobtanium" onChange="applyFilter()">
+        <label class="form-check-label" for="unobtanium">
+          Red Hat DevNation Day
+        </label>
+      </div>
+        {% assign tracks = site.data.tracks %}
+        {% for track in tracks %}
+            {% include schedule_filter_track_item.html data=track  %}
+        {% endfor %}
+        <div >
+            <input class="form-check-input " type="checkbox" id="breakfast" value="breakfast" onChange="applyFilter()">
+            <label class="form-check-label" for="breakfast">
+              Food & Admin
+            </label>
+        </div>
+      </div>
+      
+
+      <a href="#time-filter" style="color: #eee" data-toggle="collapse">
+        <div class="filter-by-section-header">
+            <span>Time</span>
+            <span class="glyphicon glyphicon-plus pull-right btn-sm" aria-hidden="true"></span>
+        </div>
+      </a>
+      <div id="time-filter" class="collapse in">
+        <div >
+          <input class="form-check-input " type="checkbox" id="until09" value="until09" onChange="applyFilter()">
+            <label class="form-check-label" for="until09">
+              00:00-09:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until11" value="until11" onChange="applyFilter()">
+            <label class="form-check-label" for="until11">
+              09:00-11:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until13" value="until13" onChange="applyFilter()">
+            <label class="form-check-label" for="until13">
+              11:00-13:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until15" value="until15" onChange="applyFilter()">
+            <label class="form-check-label" for="until15">
+              13:00-15:00
+            </label>
+        </div>
+        <div >
+          <input class="form-check-input " type="checkbox" id="until20" value="until20" onChange="applyFilter()">
+            <label class="form-check-label" for="until20">
+              15:00-20:00
+            </label>
+        </div>
+      </div><!--time filter collapse -->
+      </div><!-- global filter collapse -->
+  </div>
+  
+  <div class="row col-sm-8 col-md-9">
+    <div class="row">
+       <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
+    </div>
+
