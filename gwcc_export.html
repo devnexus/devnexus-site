@@ -1,0 +1,92 @@
+---
+permalink: /gwcc_export
+layout: null
+---
+<html>
+    <head>
+    </head>
+    <body>
+        <a id="download">export it</a>
+    </body>
+    <script>
+        const srcfile = "https://sessionize.com/api/v2/g415clv7/view/GridSmart";
+
+        const csvData = [
+            ["Event","Start","End","Room"]
+        ];
+        fetch(srcfile,{
+           method: "GET",
+           mode: "cors", 
+           cache: "no-cache",
+           credentials: "omit",
+           redirect: "follow", 
+           referrerPolicy: "origin-when-cross-origin"})
+        .then(
+            resp => {
+                //console.log(['resp', resp])
+                return resp.text()
+            }    
+        )
+        .then(
+            data => { 
+                //console.log(["data text", data]);
+                return data? JSON.parse(data) : [] 
+            }
+        )
+        .then(
+            process
+        ).catch(
+            error => console.log(["fail", error])
+        )
+        function process( days ) {
+            if (days.length == 0) {
+                throw new Error("empty event data");
+            }
+            //console.log(["days", days])
+            days.map( d => {
+                //console.log(["rooms", d["rooms"]])
+                return d["rooms"]
+            })
+            .map(rooms => {
+                console.log(["r", rooms])
+                return rooms.flatMap(r => r["sessions"]);
+            })
+            .forEach(e => {
+                console.log(["sessions.mapped", e])
+                e.forEach( s => {
+                    const row = [];
+                    const room = formatRoom(s["room"])
+                    if(!room) return;
+                    row.push('"' + s["title"] + '"')
+                    row.push('"' + formatDate(s["startsAt"]) + '"')
+                    row.push('"' + formatDate(s["endsAt"]) + '"')
+                    row.push('"A' + room + '"')
+                    //console.log([row, s])
+                    csvData.push(row.join(","))
+                })
+            });
+            if (csvData.length > 1) {
+              downloadObjectAsJson(csvData.join("\r\n"));
+            } else {
+                console.log("Nothing processed");
+            }  
+        }
+        function formatDate(datestr) {
+            return new Date(datestr).toLocaleString();;
+        }
+        function formatRoom(roomStr) {
+            const number = roomStr.match(/\d+/g);
+            if(number) return number[0];
+            else return null;
+        }
+        function downloadObjectAsJson(exportObj, exportName) {
+         var dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(exportObj);
+         var downloadAnchorNode = document.createElement("a")
+         downloadAnchorNode.setAttribute("href",     dataStr);
+         downloadAnchorNode.setAttribute("download", "sessions_export.csv");
+         document.body.appendChild(downloadAnchorNode); // required for firefox
+         downloadAnchorNode.click();
+         downloadAnchorNode.remove();
+        }  
+</script>
+</html>
