@@ -4,8 +4,8 @@
     "isDefault": true,
     "rooms": [
       {
-        "id": 33055,
-        "name": "311 (Security)",
+        "id": 28894,
+        "name": "303 (JakartaEE)",
         "sessions": [
           {
             "id": "396330",
@@ -49,8 +49,75 @@
                 "sort": 2
               }
             ],
-            "roomId": 33055,
-            "room": "311 (Security)",
+            "roomId": 28894,
+            "room": "303 (JakartaEE)",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted"
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 33053,
+        "name": "304 (Web)",
+        "sessions": [
+          {
+            "id": "450346",
+            "title": "Hands on with Azure Spring Apps Enterprise",
+            "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
+            "startsAt": "2023-04-04T09:00:00",
+            "endsAt": "2023-04-04T10:30:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
+                "name": "Eric Manley"
+              },
+              {
+                "id": "073ba34b-31d2-462d-9da4-79aae9f1f3ef",
+                "name": "Anish Patel"
+              },
+              {
+                "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
+                "name": "Ajai Peddapanga"
+              },
+              {
+                "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
+                "name": "Manoj Singh"
+              },
+              {
+                "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
+                "name": "John Lafata"
+              }
+            ],
+            "categories": [
+              {
+                "id": 43783,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 143429,
+                    "name": "Cloud Technology"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 43785,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 143441,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 33053,
+            "room": "304 (Web)",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted"
@@ -228,73 +295,6 @@
         "hasOnlyPlenumSessions": false
       },
       {
-        "id": 33059,
-        "name": "315 (Java Platform)",
-        "sessions": [
-          {
-            "id": "450346",
-            "title": "Hands on with Azure Spring Apps Enterprise",
-            "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
-            "startsAt": "2023-04-04T09:00:00",
-            "endsAt": "2023-04-04T10:30:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
-                "name": "Eric Manley"
-              },
-              {
-                "id": "073ba34b-31d2-462d-9da4-79aae9f1f3ef",
-                "name": "Anish Patel"
-              },
-              {
-                "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
-                "name": "Ajai Peddapanga"
-              },
-              {
-                "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
-                "name": "Manoj Singh"
-              },
-              {
-                "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
-                "name": "John Lafata"
-              }
-            ],
-            "categories": [
-              {
-                "id": 43783,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 143429,
-                    "name": "Cloud Technology"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 43785,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 143441,
-                    "name": "workshop"
-                  }
-                ],
-                "sort": 2
-              }
-            ],
-            "roomId": 33059,
-            "room": "315 (Java Platform)",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": "Accepted"
-          }
-        ],
-        "hasOnlyPlenumSessions": false
-      },
-      {
         "id": 33062,
         "name": "Foyer",
         "sessions": [
@@ -349,8 +349,8 @@
         "slotStart": "09:00:00",
         "rooms": [
           {
-            "id": 33055,
-            "name": "311 (Security)",
+            "id": 28894,
+            "name": "303 (JakartaEE)",
             "session": {
               "id": "396330",
               "title": "Hands-on Workshop: Building Streaming Data Pipelines with Apache Kafka",
@@ -393,13 +393,78 @@
                   "sort": 2
                 }
               ],
-              "roomId": 33055,
-              "room": "311 (Security)",
+              "roomId": 28894,
+              "room": "303 (JakartaEE)",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted"
             },
             "index": 0
+          },
+          {
+            "id": 33053,
+            "name": "304 (Web)",
+            "session": {
+              "id": "450346",
+              "title": "Hands on with Azure Spring Apps Enterprise",
+              "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
+              "startsAt": "2023-04-04T09:00:00",
+              "endsAt": "2023-04-04T10:30:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
+                  "name": "Eric Manley"
+                },
+                {
+                  "id": "073ba34b-31d2-462d-9da4-79aae9f1f3ef",
+                  "name": "Anish Patel"
+                },
+                {
+                  "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
+                  "name": "Ajai Peddapanga"
+                },
+                {
+                  "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
+                  "name": "Manoj Singh"
+                },
+                {
+                  "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
+                  "name": "John Lafata"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 43783,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 143429,
+                      "name": "Cloud Technology"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 43785,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 143441,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 2
+                }
+              ],
+              "roomId": 33053,
+              "room": "304 (Web)",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted"
+            },
+            "index": 1
           },
           {
             "id": 33056,
@@ -448,7 +513,7 @@
               "recordingUrl": null,
               "status": "Accepted"
             },
-            "index": 1
+            "index": 2
           },
           {
             "id": 33057,
@@ -509,7 +574,7 @@
               "recordingUrl": null,
               "status": "Accepted"
             },
-            "index": 2
+            "index": 3
           },
           {
             "id": 33058,
@@ -558,71 +623,6 @@
               ],
               "roomId": 33058,
               "room": "314 (Frameworks)",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": "Accepted"
-            },
-            "index": 3
-          },
-          {
-            "id": 33059,
-            "name": "315 (Java Platform)",
-            "session": {
-              "id": "450346",
-              "title": "Hands on with Azure Spring Apps Enterprise",
-              "description": "Azure Spring Apps Enterprise is a fully managed service for Spring applications from Microsoft and VMware.  \r\nBuilding on the Spring framework and bringing the best components of Microsoft Azure and VMware Tanzu, Azure Spring Apps - Enterprise paves the way for a faster path to production, for every enterprise Spring developer out there. \r\nAt our workshop, get hands on and learn about this amazing solution from Microsoft and VMware experts. \r\nLearn how Azure Spring Apps Enterprise can work for your organization. During this session, we will explore: \r\nApp architectures in the cloud, and how this managed service enables them.\r\nGo JAR to URL. Take apps to the happiest place on earth — production — with the Azure Spring Apps, without worrying about infrastructure, app lifecycle, monitoring, etc. Make your apps production ready with polyglot multi-service capabilities, SSO, rate-limiting, and more.\r\nLearn how Azure supports service discovery, centralized configuration, service connectors, application auto scaling and monitoring, distributed tracing, secrets using Managed Identities and Key Vault, isolation, on-premises connectivity, and blue/green deployment.\r\nGet insights from our experience in helping customers solve real challenges with typical app architectures and complexities. As a bonus, learn all about what makes for a great developer experience.\r\nTake advantage of our free rapid app assessment workshop with our experts, to power your modernization journey to the cloud. We will have limited slots, so sign up early! \r\nPre-requisites: \r\nAttendees should bring a laptop that does not have VPN restrictions, to fully leverage our dev and test environments without challenges.\r\nSome professional software development experience, with working knowledge of Spring Boot.\r\n",
-              "startsAt": "2023-04-04T09:00:00",
-              "endsAt": "2023-04-04T10:30:00",
-              "isServiceSession": false,
-              "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "9e5fa9a2-7c70-4ab1-a9a9-a158af533f8e",
-                  "name": "Eric Manley"
-                },
-                {
-                  "id": "073ba34b-31d2-462d-9da4-79aae9f1f3ef",
-                  "name": "Anish Patel"
-                },
-                {
-                  "id": "a8c9ad19-0e41-43af-8cdf-17e240921f9b",
-                  "name": "Ajai Peddapanga"
-                },
-                {
-                  "id": "21c465c9-eda5-4467-9b99-7feb8f79e9f0",
-                  "name": "Manoj Singh"
-                },
-                {
-                  "id": "bcbcd942-eb2a-4b0b-ac05-95f0d69bf094",
-                  "name": "John Lafata"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 43783,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 143429,
-                      "name": "Cloud Technology"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 43785,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 143441,
-                      "name": "workshop"
-                    }
-                  ],
-                  "sort": 2
-                }
-              ],
-              "roomId": 33059,
-              "room": "315 (Java Platform)",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted"
