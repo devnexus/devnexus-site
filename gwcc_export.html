@@ -60,7 +60,7 @@ layout: null
                     row.push('"' + s["title"] + '"')
                     row.push('"' + formatDate(s["startsAt"]) + '"')
                     row.push('"' + formatDate(s["endsAt"]) + '"')
-                    row.push('"A' + room + '"')
+                    row.push('"' + room + '"')
                     //console.log([row, s])
                     csvData.push(row.join(","))
                 })
@@ -72,11 +72,15 @@ layout: null
             }  
         }
         function formatDate(datestr) {
-            return new Date(datestr).toLocaleString();;
+            const date = new Date(datestr);
+            const datePart = date.toLocaleString("en-us", {month: "numeric",day: "numeric",year: "numeric"});
+            const timePart = date.toLocaleString("en-us", {hour12: true, hour: "2-digit",minute: "2-digit"});
+            return datePart+ " " +timePart
         }
         function formatRoom(roomStr) {
+            if(roomStr.includes('Sydney Marcus')) return 'Sydney Marcus';
             const number = roomStr.match(/\d+/g);
-            if(number) return number[0];
+            if(number) return "A" + number[0];
             else return null;
         }
         function downloadObjectAsJson(exportObj, exportName) {
