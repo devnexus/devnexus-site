@@ -1,7 +1,7 @@
 [
   {
     "date": "2023-04-04T00:00:00",
-    "isDefault": true,
+    "isDefault": false,
     "rooms": [
       {
         "id": 28894,
@@ -2302,6 +2302,54 @@
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted"
+          },
+          {
+            "id": "407742",
+            "title": "The OffHeap Podcast. Devnexus Edition",
+            "description": "We are back at it again! The usual suspects comes back to record a live episode of OffHeap. We discuss the latest Java News, and we'll have a (incredibly amazing, soon to be found) guest... Like other sessions we'll have trivia and a great time. Come take a listen to our live episode, participate and have fun! \r\njavaoffheap.com",
+            "startsAt": "2023-04-05T17:30:00",
+            "endsAt": "2023-04-05T18:30:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
+                "name": "Freddy Guime"
+              },
+              {
+                "id": "bb3f1805-a937-4adb-83f8-daa5973c515f",
+                "name": "Michael Minella"
+              }
+            ],
+            "categories": [
+              {
+                "id": 43783,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 143430,
+                    "name": "Core Java"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 43785,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 143440,
+                    "name": "session"
+                  }
+                ],
+                "sort": 2
+              }
+            ],
+            "roomId": 33056,
+            "room": "312 (Unobtanium)",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted"
           }
         ],
         "hasOnlyPlenumSessions": false
@@ -2970,54 +3018,6 @@
                   {
                     "id": 143432,
                     "name": "Java Platform"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 43785,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 143440,
-                    "name": "session"
-                  }
-                ],
-                "sort": 2
-              }
-            ],
-            "roomId": 33059,
-            "room": "315 (Java Platform)",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": "Accepted"
-          },
-          {
-            "id": "407742",
-            "title": "The OffHeap Podcast. Devnexus Edition",
-            "description": "We are back at it again! The usual suspects comes back to record a live episode of OffHeap. We discuss the latest Java News, and we'll have a (incredibly amazing, soon to be found) guest... Like other sessions we'll have trivia and a great time. Come take a listen to our live episode, participate and have fun! \r\njavaoffheap.com",
-            "startsAt": "2023-04-05T17:30:00",
-            "endsAt": "2023-04-05T18:30:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
-                "name": "Freddy Guime"
-              },
-              {
-                "id": "bb3f1805-a937-4adb-83f8-daa5973c515f",
-                "name": "Michael Minella"
-              }
-            ],
-            "categories": [
-              {
-                "id": 43783,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 143430,
-                    "name": "Core Java"
                   }
                 ],
                 "sort": 0
@@ -6791,8 +6791,8 @@
         "slotStart": "17:30:00",
         "rooms": [
           {
-            "id": 33059,
-            "name": "315 (Java Platform)",
+            "id": 33056,
+            "name": "312 (Unobtanium)",
             "session": {
               "id": "407742",
               "title": "The OffHeap Podcast. Devnexus Edition",
@@ -6835,13 +6835,13 @@
                   "sort": 2
                 }
               ],
-              "roomId": 33059,
-              "room": "315 (Java Platform)",
+              "roomId": 33056,
+              "room": "312 (Unobtanium)",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted"
             },
-            "index": 9
+            "index": 6
           }
         ]
       }
@@ -6849,7 +6849,7 @@
   },
   {
     "date": "2023-04-06T00:00:00",
-    "isDefault": false,
+    "isDefault": true,
     "rooms": [
       {
         "id": 28892,
@@ -7141,8 +7141,8 @@
           },
           {
             "id": "768c42e5-55df-4982-8185-bfc7f1401e15",
-            "title": "Conf After Party!",
-            "description": "time to unwind with friends old and new!",
+            "title": "Conf After Party at Establish Midtown",
+            "description": "Conf After Party at Establish Midtown",
             "startsAt": "2023-04-06T20:00:00",
             "endsAt": "2023-04-06T23:05:00",
             "isServiceSession": true,
@@ -8183,48 +8183,20 @@
             "status": "Accepted"
           },
           {
-            "id": "403691",
-            "title": "A Community Approach to OSS Distribution",
-            "description": "There are a variety of different attacks on the open source supply chain, including exploitation of zero day vulnerabilities, injection of malicious code or back-doors, and typo-squatting of popular libraries. And the systems that we rely upon for the distribution of OSS were not designed with a security mindset to prevent these sorts of attacks. There has to be a better way for open source authors and maintainers to securely deliver their packages to end users!\r\n\r\nEnter Pyrsia, a new software distribution system that is decentralized, community-driven, foundation governed, and built with a security first focus. In this presentation we will talk about how Pyrsia is designed, how you can use it to distribute and consume software packages, and how you can get involved in the Pyrsia community to grow the library of OSS software available freely and securely for all.",
+            "id": "80b748ed-e21c-47d3-b7d3-ac8e80e9d576",
+            "title": "No Session",
+            "description": null,
             "startsAt": "2023-04-06T11:30:00",
             "endsAt": "2023-04-06T12:30:00",
-            "isServiceSession": false,
+            "isServiceSession": true,
             "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "0793b99f-1282-4674-9d21-f88e30c8232e",
-                "name": "Stephen Chin"
-              }
-            ],
-            "categories": [
-              {
-                "id": 43783,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 143434,
-                    "name": "Security"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 43785,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 143440,
-                    "name": "session"
-                  }
-                ],
-                "sort": 2
-              }
-            ],
+            "speakers": [],
+            "categories": [],
             "roomId": 33055,
             "room": "311 (Security)",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": "Accepted"
+            "status": null
           },
           {
             "id": "406344",
@@ -10842,6 +10814,27 @@
             "index": 4
           },
           {
+            "id": 33055,
+            "name": "311 (Security)",
+            "session": {
+              "id": "80b748ed-e21c-47d3-b7d3-ac8e80e9d576",
+              "title": "No Session",
+              "description": null,
+              "startsAt": "2023-04-06T11:30:00",
+              "endsAt": "2023-04-06T12:30:00",
+              "isServiceSession": true,
+              "isPlenumSession": false,
+              "speakers": [],
+              "categories": [],
+              "roomId": 33055,
+              "room": "311 (Security)",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null
+            },
+            "index": 5
+          },
+          {
             "id": 33056,
             "name": "312 (Unobtanium)",
             "session": {
@@ -13026,8 +13019,8 @@
             "name": "Sydney Marcus (Architecture)",
             "session": {
               "id": "768c42e5-55df-4982-8185-bfc7f1401e15",
-              "title": "Conf After Party!",
-              "description": "time to unwind with friends old and new!",
+              "title": "Conf After Party at Establish Midtown",
+              "description": "Conf After Party at Establish Midtown",
               "startsAt": "2023-04-06T20:00:00",
               "endsAt": "2023-04-06T23:05:00",
               "isServiceSession": true,
