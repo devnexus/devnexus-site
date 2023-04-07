@@ -5,7 +5,7 @@ title: Devnexus 2023
 timezone: UTC
 active-header: navigation.html
 cfp-is-open: true
-registration: open
+registration: closed
 collections:
   speakers:
     title: Speakers 2023
@@ -33,8 +33,8 @@ url:
 uploads_dir: "/uploads"
 links:
    cfp: https://cfp.connectevents.io/en/dn2023/cfp/session/new 
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2023/
-   signIn: https://reg.connectevents.io/ConnectEvents/devnex3s2023/
+   register: https://reg.connectevents.io/ConnectEvents/devnexus
+   signIn: https://reg.connectevents./ConnectEvents/devnexus
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
    reg_maillist: https://ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=51e5b6d965
