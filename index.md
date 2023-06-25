@@ -1,16 +1,16 @@
 ---
 layout: home
-dates: Apr 4-6 2023
+dates: Apr 10-12 2024
 registration:
-  text: SOLD OUT
-  status: disabled
-  link: href="https://reg.connectevents.io/ConnectEvents/devnexus2023/"
+  text: STAY INFORMED
+  status: enabled
+  link: href="tbd"
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2023
+  alt: Devnexus 2024
 cfp:
-  announce: true
-  view: open
+  announce: false
+  view: closed
 ---
 {% if page.cfp.announce %} {% case page.cfp.view %} {% when "open" %}
 
@@ -28,6 +28,11 @@ cfp:
 
 {% comment %} {% include keynotes_promo.html %} {% include workshops_promo.html %} {% endcomment %}
 
-<div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2023?</a></div> {% include sponsor-listing.md rendering="sponsor-thumb.html" %}</div>
+<div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2024?</a></div> 
+
+<div class="featured-header">2023 Devnexus Sponsors</a></div>
+
+{% include sponsor-listing.md rendering="sponsor-thumb.html" %}
+</div>
 
 <div><a name="timeline"></a> {% include timeline.html %}</div>
