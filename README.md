@@ -24,7 +24,8 @@ active-header: navigation-post-show.html
 registration: closed
 ```
 
-2. repath collection output to new archive location and run jekyll
+2. re-path collection output to new archive location and run jekyll
+```
 collections:
   speakers:
     title: Speakers 2020
@@ -41,13 +42,15 @@ collections:
 
 ```
 
-2. Move generated files so that they become archive source files
-* mv _site/devnexus2020  archive/
+3. Run script _move_to_archive.sh  in the root of the project.
+It  does the following:
+* mv _site/archives/devnexus2020  archive/
 * mv _site/presentations/index.html  archive/devnexus2020/presentations
 * mv _site/speakers/index.html  archive/devnexus2020/speakers
+* remove contents from _events, _speakers, _event-instruction folders
 
-3. remove contents from _events, _speakers, _event-instruction folders
 4. restore _config.yml (git checkout _config.yml )
+__Recommed to commit here before preparing for next year__
 
 Steps to Prepare a new year
 * Update the _presite_plugins/jekyll_cfp/lib/jekyll/commands/cfp.rb file with CFP uris
