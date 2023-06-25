@@ -1,9 +1,9 @@
 ---
 safe: true
-exclude: ['_presite_plugins', 'README.md']
+exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2023
 timezone: UTC
-active-header: navigation.html
+active-header: navigation-post-show.html
 cfp-is-open: true
 registration: closed
 collections:

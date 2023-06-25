@@ -51,7 +51,7 @@ layout: page
 	  {% assign ordered_events = page.sessions | sort: "name" %}
 	  {% for e in ordered_events %}
 	     <div class="biography-body">
-          <a href="/presentations/{{e.name | slugify }}" title="{{e.name | escape }}">
+          <a href="../presentations/{{e.name | slugify }}" title="{{e.name | escape }}">
               <h3>{{e.name | escape }}</h3>
            </a>
 		 </div>
