@@ -12,7 +12,9 @@ layout: default
     </ul>
     <h1><img src="{{page.branding.img}}" alt="{{page.branding.alt}}"/></h1>
     <h2>Join the <span>&lt;dev/&gt;</span>olution</h2>
-    <a class="btn hero-btn-register {{ page.registration.status }}" href="{{site.links.register}}">{{page.registration.text | escape}}</a>
+    {% if page.registration.link %}
+    <a class="btn hero-btn-register {{ page.registration.status }}" href="{{page.registration.link}}">{{page.registration.text | escape}}</a>
+    {% endif %}
     {% if page.partner %}
     <h3 class="co-branding center-block">
     <a href="{{page.partner.home}}"><img src="{{page.partner.img}}" alt="{{page.partner.alt}}"/></a>

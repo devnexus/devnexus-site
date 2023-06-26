@@ -76,6 +76,9 @@ booking-url:
       <p>
           We would like to extend a special group rate to Devnexus attendees 
       </p>
-
-      <a class="btn hero-btn-register" href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1660596282980&key=GRP&app=resvlink">SPACE IS LIMITED. BOOK NOW</a>
+    {% if site.links.hotel-block %}
+    <a class="btn hero-btn-register" href="{{site.links.hotel-block}}">SPACE IS LIMITED. BOOK NOW</a>
+    {% else %}
+    <a class="btn hero-btn-register" href="{{site.links.announcements}}">Get Notified</a>
+    {% endif %}  
   </section>

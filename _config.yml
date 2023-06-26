@@ -33,6 +33,8 @@ baseurl:
 url:
 uploads_dir: "/uploads"
 links:
+   stay-informed:
+   hotel-block:
    cfp: https://cfp.connectevents.io/en/dn2023/cfp/session/new 
    register: https://reg.connectevents.io/ConnectEvents/devnexus
    signIn: https://reg.connectevents./ConnectEvents/devnexus

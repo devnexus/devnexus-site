@@ -4,7 +4,7 @@ dates: Apr 10-12 2024
 registration:
   text: STAY INFORMED
   status: enabled
-  link: href="tbd"
+  link: https://twitter.com/devnexus
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2024
