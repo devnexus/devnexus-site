@@ -30,7 +30,7 @@ cfp:
 
 <div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2024?</a></div> 
 
-<div class="featured-header">2023 Devnexus Sponsors</a></div>
+<div class="featured-header">2023 Devnexus Sponsors</div>
 
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
