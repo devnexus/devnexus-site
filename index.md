@@ -4,7 +4,7 @@ dates: Apr 10-12 2024
 registration:
   text: STAY INFORMED
   status: enabled
-  link: https://twitter.com/devnexus
+  link: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2024
