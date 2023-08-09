@@ -1,6 +1,6 @@
 ---
 layout: home
-dates: Apr 10-12 2024
+dates: Apr 9-11, 2024
 registration:
   text: STAY INFORMED
   status: enabled
