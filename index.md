@@ -2,9 +2,9 @@
 layout: home
 dates: Apr 9-11, 2024
 registration:
-  text: STAY INFORMED
+  text: SUPER EARLY BIRD SALE!
   status: enabled
-  link: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+  link: https://reg.connectevents.io/ConnectEvents/devnexus2024/
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2024
