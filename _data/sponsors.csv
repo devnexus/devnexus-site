@@ -1,43 +1,43 @@
 name,sponsorlevel,logo_image,home_page
-Akeyless,silver,/uploads/akeyless-2.png,https://www.akeyless.io/
-ASF,silver,/assets/img/asf.001.jpeg,https://www.apache.org/
-Atomic Jar,silver,/uploads/atomicjar-1.png,https://www.atomicjar.com/
-Azul,gold,/uploads/azul-3.png,https://www.azul.com/
-BellSoft,gold,/uploads/bellsoft-1.png,https://bell-sw.com/
-CircleCI,gold,/uploads/circleci-2.png,https://circleci.com/
-Cockroach Labs,gold,/uploads/cockroach-1.png,https://www.cockroachlabs.com/
-CodeSee,gold,/uploads/codesee-1.png,https://www.codesee.io/
-Couchbase,gold,/uploads/couchb-001.png,https://www.couchbase.com/
-DataDog,gold,/uploads/datadog-2.png,https://www.datadoghq.com/
-Digma,silver,/uploads/digma-1.png,https://digma.ai
-Dimiour,lunch,/uploads/dimiour-2.png,http://dimiour.io/?utm_campaign=Devenexus-2023&utm_source=Event&utm_medium=Event%20Website
-Elastic,silver,/uploads/elastic-01.png,https://www.elastic.co/
-Google Cloud,gold,/uploads/google-cloud-1.png,https://cloud.google.com/developers/devnexus
-Google Wallet,gold,/uploads/google-wallet-1.png,https://wallet.google/
-Gradle,silver,/uploads/gradle-3.png,https://gradle.com/
-ICE,gold,/uploads/ice-01.png,https://www.theice.com/index
-IBM,diamond,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
-Intel,diamond,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
-Ippon,silver,/uploads/ippon-2.png,https://us.ippon.tech/
-Jakarta EE,silver,/uploads/jakarta-1.png,https://jakarta.ee/
-JFrog,devlounge,/assets/img/jfrog1.001.jpeg,https://jfrog.com/
-Keyfactor,gold,/uploads/keyfactor-1.png,https://www.keyfactor.com/
-kong,silver,/uploads/kong-1.png,https://konghq.com/
-LaunchDarkly,gold,/uploads/launchdarkly-1.png,https://launchdarkly.com/
-Ledgent,gold,/uploads/ledgent-1.png,https://www.ledgenttech.com
-MIcrosoft,diamond,/uploads/microsoft-1.png,https://www.microsoft.com/en-us/
-MicroStream,gold,/uploads/microsteam-1.png,https://microstream.one/
-Moderne,silver,/uploads/MODERNE-01.png,https://www.moderne.io/
-OpenSSF,silver,/uploads/ossf-1.png,https://openssf.org/
-payara,silver,/uploads/payara-1.png,https://www.payara.fish/
-Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
-RingCentral,gold,/uploads/ringcentral-1.png,https://developers.ringcentral.com/
-SonarSource,platinum,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
-SonarSource,lanyard,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
-Sonatype,silver,/uploads/sonatype-1.png,https://www.sonatype.com/
-Suse,gold,/uploads/suse-01.png,https://www.suse.com/
-TelemetryHub,silver,/uploads/telemetryhub-1.png,https://telemetryhub.com/?utm_source=devnexus_23&utm_medium=event&utm_campaign=site_link
-The Home Depot,silver,/uploads/home-depot-1.png,https://careers.homedepot.com/career-areas/technology/?utm_source=vanityurl_careers.homedepot.com%2Ftech&utm_medium=vanityurl&utm_campaign=tech
-Vaadin,gold,/assets/img/vaadin2.png,https://vaadin.com/
-VMWare,platinum,/uploads/vmware-2.png,https://tanzu.vmware.com/
-VMWare,namebadge,/uploads/vmware-2.png,https://tanzu.vmware.com/
+Akeyless,,/uploads/akeyless-2.png,https://www.akeyless.io/
+ASF,,/assets/img/asf.001.jpeg,https://www.apache.org/
+Atomic Jar,,/uploads/atomicjar-1.png,https://www.atomicjar.com/
+Azul,,/uploads/azul-3.png,https://www.azul.com/
+BellSoft,,/uploads/bellsoft-1.png,https://bell-sw.com/
+CircleCI,,/uploads/circleci-2.png,https://circleci.com/
+Cockroach Labs,,/uploads/cockroach-1.png,https://www.cockroachlabs.com/
+CodeSee,,/uploads/codesee-1.png,https://www.codesee.io/
+Couchbase,,/uploads/couchb-001.png,https://www.couchbase.com/
+DataDog,,/uploads/datadog-2.png,https://www.datadoghq.com/
+Digma,,/uploads/digma-1.png,https://digma.ai
+Dimiour,,/uploads/dimiour-2.png,http://dimiour.io/?utm_campaign=Devenexus-2023&utm_source=Event&utm_medium=Event%20Website
+Elastic,,/uploads/elastic-01.png,https://www.elastic.co/
+Google Cloud,,/uploads/google-cloud-1.png,https://cloud.google.com/developers/devnexus
+Google Wallet,,/uploads/google-wallet-1.png,https://wallet.google/
+Gradle,,/uploads/gradle-3.png,https://gradle.com/
+ICE,,/uploads/ice-01.png,https://www.theice.com/index
+IBM,,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
+Intel,,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
+Ippon,,/uploads/ippon-2.png,https://us.ippon.tech/
+Jakarta EE,,/uploads/jakarta-1.png,https://jakarta.ee/
+JFrog,,/assets/img/jfrog1.001.jpeg,https://jfrog.com/
+Keyfactor,,/uploads/keyfactor-1.png,https://www.keyfactor.com/
+kong,,/uploads/kong-1.png,https://konghq.com/
+LaunchDarkly,,/uploads/launchdarkly-1.png,https://launchdarkly.com/
+Ledgent,,/uploads/ledgent-1.png,https://www.ledgenttech.com
+MIcrosoft,,/uploads/microsoft-1.png,https://www.microsoft.com/en-us/
+MicroStream,,/uploads/microsteam-1.png,https://microstream.one/
+Moderne,,/uploads/MODERNE-01.png,https://www.moderne.io/
+OpenSSF,,/uploads/ossf-1.png,https://openssf.org/
+payara,,/uploads/payara-1.png,https://www.payara.fish/
+Red Hat,,/uploads/Red-Hat-01.png,https://developers.redhat.com/
+RingCentral,,/uploads/ringcentral-1.png,https://developers.ringcentral.com/
+SonarSource,,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
+SonarSource,,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
+Sonatype,,/uploads/sonatype-1.png,https://www.sonatype.com/
+Suse,,/uploads/suse-01.png,https://www.suse.com/
+TelemetryHub,,/uploads/telemetryhub-1.png,https://telemetryhub.com/?utm_source=devnexus_23&utm_medium=event&utm_campaign=site_link
+The Home Depot,,/uploads/home-depot-1.png,https://careers.homedepot.com/career-areas/technology/?utm_source=vanityurl_careers.homedepot.com%2Ftech&utm_medium=vanityurl&utm_campaign=tech
+Vaadin,,/assets/img/vaadin2.png,https://vaadin.com/
+VMWare,,/uploads/vmware-2.png,https://tanzu.vmware.com/
+VMWare,,/uploads/vmware-2.png,https://tanzu.vmware.com/
