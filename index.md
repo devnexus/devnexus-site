@@ -10,17 +10,11 @@ branding:
   alt: Devnexus 2024
 cfp:
   announce: false
-  view: pending
 ---
-{% if page.cfp.announce %} {% case page.cfp.view %} {% when "open" %}
+{% if page.cfp.announce == "true" %}
 
 <div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS</a></h1></div>
-
-{% else %}
-
-<div class="featured-header"><h1 class="top-intro">Call For Papers Will Open</h1></div>
-
-{% endcase %}<br>{% endif %}
+{% endif %}
 
 {% include {{ site.active-header }} %}
 
