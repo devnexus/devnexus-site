@@ -9,7 +9,7 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2024
 cfp:
-  announce: true
+  announce: false
   view: open
 ---
 {% if page.cfp.announce %} {% case page.cfp.view %} {% when "open" %}
