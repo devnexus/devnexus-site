@@ -10,7 +10,7 @@ branding:
   alt: Devnexus 2024
 cfp:
   announce: false
-  view: open
+  view: pending
 ---
 {% if page.cfp.announce %} {% case page.cfp.view %} {% when "open" %}
 
