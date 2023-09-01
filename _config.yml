@@ -4,7 +4,7 @@ exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2024
 timezone: UTC
 active-header: navigation-post-show.html
-cfp-is-open: false
+cfp-is-open: true
 registration: closed
 feedback: NOTshow
 collections:
