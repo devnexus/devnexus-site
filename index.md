@@ -11,7 +11,7 @@ branding:
 cfp:
   announce: true
 ---
-{% if page.cfp.announce == "true" %}
+{% if site.cfp-is-open %}
 <div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS</a></h1></div>
 {% endif %}
 
