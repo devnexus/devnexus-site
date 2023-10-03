@@ -2,7 +2,7 @@
 layout: home
 dates: Apr 9-11, 2024
 registration:
-  text: SUPER EARLY BIRD SALE!
+  text: EARLY BIRD SALE!
   status: enabled
   link: https://reg.connectevents.io/ConnectEvents/devnexus2024/
 branding:
