@@ -12,7 +12,7 @@ cfp:
   announce: true
 ---
 {% if site.cfp-is-open %}
-<div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CLICK HERE TO SUBMIT TO THE CALL FOR PAPERS</a></h1></div>
+<div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CALL FOR PAPERS IS CLOSED</a></h1></div>
 {% endif %}
 
 {% include {{ site.active-header }} %}
@@ -23,7 +23,7 @@ cfp:
 
 <div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2024?</a></div> 
 
-<div class="featured-header">2023 Devnexus Sponsors</div>
+<div class="featured-header">2024 Devnexus Sponsors</div>
 
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
 </div>
