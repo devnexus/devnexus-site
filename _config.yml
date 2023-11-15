@@ -42,7 +42,7 @@ links:
    recordings: https://www.recallact.com/ajug
    reg_maillist: https://ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=51e5b6d965
 twitter_card:
-  default_image: https://devnexus.com/assets/img/dev.001.jpeg
+  default_image: https://devnexus.com/assets/img/twittercard.png
   type: summary
   site: "@devnexus"
   creator:  "@atlantajug"
