@@ -1,0 +1,4748 @@
+[
+  {
+    "id": "83fd871a-3bbe-4d41-92a4-9443e7c66c5f",
+    "firstName": "Aaron",
+    "lastName": "McClennen",
+    "fullName": "Aaron McClennen",
+    "bio": "A 27 year java veteran. I wrote my first java program in java 1.0 when AWT on the mac and unix were different.\r\nSince that time I have written uncounted lines of java code, and rewritten most of them.\r\nWhen I first read Fowlers Refactoring my life changed for the better as I realized there was a safe way to fix code that no longer suited.\r\n",
+    "tagLine": "Front line java engineer - AT&T",
+    "profilePicture": "https://sessionize.com/image/c79c-400o400o1-GGqVTaPoA7VxKDtAgUGNsh.jpg",
+    "sessions": [
+      {
+        "id": 555341,
+        "name": "Refactoring AF (After Fowler): Some Large Refactoring Patterns"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ATT",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "NA",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f2e1dff5-e8b9-4b4b-a8e4-4f5c6c61158f",
+    "firstName": "Abdel",
+    "lastName": "Sghiouar",
+    "fullName": "Abdel Sghiouar",
+    "bio": "Abdel Sghiouar is a senior Cloud Developer Advocate @Google Cloud. A co-host of the Kubernetes Podcast by Google and a CNCF Ambassador. His focused areas are GKE/Kubernetes, Service Mesh and Serverless. Abdel started his career in datacenters and infrastructure in Morocco where he is originally. Before moving to Google's largest EU datacenter in Belgium. Then in Sweden he joined Google Cloud Professional Services and spent 5 years working with Google Cloud customers on architecting and designing large scale distributed systems before turning to advocacy and community work.",
+    "tagLine": "Cloud Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/138d-400o400o1-f5-e8b9-4b4b-a8e4-4f5c6c61158f.fc62390d-0d7e-4a29-b526-9806b570af55.jpg",
+    "sessions": [
+      {
+        "id": 557019,
+        "name": "A developer’s journey to Kubernetes: a handy guide for developing, deploying, and debugging your app"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://www.twitter.com/boredabdel",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Google",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@boredabdel",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9b9cb6b1-b132-4f4f-8bbc-155e31958220",
+    "firstName": "Alberto",
+    "lastName": "Salazar",
+    "fullName": "Alberto Salazar",
+    "bio": "Alberto Salazar is an entrepreneur, passionate Consultant, Java Champion, Oracle Groundbreaker Ambassador, JUG Leader, Auth0 Ambassador, founder of the Ecuador Java User Group, Java Community Process Associate Member and Java evangelist/trainer. He is the co-author of the book 'Software Architecture with Spring 5.0'. Alberto has been working for 2 decades creating large scalable and high transaction load systems from military software to banking solutions. He is also a frequent speaker at Java conferences such as Oracle Code One, JBCNConf, Voxxed Days, Oracle Code, Red Hat Summit, JavaOne, Oracle Developer Tour Latam, OTN Tours, and local JUG meetings.",
+    "tagLine": "Chief Architect",
+    "profilePicture": "https://sessionize.com/image/b4a7-400o400o1-PNRh4WPs2Lyw8Yu1nCMWE3.jpeg",
+    "sessions": [
+      {
+        "id": 557712,
+        "name": "Jakarta EE! The future of enterprise application behind the myths."
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/betoSalazar",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Advance Latam",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@betoSalazar",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+    "firstName": "Alex",
+    "lastName": "Riviere",
+    "fullName": "Alex Riviere",
+    "bio": "Alex Riviere is a Senior Frontend Developer for Nexcor Technologies and the Co-Organizer for the Atlanta Vue.js Meetup, as well as the PyATL Meetup.",
+    "tagLine": "Co-Organizer for Atlanta Vue.js Meetup and Co-Organizer for PyATL meetup",
+    "profilePicture": "https://sessionize.com/image/2a67-400o400o1-Gvb6U4BXbHxWHRApqyTe58.jpg",
+    "sessions": [
+      {
+        "id": 537919,
+        "name": "Vue for React Developers"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/fimion",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Nexcor Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@fimion",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "086de2f4-8bfc-47ab-8f65-c623a5753fcf",
+    "firstName": "Ana Maria",
+    "lastName": "Mihalceanu",
+    "fullName": "Ana Maria Mihalceanu",
+    "bio": "Ana is a Java Champion Alumni, Developer Advocate for the Java Platform Group at Oracle, guest author of the book \"DevOps tools for Java Developers\", and a constant adopter of challenging technical scenarios involving Java-based frameworks and multiple cloud providers. She actively supports technical communities' growth through knowledge sharing and enjoys curating content for conferences as a program committee member. To learn more about/from her, follow her on Twitter @ammbra1508.",
+    "tagLine": "Java Champion Alumni, Certified Architect",
+    "profilePicture": "https://sessionize.com/image/02cb-400o400o1-Lawur2AKGny32MmkpG69jQ.JPG",
+    "sessions": [
+      {
+        "id": 547871,
+        "name": "A Glance At The Java Performance Toolbox"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ammbra1508",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "ammbra1508",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6aa1e85f-84ea-4607-9f9e-2275e78f494b",
+    "firstName": "Andrew",
+    "lastName": "Block",
+    "fullName": "Andrew Block",
+    "bio": "Andrew Block is a Distinguished Architect at Red Hat that works with organizations to design and implement solutions leveraging cloud native technologies. He specializes in Continuous Integration and Continuous Delivery methodologies with a focus on security to reducing the overall delivery time. Andrew is the author of several publications on solutions within the Kubernetes ecosystem, a maintainer on the Helm project, and a contributor to several Open Source projects including Sigstore.",
+    "tagLine": "Distinguished Architect",
+    "profilePicture": "https://sessionize.com/image/5b4c-400o400o1-KKjmokNkYgMPXPYqb6XDJn.jpg",
+    "sessions": [
+      {
+        "id": 557741,
+        "name": "Java automation for yesterday, today and tomorrow"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@sabre1041",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "781d5601-1f81-4d31-940c-e54f12b2de6b",
+    "firstName": "Anthony",
+    "lastName": "Dahanne",
+    "fullName": "Anthony Dahanne",
+    "bio": "Software Developer for 15+ years, my favorite topics are containerization (Docker and Kubernetes), building tools, Continuous Integration and, of course, core Java development.\r\nHaving recently joined VMware, I work as a maintainer on Paketo and Cloudfoundry Java buildpacks.\r\nIn my spare time, I work on various open source projects : from Mastodon bots written in NodeJS or Go, to public library renewals apps!",
+    "tagLine": "Software Engineer at VMware",
+    "profilePicture": "https://sessionize.com/image/d1cb-400o400o1-7qWE2ViYbzsiM2vhaEKF5T.jpg",
+    "sessions": [
+      {
+        "id": 557699,
+        "name": "Not a Kubernetes fan? The state of PaaS in 2024"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/anthonydahanne",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@anthonydahanne",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1708bdeb-e8d9-4628-a147-e9878198c900",
+    "firstName": "Baruch",
+    "lastName": "Sadogursky",
+    "fullName": "Baruch Sadogursky",
+    "bio": "Baruch Sadogursky (@jbaruch) did Java before it had generics, DevOps before there was Docker, and DevRel before it had a name. He started DevRel at JFrog when it was ten people and took it all the way to a successful $6B IPO by helping engineers solve problems. Now Baruch keeps helping engineers solve problems but also helps companies help engineers solve problems. He is a co-author of the \"Liquid Software\" and \"DevOps Tools for Java Developers\" books, serves on multiple conference program committees, and regularly speaks at numerous most prestigious industry conferences, including Kubecon, JavaOne (RIP), Devoxx, QCon, DevRelCon, DevOpsDays (all over), DevOops (not a typo) and others. After a tenure of eleven years in JFrog DevRel, Baruch is the Principal Developer Productivity Engineering Advocate at Gradle. ",
+    "tagLine": "Principal Developer Productivity Engineering Advocate, Gradle ",
+    "profilePicture": "https://sessionize.com/image/6259-400o400o1-4E9ryx5TADiKXiE9vDrJpn.jpg",
+    "sessions": [
+      {
+        "id": 538171,
+        "name": "Coding Fast and Slow: Applying Kahneman's Insights to Improve Development Practices and Efficiency"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/jbaruch",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Gradle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jbaruch",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+    "firstName": "Bazlur",
+    "lastName": "Rahman",
+    "fullName": "Bazlur Rahman",
+    "bio": "A N M Bazlur Rahman is a Software Engineer with over a decade of specialized experience in Java and related technologies. His expertise has been formally recognized through the prestigious title of Java Champion. Beyond his professional commitments, Mr. Rahman is deeply involved in community outreach and education. He is the founder and current moderator of the Java User Group in Bangladesh, where he has organized educational meetups and conferences since 2013.\r\n\r\nIn the past two years, Mr. Rahman has been an active speaker at various international conferences and Java user groups. His talks have often focused on specialized topics such as concurrency and virtual threads. In addition to his community work, Mr. Rahman also serves as an editor for Java Queue at InfoQ and Foojay.io, both of which are leading platforms for technology content. Notably, he has authored five books on the Java programming language in Bengali, three of which have become best sellers in Bangladesh. \r\n\r\nMr. Rahman holds a bachelor's degree in Information Technology, majoring in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. He currently resides in Toronto, Canada.\r\n\r\n",
+    "tagLine": "🏆 Java Champion 🌆 Jakarta EE Ambassador 💻 Software Engineer  🎓 JUG Leader  📖 Published Author  @InfoQ  🌐 and  @foojayio  📝 Editor",
+    "profilePicture": "https://sessionize.com/image/7d58-400o400o1-JsDURgXyDupbee5i1NZLmD.jpg",
+    "sessions": [
+      {
+        "id": 551714,
+        "name": "Mastering Modern Concurrency in Java - A Comprehensive Deep Dive with Virtual Threads"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/bazlur_rahman",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "N/A",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bazlur_rahman",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+    "firstName": "Billy",
+    "lastName": "Korando",
+    "fullName": "Billy Korando",
+    "bio": "Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With over a decade of experience in Java, Billy brings a passion for helping developers find ways to reduce tedious work, such as project initiation, deployment, testing, and validation, through automation and adopting the latest features and tools in the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java users group. ",
+    "tagLine": "Java Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/f07d-400o400o1-R61QV7GJDkkUUUBLsHpupk.jpg",
+    "sessions": [
+      {
+        "id": 558007,
+        "name": "To Java 22 and Beyond!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/BillyKorando",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@billykorando",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+    "firstName": "Brian",
+    "lastName": "Benz",
+    "fullName": "Brian Benz",
+    "bio": "Brian is a Java Champion and a Cloud Advocate at Microsoft, helping developers get the most out of Java on Azure. Before Joining Microsoft, he was a program manager, evangelist, solution architect, consultant, developer, and author at IBM, Deloitte, and other companies. Find him on Twitter @bbenz. A current list of Brian's talks can be found at https://aka.ms/brianspeaking",
+    "tagLine": "Brian is a Java Champion and a Cloud Advocate at Microsoft, helping developers get the most out of Java on Azure. ",
+    "profilePicture": "https://sessionize.com/image/6abf-400o400o1-Q5yv5bCxSmhNFnQAFVEYRF.jpg",
+    "sessions": [
+      {
+        "id": 541686,
+        "name": "Using AI to Deploy Java apps to Kubernetes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/bbenz",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bbenz",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "130a4bc5-3b04-4a0c-95e6-62fad0b4d722",
+    "firstName": "Brian",
+    "lastName": "Demers",
+    "fullName": "Brian Demers",
+    "bio": "Brian Demers is a Developer Advocate at Gradle and a PMC member for the Apache Shiro project. He spends much of his day contributing to OSS projects in the form of writing code, tutorials, blogs, and answering questions. Along with typical software development, Brian also has a passion for fast builds and automation. \r\n\r\nAway from the keyboard, Brian is a beekeeper and can likely be found playing board games.  You can find him on Twitter at https://twitter.com/briandemers.",
+    "tagLine": "Java Champion & Gradle Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/daf5-400o400o1-7pXz5hkdJ2jVwswgBQTukF.jpg",
+    "sessions": [
+      {
+        "id": 552526,
+        "name": "Apache Maven 102: Best Practices"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/briandemers",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Gradle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@BrianDemers",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b67a2f49-17ea-4918-b1c4-56f997b6a097",
+    "firstName": "Brian",
+    "lastName": "Rinaldi",
+    "fullName": "Brian Rinaldi",
+    "bio": "Brian Rinaldi is a Developer Experience Engineer at LaunchDarkly with over 20 years experience as a developer for the web. Brian is actively involved in the community running developer meetups via CFE.dev and Orlando Devs. He’s the editor of the Jamstacked newsletter and co-author of The Jamstack Book from Manning.",
+    "tagLine": "Developer Experience Engineer at LaunchDarkly",
+    "profilePicture": "https://sessionize.com/image/fd52-400o400o1-sk4brjD7bLHrcVnqXyELzn.jpg",
+    "sessions": [
+      {
+        "id": 559338,
+        "name": "What the Heck are Server Sent Events?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "LaunchDarkly",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "remotesynth",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "50e931e4-bda7-4065-b4c4-5083683497e6",
+    "firstName": "Brian",
+    "lastName": "Vermeer",
+    "fullName": "Brian Vermeer",
+    "bio": "Developer Advocate for Snyk, Java Champion, and Software Engineer with over a decade of hands-on experience in creating and maintaining software. He is passionate about Java, (Pure) Functional Programming and Cybersecurity. Brian is a JUG leader for the Virtual JUG and the NLJUG. He also co-leads the DevSecCon community and is a community manager for Foojay. He is a regular international speaker on mostly Java-related conferences like JavaOne, Devnexus, Devoxx, Jfokus, JavaZone and many more. Besides all that, Brian is a military reserve for the Royal Netherlands Air Force and a Taekwondo Master / Teacher.",
+    "tagLine": "Java Champion | Staff Developer Advocate @ Snyk",
+    "profilePicture": "https://sessionize.com/image/bda2-400o400o1-UPyA9WCo4ao4Ch9eQm3BYf.jpg",
+    "sessions": [
+      {
+        "id": 538515,
+        "name": "Don't Get Burned! Secure Coding Essentials to protect your application"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/BrianVerm",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@BrianVerm",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e0b15676-adb2-4ea7-bb68-ca1af864a14f",
+    "firstName": "Bruno",
+    "lastName": "Borges",
+    "fullName": "Bruno Borges",
+    "bio": "Greetings, I’m Bruno. I’m a Product Manager at Microsoft living in Vancouver, Canada. I am a fan of photography, technology, and movies. I’m also interested in food and travel. But most importantly, I'm opinionated!",
+    "tagLine": "Product Manager for Java at Microsoft ",
+    "profilePicture": "https://sessionize.com/image/aab1-400o400o1-MTtjL3SEwW6QGci7JwU1ZU.jpg",
+    "sessions": [
+      {
+        "id": 537960,
+        "name": "JVM Ergonomics Profiles: Enhancing Resource Consumption and Performance in Dedicated Environments"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@brunoborges",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
+    "firstName": "Bruno",
+    "lastName": "Souza",
+    "fullName": "Bruno Souza",
+    "bio": "Since 1995, Bruno helps Java developers design amazing careers and work on cool projects with great people! Java Evangelist and a Java Champion, Bruno is the founder and President of SouJava, the Brazilian Java Users Society. He also represents the group on the JCP Executive Committee. Bruno discusses Java and the Developer Career in the https://code4.life/ project.",
+    "tagLine": "helping developers design amazing careers",
+    "profilePicture": "https://sessionize.com/image/f5ea-400o400o1-7PDkcAx4GvdyyQxXxcu1NL.jpg",
+    "sessions": [
+      {
+        "id": 560890,
+        "name": "Reviving the Java Community: Insights from JUG Leaders Worldwide"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/brjavaman",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "SouJava",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@brjavaman",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ab1b8b69-f449-4df9-b391-243a391b9d01",
+    "firstName": "Chandra",
+    "lastName": "Guntur",
+    "fullName": "Chandra Guntur",
+    "bio": "Chandra is a Distinguished Engineer at BNY Mellon. Chandra is a technologist in the financial services industry since 2003 and is programming with Java since 1998.\r\n\r\nChandra was selected as a 2019 Java Champion. He is a Java User Group (JUG) Leader, and helps run one of the largest Java user groups, NYJavaSIG and a founder-leader at the Garden State JUG.\r\n\r\nChandra conducts code workshops and Code Katas on core Java features. He is a frequent speaker at Java user groups, and technology conferences including Oracle CodeOne, Oracle Code NY, QCon New York, Devnexus, DawsCon and GIDS India.\r\n\r\nhttps://github.com/c-guntur/current-abstracts/blob/master/AboutChandraGuntur.adoc\r\n",
+    "tagLine": "Distinguished Engineer/Sr. Director, Java Champion",
+    "profilePicture": "https://sessionize.com/image/284f-400o400o1-f3fAtTu7qnCSYCKvuDKkTJ.png",
+    "sessions": [
+      {
+        "id": 557724,
+        "name": "void main()"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/CGuntur",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BNY Mellon",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@CGuntur",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+    "firstName": "Chris",
+    "lastName": "Bono",
+    "fullName": "Chris Bono",
+    "bio": "Focused on Spring for Apache Pulsar, Spring Cloud Dataflow, and Spring Cloud Stream Applications.",
+    "tagLine": "Staff Software Engineer - Spring Team at VMware",
+    "profilePicture": "https://sessionize.com/image/5bbb-400o400o1-USrWLcnB3rjyqdCGsyzT4V.jpg",
+    "sessions": [
+      {
+        "id": 567652,
+        "name": "Crossing The Streams - leveraging Pulsar IO + Pulsar Functions together with Spring Cloud Stream"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/chris_onobc",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "chris_onobc",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0494255d-10a1-4ec1-8c00-b0881c434931",
+    "firstName": "Chris",
+    "lastName": "Corriere",
+    "fullName": "Chris Corriere",
+    "bio": "Chris Corriere has been working with data, phones, networks and writing software for over 20 years. His background in mathematics and engineering has allowed him to adapt to new and industry specific technologies and provided many unique consulting opportunities. As a devOps practitioner Chris is committed to culture, automation, learning, sharing, and having a good time while getting work done. ",
+    "tagLine": "sociotechnological Mathematician @ Large ",
+    "profilePicture": "https://sessionize.com/image/f72b-400o400o1-wMUhQ1hKLZ8s73Wj1U3ZQS.jpg",
+    "sessions": [
+      {
+        "id": 557603,
+        "name": "Sociotechnical Platform Engineering"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://www.twitter.com/cacorriere",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Inspire 11",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ecology_chris",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "db3f7afe-0214-49a6-853e-e40ea87a6b5a",
+    "firstName": "Christopher",
+    "lastName": "Curtin",
+    "fullName": "Christopher Curtin",
+    "bio": "Chief Application Developer at ADP",
+    "tagLine": "Chief Application Developer at ADP",
+    "profilePicture": "https://sessionize.com/image/eb82-400o400o1-To4QFWpxy4ZGxAxBBymUFQ.jpg",
+    "sessions": [
+      {
+        "id": 560139,
+        "name": "Architecting for Resiliency: Shuffle sharding for Workload Isolation"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ADP",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chriscurtin",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
+    "firstName": "Cody",
+    "lastName": "Frenzel",
+    "fullName": "Cody Frenzel",
+    "bio": "Cody is a Solutions Architect at Ippon Technologies and self-proclaimed software craft evangelist. He has over 10 years of experience as a full stack developer, with a passion for optimizing engineering workflows. In his free time he likes to play tennis competitively or go hiking with his dog King Louie.",
+    "tagLine": "Solutions Architect at Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image/b174-400o400o1-44s7HoJtSkm7dVxKeB7zmH.jpg",
+    "sessions": [
+      {
+        "id": 548368,
+        "name": "Death to the Monolith"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/codyfrenzel",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@codyfrenzel",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6baa8ae0-aa56-42e3-8ab8-6c511a55c2bc",
+    "firstName": "Craig",
+    "lastName": "Walls",
+    "fullName": "Craig Walls",
+    "bio": "Craig Walls is an engineer with VMware, Java Champion, Alexa Champion, and the author of Spring in Action, Spring Boot in Action, and Build Talking Apps. He's a zealous promoter of the Spring Framework, speaking frequently at local user groups and conferences and writing about Spring. When he's not slinging code, Craig is planning his next trip to Disney World or Disneyland and spending as much time as he can with his wife, two daughters, 1 bird and 3 dogs.",
+    "tagLine": "Author, \"Spring in Action\" and \"Build Talking Apps for Alexa\"",
+    "profilePicture": "https://sessionize.com/image/b6b8-400o400o1-WXXywRwC1FHh36qtmRTVAL.jpeg",
+    "sessions": [
+      {
+        "id": 537726,
+        "name": "Introducing Spring AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/habuma",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@habuma",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
+    "firstName": "Daniel",
+    "lastName": "Hinojosa",
+    "fullName": "Daniel Hinojosa",
+    "bio": "Daniel Hinojosa is a programmer, consultant, instructor, speaker, and author. With over 20 years of experience, he does work for private, educational, and government institutions. Daniel loves JVM languages like Java, Groovy, and Scala; but also works with non-JVM languages like Haskell, Ruby, Python, LISP, C, C++. He is an avid Pomodoro Technique Practitioner and makes every attempt to learn a new programming language every year. Daniel is the author of Testing in Scala and the video of Beginning Scala Programming Video Series for O’Reilly Publishing. For downtime, he enjoys reading, swimming, Legos, football, and cooking.",
+    "tagLine": "Independent Consultant",
+    "profilePicture": "https://sessionize.com/image/a8d6-400o400o1-sQfqHJDud5MWcyY8ezmLWH.jpeg",
+    "sessions": [
+      {
+        "id": 547703,
+        "name": "Architectural Design Patterns Deep Dive"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/dhinojosa",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "evolutionnext.com",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dhinojosa",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "13f2987c-b5e6-4a8e-a039-e97f93f20670",
+    "firstName": "Denis",
+    "lastName": "Magda",
+    "fullName": "Denis Magda",
+    "bio": "Denis started his software engineering career at Sun Microsystems and Oracle, where he built JVM/JDK and led one of the Java development groups. After learning Java from the inside, he joined the world of distributed systems and databases, where he has remained ever since. His experience spans from the development of database engines and high-performance applications to training and education on the topic of distributed applications.",
+    "tagLine": "Head of DevRel, Yugabyte",
+    "profilePicture": "https://sessionize.com/image/77fb-400o400o1-hVYj9GCoGbntYWC7EshL4n.jpg",
+    "sessions": [
+      {
+        "id": 549436,
+        "name": "The Wild West…East, North and South: Multi-Region Java Apps in the Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/home",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Yugabyte",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@denismagda",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "78100ec6-45ab-4076-8911-266bfc4c376b",
+    "firstName": "Dennis",
+    "lastName": "Ruzeski",
+    "fullName": "Dennis Ruzeski",
+    "bio": "Buffalo, NY native who started in tech writing basic programs on an old TI-994a computer.  This branched into a technology career doing tech support for Informix then moving into batch processing, Unix admin, Linux engineer, devops, and eventually landing in the cloud architecture space.  While not working on technology, Dennis loves to cook and spend time with his wife and 2 rescue mutts.",
+    "tagLine": "Head of Cloud and Devops",
+    "profilePicture": "https://sessionize.com/image/778d-400o400o1-32RV1wiEwBMEwBQPnAAoSH.jpg",
+    "sessions": [
+      {
+        "id": 557439,
+        "name": "Best Practices For Java in Cloud Native Architectures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon, USA",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@sorry_no_twitter",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d0e56066-fb6c-4d1f-a65c-2c7b71ede47c",
+    "firstName": "Douglas",
+    "lastName": "Hawkins",
+    "fullName": "Douglas Hawkins",
+    "bio": "Doug has been developing Java for 20+ years across a wide range of industries including bioinformatics, finance, and e-commerce.  \r\n\r\nFor the last 10 years, Doug has worked on providing tools to other Java developers.  Doug is the creator of Azul's quick start-up technology ReadyNow.  Today, Doug works at Datadog providing observability tools for enterprise Java customers.",
+    "tagLine": "Software Engineer Java Application Performance",
+    "profilePicture": "https://sessionize.com/image/82ba-400o400o1-J61Ya6DRzhxWkqyhVa979o.png",
+    "sessions": [
+      {
+        "id": 557560,
+        "name": "Just-in-time Compilation Isn’t Magic"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Datadog",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dougqh",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1acc6fe1-fb77-411b-acbb-fef29174c780",
+    "firstName": "Edwin",
+    "lastName": "Derks",
+    "fullName": "Edwin Derks",
+    "bio": "Edwin Derks is a Java Champion from The Netherlands who loves solving complex and strategic IT problems as a Principal Consultant with Team Rockstars IT. He is also passionate about gathering and sharing knowledge about anything related to the Java ecosystem, composable architectures, and cloud-driven development in general. He contributes to MicroProfile and Jakarta EE and often speaks at conferences, passionately sharing his knowledge and experience. In his spare time, he is a loving husband and a father of three. He can often be found in the gym or having a good time at dance parties or heavy metal concerts.",
+    "tagLine": "Principal Consultant @ Team Rockstars IT",
+    "profilePicture": "https://sessionize.com/image/9c78-400o400o1-UHRcZFKohV5QFcuAmP5qdU.jpg",
+    "sessions": [
+      {
+        "id": 538286,
+        "name": "How Composable Architectures can actually solve the reasons for Microservices"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/edwinderks",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Team Rockstars IT",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@edwinderks",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
+    "firstName": "Elder",
+    "lastName": "Moraes",
+    "fullName": "Elder Moraes",
+    "bio": "Elder helps Java developers to build and deliver secure, available, and fast server-side applications. He is a published author of six books and a board member at SouJava, one of the biggest JUGs in the world. As a Developer Advocate, Elder shares experiences and best practices through online content and at international events like JavaOne, The Developers Conference, QCon, Oracle Code One, Campus Party, and Devnexus.",
+    "tagLine": "Developer Advocate, Red Hat",
+    "profilePicture": "https://sessionize.com/image/aa7f-400o400o1-MyQ6xKcUg7DDu8txQgtfN3.png",
+    "sessions": [
+      {
+        "id": 560890,
+        "name": "Reviving the Java Community: Insights from JUG Leaders Worldwide"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/elderjava",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@elderjava",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f914323b-f3ba-4de7-9069-28974d1c9137",
+    "firstName": "Elias",
+    "lastName": "Nogueira",
+    "fullName": "Elias Nogueira",
+    "bio": "Elias is a Senior Principal Engineer at Backbase with a background in software engineering, consulting, agile coaching, and tech lead. He helps software engineers to develop their quality mindset and deliver bug-free software. He specializes in Quality Engineering for backend, frontend, and mobile technologies. He's a writer, blogger, and loves to help the community by running meetups and sharing knowledge by giving presentations worldwide. \r\n\r\nHe's also an Oracle ACE for Java, DevOps, and Cloud Native, Java Magazine NL editor, TDC Rockstar, and Browserstack Champion.",
+    "tagLine": "Principal Software Engineer at Backbase",
+    "profilePicture": "https://sessionize.com/image/9c76-400o400o1-WPpXFzd4HbLEa4hhyQzoQ1.jpg",
+    "sessions": [
+      {
+        "id": 557568,
+        "name": "Modern Testing Tools for Java Developers"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/eliasnogueira",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Backbase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@eliasnogueira",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "2b16e922-4d90-4637-8a92-9030591a8ef9",
+    "firstName": "Enrique",
+    "lastName": "Zamudio",
+    "fullName": "Enrique Zamudio",
+    "bio": "Enrique Zamudio is a professional programmer since 1994, based in Mexico City. He has specialized in server-side development with Java since 2000, focusing on backend applications, such as transactional switches for e-commerce and payment platforms. He is the author of the open source projects jAlarms, j8583 and ScalaSQL. Enrique joined the Ceylon Language development core team on January 2012, where he's contributed to the language module, the web IDE and the JVM compiler, and is the lead developer of the Ceylon-to-JavaScript compiler.\r\n",
+    "tagLine": "Java Champion doing cryptocurrency stuff",
+    "profilePicture": "https://sessionize.com/image/e44c-400o400o1-22-4d90-4637-8a92-9030591a8ef9.9cb220d2-3f6a-4fae-82cf-10cf834c6246.jpg",
+    "sessions": [
+      {
+        "id": 537982,
+        "name": "Focus on software, not code"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/chochosmx",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Bitso",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chochosmx",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "57813d70-680c-461a-a887-8cd6cf101a81",
+    "firstName": "Eric",
+    "lastName": "Smalling",
+    "fullName": "Eric Smalling",
+    "bio": "Eric is a Senior Developer Advocate at Snyk.io where he helps developers secure the applications, containers, and Kubernetes platforms they build and deploy to.",
+    "tagLine": "Senior Developer Advocate at Snyk",
+    "profilePicture": "https://sessionize.com/image/260f-400o400o1-sZSfF3hoMgyRiBUi23NM2q.jpg",
+    "sessions": [
+      {
+        "id": 557480,
+        "name": "The Platform Engineer Playbook - 5 Ways to Container Security"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ericsmalling",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ericsmalling",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "2f4018fc-6f1a-484c-9297-383fb1a5c4ae",
+    "firstName": "François",
+    "lastName": "Martin",
+    "fullName": "François Martin",
+    "bio": "François Martin is a senior full stack software engineer at Karakun AG and lecturer at the FHNW University of Applied Sciences in Brugg, living in Switzerland. He is an active open source contributor and co-author of the two open source JavaFX frameworks WorkbenchFX and PreferencesFX and an active member at the Swiss Testing Board.",
+    "tagLine": "Senior Full Stack Software Engineer at Karakun",
+    "profilePicture": "https://sessionize.com/image/ed1e-400o400o1-nRBUowDPhxNt9sh23ogSCp.jpg",
+    "sessions": [
+      {
+        "id": 538024,
+        "name": "The Art of Vulnerability Disclosure"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/fmartin_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Karakun AG",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@fmartin_",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a56899b4-eae5-40ac-b71a-5ef5be0945a0",
+    "firstName": "Frank",
+    "lastName": "Greco",
+    "fullName": "Frank Greco",
+    "bio": "Frank is a senior technology consultant and enterprise architect working on cloud and AI/ML tools for developers. He is a Java Champion, Chairman of the NYJavaSIG (first JUG ever), and runs the International Machine Learning for the Enterprise conference in Europe. Co-author of JSR 381 Visual Recognition for Java API standard and strong advocate for Java and Machine Learning. Member of the NullPointers. #STEAMnotSTEM",
+    "tagLine": "NYJavaSIG Chairman",
+    "profilePicture": "https://sessionize.com/image/d1f3-400o400o1-KUEe6GnWn47QnDFaFpJp1R.jpg",
+    "sessions": [
+      {
+        "id": 548614,
+        "name": "Building Your Own Private GenAI Chatbot with Java Tools - A Step-by-Step Adventure"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "NYJavaSIG",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@frankgreco",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
+    "firstName": "Freddy",
+    "lastName": "Guime",
+    "fullName": "Freddy Guime",
+    "bio": "Freddy is a Principal Developer at Expedia. Always dealing with performance and usability he is always curious on how to make the overabundance of data useful for travelers, traders and consumers. Having worked with different technologies before has allowed him to come with solutions to rendering bottleneck problems. A Usability Guru, Freddy understands and bridges the concepts of high-throughput with usability within software.\r\n\r\nHe is also the author and maintainer of the javapubhouse.com, a podcast dedicated to tutorial topics in Java that covers everything from the use of the keyword volatile to the definition of beautiful code, also of javaoffheap.com, a java news podcast.\r\n\r\n",
+    "tagLine": "Principal Engineer - Expedia Group",
+    "profilePicture": "https://sessionize.com/image/e396-400o400o1-M73caxXUD9t2kgxCqZuFQ5.jpg",
+    "sessions": [
+      {
+        "id": 557537,
+        "name": "The OffHeap Podcast. Devnexus Edition"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/fguime",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "self",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@fguime",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "71f3abf1-03cf-458b-b385-e10fd110e89a",
+    "firstName": "Gerrit",
+    "lastName": "Grunwald",
+    "fullName": "Gerrit Grunwald",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "tagLine": "Senior Developer Advocate at Azul Systems",
+    "profilePicture": "https://sessionize.com/image/f7ac-400o400o1-DZYSvNYq2n8gn4Qzy9FnQs.png",
+    "sessions": [
+      {
+        "id": 537763,
+        "name": "Trash Talk - Exploring the memory management in the JVM"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/hansolo_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@hansolo_",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+    "firstName": "Glenn",
+    "lastName": "Renfro",
+    "fullName": "Glenn Renfro",
+    "bio": "As a VMware engineer, Glenn Renfro is a core committer for Spring Cloud Task, Spring Batch, and Spring Cloud Data Flow and a Java Champion.  He has 15 years of experience in designing, building, and delivering enterprise-level applications in Java and 21 years total of software development experience. ",
+    "tagLine": "Spring Developer at VMware",
+    "profilePicture": "https://sessionize.com/image/2155-400o400o1-ntrGaApYgEN8wGjz9iHhw9.JPG",
+    "sessions": [
+      {
+        "id": 557526,
+        "name": "How to Conference : A User Guide"
+      },
+      {
+        "id": 556492,
+        "name": "Zero to Implementation in 50 Minutes, No Kidding!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/cppwfs",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "Glenn Renfro",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7c534296-8db5-4452-b17f-9249465ea914",
+    "firstName": "Grace",
+    "lastName": "Jansen",
+    "fullName": "Grace Jansen",
+    "bio": "Grace is a Developer Advocate at IBM, working with Open Liberty and Reactive Platform. She has been with IBM since graduating from Exeter University with a Degree in Biology. Grace enjoys bringing a varied perspective to her projects and using her knowledge of biological systems to simplify complex software patterns and architectures. As a developer advocate, Grace builds POC’s, demos and sample applications, and writes guides and tutorials. She is a regular presentor at international technology conferences and has recently authored a book on reactive systems. Grace also has a keen passion for encouraging more women into STEM and especially Technology careers.",
+    "tagLine": "IBM, Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/4477-400o400o1-DwbpYmtNnyKRuXNdX2yEf2.jpg",
+    "sessions": [
+      {
+        "id": 553009,
+        "name": "Thriving in the cloud: Going beyond the 12 factors"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/gracejansen27",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@gracejansen27",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a46bbee6-8f57-450a-881f-22291d822ad8",
+    "firstName": "Hanno",
+    "lastName": "Embregts",
+    "fullName": "Hanno Embregts",
+    "bio": "Hanno Embregts is a Java Developer with a passion for learning, teaching and making music.\r\n\r\nIn his day-to-day job as an IT Consultant at Info Support, Hanno prefers work that is fast-paced and versatile. This is why he juggles Java development, software architecture, public speaking, leading Info Support’s Java Community and teaching courses at Info Support’s Knowledge Centre. \r\n\r\nHanno is both a Java Champion and an Oracle ACE Associate. He is also one of the editors of the Dutch Java Magazine. Outside of work Hanno likes making music with his friends. He plays the flute, the guitar and he likes to sing.\r\n\r\nSoftware conferences are Hanno’s favourite thing in the world, because they allow him to do the three things he loves most at the same time: learning new things, teaching others about stuff he discovered and yes: even making music from time to time!\r\n",
+    "tagLine": "Java Developer by day, musician by night. A bit of both at conferences.",
+    "profilePicture": "https://sessionize.com/image/7ee3-400o400o1-sJzXCyNPdoNYFMkw5uQtxt.jpg",
+    "sessions": [
+      {
+        "id": 543941,
+        "name": "Beware of Survivorship Bias!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/hannotify",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Info Support",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@hannotify",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0df0c22e-c340-4414-aa16-12623cd9b948",
+    "firstName": "Harsha",
+    "lastName": "Cherukuri",
+    "fullName": "Harsha Cherukuri",
+    "bio": "Experienced Software Engineer with experience in Cloud-based application development and implementation. Open Source Enthusiast.",
+    "tagLine": "Senior Software Engineer, RedHat",
+    "profilePicture": "https://sessionize.com/image/67ea-400o400o1-f33d0678-0fb5-4744-8029-9c6f69a74902.jpg",
+    "sessions": [
+      {
+        "id": 557741,
+        "name": "Java automation for yesterday, today and tomorrow"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@CherukuriHarsha",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "cdc2288a-56cf-40ec-bc39-ca5d9fb59b27",
+    "firstName": "Ivar",
+    "lastName": "Grimstad",
+    "fullName": "Ivar Grimstad",
+    "bio": "Ivar Grimstad is the Jakarta EE Developer Advocate at Eclipse Foundation. He is a Java Champion and JUG Leader based in Sweden.\r\n\r\nBesides advocating the Jakarta EE technologies, Ivar is contributing to the Jakarta EE specifications as well as being the PMC Lead for Eclipse Enterprise for Java (EE4J). He is also one of the specification leads for Jakarta MVC and represents Eclipse Foundation in the JCP Executive Committee.\r\n\r\nIvar is also involved in MicroProfile, Apache NetBeans, and a wide range of other open-source projects and communities. He is a frequent speaker at International developer conferences.",
+    "tagLine": "Jakarta EE Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/ded1-400o400o1-SGC7uFHgArjkpx1792oNVY.png",
+    "sessions": [
+      {
+        "id": 557361,
+        "name": "Building RESTful Web Services with Jakarta EE"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ivar_grimstad",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Eclipse Foundation",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ivar_grimstad",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1b56e49d-1702-4a54-9cf7-433c38632ebe",
+    "firstName": "Jacqui ",
+    "lastName": "Read",
+    "fullName": "Jacqui Read",
+    "bio": "Jacqui Read (https://jacquiread.com) is an internationally recognised software and enterprise architect with over 13 years of industry experience, and author of Communication Patterns: A Guide for Developers and Architects.\r\n\r\nShe specialises in assisting businesses to create and enhance architecture practices, construct evolutionary architectures, and untangle and extract value from data and knowledge. Alongside consulting, Jacqui teaches public and private workshops and speaks at international conferences on topics such as architecture decisions, technical communication, and architecture practices. She also runs software architecture katas for teams and companies.\r\n\r\nHer professional interests include collaborative modelling, knowledge management, DDD, and sociotechnical architecture. Outside of work she enjoys gardening and attempting to strum her ukulele and sing at the same time.",
+    "tagLine": "Consultant Software Architect @ Read the Architecture",
+    "profilePicture": "https://sessionize.com/image/6956-400o400o1-UNZn6kmjKugTCUeaBeBikR.jpg",
+    "sessions": [
+      {
+        "id": 557220,
+        "name": "Knowledge Management for the Technically Inclined"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/tekiegirl",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Read the Architecture",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@tekiegirl",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
+    "firstName": "Jamie",
+    "lastName": "Coleman",
+    "fullName": "Jamie Coleman",
+    "bio": "Jamie is a Developer Advocate for Sonatype formally IBM, based in the UK. He talks about the importance of security in software, improving developer productivity and raising awareness about energy consumption of technology.\r\nPassionate about discovering ways to help reduce developers carbon footprint, he is also a subject matter expert in containerised solutions and build technologies. He fell in love with Java at University and has gone on to talk at many conferences about using Java with microservices and related technology. He has worked on a wide variety of projects such as modernising IBM CICS mainframe testing infrastructure, creating, and automating the creation of Docker images for IBM’s products and contributing to a DevOps pipeline offering.",
+    "tagLine": "Sonatype",
+    "profilePicture": "https://sessionize.com/image/fdda-400o400o1-SuD8G4oH4tX8RGD6b5NukS.jpg",
+    "sessions": [
+      {
+        "id": 556857,
+        "name": "The Death Star and the ultimate vulnerability"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/Jamie_Lee_C",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "https://www.sonatype.com/",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@Jamie_Lee_C",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "72b630b0-9ef2-4e5f-86f2-ba2f357df49f",
+    "firstName": "Jason",
+    "lastName": "Lee",
+    "fullName": "Jason Lee",
+    "bio": "Jason is a Principal Software Engineer with Red Hat, where he works on the WildFly/EAP teams. He is responsible for several areas of the application server, including OpenTelemetry, Micrometer, Jakarta Faces, and Bean Validation. Prior to Red Hat, he worked at Oracle, NetSuite, and Sun Microsystems. With over 25 years of experience, he has worked with a number of programming languages (Java, Kotlin, C/C++, Javascript, and so on) in a variety of industries, with Java (and Java EE) being the primary focus for well over a decade and a half. He found Kotlin a few years ago, and has been trying to use it everywhere possible.\r\n\r\nJason blogs at https://jasondl.ee, and is the author of \"Java 9 Programming Blueprints\", has spoken at several conferences (including JavaOne, Devnexus, and JAXConf), and is the president of the Oklahoma City Java Users Group. On the personal side, he is active in his church, and enjoys playing bass guitar, running, fishing, and a variety of martial arts. He is also married to a beautiful woman, and has two boys, who, thankfully, look like their mother.\r\n\r\n",
+    "tagLine": "Red Hat",
+    "profilePicture": "https://sessionize.com/image/0ca1-400o400o1-b0-9ef2-4e5f-86f2-ba2f357df49f.bbb0a47e-cbee-4f64-b167-cd04f6826edb.jpg",
+    "sessions": [
+      {
+        "id": 545764,
+        "name": "Supersonic, Subatomic GitHub"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jasondlee",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jasondlee",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6631e69f-25c4-47db-9fb2-08576a460048",
+    "firstName": "Jeanne",
+    "lastName": "Boyarsky",
+    "fullName": "Jeanne Boyarsky",
+    "bio": "Jeanne Boyarsky is a Java Champion and published author. She co-authored Sybex’s hugely popular Java 8/11/17 certification books with Scott Selikoff. Jeanne is a Java developer with 21 years experience and volunteers with a FIRST robotics team.  She has spoken at DevNexus, KCDC, JavaOne, and QCon.  Jeanne is a Distinguished Toastmaster which involves giving over 50 public speeches. For more on Jeanne’s professional experience:, see https:/jeanneboyarsky.com",
+    "tagLine": "Java 17 Cert Book Author",
+    "profilePicture": "https://sessionize.com/image/358a-400o400o1-nq4UVkGbNkoPzyPbhNdfqZ.jpg",
+    "sessions": [
+      {
+        "id": 547157,
+        "name": "Preparing for the Java 21 cert and learning new features"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jeanneboyarsky?lang=en",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "CodeRanch",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "jeanneboyarsky",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b5ea9e64-ad10-477c-8444-cc00339b8dc5",
+    "firstName": "Jennifer",
+    "lastName": "Reif",
+    "fullName": "Jennifer Reif",
+    "bio": "Jennifer Reif is a Developer Advocate at Neo4j, speaker, and blogger with an MS in CMIS. An avid developer and problem-solver, she has worked with many businesses and projects to organize and make sense of widespread data assets and leverage them for maximum business value. She has expertise in a variety of commercial and open source tools, and she enjoys learning new technologies, sometimes on a daily basis! Her passion is finding ways to organize chaos and deliver software more effectively.",
+    "tagLine": "Developer Advocate, Neo4j",
+    "profilePicture": "https://sessionize.com/image/8ff3-400o400o1-h7qm3KqLjVb2M2PzJ4k6ET.jpg",
+    "sessions": [
+      {
+        "id": 549463,
+        "name": "Connect the Tables: How to Graph Relational Databases"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/JMHReif",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Neo4j",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@JMHReif",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a3068189-ae77-404e-abcd-2d18c47adf2b",
+    "firstName": "Jeremiah",
+    "lastName": "Drysdale",
+    "fullName": "Jeremiah Drysdale",
+    "bio": "Jeremiah has been a fan of efficiency since he was born.  A fan of Java since being exposed to it at Georgia Tech and changing his major from Chemical Engineering to Computer Science.  A fan of data since the first encounter of a billion row database table.  \r\nNow he gets constant exposure to all three in his role as a leader in the Cloud Engineering and Optimization team at BetterCloud as he explores the power FinOps can have.   ",
+    "tagLine": "Senior Director of Engineering at BetterCloud",
+    "profilePicture": "https://sessionize.com/image/5804-400o400o1-37SET9Jvjpwf8W5aAPJn7E.jpg",
+    "sessions": [
+      {
+        "id": 556795,
+        "name": "FinOps Tooling is a magic wand for enhancing Performance and Customer Value"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BetterCloud",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "N/A",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
+    "firstName": "Jeremy",
+    "lastName": "Davis",
+    "fullName": "Jeremy Davis",
+    "bio": "Jeremy is a Principal Architect at Red Hat. He helps Red Hat's customers to design and deliver applications, works with Red Hat engineers to create great products, and occasionally speaks at conferences.\r\n\r\nBefore joining Red Hat he wrote a lot of code in C, C#, Groovy, Java, JavaScript, Objective-C, Perl, PHP, Python, Ruby, Visual Basic; mostly Java.\r\n\r\nHe currently co-lead Red Hat’s Application Development Community of Practice, and used to lead Red Hat's Microservices Community of Practice and the Business Rules and Workflow SME group. He has recently spent a lot of time with Quarkus and Kubernetes.\r\n\r\nHe recently acquired a Marshall amp after relying on Fenders for years.\r\n",
+    "tagLine": "Solving things, slinging opensource",
+    "profilePicture": "https://sessionize.com/image/db39-400o400o1-3mrajPx7RheTexQUymqwm7.png",
+    "sessions": [
+      {
+        "id": 557685,
+        "name": "Troubleshooting, Monitoring and Profiling with Java Flight Recorder, Mission Control and Cryostat"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/argntprgrmr",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@argntprgrmr",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "cfeff178-8c6d-45bd-994c-34aa448ac75c",
+    "firstName": "Jeremy",
+    "lastName": "Deane",
+    "fullName": "Jeremy Deane",
+    "bio": "Jeremy Deane is innovative technology leader, conference speaker, and technical author with diverse experience, in premier technical settings, with proven expertise in Enterprise Architecture, Software Architecture, and Software Process Improvement.",
+    "tagLine": "Chief Architect @ Foundation Medicine | Technology Leader",
+    "profilePicture": "https://sessionize.com/image/8ad7-400o400o1-RsKVchFGFrD7oG6tuQLkvw.jpeg",
+    "sessions": [
+      {
+        "id": 540114,
+        "name": "Architectural Resiliency"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Foundation Medicine, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "jtdeane",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bfc36fe5-4d43-4394-98fe-a5374fc17616",
+    "firstName": "John",
+    "lastName": "Burns",
+    "fullName": "John Burns",
+    "bio": "John is a platform engineer at GrubHub where he leads development on all JVM ecosystem shared tooling such as runtime libraries and frameworks, build tooling, test tooling, and more.\r\nHe is also a co-organizer of the Chicago Kotlin User Group and maintainer of the ktlint-gradle project.",
+    "tagLine": "Platform Developer at GrubHub && Chicago Kotlin User Group Organizer",
+    "profilePicture": "https://sessionize.com/image/19e4-400o400o1-B4z6SmUsYcAGr3tye6Zc39.jpg",
+    "sessions": [
+      {
+        "id": 537809,
+        "name": "Building a Great Developer Experience"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/wakingrufus",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "GrubHub",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "wakingrufus",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c5adff32-ef90-48f3-b1ef-14fcd2d9132c",
+    "firstName": "John",
+    "lastName": "Coyne",
+    "fullName": "John Coyne",
+    "bio": "John is an Expert Application Engineer at Discover Financial Services with over 18 years of experience building Java applications.  His current interests include Spring, Observability, CI/CD automation, Kubernetes, and good API design. Outside of work, John enjoys spending time with his wife and two boys, running, biking, and golfing.",
+    "tagLine": "Expert Application Engineer",
+    "profilePicture": "https://sessionize.com/image/daa6-400o400o1-KM6GH3RgSrM9MK5jgUJxpj.jpg",
+    "sessions": [
+      {
+        "id": 551464,
+        "name": "Spring off the HTTP High Dive into an Optimized Connection Pool"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Discover Financial Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@j0hnc0yne",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8f517aca-8293-4e1f-9360-0ce676531421",
+    "firstName": "Jonatan",
+    "lastName": "Ivanov",
+    "fullName": "Jonatan Ivanov",
+    "bio": "Jonatan Ivanov is an enthusiastic Software Engineer, member of the Spring Engineering Team, maintainer of Micrometer, one of the leaders of the Seattle Java User Group, speaker, author, certified dragon trainer.\r\nHe has hands-on experience in developing and shipping innovative, production-ready software for industry-leader companies. He likes Distributed Systems, Production, Open Source, Math, Linux, Cloud environments; he is passionate about the Java Ecosystem and the Java Community.\r\nHe is an Open Source contributor, writes a “develotters”-focused blog (https://develotters.com), sometimes can be found on Twitter(@jonatan_ivanov) and in the Seattle area.",
+    "tagLine": "Staff Software Engineer - Spring Engineering Team at VMware",
+    "profilePicture": "https://sessionize.com/image/284b-400o400o1-Da96SuT4sERdHAtmZdgtmV.jpg",
+    "sessions": [
+      {
+        "id": 556270,
+        "name": "Application Observability like you've never heard before"
+      },
+      {
+        "id": 556271,
+        "name": "Spring Boot 3 Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jonatan_ivanov",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jonatan_ivanov",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ac15c088-f8fe-44a8-9a82-3b92b39456e1",
+    "firstName": "Jonathan",
+    "lastName": "Schneider",
+    "fullName": "Jonathan Schneider",
+    "bio": "Jonathan is co-founder and CEO at Miami-based Moderne which automates software maintenance activities at scale. He founded OpenRewrite at Netflix and went on to found the Micrometer project as a member of the Spring Team. Jonathan is the author of “SRE with Java Microservices” (O’Reilly). He is an Army veteran and two time bronze star recipient.",
+    "tagLine": "Co-founder @ Moderne",
+    "profilePicture": "https://sessionize.com/image/35c3-400o400o1-p2TUNUzZEgBXyVuULc2tmq.png",
+    "sessions": [
+      {
+        "id": 557183,
+        "name": "Automated software refactoring with OpenRewrite and Generative AI"
+      },
+      {
+        "id": 557192,
+        "name": "Fundamentals of Migration Engineering with OpenRewrite"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jon_k_schneider",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Moderne",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jon_k_schneider",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f63ba6f7-e39c-426f-b079-55a63c063bda",
+    "firstName": "Jonathan",
+    "lastName": "Vila",
+    "fullName": "Jonathan Vila",
+    "bio": "Java Champion, Organiser at BarcelonaJUG and cofounder of JBCNConf and DevBcn conferences in Barcelona.\r\n\r\nCurrently working as Developer Advocate in Java for Sonarsource (SonarLint,SonarQube), focused on Clean Code & Security.\r\nFormer SE at Tetrate, SSE at Red Hat in Keycloak team, SSE at Ocado Technology, SSE at Netcentric.\r\nI have worked as a (paid) developer since the first release of The Secret of Monkey Island, about 30 years ago using Go on Kubernetes for a Service Mesh layer on top of Istio | Java on Kubernetes for K8s Operator, Rest API, using Quarkus, GraalVM, Apache Camel | PHP | VB | Python | Pascal | C\r\n\r\nVery interested in simulated reality, psychology and Java.",
+    "tagLine": "Developer Advocate at Sonarsource",
+    "profilePicture": "https://sessionize.com/image/631e-400o400o1-fJH4kgA43ksxZEXWAbU7A8.png",
+    "sessions": [
+      {
+        "id": 537768,
+        "name": "Clean code, is it really worth it?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/vilojona",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Sonar",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@vilojona",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1c0d52b2-0edc-4419-917f-b10fbf1c0d54",
+    "firstName": "Jordi",
+    "lastName": "Turner",
+    "fullName": "Jordi Turner",
+    "bio": "Jordi E. Turner has been converting Java code into space mission tools at APL for 6 years now. His priority is making good library code that can constantly grow and be reused to do anything from planning the Europa Clipper mission, to collecting and analyzing radar data around the Moon and Earth. ",
+    "tagLine": "Scientific Software Engineer, JHU Applied Physics Laboratory",
+    "profilePicture": "https://sessionize.com/image/f528-400o400o1-PQhJCgPykZmvhmZfwjvEXn.jpg",
+    "sessions": [
+      {
+        "id": 556719,
+        "name": "Java, JavaFX, and Life on Jupiter’s Europa"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Johns Hopkins University Applied Physics Laboratory",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "n/a",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+    "firstName": "Josh",
+    "lastName": "Long",
+    "fullName": "Josh Long",
+    "bio": "Josh (@starbuxman) is the Spring Developer Advocate at Pivotal. Josh is a Java Champion, author of 5 books (including O'Reilly's upcoming Cloud Native Java: Designing Resilient Systems with Spring Boot, Spring Cloud, and Cloud Foundry) and 3 best-selling video trainings (including Building Microservices with Spring Boot Livelessons with Spring Boot co-founder Phil Webb), and an open-source contributor (Spring Boot, Spring Integration, Spring Cloud, Activiti and Vaadin). He is a huge Kotlin-fan, too.",
+    "tagLine": "Spring Developer Advocate, Pivotal",
+    "profilePicture": "https://sessionize.com/image/9726-400o400o1-THZgGY9BQeUdKKWKAEVCoR.jpg",
+    "sessions": [
+      {
+        "id": 556029,
+        "name": "Bootiful Spring Boot 3.x"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/starbuxman",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "vmware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "starbuxman",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b51a2283-5d04-438c-93a2-3474d6491c55",
+    "firstName": "Justine",
+    "lastName": "Gehring",
+    "fullName": "Justine Gehring",
+    "bio": "Justine Gehring is a talented researcher in the field of Machine Learning (ML) for code and Graph Neural Networks (GNNs). Her focus lies in generating code under challenging circumstances, specifically in scenarios such as sparse data where library-specific code is required, as well as managing a substantial amount of code at a time. Justine is a research engineer at Moderne. She is completing her Master’s Degree in Computer Science at Mila & McGill. ",
+    "tagLine": "Moderne, research engineer",
+    "profilePicture": "https://sessionize.com/image/ade5-400o400o1-c847c218-7a88-48eb-a42c-5fca23a13a5b.jpg",
+    "sessions": [
+      {
+        "id": 557183,
+        "name": "Automated software refactoring with OpenRewrite and Generative AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/moderneinc",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Moderne",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@GehringJustine",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "88a48ee1-1950-4e3f-8f4d-c5e269c6eeaf",
+    "firstName": "Kaya",
+    "lastName": "Weers",
+    "fullName": "Kaya Weers",
+    "bio": "Kaya is an enthusiastic software developer at Ordina. She studied Communication & Multimedia Design, where she focused mostly on concepting and designing. After discovering programming is also fun, she switched to IT.  \r\nKaya loves innovation and asking ‘why?’.",
+    "tagLine": "Software developer @ Ordina",
+    "profilePicture": "https://sessionize.com/image/6ad2-400o400o1-KDmWvQeAj3U88Z1U96KQwa.jpg",
+    "sessions": [
+      {
+        "id": 552788,
+        "name": "A design pattern goes to the supermarket"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/kayaweers",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ordina",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@KayaWeers",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b765d60f-4717-4116-b9f2-002c8a10bd88",
+    "firstName": "Kelly",
+    "lastName": "Morrison",
+    "fullName": "Kelly Morrison",
+    "bio": "Kelly Morrison is a native of Georgia with a BS in mathematics and a PhD in computer engineering. He has over 30 years of software experience in various industries, including the television, education, retail, and agriculture sectors. He also wrote a monthly column for \"Digital Output\" magazine under the pen name \"Armand Tarantino\". He is currently employed as a solutions architect at Daugherty Business Solutions.",
+    "tagLine": "Solutions Architect at Daugherty Business Solutions / PhD in Computer Engineering",
+    "profilePicture": "https://sessionize.com/image/f6a3-400o400o1-rEmtMUMkwtaTu153cRvQH.jpg",
+    "sessions": [
+      {
+        "id": 557732,
+        "name": "AI Proof Your Career With Software Architecture"
+      },
+      {
+        "id": 557746,
+        "name": "What Time Is It, Anyway? A Practical Guide To Using Dates And Times Correctly In Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Daugherty Business Solutions",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@softwareriot",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "3b93f05b-f376-44fb-9876-d8a84491a6cd",
+    "firstName": "Kenneth",
+    "lastName": "Fogel",
+    "fullName": "Kenneth Fogel",
+    "bio": "Ken is a Java Champion and member of the java Community Process Executive Committee. He is also the organizer of the annual JChampions Conference, He retired from the classroom after 31 years teaching software development at Dawson College,  25 of those years as the chair and program coordinator of the Computer Science Technology Program. He is currently a Research Scholar in Residence at the college. His first book, Transitioning to Java, was recently published by Packt. He has spoken at numerous conferences. His recent project has been the development of a Jakarta REST 3.1 workshop for the Eclipse Foundation.",
+    "tagLine": " Java Champion, Author, JCP EC member,",
+    "profilePicture": "https://sessionize.com/image/20cf-400o400o1-5b-f376-44fb-9876-d8a84491a6cd.76fc8c81-c29e-4c37-81fe-8a2cbbc07eb4.jpg",
+    "sessions": [
+      {
+        "id": 557361,
+        "name": "Building RESTful Web Services with Jakarta EE"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/omniprof",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Retired/Self-Employed",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@omniprof",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ecda0d84-be59-41c6-8983-b58cd5b3f93c",
+    "firstName": "Kenneth",
+    "lastName": "Kousen",
+    "fullName": "Kenneth Kousen",
+    "bio": "Ken Kousen is the author of the Pragmatic Programmers books \"Mockito Made Clear\" and \"Help Your Boss Help You\", the O'Reilly books \"Kotlin Cookbook\", \"Modern Java Recipes\", and \"Gradle Recipes for Android\", and the Manning book \"Making Java Groovy\". He is a regular speaker on the No Fluff, Just Stuff conference tour, and has spoken at conferences all over the world. He is a Java Champion, a JavaOne Rock Star, and a Devnexus Rock Star.\r\n\r\nIn addition to various industry certifications, he has BS degrees in both Mathematics and Mechanical Engineering from M.I.T., an MA and Ph.D. in Aerospace Engineering from Princeton, and an MS in Computer Science from R.P.I.",
+    "tagLine": "President, Kousen IT, Inc.",
+    "profilePicture": "https://sessionize.com/image/56cf-400o400o1-hRJfHj9uhAKenHm5nQ3K15.png",
+    "sessions": [
+      {
+        "id": 549522,
+        "name": "Calling AI Tools from Java"
+      },
+      {
+        "id": 549542,
+        "name": "JUnit 5's Best Features"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/kenkousen",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Kousen IT, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@kenkousen",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "140644c4-887a-4227-84e3-4f737ab9d428",
+    "firstName": "Kesha",
+    "lastName": "Williams",
+    "fullName": "Kesha Williams",
+    "bio": "Kesha Williams is an award-winning technology leader teaching others how to transform their lives through technology. She has 25+ years of experience architecting, designing, and building enterprise web applications. Her passions include teaching cloud topics and leading software engineering teams. Kesha holds multiple AWS certifications and is recognized as an AWS Machine Learning Hero, Alexa Champion, AWS Ambassador, and HackerRank All-Star. She currently serves as the Program Director of Slalom's Cloud Residency and on the Board of Directors for Women in Voice.",
+    "tagLine": "AWS Machine Learning Hero, AWS Ambassador, Alexa Champion, HackerRank All Star, Pluralsight Author,  LinkedIn Learning Instructor",
+    "profilePicture": "https://sessionize.com/image/a9c3-400o400o1-HhYWpE2W7XeiPHT3GiCsxt.png",
+    "sessions": [
+      {
+        "id": 537786,
+        "name": "Building Intelligent Applications with ChatGPT"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/KeshaWillz",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Slalom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@KeshaWillz",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ff0a1dd3-c9f2-48e2-88a8-9c0e429251be",
+    "firstName": "Kito",
+    "lastName": "Mann",
+    "fullName": "Kito Mann",
+    "bio": "Kito D. Mann is the Principal Consultant at Virtua, Inc., specializing in enterprise application architecture, training, development, and mentoring with microservices, cloud, Web Components, Angular, and Jakarta/Java EE technologies. He is also the co-host of The Stackd Podcast and the author of JavaServer Faces in Action. Mann has participated in several Java Community Process expert groups (including CDI, JSF, and Portlets) and is an internationally recognized speaker. He is also a Java Champion and Google Developer Expert in Web Technologies. He holds a BA in Computer Science from Johns Hopkins University.",
+    "tagLine": "Principal Consultant, Virtua, Inc. ",
+    "profilePicture": "https://sessionize.com/image/d802-400o400o1-NwbhnKhztvKFA3ipzHkVWz.jpg",
+    "sessions": [
+      {
+        "id": 556248,
+        "name": "From Mosaic to Modern: The Evolution of Web App Architectures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/kito99",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Virtua, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@kito99",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "453dc8ab-94d9-4858-923a-ecddaa493949",
+    "firstName": "Lawrence",
+    "lastName": "Lockhart",
+    "fullName": "Lawrence Lockhart",
+    "bio": "Lawrence Lockhart, a Developer Advocate at Vaadin, has been in tech for 6 years and helping developers reach their goals for 5.  As a mid-life career changer, he appreciates the struggles other adults seeking to transition to tech experience and speaks to those struggles in his content creation on Twitter, TikTok, and Youtube.  He's a saved family man who's truly humbled by where his journey has brought him.",
+    "tagLine": "LawrenceDCodes: putting heart in tech, finally.",
+    "profilePicture": "https://sessionize.com/image/38ef-400o400o1-nE34iArKYyuGgoDaaLuMey.jpg",
+    "sessions": [
+      {
+        "id": 551473,
+        "name": "Fullstack from the back! Better business application development"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/LawrenceDCodes",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Vaadin",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@LawrenceDCodes",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "eaa23bbd-1207-432d-8c52-eed0035f0ddf",
+    "firstName": "M. Jeff",
+    "lastName": "Wilson",
+    "fullName": "M. Jeff Wilson",
+    "bio": "M. Jeff Wilson is an avid software developer, published author, certified scrum master and SAFe Program Consultant, and lifelong learner. He has worked with teams in the telecommunications, insurance, traffic engineering, retail, and other industries to develop and deliver solutions and improve processes. Jeff has been coding since 1981, starting with punch cards and FORTRAN at Georgia Tech, and BASIC on a friend’s Apple IIe.\r\n\r\nJeff enjoys gaming, running, music, homebrewing, and, yes, coding in his spare time. ",
+    "tagLine": "Coaching at the intersection of agile and code.",
+    "profilePicture": "https://sessionize.com/image/119f-400o400o1-JYLgVbVSv1nSLoRgff8ab7.jpeg",
+    "sessions": [
+      {
+        "id": 555341,
+        "name": "Refactoring AF (After Fowler): Some Large Refactoring Patterns"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mjeffw",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "AT&T Services, Inc",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mjefffw",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "42e68026-7d32-4cf7-8b71-84cfe2096cc2",
+    "firstName": "Maarten",
+    "lastName": "Mulders",
+    "fullName": "Maarten Mulders",
+    "bio": "Passionate architect, senior developer and trainer; also Java Champion. Passionate about \"building the right thing\" and \"building the thing right\". Focusing on lean and elegant solutions. Love to share new ideas and knowledge. Outside work, I appreciate creating and consuming good food, photography, and music, in no particular order.",
+    "tagLine": "IT Architect @ Info Support // Java Champion",
+    "profilePicture": "https://sessionize.com/image/f19a-400o400o1-4QCpmJRfn6YEu1TtskBDk6.jpg",
+    "sessions": [
+      {
+        "id": 543941,
+        "name": "Beware of Survivorship Bias!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mthmulders",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Info Support",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mthmulders",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "16e1da1a-8902-415a-badf-f021d7b888ec",
+    "firstName": "Mala",
+    "lastName": "Gupta",
+    "fullName": "Mala Gupta",
+    "bio": "Mala Gupta is a Developer Advocate at JetBrains, a Java Champion, book author with Manning, Packt, and O'Reilly Publications. \r\n\r\nAn international speaker at industry conferences, she has experience of more than two decades in the software industry. She has been actively supporting Java certification as a path to career advancement. Since 2006, she has been coaching students and professionals to succeed in these certifications. Mala Gupta’s Java books with Manning Publications, USA, are top-rated for Java Certification around the globe. \r\n\r\nShe co-leads Delhi Java User Group. A strong supporter of Women in Technology, she drives initiatives of Women Who Code - Delhi chapter to augment the participation of women in tech.",
+    "tagLine": "Developer Advocate, JetBrains. Author, Speaker. Java Champion.",
+    "profilePicture": "https://sessionize.com/image/cddf-400o400o1-R2Uk8RMrnABMVDnVyRk7gz.jpg",
+    "sessions": [
+      {
+        "id": 556916,
+        "name": "Java's New Powers: Hero or Villain in Your Code?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JetBrains",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@eMalaGupta",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6c93de4e-0f8c-45bd-b76b-ba868aa81ca7",
+    "firstName": "Marcus",
+    "lastName": "Hellberg",
+    "fullName": "Marcus Hellberg",
+    "bio": "Marcus is a long-time Java and web developer, always interested in learning new things. He's especially interested in modern web technologies and Java. Marcus loves teaching developers about cool new technologies and has presented at over 50 international conferences and user groups. He works as the Director of Developer Relations at Vaadin.",
+    "tagLine": "VP of Developer Relations at Vaadin",
+    "profilePicture": "https://sessionize.com/image/3e47-400o400o1-wA31uSJXs44iXtLSXRu6xw.jpg",
+    "sessions": [
+      {
+        "id": 548139,
+        "name": "Java meets TypeScript: learn to build full-stack web apps with Spring Boot and React"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/marcushellberg",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Vaadin",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@marcushellberg",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "eeb25beb-5d37-4fb7-acac-170357a1d89b",
+    "firstName": "Marharyta",
+    "lastName": "Nedzelska",
+    "fullName": "Marharyta Nedzelska",
+    "bio": "Margarita is a big Kotlin fan and Kotlin GDE. Knows both conference sides: speaking and organizing. Organized a KUG in her native city Kyiv because she believes in Knowledge Sharing and Collective Intelligence. For her everyday job, she's building Static Code Analysis tools for Java/Kotlin/Scala and other languages.",
+    "tagLine": "Software Engineer @ Sonar",
+    "profilePicture": "https://sessionize.com/image/0200-400o400o1-Tqc1sTRhdu99p4112d152A.jpeg",
+    "sessions": [
+      {
+        "id": 553930,
+        "name": "A Healthy diet for your Java application"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jMargaritaN",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Sonar",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jMargaritaN",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+    "firstName": "Marino",
+    "lastName": "Wijay",
+    "fullName": "Marino Wijay",
+    "bio": "Marino Wijay is a Canadian, Traveller, International Speaker, Open Source Advocate for Service Mesh, Kubernetes, and Networking. He is an Ambassador @ EddieHub, and Lead Organizer for KubeHuddle Toronto. He is passionate about technology and modern distributed systems. He will always fall back to the patterns of Networking and the ways of the OSI. Community building is his driving force; A modern Jedi Academy.",
+    "tagLine": "Developer Advocate - DevRel @ Solo.io",
+    "profilePicture": "https://sessionize.com/image/7041-400o400o1-fMYEjYongaV8iZ9gv6a8Yf.jpg",
+    "sessions": [
+      {
+        "id": 557480,
+        "name": "The Platform Engineer Playbook - 5 Ways to Container Security"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/virtualized6ix",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Solo.io",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@virtualized6ix",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9f1e9a11-4022-412d-929c-d80ee4f5d19f",
+    "firstName": "Marit",
+    "lastName": "van Dijk",
+    "fullName": "Marit van Dijk",
+    "bio": "Marit van Dijk is a software developer with 20 years of experience in different roles and companies. She loves building awesome software with amazing people and has contributed to open-source projects like Cucumber and various other projects. She enjoys learning new things as well as sharing knowledge on programming, test automation, Cucumber/BDD, and software engineering. She speaks at international conferences, in webinars, and on podcasts, occasionally writes blog posts, and contributed to the book \"97 Things Every Java Programmer Should Know\" (O'Reilly Media).",
+    "tagLine": "Developer Advocate @ JetBrains",
+    "profilePicture": "https://sessionize.com/image/c9d5-400o400o1-11-4022-412d-929c-d80ee4f5d19f.19447190-6de1-41fe-a8d8-c55626369d39.jpg",
+    "sessions": [
+      {
+        "id": 555306,
+        "name": "Reading code"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/MaritvanDijk77",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JetBrains",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@MaritvanDijk77",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d646eb1d-f4a3-41fe-9d99-9eac7abf2789",
+    "firstName": "Mark",
+    "lastName": "Stoodley",
+    "fullName": "Mark Stoodley",
+    "bio": "Mark joined the IBM Markham lab in 2002 after graduating from the University of Toronto with a Ph.D. focusing on the field of computer engineering. He spent his entire IBM career in the Runtime Technologies (formerly Java Technology Center) team developing, testing, servicing, and now architecting Just-In-Time (JIT) compilers. Mark led the J9 Java Virtual Machine team through the effort to significantly refactor and then to contribute millions of lines of J9 source code to two open projects : Eclipse OMR and Eclipse OpenJ9. Following this successful effort, he became the Chief Architect for IBM Java, leading a global team that builds, innovates in, and services the IBM Semeru Runtime (JDK) for thousands of Java-based products and cloud services used by small, medium, large, and huge companies spanning all sectors of the IT industry.",
+    "tagLine": "Chief Architect for IBM Java",
+    "profilePicture": "https://sessionize.com/image/40a8-400o400o1-XAc4WmWQaSdeXpiLfiPWJN.jpg",
+    "sessions": [
+      {
+        "id": 547420,
+        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/mstoodle",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mstoodle",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f465d18e-ff85-47b9-9997-f00a602ac48d",
+    "firstName": "Markus",
+    "lastName": "Kett",
+    "fullName": "Markus Kett",
+    "bio": "Markus and his teams have been working on IDE tools for Java and database development, as well as various open-source projects for 20 years. Markus is CEO and co-founder of MicroStream, the company behind the Eclipse open-source projects EclipseStore, Eclipse Serializer, and RapidClipse IDE. He is also the editor-in-chief for the free JAVAPRO magazine in Germany and the founder and co-organizer of the Java community conference series JCON. He is an independent editor for several magazines, and a speaker at numerous international developer conferences, user groups, and meetups. ",
+    "tagLine": "CEO at MicroStream, Editor in Chief at JAVAPRO Magazine ",
+    "profilePicture": "https://sessionize.com/image/ccd7-400o400o1-aqwBmqCnBSE2c3ThKinc3g.jpg",
+    "sessions": [
+      {
+        "id": 547420,
+        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/markuskett",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "MicroStream",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@MarkusKett",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e2712384-1dff-4eb7-8dbf-77e621e4d274",
+    "firstName": "Mary",
+    "lastName": "Grygleski",
+    "fullName": "Mary Grygleski",
+    "bio": "Mary is a Java Champion and a passionate Senior Developer Advocate at DataStax, a leading data management company that champions Open Source software and specializes in Big Data, DB-as-a-service, Streaming, and Cloud-Native systems.  She spent 3.5 years as a very effective advocate at IBM, focusing on Java, Jakarta EE, OpenJ9, Open Source, Cloud, and Distributed Systems.  She transitioned from Unix/C to Java around 2000 and has never looked back since then.  She considers herself a polyglot and loves to continue learning new and better ways to solve real-life problems. She is an active tech community builder outside of her day job, and currently the President of the Chicago Java Users Group (CJUG), as well as a co-organizer for several IBM-sponsored meetup groups in the Greater Chicago area.\r\n",
+    "tagLine": "Senior Developer Advocate at DataStax, Java Champion, President of Chicago-JUG",
+    "profilePicture": "https://sessionize.com/image/f34a-400o400o1-nGwhtD9Nq7F1Ww4mR7e79D.jpg",
+    "sessions": [
+      {
+        "id": 557295,
+        "name": "Leveraging Event Streaming to Boost LLMs with Retrieval Augmented Generation"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mgrygles",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "DataStax",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mgrygles",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f44f5308-1287-4e6c-8f48-6ed26ea9f9d3",
+    "firstName": "Mauricio",
+    "lastName": "\"Salaboy\" Salatino",
+    "fullName": "Mauricio \"Salaboy\" Salatino",
+    "bio": "Mauricio works as Open Source Software Engineer at @Diagrid, contributing to and driving initiatives for the Dapr OSS project. Mauricio also serves as a Steering Committee member for the Knative Project, and he is also Co-Leading the Knative Functions initiative. He is writing a book titled Platform Engineering on Kubernetes for Manning Publishing and previously worked at VMware and Red Hat, building tools to help developers be more productive.",
+    "tagLine": "OSS Software Engineer @Diagrid for the @Daprdev Project",
+    "profilePicture": "https://sessionize.com/image/150d-400o400o1-WV45TEFkWgpFDurtEPX2nz.jpg",
+    "sessions": [
+      {
+        "id": 557373,
+        "name": "Wiring Cloud Native applications for local development"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/salaboy",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Diagrid",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@salaboy",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
+    "firstName": "Medha",
+    "lastName": "Chakraborty",
+    "fullName": "Medha Chakraborty",
+    "bio": "With 15 years of deep expertise in Java development, Medha has consistently driven innovation in the realm of enterprise software solutions. As a seasoned Technical Lead, she possesses an extensive background in designing robust, scalable, and efficient systems, while mentoring teams to deliver excellence. Having collaborated with diverse cross-functional groups, she has mastered the art of translating business requirements into technical blueprints. Medha's dedication to best practices and continuous learning stands as a testament to his passion for the ever-evolving landscape of technology. With a track record of successful project deliveries, she embodies the perfect fusion of technical acumen and leadership finesse.",
+    "tagLine": "Blackrock, Technical Lead",
+    "profilePicture": "https://sessionize.com/image/7509-400o400o1-h7kKv46q6H4TtXyoMrSb2h.jfif",
+    "sessions": [
+      {
+        "id": 557266,
+        "name": "What is Looming in Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Blackrock",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@Medha9885273566",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "2718989a-00fd-4ea2-b459-d4b4116e8b12",
+    "firstName": "Melissa",
+    "lastName": "McKay",
+    "fullName": "Melissa McKay",
+    "bio": "Melissa is passionate about Java, DevOps and Continuous Delivery. She is currently a Developer Advocate for JFrog, serves on the Continuous Delivery Foundation TOC and is a Co-Chair of the Interoperability SIG. She loves sharing her knowledge with the community as a developer, speaker, and author. Melissa has been recognized as a Java Champion and Docker Captain, is an international speaker at numerous events including KubeCon and DockerCon, and is co-author of the O'Reilly title, DevOps Tools for Java Developers.",
+    "tagLine": "Developer Advocate, JFrog",
+    "profilePicture": "https://sessionize.com/image/efa4-400o400o1-B5NA5187XjfNpZP8cCBpfr.jpg",
+    "sessions": [
+      {
+        "id": 557734,
+        "name": "Don’t Expect Developers to be Security Experts!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/melissajmckay",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JFrog",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@melissajmckay",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "41866ef7-180d-462a-93c1-fbcaa07e3db0",
+    "firstName": "Michael",
+    "lastName": "Hall",
+    "fullName": "Michael Hall",
+    "bio": "Michael Hall is an open source software developer, community manager and technology evangelist. He has extensive experience in developing desktop and web-based software in a large variety of languages and frameworks, and contributes to a number of open source projects and communities.",
+    "tagLine": "Principle Developer Evangelist @ Arm",
+    "profilePicture": "https://sessionize.com/image/e421-400o400o1-h3KkRVypqzsGQ6jGx8HiFV.png",
+    "sessions": [
+      {
+        "id": 557363,
+        "name": "The future of Java runs on Arm"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Arm",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mhall119",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+    "firstName": "Nathaniel",
+    "lastName": "Schutta",
+    "fullName": "Nathaniel Schutta",
+    "bio": "Nathaniel T. Schutta is a software architect focused on cloud computing and building usable applications. A proponent of polyglot programming, Nate has written multiple books and appeared in various videos. Nate is a seasoned speaker regularly presenting at conferences worldwide, No Fluff Just Stuff symposia, meetups, universities, and user groups. In addition to his day job, Nate is an adjunct professor at the University of Minnesota where he teaches students to embrace (and evaluate) technical change. Driven to rid the world of bad presentations, Nate coauthored the book Presentation Patterns with Neal Ford and Matthew McCullough. Nate recently published Thinking Architecturally and Responsible Microservices both available as free downloads from VMware.",
+    "tagLine": "Architect as a Service",
+    "profilePicture": "https://sessionize.com/image/8f23-400o400o1-NskqGr2k2FcXHVF7TRwNuk.jpg",
+    "sessions": [
+      {
+        "id": 551330,
+        "name": "Analyzing and Critiquing Architectures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ntschutta",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ntschutta",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a6ee49ed-a85d-43bd-8677-bced09824b2c",
+    "firstName": "Nerando",
+    "lastName": "Johnson",
+    "fullName": "Nerando Johnson",
+    "bio": "Current Atlanta freeCodeCamp Organizer | Fullstack  Software Developer | Role => Job Hunting",
+    "tagLine": "Fmr FullStack Developer @Equity Prime Mortgage || Flatiron School Graduate || Technology Community Organizer",
+    "profilePicture": "https://sessionize.com/image/fea3-400o400o1-WCCjdWY7yQ8duUEtBKDbnb.jpg",
+    "sessions": [
+      {
+        "id": 557526,
+        "name": "How to Conference : A User Guide"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/nerajno",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "TechTile LLC",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@nerajno",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bd133af7-d326-4bdd-b960-dea75e0d6637",
+    "firstName": "Nyah",
+    "lastName": "Macklin",
+    "fullName": "Nyah Macklin",
+    "bio": "Nyah Macklin is a Developer Evangelist at Couchbase. Nyah has a non-traditional background, with a degree in African & Afro-American Studies and a career in civil service and community organizing. This background gave them the expertise to decipher the ways systems within tech perpetuate the exclusion of historically underrepresented communities, and implement policies to counteract that fact. Nyah cares about making technology and software accessible to as many communities as possible. Twitter: @NyahMacklinDev ",
+    "tagLine": "Developer Advocate, Founding Engineer",
+    "profilePicture": "https://sessionize.com/image/a995-400o400o1-hViZ53jhqixLrpUqwz6pQd.jpg",
+    "sessions": [
+      {
+        "id": 556761,
+        "name": "Crafting Code with a Conscience: Your Role in Ethical Data Stewardship"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "HTTPS://twitter.com/nyahmacklindev",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Couchbase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@NyahMacklinDev",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "3ef92880-b80a-4305-b75c-35650d1259c8",
+    "firstName": "Oleg",
+    "lastName": "Šelajev",
+    "fullName": "Oleg Šelajev",
+    "bio": "Oleg Šelajev is a developer advocate at AtomicJar working on making integration tests with Testcontainers better for everyone in the community. VirtualJUG leader. Java Champion.",
+    "tagLine": "Head of Developer Relations at AtomicJar",
+    "profilePicture": "https://sessionize.com/image/5ca7-400o400o1-nLuHACqrBji1V81wQdQsWE.jpg",
+    "sessions": [
+      {
+        "id": 557373,
+        "name": "Wiring Cloud Native applications for local development"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/shelajev",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "AtomicJar",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@shelajev",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "61524dab-5ff7-443b-a97f-ae7d6f5690ec",
+    "firstName": "Oleg",
+    "lastName": "Zhurakousky",
+    "fullName": "Oleg Zhurakousky",
+    "bio": "Open source practitioner with over 17 years of experience in software engineering across multiple disciplines including software architecture and design, consulting, business analysis and application development. Speaker who presented seminars at dozens of conferences worldwide (i.e. SpringOne, JavaZone, Hadoop Summit,, JavaOne, Scala Days, Oredev etc.)",
+    "tagLine": "Developer",
+    "profilePicture": "https://sessionize.com/image/44e5-400o400o1-9Jmckcc4YnpuA4Ehzi112N.jpg",
+    "sessions": [
+      {
+        "id": 556492,
+        "name": "Zero to Implementation in 50 Minutes, No Kidding!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/z_oleg",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMWare",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@z_oleg",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5ecff6ff-7704-433e-a38f-a057d05eacec",
+    "firstName": "Olena",
+    "lastName": "Kutsenko",
+    "fullName": "Olena Kutsenko",
+    "bio": "Olena is a seasoned expert in data, sustainable software development, and teamwork. With a background in software engineering, she's led teams and developed mission-critical applications at Nokia, HERE Technologies, and AWS. Currently, she works at Aiven where she supports developers and customers in using open-source data technologies such as Apache Kafka, ClickHouse, and OpenSearch. She is also an international public speaker and regularly present at conferences around the world. She holds AWS Developer and Solutions Architect certifications, and is also a Confluent Catalyst.",
+    "tagLine": "Sr. Developer Advocate at aiven.io",
+    "profilePicture": "https://sessionize.com/image/b7f7-400o400o1-YNsqbt1iAn11JkRZUUsFar.png",
+    "sessions": [
+      {
+        "id": 541466,
+        "name": "Contextual search with vector search: exploring your options with open source tools."
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/OlenaKutsenko",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Aiven",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@OlenaKutsenko",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "35870981-512d-4c0e-b3af-682799a959a3",
+    "firstName": "Olga",
+    "lastName": "Kundzich",
+    "fullName": "Olga Kundzich",
+    "bio": "Co-founder at Moderne. Previously, Product Manager for Spinnaker at Pivotal and enterprise data protection at Dell EMC\r\n.",
+    "tagLine": "co-founder, Moderne",
+    "profilePicture": "https://sessionize.com/image/e736-400o400o1-Nfb99g8xSi3gFp8wRAaRVg.jpg",
+    "sessions": [
+      {
+        "id": 557192,
+        "name": "Fundamentals of Migration Engineering with OpenRewrite"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Moderne",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@olgakundzich",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "90d4149a-7993-407f-a350-a0d7a8a04440",
+    "firstName": "Orlando",
+    "lastName": "Valdez",
+    "fullName": "Orlando Valdez",
+    "bio": "Orlando has been solving (and creating) problems with the help of technology for more than 15 years. He currently works at Credit Karma, leads the Charlotte JUG, occasional speaker, husband and father, retro gamer and in a constant learning journey.",
+    "tagLine": "Staff Software Engineer at Credit Karma",
+    "profilePicture": "https://sessionize.com/image/b5d3-400o400o1-VCgCAYtWzRDzYUB2DYcnfC.png",
+    "sessions": [
+      {
+        "id": 551553,
+        "name": "Kubernetes Demystified"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/orlandovaldez_",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Credit Karma",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "orlandovaldez_",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "719a72a0-c85f-476b-b9fc-23c4c816ca61",
+    "firstName": "Peter",
+    "lastName": "Wessels",
+    "fullName": "Peter Wessels",
+    "bio": "Peter Wessels is a Java Developer, Speaker, and Teacher at Info Support in the Netherlands. In addition, he leads the Java Community within Info Support. \r\n\r\nHe loves working with talented people to develop software that's not only effective but also fun to create. In his career, Peter has worn many hats, from lead engineer and project manager to scrum master and product owner. In Dutch, he would be described as a 'manusje van alles,' which roughly translates to a person who seizes every opportunity to learn new technologies and (soft)skills to create impact. This attitude helps him get diverse perspectives on software development. \r\n\r\nAs a speaker, Peter has had the privilege of presenting at prestigious events such as Devoxx UK, J-Fall, and Developer Week.",
+    "tagLine": "Passionate Java developer",
+    "profilePicture": "https://sessionize.com/image/1813-400o400o1-QB5aoWkt9xJ25UADeLwkmK.jpg",
+    "sessions": [
+      {
+        "id": 544499,
+        "name": "Battling your Biased Brain"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/PeterWessels",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Info Support B.V.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@peterwessels",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6f31d407-98ca-4b82-a009-6bb4d80b819c",
+    "firstName": "Priya ",
+    "lastName": "Jayakumar",
+    "fullName": "Priya Jayakumar",
+    "bio": "Priya Jayakumar has been in the Telecommunications domain for more than a decade. During her time, she has grown from a software developer to leading and managing a team of high caliber Software Development Engineers who build reliable, scalable and secure solutions for T-Mobile’s eCommerce Platform. She creates short- and long-term strategies, promoting innovation in software development and operating a highly stable and always available eCommerce engine for the telecom giant.\r\nAs a woman, a first-gen immigrant and a mother, Priya takes pride in her work and always fosters positive working environment. She thrives on helping her team succeed and has received multiple compliments for effectively managing and strategizing for the success of her software development team.\r\nCurrently she is helping her team build a Zero to Hero environment in an Active-Active Segmented Routing ensuring availability and integrity of a database and multiple environments across geographical regions.",
+    "tagLine": "Manager, Product & Technology, T-Mobile",
+    "profilePicture": "https://sessionize.com/image/1823-400o400o1-DjtNvvrVgjReVSzun1vrYT.jpg",
+    "sessions": [
+      {
+        "id": 539327,
+        "name": "\"Getting Along and Getting Things Done: A Guide for Software Leaders Working with Developers\""
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "T-Mobile ",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@pricoolpri",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "96f21f95-15a9-4bed-a14a-495947087740",
+    "firstName": "Ram",
+    "lastName": "Lakshmanan",
+    "fullName": "Ram Lakshmanan",
+    "bio": "Ram is the founder of the popular DevOps tools GCeasy.io, fastThread.io, HeapHero.io. Every single day millions & millions of people in North America travel, bank and do commerce using the applications that Ram Lakshmanan has architected. He has developed one of the world’s largest banking application which is used by 1 in 3 USA households. He has designed a B2B travel application which processes 70% of North America’s Leisure travel bookings. Ram advices startups, Fortune 500 enterprises, Governmental organizations on their critical technology initiatives.",
+    "tagLine": "Architect - In pursuit of answering why crash?",
+    "profilePicture": "https://sessionize.com/image/70d9-400o400o1-GqU8m3LcxH5kSPytPYfXEv.jpg",
+    "sessions": [
+      {
+        "id": 551993,
+        "name": "Effectively Troubleshoot 9 Types of OutOfMemoryError"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/tier1app",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "yCrash",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@tier1app",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f69133ba-5f6e-44e7-98e5-84b1dd108991",
+    "firstName": "Ricardo",
+    "lastName": "Ferreira",
+    "fullName": "Ricardo Ferreira",
+    "bio": "Ricardo works for AWS in the developer relations team. The world of developer relations is his current passion. After doing it as a hobby for +10 years, it became his full-time job after joining open source-based startups like Confluent and Elastic. Having experienced implementing developer relations programs from the ground up in these companies granted him an acute sense of what successful strategies are worth pursuing, and the ones to avoid.\r\n\r\nWith +20 years of experience, he built an extensive background in distributed systems, messaging, databases, and observability. The first 10 years of his career were spent in software engineering, where his primary focus was about programming languages, compilers, debuggers, code efficiency, and development best practices. Then, he spent another 10 years working as a solution architect in companies like Red Hat and Oracle.",
+    "tagLine": "Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/778d-400o400o1-pxXqxfvyAWj5dwvm6i4DiX.png",
+    "sessions": [
+      {
+        "id": 551437,
+        "name": "Work Smarter, Not Harder with your AI Coding Companion"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/riferrei",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Amazon Web Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@riferrei",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b2f9d832-c42b-452b-bbb6-f642cd43ffea",
+    "firstName": "Rich",
+    "lastName": "Hagarty",
+    "fullName": "Rich Hagarty",
+    "bio": "Rich Hagarty is a software developer and Developer Advocate at IBM, currently focusing on Java and Open Source related technologies. Based in Austin, TX, Rich has been active in the developer community for the past 7 years, working on cloud computing and AI technologies. He has created numerous learning paths, code patterns, articles, and videos - all to help developers understand and utilize IBM and Open Source technologies. ",
+    "tagLine": "IBM Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/2a81-400o400o1-Boxvd3DWZmRyeARj1BAC5H.png",
+    "sessions": [
+      {
+        "id": 554819,
+        "name": "The Next Frontier in Open Source Java Compilers: Just-In-Time Compilation as a Service"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/rhagarty8",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@rhagarty8",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "727026b3-6a06-41d7-803d-cc6df0a8802c",
+    "firstName": "Rob",
+    "lastName": "Winch",
+    "fullName": "Rob Winch",
+    "bio": "Rob Winch is employed by Pivotal as the Spring Security project lead. In the past he has worked in the health care industry, bioinformatics research, high performance computing, and as a web consultant. When he is not sitting in front of a computer he enjoys cycling with friends.",
+    "tagLine": "Spring Security Project Lead",
+    "profilePicture": "https://sessionize.com/image/433e-400o400o1-Wmi4ykANFdWrtx35C2wobd.jpg",
+    "sessions": [
+      {
+        "id": 556765,
+        "name": "Passkeys...Yes Please!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/rob_winch",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "rob_winch",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "2c2f23ea-2165-4bb3-b1a8-2080da65ff87",
+    "firstName": "Robert",
+    "lastName": "Clawson",
+    "fullName": "Robert Clawson",
+    "bio": "Robert is a talented, energetic, and insightful coach focused on helping teams align on their best way of working to build trust and accountability. He has spent more than a decade in the IT field with a primary focus on agile framework, product development, and software quality.",
+    "tagLine": "Agile and Product Dojo Coach",
+    "profilePicture": "https://sessionize.com/image/c7ba-400o400o1-fHNZb5j4gd3k4krbFSMfMF.jpg",
+    "sessions": [
+      {
+        "id": 539474,
+        "name": "Product Centricity and Agility: Mega Powers combined"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Discover Financial Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@IDon'tandHaveNeverHadTwitter(Now \"X\")",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ae7a5785-c916-448e-bf74-7faa54adae66",
+    "firstName": "Roberto",
+    "lastName": "Perez Alcolea",
+    "fullName": "Roberto Perez Alcolea",
+    "bio": "Roberto is an experienced software engineer with focused in jvm ecosystem, developer productivity and continuous delivery. He has several years of experience using technologies for the JVM. \r\n\r\nHe's an active maintainer of Netflix Nebula Plugins (https://nebula-plugins.github.io/) and occasional contributor to the Gradle Build tool (https://gradle.org/) \r\n\r\nCurrently works at Netflix in the JVM ecosystem team. The JVM Ecosystem Team provides the user experience for dependency management, building, packaging, and publishing JVM-based libraries and applications through providing tools, automation, and guidance to thousands of engineers at Netflix",
+    "tagLine": "Senior Software Engineer @ Netflix",
+    "profilePicture": "https://sessionize.com/image/a99a-400o400o1-3Zwf6NpLSK93UifudgJjo1.jpg",
+    "sessions": [
+      {
+        "id": 557675,
+        "name": "Keeping your build tool updated in a multi repository world: a Netflix tale"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/rpalcolea",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netflix",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "rpalcolea",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
+    "firstName": "Rodrigo",
+    "lastName": "Graciano",
+    "fullName": "Rodrigo Graciano",
+    "bio": "Rodrigo Graciano is a Java Champion with over 15 years of software development experience and a Director at BNY Mellon. He is also a senior member and a leader in the NYJavaSIG, the Java User Group from NY. He is a frequent speaker at JUGs and conferences such as Devnexus, JavaOne, KCDC, and TDC Brazil.",
+    "tagLine": "Java Champion, NYJavaSIG Leader and Principal Software Engineer",
+    "profilePicture": "https://sessionize.com/image/486c-400o400o1-VYFRcNXCwDPN7R59Gf2poe.jpg",
+    "sessions": [
+      {
+        "id": 557724,
+        "name": "void main()"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/rodrigograciano",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BNY Mellon",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@rodrigograciano",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ad998165-d26a-4c98-8aac-ee60a16c638a",
+    "firstName": "Rustam",
+    "lastName": "Mehmandarov",
+    "fullName": "Rustam Mehmandarov",
+    "bio": "Passionate computer scientist. Java Champion and Google Developers Expert for Cloud. Public speaker. Ex-leader of JavaZone and Norwegian JUG – javaBin.",
+    "tagLine": "Passionate computer scientist",
+    "profilePicture": "https://sessionize.com/image/771e-400o400o1-fPWBcPumLBW4crDvic6Jbd.jpeg",
+    "sessions": [
+      {
+        "id": 549984,
+        "name": "Your Cloud-Native Toolbox for Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/RMehmandarov",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Computas",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@RMehmandarov",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1038e701-f663-46f8-a01b-925f2f74d004",
+    "firstName": "Sam",
+    "lastName": "Hepburn",
+    "fullName": "Sam Hepburn",
+    "bio": "Sam Hepburn is a prominent figure in London's developer community, having dedicated the past decade to building some of the largest tech communities in the world. Her passion lies in fostering welcoming environments where individuals thrive and communities flourish. \r\n\r\nCurrently, Sam serves as the community lead at Snyk.io, spearheading efforts to integrate security into developers' workflows. She also heads the DevSecCon community and produces The Secure Developer Podcast. In her free time, Sam sits on the steering committee for Devoxx UK, a JVM-focused developer conference, and serves as an advisor for OpenUK, the UK organization for the business of Open Technology. Through her involvement with OpenUK, Sam is dedicated to promoting and supporting the growth of the open technology community in the UK and beyond.\r\n\r\nHer contributions to the developer community have earned her recognition, including the prestigious CMX 2023 Developer Relations Community Professional and overall Community Professional of the Year Award.",
+    "tagLine": "Principal Community Manager ",
+    "profilePicture": "https://sessionize.com/image/0999-400o400o1-ahA6L6SziHWxmaxTnw44fY.png",
+    "sessions": [
+      {
+        "id": 573390,
+        "name": "Community hacks to enhance your career"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/SammyHep",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@sammyhep",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f0f1fa39-eb24-4ab6-866c-b8645975bd75",
+    "firstName": "Scott",
+    "lastName": "McAllister",
+    "fullName": "Scott McAllister",
+    "bio": "Scott McAllister is a Developer Advocate for ngrok. He has been building web applications in several industries for over a decade. Now he's helping others learn about a wide range of web and infrastructure technologies. When he's not coding, writing or speaking he enjoys long walks with his wife, skipping rocks with his kids, and is happy whenever Real Salt Lake, Seattle Sounders FC, Manchester City, St. Louis Cardinals, Seattle Mariners, Chicago Bulls, Seattle Storm, Seattle Seahawks, OL Reign FC, St. Louis Blues, Seattle Kraken, Barcelona, Fiorentina, Borussia Dortmund or Mainz 05 can manage a win.\r\n",
+    "tagLine": "Developer Advocate at ngrok",
+    "profilePicture": "https://sessionize.com/image/1ebc-400o400o1-Pn9oh1DNVCkN3fTo1Y4zHS.jpg",
+    "sessions": [
+      {
+        "id": 555434,
+        "name": "Simple Ways to Make Webhook Security Better"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/stmcallister",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ngrok",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@stmcallister",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "98f13279-4870-419d-bc75-01444e9c3da5",
+    "firstName": "Scott",
+    "lastName": "Turner",
+    "fullName": "Scott Turner",
+    "bio": "Software engineer with 25+ years of experience architecting novel solutions to complex problems that arise in instrument operations in deep space, mission planning, sensor calibration, and data reduction.",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/ac31-400o400o1-3oo5FaHdx36T98RgE2zrE7.jpg",
+    "sessions": [
+      {
+        "id": 556719,
+        "name": "Java, JavaFX, and Life on Jupiter’s Europa"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Johns Hopkins Applied Physics Laboratory",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "n/a",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "27a63fc1-2981-4a83-8f13-fa986f36de8d",
+    "firstName": "Sean",
+    "lastName": "McQuaid",
+    "fullName": "Sean McQuaid",
+    "bio": "Sean is a Senior Software Engineer on the Customer Technology Solutions team at Chick-fil-A. Prior to learning how to code, he attended music school and played the trumpet professionally for over a decade. Sean is very passionate about testing, performance and tools that provide a good developer experience.",
+    "tagLine": "Senior Software Engineer at Chick-fil-A",
+    "profilePicture": "https://sessionize.com/image/86a4-400o400o1-HmECRcQE3XDknK1jHnBS1A.jpg",
+    "sessions": [
+      {
+        "id": 547698,
+        "name": "Methodically Migrating from JavaScript to TypeScript"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/SeanMcQuaidCode",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Chick-fil-A",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "SeanMcQuaidCode",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4b126c39-e57e-4882-9d41-1c78cb6662b5",
+    "firstName": "Sean",
+    "lastName": "Phillips",
+    "fullName": "Sean Phillips",
+    "bio": "Sean M Phillips is a senior software engineer at the Johns Hopkins University Applied Physics Laboratory whom specializes in custom data visualization. Sean is a Java Champion and multiple Duke's Choice Award winner providing research and capabilities on several domains including Cislunar space defense, Brain computer interfaces and advanced cyber-physical effects.",
+    "tagLine": "Researcher - Johns Hopkins University Applied Physics Laboratory",
+    "profilePicture": "https://sessionize.com/image/dcc2-400o400o1-aJ7NxQwBerSNm6ERXdyTkt.jpg",
+    "sessions": [
+      {
+        "id": 557403,
+        "name": "Counter Attack: Vector Based methods for Detecting Large Language Model Generated Text and Audio"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Johns Hopkins University Applied Physics Lab",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@seanmiphillips",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5e7219be-ad38-4708-884f-d6fbfb51490a",
+    "firstName": "Simon",
+    "lastName": "Maple",
+    "fullName": "Simon Maple",
+    "bio": "Simon Maple is the Principal Developer Advocate at Snyk, with a focus and passion around AI. He’s been a Java Champion since 2014, JavaOne Rockstar speaker in 2014 and 2017, Duke’s Choice award winner, and Virtual JUG founder. He is an experienced speaker, having presented at JavaOne, DevoxxBE, UK, & FR, DevNexus, DevSecCon, SnykCon, JavaZone, Jfokus, JavaLand, JMaghreb and many more including many JUG tours. His passion is around user groups and communities. When not traveling, Simon enjoys spending quality time with his family, cooking and eating great food.",
+    "tagLine": "Snyk, Principal Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/d8f5-400o400o1-Vh8D4iFF2mTMQgaQorYCTm.png",
+    "sessions": [
+      {
+        "id": 551307,
+        "name": "Breaking AI: Live coding and hacking applications with Generative AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@sjmaple",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8d6bb73e-5451-4e33-a0ab-7b7ffc37a52e",
+    "firstName": "Simon",
+    "lastName": "Martinelli",
+    "fullName": "Simon Martinelli",
+    "bio": "Simon Martinelli is the owner of 72 Services LLC and has been working as a software architect, developer, consultant, and trainer for 27 years, especially in the Java Enterprise environment.\r\n\r\nHis current interest is increasing the efficiency of full-stack development with Java. Due to his commitment to the Vaadin/Hilla environment, he received the Vaadin Community Award. He regularly shares his knowledge in articles, speaks at international conferences, and writes his blog: https://martinelli.ch\r\n\r\nBesides his work, he has been a lecturer at the Bern University of Applied Sciences for modern architecture and integrating distributed systems and persistence technologies with Java since 2007. And he is an expert group member of JSR-352 Java Batch and JSR-354 Money and Currency.",
+    "tagLine": "Programming Architect at 72 Services LLC",
+    "profilePicture": "https://sessionize.com/image/bfae-400o400o1-J8x3jRdbFh9ebGecYaMXPM.jpg",
+    "sessions": [
+      {
+        "id": 537943,
+        "name": "Do you really need Hibernate?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/simas_ch",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "72 Services LLC",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@simas_ch",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "709043d1-5754-4459-a8d5-6dd2f5619874",
+    "firstName": "Simon",
+    "lastName": "Ritter",
+    "fullName": "Simon Ritter",
+    "bio": "Simon Ritter is the Deputy CTO of Azul Systems.  Simon has been in the IT business since 1984 and holds a Bachelor of Science degree in Physics from Brunel University in the U.K. \r\n\r\nSimon joined Sun Microsystems in 1996 and started working with Java technology from JDK 1.0; he has spent time working in both Java development and consultancy.  Having moved to Oracle as part of the Sun acquisition, he managed the Java Evangelism team for the core Java platform, Java for client applications and embedded Java.  Now at Azul, he continues to help people understand Java as well as Azul’s JVM technologies and products.  Simon has twice been awarded Java Rockstar status at JavaOne and is a Java Champion.  He currently represents Azul on the JCP Executive Committee and on the Java SE Expert Group (JSR 379, 383 and 384).",
+    "tagLine": "Deputy CTO, talking Java around the world",
+    "profilePicture": "https://sessionize.com/image/9d17-400o400o1-WQ9zYmAvghNsKsR9G9CKwj.jpg",
+    "sessions": [
+      {
+        "id": 555596,
+        "name": "Enter The Parallel Universe of the Vector API"
+      },
+      {
+        "id": 555595,
+        "name": "Keeping Your Java Hot by Solving the JVM Warmup Problem"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/speakjava",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@speakjava",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+    "firstName": "Spencer",
+    "lastName": "Gibb",
+    "fullName": "Spencer Gibb",
+    "bio": "Spencer Gibb is a Software Engineer at VMware where he is the co-founder and lead of the Spring Cloud Core projects.\r\n\r\nHis interests include distributed systems, JVM languages, web services frameworks, message-driven architectures and making software development simpler.\r\n\r\nHe has industry experience in early e-commerce platforms, government and non-profit organizations, and business intelligence startups.  He has extensive java experience and experience in other languages such as scala and python.",
+    "tagLine": "Co-founder and Lead of Spring Cloud at VMware",
+    "profilePicture": "https://sessionize.com/image/6864-400o400o1-SR5HxiRGMgCAxgP51LzFJZ.jpg",
+    "sessions": [
+      {
+        "id": 551498,
+        "name": "Weaving Spring Cloud Gateway on Loom"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/spencerbgibb",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@spencerbgibb",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0793b99f-1282-4674-9d21-f88e30c8232e",
+    "firstName": "Stephen",
+    "lastName": "Chin",
+    "fullName": "Stephen Chin",
+    "bio": "Stephen Chin is VP of Developer Relations at JFrog, chair of the CDF governing board, member of the CNCF and OpenSSF governing boards, and author of The Definitive Guide to Modern Client Development, Raspberry Pi with Java, Pro JavaFX Platform, and the DevOps Tools for Java Developers title from O'Reilly. He has keynoted numerous conferences around the world including swampUP, Devoxx, JNation, JavaOne, Joker, and Open Source India. Stephen is an avid motorcyclist who has done evangelism tours in Europe, Japan, and Brazil, interviewing hackers in their natural habitat. When he is not traveling, he enjoys teaching kids how to do embedded and robot programming together with his daughters.",
+    "tagLine": "VP of Developer Relations",
+    "profilePicture": "https://sessionize.com/image/1c93-400o400o1-9f-1282-4674-9d21-f88e30c8232e.aa421c31-68db-4833-bbb8-ef17df5ef477.jpg",
+    "sessions": [
+      {
+        "id": 537983,
+        "name": "Know Your Ingredients: Security Starts With the Source"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/steveonjava",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JFrog",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@steveonjava",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
+    "firstName": "Steve",
+    "lastName": "Poole",
+    "fullName": "Steve Poole",
+    "bio": "Developer Advocate,Security Champion, DevOps practitioner (whatever that means) Long time Java developer, leader and evangelist. I’ve been working on Java SDKs and JVMs since Java was less than 1. Also had time to work on other things including  various JSRs, being a committer on various open source projects including ones at Apache, Eclipse and OpenJDK.  A seasoned speaker and regular presenter at international conferences on technical and software engineering topics.",
+    "tagLine": "Director Developer Advocacy, Sonatype",
+    "profilePicture": "https://sessionize.com/image/3bf6-400o400o1-GXkRhYghnsmHQcnaKDUUbL.jpg",
+    "sessions": [
+      {
+        "id": 557446,
+        "name": "More tales from the Dark Side: How AI is the bad guys new friend"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/spoole167",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Sonatype",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@spoole167",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0e577c69-f95e-4044-a53c-d626732f2bb6",
+    "firstName": "Tejas",
+    "lastName": "Chopra",
+    "fullName": "Tejas Chopra",
+    "bio": "Tejas Chopra is a Senior Software Engineer, working in the Data Storage Platform team at Netflix, where he is responsible for architecting storage solutions to support Netflix Studios and Netflix Streaming Platform. Prior to Netflix, Tejas was working on designing and implementing the storage infrastructure at Box, Inc. to support a cloud content management platform that scales to petabytes of storage & millions of users. Tejas has worked on distributed file systems & backend architectures, both in on-premise and cloud environments as part of several startups in his career. Tejas is an International Keynote Speaker and periodically conducts seminars on Micro services, NFTs, Software Development & Cloud Computing and has a Masters Degree in Electrical & Computer Engineering from Carnegie Mellon University, with a specialization in Computer Systems.",
+    "tagLine": "Senior Software Engineer, Netflix",
+    "profilePicture": "https://sessionize.com/image/8caf-400o400o1-NL4BWWTNSwV2YY7sZEzLS8.jpeg",
+    "sessions": [
+      {
+        "id": 538002,
+        "name": "Designing media optimized byte transfer and storage at Netflix"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://www.twitter.com/chopra_tejas",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netflix, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chopra_tejas",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
+    "firstName": "Theo",
+    "lastName": "Lebrun",
+    "fullName": "Theo Lebrun",
+    "bio": "Theo Lebrun is a seasoned Data Engineer and Technology Consultant with a vast experience in cloud computing, databases, and software development. With expertise in a range of tools and technologies including AWS, Kafka, Databricks, and Python, Theo has helped numerous clients optimize their data pipelines meeting and exceeding their goals.\r\n\r\nTheo's technical expertise are matched by his passion for sharing his knowledge with others. He has authored multiple blog posts covering and breaking down technical topics such as high-scaled streaming development with Kafka or Databricks Tips and Tricks. He has also presented in multiple conferences such as DevNexus and RVATech Data Summit.",
+    "tagLine": "Senior Data Engineer at Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image/cec3-400o400o1-Gc63A4WVQD19gjjNtyyRdT.jpeg",
+    "sessions": [
+      {
+        "id": 551429,
+        "name": "Build next generation Big Data applications with Delta Lake"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/Falydoor",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "Falydoor",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5b876b41-adcf-4322-ade7-e55aaf1d004e",
+    "firstName": "Theresa",
+    "lastName": "Mammarella",
+    "fullName": "Theresa Mammarella",
+    "bio": "Theresa Mammarella is a software engineer working on the Eclipse OpenJ9 JVM at IBM. She enjoys helping developers harness the full potential of their tools to create innovative, secure and performant solutions. Theresa is a frequent conference speaker and community organizer, giving talks around the world at Jfokus, Devoxx, DevNexus, JavaZone, KCDC, Java User Groups and more.",
+    "tagLine": "Software Engineer @ IBM",
+    "profilePicture": "https://sessionize.com/image/a3ac-400o400o1-WUcJiARHCCNckvnR76Bqo5.jpg",
+    "sessions": [
+      {
+        "id": 549597,
+        "name": "Cache Me If You Can: Speed Up Your JVM With Project Valhalla"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/t_mammarella",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@t_mammarella",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "172a6669-38c5-46ec-b262-3290e8aa41e3",
+    "firstName": "Todd",
+    "lastName": "Ginsberg",
+    "fullName": "Todd Ginsberg",
+    "bio": "Todd Ginsberg is a Principal Software Developer at Netspend, a payments company in Austin, TX where he is responsible for prototypes, experiments, and proofs of concept. He has been programming professionally using Java since 1995, Kotlin since 2016, and co-organizes the Triangle JUG. Todd lives in Raleigh, NC with his wife and their dog. When not programming, he enjoys reading, walking/hiking, and doughnuts. ",
+    "tagLine": "Principal Developer, Netspend Corp",
+    "profilePicture": "https://sessionize.com/image/4d1a-400o400o1-Xz5kQLxwKLEoZ7q8kzksd3.jpg",
+    "sessions": [
+      {
+        "id": 539216,
+        "name": "Loom is more than virtual threads: Structured Concurrency and Scoped Values"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ToddGinsberg",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netspend",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@toddginsberg",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5a2864c6-5fc4-4ca3-bf60-839888286167",
+    "firstName": "Todd",
+    "lastName": "Libby",
+    "fullName": "Todd Libby",
+    "bio": "I am a W3C Invited Expert and Accessibility Advocate as an independent consultant since 1999. I have been a Senior Accessibility Engineer for the past 25 years with extensive front and back end development experience having designed, built, and maintained websites for small and large companies, remediating and auditing websites for WCAG compliance and part of many at the W3C whom are working on WCAG3. I co-host a podcast, the Front End Nerdery Podcast, and stream on Twitch. Originally from Portland, Maine, and now living in Phoenix, Arizona, I love food and cooking, especially lobster and lobster rolls. In some circles, I am the Lobster guy on Twitter, I wear the moniker with pride.",
+    "tagLine": "Senior Web & Accessibility Engineer & Lobster Roll Connosieur",
+    "profilePicture": "https://sessionize.com/image/b03c-400o400o1-ftybRzn8qDo63Ez6MXWF1f.jpg",
+    "sessions": [
+      {
+        "id": 539369,
+        "name": "How To Make Your JavaScript Accessible Without Losing Your Sanity (Or Your Hair)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/toddlibby",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Independent Consultant",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@toddlibby",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "886d1d0c-c615-48f7-acac-e833f4950134",
+    "firstName": "Todd",
+    "lastName": "Sharp",
+    "fullName": "Todd Sharp",
+    "bio": "I’m a developer who advocates and evangelizes about interactive video streaming at Twitch. I’ve been writing code since 2004, and feel extremely lucky to be paid to do what I love and am truly passionate about. As part of my role as a Developer Advocate, I write lots of demos to show other developers how to use certain languages, frameworks, and technologies to solve the problems that they face every day. I have a background in writing and a love for theater, so I’m extra fortunate to have found a role that lets me use those skills and passions as part of my everyday routine. I’m married to my best friend and we live in the North Georgia mountains with our 2 kids, 8 chickens, 2 dogs, a cat, and a potbelly pig named Milton. When I’m not working, I love to cook, play video games and tinker with electronics and microcontrollers.",
+    "tagLine": "Principal Developer Advocate - Amazon Interactive Video Service - Twitch",
+    "profilePicture": "https://sessionize.com/image/ac0b-400o400o1-MZLfN7zR9gNRGgne5myrmQ.png",
+    "sessions": [
+      {
+        "id": 537933,
+        "name": "Demystifying the Digital Dystopia: Improving User Generated Content Platforms with AI and ML"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/recursivecodes",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Twitch",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@recursivecodes",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5eff389f-6760-4a05-affb-ec5b6fc2ca36",
+    "firstName": "Trisha",
+    "lastName": "Gee",
+    "fullName": "Trisha Gee",
+    "bio": "Trisha is a software engineer, Java Champion and author. Trisha has developed Java applications for a range of industries of all sizes, including finance, manufacturing and non-profit, and she's a lead developer advocate at Gradle. She has expertise in Java high-performance systems and dabbles with Open Source development.\r\n\r\nTrisha’s exceptionally passionate about sharing things that help real developers. That might be: getting them up to speed on the latest version of Java; teaching them tips and tricks to improve their productivity; or promoting healthy technical communities across the globe. Trisha values helping all developers level up their career and skills at every step of their journey.\r\n\r\nRead more from Trisha in the books “Head First Java”, “Getting to Know IntelliJ IDEA”, “97 Things Every Java Developer Should Know” and “What to Look for in a Code Review”. ",
+    "tagLine": "Engineer, author, keynote speaker, developer champion, catalyst.",
+    "profilePicture": "https://sessionize.com/image/ad3b-400o400o1-J84C35ogbL1R14hxpVoHgZ.jpg",
+    "sessions": [
+      {
+        "id": 540546,
+        "name": "Are Your Tests Slowing You Down?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/trisha_gee",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Gradle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@trisha_gee",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b576bdc5-c994-40f5-b1dd-e0f9f7999fa9",
+    "firstName": "Venkat",
+    "lastName": "Subramaniam",
+    "fullName": "Venkat Subramaniam",
+    "bio": "Dr. Venkat Subramaniam is an award-winning author, founder of Agile Developer, Inc., creator of agilelearner.com, and an instructional professor at the University of Houston.\r\nHe has trained and mentored thousands of software developers in the US, Canada, Europe, and Asia, and is a regularly-invited speaker at several international conferences. Venkat helps his clients effectively apply and succeed with sustainable agile practices on their software projects.\r\n\r\nVenkat is a (co)author of multiple technical books, including the 2007 Jolt Productivity award winning book Practices of an Agile Developer. You can find a list of his books at agiledeveloper.com. You can reach him by email at venkats@agiledeveloper.com or on twitter at @venkat_s.",
+    "tagLine": "Agile Developer, Inc.",
+    "profilePicture": "https://sessionize.com/image/15ab-400o400o1-fMEReYR1JLuMtRLc9ekHim.jpg",
+    "sessions": [
+      {
+        "id": 568265,
+        "name": "Cruising Along with Java: Making use of the Modern Features"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/venkat_s",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Agile Developer, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@venkat_s",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9f4c5484-3a97-4a43-9410-05b2007f83bb",
+    "firstName": "Wes",
+    "lastName": "Widner",
+    "fullName": "Wes Widner",
+    "bio": "Wes Widner is a Principle Engineer with Cyberhaven, a data detection and response startup focused on keeping your company's data safe. \r\n\r\nHis work history includes data engineering with a number of companies such as McAfee Labs’s Global Threat Intelligence department, malware pipelining with Norse Corporation, and building out Crowdstrike's data platform. In his spare time, Wes also enjoys teaching children how to hack, ethically of course.",
+    "tagLine": "Building better forts for the blue team",
+    "profilePicture": "https://sessionize.com/image/cfb4-400o400o1-WdVexP3sP33pW635tLimy2.jpg",
+    "sessions": [
+      {
+        "id": 552455,
+        "name": "Configuration security as a game of pursuit intercept"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Cyberhaven",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "n/a",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
+    "firstName": "zoe",
+    "lastName": "Steinkamp",
+    "fullName": "zoe Steinkamp",
+    "bio": "I'm Zoe Steinkamp, a Developer Advocate for InfluxData with a background in front-end software engineering. I'm passionate about making developers' lives easier and helping them engage with InfluxData's database platform, open-source tools, and time-series data solutions. I also have a keen interest in data science. Outside of work, I enjoy traveling and gardening. Feel free to connect with me on LinkedIn, and I look forward to sharing insights and knowledge at virtual and in-person events.",
+    "tagLine": "Developer Advocate InfluxDB",
+    "profilePicture": "https://sessionize.com/image/e7c7-400o400o1-sVbPFvPSySG9etgQpsnSEZ.jpg",
+    "sessions": [
+      {
+        "id": 556927,
+        "name": "How to choose the right database for your application"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "InfluxData",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "NA",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  }
+]
