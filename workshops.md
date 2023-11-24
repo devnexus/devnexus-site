@@ -23,3 +23,5 @@ branding:
   {% endfor %}
 </div>
 {% endfor %}
+
+<a href="/presentations" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
