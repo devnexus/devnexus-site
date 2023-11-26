@@ -28,7 +28,7 @@ collections:
     output: true
     permalink: /:collection/:path
 email: info@ajug.org
-description: Largest Java Conference in the USA.
+description: The longest-running and Largest Java Ecosystem Conference in the World.
 baseurl:
 url:
 uploads_dir: "/uploads"
@@ -36,8 +36,8 @@ links:
    stay-informed:
    hotel-block:
    cfp: https://sessionize.com/devnexus-2024/
-   register: https://reg.connectevents.io/ConnectEvents/devnexus
-   signIn: https://reg.connectevents./ConnectEvents/devnexus
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2024/
+   signIn: https://reg.connectevents./ConnectEvents/devnexus2024/
    announcements: https://twitter.com/devnexus
    recordings: https://www.recallact.com/ajug
    reg_maillist: https://ajug.us7.list-manage.com/subscribe/post?u=0b3b17489713c9e7c62595dd3&amp;id=51e5b6d965
