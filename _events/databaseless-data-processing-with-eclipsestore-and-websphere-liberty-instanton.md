@@ -44,6 +44,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: JakartaEE
 format: session
 slug: databaseless-data-processing-with-eclipsestore-and-websphere-liberty-instanton

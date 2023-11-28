@@ -44,6 +44,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Core Java
 format: session
 slug: what-time-is-it-anyway-a-practical-guide-to-using-dates-and-times-correctly-in-java

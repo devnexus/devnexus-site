@@ -48,6 +48,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Security
 format: session
 slug: the-platform-engineer-playbook-5-ways-to-container-security

@@ -36,6 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Web and Front-end
 format: session
 slug: what-the-heck-are-server-sent-events

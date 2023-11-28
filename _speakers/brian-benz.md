@@ -12,8 +12,8 @@ tagLine: 'Brian is a Java Champion and a Cloud Advocate at Microsoft, helping de
   get the most out of Java on Azure. '
 profilePicture: https://sessionize.com/image/6abf-400o400o1-Q5yv5bCxSmhNFnQAFVEYRF.jpg
 sessions:
-- id: 541686
-  name: Using AI to Deploy Java apps to Kubernetes
+- id: 551596
+  name: Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI
 isTopSpeaker: false
 links:
 - title: Twitter

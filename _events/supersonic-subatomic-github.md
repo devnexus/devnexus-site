@@ -38,6 +38,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Unobtanium
 format: session
 slug: supersonic-subatomic-github

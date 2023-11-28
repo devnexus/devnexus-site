@@ -40,6 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Agile
 format: session
 slug: refactoring-af-after-fowler-some-large-refactoring-patterns

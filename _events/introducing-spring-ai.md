@@ -43,6 +43,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Artificial Intelligence
 format: session
 slug: introducing-spring-ai

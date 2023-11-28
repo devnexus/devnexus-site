@@ -44,6 +44,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Practices and other tech
 format: session
 slug: coding-fast-and-slow-applying-kahneman-s-insights-to-improve-development-practices-and-efficiency

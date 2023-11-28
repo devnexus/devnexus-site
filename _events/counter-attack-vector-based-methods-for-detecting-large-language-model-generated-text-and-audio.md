@@ -45,6 +45,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Artificial Intelligence
 format: session
 slug: counter-attack-vector-based-methods-for-detecting-large-language-model-generated-text-and-audio

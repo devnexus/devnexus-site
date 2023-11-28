@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Security
 format: session
 slug: configuration-security-as-a-game-of-pursuit-intercept

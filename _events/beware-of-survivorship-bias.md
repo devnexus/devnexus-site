@@ -39,6 +39,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Practices and other tech
 format: session
 slug: beware-of-survivorship-bias

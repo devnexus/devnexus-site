@@ -5,7 +5,7 @@
   <a href="{{speaker.slug}}" class="thumb">
      <img class="img-responsive"
           src="{{speaker_img}}"
-          alt="{{speaker.fullName}}">
+          alt="{{speaker.fullName | escape}}">
     <h3 class="caption">{{speaker.fullName}}</h3>
   </a>
 </div>

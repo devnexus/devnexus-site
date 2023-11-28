@@ -42,6 +42,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: JUG Leaders Summit
 format: session
 slug: reviving-the-java-community-insights-from-jug-leaders-worldwide

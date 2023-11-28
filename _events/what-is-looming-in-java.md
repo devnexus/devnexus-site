@@ -37,6 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Core Java
 format: session
 slug: what-is-looming-in-java

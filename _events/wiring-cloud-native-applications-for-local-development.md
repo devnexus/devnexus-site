@@ -41,6 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Cloud Technology
 format: session
 slug: wiring-cloud-native-applications-for-local-development

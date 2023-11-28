@@ -1241,7 +1241,7 @@
         "questionAnswers": [],
         "id": "577478",
         "title": "Choose Your Own Performance; a Project Leyden Update!",
-        "description": "Project Leyden allows developers to selectively improve startup time, time to peak performance, and the footprint of Java programs, by doubling down on Java's super power of speculative optimization using capabilities built directly into the JDK. See how speculative optimizations allow AOT (ahead-of-time compilation) code to make tradeoffs between Java's static and dynamic nature as well as how new tools like Condensers and ComputedConstants may play role in further improvements.",
+        "description": "Project Leyden allows developers to selectively improve startup time, time to peak performance, and the footprint of Java programs, by doubling down on Java's super power of speculative optimization using capabilities built directly into the JDK. See how speculative optimizations allow AOT (ahead-of-time compilation) code to make tradeoffs between Java's static and dynamic nature as well as how new tools like Condensers and ComputedConstants may play role in further improvements.",
         "startsAt": null,
         "endsAt": null,
         "isServiceSession": false,
@@ -2089,6 +2089,53 @@
       },
       {
         "questionAnswers": [],
+        "id": "577755",
+        "title": "Enhancing Software Design with Spring Modulith",
+        "description": "Having more tools in your tool belt and knowing when to use each one is a crucial aspect of modern design and architecture. In this talk, I want to introduce you to a new tool: Spring Modulith. This innovative tool is reshaping how we approach software structure, especially in the debate between using Microservices or a Monolithic framework. The central question we'll explore is how to create software that's flexible and can adapt to the evolving needs of a business.\r\n\r\nSpring Modulith is designed for those working with Spring Boot, offering a way to efficiently organize and evolve software projects. Here’s what we’ll delve into:\r\n\r\nDefining and managing logical modules within Spring Boot applications using Spring Modulith.\r\n\r\nUtilizing Spring Modulith’s tools for structural validation tests, ensuring each component functions correctly and cohesively.\r\n\r\nDocumenting the architecture of your application, facilitating better collaboration and future modifications.\r\n\r\nImplementing interactions between modules in a way that maintains their independence yet allows for effective communication.\r\n\r\nMonitoring real-time interactions between modules during the software’s operation.\r\n\r\nA highlight of this talk is a live coding demonstration, where I’ll show Spring Modulith in action. This will be insightful for both seasoned Spring Boot users and newcomers alike.\r\n\r\nJoin us to discover how Spring Modulith can enhance your toolkit, making your software projects more adaptable and aligned with the dynamic landscape of business requirements.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+            "name": "DaShaun Carter"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207652,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "555596",
         "title": "Enter The Parallel Universe of the Vector API",
         "description": "Single Instruction Multiple Data (SIMD) instructions have been available in Intel and other processor instruction sets for over 25 years.  The current implementation is Advanced Vector eXtensions (AVX), first introduced in the Sandy Bridge microarchitecture.\r\n\r\nUsing Vector processing through AVX can profoundly improve the performance level of an application that includes numerically intensive operations.  The difficulty is that, although the compiler should be responsible for determining their use, code is often too complex to do so effectively.\r\n\r\nIn JDK 16, an incubator module for the Vector API (not to be confused with the Vector collections class) was introduced.  This allows a developer to express vector computations that reliably compile at runtime to optimal vector instructions.  The API has undergone several revisions resulting in the sixth incubator in JDK 21.\r\n\r\nIn this session, we'll explore how to use the Vector API in different use cases, comparing the code generated by the JIT compiler without the API and with it.  We'll also look at what difference this makes to the performance delivered.",
@@ -2110,6 +2157,53 @@
               {
                 "id": 207657,
                 "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "550866",
+        "title": "Exploring the Data Universe: Portability with Jakarta Data and Open Liberty",
+        "description": "We live on a data-driven planet where data can be accessed from relational databases, non-relational databases, message streams, and more.  Often our enterprise Java applications are restricted by the back-end datastore they were written to access.  Let us explore a new universe where data is captured, accessed, and persisted without such restrictions.\r\n\r\nThe unity and standardization of data access and persistence was the catalyst for the Jakarta Data project.  The Jakarta Data specification provides a modern persistence model focused on the stable and portable needs of the modern enterprise application developer.  Using Jakarta Data on Open Liberty offers developers a cloud-native platform to prototype, test, and deploy applications.\r\n\r\nIn this session, we will showcase the domain-driven repository pattern of the Jakarta Data project to persist data to the relational database.  We will highlight the query mechanism to utilize sorting, streaming, and paging.  Once our application is written, we will swap out the relational database for a non-relational database to highlight just how easy this can now be with Jakarta Data.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d09139fc-ca39-47ec-a66c-31f68b6bc49f",
+            "name": "Kyle Aure"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
               }
             ],
             "sort": 0
@@ -2375,53 +2469,6 @@
       },
       {
         "questionAnswers": [],
-        "id": "538286",
-        "title": "How Composable Architectures can actually solve the reasons for Microservices",
-        "description": "Many companies today want a faster time-to-market, more flexibility, and scalability for their digital services. Investments are often made in IT for this, such as a “migration to the cloud” and developing “microservices”. However, the result is often that such a transition and development becomes more complex and more expensive, instead of being able to take advantage of the anticipated benefits. So what causes this? Which aspect is missing from the application of cloud infrastructure and microservices? What can you do to make them beneficial? This is where Composable Architecture comes in! In this session, I will 1) Elaborate on Composable Architecture and how we got there; 2) Define the value of applying composable architectures using the Composable Enterprise as a framework; 3) Share how I applied Composable Architectures in projects, and what I learned from it",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "1acc6fe1-fb77-411b-acbb-fef29174c780",
-            "name": "Edwin Derks"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207652,
-                "name": "Architecture"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
-      },
-      {
-        "questionAnswers": [],
         "id": "556927",
         "title": "How to choose the right database for your application",
         "description": "In this talk, we will review the strengths and qualities of each database type from their particular use-case perspectives. Although having everything in one database seems like the straightforward path, it is not always the most cost or time effective path. Many Databases have become more specialized for the types of data they handle. Learn how to make the right choice for your workloads with this walkthrough of a set of distinct database types (graph, in-memory, search, columnar, document, relational, key-value, and time series databases). Learn about current trends in the database ecosystem and then learn about a number of different specialized databases and their strengths and weaknesses. This presentation will go over some of the fastest growing segments in the database space.",
@@ -2567,6 +2614,53 @@
       },
       {
         "questionAnswers": [],
+        "id": "549583",
+        "title": "Hyperscale Jakarta EE PaaS on Azure",
+        "description": "Azure is the only top tier public cloud with a fully managed Jakarta EE service - JBoss EAP on App Service. \r\n\r\nIn this fast-faced, demo-heavy, and mostly slide-free session we will show first-hand how to run Jakarta EE on Azure using JBoss EAP on App Service. We will demo in real time how to stand up an instance very quickly and deploy a realistic Jakarta EE application that integrates with some services on the cloud such as database, directory server, cache or log aggregator. We will also see how things like load-balancing, automatic redeployment, auto-scaling, and monitoring work in a hyperscale PaaS.\r\n\r\nAt the end of the session, you will have all the demos available on GitHub so you can explore them on your own!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8a4b1a5b-575a-402f-9ab1-417c1c1f08e0",
+            "name": "Reza Rahman"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "537726",
         "title": "Introducing Spring AI",
         "description": "By now, you've no doubt noticed that Generative AI is making waves across many industries. In between all of the hype and doubt, there are several use cases for Generative AI in many software projects. Whether it be as simple as building a live chat to help your users or using AI to analyze data and provide recommendations, Generative AI is becoming a key piece of software architecture.\r\n\r\nSo how can you implement Generative AI in your projects? Let me introduce you to Spring AI.\r\n\r\nFor over two decades, the Spring Framework and its immense portfolio of projects has been making complex problems easy for Java developers. And now with the new Spring AI project, adding Generative AI to your Spring Boot projects couldn't be easier! Spring AI brings an AI client and templated prompting that handles all of the ceremony necessary to communicate with common AI APIs (such as OpenAI and Azure OpenAI). And with Spring Boot auto-configuration, you'll be able to get straight to the point of asking questions and getting answers your application needs.\r\n\r\nIn this session, we'll consider a handful of use cases for Generative AI and see how to implement them with Spring AI. We'll start simple, then build up to some more advanced uses of Spring AI that employ your application's own data when generating answers.",
@@ -2588,6 +2682,53 @@
               {
                 "id": 207673,
                 "name": "Artificial Intelligence"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "538312",
+        "title": "Jakarta EE 11 - Performance and Developer Productivity",
+        "description": "With a baseline on Java 21, Jakarta EE 11 has a focus on Performance and Developer Productivity. Built-in support for Virtual Threads and Records are some examples of this.\r\n\r\nWe will back the tape a little and look at how the namespace change from `javax.*` to `jakarta.*` in Jakarta EE 9 impacted the entire Java ecosystem. Then move on to the cool new features introduced in Jakarta EE 10 before embarking on an adventurous journey with Jakarta EE 11. Everything is backed up by live coding demos.\r\n\r\nAfter this session, you will have an understanding of the fundamentals of Jakarta EE, as well as know how to quickly get started with Jakarta EE at your own pace.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "cdc2288a-56cf-40ec-bc39-ca5d9fb59b27",
+            "name": "Ivar Grimstad"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
               }
             ],
             "sort": 0
@@ -3280,6 +3421,53 @@
       },
       {
         "questionAnswers": [],
+        "id": "581606",
+        "title": "Leveraging Jakarta EE 10 Core Profile in Stateful Microservices",
+        "description": "Integration of Jakarta EE 10 Core Profile -compatible microservices frameworks with in-memory data grids creates a powerful platform for productive development and scalable operation of modern microservice architectures.  Developers benefit from Map-based persistence APIs injected into RESTful services, while the resulting architecture exhibits elastic scalability in cloud-native deployments.  This session will explore such an integration with Helidon 4 and Coherence CE,  and highlight state-of-the-art applications achieved as a result.  Java 21 virtual threads and MicroProfile 6 are also implemented in this integration. Join us to learn how the Jakarta EE platform can power your next cloud-native stateful microservices system.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1d4bcc79-5cdf-4ea2-8b78-6e2806b54944",
+            "name": "Aleks Seovic"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "539216",
         "title": "Loom is more than virtual threads: Structured Concurrency and Scoped Values",
         "description": "Most of the talk about Project Loom as been about JEP 425: Virtual Threads. That's great because virtual threads are incredibly useful and will revolutionize how we write high-throughput applications. But did you know there are two more JEPs associated with Project Loom that are also very useful? First we'll learn about JEP 428: Structured Concurrency and how it will simplify multithreaded programming on the JVM. Next, we'll learn about JEP 429: Scoped Values which aims to solve some problems that ThreadLocals have had since their introduction way back in Java 1.2!  Come to this talk and we'll learn why these projects are useful additions to the JVM, and write some code to illustrate where you'll be able to use them effectively. ",
@@ -3301,6 +3489,57 @@
               {
                 "id": 207655,
                 "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "551596",
+        "title": "Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI",
+        "description": "This hands-on session will show you how to enable deployments of Jakarta EE applications using Open Liberty or WebSphere Liberty to the cloud with AI. Attendees will explore how to set up a Liberty deployment on Kubernetes, and how to streamline the containerization, deployment and provisioning of resources using AI. We’ll also cover how to establish a SQL Database connection to the deployed application. We’ll be using GitHub Copilot and Copilot Chat to access generative AI, enabling smooth, secure deployments while saving time.  By the end, participants will have a comprehensive understanding of how to optimize, test, and deploy their Java applications on the cloud using Open/WebSphere Liberty and Kubernetes.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+            "name": "Brian Benz"
+          },
+          {
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
               }
             ],
             "sort": 0
@@ -3583,6 +3822,53 @@
               {
                 "id": 207653,
                 "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "538291",
+        "title": "Optimize your applications to the max with Jakarta EE and MicroProfile",
+        "description": "When using complementary tools for optimal utilization in containers and scalable infrastructures, you can achieve optimal value when developing and running enterprise software. Jakarta EE’s mechanics and application server runtimes are perfect tools for achieving this goal, especially when complemented with MicroProfile. This applies whether you are building monoliths, microservices, or anything in between.\r\n\r\nAttendees will learn how to optimally build, run and deploy such enterprise applications. Therefore, the session will show little application code, but focus on the concepts, tools, and configurations that are applicable. I will also compare some key concepts with competitors like Spring Framework to emphasize the benefits and downsides.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1acc6fe1-fb77-411b-acbb-fef29174c780",
+            "name": "Edwin Derks"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
               }
             ],
             "sort": 0
@@ -3967,6 +4253,53 @@
               {
                 "id": 207673,
                 "name": "Artificial Intelligence"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "571596",
+        "title": "Securing Your Enterprise Apps - Jakarta Security In Jakarta EE 11 And Beyond",
+        "description": "As security breaches become more commonplace and more complex, your applications constantly have to evolve to stay safe. \r\n\r\nJakarta EE helps you meet the challenge, defining a standard for creating secure enterprise Java applications, and innovating with each release to provide the best measures possible.\r\n\r\nIn this talk, Payara Software Engineer Luis Neto discusses what already exists in Jakarta EE, with a demo of Jakarta Security and Authorization. He also discusses what you can expect from Jakarta EE 11, including Jakarta Authentication 3.1, revealing how this will support the overall goals of Jakarta Security. \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "fd225e4e-f75a-48c9-97e9-10bb0564d683",
+            "name": "Luis Neto"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
               }
             ],
             "sort": 0
@@ -4774,53 +5107,6 @@
               {
                 "id": 207653,
                 "name": "Cloud Infrastructure"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
-      },
-      {
-        "questionAnswers": [],
-        "id": "541686",
-        "title": "Using AI to Deploy Java apps to Kubernetes",
-        "description": "Developer teams are constantly under pressure to deliver new features and functionality without impacting core applications, often using new and unfamiliar features and environments. In this session we’ll show how to use AI to automate deployments to Kubernetes reliably and securely using GitHub actions.  Highlights will include using AI to create Kubernetes deployment manifests and GitHub actions, AB Testing, blue-green deployments, and GitHub repo features for Dev/Test environments,  plus  practical container orchestration for Kubernetes in production.  ",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
-            "name": "Brian Benz"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207654,
-                "name": "Cloud Technology"
               }
             ],
             "sort": 0

@@ -35,6 +35,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Architecture
 format: session
 slug: connect-the-tables-how-to-graph-relational-databases

@@ -14,8 +14,8 @@ bio: Edwin Derks is a Java Champion from The Netherlands who loves solving compl
 tagLine: Principal Consultant @ Team Rockstars IT
 profilePicture: https://sessionize.com/image/9c78-400o400o1-UHRcZFKohV5QFcuAmP5qdU.jpg
 sessions:
-- id: 538286
-  name: How Composable Architectures can actually solve the reasons for Microservices
+- id: 538291
+  name: Optimize your applications to the max with Jakarta EE and MicroProfile
 isTopSpeaker: false
 links:
 - title: Twitter

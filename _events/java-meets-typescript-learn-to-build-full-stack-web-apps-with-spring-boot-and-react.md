@@ -34,6 +34,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Web and Front-end
 format: session
 slug: java-meets-typescript-learn-to-build-full-stack-web-apps-with-spring-boot-and-react

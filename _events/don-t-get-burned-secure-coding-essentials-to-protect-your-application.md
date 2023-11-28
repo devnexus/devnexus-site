@@ -41,6 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Security
 format: session
 slug: don-t-get-burned-secure-coding-essentials-to-protect-your-application

@@ -35,6 +35,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Architecture
 format: session
 slug: a-design-pattern-goes-to-the-supermarket

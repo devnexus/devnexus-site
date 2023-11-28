@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Frameworks
 format: session
 slug: junit-5-s-best-features

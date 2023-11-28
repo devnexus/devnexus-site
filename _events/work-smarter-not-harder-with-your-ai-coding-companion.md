@@ -39,6 +39,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Tools and techniques
 format: session
 slug: work-smarter-not-harder-with-your-ai-coding-companion

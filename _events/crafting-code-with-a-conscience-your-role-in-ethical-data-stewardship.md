@@ -32,6 +32,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Agile
 format: session
 slug: crafting-code-with-a-conscience-your-role-in-ethical-data-stewardship

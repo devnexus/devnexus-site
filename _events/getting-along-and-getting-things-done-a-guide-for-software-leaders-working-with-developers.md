@@ -40,6 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Practices and other tech
 format: session
 slug: getting-along-and-getting-things-done-a-guide-for-software-leaders-working-with-developers

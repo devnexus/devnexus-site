@@ -31,6 +31,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Web and Front-end
 format: session
 slug: vue-for-react-developers

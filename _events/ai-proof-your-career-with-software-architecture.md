@@ -46,6 +46,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Artificial Intelligence
 format: session
 slug: ai-proof-your-career-with-software-architecture

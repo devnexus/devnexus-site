@@ -16,6 +16,8 @@ profilePicture: https://sessionize.com/image/ded1-400o400o1-SGC7uFHgArjkpx1792oN
 sessions:
 - id: 557361
   name: Building RESTful Web Services with Jakarta EE
+- id: 538312
+  name: Jakarta EE 11 - Performance and Developer Productivity
 isTopSpeaker: false
 links:
 - title: Twitter

@@ -39,6 +39,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Cloud Technology
 format: session
 slug: build-next-generation-big-data-applications-with-delta-lake

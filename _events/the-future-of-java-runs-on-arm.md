@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Java Platform
 format: session
 slug: the-future-of-java-runs-on-arm

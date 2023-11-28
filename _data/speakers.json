@@ -120,6 +120,48 @@
     "categories": []
   },
   {
+    "id": "1d4bcc79-5cdf-4ea2-8b78-6e2806b54944",
+    "firstName": "Aleks",
+    "lastName": "Seovic",
+    "fullName": "Aleks Seovic",
+    "bio": "Aleks Seović is an architect at Oracle where he works on Coherence—a leading open source in-memory data grid—and contributes to the Helidon microservices framework. \r\n\r\nMost recently, Aleks led the design and implementation of the Helidon gRPC framework, as well as CDI and Eclipse MicroProfile support in Oracle Coherence. He currently leads the implementation of Oracle Coherence native clients, GraphQL support, and Helidon, Micronaut and Spring integration, and serves as the spec lead for the Jakarta RPC specification, which aims to make implementation of gRPC services in Java as simple as possible.",
+    "tagLine": "Architect, Oracle Coherence",
+    "profilePicture": "https://sessionize.com/image/7767-400o400o1-Go5SYe5NTjx78m6SjUorzk.jpg",
+    "sessions": [
+      {
+        "id": 581606,
+        "name": "Leveraging Jakarta EE 10 Core Profile in Stateful Microservices"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/aseovic",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@aseovic",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
     "firstName": "Alex",
     "lastName": "Riviere",
@@ -417,8 +459,8 @@
     "profilePicture": "https://sessionize.com/image/6abf-400o400o1-Q5yv5bCxSmhNFnQAFVEYRF.jpg",
     "sessions": [
       {
-        "id": 541686,
-        "name": "Using AI to Deploy Java apps to Kubernetes"
+        "id": 551596,
+        "name": "Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI"
       }
     ],
     "isTopSpeaker": false,
@@ -972,6 +1014,48 @@
     "categories": []
   },
   {
+    "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+    "firstName": "DaShaun",
+    "lastName": "Carter",
+    "fullName": "DaShaun Carter",
+    "bio": "DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu. Deliberately practicing to build, run, and manage, better software, faster.",
+    "tagLine": "Spring Developer Advocate, VMware Tanzu",
+    "profilePicture": "https://sessionize.com/image/d244-400o400o1-BvDf1x1yDTviz1mo3h9aUH.png",
+    "sessions": [
+      {
+        "id": 577755,
+        "name": "Enhancing Software Design with Spring Modulith"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/dashaun",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "VMware",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dashaun",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "13f2987c-b5e6-4a8e-a039-e97f93f20670",
     "firstName": "Denis",
     "lastName": "Magda",
@@ -1095,8 +1179,8 @@
     "profilePicture": "https://sessionize.com/image/9c78-400o400o1-UHRcZFKohV5QFcuAmP5qdU.jpg",
     "sessions": [
       {
-        "id": 538286,
-        "name": "How Composable Architectures can actually solve the reasons for Microservices"
+        "id": 538291,
+        "name": "Optimize your applications to the max with Jakarta EE and MicroProfile"
       }
     ],
     "isTopSpeaker": false,
@@ -1205,6 +1289,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@eliasnogueira",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+    "firstName": "Emily",
+    "lastName": "Jiang",
+    "fullName": "Emily Jiang",
+    "bio": "Emily Jiang is a Java Champion. She is Liberty Cloud Native Architect and Chief Advocate, Senior Technical Staff Member (STSM) in IBM, based at Hursley Lab in the UK. Emily is a MicroProfile guru and has been working on MicroProfile since 2016 and leads a number of specifications including MicroProfile Config and Fault Tolerance. She interacts with most of the other MicroProfile specifications. She is also active in Jakarta EE specifications. She is a co-lead in Jakarta Config and also a Jakarta Context and Dependency Injection  (CDI) committer. At IBM, she leads the effort of implementing all of MicroProfile specifications on Open Liberty.\r\n\r\nShe is passionate about MicroProfile and Jakarta EE. She regularly speaks at conferences, such as QCon, Code One, DevNexus, JAX London, Voxxed, Devoxx, EclipseCon, GeeCon, JFokus, etc. \r\n\r\nConnect with Emily on Twitter @emilyfhjiang LinkedIn (https://www.linkedin.com/in/emilyfhjiang).\r\n\r\n",
+    "tagLine": "IBM, Cloud Native Architect and Chief Advocate",
+    "profilePicture": "https://sessionize.com/image/1303-400o400o1-PVqjEq2VCaNo8irVtYX6D6.jpg",
+    "sessions": [
+      {
+        "id": 551596,
+        "name": "Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/emilyfhjiang",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "emilyfhjiang",
         "sort": 21,
         "answerExtra": null
       }
@@ -1456,7 +1582,7 @@
     "firstName": "Gerrit",
     "lastName": "Grunwald",
     "fullName": "Gerrit Grunwald",
-    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
     "tagLine": "Senior Developer Advocate at Azul Systems",
     "profilePicture": "https://sessionize.com/image/f7ac-400o400o1-DZYSvNYq2n8gn4Qzy9FnQs.png",
     "sessions": [
@@ -1671,6 +1797,10 @@
       {
         "id": 557361,
         "name": "Building RESTful Web Services with Jakarta EE"
+      },
+      {
+        "id": 538312,
+        "name": "Jakarta EE 11 - Performance and Developer Productivity"
       }
     ],
     "isTopSpeaker": false,
@@ -1832,7 +1962,7 @@
     "firstName": "Jeanne",
     "lastName": "Boyarsky",
     "fullName": "Jeanne Boyarsky",
-    "bio": "Jeanne Boyarsky is a Java Champion and published author. She co-authored Sybex’s hugely popular Java 8/11/17 certification books with Scott Selikoff. Jeanne is a Java developer with 21 years experience and volunteers with a FIRST robotics team.  She has spoken at DevNexus, KCDC, JavaOne, and QCon.  Jeanne is a Distinguished Toastmaster which involves giving over 50 public speeches. For more on Jeanne’s professional experience:, see https:/jeanneboyarsky.com",
+    "bio": "Jeanne Boyarsky is a Java Champion and published author. She co-authored Sybex’s hugely popular Java 8/11/17 certification books with Scott Selikoff. Jeanne is a Java developer with 21 years experience and volunteers with a FIRST robotics team.  She has spoken at DevNexus, KCDC, JavaOne, and QCon.  Jeanne is a Distinguished Toastmaster which involves giving over 50 public speeches. For more on Jeanne’s professional experience:, see https:/jeanneboyarsky.com",
     "tagLine": "Java 17 Cert Book Author",
     "profilePicture": "https://sessionize.com/image/358a-400o400o1-nq4UVkGbNkoPzyPbhNdfqZ.jpg",
     "sessions": [
@@ -2612,6 +2742,42 @@
     "categories": []
   },
   {
+    "id": "d09139fc-ca39-47ec-a66c-31f68b6bc49f",
+    "firstName": "Kyle",
+    "lastName": "Aure",
+    "fullName": "Kyle Aure",
+    "bio": "Kyle Aure is a Software Developer at IBM working on Open Liberty.  He is an avid committer to the Jakarta Concurrency and Jakarta Data specifications.  He has a passion for database access and diversity/inclusion in the developer profession.\r\n\r\nKyle has a degree in Computer Science from Winona State University.  He is also a master knitter and is easily spotted in crowds while wearing hand-knit sweaters.",
+    "tagLine": "Software Developer @IBM",
+    "profilePicture": "https://sessionize.com/image/6699-400o400o1-JzuASRUE9dH6FDyFFLXMap.jpg",
+    "sessions": [
+      {
+        "id": 550866,
+        "name": "Exploring the Data Universe: Portability with Jakarta Data and Open Liberty"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "none, deleted after Elon took over twitter.",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "453dc8ab-94d9-4858-923a-ecddaa493949",
     "firstName": "Lawrence",
     "lastName": "Lockhart",
@@ -2647,6 +2813,42 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@LawrenceDCodes",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "fd225e4e-f75a-48c9-97e9-10bb0564d683",
+    "firstName": "Luis",
+    "lastName": "Neto",
+    "fullName": "Luis Neto",
+    "bio": "Luis is a Software Developer at Payara Services, the market leading providers of application server technology and key contributors to the Jakarta EE working group. He is a Jakarta EE and MicroProfile Expert. ",
+    "tagLine": "Payara Services Java Software Developer",
+    "profilePicture": "https://sessionize.com/image/eac4-400o400o1-9PNKwL32JtmaBoexGU398v.png",
+    "sessions": [
+      {
+        "id": 571596,
+        "name": "Securing Your Enterprise Apps - Jakarta Security In Jakarta EE 11 And Beyond"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Payara Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@payara_fish",
         "sort": 21,
         "answerExtra": null
       }
@@ -3755,6 +3957,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@tier1app",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8a4b1a5b-575a-402f-9ab1-417c1c1f08e0",
+    "firstName": "Reza",
+    "lastName": "Rahman",
+    "fullName": "Reza Rahman",
+    "bio": "Reza Rahman is Principal Program Manager for Java on Azure at Microsoft. He works to make sure Java developers are first class citizens at Microsoft and Microsoft is a first class citizen of the Java ecosystem.\r\n\r\nReza has been an official Java technologist at Oracle. He is the author of the popular book EJB 3 in Action from Manning Publishing. Reza has long been a frequent speaker at Java User Groups and conferences worldwide including JavaOne and Devoxx. He has been the lead for the Java EE track at JavaOne as well as a JavaOne Rock Star Speaker award recipient. He was the program chair for the inaugural JakartaOne conference. Reza is an avid contributor to industry journals like JavaLobby/DZone and TheServerSide. He has been a member of the Java EE, EJB and JMS expert groups over the years. Reza implemented the EJB container for the Resin open source Java EE application server. He helps lead the Philadelphia Java User Group. Reza is proud to be a founding member of the Jakarta EE Ambassadors.",
+    "tagLine": "Principal Program Manager, Java on Azure at Microsoft",
+    "profilePicture": "https://sessionize.com/image/8911-400o400o1-MiREP4Mzrcx4RZaALXMH9g.jpg",
+    "sessions": [
+      {
+        "id": 549583,
+        "name": "Hyperscale Jakarta EE PaaS on Azure"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/reza_rahman",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@reza_rahman",
         "sort": 21,
         "answerExtra": null
       }

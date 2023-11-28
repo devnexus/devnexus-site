@@ -39,6 +39,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Security
 format: session
 slug: don-t-expect-developers-to-be-security-experts

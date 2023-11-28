@@ -36,6 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Practices and other tech
 format: session
 slug: community-hacks-to-enhance-your-career

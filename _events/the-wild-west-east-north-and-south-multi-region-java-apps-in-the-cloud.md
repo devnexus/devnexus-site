@@ -36,6 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Cloud Technology
 format: session
 slug: the-wild-west-east-north-and-south-multi-region-java-apps-in-the-cloud

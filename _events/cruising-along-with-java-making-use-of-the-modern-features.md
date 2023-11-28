@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Core Java
 format: workshop
 slug: cruising-along-with-java-making-use-of-the-modern-features

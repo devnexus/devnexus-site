@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Frameworks
 format: session
 slug: weaving-spring-cloud-gateway-on-loom

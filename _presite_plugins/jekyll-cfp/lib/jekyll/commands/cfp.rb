@@ -1,4 +1,5 @@
 require 'net/http'
+require 'fileutils'
 module Jekyll
   module Commands
     class Cfp < Command
@@ -58,7 +59,7 @@ module Jekyll
         def process_speaker_collection( event_data )
           speaker_json = JSON.parse(event_data)
           Jekyll.logger.info("Reading #{speaker_json.length} speakers from cfp")
-          
+          FileUtils.rm Dir.glob("_speakers/*.md")
           for speaker in speaker_json do
              speaker["slug"] = Jekyll::Utils.slugify(speaker["fullName"])
              write_item("speakers", speaker, "")
@@ -70,6 +71,7 @@ module Jekyll
           events = event_json[0]["sessions"]
           #puts(events)
           Jekyll.logger.info("Reading #{events.length} events from cfp")
+          FileUtils.rm Dir.glob("_events/*.md")
           for event in events do
              #puts(event)
             if (! event["categories"].empty?)

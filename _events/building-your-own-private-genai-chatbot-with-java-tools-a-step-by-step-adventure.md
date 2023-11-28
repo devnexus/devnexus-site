@@ -44,6 +44,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Artificial Intelligence
 format: session
 slug: building-your-own-private-genai-chatbot-with-java-tools-a-step-by-step-adventure

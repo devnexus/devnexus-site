@@ -33,6 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Tools and techniques
 format: session
 slug: effectively-troubleshoot-9-types-of-outofmemoryerror

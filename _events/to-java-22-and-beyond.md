@@ -34,6 +34,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Core Java
 format: session
 slug: to-java-22-and-beyond

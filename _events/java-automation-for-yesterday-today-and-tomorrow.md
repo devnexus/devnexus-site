@@ -47,6 +47,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Unobtanium
 format: session
 slug: java-automation-for-yesterday-today-and-tomorrow

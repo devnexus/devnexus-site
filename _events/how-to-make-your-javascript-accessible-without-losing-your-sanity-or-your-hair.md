@@ -41,6 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Web and Front-end
 format: session
 slug: how-to-make-your-javascript-accessible-without-losing-your-sanity-or-your-hair

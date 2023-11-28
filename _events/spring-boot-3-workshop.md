@@ -43,6 +43,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Frameworks
 format: workshop
 slug: spring-boot-3-workshop

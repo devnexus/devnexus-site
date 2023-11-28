@@ -32,6 +32,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Practices and other tech
 format: session
 slug: finops-tooling-is-a-magic-wand-for-enhancing-performance-and-customer-value

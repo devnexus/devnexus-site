@@ -41,6 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Agile
 format: session
 slug: product-centricity-and-agility-mega-powers-combined

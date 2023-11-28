@@ -43,6 +43,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
+isInformed: false
+isConfirmed: false
 track: Core Java
 format: workshop
 slug: mastering-modern-concurrency-in-java-a-comprehensive-deep-dive-with-virtual-threads
