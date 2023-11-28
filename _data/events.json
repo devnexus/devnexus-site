@@ -46,7 +46,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -91,7 +93,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -136,7 +140,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -181,7 +187,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -226,7 +234,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -271,7 +281,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -316,7 +328,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -361,7 +375,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -406,7 +422,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -451,7 +469,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -496,7 +516,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -541,7 +563,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -586,7 +610,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -635,7 +661,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -680,7 +708,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -725,7 +755,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -774,7 +806,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -819,7 +853,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -864,7 +900,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -909,7 +947,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -954,7 +994,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -999,7 +1041,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1048,7 +1092,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1093,7 +1139,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1138,7 +1186,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1183,7 +1233,56 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "577478",
+        "title": "Choose Your Own Performance; a Project Leyden Update!",
+        "description": "Project Leyden allows developers to selectively improve startup time, time to peak performance, and the footprint of Java programs, by doubling down on Java's super power of speculative optimization using capabilities built directly into the JDK. See how speculative optimizations allow AOT (ahead-of-time compilation) code to make tradeoffs between Java's static and dynamic nature as well as how new tools like Condensers and ComputedConstants may play role in further improvements.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "00018bec-730b-4775-bfb5-67cb589c7042",
+            "name": "Dan Heidinga"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207655,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1228,7 +1327,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1273,7 +1374,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1318,7 +1421,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1363,7 +1468,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1408,7 +1515,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1453,7 +1562,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1498,7 +1609,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1543,7 +1656,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1588,7 +1703,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1633,7 +1750,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1682,7 +1801,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1727,52 +1848,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
-      },
-      {
-        "questionAnswers": [],
-        "id": "537933",
-        "title": "Demystifying the Digital Dystopia: Improving User Generated Content Platforms with AI and ML",
-        "description": "In the past year, GPT-4 opened the world’s eyes to the power of Artificial Intelligence. This awakening has brought concerns of neural networks that blur the lines of reality and sentient systems that will take over the internet and push their own evil agenda on the masses. In reality, these developments in AI technology have the power to be used to make the internet a better place by helping with mundane tasks like content detection and moderation. \r\n\r\nIn this session, we’ll look at various approaches to content detection and moderation of live streaming platforms, and how to improve them with the help of AI. We’ll see how to analyze live streams for offensive or inappropriate content and use that analysis as a prompt for moderator intervention. We’ll also see how we can use AI content detection to assist in stream discovery, monetization and how to analyze chat messages for sentiment analysis and PII detection. ",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "886d1d0c-c615-48f7-acac-e833f4950134",
-            "name": "Todd Sharp"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207673,
-                "name": "Artificial Intelligence"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1817,7 +1895,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1862,7 +1942,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1907,7 +1989,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1952,7 +2036,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1997,7 +2083,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2042,7 +2130,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2087,7 +2177,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2132,7 +2224,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2177,7 +2271,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2222,7 +2318,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2271,7 +2369,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2316,7 +2416,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2361,7 +2463,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2410,7 +2514,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2455,7 +2561,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2500,7 +2608,56 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "537737",
+        "title": "Jakarta EE 11: Going Beyond the Era of Java EE",
+        "description": "Since its introduction in 2018 as Jakarta EE, the platform has evolved from: Jakarta EE 8, an open-source version of Java EE 8; to Jakarta EE 9, the \"big bang\" release; to Jakarta EE 10 that introduced the Core Profile.\r\n\r\nJakarta EE 11, scheduled for a GA release in 1Q2024, will introduce new specifications, provide updated specifications, and set the baseline to Java 21, the latest LTS release.\r\n\r\nThis presentation will provide a brief history of JavaEE/Jakarta EE and a review of new and updated specifications with code examples.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9820a802-240a-4fc0-9541-36ff1c2f760b",
+            "name": "Michael Redlich"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 219279,
+                "name": "JakartaEE"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2545,7 +2702,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2594,7 +2753,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2639,7 +2800,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2688,7 +2851,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2733,7 +2898,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2778,7 +2945,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2823,7 +2992,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2868,7 +3039,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2913,7 +3086,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -2958,7 +3133,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3003,7 +3180,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3048,7 +3227,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3093,52 +3274,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
-      },
-      {
-        "questionAnswers": [],
-        "id": "557295",
-        "title": "Leveraging Event Streaming to Boost LLMs with Retrieval Augmented Generation",
-        "description": "Large pre-trained language foundation models (LLMs), such as ChatGPT, that are pre-trained offline have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream natural language processing (NLP) tasks. However, their ability to access and precisely manipulate knowledge, especially with up-to-date knowledge, is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures.  \r\n\r\nTo overcome such limitations, Retrieval Augmentation Generation (RAG) is a technique that can be utilized to retrieve data from outside a foundation model, and as such, it can be used for augmenting the prompts by injecting the relevant retrieved data into the context.   RAG has proven to be more cost-effective and efficient than pre-training or fine-tuning foundation models, and can help to reduce hallucinations in LLMs.\r\n\r\nWe’ll take a look at how utilizing an event-driven streaming approach, by using a new open source library, LangStream, can quickly integrate your existing data in motion into generative AI applications such as with prompt engineering and the RAG pattern.  LangStream can be used with Apache Kafka or Apache Pulsar underneath as the event streaming and message broker platform.",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "e2712384-1dff-4eb7-8dbf-77e621e4d274",
-            "name": "Mary Grygleski"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207673,
-                "name": "Artificial Intelligence"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3183,7 +3321,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3228,7 +3368,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3273,7 +3415,56 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "540558",
+        "title": "ML in Java, YES it's possible!",
+        "description": "When you think about building and/or deploying machine learning models, Java is not within the top 3 languages that we generally think of. Nonetheless Java has a strong community, with millions of developers using it as their main language.\r\nWith the AI buzz spiking in the past month, All developers, and especially Java developers, need to understand how to build and run apps that use ML. In this session we are going to explore what are our options, as java developers, to build, save and run machine learning models.We are also going to discuss and compare the most 3 popular frameworks (Deeplearning4J, djl and Tribuo), along with a real world example to understand capabilities and tradeoffs of each framework. We will also briefly cover JSR381, an open-source, Java-friendly API for ML, specifically visual recognition",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "df2764ce-246c-406d-8cba-c3515e254253",
+            "name": "Mohammed Aboullaite"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207657,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3318,7 +3509,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3363,7 +3556,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3408,7 +3603,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3453,7 +3650,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3498,7 +3697,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3543,7 +3744,56 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "556894",
+        "title": "Quarkus in the Cloud: Strategies for Teams and Topolgies",
+        "description": "Java is a powerhouse of a language suitable for use in many environments, footprints, and form-factors. As we collectively learn more about how to write cloud applications, we're seeing more nuanced discussions about how we build applications: should we be using monoliths or microservices? Should I use cloud functions? What is a modular monolith and is it a good idea or not?  These choices require thoughtful architectural decisions and optimization strategies, not only at the code level but also in fostering effective teamwork. This talk delves deep into the architectural nuances and trade-offs essential for making informed decisions in these deployment paradigms.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f6c77911-6612-4b72-9832-63409826e785",
+            "name": "Erin Schnabel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Unobtanium"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3588,7 +3838,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3637,7 +3889,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3686,7 +3940,56 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "568379",
+        "title": "Scalable Machine Learning with PyTorch,  Kubeflow and Kubernetes",
+        "description": "In the dynamic world of machine learning, data scientists and engineers face a constant challenge to design, train, and deploy models at scale while maintaining flexibility and reproducibility. PyTorch, a popular deep learning framework, Kubeflow, an advanced machine learning platform built on Kubernetes, and Kubernetes, a leading container orchestration system, have emerged as a triumphant trio to tackle these complex demands.\r\nWith Kubeflow, data teams can effortlessly manage distributed training, hyperparameter tuning, and model serving, leveraging the scalability and fault tolerance of Kubernetes.\r\nThis talk will explore the seamless integration of PyTorch with Kubeflow over Kubernetes orchestration platform to efficiently design and train models on any scale. \r\n\r\nTo begin, we will provide an overview of PyTorch, highlighting its strengths in building dynamic and efficient deep learning models.\r\nNext, we will delve into Kubeflow's core capabilities, elucidating how it extends Kubernetes to orchestrate end-to-end machine learning workflows.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+            "name": "Mo Haghighi"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207673,
+                "name": "Artificial Intelligence"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3731,7 +4034,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3776,7 +4081,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3821,7 +4128,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3866,7 +4175,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3911,7 +4222,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3956,7 +4269,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4001,7 +4316,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4046,7 +4363,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4091,7 +4410,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4136,7 +4457,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4185,7 +4508,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4230,7 +4555,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4275,7 +4602,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4320,7 +4649,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4365,7 +4696,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4410,7 +4743,60 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "547437",
+        "title": "Unlocking Dramatic Savings: Optimize your App and Database Footprint with Serverless Java",
+        "description": "In the dynamic world of cloud-native apps, efficient microservices are crucial. This talk introduces a groundbreaking blend of serverless computing. Serverless architecture simplify containerized app deployment and scaling, letting developers focus on coding, not infrastructure. EclipseStore is a high-performance, in-memory data platform. This combination offers: 1) Seamless Scalability: Dynamic microservice scaling with Serverless optimizes resource use, minimizes overhead. 2) Data Efficiency: EclipseStore's in-memory data processing boosts data access speed, reduces latency. 3) Cost Savings: serverless computing cuts infrastructure costs, eliminates server management. EclipseStore eliminates data storage costs.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f465d18e-ff85-47b9-9997-f00a602ac48d",
+            "name": "Markus Kett"
+          },
+          {
+            "id": "c53d0ee3-4ee1-4a19-ac0a-26a38a4c43af",
+            "name": "Richard Fichtner"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207653,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4455,7 +4841,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4504,7 +4892,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4549,7 +4939,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4594,7 +4986,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4639,7 +5033,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4684,7 +5080,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4729,7 +5127,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4778,7 +5178,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4823,7 +5225,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4868,7 +5272,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -4917,7 +5323,9 @@
         "room": null,
         "liveUrl": null,
         "recordingUrl": null,
-        "status": "Accepted"
+        "status": "Accepted",
+        "isInformed": false,
+        "isConfirmed": false
       }
     ],
     "isDefault": false

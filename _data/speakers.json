@@ -894,6 +894,42 @@
     "categories": []
   },
   {
+    "id": "00018bec-730b-4775-bfb5-67cb589c7042",
+    "firstName": "Dan",
+    "lastName": "Heidinga",
+    "fullName": "Dan Heidinga",
+    "bio": "Dan Heidinga is an Architect on the Runtimes team at Oracle.  He has a long history of JVM development across multiple companies and JVMs.  He's currently involved in Project Valhalla, Project Leyden, and others at OpenJDK.",
+    "tagLine": "Oracle, Runtime Architect",
+    "profilePicture": "https://sessionize.com/image/0a69-400o400o1-fEXKXEfcmSTjz2hf3kPYA7.png",
+    "sessions": [
+      {
+        "id": 577478,
+        "name": "Choose Your Own Performance; a Project Leyden Update!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@DanHeidinga",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
     "firstName": "Daniel",
     "lastName": "Hinojosa",
@@ -1260,6 +1296,42 @@
     "categories": []
   },
   {
+    "id": "f6c77911-6612-4b72-9832-63409826e785",
+    "firstName": "Erin",
+    "lastName": "Schnabel",
+    "fullName": "Erin Schnabel",
+    "bio": "Erin Schnabel (@ebullientworks) is a Distinguished Engineer and maker of things at Red Hat. She is a Java Champion, with over 25 years under her belt as a developer, technical leader, architect and advocate, and she strongly prefers being up to her elbows in code. Erin learns (and teaches) by coding ridiculous things, like \"Monster Combat\" (https://github.com/ebullient/monster-combat), an application that makes monsters fight each other to explore application metrics; and “Game On! Text Adventure” (https://gameontext.org) for exploring cloud native development.",
+    "tagLine": "Distinguished Engineer, Maker of Things",
+    "profilePicture": "https://sessionize.com/image/90b4-400o400o1-S95Uj3n1PmqQz5PprpDvXn.jpg",
+    "sessions": [
+      {
+        "id": 556894,
+        "name": "Quarkus in the Cloud: Strategies for Teams and Topolgies"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ebullientworks",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "2f4018fc-6f1a-484c-9297-383fb1a5c4ae",
     "firstName": "François",
     "lastName": "Martin",
@@ -1384,7 +1456,7 @@
     "firstName": "Gerrit",
     "lastName": "Grunwald",
     "fullName": "Gerrit Grunwald",
-    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and has participated in popular projects like JFXtras.org as well as his own projects (TilesFX, Medusa, Enzo, SteelSeries Swing, SteelSeries Canvas). \r\nGerrit blogs regularly at http://harmonic-code.org, he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
     "tagLine": "Senior Developer Advocate at Azul Systems",
     "profilePicture": "https://sessionize.com/image/f7ac-400o400o1-DZYSvNYq2n8gn4Qzy9FnQs.png",
     "sessions": [
@@ -1760,7 +1832,7 @@
     "firstName": "Jeanne",
     "lastName": "Boyarsky",
     "fullName": "Jeanne Boyarsky",
-    "bio": "Jeanne Boyarsky is a Java Champion and published author. She co-authored Sybex’s hugely popular Java 8/11/17 certification books with Scott Selikoff. Jeanne is a Java developer with 21 years experience and volunteers with a FIRST robotics team.  She has spoken at DevNexus, KCDC, JavaOne, and QCon.  Jeanne is a Distinguished Toastmaster which involves giving over 50 public speeches. For more on Jeanne’s professional experience:, see https:/jeanneboyarsky.com",
+    "bio": "Jeanne Boyarsky is a Java Champion and published author. She co-authored Sybex’s hugely popular Java 8/11/17 certification books with Scott Selikoff. Jeanne is a Java developer with 21 years experience and volunteers with a FIRST robotics team.  She has spoken at DevNexus, KCDC, JavaOne, and QCon.  Jeanne is a Distinguished Toastmaster which involves giving over 50 public speeches. For more on Jeanne’s professional experience:, see https:/jeanneboyarsky.com",
     "tagLine": "Java 17 Cert Book Author",
     "profilePicture": "https://sessionize.com/image/358a-400o400o1-nq4UVkGbNkoPzyPbhNdfqZ.jpg",
     "sessions": [
@@ -2923,6 +2995,10 @@
       {
         "id": 547420,
         "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
+      },
+      {
+        "id": 547437,
+        "name": "Unlocking Dramatic Savings: Optimize your App and Database Footprint with Serverless Java"
       }
     ],
     "isTopSpeaker": false,
@@ -2947,48 +3023,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@MarkusKett",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "e2712384-1dff-4eb7-8dbf-77e621e4d274",
-    "firstName": "Mary",
-    "lastName": "Grygleski",
-    "fullName": "Mary Grygleski",
-    "bio": "Mary is a Java Champion and a passionate Senior Developer Advocate at DataStax, a leading data management company that champions Open Source software and specializes in Big Data, DB-as-a-service, Streaming, and Cloud-Native systems.  She spent 3.5 years as a very effective advocate at IBM, focusing on Java, Jakarta EE, OpenJ9, Open Source, Cloud, and Distributed Systems.  She transitioned from Unix/C to Java around 2000 and has never looked back since then.  She considers herself a polyglot and loves to continue learning new and better ways to solve real-life problems. She is an active tech community builder outside of her day job, and currently the President of the Chicago Java Users Group (CJUG), as well as a co-organizer for several IBM-sponsored meetup groups in the Greater Chicago area.\r\n",
-    "tagLine": "Senior Developer Advocate at DataStax, Java Champion, President of Chicago-JUG",
-    "profilePicture": "https://sessionize.com/image/f34a-400o400o1-nGwhtD9Nq7F1Ww4mR7e79D.jpg",
-    "sessions": [
-      {
-        "id": 557295,
-        "name": "Leveraging Event Streaming to Boost LLMs with Retrieval Augmented Generation"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/mgrygles",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "DataStax",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@mgrygles",
         "sort": 21,
         "answerExtra": null
       }
@@ -3145,6 +3179,132 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@mhall119",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9820a802-240a-4fc0-9541-36ff1c2f760b",
+    "firstName": "Michael",
+    "lastName": "Redlich",
+    "fullName": "Michael Redlich",
+    "bio": "Michael Redlich has been an active member within the Java community for the past 25 years. He founded the Garden State Java User Group (formerly the ACGNJ Java Users Group) in 2001 that remains in continuous operation. Since 2016, Mike serves as a Java community news editor for InfoQ where his contributions include monthly news items, technical writing and technical reviews.\r\n\r\nHe has presented at venues such as Oracle Code One, Emerging Technologies for the Enterprise (ETE), Trenton Computer Festival (TCF), TCF IT Professional Conference, and numerous Java User Groups. Mike serves as a committer on the Jakarta NoSQL and Jakarta Data specifications and participates on the leadership council of the Jakarta EE Ambassadors. He was named a Java Champion in April 2023.\r\n\r\nWith 33-1/2 years service, Mike recently retired from ExxonMobil Technology & Engineering in Clinton, New Jersey with experience in developing custom scientific laboratory and web applications. He also has experience as a Technical Support Engineer at Ai-Logix, Inc. (now AudioCodes) where he provided technical support and developed telephony applications for customers.",
+    "tagLine": "Java Champion | Garden State JUG Director | InfoQ Java Queue Editor",
+    "profilePicture": "https://sessionize.com/image/6bd5-400o400o1-JCd9zwtZCoVEdeVsqrCFLM.jpg",
+    "sessions": [
+      {
+        "id": 537737,
+        "name": "Jakarta EE 11: Going Beyond the Era of Java EE"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mpredli",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Garden State Java User Group",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mpredli",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+    "firstName": "Mo",
+    "lastName": "Haghighi",
+    "fullName": "Mo Haghighi",
+    "bio": "Dr Mo Haghighi is distinguished engineer/director for Cloud Platform and Infrastructure at Discover Financial Services. His current focus is hybrid and multi-cloud strategy, application modernisation and automating application/workload migration across public and private clouds. Previously, he held various leadership positions as a program director at IBM, where he led Developer Ecosystem and Cloud Engineering teams in 27 countries across Europe, Middle East and Africa. Prior to IBM, he was a research scientist at Intel and a Java developer at Sun Microsystems/Oracle. Mo obtained a PhD in computer science, and his primary areas of expertise are distributed and edge computing, cloud native, IoT and AI, with several publications and patents in those areas. Mo is a regular keynote/speaker at major developer conferences including DevOpsCon, Java/Code One, Codemotion, DevRelCon, O’Reilly, The Next Web, DevNexus, IEEE/ACM, ODSC, AiWorld, CloudConf and Pycon.",
+    "tagLine": "Distinguished Engineer",
+    "profilePicture": "https://sessionize.com/image/847b-400o400o1-c2-96d9-4b4a-b2c8-99dd2efb77a7.821c48d1-543c-4922-b5b1-f9e6b8dbb291.JPEG",
+    "sessions": [
+      {
+        "id": 568379,
+        "name": "Scalable Machine Learning with PyTorch,  Kubeflow and Kubernetes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/mohaghighi",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Discover Financial Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mohaghighi",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "df2764ce-246c-406d-8cba-c3515e254253",
+    "firstName": "Mohammed",
+    "lastName": "Aboullaite",
+    "fullName": "Mohammed Aboullaite",
+    "bio": "Mohammed is a community catalyst, a true open source believer and one of Google developer expert.",
+    "tagLine": "Backend engineer, Spotify",
+    "profilePicture": "https://sessionize.com/image/ed64-400o400o1-QKB71Uk8WRw1XYdxLjDu4h.jpg",
+    "sessions": [
+      {
+        "id": 540558,
+        "name": "ML in Java, YES it's possible!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/laytoun",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Spotify",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@laytoun",
         "sort": 21,
         "answerExtra": null
       }
@@ -3679,6 +3839,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@rhagarty8",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c53d0ee3-4ee1-4a19-ac0a-26a38a4c43af",
+    "firstName": "Richard",
+    "lastName": "Fichtner",
+    "fullName": "Richard Fichtner",
+    "bio": "Richard Fichtner is Principal Software Architect at XDEV Software GmbH and has worked in the software industry for more than 20 years, often at the interface between business and technology. He is involved in the open-source community to spread knowledge about Java technologies. He speaks at conferences and contributes to various open-source projects such as https://www.rapidclipse.com/. Richard is a leader of the Java User Group Oberpfalz, Co-organizer of JCON conferences https://jcon.one/, recognized as Oracle ACE Pro and holds a Master of Science degree in applied computer science. He is passionate about enabling developer productivity and supports teams in the use of cloud solutions. His interests are Java, clean code, cloud, new technologies and everything pragmatic.",
+    "tagLine": "Principal Software Architect / CEO at XDEV Software GmbH",
+    "profilePicture": "https://sessionize.com/image/0dfd-400o400o1-SxrV6UaTfdNi5HK88LWvKW.jpg",
+    "sessions": [
+      {
+        "id": 547437,
+        "name": "Unlocking Dramatic Savings: Optimize your App and Database Footprint with Serverless Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/RichardFichtner",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JUG Oberpfalz / XDEV Software",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@RichardFichtner",
         "sort": 21,
         "answerExtra": null
       }
@@ -4541,48 +4743,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@toddlibby",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "886d1d0c-c615-48f7-acac-e833f4950134",
-    "firstName": "Todd",
-    "lastName": "Sharp",
-    "fullName": "Todd Sharp",
-    "bio": "I’m a developer who advocates and evangelizes about interactive video streaming at Twitch. I’ve been writing code since 2004, and feel extremely lucky to be paid to do what I love and am truly passionate about. As part of my role as a Developer Advocate, I write lots of demos to show other developers how to use certain languages, frameworks, and technologies to solve the problems that they face every day. I have a background in writing and a love for theater, so I’m extra fortunate to have found a role that lets me use those skills and passions as part of my everyday routine. I’m married to my best friend and we live in the North Georgia mountains with our 2 kids, 8 chickens, 2 dogs, a cat, and a potbelly pig named Milton. When I’m not working, I love to cook, play video games and tinker with electronics and microcontrollers.",
-    "tagLine": "Principal Developer Advocate - Amazon Interactive Video Service - Twitch",
-    "profilePicture": "https://sessionize.com/image/ac0b-400o400o1-MZLfN7zR9gNRGgne5myrmQ.png",
-    "sessions": [
-      {
-        "id": 537933,
-        "name": "Demystifying the Digital Dystopia: Improving User Generated Content Platforms with AI and ML"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/recursivecodes",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Twitch",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@recursivecodes",
         "sort": 21,
         "answerExtra": null
       }
