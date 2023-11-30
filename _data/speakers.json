@@ -3234,8 +3234,8 @@
   {
     "id": "f44f5308-1287-4e6c-8f48-6ed26ea9f9d3",
     "firstName": "Mauricio",
-    "lastName": "\"Salaboy\" Salatino",
-    "fullName": "Mauricio \"Salaboy\" Salatino",
+    "lastName": "Salatino",
+    "fullName": "Mauricio Salatino",
     "bio": "Mauricio works as Open Source Software Engineer at @Diagrid, contributing to and driving initiatives for the Dapr OSS project. Mauricio also serves as a Steering Committee member for the Knative Project, and he is also Co-Leading the Knative Functions initiative. He is writing a book titled Platform Engineering on Kubernetes for Manning Publishing and previously worked at VMware and Red Hat, building tools to help developers be more productive.",
     "tagLine": "OSS Software Engineer @Diagrid for the @Daprdev Project",
     "profilePicture": "https://sessionize.com/image/150d-400o400o1-WV45TEFkWgpFDurtEPX2nz.jpg",
