@@ -9,6 +9,9 @@ cfp-is-open: false
 registration:
   text: REGISTER TODAY!
   status: enabled
+branding:
+  img: /assets/img/dev-nexus-logo-large.png
+  alt: Devnexus 2024
 feedback: NOTshow
 collections:
   speakers:

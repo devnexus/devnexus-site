@@ -1,0 +1,18 @@
+---
+layout: home
+---
+{% assign events = site.events | where: "track", page.track | sort: "name" %}
+<div class="featured-header">
+<h1>{{page.track | capitalize }}</h1>
+</div>
+
+{% for session in events %}
+<div class="workshop-promo-row">
+  <h2><a href="/presentations/{{session.slug}}">{{session.title}}</a></h2>
+  {% for speaker in session.speakers %}
+      {% include workshop_speaker.html data = speaker %}
+  {% endfor %}
+</div>
+{% endfor %}
+
+<a href="/presentations" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
