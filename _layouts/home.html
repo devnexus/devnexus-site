@@ -6,7 +6,7 @@ layout: default
   <div>
     {% include inline-social.html %}
     <ul class="list-inline hero-date-location">
-      {% assign dates = page.dates | default: "00-99 XXX" %}
+      {% assign dates = site.dates | default: "00-99 XXX" %}
       <li><img src="/assets/img/calendar.png"/>{{ dates | escape }}</li>
       <li><img src="/assets/img/location.png"/>Atlanta, GA</li>
     </ul>

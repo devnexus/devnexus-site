@@ -2,6 +2,7 @@
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2024
+dates: Apr 9-11, 2024
 timezone: UTC
 active-header: navigation-before-schedule.html
 cfp-is-open: false
