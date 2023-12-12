@@ -5,7 +5,9 @@ title: Devnexus 2024
 timezone: UTC
 active-header: navigation-before-schedule.html
 cfp-is-open: false
-registration: closed
+registration:
+  text: REGISTER TODAY!
+  status: enabled
 feedback: NOTshow
 collections:
   speakers:

@@ -5,7 +5,7 @@ dates: Apr 4 2023
 registration:
   text: REGISTER HERE
   status: enabled
-  link: href="https://reg.connectevents.io/ConnectEvents/devnexus2023/"
+  link: https://reg.connectevents.io/ConnectEvents/devnexus2023/
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2023
