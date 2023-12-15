@@ -12,8 +12,8 @@
   title: Gold Sponsors
 - category: silver
   title: Silver Sponsors
-- category: bronze
-  title: Bronze Sponsors
+- category: jugsummit
+  title: Bronze Sponsor
 - category: opensource
   title: Opensource RRR Jam Sponsors
 - category: lanyard
@@ -26,5 +26,7 @@
   title: Media Partner
 - category: community
   title: Community Partners
+- category: jugsummit
+  title: JUG Leaders Summit Sponsor
 - category: jug
   title: Java Users Groups at the JUG Leaders Summit
