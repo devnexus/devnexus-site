@@ -43,7 +43,7 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
+isInformed: true
 isConfirmed: false
 track: Artificial Intelligence
 format: session

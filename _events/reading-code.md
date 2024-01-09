@@ -37,8 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: reading-code

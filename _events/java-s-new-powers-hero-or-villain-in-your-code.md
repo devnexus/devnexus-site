@@ -42,8 +42,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Core Java
 format: session
 slug: java-s-new-powers-hero-or-villain-in-your-code

@@ -33,8 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Architecture
 format: session
 slug: architecting-for-resiliency-shuffle-sharding-for-workload-isolation

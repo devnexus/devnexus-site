@@ -35,8 +35,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Core Java
 format: session
 slug: cache-me-if-you-can-speed-up-your-jvm-with-project-valhalla

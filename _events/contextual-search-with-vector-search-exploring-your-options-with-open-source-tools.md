@@ -47,8 +47,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: contextual-search-with-vector-search-exploring-your-options-with-open-source-tools

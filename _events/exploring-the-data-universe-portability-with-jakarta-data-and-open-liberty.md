@@ -41,8 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: exploring-the-data-universe-portability-with-jakarta-data-and-open-liberty

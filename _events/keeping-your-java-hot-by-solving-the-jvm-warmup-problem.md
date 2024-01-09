@@ -45,8 +45,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Java Platform
 format: session
 slug: keeping-your-java-hot-by-solving-the-jvm-warmup-problem

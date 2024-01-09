@@ -36,8 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Security
 format: session
 slug: more-tales-from-the-dark-side-how-ai-is-the-bad-guys-new-friend

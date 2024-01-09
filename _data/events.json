@@ -47,8 +47,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -94,8 +94,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -141,8 +141,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -188,8 +188,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -235,7 +235,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -282,8 +282,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -329,8 +329,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -376,8 +376,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "557496",
+        "title": "API Management as Code: A declarative approach to handling API artifacts",
+        "description": "Every day software development relies more and more on APIs. Using it as part of digital transformation or just to connect some microservices, developers use APIs to connect applications and devices. API management is now a mature discipline covering the different aspects of the API lifecycle. However, managing efficiently the surge of APIs in the organization could be a challenge. Using a declarative approach makes it easier to understand and automate the desired state of APIs. It makes it easier to version, review and share with other members of the team. Some projects have started to complement their capabilities to add this declarative approach, usually in environments like Kubernetes. \r\n\r\nJoin this session to learn more about:\r\n\r\nCommon API management artifacts\r\nAn introduction to declarative vs imperative management\r\nThe operator pattern and how it helps with declarative management\r\nAn example from the 3scale operator\r\nOther projects using Kubernetes custom resources.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e546ec56-9837-46b5-b3fa-4f79381b5aaa",
+            "name": "Hugo Guerrero"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -423,8 +470,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "557701",
+        "title": "Approval Testing: When it's too late for Test-Driven Development",
+        "description": "Approval Testing may seem odd compared to Test-Driven Development, but it’s designed to let you write automated tests when you already have a large codebase (that may already be in production) and/or the business requirements are out of date, incomplete, or completely missing. While this may sound crazy, it’s something most programmers have had to deal with.\r\n\r\nThe Good News is that Approval Testing evolved as a solution for just this kind of problem. It makes the reasonable assumption that the current behavior of production code is correct, and compares it with how the system behaves after you’ve made some changes. If the results are identical then the test passes; if not, then it shows you the differences so you can decide whether the changes are correct or not. With Approval Tests in place, you can safely refactor the existing production code, then start introducing Test-Driven Development when adding new features to the system.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7d933c95-3f49-48a4-852b-7fc30aa8b977",
+            "name": "Burk Hufnagel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207651,
+                "name": "Agile"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -470,8 +564,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -517,8 +611,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -564,8 +658,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -611,8 +705,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -662,8 +756,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -709,8 +803,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -756,8 +850,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -807,8 +901,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "544960",
+        "title": "Biometric authentication in the browser: an intro to WebAuthn",
+        "description": "WebAuthn is a standard which allows you to leverage biometric based authentication methods from within your browser. While you can use a variety of hardware to authenticate users, the real benefit of WebAuthn is the fact that it connects users’ browsers to built-in operating system authentication methods.\r\n\r\nWhen you build with WebAuthn, you are benefiting from the security and pervasiveness of FaceID, Fingerprint Scanner, and Windows Hello, among others. WebAuthn is supported by all major browsers, as well as all major desktop and mobile OS platforms.\r\n\r\nIn this talk, we’ll walk through the WebAuthn process, including registration, attestation, and authentication. You’ll learn the difference between platform and cross-platform authenticators, as well as the difference between user verification and user presence.\r\n\r\nAt the end of this talk, you’ll have a grasp of what WebAuthn is, when it makes sense, and how you can leverage it for your next project.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "30897cf3-d06f-453a-9f83-c6ba7d4b31c9",
+            "name": "Dan Moore"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207661,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -854,8 +995,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -901,8 +1042,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -948,8 +1089,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -995,8 +1136,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1042,8 +1183,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1093,8 +1234,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1140,8 +1281,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1187,8 +1328,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1234,8 +1375,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1281,7 +1422,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -1328,8 +1469,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "537984",
+        "title": "Climbing Up with Alpine.js",
+        "description": "Every modern web site requires some degree of interactivity, but for many projects large frameworks like React or Vue can be overly complex and unnecessary. Alpine.js offers a much simpler, but still powerful, solution to this that aims to be like \"jQuery for the modern web.\" In this talk, I'll introduce Alpine and explain where it makes the most sense to use it. I'll walk through the basic syntax and then demonstrate examples of how Alpine can progressively enhance web pages to add interactivity. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d70d4c74-7ab1-4c08-b421-f4f04535cf34",
+            "name": "Raymond Camden"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207661,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1352,8 +1540,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207658,
-                "name": "Practices and other tech"
+                "id": 207651,
+                "name": "Agile"
               }
             ],
             "sort": 0
@@ -1375,8 +1563,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1422,8 +1610,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1469,8 +1657,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1516,8 +1704,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1563,8 +1751,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1610,8 +1798,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1657,8 +1845,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1704,8 +1892,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1751,8 +1939,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1802,7 +1990,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -1849,8 +2037,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1896,8 +2084,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1943,8 +2131,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1990,8 +2178,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2037,8 +2225,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "539882",
+        "title": "Dude, what happened to my developer-first cloud? Production-easy Spring Cloud",
+        "description": "Dude, what happened to my developer-first cloud? Production-easy Spring Cloud\r\n\r\nIf you've used Spring Boot & Spring Cloud to build robust production systems, you know you love how it makes your microservices more stable, resilient, scalable, and manageable.\r\n\r\nOnce upon a time, certain cloud environments took a similar, developer-first approach. Getting to production was as easy as pushing a JAR to the platform and letting it do all the heavy lifting, letting you focus on creating and delivering mission-critical features to your users.\r\n\r\nRemember, no one ever got praise and a raise for crafting the perfect Kubernetes YAML file...which is the universe's way of reminding you that you want -- you need -- to focus on writing great code, not on endlessly tweaking infrastructure.\r\n\r\nIn this session, the presenter will examine the pieces needed for a Spring Boot developer-first cloud and then demonstrate how to unlock those pieces using intelligent deployment options that allow you to focus on what you do best: creating mission critical, game changing applications while the platform takes care of the rest. \r\n\r\nCome to this session to learn how to increase your company's -- and your -- value by getting back to what you do best and what brings you greatest joy: writing amazing code and delivering needed features to your users!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "05be364d-a57f-4e08-978d-8043d43db097",
+            "name": "Mark Heckler"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207654,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2084,8 +2319,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2131,8 +2366,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2178,8 +2413,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2225,8 +2460,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2272,8 +2507,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2319,8 +2554,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2366,8 +2601,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "557310",
+        "title": "From Zero to Hero: Building and Shipping Your First JavaScript Library",
+        "description": "If you're a developer, chances you've used a third-party library for various parts of your projects. Third-party libraries offer so much functionality that they are essential to most teams success. So, how do you make your own library? How do you go from your teams \"utils\" folder, to a package on npm that can be installed across your organization? In this talk, we will look at how to publish a library, set it up to follow best practices, and ensure you maintain code quality. \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "daccf3ad-4033-467e-a0f9-e6404e73d5a3",
+            "name": "Mike Hartington"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207661,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2413,8 +2695,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2464,7 +2746,152 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "588202",
+        "title": "Gain new supersonic, subatomic superpowers with Quarkus 3",
+        "description": "This workshop focuses on Quarkus, supersonic subatomic Kubernetes native Java. The workshop uses a cloud IDE (VS Code) to develop Quarkus apps, deploy them to Kubernetes, and migrate Spring Boot Petclinic to Quarkus. The hands-on lab also covers several other developer topics such as:\r\n\r\n- Dependency Injection\r\n- Testing Quarkus Apps\r\n- Debugging Quarkus Apps\r\n- Building Native Quarkus Apps\r\n- Developing Cloud Native with Quarkus\r\n- Using Quarkus extensions\r\n- Hibernate ORM with Panache\r\n- Event-driven Messaging\r\n- Streaming Data with Quarkus and Kafka\r\n- Monitoring with Prometheus and Grafana\r\n- Tracing Quarkus Apps with Jaeger and MicroProfile Tracing\r\n- Migrate Spring Boot (Petclinic) to Quarkus",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+            "name": "Daniel Oh"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207656,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207666,
+                "name": "workshop"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "551434",
+        "title": "Going from containers, to pods, to Kubernetes – help for your developer environments!",
+        "description": "Today, Kubernetes is the undisputed go-to platform for scaling containers. But for developers, Kubernetes can be daunting, particularly when working with the discrepancies between local and production environments. Podman and Podman Desktop bridges this gap. In this talk, you’ll be introduced to Podman and witness the unveiling of Podman Desktop, an open-source GUI tool that streamlines container workflows and is compatible with Podman, Lima, Docker, and more. Podman Desktop serves as a beginner-friendly launch pad to Kubernetes, enabling developers to spin up local clusters (with Kind and Minikube) or work with remote environments. A demo will be given that helps you navigate the paths necessary to transition from app to containers, to pods, and ultimately to Kubernetes, highlighting how it reduces discrepancies and enables predictability in your deployments by leveraging Podman and Podman Desktop's perks and security advantages. You'll also learn how you can benefit from Podman Desktop to streamline your container development processes!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "78cedbd4-1408-4625-ab2e-44559814885b",
+            "name": "Cedric Clyburn"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "588220",
+        "title": "How do I see it in Backstage?",
+        "description": "Software Templates get lots of attention, and they’re a quick model for an introduction to Backstage. But daily development revolves around the Software Catalog. A central location for discovering everything isn’t very useful unless everything is there. How do you describe the elements of your environment in a way that Backstage understands?\r\n\r\nCome to this talk to learn about the basic Kinds of Backstage Entities and how Processors examine and validate them for addition to your Catalog. You’ll leave with a basic platform engineering vocabulary and an understanding of how Backstage models Components, APIs, Locations and other Entities in the catalog-info.yaml file.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ac053209-5370-4e01-859e-abb13ca60179",
+            "name": "Josh Wood"
+          },
+          {
+            "id": "f40099db-47bc-44af-a1fc-4c7034e5ef98",
+            "name": "Ryan Jarvinen"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -2511,8 +2938,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2562,8 +2989,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2609,8 +3036,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2656,8 +3083,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2703,7 +3130,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -2750,8 +3177,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2797,8 +3224,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2844,8 +3271,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2873,7 +3300,7 @@
             "categoryItems": [
               {
                 "id": 207664,
-                "name": "Unobtanium"
+                "name": "Cloud Native"
               }
             ],
             "sort": 0
@@ -2895,7 +3322,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -2942,8 +3369,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2993,8 +3420,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3040,8 +3467,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3087,8 +3514,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3134,8 +3561,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3181,8 +3608,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3228,8 +3655,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3275,8 +3702,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3322,8 +3749,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3369,8 +3796,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3395,6 +3822,53 @@
               {
                 "id": 207654,
                 "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "596932",
+        "title": "Learning Kafka in 2024",
+        "description": "Apache Kafka is one of the leading streaming platform. It is highly versatile in it's application. In this session, Nikhil will explain the basic concepts of Zookeeper, Broker, Producer, and Subscriber. He will live code a data processing system to explain certain gotchas while using Kafka. The session is designed to be an interactive hands-on session without any slides.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b1c4a924-b6db-453f-91d2-16b0fcf3bafd",
+            "name": "Nikhil Nanivadekar"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207660,
+                "name": "Tools and techniques"
               }
             ],
             "sort": 0
@@ -3463,7 +3937,54 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "538373",
+        "title": "LLMs and Spring: Building Smart Chat Applications with Redis",
+        "description": "Generative AI and the emergence of LLMs are radically changing content retrieval and generation industries. Using a combination of Natural Language Processing (NLP) techniques, foundation Machine Learning models (GPT and friends), and vector databases, chat-driven smart applications are changing the landscape of modern apps. This presentation explores the Retrieval-Augmented Generation (RAG) approach, which leverages semantic search to dynamically infuse factual knowledge into a large language model (LLM) prompt. This technique enables contextual augmentation of the LLM, enhancing its performance in various tasks such as answering questions, summarizing content, or generating new content. Redis, a vector database and full-text search engine, enables RAG workflows. In this session, we'll explore building RAG applications using Redis and Spring Boot.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4deee821-d54c-4f81-a909-07a61689e41e",
+            "name": "Brian Sam-Bodden"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207673,
+                "name": "Artificial Intelligence"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -3510,8 +4031,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3561,8 +4082,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3596,8 +4117,8 @@
             "name": "Session Format",
             "categoryItems": [
               {
-                "id": 207666,
-                "name": "workshop"
+                "id": 207665,
+                "name": "session"
               }
             ],
             "sort": 1
@@ -3608,7 +4129,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -3655,8 +4176,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "556701",
+        "title": "Micro Frontends for Java Microservices",
+        "description": "You've figured out how to split up your backend services into microservices and scale your teams to the moon, right? But what about the front end? Are you still building monoliths for your UI? If so, you might want to check out micro frontends—basically extensions to the microservices pattern, where the concept is extended to the front end.\r\n\r\nFind out how to package and deploy your microservices and their UIs in the same artifact, as well as make it possible to test and develop them independently.\r\n\r\nIn this live session, Matt will show you how to build a microservices and micro frontends architecture using React, Spring Boot, and Spring Cloud.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ec9ed7f2-f27c-424f-85ba-9d078cb73e11",
+            "name": "Matt Raible"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207654,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3702,8 +4270,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3749,8 +4317,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3796,7 +4364,54 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "554096",
+        "title": "Moving Java Forward Together",
+        "description": "Modern application development is unrecognizable without Java. Rather than resting on our laurels, Oracle’s leadership continues to drive Java innovation forward. Equally important is Oracle's continuing stewardship of the Java ecosystem because without you, the community, Java doesn't move forward. The role you play is critical in ensuring Java's future for today as well as tomorrow and for the next decades ahead of us. In this session, you'll learn about the many ways YOU can help ensure Java remains the leading choice to build the future.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "94bab1ab-fa4d-4e5e-bc5b-f0de8c2bb668",
+            "name": "Sharat Chander"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 231062,
+                "name": "Keynote"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -3843,8 +4458,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3890,8 +4505,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3937,8 +4552,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3984,8 +4599,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4031,8 +4646,102 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "537819",
+        "title": "Quarkus 3: The Road to Virtual Threads for Cheaper, Faster, and Easier Concurrent Applications",
+        "description": "Developers have had extraordinary experiences and taken stunning capabilities while they were developing Java microservices from local to the cloud using Quarkus for the past 5 years. But there is more to come with their journey since we have just arrived in Quarkus 3 which provides good, better, and even excellent features and capabilities in terms of developer experience, performance, scalability, and cloud integration. Especially, Quarkus 3 on Java 21 simplifies asynchronous concurrent applications using virtual threads (Project Loom) for high scalability. In this session, we take you through how Quarkus integrates Loom on Java 21 for developers to make concurrent applications easier, have cheaper memory, and have high performance using virtual threads. You can also learn about what’s new in Quarkus 3 such as JakartaEE 10, MicroProfile 6, Hibernate ORM 6, and more.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+            "name": "Daniel Oh"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "553347",
+        "title": "Quarkus and AI. Integrating Java and LLM to build intelligent applications.",
+        "description": "A Large Language Model (LLM) is a component of artificial intelligence specifically designed to comprehend and generate text that closely resembles human language based on the input it receives. One common scenario where it finds utility is when it needs to generate Java code to address a problem or create Kubernetes manifests with specific features.\r\n\r\nHowever, LLMs can also be employed with your enterprise code to enhance the customer experience, eliminating the need for customers to navigate through an entire website or improving the search process of on-site documentation \r\n\r\nDuring this session, we will explore how to integrate Quarkus with Large Language Models to establish a novel interaction interface for your users so they feel more human than just clicking across links.\r\n\r\nIt's important to note that while Quarkus plays a significant role in this discussion, the concepts presented also apply to other Java frameworks.\r\n\r\nIf you're interested in hands-on experience with Large Language Models and Java, with a focus on practical applications rather than theory,  then this session is for you.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
+            "name": "Alex Soto"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4056,7 +4765,7 @@
             "categoryItems": [
               {
                 "id": 207664,
-                "name": "Unobtanium"
+                "name": "Cloud Native"
               }
             ],
             "sort": 0
@@ -4078,8 +4787,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4125,8 +4834,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4176,8 +4885,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4227,8 +4936,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4274,7 +4983,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -4321,8 +5030,59 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "544457",
+        "title": "Serverless Java in Action: Cloud Agnostic Design Patterns and Tips",
+        "description": "You've probably seen how to create a Function-as-a-Service with one of the cloud providers, but if this is all you know about Serverless, prepare to have your mind blown!\r\nIn this session we'll show you how to create a production-grade, cloud-agnostic, event-driven serverless solution with Quarkus, a Java stack optimized for fast startup and small footprint; and Knative, an open source community project for deploying, running and managing serverless applications on Kubernetes.   Say goodbye to vendor lock-in and hello to Supersonic Subatomic Java-based Serverless bliss!\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "a4305a38-d462-482b-9e4a-536eb74ec63c",
+            "name": "Kevin Dubois"
+          },
+          {
+            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+            "name": "Daniel Oh"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4368,8 +5128,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4415,8 +5175,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4462,8 +5222,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4509,8 +5269,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4534,7 +5294,7 @@
             "categoryItems": [
               {
                 "id": 207664,
-                "name": "Unobtanium"
+                "name": "Cloud Native"
               }
             ],
             "sort": 0
@@ -4556,8 +5316,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "547744",
+        "title": "Tech Parents Do's and Don'ts for Teaching Your Kids Programming (from the perspective of a kid)",
+        "description": "I have been teaching workshops for underprivileged kids since I was 13 years old, because I want programming to be fun and engaging just like how I learned to program. Teaching kids programming at a young age is really important to improve diversity in the field of computer science. Studies show that after middle school most students have already made up their mind about a career in computers, so having a positive introduction to computers at a young age is really important.\r\n\r\nI will share some of the techniques I use to get kids excited about technology, which you can use to teach your own kids or others. We will use Phippy and Friends characters to introduce basic programming and cloud-computing concepts in a way that is approachable for kids of all ages.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "3d98aed4-4043-4271-816a-961063c448e1",
+            "name": "Cassandra Chin"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 231062,
+                "name": "Keynote"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4603,8 +5410,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4650,8 +5457,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4697,8 +5504,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4744,8 +5551,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4791,8 +5598,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4809,7 +5616,7 @@
             "name": "Marino Wijay"
           },
           {
-            "id": "57813d70-680c-461a-a887-8cd6cf101a81",
+            "id": "8256c8df-de2c-46f2-85d3-e8a88e6612e0",
             "name": "Eric Smalling"
           }
         ],
@@ -4842,8 +5649,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "557595",
+        "title": "The Ultimate One-Day Java Workshop: Secure, High-Performance Deployment to Kubernetes and Serverless",
+        "description": "This intensive one-day workshop is tailored for developers and IT professionals who aim to excel in deploying Java applications in cloud environments, focusing on security and performance. Participants will engage in a comprehensive, hands-on exploration of Java application creation and deployment, emphasising secure, efficient practices using Google Cloud as the primary platform.\r\n\r\nOne-Day Agenda:\r\n\r\n8:30 AM - 9:00 AM: Welcome and Introduction\r\nOverview of the workshop\r\nIntroduction to Java deployment in cloud environments\r\n9:00 AM - 10:30 AM: Java Packaging and Deployment Options\r\nExploring JAR deployment, containerization, CRaC, and native compilation etc\r\nHands-on demonstrations using Google Cloud\r\n10:30 AM - 10:45 AM: Coffee Break\r\n10:45 AM - 12:15 PM: Kubernetes vs. Serverless: Architectural Decisions\r\nUnderstanding Kubernetes and serverless architectures\r\nComparing cost, scalability, ease of use, operational management etc\r\n12:15 PM - 1:00 PM: Lunch Break\r\n1:00 PM - 2:30 PM: Ensuring Security in Java Deployment\r\nIntroduction to security tools (SBOMs, dependency scanning etc) \r\nAddressing cyber threats and secure software development practices\r\n2:30 PM - 2:45 PM: Short Break\r\n2:45 PM - 4:00 PM: AI in Development and Deployment\r\nDiscussing the impact of AI on development processes\r\nHands-on session: Integrating Google’s AI APIs in Java applications\r\n4:00 PM - 4:45 PM: Building a Secure, Efficient Deployment Pipeline\r\nStrategies for fast, secure, and compliant Java application deployment\r\nLegislation impact on software development and deployment\r\nLeveraging cloud platform features and security tools\r\n4:45 PM - 5:00 PM: Closing Remarks and Q&A\r\nRecap of key learnings\r\nOpen Q&A session\r\nWorkshop Outcomes:\r\nAttendees of this workshop will leave with a robust understanding of deploying Java applications in cloud environments, particularly focusing on Google Cloud. They will gain practical experience in various deployment methods, understand the importance of security in the development lifecycle, and explore the impact of AI on development processes. By the end of the day, participants will be equipped with the knowledge to make informed decisions about architectural choices, security practices, and the use of AI in Java application deployment.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
+            "name": "Steve Poole"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207659,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207666,
+                "name": "workshop"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4889,8 +5743,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4936,8 +5790,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -4983,8 +5837,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5030,8 +5884,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5077,8 +5931,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5128,7 +5982,7 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
+        "isInformed": true,
         "isConfirmed": false
       },
       {
@@ -5179,55 +6033,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
-      },
-      {
-        "questionAnswers": [],
-        "id": "537919",
-        "title": "Vue for React Developers",
-        "description": "React is one of the most popular front end frameworks... but within the React community there are several misconceptions about Vue. Let's go through and convert a React component into a Vue component. The results might surprise a lot of React developers!",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
-            "name": "Alex Riviere"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207661,
-                "name": "Web and Front-end"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5273,8 +6080,59 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "582996",
+        "title": "Welcome to Devnexus 2024!",
+        "description": "Opening of the conference",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": true,
+        "speakers": [
+          {
+            "id": "e87c804d-b551-4614-8891-007f421a683f",
+            "name": "Pratik Patel"
+          },
+          {
+            "id": "b72554fc-3fc6-48e3-a268-2ee5187bdb5e",
+            "name": "Vincent Mayers"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207655,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5320,8 +6178,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5367,8 +6225,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5414,8 +6272,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "549107",
+        "title": "Wireguard, TLS and Workload Identity: The Backbone of Modern Service Networking",
+        "description": "Zero Trust Networking has become a standard marketing buzzword but the underlying principles are critical for modern microservice-style architectures. Authentication, authorizations, policy, etc. can be difficult to implement between services and do so in a maintainable way. Google invented their own transparent encryption and authorization protocol called \"ALTS\" back in 2007 to serve the application layer of Google's Borg workload scheduler, but we don't see others using it outside Google.\r\n\r\nIn this session we look at existing technology like TLS and newcomer Wireguard and see how these technologies come together to provide a secure foundation for workload identity and modern service-to-service networking. We will see how to accomplish exactly what Google did with ALTS but in a more open-source friendly way.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6e160707-beeb-4abc-97de-23d6f2c84056",
+            "name": "Christian Posta"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207653,
+                "name": "Cloud Infrastructure"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5465,8 +6370,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5512,8 +6417,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5536,8 +6441,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207657,
-                "name": "Java Platform"
+                "id": 207654,
+                "name": "Cloud Technology"
               }
             ],
             "sort": 0
@@ -5559,8 +6464,55 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "559371",
+        "title": "Your Java Code in the Kubernetes Native Era: A Live Coding Experience",
+        "description": "Is your Java code ready for the Kubernetes Native era?\r\n\r\nThere's a lot of hype around this topic. However, modern applications do indeed come with complexities like scalability, containerization, and service mesh, which Kubernetes can undoubtedly address.\r\n\r\nThe question is: Is your Java code ready for all of this? If you make the right choices, the answer is yes!\r\n\r\nQuarkus has been built with a Kubernetes Native approach, and it even allows you to use MicroProfile, Camel, Hibernate, and various other open-source projects among the world's best.\r\n\r\nNow is the time to embrace Kubernetes with Java! And this 100% practical session will show you how to do it today.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
+            "name": "Elder Moraes"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -5610,8 +6562,8 @@
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
-        "isInformed": false,
-        "isConfirmed": false
+        "isInformed": true,
+        "isConfirmed": true
       }
     ],
     "isDefault": false

@@ -31,8 +31,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Cloud Technology
 format: session
 slug: best-practices-for-java-in-cloud-native-architectures

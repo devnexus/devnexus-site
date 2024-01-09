@@ -41,8 +41,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Java Platform
 format: session
 slug: enter-the-parallel-universe-of-the-vector-api

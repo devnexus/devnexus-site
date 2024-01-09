@@ -17,7 +17,7 @@ sessions:
 isTopSpeaker: false
 links:
 - title: Twitter
-  url: https://twitter.com/home
+  url: https://twitter.com/denismagda
   linkType: Twitter
 questionAnswers:
 - id: 59531

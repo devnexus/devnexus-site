@@ -1,8 +1,8 @@
 ---
 id: f44f5308-1287-4e6c-8f48-6ed26ea9f9d3
 firstName: Mauricio
-lastName: Salatino "Salaboy"
-fullName: Mauricio Salatino "Salaboy"
+lastName: '"Salaboy" Salatino'
+fullName: Mauricio "Salaboy" Salatino
 bio: Mauricio works as Open Source Software Engineer at @Diagrid, contributing to
   and driving initiatives for the Dapr OSS project. Mauricio also serves as a Steering
   Committee member for the Knative Project, and he is also Co-Leading the Knative

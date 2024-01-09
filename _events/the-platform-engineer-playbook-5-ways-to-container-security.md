@@ -28,7 +28,7 @@ isPlenumSession: false
 speakers:
 - id: d7100338-7ea1-4f10-84fe-758b7ecbe1e7
   name: Marino Wijay
-- id: 57813d70-680c-461a-a887-8cd6cf101a81
+- id: 8256c8df-de2c-46f2-85d3-e8a88e6612e0
   name: Eric Smalling
 categories:
 - id: 59536
@@ -48,8 +48,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Security
 format: session
 slug: the-platform-engineer-playbook-5-ways-to-container-security

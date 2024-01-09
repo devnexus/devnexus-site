@@ -37,8 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Core Java
 format: session
 slug: trash-talk-exploring-the-memory-management-in-the-jvm

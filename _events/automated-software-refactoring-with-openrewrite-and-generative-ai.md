@@ -51,8 +51,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: automated-software-refactoring-with-openrewrite-and-generative-ai

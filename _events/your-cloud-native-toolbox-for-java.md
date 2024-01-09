@@ -21,8 +21,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207657
-    name: Java Platform
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -35,9 +35,9 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
-track: Java Platform
+isInformed: true
+isConfirmed: true
+track: Cloud Technology
 format: session
 slug: your-cloud-native-toolbox-for-java
 

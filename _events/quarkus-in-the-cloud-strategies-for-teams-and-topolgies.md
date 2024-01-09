@@ -23,7 +23,7 @@ categories:
   name: Track
   categoryItems:
   - id: 207664
-    name: Unobtanium
+    name: Cloud Native
   sort: 0
 - id: 59537
   name: Session Format
@@ -36,9 +36,9 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
-track: Unobtanium
+isInformed: true
+isConfirmed: true
+track: Cloud Native
 format: session
 slug: quarkus-in-the-cloud-strategies-for-teams-and-topolgies
 

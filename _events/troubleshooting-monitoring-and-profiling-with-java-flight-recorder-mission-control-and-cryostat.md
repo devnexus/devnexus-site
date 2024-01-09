@@ -37,8 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Frameworks
 format: session
 slug: troubleshooting-monitoring-and-profiling-with-java-flight-recorder-mission-control-and-cryostat

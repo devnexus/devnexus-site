@@ -52,8 +52,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Architecture
 format: session
 slug: death-to-the-monolith

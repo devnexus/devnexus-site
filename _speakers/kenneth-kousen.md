@@ -22,7 +22,7 @@ sessions:
 isTopSpeaker: false
 links:
 - title: Twitter
-  url: http://twitter.com/kenkousen
+  url: https://twitter.com/kenkousen
   linkType: Twitter
 questionAnswers:
 - id: 59531

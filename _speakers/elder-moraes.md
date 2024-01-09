@@ -14,6 +14,8 @@ profilePicture: https://sessionize.com/image/aa7f-400o400o1-MyQ6xKcUg7DDu8txQgtf
 sessions:
 - id: 560890
   name: 'Reviving the Java Community: Insights from JUG Leaders Worldwide'
+- id: 559371
+  name: 'Your Java Code in the Kubernetes Native Era: A Live Coding Experience'
 isTopSpeaker: false
 links:
 - title: Twitter

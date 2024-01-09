@@ -3,12 +3,11 @@ id: 172a6669-38c5-46ec-b262-3290e8aa41e3
 firstName: Todd
 lastName: Ginsberg
 fullName: Todd Ginsberg
-bio: 'Todd Ginsberg is a Principal Software Developer at Netspend, a payments company
-  in Austin, TX where he is responsible for prototypes, experiments, and proofs of
-  concept. He has been programming professionally using Java since 1995, Kotlin since
-  2016, and co-organizes the Triangle JUG. Todd lives in Raleigh, NC with his wife
-  and their dog. When not programming, he enjoys reading, walking/hiking, and doughnuts. '
-tagLine: Principal Developer, Netspend Corp
+bio: Todd Ginsberg is the Lead Engineer for Payments at a large multinational bank.
+  He has been programming professionally using Java since 1995, Kotlin since 2016,
+  and co-organizes the Triangle JUG. Todd lives in Raleigh, NC with his wife and their
+  dog. When not programming, he enjoys reading, walking/hiking, and doughnuts.
+tagLine: Lead Engineer
 profilePicture: https://sessionize.com/image/4d1a-400o400o1-Xz5kQLxwKLEoZ7q8kzksd3.jpg
 sessions:
 - id: 539216

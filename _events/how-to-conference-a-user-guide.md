@@ -40,8 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Agile
 format: session
 slug: how-to-conference-a-user-guide

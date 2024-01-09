@@ -33,8 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Frameworks
 format: session
 slug: spring-off-the-http-high-dive-into-an-optimized-connection-pool

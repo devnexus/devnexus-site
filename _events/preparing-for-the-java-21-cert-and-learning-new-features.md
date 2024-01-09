@@ -33,8 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Core Java
 format: session
 slug: preparing-for-the-java-21-cert-and-learning-new-features

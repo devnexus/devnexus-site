@@ -37,8 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Core Java
 format: session
 slug: loom-is-more-than-virtual-threads-structured-concurrency-and-scoped-values

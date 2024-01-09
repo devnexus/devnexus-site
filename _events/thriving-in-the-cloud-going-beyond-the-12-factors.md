@@ -35,8 +35,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Architecture
 format: session
 slug: thriving-in-the-cloud-going-beyond-the-12-factors

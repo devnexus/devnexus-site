@@ -33,8 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Agile
 format: session
 slug: building-a-great-developer-experience

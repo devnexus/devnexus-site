@@ -36,8 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: jakarta-ee-11-performance-and-developer-productivity

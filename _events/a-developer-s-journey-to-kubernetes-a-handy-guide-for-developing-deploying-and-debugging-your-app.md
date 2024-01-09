@@ -38,8 +38,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Cloud Infrastructure
 format: session
 slug: a-developer-s-journey-to-kubernetes-a-handy-guide-for-developing-deploying-and-debugging-your-app

@@ -1,12 +1,16 @@
 ---
-id: 57813d70-680c-461a-a887-8cd6cf101a81
+id: 8256c8df-de2c-46f2-85d3-e8a88e6612e0
 firstName: Eric
 lastName: Smalling
 fullName: Eric Smalling
-bio: Eric is a Senior Developer Advocate at Snyk.io where he helps developers secure
-  the applications, containers, and Kubernetes platforms they build and deploy to.
-tagLine: Senior Developer Advocate at Snyk
-profilePicture: https://sessionize.com/image/260f-400o400o1-sZSfF3hoMgyRiBUi23NM2q.jpg
+bio: Eric is a 30+ year enterprise software developer, architect, and consultant with
+  a focus on CI/CD, DevOps, and container-based solutions over the last decade. He
+  is a Docker Captain, is certified in Kubernetes (CKA, CKAD, CKS), and has been a
+  Docker user since 2013. As a Staff Solutions Architect at Chainguard, Eric helps
+  teams deploy their applications securely by minimizing container image footprint
+  and CVE counts.
+tagLine: Staff Solutions Architect @ Chainguard
+profilePicture: https://sessionize.com/image/5b36-400o400o1-E2FmAYLNcEvmaNnQXF9fJ8.jpg
 sessions:
 - id: 557480
   name: The Platform Engineer Playbook - 5 Ways to Container Security
@@ -19,7 +23,7 @@ questionAnswers:
 - id: 59531
   question: Company
   questionType: Short_Text
-  answer: Snyk
+  answer: Chainguard
   sort: 17
   answerExtra: 
 - id: 59535

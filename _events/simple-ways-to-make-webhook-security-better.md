@@ -34,8 +34,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Web and Front-end
 format: session
 slug: simple-ways-to-make-webhook-security-better

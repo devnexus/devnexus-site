@@ -36,8 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: optimize-your-applications-to-the-max-with-jakarta-ee-and-microprofile

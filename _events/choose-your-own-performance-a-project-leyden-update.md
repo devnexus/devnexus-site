@@ -33,7 +33,7 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
+isInformed: true
 isConfirmed: false
 track: Core Java
 format: session

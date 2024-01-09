@@ -37,8 +37,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: workshop
 slug: building-restful-web-services-with-jakarta-ee

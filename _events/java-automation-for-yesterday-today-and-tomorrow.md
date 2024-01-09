@@ -34,7 +34,7 @@ categories:
   name: Track
   categoryItems:
   - id: 207664
-    name: Unobtanium
+    name: Cloud Native
   sort: 0
 - id: 59537
   name: Session Format
@@ -47,9 +47,9 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
+isInformed: true
 isConfirmed: false
-track: Unobtanium
+track: Cloud Native
 format: session
 slug: java-automation-for-yesterday-today-and-tomorrow
 

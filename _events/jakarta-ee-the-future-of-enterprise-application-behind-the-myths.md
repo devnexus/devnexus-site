@@ -33,8 +33,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: jakarta-ee-the-future-of-enterprise-application-behind-the-myths

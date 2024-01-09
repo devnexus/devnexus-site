@@ -40,8 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Cloud Infrastructure
 format: session
 slug: designing-media-optimized-byte-transfer-and-storage-at-netflix

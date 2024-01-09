@@ -38,8 +38,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Web and Front-end
 format: session
 slug: from-mosaic-to-modern-the-evolution-of-web-app-architectures

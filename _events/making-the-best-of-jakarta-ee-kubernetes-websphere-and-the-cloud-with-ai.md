@@ -38,8 +38,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: making-the-best-of-jakarta-ee-kubernetes-websphere-and-the-cloud-with-ai

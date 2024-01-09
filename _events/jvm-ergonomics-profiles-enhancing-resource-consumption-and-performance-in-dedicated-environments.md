@@ -42,8 +42,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Java Platform
 format: session
 slug: jvm-ergonomics-profiles-enhancing-resource-consumption-and-performance-in-dedicated-environments

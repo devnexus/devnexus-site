@@ -32,8 +32,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Cloud Infrastructure
 format: session
 slug: not-a-kubernetes-fan-the-state-of-paas-in-2024

@@ -35,18 +35,18 @@ categories:
 - id: 59537
   name: Session Format
   categoryItems:
-  - id: 207666
-    name: workshop
+  - id: 207665
+    name: session
   sort: 1
 roomId: 
 room: 
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
+isInformed: true
 isConfirmed: false
 track: Core Java
-format: workshop
+format: session
 slug: mastering-modern-concurrency-in-java-a-comprehensive-deep-dive-with-virtual-threads
 
 ---

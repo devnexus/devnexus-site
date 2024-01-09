@@ -40,8 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Frameworks
 format: session
 slug: crossing-the-streams-leveraging-pulsar-io-pulsar-functions-together-with-spring-cloud-stream

@@ -36,8 +36,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: leveraging-jakarta-ee-10-core-profile-in-stateful-microservices

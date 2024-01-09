@@ -43,8 +43,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Architecture
 format: workshop
 slug: fundamentals-of-migration-engineering-with-openrewrite

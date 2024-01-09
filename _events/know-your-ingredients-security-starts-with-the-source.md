@@ -39,8 +39,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Security
 format: session
 slug: know-your-ingredients-security-starts-with-the-source

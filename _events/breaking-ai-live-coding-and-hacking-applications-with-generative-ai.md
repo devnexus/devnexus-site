@@ -40,8 +40,8 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Security
 format: session
 slug: breaking-ai-live-coding-and-hacking-applications-with-generative-ai

@@ -30,8 +30,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207658
-    name: Practices and other tech
+  - id: 207651
+    name: Agile
   sort: 0
 - id: 59537
   name: Session Format
@@ -44,9 +44,9 @@ room:
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
-track: Practices and other tech
+isInformed: true
+isConfirmed: true
+track: Agile
 format: session
 slug: coding-fast-and-slow-applying-kahneman-s-insights-to-improve-development-practices-and-efficiency
 
