@@ -1,5 +1,6 @@
 name,sponsorlevel,logo_image,home_page
 Akeyless,silver,/uploads/akeyless-2.png,https://www.akeyless.io/
+Amsterdam,jug,/uploads/amsterdam.png,http://amsterdamjug.com/
 ASF,,/assets/img/asf.001.jpeg,https://www.apache.org/
 atlanta,jug,/uploads/ajug-01.png,https://ajug.org/
 Atomic Jar,gold,/uploads/atomicjar-1.png,https://www.atomicjar.com/
@@ -17,6 +18,7 @@ Digma,silver,/uploads/digma-1.png,https://digma.ai
 Dimiour,,/uploads/dimiour-2.png,http://dimiour.io/?utm_campaign=Devenexus-2023&utm_source=Event&utm_medium=Event%20Website
 Elastic,,/uploads/elastic-01.png,https://www.elastic.co/
 Endor Labs,silver,/uploads/endor-labs-01.png,https://www.endorlabs.com/
+Garden State JUG,jug,/uploads/garden-state-01.png,https://gsjug.org/
 Google Cloud,,/uploads/google-cloud-1.png,https://cloud.google.com/developers/devnexus
 Google Wallet,,/uploads/google-wallet-1.png,https://wallet.google/
 Gradle,,/uploads/gradle-3.png,https://gradle.com/
@@ -26,6 +28,7 @@ IBM,,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
 Intel,,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 Ippon,,/uploads/ippon-2.png,https://us.ippon.tech/
 Jakarta EE,silver,/uploads/jakarta-1.png,https://jakarta.ee/
+JCP,jug,/uploads/jcp-01.png,https://www.jcp.org/en/home/index
 Jetbrains,gold,/uploads/jetbrains-01.png,https://jb.gg/96a236
 JFrog,devlounge,/assets/img/jfrog1.001.jpeg,https://jfrog.com/
 Keyfactor,,/uploads/keyfactor-1.png,https://www.keyfactor.com/
@@ -40,6 +43,7 @@ MicroStream,silver,/uploads/microstream-01.png,https://microstream.one/
 Moderne,silver,/uploads/MODERNE-01.png,https://www.moderne.io/?utm_source=devnexus-2024&utm_medium=event-website&utm_content=moderne-logo
 nashville,jug,/uploads/nasville-01.png,https://www.meetup.com/nashvillejug/
 new york,jug,/uploads/ny.png,https://www.javasig.com/
+Oberplatz JUG,jug,/uploads/oberplatz-01.png,https://jug-oberpfalz.de/
 OpenSSF,,/uploads/ossf-1.png,https://openssf.org/
 payara,,/uploads/payara-1.png,https://www.payara.fish/
 Peru,jug,/uploads/peru.png,https://perujug.org/
