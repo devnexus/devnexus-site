@@ -1,9 +1,9 @@
-<div class="speakers sessions justify-content-center">
+<div class="speakers sessions">
  {% for event in include.collection %}
  {% assign lead = event.speakers[0] %}
  {% assign lead_data = site.data.speakers | where: "id", lead.id | first %}
    <div class="col-sm-6 col-md-6 col-lg-6">
-        <div class="thumbnail">
+        <div class="thumbnail  center-block">
             {% if lead_data.profilePicture%}
             <img class="img-responsive" src="{{ lead_data.profilePicture }}" alt="{{ event.title }}" >
             {% else %}
