@@ -14,11 +14,11 @@ profilePicture: https://sessionize.com/image/f97e-400o400o1-BPQt7cWcMDSALZDVXfKP
 sessions:
 - id: 588202
   name: Gain new supersonic, subatomic superpowers with Quarkus 3
+- id: 544457
+  name: 'Serverless Java in Action: Cloud Agnostic Design Patterns and Tips'
 - id: 537819
   name: 'Quarkus 3: The Road to Virtual Threads for Cheaper, Faster, and Easier Concurrent
     Applications'
-- id: 544457
-  name: 'Serverless Java in Action: Cloud Agnostic Design Patterns and Tips'
 isTopSpeaker: false
 links:
 - title: Twitter

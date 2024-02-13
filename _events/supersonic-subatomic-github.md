@@ -13,8 +13,8 @@ description: "You've seen GitHub Actions, but did you know about GitHub Apps? \"
   with GitHub, set up the project for the application, and react to various events.
   At the end, we'll have a working GitHub application, written in Java (or Kotlin!)
   that is supersonic, subatomic awesomeness."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T15:30:00'
+endsAt: '2024-04-11T16:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -7,8 +7,8 @@ description: "Kubernetes won the containers orchestration war. But has it made d
   but mainly what the PaaS space looks like in 2024; 17 years after Heroku made it
   popular.\r\nIs Heroku still around? What about Cloud Foundry? \r\nAnd what are those
   new comers (fly.io, repl.it) worth?\r\nDid the Cloud giants replace them all?"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

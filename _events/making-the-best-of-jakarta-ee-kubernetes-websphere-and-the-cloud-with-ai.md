@@ -11,8 +11,8 @@ description: This hands-on session will show you how to enable deployments of Ja
   secure deployments while saving time.  By the end, participants will have a comprehensive
   understanding of how to optimize, test, and deploy their Java applications on the
   cloud using Open/WebSphere Liberty and Kubernetes.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

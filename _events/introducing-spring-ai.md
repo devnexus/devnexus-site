@@ -18,8 +18,8 @@ description: "By now, you've no doubt noticed that Generative AI is making waves
   we'll consider a handful of use cases for Generative AI and see how to implement
   them with Spring AI. We'll start simple, then build up to some more advanced uses
   of Spring AI that employ your application's own data when generating answers."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,8 +38,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

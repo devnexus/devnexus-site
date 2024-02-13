@@ -14,8 +14,8 @@ description: "    Delta Lake (https://delta.io/) is an open-source storage frame
   this presentation, I will provide an introduction to Delta Lake, explaining how
   it works, and its key features and benefits. Whether you're a data scientist, data
   engineer, or business analyst, this session is for you."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

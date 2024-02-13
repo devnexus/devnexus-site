@@ -10,8 +10,8 @@ description: "OpenJDK’s Project Valhalla is set to revolutionize how the JVM h
   Java ecosystem with examples throughout. Come discover how Project Valhalla is on
   the verge of reshaping the landscape of Java, paving the way for a more efficient
   and high-performing future."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

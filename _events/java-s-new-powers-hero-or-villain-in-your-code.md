@@ -17,8 +17,8 @@ description: "With Java’s six-month release cadence, new features and enhancem
   Threads, String Templates, Pattern Matching, Records, Text Blocks and many more.
   Join me for an exploration of how Java can be your ally in the battle against code
   chaos."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

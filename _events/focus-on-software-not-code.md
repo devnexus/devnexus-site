@@ -9,8 +9,8 @@ description: "There is a recent trend to focus too much on code, sometimes losin
   real-life examples and situations to illustrate the benefits of focusing on software
   and not just code, such as prioritizing optimizations, improving performance, fixing
   bugs, and even keeping tech debt under control.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

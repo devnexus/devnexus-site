@@ -19,8 +19,8 @@ description: "The most poorly understood and incorrectly used APIs in Java that 
   will be given on properly using dates and times in unit tests.\r\n\r\nThe goal for
   this presentation is for attendees to be able to confidently and correctly use dates
   and times in Java instead of blindly copying and pasting code from the Internet."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

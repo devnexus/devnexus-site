@@ -15,8 +15,8 @@ description: "Netflix is a media streaming company and a movie studio with data 
   storage footprint, such as chunking, deduplication\r\n- Learn about how different
   applications expect data to be presented at different locations and in different
   formats.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -15,8 +15,8 @@ description: "This session will provide software development leaders and manager
   manager looking to refine their skills or new to the role, my presentation will
   equip them with the knowledge and tools to excel in leading their software development
   team to success."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

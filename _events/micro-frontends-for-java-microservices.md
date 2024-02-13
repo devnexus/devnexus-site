@@ -10,8 +10,8 @@ description: "You've figured out how to split up your backend services into micr
   in the same artifact, as well as make it possible to test and develop them independently.\r\n\r\nIn
   this live session, Matt will show you how to build a microservices and micro frontends
   architecture using React, Spring Boot, and Spring Cloud."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42138
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

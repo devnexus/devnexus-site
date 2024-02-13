@@ -15,8 +15,8 @@ description: "Every day software development relies more and more on APIs. Using
   vs imperative management\r\nThe operator pattern and how it helps with declarative
   management\r\nAn example from the 3scale operator\r\nOther projects using Kubernetes
   custom resources.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

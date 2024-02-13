@@ -13,8 +13,8 @@ description: "\r\nDo you or someone you know reuse passwords? How much entropy d
   Rob will teach you all there is to know Passkeys. He will  also walk you through
   a demo Spring application that leverages Passkeys so you can see first hand what
   it takes to implement Passkeys in your applications."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

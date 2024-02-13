@@ -15,8 +15,8 @@ description: Today, Kubernetes is the undisputed go-to platform for scaling cont
   and enables predictability in your deployments by leveraging Podman and Podman Desktop's
   perks and security advantages. You'll also learn how you can benefit from Podman
   Desktop to streamline your container development processes!
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

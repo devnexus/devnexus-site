@@ -11,8 +11,8 @@ description: "When using complementary tools for optimal utilization in containe
   Therefore, the session will show little application code, but focus on the concepts,
   tools, and configurations that are applicable. I will also compare some key concepts
   with competitors like Spring Framework to emphasize the benefits and downsides."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

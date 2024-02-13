@@ -11,8 +11,8 @@ description: Integration of Jakarta EE 10 Core Profile -compatible microservices
   state-of-the-art applications achieved as a result.  Java 21 virtual threads and
   MicroProfile 6 are also implemented in this integration. Join us to learn how the
   Jakarta EE platform can power your next cloud-native stateful microservices system.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

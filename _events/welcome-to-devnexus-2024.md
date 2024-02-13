@@ -3,8 +3,8 @@ questionAnswers: []
 id: '582996'
 title: Welcome to Devnexus 2024!
 description: Opening of the conference
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T09:00:00'
+endsAt: '2024-04-10T09:20:00'
 isServiceSession: false
 isPlenumSession: true
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42148
+room: Foyer
 liveUrl: 
 recordingUrl: 
 status: Accepted

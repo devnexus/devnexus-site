@@ -8,8 +8,8 @@ description: Java was once a language that dragged along at snail's pace. Thankf
   of the recent changes of Java that are both fun and powerful to use, to learn how
   you can benefit from these, and we'll also discuss where the language is heading
   in the near future.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

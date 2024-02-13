@@ -8,8 +8,8 @@ description: Embark on a journey into the depths of java.lang.OutOfMemoryError a
   session equips you with the knowledge, tools, and techniques needed to troubleshoot
   and conquer OutOfMemoryError in all its forms, ensuring smoother, more efficient
   Java applications.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

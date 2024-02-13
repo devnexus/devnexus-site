@@ -9,8 +9,8 @@ description: "Since its introduction in 2018 as Jakarta EE, the platform has evo
   provide updated specifications, and set the baseline to Java 21, the latest LTS
   release.\r\n\r\nThis presentation will provide a brief history of JavaEE/Jakarta
   EE and a review of new and updated specifications with code examples."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T15:30:00'
+endsAt: '2024-04-11T16:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

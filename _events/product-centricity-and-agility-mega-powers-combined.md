@@ -16,8 +16,8 @@ description: "Abstract:\r\nIn software development two themes run rampant which 
   fall to achieve desired outcomes.\r\nLearn to formulate recommendations for improving
   a product development strategy by the incorporating the beneficial elements of both
   product centricity and agility."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

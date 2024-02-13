@@ -20,8 +20,8 @@ description: "For Java developers, the Just-In-Time (JIT) compiler is key to imp
   be deployed in containers, demonstrate its advantages compared to a traditional
   JIT compilation technique and offer practical recommendations about when to use
   this technology."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,8 +40,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

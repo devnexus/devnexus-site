@@ -9,8 +9,8 @@ description: Modern application development is unrecognizable without Java. Rath
   is critical in ensuring Java's future for today as well as tomorrow and for the
   next decades ahead of us. In this session, you'll learn about the many ways YOU
   can help ensure Java remains the leading choice to build the future.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T13:30:00'
+endsAt: '2024-04-10T14:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,13 +29,13 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42148
+room: Foyer
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Keynote
 format: session
 slug: moving-java-forward-together

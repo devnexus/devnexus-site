@@ -11,8 +11,8 @@ description: 'Java is a powerhouse of a language suitable for use in many enviro
   but also in fostering effective teamwork. This talk delves deep into the architectural
   nuances and trade-offs essential for making informed decisions in these deployment
   paradigms.'
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

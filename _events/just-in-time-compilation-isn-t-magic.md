@@ -10,8 +10,8 @@ description: "Just-in-time Compilation Isn’t Magic\r\n\r\nFortunately for most
   and inlining.  By the learning these concepts, you’ll learn to save time not trying
   to optimize the things that the compiler can already do for you and focus on things
   that matter most.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

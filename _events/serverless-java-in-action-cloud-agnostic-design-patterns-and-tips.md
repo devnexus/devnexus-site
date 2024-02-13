@@ -10,8 +10,8 @@ description: "You've probably seen how to create a Function-as-a-Service with on
   for deploying, running and managing serverless applications on Kubernetes.   Say
   goodbye to vendor lock-in and hello to Supersonic Subatomic Java-based Serverless
   bliss!\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

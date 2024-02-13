@@ -12,8 +12,8 @@ description: "Knowledge sharing and creation is foundational to technical profes
   by the reader\r\n- how to work together with your peers to improve your documentation\r\n-
   how to align your documentation to your audience to optimise communication\r\n\r\nLearn
   how to optimise the knowledge and understanding that underpins what you do."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -7,8 +7,8 @@ description: "I knew our journey into adopting FinOps would result in Cloud Cost
   bugs, and even challenging things like our product pricing.\r\n\r\nThis session
   will walk through what FinOps is, the results of our adoption, and the interesting
   observations that surprised us along the way."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

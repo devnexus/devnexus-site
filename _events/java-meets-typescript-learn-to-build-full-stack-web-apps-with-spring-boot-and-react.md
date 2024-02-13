@@ -9,8 +9,8 @@ description: "As Java developers, we know the benefits of type-safety when build
   to build a full-stack reactive web app through live code examples. We'll use Spring
   Boot and Java on the backend and React with TypeScript on the frontend, connecting
   the two with the new Hilla framework from Vaadin."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

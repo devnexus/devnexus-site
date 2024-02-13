@@ -13,8 +13,8 @@ description: "The introduction of the NCSA Mosaic browser in 1993 marked the inc
   understanding of the past, attendees will be better poised to approach future web
   development challenges with clarity and confidence. Join this journey through time
   to gain a deeper appreciation of the web's evolution and prepare for what lies ahead."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

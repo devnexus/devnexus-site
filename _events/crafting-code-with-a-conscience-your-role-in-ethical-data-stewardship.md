@@ -7,8 +7,8 @@ description: 'Ensuring ethical data handling is not just about compliance; it’
   arm themselves with a curated set of tools, insights, and frameworks designed to
   seamlessly integrate ethics into your development process while championing & influencing
   ethical data stewardship. '
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

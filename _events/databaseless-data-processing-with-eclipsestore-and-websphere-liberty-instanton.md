@@ -17,8 +17,8 @@ description: 'More and more companies and organizations are using AI, ML, VR and
   data processing, up to 1000x faster queries, up to 99% cloud database cost savings,
   and unrivaled simplicity. WebSphere Liberty InstantOn enables EclipseStore cluster
   nodes starting in milliseconds without the need for using GraalVM native images. '
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

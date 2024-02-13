@@ -12,8 +12,8 @@ description: "Most talks on a typical conference schedule contain success storie
   your ideas and cloud your judgement.\r\n\r\nAfter attending this talk you'll be
   more aware of survivorship bias and what you can do to keep your head cool, no matter
   how many 'silver bullets' are fired at you. "
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

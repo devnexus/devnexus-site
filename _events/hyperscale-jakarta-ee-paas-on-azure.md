@@ -11,8 +11,8 @@ description: "Azure is the only top tier public cloud with a fully managed Jakar
   We will also see how things like load-balancing, automatic redeployment, auto-scaling,
   and monitoring work in a hyperscale PaaS.\r\n\r\nAt the end of the session, you
   will have all the demos available on GitHub so you can explore them on your own!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

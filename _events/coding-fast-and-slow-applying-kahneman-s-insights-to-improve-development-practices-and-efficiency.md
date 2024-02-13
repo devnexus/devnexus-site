@@ -19,8 +19,8 @@ description: "Embark on an exciting journey into the intersection of psychology,
   between the human mind, software development, and DPE, this talk is for you. Join
   us for an exhilarating adventure into the fast and slow worlds of coding, and uncover
   new ways to maximize your cognitive resources."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

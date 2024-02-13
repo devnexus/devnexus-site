@@ -11,8 +11,8 @@ description: "Is your Java code ready for the Kubernetes Native era?\r\n\r\nTher
   Camel, Hibernate, and various other open-source projects among the world's best.\r\n\r\nNow
   is the time to embrace Kubernetes with Java! And this 100% practical session will
   show you how to do it today."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T15:30:00'
+endsAt: '2024-04-11T16:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

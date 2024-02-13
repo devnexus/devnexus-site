@@ -8,8 +8,8 @@ description: In this session we will take a look at the emerging field of cloud 
   we'll explore the cognitive and technical limitations that all CSPM systems face
   and what you should look for when evaluating the strengths and weakness of CSPM
   vendors.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

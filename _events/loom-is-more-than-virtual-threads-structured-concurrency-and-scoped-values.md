@@ -12,8 +12,8 @@ description: 'Most of the talk about Project Loom as been about JEP 425: Virtual
   1.2!  Come to this talk and we''ll learn why these projects are useful additions
   to the JVM, and write some code to illustrate where you''ll be able to use them
   effectively. '
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

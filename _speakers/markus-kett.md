@@ -13,11 +13,11 @@ bio: 'Markus and his teams have been working on IDE tools for Java and database 
 tagLine: 'CEO at MicroStream, Editor in Chief at JAVAPRO Magazine '
 profilePicture: https://sessionize.com/image/ccd7-400o400o1-aqwBmqCnBSE2c3ThKinc3g.jpg
 sessions:
-- id: 547420
-  name: Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn
 - id: 547437
   name: 'Unlocking Dramatic Savings: Optimize your App and Database Footprint with
     Serverless Java'
+- id: 547420
+  name: Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn
 isTopSpeaker: false
 links:
 - title: Twitter

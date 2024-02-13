@@ -20,8 +20,8 @@ description: "Java bytecodes and class files deliver on the original vision of â
   all application state (heap, stack, etc.) in addition to the JIT-compiled code.
   \ Project CRaC will be used as an example.\r\n\r\nAt the end of the session, youâ€™ll
   be all set to keep your Java hot!\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,8 +40,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

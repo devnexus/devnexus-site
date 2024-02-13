@@ -19,8 +19,8 @@ description: "Gradle is an open-source build automation tool focused on flexibil
   try to solve\r\n- How we distribute it to every JVM engineer\r\n- How we ensure
   that Nebula/Gradle changes do not break builds so we can ship new features with
   confidence at Netflix"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

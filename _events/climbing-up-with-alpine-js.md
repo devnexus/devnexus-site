@@ -9,8 +9,8 @@ description: 'Every modern web site requires some degree of interactivity, but f
   explain where it makes the most sense to use it. I''ll walk through the basic syntax
   and then demonstrate examples of how Alpine can progressively enhance web pages
   to add interactivity. '
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

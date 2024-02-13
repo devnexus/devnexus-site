@@ -21,8 +21,8 @@ description: "The infamous Log4Shell vulnerability took the software community b
   & authorization\r\n- Encryption & identification for services\r\n\r\nJoin us and
   protect your organization from an attack on the next critical CVE and make it harder
   for attackers to leverage it against you!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -43,8 +43,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

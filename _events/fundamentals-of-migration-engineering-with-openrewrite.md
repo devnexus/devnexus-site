@@ -16,8 +16,8 @@ description: "How adaptable is your technology stack to changes in business requ
   together with YAML, with Refaster-style templates, with Semgrep matchers, etc. \r\n\r\nThis
   is a comprehensive look at all kinds of recipe development. You will come away fully
   equipped to plan and exercise large scale code transformations in your organization.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,8 +38,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

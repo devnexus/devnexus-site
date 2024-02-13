@@ -8,8 +8,8 @@ description: Java and Arm have always gone together, from the very early days al
   ever. In this talk we will look at the various optimizations being made to Core
   Java, JITs and the rest of the Java Platform to take advantage of advances in the
   Arm architecture.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T15:30:00'
+endsAt: '2024-04-11T16:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

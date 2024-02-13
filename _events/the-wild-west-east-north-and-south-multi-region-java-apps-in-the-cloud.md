@@ -11,8 +11,8 @@ description: "Cloud providers allow us to provision our application infrastructu
   single-region configuration and then switch to a multi-region setting. In the end,
   we'll have a working prototype of an application that handles user traffic with
   low latency in North America, Europe, and Australia."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

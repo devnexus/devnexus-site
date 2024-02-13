@@ -366,48 +366,6 @@
     "categories": []
   },
   {
-    "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
-    "firstName": "Bazlur",
-    "lastName": "Rahman",
-    "fullName": "Bazlur Rahman",
-    "bio": "A N M Bazlur Rahman is a Software Engineer with over a decade of specialized experience in Java and related technologies. His expertise has been formally recognized through the prestigious title of Java Champion. Beyond his professional commitments, Mr. Rahman is deeply involved in community outreach and education. He is the founder and current moderator of the Java User Group in Bangladesh, where he has organized educational meetups and conferences since 2013.\r\n\r\nIn the past two years, Mr. Rahman has been an active speaker at various international conferences and Java user groups. His talks have often focused on specialized topics such as concurrency and virtual threads. In addition to his community work, Mr. Rahman also serves as an editor for Java Queue at InfoQ and Foojay.io, both of which are leading platforms for technology content. Notably, he has authored five books on the Java programming language in Bengali, three of which have become best sellers in Bangladesh. \r\n\r\nMr. Rahman holds a bachelor's degree in Information Technology, majoring in Software Engineering, from the Institute of Information Technology, University of Dhaka, Bangladesh. He currently resides in Toronto, Canada.\r\n\r\n",
-    "tagLine": "🏆 Java Champion 🌆 Jakarta EE Ambassador 💻 Software Engineer  🎓 JUG Leader  📖 Published Author  @InfoQ  🌐 and  @foojayio  📝 Editor",
-    "profilePicture": "https://sessionize.com/image/7d58-400o400o1-JsDURgXyDupbee5i1NZLmD.jpg",
-    "sessions": [
-      {
-        "id": 551714,
-        "name": "Mastering Modern Concurrency in Java - A Comprehensive Deep Dive with Virtual Threads"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/bazlur_rahman",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "N/A",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@bazlur_rahman",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
     "firstName": "Billy",
     "lastName": "Korando",
@@ -683,48 +641,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@brunoborges",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
-    "firstName": "Bruno",
-    "lastName": "Souza",
-    "fullName": "Bruno Souza",
-    "bio": "Since 1995, Bruno helps Java developers design amazing careers and work on cool projects with great people! Java Evangelist and a Java Champion, Bruno is the founder and President of SouJava, the Brazilian Java Users Society. He also represents the group on the JCP Executive Committee. Bruno discusses Java and the Developer Career in the https://code4.life/ project.",
-    "tagLine": "helping developers design amazing careers",
-    "profilePicture": "https://sessionize.com/image/f5ea-400o400o1-7PDkcAx4GvdyyQxXxcu1NL.jpg",
-    "sessions": [
-      {
-        "id": 560890,
-        "name": "Reviving the Java Community: Insights from JUG Leaders Worldwide"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/brjavaman",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "SouJava",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@brjavaman",
         "sort": 21,
         "answerExtra": null
       }
@@ -1279,12 +1195,12 @@
         "name": "Gain new supersonic, subatomic superpowers with Quarkus 3"
       },
       {
-        "id": 537819,
-        "name": "Quarkus 3: The Road to Virtual Threads for Cheaper, Faster, and Easier Concurrent Applications"
-      },
-      {
         "id": 544457,
         "name": "Serverless Java in Action: Cloud Agnostic Design Patterns and Tips"
+      },
+      {
+        "id": 537819,
+        "name": "Quarkus 3: The Road to Virtual Threads for Cheaper, Faster, and Easier Concurrent Applications"
       }
     ],
     "isTopSpeaker": false,
@@ -1522,10 +1438,6 @@
     "tagLine": "Developer Advocate, Red Hat",
     "profilePicture": "https://sessionize.com/image/aa7f-400o400o1-MyQ6xKcUg7DDu8txQgtfN3.png",
     "sessions": [
-      {
-        "id": 560890,
-        "name": "Reviving the Java Community: Insights from JUG Leaders Worldwide"
-      },
       {
         "id": 559371,
         "name": "Your Java Code in the Kubernetes Native Era: A Live Coding Experience"
@@ -2504,6 +2416,48 @@
     "categories": []
   },
   {
+    "id": "56115ae3-406f-47af-818c-20354acc07b2",
+    "firstName": "Jeremy",
+    "lastName": "Meiss",
+    "fullName": "Jeremy Meiss",
+    "bio": "Jeremy is a seasoned Developer Experience and Community leader, formerly the Director of DevRel & Community at CircleCI, and previously at Solace, Auth0, and XDA. With almost 30 years in Tech, covering just about every functional area including support, system and database administration, application and web development, project management, program management, and systems analysis, Jeremy is active in the DevRel and DevOps communities, and is a co-creator of DevOpsPartyGames.com. A lover of all things coffee, community, open source, and tech, he’s a husband and father, and is also house-broken, and (generally) plays well with others.",
+    "tagLine": "Co-Founder, Developer Experience",
+    "profilePicture": "https://sessionize.com/image/1f95-400o400o1-SMXXHoVnzy6h19Y4Cu54Ec.png",
+    "sessions": [
+      {
+        "id": 600115,
+        "name": "Developer Experience is central to DevOps success"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/IAmJerdog",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "DevEx startup",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@iamjerdog",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "bfc36fe5-4d43-4394-98fe-a5374fc17616",
     "firstName": "John",
     "lastName": "Burns",
@@ -2591,12 +2545,12 @@
     "profilePicture": "https://sessionize.com/image/284b-400o400o1-Da96SuT4sERdHAtmZdgtmV.jpg",
     "sessions": [
       {
-        "id": 556270,
-        "name": "Application Observability like you've never heard before"
-      },
-      {
         "id": 556271,
         "name": "Spring Boot 3 Workshop"
+      },
+      {
+        "id": 556270,
+        "name": "Application Observability like you've never heard before"
       }
     ],
     "isTopSpeaker": false,
@@ -2637,12 +2591,12 @@
     "profilePicture": "https://sessionize.com/image/35c3-400o400o1-p2TUNUzZEgBXyVuULc2tmq.png",
     "sessions": [
       {
-        "id": 557183,
-        "name": "Automated software refactoring with OpenRewrite and Generative AI"
-      },
-      {
         "id": 557192,
         "name": "Fundamentals of Migration Engineering with OpenRewrite"
+      },
+      {
+        "id": 557183,
+        "name": "Automated software refactoring with OpenRewrite and Generative AI"
       }
     ],
     "isTopSpeaker": false,
@@ -2842,7 +2796,7 @@
     "fullName": "Justine Gehring",
     "bio": "Justine Gehring is a talented researcher in the field of Machine Learning (ML) for code and Graph Neural Networks (GNNs). Her focus lies in generating code under challenging circumstances, specifically in scenarios such as sparse data where library-specific code is required, as well as managing a substantial amount of code at a time. Justine is a research engineer at Moderne. She is completing her Master’s Degree in Computer Science at Mila & McGill. ",
     "tagLine": "Moderne, research engineer",
-    "profilePicture": "https://sessionize.com/image/ade5-400o400o1-c847c218-7a88-48eb-a42c-5fca23a13a5b.jpg",
+    "profilePicture": "https://sessionize.com/image/9992-400o400o1-4ugxFRjW6x7psdWA9vbRtC.png",
     "sessions": [
       {
         "id": 557183,
@@ -3450,48 +3404,6 @@
     "categories": []
   },
   {
-    "id": "eeb25beb-5d37-4fb7-acac-170357a1d89b",
-    "firstName": "Marharyta",
-    "lastName": "Nedzelska",
-    "fullName": "Marharyta Nedzelska",
-    "bio": "Margarita is a big Kotlin fan and Kotlin GDE. Knows both conference sides: speaking and organizing. Organized a KUG in her native city Kyiv because she believes in Knowledge Sharing and Collective Intelligence. For her everyday job, she's building Static Code Analysis tools for Java/Kotlin/Scala and other languages.",
-    "tagLine": "Software Engineer @ Sonar",
-    "profilePicture": "https://sessionize.com/image/0200-400o400o1-Tqc1sTRhdu99p4112d152A.jpeg",
-    "sessions": [
-      {
-        "id": 553930,
-        "name": "A Healthy diet for your Java application"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/jMargaritaN",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Sonar",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@jMargaritaN",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
     "firstName": "Marino",
     "lastName": "Wijay",
@@ -3669,12 +3581,12 @@
     "profilePicture": "https://sessionize.com/image/ccd7-400o400o1-aqwBmqCnBSE2c3ThKinc3g.jpg",
     "sessions": [
       {
-        "id": 547420,
-        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
-      },
-      {
         "id": 547437,
         "name": "Unlocking Dramatic Savings: Optimize your App and Database Footprint with Serverless Java"
+      },
+      {
+        "id": 547420,
+        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
       }
     ],
     "isTopSpeaker": false,
@@ -3868,6 +3780,48 @@
     "categories": []
   },
   {
+    "id": "e5aad250-139d-4a16-9c6e-d3534bbe1fc6",
+    "firstName": "Micah",
+    "lastName": "Silverman",
+    "fullName": "Micah Silverman",
+    "bio": "Micah Silverman leads DevSecOps Acceleration for Snyk. With 27 years of Java Experience (yup, that's from the beginning), he's authored numerous articles, co-authored a Java EE book and spoken at many conferences. He's a maker, who's built full size MAME arcade cabinets and repaired old electronic games (http://afitnerd.com/2011/10/16/weekend-project-fix-dark-tower/). He brings his love of all things Security and Java to a conference near you!",
+    "tagLine": "Director, DevSecOps Acceleration @ Snyk",
+    "profilePicture": "https://sessionize.com/image/8571-400o400o1-50-139d-4a16-9c6e-d3534bbe1fc6.3dcacb25-df05-45f4-a340-d98f74ac5014.png",
+    "sessions": [
+      {
+        "id": 551307,
+        "name": "Breaking AI: Live coding and hacking applications with Generative AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/afitnerd",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@afitnerd",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "41866ef7-180d-462a-93c1-fbcaa07e3db0",
     "firstName": "Michael",
     "lastName": "Hall",
@@ -3939,48 +3893,6 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@mpredli",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "daccf3ad-4033-467e-a0f9-e6404e73d5a3",
-    "firstName": "Mike",
-    "lastName": "Hartington",
-    "fullName": "Mike Hartington",
-    "bio": "Mike is a developer, Angular GDE, and Director of Developer Advocacy at Ionic who's been working in the mobile landscape for most of his professional career. When he's not working Ionic itself, Mike works with community members and helps them succeed at mobile. In his spare time, he’s an aspiring woodworker, occasional musician, and craft beer lover.",
-    "tagLine": "Developer/Advocate for Ionic, all around swell guy",
-    "profilePicture": "https://sessionize.com/image/83b5-400o400o1-QA2G5cKS8Td2kNY6mwLvVC.png",
-    "sessions": [
-      {
-        "id": 557310,
-        "name": "From Zero to Hero: Building and Shipping Your First JavaScript Library"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "http://twitter.com/mhartington",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Ionic",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@mhartington",
         "sort": 21,
         "answerExtra": null
       }
@@ -5098,6 +5010,42 @@
     "categories": []
   },
   {
+    "id": "51b25e57-ea9c-4900-9b0d-32bc7724f2eb",
+    "firstName": "Scott",
+    "lastName": "Frederick",
+    "fullName": "Scott Frederick",
+    "bio": "Scott is a Software Engineer at Broadcom, working on Spring Boot and other Spring projects.",
+    "tagLine": "Spring developer at Broadcom",
+    "profilePicture": "https://sessionize.com/image/4966-400o400o1-KRSULKaMVxSxKJvSodgFpL.jpg",
+    "sessions": [
+      {
+        "id": 556271,
+        "name": "Spring Boot 3 Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@scottyfred",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "f0f1fa39-eb24-4ab6-866c-b8645975bd75",
     "firstName": "Scott",
     "lastName": "McAllister",
@@ -5296,42 +5244,6 @@
     "categories": []
   },
   {
-    "id": "5e7219be-ad38-4708-884f-d6fbfb51490a",
-    "firstName": "Simon",
-    "lastName": "Maple",
-    "fullName": "Simon Maple",
-    "bio": "Simon Maple is the Principal Developer Advocate at Snyk, with a focus and passion around AI. He’s been a Java Champion since 2014, JavaOne Rockstar speaker in 2014 and 2017, Duke’s Choice award winner, and Virtual JUG founder. He is an experienced speaker, having presented at JavaOne, DevoxxBE, UK, & FR, DevNexus, DevSecCon, SnykCon, JavaZone, Jfokus, JavaLand, JMaghreb and many more including many JUG tours. His passion is around user groups and communities. When not traveling, Simon enjoys spending quality time with his family, cooking and eating great food.",
-    "tagLine": "Snyk, Principal Developer Advocate",
-    "profilePicture": "https://sessionize.com/image/d8f5-400o400o1-Vh8D4iFF2mTMQgaQorYCTm.png",
-    "sessions": [
-      {
-        "id": 551307,
-        "name": "Breaking AI: Live coding and hacking applications with Generative AI"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Snyk",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@sjmaple",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "8d6bb73e-5451-4e33-a0ab-7b7ffc37a52e",
     "firstName": "Simon",
     "lastName": "Martinelli",
@@ -5513,12 +5425,12 @@
     "profilePicture": "https://sessionize.com/image/3bf6-400o400o1-GXkRhYghnsmHQcnaKDUUbL.jpg",
     "sessions": [
       {
-        "id": 557446,
-        "name": "More tales from the Dark Side: How AI is the bad guys new friend"
-      },
-      {
         "id": 557595,
         "name": "The Ultimate One-Day Java Workshop: Secure, High-Performance Deployment to Kubernetes and Serverless"
+      },
+      {
+        "id": 557446,
+        "name": "More tales from the Dark Side: How AI is the bad guys new friend"
       }
     ],
     "isTopSpeaker": false,
@@ -5669,6 +5581,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@t_mammarella",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "421c42e7-2da6-4dfd-b7d9-12c6d75ad354",
+    "firstName": "Tim",
+    "lastName": "Berglund",
+    "fullName": "Tim Berglund",
+    "bio": "Tim is a teacher, author, and technology leader with StarTree, where he serves as the Vice President of Developer Relations. He is a regular speaker at conferences and a presence on YouTube explaining complex technology topics in an accessible way. He tweets as @tlberglund, blogs every few years at http://timberglund.com, and lives in Littleton, CO, USA. He has three grown children and two grandchildren, a fact about which he is rather excited.",
+    "tagLine": "VP DevRel, StarTree",
+    "profilePicture": "https://sessionize.com/image/1e67-400o400o1-VEdGihGqA8CnPxoQ9zDuP6.jpg",
+    "sessions": [
+      {
+        "id": 603871,
+        "name": "Apache Pinot Real-Time Analytics Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/tlberglund",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "StarTree",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@tlberglund",
         "sort": 21,
         "answerExtra": null
       }
@@ -5837,6 +5791,52 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@venkat_s",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
+    "firstName": "Viktor",
+    "lastName": "Gamov",
+    "fullName": "Viktor Gamov",
+    "bio": "Viktor Gamov is the Head of Developer Advocacy at StarTree, a pioneering company in real-time analytics based on Apache Pinot. With a rich background in implementing and advocating for distributed systems and cloud-native architectures, Viktor excels in open-source technologies. \r\nAs a Java Champion and an esteemed speaker, Viktor is known for his insightful presentations at top industry events like JavaOne, Devoxx, Kafka Summit, and QCon. His expertise spans distributed systems, real-time data streaming, JVM, and DevOps. Viktor has co-authored \"Apache Kafka® in Action\" from Manning. \r\nFollow Viktor on X - @gamussa to stay up to date with Viktor's latest thoughts on technology, his gym and food adventures, and insights into open-source and developer advocacy.\r\n",
+    "tagLine": "Head of Developer Advocacy, StarTree",
+    "profilePicture": "https://sessionize.com/image/51cd-400o400o1-LZQqNCkMeZo2FnFcnWGj1C.jpg",
+    "sessions": [
+      {
+        "id": 603871,
+        "name": "Apache Pinot Real-Time Analytics Workshop"
+      },
+      {
+        "id": 603870,
+        "name": "Real-Time Dashboards in the Corporate World: How Apache Pinot® Powers Industry Leaders"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/gamussa",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "StarTree",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@gamussa",
         "sort": 21,
         "answerExtra": null
       }

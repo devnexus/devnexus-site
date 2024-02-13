@@ -10,8 +10,8 @@ description: In this workshop you will examine and work with the Jakarta EE 10 i
   It does not end there as this workshop will show you how to implement REST clients
   using JSON-B to go from an object to JSON and then back again. Come prepared to
   discuss what you will want to do with REST and then workshop your needs.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

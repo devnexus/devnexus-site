@@ -7,8 +7,8 @@ description: Coming back for another year, the OffHeap podcast have been a stapl
   our favorite JVM language we promise that this session will be another one you are
   NOT going to forget. Take the time to meet the faces behind the (most awesome) Java
   podcast out there!
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T18:00:00'
+endsAt: '2024-04-10T19:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

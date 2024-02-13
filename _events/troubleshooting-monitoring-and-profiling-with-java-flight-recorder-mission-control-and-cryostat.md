@@ -12,8 +12,8 @@ description: "Java Flight Recorder and JDK Mission Control enable continuous col
   Java apps.\r\n\r\nIn this presentation, we will dive into Java Flight Recorder,
   Java Mission Control, and Cryostat.  You will leave knowing how start, stop, and
   visualize data about your Java applications running in and out of containers."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

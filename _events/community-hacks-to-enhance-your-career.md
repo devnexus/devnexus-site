@@ -11,8 +11,8 @@ description: "Do you feel it’s no longer enough to just be a great developer? 
   looking at your code).\r\n\r\nIn this session we’ll explore some of the best practices
   that assist in not having to do it all from scratch. Knowing what you are doing
   can give you an easier path to visible contributions to the community."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

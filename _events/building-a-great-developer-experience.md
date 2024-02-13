@@ -8,8 +8,8 @@ description: If you want to onboard developers quickly, and retain them by provi
   local environmets, data collection and displays, and migration automation. All of
   these work together to create a constant two-way stream of information between the
   platform engineers and their client development teams.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

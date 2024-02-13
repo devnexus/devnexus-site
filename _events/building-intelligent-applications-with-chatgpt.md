@@ -10,8 +10,8 @@ description: As software engineers, we have the incredible opportunity to harnes
   capabilities and create innovative applications that understand, respond, and engage
   with users in natural language. Unleash the power of AI-driven interactions and
   take your applications to the next level.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

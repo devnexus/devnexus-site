@@ -8,8 +8,8 @@ description: It's no secret that TypeScript is all the rage in modern web develo
   to think about the necessary steps to migrate your existing JavaScript project to
   TypeScript. In this talk we'll explore progressive enhancements you can make to
   move your JavaScript project to TypeScript without disrupting your team's productivity.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

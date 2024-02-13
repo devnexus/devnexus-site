@@ -8,8 +8,8 @@ description: 'In this session, I will explore different Spring libraries used fo
   along with what defaults are present when nothing is given, focusing in on connection
   pool settings.  I’ll use observability tools and logs to show what’s happening under
   the covers and showcase some gotchas for things like TTL settings and DNS caching. '
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

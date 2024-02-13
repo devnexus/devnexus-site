@@ -10,8 +10,8 @@ description: "As security breaches become more commonplace and more complex, you
   EE, with a demo of Jakarta Security and Authorization. He also discusses what you
   can expect from Jakarta EE 11, including Jakarta Authentication 3.1, revealing how
   this will support the overall goals of Jakarta Security. \r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

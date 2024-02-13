@@ -15,8 +15,8 @@ description: "Testing is a Good Thing, right? Especially automated testing. But 
   live coding, analysis of social media poll results, an overview of solutions in
   this space, \"best practice\" recommendations, and machine learning will be mentioned
   at some point."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

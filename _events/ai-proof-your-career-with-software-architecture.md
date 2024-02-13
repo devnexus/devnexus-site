@@ -21,8 +21,8 @@ description: "The rapid rise of AI tools such as ChatGPT, Bard, GitHub Copilot, 
   \r\n\r\nWe will wrap up with a brief look at ArchUnit - a library for testing the
   architecture of a Java application, and how it may be used to guide junior developers
   who use AI tools to generate the \"street level\" code in a project."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -41,8 +41,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

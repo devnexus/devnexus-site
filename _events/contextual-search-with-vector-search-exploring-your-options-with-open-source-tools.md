@@ -22,8 +22,8 @@ description: "Have you noticed the recent improvement in how our searches have b
   the options. This session will be useful for anyone who is intrigued by contextual
   search and usage of AI, but might find themselves overwhelmed by the complexities
   to get started.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -42,8 +42,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

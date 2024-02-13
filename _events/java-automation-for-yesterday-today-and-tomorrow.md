@@ -20,8 +20,8 @@ description: "Consistency, repeatability and simplicity are core tenants to bein
   or at the edge\r\n* See how easy it is to build and deploy Quarkus based applications
   using automation\r\n* Leverage a suite of assets that development and operations
   teams can leverage in their own environment\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -42,8 +42,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

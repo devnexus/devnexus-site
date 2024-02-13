@@ -13,8 +13,8 @@ description: "Containers are everywhere nowadays, and they have changed the way 
   and which K8s API objects to use for which component, and in this talk we’ll detail
   these important items. We also know that developers struggle to troubleshoot their
   deployed applications, because, well, things break and you need to figure out why!\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

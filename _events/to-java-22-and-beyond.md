@@ -9,8 +9,8 @@ description: "Java 21 has come and gone, and the Java release train continues wi
   virtual threads, pattern matching, records, Generational ZGC, and more, understanding
   the goals of these changes can be key to understanding where Java is now and where
   it is going in the future!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

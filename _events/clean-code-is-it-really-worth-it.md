@@ -11,8 +11,8 @@ description: "As developers, we participate every day in our software life cycle
   goes beyond the produced software and its programming language. Is a fundamental
   part of a developer's role growth, something that represents us no matter the language
   and the company where we work. Do not lose the thread."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

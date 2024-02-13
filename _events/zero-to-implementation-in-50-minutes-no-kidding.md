@@ -12,8 +12,8 @@ description: If you separate yourself from the distractions you typically see wh
   such a solution as a requirement. Without realizing that their design is not the
   requirement they miss out on the simpler and better solution.  What are those distractions,
   how to spot them, and how Spring can help you deal with them?
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -13,8 +13,8 @@ description: "Have you heard about Kubernetes? Of course you have, is that thing
   like pods, deployments, services, and more. You'll gain the knowledge you need to
   navigate the Kubernetes landscape confidently, making sense of the buzzwords that
   have left you scratching your head."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

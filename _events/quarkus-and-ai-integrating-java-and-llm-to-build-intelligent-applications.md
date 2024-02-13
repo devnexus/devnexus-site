@@ -16,8 +16,8 @@ description: "A Large Language Model (LLM) is a component of artificial intellig
   the concepts presented also apply to other Java frameworks.\r\n\r\nIf you're interested
   in hands-on experience with Large Language Models and Java, with a focus on practical
   applications rather than theory,  then this session is for you.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted

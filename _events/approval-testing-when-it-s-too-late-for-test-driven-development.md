@@ -14,8 +14,8 @@ description: "Approval Testing may seem odd compared to Test-Driven Development,
   whether the changes are correct or not. With Approval Tests in place, you can safely
   refactor the existing production code, then start introducing Test-Driven Development
   when adding new features to the system."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

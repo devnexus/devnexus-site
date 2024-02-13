@@ -15,13 +15,13 @@ description: Is your organisation ready to revolutionize your coding experience 
   your spot now and get ready to code like never before! In this session you'll learn
   how you can leverage the power of AI to increase your velocity while mitigating
   risks and staying secure.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
-- id: 5e7219be-ad38-4708-884f-d6fbfb51490a
-  name: Simon Maple
+- id: e5aad250-139d-4a16-9c6e-d3534bbe1fc6
+  name: Micah Silverman
 categories:
 - id: 59536
   name: Track
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

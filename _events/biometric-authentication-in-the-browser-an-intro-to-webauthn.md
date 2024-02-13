@@ -14,8 +14,8 @@ description: "WebAuthn is a standard which allows you to leverage biometric base
   authenticators, as well as the difference between user verification and user presence.\r\n\r\nAt
   the end of this talk, you’ll have a grasp of what WebAuthn is, when it makes sense,
   and how you can leverage it for your next project."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -15,8 +15,8 @@ description: "In the dynamic world of machine learning, data scientists and engi
   PyTorch, highlighting its strengths in building dynamic and efficient deep learning
   models.\r\nNext, we will delve into Kubeflow's core capabilities, elucidating how
   it extends Kubernetes to orchestrate end-to-end machine learning workflows."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

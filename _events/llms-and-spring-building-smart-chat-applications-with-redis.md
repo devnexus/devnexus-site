@@ -13,8 +13,8 @@ description: Generative AI and the emergence of LLMs are radically changing cont
   or generating new content. Redis, a vector database and full-text search engine,
   enables RAG workflows. In this session, we'll explore building RAG applications
   using Redis and Spring Boot.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,13 +33,13 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: llms-and-spring-building-smart-chat-applications-with-redis

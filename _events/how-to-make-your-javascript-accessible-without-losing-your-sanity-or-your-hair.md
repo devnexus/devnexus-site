@@ -16,8 +16,8 @@ description: "Accessibility is an important aspect of web development, ensuring 
   attendees will have a solid understanding of the principles of web accessibility
   and specific techniques and tools they can use to build more inclusive web applications
   with JavaScript."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -11,8 +11,8 @@ description: "The bad guys are clever, motivated, ruthless and armed with AI. Wh
   appalled and frightened. Fainting is not allowed.\r\n\r\nDiscover how to fight back
   and see how you can change your behaviour and your code to defend against these
   attacks.\r\n\r\nYour destiny is clear - it’s time to be come a Cyber Defender"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

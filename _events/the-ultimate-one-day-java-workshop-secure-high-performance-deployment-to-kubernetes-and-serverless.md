@@ -31,8 +31,8 @@ description: "This intensive one-day workshop is tailored for developers and IT 
   explore the impact of AI on development processes. By the end of the day, participants
   will be equipped with the knowledge to make informed decisions about architectural
   choices, security practices, and the use of AI in Java application deployment.\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -51,8 +51,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 42138
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

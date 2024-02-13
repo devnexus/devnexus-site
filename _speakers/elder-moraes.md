@@ -12,8 +12,6 @@ bio: Elder helps Java developers to build and deliver secure, available, and fas
 tagLine: Developer Advocate, Red Hat
 profilePicture: https://sessionize.com/image/aa7f-400o400o1-MyQ6xKcUg7DDu8txQgtfN3.png
 sessions:
-- id: 560890
-  name: 'Reviving the Java Community: Insights from JUG Leaders Worldwide'
 - id: 559371
   name: 'Your Java Code in the Kubernetes Native Era: A Live Coding Experience'
 isTopSpeaker: false

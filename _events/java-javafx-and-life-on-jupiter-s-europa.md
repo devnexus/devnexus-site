@@ -23,8 +23,8 @@ description: "NASA’s deep space Clipper mission will launch in 2024 and travel
   way back to Earth. This presentation will review the NASA Clipper use case, provide
   a live demo of the software while discussing code segments that are insightful or
   tricky for such an implementation."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -45,8 +45,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

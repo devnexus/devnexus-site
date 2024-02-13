@@ -10,8 +10,8 @@ description: "What does it mean to have cloud-native Java applications? What do 
   us in exploring different tools for creating cloud-native Java apps. We will go
   through the whole life-cycle of an application – from the first lines of code to
   a fully operational and containerized application."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -7,8 +7,8 @@ description: There are many changes in the Java language aiming to reduce boiler
   talk will cover recent features by live refactoring an application to the newest
   Java version. You will learn the benefits and applicability of new features while
   writing a more readable code.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42141
+room: Java Platform
 liveUrl: 
 recordingUrl: 
 status: Accepted

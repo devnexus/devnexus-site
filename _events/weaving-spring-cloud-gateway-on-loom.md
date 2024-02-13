@@ -8,8 +8,8 @@ description: We will provide a brief history of API gateways in Spring Cloud, in
   Spring Cloud Gateway can work in servlet containers using virtual threads on Java
   21. We will compare and contrast this new functionality to the original WebFlux-based
   Spring Cloud Gateway.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

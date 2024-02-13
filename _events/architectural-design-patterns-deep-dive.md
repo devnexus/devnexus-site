@@ -13,8 +13,8 @@ description: "In this day-long work workshop, we will review a catalog of all th
   Event Sourcing\r\n* Competing Consumers\r\n* Claim Check\r\n* Materialized Views\r\n*
   CQRS (Command-Query Responsibility Segregation)\r\n* Strangler Fig\r\n* Gatekeeper\r\n*
   Valet Key\r\n* Saga Pattern\r\n* Data Mesh"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 39693
+room: Keynote/Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

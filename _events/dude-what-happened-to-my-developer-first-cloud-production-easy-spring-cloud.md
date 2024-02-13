@@ -19,8 +19,8 @@ description: "Dude, what happened to my developer-first cloud? Production-easy S
   to learn how to increase your company's -- and your -- value by getting back to
   what you do best and what brings you greatest joy: writing amazing code and delivering
   needed features to your users!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

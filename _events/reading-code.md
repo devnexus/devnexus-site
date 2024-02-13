@@ -12,8 +12,8 @@ description: "As developers, we spend a lot of time learning to write code, whil
   deliberately practicing reading code in a code reading club or session without an
   IDE, as well as common strategies to navigate a new codebase and familiarise ourselves
   with the code using the IDE."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

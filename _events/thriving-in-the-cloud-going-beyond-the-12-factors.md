@@ -10,8 +10,8 @@ description: "Enabling applications to really thrive (and not just survive) in c
   needed to build cloud native applications that are able to thrive in this environment,
   and we'll take a look at open source technologies and tools that can help us achieve
   this."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

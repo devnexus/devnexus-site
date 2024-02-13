@@ -16,8 +16,8 @@ description: As a developer, you understand the importance of writing code that 
   brush up on your skills, this session is a must-attend for anyone concerned with
   the security of their applications. Let’s start writing secure code and learn how
   to avoid security mistakes.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42143
+room: Security
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -8,8 +8,8 @@ description: Project Leyden allows developers to selectively improve startup tim
   into the JDK. See how speculative optimizations allow AOT (ahead-of-time compilation) code
   to make tradeoffs between Java's static and dynamic nature as well as how new tools
   like Condensers and ComputedConstants may play role in further improvements.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,13 +28,13 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: choose-your-own-performance-a-project-leyden-update

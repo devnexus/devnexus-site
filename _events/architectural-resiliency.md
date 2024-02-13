@@ -8,8 +8,8 @@ description: Regardless of the techniques used to make enterprise solutions High
   solutions is inevitable. This presentation covers a number of architectural resiliency
   techniques and patterns that help increase Mean Time to Failure (MTTF), a.k.a Fault
   Tolerance and decrease Mean Time to Recovery (MTTR).
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39693
+room: Keynote/Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

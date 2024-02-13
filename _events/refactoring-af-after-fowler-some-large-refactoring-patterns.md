@@ -13,8 +13,8 @@ description: "Martin Fowler’s Refactoring: Improving the Design of Existing Co
   the end of the session, the attendee will be able to plan a refactoring effort on
   legacy codebases, apply refactoring techniques beyond those listed in Fowler, and
   recognize accidental code complexity in large codebases."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

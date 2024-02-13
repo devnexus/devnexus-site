@@ -12,8 +12,8 @@ description: "Do you regularly spend sleepless nights desperately trying to make
   without vendor lock-in using Micrometer, OpenTelemetry, Grafana, OpenZipkin, Prometheus,
   OpenMetrics, etc, so you can have a much better sense of what is going on inside
   of your app."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

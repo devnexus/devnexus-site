@@ -14,10 +14,10 @@ bio: "Jonatan Ivanov is an enthusiastic Software Engineer, member of the Spring 
 tagLine: Staff Software Engineer - Spring Engineering Team at VMware
 profilePicture: https://sessionize.com/image/284b-400o400o1-Da96SuT4sERdHAtmZdgtmV.jpg
 sessions:
-- id: 556270
-  name: Application Observability like you've never heard before
 - id: 556271
   name: Spring Boot 3 Workshop
+- id: 556270
+  name: Application Observability like you've never heard before
 isTopSpeaker: false
 links:
 - title: Twitter

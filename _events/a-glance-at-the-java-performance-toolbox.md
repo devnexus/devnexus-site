@@ -12,8 +12,8 @@ description: "What's the first step to improving performance?\r\n\r\nIs it tunin
   gathered from these tools with widespread monitoring systems like Prometheus.\r\n\r\nAfter
   this talk, you will be ready to understand what your application spends time on
   and why so you can start improving its performance with complete information."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

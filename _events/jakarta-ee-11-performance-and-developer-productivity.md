@@ -11,8 +11,8 @@ description: "With a baseline on Java 21, Jakarta EE 11 has a focus on Performan
   up by live coding demos.\r\n\r\nAfter this session, you will have an understanding
   of the fundamentals of Jakarta EE, as well as know how to quickly get started with
   Jakarta EE at your own pace."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

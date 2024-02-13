@@ -14,8 +14,8 @@ description: "AI coding companion tools are growing in popularity, and many orga
   requiring proper onboarding. It will share day-to-day scenarios of developer problems
   and how these tools can help them if properly used. Examples will use Java, Visual
   Studio Code, and Amazon CodeWhisperer."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42138
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

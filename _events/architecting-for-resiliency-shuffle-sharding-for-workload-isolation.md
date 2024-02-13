@@ -8,8 +8,8 @@ description: "Multi-tenant, cloud-based architectures have a set of resiliency r
   talk will introduce the architectural pattern of Shuffle Sharding, discuss the situations
   it can help mitigate, the pros and cons of the pattern, and review some examples
   of its use."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T14:30:00'
+endsAt: '2024-04-11T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39693
+room: Keynote/Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -11,8 +11,8 @@ description: "This workshop focuses on Quarkus, supersonic subatomic Kubernetes 
   ORM with Panache\r\n- Event-driven Messaging\r\n- Streaming Data with Quarkus and
   Kafka\r\n- Monitoring with Prometheus and Grafana\r\n- Tracing Quarkus Apps with
   Jaeger and MicroProfile Tracing\r\n- Migrate Spring Boot (Petclinic) to Quarkus"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

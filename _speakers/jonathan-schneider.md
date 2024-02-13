@@ -11,10 +11,10 @@ bio: Jonathan is co-founder and CEO at Miami-based Moderne which automates softw
 tagLine: Co-founder @ Moderne
 profilePicture: https://sessionize.com/image/35c3-400o400o1-p2TUNUzZEgBXyVuULc2tmq.png
 sessions:
-- id: 557183
-  name: Automated software refactoring with OpenRewrite and Generative AI
 - id: 557192
   name: Fundamentals of Migration Engineering with OpenRewrite
+- id: 557183
+  name: Automated software refactoring with OpenRewrite and Generative AI
 isTopSpeaker: false
 links:
 - title: Twitter

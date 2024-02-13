@@ -6,8 +6,8 @@ description: Know enough about Maven to get by, but not enough to thrive? Then t
   talk is for you. We will review the basics and then dive into the best practices
   for both Maven single and multi-module projects. You will also walk away with enough
   knowledge to troubleshoot your builds.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42144
+room: Tools and Techniques
 liveUrl: 
 recordingUrl: 
 status: Accepted

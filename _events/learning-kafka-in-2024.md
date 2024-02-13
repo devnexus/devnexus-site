@@ -7,8 +7,8 @@ description: Apache Kafka is one of the leading streaming platform. It is highly
   Zookeeper, Broker, Producer, and Subscriber. He will live code a data processing
   system to explain certain gotchas while using Kafka. The session is designed to
   be an interactive hands-on session without any slides.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T15:30:00'
+endsAt: '2024-04-11T16:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,13 +27,13 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42142
+room: Practices and other Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
-isInformed: false
-isConfirmed: false
+isInformed: true
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: learning-kafka-in-2024

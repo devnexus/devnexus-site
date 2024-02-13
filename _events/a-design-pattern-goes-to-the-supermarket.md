@@ -10,8 +10,8 @@ description: "Everybody knows the term design patterns. Some know the patterns a
   how a design pattern would behave in a non-digital environment: the supermarket!
   With the help of drawings and code snippets, this talk will give you a solid understanding
   of design patterns, so you won't have to look them up ever again!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39693
+room: Keynote/Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

@@ -12,8 +12,8 @@ description: In this talk, we will review the strengths and qualities of each da
   current trends in the database ecosystem and then learn about a number of different
   specialized databases and their strengths and weaknesses. This presentation will
   go over some of the fastest growing segments in the database space.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39693
+room: Keynote/Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

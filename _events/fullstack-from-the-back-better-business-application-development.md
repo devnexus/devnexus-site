@@ -12,8 +12,8 @@ description: "This session will guide attendees through building data-rich busin
   that integrates a Spring Boot Java backend with a reactive TypeScript frontend.
   It works with React or Lit and helps you build business apps faster with type-safe
   server communication, included UI components, and integrated tooling."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42145
+room: Web and front-end
 liveUrl: 
 recordingUrl: 
 status: Accepted

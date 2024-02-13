@@ -20,8 +20,8 @@ description: "The advent of large token width Large Language Models (LLMs) such 
   to scale up as LLMs scale while offering an asymmetric cost advantage. The discussion
   will include a live software demonstration using a JHUAPL developed interactive
   3D XAI analysis tool called Trinity."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,8 +40,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42136
+room: AI
 liveUrl: 
 recordingUrl: 
 status: Accepted

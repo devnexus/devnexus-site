@@ -18,13 +18,15 @@ description: "Spring Boot 3 is the new major revision of Spring Boot. In this wo
   Very basic Spring Boot knowledge (how to create beans and HTTP endpoints), you can
   learn these from our online guides quickly, e.g.: https://spring.io/guides/gs/rest-service/\r\n-
   Docker\r\n- Java 17 (or higher) installed\r\n- A Java IDE"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-09T09:00:00'
+endsAt: '2024-04-09T10:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 8f517aca-8293-4e1f-9360-0ce676531421
   name: Jonatan Ivanov
+- id: 51b25e57-ea9c-4900-9b0d-32bc7724f2eb
+  name: Scott Frederick
 categories:
 - id: 59536
   name: Track
@@ -38,8 +40,8 @@ categories:
   - id: 207666
     name: workshop
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

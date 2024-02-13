@@ -11,8 +11,8 @@ description: "Projects often use Java Persistence API (JPA) by default and, thus
   how common ORM problems, such as the n+1 select problem, can be avoided.\r\nFinally,
   the possibility of combining jOOQ and JPA/Hibernate and thus using the best of both
   worlds is discussed."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

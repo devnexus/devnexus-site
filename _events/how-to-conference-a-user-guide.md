@@ -13,8 +13,8 @@ description: "Are you an introvert who dreads large gatherings? Do you find it c
   We'll also delve into techniques and ideas for finding essential breaks to recharge
   and reveal the optimal places to be for maximum advantage.\r\n\r\nDiscover how introverts
   and extroverts can thrive in the world of tech conferences and user groups."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

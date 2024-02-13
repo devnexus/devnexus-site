@@ -13,8 +13,8 @@ description: "I have been teaching workshops for underprivileged kids since I wa
   you can use to teach your own kids or others. We will use Phippy and Friends characters
   to introduce basic programming and cloud-computing concepts in a way that is approachable
   for kids of all ages."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:00:00'
+endsAt: '2024-04-10T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42148
+room: Foyer
 liveUrl: 
 recordingUrl: 
 status: Accepted

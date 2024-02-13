@@ -16,8 +16,8 @@ description: "We live on a data-driven planet where data can be accessed from re
   query mechanism to utilize sorting, streaming, and paging.  Once our application
   is written, we will swap out the relational database for a non-relational database
   to highlight just how easy this can now be with Jakarta Data."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

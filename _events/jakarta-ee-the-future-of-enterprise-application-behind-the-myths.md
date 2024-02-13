@@ -8,8 +8,8 @@ description: Most enterprises continue running their Application in a JEE Server
   running JEE 5 & 7 to Jakarta EE 10. At the end of this session, you are going to
   understand the pitfalls and put away the concerns of updating and evolving your
   enterprise applications.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42147
+room: JakartaEE
 liveUrl: 
 recordingUrl: 
 status: Accepted

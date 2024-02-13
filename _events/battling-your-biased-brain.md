@@ -11,8 +11,8 @@ description: "Ever heard of the IKEA effect or the bandwagon-effect? In our effo
   of how your brain tricks you, how to make better decisions and in the end how to
   deliver some great software.\r\n\r\nA word of warning; during this talk you may
   get tricked!"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted

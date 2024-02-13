@@ -11,8 +11,8 @@ description: "Spring Framework 6.x and Spring Boot 3.x are almost here and you k
   me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at next-gen
   Spring and learn why, with Spring taken together with Java 21, there's never been
   a better time to Java developer.\r\n\r\n"
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted

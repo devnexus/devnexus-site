@@ -12,8 +12,8 @@ description: In the realm of Java programming, understanding memory management a
   collection. So when you are interested in getting more knowledge about which garbage
   collector to use best for your application or about memory management in the JVM,
   this session is for you.
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:35:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42139
+room: Core Java
 liveUrl: 
 recordingUrl: 
 status: Accepted

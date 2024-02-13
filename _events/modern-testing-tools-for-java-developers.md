@@ -20,8 +20,8 @@ description: "New versions of the API framework appear, adding the last trending
   to assert any result.\r\n\r\nWiremock will give you the ability not only restricted
   as a mock solution for your unit and integration test but as a service virtualization
   tool solving common problems in an integrated environment."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T13:30:00'
+endsAt: '2024-04-11T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,8 +40,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42138
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

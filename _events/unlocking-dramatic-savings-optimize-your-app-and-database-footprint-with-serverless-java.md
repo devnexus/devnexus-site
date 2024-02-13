@@ -12,8 +12,8 @@ description: 'In the dynamic world of cloud-native apps, efficient microservices
   EclipseStore''s in-memory data processing boosts data access speed, reduces latency.
   3) Cost Savings: serverless computing cuts infrastructure costs, eliminates server
   management. EclipseStore eliminates data storage costs.'
-startsAt: 
-endsAt: 
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42137
+room: Cloud Infra
 liveUrl: 
 recordingUrl: 
 status: Accepted

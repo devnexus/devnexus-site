@@ -11,8 +11,8 @@ description: "Software Templates get lots of attention, and they’re a quick mo
   to your Catalog. You’ll leave with a basic platform engineering vocabulary and an
   understanding of how Backstage models Components, APIs, Locations and other Entities
   in the catalog-info.yaml file."
-startsAt: 
-endsAt: 
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,13 +33,13 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 
-room: 
+roomId: 42146
+room: Cloud Native
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Native
 format: session
 slug: how-do-i-see-it-in-backstage

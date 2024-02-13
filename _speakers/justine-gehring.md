@@ -10,7 +10,7 @@ bio: 'Justine Gehring is a talented researcher in the field of Machine Learning 
   is a research engineer at Moderne. She is completing her Master’s Degree in Computer
   Science at Mila & McGill. '
 tagLine: Moderne, research engineer
-profilePicture: https://sessionize.com/image/ade5-400o400o1-c847c218-7a88-48eb-a42c-5fca23a13a5b.jpg
+profilePicture: https://sessionize.com/image/9992-400o400o1-4ugxFRjW6x7psdWA9vbRtC.png
 sessions:
 - id: 557183
   name: Automated software refactoring with OpenRewrite and Generative AI
