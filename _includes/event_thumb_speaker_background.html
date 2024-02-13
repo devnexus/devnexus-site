@@ -1,18 +1,19 @@
-<div class="speakers sessions">
+<div class="speakers sessions justify-content-center">
  {% for event in include.collection %}
- {% assign lead = event.primary %}
- {% assign lead_details = site.data.speakers[lead.id] %}
-   <div class="col-sm-6 col-md-4 col-lg-4">
+ {% assign lead = event.speakers[0] %}
+ {% assign lead_data = site.data.speakers | where: "id", lead.id | first %}
+   <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="thumbnail">
-            {% if lead_details.hd_avatar_path %}
-            <img class="img-responsive" src="{{ lead_details.hd_avatar_path }}" alt="{{ event.title }}" >
+            {% if lead_data.profilePicture%}
+            <img class="img-responsive" src="{{ lead_data.profilePicture }}" alt="{{ event.title }}" >
             {% else %}
             <img class="img-responsive" src="/uploads/anonymous-avatar.jpeg" alt="{{ event.title }}" >
             {% endif %}
             <div class="caption">
-                <p>{{ lead_details.name | escape }}</p>
+                <p>{{ lead_data.fullName | escape }}</p>
                 <h3><a href="{{ event.url }}">{{ event.title | escape }}</a></h3>
            </div>
         </div>
    </div>
    {% endfor %}
+</div>

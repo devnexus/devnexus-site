@@ -18,7 +18,7 @@ cfp:
 
 {% include marketing-video.html %}
 
-{% comment %} {% include keynotes_promo.html %} {% include workshops_promo.html %} {% endcomment %}
+{% include keynotes_promo.html %} {% comment %} {% include workshops_promo.html %} {% endcomment %}
 
 <div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2024?</a></div> 
 
