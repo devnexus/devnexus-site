@@ -3,7 +3,7 @@ Akeyless,silver,/uploads/akeyless-2.png,https://www.akeyless.io/
 Amsterdam,jug,/uploads/amsterdam.png,http://amsterdamjug.com/
 ASF,,/assets/img/asf.001.jpeg,https://www.apache.org/
 atlanta,jug,/uploads/ajug-01.png,https://ajug.org/
-Atomic Jar,gold,/uploads/atomicjar-1.png,https://www.atomicjar.com/
+Atomic Jar,,/uploads/atomicjar-1.png,https://www.atomicjar.com/
 Azul,silver,/uploads/azul-3.png,https://www.azul.com/
 BellSoft,,/uploads/bellsoft-1.png,https://bell-sw.com/
 charlotte,jug,/uploads/charlotte-01.png,https://cltjug.org/
@@ -17,6 +17,7 @@ devnver,jug,/uploads/denver-01.png,https://www.meetup.com/denverjavausersgroup/
 Digma,silver,/uploads/digma-1.png,https://digma.ai
 Dimiour,,/uploads/dimiour-2.png,http://dimiour.io/?utm_campaign=Devenexus-2023&utm_source=Event&utm_medium=Event%20Website
 Discover,gold,/uploads/discover-01.png,https://technology.discover.com/
+Docker,gold,/uploads/docker-01.png,https://testcontainers.com/
 Elastic,,/uploads/elastic-01.png,https://www.elastic.co/
 Endor Labs,silver,/uploads/endor-labs-01.png,https://www.endorlabs.com/
 Garden State JUG,jug,/uploads/garden-state-01.png,https://gsjug.org/
