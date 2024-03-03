@@ -103,14 +103,14 @@ timeslots:
 
 {% include schedule_filtering.html %}
 
-<div class="row new-day apr04">
+<div class="row new-day apr09">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
             <span><a href="/workshopinstructions">Get Ready</a></span>
         </div>
         <div>
-          <h2 class="day "> Tuesdsay Apr 4 - Workshops </h2>
+          <h2 class="day "> Tuesdsay Apr 9 - Workshops </h2>
           <h3>*** Workshop ticket holders only. ***</h3>
         </div>  
         <div class="until09">
@@ -125,14 +125,14 @@ timeslots:
 
 {% assign day1 = site.data.schedule[1] %}
 {% assign day1_times = day1.timeSlots %}
-<div class="row new-day apr05">
+<div class="row new-day apr10">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
             <span><a href="/gwcc_map.pdf">Rooms</a></span>
         </div>
         <div>
-          <h2 class="day "> Wednesday Apr 5 - Day 1 </h2>
+          <h2 class="day "> Wednesday Apr 10 - Day 1 </h2>
         </div>
         {% for slot in day1_times %}
         {% assign rooms = slot.rooms | sort: "name" %}
@@ -149,14 +149,14 @@ timeslots:
 
 {% assign day2 = site.data.schedule[2] %}
 {% assign day2_times = day2.timeSlots %}
-<div class="row new-day apr06">
+<div class="row new-day apr11">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
             <span><a href="/gwcc_map.pdf">Rooms</a></span>
         </div>
         <div>
-          <h2 class="day "> Thursday Apr 6 - Day 2 </h2>
+          <h2 class="day "> Thursday Apr 11 - Day 2 </h2>
         </div>
         {% for slot in day2_times %}
         <div class="{{slot.slotStart | slugify}}">
