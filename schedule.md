@@ -5,9 +5,6 @@ tracks:
   key: cloud-infrastructure
   name: Cloud Infrastructure
 - 
-  key: jakarta-ee
-  name: JakartaEE
-- 
   key: web-and-front-end
   name: Web 
 - 
@@ -16,9 +13,6 @@ tracks:
 - 
   key: security
   name: Security
-- 
-  key: unobtanium
-  name: Unobtanium
 - 
   key: cloud-technology
   name: Cloud Technology
@@ -37,19 +31,34 @@ tracks:
 - 
   key: architecture
   name: Architecture  
-  
+- 
+  key: artificial-intelligence
+  name: AI
+-
+  key: cloud-native
+  name: Cloud Native
+- 
+  key: agile
+  name: Agile
+-
+  key: jakartaee
+  name: JakartaEE
+- 
+  key: keynote
+  name: Keynotes         
 timeslots:  
 - 
   key: 07-30-00
   name: Morning Socials
   slots:
   - 07-30-00
-  - 07-45-00
+  - 08-15-00
   - 08-00-00
 - key: 09-00-00
   name: 09:00 - 10:00
   slots:
   - 09-00-00
+  - 09-10-00
 - key: 10-00-00
   name: 10:00 - 11:00
   slots:
@@ -65,33 +74,32 @@ timeslots:
   slots: 
   - 12-30-00
 - key: 13-30-00
-  name: 13:30 - 14:30
+  name: 13:30 - 15:00
   slots: 
   - 13-30-00
+  - 14-00-00
   - 14-30-00
-- key: 14-45-00
-  name: 14:45 - 15:45
-  slots: 
-  - 14-45-00
 - key: 15-00-00
   name: 15:00 - 16:00
   slots: 
   - 15-00-00
-- key: 15-45-00
-  name: 15:45 - 16-45
-  slots:
-  - 15-45-00
+  - 15-30-00
 - key: 16-00-00
   name: 16:00 - 17:00
-  slots:
+  slots: 
+  - 15-30-00
   - 16-00-00
 - key: 17-00-00
+  name: 17:00 - 18-00
+  slots:
+  - 17-00-00
+- key: socials
   name: Evening Socials
   slots: 
-  - 17-00-00
+  - 18-00-00
   - 17-30-00
   - 16-45-00
-  - 20-00-00
+  - 19-30-00
 
 ---
 

@@ -50,7 +50,7 @@ function applyFilter() {
   tracks.forEach(element => {
       if (trackFilters.length > 0 ) {
           if (trackFilters.includes(element)) {
-            $('div.' + element).show();
+            $('div' + element).show();
           } else {
             $('div.' + element).hide();
           }
