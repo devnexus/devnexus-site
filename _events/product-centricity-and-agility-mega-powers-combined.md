@@ -17,7 +17,7 @@ description: "Abstract:\r\nIn software development two themes run rampant which 
   a product development strategy by the incorporating the beneficial elements of both
   product centricity and agility."
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

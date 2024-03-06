@@ -15,8 +15,8 @@ description: "This isn't your typical tech talk—it's a story of the journey in
   about the future of tech. Viktor's dynamic style will keep you on the edge of your
   seat, eager to put these insights into action. So, buckle up and get ready to be
   wowed by the power of real-time analytics with Apache Pinot – it will be a blast!"
-startsAt: '2024-04-10T16:00:00'
-endsAt: '2024-04-10T17:00:00'
+startsAt: '2024-04-11T11:30:00'
+endsAt: '2024-04-11T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207652
-    name: Architecture
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -35,14 +35,14 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42146
-room: Cloud Native
+roomId: 42137
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Architecture
+track: Cloud Technology
 format: session
 slug: real-time-dashboards-in-the-corporate-world-how-apache-pinot-powers-industry-leaders
 

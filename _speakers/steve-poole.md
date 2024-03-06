@@ -13,8 +13,8 @@ tagLine: Director Developer Advocacy, Sonatype
 profilePicture: https://sessionize.com/image/3bf6-400o400o1-GXkRhYghnsmHQcnaKDUUbL.jpg
 sessions:
 - id: 557595
-  name: 'The Ultimate One-Day Java Workshop: Secure, High-Performance Deployment to
-    Kubernetes and Serverless'
+  name: 'The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with
+    Security & Scalability'
 - id: 557446
   name: 'More tales from the Dark Side: How AI is the bad guys new friend'
 isTopSpeaker: false

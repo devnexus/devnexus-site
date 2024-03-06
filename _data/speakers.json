@@ -45,6 +45,10 @@
     "profilePicture": "https://sessionize.com/image/138d-400o400o1-f5-e8b9-4b4b-a8e4-4f5c6c61158f.fc62390d-0d7e-4a29-b526-9806b570af55.jpg",
     "sessions": [
       {
+        "id": 557595,
+        "name": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability"
+      },
+      {
         "id": 557019,
         "name": "A developer’s journey to Kubernetes: a handy guide for developing, deploying, and debugging your app"
       }
@@ -1525,6 +1529,10 @@
       {
         "id": 551596,
         "name": "Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI"
+      },
+      {
+        "id": 547420,
+        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
       }
     ],
     "isTopSpeaker": false,
@@ -1893,6 +1901,10 @@
     "profilePicture": "https://sessionize.com/image/4477-400o400o1-DwbpYmtNnyKRuXNdX2yEf2.jpg",
     "sessions": [
       {
+        "id": 557595,
+        "name": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability"
+      },
+      {
         "id": 553009,
         "name": "Thriving in the cloud: Going beyond the 12 factors"
       }
@@ -2134,6 +2146,48 @@
     "categories": []
   },
   {
+    "id": "b9f343b4-5370-4839-bd53-572b0322882e",
+    "firstName": "James",
+    "lastName": "Falkner",
+    "fullName": "James Falkner",
+    "bio": "Technology evangelist, teacher, learner, author, dedicated to open source and open computing. I work at Red Hat as a product marketing director for Red Hat's portfolio of open source products and love what we do and learning from others, and occasionally teaching at conferences.\r\n\r\n",
+    "tagLine": "Director, Red Hat Runtimes Technical Marketing",
+    "profilePicture": "https://sessionize.com/image/80fb-400o400o1-07b8f778-68b2-4d94-9d0c-17044d6028b0.jpg",
+    "sessions": [
+      {
+        "id": 588202,
+        "name": "Gain new supersonic, subatomic superpowers with Quarkus 3"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/schtool",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@schtool",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
     "firstName": "Jamie",
     "lastName": "Coleman",
@@ -2142,6 +2196,10 @@
     "tagLine": "Sonatype",
     "profilePicture": "https://sessionize.com/image/fdda-400o400o1-SuD8G4oH4tX8RGD6b5NukS.jpg",
     "sessions": [
+      {
+        "id": 557595,
+        "name": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability"
+      },
       {
         "id": 556857,
         "name": "The Death Star and the ultimate vulnerability"
@@ -2965,12 +3023,12 @@
     "profilePicture": "https://sessionize.com/image/56cf-400o400o1-hRJfHj9uhAKenHm5nQ3K15.png",
     "sessions": [
       {
-        "id": 549522,
-        "name": "Calling AI Tools from Java"
-      },
-      {
         "id": 549542,
         "name": "JUnit 5's Best Features"
+      },
+      {
+        "id": 549522,
+        "name": "Calling AI Tools from Java"
       }
     ],
     "isTopSpeaker": false,
@@ -3530,48 +3588,6 @@
     "categories": []
   },
   {
-    "id": "d646eb1d-f4a3-41fe-9d99-9eac7abf2789",
-    "firstName": "Mark",
-    "lastName": "Stoodley",
-    "fullName": "Mark Stoodley",
-    "bio": "Mark joined the IBM Markham lab in 2002 after graduating from the University of Toronto with a Ph.D. focusing on the field of computer engineering. He spent his entire IBM career in the Runtime Technologies (formerly Java Technology Center) team developing, testing, servicing, and now architecting Just-In-Time (JIT) compilers. Mark led the J9 Java Virtual Machine team through the effort to significantly refactor and then to contribute millions of lines of J9 source code to two open projects : Eclipse OMR and Eclipse OpenJ9. Following this successful effort, he became the Chief Architect for IBM Java, leading a global team that builds, innovates in, and services the IBM Semeru Runtime (JDK) for thousands of Java-based products and cloud services used by small, medium, large, and huge companies spanning all sectors of the IT industry.",
-    "tagLine": "Chief Architect for IBM Java",
-    "profilePicture": "https://sessionize.com/image/40a8-400o400o1-XAc4WmWQaSdeXpiLfiPWJN.jpg",
-    "sessions": [
-      {
-        "id": 547420,
-        "name": "Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "Twitter",
-        "url": "http://twitter.com/mstoodle",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 59531,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "IBM",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 59535,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@mstoodle",
-        "sort": 21,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "f465d18e-ff85-47b9-9997-f00a602ac48d",
     "firstName": "Markus",
     "lastName": "Kett",
@@ -3618,7 +3634,7 @@
     "categories": []
   },
   {
-    "id": "ec9ed7f2-f27c-424f-85ba-9d078cb73e11",
+    "id": "55118daf-09db-4e61-a5b6-c2661640c3d2",
     "firstName": "Matt",
     "lastName": "Raible",
     "fullName": "Matt Raible",
@@ -3910,7 +3926,7 @@
     "sessions": [
       {
         "id": 568379,
-        "name": "Scalable Machine Learning with PyTorch,  Kubeflow and Kubernetes"
+        "name": "Harnessing the Power of Open Source for Cloud Native Development: Strategies for Success"
       }
     ],
     "isTopSpeaker": false,
@@ -3950,6 +3966,10 @@
     "tagLine": "Backend engineer, Spotify",
     "profilePicture": "https://sessionize.com/image/ed64-400o400o1-QKB71Uk8WRw1XYdxLjDu4h.jpg",
     "sessions": [
+      {
+        "id": 557595,
+        "name": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability"
+      },
       {
         "id": 540558,
         "name": "ML in Java, YES it's possible!"
@@ -4019,6 +4039,48 @@
         "question": "Twitter handle with @ ex: @prpatel",
         "questionType": "Short_Text",
         "answer": "@ntschutta",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e7343345-6288-4fa5-8b88-086b6e09015d",
+    "firstName": "Neal",
+    "lastName": "Ford",
+    "fullName": "Neal Ford",
+    "bio": " Neal is Director, Software Architect, and Meme Wrangler at ThoughtWorks, a software company and a community of passionate, purpose-led individuals, who thinks disruptively to deliver technology to address the toughest challenges, all while seeking to revolutionize the IT industry and create positive social change. He is an internationally recognized expert on software development and delivery, especially in the intersection of agile engineering techniques and software architecture. Neal has authored magazine articles, seven books (and counting), dozens of video presentations, and spoken at hundreds of developers conferences worldwide. His topics include software architecture, continuous delivery, functional programming, cutting edge software innovations, and includes a business-focused book and video on improving technical presentations. Check out his web site at nealford.com. ",
+    "tagLine": "Director / Architect / Meme Wrangler @ ThoughtWorks",
+    "profilePicture": "https://sessionize.com/image/d50a-400o400o1-wUFxaiJFMUKB9VaxiTNPCY.png",
+    "sessions": [
+      {
+        "id": 634712,
+        "name": "What Makes Software Architecture So Intractable?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/neal4d",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Thoughtworks Inc",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "na",
         "sort": 21,
         "answerExtra": null
       }
@@ -5010,6 +5072,42 @@
     "categories": []
   },
   {
+    "id": "0bcff2e0-2a53-4cdb-9301-11cfc4a4041d",
+    "firstName": "Samuel",
+    "lastName": "Raghunath",
+    "fullName": "Samuel Raghunath",
+    "bio": "Senior Principal @ Grubhub. Advocate for all things backend engineering, with a focus on developer experience and platform engineering for mid-large sized companies.",
+    "tagLine": "Senior Principal Engineer, Grubhub",
+    "profilePicture": "https://sessionize.com/image/7d7d-400o400o1-de2a52b5-e221-4cfe-82d8-980f0cf2e3a5.jpg",
+    "sessions": [
+      {
+        "id": 537809,
+        "name": "Building a Great Developer Experience"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 59531,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Grubhub",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 59535,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "None",
+        "sort": 21,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "51b25e57-ea9c-4900-9b0d-32bc7724f2eb",
     "firstName": "Scott",
     "lastName": "Frederick",
@@ -5336,13 +5434,13 @@
     "firstName": "Spencer",
     "lastName": "Gibb",
     "fullName": "Spencer Gibb",
-    "bio": "Spencer Gibb is a Software Engineer at VMware where he is the co-founder and lead of the Spring Cloud Core projects.\r\n\r\nHis interests include distributed systems, JVM languages, web services frameworks, message-driven architectures and making software development simpler.\r\n\r\nHe has industry experience in early e-commerce platforms, government and non-profit organizations, and business intelligence startups.  He has extensive java experience and experience in other languages such as scala and python.",
-    "tagLine": "Co-founder and Lead of Spring Cloud at VMware",
-    "profilePicture": "https://sessionize.com/image/6864-400o400o1-SR5HxiRGMgCAxgP51LzFJZ.jpg",
+    "bio": "Spencer Gibb is a Software Engineer at Broadcom where he is the co-founder and lead of the Spring Cloud Core projects.\r\n\r\nHis interests include distributed systems, JVM languages, web services frameworks, message-driven architectures and making software development simpler.\r\n\r\nHe has industry experience in early e-commerce platforms, government and non-profit organizations, and business intelligence startups.  He has extensive java experience and experience in other languages such as scala and python.",
+    "tagLine": "Co-founder and Lead of Spring Cloud at Broadcom",
+    "profilePicture": "https://sessionize.com/image/f9c0-400o400o1-QRBdUDT7LomUFvidEtQ74x.jpg",
     "sessions": [
       {
         "id": 551498,
-        "name": "Weaving Spring Cloud Gateway on Loom"
+        "name": "Spring Cloud Gateway MVC: Built for Java 21 and Virtual Threads"
       }
     ],
     "isTopSpeaker": false,
@@ -5426,7 +5524,7 @@
     "sessions": [
       {
         "id": 557595,
-        "name": "The Ultimate One-Day Java Workshop: Secure, High-Performance Deployment to Kubernetes and Serverless"
+        "name": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability"
       },
       {
         "id": 557446,
@@ -5592,7 +5690,7 @@
     "firstName": "Tim",
     "lastName": "Berglund",
     "fullName": "Tim Berglund",
-    "bio": "Tim is a teacher, author, and technology leader with StarTree, where he serves as the Vice President of Developer Relations. He is a regular speaker at conferences and a presence on YouTube explaining complex technology topics in an accessible way. He tweets as @tlberglund, blogs every few years at http://timberglund.com, and lives in Littleton, CO, USA. He has three grown children and two grandchildren, a fact about which he is rather excited.",
+    "bio": "Tim is a teacher, author, and technology leader with StarTree, where he serves as the VP of Developer Relations, working with his team to make Apache Pinot and real-time analytics accessible to all developers. He is a regular speaker at conferences and a presence on YouTube explaining complex technology topics in an accessible way. He tweets as @tlberglund. He lives with his wife and stepdaughter in Mountain View, CA, USA. He has three grown children and three grandchildren, with a fourth on the way.",
     "tagLine": "VP DevRel, StarTree",
     "profilePicture": "https://sessionize.com/image/1e67-400o400o1-VEdGihGqA8CnPxoQ9zDuP6.jpg",
     "sessions": [
@@ -5848,7 +5946,7 @@
     "firstName": "Vincent",
     "lastName": "Mayers",
     "fullName": "Vincent Mayers",
-    "bio": "Vincent is Director of Community Operations for Gradle Inc., Expat Brit, Artist, athlete, traveler, and technology community junkie. Vincent is an Oracle Java Champion, steering committee member for MicroProfile, has been a board member of the Atlanta Java Users Group since 2008, and runs some of the USA's premier community technology conferences:\r\nhttp://devnexus.com  http://connect.tech http://vueconf.us \r\n \r\nVincent has a degree in 3D Design from the University of Wolverhampton, United Kingdom, and, in another life, was a full-time athlete competing at World Championship level in whitewater kayaking.",
+    "bio": "Expat Brit, artist, athlete, traveler, and technology community junkie. Vincent is a Java Champion, a steering committee member for MicroProfile, has been a board member of the Atlanta Java Users Group since 2008, and runs some of the USA's premier community technology conferences:\r\nhttp://devnexus.com\r\nhttp://connect.tech\r\nhttp://vueconf.us\r\nhttp://jconf.dev\r\n\r\nVincent has a degree in 3D Design from the University of Wolverhampton, United Kingdom, and, in another life, was a full-time athlete competing at World Championship level in whitewater kayaking.",
     "tagLine": "I am not a Software Engineer but iI do play one on TV",
     "profilePicture": "https://sessionize.com/image/30a4-400o400o1-SWL8RN7hRBagtnMT32ffhU.jpg",
     "sessions": [

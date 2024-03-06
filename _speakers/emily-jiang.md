@@ -19,6 +19,8 @@ profilePicture: https://sessionize.com/image/1303-400o400o1-PVqjEq2VCaNo8irVtYX6
 sessions:
 - id: 551596
   name: Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI
+- id: 547420
+  name: Databaseless Data Processing with EclipseStore and WebSphere Liberty InstantOn
 isTopSpeaker: false
 links:
 - title: Twitter

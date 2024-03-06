@@ -8,6 +8,9 @@ bio: Mohammed is a community catalyst, a true open source believer and one of Go
 tagLine: Backend engineer, Spotify
 profilePicture: https://sessionize.com/image/ed64-400o400o1-QKB71Uk8WRw1XYdxLjDu4h.jpg
 sessions:
+- id: 557595
+  name: 'The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with
+    Security & Scalability'
 - id: 540558
   name: ML in Java, YES it's possible!
 isTopSpeaker: false

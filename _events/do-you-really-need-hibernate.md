@@ -12,7 +12,7 @@ description: "Projects often use Java Persistence API (JPA) by default and, thus
   the possibility of combining jOOQ and JPA/Hibernate and thus using the best of both
   worlds is discussed."
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

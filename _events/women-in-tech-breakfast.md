@@ -1,21 +1,21 @@
 ---
 questionAnswers: []
-id: ede49b8f-8a5a-490e-82ac-2fe7de5ef5ca
-title: Intro to Kafka
+id: 6ccb7f81-8a86-42ed-b663-00d6d6f748a9
+title: Women in Tech Breakfast
 description: 
-startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+startsAt: '2024-04-10T08:00:00'
+endsAt: '2024-04-10T09:00:00'
 isServiceSession: true
 isPlenumSession: false
 speakers: []
 categories: []
-roomId: 42137
-room: Cloud Infra
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: 
 isInformed: false
 isConfirmed: false
-slug: intro-to-kafka
+slug: women-in-tech-breakfast
 
 ---

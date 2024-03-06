@@ -9,7 +9,7 @@ description: Regardless of the techniques used to make enterprise solutions High
   techniques and patterns that help increase Mean Time to Failure (MTTF), a.k.a Fault
   Tolerance and decrease Mean Time to Recovery (MTTR).
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,7 +29,7 @@ categories:
     name: session
   sort: 1
 roomId: 39693
-room: Keynote/Architecture
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

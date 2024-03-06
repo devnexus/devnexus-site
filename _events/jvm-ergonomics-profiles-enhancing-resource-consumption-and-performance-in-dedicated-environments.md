@@ -17,8 +17,8 @@ description: 'Ergonomics Profiles is a new Java Virtual Machine (JVM) feature pr
   the selected profile. By incorporating Ergonomics Profiles, JVMs can better adapt
   to dedicated environments, reduce resource waste, and increase overall chances of
   better performance, resulting in more efficient and scalable Java applications.'
-startsAt: '2024-04-10T10:00:00'
-endsAt: '2024-04-10T11:00:00'
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

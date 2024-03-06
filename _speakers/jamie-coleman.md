@@ -16,6 +16,9 @@ bio: "Jamie is a Developer Advocate for Sonatype formally IBM, based in the UK. 
 tagLine: Sonatype
 profilePicture: https://sessionize.com/image/fdda-400o400o1-SuD8G4oH4tX8RGD6b5NukS.jpg
 sessions:
+- id: 557595
+  name: 'The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with
+    Security & Scalability'
 - id: 556857
   name: The Death Star and the ultimate vulnerability
 isTopSpeaker: false

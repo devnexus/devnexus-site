@@ -7,7 +7,7 @@ description: As far as Java is concerned, most AI tools are just another RESTful
   blocks, the HTTP Client API and more to access ChatGPT, the Whisper audio-to-text
   transcription API, and image generators like DALL-E, Stable Diffusion, and Midjourney.
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

@@ -13,8 +13,8 @@ description: "Zero Trust Networking has become a standard marketing buzzword but
   secure foundation for workload identity and modern service-to-service networking.
   We will see how to accomplish exactly what Google did with ALTS but in a more open-source
   friendly way."
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207653
-    name: Cloud Infrastructure
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -33,14 +33,14 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42138
+roomId: 42137
 room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Infrastructure
+track: Cloud Technology
 format: session
 slug: wireguard-tls-and-workload-identity-the-backbone-of-modern-service-networking
 

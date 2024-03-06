@@ -12,7 +12,7 @@ description: "As developers, we participate every day in our software life cycle
   part of a developer's role growth, something that represents us no matter the language
   and the company where we work. Do not lose the thread."
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

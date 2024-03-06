@@ -14,8 +14,8 @@ description: "Developers are not security experts! Why not? And should they be?\
   how to integrate a measure of security that makes sense in existing development
   processes and how to introduce a security culture to your team in a healthy way
   without exhausting your developers."
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-11T16:00:00'
+endsAt: '2024-04-11T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

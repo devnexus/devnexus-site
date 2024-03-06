@@ -13,7 +13,7 @@ description: 'In the dynamic world of cloud-native apps, efficient microservices
   3) Cost Savings: serverless computing cuts infrastructure costs, eliminates server
   management. EclipseStore eliminates data storage costs.'
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207653
-    name: Cloud Infrastructure
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -35,13 +35,13 @@ categories:
     name: session
   sort: 1
 roomId: 42137
-room: Cloud Infra
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: false
-track: Cloud Infrastructure
+track: Cloud Technology
 format: session
 slug: unlocking-dramatic-savings-optimize-your-app-and-database-footprint-with-serverless-java
 

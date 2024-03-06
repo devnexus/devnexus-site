@@ -12,7 +12,7 @@ description: "The bad guys are clever, motivated, ruthless and armed with AI. Wh
   and see how you can change your behaviour and your code to defend against these
   attacks.\r\n\r\nYour destiny is clear - it’s time to be come a Cyber Defender"
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

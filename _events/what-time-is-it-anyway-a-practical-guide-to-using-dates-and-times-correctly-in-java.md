@@ -30,8 +30,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207655
-    name: Core Java
+  - id: 207657
+    name: Java Platform
   sort: 0
 - id: 59537
   name: Session Format
@@ -46,7 +46,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Core Java
+track: Java Platform
 format: session
 slug: what-time-is-it-anyway-a-practical-guide-to-using-dates-and-times-correctly-in-java
 

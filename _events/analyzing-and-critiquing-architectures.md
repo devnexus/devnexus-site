@@ -11,7 +11,7 @@ description: Software architecture is having a moment, from best selling books t
   we’ll work through real world examples, providing you a chance to practice this
   vital skill.
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,7 +31,7 @@ categories:
     name: session
   sort: 1
 roomId: 39693
-room: Keynote/Architecture
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

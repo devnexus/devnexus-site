@@ -14,6 +14,9 @@ bio: Abdel Sghiouar is a senior Cloud Developer Advocate @Google Cloud. A co-hos
 tagLine: Cloud Developer Advocate
 profilePicture: https://sessionize.com/image/138d-400o400o1-f5-e8b9-4b4b-a8e4-4f5c6c61158f.fc62390d-0d7e-4a29-b526-9806b570af55.jpg
 sessions:
+- id: 557595
+  name: 'The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with
+    Security & Scalability'
 - id: 557019
   name: 'A developer’s journey to Kubernetes: a handy guide for developing, deploying,
     and debugging your app'

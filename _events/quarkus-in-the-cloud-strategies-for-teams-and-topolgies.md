@@ -12,7 +12,7 @@ description: 'Java is a powerhouse of a language suitable for use in many enviro
   nuances and trade-offs essential for making informed decisions in these deployment
   paradigms.'
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

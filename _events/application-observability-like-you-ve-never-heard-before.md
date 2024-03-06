@@ -13,7 +13,7 @@ description: "Do you regularly spend sleepless nights desperately trying to make
   OpenMetrics, etc, so you can have a much better sense of what is going on inside
   of your app."
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

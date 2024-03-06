@@ -6,8 +6,8 @@ description: "In this session, we'll explore the challenges of optimizing Java d
   in dynamic scaling, container, and cloud function environments. \r\nWe'll dig into
   resource management, garbage collection, cold start issues, classpath and dependency
   management, performance monitoring, and potential security issues."
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -17,8 +17,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207654
-    name: Cloud Technology
+  - id: 207660
+    name: Tools and techniques
   sort: 0
 - id: 59537
   name: Session Format
@@ -33,7 +33,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Technology
+track: Tools and techniques
 format: session
 slug: best-practices-for-java-in-cloud-native-architectures
 

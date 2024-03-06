@@ -9,7 +9,7 @@ description: Most enterprises continue running their Application in a JEE Server
   understand the pitfalls and put away the concerns of updating and evolving your
   enterprise applications.
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

@@ -17,7 +17,7 @@ description: "Accessibility is an important aspect of web development, ensuring 
   and specific techniques and tools they can use to build more inclusive web applications
   with JavaScript."
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

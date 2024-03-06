@@ -4,11 +4,12 @@ firstName: Tim
 lastName: Berglund
 fullName: Tim Berglund
 bio: Tim is a teacher, author, and technology leader with StarTree, where he serves
-  as the Vice President of Developer Relations. He is a regular speaker at conferences
+  as the VP of Developer Relations, working with his team to make Apache Pinot and
+  real-time analytics accessible to all developers. He is a regular speaker at conferences
   and a presence on YouTube explaining complex technology topics in an accessible
-  way. He tweets as @tlberglund, blogs every few years at http://timberglund.com,
-  and lives in Littleton, CO, USA. He has three grown children and two grandchildren,
-  a fact about which he is rather excited.
+  way. He tweets as @tlberglund. He lives with his wife and stepdaughter in Mountain
+  View, CA, USA. He has three grown children and three grandchildren, with a fourth
+  on the way.
 tagLine: VP DevRel, StarTree
 profilePicture: https://sessionize.com/image/1e67-400o400o1-VEdGihGqA8CnPxoQ9zDuP6.jpg
 sessions:

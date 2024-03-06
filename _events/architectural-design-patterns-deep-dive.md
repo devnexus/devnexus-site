@@ -34,7 +34,7 @@ categories:
     name: workshop
   sort: 1
 roomId: 39693
-room: Keynote/Architecture
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

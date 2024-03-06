@@ -13,7 +13,7 @@ description: "As developers, we spend a lot of time learning to write code, whil
   IDE, as well as common strategies to navigate a new codebase and familiarise ourselves
   with the code using the IDE."
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

@@ -24,8 +24,8 @@ isPlenumSession: false
 speakers:
 - id: f465d18e-ff85-47b9-9997-f00a602ac48d
   name: Markus Kett
-- id: d646eb1d-f4a3-41fe-9d99-9eac7abf2789
-  name: Mark Stoodley
+- id: fd61aaae-755a-4c22-9e72-ab751cbe2b63
+  name: Emily Jiang
 categories:
 - id: 59536
   name: Track

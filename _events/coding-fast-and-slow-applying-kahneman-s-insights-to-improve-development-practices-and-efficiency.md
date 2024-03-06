@@ -20,7 +20,7 @@ description: "Embark on an exciting journey into the intersection of psychology,
   us for an exhilarating adventure into the fast and slow worlds of coding, and uncover
   new ways to maximize your cognitive resources."
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207651
-    name: Agile
+  - id: 207658
+    name: Practices and other tech
   sort: 0
 - id: 59537
   name: Session Format
@@ -46,7 +46,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Agile
+track: Practices and other tech
 format: session
 slug: coding-fast-and-slow-applying-kahneman-s-insights-to-improve-development-practices-and-efficiency
 

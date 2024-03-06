@@ -27,8 +27,8 @@ description: "Monolithic architecture has been the traditional approach for buil
   using an application composition platform. They will also learn how embracing micro-frontend
   architecture can enable organizations to become more agile and efficient in their
   development process.\r\n"
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -47,8 +47,8 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42140
-room: Frameworks
+roomId: 39693
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

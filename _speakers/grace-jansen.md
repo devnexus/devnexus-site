@@ -14,6 +14,9 @@ bio: Grace is a Developer Advocate at IBM, working with Open Liberty and Reactiv
 tagLine: IBM, Developer Advocate
 profilePicture: https://sessionize.com/image/4477-400o400o1-DwbpYmtNnyKRuXNdX2yEf2.jpg
 sessions:
+- id: 557595
+  name: 'The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with
+    Security & Scalability'
 - id: 553009
   name: 'Thriving in the cloud: Going beyond the 12 factors'
 isTopSpeaker: false

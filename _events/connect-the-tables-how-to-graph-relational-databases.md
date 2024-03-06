@@ -10,8 +10,8 @@ description: "You might have heard about graphs, but what if you already have a 
   principles for a successful graph model. At each step, we will show live code for
   making this work in the real world. Come to this session to get concrete steps for
   graphing relational databases."
-startsAt: '2024-04-11T11:30:00'
-endsAt: '2024-04-11T12:30:00'
+startsAt: '2024-04-10T16:00:00'
+endsAt: '2024-04-10T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,7 +31,7 @@ categories:
     name: session
   sort: 1
 roomId: 39693
-room: Keynote/Architecture
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

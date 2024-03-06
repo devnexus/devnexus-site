@@ -13,8 +13,8 @@ description: "Containers are everywhere nowadays, and they have changed the way 
   and which K8s API objects to use for which component, and in this talk we’ll detail
   these important items. We also know that developers struggle to troubleshoot their
   deployed applications, because, well, things break and you need to figure out why!\r\n"
-startsAt: '2024-04-11T11:30:00'
-endsAt: '2024-04-11T12:30:00'
+startsAt: '2024-04-10T11:30:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207653
-    name: Cloud Infrastructure
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -34,13 +34,13 @@ categories:
     name: session
   sort: 1
 roomId: 42137
-room: Cloud Infra
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Infrastructure
+track: Cloud Technology
 format: session
 slug: a-developer-s-journey-to-kubernetes-a-handy-guide-for-developing-deploying-and-debugging-your-app
 

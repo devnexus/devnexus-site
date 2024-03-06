@@ -21,7 +21,7 @@ description: "Java bytecodes and class files deliver on the original vision of â
   \ Project CRaC will be used as an example.\r\n\r\nAt the end of the session, youâ€™ll
   be all set to keep your Java hot!\r\n"
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

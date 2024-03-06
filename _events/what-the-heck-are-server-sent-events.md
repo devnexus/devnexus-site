@@ -11,8 +11,8 @@ description: "Web applications frequently need to open a channel of communicatio
   using JavaScript. We'll also take a quick look at a number of open source libraries
   LaunchDarkly maintains for implementing SSEs in Python, .NET, Go and more for server-to-server
   SSEs."
-startsAt: '2024-04-11T14:30:00'
-endsAt: '2024-04-11T15:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

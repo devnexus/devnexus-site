@@ -19,7 +19,8 @@ tagLine: Distinguished Engineer
 profilePicture: https://sessionize.com/image/847b-400o400o1-c2-96d9-4b4a-b2c8-99dd2efb77a7.821c48d1-543c-4922-b5b1-f9e6b8dbb291.JPEG
 sessions:
 - id: 568379
-  name: Scalable Machine Learning with PyTorch,  Kubeflow and Kubernetes
+  name: 'Harnessing the Power of Open Source for Cloud Native Development: Strategies
+    for Success'
 isTopSpeaker: false
 links:
 - title: Twitter

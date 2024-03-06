@@ -12,8 +12,8 @@ description: "In the evolving landscape of software development, Java continues 
   In this talk we will introduce how Fibers can reduce the effort of developing and
   managing high throughput applications.  We’ll take a quick peak at asynchronous
   coding styles, and then look at how Loom fits in today’s Java applications."
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

@@ -22,7 +22,7 @@ description: "Having more tools in your tool belt and knowing when to use each o
   how Spring Modulith can enhance your toolkit, making your software projects more
   adaptable and aligned with the dynamic landscape of business requirements."
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -42,7 +42,7 @@ categories:
     name: session
   sort: 1
 roomId: 39693
-room: Keynote/Architecture
+room: Architecture
 liveUrl: 
 recordingUrl: 
 status: Accepted

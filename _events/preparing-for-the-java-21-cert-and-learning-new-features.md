@@ -8,8 +8,8 @@ description: Looking to learn about features in the language added after Java 17
   interesting and/or surprising behavior.  After a brief overview of the cert, we
   will explain these features and walk through lots of tricky questions. Come to this
   session and walk away with an increased awareness in these Java topics.
-startsAt: '2024-04-11T14:30:00'
-endsAt: '2024-04-11T15:30:00'
+startsAt: '2024-04-11T16:00:00'
+endsAt: '2024-04-11T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

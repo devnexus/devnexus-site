@@ -16,7 +16,7 @@ description: "Netflix is a media streaming company and a movie studio with data 
   applications expect data to be presented at different locations and in different
   formats.\r\n"
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207653
-    name: Cloud Infrastructure
+  - id: 207654
+    name: Cloud Technology
   sort: 0
 - id: 59537
   name: Session Format
@@ -36,13 +36,13 @@ categories:
     name: session
   sort: 1
 roomId: 42137
-room: Cloud Infra
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Infrastructure
+track: Cloud Technology
 format: session
 slug: designing-media-optimized-byte-transfer-and-storage-at-netflix
 

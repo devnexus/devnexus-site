@@ -10,7 +10,7 @@ description: "Java 21 has come and gone, and the Java release train continues wi
   the goals of these changes can be key to understanding where Java is now and where
   it is going in the future!"
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

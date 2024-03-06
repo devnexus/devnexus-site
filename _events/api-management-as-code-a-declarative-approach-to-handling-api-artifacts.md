@@ -16,7 +16,7 @@ description: "Every day software development relies more and more on APIs. Using
   management\r\nAn example from the 3scale operator\r\nOther projects using Kubernetes
   custom resources.\r\n"
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

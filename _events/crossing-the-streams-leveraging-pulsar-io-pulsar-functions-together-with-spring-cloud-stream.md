@@ -15,8 +15,8 @@ description: "Apache® Pulsar™ is an open-source, distributed messaging and st
   simplifies their usage.  We will also show how to use the Spring Cloud Stream Pulsar
   Binder in your application.  Finally, we will “cross the streams” and leverage these
   technologies together to build a Pulsar message processing application."
-startsAt: '2024-04-11T14:30:00'
-endsAt: '2024-04-11T15:30:00'
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

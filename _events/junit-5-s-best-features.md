@@ -8,8 +8,8 @@ description: The team that rewrote JUnit in version 5 did a fantastic job improv
   initial 5.0 release.  This talk will cover topics like the set of useful functional
   interfaces available, how to do parameterized tests with various sources, lazy loading
   of error messages, and more.
-startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+startsAt: '2024-04-10T14:30:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

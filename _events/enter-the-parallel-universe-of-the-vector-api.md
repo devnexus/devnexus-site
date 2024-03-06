@@ -17,7 +17,7 @@ description: "Single Instruction Multiple Data (SIMD) instructions have been ava
   the JIT compiler without the API and with it.  We'll also look at what difference
   this makes to the performance delivered."
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

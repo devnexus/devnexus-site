@@ -22,7 +22,7 @@ description: "The infamous Log4Shell vulnerability took the software community b
   protect your organization from an attack on the next critical CVE and make it harder
   for attackers to leverage it against you!"
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

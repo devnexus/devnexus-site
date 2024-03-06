@@ -3,18 +3,18 @@ id: bdcf9fac-1a10-416b-9dc9-be50b718e9af
 firstName: Spencer
 lastName: Gibb
 fullName: Spencer Gibb
-bio: "Spencer Gibb is a Software Engineer at VMware where he is the co-founder and
+bio: "Spencer Gibb is a Software Engineer at Broadcom where he is the co-founder and
   lead of the Spring Cloud Core projects.\r\n\r\nHis interests include distributed
   systems, JVM languages, web services frameworks, message-driven architectures and
   making software development simpler.\r\n\r\nHe has industry experience in early
   e-commerce platforms, government and non-profit organizations, and business intelligence
   startups.  He has extensive java experience and experience in other languages such
   as scala and python."
-tagLine: Co-founder and Lead of Spring Cloud at VMware
-profilePicture: https://sessionize.com/image/6864-400o400o1-SR5HxiRGMgCAxgP51LzFJZ.jpg
+tagLine: Co-founder and Lead of Spring Cloud at Broadcom
+profilePicture: https://sessionize.com/image/f9c0-400o400o1-QRBdUDT7LomUFvidEtQ74x.jpg
 sessions:
 - id: 551498
-  name: Weaving Spring Cloud Gateway on Loom
+  name: 'Spring Cloud Gateway MVC: Built for Java 21 and Virtual Threads'
 isTopSpeaker: false
 links:
 - title: Twitter

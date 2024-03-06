@@ -21,7 +21,7 @@ description: "For Java developers, the Just-In-Time (JIT) compiler is key to imp
   JIT compilation technique and offer practical recommendations about when to use
   this technology."
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

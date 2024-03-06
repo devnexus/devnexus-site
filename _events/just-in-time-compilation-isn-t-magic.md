@@ -21,8 +21,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207657
-    name: Java Platform
+  - id: 207655
+    name: Core Java
   sort: 0
 - id: 59537
   name: Session Format
@@ -37,7 +37,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Java Platform
+track: Core Java
 format: session
 slug: just-in-time-compilation-isn-t-magic
 

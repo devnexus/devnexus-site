@@ -12,7 +12,7 @@ description: Integration of Jakarta EE 10 Core Profile -compatible microservices
   MicroProfile 6 are also implemented in this integration. Join us to learn how the
   Jakarta EE platform can power your next cloud-native stateful microservices system.
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

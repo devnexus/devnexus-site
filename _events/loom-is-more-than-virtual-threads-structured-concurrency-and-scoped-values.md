@@ -13,7 +13,7 @@ description: 'Most of the talk about Project Loom as been about JEP 425: Virtual
   to the JVM, and write some code to illustrate where you''ll be able to use them
   effectively. '
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

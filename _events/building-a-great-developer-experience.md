@@ -9,12 +9,14 @@ description: If you want to onboard developers quickly, and retain them by provi
   these work together to create a constant two-way stream of information between the
   platform engineers and their client development teams.
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: bfc36fe5-4d43-4394-98fe-a5374fc17616
   name: John Burns
+- id: 0bcff2e0-2a53-4cdb-9301-11cfc4a4041d
+  name: Samuel Raghunath
 categories:
 - id: 59536
   name: Track

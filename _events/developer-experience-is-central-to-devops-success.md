@@ -21,8 +21,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207658
-    name: Practices and other tech
+  - id: 207651
+    name: Agile
   sort: 0
 - id: 59537
   name: Session Format
@@ -37,7 +37,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Practices and other tech
+track: Agile
 format: session
 slug: developer-experience-is-central-to-devops-success
 

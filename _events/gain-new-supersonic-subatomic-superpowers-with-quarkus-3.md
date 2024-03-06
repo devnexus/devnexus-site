@@ -18,6 +18,8 @@ isPlenumSession: false
 speakers:
 - id: 4b82436a-947c-45bb-9d5d-3b94c02c8faa
   name: Daniel Oh
+- id: b9f343b4-5370-4839-bd53-572b0322882e
+  name: James Falkner
 categories:
 - id: 59536
   name: Track

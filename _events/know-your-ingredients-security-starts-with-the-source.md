@@ -14,8 +14,8 @@ description: "One of the most neglected parts of application security is the ing
   Securing the software supply chain is a huge undertaking for the entire tech industry,
   and we will talk about some of the ongoing efforts by open source projects, foundations,
   and corporations to help us all know our ingredients."
-startsAt: '2024-04-11T14:30:00'
-endsAt: '2024-04-11T15:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

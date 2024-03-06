@@ -13,7 +13,7 @@ description: In the realm of Java programming, understanding memory management a
   collector to use best for your application or about memory management in the JVM,
   this session is for you.
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

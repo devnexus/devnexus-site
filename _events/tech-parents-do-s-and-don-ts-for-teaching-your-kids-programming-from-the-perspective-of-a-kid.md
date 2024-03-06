@@ -30,18 +30,18 @@ categories:
 - id: 59537
   name: Session Format
   categoryItems:
-  - id: 207665
-    name: session
+  - id: 207667
+    name: keynote
   sort: 1
 roomId: 42148
-room: Foyer
+room: Foyer/Sidney Marcus Theatre
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
 track: Keynote
-format: session
+format: keynote
 slug: tech-parents-do-s-and-don-ts-for-teaching-your-kids-programming-from-the-perspective-of-a-kid
 
 ---

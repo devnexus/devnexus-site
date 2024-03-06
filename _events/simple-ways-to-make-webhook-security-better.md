@@ -9,8 +9,8 @@ description: Webhooks are a simple and powerful way for services to notify each 
   learn the most common, interesting, and challenging patterns across 100+ webhook
   implementations, and learn some simple ways to make webhook security better (for
   providers and consumers).
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-11T10:00:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

@@ -30,8 +30,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207654
-    name: Cloud Technology
+  - id: 207660
+    name: Tools and techniques
   sort: 0
 - id: 59537
   name: Session Format
@@ -46,7 +46,7 @@ recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Technology
+track: Tools and techniques
 format: session
 slug: dude-what-happened-to-my-developer-first-cloud-production-easy-spring-cloud
 

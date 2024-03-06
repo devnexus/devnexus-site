@@ -8,14 +8,14 @@
         "id": "b64cb3c6-56a6-4114-b7e6-f10cfb1a2d48",
         "title": "Workshop registration and breakfast",
         "description": null,
-        "startsAt": "2024-04-09T08:00:00",
+        "startsAt": "2024-04-09T07:30:00",
         "endsAt": "2024-04-09T09:00:00",
         "isServiceSession": true,
         "isPlenumSession": true,
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -62,7 +62,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -211,53 +211,6 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "557595",
-        "title": "The Ultimate One-Day Java Workshop: Secure, High-Performance Deployment to Kubernetes and Serverless",
-        "description": "This intensive one-day workshop is tailored for developers and IT professionals who aim to excel in deploying Java applications in cloud environments, focusing on security and performance. Participants will engage in a comprehensive, hands-on exploration of Java application creation and deployment, emphasising secure, efficient practices using Google Cloud as the primary platform.\r\n\r\nOne-Day Agenda:\r\n\r\n8:30 AM - 9:00 AM: Welcome and Introduction\r\nOverview of the workshop\r\nIntroduction to Java deployment in cloud environments\r\n9:00 AM - 10:30 AM: Java Packaging and Deployment Options\r\nExploring JAR deployment, containerization, CRaC, and native compilation etc\r\nHands-on demonstrations using Google Cloud\r\n10:30 AM - 10:45 AM: Coffee Break\r\n10:45 AM - 12:15 PM: Kubernetes vs. Serverless: Architectural Decisions\r\nUnderstanding Kubernetes and serverless architectures\r\nComparing cost, scalability, ease of use, operational management etc\r\n12:15 PM - 1:00 PM: Lunch Break\r\n1:00 PM - 2:30 PM: Ensuring Security in Java Deployment\r\nIntroduction to security tools (SBOMs, dependency scanning etc) \r\nAddressing cyber threats and secure software development practices\r\n2:30 PM - 2:45 PM: Short Break\r\n2:45 PM - 4:00 PM: AI in Development and Deployment\r\nDiscussing the impact of AI on development processes\r\nHands-on session: Integrating Google’s AI APIs in Java applications\r\n4:00 PM - 4:45 PM: Building a Secure, Efficient Deployment Pipeline\r\nStrategies for fast, secure, and compliant Java application deployment\r\nLegislation impact on software development and deployment\r\nLeveraging cloud platform features and security tools\r\n4:45 PM - 5:00 PM: Closing Remarks and Q&A\r\nRecap of key learnings\r\nOpen Q&A session\r\nWorkshop Outcomes:\r\nAttendees of this workshop will leave with a robust understanding of deploying Java applications in cloud environments, particularly focusing on Google Cloud. They will gain practical experience in various deployment methods, understand the importance of security in the development lifecycle, and explore the impact of AI on development processes. By the end of the day, participants will be equipped with the knowledge to make informed decisions about architectural choices, security practices, and the use of AI in Java application deployment.\r\n",
-        "startsAt": "2024-04-09T09:00:00",
-        "endsAt": "2024-04-09T10:00:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
-            "name": "Steve Poole"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207659,
-                "name": "Security"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207666,
-                "name": "workshop"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42138,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
@@ -278,6 +231,10 @@
           {
             "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
             "name": "Daniel Oh"
+          },
+          {
+            "id": "b9f343b4-5370-4839-bd53-572b0322882e",
+            "name": "James Falkner"
           }
         ],
         "categories": [
@@ -416,6 +373,69 @@
       },
       {
         "questionAnswers": [],
+        "id": "557595",
+        "title": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security & Scalability",
+        "description": "The Ultimate One-Day Java Workshop: Deploying AI-Enhanced Applications with Security and High-Performance on Kubernetes and Serverless Platforms\r\n\r\nIntroduction: Welcome to a comprehensive workshop designed for those  eager to master the intricacies of deploying Java applications in cloud environments. As the software development landscape continues to evolve rapidly, the dual needs to  integrate Artificial Intelligence (AI) and deliver efficient, secure, and scalable deployment strategies become increasingly critical. This workshop aims to bridge the gap between traditional Java application deployment and modern cloud-based solutions, offering participants a deep dive into the latest technologies, methodologies, and best practices, including the exciting realm of AI.\r\n\r\nObjective: Our goal is to equip you with the knowledge and skills necessary to start navigating the complexities of Java deployment to cloud platforms in a safe, secure, and innovative way. Whether you're looking to deploy Java applications using traditional JAR files, explore the potential of containerization, venture into serverless architectures, or integrate AI to enhance application capabilities, this workshop will provide you with a solid foundation and practical insights to enhance your deployment strategies. Special emphasis will be placed on not only mastering deployment techniques but also on how to incorporate AI into your Java applications and deliver these advanced solutions in a safe manner.\r\n\r\nEnvironment:   All code and development will take place online using Google’s platform\r\n\r\nPreReqs: \r\nAttendees should have some familiarity with the Java programming language. \r\nAttendees should bring a laptop with wifi capabilities.  \r\n\r\n\r\nAgenda \r\n\r\nPart 1: Introduction and Overview\r\n Setting the stage for an in-depth exploration of Java deployment in cloud environments. We'll provide an overview of the workshop's structure, aiming to equip attendees with a solid understanding of the deployment lifecycle, from packaging to deployment, with a focus on Java applications. The facilitators will introduce themselves, offering insights into their expertise and what attendees can expect to learn, particularly about secure deployment options like JAR, CRaC, native compilation, and containerization.\r\n\r\nPart 2: Java Packaging and Deployment Options\r\nThis segment delves into the technicalities of Java packaging and deployment, offering a comparative analysis of deployment strategies such as JAR deployment, Checkpoint/Restore in Application Continuity (CRaC), and native compilation. We'll explore containerization including using application frameworks for MicroProfile. With hands-on practical demonstrations using Google Cloud, the attendees will be able to use Google’s online development environments to explore the various deployment workflows from JAR to cloud, JAR to container to cloud, and native compilation to serverless architectures. \r\n\r\nPart 3: Ensuring Security in Java Deployment\r\nThis critical section addresses the paramount importance of a secure software supply chain in Java deployment. We begin with an introduction to essential tools like Software Bill of Materials (SBOMs) and dependency scanning, moving on to a detailed discussion on mitigating cyber threats and adopting secure software development practices.  We’ll look at commercial options (with a demonstration of Sonatype Nexus and Lifecycle) review relevant open source tools and discuss the various pros-and-cons of each.\r\n\r\nLunch\r\n\r\nPart 4:  Extended Architectural Decisions\r\nPost-lunch, the conversation shifts to architectural decisions, contrasting Kubernetes with serverless architectures in terms of cost, scalability, operational management, and security. This part aims to provide a comprehensive understanding of choosing the right architecture for Java applications in the cloud.\r\n\r\nPart 5: AI in Development and Deployment \r\nThe final part of our workshop explores the revolutionary role of AI in development and deployment processes. With examples using  HuggingFace, PaLM and GEMINI the attendees will use LangChain4J in a hands-on session to integrate Google’s AI APIs  into Java applications. We'll also examine the security implications of AI, including supply chain concerns and legislative impacts, followed by a series of short discussions on the elements of building secure and efficient deployment pipelines. \r\n\r\nClosing\r\nThe workshop concludes with a recap of key learnings, emphasizing the importance of automation, security in the supply chain, and the variety of deployment options available. An open Q&A session offers participants the opportunity to clarify doubts and engage directly with the experts.\r\n\r\n",
+        "startsAt": "2024-04-09T09:00:00",
+        "endsAt": "2024-04-09T10:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7a6d377f-3ce1-4b32-9014-c70c87022fd0",
+            "name": "Steve Poole"
+          },
+          {
+            "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
+            "name": "Jamie Coleman"
+          },
+          {
+            "id": "7c534296-8db5-4452-b17f-9249465ea914",
+            "name": "Grace Jansen"
+          },
+          {
+            "id": "f2e1dff5-e8b9-4b4b-a8e4-4f5c6c61158f",
+            "name": "Abdel Sghiouar"
+          },
+          {
+            "id": "df2764ce-246c-406d-8cba-c3515e254253",
+            "name": "Mohammed Aboullaite"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207659,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207666,
+                "name": "workshop"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 42142,
+        "room": "Practices and other Tech",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "29424e2b-1b71-41b8-875f-90145adf902b",
         "title": "Morning Break",
         "description": null,
@@ -426,7 +446,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -445,7 +465,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -464,7 +484,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -474,16 +494,35 @@
       {
         "questionAnswers": [],
         "id": "a0f92b48-8680-4b4c-86b6-27fcf80423a6",
-        "title": "Registration",
+        "title": "Registration & breakfast",
         "description": null,
-        "startsAt": "2024-04-10T08:00:00",
+        "startsAt": "2024-04-10T07:30:00",
         "endsAt": "2024-04-10T09:00:00",
         "isServiceSession": true,
         "isPlenumSession": true,
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": null,
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "6ccb7f81-8a86-42ed-b663-00d6d6f748a9",
+        "title": "Women in Tech Breakfast",
+        "description": null,
+        "startsAt": "2024-04-10T08:00:00",
+        "endsAt": "2024-04-10T09:00:00",
+        "isServiceSession": true,
+        "isPlenumSession": false,
+        "speakers": [],
+        "categories": [],
+        "roomId": 39694,
+        "room": "Agile",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -496,7 +535,7 @@
         "title": "Welcome to Devnexus 2024!",
         "description": "Opening of the conference",
         "startsAt": "2024-04-10T09:00:00",
-        "endsAt": "2024-04-10T09:20:00",
+        "endsAt": "2024-04-10T09:10:00",
         "isServiceSession": false,
         "isPlenumSession": true,
         "speakers": [
@@ -515,8 +554,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207655,
-                "name": "Core Java"
+                "id": 231062,
+                "name": "Keynote"
               }
             ],
             "sort": 0
@@ -534,7 +573,7 @@
           }
         ],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -543,20 +582,48 @@
       },
       {
         "questionAnswers": [],
-        "id": "cf11dad5-2784-48e4-84a0-8bfd7e651d8c",
-        "title": "Conf open and Keynote",
-        "description": null,
-        "startsAt": "2024-04-10T09:20:00",
-        "endsAt": "2024-04-10T09:55:00",
-        "isServiceSession": true,
-        "isPlenumSession": true,
-        "speakers": [],
-        "categories": [],
+        "id": "634712",
+        "title": "What Makes Software Architecture So Intractable?",
+        "description": " Why can't we make software architecture once and for all? Why do we keep having to make the seemingly same decisions over and over again? This keynote delves into the slippery nature of software architecture decisions and the modern way to do trade-off analysis. I show tips and techniques for assessing architecture trade-offs, as well as some easy-to-fall-into anti-patterns. I also discuss iterative architecture–the faster you can get feedback for your trade-off analysis, the easier you can make architecture decisions based on objective reality, not opinions.",
+        "startsAt": "2024-04-10T09:10:00",
+        "endsAt": "2024-04-10T10:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e7343345-6288-4fa5-8b88-086b6e09015d",
+            "name": "Neal Ford"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 231062,
+                "name": "Keynote"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207667,
+                "name": "keynote"
+              }
+            ],
+            "sort": 1
+          }
+        ],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
-        "status": null,
+        "status": "Accepted",
         "isInformed": false,
         "isConfirmed": false
       },
@@ -600,7 +667,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -745,7 +812,7 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
+        "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -801,17 +868,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "556029",
-        "title": "Bootiful Spring Boot 3.x",
-        "description": "Spring Framework 6.x and Spring Boot 3.x are almost here and you know what that means? New .jars! And also new baselines and new possibilities! Spring Framework implies a Java 17 and Jakarta EE baseline, and offers new support for building GraalVM-native images. It also offers a new observability layer, an amalgamation of some of the work in the Micrometer project and Spring Cloud Sleuth. Spring Boot 3 builds upon all of this, and integrates all of this into our application. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at next-gen Spring and learn why, with Spring taken together with Java 21, there's never been a better time to Java developer.\r\n\r\n",
+        "id": "551498",
+        "title": "Spring Cloud Gateway MVC: Built for Java 21 and Virtual Threads",
+        "description": "We will provide a brief history of API gateways in Spring Cloud, including Zuul and why we built Spring Cloud Gateway to replace it. Then we will give a short primer on how the gateway routes and filters requests. We will then introduce how Spring Cloud Gateway can work in servlet containers using virtual threads on Java 21. We will compare and contrast this new functionality to the original WebFlux-based Spring Cloud Gateway.",
         "startsAt": "2024-04-10T10:00:00",
         "endsAt": "2024-04-10T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
-            "name": "Josh Long"
+            "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+            "name": "Spencer Gibb"
           }
         ],
         "categories": [
@@ -848,17 +915,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "537960",
-        "title": "JVM Ergonomics Profiles: Enhancing Resource Consumption and Performance in Dedicated Environments",
-        "description": "Ergonomics Profiles is a new Java Virtual Machine (JVM) feature proposal aimed at improving resource utilization and performance in dedicated JVM environments, such as containers. The proposal outlines the motivation behind Ergonomics Profiles, highlighting the prevalent usage of dedicated resources in modern cloud-based JVM workloads. It addresses the limitations of default JVM ergonomics designed for shared environments and the resulting resource waste. The proposed solution includes the introduction of two profiles: \"shared\" for traditional environments and \"dedicated\" for systems with dedicated resources. The dedicated profile offers optimized heuristics for maximizing resource consumption, including dynamic heap size allocation, enhanced garbage collector selection, and native memory estimation. The proposal also presents a new flag for profile selection and provides APIs for programmatically identifying the selected profile. By incorporating Ergonomics Profiles, JVMs can better adapt to dedicated environments, reduce resource waste, and increase overall chances of better performance, resulting in more efficient and scalable Java applications.",
+        "id": "540558",
+        "title": "ML in Java, YES it's possible!",
+        "description": "When you think about building and/or deploying machine learning models, Java is not within the top 3 languages that we generally think of. Nonetheless Java has a strong community, with millions of developers using it as their main language.\r\nWith the AI buzz spiking in the past month, All developers, and especially Java developers, need to understand how to build and run apps that use ML. In this session we are going to explore what are our options, as java developers, to build, save and run machine learning models.We are also going to discuss and compare the most 3 popular frameworks (Deeplearning4J, djl and Tribuo), along with a real world example to understand capabilities and tradeoffs of each framework. We will also briefly cover JSR381, an open-source, Java-friendly API for ML, specifically visual recognition",
         "startsAt": "2024-04-10T10:00:00",
         "endsAt": "2024-04-10T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "e0b15676-adb2-4ea7-bb68-ca1af864a14f",
-            "name": "Bruno Borges"
+            "id": "df2764ce-246c-406d-8cba-c3515e254253",
+            "name": "Mohammed Aboullaite"
           }
         ],
         "categories": [
@@ -1036,6 +1103,53 @@
       },
       {
         "questionAnswers": [],
+        "id": "547698",
+        "title": "Methodically Migrating from JavaScript to TypeScript",
+        "description": "It's no secret that TypeScript is all the rage in modern web development. With all of the scaffolding tools that exist to support starting a new project with TypeScript, it's never been easier to try it out. However, it can feel very overwhelming to think about the necessary steps to migrate your existing JavaScript project to TypeScript. In this talk we'll explore progressive enhancements you can make to move your JavaScript project to TypeScript without disrupting your team's productivity.",
+        "startsAt": "2024-04-10T10:00:00",
+        "endsAt": "2024-04-10T11:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "27a63fc1-2981-4a83-8f13-fa986f36de8d",
+            "name": "Sean McQuaid"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207661,
+                "name": "Web and Front-end"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 42145,
+        "room": "Web and front-end",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "588220",
         "title": "How do I see it in Backstage?",
         "description": "Software Templates get lots of attention, and they’re a quick model for an introduction to Backstage. But daily development revolves around the Software Catalog. A central location for discovering everything isn’t very useful unless everything is there. How do you describe the elements of your environment in a way that Backstage understands?\r\n\r\nCome to this talk to learn about the basic Kinds of Backstage Entities and how Processors examine and validate them for addition to your Catalog. You’ll leave with a basic platform engineering vocabulary and an understanding of how Backstage models Components, APIs, Locations and other Entities in the catalog-info.yaml file.",
@@ -1144,7 +1258,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -1157,7 +1271,7 @@
         "title": "Analyzing and Critiquing Architectures",
         "description": "Software architecture is having a moment, from best selling books to packed classes, the software industry acknowledges the importance of the parts of software resistant to internet searches. Ample pixels have been spilt talking about patterns, decomposition, styles, diagrams and more and all to good ends! But when it comes time to review an architecture, what should you do? What factors should you consider? How do you provide constructive feedback? But we won’t just talk theory, we’ll work through real world examples, providing you a chance to practice this vital skill.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1191,7 +1305,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -1204,13 +1318,17 @@
         "title": "Building a Great Developer Experience",
         "description": "If you want to onboard developers quickly, and retain them by providing a frustration-free environment, you need a great developer experience (DX). This goes beyond just providing CI/CD. It requires runtime libraries, build tooling, local environmets, data collection and displays, and migration automation. All of these work together to create a constant two-way stream of information between the platform engineers and their client development teams.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
             "id": "bfc36fe5-4d43-4394-98fe-a5374fc17616",
             "name": "John Burns"
+          },
+          {
+            "id": "0bcff2e0-2a53-4cdb-9301-11cfc4a4041d",
+            "name": "Samuel Raghunath"
           }
         ],
         "categories": [
@@ -1251,7 +1369,7 @@
         "title": "Building Your Own Private GenAI Chatbot with Java Tools - A Step-by-Step Adventure",
         "description": "In today's software development world, there are several Machine Learning (ML) tools that empower developers to create specific chatbots that cater to various needs. These chatbots harness the capabilities of Large Language Models (LLMs) trained on confidential, private document sets on your local machine or enterprise data repositories. They enable you to interact and engage with these document sets, from summarizing emails and meeting notes to gauging sentiment, extracting dates and names from websites, pre-screening resumes, and performing many other tasks.\r\n\r\nBut most of these systems are Python-based.  While Python serves as a formidable language for ML, many software developers find themselves operating within the Java ecosystem, especially within large organizations that prioritize Java for robust and reliable production deployments. This presentation focuses on Java-centric tools to construct tuned assistant systems using the retrieval-augmented generation (RAG) technique.\r\n\r\nQuick Overview of Neural Networks, Weights, and Embeddings\r\nExploring the Current State of LLMs\r\nImplementing Prompts and Completions via a Java API to ChatGPT\r\nUnderstanding Prompt Structure and Prompt Engineering Techniques\r\nLearn about Instruction-Tuning and Fine-Tuning Techniques\r\nNavigating Vector Databases and Embeddings with Java\r\nCrafting a Private Chatbot Architecture\r\nDemo\r\n",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1294,21 +1412,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "544457",
-        "title": "Serverless Java in Action: Cloud Agnostic Design Patterns and Tips",
-        "description": "You've probably seen how to create a Function-as-a-Service with one of the cloud providers, but if this is all you know about Serverless, prepare to have your mind blown!\r\nIn this session we'll show you how to create a production-grade, cloud-agnostic, event-driven serverless solution with Quarkus, a Java stack optimized for fast startup and small footprint; and Knative, an open source community project for deploying, running and managing serverless applications on Kubernetes.   Say goodbye to vendor lock-in and hello to Supersonic Subatomic Java-based Serverless bliss!\r\n",
+        "id": "557019",
+        "title": "A developer’s journey to Kubernetes: a handy guide for developing, deploying, and debugging your app",
+        "description": "Containers are everywhere nowadays, and they have changed the way we develop, architect, deploy and troubleshoot our apps in production.\r\n\r\nThis talk will cover the most important things you need to know from developing containerized apps, to deploying them into your Kubernetes cluster, and finally, debugging them.\r\n\r\nWe will cover valuable tools to boost your productivity on Kubernetes—like Skaffold, Dart, Buildpacks and Jib—and discuss common deployment patterns and best practices. We know developers need to understand how to manage resources, application lifecycle and which K8s API objects to use for which component, and in this talk we’ll detail these important items. We also know that developers struggle to troubleshoot their deployed applications, because, well, things break and you need to figure out why!\r\n",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "a4305a38-d462-482b-9e4a-536eb74ec63c",
-            "name": "Kevin Dubois"
-          },
-          {
-            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
-            "name": "Daniel Oh"
+            "id": "f2e1dff5-e8b9-4b4b-a8e4-4f5c6c61158f",
+            "name": "Abdel Sghiouar"
           }
         ],
         "categories": [
@@ -1317,8 +1431,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207664,
-                "name": "Cloud Native"
+                "id": 207654,
+                "name": "Cloud Technology"
               }
             ],
             "sort": 0
@@ -1336,7 +1450,7 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
+        "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -1349,7 +1463,7 @@
         "title": "To Java 22 and Beyond!",
         "description": "Java 21 has come and gone, and the Java release train continues with Java 22!\r\n\r\nStill, we will look over the key changes that have come to Java in recent releases, briefly discuss what has changed from 11-17, and take time to focus on changes in 17+. \r\n\r\nMany key changes have come to Java in recent releases; virtual threads, pattern matching, records, Generational ZGC, and more, understanding the goals of these changes can be key to understanding where Java is now and where it is going in the future!",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1396,7 +1510,7 @@
         "title": "Do you really need Hibernate?",
         "description": "Projects often use Java Persistence API (JPA) by default and, thus, mostly Hibernate. But do all applications need a comprehensive object/relational mapping (ORM) with all conceivable functions?\r\n\r\nThis talk examines the architecture of database-centric applications and discusses whether you always need an object graph for persistence.\r\n\r\nUsing an example application, it is shown how pure SQL, with the help of jOOQ and (nested) Java Records simplifies data access and how common ORM problems, such as the n+1 select problem, can be avoided.\r\nFinally, the possibility of combining jOOQ and JPA/Hibernate and thus using the best of both worlds is discussed.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1443,7 +1557,7 @@
         "title": "Enter The Parallel Universe of the Vector API",
         "description": "Single Instruction Multiple Data (SIMD) instructions have been available in Intel and other processor instruction sets for over 25 years.  The current implementation is Advanced Vector eXtensions (AVX), first introduced in the Sandy Bridge microarchitecture.\r\n\r\nUsing Vector processing through AVX can profoundly improve the performance level of an application that includes numerically intensive operations.  The difficulty is that, although the compiler should be responsible for determining their use, code is often too complex to do so effectively.\r\n\r\nIn JDK 16, an incubator module for the Vector API (not to be confused with the Vector collections class) was introduced.  This allows a developer to express vector computations that reliably compile at runtime to optimal vector instructions.  The API has undergone several revisions resulting in the sixth incubator in JDK 21.\r\n\r\nIn this session, we'll explore how to use the Vector API in different use cases, comparing the code generated by the JIT compiler without the API and with it.  We'll also look at what difference this makes to the performance delivered.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1490,7 +1604,7 @@
         "title": "Beware of Survivorship Bias!",
         "description": "Most talks on a typical conference schedule contain success stories of technology. This could lead to survivorship bias. Survivorship bias causes you to draw false conclusions because you mostly heard about successes, but hardly ever about failures. Yet failures provide us with lots of valuable knowledge: when not to apply a certain technique, pattern or process.\r\n\r\nSo no success stories in this talk! Just some 'silver bullets' we tried to use to solve our problems, but turned out to be Very Bad Ideas™. We’ll share how survivorship bias can easily influence your ideas and cloud your judgement.\r\n\r\nAfter attending this talk you'll be more aware of survivorship bias and what you can do to keep your head cool, no matter how many 'silver bullets' are fired at you. ",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1541,7 +1655,7 @@
         "title": "The Platform Engineer Playbook - 5 Ways to Container Security",
         "description": "The infamous Log4Shell vulnerability took the software community by surprise two years ago; it was a perfect storm of the massively popular open-source library with a vulnerability that was fairly trivial to attack. Will there be another massive vulnerability to deal with this year? It’s always possible, but there are things you can do to protect your application.\r\n\r\nAs we address additional layers in our defense-in-depth model, and with many containers requiring scale, an advanced application network with a wide array of security features is required. How do we ensure the right policies are in place to allow communication? What mechanisms exist to ensure that payloads in our network cannot be deciphered or replayed? How do we leverage identity to attest containers and their intent?\r\n\r\nFrom a developer’s shell to a platform engineer moving to a runtime in production, there are many tools and practices available to mitigate and detect would-be attackers and make their lives harder.\r\n\r\nThis session will include a live demo of the Log4Shell remote code exploit (RCE) and effective techniques to defend against vulnerabilities like it such as:\r\n- Code & container image scanning\r\n- Best practices for container runtime configuration\r\n- Policy enforcement in Kubernetes\r\n- Container authentication & authorization\r\n- Encryption & identification for services\r\n\r\nJoin us and protect your organization from an attack on the next critical CVE and make it harder for attackers to leverage it against you!",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1592,7 +1706,7 @@
         "title": "Reading code",
         "description": "As developers, we spend a lot of time learning to write code, while spending little to no time learning to read code. Meanwhile, we often spend more time reading code than actually writing it. Shouldn’t we be spending at least the same amount of time and effort improving this skill? Deliberate practice can help us get better at reading code. Learning how to better read and understand code, can in turn teach us what makes code readable. This might even help us to write code that is easier to read.\r\n\r\nIn this talk we will discuss the benefits of deliberately practicing reading code in a code reading club or session without an IDE, as well as common strategies to navigate a new codebase and familiarise ourselves with the code using the IDE.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1639,7 +1753,7 @@
         "title": "Java meets TypeScript: learn to build full-stack web apps with Spring Boot and React",
         "description": "As Java developers, we know the benefits of type-safety when building apps. The problem? Usually, that type-safety ends when we leave the server. What if it didn't have to be that way?\r\n\r\nIn this presentation, you'll learn how to build a full-stack reactive web app through live code examples. We'll use Spring Boot and Java on the backend and React with TypeScript on the frontend, connecting the two with the new Hilla framework from Vaadin.",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1686,7 +1800,7 @@
         "title": "Quarkus and AI. Integrating Java and LLM to build intelligent applications.",
         "description": "A Large Language Model (LLM) is a component of artificial intelligence specifically designed to comprehend and generate text that closely resembles human language based on the input it receives. One common scenario where it finds utility is when it needs to generate Java code to address a problem or create Kubernetes manifests with specific features.\r\n\r\nHowever, LLMs can also be employed with your enterprise code to enhance the customer experience, eliminating the need for customers to navigate through an entire website or improving the search process of on-site documentation \r\n\r\nDuring this session, we will explore how to integrate Quarkus with Large Language Models to establish a novel interaction interface for your users so they feel more human than just clicking across links.\r\n\r\nIt's important to note that while Quarkus plays a significant role in this discussion, the concepts presented also apply to other Java frameworks.\r\n\r\nIf you're interested in hands-on experience with Large Language Models and Java, with a focus on practical applications rather than theory,  then this session is for you.\r\n",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1733,7 +1847,7 @@
         "title": "Securing Your Enterprise Apps - Jakarta Security In Jakarta EE 11 And Beyond",
         "description": "As security breaches become more commonplace and more complex, your applications constantly have to evolve to stay safe. \r\n\r\nJakarta EE helps you meet the challenge, defining a standard for creating secure enterprise Java applications, and innovating with each release to provide the best measures possible.\r\n\r\nIn this talk, Payara Software Engineer Luis Neto discusses what already exists in Jakarta EE, with a demo of Jakarta Security and Authorization. He also discusses what you can expect from Jakarta EE 11, including Jakarta Authentication 3.1, revealing how this will support the overall goals of Jakarta Security. \r\n",
         "startsAt": "2024-04-10T11:30:00",
-        "endsAt": "2024-04-10T12:35:00",
+        "endsAt": "2024-04-10T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1786,7 +1900,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -1825,15 +1939,15 @@
             "name": "Session Format",
             "categoryItems": [
               {
-                "id": 207665,
-                "name": "session"
+                "id": 207667,
+                "name": "keynote"
               }
             ],
             "sort": 1
           }
         ],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -1872,15 +1986,15 @@
             "name": "Session Format",
             "categoryItems": [
               {
-                "id": 207665,
-                "name": "session"
+                "id": 207667,
+                "name": "keynote"
               }
             ],
             "sort": 1
           }
         ],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -1893,7 +2007,7 @@
         "title": "Architectural Resiliency",
         "description": "Regardless of the techniques used to make enterprise solutions Highly Available (HA), failure at some point inevitable. Resiliency is how fast a system reacts and then recovers to such failures. Failure of Highly Available (HA) enterprise solutions is inevitable. This presentation covers a number of architectural resiliency techniques and patterns that help increase Mean Time to Failure (MTTF), a.k.a Fault Tolerance and decrease Mean Time to Recovery (MTTR).",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1927,7 +2041,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -1940,7 +2054,7 @@
         "title": "Approval Testing: When it's too late for Test-Driven Development",
         "description": "Approval Testing may seem odd compared to Test-Driven Development, but it’s designed to let you write automated tests when you already have a large codebase (that may already be in production) and/or the business requirements are out of date, incomplete, or completely missing. While this may sound crazy, it’s something most programmers have had to deal with.\r\n\r\nThe Good News is that Approval Testing evolved as a solution for just this kind of problem. It makes the reasonable assumption that the current behavior of production code is correct, and compares it with how the system behaves after you’ve made some changes. If the results are identical then the test passes; if not, then it shows you the differences so you can decide whether the changes are correct or not. With Approval Tests in place, you can safely refactor the existing production code, then start introducing Test-Driven Development when adding new features to the system.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -1987,7 +2101,7 @@
         "title": "Counter Attack: Vector Based methods for Detecting Large Language Model Generated Text and Audio",
         "description": "The advent of large token width Large Language Models (LLMs) such as ChatGPT and their ilk has significantly increased the problem of reliable detection. Organizations are now using LLMs to generate text content with targeted precision at a massive scale with the objective of artificially amplifying false narratives and negative propaganda. As part of a broader Counter AI research program we have investigated ways for addressing this problem. In this presentation we will discuss and demonstrate one such promising technique called Masked Permutations. \r\n\r\nThis technique removes a subset of the words and phrases from an arbitrary input text and has the targeted LLM model “fill in the blanks” for a nontrivial collection of permutations. These permutations are then clustered using a manifold approximation technique. With the clustered projection of the LLM embedding vectors in hand, a proximity distance measurement from the original text is then used to determine likelihood of LLM generation. \r\n\r\nThis approach has shown great potential in experimentation as being a practical method of detection that has the potential to scale up as LLMs scale while offering an asymmetric cost advantage. The discussion will include a live software demonstration using a JHUAPL developed interactive 3D XAI analysis tool called Trinity.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2034,7 +2148,7 @@
         "title": "Designing media optimized byte transfer and storage at Netflix",
         "description": "Netflix is a media streaming company and a movie studio with data at exabyte scale. Most of the data generated, transferred and stored at Netflix is very media specific, for example, raw camera footage, or data generated as a result of encoding and rendering for different screen types.\r\n\r\nIn this session, I will throw light on how we design a media aware and optimized transfer, storage and presentation layer for data.\r\n\r\nBy leveraging this architecture at Netflix scale, we provide a scalable, reliable, and optimized backend layer for media data.\r\n\r\nMajor takeaways from this session\r\n- Learn about the challenges of designing a scalable object storage layer for data while adhering to the file system POSIX semantics of media applications\r\n- Learn about the optimizations applied to reduce cloud storage footprint, such as chunking, deduplication\r\n- Learn about how different applications expect data to be presented at different locations and in different formats.\r\n",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2049,8 +2163,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207653,
-                "name": "Cloud Infrastructure"
+                "id": 207654,
+                "name": "Cloud Technology"
               }
             ],
             "sort": 0
@@ -2068,7 +2182,7 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
+        "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -2081,7 +2195,7 @@
         "title": "Trash Talk - Exploring the memory management in the JVM",
         "description": "In the realm of Java programming, understanding memory management and garbage collection mechanisms cannot only be helpful for optimizing performance and resource utilization but also in general will help you to use the right garbage collector for your application. This session will be about memory allocation, object lifecycle, and garbage collection strategies within the Java Virtual Machine (JVM). Attendees will gain insights into memory allocation strategies, object retention policies, and various garbage collection algorithms like generational and concurrent collection. So when you are interested in getting more knowledge about which garbage collector to use best for your application or about memory management in the JVM, this session is for you.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2124,17 +2238,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "557685",
-        "title": "Troubleshooting, Monitoring and Profiling with Java Flight Recorder, Mission Control and Cryostat",
-        "description": "Java Flight Recorder and JDK Mission Control enable continuous collection of low level,  detailed runtime information for incident analysis. JFR is included with the JDK, has a tiny footprint, and \r\n\r\nJava Flight Recorder is a profiling and event collection framework built into the JDK. \r\n\r\nJDK Mission Control contains a set of tools that enable detailed analysis of the data collected by Java Flight Recorder.\r\n\r\nCryotstat enables secure managemant of JFR recordings for containerized Java apps.\r\n\r\nIn this presentation, we will dive into Java Flight Recorder, Java Mission Control, and Cryostat.  You will leave knowing how start, stop, and visualize data about your Java applications running in and out of containers.",
+        "id": "549542",
+        "title": "JUnit 5's Best Features",
+        "description": "The team that rewrote JUnit in version 5 did a fantastic job improving the platform while maintaining backward compatibility. Many Java developers don't realize how many new cool capabilities have been added to the framework since the initial 5.0 release.  This talk will cover topics like the set of useful functional interfaces available, how to do parameterized tests with various sources, lazy loading of error messages, and more.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
-            "name": "Jeremy Davis"
+            "id": "ecda0d84-be59-41c6-8983-b58cd5b3f93c",
+            "name": "Kenneth Kousen"
           }
         ],
         "categories": [
@@ -2175,7 +2289,7 @@
         "title": "void main()",
         "description": "There are many changes in the Java language aiming to reduce boilerplate and make the language more straightforward and attractive to new developers. This talk will cover recent features by live refactoring an application to the newest Java version. You will learn the benefits and applicability of new features while writing a more readable code.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2194,8 +2308,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207655,
-                "name": "Core Java"
+                "id": 207657,
+                "name": "Java Platform"
               }
             ],
             "sort": 0
@@ -2226,7 +2340,7 @@
         "title": "Clean code, is it really worth it?",
         "description": "As developers, we participate every day in our software life cycle adding new logic, adapting the existing one, and integrating with services or platforms.\r\n\r\nBut, do we put the same effort into making software robust, maintainable, consistent, secure, clear, and tested?\r\n\r\nIn this session, I will show the need for good practices in Clean Code along with the issues of not using it, showing concepts like Clean As You Code (CAYC) using free and open-source tools.\r\n\r\nClean Code goes beyond the produced software and its programming language. Is a fundamental part of a developer's role growth, something that represents us no matter the language and the company where we work. Do not lose the thread.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2273,7 +2387,7 @@
         "title": "More tales from the Dark Side: How AI is the bad guys new friend",
         "description": "The bad guys are clever, motivated, ruthless and armed with AI. What was scary before is now terrifying.  So many new ways of tricking you: Learn about sneaky device attacks, amazing attacks-by-post , AI's imitating your coworkers,  AI being corrupted, unbelievable physical choreography manipulations,  open source taker overs  and more!\r\n\r\nIn this talk learn a little about the scale of the challenge developers still face from assaults on our systems. Be prepared to be appalled and frightened. Fainting is not allowed.\r\n\r\nDiscover how to fight back and see how you can change your behaviour and your code to defend against these attacks.\r\n\r\nYour destiny is clear - it’s time to be come a Cyber Defender",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2320,7 +2434,7 @@
         "title": "Keeping your build tool updated in a multi repository world: a Netflix tale",
         "description": "Gradle is an open-source build automation tool focused on flexibility, build reproducibility and performance. Over the years, this tool has evolved and introduced new concepts and features around dependency management, publication and other aspects on build and release of artifacts for the Java platform.\r\n\r\nKeeping up to date with all these features across several projects can be challenging. How do you make sure that all your projects can be upgraded to the latest version of Gradle? What if you have thousands of projects and hundreds of engineers? How can you abstract common tasks for them and make sure that new releases work as expected?\r\n\r\nAt Netflix, we built Nebula, a collection of Gradle plugins that helps engineers remove boilerplate in Gradle build files, and makes building software the Netflix way easy. This reduces the cognitive load on developers, allowing them to focus on writing code.\r\n\r\nIn this talk, I’ll share with you our philosophy on how to build JVM artifacts and the pieces that help us boost the productivity of engineers at Netflix. I’ll talk about:\r\n- What is Nebula\r\n- What are the common problems we face and try to solve\r\n- How we distribute it to every JVM engineer\r\n- How we ensure that Nebula/Gradle changes do not break builds so we can ship new features with confidence at Netflix",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2367,7 +2481,7 @@
         "title": "How To Make Your JavaScript Accessible Without Losing Your Sanity (Or Your Hair)",
         "description": "Accessibility is an important aspect of web development, ensuring that people with disabilities can access and use web applications. However, accessibility can often be an afterthought for developers.\r\n\r\nIn this talk, we will explore how JavaScript developers can build more accessible web applications and start by discussing specific techniques and tools that JavaScript developers can use to ensure their applications are more accessible.\r\n\r\nWe will cover topics such as basic accessibility, using semantic HTML and ARIA attributes, implementing keyboard accessibility, and testing for accessibility issues. We will also discuss how to ensure accessibility when working with popular JavaScript libraries and frameworks and the importance of designing for accessibility from the outset.\r\n\r\nBy the end of this talk, attendees will have a solid understanding of the principles of web accessibility and specific techniques and tools they can use to build more inclusive web applications with JavaScript.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2414,7 +2528,7 @@
         "title": "Quarkus in the Cloud: Strategies for Teams and Topolgies",
         "description": "Java is a powerhouse of a language suitable for use in many environments, footprints, and form-factors. As we collectively learn more about how to write cloud applications, we're seeing more nuanced discussions about how we build applications: should we be using monoliths or microservices? Should I use cloud functions? What is a modular monolith and is it a good idea or not?  These choices require thoughtful architectural decisions and optimization strategies, not only at the code level but also in fostering effective teamwork. This talk delves deep into the architectural nuances and trade-offs essential for making informed decisions in these deployment paradigms.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2461,7 +2575,7 @@
         "title": "Leveraging Jakarta EE 10 Core Profile in Stateful Microservices",
         "description": "Integration of Jakarta EE 10 Core Profile -compatible microservices frameworks with in-memory data grids creates a powerful platform for productive development and scalable operation of modern microservice architectures.  Developers benefit from Map-based persistence APIs injected into RESTful services, while the resulting architecture exhibits elastic scalability in cloud-native deployments.  This session will explore such an integration with Helidon 4 and Coherence CE,  and highlight state-of-the-art applications achieved as a result.  Java 21 virtual threads and MicroProfile 6 are also implemented in this integration. Join us to learn how the Jakarta EE platform can power your next cloud-native stateful microservices system.",
         "startsAt": "2024-04-10T14:30:00",
-        "endsAt": "2024-04-10T15:35:00",
+        "endsAt": "2024-04-10T15:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -2514,12 +2628,59 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
         "isInformed": false,
         "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "549463",
+        "title": "Connect the Tables: How to Graph Relational Databases",
+        "description": "You might have heard about graphs, but what if you already have a relational database? How do you incorporate something new? This session will show you how to translate part or all data from a relational format into a graph.\r\n\r\nWe will cover the basics of migrating the model and practical steps for actually implementing it. We will walk through naming and case conventions for graphs, as well as some principles for a successful graph model. At each step, we will show live code for making this work in the real world. Come to this session to get concrete steps for graphing relational databases.",
+        "startsAt": "2024-04-10T16:00:00",
+        "endsAt": "2024-04-10T17:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b5ea9e64-ad10-477c-8444-cc00339b8dc5",
+            "name": "Jennifer Reif"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207652,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 39693,
+        "room": "Architecture",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -2571,8 +2732,8 @@
       {
         "questionAnswers": [],
         "id": "568379",
-        "title": "Scalable Machine Learning with PyTorch,  Kubeflow and Kubernetes",
-        "description": "In the dynamic world of machine learning, data scientists and engineers face a constant challenge to design, train, and deploy models at scale while maintaining flexibility and reproducibility. PyTorch, a popular deep learning framework, Kubeflow, an advanced machine learning platform built on Kubernetes, and Kubernetes, a leading container orchestration system, have emerged as a triumphant trio to tackle these complex demands.\r\nWith Kubeflow, data teams can effortlessly manage distributed training, hyperparameter tuning, and model serving, leveraging the scalability and fault tolerance of Kubernetes.\r\nThis talk will explore the seamless integration of PyTorch with Kubeflow over Kubernetes orchestration platform to efficiently design and train models on any scale. \r\n\r\nTo begin, we will provide an overview of PyTorch, highlighting its strengths in building dynamic and efficient deep learning models.\r\nNext, we will delve into Kubeflow's core capabilities, elucidating how it extends Kubernetes to orchestrate end-to-end machine learning workflows.",
+        "title": "Harnessing the Power of Open Source for Cloud Native Development: Strategies for Success",
+        "description": "As cloud native architectures become increasingly popular, open source tools have become essential for managing and deploying cloud native applications. Whether you are a developer, architect, or IT professional, this talk will provide valuable insights and guidance for leveraging open source tools in your own cloud native initiatives. Mo Haghighi, will explore some of the most popular open source tools for cloud native development such as Kubernetes, Prometheus and Grafana that work together complementarily to orchestrate, log activities and monitor containers. \r\nWe will begin with an introduction to cloud native architecture and the benefits of microsevices architecture. He will then dig into the key challenges faced by organizations looking to adopt cloud native technologies.\r\nWe will then dive into open source tools that work efficiently with Kubernetes, an open source container orchestration platform that simplifies the management of containerized applications.\r\nMo will specifically discuss open source monitoring systems such as Prometheus and Grafana to get detailed and visualised insights into the health of microservices. \r\nThe main focus of the talk will be to educate attendees on the benefits of using open source tools for cloud native development, and how to leverage them effectively to streamline processes and maximize productivity.",
         "startsAt": "2024-04-10T16:00:00",
         "endsAt": "2024-04-10T17:00:00",
         "isServiceSession": false,
@@ -2655,7 +2816,7 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
+        "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -2762,17 +2923,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "540558",
-        "title": "ML in Java, YES it's possible!",
-        "description": "When you think about building and/or deploying machine learning models, Java is not within the top 3 languages that we generally think of. Nonetheless Java has a strong community, with millions of developers using it as their main language.\r\nWith the AI buzz spiking in the past month, All developers, and especially Java developers, need to understand how to build and run apps that use ML. In this session we are going to explore what are our options, as java developers, to build, save and run machine learning models.We are also going to discuss and compare the most 3 popular frameworks (Deeplearning4J, djl and Tribuo), along with a real world example to understand capabilities and tradeoffs of each framework. We will also briefly cover JSR381, an open-source, Java-friendly API for ML, specifically visual recognition",
+        "id": "537960",
+        "title": "JVM Ergonomics Profiles: Enhancing Resource Consumption and Performance in Dedicated Environments",
+        "description": "Ergonomics Profiles is a new Java Virtual Machine (JVM) feature proposal aimed at improving resource utilization and performance in dedicated JVM environments, such as containers. The proposal outlines the motivation behind Ergonomics Profiles, highlighting the prevalent usage of dedicated resources in modern cloud-based JVM workloads. It addresses the limitations of default JVM ergonomics designed for shared environments and the resulting resource waste. The proposed solution includes the introduction of two profiles: \"shared\" for traditional environments and \"dedicated\" for systems with dedicated resources. The dedicated profile offers optimized heuristics for maximizing resource consumption, including dynamic heap size allocation, enhanced garbage collector selection, and native memory estimation. The proposal also presents a new flag for profile selection and provides APIs for programmatically identifying the selected profile. By incorporating Ergonomics Profiles, JVMs can better adapt to dedicated environments, reduce resource waste, and increase overall chances of better performance, resulting in more efficient and scalable Java applications.",
         "startsAt": "2024-04-10T16:00:00",
         "endsAt": "2024-04-10T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "df2764ce-246c-406d-8cba-c3515e254253",
-            "name": "Mohammed Aboullaite"
+            "id": "e0b15676-adb2-4ea7-bb68-ca1af864a14f",
+            "name": "Bruno Borges"
           }
         ],
         "categories": [
@@ -2997,17 +3158,21 @@
       },
       {
         "questionAnswers": [],
-        "id": "603870",
-        "title": "Real-Time Dashboards in the Corporate World: How Apache Pinot® Powers Industry Leaders",
-        "description": "This isn't your typical tech talk—it's a story of the journey into how big players like LinkedIn, Uber Eats, and Stripe are mastering the art of real-time data.\r\nViktor is here to demystify Apache Pinot's superpowers, showing you how it instantly transforms mountains of data into actionable insights. Business decision-makers have long had access to dashboards and reports, but now analytics can be made available to users as features of stickier, more engaging applications. With stories, insights, and a touch of humor, Viktor will unpack the cool features of Apache Pinot, including the Star-Tree Index, and show you why it’s a game-changer in data strategy.\r\nThis session is for everyone, whether you're a data geek, a business guru, or just curious about the future of tech. Viktor's dynamic style will keep you on the edge of your seat, eager to put these insights into action. So, buckle up and get ready to be wowed by the power of real-time analytics with Apache Pinot – it will be a blast!",
+        "id": "544457",
+        "title": "Serverless Java in Action: Cloud Agnostic Design Patterns and Tips",
+        "description": "You've probably seen how to create a Function-as-a-Service with one of the cloud providers, but if this is all you know about Serverless, prepare to have your mind blown!\r\nIn this session we'll show you how to create a production-grade, cloud-agnostic, event-driven serverless solution with Quarkus, a Java stack optimized for fast startup and small footprint; and Knative, an open source community project for deploying, running and managing serverless applications on Kubernetes.   Say goodbye to vendor lock-in and hello to Supersonic Subatomic Java-based Serverless bliss!\r\n",
         "startsAt": "2024-04-10T16:00:00",
         "endsAt": "2024-04-10T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
-            "name": "Viktor Gamov"
+            "id": "a4305a38-d462-482b-9e4a-536eb74ec63c",
+            "name": "Kevin Dubois"
+          },
+          {
+            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+            "name": "Daniel Oh"
           }
         ],
         "categories": [
@@ -3016,8 +3181,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207652,
-                "name": "Architecture"
+                "id": 207664,
+                "name": "Cloud Native"
               }
             ],
             "sort": 0
@@ -3091,11 +3256,58 @@
       },
       {
         "questionAnswers": [],
+        "id": "548368",
+        "title": "Death to the Monolith",
+        "description": "Monolithic architecture has been the traditional approach for building web applications, but it often leads to a rigid, inflexible, and slow development process. Micro-frontends, on the other hand, allows for breaking down large, complex applications into smaller, more manageable pieces that can be developed, tested, and deployed independently. In this talk, we will learn how to say \"death to the monolith\" and embrace micro-frontends as an architecture pattern.\r\n\r\nBy exploring the problems with monolithic architecture we will discuss why it's time to move away from it. A monolithic architecture can lead to a lack of agility, difficulty in scaling, and an increased risk of failure. Meanwhile, a micro-frontend architecture pattern allows for a more flexible, scalable, and efficient development process.\r\n\r\nNext, we will look at how an application composition platform provides a framework for creating and managing micro-frontends, including tools for versioning, testing, and deploying them. We will discuss how an application composition platform can help ensure consistency across micro-frontends by providing a centralized location for managing shared resources.\r\n\r\nFinally, we will learn how embracing micro-frontend architecture with an application composition platform can enable organizations to become more agile and efficient. Additionally, we will explore how micro-frontend architecture can enable rapid prototyping, reduce time to market, and allow for easier scaling of applications.\r\n\r\nAttendees of this talk will leave with a deeper understanding of the problems with monolithic architecture and the benefits of micro-frontend architecture. They will gain practical tips and strategies for building micro-frontends that are flexible, maintainable, and optimized for performance using an application composition platform. They will also learn how embracing micro-frontend architecture can enable organizations to become more agile and efficient in their development process.\r\n",
+        "startsAt": "2024-04-10T17:00:00",
+        "endsAt": "2024-04-10T18:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
+            "name": "Cody Frenzel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207652,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 39693,
+        "room": "Architecture",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "539474",
         "title": "Product Centricity and Agility: Mega Powers combined",
         "description": "Abstract:\r\nIn software development two themes run rampant which are complementary yet distinct: Product Centricity and Agility. Even specialists of these areas might not be familiar with how they are different, what their divergent priorities are, and how to align when trying to decide on where to fall on the continuum between the two. Hear about how these Mega Powers can either work together or explode! Learn how organizations like Discover use dojos and academies to helps product leaders and agile coaches align to drive innovation and continuous improvement while staying true to product vision and organizational outcomes.\r\n\r\n\r\nDesired learning outcomes:\r\n\r\n1. Identify key characteristics of a product-centric approach and an agile (user-focused) approach.\r\n2. Evaluate a given product development scenario to assess where on the continuum of product-centricity and agility your team must fall to achieve desired outcomes.\r\nLearn to formulate recommendations for improving a product development strategy by the incorporating the beneficial elements of both product centricity and agility.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3142,7 +3354,7 @@
         "title": "Calling AI Tools from Java",
         "description": "As far as Java is concerned, most AI tools are just another RESTful web service. In this session, learn how to use modern Java features like records, text blocks, the HTTP Client API and more to access ChatGPT, the Whisper audio-to-text transcription API, and image generators like DALL-E, Stable Diffusion, and Midjourney.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3185,41 +3397,144 @@
       },
       {
         "questionAnswers": [],
-        "id": "ede49b8f-8a5a-490e-82ac-2fe7de5ef5ca",
-        "title": "Intro to Kafka",
-        "description": null,
+        "id": "549107",
+        "title": "Wireguard, TLS and Workload Identity: The Backbone of Modern Service Networking",
+        "description": "Zero Trust Networking has become a standard marketing buzzword but the underlying principles are critical for modern microservice-style architectures. Authentication, authorizations, policy, etc. can be difficult to implement between services and do so in a maintainable way. Google invented their own transparent encryption and authorization protocol called \"ALTS\" back in 2007 to serve the application layer of Google's Borg workload scheduler, but we don't see others using it outside Google.\r\n\r\nIn this session we look at existing technology like TLS and newcomer Wireguard and see how these technologies come together to provide a secure foundation for workload identity and modern service-to-service networking. We will see how to accomplish exactly what Google did with ALTS but in a more open-source friendly way.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
-        "isServiceSession": true,
+        "endsAt": "2024-04-10T18:00:00",
+        "isServiceSession": false,
         "isPlenumSession": false,
-        "speakers": [],
-        "categories": [],
+        "speakers": [
+          {
+            "id": "6e160707-beeb-4abc-97de-23d6f2c84056",
+            "name": "Christian Posta"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207654,
+                "name": "Cloud Technology"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
         "roomId": 42137,
-        "room": "Cloud Infra",
+        "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
-        "status": null,
-        "isInformed": false,
-        "isConfirmed": false
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
-        "id": "2a008126-43e6-4b6f-9390-037f5a10bfca",
-        "title": "Apache Pinot presentation",
-        "description": null,
+        "id": "557685",
+        "title": "Troubleshooting, Monitoring and Profiling with Java Flight Recorder, Mission Control and Cryostat",
+        "description": "Java Flight Recorder and JDK Mission Control enable continuous collection of low level,  detailed runtime information for incident analysis. JFR is included with the JDK, has a tiny footprint, and \r\n\r\nJava Flight Recorder is a profiling and event collection framework built into the JDK. \r\n\r\nJDK Mission Control contains a set of tools that enable detailed analysis of the data collected by Java Flight Recorder.\r\n\r\nCryotstat enables secure managemant of JFR recordings for containerized Java apps.\r\n\r\nIn this presentation, we will dive into Java Flight Recorder, Java Mission Control, and Cryostat.  You will leave knowing how start, stop, and visualize data about your Java applications running in and out of containers.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
-        "isServiceSession": true,
+        "endsAt": "2024-04-10T18:00:00",
+        "isServiceSession": false,
         "isPlenumSession": false,
-        "speakers": [],
-        "categories": [],
+        "speakers": [
+          {
+            "id": "943e1c6e-d2db-4829-b701-000eaac0f5cd",
+            "name": "Jeremy Davis"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207655,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 42139,
+        "room": "Core Java",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "551437",
+        "title": "Work Smarter, Not Harder with your AI Coding Companion",
+        "description": "AI coding companion tools are growing in popularity, and many organizations are asking their development teams to use these tools with the goal of producing code faster and with fewer defects. However, large is the number of developers complaining about not being able to use them because \"they are not smart enough\" to understand their programming intentions. Anecdotally, this happens because, like a new developer during their first day in the job; there is no understanding of the existing code base, they have no clue about which frameworks are being used, and what is the required coding style.\r\n\r\nThis session will get into the weeds about how developers can explore the potential of AI coding companion tools by treating them as a new developer requiring proper onboarding. It will share day-to-day scenarios of developer problems and how these tools can help them if properly used. Examples will use Java, Visual Studio Code, and Amazon CodeWhisperer.",
+        "startsAt": "2024-04-10T17:00:00",
+        "endsAt": "2024-04-10T18:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f69133ba-5f6e-44e7-98e5-84b1dd108991",
+            "name": "Ricardo Ferreira"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207656,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
         "roomId": 42140,
         "room": "Frameworks",
         "liveUrl": null,
         "recordingUrl": null,
-        "status": null,
-        "isInformed": false,
-        "isConfirmed": false
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3227,7 +3542,7 @@
         "title": "The Next Frontier in Open Source Java Compilers: Just-In-Time Compilation as a Service",
         "description": "For Java developers, the Just-In-Time (JIT) compiler is key to improved performance. However, in a container world, the performance gains are often negated due to CPU and memory consumption constraints. To help solve this issue, the Eclipse OpenJ9 JVM provides JITServer technology, which separates the JIT compiler from the application.\r\n\r\nJITServer allows the user to employ much smaller containers enabling a higher density of applications, resulting in cost savings for end-users and/or cloud providers. Because the CPU and memory surges due to JIT compilation are eliminated, the user has a much easier task of provisioning resources for his/her application. Additional advantages include: faster ramp-up time, better control over resources devoted to compilation, increased reliability (JIT compiler bugs no longer crash the application) and amortization of compilation costs across many application instances.\r\n\r\nWe will dig into JITServer technology, showing the challenges of implementation, detailing its strengths and weaknesses and illustrating its performance characteristics. For the cloud audience we will show how it can be deployed in containers, demonstrate its advantages compared to a traditional JIT compilation technique and offer practical recommendations about when to use this technology.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3274,7 +3589,7 @@
         "title": "Coding Fast and Slow: Applying Kahneman's Insights to Improve Development Practices and Efficiency",
         "description": "Embark on an exciting journey into the intersection of psychology, software development, and Developer Productivity Engineering (DPE) as we explore how Nobel laureate Daniel Kahneman's groundbreaking work on the psychology of judgment and decision-making can optimize your development practices while conserving cognitive resources. Discover the impact of System 1 and System 2 thinking on the software development process, and learn to strike the perfect balance between \"fast\" intuitive thinking and \"slow\" deliberative reasoning.\r\nWe'll delve into practical DPE strategies for reducing mental fatigue and minimizing context switches, focusing on techniques like build system performance optimization, test parallelization,  AI-powered test selection, and developer productivity observability. By leveraging these best practices, you'll enhance your and your team's productivity and maintain focus on high-value tasks.\r\nWhether you're an experienced developer seeking to boost your performance or a curious newcomer eager to learn about the connections between the human mind, software development, and DPE, this talk is for you. Join us for an exhilarating adventure into the fast and slow worlds of coding, and uncover new ways to maximize your cognitive resources.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3289,8 +3604,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207651,
-                "name": "Agile"
+                "id": 207658,
+                "name": "Practices and other tech"
               }
             ],
             "sort": 0
@@ -3321,7 +3636,7 @@
         "title": "Don't Get Burned! Secure Coding Essentials to protect your application",
         "description": "As a developer, you understand the importance of writing code that is functional, scalable, and maintainable. But how about secure code? Even the most seasoned developer can make common security mistakes that leave your code vulnerable to attack. In this session, we'll explore the most common and sometimes unknown security pitfalls made by developers and provide practical tips for avoiding them. We'll cover everything from input validation errors to injection to file overwrites and arbitrary code execution. We'll show real-world examples of insecure code and demonstrate how attackers exploit these vulnerabilities before showing you how to fix these code constructions. By understanding how these mistakes get exploited, you'll be better equipped to write secure, bulletproof code that can withstand attacks. Whether you're a junior developer just starting out or a seasoned pro looking to brush up on your skills, this session is a must-attend for anyone concerned with the security of their applications. Let’s start writing secure code and learn how to avoid security mistakes.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3368,7 +3683,7 @@
         "title": "Application Observability like you've never heard before",
         "description": "Do you regularly spend sleepless nights desperately trying to make sense of cryptic error messages that seem to have been penned by a particularly grumpy Shakespearean ghostwriter? Are you frequently wondering about what your application is doing in production?\r\nPlease join us on this example-driven journey where we go through some of the more advanced topics of Observability, and we dive into the toolsets available for you today to instrument your application so that it can tell you what it is doing and why. We will explore how to instrument your JVM-based application without vendor lock-in using Micrometer, OpenTelemetry, Grafana, OpenZipkin, Prometheus, OpenMetrics, etc, so you can have a much better sense of what is going on inside of your app.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3415,7 +3730,7 @@
         "title": "Climbing Up with Alpine.js",
         "description": "Every modern web site requires some degree of interactivity, but for many projects large frameworks like React or Vue can be overly complex and unnecessary. Alpine.js offers a much simpler, but still powerful, solution to this that aims to be like \"jQuery for the modern web.\" In this talk, I'll introduce Alpine and explain where it makes the most sense to use it. I'll walk through the basic syntax and then demonstrate examples of how Alpine can progressively enhance web pages to add interactivity. ",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3458,11 +3773,58 @@
       },
       {
         "questionAnswers": [],
+        "id": "559371",
+        "title": "Your Java Code in the Kubernetes Native Era: A Live Coding Experience",
+        "description": "Is your Java code ready for the Kubernetes Native era?\r\n\r\nThere's a lot of hype around this topic. However, modern applications do indeed come with complexities like scalability, containerization, and service mesh, which Kubernetes can undoubtedly address.\r\n\r\nThe question is: Is your Java code ready for all of this? If you make the right choices, the answer is yes!\r\n\r\nQuarkus has been built with a Kubernetes Native approach, and it even allows you to use MicroProfile, Camel, Hibernate, and various other open-source projects among the world's best.\r\n\r\nNow is the time to embrace Kubernetes with Java! And this 100% practical session will show you how to do it today.",
+        "startsAt": "2024-04-10T17:00:00",
+        "endsAt": "2024-04-10T18:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
+            "name": "Elder Moraes"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207664,
+                "name": "Cloud Native"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 42146,
+        "room": "Cloud Native",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "557712",
         "title": "Jakarta EE! The future of enterprise application behind the myths.",
         "description": "Most enterprises continue running their Application in a JEE Server. We realize that there are among of code that is not evolving. Throughout this talk, we are showing you by example some real-world experiences of moving forward Applications running JEE 5 & 7 to Jakarta EE 10. At the end of this session, you are going to understand the pitfalls and put away the concerns of updating and evolving your enterprise applications.",
         "startsAt": "2024-04-10T17:00:00",
-        "endsAt": "2024-04-10T18:05:00",
+        "endsAt": "2024-04-10T18:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3515,7 +3877,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -3572,16 +3934,16 @@
       {
         "questionAnswers": [],
         "id": "236a0817-b43e-4d4d-8956-c963fa1dff33",
-        "title": "Registration day 2",
+        "title": "Registration & breakfast",
         "description": null,
-        "startsAt": "2024-04-11T08:00:00",
-        "endsAt": "2024-04-11T09:05:00",
+        "startsAt": "2024-04-11T08:15:00",
+        "endsAt": "2024-04-11T09:00:00",
         "isServiceSession": true,
         "isPlenumSession": true,
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -3590,22 +3952,50 @@
       },
       {
         "questionAnswers": [],
-        "id": "6bd26803-8a98-4286-83f5-6624f7c8b9b8",
-        "title": "Keynote Day 2",
-        "description": null,
+        "id": "557220",
+        "title": "Knowledge Management for the Technically Inclined",
+        "description": "Knowledge sharing and creation is foundational to technical professionals' work, and yet is one of the most overlooked areas of modern business. When you cannot find the information you need, or it is hard to understand, your productivity and your end customer are going to be affected.\r\n\r\nYou can use effective knowledge management principles and techniques to get your time back for your important work. Discover:\r\n- techniques for organising your personal, team, and organisation knowledge so it can be found\r\n- how to present information so it can be more easily consumed by the reader\r\n- how to work together with your peers to improve your documentation\r\n- how to align your documentation to your audience to optimise communication\r\n\r\nLearn how to optimise the knowledge and understanding that underpins what you do.",
         "startsAt": "2024-04-11T09:00:00",
-        "endsAt": "2024-04-11T10:05:00",
-        "isServiceSession": true,
+        "endsAt": "2024-04-11T10:00:00",
+        "isServiceSession": false,
         "isPlenumSession": true,
-        "speakers": [],
-        "categories": [],
+        "speakers": [
+          {
+            "id": "1b56e49d-1702-4a54-9cf7-433c38632ebe",
+            "name": "Jacqui Read"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 231062,
+                "name": "Keynote"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207667,
+                "name": "keynote"
+              }
+            ],
+            "sort": 1
+          }
+        ],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
-        "status": null,
-        "isInformed": false,
-        "isConfirmed": false
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -3613,7 +4003,7 @@
         "title": "Enhancing Software Design with Spring Modulith",
         "description": "Having more tools in your tool belt and knowing when to use each one is a crucial aspect of modern design and architecture. In this talk, I want to introduce you to a new tool: Spring Modulith. This innovative tool is reshaping how we approach software structure, especially in the debate between using Microservices or a Monolithic framework. The central question we'll explore is how to create software that's flexible and can adapt to the evolving needs of a business.\r\n\r\nSpring Modulith is designed for those working with Spring Boot, offering a way to efficiently organize and evolve software projects. Here’s what we’ll delve into:\r\n\r\nDefining and managing logical modules within Spring Boot applications using Spring Modulith.\r\n\r\nUtilizing Spring Modulith’s tools for structural validation tests, ensuring each component functions correctly and cohesively.\r\n\r\nDocumenting the architecture of your application, facilitating better collaboration and future modifications.\r\n\r\nImplementing interactions between modules in a way that maintains their independence yet allows for effective communication.\r\n\r\nMonitoring real-time interactions between modules during the software’s operation.\r\n\r\nA highlight of this talk is a live coding demonstration, where I’ll show Spring Modulith in action. This will be insightful for both seasoned Spring Boot users and newcomers alike.\r\n\r\nJoin us to discover how Spring Modulith can enhance your toolkit, making your software projects more adaptable and aligned with the dynamic landscape of business requirements.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3647,7 +4037,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -3660,7 +4050,7 @@
         "title": "Refactoring AF (After Fowler): Some Large Refactoring Patterns",
         "description": "Martin Fowler’s Refactoring: Improving the Design of Existing Code was first published in 1999. What have we learned since then about refactoring? What should we, as professional software developers, know before deciding to do a refactor on a legacy codebase? What is the thought process we need to apply when choosing a new design for existing code? This talk will delve into these questions with examples and humor.\r\n\r\nThe audience for this session is software developers and the people that interface with them (product owners, scrum masters, development managers) who need to know the value of this important and often neglected technical practice.\r\n\r\nAt the end of the session, the attendee will be able to plan a refactoring effort on legacy codebases, apply refactoring techniques beyond those listed in Fowler, and recognize accidental code complexity in large codebases.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3711,7 +4101,7 @@
         "title": "Contextual search with vector search: exploring your options with open source tools.",
         "description": "Have you noticed the recent improvement in how our searches have become smarter? It's fascinating how vector search technology has enhanced our contextual search experience.\r\n\r\nThe underlying idea is quite straightforward. For example, let's consider an example of a movie recommendation system. The idea is to represent each movie in our catalog as a vector, a numerical representation of a piece of text.\r\n\r\nOnce we're done with that and also converted the search phrase into a vector, we step into a whole new realm — a multidimensional space where these vectors replace the original text values. Through some mathematical techniques, we can determine which movie representations are closest to the vector representing our search query!\r\n\r\nHow do we create such vector representations? We need an AI model trained on vast amounts of data to recognize patterns and effectively convert text phrases into vectors. \r\n\r\nAll of this you’ll learn in this session. We'll try out different data solutions - ClickHouse, OpenSearch and PGVector. We'll also explore different models available depending on your language preference and skills, or, in case you 'd rather not run the model locally, what APIs you can use to do data inference for free.\r\n\r\nPlenty of demos and a bit of coding for each of the options. This session will be useful for anyone who is intrigued by contextual search and usage of AI, but might find themselves overwhelmed by the complexities to get started.\r\n",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3758,7 +4148,7 @@
         "title": "Unlocking Dramatic Savings: Optimize your App and Database Footprint with Serverless Java",
         "description": "In the dynamic world of cloud-native apps, efficient microservices are crucial. This talk introduces a groundbreaking blend of serverless computing. Serverless architecture simplify containerized app deployment and scaling, letting developers focus on coding, not infrastructure. EclipseStore is a high-performance, in-memory data platform. This combination offers: 1) Seamless Scalability: Dynamic microservice scaling with Serverless optimizes resource use, minimizes overhead. 2) Data Efficiency: EclipseStore's in-memory data processing boosts data access speed, reduces latency. 3) Cost Savings: serverless computing cuts infrastructure costs, eliminates server management. EclipseStore eliminates data storage costs.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3769,57 +4159,6 @@
           {
             "id": "c53d0ee3-4ee1-4a19-ac0a-26a38a4c43af",
             "name": "Richard Fichtner"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207653,
-                "name": "Cloud Infrastructure"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": false
-      },
-      {
-        "questionAnswers": [],
-        "id": "557373",
-        "title": "Wiring Cloud Native applications for local development",
-        "description": "Despite the quality of modern cloud-native tools, the user experience for the inner and outer loops are still radically different, which introduces friction and slows down developer productivity. \r\n\r\nDevelopment setups are application-centric, while production environments deal with deployments and tools required for operations teams to keep applications up and running. In this session, we explore tools to simplify both sides to improve developer productivity by following a platform engineering and polyglot approach. \r\n\r\nThis session demonstrates and provides hands-on experience on:\r\nHow to enable developers with standard application-level APIs to solve common distributed application challenges by using Dapr.\r\nHow to equip developers and product managers with consistent and polyglot feature flags with OpenFeature.\r\nAnd how to develop locally with these tools, outside of a Kubernetes Cluster, by using Testcontainers. \r\n",
-        "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "3ef92880-b80a-4305-b75c-35650d1259c8",
-            "name": "Oleg Šelajev"
-          },
-          {
-            "id": "f44f5308-1287-4e6c-8f48-6ed26ea9f9d3",
-            "name": "Mauricio \"Salaboy\" Salatino"
           }
         ],
         "categories": [
@@ -3846,13 +4185,13 @@
             "sort": 1
           }
         ],
-        "roomId": 42138,
+        "roomId": 42137,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": true
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -3860,7 +4199,7 @@
         "title": "Loom is more than virtual threads: Structured Concurrency and Scoped Values",
         "description": "Most of the talk about Project Loom as been about JEP 425: Virtual Threads. That's great because virtual threads are incredibly useful and will revolutionize how we write high-throughput applications. But did you know there are two more JEPs associated with Project Loom that are also very useful? First we'll learn about JEP 428: Structured Concurrency and how it will simplify multithreaded programming on the JVM. Next, we'll learn about JEP 429: Scoped Values which aims to solve some problems that ThreadLocals have had since their introduction way back in Java 1.2!  Come to this talk and we'll learn why these projects are useful additions to the JVM, and write some code to illustrate where you'll be able to use them effectively. ",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3903,17 +4242,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "549542",
-        "title": "JUnit 5's Best Features",
-        "description": "The team that rewrote JUnit in version 5 did a fantastic job improving the platform while maintaining backward compatibility. Many Java developers don't realize how many new cool capabilities have been added to the framework since the initial 5.0 release.  This talk will cover topics like the set of useful functional interfaces available, how to do parameterized tests with various sources, lazy loading of error messages, and more.",
+        "id": "567652",
+        "title": "Crossing The Streams - leveraging Pulsar IO + Pulsar Functions together with Spring Cloud Stream",
+        "description": "Apache® Pulsar™ is an open-source, distributed messaging and streaming platform built for the cloud. It provides Pulsar Functions and Pulsar IO connectors which can be leveraged to build Pulsar message processing applications.\r\nSpring Cloud Stream is a framework for building message-driven micro-service applications. It provides a Pulsar binder implementation that can be used to build Pulsar message-processing applications.\r\nBoth of these solutions share a high degree of feature overlap and either could be used to solve the same problem. However, it need not be an ‘either-or’ proposition, they can actually be used in tandem.\r\nIn this talk, we will demonstrate Pulsar Functions and Pulsar IO connectors and show how Spring for Apache Pulsar simplifies their usage.  We will also show how to use the Spring Cloud Stream Pulsar Binder in your application.  Finally, we will “cross the streams” and leverage these technologies together to build a Pulsar message processing application.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "ecda0d84-be59-41c6-8983-b58cd5b3f93c",
-            "name": "Kenneth Kousen"
+            "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+            "name": "Chris Bono"
           }
         ],
         "categories": [
@@ -3954,7 +4293,7 @@
         "title": "Keeping Your Java Hot by Solving the JVM Warmup Problem",
         "description": "Java bytecodes and class files deliver on the original vision of “write once, run anywhere”.  Using a Just-in-Time (JIT) compiler allows JVM-based applications to compile only the code that’s being used frequently and optimise it precisely for how it is being used.  Using techniques like speculative optimisation can often deliver better performance than static, Ahead-of-Time (AOT) compiled code.\r\n\r\nHowever, this flexibility and performance comes at a cost.  Each time the JVM starts an application, it must perform the same analysis to find hot spots of code and compile them.  This is referred to as the application warmup time.\r\n\r\nIn this session, we’ll look at several approaches to how this problem can be alleviated or even eliminated.  Specifically:\r\n\r\n•\tGenerating a JIT compiler profile of a running, warmed-up application that can be reused when the same application is restarted, eliminating the need for much of the JIT compilation.\r\n•\tDecoupling the JIT compiler from the JVM for a Cloud environment.  Providing a centralised JIT-as-a-Service allows caching of compiled code and offloading the compilation work when new code must be compiled.\r\n•\tCreating a checkpoint of a running application.  This includes all application state (heap, stack, etc.) in addition to the JIT-compiled code.  Project CRaC will be used as an example.\r\n\r\nAt the end of the session, you’ll be all set to keep your Java hot!\r\n",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -3997,17 +4336,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "557220",
-        "title": "Knowledge Management for the Technically Inclined",
-        "description": "Knowledge sharing and creation is foundational to technical professionals' work, and yet is one of the most overlooked areas of modern business. When you cannot find the information you need, or it is hard to understand, your productivity and your end customer are going to be affected.\r\n\r\nYou can use effective knowledge management principles and techniques to get your time back for your important work. Discover:\r\n- techniques for organising your personal, team, and organisation knowledge so it can be found\r\n- how to present information so it can be more easily consumed by the reader\r\n- how to work together with your peers to improve your documentation\r\n- how to align your documentation to your audience to optimise communication\r\n\r\nLearn how to optimise the knowledge and understanding that underpins what you do.",
+        "id": "540546",
+        "title": "Are Your Tests Slowing You Down?",
+        "description": "Testing is a Good Thing, right? Especially automated testing. But \"Good things come to those who wait\" is not something that's going to appeal to the busy developer. You want results, and you want them now. You're in The Zone working on a problem, and the last thing you want is to break your flow wrestling with your testing framework or waiting for the tests to finish running.\r\n\r\nMore code means more tests. More coverage means more tests. More tests mean more time. Time that you want to spend being productive, creative, innovative. How can you balance the need for quality with the need for speed?\r\n\r\nIn this talk, Trisha will identify issues that slow down developers when writing, running and debugging tests, and look at tools that can help developers with each of these problems. There will be live coding, analysis of social media poll results, an overview of solutions in this space, \"best practice\" recommendations, and machine learning will be mentioned at some point.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "1b56e49d-1702-4a54-9cf7-433c38632ebe",
-            "name": "Jacqui Read"
+            "id": "5eff389f-6760-4a05-affb-ec5b6fc2ca36",
+            "name": "Trisha Gee"
           }
         ],
         "categories": [
@@ -4016,8 +4355,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207660,
-                "name": "Tools and techniques"
+                "id": 207658,
+                "name": "Practices and other tech"
               }
             ],
             "sort": 0
@@ -4048,7 +4387,7 @@
         "title": "Breaking AI: Live coding and hacking applications with Generative AI",
         "description": "Is your organisation ready to revolutionize your coding experience with generative AI tools, like copilot, ChatGPT, or code whisperer? Do you know how to code safely with generative AI tools increasing your delivery speed without compromising security? In this session, we’ll discuss some of the dangers of generative AI, including hallucinations and security risks. We’ll live code a Spring coffee shop application using copilot, and ChatGPT, and live hack the results, showing how the generated code can be exploited in a running app. We’ll uncover generated SQL injections, Cross site scripting, directory traversal and more. Don't miss this electrifying opportunity to explore the cutting edge of coding technology. Join us and embark on a journey where velocity meets security, and innovation knows no bounds. Secure your spot now and get ready to code like never before! In this session you'll learn how you can leverage the power of AI to increase your velocity while mitigating risks and staying secure.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -4095,7 +4434,7 @@
         "title": "Java, JavaFX, and Life on Jupiter’s Europa",
         "description": "NASA’s deep space Clipper mission will launch in 2024 and travel to Jupiter’s icy moon Europa searching for the conditions and evidence of organic life. The mission’s success hinges on innumerable technical trials, from evaluating spacecraft trajectories to prioritizing surface observation targets. To help the Europa Clipper team navigate these complex challenges, we developed a Java-based visualization, planning, and analysis tool, named Cadmus.\r\n\r\nThe planning and analysis of the Europa Clipper mission requires highly precise spatial geometries, as the spacecraft will be flying at a speed of kilometers per seconds, while targeting small features on the Europa surface. At nearly 1 billion kilometers away from Earth, precision in planning is paramount. For this, the Cadmus tool uses a combination of Java spatial geometry toolkits and JavaFX to display the precise positions of the spacecraft, planets, moons, stars, surface features, flyby paths, and many more. This effect must be both high performance and interactive so that scientists and engineers can quickly prioritize and plan upcoming observations. \r\n\r\nTo achieve this, we created an infrastructure in Java that allows us to responsively render and interact with maps and space views by combining JavaFX and AWT in a multi-threaded approach. This approach has been extremely successful, and now supports missions outside of Europa Clipper, analyzing spacecraft and data around Saturn, Venus, the Moon, and all the way back to Earth. This presentation will review the NASA Clipper use case, provide a live demo of the software while discussing code segments that are insightful or tricky for such an implementation.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -4142,17 +4481,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "547698",
-        "title": "Methodically Migrating from JavaScript to TypeScript",
-        "description": "It's no secret that TypeScript is all the rage in modern web development. With all of the scaffolding tools that exist to support starting a new project with TypeScript, it's never been easier to try it out. However, it can feel very overwhelming to think about the necessary steps to migrate your existing JavaScript project to TypeScript. In this talk we'll explore progressive enhancements you can make to move your JavaScript project to TypeScript without disrupting your team's productivity.",
+        "id": "555434",
+        "title": "Simple Ways to Make Webhook Security Better",
+        "description": "Webhooks are a simple and powerful way for services to notify each other that something interesting has happened. So much so that it became the most popular mechanism for communicating events. While webhooks give us power and flexibility, they rely heavily on the listener to enforce security. In this session, we will learn the most common, interesting, and challenging patterns across 100+ webhook implementations, and learn some simple ways to make webhook security better (for providers and consumers).",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "27a63fc1-2981-4a83-8f13-fa986f36de8d",
-            "name": "Sean McQuaid"
+            "id": "f0f1fa39-eb24-4ab6-866c-b8645975bd75",
+            "name": "Scott McAllister"
           }
         ],
         "categories": [
@@ -4193,7 +4532,7 @@
         "title": "API Management as Code: A declarative approach to handling API artifacts",
         "description": "Every day software development relies more and more on APIs. Using it as part of digital transformation or just to connect some microservices, developers use APIs to connect applications and devices. API management is now a mature discipline covering the different aspects of the API lifecycle. However, managing efficiently the surge of APIs in the organization could be a challenge. Using a declarative approach makes it easier to understand and automate the desired state of APIs. It makes it easier to version, review and share with other members of the team. Some projects have started to complement their capabilities to add this declarative approach, usually in environments like Kubernetes. \r\n\r\nJoin this session to learn more about:\r\n\r\nCommon API management artifacts\r\nAn introduction to declarative vs imperative management\r\nThe operator pattern and how it helps with declarative management\r\nAn example from the 3scale operator\r\nOther projects using Kubernetes custom resources.\r\n",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -4240,7 +4579,7 @@
         "title": "Making the best of Jakarta EE, Kubernetes, WebSphere and the cloud with AI",
         "description": "This hands-on session will show you how to enable deployments of Jakarta EE applications using Open Liberty or WebSphere Liberty to the cloud with AI. Attendees will explore how to set up a Liberty deployment on Kubernetes, and how to streamline the containerization, deployment and provisioning of resources using AI. We’ll also cover how to establish a SQL Database connection to the deployed application. We’ll be using GitHub Copilot and Copilot Chat to access generative AI, enabling smooth, secure deployments while saving time.  By the end, participants will have a comprehensive understanding of how to optimize, test, and deploy their Java applications on the cloud using Open/WebSphere Liberty and Kubernetes.",
         "startsAt": "2024-04-11T10:00:00",
-        "endsAt": "2024-04-11T11:05:00",
+        "endsAt": "2024-04-11T11:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -4297,7 +4636,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -4306,17 +4645,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "549463",
-        "title": "Connect the Tables: How to Graph Relational Databases",
-        "description": "You might have heard about graphs, but what if you already have a relational database? How do you incorporate something new? This session will show you how to translate part or all data from a relational format into a graph.\r\n\r\nWe will cover the basics of migrating the model and practical steps for actually implementing it. We will walk through naming and case conventions for graphs, as well as some principles for a successful graph model. At each step, we will show live code for making this work in the real world. Come to this session to get concrete steps for graphing relational databases.",
+        "id": "556701",
+        "title": "Micro Frontends for Java Microservices",
+        "description": "You've figured out how to split up your backend services into microservices and scale your teams to the moon, right? But what about the front end? Are you still building monoliths for your UI? If so, you might want to check out micro frontends—basically extensions to the microservices pattern, where the concept is extended to the front end.\r\n\r\nFind out how to package and deploy your microservices and their UIs in the same artifact, as well as make it possible to test and develop them independently.\r\n\r\nIn this live session, Matt will show you how to build a microservices and micro frontends architecture using React, Spring Boot, and Spring Cloud.",
         "startsAt": "2024-04-11T11:30:00",
         "endsAt": "2024-04-11T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "b5ea9e64-ad10-477c-8444-cc00339b8dc5",
-            "name": "Jennifer Reif"
+            "id": "55118daf-09db-4e61-a5b6-c2661640c3d2",
+            "name": "Matt Raible"
           }
         ],
         "categories": [
@@ -4344,7 +4683,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -4447,17 +4786,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "557019",
-        "title": "A developer’s journey to Kubernetes: a handy guide for developing, deploying, and debugging your app",
-        "description": "Containers are everywhere nowadays, and they have changed the way we develop, architect, deploy and troubleshoot our apps in production.\r\n\r\nThis talk will cover the most important things you need to know from developing containerized apps, to deploying them into your Kubernetes cluster, and finally, debugging them.\r\n\r\nWe will cover valuable tools to boost your productivity on Kubernetes—like Skaffold, Dart, Buildpacks and Jib—and discuss common deployment patterns and best practices. We know developers need to understand how to manage resources, application lifecycle and which K8s API objects to use for which component, and in this talk we’ll detail these important items. We also know that developers struggle to troubleshoot their deployed applications, because, well, things break and you need to figure out why!\r\n",
+        "id": "603870",
+        "title": "Real-Time Dashboards in the Corporate World: How Apache Pinot® Powers Industry Leaders",
+        "description": "This isn't your typical tech talk—it's a story of the journey into how big players like LinkedIn, Uber Eats, and Stripe are mastering the art of real-time data.\r\nViktor is here to demystify Apache Pinot's superpowers, showing you how it instantly transforms mountains of data into actionable insights. Business decision-makers have long had access to dashboards and reports, but now analytics can be made available to users as features of stickier, more engaging applications. With stories, insights, and a touch of humor, Viktor will unpack the cool features of Apache Pinot, including the Star-Tree Index, and show you why it’s a game-changer in data strategy.\r\nThis session is for everyone, whether you're a data geek, a business guru, or just curious about the future of tech. Viktor's dynamic style will keep you on the edge of your seat, eager to put these insights into action. So, buckle up and get ready to be wowed by the power of real-time analytics with Apache Pinot – it will be a blast!",
         "startsAt": "2024-04-11T11:30:00",
         "endsAt": "2024-04-11T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "f2e1dff5-e8b9-4b4b-a8e4-4f5c6c61158f",
-            "name": "Abdel Sghiouar"
+            "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
+            "name": "Viktor Gamov"
           }
         ],
         "categories": [
@@ -4466,8 +4805,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207653,
-                "name": "Cloud Infrastructure"
+                "id": 207654,
+                "name": "Cloud Technology"
               }
             ],
             "sort": 0
@@ -4485,53 +4824,6 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "551437",
-        "title": "Work Smarter, Not Harder with your AI Coding Companion",
-        "description": "AI coding companion tools are growing in popularity, and many organizations are asking their development teams to use these tools with the goal of producing code faster and with fewer defects. However, large is the number of developers complaining about not being able to use them because \"they are not smart enough\" to understand their programming intentions. Anecdotally, this happens because, like a new developer during their first day in the job; there is no understanding of the existing code base, they have no clue about which frameworks are being used, and what is the required coding style.\r\n\r\nThis session will get into the weeds about how developers can explore the potential of AI coding companion tools by treating them as a new developer requiring proper onboarding. It will share day-to-day scenarios of developer problems and how these tools can help them if properly used. Examples will use Java, Visual Studio Code, and Amazon CodeWhisperer.",
-        "startsAt": "2024-04-11T11:30:00",
-        "endsAt": "2024-04-11T12:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "f69133ba-5f6e-44e7-98e5-84b1dd108991",
-            "name": "Ricardo Ferreira"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207660,
-                "name": "Tools and techniques"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42138,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
@@ -4560,8 +4852,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207657,
-                "name": "Java Platform"
+                "id": 207655,
+                "name": "Core Java"
               }
             ],
             "sort": 0
@@ -4588,17 +4880,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "551498",
-        "title": "Weaving Spring Cloud Gateway on Loom",
-        "description": "We will provide a brief history of API gateways in Spring Cloud, including Zuul and why we built Spring Cloud Gateway to replace it. Then we will give a short primer on how the gateway routes and filters requests. We will then introduce how Spring Cloud Gateway can work in servlet containers using virtual threads on Java 21. We will compare and contrast this new functionality to the original WebFlux-based Spring Cloud Gateway.",
+        "id": "556029",
+        "title": "Bootiful Spring Boot 3.x",
+        "description": "Spring Framework 6.x and Spring Boot 3.x are almost here and you know what that means? New .jars! And also new baselines and new possibilities! Spring Framework implies a Java 17 and Jakarta EE baseline, and offers new support for building GraalVM-native images. It also offers a new observability layer, an amalgamation of some of the work in the Micrometer project and Spring Cloud Sleuth. Spring Boot 3 builds upon all of this, and integrates all of this into our application. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at next-gen Spring and learn why, with Spring taken together with Java 21, there's never been a better time to Java developer.\r\n\r\n",
         "startsAt": "2024-04-11T11:30:00",
         "endsAt": "2024-04-11T12:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
-            "name": "Spencer Gibb"
+            "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+            "name": "Josh Long"
           }
         ],
         "categories": [
@@ -4654,8 +4946,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207655,
-                "name": "Core Java"
+                "id": 207657,
+                "name": "Java Platform"
               }
             ],
             "sort": 0
@@ -4795,8 +5087,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207654,
-                "name": "Cloud Technology"
+                "id": 207660,
+                "name": "Tools and techniques"
               }
             ],
             "sort": 0
@@ -4974,7 +5266,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -5021,7 +5313,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -5049,8 +5341,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207658,
-                "name": "Practices and other tech"
+                "id": 207651,
+                "name": "Agile"
               }
             ],
             "sort": 0
@@ -5162,53 +5454,6 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "557568",
-        "title": "Modern Testing Tools for Java Developers",
-        "description": "New versions of the API framework appear, adding the last trending and here we go again: changing our code to adopt these new things. How awesome it is! We are improving!\r\n\r\nHow about one of the most important and, sometimes, missed things: quality! How the quality evolves within the adoption of new versions of development frameworks and libraries?\r\n\r\nThis talk will show you 5 libraries you can use, as a Java Developer, to improve the application quality with real-world examples.\r\n\r\nAssertJ will give you infinity assertion possibilities compared to JUnit internals and Hamcrest matches, enabling you to easily use any kind of assertion, even creating your own.\r\n\r\nYou will learn how to use these tools with real-world examples!\r\n\r\nPiTest will increase, even more, the coverage of your tests by applying the mutation testing technique and creating bullet-proof unit tests.\r\n\r\nRestAssured will take your API tests to the next level where, using it as a \"hard user\", can ease the test creation based on an OpenAPI specification.\r\n\r\nAwaitability will solve one of the biggest problems in the API tests: asynchronous calls/messages (mainly in a messaging system). We will be able to wait for the request to be completed to assert any result.\r\n\r\nWiremock will give you the ability not only restricted as a mock solution for your unit and integration test but as a service virtualization tool solving common problems in an integrated environment.",
-        "startsAt": "2024-04-11T13:30:00",
-        "endsAt": "2024-04-11T14:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "f914323b-f3ba-4de7-9069-28974d1c9137",
-            "name": "Elias Nogueira"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207660,
-                "name": "Tools and techniques"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42138,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
@@ -5331,8 +5576,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207655,
-                "name": "Core Java"
+                "id": 207657,
+                "name": "Java Platform"
               }
             ],
             "sort": 0
@@ -5359,17 +5604,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "540546",
-        "title": "Are Your Tests Slowing You Down?",
-        "description": "Testing is a Good Thing, right? Especially automated testing. But \"Good things come to those who wait\" is not something that's going to appeal to the busy developer. You want results, and you want them now. You're in The Zone working on a problem, and the last thing you want is to break your flow wrestling with your testing framework or waiting for the tests to finish running.\r\n\r\nMore code means more tests. More coverage means more tests. More tests mean more time. Time that you want to spend being productive, creative, innovative. How can you balance the need for quality with the need for speed?\r\n\r\nIn this talk, Trisha will identify issues that slow down developers when writing, running and debugging tests, and look at tools that can help developers with each of these problems. There will be live coding, analysis of social media poll results, an overview of solutions in this space, \"best practice\" recommendations, and machine learning will be mentioned at some point.",
+        "id": "573390",
+        "title": "Community hacks to enhance your career",
+        "description": "Do you feel it’s no longer enough to just be a great developer? Does advancing your career mean you have to be blogging, speaking at conferences, engaging on social media, committing to open source and other things distracting you from actually building software?\r\n\r\nYou’ll do well to ensure that the people making decisions about your career are hearing and seeing your name and associating it with progress and other cool and positive things (and truth, they probably aren’t looking at your code).\r\n\r\nIn this session we’ll explore some of the best practices that assist in not having to do it all from scratch. Knowing what you are doing can give you an easier path to visible contributions to the community.",
         "startsAt": "2024-04-11T13:30:00",
         "endsAt": "2024-04-11T14:30:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "5eff389f-6760-4a05-affb-ec5b6fc2ca36",
-            "name": "Trisha Gee"
+            "id": "1038e701-f663-46f8-a01b-925f2f74d004",
+            "name": "Sam Hepburn"
           }
         ],
         "categories": [
@@ -5611,8 +5856,8 @@
             "name": "Markus Kett"
           },
           {
-            "id": "d646eb1d-f4a3-41fe-9d99-9eac7abf2789",
-            "name": "Mark Stoodley"
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
           }
         ],
         "categories": [
@@ -5649,11 +5894,30 @@
       },
       {
         "questionAnswers": [],
+        "id": "f4ac1d09-c1f8-48e2-8a68-e32cddc5fabd",
+        "title": "Afternoon break",
+        "description": "Afternoon break",
+        "startsAt": "2024-04-11T14:30:00",
+        "endsAt": "2024-04-11T15:00:00",
+        "isServiceSession": true,
+        "isPlenumSession": true,
+        "speakers": [],
+        "categories": [],
+        "roomId": 39693,
+        "room": "Architecture",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": null,
+        "isInformed": false,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "560139",
         "title": "Architecting for Resiliency: Shuffle sharding for Workload Isolation",
         "description": "Multi-tenant, cloud-based architectures have a set of resiliency requirements that are often at odds with customer satisfaction and cost requirements.\r\n\r\nOne 'bad actor' can impact all your other clients, or exceed your budget models. This talk will introduce the architectural pattern of Shuffle Sharding, discuss the situations it can help mitigate, the pros and cons of the pattern, and review some examples of its use.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -5687,7 +5951,58 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "557183",
+        "title": "Automated software refactoring with OpenRewrite and Generative AI",
+        "description": "The software industrial revolution has arrived. Software is now 80% open source and third-party\r\nand 20% proprietary code that stitches it together into business-critical applications. In these large and diversely composed codebases, dependencies change frequently at their own pace and security vulnerabilities can be introduced at any time by anyone. Not updating software regularly leads to critical bugs, performance, and security issues (plus your code can just get harder to work with!).\r\n\r\nMass code refactoring in these massive codebases is a multi-point operation that requires accuracy and consistency. It’s about affecting change across many individual cursor positions in thousands of repositories representing tens or hundreds of millions of lines of code. Whether you’re migrating frameworks or guarding against vulnerabilities, this requires coordination, tracking, and accuracy. \r\n\r\nThis is not a problem AI can solve alone. AI, like many humans, is not good at math and programming. AI needs a computer just like a human does.\r\n\r\nIn this talk, we’ll discuss automated code remediation with the deterministic OpenRewrite refactoring engine, a technology born at Netflix in 2016. It’s built on manipulating the Lossless Semantic Tree (LST) representation of code with recipes (programs) that result in 100% accurate style-preserving code transformations. It is a rule-based, authoritative system.\r\n\r\nThen we’ll show how to couple the precision of a rules-based system with the power of AI.\r\nWe'll demonstrate a generative AI procedure that samples source code to identify defects and uses OpenRewrite to fix them. This is a general purpose pattern you're going to start seeing a lot of — \"ChatGPT gets a computer\" (with OpenRewrite as the computer in this case).",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ac15c088-f8fe-44a8-9a82-3b92b39456e1",
+            "name": "Jonathan Schneider"
+          },
+          {
+            "id": "b51a2283-5d04-438c-93a2-3474d6491c55",
+            "name": "Justine Gehring"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207651,
+                "name": "Agile"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 39694,
+        "room": "Agile",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -5699,8 +6014,8 @@
         "id": "537726",
         "title": "Introducing Spring AI",
         "description": "By now, you've no doubt noticed that Generative AI is making waves across many industries. In between all of the hype and doubt, there are several use cases for Generative AI in many software projects. Whether it be as simple as building a live chat to help your users or using AI to analyze data and provide recommendations, Generative AI is becoming a key piece of software architecture.\r\n\r\nSo how can you implement Generative AI in your projects? Let me introduce you to Spring AI.\r\n\r\nFor over two decades, the Spring Framework and its immense portfolio of projects has been making complex problems easy for Java developers. And now with the new Spring AI project, adding Generative AI to your Spring Boot projects couldn't be easier! Spring AI brings an AI client and templated prompting that handles all of the ceremony necessary to communicate with common AI APIs (such as OpenAI and Azure OpenAI). And with Spring Boot auto-configuration, you'll be able to get straight to the point of asking questions and getting answers your application needs.\r\n\r\nIn this session, we'll consider a handful of use cases for Generative AI and see how to implement them with Spring AI. We'll start simple, then build up to some more advanced uses of Spring AI that employ your application's own data when generating answers.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -5743,64 +6058,21 @@
       },
       {
         "questionAnswers": [],
-        "id": "557699",
-        "title": "Not a Kubernetes fan? The state of PaaS in 2024",
-        "description": "Kubernetes won the containers orchestration war. But has it made deploying your apps easier?\r\nLet's explore some of Kubernetes extensive app developer tooling, but mainly what the PaaS space looks like in 2024; 17 years after Heroku made it popular.\r\nIs Heroku still around? What about Cloud Foundry? \r\nAnd what are those new comers (fly.io, repl.it) worth?\r\nDid the Cloud giants replace them all?",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "id": "557373",
+        "title": "Wiring Cloud Native applications for local development",
+        "description": "Despite the quality of modern cloud-native tools, the user experience for the inner and outer loops are still radically different, which introduces friction and slows down developer productivity. \r\n\r\nDevelopment setups are application-centric, while production environments deal with deployments and tools required for operations teams to keep applications up and running. In this session, we explore tools to simplify both sides to improve developer productivity by following a platform engineering and polyglot approach. \r\n\r\nThis session demonstrates and provides hands-on experience on:\r\nHow to enable developers with standard application-level APIs to solve common distributed application challenges by using Dapr.\r\nHow to equip developers and product managers with consistent and polyglot feature flags with OpenFeature.\r\nAnd how to develop locally with these tools, outside of a Kubernetes Cluster, by using Testcontainers. \r\n",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "781d5601-1f81-4d31-940c-e54f12b2de6b",
-            "name": "Anthony Dahanne"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207653,
-                "name": "Cloud Infrastructure"
-              }
-            ],
-            "sort": 0
+            "id": "3ef92880-b80a-4305-b75c-35650d1259c8",
+            "name": "Oleg Šelajev"
           },
           {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "556701",
-        "title": "Micro Frontends for Java Microservices",
-        "description": "You've figured out how to split up your backend services into microservices and scale your teams to the moon, right? But what about the front end? Are you still building monoliths for your UI? If so, you might want to check out micro frontends—basically extensions to the microservices pattern, where the concept is extended to the front end.\r\n\r\nFind out how to package and deploy your microservices and their UIs in the same artifact, as well as make it possible to test and develop them independently.\r\n\r\nIn this live session, Matt will show you how to build a microservices and micro frontends architecture using React, Spring Boot, and Spring Cloud.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "ec9ed7f2-f27c-424f-85ba-9d078cb73e11",
-            "name": "Matt Raible"
+            "id": "f44f5308-1287-4e6c-8f48-6ed26ea9f9d3",
+            "name": "Mauricio \"Salaboy\" Salatino"
           }
         ],
         "categories": [
@@ -5827,7 +6099,7 @@
             "sort": 1
           }
         ],
-        "roomId": 42138,
+        "roomId": 42137,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
@@ -5837,17 +6109,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "547157",
-        "title": "Preparing for the Java 21 cert and learning new features",
-        "description": "Looking to learn about features in the language added after Java 17 in more detail? As programmers we are used to dealing with edge cases. But what about edge cases in the language? As certification book authors, we encounter lots of interesting and/or surprising behavior.  After a brief overview of the cert, we will explain these features and walk through lots of tricky questions. Come to this session and walk away with an increased awareness in these Java topics.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "id": "557266",
+        "title": "What is Looming in Java",
+        "description": "In the evolving landscape of software development, Java continues to be a stalwart choice for building reliable, scalable, and performant applications. The language and its ecosystem have evolved, incorporating modern paradigms and tools that cater specifically to the needs of high-scale applications. In JDK 21, java released Virtual Thread, which is known as Project Loom.\r\n\r\nProject Loom introduces lightweight and efficient virtual threads called fibers, massively increasing resource efficiency while preserving the same simple thread abstraction for developers. In this talk we will introduce how Fibers can reduce the effort of developing and managing high throughput applications.  We’ll take a quick peak at asynchronous coding styles, and then look at how Loom fits in today’s Java applications.",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "6631e69f-25c4-47db-9fb2-08576a460048",
-            "name": "Jeanne Boyarsky"
+            "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
+            "name": "Medha Chakraborty"
           }
         ],
         "categories": [
@@ -5884,17 +6156,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "567652",
-        "title": "Crossing The Streams - leveraging Pulsar IO + Pulsar Functions together with Spring Cloud Stream",
-        "description": "Apache® Pulsar™ is an open-source, distributed messaging and streaming platform built for the cloud. It provides Pulsar Functions and Pulsar IO connectors which can be leveraged to build Pulsar message processing applications.\r\nSpring Cloud Stream is a framework for building message-driven micro-service applications. It provides a Pulsar binder implementation that can be used to build Pulsar message-processing applications.\r\nBoth of these solutions share a high degree of feature overlap and either could be used to solve the same problem. However, it need not be an ‘either-or’ proposition, they can actually be used in tandem.\r\nIn this talk, we will demonstrate Pulsar Functions and Pulsar IO connectors and show how Spring for Apache Pulsar simplifies their usage.  We will also show how to use the Spring Cloud Stream Pulsar Binder in your application.  Finally, we will “cross the streams” and leverage these technologies together to build a Pulsar message processing application.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "id": "551429",
+        "title": "Build next generation Big Data applications with Delta Lake",
+        "description": "    Delta Lake (https://delta.io/) is an open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark and also APIs for Scala/Java, Python and Rust. A Lakehouse is a modern data architecture that reimagines data warehouses in response to the availability of affordable and highly reliable storage solutions. \r\n\r\n    Delta Lake provides key benefits and will fit perfectly in your Big Data architecture:\r\n     - ACID Transactions\r\n     - Schema Evolution\r\n     - Time Travel\r\n     - Audit History\r\n     - Handle petabyte-scale tables\r\n     - Platform Agnostic (Cloud, On-prem, or locally)\r\n     - DML operations through its SQL and Spark API \r\n\r\n     \r\n\r\n    In this presentation, I will provide an introduction to Delta Lake, explaining how it works, and its key features and benefits. Whether you're a data scientist, data engineer, or business analyst, this session is for you.",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "974e24f5-044f-4552-a362-fdefd445dabc",
-            "name": "Chris Bono"
+            "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
+            "name": "Theo Lebrun"
           }
         ],
         "categories": [
@@ -5931,17 +6203,64 @@
       },
       {
         "questionAnswers": [],
-        "id": "573390",
-        "title": "Community hacks to enhance your career",
-        "description": "Do you feel it’s no longer enough to just be a great developer? Does advancing your career mean you have to be blogging, speaking at conferences, engaging on social media, committing to open source and other things distracting you from actually building software?\r\n\r\nYou’ll do well to ensure that the people making decisions about your career are hearing and seeing your name and associating it with progress and other cool and positive things (and truth, they probably aren’t looking at your code).\r\n\r\nIn this session we’ll explore some of the best practices that assist in not having to do it all from scratch. Knowing what you are doing can give you an easier path to visible contributions to the community.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "id": "557568",
+        "title": "Modern Testing Tools for Java Developers",
+        "description": "New versions of the API framework appear, adding the last trending and here we go again: changing our code to adopt these new things. How awesome it is! We are improving!\r\n\r\nHow about one of the most important and, sometimes, missed things: quality! How the quality evolves within the adoption of new versions of development frameworks and libraries?\r\n\r\nThis talk will show you 5 libraries you can use, as a Java Developer, to improve the application quality with real-world examples.\r\n\r\nAssertJ will give you infinity assertion possibilities compared to JUnit internals and Hamcrest matches, enabling you to easily use any kind of assertion, even creating your own.\r\n\r\nYou will learn how to use these tools with real-world examples!\r\n\r\nPiTest will increase, even more, the coverage of your tests by applying the mutation testing technique and creating bullet-proof unit tests.\r\n\r\nRestAssured will take your API tests to the next level where, using it as a \"hard user\", can ease the test creation based on an OpenAPI specification.\r\n\r\nAwaitability will solve one of the biggest problems in the API tests: asynchronous calls/messages (mainly in a messaging system). We will be able to wait for the request to be completed to assert any result.\r\n\r\nWiremock will give you the ability not only restricted as a mock solution for your unit and integration test but as a service virtualization tool solving common problems in an integrated environment.",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "1038e701-f663-46f8-a01b-925f2f74d004",
-            "name": "Sam Hepburn"
+            "id": "f914323b-f3ba-4de7-9069-28974d1c9137",
+            "name": "Elias Nogueira"
+          }
+        ],
+        "categories": [
+          {
+            "id": 59536,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 207657,
+                "name": "Java Platform"
+              }
+            ],
+            "sort": 0
+          },
+          {
+            "id": 59537,
+            "name": "Session Format",
+            "categoryItems": [
+              {
+                "id": 207665,
+                "name": "session"
+              }
+            ],
+            "sort": 1
+          }
+        ],
+        "roomId": 42141,
+        "room": "Java Platform",
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "596932",
+        "title": "Learning Kafka in 2024",
+        "description": "Apache Kafka is one of the leading streaming platform. It is highly versatile in it's application. In this session, Nikhil will explain the basic concepts of Zookeeper, Broker, Producer, and Subscriber. He will live code a data processing system to explain certain gotchas while using Kafka. The session is designed to be an interactive hands-on session without any slides.",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b1c4a924-b6db-453f-91d2-16b0fcf3bafd",
+            "name": "Nikhil Nanivadekar"
           }
         ],
         "categories": [
@@ -5981,8 +6300,8 @@
         "id": "537983",
         "title": "Know Your Ingredients: Security Starts With the Source",
         "description": "One of the most neglected parts of application security is the ingredients that go into developing software. Over 80 percent of code used in enterprise applications comes from open source dependencies, but how much attention goes towards the provenance and security of those packages. And in the pursuit of accelerated software development, developers are leveraging more and more libraries and also code “created” by generative AI algorithms, so how do you prevent defects or malicious payloads from compromising your security?\r\n\r\nThis is analogous to a restaurant where you invest in modern decor, professional chefs, and world class service. But if you don’t get fresh, quality ingredients delivered daily, the taste and hygiene of the food will suffer. Securing the software supply chain is a huge undertaking for the entire tech industry, and we will talk about some of the ongoing efforts by open source projects, foundations, and corporations to help us all know our ingredients.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6025,17 +6344,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "551429",
-        "title": "Build next generation Big Data applications with Delta Lake",
-        "description": "    Delta Lake (https://delta.io/) is an open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark and also APIs for Scala/Java, Python and Rust. A Lakehouse is a modern data architecture that reimagines data warehouses in response to the availability of affordable and highly reliable storage solutions. \r\n\r\n    Delta Lake provides key benefits and will fit perfectly in your Big Data architecture:\r\n     - ACID Transactions\r\n     - Schema Evolution\r\n     - Time Travel\r\n     - Audit History\r\n     - Handle petabyte-scale tables\r\n     - Platform Agnostic (Cloud, On-prem, or locally)\r\n     - DML operations through its SQL and Spark API \r\n\r\n     \r\n\r\n    In this presentation, I will provide an introduction to Delta Lake, explaining how it works, and its key features and benefits. Whether you're a data scientist, data engineer, or business analyst, this session is for you.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "id": "557439",
+        "title": "Best Practices For Java in Cloud Native Architectures",
+        "description": "In this session, we'll explore the challenges of optimizing Java deployments in dynamic scaling, container, and cloud function environments. \r\nWe'll dig into resource management, garbage collection, cold start issues, classpath and dependency management, performance monitoring, and potential security issues.",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
-            "name": "Theo Lebrun"
+            "id": "78100ec6-45ab-4076-8911-266bfc4c376b",
+            "name": "Dennis Ruzeski"
           }
         ],
         "categories": [
@@ -6044,8 +6363,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207654,
-                "name": "Cloud Technology"
+                "id": 207660,
+                "name": "Tools and techniques"
               }
             ],
             "sort": 0
@@ -6075,8 +6394,8 @@
         "id": "559338",
         "title": "What the Heck are Server Sent Events?",
         "description": "Web applications frequently need to open a channel of communication with a server to get real-time updates. This is often done using two-way communication via WebSockets, but they can be complex to implement and, in many cases, are overkill. Server Sent Events (SSEs) offer an easy-to-implement alternative for many common use cases where an application only needs to receive updates.\r\n\r\nIn this session, we'll explore what the SSE spec is and how to implement it in a web application using JavaScript. We'll also take a quick look at a number of open source libraries LaunchDarkly maintains for implementing SSEs in Python, .NET, Go and more for server-to-server SSEs.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6122,8 +6441,8 @@
         "id": "537819",
         "title": "Quarkus 3: The Road to Virtual Threads for Cheaper, Faster, and Easier Concurrent Applications",
         "description": "Developers have had extraordinary experiences and taken stunning capabilities while they were developing Java microservices from local to the cloud using Quarkus for the past 5 years. But there is more to come with their journey since we have just arrived in Quarkus 3 which provides good, better, and even excellent features and capabilities in terms of developer experience, performance, scalability, and cloud integration. Especially, Quarkus 3 on Java 21 simplifies asynchronous concurrent applications using virtual threads (Project Loom) for high scalability. In this session, we take you through how Quarkus integrates Loom on Java 21 for developers to make concurrent applications easier, have cheaper memory, and have high performance using virtual threads. You can also learn about what’s new in Quarkus 3 such as JakartaEE 10, MicroProfile 6, Hibernate ORM 6, and more.",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6169,8 +6488,8 @@
         "id": "549583",
         "title": "Hyperscale Jakarta EE PaaS on Azure",
         "description": "Azure is the only top tier public cloud with a fully managed Jakarta EE service - JBoss EAP on App Service. \r\n\r\nIn this fast-faced, demo-heavy, and mostly slide-free session we will show first-hand how to run Jakarta EE on Azure using JBoss EAP on App Service. We will demo in real time how to stand up an instance very quickly and deploy a realistic Jakarta EE application that integrates with some services on the cloud such as database, directory server, cache or log aggregator. We will also see how things like load-balancing, automatic redeployment, auto-scaling, and monitoring work in a hyperscale PaaS.\r\n\r\nAt the end of the session, you will have all the demos available on GitHub so you can explore them on your own!",
-        "startsAt": "2024-04-11T14:30:00",
-        "endsAt": "2024-04-11T15:30:00",
+        "startsAt": "2024-04-11T15:00:00",
+        "endsAt": "2024-04-11T16:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6216,8 +6535,8 @@
         "id": "557603",
         "title": "Sociotechnical Platform Engineering",
         "description": "devOps practices help reduce friction to production for technologists. Once an application has user traffic, user experience should become a priority, but at what cost?\r\n\r\nThis talk will connect human centered devOps & SRE practices across a value stream to explore how platforms balance developer experience against production stability over time, and how process dependencies factor into overall platform success. \r\n\r\nthis talk will Explore:\r\n- How pipelines are value streams\r\n- A general-purpose value stream map for platforms\r\n- Dependency (wardley) maps for platform processes\r\n- Aligning SLIs, SLOs, & SLAs across our platform VSM\r\n- Establishing Error Budgets\r\n- Chaos Engineering & Complexity Science\r\n",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6251,7 +6570,7 @@
           }
         ],
         "roomId": 39693,
-        "room": "Keynote/Architecture",
+        "room": "Architecture",
         "liveUrl": null,
         "recordingUrl": null,
         "status": "Accepted",
@@ -6260,21 +6579,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "557183",
-        "title": "Automated software refactoring with OpenRewrite and Generative AI",
-        "description": "The software industrial revolution has arrived. Software is now 80% open source and third-party\r\nand 20% proprietary code that stitches it together into business-critical applications. In these large and diversely composed codebases, dependencies change frequently at their own pace and security vulnerabilities can be introduced at any time by anyone. Not updating software regularly leads to critical bugs, performance, and security issues (plus your code can just get harder to work with!).\r\n\r\nMass code refactoring in these massive codebases is a multi-point operation that requires accuracy and consistency. It’s about affecting change across many individual cursor positions in thousands of repositories representing tens or hundreds of millions of lines of code. Whether you’re migrating frameworks or guarding against vulnerabilities, this requires coordination, tracking, and accuracy. \r\n\r\nThis is not a problem AI can solve alone. AI, like many humans, is not good at math and programming. AI needs a computer just like a human does.\r\n\r\nIn this talk, we’ll discuss automated code remediation with the deterministic OpenRewrite refactoring engine, a technology born at Netflix in 2016. It’s built on manipulating the Lossless Semantic Tree (LST) representation of code with recipes (programs) that result in 100% accurate style-preserving code transformations. It is a rule-based, authoritative system.\r\n\r\nThen we’ll show how to couple the precision of a rules-based system with the power of AI.\r\nWe'll demonstrate a generative AI procedure that samples source code to identify defects and uses OpenRewrite to fix them. This is a general purpose pattern you're going to start seeing a lot of — \"ChatGPT gets a computer\" (with OpenRewrite as the computer in this case).",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "id": "557699",
+        "title": "Not a Kubernetes fan? The state of PaaS in 2024",
+        "description": "Kubernetes won the containers orchestration war. But has it made deploying your apps easier?\r\nLet's explore some of Kubernetes extensive app developer tooling, but mainly what the PaaS space looks like in 2024; 17 years after Heroku made it popular.\r\nIs Heroku still around? What about Cloud Foundry? \r\nAnd what are those new comers (fly.io, repl.it) worth?\r\nDid the Cloud giants replace them all?",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "ac15c088-f8fe-44a8-9a82-3b92b39456e1",
-            "name": "Jonathan Schneider"
-          },
-          {
-            "id": "b51a2283-5d04-438c-93a2-3474d6491c55",
-            "name": "Justine Gehring"
+            "id": "781d5601-1f81-4d31-940c-e54f12b2de6b",
+            "name": "Anthony Dahanne"
           }
         ],
         "categories": [
@@ -6283,55 +6598,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 207673,
-                "name": "Artificial Intelligence"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42136,
-        "room": "AI",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "559371",
-        "title": "Your Java Code in the Kubernetes Native Era: A Live Coding Experience",
-        "description": "Is your Java code ready for the Kubernetes Native era?\r\n\r\nThere's a lot of hype around this topic. However, modern applications do indeed come with complexities like scalability, containerization, and service mesh, which Kubernetes can undoubtedly address.\r\n\r\nThe question is: Is your Java code ready for all of this? If you make the right choices, the answer is yes!\r\n\r\nQuarkus has been built with a Kubernetes Native approach, and it even allows you to use MicroProfile, Camel, Hibernate, and various other open-source projects among the world's best.\r\n\r\nNow is the time to embrace Kubernetes with Java! And this 100% practical session will show you how to do it today.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "058c3cdc-0607-4437-81bb-07a1aed5d05c",
-            "name": "Elder Moraes"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207664,
-                "name": "Cloud Native"
+                "id": 207654,
+                "name": "Cloud Technology"
               }
             ],
             "sort": 0
@@ -6349,53 +6617,6 @@
           }
         ],
         "roomId": 42137,
-        "room": "Cloud Infra",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "549107",
-        "title": "Wireguard, TLS and Workload Identity: The Backbone of Modern Service Networking",
-        "description": "Zero Trust Networking has become a standard marketing buzzword but the underlying principles are critical for modern microservice-style architectures. Authentication, authorizations, policy, etc. can be difficult to implement between services and do so in a maintainable way. Google invented their own transparent encryption and authorization protocol called \"ALTS\" back in 2007 to serve the application layer of Google's Borg workload scheduler, but we don't see others using it outside Google.\r\n\r\nIn this session we look at existing technology like TLS and newcomer Wireguard and see how these technologies come together to provide a secure foundation for workload identity and modern service-to-service networking. We will see how to accomplish exactly what Google did with ALTS but in a more open-source friendly way.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "6e160707-beeb-4abc-97de-23d6f2c84056",
-            "name": "Christian Posta"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207653,
-                "name": "Cloud Infrastructure"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42138,
         "room": "Cloud Tech",
         "liveUrl": null,
         "recordingUrl": null,
@@ -6405,17 +6626,17 @@
       },
       {
         "questionAnswers": [],
-        "id": "557266",
-        "title": "What is Looming in Java",
-        "description": "In the evolving landscape of software development, Java continues to be a stalwart choice for building reliable, scalable, and performant applications. The language and its ecosystem have evolved, incorporating modern paradigms and tools that cater specifically to the needs of high-scale applications. In JDK 21, java released Virtual Thread, which is known as Project Loom.\r\n\r\nProject Loom introduces lightweight and efficient virtual threads called fibers, massively increasing resource efficiency while preserving the same simple thread abstraction for developers. In this talk we will introduce how Fibers can reduce the effort of developing and managing high throughput applications.  We’ll take a quick peak at asynchronous coding styles, and then look at how Loom fits in today’s Java applications.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "id": "547157",
+        "title": "Preparing for the Java 21 cert and learning new features",
+        "description": "Looking to learn about features in the language added after Java 17 in more detail? As programmers we are used to dealing with edge cases. But what about edge cases in the language? As certification book authors, we encounter lots of interesting and/or surprising behavior.  After a brief overview of the cert, we will explain these features and walk through lots of tricky questions. Come to this session and walk away with an increased awareness in these Java topics.",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
           {
-            "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
-            "name": "Medha Chakraborty"
+            "id": "6631e69f-25c4-47db-9fb2-08576a460048",
+            "name": "Jeanne Boyarsky"
           }
         ],
         "categories": [
@@ -6452,58 +6673,11 @@
       },
       {
         "questionAnswers": [],
-        "id": "548368",
-        "title": "Death to the Monolith",
-        "description": "Monolithic architecture has been the traditional approach for building web applications, but it often leads to a rigid, inflexible, and slow development process. Micro-frontends, on the other hand, allows for breaking down large, complex applications into smaller, more manageable pieces that can be developed, tested, and deployed independently. In this talk, we will learn how to say \"death to the monolith\" and embrace micro-frontends as an architecture pattern.\r\n\r\nBy exploring the problems with monolithic architecture we will discuss why it's time to move away from it. A monolithic architecture can lead to a lack of agility, difficulty in scaling, and an increased risk of failure. Meanwhile, a micro-frontend architecture pattern allows for a more flexible, scalable, and efficient development process.\r\n\r\nNext, we will look at how an application composition platform provides a framework for creating and managing micro-frontends, including tools for versioning, testing, and deploying them. We will discuss how an application composition platform can help ensure consistency across micro-frontends by providing a centralized location for managing shared resources.\r\n\r\nFinally, we will learn how embracing micro-frontend architecture with an application composition platform can enable organizations to become more agile and efficient. Additionally, we will explore how micro-frontend architecture can enable rapid prototyping, reduce time to market, and allow for easier scaling of applications.\r\n\r\nAttendees of this talk will leave with a deeper understanding of the problems with monolithic architecture and the benefits of micro-frontend architecture. They will gain practical tips and strategies for building micro-frontends that are flexible, maintainable, and optimized for performance using an application composition platform. They will also learn how embracing micro-frontend architecture can enable organizations to become more agile and efficient in their development process.\r\n",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
-            "name": "Cody Frenzel"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207652,
-                "name": "Architecture"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42140,
-        "room": "Frameworks",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
         "id": "557363",
         "title": "The future of Java runs on Arm",
         "description": "Java and Arm have always gone together, from the very early days all the way through the smartphone revolution. Now with Arm64 CPUs taking over the cloud and datacenter, keeping Java performant on this architecture is more important than ever. In this talk we will look at the various optimizations being made to Core Java, JITs and the rest of the Java Platform to take advantage of advances in the Arm architecture.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6546,58 +6720,11 @@
       },
       {
         "questionAnswers": [],
-        "id": "596932",
-        "title": "Learning Kafka in 2024",
-        "description": "Apache Kafka is one of the leading streaming platform. It is highly versatile in it's application. In this session, Nikhil will explain the basic concepts of Zookeeper, Broker, Producer, and Subscriber. He will live code a data processing system to explain certain gotchas while using Kafka. The session is designed to be an interactive hands-on session without any slides.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "b1c4a924-b6db-453f-91d2-16b0fcf3bafd",
-            "name": "Nikhil Nanivadekar"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207660,
-                "name": "Tools and techniques"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42142,
-        "room": "Practices and other Tech",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
         "id": "557734",
         "title": "Don’t Expect Developers to be Security Experts!",
         "description": "Developers are not security experts! Why not? And should they be?\r\n\r\nWe’re still learning — sometimes through trial and error — the best way to tackle security issues that won’t negatively interfere with delivering functional (and secure) software.\r\n\r\nOne thing is sure, there is only a subset of prevention and mitigation strategies that make sense to put on a developer’s plate. Even then, assuming all devs are equipped to handle this additional workload is unreasonable.\r\n\r\nMelissa will define common security related terms and lingo; share typical places to shore up applications when it comes to dependencies, packaging, and supply chain concerns; and discuss the plethora of scanning tools available today and how they actually work. Learn how to integrate a measure of security that makes sense in existing development processes and how to introduce a security culture to your team in a healthy way without exhausting your developers.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6640,105 +6767,11 @@
       },
       {
         "questionAnswers": [],
-        "id": "557439",
-        "title": "Best Practices For Java in Cloud Native Architectures",
-        "description": "In this session, we'll explore the challenges of optimizing Java deployments in dynamic scaling, container, and cloud function environments. \r\nWe'll dig into resource management, garbage collection, cold start issues, classpath and dependency management, performance monitoring, and potential security issues.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "78100ec6-45ab-4076-8911-266bfc4c376b",
-            "name": "Dennis Ruzeski"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207654,
-                "name": "Cloud Technology"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42144,
-        "room": "Tools and Techniques",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
-        "id": "555434",
-        "title": "Simple Ways to Make Webhook Security Better",
-        "description": "Webhooks are a simple and powerful way for services to notify each other that something interesting has happened. So much so that it became the most popular mechanism for communicating events. While webhooks give us power and flexibility, they rely heavily on the listener to enforce security. In this session, we will learn the most common, interesting, and challenging patterns across 100+ webhook implementations, and learn some simple ways to make webhook security better (for providers and consumers).",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "f0f1fa39-eb24-4ab6-866c-b8645975bd75",
-            "name": "Scott McAllister"
-          }
-        ],
-        "categories": [
-          {
-            "id": 59536,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 207661,
-                "name": "Web and Front-end"
-              }
-            ],
-            "sort": 0
-          },
-          {
-            "id": 59537,
-            "name": "Session Format",
-            "categoryItems": [
-              {
-                "id": 207665,
-                "name": "session"
-              }
-            ],
-            "sort": 1
-          }
-        ],
-        "roomId": 42145,
-        "room": "Web and front-end",
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
         "id": "545764",
         "title": "Supersonic, Subatomic GitHub",
         "description": "You've seen GitHub Actions, but did you know about GitHub Apps? \"GitHub Apps are tools that extend GitHub's functionality.\" A GitHub app lets you interact with GitHub -- or a third party system, or both! -- when certain things happen in a repository. Things like someone pushing to the repository, creating a pull request or issue, commenting on or editing pull requests, issues, etc. The official docs show you how to write an App using JavaScript, which is fine, but then you have to use JavaScript! \r\n\r\nIn this presentation, we'll look at how we can use our Java and Quarkus experience to write an application. We'll register the application with GitHub, set up the project for the application, and react to various events. At the end, we'll have a working GitHub application, written in Java (or Kotlin!) that is supersonic, subatomic awesomeness.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6784,8 +6817,8 @@
         "id": "537737",
         "title": "Jakarta EE 11: Going Beyond the Era of Java EE",
         "description": "Since its introduction in 2018 as Jakarta EE, the platform has evolved from: Jakarta EE 8, an open-source version of Java EE 8; to Jakarta EE 9, the \"big bang\" release; to Jakarta EE 10 that introduced the Core Profile.\r\n\r\nJakarta EE 11, scheduled for a GA release in 1Q2024, will introduce new specifications, provide updated specifications, and set the baseline to Java 21, the latest LTS release.\r\n\r\nThis presentation will provide a brief history of JavaEE/Jakarta EE and a review of new and updated specifications with code examples.",
-        "startsAt": "2024-04-11T15:30:00",
-        "endsAt": "2024-04-11T16:30:00",
+        "startsAt": "2024-04-11T16:00:00",
+        "endsAt": "2024-04-11T17:00:00",
         "isServiceSession": false,
         "isPlenumSession": false,
         "speakers": [
@@ -6831,14 +6864,14 @@
         "id": "f2d0ceb6-835d-46e2-8c7b-8f2908eb5e29",
         "title": "Mega Raffle and conf close!",
         "description": null,
-        "startsAt": "2024-04-11T16:30:00",
-        "endsAt": "2024-04-11T16:55:00",
+        "startsAt": "2024-04-11T17:00:00",
+        "endsAt": "2024-04-11T17:25:00",
         "isServiceSession": true,
         "isPlenumSession": true,
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,
@@ -6857,7 +6890,7 @@
         "speakers": [],
         "categories": [],
         "roomId": 42148,
-        "room": "Foyer",
+        "room": "Foyer/Sidney Marcus Theatre",
         "liveUrl": null,
         "recordingUrl": null,
         "status": null,

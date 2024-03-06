@@ -21,7 +21,7 @@ description: "The advent of large token width Large Language Models (LLMs) such 
   will include a live software demonstration using a JHUAPL developed interactive
   3D XAI analysis tool called Trinity."
 startsAt: '2024-04-10T14:30:00'
-endsAt: '2024-04-10T15:35:00'
+endsAt: '2024-04-10T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

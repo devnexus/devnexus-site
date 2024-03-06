@@ -24,8 +24,8 @@ description: "The software industrial revolution has arrived. Software is now 80
   samples source code to identify defects and uses OpenRewrite to fix them. This is
   a general purpose pattern you're going to start seeing a lot of — \"ChatGPT gets
   a computer\" (with OpenRewrite as the computer in this case)."
-startsAt: '2024-04-11T15:30:00'
-endsAt: '2024-04-11T16:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207673
-    name: Artificial Intelligence
+  - id: 207651
+    name: Agile
   sort: 0
 - id: 59537
   name: Session Format
@@ -46,14 +46,14 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42136
-room: AI
+roomId: 39694
+room: Agile
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Artificial Intelligence
+track: Agile
 format: session
 slug: automated-software-refactoring-with-openrewrite-and-generative-ai
 

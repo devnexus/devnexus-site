@@ -14,8 +14,8 @@ description: "AI coding companion tools are growing in popularity, and many orga
   requiring proper onboarding. It will share day-to-day scenarios of developer problems
   and how these tools can help them if properly used. Examples will use Java, Visual
   Studio Code, and Amazon CodeWhisperer."
-startsAt: '2024-04-11T11:30:00'
-endsAt: '2024-04-11T12:30:00'
+startsAt: '2024-04-10T17:00:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
 - id: 59536
   name: Track
   categoryItems:
-  - id: 207660
-    name: Tools and techniques
+  - id: 207656
+    name: Frameworks
   sort: 0
 - id: 59537
   name: Session Format
@@ -34,14 +34,14 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42138
-room: Cloud Tech
+roomId: 42140
+room: Frameworks
 liveUrl: 
 recordingUrl: 
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Tools and techniques
+track: Frameworks
 format: session
 slug: work-smarter-not-harder-with-your-ai-coding-companion
 

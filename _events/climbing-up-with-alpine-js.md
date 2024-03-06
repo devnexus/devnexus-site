@@ -10,7 +10,7 @@ description: 'Every modern web site requires some degree of interactivity, but f
   and then demonstrate examples of how Alpine can progressively enhance web pages
   to add interactivity. '
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

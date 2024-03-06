@@ -14,8 +14,8 @@ description: Developers have had extraordinary experiences and taken stunning ca
   to make concurrent applications easier, have cheaper memory, and have high performance
   using virtual threads. You can also learn about what’s new in Quarkus 3 such as
   JakartaEE 10, MicroProfile 6, Hibernate ORM 6, and more.
-startsAt: '2024-04-11T14:30:00'
-endsAt: '2024-04-11T15:30:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

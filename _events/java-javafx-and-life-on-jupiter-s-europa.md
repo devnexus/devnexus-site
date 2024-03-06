@@ -24,7 +24,7 @@ description: "NASA’s deep space Clipper mission will launch in 2024 and travel
   a live demo of the software while discussing code segments that are insightful or
   tricky for such an implementation."
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

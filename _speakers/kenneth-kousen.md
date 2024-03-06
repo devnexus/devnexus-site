@@ -15,10 +15,10 @@ bio: "Ken Kousen is the author of the Pragmatic Programmers books \"Mockito Made
 tagLine: President, Kousen IT, Inc.
 profilePicture: https://sessionize.com/image/56cf-400o400o1-hRJfHj9uhAKenHm5nQ3K15.png
 sessions:
-- id: 549522
-  name: Calling AI Tools from Java
 - id: 549542
   name: JUnit 5's Best Features
+- id: 549522
+  name: Calling AI Tools from Java
 isTopSpeaker: false
 links:
 - title: Twitter

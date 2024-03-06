@@ -14,8 +14,8 @@ description: "Despite the quality of modern cloud-native tools, the user experie
   product managers with consistent and polyglot feature flags with OpenFeature.\r\nAnd
   how to develop locally with these tools, outside of a Kubernetes Cluster, by using
   Testcontainers. \r\n"
-startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+startsAt: '2024-04-11T15:00:00'
+endsAt: '2024-04-11T16:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,7 +36,7 @@ categories:
   - id: 207665
     name: session
   sort: 1
-roomId: 42138
+roomId: 42137
 room: Cloud Tech
 liveUrl: 
 recordingUrl: 

@@ -23,7 +23,7 @@ description: "Have you noticed the recent improvement in how our searches have b
   search and usage of AI, but might find themselves overwhelmed by the complexities
   to get started.\r\n"
 startsAt: '2024-04-11T10:00:00'
-endsAt: '2024-04-11T11:05:00'
+endsAt: '2024-04-11T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

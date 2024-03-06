@@ -10,7 +10,7 @@ isPlenumSession: true
 speakers: []
 categories: []
 roomId: 42148
-room: Foyer
+room: Foyer/Sidney Marcus Theatre
 liveUrl: 
 recordingUrl: 
 status: 

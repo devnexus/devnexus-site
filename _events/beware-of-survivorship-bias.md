@@ -13,7 +13,7 @@ description: "Most talks on a typical conference schedule contain success storie
   more aware of survivorship bias and what you can do to keep your head cool, no matter
   how many 'silver bullets' are fired at you. "
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

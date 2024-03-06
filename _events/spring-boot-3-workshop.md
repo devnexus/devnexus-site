@@ -41,7 +41,7 @@ categories:
     name: workshop
   sort: 1
 roomId: 42137
-room: Cloud Infra
+room: Cloud Tech
 liveUrl: 
 recordingUrl: 
 status: Accepted

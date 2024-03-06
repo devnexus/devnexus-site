@@ -12,8 +12,8 @@ description: "When you think about building and/or deploying machine learning mo
   frameworks (Deeplearning4J, djl and Tribuo), along with a real world example to
   understand capabilities and tradeoffs of each framework. We will also briefly cover
   JSR381, an open-source, Java-friendly API for ML, specifically visual recognition"
-startsAt: '2024-04-10T16:00:00'
-endsAt: '2024-04-10T17:00:00'
+startsAt: '2024-04-10T10:00:00'
+endsAt: '2024-04-10T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

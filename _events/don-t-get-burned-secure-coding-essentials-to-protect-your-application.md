@@ -17,7 +17,7 @@ description: As a developer, you understand the importance of writing code that 
   the security of their applications. Let’s start writing secure code and learn how
   to avoid security mistakes.
 startsAt: '2024-04-10T17:00:00'
-endsAt: '2024-04-10T18:05:00'
+endsAt: '2024-04-10T18:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:

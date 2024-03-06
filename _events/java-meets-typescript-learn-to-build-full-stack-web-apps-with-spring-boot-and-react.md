@@ -10,7 +10,7 @@ description: "As Java developers, we know the benefits of type-safety when build
   Boot and Java on the backend and React with TypeScript on the frontend, connecting
   the two with the new Hilla framework from Vaadin."
 startsAt: '2024-04-10T11:30:00'
-endsAt: '2024-04-10T12:35:00'
+endsAt: '2024-04-10T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
