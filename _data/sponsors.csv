@@ -7,6 +7,8 @@ Atomic Jar,,/uploads/atomicjar-1.png,https://www.atomicjar.com/
 Azul,silver,/uploads/azul-3.png,https://www.azul.com/
 BellSoft,,/uploads/bellsoft-1.png,https://bell-sw.com/
 charlotte,jug,/uploads/charlotte-01.png,https://cltjug.org/
+CHARLOTTE JUG,jug,/uploads/charlotte-01-1.png,https://cltjug.org/
+CJUG,jug,/uploads/cjug-001.jpeg,https://cjug.org/
 CircleCI,,/uploads/circleci-2.png,https://circleci.com/
 CloudBees,gold,/uploads/cloudbees-01.png,https://www.cloudbees.com/
 Cockroach Labs,,/uploads/cockroach-1.png,https://www.cockroachlabs.com/
@@ -26,10 +28,13 @@ Google Cloud,,/uploads/google-cloud-1.png,https://cloud.google.com/developers/de
 Google Wallet,,/uploads/google-wallet-1.png,https://wallet.google/
 Gradle,gold,/uploads/gradle-01.png,https://gradle.com/
 Guatemala,jug,/uploads/guatemala.png,https://www.guate-jug.net/
+Hamburg jug,jug,/uploads/hamburg-01.png,https://www.meetup.com/de-DE/jug-hamburg/
+Houston JUG,jug,/uploads/houston.png,https://www.hjug.org/
 ICE,gold,/uploads/ice-01.png,https://www.theice.com/index
 IBM,diamond,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
 Intel,,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 Ippon,,/uploads/ippon-2.png,https://us.ippon.tech/
+Jacksonville JUG,jug,/uploads/jax-01.png,https://www.meetup.com/jacksonville-java-user-group-jaxjug/
 Jakarta EE,silver,/uploads/jakarta-1.png,https://jakarta.ee/
 javaswitzerland,jug,/uploads/jswitzerland-01.png,https://www.jug.ch/
 JCP,jug,/uploads/jcp-01.png,https://www.jcp.org/en/home/index
@@ -42,10 +47,12 @@ LaunchDarkly,gold,/uploads/launchdarkly-1.png,https://launchdarkly.com/
 Ledgent,,/uploads/ledgent-1.png,https://www.ledgenttech.com
 ljc,jug,/uploads/london-01.png,https://www.londonjavacommunity.co.uk/
 Malmo,jug,/uploads/malmo-01.png,https://www.meetup.com/javaforum-malmo/
+Medellin,jug,/uploads/medellin-01.png,https://medellinjug.org/
 MicroProfile,silver,/uploads/microprofile-01.png,https://microprofile.io/
 MIcrosoft,,/uploads/microsoft-1.png,https://www.microsoft.com/en-us/
 MicroStream,silver,/uploads/microstream-01.png,https://microstream.one/
 Moderne,silver,/uploads/MODERNE-01.png,https://www.moderne.io/?utm_source=devnexus-2024&utm_medium=event-website&utm_content=moderne-logo
+Montreal JUG,jug,/uploads/montreal-01-1.png,https://www.montreal-jug.org/
 nashville,jug,/uploads/nasville-01.png,https://www.meetup.com/nashvillejug/
 new york,jug,/uploads/ny.png,https://www.javasig.com/
 Oberplatz JUG,jug,/uploads/oberplatz-01.png,https://jug-oberpfalz.de/
@@ -67,9 +74,11 @@ soujava,jug,/uploads/soujava-01.png,https://soujava.org.br/
 Suse,diamond,/uploads/suse-01.png,https://www.suse.com/
 svjug,jug,/uploads/svjug-01.png,https://www.meetup.com/sv-jug/
 Swimm,silver,/uploads/swimm-01.png,https://swimm.io/
+Tampa JUg,jug,/uploads/tampa-01.png,https://www.meetup.com/tampa-jug/
 TelemetryHub,,/uploads/telemetryhub-1.png,https://telemetryhub.com/?utm_source=devnexus_23&utm_medium=event&utm_campaign=site_link
 Temporal,gold,/uploads/temporal-01.png,https://t.mp/temporalDN
 The Home Depot,silver,/uploads/home-depot-1.png,https://careers.homedepot.com/
+Toronto JUG,jug,/uploads/toronto-01.png,https://www.meetup.com/toronto-java-users-group/
 TriJUG,jug,/uploads/trijug-01.png,https://www.meetup.com/triangle-java-users-group/
 Vaadin,silver,/assets/img/vaadin2.png,https://vaadin.com/
 VMWare,platinum,/uploads/tanzu-01-1.png,https://tanzu.vmware.com/
