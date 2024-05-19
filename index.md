@@ -1,12 +1,12 @@
 ---
 layout: home
-dates: Apr 9-11, 2024
+dates: Mar 4-6, 2025
 registration:
-  text: REGISTER TODAY!
-  status: enabled
+  text: Opens Fall 2024
+  status: closed
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2024
+  alt: Devnexus 2025
 cfp:
   announce: true
 ---
