@@ -2,13 +2,13 @@
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2025
-dates: Apr 9-11, 2025
+dates: Mar 4-6, 2025
 timezone: UTC
 active-header: navigation-post-show.html
 cfp-is-open: false
 registration:
-  text: REGISTER TODAY!
-  status: closed
+  text:   Opens Fall 2024
+  status: disabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2025
