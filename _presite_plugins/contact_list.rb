@@ -1,6 +1,6 @@
 require 'json'
 require 'net/http'
-dataurl = URI('https://sessionize.com/api/v2/g415clv7/view/GridSmart')
+dataurl = URI('https://sessionize.com/api/v2/4bgu31xq/view/GridSmart')
 event_data_file = Net::HTTP.get(dataurl)
 event_data = JSON.parse(event_data_file)
 events = event_data[0]["rooms"]

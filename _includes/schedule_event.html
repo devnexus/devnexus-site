@@ -1,5 +1,6 @@
 {% assign preso = include.details %}
 {% assign location = site.data.tracks[include.track] %}
+{% assign roomno = site.data.cfp_rooms_to_gwwc[preso.room] %}
 {% if preso.categories.size > 0 %}
    {% assign track = preso.categories[0].categoryItems[0].name %}
    {% if track ==  "Keynote" %}
@@ -22,7 +23,7 @@
 			 </span>
 			<br/>
 			<span class="small pull-right">
-				{{ preso.room }}
+				{{ preso.room }} | {{roomno}}
 			</span>
 	  </div>
 </div>
