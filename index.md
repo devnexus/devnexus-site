@@ -5,7 +5,7 @@ branding:
   alt: Devnexus 2025
 ---
 {% if site.cfp-is-open %}
-<div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CALL FOR PAPERS IS CLOSED</a></h1></div>
+<div class="featured-header"><h1 class="top-intro"><a href="{{site.links.cfp}}">CALL FOR PAPERS IS OPEN</a></h1></div>
 {% endif %}
 
 {% include {{ site.active-header }} %}
