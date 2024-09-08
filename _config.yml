@@ -7,7 +7,7 @@ timezone: UTC
 active-header: navigation-post-show.html
 cfp-is-open: true
 registration:
-  text:   SUPER EARLY BIRD SALE
+  text:   EARLY BIRD SALE UNTIL OCTOBER 13
   status: enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
