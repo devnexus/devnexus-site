@@ -16,8 +16,6 @@ branding:
    {% include keynotes_promo.html %} {% comment %} {% include workshops_promo.html %} {% endcomment %}
 {% endcomment %}
 
-
-<div class="featured-header">Thank you 2024 Devnexus Sponsors</div>
 <div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2025?</a></div> 
 
 {% include sponsor-listing.md rendering="sponsor-thumb.html" %}
