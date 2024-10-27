@@ -4,10 +4,10 @@ exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2025
 dates: Mar 4-6, 2025
 timezone: UTC
-active-header: navigation-post-show.html
+active-header: navigation-before-schedule.html
 cfp-is-open: false
 registration:
-  text:   EARLY BIRD SALE UNTIL OCTOBER 13
+  text:   REGISTER NOW
   status: enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
