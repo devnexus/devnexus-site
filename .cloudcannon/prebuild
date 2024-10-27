@@ -1,5 +1,5 @@
 #! /bin/bash
 
- #bundle exec jekyll cfp speakers
-# bundle exec jekyll cfp events
+bundle exec jekyll cfp speakers
+bundle exec jekyll cfp events
 # bundle exec jekyll cfp schedule
