@@ -3,9 +3,9 @@ Advance Tech Placement,,/uploads/atp-01.png,https://advancedtechplacement.com/
 Akeyless,,/uploads/akeyless-2.png,https://www.akeyless.io/
 Amsterdam,,/uploads/amsterdam.png,http://amsterdamjug.com/
 ASF,,/assets/img/asf.001.jpeg,https://www.apache.org/
-atlanta,,/uploads/ajug-01.png,https://ajug.org/
+atlanta,jug,/uploads/ajug-01.png,https://ajug.org/
 Atomic Jar,,/uploads/atomicjar-1.png,https://www.atomicjar.com/
-Azul,,/uploads/azul-3.png,https://www.azul.com/
+Azul,gold,/uploads/azul-3.png,https://www.azul.com/
 BellSoft,,/uploads/bellsoft-1.png,https://bell-sw.com/
 charlotte,,/uploads/charlotte-01.png,https://cltjug.org/
 CHARLOTTE JUG,,/uploads/charlotte-01-1.png,https://cltjug.org/
@@ -36,7 +36,7 @@ IBM,,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
 Intel,,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 Ippon,,/uploads/ippon-2.png,https://us.ippon.tech/
 Jacksonville JUG,,/uploads/jax-01.png,https://www.meetup.com/jacksonville-java-user-group-jaxjug/
-Jakarta EE,,/uploads/jakarta-1.png,https://jakarta.ee/
+Jakarta EE,silver,/uploads/jakarta-1.png,https://jakarta.ee/
 javaswitzerland,,/uploads/jswitzerland-01.png,https://www.jug.ch/
 JCP,,/uploads/jcp-01.png,https://www.jcp.org/en/home/index
 Jetbrains,,/uploads/jetbrains-01.png,https://jb.gg/96a236
@@ -52,7 +52,8 @@ Medellin,,/uploads/medellin-01.png,https://medellinjug.org/
 MicroProfile,,/uploads/microprofile-01.png,https://microprofile.io/
 MIcrosoft,,/uploads/microsoft-1.png,https://www.microsoft.com/en-us/
 MicroStream,,/uploads/microstream-01.png,https://microstream.one/
-Moderne,,/uploads/MODERNE-01.png,https://www.moderne.io/?utm_source=devnexus-2024&utm_medium=event-website&utm_content=moderne-logo
+Moderne,silver,/uploads/MODERNE-01.png,https://www.moderne.io/?utm_source=devnexus-2024&utm_medium=event-website&utm_content=moderne-logo
+Mongodb,silver,/uploads/mongodb-001.jpeg,https://www.mongodb.com/
 Montreal JUG,,/uploads/montreal-01-1.png,https://www.montreal-jug.org/
 mysql,,/uploads/mysql-01.png,https://dev.mysql.com/
 nashville,,/uploads/nasville-01.png,https://www.meetup.com/nashvillejug/
@@ -66,7 +67,7 @@ Peru,,/uploads/peru.png,https://perujug.org/
 Philly,,/uploads/philly-01.png,https://www.meetup.com/phillyjug/
 pixee,,/uploads/pixee-01-1.png,https://www.pixee.ai/
 PostgreSQL,,/uploads/postgre-01.png,https://www.postgresql.org/
-Red Hat,,/uploads/Red-Hat-01.png,https://developers.redhat.com/
+Red Hat,unobtanium,/uploads/Red-Hat-01.png,https://developers.redhat.com/
 RingCentral,,/uploads/ringcentral-1.png,https://developers.ringcentral.com/
 SEAJUG,,/seajug.png,https://www.seajug.org/
 Snyk,,/uploads/snyk-01.png,https://snyk.io/
