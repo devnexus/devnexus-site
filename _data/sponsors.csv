@@ -17,7 +17,7 @@ CloudBees,,/uploads/cloudbees-01.png,https://www.cloudbees.com/
 Cockroach Labs,,/uploads/cockroach-1.png,https://www.cockroachlabs.com/
 CodeSee,,/uploads/codesee-1.png,https://www.codesee.io/
 CodiumAI,,/uploads/codiumai-01.png,https://codium.ai
-Couchbase,,/uploads/couchb-001.png,https://www.couchbase.com/
+Couchbase,silver,/uploads/couchb-001.png,https://www.couchbase.com/
 DataDog,gold,/uploads/datadog-2.png,https://www.datadoghq.com/
 devnver,,/uploads/denver-01.png,https://www.meetup.com/denverjavausersgroup/
 Digma,,/uploads/digma-1.png,https://digma.ai
@@ -38,6 +38,7 @@ Heroku,gold,/uploads/heroku-01.png,https://www.heroku.com/
 Houston JUG,,/uploads/houston.png,https://www.hjug.org/
 ICE,gold,/uploads/icelogo-01.png,https://www.theice.com/index
 IBM,diamond,/uploads/ibm-1.png,"   https://www.ibm.com/us-en/"
+InfluxData,silver,/uploads/infuxdata-01.png,https://www.influxdata.com/
 Intel,,/uploads/intel.png,https://www.intel.com/content/www/us/en/homepage.html
 Ippon,,/uploads/ippon-2.png,https://us.ippon.tech/
 Jacksonville JUG,,/uploads/jax-01.png,https://www.meetup.com/jacksonville-java-user-group-jaxjug/
