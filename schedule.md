@@ -118,7 +118,7 @@ timeslots:
             <span><a href="/workshopinstructions">Get Ready</a></span>
         </div>
         <div>
-          <h2 class="day "> Tuesdsay Apr 9 - Workshops 9.00 am - 5.00 pm </h2>
+          <h2 class="day "> Tuesdsay Mar 4 - Workshops 9.00 am - 5.00 pm </h2>
           <h3>*** Workshop ticket holders only. ***</h3>
         </div>  
         <div class="until09">
@@ -140,7 +140,7 @@ timeslots:
             <span><a href="/gwcc_map.pdf">Rooms</a></span>
         </div>
         <div>
-          <h2 class="day "> Wednesday Apr 10 - Day 1 </h2>
+          <h2 class="day "> Wednesday Mar 5 - Day 1 </h2>
         </div>
         {% for slot in day1_times %}
         {% assign rooms = slot.rooms | sort: "name" %}
@@ -164,7 +164,7 @@ timeslots:
             <span><a href="/gwcc_map.pdf">Rooms</a></span>
         </div>
         <div>
-          <h2 class="day "> Thursday Apr 11 - Day 2 </h2>
+          <h2 class="day "> Thursday Mar 6 - Day 2 </h2>
         </div>
         {% for slot in day2_times %}
         <div class="{{slot.slotStart | slugify}}">
