@@ -19,8 +19,8 @@ description: "Your first experience running a Spring app on Kubernetes likely le
   dream: a single automated process that happens quickly and easily.  You will leave
   this session no longer dreading deploying Spring apps to Kubernetes and instead
   making your deployments painless and intuitive, unlocking the true power of Kubernetes.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,13 +39,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: frustration-free-k8s-for-spring-developers

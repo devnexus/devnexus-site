@@ -16,7 +16,7 @@ sessions:
   name: Code coverage MythBusters
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/_Godin_
   linkType: Twitter
 - title: LinkedIn

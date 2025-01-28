@@ -11,8 +11,8 @@ description: In this session, we will explore the intricate details of Java clas
   you are a seasoned Java developer or new to understanding the depths of the JVM,
   this session will provide valuable insights into the hidden layers of Java class
   files.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,13 +31,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: unveiling-the-hidden-layers-of-java-class-files-beyond-bytecode

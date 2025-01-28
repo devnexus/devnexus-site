@@ -13,8 +13,8 @@ description: Are you feeling lost as a Java Developer in this new age where AI i
   to take advantage of the mature libraries in the Python community like PyTorch or
   Tensorflow. Get the most out of your data by using the best of both the Java and
   Python communities.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
 - id: 81703
   name: Track
   categoryItems:
-  - id: 290615
-    name: Artificial Intelligence
+  - id: 290607
+    name: Frameworks
   sort: 0
 - id: 81704
   name: Session Format
@@ -33,14 +33,14 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58702
+room: Frameworks
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
-track: Artificial Intelligence
+isConfirmed: true
+track: Frameworks
 format: session
 slug: polyglot-pipelines-with-apache-nifi
 

@@ -17,8 +17,8 @@ description: "How adaptable is your technology stack to changes in business requ
   recipe development. \r\n\r\nThis is a comprehensive look at all kinds of recipe
   development that will enable you to come away fully equipped to plan and exercise
   large-scale code transformations in your organization."
-startsAt:
-endsAt:
+startsAt: '2025-03-04T09:00:00'
+endsAt: '2025-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,13 +37,13 @@ categories:
   - id: 290620
     name: workshop
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 format: workshop
 slug: migration-engineering-with-openrewrite-the-recipe-for-success

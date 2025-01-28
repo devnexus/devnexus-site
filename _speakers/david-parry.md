@@ -30,6 +30,9 @@ sessions:
   name: 'Codebase Resurrection: Revive and Refactor with AI'
 isTopSpeaker: false
 links:
+- title: X (Twitter)
+  url: https://x.com/daviddryparry
+  linkType: Twitter
 - title: LinkedIn
   url: https://www.linkedin.com/in/david-parry-47b4a44
   linkType: LinkedIn

@@ -15,8 +15,8 @@ description: "Developer Experience is Dead! Long Live Developer Experience!\r\n\
   developer portals already exist. As business leaders, we just need to invest in
   and create urgency behind these solutions today, so that we don’t find ourselves
   having the same discussion again in a decade.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,13 +35,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 format: session
 slug: building-10x-organizations-with-internal-developer-portals

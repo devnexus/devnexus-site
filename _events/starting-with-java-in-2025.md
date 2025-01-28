@@ -5,8 +5,8 @@ title: Starting with Java in 2025
 description: Java is dead. Despite of hearing that a lot, Java is a modern language
   with impressive new features. We will demo how easy is to start with Java in 2025
   and showcase the amazing features available to developers
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,13 +27,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 format: session
 slug: starting-with-java-in-2025

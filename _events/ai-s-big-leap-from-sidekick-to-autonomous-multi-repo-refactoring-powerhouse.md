@@ -18,8 +18,8 @@ description: "Generative AI can be a force multiplier for developers, but it als
   OpenRewrite recipes to fix the problem. We'll also show you how GenAI can be helpful
   at scale: by assisting with writing OpenRewrite deterministic recipes.\r\n\r\nCome
   learn the technical underpinnings for reliably using AI at scale for code modernization."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,13 +38,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: ai-s-big-leap-from-sidekick-to-autonomous-multi-repo-refactoring-powerhouse

@@ -14,8 +14,8 @@ description: "Is your application a black box? Is your current observability ins
   use cases demonstrating the power of Micrometer's observability toolkit.\r\n\r\nReady
   to elevate your observability game using the industry’s golden standard? This talk
   is your one-stop shop for Micrometer mastery!"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: micrometer-mastery-unleash-advanced-observability-in-your-jvm-apps

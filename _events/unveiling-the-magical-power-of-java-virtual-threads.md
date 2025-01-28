@@ -15,8 +15,8 @@ description: "Thread-per-request programming limits application scalability, lea
   cases, and the APIs introduced by Project Loom. We'll also compare traditional threads
   with virtual threads through a simple programming example to see their benefits
   in action."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,13 +35,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: unveiling-the-magical-power-of-java-virtual-threads

@@ -10,8 +10,8 @@ description: Debugging is a fundamental skill that's vital for any Java develope
   debugger and tips for conditional breakpoints will all be covered. You'll also learn
   how to open good issues against open source projects to quickly get the fixes you
   need.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: how-to-debug-lessons-learnt-from-10-years-of-spring-boot

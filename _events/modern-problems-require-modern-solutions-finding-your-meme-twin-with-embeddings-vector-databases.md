@@ -24,8 +24,8 @@ description: "Do you look like a famous meme character? Does someone you know? K
   take some photos during the session and use it all to find your meme twin!\r\n\r\nSo,
   are you ready to find your meme twin? Or are you ready to learn how to use this
   technology? I say, [Why Not Both](https://knowyourmeme.com/memes/why-not-both-why-dont-we-have-both)."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -44,13 +44,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: modern-problems-require-modern-solutions-finding-your-meme-twin-with-embeddings-vector-databases

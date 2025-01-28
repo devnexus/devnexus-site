@@ -12,8 +12,8 @@ description: "Delivering new features without impacting user experience is a cha
   a fully automated canary release in action—watch as we safely deploy updates in
   real time!\r\n\r\nJoin us to learn how to leverage canary releases for safer, more
   reliable software delivery."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,13 +32,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Technology
 format: session
 slug: mastering-canary-releases-with-argo-rollouts-in-kubernetes

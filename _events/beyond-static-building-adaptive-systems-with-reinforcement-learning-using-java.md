@@ -19,8 +19,8 @@ description: "Imagine a Java application that adapts to new challenges, learns f
   Whether you are looking to optimize resource allocation, improve decision-making
   processes, or create more responsive user experiences, reinforcement learning in
   Java opens up a world of possibilities."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
 - id: 81703
   name: Track
   categoryItems:
-  - id: 290615
-    name: Artificial Intelligence
+  - id: 290603
+    name: Architecture
   sort: 0
 - id: 81704
   name: Session Format
@@ -39,14 +39,14 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
-track: Artificial Intelligence
+isConfirmed: true
+track: Architecture
 format: session
 slug: beyond-static-building-adaptive-systems-with-reinforcement-learning-using-java
 

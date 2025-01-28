@@ -13,7 +13,7 @@ tagLine: 'IBM Software Engineer '
 profilePicture: https://sessionize.com/image/a3c2-400o400o1-h1RAQcV7BnmpqzqwBaGhAt.jpg
 sessions:
 - id: 751791
-  name: A developers guide to running SpringBoot applications on Open Liberty
+  name: A developers guide to running Spring Boot applications on Open Liberty
 isTopSpeaker: false
 links:
 - title: Twitter

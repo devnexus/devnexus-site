@@ -14,8 +14,8 @@ description: "Machine learning is becoming a must-have skill in today's world. B
   dive into the future of ML Ops. Join us and learn how to integrate machine learning
   into your Java projects with Kubeflow and Quarkus. Your journey to becoming a Java
   ML Ops expert starts here! \r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,13 +36,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Native
 format: session
 slug: ml-ops-for-java-developers-a-hands-on-guide-with-kubeflow-and-quarkus

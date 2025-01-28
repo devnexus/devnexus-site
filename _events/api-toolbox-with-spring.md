@@ -10,8 +10,8 @@ description: "Have you ever wondered what options are available in the Spring ec
   projects from the Spring portfolio such as Spring Data and Spring Cloud that can
   enhance developer productivity in creating APIs and developer experience while consuming
   them."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58702
+room: Frameworks
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 format: session
 slug: api-toolbox-with-spring

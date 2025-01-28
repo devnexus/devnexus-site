@@ -15,7 +15,7 @@ sessions:
   name: Sociotechnical Platform Engineering
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: http://www.twitter.com/cacorriere
   linkType: Twitter
 - title: LinkedIn

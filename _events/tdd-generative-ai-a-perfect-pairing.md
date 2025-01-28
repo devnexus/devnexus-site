@@ -10,8 +10,8 @@ description: "In this talk we will dive into the question whether generative AI 
   ready!\r\n\r\nWith some live coding, we will explore this idea together. Furthermore
   we will take a look at the implications of this paradigm shift. After attending
   you should be able to apply this technique to your own project."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Artificial Intelligence
 format: session
 slug: tdd-generative-ai-a-perfect-pairing

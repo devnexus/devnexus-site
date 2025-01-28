@@ -13,8 +13,8 @@ description: In this session, we will explore advanced techniques for optimizing
   latency. Whether you are a developer, architect, or DevOps engineer, this session
   will equip you with the knowledge to leverage AWS Lambda SnapStart for seamless
   and efficient serverless applications.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted

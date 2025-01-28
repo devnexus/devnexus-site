@@ -17,8 +17,8 @@ description: "Spring Boot 3 introduces a suite of features designed to enhance r
   how Spring Boot handles high-concurrency tasks, greatly enhancing scalability and
   efficiency. Through live demos, you'll learn how to leverage these tools and techniques
   to optimize your Spring Boot applications for maximum runtime performance."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,13 +37,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58702
+room: Frameworks
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 format: session
 slug: runtime-efficiencies-and-spring-boot

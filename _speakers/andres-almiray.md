@@ -14,6 +14,8 @@ bio: Andres is a Java/Groovy developer and a Java Champion Alumni, Developer Adv
 tagLine: Seasoned Sourceror
 profilePicture: https://sessionize.com/image/5dab-400o400o1-YGt5m7v9F1XRMaWb8uE9Qu.jpg
 sessions:
+- id: 741181
+  name: Setting up data driven tests with Java tools
 - id: 741176
   name: Going beyond ORMs
 isTopSpeaker: false

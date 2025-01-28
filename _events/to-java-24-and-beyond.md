@@ -10,8 +10,8 @@ description: "Java 21 has come and gone, but the Java release train continues wi
   and how they will rewrite the Java concurrency story. \r\n\r\nWe will also cover
   other important changes including: Generational ZGC, the Foreign Function and Memory
   API, JavaDoc updates, and even take a look into the future of where Java is heading! "
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: to-java-24-and-beyond

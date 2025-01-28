@@ -13,8 +13,8 @@ description: "Everyone wants to ship more software faster, and following the lea
   provide ... and that gap is the basis of this talk. We'll discuss the consequences
   that arise when attempting to implement MFE architecture that no on seems to want
   to talk about."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,13 +33,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58707
+room: Web and front-end
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Web and Front-end
 format: session
 slug: the-problems-micro-frontends-won-t-solve-that-no-one-wants-to-talk-about

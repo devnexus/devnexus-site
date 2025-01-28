@@ -10,8 +10,8 @@ description: AI’s capabilities for software development through code generatio
   cases for testing, monitoring and observability, and continuous deployments, as
   well as strategies for ensuring a successful approach to integrating AI into DevOps
   on your team.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted

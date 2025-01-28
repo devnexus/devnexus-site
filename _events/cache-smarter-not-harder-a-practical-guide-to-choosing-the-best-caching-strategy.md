@@ -17,13 +17,15 @@ description: "In today's rapidly evolving digital landscape, ensuring applicatio
   attendees will walk away with a clear framework for evaluating caching solutions
   and practical strategies to optimize their architecture for high performance and
   scalability. "
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: f7d03f66-8402-4926-ba4c-aade6a3f7817
   name: Medha Chakraborty
+- id: 616f816d-a777-4392-a9cd-f93bf93ddab9
+  name: Eswaran Rathinam
 categories:
 - id: 81703
   name: Track
@@ -37,13 +39,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 format: session
 slug: cache-smarter-not-harder-a-practical-guide-to-choosing-the-best-caching-strategy

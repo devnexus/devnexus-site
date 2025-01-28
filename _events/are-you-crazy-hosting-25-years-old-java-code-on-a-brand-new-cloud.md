@@ -14,8 +14,8 @@ description: Hosting legacy Java code on a modern cloud platform poses unique ch
   learn not only best practices around application modernisation but also gain insights
   into how this approach turns challenges into opportunities for innovation, resulting
   in a more agile, scalable, and future-proof system.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted

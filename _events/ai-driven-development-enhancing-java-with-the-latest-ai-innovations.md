@@ -7,8 +7,8 @@ description: This hands-on workshopn will dive deep into how to build and mainta
   work with AI when building, updating, and deploying java applications. Whether you're
   an experienced developer looking to broaden your horizons or just curious about
   the latest in AI, this session will engage and inspire.
-startsAt:
-endsAt:
+startsAt: '2025-03-04T09:00:00'
+endsAt: '2025-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,13 +27,13 @@ categories:
   - id: 290620
     name: workshop
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Artificial Intelligence
 format: workshop
 slug: ai-driven-development-enhancing-java-with-the-latest-ai-innovations

@@ -18,8 +18,8 @@ description: "The adoption of open-source AI software introduces a new family of
   analyze model checkpoints, leaving these silent vulnerabilities in your stacks,
   we’ll demo through real code examples, why the runtime context is crucial to detect
   these security issues."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,13 +38,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Security
 format: session
 slug: shadow-vulnerabilities-in-ai-ml-data-stacks-what-you-don-t-know-can-hurt-you

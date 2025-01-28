@@ -11,8 +11,8 @@ description: "We've all learned that documenting your code is a good idea. But w
   provide a mechanism to think about architecture upfront, and make it more predictable.
   You'll walk away armed with everything you need to know about documenting your current,
   and future architectures. "
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,13 +31,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 format: session
 slug: documenting-your-architecture

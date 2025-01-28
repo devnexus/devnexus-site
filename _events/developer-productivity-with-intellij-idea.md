@@ -12,8 +12,8 @@ description: "Developer productivity is a hot topic right now, but what does it 
   will gain a deeper understanding of how IntelliJ IDEA helps them to be effective,
   productive, and happy. Trisha wants you to look at your toolchain and ask yourself,
   “Does this enable me to be creative and happy?”"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,13 +32,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: developer-productivity-with-intellij-idea

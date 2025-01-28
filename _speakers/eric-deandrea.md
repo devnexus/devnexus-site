@@ -15,12 +15,14 @@ bio: Eric Deandrea is a Java Champion & Senior Principal Developer Advocate at R
 tagLine: Java Champion & Senior Principal Developer Advocate, Red Hat
 profilePicture: https://sessionize.com/image/a726-400o400o1-GDEFAutNNeMep9QCJyJ6VS.png
 sessions:
+- id: 751412
+  name: 'Practical AI Lab for Enterprise Java Developers: From Zero to Hero'
 - id: 750111
   name: 'Test-Driven Development: It''s easier than you think!'
 isTopSpeaker: false
 links:
 - title: X (Twitter)
-  url: https://twitter.com/edeandrea
+  url: https://x.com/edeandrea
   linkType: Twitter
 - title: LinkedIn
   url: https://www.linkedin.com/in/edeandrea

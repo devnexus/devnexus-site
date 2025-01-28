@@ -14,8 +14,8 @@ description: "Security vulnerabilities aren’t just hypothetical—they’re re
   Deserialization Injection, and Logging Injection.\r\nPractical code examples and
   fixes to secure your applications.\r\nInsights into real-world case studies of major
   security breaches.\r\nTooling that will help us to commit safe code."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Security
 format: session
 slug: top-security-flaws-hiding-in-your-code-right-now-and-how-to-fix-them

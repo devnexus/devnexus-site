@@ -27,7 +27,7 @@ links:
   url: https://twitter.com/speakjava
   linkType: Twitter
 - title: LinkedIn
-  url: https://www.linkedin.com/in/sritter/
+  url: https://www.linkedin.com/in/siritter/
   linkType: LinkedIn
 questionAnswers:
 - id: 81698

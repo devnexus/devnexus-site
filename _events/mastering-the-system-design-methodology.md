@@ -41,8 +41,8 @@ description: "Mastering the System Design Methodology is a must-attend talk for 
   the order fulfillment process for an online retailer\r\n\r\n* Review, Refine, and
   Finalize\r\n    * Consolidating insights and preparing for implementation\r\n    *
   Case Study: Finalizing and launching a new feature for a social media platform"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -61,8 +61,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

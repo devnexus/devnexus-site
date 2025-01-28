@@ -10,8 +10,8 @@ description: "The rise of AI-powered coding assistants is changing the way we ap
   of our applications still hold substantial value in the age of AI? Let's explore
   the evolving landscape of software development and look at the ongoing relevance
   of TDD in an AI-enhanced world."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58704
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Practices and other tech
 format: session
 slug: tdd-test-driven-development-vs-tab-driven-development

@@ -10,8 +10,8 @@ description: "Disclaimer: If you love to maintain legacy code than this session 
   to another…and the codebase is growing.\r\nThis session will give you an idea about
   what you can do to get rid of legacy code. Which tools are available and how they
   can help you to male your life easier."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted

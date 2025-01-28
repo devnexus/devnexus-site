@@ -26,7 +26,7 @@ sessions:
   name: Complex Problems... and other ways to disappoint your friends.
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/GantLaborde
   linkType: Twitter
 - title: LinkedIn

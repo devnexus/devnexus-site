@@ -11,13 +11,13 @@ description: How can architects and software developers use AI to transform the 
   AI-driven solutions into their API projects to maximize output, reduce time-to-market,
   and maintain quality standards. Come learn how AI is a disruptive force in the evolution
   of API development, not just a small improvement.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
-- id: a4797c7b-e72c-4619-9a92-c8c667a43a88
-  name: Hugo Guerrero
+- id: a4305a38-d462-482b-9e4a-536eb74ec63c
+  name: Kevin Dubois
 categories:
 - id: 81703
   name: Track
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -18,7 +18,7 @@ sessions:
   name: 'Nurturing OpenJDK distribution: Eclipse Temurin Success History and Plan'
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/cldelgadop
   linkType: Twitter
 - title: LinkedIn

@@ -13,8 +13,8 @@ description: "Implementing the correct security patterns is a common challenge t
   an enterprise application using OpenID Connect concepts with multiple Java Framworks,
   with a live demonstration of a small application that uses standard frameworks (Jakarta
   EE and Eclipse MicroProfile) in tandem with an external OpenID Connect provider."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,13 +33,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Security
 format: session
 slug: let-openid-connect-secure-your-applications

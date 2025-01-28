@@ -11,8 +11,8 @@ description: Launching an open source foundation comes with challenges, from est
   hooks. Additionally, I’ll demonstrate how we’ve built a self-service portal for
   our members using a combination of Quarkus, the GitHub GraphQL and REST APIs, Lume
   (the static site generator for Deno), and Svelte.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted

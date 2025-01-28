@@ -10,8 +10,8 @@ description: "Join me as we explore the pillars that make Eclipse Temurin one of
   In this talk, we will also shine a spotlight on our dedication to delivering quality
   and outstanding performance, with a special focus on our AQAvit project and Security
   Effort."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58704
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Practices and other tech
 format: session
 slug: nurturing-openjdk-distribution-eclipse-temurin-success-history-and-plan

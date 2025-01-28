@@ -6,8 +6,8 @@ description: 'As a Java developer you might have a hard time accepting the limit
   that you feel being introduced into your development cycles. Let''s look at the
   positives and learn everything important to know to turn Backstag''s software templates
   into a helpful tool you can use to elevate the platform experience for all developers. '
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -17,8 +17,8 @@ categories:
 - id: 81703
   name: Track
   categoryItems:
-  - id: 290604
-    name: Cloud Infrastructure
+  - id: 290605
+    name: Cloud Technology
   sort: 0
 - id: 81704
   name: Session Format
@@ -26,14 +26,14 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
-track: Cloud Infrastructure
+isConfirmed: true
+track: Cloud Technology
 format: session
 slug: backstage-software-templates-for-java-developers
 

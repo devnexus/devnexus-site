@@ -21,8 +21,8 @@ description: "Is your codebase in need of a major overhaul? Do you find yourself
   robust, and future-proof. Don't miss this opportunity to revolutionize your coding
   practices and elevate your software architecture to new heights with Codium.AI.
   Join us and embark on your journey towards code excellence!\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -41,13 +41,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: codebase-resurrection-revive-and-refactor-with-ai

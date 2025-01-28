@@ -15,8 +15,8 @@ description: "Domain Driven Design is designed for implementing complicated busi
   a basic knowledge of Domain Driven Design, how to structure and test your application
   to implement DDD and how to use Hexagonal Architecture to extend your applications.\r\n\r\nNo
   slides; just live code."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted

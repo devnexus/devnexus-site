@@ -12,8 +12,8 @@ description: 'The journey to cloud is an ongoing challenge for many enterprises.
   and how we overcame them using Helidon, an open-source framework that makes it easy
   to write Java microservices, including MicroProfile microservices that easily integrate
   with Jakarta EE applications.'
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,13 +32,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58708
+room: JakarataEE
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: JakartaEE
 format: session
 slug: case-study-journey-to-cloud-with-jakarta-ee-and-microprofile

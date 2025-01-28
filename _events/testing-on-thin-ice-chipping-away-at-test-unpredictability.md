@@ -14,8 +14,8 @@ description: "Ever tried to catch melting snowflakes? That's the challenge of de
   and ultimately melt away these flaky tests. Through our combined experience, we'll
   provide actionable techniques and tools to make sure snow is the only flakiness
   you experience, ensuring a smoother, more reliable journey in software development."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58704
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -9,8 +9,8 @@ description: "Most developers have heard of \"Big O notation\" but it stops ther
   focus on the key aspects that you can't ignore.  It's important to know when you
   stumble across an NP-Complete problem, and what you can do.  I promise short journey
   into the jungle of PSPACE for developers who have never even heard these terms.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,13 +29,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 format: session
 slug: complex-problems-and-other-ways-to-disappoint-your-friends

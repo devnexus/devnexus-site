@@ -12,8 +12,8 @@ description: "Frustrated with Apache Maven? Confused about how to control versio
   provides an ease-of-use and follows the \"principle of least astonishment\".\r\n\r\nCome
   join to see how to solve build woes using the latest (and greatest) version of Apache
   Maven!"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted

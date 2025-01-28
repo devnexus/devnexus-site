@@ -12,8 +12,8 @@ description: "May 23rd, 1995, saw the launch of not just a new programming langu
   for Sun Microsystems in February 1996, roughly the same week JDK 1.0 was launched.
   \ Through fourteen years at Sun, five at Oracle and nine at Azul, I’ll bring plenty
   of anecdotes (and some souvenirs).  Be prepared for some serious developer nostalgia!\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted

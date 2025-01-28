@@ -11,7 +11,7 @@ tagLine: Development Lead Open Liberty
 profilePicture: https://sessionize.com/image/4343-400o400o1-h8ySipDsFg31BvZseBZzJp.png
 sessions:
 - id: 751791
-  name: A developers guide to running SpringBoot applications on Open Liberty
+  name: A developers guide to running Spring Boot applications on Open Liberty
 isTopSpeaker: false
 links:
 - title: LinkedIn

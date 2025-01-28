@@ -11,8 +11,8 @@ description: "Our jobs don't deal with new code, but old crufty and evil code. H
   \ We discuss the following maneuvers:\r\n\r\n* Extract Delegate\r\n* Extract Interface\r\n*
   Parameterize Method\r\n* Parameterize Constructor\r\n* Sprout Method and Class\r\n*
   Wrap Method and Class\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,13 +31,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: testing-legacy-code-refactoring-patterns

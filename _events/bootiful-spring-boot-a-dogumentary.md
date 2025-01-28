@@ -10,8 +10,8 @@ description: "Spring Boot 3.x and Java 21 have arrived, making it an exciting ti
   virtual threads, GraalVM, AppCDS, and more. Let's explore the latest-and-greatest
   in Spring Boot to build faster, more scalable, more efficient, more modular, more
   secure, and more intelligent systems and services.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 format: session
 slug: bootiful-spring-boot-a-dogumentary

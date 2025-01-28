@@ -18,8 +18,8 @@ description: "Becoming a software architect is a longed-for career upgrade for m
   opportunities to think through architectural decisions and patterns, discuss the
   importance of non functional requirements and why architects cannot afford to practice
   resume driven design."
-startsAt:
-endsAt:
+startsAt: '2025-03-04T09:00:00'
+endsAt: '2025-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -38,8 +38,8 @@ categories:
   - id: 290620
     name: workshop
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted

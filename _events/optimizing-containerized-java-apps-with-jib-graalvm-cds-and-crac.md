@@ -11,8 +11,8 @@ description: In today’s cloud-native world, keeping microservices reliable and
   Data Sharing (CDS) and CRaC to improve startup times, while evaluating trade-offs
   to choose the best optimization techniques, ensuring your applications are optimized
   for scale, reliability, and efficiency in the cloud.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,13 +33,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Native
 format: session
 slug: optimizing-containerized-java-apps-with-jib-graalvm-cds-and-crac

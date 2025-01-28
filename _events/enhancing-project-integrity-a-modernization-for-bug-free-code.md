@@ -19,8 +19,8 @@ description: "Embarking on a Java project involves employing the best strategies
   process of running various components such as databases, services, and extensions,
   thereby minimizing the need for manual intervention\r\n\r\nThroughout the session,
   we'll delve into concrete examples, ensuring a hands-on experience"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -39,8 +39,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted

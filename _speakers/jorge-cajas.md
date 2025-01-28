@@ -9,7 +9,7 @@ tagLine: Manager @ MangoChango
 profilePicture: https://sessionize.com/image/bbc4-400o400o1-Wsva8hGVPTdXE2mTwSNr1u.jpg
 sessions:
 - id: 746924
-  name: 'JakartaEE meets AI: Beyond the chatbot with Langchain4j'
+  name: 'Jakarta EE meets AI: Beyond the chatbot with LangChain4j'
 isTopSpeaker: false
 links:
 - title: Twitter

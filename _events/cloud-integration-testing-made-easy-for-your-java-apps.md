@@ -20,8 +20,8 @@ description: "Integration testing is complicated as it is, even more so when thi
   Boot app with LocalStack and Testcontainers conveys isolation, speed, cost, and
   flexibility, making it effortless to get started with writing integration tests
   for your cloud application."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -40,13 +40,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Technology
 format: session
 slug: cloud-integration-testing-made-easy-for-your-java-apps

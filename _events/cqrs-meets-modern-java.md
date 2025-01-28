@@ -11,8 +11,8 @@ description: "Command Query Responsibility Segregation (CQRS) is a proven design
   and pattern matching. An example application will demonstrate how the theoretical
   foundations of CQRS can be applied in practice and how this affects application
   design while increasing data access efficiency."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

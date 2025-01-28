@@ -13,8 +13,8 @@ description: "Everyone loves writing tests, don’t they? How do you write good 
   mocking, spying, and interaction-based testing/verification.\r\n\r\nI'll even spend
   some time showing how IDE-based AI assistants can help!\r\n\r\nOnce you see how
   easy TDD really can be there isn't a reason to not do it!"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted

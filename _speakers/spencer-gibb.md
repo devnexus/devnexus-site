@@ -18,7 +18,7 @@ sessions:
 isTopSpeaker: false
 links:
 - title: X (Twitter)
-  url: https://twitter.com/spencerbgibb
+  url: https://x.com/spencerbgibb
   linkType: Twitter
 - title: LinkedIn
   url: https://www.linkedin.com/in/spencergibb/

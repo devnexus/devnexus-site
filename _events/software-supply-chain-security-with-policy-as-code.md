@@ -11,8 +11,8 @@ description: "How do you ensure that your Java software supply chain is secure? 
   behaviors. PaC concepts learned in this talk will work at the developer desktop
   as well as in continuous integration automation, thereby improving governance and
   compliance of the Java software supply chain."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

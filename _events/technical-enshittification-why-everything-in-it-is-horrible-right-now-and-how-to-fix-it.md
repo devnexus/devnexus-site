@@ -26,8 +26,8 @@ description: "Did you notice how everything in IT is crap right now? Services ar
   project management. Real-world examples will show how to keep IT services efficient,
   innovative, and user-friendly.\r\n\r\nJoin us to learn how to turn things around
   and ensure long-term success in today’s digital landscape."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -46,13 +46,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58704
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Practices and other tech
 format: session
 slug: technical-enshittification-why-everything-in-it-is-horrible-right-now-and-how-to-fix-it

@@ -15,8 +15,8 @@ description: "In an ever-changing world, uncertainty is a constant companion, es
   to guide their teams towards successful outcomes. Whether you are a developer, team
   lead, or product manager, this session will provide you with a fresh perspective
   on planning in the face of uncertainty."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,13 +35,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 format: session
 slug: navigating-uncertainty-in-software-development-effective-planning-techniques

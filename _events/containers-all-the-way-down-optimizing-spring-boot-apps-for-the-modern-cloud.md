@@ -17,8 +17,8 @@ description: "In a cloud-native world, containerization is a key enabler for sca
   how to optimize your development workflow and ensure that your Spring Boot applications
   can handle the demands of production in a containerized world. Come to this session
   to learn how to unlock the *full* potential of containers for your Spring Boot projects!"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,13 +37,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58702
+room: Frameworks
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 format: session
 slug: containers-all-the-way-down-optimizing-spring-boot-apps-for-the-modern-cloud

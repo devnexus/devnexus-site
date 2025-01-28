@@ -17,8 +17,8 @@ description: "For Spring developers, GraalVM native images offer exciting potent
   this talk to gain practical insights and a step-by-step approach for testing Spring
   Boot native images with confidence. Feel the freedom to deploy with performance
   gains without sacrificing reliability."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,13 +37,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 format: session
 slug: testing-your-way-to-production-confidence-with-native-images

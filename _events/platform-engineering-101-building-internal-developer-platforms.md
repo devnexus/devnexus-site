@@ -19,15 +19,13 @@ description: "Tell us what you want, what you really, really want… Developer p
   teams to enable rapid, easy deployment of their applications. We’ll demo this with
   a range of technologies, runtimes and tools to really showcase just how flexible
   and personalised these IDPs can be to your own organization and application needs."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 7c534296-8db5-4452-b17f-9249465ea914
   name: Grace Jansen
-- id: a4305a38-d462-482b-9e4a-536eb74ec63c
-  name: Kevin Dubois
 categories:
 - id: 81703
   name: Track
@@ -41,13 +39,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Native
 format: session
 slug: platform-engineering-101-building-internal-developer-platforms

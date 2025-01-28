@@ -15,8 +15,8 @@ description: "By now, you are very likely aware of the problem of secrets sprawl
   Get an update on the state of secrets sprawl\r\n- Diagram auto-rotation architectures\r\n-
   Plan a secrets audit and code refactor strategy\r\n- Start the email that will help
   you convince the team\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

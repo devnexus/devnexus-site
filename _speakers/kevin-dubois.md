@@ -21,8 +21,8 @@ profilePicture: https://sessionize.com/image/7df3-400o400o1-WoJXMV1WNg5WJ88aFuYT
 sessions:
 - id: 734811
   name: Create AI-Infused Java Apps with LangChain4j
-- id: 743625
-  name: 'Platform Engineering 101: Building Internal Developer Platforms'
+- id: 770645
+  name: Building APIs in the AI Era
 isTopSpeaker: false
 links:
 - title: X (Twitter)

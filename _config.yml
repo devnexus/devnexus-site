@@ -4,7 +4,7 @@ exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2025
 dates: Mar 4-6, 2025
 timezone: UTC
-active-header: navigation-before-schedule.html
+active-header: navigation.html
 cfp-is-open: false
 registration:
   text:   REGISTER NOW

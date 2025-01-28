@@ -16,8 +16,8 @@ description: Dive into the world of containers and Kubernetes with Podman Deskto
   you can seamlessly adopt containers and ensure predictability in deployments on
   Kubernetes, through local clusters (with Kind and Minikube) and by leveraging Podman
   Desktop’s features and security advantages!
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted

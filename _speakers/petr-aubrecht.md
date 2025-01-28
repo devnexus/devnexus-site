@@ -14,7 +14,7 @@ tagLine: Payara Services, Senior Software Engineer
 profilePicture: https://sessionize.com/image/fa00-400o400o1-wKBFFrWDYeQvabzxf9S3zR.jpg
 sessions:
 - id: 750035
-  name: Connected Industries with an Edge
+  name: 'Jakarta EE: Connected Industries with an Edge'
 isTopSpeaker: false
 links: []
 questionAnswers:

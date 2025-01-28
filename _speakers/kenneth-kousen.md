@@ -15,11 +15,11 @@ bio: "Ken Kousen is the author of the Pragmatic Programmers books \"Mockito Made
 tagLine: President, Kousen IT, Inc.
 profilePicture: https://sessionize.com/image/03d9-400o400o1-LBfebaEnfDgihWECZf46pX.png
 sessions:
-- id: 751645
-  name: 'LangChain4j: The Awesome Framework for AI and Java'
+- id: 751652
+  name: Managing Your AI-Driven Manager
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/kenkousen
   linkType: Twitter
 - title: LinkedIn

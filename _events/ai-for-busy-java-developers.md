@@ -16,8 +16,8 @@ description: "Yep, we know you're knee-deep in production Java deployments and d
   The Importance of Context for GenAI\r\n* Retrieval-Augmented Generation (RAG) Systems\r\n*
   Fine-tuning vs RAG\r\n* Java Libraries for AI/ML\r\n* AI and the Software Development
   Process\r\n* Responsible AI and Ethics\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted

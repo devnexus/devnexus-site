@@ -11,8 +11,8 @@ description: "Can we use big data techniques without big data infrastructure? As
   aggregations, window functions, etc. I will use an open source DFLib library (https://dflib.org)
   and a Jupyter notebook to demonstrate how to do data processing and visualization
   in a Java app with DataFrames without much fuss.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58701
+room: Core Java
 liveUrl:
 recordingUrl:
 status: Accepted

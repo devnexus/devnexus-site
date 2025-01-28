@@ -14,8 +14,8 @@ description: "In this session you’ll learn about Test-Driven Development (TDD)
   and lets you know what (if anything) has changed. Instead of asserting that a number,
   or a simple string were returned, an approval test might compare a complex object
   with it’s approved version and let you know when things change."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58704
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

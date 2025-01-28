@@ -14,8 +14,8 @@ description: "Erich Gamma, et al's Design Patterns: Elements of Reusable Object-
   hidden patterns in their code bases, plan a refactor effort on legacy codebases,
   write their own refactorings, and recognize accidental code complexity in large
   codebases.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted

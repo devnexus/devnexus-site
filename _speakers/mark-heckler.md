@@ -19,7 +19,7 @@ sessions:
     Cloud'
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/mkheck
   linkType: Twitter
 - title: LinkedIn

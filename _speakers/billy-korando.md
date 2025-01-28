@@ -13,13 +13,13 @@ bio: 'Billy is a Java Developer Advocate with the Java Platform Group at Oracle.
 tagLine: Java Developer Advocate
 profilePicture: https://sessionize.com/image/a3ad-400o400o1-35ppNMVjk7tRjTToBVm3S4.jpg
 sessions:
-- id: 755076
-  name: Taking off With JDK Flight Recorder
 - id: 755075
   name: To Java 24 and Beyond!
+- id: 755076
+  name: Taking off With JDK Flight Recorder
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/BillyKorando
   linkType: Twitter
 questionAnswers:

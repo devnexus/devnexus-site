@@ -16,7 +16,7 @@ sessions:
   name: Delivery Engineering
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/ajunaky
   linkType: Twitter
 - title: LinkedIn

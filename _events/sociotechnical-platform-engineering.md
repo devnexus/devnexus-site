@@ -11,8 +11,8 @@ description: "devOps practices help reduce friction to production for technologi
   A general-purpose value stream map for platforms\r\n- Dependency (wardley) maps
   for platform processes\r\n- Aligning SLIs, SLOs, & SLAs across our platform VSM\r\n-
   Establishing Error Budgets\r\n- Chaos Engineering & Complexity Science"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,13 +31,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 format: session
 slug: sociotechnical-platform-engineering

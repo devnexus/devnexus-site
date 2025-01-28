@@ -25,8 +25,8 @@ description: "Ever wanted to run your own private cloud but thought it was out o
   experiment with and deploy cloud-based applications securely and efficiently. Whether
   for personal projects, learning, or small-scale deployments, attendees will gain
   the skills to create a reliable private cloud environment at home."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T16:00:00'
+endsAt: '2025-03-05T17:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -45,8 +45,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted

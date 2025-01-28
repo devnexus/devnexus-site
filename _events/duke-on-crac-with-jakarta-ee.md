@@ -8,8 +8,8 @@ description: "Have you heard of Coordinated Restore at Checkpoint (CRaC)? The sh
   and follow Duke’s adventures of building modern and quick Jakarta EE applications
   with even faster start-up time. You will learn the basics of CRaC as well as gain
   an understanding of why it is a particularly good fit for Jakarta EE.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58708
+room: JakarataEE
 liveUrl:
 recordingUrl:
 status: Accepted

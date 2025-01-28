@@ -14,8 +14,8 @@ description: "Break free from arbitrary workflows and flawed productivity metric
   leave this session equipped with actionable insights to transform your team's productivity
   and unlock unparalleled success. Don't miss this opportunity to elevate your software
   craft and join the ranks of industry leaders!"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T15:45:00'
+endsAt: '2025-03-06T16:45:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -17,8 +17,8 @@ description: Large Language Models (LLMs) have revolutionized natural language p
   showcasing the transformative impact of combining Graph Technology with LLMs. Join
   us to explore how GraphRAG is setting a new standard in enhancing AI's accuracy
   and explainability.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted

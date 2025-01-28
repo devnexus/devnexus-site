@@ -14,8 +14,8 @@ description: "How to does one get the best out of a mentor-ship,  while providin
   read ( books, articles, and people to follow on Twitter).\r\n=> Etc ( Anything else
   that can come to mind when writing this talk based on the theme of the audience/
   conference ). "
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 format: session
 slug: how-not-to-be-mentored

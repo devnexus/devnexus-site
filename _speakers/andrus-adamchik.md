@@ -16,7 +16,7 @@ sessions:
   name: DataFrame - a Swiss Army Knife of Java Data Processing
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/andrus_a
   linkType: Twitter
 - title: LinkedIn

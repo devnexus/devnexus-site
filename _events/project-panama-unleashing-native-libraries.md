@@ -11,8 +11,8 @@ description: Many native libraries offer powerful solutions to interesting probl
   that lets Java developers’ interop with native code seamlessly. Come to this session
   to learn more about how OpenJDK Project Panama can help you interact with native
   libraries seamlessly.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted

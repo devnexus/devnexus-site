@@ -12,13 +12,15 @@ description: "While Java apps are technically portable across many platforms, it
   Abstract service configuration / binding\r\n* Utilize Testcontainers across local
   dev/test & CI\r\n* Efficiently avoid cold starts with CRaC and other techniques\r\n*
   Package applications most efficiently for the target platforms"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 5c84d73d-1b13-4383-a7ec-e7ce3151794e
   name: James Ward
+- id: 9548c494-2cab-45b9-af37-398f9b6d1f9d
+  name: Vinicius Senger
 categories:
 - id: 81703
   name: Track
@@ -32,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Technology
 format: session
 slug: write-once-deploy-everywhere-from-containers-to-serverless

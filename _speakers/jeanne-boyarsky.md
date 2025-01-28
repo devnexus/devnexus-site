@@ -14,7 +14,7 @@ tagLine: 'Java Author: Cert books & Real World Java'
 profilePicture: https://sessionize.com/image/5789-400o400o1-HHbAw2bpM1RQfrcBTsofHR.jpg
 sessions:
 - id: 747847
-  name: Logging Deep Dive
+  name: Mastering Logging in Java
 isTopSpeaker: false
 links:
 - title: Twitter

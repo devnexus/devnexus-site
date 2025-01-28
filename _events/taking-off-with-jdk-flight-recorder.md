@@ -9,8 +9,8 @@ description: Are you running into problems with Java applications in production?
   into the JVM that can help you track down those performance issues and difficult-to-understand
   bugs. In this presentation, we will go through the basics of using JFR in your Java
   applications.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,13 +29,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: taking-off-with-jdk-flight-recorder

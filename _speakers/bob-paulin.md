@@ -14,8 +14,6 @@ profilePicture: https://sessionize.com/image/98ab-400o400o1-VuCZmD1St8MMLfJRHtnw
 sessions:
 - id: 753956
   name: Polyglot Pipelines with Apache Nifi
-- id: 754896
-  name: The OffHeap Podcast. Devnexus Edition (Now with more AI)
 isTopSpeaker: false
 links:
 - title: Twitter

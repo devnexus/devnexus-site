@@ -12,8 +12,8 @@ description: "Device integrations have for decades been a problem for many busin
   web apps. As a hands-on code example, we use Web Bluetooth API available in Chrome
   to collect ECG precise data from a wireless heart monitor belt. The row bytes are
   then sent over to the Java server for further analysis."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,13 +32,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58707
+room: Web and front-end
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Web and Front-end
 format: session
 slug: web-apps-and-devices-yes-we-can

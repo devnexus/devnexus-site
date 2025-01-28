@@ -13,10 +13,10 @@ bio: "Chandra is a technologist in the financial services industry since 2003 an
 tagLine: Sr. Principal Engineer, Java Champion, JUG Leader
 profilePicture: https://sessionize.com/image/9c8e-400o400o1-D4674eAuPNWvtthbVLUFgr.jpg
 sessions:
-- id: 754901
-  name: 'Hands On: Apache Maven 4'
 - id: 754870
   name: Starting with Java in 2025
+- id: 754901
+  name: 'Hands On: Apache Maven 4'
 isTopSpeaker: false
 links:
 - title: Twitter

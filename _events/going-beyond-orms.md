@@ -10,8 +10,8 @@ description: For some time now JSON has been the preferred format for exchanging
   data world. this is what JSON Duality Views propose. In this session we'll explore
   options to enhance data driven applications written with Spring Boot, Quarkus, and
   Micronaut, enhancing your developer experience and increasing customer satisfaction.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: going-beyond-orms

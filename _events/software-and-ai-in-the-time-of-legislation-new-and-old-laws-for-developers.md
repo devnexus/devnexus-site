@@ -16,8 +16,8 @@ description: "The software development landscape is rapidly changing, with legis
   and technology we can gain  insights to what is needed to thrive in an evolving
   legal environment without stifling innovation.  \r\n\r\nAI, Software, and the Law
   – more opportunity than obstacle\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58705
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

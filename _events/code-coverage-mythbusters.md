@@ -14,8 +14,8 @@ description: "Code coverage is a compelling set of metrics that can help you imp
   this talk, we will dispel the most popular myths built around code coverage. This
   talk will help you understand the concept of code coverage, how it should be used,
   and how to boost your productivity with code coverage."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,13 +36,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: code-coverage-mythbusters

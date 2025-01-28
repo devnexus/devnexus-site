@@ -9,8 +9,8 @@ description: Docker is the cornerstone of today's development! Let's overview qu
   discuss the strategy of splitting the JAR into multiple layers and using multistage
   Dockerfiles, gradually improving our image. Join me to learn how to build the ultimate
   Docker image for Spring applications.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T14:30:00'
+endsAt: '2025-03-06T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -20,8 +20,8 @@ categories:
 - id: 81703
   name: Track
   categoryItems:
-  - id: 290604
-    name: Cloud Infrastructure
+  - id: 290605
+    name: Cloud Technology
   sort: 0
 - id: 81704
   name: Session Format
@@ -29,14 +29,14 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Cloud Infrastructure
+track: Cloud Technology
 format: session
 slug: crafting-the-ultimate-docker-image-for-spring-applications
 

@@ -19,13 +19,15 @@ description: "\r\nAs the world of server architecture evolves, ARM64 servers are
   their applications for the future. Whether you’re considering a transition to ARM64
   or simply curious about its benefits, this session will provide valuable insights
   and practical guidance."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: bceafbd1-53f7-4888-a891-72955eab9077
   name: Aaron Williams
+- id: f9e44c9c-823d-47dc-9853-924dcb375b96
+  name: Dave Neary
 categories:
 - id: 81703
   name: Track
@@ -39,13 +41,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58711
+room: Cloud Tech
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Technology
 format: session
 slug: amp-ing-your-java-with-aarch64-arm64-servers

@@ -9,8 +9,8 @@ description: Conway’s Law posits that the design of a system mirrors the commu
   the implications of Conway’s Law in the context of digital transformation, examining
   how traditional, hierarchical structures often hinder the agility and innovation
   required for modern, scalable systems.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58710
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

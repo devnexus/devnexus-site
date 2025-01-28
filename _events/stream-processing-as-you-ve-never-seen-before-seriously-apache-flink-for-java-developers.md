@@ -19,13 +19,15 @@ description: "You were tasked with building a real-time platform, but traditiona
   the end of this talk, you’ll be equipped to tackle real-time data challenges. Whether
   you are building analytics dashboards, event-driven systems, or handling data streams,
   Apache Flink can be the game-changer you’ve been searching for."
-startsAt:
-endsAt:
+startsAt: '2025-03-04T09:00:00'
+endsAt: '2025-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 4f858987-1a60-4da8-a4a2-045824a496c7
   name: Viktor Gamov
+- id: 81c2a2e6-f9f4-4acf-abf3-d6a26409bc30
+  name: Sandon Jacobs
 categories:
 - id: 81703
   name: Track
@@ -39,13 +41,13 @@ categories:
   - id: 290620
     name: workshop
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 format: workshop
 slug: stream-processing-as-you-ve-never-seen-before-seriously-apache-flink-for-java-developers

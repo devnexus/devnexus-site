@@ -12,8 +12,13 @@ bio: Daniel Oh is a Java Champion and Senior Principal Developer Advocate at Red
 tagLine: Senior Principal Developer Advocate
 profilePicture: https://sessionize.com/image/5565-400o400o1-BUkFnSQGzACGTgZh7xtYrf.png
 sessions:
+- id: 751412
+  name: 'Practical AI Lab for Enterprise Java Developers: From Zero to Hero'
 - id: 734811
   name: Create AI-Infused Java Apps with LangChain4j
+- id: 751398
+  name: 'Supercharge Agentic AI Projects: A DevEx-Driven Approach to Cloud-Native
+    Scaffolding'
 - id: 770490
   name: 'Shield your Java code: Practical guides for trusted software'
 isTopSpeaker: false

@@ -12,8 +12,8 @@ description: In today's interconnected software landscape, securing your Java co
   the integrity of your software development process. By the end of this session,
   you will have a comprehensive understanding of the essential steps to shield your
   Java code and build resilient, secure applications.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T11:30:00'
+endsAt: '2025-03-06T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -10,8 +10,8 @@ description: This is a beginner-friendly session designed for Java developers wh
   may call for different solutions, and in this session, we will explore this topic
   in depth. By the end of this talk, you will be up to date with the latest techniques
   for building frontend applications.
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58707
+room: Web and front-end
 liveUrl:
 recordingUrl:
 status: Accepted

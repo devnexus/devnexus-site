@@ -13,6 +13,10 @@ bio: 'Josh (@starbuxman) is the Spring Developer Advocate at Pivotal. Josh is a 
 tagLine: Spring Developer Advocate, Pivotal
 profilePicture: https://sessionize.com/image/1c2f-400o400o1-TbAFhMW5XdfBkKGsu9z4we.jpg
 sessions:
+- id: 771631
+  name: 'Spring AI: Seamlessly Integrating AI into Your Enterprise Java Applications'
+- id: 800031
+  name: 'Building Scalable Systems and Services with Spring Boot 3.4 '
 - id: 763722
   name: 'Bootiful Spring Boot: A DOGumentary'
 isTopSpeaker: false

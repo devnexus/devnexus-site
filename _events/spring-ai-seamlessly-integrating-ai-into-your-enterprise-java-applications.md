@@ -16,13 +16,15 @@ description: "As artificial intelligence becomes increasingly important in enter
   Calling patterns that enable AI models to interact with your business logic\r\n*
   Evaluation techniques to measure LLM response accuracy and mitigate hallucination\r\n*
   Observability features to monitor your AI application's behavior in production\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-06T10:00:00'
+endsAt: '2025-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 247ec778-0f81-4b84-b25d-48893a6302ad
   name: Mark Pollack
+- id: f2617bc2-d35e-4fd7-9cea-02060f3e1608
+  name: Josh Long
 categories:
 - id: 81703
   name: Track
@@ -36,8 +38,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted

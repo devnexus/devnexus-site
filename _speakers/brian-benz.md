@@ -16,7 +16,7 @@ sessions:
   name: 'AI-Driven Development: Enhancing Java with the latest AI Innovations'
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/bbenz
   linkType: Twitter
 - title: LinkedIn

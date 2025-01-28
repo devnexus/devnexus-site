@@ -9,8 +9,8 @@ description: 'What is the antidote when a Spring developer hears you hear, “He
   Spring tools like Spring Boot, Spring Batch, and Spring Pulsar to help you to populate
   your favorite vector store with the data necessary help reduce those pesky hallucinations
   provided for free from our favorite AI models.  '
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58702
+room: Frameworks
 liveUrl:
 recordingUrl:
 status: Accepted

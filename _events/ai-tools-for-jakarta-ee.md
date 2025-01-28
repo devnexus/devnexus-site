@@ -12,8 +12,8 @@ description: "Discover how AI-powered tools are reshaping Jakarta EE development
   cutting-edge demonstrations. Discover how AI-powered tools enhance productivity
   and streamline workflows in Apache NetBeans IDE and beyond, from creating a simple
   hello-world program to developing full-stack applications."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58708
+room: JakarataEE
 liveUrl:
 recordingUrl:
 status: Accepted

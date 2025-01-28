@@ -11,8 +11,8 @@ description: 'While Python and specialized ML libraries dominate the AI/ML lands
   models at scale using Vertex AI''s SQL interface. Through hands-on examples and
   code demonstrations, you''ll gain practical insights into harnessing SQL''s capabilities
   to streamline your Cloud AI/ML development process. '
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,18 +28,18 @@ categories:
 - id: 81704
   name: Session Format
   categoryItems:
-  - id: 290620
-    name: workshop
+  - id: 290619
+    name: session
   sort: 1
-roomId:
-room:
+roomId: 53139
+room: AI
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
 track: Artificial Intelligence
-format: workshop
+format: session
 slug: don-t-call-it-a-comeback-sql-in-cloud-ai-and-ml
 
 ---

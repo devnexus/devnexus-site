@@ -12,13 +12,13 @@ bio: Elder helps Java developers to build and deliver secure, available, and fas
 tagLine: Developer Advocate, Red Hat
 profilePicture: https://sessionize.com/image/4265-400o400o1-EnDT4kzMKfWnbCxCkzNEPQ.png
 sessions:
-- id: 750788
-  name: 'ML Ops for Java Developers: A Hands-On Guide with Kubeflow and Quarkus'
 - id: 751289
   name: Optimizing Containerized Java Apps with Jib, GraalVM, CDS, and CRaC
+- id: 750788
+  name: 'ML Ops for Java Developers: A Hands-On Guide with Kubeflow and Quarkus'
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/elderjava
   linkType: Twitter
 - title: LinkedIn

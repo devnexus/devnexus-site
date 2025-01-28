@@ -12,8 +12,8 @@ description: Taking shortcuts in software development is often perceived as risk
   help you identify areas where you can work faster and smarter. By the end, you will
   be equipped with practical strategies to always be on the lookout for opportunities
   to improve your workflow.
-startsAt:
-endsAt:
+startsAt: '2025-03-05T10:00:00'
+endsAt: '2025-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,13 +32,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: taking-shortcuts-beyond-your-ide

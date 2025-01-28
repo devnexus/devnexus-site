@@ -8,8 +8,8 @@ description: "When trying to track down a bug, the first thing we usually do is 
   and some great techniques and tools you can use to streamline your debugging sessions.\r\n\r\nWe
   will be referencing the book \"Why Programs Fail\" by Andreas Zeller and the new
   book “Troublshooting Java” by Laurențiu Spilcă."
-startsAt:
-endsAt:
+startsAt: '2025-03-05T13:30:00'
+endsAt: '2025-03-05T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,13 +28,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58703
+room: Java Platform
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Java Platform
 format: session
 slug: debugging-java

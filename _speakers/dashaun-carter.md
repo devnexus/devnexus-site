@@ -15,7 +15,7 @@ sessions:
   name: Testing Your Way to Production Confidence with Native Images
 isTopSpeaker: false
 links:
-- title: Twitter
+- title: X (Twitter)
   url: https://twitter.com/dashaun
   linkType: Twitter
 - title: LinkedIn

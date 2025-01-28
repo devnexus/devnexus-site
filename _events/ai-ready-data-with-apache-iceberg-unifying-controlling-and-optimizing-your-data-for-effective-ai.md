@@ -26,8 +26,8 @@ description: "Title: AI Ready Data with Apache Iceberg: Unifying, Controlling, a
   Use Cases:\r\nShare examples of how organizations are using Iceberg, Nessie, and
   data contracts to build robust data pipelines, enhance data quality, and achieve
   tangible results with their AI initiatives.\r\n"
-startsAt:
-endsAt:
+startsAt: '2025-03-05T14:30:00'
+endsAt: '2025-03-05T15:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
 - id: 81703
   name: Track
   categoryItems:
-  - id: 290615
-    name: Artificial Intelligence
+  - id: 290603
+    name: Architecture
   sort: 0
 - id: 81704
   name: Session Format
@@ -46,14 +46,14 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53138
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: Artificial Intelligence
+track: Architecture
 format: session
 slug: ai-ready-data-with-apache-iceberg-unifying-controlling-and-optimizing-your-data-for-effective-ai
 

@@ -14,8 +14,8 @@ description: "Change and adopting Hybrid Cloud solutions are inevitable in today
   an era where agility, efficiency, and resilience are paramount, this session will
   equip you with the insights and tools to navigate the Hybrid Cloud's complexities
   successfully. "
-startsAt:
-endsAt:
+startsAt: '2025-03-05T11:30:00'
+endsAt: '2025-03-05T12:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 53140
+room: Cloud Native
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Cloud Native
 format: session
 slug: embracing-the-hybrid-cloud-unlocking-success-with-open-source-technologies

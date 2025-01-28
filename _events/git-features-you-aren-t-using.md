@@ -14,8 +14,8 @@ description: "In this session we'll take a tour of some features that you might 
   the end of this session, you will walk away with a slew of new tools in your arsenal,
   and a new perspective on how this can help you and your colleagues get the most
   out of Git."
-startsAt:
-endsAt:
+startsAt: '2025-03-06T13:30:00'
+endsAt: '2025-03-06T14:30:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,13 +34,13 @@ categories:
   - id: 290619
     name: session
   sort: 1
-roomId:
-room:
+roomId: 58706
+room: Tools and Techniques
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tools and techniques
 format: session
 slug: git-features-you-aren-t-using
