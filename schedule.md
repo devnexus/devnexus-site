@@ -133,7 +133,7 @@ timeslots:
 
 {% assign day1 = site.data.schedule[1] %}
 {% assign day1_times = day1.timeSlots %}
-<div class="row new-day apr10">
+<div class="row new-day mar4">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
