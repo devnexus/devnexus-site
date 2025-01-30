@@ -118,7 +118,7 @@ timeslots:
             <span><a href="/workshopinstructions">Get Ready</a></span>
         </div>
         <div>
-          <h2 class="day "> Tuesdsay Mar 4 - Workshops 9.00 am - 5.00 pm </h2>
+          <h2 class="day "> Tuesday Mar 4 - Workshops 9.00 am - 5.00 pm </h2>
           <h3>*** Workshop ticket holders only. ***</h3>
         </div>  
         <div class="until09">
