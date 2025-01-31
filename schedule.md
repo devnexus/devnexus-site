@@ -111,7 +111,7 @@ timeslots:
 
 {% include schedule_filtering.html %}
 
-<div class="row new-day apr09">
+<div class="row new-day mar04">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
@@ -133,7 +133,7 @@ timeslots:
 
 {% assign day1 = site.data.schedule[1] %}
 {% assign day1_times = day1.timeSlots %}
-<div class="row new-day mar4">
+<div class="row new-day mar05">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">
@@ -157,7 +157,7 @@ timeslots:
 
 {% assign day2 = site.data.schedule[2] %}
 {% assign day2_times = day2.timeSlots %}
-<div class="row new-day apr11">
+<div class="row new-day mar06">
   <div class="col-xs-12">
       <div class="col-xs-12 box no-print pull-right" style="margin-top:1em">
         <div class="ribbon">

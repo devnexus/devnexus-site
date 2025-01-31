@@ -9,7 +9,7 @@ function applyFilter() {
   let filterTracks = false;
   let filterTimes = false;
 
-  let dates = ['apr09', 'apr10','apr11']
+  let dates = ['mar04', 'mar05','mar06']
   let dateFilters = []
   let times = {{ times | jsonify }};
   let timeslots = {{ timefilters | jsonify }};
@@ -103,21 +103,21 @@ function resetFilters() {
       </a>
       <div id="date-filter" class="collapse in">
         <div >
-          <input class="form-check-input " type="checkbox" id="apr09" value="apr09" onChange="applyFilter()">
-            <label class="form-check-label" for="apr09">
-              Apr 09
+          <input class="form-check-input " type="checkbox" id="mar04" value="mar04" onChange="applyFilter()">
+            <label class="form-check-label" for="mar04">
+              Mar 04
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="apr10" value="apr10" onChange="applyFilter()">
-            <label class="form-check-label" for="apr10">
-              Apr 10
+          <input class="form-check-input " type="checkbox" id="mar05" value="mar05" onChange="applyFilter()">
+            <label class="form-check-label" for="mar05">
+              Mar 05
             </label>
         </div>
         <div >
-          <input class="form-check-input " type="checkbox" id="apr11" value="apr11" onChange="applyFilter()">
-            <label class="form-check-label" for="apr11">
-              Apr 11
+          <input class="form-check-input " type="checkbox" id="mar06" value="mar06" onChange="applyFilter()">
+            <label class="form-check-label" for="mar06">
+              Mar 06
             </label>
         </div>
       </div>
