@@ -1,7 +1,8 @@
 {% assign preso_url = include.details.title | slugify %}
-{% assign roomno = site.data.cfp_rooms_to_gwwc[include.details.room] %}
+{% assign roomkey = include.details.room | strip %}
+{% assign roomno = site.data.cfp_rooms_to_gwwc[roomkey] %}
 <div class="row schedule-row workshop">
-		<div class=" col-xs-12 workshop">
+		<div class=" col-xs-12 workshtop">
 				<a href="/presentations/{{preso_url}}">{{include.details.title | escape}}</a>
 				<br/>
 				<span class="small">
@@ -11,7 +12,7 @@
 				{% endfor %}
 			 </span>
 			 <span class="small pull-right">
-				Workshop | {{ roomno }}
+				Workshop | {{ roomno }} 
  			</span>
 	    </div>
 </div>

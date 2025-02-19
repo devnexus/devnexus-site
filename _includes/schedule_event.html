@@ -1,6 +1,7 @@
 {% assign preso = include.details %}
 {% assign location = site.data.tracks[include.track] %}
-{% assign roomno = site.data.cfp_rooms_to_gwwc[preso.room] %}
+{% assign roomkey = preso.room] | strip %}
+{% assign roomno = site.data.cfp_rooms_to_gwwc[roomkey] %}
 {% if preso.categories.size > 0 %}
    {% assign track = preso.categories[0].categoryItems[0].name %}
    {% if track ==  "Keynote" %}

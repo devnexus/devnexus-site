@@ -9,7 +9,7 @@
         "sessions": [
           {
             "id": "88f90b8c-b2aa-4436-bc81-133985c5e2a3",
-            "title": "Workshop (on 400 level)",
+            "title": "Workshop (on 300 level)",
             "description": null,
             "startsAt": "2025-03-04T09:00:00",
             "endsAt": "2025-03-04T17:05:00",
@@ -24,67 +24,6 @@
             "status": null,
             "isInformed": false,
             "isConfirmed": false
-          }
-        ],
-        "hasOnlyPlenumSessions": false
-      },
-      {
-        "id": 58710,
-        "name": "Tech Leadership",
-        "sessions": [
-          {
-            "id": "751412",
-            "title": "Practical AI Lab for Enterprise Java Developers: From Zero to Hero",
-            "description": "This hands-on workshop is designed to equip enterprise Java developers with the essential skills and knowledge needed to harness the power of artificial intelligence in their projects. Developers learn:\r\n\r\nHow to modernize and deploy Java AI-infused applications across teams using internal developer portals\r\n\r\nUnderstand developer AI concepts like prompt engineering, application testing, applying RAG patterns, observing AI-infused applications, and using tools/agents\r\n\r\nExperiment with models and applications directly on the desktop with AI-focused local development tools\r\n\r\nBuilding AI applications with S/W templates and deploying to Kubernetes\r\n\r\nEasy fine-tuning of base models using open source tools",
-            "startsAt": "2025-03-04T09:00:00",
-            "endsAt": "2025-03-04T17:05:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
-                "name": "Daniel Oh"
-              },
-              {
-                "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
-                "name": "Eric Deandrea"
-              },
-              {
-                "id": "b9f343b4-5370-4839-bd53-572b0322882e",
-                "name": "James Falkner"
-              }
-            ],
-            "categories": [
-              {
-                "id": 81703,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 290615,
-                    "name": "Artificial Intelligence"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 81704,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 290620,
-                    "name": "workshop"
-                  }
-                ],
-                "sort": 1
-              }
-            ],
-            "roomId": 58710,
-            "room": "Tech Leadership",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
           }
         ],
         "hasOnlyPlenumSessions": false
@@ -110,55 +49,9 @@
             "status": null,
             "isInformed": false,
             "isConfirmed": false
-          },
-          {
-            "id": "751053",
-            "title": "Migration Engineering with OpenRewrite: The Recipe for Success",
-            "description": "How adaptable is your technology stack to changes in business requirements, technological advancements, and the availability of new and better tools? When you can more easily secure, upgrade, move, or modernize your code, that means you can adapt quickly and efficiently to changes in technology and markets. That’s what Migration Engineering is all about—and what we’ll be exploring in this workshop.\r\n\r\nWe’ll discuss and demonstrate how to create custom recipes using OpenRewrite, an open source auto-refactoring tool that enables large-scale code analysis and transformations. You’ll learn the make-up of recipes as we walk through a number of examples, then we’ll demonstrate how to write code search and transformation actions that are custom to your organization. We will assemble these recipes with the visitor pattern, and show how to stitch recipes together with YAML, with Refaster-style templates, with Semgrep matchers, etc. We’ll also show how Generative AI can be applied to accelerate recipe development. \r\n\r\nThis is a comprehensive look at all kinds of recipe development that will enable you to come away fully equipped to plan and exercise large-scale code transformations in your organization.",
-            "startsAt": "2025-03-04T09:00:00",
-            "endsAt": "2025-03-04T17:05:00",
-            "isServiceSession": false,
-            "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "4c5e0fa5-266a-40aa-b27b-c72bc1ce7f9a",
-                "name": "Jonathan Schneider"
-              }
-            ],
-            "categories": [
-              {
-                "id": 81703,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 290603,
-                    "name": "Architecture"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 81704,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 290620,
-                    "name": "workshop"
-                  }
-                ],
-                "sort": 1
-              }
-            ],
-            "roomId": 53138,
-            "room": "Architecture",
-            "liveUrl": null,
-            "recordingUrl": null,
-            "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
           }
         ],
-        "hasOnlyPlenumSessions": false
+        "hasOnlyPlenumSessions": true
       },
       {
         "id": 53139,
@@ -222,17 +115,25 @@
         "name": "Cloud Native",
         "sessions": [
           {
-            "id": "744151",
-            "title": "Developer To Architect",
-            "description": "Becoming a software architect is a longed-for career upgrade for many software developers. While the job title suggests a work day focused on technical decision-making, the reality is quite different. In this workshop, software architect Nathaniel Schutta constructs a real world job description in which communication trumps coding.\r\n\r\nDiscover the skill sets needed to juggle multiple priorities, meetings, and time demandsLearn why your best team leadership tool is not a hammer, but a shared cup of coffeeHear the best ways to give and take criticismUnderstand the necessity of writing effective email and formal architecture documentsGet tips for delivering confident career-building presentations to any audienceReview essential techniques for stakeholder management and relationship buildingExplore the critical needs for architecture reviews and an effective process for conducting themThrough lecture and small group exercises, Nathaniel will help you understand what it means to be a successful architect. Working through various problems, attendees will have opportunities to think through architectural decisions and patterns, discuss the importance of non functional requirements and why architects cannot afford to practice resume driven design.",
+            "id": "751412",
+            "title": "Practical AI Lab for Enterprise Java Developers: From Zero to Hero",
+            "description": "This hands-on workshop is designed to equip enterprise Java developers with the essential skills and knowledge needed to harness the power of artificial intelligence in their projects. Developers learn:\r\n\r\nHow to modernize and deploy Java AI-infused applications across teams using internal developer portals\r\n\r\nUnderstand developer AI concepts like prompt engineering, application testing, applying RAG patterns, observing AI-infused applications, and using tools/agents\r\n\r\nExperiment with models and applications directly on the desktop with AI-focused local development tools\r\n\r\nBuilding AI applications with S/W templates and deploying to Kubernetes\r\n\r\nEasy fine-tuning of base models using open source tools",
             "startsAt": "2025-03-04T09:00:00",
             "endsAt": "2025-03-04T17:05:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                "name": "Nathaniel Schutta"
+                "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+                "name": "Daniel Oh"
+              },
+              {
+                "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
+                "name": "Eric Deandrea"
+              },
+              {
+                "id": "b9f343b4-5370-4839-bd53-572b0322882e",
+                "name": "James Falkner"
               }
             ],
             "categories": [
@@ -241,8 +142,8 @@
                 "name": "Track",
                 "categoryItems": [
                   {
-                    "id": 290603,
-                    "name": "Architecture"
+                    "id": 290615,
+                    "name": "Artificial Intelligence"
                   }
                 ],
                 "sort": 0
@@ -271,8 +172,8 @@
         "hasOnlyPlenumSessions": false
       },
       {
-        "id": 58711,
-        "name": "Cloud Tech",
+        "id": 58702,
+        "name": "Frameworks  ",
         "sessions": [
           {
             "id": "754852",
@@ -312,8 +213,114 @@
                 "sort": 1
               }
             ],
-            "roomId": 58711,
-            "room": "Cloud Tech",
+            "roomId": 58702,
+            "room": "Frameworks  ",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 58703,
+        "name": "Java Platform ",
+        "sessions": [
+          {
+            "id": "744151",
+            "title": "Developer To Architect",
+            "description": "Becoming a software architect is a longed-for career upgrade for many software developers. While the job title suggests a work day focused on technical decision-making, the reality is quite different. In this workshop, software architect Nathaniel Schutta constructs a real world job description in which communication trumps coding.\r\n\r\nDiscover the skill sets needed to juggle multiple priorities, meetings, and time demandsLearn why your best team leadership tool is not a hammer, but a shared cup of coffeeHear the best ways to give and take criticismUnderstand the necessity of writing effective email and formal architecture documentsGet tips for delivering confident career-building presentations to any audienceReview essential techniques for stakeholder management and relationship buildingExplore the critical needs for architecture reviews and an effective process for conducting themThrough lecture and small group exercises, Nathaniel will help you understand what it means to be a successful architect. Working through various problems, attendees will have opportunities to think through architectural decisions and patterns, discuss the importance of non functional requirements and why architects cannot afford to practice resume driven design.",
+            "startsAt": "2025-03-04T09:00:00",
+            "endsAt": "2025-03-04T17:05:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290603,
+                    "name": "Architecture"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290620,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 58703,
+            "room": "Java Platform ",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 58705,
+        "name": "Security. ",
+        "sessions": [
+          {
+            "id": "751053",
+            "title": "Migration Engineering with OpenRewrite: The Recipe for Success",
+            "description": "How adaptable is your technology stack to changes in business requirements, technological advancements, and the availability of new and better tools? When you can more easily secure, upgrade, move, or modernize your code, that means you can adapt quickly and efficiently to changes in technology and markets. That’s what Migration Engineering is all about—and what we’ll be exploring in this workshop.\r\n\r\nWe’ll discuss and demonstrate how to create custom recipes using OpenRewrite, an open source auto-refactoring tool that enables large-scale code analysis and transformations. You’ll learn the make-up of recipes as we walk through a number of examples, then we’ll demonstrate how to write code search and transformation actions that are custom to your organization. We will assemble these recipes with the visitor pattern, and show how to stitch recipes together with YAML, with Refaster-style templates, with Semgrep matchers, etc. We’ll also show how Generative AI can be applied to accelerate recipe development. \r\n\r\nThis is a comprehensive look at all kinds of recipe development that will enable you to come away fully equipped to plan and exercise large-scale code transformations in your organization.",
+            "startsAt": "2025-03-04T09:00:00",
+            "endsAt": "2025-03-04T17:05:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "4c5e0fa5-266a-40aa-b27b-c72bc1ce7f9a",
+                "name": "Jonathan Schneider"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290603,
+                    "name": "Architecture"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290620,
+                    "name": "workshop"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 58705,
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -349,7 +356,7 @@
               "isInformed": false,
               "isConfirmed": false
             },
-            "index": 2
+            "index": 1
           }
         ]
       },
@@ -361,7 +368,7 @@
             "name": "Keynote",
             "session": {
               "id": "88f90b8c-b2aa-4436-bc81-133985c5e2a3",
-              "title": "Workshop (on 400 level)",
+              "title": "Workshop (on 300 level)",
               "description": null,
               "startsAt": "2025-03-04T09:00:00",
               "endsAt": "2025-03-04T17:05:00",
@@ -378,116 +385,6 @@
               "isConfirmed": false
             },
             "index": 0
-          },
-          {
-            "id": 58710,
-            "name": "Tech Leadership",
-            "session": {
-              "id": "751412",
-              "title": "Practical AI Lab for Enterprise Java Developers: From Zero to Hero",
-              "description": "This hands-on workshop is designed to equip enterprise Java developers with the essential skills and knowledge needed to harness the power of artificial intelligence in their projects. Developers learn:\r\n\r\nHow to modernize and deploy Java AI-infused applications across teams using internal developer portals\r\n\r\nUnderstand developer AI concepts like prompt engineering, application testing, applying RAG patterns, observing AI-infused applications, and using tools/agents\r\n\r\nExperiment with models and applications directly on the desktop with AI-focused local development tools\r\n\r\nBuilding AI applications with S/W templates and deploying to Kubernetes\r\n\r\nEasy fine-tuning of base models using open source tools",
-              "startsAt": "2025-03-04T09:00:00",
-              "endsAt": "2025-03-04T17:05:00",
-              "isServiceSession": false,
-              "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
-                  "name": "Daniel Oh"
-                },
-                {
-                  "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
-                  "name": "Eric Deandrea"
-                },
-                {
-                  "id": "b9f343b4-5370-4839-bd53-572b0322882e",
-                  "name": "James Falkner"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 81703,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 290615,
-                      "name": "Artificial Intelligence"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 81704,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 290620,
-                      "name": "workshop"
-                    }
-                  ],
-                  "sort": 1
-                }
-              ],
-              "roomId": 58710,
-              "room": "Tech Leadership",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
-            },
-            "index": 1
-          },
-          {
-            "id": 53138,
-            "name": "Architecture",
-            "session": {
-              "id": "751053",
-              "title": "Migration Engineering with OpenRewrite: The Recipe for Success",
-              "description": "How adaptable is your technology stack to changes in business requirements, technological advancements, and the availability of new and better tools? When you can more easily secure, upgrade, move, or modernize your code, that means you can adapt quickly and efficiently to changes in technology and markets. That’s what Migration Engineering is all about—and what we’ll be exploring in this workshop.\r\n\r\nWe’ll discuss and demonstrate how to create custom recipes using OpenRewrite, an open source auto-refactoring tool that enables large-scale code analysis and transformations. You’ll learn the make-up of recipes as we walk through a number of examples, then we’ll demonstrate how to write code search and transformation actions that are custom to your organization. We will assemble these recipes with the visitor pattern, and show how to stitch recipes together with YAML, with Refaster-style templates, with Semgrep matchers, etc. We’ll also show how Generative AI can be applied to accelerate recipe development. \r\n\r\nThis is a comprehensive look at all kinds of recipe development that will enable you to come away fully equipped to plan and exercise large-scale code transformations in your organization.",
-              "startsAt": "2025-03-04T09:00:00",
-              "endsAt": "2025-03-04T17:05:00",
-              "isServiceSession": false,
-              "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "4c5e0fa5-266a-40aa-b27b-c72bc1ce7f9a",
-                  "name": "Jonathan Schneider"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 81703,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 290603,
-                      "name": "Architecture"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 81704,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 290620,
-                      "name": "workshop"
-                    }
-                  ],
-                  "sort": 1
-                }
-              ],
-              "roomId": 53138,
-              "room": "Architecture",
-              "liveUrl": null,
-              "recordingUrl": null,
-              "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
-            },
-            "index": 2
           },
           {
             "id": 53139,
@@ -542,23 +439,31 @@
               "isInformed": true,
               "isConfirmed": true
             },
-            "index": 3
+            "index": 2
           },
           {
             "id": 53140,
             "name": "Cloud Native",
             "session": {
-              "id": "744151",
-              "title": "Developer To Architect",
-              "description": "Becoming a software architect is a longed-for career upgrade for many software developers. While the job title suggests a work day focused on technical decision-making, the reality is quite different. In this workshop, software architect Nathaniel Schutta constructs a real world job description in which communication trumps coding.\r\n\r\nDiscover the skill sets needed to juggle multiple priorities, meetings, and time demandsLearn why your best team leadership tool is not a hammer, but a shared cup of coffeeHear the best ways to give and take criticismUnderstand the necessity of writing effective email and formal architecture documentsGet tips for delivering confident career-building presentations to any audienceReview essential techniques for stakeholder management and relationship buildingExplore the critical needs for architecture reviews and an effective process for conducting themThrough lecture and small group exercises, Nathaniel will help you understand what it means to be a successful architect. Working through various problems, attendees will have opportunities to think through architectural decisions and patterns, discuss the importance of non functional requirements and why architects cannot afford to practice resume driven design.",
+              "id": "751412",
+              "title": "Practical AI Lab for Enterprise Java Developers: From Zero to Hero",
+              "description": "This hands-on workshop is designed to equip enterprise Java developers with the essential skills and knowledge needed to harness the power of artificial intelligence in their projects. Developers learn:\r\n\r\nHow to modernize and deploy Java AI-infused applications across teams using internal developer portals\r\n\r\nUnderstand developer AI concepts like prompt engineering, application testing, applying RAG patterns, observing AI-infused applications, and using tools/agents\r\n\r\nExperiment with models and applications directly on the desktop with AI-focused local development tools\r\n\r\nBuilding AI applications with S/W templates and deploying to Kubernetes\r\n\r\nEasy fine-tuning of base models using open source tools",
               "startsAt": "2025-03-04T09:00:00",
               "endsAt": "2025-03-04T17:05:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                  "name": "Nathaniel Schutta"
+                  "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+                  "name": "Daniel Oh"
+                },
+                {
+                  "id": "6f672350-1c71-4a6e-a382-2b1db6e631fd",
+                  "name": "Eric Deandrea"
+                },
+                {
+                  "id": "b9f343b4-5370-4839-bd53-572b0322882e",
+                  "name": "James Falkner"
                 }
               ],
               "categories": [
@@ -567,8 +472,8 @@
                   "name": "Track",
                   "categoryItems": [
                     {
-                      "id": 290603,
-                      "name": "Architecture"
+                      "id": 290615,
+                      "name": "Artificial Intelligence"
                     }
                   ],
                   "sort": 0
@@ -593,11 +498,11 @@
               "isInformed": true,
               "isConfirmed": true
             },
-            "index": 4
+            "index": 3
           },
           {
-            "id": 58711,
-            "name": "Cloud Tech",
+            "id": 58702,
+            "name": "Frameworks  ",
             "session": {
               "id": "754852",
               "title": "AI-Driven Development: Enhancing Java with the latest AI Innovations",
@@ -636,8 +541,59 @@
                   "sort": 1
                 }
               ],
-              "roomId": 58711,
-              "room": "Cloud Tech",
+              "roomId": 58702,
+              "room": "Frameworks  ",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 4
+          },
+          {
+            "id": 58703,
+            "name": "Java Platform ",
+            "session": {
+              "id": "744151",
+              "title": "Developer To Architect",
+              "description": "Becoming a software architect is a longed-for career upgrade for many software developers. While the job title suggests a work day focused on technical decision-making, the reality is quite different. In this workshop, software architect Nathaniel Schutta constructs a real world job description in which communication trumps coding.\r\n\r\nDiscover the skill sets needed to juggle multiple priorities, meetings, and time demandsLearn why your best team leadership tool is not a hammer, but a shared cup of coffeeHear the best ways to give and take criticismUnderstand the necessity of writing effective email and formal architecture documentsGet tips for delivering confident career-building presentations to any audienceReview essential techniques for stakeholder management and relationship buildingExplore the critical needs for architecture reviews and an effective process for conducting themThrough lecture and small group exercises, Nathaniel will help you understand what it means to be a successful architect. Working through various problems, attendees will have opportunities to think through architectural decisions and patterns, discuss the importance of non functional requirements and why architects cannot afford to practice resume driven design.",
+              "startsAt": "2025-03-04T09:00:00",
+              "endsAt": "2025-03-04T17:05:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290603,
+                      "name": "Architecture"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290620,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 58703,
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -645,6 +601,57 @@
               "isConfirmed": true
             },
             "index": 5
+          },
+          {
+            "id": 58705,
+            "name": "Security. ",
+            "session": {
+              "id": "751053",
+              "title": "Migration Engineering with OpenRewrite: The Recipe for Success",
+              "description": "How adaptable is your technology stack to changes in business requirements, technological advancements, and the availability of new and better tools? When you can more easily secure, upgrade, move, or modernize your code, that means you can adapt quickly and efficiently to changes in technology and markets. That’s what Migration Engineering is all about—and what we’ll be exploring in this workshop.\r\n\r\nWe’ll discuss and demonstrate how to create custom recipes using OpenRewrite, an open source auto-refactoring tool that enables large-scale code analysis and transformations. You’ll learn the make-up of recipes as we walk through a number of examples, then we’ll demonstrate how to write code search and transformation actions that are custom to your organization. We will assemble these recipes with the visitor pattern, and show how to stitch recipes together with YAML, with Refaster-style templates, with Semgrep matchers, etc. We’ll also show how Generative AI can be applied to accelerate recipe development. \r\n\r\nThis is a comprehensive look at all kinds of recipe development that will enable you to come away fully equipped to plan and exercise large-scale code transformations in your organization.",
+              "startsAt": "2025-03-04T09:00:00",
+              "endsAt": "2025-03-04T17:05:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "4c5e0fa5-266a-40aa-b27b-c72bc1ce7f9a",
+                  "name": "Jonathan Schneider"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290603,
+                      "name": "Architecture"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290620,
+                      "name": "workshop"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 58705,
+              "room": "Security. ",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 6
           }
         ]
       }
@@ -677,22 +684,50 @@
             "isConfirmed": false
           },
           {
-            "id": "c36440b9-6e42-4c24-81be-16ae1f9cbf02",
-            "title": "Opening keynote",
-            "description": null,
+            "id": "739382",
+            "title": "Commonly Uncommon: Diverse Paths that Lead to Winning Outcomes",
+            "description": "We each have a unique combination of experiences that we bring to our career in tech. Many of us don't have an undergraduate, graduate, and/or doctorate in computer science. In this session, we will get a glimpse into the speaker's winding journey to a tech career and discuss how conventional and unconventional paths foster unique perspectives that create ideal conditions for inventive solutions and ideas. Find out how to leverage your diverse experiences in your career, encourage and welcome new additions, and contribute to the innovation that makes the tech industry so exciting.",
             "startsAt": "2025-03-05T09:00:00",
             "endsAt": "2025-03-05T10:00:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "e8154769-ac25-4c42-890f-6ccd70e2ec79",
+                "name": "Jennifer Reif"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290618,
+                    "name": "Keynote"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290621,
+                    "name": "keynote"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
             "roomId": 58709,
             "room": "Keynote",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "35b93832-1f7c-4421-b198-bd4f2719a9df",
@@ -775,8 +810,8 @@
         "sessions": [
           {
             "id": "741822",
-            "title": "Building 10x Organizations with Internal Developer Portals",
-            "description": "Developer Experience is Dead! Long Live Developer Experience!\r\n\r\nIn this keynote style session, we’ll take a detailed, granular look at the barriers to productivity faced by developers today. 10x developers may be a myth, but 10x organizations are very real, as proven by the influential study performed in the 1980s, ‘The Coding War Games.’\r\n\r\nRight now, here in early 2024, we seem to be experiencing YAPP (Yet Another Productivity Philosophy), and that philosophy is converging on developer experience or ‘DevEx.’ It seems that with every new method we invent for the delivery of products, whether physical or virtual, we reinvent productivity productivity philosophies to go alongside them.\r\n\r\nWe have no need to reinvent another productivity approach when effective solutions such as internal developer portals already exist. As business leaders, we just need to invest in and create urgency behind these solutions today, so that we don’t find ourselves having the same discussion again in a decade.\r\n",
+            "title": "Building 10x Organizations using Modern Productivity Metrics",
+            "description": "Developer Experience is Dead! Long Live Developer Experience!\r\n\r\nIn this keynote-style session, we’ll take a detailed, granular look at the barriers to productivity developers face today and modern approaches for removing them. 10x developers may be a myth, but 10x organizations are very real, as proven by the influential study performed in the 1980s, ‘The Coding War Games.’\r\n\r\nRight now, here in early 2025, we seem to be experiencing YAPP (Yet Another Productivity Philosophy), and that philosophy is converging on developer experience. It seems that with every new method, we invent to deliver products, whether physical or virtual, we reinvent productivity philosophies to go alongside them.\r\n\r\nBut which of these approaches works? DORA? SPACE? DevEx? What should we invest in and create urgency behind today so we don’t have the same discussion again in a decade?\r\n",
             "startsAt": "2025-03-05T10:00:00",
             "endsAt": "2025-03-05T11:00:00",
             "isServiceSession": false,
@@ -1731,7 +1766,7 @@
       },
       {
         "id": 58711,
-        "name": "Cloud Tech",
+        "name": "Cloud Tech ",
         "sessions": [
           {
             "id": "752303",
@@ -1772,7 +1807,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1818,7 +1853,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1864,7 +1899,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1914,7 +1949,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1960,7 +1995,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -1972,7 +2007,7 @@
       },
       {
         "id": 58701,
-        "name": "Core Java",
+        "name": "Core Java ",
         "sessions": [
           {
             "id": "754668",
@@ -2013,7 +2048,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2059,7 +2094,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2105,7 +2140,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2151,7 +2186,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2197,7 +2232,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2209,7 +2244,7 @@
       },
       {
         "id": 58702,
-        "name": "Frameworks",
+        "name": "Frameworks  ",
         "sessions": [
           {
             "id": "761780",
@@ -2250,7 +2285,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2300,7 +2335,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2346,7 +2381,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2392,7 +2427,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2438,7 +2473,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2450,7 +2485,7 @@
       },
       {
         "id": 58703,
-        "name": "Java Platform",
+        "name": "Java Platform ",
         "sessions": [
           {
             "id": "753362",
@@ -2491,7 +2526,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2537,12 +2572,12 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "756952",
@@ -2583,7 +2618,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2629,7 +2664,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2675,7 +2710,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2687,7 +2722,7 @@
       },
       {
         "id": 58704,
-        "name": "Practices",
+        "name": "Practices. ",
         "sessions": [
           {
             "id": "751868",
@@ -2728,7 +2763,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2774,7 +2809,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2782,17 +2817,21 @@
             "isConfirmed": true
           },
           {
-            "id": "784396",
-            "title": "Black Friday Brilliance: Managing a Billion Transactions with Tech, Tactics, and Teamwork",
-            "description": "The Black Friday and Cyber Monday period is one of the busiest times in the retail calendar, both in stores and online, and our customers rely on our infrastructure to support their businesses at this crucial time. Over this period in 2023 we processed over 1 billion requests to our APIs, and we managed this with greater than 99.99% availability! We've seen our request volume increase over 100x in the last 10 years, and managing this requires the right technologies, careful planning, and a great team of people.\r\n\r\nWith insightful commentary from a cross-section of our brilliant Dev team, I’ll talk you through how we scale our infrastructure on different Clouds, the technologies and processes that are put in place and problems we have had to overcome in the past. I’ll also give some insights into how the team works together over this busy period to keep everything running smoothly.\r\n",
+            "id": "862121",
+            "title": "The Ultimate Battle: Software Manager vs. Developer",
+            "description": "Prepare yourself for an electrifying and insightful presentation where a software development manager and a developer engage in the ultimate battle of wits and skills. This captivating session will dive into the critical aspects of modern software development, including code build, testing, deployment, automation, system resilience, and security where you will witness the contrasting perspectives and strategies as the manager and developer tackle real-world challenges head-on!\r\nThroughout the presentation, you'll gain valuable insights into how these two roles can collaborate effectively to achieve optimal results. \r\nWhether you are a manager, developer, or tech enthusiast, this session promises to be both informative and entertaining. Don't miss out on this ultimate battle!",
             "startsAt": "2025-03-05T13:30:00",
             "endsAt": "2025-03-05T14:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
-                "name": "Jamie Coleman"
+                "id": "6f31d407-98ca-4b82-a009-6bb4d80b819c",
+                "name": "Priya Jayakumar"
+              },
+              {
+                "id": "8f63bac0-143b-42c4-b48d-a55c68015e4b",
+                "name": "Nashidul Islam"
               }
             ],
             "categories": [
@@ -2801,8 +2840,8 @@
                 "name": "Track",
                 "categoryItems": [
                   {
-                    "id": 290609,
-                    "name": "Practices and other tech"
+                    "id": 302778,
+                    "name": "Tech Leadership"
                   }
                 ],
                 "sort": 0
@@ -2820,12 +2859,12 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
+            "isInformed": false,
+            "isConfirmed": false
           },
           {
             "id": "783614",
@@ -2866,7 +2905,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2912,7 +2951,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -2924,7 +2963,7 @@
       },
       {
         "id": 58705,
-        "name": "Security",
+        "name": "Security. ",
         "sessions": [
           {
             "id": "753084",
@@ -2965,7 +3004,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3011,7 +3050,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3057,7 +3096,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3103,7 +3142,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3149,7 +3188,57 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "754896",
+            "title": "The OffHeap Podcast. Devnexus Edition (Now with more AI)",
+            "description": "Come and listen to our Offheap podcast live from Devnexus where we'll discuss current topics in the Java ecosystem, play a trivia game and in general have a great time! (who knows, maybe we throw in more AI since that's what everyone is doing)",
+            "startsAt": "2025-03-05T17:00:00",
+            "endsAt": "2025-03-05T19:00:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
+                "name": "Freddy Guime"
+              },
+              {
+                "id": "7f8e5588-7314-41ac-854a-0ddf6fe867d2",
+                "name": "Bob Paulin"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290602,
+                    "name": "Agile"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290619,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 58705,
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3161,7 +3250,7 @@
       },
       {
         "id": 58706,
-        "name": "Tools and Techniques",
+        "name": "Tools and Techniques ",
         "sessions": [
           {
             "id": "751190",
@@ -3202,7 +3291,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3248,7 +3337,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3298,7 +3387,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3344,7 +3433,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3390,7 +3479,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3402,7 +3491,7 @@
       },
       {
         "id": 58707,
-        "name": "Web and front-end",
+        "name": "Web and front-end   ",
         "sessions": [
           {
             "id": "752387",
@@ -3443,7 +3532,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3451,50 +3540,22 @@
             "isConfirmed": false
           },
           {
-            "id": "749192",
-            "title": "Fresh Hot CSS Features!",
-            "description": "Do you use a CSS Framework like bootstrap? Or maybe you've been coasting for a few years on your current knowledge of CSS. You've maybe seen something called CSS Grid and wondered what it was... Maybe you have never seen `var()` used before.\r\n\r\nLet's discuss the latest newest hottest big features in CSS from the last few years, and get you up to speed on what a browser engine is capable of!\r\n\r\nWe'll cover the following topics:\r\n- CSS Grid\r\n- Custom Properties\r\n- the `:has()` selector\r\n- CSS Layers\r\n- Container Queries\r\n\r\n... And more!",
+            "id": "e5db9f38-b44a-4d4c-9b81-f138a191a3f7",
+            "title": "TBD",
+            "description": null,
             "startsAt": "2025-03-05T11:30:00",
             "endsAt": "2025-03-05T12:30:00",
-            "isServiceSession": false,
+            "isServiceSession": true,
             "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
-                "name": "Alex Riviere"
-              }
-            ],
-            "categories": [
-              {
-                "id": 81703,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 290612,
-                    "name": "Web and Front-end"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 81704,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 290619,
-                    "name": "session"
-                  }
-                ],
-                "sort": 1
-              }
-            ],
+            "speakers": [],
+            "categories": [],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
           },
           {
             "id": "753663",
@@ -3535,7 +3596,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3581,7 +3642,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3627,7 +3688,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3639,7 +3700,7 @@
       },
       {
         "id": 58708,
-        "name": "JakarataEE",
+        "name": "JakarataEE   ",
         "sessions": [
           {
             "id": "750246",
@@ -3680,7 +3741,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3726,7 +3787,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3772,7 +3833,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3822,7 +3883,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3868,7 +3929,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -3915,22 +3976,50 @@
             "id": 58709,
             "name": "Keynote",
             "session": {
-              "id": "c36440b9-6e42-4c24-81be-16ae1f9cbf02",
-              "title": "Opening keynote",
-              "description": null,
+              "id": "739382",
+              "title": "Commonly Uncommon: Diverse Paths that Lead to Winning Outcomes",
+              "description": "We each have a unique combination of experiences that we bring to our career in tech. Many of us don't have an undergraduate, graduate, and/or doctorate in computer science. In this session, we will get a glimpse into the speaker's winding journey to a tech career and discuss how conventional and unconventional paths foster unique perspectives that create ideal conditions for inventive solutions and ideas. Find out how to leverage your diverse experiences in your career, encourage and welcome new additions, and contribute to the innovation that makes the tech industry so exciting.",
               "startsAt": "2025-03-05T09:00:00",
               "endsAt": "2025-03-05T10:00:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "e8154769-ac25-4c42-890f-6ccd70e2ec79",
+                  "name": "Jennifer Reif"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290618,
+                      "name": "Keynote"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290621,
+                      "name": "keynote"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
               "roomId": 58709,
               "room": "Keynote",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -3944,8 +4033,8 @@
             "name": "Tech Leadership",
             "session": {
               "id": "741822",
-              "title": "Building 10x Organizations with Internal Developer Portals",
-              "description": "Developer Experience is Dead! Long Live Developer Experience!\r\n\r\nIn this keynote style session, we’ll take a detailed, granular look at the barriers to productivity faced by developers today. 10x developers may be a myth, but 10x organizations are very real, as proven by the influential study performed in the 1980s, ‘The Coding War Games.’\r\n\r\nRight now, here in early 2024, we seem to be experiencing YAPP (Yet Another Productivity Philosophy), and that philosophy is converging on developer experience or ‘DevEx.’ It seems that with every new method we invent for the delivery of products, whether physical or virtual, we reinvent productivity productivity philosophies to go alongside them.\r\n\r\nWe have no need to reinvent another productivity approach when effective solutions such as internal developer portals already exist. As business leaders, we just need to invest in and create urgency behind these solutions today, so that we don’t find ourselves having the same discussion again in a decade.\r\n",
+              "title": "Building 10x Organizations using Modern Productivity Metrics",
+              "description": "Developer Experience is Dead! Long Live Developer Experience!\r\n\r\nIn this keynote-style session, we’ll take a detailed, granular look at the barriers to productivity developers face today and modern approaches for removing them. 10x developers may be a myth, but 10x organizations are very real, as proven by the influential study performed in the 1980s, ‘The Coding War Games.’\r\n\r\nRight now, here in early 2025, we seem to be experiencing YAPP (Yet Another Productivity Philosophy), and that philosophy is converging on developer experience. It seems that with every new method, we invent to deliver products, whether physical or virtual, we reinvent productivity philosophies to go alongside them.\r\n\r\nBut which of these approaches works? DORA? SPACE? DevEx? What should we invest in and create urgency behind today so we don’t have the same discussion again in a decade?\r\n",
               "startsAt": "2025-03-05T10:00:00",
               "endsAt": "2025-03-05T11:00:00",
               "isServiceSession": false,
@@ -4149,7 +4238,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "752303",
               "title": "Backstage Software Templates for Java Developers",
@@ -4189,7 +4278,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4200,7 +4289,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "754668",
               "title": "DataFrame - a Swiss Army Knife of Java Data Processing",
@@ -4240,7 +4329,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4251,7 +4340,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "761780",
               "title": "API Toolbox with Spring",
@@ -4291,7 +4380,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4302,7 +4391,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "753362",
               "title": "30 Years of Java - How Did We Get Here?",
@@ -4342,7 +4431,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4353,7 +4442,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "751868",
               "title": "Delivery Engineering",
@@ -4393,7 +4482,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4404,7 +4493,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "753084",
               "title": "Securing the Digital Landscape: A Deep Dive into OWASP Top 10 for Applications, APIs, and LLMs",
@@ -4444,7 +4533,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4455,7 +4544,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "751190",
               "title": "Taking Shortcuts Beyond Your IDE",
@@ -4495,7 +4584,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4506,7 +4595,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "752387",
               "title": "Typescript Deep Dive",
@@ -4546,7 +4635,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4557,7 +4646,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "750246",
               "title": "A Developer's Guide to Jakarta EE 11",
@@ -4597,7 +4686,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4849,7 +4938,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "751905",
               "title": "Mastering Canary Releases with Argo Rollouts in Kubernetes",
@@ -4889,7 +4978,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4900,7 +4989,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "753353",
               "title": "Keeping Your Java Hot by Solving the JVM Warmup Problem",
@@ -4940,7 +5029,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -4951,7 +5040,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "747847",
               "title": "Mastering Logging in Java",
@@ -4995,7 +5084,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5006,7 +5095,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "751867",
               "title": "Project Panama: Unleashing native libraries",
@@ -5046,18 +5135,18 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 8
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "751380",
               "title": "TDD: Test-Driven Development vs TAB-Driven Development",
@@ -5097,7 +5186,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5108,7 +5197,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "754814",
               "title": "Software and AI in the time of Legislation.  New (and old) laws for developers",
@@ -5148,7 +5237,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5159,7 +5248,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "782799",
               "title": "OpenTelemetry and Continuous Feedback - Things you need to know about Spring application at runtime",
@@ -5199,7 +5288,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5210,58 +5299,30 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
-              "id": "749192",
-              "title": "Fresh Hot CSS Features!",
-              "description": "Do you use a CSS Framework like bootstrap? Or maybe you've been coasting for a few years on your current knowledge of CSS. You've maybe seen something called CSS Grid and wondered what it was... Maybe you have never seen `var()` used before.\r\n\r\nLet's discuss the latest newest hottest big features in CSS from the last few years, and get you up to speed on what a browser engine is capable of!\r\n\r\nWe'll cover the following topics:\r\n- CSS Grid\r\n- Custom Properties\r\n- the `:has()` selector\r\n- CSS Layers\r\n- Container Queries\r\n\r\n... And more!",
+              "id": "e5db9f38-b44a-4d4c-9b81-f138a191a3f7",
+              "title": "TBD",
+              "description": null,
               "startsAt": "2025-03-05T11:30:00",
               "endsAt": "2025-03-05T12:30:00",
-              "isServiceSession": false,
+              "isServiceSession": true,
               "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
-                  "name": "Alex Riviere"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 81703,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 290612,
-                      "name": "Web and Front-end"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 81704,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 290619,
-                      "name": "session"
-                    }
-                  ],
-                  "sort": 1
-                }
-              ],
+              "speakers": [],
+              "categories": [],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
             },
             "index": 12
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "751431",
               "title": "AI Tools for Jakarta EE",
@@ -5301,7 +5362,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5553,7 +5614,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "754051",
               "title": "Cloud Integration Testing Made Easy for Your Java Apps",
@@ -5593,7 +5654,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5604,7 +5665,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "754901",
               "title": "Hands On: Apache Maven 4",
@@ -5644,7 +5705,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5655,7 +5716,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "736775",
               "title": "Functional Spring Boot",
@@ -5695,7 +5756,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5706,7 +5767,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "756952",
               "title": "Debugging Java",
@@ -5746,7 +5807,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5757,19 +5818,23 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
-              "id": "784396",
-              "title": "Black Friday Brilliance: Managing a Billion Transactions with Tech, Tactics, and Teamwork",
-              "description": "The Black Friday and Cyber Monday period is one of the busiest times in the retail calendar, both in stores and online, and our customers rely on our infrastructure to support their businesses at this crucial time. Over this period in 2023 we processed over 1 billion requests to our APIs, and we managed this with greater than 99.99% availability! We've seen our request volume increase over 100x in the last 10 years, and managing this requires the right technologies, careful planning, and a great team of people.\r\n\r\nWith insightful commentary from a cross-section of our brilliant Dev team, I’ll talk you through how we scale our infrastructure on different Clouds, the technologies and processes that are put in place and problems we have had to overcome in the past. I’ll also give some insights into how the team works together over this busy period to keep everything running smoothly.\r\n",
+              "id": "862121",
+              "title": "The Ultimate Battle: Software Manager vs. Developer",
+              "description": "Prepare yourself for an electrifying and insightful presentation where a software development manager and a developer engage in the ultimate battle of wits and skills. This captivating session will dive into the critical aspects of modern software development, including code build, testing, deployment, automation, system resilience, and security where you will witness the contrasting perspectives and strategies as the manager and developer tackle real-world challenges head-on!\r\nThroughout the presentation, you'll gain valuable insights into how these two roles can collaborate effectively to achieve optimal results. \r\nWhether you are a manager, developer, or tech enthusiast, this session promises to be both informative and entertaining. Don't miss out on this ultimate battle!",
               "startsAt": "2025-03-05T13:30:00",
               "endsAt": "2025-03-05T14:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
-                  "name": "Jamie Coleman"
+                  "id": "6f31d407-98ca-4b82-a009-6bb4d80b819c",
+                  "name": "Priya Jayakumar"
+                },
+                {
+                  "id": "8f63bac0-143b-42c4-b48d-a55c68015e4b",
+                  "name": "Nashidul Islam"
                 }
               ],
               "categories": [
@@ -5778,8 +5843,8 @@
                   "name": "Track",
                   "categoryItems": [
                     {
-                      "id": 290609,
-                      "name": "Practices and other tech"
+                      "id": 302778,
+                      "name": "Tech Leadership"
                     }
                   ],
                   "sort": 0
@@ -5797,18 +5862,18 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
+              "isInformed": false,
+              "isConfirmed": false
             },
             "index": 9
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "756256",
               "title": "There's an Authz for that: Spring Security in 2025",
@@ -5848,7 +5913,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5859,7 +5924,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "743493",
               "title": "OG Refactoring (Observing Gamma): Patterns to Refactor Towards",
@@ -5903,7 +5968,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5914,7 +5979,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "753663",
               "title": "The Problems Micro Frontends Won't Solve That No One Wants to Talk About",
@@ -5954,7 +6019,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -5965,7 +6030,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "754875",
               "title": "Foundations of Modern Java Server Apps",
@@ -6005,7 +6070,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6225,7 +6290,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "750943",
               "title": "Write Once, Deploy Everywhere: From Containers to Serverless",
@@ -6269,7 +6334,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6280,7 +6345,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "755075",
               "title": "To Java 24 and Beyond!",
@@ -6320,7 +6385,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6331,7 +6396,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "758766",
               "title": "Runtime Efficiencies and Spring Boot",
@@ -6371,7 +6436,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6382,7 +6447,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "800469",
               "title": "OOP vs. Data Oriented Programming: Which One to Choose?",
@@ -6422,7 +6487,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6433,7 +6498,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "783614",
               "title": "Take the Polar Plunge: A Fearless Introduction to Apache Iceberg®",
@@ -6473,7 +6538,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6484,7 +6549,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "739051",
               "title": "Top Security Flaws Hiding in Your Code Right Now – and How to Fix Them",
@@ -6524,7 +6589,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6535,7 +6600,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "755869",
               "title": "Developer Productivity With IntelliJ IDEA",
@@ -6575,7 +6640,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6586,7 +6651,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "748220",
               "title": "Run to the light Carol Anne: Auditing with Lighthouse",
@@ -6626,7 +6691,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6637,7 +6702,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "751660",
               "title": "Java + LLMs: A hands-on guide to building LLM Apps in Java with JakartaEE",
@@ -6681,7 +6746,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6929,7 +6994,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "740043",
               "title": "Home Lab - Private Cloud on a budget",
@@ -6969,7 +7034,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -6980,7 +7045,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "800468",
               "title": "Refactoring to Modernize Java Applications",
@@ -7020,7 +7085,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7031,7 +7096,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "753956",
               "title": "Polyglot Pipelines with Apache Nifi",
@@ -7071,7 +7136,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7082,7 +7147,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "733563",
               "title": "Frustration-free K8S For Spring Developers",
@@ -7122,7 +7187,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7133,7 +7198,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "838546",
               "title": "The Human Factor in DevOps: Because Even Robots Need Good Teammates (Almost)",
@@ -7173,7 +7238,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7184,7 +7249,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "738682",
               "title": "Software Supply Chain Security with Policy as Code",
@@ -7224,7 +7289,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7235,7 +7300,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "752306",
               "title": "Streamlining Open Source Foundation Operations with Quarkus and GitHub Actions",
@@ -7275,7 +7340,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7286,7 +7351,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "787704",
               "title": "Unlocking Machine Learning Potential in JavaScript: A Journey Through Cutting-Edge Tools",
@@ -7326,7 +7391,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7337,7 +7402,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "751804",
               "title": "Migrating from Java EE - to Spring Boot or something else?",
@@ -7377,7 +7442,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -7413,6 +7478,61 @@
               "isConfirmed": false
             },
             "index": 0
+          },
+          {
+            "id": 58705,
+            "name": "Security. ",
+            "session": {
+              "id": "754896",
+              "title": "The OffHeap Podcast. Devnexus Edition (Now with more AI)",
+              "description": "Come and listen to our Offheap podcast live from Devnexus where we'll discuss current topics in the Java ecosystem, play a trivia game and in general have a great time! (who knows, maybe we throw in more AI since that's what everyone is doing)",
+              "startsAt": "2025-03-05T17:00:00",
+              "endsAt": "2025-03-05T19:00:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
+                  "name": "Freddy Guime"
+                },
+                {
+                  "id": "7f8e5588-7314-41ac-854a-0ddf6fe867d2",
+                  "name": "Bob Paulin"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290602,
+                      "name": "Agile"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290619,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 58705,
+              "room": "Security. ",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 10
           }
         ]
       }
@@ -7445,22 +7565,50 @@
             "isConfirmed": false
           },
           {
-            "id": "45040691-b23e-4acb-9320-331e1f983559",
-            "title": "Day 2 keynote",
-            "description": null,
+            "id": "778588",
+            "title": "Building Resilient Systems: Ensuring Reliability in a Rapidly Changing World",
+            "description": "In today’s fast-paced, technology-driven environment, systems reliability has become a cornerstone of organizational success. This keynote will explore the critical importance of building resilient systems that can withstand disruptions, adapt to changes, and continue delivering value. We’ll delve into strategies for proactive risk management and the value of a strong resiliency program that aligns people, processes, and technology. Learn how to foster a reliability-first culture that empowers teams to build robust systems ready for the demands of tomorrow.",
             "startsAt": "2025-03-06T09:00:00",
             "endsAt": "2025-03-06T10:00:00",
-            "isServiceSession": true,
-            "isPlenumSession": true,
-            "speakers": [],
-            "categories": [],
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "1590f52b-d9a0-4d2b-b210-27fe52a2df63",
+                "name": "Ram Machiraju"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290618,
+                    "name": "Keynote"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290621,
+                    "name": "keynote"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
             "roomId": 58709,
             "room": "Keynote",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "a6c6ec2f-b705-47bb-8d03-a8b6930b36d4",
@@ -7838,7 +7986,7 @@
                 "name": "Medha Chakraborty"
               },
               {
-                "id": "616f816d-a777-4392-a9cd-f93bf93ddab9",
+                "id": "be0ecef9-357e-4aa6-bb12-1a0a9bee7a8a",
                 "name": "Eswaran Rathinam"
               }
             ],
@@ -7971,20 +8119,48 @@
             "isConfirmed": true
           },
           {
-            "id": "11fff9b0-51fd-42af-87c7-344e34bef6c2",
-            "title": "TBD",
-            "description": null,
+            "id": "851067",
+            "title": "Thinking Architecturally",
+            "description": "Rich Hickey once said programmers know the benefits of everything and the trade offs of nothing...an approach that can lead a project down a path of frustrated developers and unhappy customers. As architects though, we must consider the trade offs of every new library, language, pattern or approach and quickly make decisions often with incomplete information. How should we think about the inevitable technology choices we have to make on a project? How do we balance competing agendas? How do we keep our team happy and excited without chasing every new thing that someone finds on the inner webs?\r\n\r\nAs architects it is our responsibility to effectively guide our teams on the technology journey. In this talk I will outline the importance of trade offs, how we can analyze new technologies and how we can effectively capture the inevitable architectural decisions we will make. I will also explore the value of fitness functions as a way of ensuring the decisions we make are actually reflected in the code base.",
             "startsAt": "2025-03-06T15:45:00",
             "endsAt": "2025-03-06T16:45:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290603,
+                    "name": "Architecture"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290619,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
             "roomId": 53138,
             "room": "Architecture",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
+            "status": "Accepted",
             "isInformed": false,
             "isConfirmed": false
           }
@@ -8092,50 +8268,22 @@
             "isConfirmed": true
           },
           {
-            "id": "746227",
-            "title": "Don't Call it a Comeback: SQL in Cloud AI and ML",
-            "description": "While Python and specialized ML libraries dominate the AI/ML landscape, SQL's simplicity and power remain invaluable for developers. This session will demonstrate how SQL seamlessly integrates with Google Cloud Platform's AI/ML tools, enabling developers to leverage their existing SQL skills for efficient data handling and model building. We'll cover techniques for data exploration, feature engineering, and model training directly within BigQuery, and showcase how to deploy and manage models at scale using Vertex AI's SQL interface. Through hands-on examples and code demonstrations, you'll gain practical insights into harnessing SQL's capabilities to streamline your Cloud AI/ML development process. ",
+            "id": "11fff9b0-51fd-42af-87c7-344e34bef6c2",
+            "title": "TBD",
+            "description": null,
             "startsAt": "2025-03-06T13:30:00",
             "endsAt": "2025-03-06T14:30:00",
-            "isServiceSession": false,
+            "isServiceSession": true,
             "isPlenumSession": false,
-            "speakers": [
-              {
-                "id": "6899d8db-4ad2-4599-934a-08d37dcc250e",
-                "name": "Amy Russ"
-              }
-            ],
-            "categories": [
-              {
-                "id": 81703,
-                "name": "Track",
-                "categoryItems": [
-                  {
-                    "id": 290615,
-                    "name": "Artificial Intelligence"
-                  }
-                ],
-                "sort": 0
-              },
-              {
-                "id": 81704,
-                "name": "Session Format",
-                "categoryItems": [
-                  {
-                    "id": 290619,
-                    "name": "session"
-                  }
-                ],
-                "sort": 1
-              }
-            ],
+            "speakers": [],
+            "categories": [],
             "roomId": 53139,
             "room": "AI",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
           },
           {
             "id": "742963",
@@ -8231,7 +8379,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           }
         ],
         "hasOnlyPlenumSessions": false
@@ -8483,7 +8631,7 @@
       },
       {
         "id": 58711,
-        "name": "Cloud Tech",
+        "name": "Cloud Tech ",
         "sessions": [
           {
             "id": "750836",
@@ -8528,7 +8676,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8578,7 +8726,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8624,7 +8772,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8670,7 +8818,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8720,7 +8868,7 @@
               }
             ],
             "roomId": 58711,
-            "room": "Cloud Tech",
+            "room": "Cloud Tech ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8732,7 +8880,7 @@
       },
       {
         "id": 58701,
-        "name": "Core Java",
+        "name": "Core Java ",
         "sessions": [
           {
             "id": "738256",
@@ -8773,7 +8921,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8819,7 +8967,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8865,7 +9013,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8911,7 +9059,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8957,7 +9105,7 @@
               }
             ],
             "roomId": 58701,
-            "room": "Core Java",
+            "room": "Core Java ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -8969,7 +9117,7 @@
       },
       {
         "id": 58702,
-        "name": "Frameworks",
+        "name": "Frameworks  ",
         "sessions": [
           {
             "id": "779565",
@@ -9010,7 +9158,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9018,17 +9166,17 @@
             "isConfirmed": true
           },
           {
-            "id": "800031",
-            "title": "Building Scalable Systems and Services with Spring Boot 3.4 ",
-            "description": "Hi, Spring fans! In this installment we're going to look at how to build scalable systems and services using the amazing Spring Boot 3.4 release and all the umbrella projects that accompany it. \r\n\r\nWe'll look at the basics - a sort of desk check for the wayward Spring developer - to ensure that development itself is scalable when using Spring.\r\n\r\nWe'll look at the basics of data access and web programming with Spring. We'll look at data processing strategies, too.\r\n\r\nWe'll look at how to build modular, intelligent applications with Spring Modulith and Spring AI. \r\n\r\nWe'll look at how to build messaging and integration into our system. \r\n\r\nWe'll look at how to integrate security into the system, making passwords safe and then - ideally - avoiding them altogether. \r\n\r\nAnd we'll look at scaling and optimizing Spring applications, too. \r\n\r\nProduction is the happiest place on earth! Join me for this workshop and we'll learn how to get there with aplomb. ",
+            "id": "851068",
+            "title": "The Influential Software Engineer",
+            "description": "Software engineers have a tendency to view projects in purely technical terms fixating on languages, datastores and frameworks. While it is tempting to focus solely on tech, it isn’t enough to get you that next promotion, raise or bonus, you can’t ignore the soft side of software. As you grow in your career, it becomes clear that projects are made up of people with the inevitable personalities, emotions and opinions on full display yet odds are your computer education omitted people skills as part of the curriculum. This talk will help you wield influence in you org be it to convince management to upgrade to the latest version of your tech stack or help you customer understand why you need to pay down some technical debt. We’ll also cover the impact culture has on our work as well as how to manage the many stakeholders in our orbit.",
             "startsAt": "2025-03-06T11:30:00",
             "endsAt": "2025-03-06T12:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
-                "name": "Josh Long"
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
               }
             ],
             "categories": [
@@ -9037,8 +9185,8 @@
                 "name": "Track",
                 "categoryItems": [
                   {
-                    "id": 290607,
-                    "name": "Frameworks"
+                    "id": 290609,
+                    "name": "Practices and other tech"
                   }
                 ],
                 "sort": 0
@@ -9048,20 +9196,20 @@
                 "name": "Session Format",
                 "categoryItems": [
                   {
-                    "id": 290620,
-                    "name": "workshop"
+                    "id": 290619,
+                    "name": "session"
                   }
                 ],
                 "sort": 1
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
-            "isInformed": true,
-            "isConfirmed": true
+            "isInformed": false,
+            "isConfirmed": false
           },
           {
             "id": "759124",
@@ -9106,7 +9254,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9152,7 +9300,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9198,7 +9346,7 @@
               }
             ],
             "roomId": 58702,
-            "room": "Frameworks",
+            "room": "Frameworks  ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9210,7 +9358,7 @@
       },
       {
         "id": 58703,
-        "name": "Java Platform",
+        "name": "Java Platform ",
         "sessions": [
           {
             "id": "752500",
@@ -9251,7 +9399,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9297,7 +9445,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9347,7 +9495,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9393,7 +9541,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9439,7 +9587,7 @@
               }
             ],
             "roomId": 58703,
-            "room": "Java Platform",
+            "room": "Java Platform ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9451,7 +9599,7 @@
       },
       {
         "id": 58704,
-        "name": "Practices",
+        "name": "Practices. ",
         "sessions": [
           {
             "id": "735884",
@@ -9496,7 +9644,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9542,7 +9690,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9588,7 +9736,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9634,7 +9782,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9684,7 +9832,7 @@
               }
             ],
             "roomId": 58704,
-            "room": "Practices",
+            "room": "Practices. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9696,7 +9844,7 @@
       },
       {
         "id": 58705,
-        "name": "Security",
+        "name": "Security. ",
         "sessions": [
           {
             "id": "740966",
@@ -9741,7 +9889,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9749,17 +9897,17 @@
             "isConfirmed": true
           },
           {
-            "id": "750525",
-            "title": "Shadow Vulnerabilities in AI/ML Data Stacks - What You Don’t Know CAN Hurt You",
-            "description": "The adoption of open-source AI software introduces a new family of vulnerabilities to organizations. Some components in AI, like model serving, include Remote Code Execution (RCE) by design, like when loading pre-trained models from external sources.\r\n\r\nTraditional SCA and SAST approaches are not built for the AI ecosystem leaving a huge & insecure attack surface. \r\n\r\nAI models are often downloaded from the public web, from untrusted sources in common platforms like HuggingFace using the “trust_remote_code=True” flag when loading models.  So how do we better secure our AI stacks?\r\n\r\nIn this talk, we’ll examine some of the common security anti-patterns prevalent in AI engineering, such as security issues that are not classified as CVEs by design, or patched security issues that introduce breaking changes.\r\n\r\nWe’ll review the methods introduced for better security hygiene such as new checkpoint formats (model files on disk) - like SavedModel and SafeTensors. While SCA, SAST, and traditional approaches don't analyze model checkpoints, leaving these silent vulnerabilities in your stacks, we’ll demo through real code examples, why the runtime context is crucial to detect these security issues.",
+            "id": "861845",
+            "title": "Protect The Bat-Computer! Understanding OAuth2 (With The Help Of Some Super Friends)",
+            "description": "OAuth2 can be difficult to understand - this talk takes the mystery out of it. It begins by explaining OAuth2 using a couple of heroes with a problem (Batman has a Bat-Computer that Superman would like to use, but Batman doesn't know Superman. However, they both know Wonder Woman) and shows how the heroes interact to allow Superman access to the Bat-Computer. We then map the characters into their OAuth2 equivalents (the Bat-Computer is a shared resource, Batman is the resource owner, etc.) and see how the OAuth2 flow works.\r\n\r\nNext, we look at implementing OAuth2 in some common frameworks, such as Spring. Tips are offered for debugging OAuth2 and implementing it on the front end. The speaker will offer some advice gleaned from implementing OAuth2 security at multiple companies.\r\n\r\nParticipants will leave with an understanding of the OAuth2 workflow, some practical examples, and advice on implementing it in common situations.",
             "startsAt": "2025-03-06T11:30:00",
             "endsAt": "2025-03-06T12:30:00",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "dea86363-2e13-4dfa-996a-200e6feb8749",
-                "name": "Gal Elbaz"
+                "id": "b765d60f-4717-4116-b9f2-002c8a10bd88",
+                "name": "Kelly Morrison"
               }
             ],
             "categories": [
@@ -9787,7 +9935,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9833,7 +9981,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9879,7 +10027,7 @@
               }
             ],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9897,7 +10045,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 58705,
-            "room": "Security",
+            "room": "Security. ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -9909,7 +10057,7 @@
       },
       {
         "id": 58706,
-        "name": "Tools and Techniques",
+        "name": "Tools and Techniques ",
         "sessions": [
           {
             "id": "750660",
@@ -9950,7 +10098,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -9996,7 +10144,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10042,7 +10190,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10088,7 +10236,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10134,7 +10282,7 @@
               }
             ],
             "roomId": 58706,
-            "room": "Tools and Techniques",
+            "room": "Tools and Techniques ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10146,7 +10294,7 @@
       },
       {
         "id": 58707,
-        "name": "Web and front-end",
+        "name": "Web and front-end   ",
         "sessions": [
           {
             "id": "751546",
@@ -10187,7 +10335,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10233,7 +10381,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10279,7 +10427,7 @@
               }
             ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10287,22 +10435,50 @@
             "isConfirmed": true
           },
           {
-            "id": "1edace2b-f58c-4248-815d-dfc9d8e032b9",
-            "title": "TBD",
-            "description": null,
+            "id": "749192",
+            "title": "Fresh Hot CSS Features!",
+            "description": "Do you use a CSS Framework like bootstrap? Or maybe you've been coasting for a few years on your current knowledge of CSS. You've maybe seen something called CSS Grid and wondered what it was... Maybe you have never seen `var()` used before.\r\n\r\nLet's discuss the latest newest hottest big features in CSS from the last few years, and get you up to speed on what a browser engine is capable of!\r\n\r\nWe'll cover the following topics:\r\n- CSS Grid\r\n- Custom Properties\r\n- the `:has()` selector\r\n- CSS Layers\r\n- Container Queries\r\n\r\n... And more!",
             "startsAt": "2025-03-06T14:30:00",
             "endsAt": "2025-03-06T15:30:00",
-            "isServiceSession": true,
+            "isServiceSession": false,
             "isPlenumSession": false,
-            "speakers": [],
-            "categories": [],
+            "speakers": [
+              {
+                "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+                "name": "Alex Riviere"
+              }
+            ],
+            "categories": [
+              {
+                "id": 81703,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 290612,
+                    "name": "Web and Front-end"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 81704,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 290619,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
-            "status": null,
-            "isInformed": false,
-            "isConfirmed": false
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
           },
           {
             "id": "9f3d5fc8-28ad-4a78-b40e-b85217024915",
@@ -10315,7 +10491,7 @@
             "speakers": [],
             "categories": [],
             "roomId": 58707,
-            "room": "Web and front-end",
+            "room": "Web and front-end   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": null,
@@ -10327,7 +10503,7 @@
       },
       {
         "id": 58708,
-        "name": "JakarataEE",
+        "name": "JakarataEE   ",
         "sessions": [
           {
             "id": "746924",
@@ -10368,7 +10544,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10418,7 +10594,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10468,7 +10644,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10514,7 +10690,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10531,8 +10707,8 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "c3739d81-91b9-4c51-b56a-9099c7e02e74",
-                "name": "David Cabelus"
+                "id": "72989ad5-a09c-4956-90cf-355e7fcef82b",
+                "name": "Julian Ortiz"
               }
             ],
             "categories": [
@@ -10560,7 +10736,7 @@
               }
             ],
             "roomId": 58708,
-            "room": "JakarataEE",
+            "room": "JakarataEE   ",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -10607,22 +10783,50 @@
             "id": 58709,
             "name": "Keynote",
             "session": {
-              "id": "45040691-b23e-4acb-9320-331e1f983559",
-              "title": "Day 2 keynote",
-              "description": null,
+              "id": "778588",
+              "title": "Building Resilient Systems: Ensuring Reliability in a Rapidly Changing World",
+              "description": "In today’s fast-paced, technology-driven environment, systems reliability has become a cornerstone of organizational success. This keynote will explore the critical importance of building resilient systems that can withstand disruptions, adapt to changes, and continue delivering value. We’ll delve into strategies for proactive risk management and the value of a strong resiliency program that aligns people, processes, and technology. Learn how to foster a reliability-first culture that empowers teams to build robust systems ready for the demands of tomorrow.",
               "startsAt": "2025-03-06T09:00:00",
               "endsAt": "2025-03-06T10:00:00",
-              "isServiceSession": true,
-              "isPlenumSession": true,
-              "speakers": [],
-              "categories": [],
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "1590f52b-d9a0-4d2b-b210-27fe52a2df63",
+                  "name": "Ram Machiraju"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290618,
+                      "name": "Keynote"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290621,
+                      "name": "keynote"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
               "roomId": 58709,
               "room": "Keynote",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -10845,7 +11049,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "750836",
               "title": "AMP-ing Your Java with AArch64/Arm64 Servers",
@@ -10889,7 +11093,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -10900,7 +11104,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "738256",
               "title": "We hate code - The !joy of maintaining dead code",
@@ -10940,7 +11144,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -10951,7 +11155,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "779565",
               "title": "Spring Batch 5.2 and beyond: What's new and what's coming next",
@@ -10991,7 +11195,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11002,7 +11206,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "752500",
               "title": "Micrometer Mastery: Unleash Advanced Observability in your JVM Apps",
@@ -11042,7 +11246,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11053,7 +11257,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "735884",
               "title": "Testing on Thin Ice: Chipping Away at Test Unpredictability",
@@ -11097,7 +11301,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11108,7 +11312,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "740966",
               "title": "Securing LLM-Powered Applications: Overcoming Security and Privacy Challenges",
@@ -11152,7 +11356,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11163,7 +11367,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "750660",
               "title": "Codebase Resurrection: Revive and Refactor with AI",
@@ -11203,7 +11407,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11214,7 +11418,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "751546",
               "title": "A Java Developers Guide to Navigating the Frontend Landscape",
@@ -11254,7 +11458,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11265,7 +11469,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "746924",
               "title": "Jakarta EE meets AI: Beyond the chatbot with LangChain4j",
@@ -11305,7 +11509,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11415,7 +11619,7 @@
                   "name": "Medha Chakraborty"
                 },
                 {
-                  "id": "616f816d-a777-4392-a9cd-f93bf93ddab9",
+                  "id": "be0ecef9-357e-4aa6-bb12-1a0a9bee7a8a",
                   "name": "Eswaran Rathinam"
                 }
               ],
@@ -11557,7 +11761,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "750567",
               "title": "Are you crazy? hosting 25 years old java code on a brand-new cloud?",
@@ -11601,7 +11805,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11612,7 +11816,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "750629",
               "title": "Unveiling the Magical Power of Java Virtual Threads",
@@ -11652,7 +11856,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11663,19 +11867,19 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
-              "id": "800031",
-              "title": "Building Scalable Systems and Services with Spring Boot 3.4 ",
-              "description": "Hi, Spring fans! In this installment we're going to look at how to build scalable systems and services using the amazing Spring Boot 3.4 release and all the umbrella projects that accompany it. \r\n\r\nWe'll look at the basics - a sort of desk check for the wayward Spring developer - to ensure that development itself is scalable when using Spring.\r\n\r\nWe'll look at the basics of data access and web programming with Spring. We'll look at data processing strategies, too.\r\n\r\nWe'll look at how to build modular, intelligent applications with Spring Modulith and Spring AI. \r\n\r\nWe'll look at how to build messaging and integration into our system. \r\n\r\nWe'll look at how to integrate security into the system, making passwords safe and then - ideally - avoiding them altogether. \r\n\r\nAnd we'll look at scaling and optimizing Spring applications, too. \r\n\r\nProduction is the happiest place on earth! Join me for this workshop and we'll learn how to get there with aplomb. ",
+              "id": "851068",
+              "title": "The Influential Software Engineer",
+              "description": "Software engineers have a tendency to view projects in purely technical terms fixating on languages, datastores and frameworks. While it is tempting to focus solely on tech, it isn’t enough to get you that next promotion, raise or bonus, you can’t ignore the soft side of software. As you grow in your career, it becomes clear that projects are made up of people with the inevitable personalities, emotions and opinions on full display yet odds are your computer education omitted people skills as part of the curriculum. This talk will help you wield influence in you org be it to convince management to upgrade to the latest version of your tech stack or help you customer understand why you need to pay down some technical debt. We’ll also cover the impact culture has on our work as well as how to manage the many stakeholders in our orbit.",
               "startsAt": "2025-03-06T11:30:00",
               "endsAt": "2025-03-06T12:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
-                  "name": "Josh Long"
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
                 }
               ],
               "categories": [
@@ -11684,8 +11888,8 @@
                   "name": "Track",
                   "categoryItems": [
                     {
-                      "id": 290607,
-                      "name": "Frameworks"
+                      "id": 290609,
+                      "name": "Practices and other tech"
                     }
                   ],
                   "sort": 0
@@ -11695,26 +11899,26 @@
                   "name": "Session Format",
                   "categoryItems": [
                     {
-                      "id": 290620,
-                      "name": "workshop"
+                      "id": 290619,
+                      "name": "session"
                     }
                   ],
                   "sort": 1
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
+              "isInformed": false,
+              "isConfirmed": false
             },
             "index": 7
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "741181",
               "title": "Setting up data driven tests with Java tools",
@@ -11754,7 +11958,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11765,7 +11969,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "751558",
               "title": "Nurturing OpenJDK distribution: Eclipse Temurin Success History and Plan",
@@ -11805,7 +12009,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11816,19 +12020,19 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
-              "id": "750525",
-              "title": "Shadow Vulnerabilities in AI/ML Data Stacks - What You Don’t Know CAN Hurt You",
-              "description": "The adoption of open-source AI software introduces a new family of vulnerabilities to organizations. Some components in AI, like model serving, include Remote Code Execution (RCE) by design, like when loading pre-trained models from external sources.\r\n\r\nTraditional SCA and SAST approaches are not built for the AI ecosystem leaving a huge & insecure attack surface. \r\n\r\nAI models are often downloaded from the public web, from untrusted sources in common platforms like HuggingFace using the “trust_remote_code=True” flag when loading models.  So how do we better secure our AI stacks?\r\n\r\nIn this talk, we’ll examine some of the common security anti-patterns prevalent in AI engineering, such as security issues that are not classified as CVEs by design, or patched security issues that introduce breaking changes.\r\n\r\nWe’ll review the methods introduced for better security hygiene such as new checkpoint formats (model files on disk) - like SavedModel and SafeTensors. While SCA, SAST, and traditional approaches don't analyze model checkpoints, leaving these silent vulnerabilities in your stacks, we’ll demo through real code examples, why the runtime context is crucial to detect these security issues.",
+              "id": "861845",
+              "title": "Protect The Bat-Computer! Understanding OAuth2 (With The Help Of Some Super Friends)",
+              "description": "OAuth2 can be difficult to understand - this talk takes the mystery out of it. It begins by explaining OAuth2 using a couple of heroes with a problem (Batman has a Bat-Computer that Superman would like to use, but Batman doesn't know Superman. However, they both know Wonder Woman) and shows how the heroes interact to allow Superman access to the Bat-Computer. We then map the characters into their OAuth2 equivalents (the Bat-Computer is a shared resource, Batman is the resource owner, etc.) and see how the OAuth2 flow works.\r\n\r\nNext, we look at implementing OAuth2 in some common frameworks, such as Spring. Tips are offered for debugging OAuth2 and implementing it on the front end. The speaker will offer some advice gleaned from implementing OAuth2 security at multiple companies.\r\n\r\nParticipants will leave with an understanding of the OAuth2 workflow, some practical examples, and advice on implementing it in common situations.",
               "startsAt": "2025-03-06T11:30:00",
               "endsAt": "2025-03-06T12:30:00",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "dea86363-2e13-4dfa-996a-200e6feb8749",
-                  "name": "Gal Elbaz"
+                  "id": "b765d60f-4717-4116-b9f2-002c8a10bd88",
+                  "name": "Kelly Morrison"
                 }
               ],
               "categories": [
@@ -11856,7 +12060,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11867,7 +12071,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "754866",
               "title": "An All Code Introduction to Domain Driven Design and Hexagonal Architecture",
@@ -11907,7 +12111,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11918,7 +12122,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "751886",
               "title": "Architecting a Front-End Project for Longevity",
@@ -11958,7 +12162,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -11969,7 +12173,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "755597",
               "title": "Duke on CRaC with Jakarta EE",
@@ -12013,7 +12217,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12165,50 +12369,22 @@
             "id": 53139,
             "name": "AI",
             "session": {
-              "id": "746227",
-              "title": "Don't Call it a Comeback: SQL in Cloud AI and ML",
-              "description": "While Python and specialized ML libraries dominate the AI/ML landscape, SQL's simplicity and power remain invaluable for developers. This session will demonstrate how SQL seamlessly integrates with Google Cloud Platform's AI/ML tools, enabling developers to leverage their existing SQL skills for efficient data handling and model building. We'll cover techniques for data exploration, feature engineering, and model training directly within BigQuery, and showcase how to deploy and manage models at scale using Vertex AI's SQL interface. Through hands-on examples and code demonstrations, you'll gain practical insights into harnessing SQL's capabilities to streamline your Cloud AI/ML development process. ",
+              "id": "11fff9b0-51fd-42af-87c7-344e34bef6c2",
+              "title": "TBD",
+              "description": null,
               "startsAt": "2025-03-06T13:30:00",
               "endsAt": "2025-03-06T14:30:00",
-              "isServiceSession": false,
+              "isServiceSession": true,
               "isPlenumSession": false,
-              "speakers": [
-                {
-                  "id": "6899d8db-4ad2-4599-934a-08d37dcc250e",
-                  "name": "Amy Russ"
-                }
-              ],
-              "categories": [
-                {
-                  "id": 81703,
-                  "name": "Track",
-                  "categoryItems": [
-                    {
-                      "id": 290615,
-                      "name": "Artificial Intelligence"
-                    }
-                  ],
-                  "sort": 0
-                },
-                {
-                  "id": 81704,
-                  "name": "Session Format",
-                  "categoryItems": [
-                    {
-                      "id": 290619,
-                      "name": "session"
-                    }
-                  ],
-                  "sort": 1
-                }
-              ],
+              "speakers": [],
+              "categories": [],
               "roomId": 53139,
               "room": "AI",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": "Accepted",
-              "isInformed": true,
-              "isConfirmed": true
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
             },
             "index": 3
           },
@@ -12265,7 +12441,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "753141",
               "title": "Optimize cold starts for Java functions using AWS Lambda SnapStart",
@@ -12305,7 +12481,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12316,7 +12492,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "758773",
               "title": "Testing Your Way to Production Confidence with Native Images",
@@ -12356,7 +12532,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12367,7 +12543,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "759124",
               "title": "The Overwhelmed Spring Developer's Guide To AI",
@@ -12411,7 +12587,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12422,7 +12598,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "734173",
               "title": "Code coverage MythBusters",
@@ -12466,7 +12642,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12477,7 +12653,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "751874",
               "title": "Developer’s Guide to Test-Driven Development and Approval Testing",
@@ -12517,7 +12693,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12528,7 +12704,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "738670",
               "title": "Long Live Short Lived Credentials - Auto-rotating Secrets At Scale",
@@ -12568,7 +12744,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12579,7 +12755,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "734820",
               "title": "Git features you aren’t using",
@@ -12619,7 +12795,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12630,7 +12806,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "754616",
               "title": "Web Apps and Devices – Yes We Can!",
@@ -12670,7 +12846,7 @@
                 }
               ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12681,7 +12857,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "751261",
               "title": "Concurrency redefined: what’s new in Jakarta Concurrency 3.1",
@@ -12725,7 +12901,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -12949,7 +13125,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "733495",
               "title": "Crafting the Ultimate Docker Image for Spring Applications",
@@ -12989,7 +13165,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13000,7 +13176,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "753038",
               "title": "Testing Legacy Code & Refactoring Patterns",
@@ -13040,7 +13216,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13051,7 +13227,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "734869",
               "title": "BoxLang - The Future is Dynamic",
@@ -13091,7 +13267,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13102,7 +13278,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "755076",
               "title": "Taking off With JDK Flight Recorder",
@@ -13142,7 +13318,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13153,7 +13329,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "750765",
               "title": "Technical Enshittification: Why Everything in IT is Horrible Right Now and How to Fix It",
@@ -13193,7 +13369,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13204,7 +13380,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "750953",
               "title": "Let OpenID Connect secure your applications",
@@ -13244,7 +13420,7 @@
                 }
               ],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13255,7 +13431,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "741176",
               "title": "Going beyond ORMs",
@@ -13295,7 +13471,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13306,30 +13482,58 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
-              "id": "1edace2b-f58c-4248-815d-dfc9d8e032b9",
-              "title": "TBD",
-              "description": null,
+              "id": "749192",
+              "title": "Fresh Hot CSS Features!",
+              "description": "Do you use a CSS Framework like bootstrap? Or maybe you've been coasting for a few years on your current knowledge of CSS. You've maybe seen something called CSS Grid and wondered what it was... Maybe you have never seen `var()` used before.\r\n\r\nLet's discuss the latest newest hottest big features in CSS from the last few years, and get you up to speed on what a browser engine is capable of!\r\n\r\nWe'll cover the following topics:\r\n- CSS Grid\r\n- Custom Properties\r\n- the `:has()` selector\r\n- CSS Layers\r\n- Container Queries\r\n\r\n... And more!",
               "startsAt": "2025-03-06T14:30:00",
               "endsAt": "2025-03-06T15:30:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+                  "name": "Alex Riviere"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290612,
+                      "name": "Web and Front-end"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290619,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
-              "isInformed": false,
-              "isConfirmed": false
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
             },
             "index": 12
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "750035",
               "title": "Jakarta EE: Connected Industries with an Edge",
@@ -13369,7 +13573,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13466,20 +13670,48 @@
             "id": 53138,
             "name": "Architecture",
             "session": {
-              "id": "11fff9b0-51fd-42af-87c7-344e34bef6c2",
-              "title": "TBD",
-              "description": null,
+              "id": "851067",
+              "title": "Thinking Architecturally",
+              "description": "Rich Hickey once said programmers know the benefits of everything and the trade offs of nothing...an approach that can lead a project down a path of frustrated developers and unhappy customers. As architects though, we must consider the trade offs of every new library, language, pattern or approach and quickly make decisions often with incomplete information. How should we think about the inevitable technology choices we have to make on a project? How do we balance competing agendas? How do we keep our team happy and excited without chasing every new thing that someone finds on the inner webs?\r\n\r\nAs architects it is our responsibility to effectively guide our teams on the technology journey. In this talk I will outline the importance of trade offs, how we can analyze new technologies and how we can effectively capture the inevitable architectural decisions we will make. I will also explore the value of fitness functions as a way of ensuring the decisions we make are actually reflected in the code base.",
               "startsAt": "2025-03-06T15:45:00",
               "endsAt": "2025-03-06T16:45:00",
-              "isServiceSession": true,
+              "isServiceSession": false,
               "isPlenumSession": false,
-              "speakers": [],
-              "categories": [],
+              "speakers": [
+                {
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 81703,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 290603,
+                      "name": "Architecture"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 81704,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 290619,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
               "roomId": 53138,
               "room": "Architecture",
               "liveUrl": null,
               "recordingUrl": null,
-              "status": null,
+              "status": "Accepted",
               "isInformed": false,
               "isConfirmed": false
             },
@@ -13536,7 +13768,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 3
           },
@@ -13593,7 +13825,7 @@
           },
           {
             "id": 58711,
-            "name": "Cloud Tech",
+            "name": "Cloud Tech ",
             "session": {
               "id": "751799",
               "title": "Java and the Internet of Things",
@@ -13637,7 +13869,7 @@
                 }
               ],
               "roomId": 58711,
-              "room": "Cloud Tech",
+              "room": "Cloud Tech ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13648,7 +13880,7 @@
           },
           {
             "id": 58701,
-            "name": "Core Java",
+            "name": "Core Java ",
             "session": {
               "id": "736664",
               "title": "Unveiling the Hidden Layers of Java Class Files: Beyond Bytecode",
@@ -13688,7 +13920,7 @@
                 }
               ],
               "roomId": 58701,
-              "room": "Core Java",
+              "room": "Core Java ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13699,7 +13931,7 @@
           },
           {
             "id": 58702,
-            "name": "Frameworks",
+            "name": "Frameworks  ",
             "session": {
               "id": "754695",
               "title": "Containers All the Way Down!: Optimizing Spring Boot apps for the Modern Cloud",
@@ -13739,7 +13971,7 @@
                 }
               ],
               "roomId": 58702,
-              "room": "Frameworks",
+              "room": "Frameworks  ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13750,7 +13982,7 @@
           },
           {
             "id": 58703,
-            "name": "Java Platform",
+            "name": "Java Platform ",
             "session": {
               "id": "769415",
               "title": "How to debug: Lessons learnt from 10 years of Spring Boot",
@@ -13790,7 +14022,7 @@
                 }
               ],
               "roomId": 58703,
-              "room": "Java Platform",
+              "room": "Java Platform ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13801,7 +14033,7 @@
           },
           {
             "id": 58704,
-            "name": "Practices",
+            "name": "Practices. ",
             "session": {
               "id": "751791",
               "title": "A developers guide to running Spring Boot applications on Open Liberty",
@@ -13845,7 +14077,7 @@
                 }
               ],
               "roomId": 58704,
-              "room": "Practices",
+              "room": "Practices. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13856,7 +14088,7 @@
           },
           {
             "id": 58705,
-            "name": "Security",
+            "name": "Security. ",
             "session": {
               "id": "d56e0c39-8639-46e7-8159-66fb8aca91d4",
               "title": "TBD",
@@ -13868,7 +14100,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 58705,
-              "room": "Security",
+              "room": "Security. ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -13879,7 +14111,7 @@
           },
           {
             "id": 58706,
-            "name": "Tools and Techniques",
+            "name": "Tools and Techniques ",
             "session": {
               "id": "753218",
               "title": "Enhancing Project Integrity: A Modernization for Bug-Free Code",
@@ -13919,7 +14151,7 @@
                 }
               ],
               "roomId": 58706,
-              "room": "Tools and Techniques",
+              "room": "Tools and Techniques ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
@@ -13930,7 +14162,7 @@
           },
           {
             "id": 58707,
-            "name": "Web and front-end",
+            "name": "Web and front-end   ",
             "session": {
               "id": "9f3d5fc8-28ad-4a78-b40e-b85217024915",
               "title": "TBD",
@@ -13942,7 +14174,7 @@
               "speakers": [],
               "categories": [],
               "roomId": 58707,
-              "room": "Web and front-end",
+              "room": "Web and front-end   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": null,
@@ -13953,7 +14185,7 @@
           },
           {
             "id": 58708,
-            "name": "JakarataEE",
+            "name": "JakarataEE   ",
             "session": {
               "id": "760135",
               "title": "Case Study: Journey to Cloud with Jakarta EE and MicroProfile",
@@ -13964,8 +14196,8 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "c3739d81-91b9-4c51-b56a-9099c7e02e74",
-                  "name": "David Cabelus"
+                  "id": "72989ad5-a09c-4956-90cf-355e7fcef82b",
+                  "name": "Julian Ortiz"
                 }
               ],
               "categories": [
@@ -13993,7 +14225,7 @@
                 }
               ],
               "roomId": 58708,
-              "room": "JakarataEE",
+              "room": "JakarataEE   ",
               "liveUrl": null,
               "recordingUrl": null,
               "status": "Accepted",
