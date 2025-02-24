@@ -3,9 +3,7 @@ id: ca26f6b4-6211-4491-a8f3-d090c2390c8c
 firstName: Annelore
 lastName: Egger
 fullName: Annelore Egger
-bio: 'I''ve been a software developer for 5 years and find it very important to share
-  knowledge so the whole community can profit from it. With combining our knowledge
-  we can achieve more together. '
+bio: 'I am a passionate software developer who values writing good, maintainable code, working in teams, and sharing knowledge. By combining our knowledge and learning from each other, we can achieve higher goals together.'
 tagLine: Software Engineer, OpenValue Switzerland
 profilePicture: https://sessionize.com/image/4d84-400o400o1-h5FPyV5esyw4Uo6VWWwk3d.jpg
 sessions:
