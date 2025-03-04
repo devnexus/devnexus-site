@@ -12,7 +12,7 @@ registration:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2025
-feedback: NOTshow
+feedback: show
 collections:
   speakers:
     title: Speakers 2025

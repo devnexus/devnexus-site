@@ -1,146 +1,153 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
 {% include head.html %}
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXXPHQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXXPHQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {{ content }}
   <!-- javascipt -->
   <script src="/assets/js/all.js"></script>
 
   <script>
-  $(document).ready(function(){
-    //These control the schedule filter on the schedule page
-    $(window).resize(function(){
+    $(document).ready(function () {
+      //These control the schedule filter on the schedule page
+      $(window).resize(function () {
+        togglePanel();
+      });
+
       togglePanel();
-    });
+      window.setTimeout(() => {
+        if (typeof applyFilter !== 'undefined') {
+          applyFilter();
+        }
+      }, 1)
 
-    togglePanel();
-    window.setTimeout(()=>{if (typeof applyFilter !== 'undefined') {
-      applyFilter();
-    }},1)
-    
-      
-    $("#scheduleSearch").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $(".schedule-row").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });  
-    });
 
-   
+      $("#scheduleSearch").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $(".schedule-row").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
 
-    function togglePanel() {
-      var w = $(window).width();
-      if (w <= 768) {
+
+
+      function togglePanel() {
+        var w = $(window).width();
+        if (w <= 768) {
           $('#schedule-filter').removeClass('in');
-      } else {
+        } else {
           $('#schedule-filter').addClass('in');
+        }
       }
-    }
 
-});
-</script>
+    });
+  </script>
 
   <script>
-  "use strict";
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    "use strict";
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-44984422-1', 'devnexus.com');
-  ga('send', 'pageview');
-  
-  $(function() {
-    $(".video-container").each(function() {
-      var videoId = this.id;
-      $(document).delegate('#video-play-button', 'click', function() {
-        var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
-        var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, style:"height:100%;width:100%"});
+    ga('create', 'UA-44984422-1', 'devnexus.com');
+    ga('send', 'pageview');
 
-        $('#' + videoId).html(iframe).addClass('loaded');
-        $('#video-play-button').hide();
+    $(function () {
+      $(".video-container").each(function () {
+        var videoId = this.id;
+        $(document).delegate('#video-play-button', 'click', function () {
+          var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
+          var iframe = $('<iframe/>', { 'frameborder': '0', 'src': iframe_url, style: "height:100%;width:100%" });
+
+          $('#' + videoId).html(iframe).addClass('loaded');
+          $('#video-play-button').hide();
+        });
       });
     });
-  });
 
   </script>
-  <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+  <script>/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2)s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/\>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script>
+</body>
 
-  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script>
   const config = {
-              apiKey: "AIzaSyCZAoJfVeGGOy_DYXcEP6RTUztPi6a51_I",
-              authDomain: "devnexus2023.firebaseapp.com",
-              projectId: "devnexus2023",
-              storageBucket: "devnexus2023.appspot.com",
-              messagingSenderId: "988355557157",
-              appId: "1:988355557157:web:6726254ef5f4f2b65e8ccc",
-              measurementId: "G-GTTR8RRD3W"
-        };
+    apiKey: "AIzaSyCZAoJfVeGGOy_DYXcEP6RTUztPi6a51_I",
+    authDomain: "devnexus2023.firebaseapp.com",
+    projectId: "devnexus2023",
+    storageBucket: "devnexus2023.appspot.com",
+    messagingSenderId: "988355557157",
+    appId: "1:988355557157:web:6726254ef5f4f2b65e8ccc",
+    measurementId: "G-GTTR8RRD3W"
+  };
 
-        const app = firebase.initializeApp(config);
-        const db = app.firestore();
+  const app = firebase.initializeApp(config);
+  const db = app.firestore();
 
-        $(document).ready(function(){
-              //used on feedback page to enable button
-             $('input[name="rating"]').click(i => {
-                $("#submit").removeClass("disabled");
-                $("#submit").click(submitFeedback)
-              })
+  $(document).ready(function () {
+    //used on feedback page to enable button
+    $('input[name="rating"]').click(i => {
+      $("#submit").removeClass("disabled");
+      $("#submit").click(submitFeedback)
+    })
 
-              function submitFeedback() {
-                const rating = $('input[name="rating"]:checked').val();
-                const title = $('#talkTitle').val();
-                const comment = $('#comment').val();
-                $("#submit").addClass("disabled");
-                $("#submit").off("click");
-                $("#submit").text("Sending...")
-                return db.collection("feedback").doc(title.replace('"','').replace("/",'')).set({feedback: firebase.firestore.FieldValue.arrayUnion( {
-                          id: generateUUID(),
-                          comment: comment,
-                          rating: rating
-                        })}, {merge: true}
-                      ).then(()=>{
-                        $("#submit").text("Submitted!");
-                        $('input[name="rating"]').off("click");
-                      })
-                      /* eslint-disable-next-line no-console */
-                      .catch((err)=> console.log(err)); 
-                
-              }
+    function submitFeedback() {
+      const rating = $('input[name="rating"]:checked').val();
+      const title = $('#talkTitle').val();
+      const comment = $('#comment').val();
+      $("#submit").addClass("disabled");
+      $("#submit").off("click");
+      $("#submit").text("Sending...")
+      return db.collection("feedback2025").doc(title.replace('"', '').replace("/", '')).set({
+        feedback: firebase.firestore.FieldValue.arrayUnion({
+          id: generateUUID(),
+          comment: comment,
+          rating: rating
+        })
+      }, { merge: true }
+      ).then(() => {
+        $("#submit").text("Submitted!");
+        $('input[name="rating"]').off("click");
+      })
+        /* eslint-disable-next-line no-console */
+        .catch((err) => console.log(err));
 
-              function generateUUID() { // Public Domain/MIT
-              var d = new Date().getTime();//Timestamp
-              var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
-              return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                  var r = Math.random() * 16;//random number between 0 and 16
-                  if(d > 0){//Use timestamp until depleted
-                      r = (d + r)%16 | 0;
-                      d = Math.floor(d/16);
-                  } else {//Use microseconds since page-load if supported
-                      r = (d2 + r)%16 | 0;
-                      d2 = Math.floor(d2/16);
-                  }
-                  return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-    });
-}
+    }
+
+    function generateUUID() { // Public Domain/MIT
+      var d = new Date().getTime();//Timestamp
+      var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now() * 1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if (d > 0) {//Use timestamp until depleted
+          r = (d + r) % 16 | 0;
+          d = Math.floor(d / 16);
+        } else {//Use microseconds since page-load if supported
+          r = (d2 + r) % 16 | 0;
+          d2 = Math.floor(d2 / 16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+      });
+    }
 
 
-        });
+  });
 </script>
 </body>
+
 </html>
