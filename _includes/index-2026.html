@@ -1,0 +1,38 @@
+<!-- Header -->
+
+<main>
+    {% include video-cta.html %}
+
+    <!-- Scrolling Content Blocks -->
+    <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+
+        <!-- Combined Section: Featured Blog Post & Twitter Highlights -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Column 1: Featured Blog Post -->
+     
+            {% include post-latest-summary.html %}
+
+            <!-- Column 2: Twitter Highlights -->
+            {% include social-feed-main.html %}
+        </div>
+    </section>
+    <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- More Posts -->git 
+        {% include post-list-home.html %}
+    </section>    
+</main>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-video-container">
+            <!-- Replace 'VIDEO_ID' with your YouTube video ID -->
+            <iframe id="modalVideoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Promotional Video Modal"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
