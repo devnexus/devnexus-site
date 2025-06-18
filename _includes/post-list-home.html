@@ -2,26 +2,14 @@
             <div class="bg-white p-8 rounded-xl shadow-lg">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">More from Our Blog</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Blog Post 1 -->
+      {% for post in site.posts %}              
                     <div class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-                        <img src="https://placehold.co/280x180/9ca3af/ffffff?text=Article+A" alt="Blog Post Image" class="w-full h-40 object-cover rounded-md mb-3">
-                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">The Art of Effective Communication</h3>
-                        <p class="text-gray-600 text-sm mb-3 line-clamp-3">Mastering communication is key to success in any field. Discover our top strategies for clear and impactful messaging.</p>
+                        <img src="https://placehold.co/280x180/9ca3af/ffffff?text=An+Article" alt="Blog Post Image" class="w-full h-40 object-cover rounded-md mb-3">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">{{ post.title }}</h3>
+                        <p class="text-gray-600 text-sm mb-3 line-clamp-3">{{
+                            post }}</p>
                         <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm">Read Article &rarr;</a>
                     </div>
-                    <!-- Blog Post 2 -->
-                    <div class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-                        <img src="https://placehold.co/280x180/9ca3af/ffffff?text=Article+B" alt="Blog Post Image" class="w-full h-40 object-cover rounded-md mb-3">
-                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">Navigating the Remote Work Landscape</h3>
-                        <p class="text-gray-600 text-sm mb-3 line-clamp-3">Tips and tricks for thriving in a remote work environment, from maintaining productivity to fostering team connection.</p>
-                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm">Read Article &rarr;</a>
-                    </div>
-                    <!-- Blog Post 3 -->
-                    <div class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-                        <img src="https://placehold.co/280x180/9ca3af/ffffff?text=Article+C" alt="Blog Post Image" class="w-full h-40 object-cover rounded-md mb-3">
-                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">The Latest Trends in Digital Marketing</h3>
-                        <p class="text-gray-600 text-sm mb-3 line-clamp-3">Stay updated with the rapidly evolving world of digital marketing. Learn about new strategies and tools for your business.</p>
-                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium text-sm">Read Article &rarr;</a>
-                    </div>
+      {% endfor %}              
                 </div>
             </div>

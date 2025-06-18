@@ -33,6 +33,10 @@ collections:
     title: Organizers
     output: true
     permalink: /:collection/:path
+  posts:
+    title: Latest News
+    output: true
+    permalink: /:collection/:slug  
 email: info@ajug.org
 description: The longest-running and Largest Java Ecosystem Conference in the World.
 baseurl:
