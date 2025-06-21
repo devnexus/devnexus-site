@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: home-2026
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026

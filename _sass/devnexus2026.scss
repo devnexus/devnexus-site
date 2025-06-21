@@ -59,3 +59,24 @@
             border: 0;
             border-radius: 0.75rem;
         }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+        width: 100%;
+    }
+    .navbar-white-row {
+        background: #fff;
+        padding: 8px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .navbar-white-row .navbar-brand {
+        margin: 0;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+    .navbar-inverse {
+        margin-bottom: 0;
+    }

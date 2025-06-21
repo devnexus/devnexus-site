@@ -5,7 +5,7 @@
             <div class="relative z-10">
                 <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Unfold Your Potential</h1>
                 <p class="text-xl mb-8 drop-shadow-md">
-                    The largest developer focused conference in the Southeast.
+                    The largest enterprise developer conference in the Southeast.
                 </p>
                 <button id="openVideoModal" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                     Watch Our Story
@@ -17,3 +17,17 @@
                 </p>
             </div>
         </section>
+        <!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-video-container">
+            <!-- Replace 'VIDEO_ID' with your YouTube video ID -->
+            <iframe id="modalVideoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Promotional Video Modal"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
