@@ -1,0 +1,29 @@
+
+
+<div>
+    <nav class="navbar navbar-inverse" id="nav" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <img class="navbar-brand" src="/assets/img2026/dn-black-white-horizontal.png" alt="dev/nexus" />
+                </ul>                
+                <ul class="nav navbar-nav navbar-left">
+                    {% if site.cfp-is-open %}
+                    <li class="nav-link"><a href="/call-for-papers">CFP</a></li>
+                    {% endif %}
+                    <li class="nav-link"><a href="{{site.links.announcements}}">ANNOUNCEMENTS</a></li>
+                    <li class="nav-link"><a href="/past-conferences">PAST CONFERENCES</a></li>
+                    <li class="nav-link"><a href="{{site.links.recordings}}">RECORDINGS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
