@@ -1,5 +1,5 @@
 <!-- Header -->
-{% include 2026-nav-basic.html %}
+
 <main>
     {% include video-cta.html %}
 
@@ -8,17 +8,10 @@
 
         <!-- Combined Section: Featured Blog Post & Twitter Highlights -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <!-- Column 1: Featured Blog Post -->
-     
-            {% include post-latest-summary.html %}
-
-            <!-- Column 2: Twitter Highlights -->
-            {% include social-feed-main.html %}
+        {% for post in site.posts limit:4 %}
+            {{post}}
+        {% endfor %}
         </div>
-    </section>
-    <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <!-- More Posts -->
-        {% include post-list-home.html %}
     </section>    
 </main>
 
