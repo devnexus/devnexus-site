@@ -43,50 +43,15 @@ collections_config:
     path: _data
     name: Data
     icon: data_usage
+    description: ''
+    _enabled_editors:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
-  drafts:
-    path: _drafts
-    name: Drafts
-    icon: event
-    _inputs:
-      categories:
-        type: multiselect
-        options:
-          allow_create: true
-          empty_type: array
-          values: collections.posts[*].categories
-        cascade: true
-      tags:
-        type: multiselect
-        options:
-          allow_create: true
-          empty_type: array
-          values: collections.posts[*].tags
-        cascade: true
-    create:
-      path: ''
-      publish_to: posts
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  pages:
-    path: ''
-    name: Pages
-    icon: wysiwyg
-    description: ''
-    _enabled_editors:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  event-instructions:
-    path: _event-instructions
-    name: Event Instructions
-    icon: construction
-    disable_add: false
-    disable_add_folder: true
-    disable_file_actions: false
+collection_groups:
+  - heading: Highlights
+    collections:
+      - posts
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
