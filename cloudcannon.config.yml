@@ -37,7 +37,7 @@ collections_config:
     name: Organizers
     icon: equalizer
     disable_add: false
-    disable_add_folder: false
+    disable_add_folder: true
     disable_file_actions: false
   data:
     path: _data
@@ -85,30 +85,7 @@ collections_config:
     name: Event Instructions
     icon: construction
     disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  speakers:
-    path: _speakers
-    name: Speakers
-    icon: speaker
-    description: ''
-    _enabled_editors:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  events:
-    path: _events
-    name: Events
-    icon: event
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  tracks:
-    path: _tracks
-    name: Tracks
-    icon: stacks
-    disable_add: false
-    disable_add_folder: false
+    disable_add_folder: true
     disable_file_actions: false
 _snippets_imports:
   jekyll: true
