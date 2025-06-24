@@ -1,10 +1,74 @@
 _schema: _schema
+source: /
 paths:
   uploads: uploads
   static: ''
   data: _data
   layouts: _layouts
   includes: _includes
+collections_config:
+  posts:
+    path: _posts
+    glob:
+    name:
+    singular_name:
+    icon: news
+    output: true
+    url:
+    filter:
+    parse_branch_index:
+    documentation:
+    description: ''
+    preview:
+    sort:
+    sort_options:
+    singular_key:
+    _editables:
+    _enabled_editors:
+      - visual
+    _inputs:
+    _select_data:
+    _structures:
+    add_options:
+    create:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url:
+    schemas:
+      embedded-social:
+        path:
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name:
+        icon: notes
+        preview:
+        _editables:
+        _enabled_editors:
+        _inputs:
+        _select_data:
+        _structures:
+          embedded-social:
+            style: select
+            id_key: layout
+            values:
+              - id:
+                default:
+                icon:
+                image:
+                label:
+                picker_preview:
+                preview:
+                tags:
+                groups:
+                place_groups_below:
+                tabbed:
+                value:
+        create:
+        new_preview_url:
+    schema_key:
 _enabled_editors:
   - visual
 _inputs:
