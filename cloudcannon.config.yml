@@ -7,6 +7,13 @@ collections_config:
     path: _posts
     name: Posts
     icon: event_available
+    schemas:
+     default:
+      path: .cloudcannon/schemas/post-article.md
+      name: New blog post
+     social:
+       path: .cloudcannon/schemas/embed-post.md
+       name: Embed Social Post
     _inputs:
       categories:
         type: multiselect
