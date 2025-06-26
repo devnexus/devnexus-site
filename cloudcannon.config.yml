@@ -1,4 +1,5 @@
 _schema: _schema
+source: /
 paths:
   uploads: uploads
   static: ''
@@ -7,13 +8,7 @@ collections_config:
     path: _posts
     name: Posts
     icon: event_available
-    schemas:
-      default:
-        path: .cloudcannon/schemas/post-article.md
-        name: New Article
-      social:
-         path: .cloudcannon/schemas/embedded-posts.md
-         name: Embedded Social Post
+    disable_url: false
     _inputs:
       categories:
         type: multiselect
@@ -39,10 +34,28 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post-article.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Article
+        icon: notes
+      social:
+        path: .cloudcannon/schemas/embedded-posts.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: Embedded Social Post
+        icon: notes
   organizers:
     path: _organizers
     name: Organizers
     icon: equalizer
+    disable_url: false
     disable_add: false
     disable_add_folder: true
     disable_file_actions: false
@@ -50,6 +63,7 @@ collections_config:
     path: _data
     name: Data
     icon: data_usage
+    disable_url: false
     description: ''
     _enabled_editors:
     disable_add: true
