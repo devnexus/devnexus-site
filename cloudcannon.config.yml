@@ -12,7 +12,7 @@ collections_config:
         path: .cloudcannon/schemas/post-article.md
         name: New Article
       social:
-         path: .cloudcannon/schemas/embedded-post.md
+         path: .cloudcannon/schemas/embedded-posts.md
          name: Embedded Social Post
     _inputs:
       categories:
