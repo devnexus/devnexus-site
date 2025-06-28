@@ -1,0 +1,22 @@
+<section class="bg-cover bg-center min-h-[400px] flex items-center justify-center" style="background-image: url('/assets/img/hero.jpg');">
+    <div class="flex flex-col items-center w-full">
+ 
+        <img class="mx-auto block w-3/4 h-auto mt-4 bg-black bg-opacity-30 p-8 rounded-lg" src="/assets/img2026/dn-white-transparent-horizontal.png" alt="logo"/>
+     
+        <div class="bg-black bg-opacity-60 p-8 rounded-lg max-w-xl w-full mx-auto mt-6">
+    
+            <ul class="flex items-center space-x-6 my-4">
+                {% assign dates = site.dates | default: "00-99 XXX" %}
+                <li class="flex items-center text-white text-lg">
+                    {{ dates | escape }}
+                </li>
+                <li class="flex items-center text-white text-lg">
+                    Atlanta, GA
+                </li>
+            </ul>
+            <h3 class="text-white text-2xl font-bold text-center mt-4">
+                Celebrate Java's 30th Anniversary with us
+            </h3>
+        </div>
+    </div>
+</section>
