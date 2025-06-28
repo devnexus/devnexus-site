@@ -1,36 +1,41 @@
 <div class="footer">
     <div>
-        <img  class="center-block" style="margin-top: 40px;padding-left: 50px;width:auto;height: auto" src="/assets/img2026/dn-white-transparent-horizontal.png" alt="logo"/>
+        <img class="mx-auto block w-1/2 h-auto mt-4" src="/assets/img2026/dn-white-transparent-horizontal.png" alt="logo"/>
     </div>
-    <div style="text-align: center;margin-top: 40px">
+    <div class="text-center mt-10">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-center pl-0 m-0">
 
-        <ul style="display: flex; justify-content: center; gap: 20px; padding-left: 0; margin: 0;">
-            {% comment %}
-            <li style="display: inline; margin: 0 8px;">
+            <li class="inline mx-2">
                 <a href="/speakers" class="text">speakers</a>
             </li>
-            <li style="display: inline; margin: 0 8px;">
+            <li class="inline mx-2">
                 <a href="/presentations" class="text">sessions</a>
             </li>
-            <li style=" display: inline; margin: 0 8px;">
+            <li class="inline mx-2">
                 <a href="/conference-info" class="text">conference info</a>
             </li>
-            {% endcomment %}
-            <li style="display: inline; margin: 0 8px;">
+    
+            <li>
                 <a href="/past-conferences" class="text">past conferences</a>
             </li>
-            <li style="display: inline; margin: 0 8px;">
+            <li>
                 <a href="/#sponsorlist" class="text">sponsors</a>
             </li>
-         <li style=" display: inline; margin: 0 8px;"></li><a href="/code-of-conduct" class="text">code of conduct</a></li>
-         <li style=" display: inline; margin: 0 8px;"></li><a href="/privacy-policy" class="text">privacy policy</a></li>
-         <li style=" display: inline; margin: 0 8px;"></li><a href="/organizers" class="text">organizers</a>  </li>
+            <li>
+                <a href="/code-of-conduct" class="text">code of conduct</a>
+            </li>
+            <li>
+                <a href="/privacy-policy" class="text">privacy policy</a>
+            </li>
+            <li>
+                <a href="/organizers" class="text">organizers</a>
+            </li>
         </ul>
     </div>
-    <div style="text-align: center;margin-top: 5px">
+    <div class="text-center mt-1.5">
         <a href="/we-are-opensource" class="text">We are open-source</a>
     </div>
-    <div style="text-align: center;margin-top: 5px">
+    <div class="text-center mt-1.5">
        {% include inline-social.html %}
     </div>
 </div>
