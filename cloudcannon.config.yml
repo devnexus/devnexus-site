@@ -4,6 +4,10 @@ paths:
   uploads: uploads
   static: ''
 collections_config:
+  sponsors:
+   path: _sponsors
+  home:
+   path: _includes/2026-home.html  
   posts:
     path: _posts
     name: Posts
@@ -26,8 +30,9 @@ collections_config:
         cascade: true
     add_options:
       - name: Add Post
-      - name: Add Draft
-        collection: drafts
+        schema: default  
+      - name: Embed Social
+        collection: social
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
@@ -70,9 +75,14 @@ collections_config:
     disable_add_folder: true
     disable_file_actions: true
 collection_groups:
-  - heading: Highlights
+  - heading: Current News
     collections:
       - posts
+  - heading: Home Page
+    collections:
+      - sponsors
+      - brand
+      - home
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
