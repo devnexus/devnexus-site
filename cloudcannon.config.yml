@@ -32,7 +32,7 @@ collections_config:
       - name: Add Post
         schema: default  
       - name: Embed Social
-        collection: social
+        schema: social
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
