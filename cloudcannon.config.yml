@@ -5,7 +5,8 @@ paths:
   static: ''
 collections_config:
   sponsors:
-   path: _data/sponsors.csv
+   path: _data
+   glob: sponsors.csv
    type: data
   posts:
     path: _posts
