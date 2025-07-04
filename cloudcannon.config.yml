@@ -1,65 +1,14 @@
 _schema: _schema
+source: /
 paths:
   uploads: uploads
   static: ''
 collections_config:
-  pages:
-    path: ''
-    name: Pages
-    icon: wysiwyg
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  drafts:
-    path: _drafts
-    name: Drafts
-    icon: event
-    _inputs:
-      categories:
-        type: multiselect
-        options:
-          allow_create: true
-          empty_type: array
-          values: collections.posts[*].categories
-        cascade: true
-      tags:
-        type: multiselect
-        options:
-          allow_create: true
-          empty_type: array
-          values: collections.posts[*].tags
-        cascade: true
-    create:
-      path: ''
-      publish_to: posts
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  event-instructions:
-    path: _event-instructions
-    name: Event Instructions
-    icon: construction
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  events:
-    path: _events
-    name: Events
-    icon: event
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  organizers:
-    path: _organizers
-    name: Organizers
-    icon: equalizer
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
   posts:
     path: _posts
     name: Posts
     icon: event_available
+    disable_url: false
     _inputs:
       categories:
         type: multiselect
@@ -85,27 +34,45 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  speakers:
-    path: _speakers
-    name: Speakers
-    icon: speaker
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post-article.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Article
+        icon: notes
+      social:
+        path: .cloudcannon/schemas/embedded-posts.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: Embedded Social Post
+        icon: notes
+  organizers:
+    path: _organizers
+    name: Organizers
+    icon: equalizer
+    disable_url: false
     disable_add: false
-    disable_add_folder: false
+    disable_add_folder: true
     disable_file_actions: false
   data:
     path: _data
     name: Data
     icon: data_usage
+    disable_url: false
+    description: ''
+    _enabled_editors:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
-  tracks:
-    path: _tracks
-    name: Tracks
-    icon: stacks
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+collection_groups:
+  - heading: Highlights
+    collections:
+      - posts
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
