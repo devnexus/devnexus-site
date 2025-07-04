@@ -5,9 +5,8 @@ paths:
   static: ''
 collections_config:
   sponsors:
-   path: _sponsors
-  home:
-   path: _includes/2026-home.html  
+   path: _data/sponsors.csv
+   type: data
   posts:
     path: _posts
     name: Posts
