@@ -80,8 +80,6 @@ collection_groups:
   - heading: Home Page
     collections:
       - sponsors
-      - brand
-      - home
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
