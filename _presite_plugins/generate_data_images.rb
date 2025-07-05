@@ -21,22 +21,27 @@ Dir.glob(File.join(dir, '*.html')).each do |html_file|
 
       # Add localhost if no host in URL
       uri = URI.parse(img_url)
-      if !uri.host
-        img_url = "http://localhost:4000#{img_url.start_with?('/') ? '' : '/'}#{img_url}"
-      end
+      if uri.host == 'cfp.devnexus.com'
+        changed = true
+        "#{prefix}#{''}#{suffix}"
+      else
+        if !uri.host
+          img_url = "http://localhost:4000#{img_url.start_with?('/') ? '' : '/'}#{img_url}"
+        end
 
-      image_data = URI.open(img_url) { |f| f.read }
-      ext = File.extname(img_url.split('?').first)
-      mime = case ext.downcase
-             when '.jpg', '.jpeg' then 'image/jpeg'
-             when '.png' then 'image/png'
-             when '.gif' then 'image/gif'
-             else 'application/octet-stream'
-             end
-      base64_image = Base64.strict_encode64(image_data)
-      data_uri = "data:#{mime};base64,#{base64_image}"
-      changed = true
-      "#{prefix}#{data_uri}#{suffix}"
+        image_data = URI.open(img_url) { |f| f.read }
+        ext = File.extname(img_url.split('?').first)
+        mime = case ext.downcase
+               when '.jpg', '.jpeg' then 'image/jpeg'
+               when '.png' then 'image/png'
+               when '.gif' then 'image/gif'
+               else 'application/octet-stream'
+               end
+        base64_image = Base64.strict_encode64(image_data)
+        data_uri = "data:#{mime};base64,#{base64_image}"
+        changed = true
+        "#{prefix}#{data_uri}#{suffix}"
+      end
     rescue => e
       puts "Failed to process image #{img_url} in #{html_file}: #{e}"
       match
