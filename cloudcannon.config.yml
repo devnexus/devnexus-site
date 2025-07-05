@@ -51,18 +51,7 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: true
         name: Embedded Social Post
-        icon: notes
-  home_page:
-  path: _includes
-  glob:
-   - 2026-home*
-   - marketing-video.html
-   - post-list-home.html
-   - sponsor-listing.md
-  name: sections
-  disable_url: true
-  description: sections and layout of home page
-   
+        icon: notes  
   organizers:
     path: _organizers
     name: Organizers
@@ -85,9 +74,6 @@ collection_groups:
   - heading: Current News
     collections:
       - posts
-  - heading: Home Page
-    collections: 
-      - home_page
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
