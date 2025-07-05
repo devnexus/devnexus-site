@@ -4,25 +4,6 @@ paths:
   uploads: uploads
   static: ''
 collections_config:
-  sponsors:
-    path: _data
-    glob:
-      - '*sponsor*'
-    name: sponsors
-    icon: handshake
-    disable_url: true
-    description: manage sponsor data
-    _enabled_editors:
-    create:
-      path:
-      extra_data:
-      publish_to:
-      _inputs:
-      _select_data:
-      _structures:
-    disable_add: true
-    disable_add_folder: true
-    disable_file_actions: false
   posts:
     path: _posts
     name: Posts
@@ -83,7 +64,7 @@ collections_config:
     path: _data
     name: Data
     icon: data_usage
-    disable_url: false
+    disable_url: true
     description: ''
     _enabled_editors:
     disable_add: true
@@ -95,7 +76,7 @@ collection_groups:
       - posts
   - heading: Admin
     collections:
-      - sponsors
+      - data
       - organizers
 _snippets_imports:
   jekyll: true
