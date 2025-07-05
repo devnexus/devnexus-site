@@ -93,6 +93,10 @@ collection_groups:
   - heading: Current News
     collections:
       - posts
+  - heading: Admin
+    collections:
+      - sponsors
+      - organizers
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
