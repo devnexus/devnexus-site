@@ -4,6 +4,25 @@ paths:
   uploads: uploads
   static: ''
 collections_config:
+  sponsors:
+    path: _data
+    glob:
+      - '*sponsor*'
+    name: sponsors
+    icon: handshake
+    disable_url: true
+    description: manage sponsor data
+    _enabled_editors:
+    create:
+      path:
+      extra_data:
+      publish_to:
+      _inputs:
+      _select_data:
+      _structures:
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: false
   posts:
     path: _posts
     name: Posts
@@ -26,7 +45,7 @@ collections_config:
         cascade: true
     add_options:
       - name: Add Post
-        schema: default  
+        schema: default
       - name: Embed Social
         schema: social
     create:
@@ -51,7 +70,7 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: true
         name: Embedded Social Post
-        icon: notes  
+        icon: notes
   organizers:
     path: _organizers
     name: Organizers
