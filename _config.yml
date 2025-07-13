@@ -13,6 +13,8 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026
 feedback: show
+tailwindcss:
+  config: "./tailwind.config.js"
 collections:
   speakers:
     title: Speakers 2025
