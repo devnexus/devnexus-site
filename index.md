@@ -4,9 +4,9 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026
 ---
-<!-- Header -->
+<div>
 {% include 2026-home-hero.html %}
-<main>
+
     {% include video-cta.html %}
 
     <!-- Scrolling Content Blocks -->
@@ -19,4 +19,4 @@ branding:
         {% endfor %}
         </div>
     </section>    
-</main>
+</div>

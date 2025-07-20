@@ -4,15 +4,18 @@
 {% include head.html %}
 
 <body>
-  <div class="fixed top-0 left-0 w-full z-50">
+  <div class="fixed top-0 left-0 w-full h-[80vh] z-50"></div>
     {% include 2026-nav-basic.html %}
   </div>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXXPHQ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <main class="pt-16 container mx-auto px-4 py-8">
   {{ content }}
 
+  </main>
   {% include footer.html %}
   <!-- javascipt -->
   <script src="/assets/js/all.js"></script>
