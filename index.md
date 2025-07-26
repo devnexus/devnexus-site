@@ -15,7 +15,7 @@ branding:
         <!-- Combined Section: Featured Blog Post & Twitter Highlights -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         {% for post in site.posts limit:4 %}
-            {{post}}
+              {% include post-home-thumbnail.html post=post %}
         {% endfor %}
         </div>
     </section>    

@@ -4,40 +4,37 @@ title: Latest News
 permalink: /posts/index.html
 ---
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
+<div class="container mt-32">
+    <div class="col-md-8">
+        <main>
             {% assign latest_post = site.posts.first %}
             <div class="latest-post">
-                <h2><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h2>
+                <h2><a href="{{ latest_post.url }}">Title needs to go here</a></h2>
                 <p class="post-date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
                 <div class="post-content">
-                    {{ latest_post.excerpt }}
-                    <a href="{{ latest_post.url }}" class="read-more">Read more &raquo;</a>
+                    {{ latest_post.content }}
                 </div>
             </div>
-            
-            <div class="row recent-posts">
+        </main>    
+        <div class="row recent-posts">
                 {% for post in site.posts offset:1 limit:5 %}
                 <div class="col-md-4 post-thumbnail">
                     <a href="{{ post.url }}">
                         {% if post.thumbnail %}
                         <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="img-thumbnail">
                         {% elsif post.icon %}   
-                         <span class="articons {{post.icon}}"></span>
+                         <span class="articons {{ post.icon }}"></span>
                         {% else %}
-                        {{post.track}}
+                        {{ post.track }}
                         {% endif %}
                         <h4>{{ post.title }}</h4>
                     </a>
                     <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
                 </div>
                 {% endfor %}
-            </div>
         </div>
-        
-        <div class="col-md-4">
-            <div class="sidebar">
+    </div>
+    <sidebar class="col-md-4 sidebar">
                 <h3 class="text-xl font-bold mb-4">Posts by Date</h3>
                 
                 <div class="post-index space-y-2">
@@ -80,7 +77,6 @@ permalink: /posts/index.html
                             </div>
                         </div>
                     {% endfor %}
-                </div>
                 
                 <script>
                     function toggleAccordion(id) {
@@ -94,6 +90,5 @@ permalink: /posts/index.html
                     }
                 </script>
             </div>
-        </div>
-    </div>
+     </sidebar>           
 </div>
