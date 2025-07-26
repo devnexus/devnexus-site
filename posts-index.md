@@ -9,7 +9,7 @@ permalink: /posts/index.html
         <main>
             {% assign latest_post = site.posts.first %}
             <div class="latest-post">
-                <h2><a href="{{ latest_post.url }}">Title needs to go here</a></h2>
+                <h2><a href="{{ latest_post.url }}">{{latest_post.title}}</a></h2>
                 <p class="post-date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
                 <div class="post-content">
                     {{ latest_post.content }}
