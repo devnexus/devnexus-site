@@ -1,5 +1,10 @@
 ---
 layout: post-embedded
-title: old xwitter post
+title: Venkat Workshop - Applying Design Patterns
+track: Workshops
+tags: 
+- workshop
+- architecture 
+icon: lego-builder
 ---
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The most awesome <a href="https://twitter.com/venkat_s?ref_src=twsrc%5Etfw">@venkat_s</a> leads a full day workshop “Applying Design Patterns”. <br><br>Get hands-on experience from a master craftsman on how to prudently identify &amp; use patterns that help create extensible code <a href="https://t.co/aZpWQKSTe3">https://t.co/aZpWQKSTe3</a><br><br>Atlanta March 2019<br>15 TRACKS<br>1 <a href="https://twitter.com/java?ref_src=twsrc%5Etfw">@java</a> PLATFORM <a href="https://t.co/WlVXVFXaUy">pic.twitter.com/WlVXVFXaUy</a></p>&mdash; Devnexus (@devnexus) <a href="https://twitter.com/devnexus/status/1087927113389350914?ref_src=twsrc%5Etfw">January 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
