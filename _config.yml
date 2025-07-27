@@ -31,6 +31,9 @@ collections:
   tracks:
     title: Tracks
     output: false
+  track-details:
+    title: Track Details
+    output: false
   organizers:
     title: Organizers
     output: true
