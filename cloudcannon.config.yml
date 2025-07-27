@@ -60,6 +60,23 @@ collections_config:
     disable_add: false
     disable_add_folder: true
     disable_file_actions: false
+  track-details:
+    path: _track-details
+    name: Tracks
+    icon: equalizer
+    disable_url: false
+    disable_add: false
+    disable_add_folder: true
+    disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/track-detail.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Track
+        icon: notes
   data:
     path: _data
     name: Data
@@ -78,6 +95,8 @@ collection_groups:
     collections:
       - data
       - organizers
+      - tracks
+  
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
