@@ -2,7 +2,7 @@
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2026
-dates: March 3-6, 2026 &#2002 Georgia World Congress Center
+dates: March 3-6, 2026 · Georgia World Congress Center
 timezone: UTC
 active-header: navigation-post-show.html
 cfp-is-open: false
