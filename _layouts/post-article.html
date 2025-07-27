@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<div class="mt-32">
-<main class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center md:text-left md:items-start">
-      <div class="flex flex-row items-center gap-4 w-full mb-6">
-        <img src="{{ page.img }}" alt="{{ page.title }}" class="w-1/4 h-auto object-cover rounded-md"> 
-        <h1 class="featured-header text-3xl font-bold text-gray-900">{{ page.title }}</h1>
-      </div>
-       <p class="text-lg text-gray-700 mb-4"></p>
+<div class="container mt-32">
+<main class="col-md-8">
+      <h1 class="featured-header text-3xl">{{ page.title }}</h1>  
+       <img class="col-md-4 mb-6" src="{{ page.img }}" alt="{{ page.title }}"> 
+       <div class="col-md-8 mb-4 text-lg">
           {{content}}
-       </p>
+       </div>
 </main>
+{%include posts-index-by-date.html %}
 </div>
