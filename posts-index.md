@@ -6,19 +6,19 @@ permalink: /posts/index.html
 
 <div class="container mt-32">
     <div class="col-md-8">
-        <main>
+        <main class="mb-16">
             {% assign latest_post = site.posts.first %}
-            <div class="latest-post">
-                <h2><a href="{{ latest_post.url }}">{{latest_post.title}}</a></h2>
-                <p class="post-date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
+            <div class="latest-post text-xl">
+                <h2  class="text-6xl"><a href="{{ latest_post.url }}">{{latest_post.title}}</a></h2>
+                <p class="post-date text-base">{{ latest_post.date | date: "%B %d, %Y" }}</p>
                 <div class="post-content">
                     {{ latest_post.content }}
                 </div>
             </div>
         </main>    
-        <div class="row recent-posts">
+        <div class="row recent-posts  text-lg">
                 {% for post in site.posts offset:1 limit:5 %}
-                <div class="col-md-4 post-thumbnail">
+                <div class="col-md-4 post-thumbnail text-blue-500">
                     <a href="{{ post.url }}">
                         {% if post.thumbnail %}
                         <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="img-thumbnail">
@@ -27,15 +27,15 @@ permalink: /posts/index.html
                         {% else %}
                         {{ post.track }}
                         {% endif %}
-                        <h4>{{ post.title }}</h4>
+                        <h4 class="text-2xl">{{ post.title }}</h4>
                     </a>
-                    <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                    <p class="post-date text-base">{{ post.date | date: "%B %d, %Y" }}</p>
                 </div>
                 {% endfor %}
         </div>
     </div>
-    <sidebar class="col-md-4 sidebar">
-                <h3 class="text-xl font-bold mb-4">Posts by Date</h3>
+    <sidebar class="col-md-3 sidebar">
+                <h3 class="text-xl font-bold mb-4">Posts Index</h3>
                 
                 <div class="post-index space-y-2">
                     {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
@@ -46,7 +46,7 @@ permalink: /posts/index.html
                             <button class="flex justify-between items-center w-full px-4 py-2 text-left font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none"
                                     onclick="toggleAccordion('year-{{ year.name }}')"
                                     aria-expanded="{{ year.name == currentYear }}">
-                                <span>{{ year.name }}</span>
+                                <span class="text-base bold">{{ year.name }}</span>
                                 <svg id="icon-{{ year.name }}" class="w-5 h-5 transform {% if year.name == currentYear %}rotate-180{% endif %}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
@@ -59,7 +59,7 @@ permalink: /posts/index.html
                                         <button class="flex justify-between items-center w-full px-3 py-1 text-left font-medium text-sm bg-gray-50 hover:bg-gray-100 focus:outline-none rounded"
                                                 onclick="toggleAccordion('month-{{ year.name }}-{{ month.name }}')"
                                                 aria-expanded="false">
-                                            <span>{{ month.name }}</span>
+                                            <span class="text-lg">{{ month.name }}</span>
                                             <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                             </svg>
@@ -67,7 +67,7 @@ permalink: /posts/index.html
                                         
                                         <div id="month-{{ year.name }}-{{ month.name }}" class="hidden pl-4 py-1 space-y-1">
                                             {% for post in month.items %}
-                                                <div class="text-sm">
+                                                <div class="text-base text-blue-500">
                                                     <a href="{{ post.url }}" class="hover:text-blue-600">{{ post.title }}</a>
                                                 </div>
                                             {% endfor %}
