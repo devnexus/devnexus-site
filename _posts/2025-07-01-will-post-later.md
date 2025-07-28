@@ -1,10 +1,11 @@
 ---
+_schema: default
 layout: post-article
-title: Best Deals Now!
-img: https://placehold.co/400x250/3b82f6/ffffff?text=Early+Bird+Special
+title: Super Early Bird. Best Deals Now!
+img: /assets/images/early-bird-catches-the-worm.jpeg
 ---
-Devnexus tickets are the cheapest they will every be!
-Register today!!!!!!!!!
+Devnexus tickets are the cheapest they will every be! Register today!!!!!!!!!
 
-and a bunch more text about devnexus 2026 and why it will be so cool to attend
-maybe something like the contest to earn a free hotel room by bringing friends to attend or something of that nature
+**The SUPER EARLY BIRD passes are available until September 4 for only $395**
+
+Devnexus is the largest and longest-running Java ecosystem conference in the U.S., bringing together over 1,500 developers for two or three days for hands-on workshops, expert-led sessions, and live demos. The conference features 10 focused tracks—including AI, Architecture, Web, Java Frameworks, and Security—offering 100+ deep-dive sessions that cover everything from generative AI and software architecture to leadership and security. Devnexus is where passionate developers connect, learn, and stay ahead of the curve in the ever-evolving world of technology.<br><br>[REGISTER HERE](https://reg.connectevents.io/ConnectEvents/devnexus2026/ "Devnexus 2026 Registration"){: target="_blank" rel="noopener"}
