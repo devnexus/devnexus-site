@@ -8,8 +8,21 @@ collections_config:
     path: _posts
     name: Posts
     icon: event_available
+    preview:
+      text:
+        -key: title
+      subtext:
+        -key: date
     disable_url: false
     _inputs:
+      title:
+        type: text
+        required: true
+        placeholder: 'Title of the post'
+      img:
+        type: image
+        required: false
+        placeholder: 'Image for the post'
       categories:
         type: multiselect
         options:
@@ -39,16 +52,16 @@ collections_config:
       default:
         path: .cloudcannon/schemas/post-article.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
         name: New Article
         icon: notes
       social:
         path: .cloudcannon/schemas/embedded-posts.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
+        hide_extra_inputs: true
+        remove_empty_inputs: true
         remove_extra_inputs: true
         name: Embedded Social Post
         icon: notes
