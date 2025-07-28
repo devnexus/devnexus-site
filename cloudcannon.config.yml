@@ -15,6 +15,8 @@ collections_config:
       subtext:
         '-key': date
     _inputs:
+      layout:
+        type: hidden
       img:
         type: image
         options:
@@ -127,7 +129,7 @@ collection_groups:
     collections:
       - data
       - organizers
-      - tracks-details
+      - track-details
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
