@@ -1,28 +1,45 @@
 _schema: _schema
 source: /
 paths:
-  uploads: uploads
+  uploads: /assets/images
   static: ''
 collections_config:
   posts:
     path: _posts
     name: Posts
     icon: event_available
+    disable_url: false
     preview:
       text:
-        -key: title
+        '-key': title
       subtext:
-        -key: date
-    disable_url: false
+        '-key': date
     _inputs:
-      title:
-        type: text
-        required: true
-        placeholder: 'Title of the post'
       img:
         type: image
+        options:
+          paths:
+            uploads: /assets/img/posts
+          accepts_mime_types:
+            - image/png
+            - image/jpeg
+            - image/svg
+          allowed_sources:
+            - site-files
+          required: false 
+          max_file_size: 5242880
+      pattern: (?i)\.(jpe?g|png|svg)$
+      pattern_message: Please select an image file
+      title:
+        type: text
+        cascade: true
+        required: true
+        placeholder: Title of the post
+      img:
+        type: image
+        cascade: true
         required: false
-        placeholder: 'Image for the post'
+        placeholder: Image for the post
       categories:
         type: multiselect
         options:
@@ -78,6 +95,8 @@ collections_config:
     name: Tracks
     icon: equalizer
     disable_url: false
+    description: ''
+    _enabled_editors:
     disable_add: false
     disable_add_folder: true
     disable_file_actions: false
@@ -108,8 +127,7 @@ collection_groups:
     collections:
       - data
       - organizers
-      - tracks
-  
+      - tracks-details
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
