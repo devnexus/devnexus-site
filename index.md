@@ -38,19 +38,8 @@ branding:
         </section> <!-- Correctly closing the main section div -->
     {% assign sponsors_by_level = site.data.sponsors | group_by: "sponsorlevel" %}
     <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 justify-items-center">
-      {% assign levels_order = "platinum,gold,silver,bronze,startup,community" | split: "," %}
-        <div class="mb-12  ">
-          {% for level_name in levels_order %}
-            {% assign level = sponsors_by_level | where: "name", level_name | first %}
-            {% if level and level.items.size > 0 %}
-            <h4 class="text-lg md:text-4xl text-center bg-gray-200 py-4">{{level.name | capitalize }} Sponsors</h4>
-              <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-justify-center">
-              {% for item in level.items %}
-              <a href="{{item.home_path_url}}"><img class="img-responsive" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
-              {% endfor %}
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
+     <div class="mb-12">
+      {% include sponsor-listing.html %}
+     </div> 
     </section>    
 </div>
