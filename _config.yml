@@ -2,7 +2,7 @@
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2026
-dates: March 3-6, 2026 · Georgia World Congress Center
+dates: March 4-6, 2026 · Georgia World Congress Center, Atlanta USA
 timezone: UTC
 active-header: navigation-post-show.html
 cfp-is-open: false
@@ -51,8 +51,8 @@ links:
    stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
    hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
    cfp: https://sessionize.com/devnexus-2025/
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2025/
-   signIn: https://reg.connectevents./ConnectEvents/devnexus2025/
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
+   signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
    announcements: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
    recordings: https://www.youtube.com/@devnexus-conference/videos
    reg_maillist: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
