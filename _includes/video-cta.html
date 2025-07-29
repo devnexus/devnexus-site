@@ -1,15 +1,12 @@
         <!-- Hero Section: Background Image with Modal Video CTA -->
-        <section class="relative h-96 flex items-center justify-center text-white text-center p-4">
-            <div class="absolute inset-0 bg-black rounded-b-xl"></div>
-            <div class="relative z-10">
-                <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">What is Devnexus?</h1>
-                <p class="text-3xl mb-8 drop-shadow-md">
-                    Devnexus is the largest and longest-running Java ecosystem conference in the U.S. and a leading global tech event. Founded by the Atlanta Java Users Group in 2004, it draws 1500+ developers for three days of hands-on workshops, expert-led sessions, and live demos. With 10 tracks and 100+ sessions, Devnexus offers deep dives into the latest technologies and a chance to connect with top technologists and fellow developers.
-                </p>
-                <button id="openVideoModal" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    See the Devnexus vibe
-                </button>
-            </div>
+        <section class="bg-black text-white p-6 rounded-xl flex flex-col items-center">
+            <h1 class="text-lg md:text-2xl font-bold mb-4">What is Devnexus?</h1>
+            <p class="text-base mb-6 md:w-2/3 text-center">
+                Devnexus is the largest and longest-running Java ecosystem conference in the U.S. and a leading global tech event. Founded by the Atlanta Java Users Group in 2004, it draws 1500+ developers for three days of hands-on workshops, expert-led sessions, and live demos. With 10 tracks and 100+ sessions, Devnexus offers deep dives into the latest technologies and a chance to connect with top technologists and fellow developers.
+            </p>
+            <button id="openVideoModal" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                See the Devnexus vibe
+            </button>
         </section>
         <!-- Video Modal -->
 <div id="videoModal" class="modal">
@@ -17,7 +14,7 @@
         <span class="close-button">&times;</span>
         <div class="modal-video-container">
             <!-- Replace 'VIDEO_ID' with your YouTube video ID -->
-            <iframe id="modalVideoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Promotional Video Modal"
+            <iframe id="modalVideoFrame" src="https://www.youtube.com/watch?v=HScqDh4AzEc&list=PLid93BOrASLPwdAIvI07xih7atlb610oy" title="Feel the Devnexus Vibe"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
