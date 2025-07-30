@@ -121,6 +121,10 @@ collections_config:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
+  cta:
+    - path: _includes/buttons
+      name: CTA Buttons
+      description: Buttons used to connect to registration and other calls to action.
 collection_groups:
   - heading: Current News
     collections:
@@ -130,6 +134,7 @@ collection_groups:
       - data
       - organizers
       - track-details
+      - cta
 _snippets_imports:
   jekyll: true
 timezone: America/New_York
