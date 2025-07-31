@@ -13,30 +13,28 @@ branding:
       <section class="max-w-7xl mx-auto w-full bg-white rounded-xl shadow-lg overflow-hidden md:flex">
         <!-- Left Column - Track Details -->
          <div class="md:w-1/2 bg-indigo-50 p-4">
-          <div class="grid grid-cols-1 gap-4 p-4">
-          <h2 class="text-lg md:text-4xl">Tracks</h2>
-            {% for track in site.track-details%}
-            {{ track }}
+            <h2 class="text-lg md:text-4xl mb-4">Tracks</h2>
+            {% assign tracks_by_theme = site.track-details | group_by: "theme" | sort: "name" %}
+            {% for theme_group in tracks_by_theme %}
+                  {% for track in theme_group.items %}
+                     {{track}}
+                  {% endfor %}
             {% endfor %}
-          </div>    
-        </div>
-
-        <!-- Right Column - Latest Posts -->
-        <div class="md:w-1/2 bg-indigo-50 p-4">
-          <div class="grid grid-cols-1 gap-4 p-4">
-            <h2 class="text-lg md:text-4xl">Latest News</h2>
-            {% for post in site.posts limit:4 %}
-            <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">{{ post.title }}</h3>
-            <p class="text-sm text-gray-600 mb-3">{{ post.date | date: "%B %d, %Y" }}</p>
-            <p class="text-gray-700 mb-3">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-            <a href="{{ post.url }}" class="text-indigo-600 font-medium hover:text-indigo-800">Read more →</a>
+          </div>  
+          <!-- Right Column - Latest News -->
+          <div class="md:w-1/2 bg-indigo-50 p-4">
+            <h2 class="text-lg md:text-4xl mb-4">Latest News</h2>
+            {% for post in site.posts limit:8 %}
+            <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow mb-4">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">{{ post.title }}</h3>
+              <p class="text-sm text-gray-600 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+              <p class="text-gray-700 mb-2">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+              <a href="{{ post.url }}" class="text-indigo-600 font-medium hover:text-indigo-800">Read more →</a>
             </div>
-            {% endfor %}
-          </div>    
+            {% endfor %}   
         </div>
         </section> <!-- Correctly closing the main section div -->
-    {% assign sponsors_by_level = site.data.sponsors | group_by: "sponsorlevel" %}
+
     <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 justify-items-center">
      <div class="mb-12">
       {% include sponsor-listing.html %}
