@@ -1,12 +1,15 @@
         <!-- Hero Section: Background Image with Modal Video CTA -->
         <section class="bg-black text-white p-6 rounded-xl flex flex-col items-center">
             <h1 class="text-lg md:text-2xl font-bold mb-4">What is Devnexus?</h1>
-            <p class="text-base mb-6 md:w-2/3 text-center">
+            <p class="md:text-lg mb-6 md:w-2/3 text-center">
                 Devnexus is the largest and longest-running Java ecosystem conference in the U.S. and a leading global tech event. Founded by the Atlanta Java Users Group in 2004, it draws 1500+ developers for two or three days of hands-on workshops, expert-led sessions, in-person mentoring by Java Champions and speakers, and live demos. With 10 tracks and 100+ sessions, Devnexus offers deep dives into the latest technologies and a chance to connect with top technologists and fellow developers.
             </p>
-            <button id="video-play-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
-                See the Devnexus vibe
-            </button>
-            <div id="HScqDh4AzEc?si=JU8E1wgCfX-lfQ0U" class="video-container modal video-modal"></div>
+                                        <div class="flex flex-col items-center md:flex-row gap-8 mb-6 w-full md:w-auto">
+                                              <button id="video-play-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 whitespace-nowrap">
+                                                     See the Devnexus vibe
+                                              </button>
+                                              {% include buttons/register.html %}
+                                        </div>                
+                        <div id="HScqDh4AzEc?si=JU8E1wgCfX-lfQ0U" class="video-container modal video-modal"></div>
         </section>
         <!-- Video Modal -->
