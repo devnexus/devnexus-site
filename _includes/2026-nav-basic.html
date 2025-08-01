@@ -1,5 +1,5 @@
 
-    <nav class="overflow-x-autonavbar navbar-inverse" id="nav" role="navigation">
+    <nav class="overflow-x-autonavbar navbar-inverse pt-4 pr-4" id="nav" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -17,8 +17,8 @@
                     {% endif %}
                     <li class="nav-link"><a href="{{site.links.announcements}}">GET INFO</a></li>
                 </ul>
-                <div class="nav navbar-nav navbar-right flex items-center justify-center">
-                    <div class="nav-link">{% include buttons/register.html %}</div>
+                <div class="navbar-right mb-4">
+                    {% include buttons/register.html %}
                 </div>
             </div>
     </nav>
