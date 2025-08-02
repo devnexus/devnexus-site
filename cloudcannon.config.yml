@@ -14,9 +14,6 @@ collections_config:
         '-key': title
       subtext:
         '-key': date
-    _inputs:
-      layout:
-        type: hidden
       img:
         type: image
         options:
