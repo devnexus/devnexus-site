@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: post-article
-title: Title for post and slug
+title: The CFP for Devnexus 2026 is open
 img: /assets/images/generated-image-1-6.png
 ---
 # The CFP for Devnexus 2026 is open!
