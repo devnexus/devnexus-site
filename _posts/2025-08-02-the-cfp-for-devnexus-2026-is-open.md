@@ -11,36 +11,25 @@ img: /assets/images/generated-image-1-6.png
 The call for papers for Devnexus 2026 is now open. Key details:
 
 - Location: Atlanta, GA, USA
-
 - Workshop day: March 4
-
 - JUG Leaders Summit & JC Summit: March 4
-
 - Main Conference day: March 5,6
-
 - Speaker/JUG Leader day: March 7 (TBD)
 
 This year’s event is a little different than previous years. We have the conference split into three major themes with tracks for each of them, and there are fewer tracks:
 
 - AI
-
-Generative AI
-
-AI Engineering and Infrastructure
-
-AI in Practice (dev and non-dev)
+  - Generative AI
+  - AI Engineering and Infrastructure
+  - AI in Practice (dev and non-dev)
 
 - Java
-
-Core Java
-
-Java Frameworks and Ecosystem
+  - Core Java
+  - Java Frameworks and Ecosystem
 
 - Dev Practices
-
-Tech Leadership
-
-Architecture
+  - Tech Leadership
+  - Architecture
 
 Tools and Security
 
