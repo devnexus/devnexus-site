@@ -1,5 +1,0 @@
----
-layout: post-embedded
-title: Todd Ginsberg 
----
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:v4z7wmda76iv5mgwovlkd3w3/app.bsky.feed.post/3ljsfwnr7vc2v" data-bluesky-cid="bafyreidi6h5umjcool6ke3od7lig4jjjwv7hpfsnbea4phdejywpjsxeky" data-bluesky-embed-color-mode="system"><p lang="en">I&#x27;m back home from @devnexus.bsky.social 2025. It was great seeing all my old Chicago friends, fellow JUG leaders, and conference people I&#x27;ve met over the years. I attended some good talks and the hallway track and now I have a lot of good ideas to go explore. I always enjoy this conference!</p>&mdash; Todd Ginsberg (<a href="https://bsky.app/profile/did:plc:v4z7wmda76iv5mgwovlkd3w3?ref_src=embed">@todd.ginsberg.com</a>) <a href="https://bsky.app/profile/did:plc:v4z7wmda76iv5mgwovlkd3w3/post/3ljsfwnr7vc2v?ref_src=embed">March 7, 2025 at 11:18 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
