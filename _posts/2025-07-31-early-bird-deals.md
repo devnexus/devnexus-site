@@ -4,9 +4,6 @@ layout: post-article
 title: Super Early Bird. Best Deals Now!
 img: /assets/images/early-bird-catches-the-worm.jpeg
 ---
-Devnexus tickets are the cheapest they will every be! Register today!!!!!!!!!
-
-&nbsp;
 
 **The SUPER EARLY BIRD passes are available until September 4 for only $425**
 

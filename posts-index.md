@@ -11,7 +11,7 @@ permalink: /posts/index.html
             <div class="latest-post">
                 <h2  class="text-6xl"><a href="{{ latest_post.url }}">{{latest_post.title}}</a></h2>
                 <p class="post-date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
-                <div class="post-content">
+                <div class="post-content prose">
                     {{ latest_post.content }}
                 </div>
             </div>
