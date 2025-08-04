@@ -1,0 +1,162 @@
+_schema: _schema
+source: /
+paths:
+  uploads: /assets/images
+  static: ''
+collections_config:
+  posts:
+    path: _posts
+    name: Posts
+    icon: event_available
+    disable_url: false
+    preview:
+      text:
+        '-key': title
+      subtext:
+        '-key': date
+      img:
+        type: image
+        options:
+          paths:
+            uploads: /assets/img/posts
+          accepts_mime_types:
+            - image/png
+            - image/jpeg
+            - image/svg
+          allowed_sources:
+            - site-files
+          required: false 
+          max_file_size: 5242880
+      pattern: (?i)\.(jpe?g|png|svg)$
+      pattern_message: Please select an image file
+      title:
+        type: text
+        cascade: true
+        required: true
+        placeholder: Title of the post
+      img:
+        type: image
+        cascade: true
+        required: false
+        placeholder: Image for the post
+      categories:
+        type: multiselect
+        options:
+          allow_create: true
+          empty_type: array
+          values: collections.posts[*].categories
+        cascade: true
+      tags:
+        type: multiselect
+        options:
+          allow_create: true
+          empty_type: array
+          values: collections.posts[*].tags
+        cascade: true
+    add_options:
+      - name: Add Post
+        schema: default
+      - name: Embed Social
+        schema: social
+    create:
+      path: >-
+        [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post-article.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: false
+        name: New Article
+        icon: notes
+      social:
+        path: .cloudcannon/schemas/embedded-posts.md
+        reorder_inputs: true
+        hide_extra_inputs: true
+        remove_empty_inputs: true
+        remove_extra_inputs: true
+        name: Embedded Social Post
+        icon: notes
+  organizers:
+    path: _organizers
+    name: Organizers
+    icon: equalizer
+    disable_url: false
+    disable_add: false
+    disable_add_folder: true
+    disable_file_actions: false
+  track-details:
+    path: _track-details
+    name: Tracks
+    icon: equalizer
+    disable_url: false
+    description: ''
+    _enabled_editors:
+    disable_add: false
+    disable_add_folder: true
+    disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/track-detail.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Track
+        icon: notes
+  data:
+    path: _data
+    name: Data
+    icon: data_usage
+    disable_url: true
+    description: ''
+    _enabled_editors:
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
+  cta:
+    - path: _includes/buttons
+      name: CTA Buttons
+      description: Buttons used to connect to registration and other calls to action.
+collection_groups:
+  - heading: Current News
+    collections:
+      - posts
+  - heading: Admin
+    collections:
+      - data
+      - organizers
+      - track-details
+      - cta
+_snippets_imports:
+  jekyll: true
+timezone: America/New_York
+markdown:
+  engine: kramdown
+  options:
+    xhtml: false
+    breaks: false
+    linkify: false
+    typographer: false
+    spaced_lists: false
+    sentence_per_line: false
+    gfm: false
+    code_block_fences: '```'
+    escape_snippets_in_code_blocks: false
+    treat_indentation_as_code: true
+    table: false
+    strikethrough: false
+    subscript: false
+    superscript: false
+    heading_ids: false
+    attributes: true
+    attribute_elements:
+      inline: right
+      block: below
+      tr: none
+      td: none
+      li: right-of-prefix

@@ -1,38 +1,47 @@
 ---
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
-title: Devnexus 2025
-dates: Mar 4-6, 2025
+title: Devnexus 2026
+dates: March 4-6, 2026 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
-active-header: navigation.html
-cfp-is-open: false
+active-header: navigation-post-show.html
+cfp-is-open: true
 registration:
-  text:   REGISTER NOW
-  status: enabled
+  text:   Opening August 2025
+  status: not-enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2025
+  alt: Devnexus 2026
 feedback: show
+tailwindcss:
+  config: "./tailwind.config.js"
 collections:
   speakers:
     title: Speakers 2025
     output: true
-    permalink: /:collection/:slug
+    permalink: archive/devnexus2025/:collection/:slug
   events:
      title: Presentations 2025
      output: true
-     permalink: /presentations/:slug/
+     permalink: archive/devnexus2025/presentations/:slug/
   event-instructions:
      title: Workshop Prep 2025
      output: true
-     permalink: /presentations/:path/instructions
+     permalink: archive/devnexus2025/presentations/:path/instructions
   tracks:
     title: Tracks
+    output: false
+  track-details:
+    title: Track Details
     output: false
   organizers:
     title: Organizers
     output: true
     permalink: /:collection/:path
+  posts:
+    title: Latest News
+    output: true
+    permalink: /:collection/:slug  
 email: info@ajug.org
 description: The longest-running and Largest Java Ecosystem Conference in the World.
 baseurl:
@@ -42,8 +51,8 @@ links:
    stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
    hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
    cfp: https://sessionize.com/devnexus-2025/
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2025/
-   signIn: https://reg.connectevents./ConnectEvents/devnexus2025/
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
+   signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
    announcements: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
    recordings: https://www.youtube.com/@devnexus-conference/videos
    reg_maillist: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup

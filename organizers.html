@@ -1,21 +1,23 @@
 ---
-layout: info
+layout: default
 title: Devnexus Organizers
 permalink: /organizers/index.html
 ---
-<h1 class="featured-header">Organizers</h1>
-<div class="row">
+
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-8 ml-2">
   {% assign organizerList = site.organizers | sort: 'order'%}
   {% for organizer in organizerList %}
-  <div class="col-sm-12 col-md-4">
-    <div class="thumbnail" id="{{organizer.first_name}}_{{organizer.last_name}}">
-      <img class="img-responsive" src="/assets/img{{ organizer.url | prepend: organizer.baseurl | downcase }}.jpeg"
-                                   alt="{{organizer.first_name}} {{organizer.last_name}}">
-      <div class="caption">
-        <h3><a href="{{ organizer.url | prepend: organizer.baseurl }}">{{organizer.first_name}} {{organizer.last_name}}</a></h3>
-        <p>{{organizer.company}}&nbsp;</p>
-      </div>
+ 
+  
+    <div class="relative overflow-hidden">
+        <img class="" 
+         src="/assets/img{{ organizer.url | prepend: organizer.baseurl | downcase }}.jpeg"
+         alt="{{organizer.first_name}} {{organizer.last_name}}">
+        <h3 class="text-xl font-semibold">
+          <a href="{{ organizer.url | prepend: organizer.baseurl }}" 
+          class="text-blue-600 hover:text-blue-800">{{organizer.first_name}} {{organizer.last_name}}</a></h3>
+        <p class="text-gray-600">{{organizer.company}}&nbsp;</p>
     </div>
-  </div>
+  
   {% endfor %}
 </div>

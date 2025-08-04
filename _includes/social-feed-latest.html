@@ -1,0 +1,36 @@
+<!-- Column 2: Social Highlights -->
+<div class="bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Social Highlights</h2>
+    <div id="bluesky-feed" class="space-y-6">
+        <div class="text-center text-gray-400">Loading latest posts...</div>
+    </div>
+    <div class="text-center mt-8">
+        <a href="https://bsky.app/profile/devnexus.bsky.social" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold py-2 px-6 rounded-full transition duration-300">
+            See More
+        </a>
+    </div>
+</div>
+<script>
+fetch('https://bsky.app/profile/devnexus.bsky.social/posts?limit=3')
+    .then(res => res.json())
+    .then(posts => {
+        const feed = document.getElementById('bluesky-feed');
+        if (!posts.length) {
+            feed.innerHTML = '<div class="text-center text-gray-400">No recent posts found.</div>';
+            return;
+        }
+        feed.innerHTML = posts.slice(0, 3).map(post => `
+            <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <p class="text-md text-gray-800 mb-3">
+                    <span class="font-bold text-blue-600">@devnexus</span> ${post.text}
+                </p>
+                <p class="text-xs text-gray-500 text-right">${new Date(post.date).toLocaleDateString()}</p>
+            </div>
+        `).join('');
+    })
+    .catch(() => {
+        document.getElementById('bluesky-feed').innerHTML =
+            '<div class="text-center text-red-400">Failed to load posts.</div>';
+    });
+</script>

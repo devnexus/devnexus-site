@@ -1,0 +1,16 @@
+{% assign levels_order = "platinum,gold,silver,bronze,startup,community" | split: "," %}
+    {% assign sponsors_by_level = site.data.sponsors | group_by: "sponsorlevel" %}        
+          {% for level_name in levels_order %}
+            {% assign level = sponsors_by_level | where: "name", level_name | first %}
+            {% if level and level.items.size > 0 %}
+            <h4 class="text-lg md:text-4xl text-center bg-gray-200 py-4">{{level.name | capitalize }} Sponsors</h4>
+              <div class="my-4 grid grid-cols-3 md:grid-cols-6 gap-8 items-justify-center">
+              {% for item in level.items %}
+              <a href="{{item.home_path_url}}"><img class="img-responsive" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
+              {% endfor %}
+              </div>
+            {% endif %}
+          {% endfor %}
+{% include buttons/become-a-sponsor.html %}
+
+

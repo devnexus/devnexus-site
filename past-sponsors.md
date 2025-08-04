@@ -1,11 +1,11 @@
 ---
-layout: home
-branding:
-  img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2025
+layout: default
 ---
+<div class="mt-24 mb-4">
+{% include buttons/become-a-sponsor.html %}
+</div>
 
-<div class="row"><a name="sponsorlist"></a><div class="featured-header"><a class="action-header" href="https://ajug.typeform.com/to/BTa7bZ">Interested in Sponsoring Devnexus 2025?</a></div> 
+<main class="row">
 
 {% for sponsorLevel in site.data.lastyearlevels%}
 {% assign sponsorsInLevel = site.data.lastyearsponsors | where:'sponsorlevel', sponsorLevel.category %}
@@ -14,6 +14,8 @@ branding:
 {% include sponsor-thumb.html sponsors=sponsorsInLevel level-name=sponsorLevel.title level-tag=sponsorLevel.category %}
 {% endunless %}
 {% endfor %}
-</div>
+</main>
 
-<div><a name="timeline"></a> {% include timeline.html %}</div>
+<div class="mt-4 mb-16">
+{% include buttons/become-a-sponsor.html %}
+</div>

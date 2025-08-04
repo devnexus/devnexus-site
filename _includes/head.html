@@ -14,6 +14,8 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -28,10 +30,4 @@
 
   <!-- fonts: external links -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
 </head>

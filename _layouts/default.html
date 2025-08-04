@@ -4,11 +4,16 @@
 {% include head.html %}
 
 <body>
+  <div class="fixed top-0 left-0 w-full z-50 h-16">
+    {% include 2026-nav-basic.html %}
+  </div>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXXPHQ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   {{ content }}
+ {% include footer.html %}
   <!-- javascipt -->
   <script src="/assets/js/all.js"></script>
 
@@ -65,15 +70,50 @@
     ga('create', 'UA-44984422-1', 'devnexus.com');
     ga('send', 'pageview');
 
-    $(function () {
-      $(".video-container").each(function () {
-        var videoId = this.id;
-        $(document).delegate('#video-play-button', 'click', function () {
-          var iframe_url = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&autohide=1';
-          var iframe = $('<iframe/>', { 'frameborder': '0', 'src': iframe_url, style: "height:100%;width:100%" });
-
-          $('#' + videoId).html(iframe).addClass('loaded');
-          $('#video-play-button').hide();
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoContainers = document.querySelectorAll('.video-container');
+      
+      videoContainers.forEach(container => {
+        const videoId = container.id;
+        
+        document.addEventListener('click', (event) => {
+          if (event.target.id === 'video-play-button') {
+            const iframeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&autohide=1`;
+            const iframe = document.createElement('iframe');
+            
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('src', iframeUrl);
+            iframe.style.height = '30vh';
+            iframe.style.width = '75%';
+            iframe.style.position = 'fixed';
+            iframe.style.top = '10vh';
+            iframe.style.left = '50%';
+            iframe.style.transform = 'translateX(-50%)';
+            iframe.style.zIndex = '1000';
+            
+            // Create dismiss button
+            const closeButton = document.createElement('button');
+            closeButton.innerText = '✕';
+            closeButton.style.position = 'fixed';
+            closeButton.style.top = '10vh';
+            closeButton.style.right = 'calc(12.5% - 30px)';
+            closeButton.style.zIndex = '1001';
+            closeButton.style.padding = '5px 10px';
+            closeButton.style.backgroundColor = '#000';
+            closeButton.style.color = '#fff';
+            closeButton.style.border = 'none';
+            closeButton.style.borderRadius = '3px';
+            closeButton.style.cursor = 'pointer';
+            
+            closeButton.onclick = function() {
+              document.body.removeChild(iframe);
+              document.body.removeChild(closeButton);
+            };
+            
+            document.body.appendChild(iframe);
+            document.body.appendChild(closeButton);
+            container.classList.add('loaded');
+          }
         });
       });
     });
