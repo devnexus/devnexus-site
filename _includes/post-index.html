@@ -1,0 +1,14 @@
+<!-- Block 3: Blog Post Titles in Date Order -->
+<div class="p-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center"><a href="/posts">More Posts</a></h2>
+    
+    <ul class="">
+        {% for post in site.posts %}
+            <li class="py-4">
+                <div class="flex items-center justify-between">
+                    <a href="{{ post.url }}" class="text-lg font-semibold text-indigo-700 hover:text-indigo-900">{{ post.title }}</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
