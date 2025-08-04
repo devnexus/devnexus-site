@@ -25,13 +25,24 @@ branding:
           <div class="md:w-1/2 bg-indigo-50 p-4">
             <h2 class="text-lg md:text-4xl mb-4">Latest News</h2>
             {% for post in site.posts limit:8 %}
-            <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow mb-4">
-              <h3 class="text-lg font-bold text-gray-900 mb-2">{{ post.title }}</h3>
-              <p class="text-sm text-gray-600 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
-              <p class="text-gray-700 mb-2">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-              <a href="{{ post.url }}" class="text-indigo-600 font-medium hover:text-indigo-800">Read more →</a>
-            </div>
-            {% endfor %}   
+            <div class="flex bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow mb-4">
+              <!-- Left column with thumbnail -->
+              <div class="w-1/4 pr-4">
+                {% if post.img %}
+                  <img src="{{ post.img }}" alt="{{ post.title }}" class="w-full h-auto rounded">
+                {% endif %}
+              </div>
+              
+              <!-- Right column with post details -->
+              <div class="w-3/4">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{{ post.title }}</h3>
+                <p class="text-sm text-gray-600 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+                <p class="text-gray-700 mb-2">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url }}" class="text-indigo-600 font-medium hover:text-indigo-800">Read more →</a>
+              </div>
+            </div>    
+            
+          {% endfor %}   
         </div>
         </section> <!-- Correctly closing the main section div -->
 
