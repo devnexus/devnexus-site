@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: AI Tools
+title: AI in Practice
 theme: ai
 ---
-The AI Tools track highlights the platforms, frameworks, and libraries powering modern AI development. From open source tools to enterprise-grade solutions, sessions will showcase how developers are leveraging these technologies to accelerate experimentation, streamline workflows, and integrate AI capabilities into their applications with greater speed and efficiency.
+The AI in Practice track showcases real-world applications of artificial intelligence for both developers and non-developers. Sessions highlight how teams are using AI to solve practical problems, improve productivity, and enhance decision-making across industries. From integrating AI into software products to using no-code and low-code AI tools, this track offers hands-on insights and success stories that make AI tangible and accessible for all.
