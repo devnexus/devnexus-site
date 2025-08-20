@@ -69,13 +69,16 @@ collections_config:
             dam_static:
           mime_type:
           accepts_mime_types:
+            - image/svg+xml
+            - image/png
+            - image/jpeg
           empty_type:
           resize_style:
           width: 1600
           height: 1200
           expandable:
           allowed_sources:
-          prevent_resize_existing_files: true
+          prevent_resize_existing_files:
           sizes:
         cascade: true
     add_options:
