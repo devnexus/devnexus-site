@@ -22,7 +22,7 @@ collections_config:
         required: true
         placeholder: Title of the post
       img:
-        type: image
+        type: file
         cascade: true
         required: false
         placeholder: Image for the post
