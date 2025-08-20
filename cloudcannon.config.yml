@@ -15,7 +15,7 @@ collections_config:
       subtext:
         '-key': date
       img:
-        type: image
+        type: file
         options:
           paths:
             uploads: /assets/img/posts
