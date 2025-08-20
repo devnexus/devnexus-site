@@ -9,11 +9,17 @@ collections_config:
     name: Posts
     icon: event_available
     disable_url: false
+    description: ''
     preview:
       text:
         '-key': title
       subtext:
         '-key': date
+      img:
+        type: image
+        cascade: true
+        required: false
+        placeholder: Image for the post
       pattern: (?i)\.(jpe?g|png|svg)$
       pattern_message: Please select an image file
       title:
@@ -21,19 +27,6 @@ collections_config:
         cascade: true
         required: true
         placeholder: Title of the post
-     img:
-        type: file
-        options:
-          paths:
-            uploads: /assets/img/posts
-          accepts_mime_types:
-            - image/png
-            - image/jpeg
-            - image/svg
-          allowed_sources:
-            - site-files
-          required: false 
-          max_file_size: 5242880
       categories:
         type: multiselect
         options:
@@ -47,6 +40,33 @@ collections_config:
           allow_create: true
           empty_type: array
           values: collections.posts[*].tags
+        cascade: true
+    _enabled_editors:
+    _inputs:
+      img:
+        type: image
+        options:
+          paths:
+            uploads: /assets/images
+            uploads_filename:
+            uploads_use_relative_path:
+            static:
+            dam_uploads:
+            dam_uploads_filename:
+            dam_static:
+          mime_type:
+          accepts_mime_types:
+            - image/svg+xml
+            - image/png
+            - image/jpeg
+          empty_type:
+          resize_style:
+          width: 1600
+          height: 1200
+          expandable:
+          allowed_sources:
+          prevent_resize_existing_files:
+          sizes:
         cascade: true
     add_options:
       - name: Add Post
