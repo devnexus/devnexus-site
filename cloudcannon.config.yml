@@ -35,14 +35,11 @@ collections_config:
         cascade: true
         required: true
         placeholder: Title of the post
-<<<<<<< HEAD
-=======
       img:
         type: file
         cascade: true
         required: false
         placeholder: Image for the post
->>>>>>> e69c7adf (Updated 1 file via CloudCannon.)
       categories:
         type: multiselect
         options:
