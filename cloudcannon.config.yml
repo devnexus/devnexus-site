@@ -1,8 +1,8 @@
 _schema: _schema
 source: /
 paths:
-  uploads: /w"assets/images
-  static: ''"
+  uploads: /assets/images
+  static: ''
 collections_config:
   posts:
     path: _posts
@@ -23,14 +23,11 @@ collections_config:
         cascade: true
         required: true
         placeholder: Title of the post
-<<<<<<< HEAD
-=======
-      img:
+     img:
         type: file
         cascade: true
         required: false
         placeholder: Image for the post
->>>>>>> e69c7adf (Updated 1 file via CloudCannon.)
       categories:
         type: multiselect
         options:
