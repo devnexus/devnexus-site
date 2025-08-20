@@ -17,18 +17,10 @@ collections_config:
       subtext:
         '-key': date
       img:
-        type: file
-        options:
-          paths:
-            uploads: /assets/img/posts
-          accepts_mime_types:
-            - image/png
-            - image/jpeg
-            - image/svg
-          allowed_sources:
-            - site-files
-          required: false 
-          max_file_size: 5242880
+        type: image
+        cascade: true
+        required: false
+        placeholder: Image for the post
       pattern: (?i)\.(jpe?g|png|svg)$
       pattern_message: Please select an image file
       title:
@@ -36,11 +28,6 @@ collections_config:
         cascade: true
         required: true
         placeholder: Title of the post
-      img:
-        type: file
-        cascade: true
-        required: false
-        placeholder: Image for the post
       categories:
         type: multiselect
         options:
@@ -73,12 +60,16 @@ collections_config:
             - image/svg+xml
             - image/png
             - image/jpeg
+            - image/svg+xml
+            - image/png
+            - image/jpeg
           empty_type:
           resize_style:
           width: 1600
           height: 1200
           expandable:
           allowed_sources:
+          prevent_resize_existing_files:
           prevent_resize_existing_files:
           sizes:
         cascade: true
