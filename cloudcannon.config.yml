@@ -15,20 +15,6 @@ collections_config:
         '-key': title
       subtext:
         '-key': date
-      _inputs:
-        img:
-         type: file
-         options:
-           paths:
-             uploads: /assets/img/posts
-           accepts_mime_types:
-            - image/png
-            - image/jpeg
-            - image/svg
-          allowed_sources:
-            - site-files
-          required: false 
-          max_file_size: 5242880
       pattern: (?i)\.(jpe?g|png|svg)$
       pattern_message: Please select an image file
       title:
