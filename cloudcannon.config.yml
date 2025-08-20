@@ -16,12 +16,13 @@ collections_config:
         '-key': title
       subtext:
         '-key': date
-      img:
-        type: file
-        options:
-          paths:
-            uploads: /assets/img/posts
-          accepts_mime_types:
+      _inputs:
+        img:
+         type: file
+         options:
+           paths:
+             uploads: /assets/img/posts
+           accepts_mime_types:
             - image/png
             - image/jpeg
             - image/svg
