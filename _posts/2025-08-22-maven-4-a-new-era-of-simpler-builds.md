@@ -28,7 +28,6 @@ Beyond these foundational changes, Maven 4 introduces several **quality-of-life 
 
 &nbsp;
 
-
 [![**Watch Chandra Guntur’s full Devnexus 2025 session on Maven 4**](https://img.youtube.com/vi/6rpXSXv9oME/0.jpg)](https://www.youtube.com/watch?v=6rpXSXv9oME)
 
 &nbsp;
