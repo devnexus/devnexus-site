@@ -4,7 +4,6 @@ layout: post-article
 title: 'Maven 4: A New Era of Simpler Builds'
 img: /assets/images/chandra-video-still.jpg
 ---
-# Maven 4: A New Era of Simpler Builds
 
 &nbsp;
 
@@ -20,17 +19,11 @@ Beyond these foundational changes, Maven 4 introduces several **quality-of-life 
 
 &nbsp;
 
-\-–
-
-&nbsp;
-
 ## Watch the session & join us at Devnexus 2026
 
 &nbsp;
 
 [![**Watch Chandra Guntur’s full Devnexus 2025 session on Maven 4**](https://img.youtube.com/vi/6rpXSXv9oME/0.jpg)](https://www.youtube.com/watch?v=6rpXSXv9oME)
-
-&nbsp;
 
 And don’t miss [**Devnexus 2026**](https://devnexus.com/), where developers come together to explore the tools and ideas shaping the future of software. Secure your ticket early and be part of the innovation.
 
