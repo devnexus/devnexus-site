@@ -52,8 +52,6 @@ style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"&gt;
 
 &lt;/div&gt;
 
-&nbsp;
-
 And don’t miss \*\*\[Devnexus 2026\](https://devnexus.com/)\*\*, where developers come together to explore the tools and ideas shaping the future of software. Secure your ticket early and be part of the innovation.
 
 &nbsp;
