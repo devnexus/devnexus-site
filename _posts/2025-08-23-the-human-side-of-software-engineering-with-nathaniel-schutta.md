@@ -2,7 +2,7 @@
 _schema: default
 layout: post-article
 title: The Human Side of Software Engineering with Nathaniel Schutta
-img: /assets/img/posts/java.png
+img: /assets/images/nathaniel-schutta-video-still.jpg
 ---
 **What makes software projects succeed—or fail—has less to do with code and more to do with people.** In this session, Nathaniel Schutta unpacks the human side of software engineering and why mastering influence, communication, and culture can make or break your next big project.
 
