@@ -1,10 +1,6 @@
 ---
 layout: default
 title: Presentations
-topics:
- -JAVA
- -AI
- -Dev Practices
 ---
 <div class="container mt-16">
 <main class="flex flex-col gap-4 w-full max-w-5xl mx-auto my-8 px-4">
