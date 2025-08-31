@@ -46,11 +46,11 @@ collections:
   events:
      title: Presentations 2025
      output: true
-     permalink: archive/devnexus2025/presentations/:slug/
+     permalink: archive/devnexus2025/events/:slug/
   event-instructions:
      title: Workshop Prep 2025
      output: true
-     permalink: archive/devnexus2025/presentations/:path/instructions
+     permalink: archive/devnexus2025/events/:path/instructions
   tracks:
     title: Tracks
     output: false

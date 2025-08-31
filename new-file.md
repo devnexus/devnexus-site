@@ -1,3 +1,0 @@
----
-layout: info-fluid
----
