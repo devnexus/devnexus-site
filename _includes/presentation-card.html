@@ -1,0 +1,14 @@
+
+<div class="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:translate-y-[-3px] hover:shadow-md transition-all">
+        <div class="flex-1 p-6">
+            <a href="{{ include.link }}" class="no-underline">
+                <h2 class="mt-0 text-indigo-600">{{ include.title }}</h2>
+            </a>
+            <p>{{ include.description }}</p>
+        </div>
+        <div class="flex items-stretch w-12 bg-gray-50">
+            <a href="{{ include.link }}" aria-label="View all presentations" class="flex items-center justify-center w-full h-full no-underline text-gray-800">
+                <span class="text-4xl font-bold">›</span>
+            </a>
+        </div>
+    </div>
