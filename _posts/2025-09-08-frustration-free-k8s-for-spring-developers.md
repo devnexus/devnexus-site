@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: post-article
-title: Frustration-Free K8s for Spring Developers with Ryan Baxter
+title: Frustration-free K8s for Spring developers
 img: /assets/images/ryan-baxter-devnexus-video-still.jpg
 ---
 
@@ -17,12 +17,6 @@ The talk wrapped up with a look at how these tools fit into a seamless workflow.
 
 The overall message was clear: by leveraging these tools together, Spring developers can cut through Kubernetes complexity and deliver cloud-native applications with speed and confidence. Instead of frustration, Kubernetes can become a natural extension of the Spring developer experience.  
 
----
-
-## 🎥 Watch the Talk  
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sBEunqtSSLA" title="Frustration-Free Kubernetes for Spring Developers" frameborder="0" allowfullscreen></iframe>
-
----
+🎥 Watch the full talk here: [Frustration-Free Kubernetes for Spring Developers](https://www.youtube.com/watch?v=sBEunqtSSLA)  
 
 🚀 Don’t miss **Devnexus 2026**, where you’ll discover even more practical insights, tools, and workflows to level up your development journey.  
