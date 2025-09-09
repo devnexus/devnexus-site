@@ -18,4 +18,4 @@ To address this challenge, Subramaniam presents a clean alternative: **data-orie
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iw8E6rJ-v1U" title="OOP vs. DOP: The Right Tool for the Right Job" frameborder="0" allowfullscreen=""></iframe>
 
 ---
-🚀 Don’t miss **Devnexus 2026**, where leading voices like Venkat Subramaniam share insights that help developers sharpen their skills and rethink their approach to modern software. Be part of the conversation and secure your spot early!
+🚀 Don’t miss **Devnexus 2026**, where leading voices like Venkat Subramaniam share insights that help developers sharpen their skills and rethink their approach to modern software. Be part of the conversation and secure your spot early! 
