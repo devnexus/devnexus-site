@@ -16,6 +16,7 @@ group :jekyll_plugins do
    #gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-cfp', '0.1.1', :path => '_presite_plugins/jekyll-cfp'
    gem "jekyll-tailwindcss"
+   gem "jekyll-paginate-v2"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

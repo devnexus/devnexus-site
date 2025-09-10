@@ -4,6 +4,8 @@ exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
 title: Devnexus 2026
 dates: March 4-6, 2026 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
+email: info@ajug.org
+description: The longest-running and Largest Java Ecosystem Conference in the World.
 active-header: navigation-post-show.html
 cfp-is-open: true
 registration:
@@ -13,8 +15,29 @@ branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026
 feedback: show
-tailwindcss:
-  config: "./tailwind.config.js"
+uploads_dir: "/uploads"
+links:
+   stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+   hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
+   cfp: https://sessionize.com/devnexus-2025/
+   register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
+   signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
+   announcements: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+   recordings: https://www.youtube.com/@devnexus-conference/videos
+   reg_maillist: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+twitter_card:
+  default_image: https://devnexus.com/assets/img/twittercard.png
+  type: summary
+  site: "@devnexus"
+  creator:  "@atlantajug"
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true  
 collections:
   speakers:
     title: Speakers 2025
@@ -42,25 +65,10 @@ collections:
     title: Latest News
     output: true
     permalink: /:collection/:slug  
-email: info@ajug.org
-description: The longest-running and Largest Java Ecosystem Conference in the World.
 baseurl:
 url:
-uploads_dir: "/uploads"
-links:
-   stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
-   hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
-   cfp: https://sessionize.com/devnexus-2025/
-   register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
-   signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
-   announcements: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
-   recordings: https://www.youtube.com/@devnexus-conference/videos
-   reg_maillist: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
-twitter_card:
-  default_image: https://devnexus.com/assets/img/twittercard.png
-  type: summary
-  site: "@devnexus"
-  creator:  "@atlantajug"
+tailwindcss:
+  config: "./tailwind.config.js"
 markdown: kramdown
 theme:
 plugins:
