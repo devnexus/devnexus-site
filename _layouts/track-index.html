@@ -10,7 +10,7 @@ layout: default
 
 {% for session in events %}
 <div class="workshop-promo-row">
-  <h2><a href="/events/{{session.slug}}">{{session.title}}</a></h2>
+  <h2 class="text-indigo-600 font-bold hover:text-indigo-800 text-center"><a href="/events/{{session.slug}}">{{session.title}}</a></h2>
   {% for speaker in session.speakers %}
       {% include workshop_speaker.html data = speaker %}
   {% endfor %}

@@ -3,15 +3,16 @@
 {% assign details = site.speakers | where: "fullName", key.name | first %}
 {% assign speaker_img = details.profilePicture | "/uploads/anonymous-avatar.jpeg" %}
 <div class="speaker">
-  <h3>{{ details.fullName | escape }}</h3>
+  
  <div class="row">
   <div class="col-sm-2" >
     <a href="/speakers/{{ details.slug }}">
       <img class="img-responsive" src="{{speaker_img}}" alt="{{ details.fullName }}" />
     </a>
   </div> 
-   <div class="col-sm-10">           
-     {{ details.bio | escape | truncatewords: 25 }}
+   <div class="col-sm-10">
+     <h3 class="mb-8">{{ details.fullName | escape }}</h3>
+     <p>{{ details.bio | escape | truncatewords: 25 }}</p>
    </div> 
   </div> 
 </div>
