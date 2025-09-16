@@ -1,8 +1,8 @@
 _schema: _schema
 source: /
 paths:
-  uploads: /assets/images
-  static: ''
+  uploads: /w"assets/images
+  static: ''"
 collections_config:
   posts:
     path: _posts
