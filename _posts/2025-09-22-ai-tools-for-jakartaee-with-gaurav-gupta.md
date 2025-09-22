@@ -11,9 +11,8 @@ Gupta introduced two standout AI-powered tools that streamline Jakarta EE develo
 
 The second tool is the **Jeddict AI Assistant for Apache NetBeans IDE**, a free and open-source plugin. Jeddict adds powerful features such as **context-aware chat** at both project and package levels, AI-driven inline completion, and intelligent SQL inline completion. Gupta demonstrated how it can suggest relevant code snippets, improve variable and method naming, generate clear log messages and detailed Javadoc, and even create test cases to strengthen coverage. One of its most innovative capabilities is context-aware database chat, where developers can interact with their database schema using natural language and instantly import generated code into their project. These capabilities enable Jakarta EE developers to **“code smarter, not harder”**, boosting productivity and improving overall software quality.
 
-
-
 Gupta’s talk makes it clear that the future of Jakarta EE lies not only in frameworks and specifications but also in the **AI-assisted tooling that empowers developers**. By embracing tools like Payara Starter and Jeddict, teams can accelerate delivery, reduce repetitive effort, and create cleaner, more maintainable applications.
+
 ---
 
 ## Watch the Talk
