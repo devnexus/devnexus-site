@@ -10,7 +10,8 @@ To overcome these bottlenecks, the session highlighted specific AI applications 
 
 The key takeaway for developers and engineering leaders is that Generative DevOps is not a plug-and-play solution but a transformation that requires a phased, measured approach. AI should be applied where it accelerates strong workflows or addresses clear bottlenecks rather than simply speeding up weak processes, which can exacerbate issues. Governance, risk management, and data security are critical considerations, especially around sensitive data exposure during AI training. By adopting an incremental approach and focusing on testing, verification, and observability, organizations can move beyond the pitfalls of codegen and unlock the full potential of AI across the software delivery lifecycle.
 
-🎥 **Watch the full session:** https://www.youtube.com/watch?v=bOnTbrusOXY
+🎥 **Watch the full session:** [Watch Generative DevOps with Cecelia Martinez](https://www.youtube.com/watch?v=bOnTbrusOXY)
+
 
 ---
 
