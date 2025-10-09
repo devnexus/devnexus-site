@@ -2,11 +2,11 @@
 layout: default
 ---
 <!-- Header with profile picture and speaker name -->
-<header class="bg-black text-white py-8 mt-32">
+<header class="py-8 mt-32">
 	<div class="container mx-auto px-4">
 		<div class="max-w-4xl mx-auto flex items-center gap-4">
 			{% if page.profilePicture %}
-				<img src="{{page.profilePicture}}" class="w-32 h-32 object-cover border-2 border-white" alt="{{page.fullName}}">
+				<img src="{{page.profilePicture}}" class="w-32 h-32 md:w-48 md:h-48 object-cover border-2 border-white" alt="{{page.fullName}}">
 			{% endif %}
 			<h1 class="text-3xl font-bold">{{ page.fullName }}</h1>
 		</div>
