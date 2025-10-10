@@ -1,11 +1,11 @@
 
 {% assign speaker = include.speaker %}
 {% assign speaker_img = speaker.profilePicture | "/uploads/anonymous-avatar.jpeg" %}
-<div class="col-sm-6 col-md-4 col-lg-3">
-  <a href="{{speaker.slug}}" class="thumb">
-     <img class="img-responsive"
+<div>
+  <a href="{{speaker.slug}}" class="block hover:opacity-75 transition-opacity">
+     <img class="w-48 h-48 object-cover"
           src="{{speaker_img}}"
           alt="{{speaker.fullName | escape}}">
-    <h3 class="caption">{{speaker.fullName}}</h3>
+    <h3 class="font-bold text-xl mt-1">{{speaker.fullName}}</h3>
   </a>
 </div>
