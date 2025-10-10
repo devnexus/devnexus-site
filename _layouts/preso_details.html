@@ -13,7 +13,7 @@ layout: info
 		{% assign speaker_data = site.data.speakers | where: "id", speaker.id | first %}
 
 			<div class="flex flex-col lg:flex-row items-center lg:items-start p-6 bg-white rounded-lg shadow-md">
-				<div class="w-36 h-36 rounded-full overflow-hidden mb-4 lg:mb-0 lg:mr-8 mx-auto lg:mx-0">
+				<div class="w-36 h-36 overflow-hidden mb-4 lg:mb-0 lg:mr-8 mx-auto lg:mx-0">
 					<img src="{{ speaker_data.profilePicture }}" alt="Photo of {{ speaker_data.fullName }}" class="object-cover w-full h-full">
 				</div>
 				
