@@ -6,8 +6,7 @@ dates: March 4-6, 2026 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
 email: info@ajug.org
 description: The longest-running and Largest Java Ecosystem Conference in the World.
-active-header: navigation-post-show.html
-cfp-is-open: true
+cfp-is-open: false
 registration:
   text:   Opening August 2025
   status: not-enabled
