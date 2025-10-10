@@ -14,7 +14,7 @@ registration:
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026
-feedback: show
+feedback: not-show
 uploads_dir: "/uploads"
 links:
    stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
