@@ -14,7 +14,7 @@ module Jekyll
             end
           end
           pcmd.command(:events) do |e|
-            url = "https://sessionize.com/api/v2/csk3n1qx/view/Sessions"
+            url = "https://sessionize.com/api/v2/juzvwep9/view/Sessions"
             e.description "process promo_events.json"
             e.action do |args, options|
                edata = (options['file']) ? read_data(options['file']) : fetch_data(url)
