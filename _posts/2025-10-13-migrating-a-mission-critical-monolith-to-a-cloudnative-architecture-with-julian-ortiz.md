@@ -2,7 +2,7 @@
 _schema: default
 layout: post-article
 title: >-
-  Migrating a Mission Critical Monolith to a #CloudNative Architecture with
+  Migrating a Mission Critical Monolith to a Cloud Native Architecture with
   Julian Ortiz
 img: /assets/images/julian-ortiz-video-still.jpg
 ---
