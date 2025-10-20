@@ -15,8 +15,7 @@ The key takeaway is both practical and empowering: **the Java of today is fast, 
 
 ### 🎥 Watch the Session
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/kcp77oY8J3A" title="Runtime Efficiencies and Spring Boot: Saving a Million Dollars on Your Cloud Bill — DaShaun Carter" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VUpFdEkOzY4?si=rT8rAUj2sJWLlSg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
 ### 🚀 Join Us Next Year at Devnexus
