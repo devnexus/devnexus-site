@@ -15,7 +15,6 @@ For developers, the implications of this approach are profound. By combining **N
 
 ### 🎥 Watch the Session
 
-### 🎥 Devnexus 2025 Session
 
 <div style="display: flex; justify-content: center; margin: 2rem 0;">
   <div style="position: relative; width: 100%; max-width: 800px; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); background-color: #000;">
