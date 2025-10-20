@@ -15,7 +15,22 @@ For developers, the implications of this approach are profound. By combining **N
 
 ### 🎥 Watch the Session
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iNMpbDtczk?si=Nt_y_S5_TvRwN4vZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### 🎥 Devnexus 2025 Session
+
+<div style="display: flex; justify-content: center; margin: 2rem 0;">
+  <div style="position: relative; width: 100%; max-width: 800px; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); background-color: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/7iNMpbDtczk" 
+      title="Devnexus 2025 Session" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+      style="position: absolute; top:0; left:0; width:100%; height:100%; border-radius: 12px;">
+    </iframe>
+  </div>
+</div>
+
+
 ---
 
 ### 🚀 Join Us Next Year at Devnexus
