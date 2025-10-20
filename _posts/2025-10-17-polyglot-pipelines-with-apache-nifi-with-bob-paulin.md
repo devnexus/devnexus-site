@@ -15,8 +15,7 @@ For developers, the implications of this approach are profound. By combining **N
 
 ### 🎥 Watch the Session
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/your_video_id_here" title="Polyglot Pipelines with Apache NiFi - Bob Paulin" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7iNMpbDtczk?si=Nt_y_S5_TvRwN4vZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
 ### 🚀 Join Us Next Year at Devnexus
