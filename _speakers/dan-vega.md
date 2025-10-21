@@ -11,36 +11,38 @@ bio: Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been develo
   or teaching he enjoys spending time with his family, lifting weights, running, or
   reading a good book.
 tagLine: Spring Developer Advocate
-profilePicture: https://sessionize.com/image/9136-400o400o1-77Dnat6utbFK2wSApDJou.jpg
+profilePicture: https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2Tm.png
 sessions:
-- id: 751546
-  name: A Java Developers Guide to Navigating the Frontend Landscape
+- id: 1032716
+  name: Fundamentals of Software Engineering In the age of AI
+- id: 1034698
+  name: 'Integrating LLMs in Java: A Practical Guide to Model Context Protocol'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/therealdanvega
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/danvega/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Broadcom
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: therealdanvega
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/danvega/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/danvega.dev
+  sort: 23
   answerExtra:
 categories: []
 slug: dan-vega

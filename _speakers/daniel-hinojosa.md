@@ -14,34 +14,36 @@ bio: Daniel Hinojosa is a programmer, consultant, instructor, speaker, and autho
 tagLine: Independent Consultant
 profilePicture: https://sessionize.com/image/a8d6-400o400o1-sQfqHJDud5MWcyY8ezmLWH.jpeg
 sessions:
-- id: 753038
-  name: Testing Legacy Code & Refactoring Patterns
+- id: 1053998
+  name: Event Driven Architecture & Event Streaming Workshop
+- id: 1036827
+  name: Java's Asynchronous Ecosystem
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: http://twitter.com/dhinojosa
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/dhevolutionnext
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: dhinojosa@evolutionnext.com
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
-  answer: "@dhinojosa [deleted]"
+  answer:
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/dhevolutionnext/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/dhinojosa.bsky.social
+  sort: 23
   answerExtra:
 categories: []
 slug: daniel-hinojosa

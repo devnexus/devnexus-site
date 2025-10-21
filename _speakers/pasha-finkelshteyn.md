@@ -9,37 +9,37 @@ bio: Years of experience in software engineering and the team's leading roles co
   tools built by BellSoft and helps to create and test instruments for developers.
   He writes in Kotlin, speaks at conferences, composes a new articles, or maintains
   his pet projects.
-tagLine: Developer Advocate
-profilePicture: https://sessionize.com/image/2690-400o400o1-MMjLstRmcZTMC6V3BEbuZ6.jpg
+tagLine: Developer Advocate, BellSoft
+profilePicture: https://sessionize.com/image/1c41-400o400o1-YpEZkvAnYbV1h9XVjxMMjD.jpg
 sessions:
-- id: 733495
-  name: Crafting the Ultimate Docker Image for Spring Applications
+- id: 1003030
+  name: The Ultimate Showdown of Database Migration Tools
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/asm0di0
-  linkType: Twitter
-- title: LinkedIn
-  url: https://linkedin.com/in/asm0dey
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: BellSoft
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@asm0di0"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: https://linkedin.com/in/asm0dey
+  answer: http://linkedin.com/in/asm0dey
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: "@asm0dey.site"
+  sort: 23
   answerExtra:
 categories: []
 slug: pasha-finkelshteyn

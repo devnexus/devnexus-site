@@ -4,9 +4,9 @@ firstName: David
 lastName: Parry
 fullName: David Parry
 bio: "David Parry is an accomplished Director of Architecture with over 20 years of
-  experience in Java development. It all began in 1996 when he discovered the fascinating
-  world of programming, with a particular focus on Java applets.\r\nThroughout his
-  illustrious career, David Parry has been involved in various noteworthy projects.
+  experience in Software Development. It all began in 1996 when he discovered the
+  fascinating world of programming, with a particular focus on Java applets.\r\nThroughout
+  his illustrious career, David Parry has been involved in various noteworthy projects.
   He has successfully built and implemented content management systems for a wide
   range of clients, including the esteemed Johny Walker and its renowned keepwalking.com.
   Additionally, as a consultant at a Big 4 firm, David played a pivotal role in solving
@@ -22,38 +22,38 @@ bio: "David Parry is an accomplished Director of Architecture with over 20 years
   team.\r\nHaving witnessed the evolution of Java development from its early days
   to its current state, David Parry's wealth of experience and strategic perspective,
   combined with his consulting work at a Big 4 firm, make him an invaluable asset
-  in any project or organization he is a part of.\r\n"
-tagLine: 'Unlocking Innovation Through Expertise: David Parry, Director of Architecture'
-profilePicture: https://sessionize.com/image/b4a7-400o400o1-ERzdEyCWLxVw9P5L2qLapD.jpg
+  in any project or organization he is a part of."
+tagLine: 'Unlocking Innovation Through Expertise: David Parry, Developer Advocate'
+profilePicture: https://sessionize.com/image/4d60-400o400o1-srRzDUNZtga7vW3JsduYRj.png
 sessions:
-- id: 750660
-  name: 'Codebase Resurrection: Revive and Refactor with AI'
+- id: 1025674
+  name: 'Inside MCP: Live Protocol Messages, Real-Time Flows, and Smarter Agents'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://x.com/daviddryparry
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/david-parry-47b4a44
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Qodo
+  answer: Qodo.ai
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@daviddryparry"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/david-parry-47b4a44/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer:
+  sort: 23
   answerExtra:
 categories: []
 slug: david-parry

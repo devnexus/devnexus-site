@@ -22,34 +22,34 @@ bio: "Gant Laborde is a New Orleans native, born and raised.  He grew up with hu
 tagLine: CIO and Advocate of Education with Infinite Red
 profilePicture: https://sessionize.com/image/1f72-400o400o1-MTa8kEwhuD2WfwVBQ7JTPF.jpg
 sessions:
-- id: 753446
-  name: Complex Problems... and other ways to disappoint your friends.
+- id: 1021472
+  name: Hacking AI - How to Survive the AI Uprising
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/GantLaborde
-  linkType: Twitter
-- title: LinkedIn
-  url: https://linkedin.com/in/gant-laborde/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Infinite Red
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@GantLaborde"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/gant-laborde/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/gantlaborde.com
+  sort: 23
   answerExtra:
 categories: []
 slug: gant-laborde

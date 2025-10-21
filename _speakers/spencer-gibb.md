@@ -11,36 +11,36 @@ bio: "Spencer Gibb is a Software Engineer at Broadcom where he is the co-founder
   startups.  He has extensive java experience and experience in other languages such
   as scala and python."
 tagLine: Co-founder and Lead of Spring Cloud at Broadcom
-profilePicture: https://sessionize.com/image/0ca6-400o400o1-PAVrio5tz1NtFySREhEmMe.jpg
+profilePicture: https://sessionize.com/image/9b91-400o400o1-pzM8FH2X7HPVR3dL1oD2Z9.jpg
 sessions:
-- id: 761780
-  name: API Toolbox with Spring
+- id: 1014291
+  name: API Versioning in Spring
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://x.com/spencerbgibb
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/spencergibb/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Spring Team
+  answer: Spring Cloud
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
-  answer: spencerbgibb
+  answer: "@spencerbgibb"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: https://www.linkedin.com/in/spencergibb
+  answer: https://www.linkedin.com/in/spencergibb/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: spencer.gibb.us
+  sort: 23
   answerExtra:
 categories: []
 slug: spencer-gibb

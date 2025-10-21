@@ -13,28 +13,34 @@ bio: Erin Schnabel (@ebullientworks) is a Distinguished Engineer and maker of th
 tagLine: Distinguished Engineer, Maker of Things
 profilePicture: https://sessionize.com/image/90b4-400o400o1-S95Uj3n1PmqQz5PprpDvXn.jpg
 sessions:
-- id: 752306
-  name: Streamlining Open Source Foundation Operations with Quarkus and GitHub Actions
+- id: 1036671
+  name: Supercharge Your Applications with Java, Graphs, and a Touch of AI
 isTopSpeaker: false
 links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Red Hat
+  answer: IBM
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@ebullientworks"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/erinschnabel/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/ebullient.dev
+  sort: 23
   answerExtra:
 categories: []
 slug: erin-schnabel

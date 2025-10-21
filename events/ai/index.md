@@ -1,8 +1,7 @@
 ---
 layout: track-index
 tracks:
- - ai-generative
- - ai-engineering-&-infra
- - ai-practice
- - Artificial Intelligence
+ - Gen AI
+ - AI Engineering
+ - AI In Practice
 ---

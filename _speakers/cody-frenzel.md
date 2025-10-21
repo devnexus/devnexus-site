@@ -8,36 +8,36 @@ bio: Cody is a Solutions Architect at Ippon Technologies and self-proclaimed sof
   with a passion for optimizing engineering workflows. In his free time he likes to
   play tennis competitively or go hiking with his dog King Louie.
 tagLine: Solutions Architect at Ippon Technologies
-profilePicture: https://sessionize.com/image/f0a7-400o400o1-L8qe8ir49XBHruZgobpFyM.jpg
+profilePicture: https://sessionize.com/image/8919-400o400o1-GuLai1m6emDCbbazvN6htu.jpg
 sessions:
-- id: 739820
-  name: 'Unlock Lightning-Fast Delivery: Mastering Software Craft for Unrivaled Success'
+- id: 1030588
+  name: 10 Things I Hate About AI
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/codyfrenzel
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/codyfrenzel/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Ippon Technologies
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@codyfrenzel"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/codyfrenzel/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: "@pseudocody.bsky.social"
+  sort: 23
   answerExtra:
 categories: []
 slug: cody-frenzel

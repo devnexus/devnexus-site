@@ -3,45 +3,45 @@ id: '0793b99f-1282-4674-9d21-f88e30c8232e'
 firstName: Stephen
 lastName: Chin
 fullName: Stephen Chin
-bio: Stephen Chin is VP of Developer Relations at Neo4j and author of The Definitive
-  Guide to Modern Client Development, Raspberry Pi with Java, Pro JavaFX Platform,
-  and the DevOps Tools for Java Developers title from O'Reilly. He has keynoted numerous
-  conferences around the world including AI DevSummit, Devoxx, DevNexus, JNation,
-  JavaOne, Joker, swampUP, and Open Source India. Stephen is an avid motorcyclist
-  who has done evangelism tours in Europe, Japan, and Brazil, interviewing hackers
-  in their natural habitat. When he is not traveling, he enjoys teaching kids how
-  to do AI, embedded, and robot programming together with his daughters.
+bio: 'Stephen Chin is VP of Developer Relations at Neo4j, conference chair of the
+  LF AI & Data Foundation, and author of numerous titles including the upcoming GraphRAG:
+  The Definitive Guide for O''Reilly. He has given keynotes and main stage talks at
+  numerous conferences around the world including AI Engineer Summit, AI DevSummit,
+  Devoxx, DevNexus, JNation, JavaOne, Shift, Joker, swampUP, and GIDS. Stephen is
+  an avid motorcyclist who has done evangelism tours in Europe, Japan, and Brazil,
+  interviewing developers in their natural habitat. When he is not traveling, he enjoys
+  teaching kids how to do AI, embedded, and robot programming together with his daughters.'
 tagLine: VP of Developer Relations
-profilePicture: https://sessionize.com/image/bb41-400o400o1-EHvMKwbfP43RYxL9qJMwGv.jpg
+profilePicture: https://sessionize.com/image/67c7-400o400o1-94UgqvdxnaQUpj38o9TkBX.jpg
 sessions:
-- id: 751775
-  name: Enhancing LLMs with Graph Technology
+- id: 1045377
+  name: 'Context Engineering: Connecting the Dots with Graphs'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/steveonjava
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/steveonjava/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Neo4j
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@steveonjava"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: https://linkedin.com/in/steveonjava
+  answer: https://www.linkedin.com/in/steveonjava
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/steveonjava.bsky.social
+  sort: 23
   answerExtra:
 categories: []
 slug: stephen-chin

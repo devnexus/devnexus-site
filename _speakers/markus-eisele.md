@@ -9,34 +9,34 @@ bio: 'Markus is a Java Champion, former Java EE Expert Group member, founder of 
 tagLine: Cloud Native and AI in a hybrid world. Loves Java and programming.
 profilePicture: https://sessionize.com/image/b2d5-400o400o1-77TSCPm4qLJ9CED6R2kDEU.jpg
 sessions:
-- id: 752303
-  name: Backstage Software Templates for Java Developers
+- id: 1025529
+  name: Building Trustworthy and Reliable LLM Applications
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/myfear
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/markuseisele/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Red Hat
+  answer: IBM Research
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
-  answer: "@myfear"
+  answer: "@myfear "
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: https://www.linkedin.com/in/markuseisele/
+  answer: https://www.linkedin.com/in/markuseisele
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: "@myfear.com"
+  sort: 23
   answerExtra:
 categories: []
 slug: markus-eisele

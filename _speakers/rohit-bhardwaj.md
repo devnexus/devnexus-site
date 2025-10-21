@@ -19,31 +19,36 @@ bio: Rohit Bhardwaj is the Director of Architecture at Salesforce, where he spec
 tagLine: Director of Architecture, CTO, Salesforce
 profilePicture: https://sessionize.com/image/22e3-400o400o1-Y9DATxkJE8fWD1XBuFSRCP.jpg
 sessions:
-- id: 753084
-  name: 'Securing the Digital Landscape: A Deep Dive into OWASP Top 10 for Applications,
-    APIs, and LLMs'
-- id: 753081
-  name: Mastering the System Design Methodology
+- id: 1035067
+  name: Agentic, Assistive & Predictive AI Patterns
+- id: 1035064
+  name: Architecting Microservices for Agentic AI Integration
 isTopSpeaker: false
 links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Salesforce
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: rbhardwaj1
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/rohit-bhardwaj-cloud/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer:
+  sort: 23
   answerExtra:
 categories: []
 slug: rohit-bhardwaj
