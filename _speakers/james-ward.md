@@ -10,34 +10,36 @@ bio: Professional software developer since 1997, with much of that time spent he
 tagLine: Developer Advocate @ AWS
 profilePicture: https://sessionize.com/image/ded2-400o400o1-3d-1b13-4383-a7ec-e7ce3151794e.dc841fd0-dfb3-44cb-8c0b-542fb0968a02.jpg
 sessions:
-- id: 750943
-  name: 'Write Once, Deploy Everywhere: From Containers to Serverless'
+- id: 1034679
+  name: Building AI Agents with Spring & MCP
+- id: 1034680
+  name: 'Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/_JamesWard
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/jamesward
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: AWS
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
-  answer: "@_JamesWard"
+  answer: "@JamesWard"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://linkedin.com/in/jamesward
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: jamesward.com
+  sort: 23
   answerExtra:
 categories: []
 slug: james-ward

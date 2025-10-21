@@ -11,36 +11,36 @@ bio: Jennifer Reif is a Developer Relations Engineer at Neo4j, speaker, and blog
   daily basis! Her passion is finding ways to organize chaos and deliver software
   more effectively.
 tagLine: Neo4j Developer Relations Engineer
-profilePicture: https://sessionize.com/image/57e0-400o400o1-PAM74upE4799Tu7rb79G8W.jpg
+profilePicture: https://sessionize.com/image/cbe1-400o400o1-VkYvUgYc3aKCRcuyMhdxci.jpg
 sessions:
-- id: 739382
-  name: 'Commonly Uncommon: Diverse Paths that Lead to Winning Outcomes'
+- id: 1036671
+  name: Supercharge Your Applications with Java, Graphs, and a Touch of AI
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/JMHReif
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/jmhreif/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Neo4j
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@JMHReif"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/jmhreif/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer:
+  sort: 23
   answerExtra:
 categories: []
 slug: jennifer-reif

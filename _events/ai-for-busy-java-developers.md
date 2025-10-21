@@ -1,50 +1,49 @@
 ---
 questionAnswers: []
-id: '752508'
+id: '1028847'
 title: AI for Busy Java Developers
 description: "Yep, we know you're knee-deep in production Java deployments and don’t
-  exactly have spare time to learn about AI.  But your manager is talking more about
-  AI every day, and you’re reading unsettling posts about how GenAI will take your
-  job.  In this session, we’ll fast-track you through AI and Machine Learning concepts—tailored
-  just for Java developers who need to learn the basics without the need to drill
-  down into data science and complicated math. We’ll cover all the basics and explain
-  how AI can be used in the software development process beyond simple code generation.
-  \ You’ll walk away understanding where AI fits (and doesn’t fit), grasp its ethical
-  concerns, become more valuable, and enhance your career.\r\n\r\n* Why AI Matters
-  to Developers and Your Career\r\n* Importance of Patterns\r\n* Predictive AI (PredAI)
-  vs Generative AI (GenAI)\r\n* GenAI vs. Traditional Search Engines\r\n* Prompt Techniques\r\n*
-  The Importance of Context for GenAI\r\n* Retrieval-Augmented Generation (RAG) Systems\r\n*
-  Fine-tuning vs RAG\r\n* Java Libraries for AI/ML\r\n* AI and the Software Development
-  Process\r\n* Responsible AI and Ethics\r\n"
-startsAt: '2025-03-05T13:30:00'
-endsAt: '2025-03-05T14:30:00'
+  exactly have time to learn about AI.  But your manager and the senior executives
+  in your company are mentioning “AI” seemingly at every meeting.  And you’re watching
+  unsettling YouTube posts about how GenAI will take your job or that 90% of all AI
+  projects fail.  Pretty scary, right?\r\n\r\nIn this session, I will fast-track you
+  through AI/ML focused on Java developers who need to get the job done without the
+  need to drill down into data science and complicated math. \r\nThis presentation
+  is designed for junior and intermediate Java developers who need to understand how
+  non-deterministic tools can be effectively utilized throughout the software development
+  process. You will gain a practical introduction to AI and Machine Learning with
+  a focus on the Java ecosystem, featuring hands-on coding using LangChain4j, ChatGPT,
+  Claude, Gemini, and other APIs. \r\n\r\nThis session will cover how neural networks
+  and large language models (LLMs) process information, how to craft effective prompts
+  and manage context, and how to use embeddings and vector databases to support Retrieval
+  Augmented Generation (RAG) for helpful responses. We will explore reusable prompt
+  templates, the building blocks of chatbot architectures, and provide a brief introduction
+  to agents, all while learning how to integrate GenAI in an ethical and responsible
+  manner and manage potential risks. \r\n\r\nBy the end of this presentation, you
+  should understand the very essence of AI/ML, so that you will understand what AI
+  is and how to use it for successful deployments properly.  \r\n"
+startsAt:
+endsAt:
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: a56899b4-eae5-40ac-b71a-5ef5be0945a0
   name: Frank Greco
 categories:
-- id: 81703
+- id: 107979
   name: Track
   categoryItems:
-  - id: 290615
-    name: Artificial Intelligence
+  - id: 389411
+    name: AI In Practice
   sort: 0
-- id: 81704
-  name: Session Format
-  categoryItems:
-  - id: 290619
-    name: session
-  sort: 1
-roomId: 53139
-room: AI
+roomId:
+room:
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: false
-track: Artificial Intelligence
-format: session
+track: AI In Practice
 slug: ai-for-busy-java-developers
 
 ---

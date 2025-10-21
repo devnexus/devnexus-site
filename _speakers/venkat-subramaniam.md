@@ -13,38 +13,36 @@ bio: "Dr. Venkat Subramaniam is an award-winning author, founder of Agile Develo
   Developer. You can find a list of his books at agiledeveloper.com. You can reach
   him by email at venkats@agiledeveloper.com or on twitter at @venkat_s."
 tagLine: Agile Developer, Inc.
-profilePicture: https://sessionize.com/image/5480-400o400o1-RPaFqq6ZZiYjxgxKBC21BA.jpg
+profilePicture: https://sessionize.com/image/2458-400o400o1-c5-c994-40f5-b1dd-e0f9f7999fa9.7ec0ab6e-811f-440b-be84-ec01c03f63e6.jpg
 sessions:
-- id: 800469
-  name: 'OOP vs. Data Oriented Programming: Which One to Choose?'
-- id: 800468
-  name: Refactoring to Modernize Java Applications
+- id: 1053995
+  name: 'Cruising Along with Java: From Java 9 to 25'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/venkat_s
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/vsubramaniam/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Agile Developer, Inc.
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@venkat_s"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: https://www.linkedin.com/in/vsubramaniam/
+  answer: https://www.linkedin.com/in/vsubramaniam
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/venkats.bsky.social
+  sort: 23
   answerExtra:
 categories: []
 slug: venkat-subramaniam

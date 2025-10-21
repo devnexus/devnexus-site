@@ -10,34 +10,34 @@ bio: 'As a VMware engineer, Glenn Renfro is a core committer for Spring Cloud Ta
 tagLine: Spring Developer at VMware by Broadcom
 profilePicture: https://sessionize.com/image/2155-400o400o1-ntrGaApYgEN8wGjz9iHhw9.JPG
 sessions:
-- id: 759124
-  name: The Overwhelmed Spring Developer's Guide To AI
+- id: 1032726
+  name: Thriving in an Evolving Software Industry
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/cppwfs
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/cppwfs/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Broadcom
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@cppwfs"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
-  answer: linkedin.com/cppwfs
+  answer: "@cppwfs"
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: "@cppwfs"
+  sort: 23
   answerExtra:
 categories: []
 slug: glenn-renfro

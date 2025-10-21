@@ -17,36 +17,34 @@ bio: "Simon Ritter is the Deputy CTO of Azul Systems.  Simon has been in the IT 
 tagLine: Deputy CTO, talking Java around the world
 profilePicture: https://sessionize.com/image/dd6c-400o400o1-LswjbcsNzih8ifmTU4MgBq.jpg
 sessions:
-- id: 753362
-  name: 30 Years of Java - How Did We Get Here?
-- id: 753353
-  name: Keeping Your Java Hot by Solving the JVM Warmup Problem
+- id: 1000618
+  name: 'Java Performance: Beyond Simple Request Latencies'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/speakjava
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/siritter/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: Azul
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@speakjava"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/siritter/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/speakjava.bsky.social
+  sort: 23
   answerExtra:
 categories: []
 slug: simon-ritter

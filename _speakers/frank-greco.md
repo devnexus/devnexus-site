@@ -11,28 +11,34 @@ bio: 'Frank is a senior technology consultant and enterprise architect working o
 tagLine: NYJavaSIG Chairman
 profilePicture: https://sessionize.com/image/d1f3-400o400o1-KUEe6GnWn47QnDFaFpJp1R.jpg
 sessions:
-- id: 752508
+- id: 1028847
   name: AI for Busy Java Developers
 isTopSpeaker: false
 links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
   answer: NYJavaSIG
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@frankgreco"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/frankdgreco/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: "@frankgreco.bsky.social"
+  sort: 23
   answerExtra:
 categories: []
 slug: frank-greco

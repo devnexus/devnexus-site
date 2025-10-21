@@ -15,34 +15,34 @@ bio: Vinicius Senger is a developer, inventor, and technical speaker working for
 tagLine: Sr Developer Advocate for Java
 profilePicture: https://sessionize.com/image/bc45-400o400o1-rpfe49GpmfNW4gW4Yt9neS.png
 sessions:
-- id: 750943
-  name: 'Write Once, Deploy Everywhere: From Containers to Serverless'
+- id: 1032003
+  name: 10 Tools & Tips to Upgrade Your Legacy Code with GenAI
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://twitter.com/vsenger
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/viniciussenger/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Amazon Web Services
+  answer: AWS
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
-  answer: "@vsenger"
+  answer: "@siliconvini"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/viniciussenger/
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer:
+  sort: 23
   answerExtra:
 categories: []
 slug: vinicius-senger

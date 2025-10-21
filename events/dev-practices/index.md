@@ -2,6 +2,7 @@
 layout: track-index
 tracks:
  - Architecture
- - Leadership
- - Security & Dev Tools
+ - Tech Leadership
+ - Security
+ - Practices and other tech
 ---

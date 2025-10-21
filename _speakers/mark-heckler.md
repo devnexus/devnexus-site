@@ -3,46 +3,42 @@ id: 05be364d-a57f-4e08-978d-8043d43db097
 firstName: Mark
 lastName: Heckler
 fullName: Mark Heckler
-bio: 'Mark Heckler, MBA is a software developer & Principal Cloud Developer Advocate
-  for Java/JVM Languages at Microsoft, conference speaker, Java Champion, and Kotlin
-  Developer Expert focused on developing innovative production-ready software at velocity
-  for cloud and edge computing platforms. He has worked with key players in numerous
-  industries and public sector organizations to develop and deliver critical capabilities
-  on time and on budget. Mark is an open source contributor and author of Spring Boot:
-  Up and Running (https://bit.ly/springbootbook) and can be found on Twitter/X @mkheck.'
-tagLine: The Java Pilot! Principal Cloud Developer Advocate for Java/JVM Languages
-  at Microsoft
-profilePicture: https://sessionize.com/image/1fd2-400o400o1-Hr2Mas6BX6iEHBvw5iCBve.png
+bio: "Mark Heckler, MBA is the Senior Director of Field Engineering at Moderne. \r\nHe
+  has worked with key players in numerous industries and organizations to develop,
+  deliver, and maintain critical capabilities securely, on time, and on budget. Mark
+  is an open source contributor, author of Spring Boot: Up and Running (https://bit.ly/springbootbook),
+  and a licensed, instrument-rated pilot."
+tagLine: Senior Director of Field Engineering at Moderne
+profilePicture: https://sessionize.com/image/f0e0-400o400o1-ZBMq2SYxmeNzmE6h56Kxs.png
 sessions:
-- id: 754695
-  name: 'Containers All the Way Down!: Optimizing Spring Boot apps for the Modern
-    Cloud'
+- id: 1036658
+  name: 'Migration Engineering with OpenRewrite: The Recipe for Success'
 isTopSpeaker: false
-links:
-- title: X (Twitter)
-  url: https://x.com/mkheck
-  linkType: Twitter
-- title: LinkedIn
-  url: https://www.linkedin.com/in/markheckler/
-  linkType: LinkedIn
+links: []
 questionAnswers:
-- id: 81698
+- id: 107974
   question: Company
   questionType: Short_Text
-  answer: Microsoft
+  answer: Moderne
   sort: 17
   answerExtra:
-- id: 81702
+- id: 107978
   question: 'Twitter handle with @ ex: @prpatel'
   questionType: Short_Text
   answer: "@mkheck"
   sort: 21
   answerExtra:
-- id: 81705
+- id: 107981
   question: LinkedIn URL
   questionType: Short_Text
   answer: https://www.linkedin.com/in/markheckler
   sort: 22
+  answerExtra:
+- id: 107982
+  question: Bluesky handle
+  questionType: Short_Text
+  answer: https://bsky.app/profile/mkheck.bsky.social
+  sort: 23
   answerExtra:
 categories: []
 slug: mark-heckler
