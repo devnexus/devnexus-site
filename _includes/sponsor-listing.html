@@ -1,4 +1,4 @@
-{% assign levels_order = "unobtanium,platinum,gold,silver,bronze,startup,community" | split: "," %}
+{% assign levels_order = "unobtanium,diamond,platinum,gold,silver,bronze,startup,community" | split: "," %}
     {% assign sponsors_by_level = site.data.sponsors | group_by: "sponsorlevel" %}        
           {% for level_name in levels_order %}
             {% assign level = sponsors_by_level | where: "name", level_name | first %}
