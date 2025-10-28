@@ -10,6 +10,7 @@ collections_config:
     icon: event_available
     disable_url: false
     description: ''
+    description: ''
     preview:
       text:
         '-key': title
