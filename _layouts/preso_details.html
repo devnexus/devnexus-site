@@ -6,7 +6,7 @@ layout: info
 
 <main class="mt-32 mx-4 lg:mx-auto lg:max-w-4xl">
   <h1 class="text-3xl font-bold text-gray-900 mb-4 text-center">{{ page.title }}</h1>
-  <p class="text-lg text-gray-700 leading-relaxed">{{ page.description }}</p>
+  <p class="text-lg text-gray-700 leading-relaxed">{{ page.description | markdownify }}</p>
 </main>
 <aside class="mx-4 lg:mx-auto lg:max-w-4xl my-8">
 	{% for speaker in page.speakers %}
