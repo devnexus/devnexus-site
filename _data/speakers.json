@@ -1,0 +1,3362 @@
+[
+  {
+    "id": "83fd871a-3bbe-4d41-92a4-9443e7c66c5f",
+    "firstName": "Aaron",
+    "lastName": "McClennen",
+    "fullName": "Aaron McClennen",
+    "bio": "A 29 year java veteran. I wrote my first java program in java 1.0 when AWT on the mac and unix were different.\r\nSince that time I have written uncounted lines of java code, and rewritten most of them.\r\nWhen I first read Fowlers Refactoring my life changed for the better as I realized there was a safe way to fix code that no longer suited.\r\n",
+    "tagLine": "Front line java engineer - AT&T",
+    "profilePicture": "https://sessionize.com/image/c79c-400o400o1-GGqVTaPoA7VxKDtAgUGNsh.jpg",
+    "sessions": [
+      {
+        "id": 1031556,
+        "name": "Refactoring RN"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "AT&T",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "NA",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
+    "firstName": "Alex",
+    "lastName": "Soto",
+    "fullName": "Alex Soto",
+    "bio": "Alex Soto is a Developer Advocate at IBM. He is passionate about the Java world and software automation and believes in the open-source software model. Alex is the co-author of Manning and O'Reilly books Testing Java Microservice, Quarkus Cookbook, Kubernetes Secrets Management, GitOps Cookbook, RHCE Ansible Automation Study Guide, Applied AI for Enterprise Java Development, and AI Agents with Java.\r\nA Java Champion since 2017, he is also an international speaker (Devoxx, KubeCon, DevNexus, JavaOne, JavaLand, ...)  and teacher at Salle URL University. You can follow him on Twitter (@alexsotob) to stay tuned to what’s happening in Java.",
+    "tagLine": "Developer Advocate at IBM",
+    "profilePicture": "https://sessionize.com/image/08e3-400o400o1-Vj8VMmiq2VU3Yx7YUohwhj.jpg",
+    "sessions": [
+      {
+        "id": 1025529,
+        "name": "Building Trustworthy and Reliable LLM Applications"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@alexsotob",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/asotobu/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e77d8e2a-77c4-4eb0-88de-a2dd789bc471",
+    "firstName": "Anders",
+    "lastName": "Swanson",
+    "fullName": "Anders Swanson",
+    "bio": "I'm here to help you use Oracle Database better, and more easily.\r\n\r\nAs a Developer Evangelist at Oracle, I help developers build modern apps, including microservices, event-driven systems, cloud-native architectures, and more. If you're working with tools like Kubernetes, Spring Boot, or Kafka, and wondering how Oracle fits into that world, that's where I come in.\r\n\r\nMy goal is to share practical, hands-on guidance that helps you build faster, ship smarter, and make the most of Oracle's database tech. If you're using JSON, event streaming, vector search, or just figuring out how to get started, I'm here to make things clearer and more developer-friendly.\r\n\r\nLet's build something cool together.",
+    "tagLine": "Developer Advocate, Oracle Database",
+    "profilePicture": "https://sessionize.com/image/4659-400o400o1-PhRGfBG1HYXFeqDwtmaV5v.jpg",
+    "sessions": [
+      {
+        "id": 1003194,
+        "name": "Extend your JPA applications with Relational JSON documents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle Corp.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/anders-swanson/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e951051b-a206-47c3-8807-ebb6ee5d6cdb",
+    "firstName": "Anitha",
+    "lastName": "Dakamarri",
+    "fullName": "Anitha Dakamarri",
+    "bio": "I am Anitha Dakamarri, a seasoned IT professional with over 16 years of experience in the field of information security. My journey began with a Master of Computer Applications from Jawaharlal Technological University, which laid a strong foundation for my career. Over the years, I have honed my skills in various domains, including threat modeling, application security assessments, and network security assessments. My work experience spans across reputable organizations like DFIN, USCELLULAR, and Syntel Inc., where I have led teams, developed security standards, and implemented robust security frameworks. I am a Certified Information Systems Security Professional (CISSP) and hold several other certifications such as CEH and CHFI, which reflect my commitment to continuous learning and professional growth. My passion for security extends beyond technical assessments; I have also initiated and conducted security awareness workshops to educate and empower others. As a mentor, I am eager to share my knowledge and experiences to help others navigate the complexities of the IT security landscape.\r\n",
+    "tagLine": "DFIN-Lead Security Engineer",
+    "profilePicture": "https://sessionize.com/image/b3af-400o400o1-PJM8NFDXwqYtPasbAkh4ft.jpg",
+    "sessions": [
+      {
+        "id": 1020011,
+        "name": "Privacy in design (PbD) in DevSecOps"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "DFIN",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/anithadakamarri/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f58eda10-92dc-41a0-ac4a-b1a9f2bd7e97",
+    "firstName": "Anton",
+    "lastName": "Arhipov",
+    "fullName": "Anton Arhipov",
+    "bio": "Anton is a Developer Advocate at JetBrains, working with Kotlin, IntelliJ IDEA, and AI-driven developer tools. With a background in server-side development, he has spent over a decade building software for developers. A Java Champion since 2014, Anton speaks at conferences, shares insights on the Kotlin YouTube channel, and enjoys exploring new ideas in programming languages, AI-powered tooling, and developer workflows. He’s always experimenting with new tech, looking for ways to make coding more efficient and enjoyable.",
+    "tagLine": "Developer Advocate, JetBrains",
+    "profilePicture": "https://sessionize.com/image/706d-400o400o1-DetNfUC6HLw7aZZrgSVsoK.jpg",
+    "sessions": [
+      {
+        "id": 1003030,
+        "name": "The Ultimate Showdown of Database Migration Tools"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JetBrains ",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@antonarhipov",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/antonarhipov",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "antonarhipov.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1708bdeb-e8d9-4628-a147-e9878198c900",
+    "firstName": "Baruch",
+    "lastName": "Sadogursky",
+    "fullName": "Baruch Sadogursky",
+    "bio": "Baruch Sadogursky (@jbaruch) did Java before it had generics, DevOps before there was Docker, and DevRel before it had a name. He started DevRel at JFrog when it was ten people and took it all the way to a successful $6B IPO by helping engineers solve problems. Now, Baruch keeps helping engineers solve problems, but also helps companies help engineers solve problems. He is a co-author of the \"Liquid Software\" and \"DevOps Tools for Java Developers\" books, Java Champion and CNCF Ambassador alumni, serves on multiple conference program committees, and regularly speaks at numerous most prestigious industry conferences, such as DevNexus, DevOpsDays, Voxxed Days, Devoxx, DevRelCon, Kubecon and QCon. Today, he's taking care of developers at TuxCare.",
+    "tagLine": "Head of DevRel, TuxCare",
+    "profilePicture": "https://sessionize.com/image/6857-400o400o1-JXocy3YoRTEqmNrjJd2d7Y.png",
+    "sessions": [
+      {
+        "id": 998343,
+        "name": "Back to the Future of Software: How to Survive the AI Apocalypse with Tests, Prompts, and Specs"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Tuxcare",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jbaruch",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jbaruch",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@jbaru.ch",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+    "firstName": "Billy",
+    "lastName": "Korando",
+    "fullName": "Billy Korando",
+    "bio": "Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With over a decade of experience in Java, Billy brings a passion for helping developers find ways to reduce tedious work, such as project initiation, deployment, testing, and validation, through automation and adopting the latest features and tools in the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java users group. ",
+    "tagLine": "Java Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/ecc1-400o400o1-VadMZHw9Uhmd4GbgH96jx1.jpg",
+    "sessions": [
+      {
+        "id": 1043681,
+        "name": "To Java 26 and Beyond!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Oracle",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "billykorando",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/billy-korando-129b8197/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@billykorando.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0bbdbd49-49d5-4418-9e3f-5df6968288ae",
+    "firstName": "Brayan",
+    "lastName": "Munoz V.",
+    "fullName": "Brayan Munoz V.",
+    "bio": "Brayan Muñoz V., an Oracle Ace Associate, is a Java SDE, Data Scientist, and Professor with an MSc in Data Science (UCJC) and a Telematics Engineer degree (PUCMM). He brings six years of software development experience, which includes three years in AI and data science projects, in monolithic and microservices architectures. He currently serves as a Professor and thesis advisor at PUCMM's School of Computing and Telecommunications. Brayan is a Board Member of the Dominican Republic Java User Group (@JavaDominicano) and a winner of the JCP Program Awards Java in Education category with the group, frequently speaking on Java and AI/ML topics. He is also an open-source enthusiast.",
+    "tagLine": "MSc Data Science 📈👨🏽‍💻| @java dev ☕️ ❤️ | Professor 👨‍🏫 | Oracle Ace Associate ",
+    "profilePicture": "https://sessionize.com/image/97e8-400o400o1-7WVJC3StyaKduCsJ2sc3m8.jpg",
+    "sessions": [
+      {
+        "id": 1013263,
+        "name": "OK, But What About Predictive AI?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Dominican Republic JUG",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@Brayanmnz_",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/brayanmnz/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "50e931e4-bda7-4065-b4c4-5083683497e6",
+    "firstName": "Brian",
+    "lastName": "Vermeer",
+    "fullName": "Brian Vermeer",
+    "bio": "Staff Developer Advocate for Snyk, Java Champion, Oracle Ace Pro, and Software Engineer with over a decade of hands-on experience in creating and maintaining software. He is passionate about Java, (Pure) Functional Programming and Cybersecurity. Brian is a JUG leader for the Virtual JUG and the NLJUG. He also co-leads the DevSecCon community and is a community manager for Foojay. He is a regular international speaker on mostly Java-related conferences like JavaOne, Devnexus, Devoxx, Jfokus, JavaZone and many more. Besides all that, Brian is a military reserve for the Royal Netherlands Air Force and a Taekwondo Master / Teacher.",
+    "tagLine": "Java Champion | Staff Developer Advocate @ Snyk",
+    "profilePicture": "https://sessionize.com/image/c521-400o400o1-JXSfjGizEDCS64drcaDcxA.jpg",
+    "sessions": [
+      {
+        "id": 1030979,
+        "name": "The Hidden Security Hazards in Your Java Stack"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Snyk",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@BrianVerm",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/brianvermeer/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@brianvermeer.nl",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e0b15676-adb2-4ea7-bb68-ca1af864a14f",
+    "firstName": "Bruno",
+    "lastName": "Borges",
+    "fullName": "Bruno Borges",
+    "bio": "Greetings, I’m Bruno. I’m a Product Manager at Microsoft living in Vancouver, Canada. I am a fan of photography, technology, and movies. I’m also interested in food and travel. But most importantly, I'm opinionated!",
+    "tagLine": "Product Manager for Java at Microsoft ",
+    "profilePicture": "https://sessionize.com/image/7784-400o400o1-347intnJjEcap4XzCggHKi.png",
+    "sessions": [
+      {
+        "id": 1036705,
+        "name": "Peek Inside Production JVMs for Full Insights"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@brunoborges",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/brunocborges",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@brunoborges.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "db3f7afe-0214-49a6-853e-e40ea87a6b5a",
+    "firstName": "Christopher",
+    "lastName": "Curtin",
+    "fullName": "Christopher Curtin",
+    "bio": "Chief Application Developer at ADP",
+    "tagLine": "Chief Application Developer at ADP",
+    "profilePicture": "https://sessionize.com/image/5970-400o400o1-anvKT7fJtwBwanqNeLPGdF.jpg",
+    "sessions": [
+      {
+        "id": 996071,
+        "name": "Introduction to Cell Architectures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ADP",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chriscurtin",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/chriscurtin/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
+    "firstName": "Cody",
+    "lastName": "Frenzel",
+    "fullName": "Cody Frenzel",
+    "bio": "Cody is a Solutions Architect at Ippon Technologies and self-proclaimed software craft evangelist. He has over 10 years of experience as a full stack developer, with a passion for optimizing engineering workflows. In his free time he likes to play tennis competitively or go hiking with his dog King Louie.",
+    "tagLine": "Solutions Architect at Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image/8919-400o400o1-GuLai1m6emDCbbazvN6htu.jpg",
+    "sessions": [
+      {
+        "id": 1030588,
+        "name": "10 Things I Hate About AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@codyfrenzel",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/codyfrenzel/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@pseudocody.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+    "firstName": "Dan",
+    "lastName": "Vega",
+    "fullName": "Dan Vega",
+    "bio": "Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been developing software for the web for over 20 years and his superpower is problem-solving. Dan is a blogger, YouTuber, course creator, and speaker. He is a lifelong learner and his passion is sharing his knowledge with the developer community. Dan lives near Cleveland Ohio with his beautiful wife and 2 daughters. When he isn’t writing code or teaching he enjoys spending time with his family, lifting weights, running, or reading a good book.",
+    "tagLine": "Spring Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2Tm.png",
+    "sessions": [
+      {
+        "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI"
+      },
+      {
+        "id": 1034698,
+        "name": "Integrating LLMs in Java: A Practical Guide to Model Context Protocol"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "therealdanvega",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/danvega/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/danvega.dev",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
+    "firstName": "Daniel",
+    "lastName": "Hinojosa",
+    "fullName": "Daniel Hinojosa",
+    "bio": "Daniel Hinojosa is a programmer, consultant, instructor, speaker, and author. With over 20 years of experience, he does work for private, educational, and government institutions. Daniel loves JVM languages like Java, Groovy, and Scala; but also works with non-JVM languages like Haskell, Ruby, Python, LISP, C, C++. He is an avid Pomodoro Technique Practitioner and makes every attempt to learn a new programming language every year. Daniel is the author of Testing in Scala and the video of Beginning Scala Programming Video Series for O’Reilly Publishing. For downtime, he enjoys reading, swimming, Legos, football, and cooking.",
+    "tagLine": "Independent Consultant",
+    "profilePicture": "https://sessionize.com/image/a8d6-400o400o1-sQfqHJDud5MWcyY8ezmLWH.jpeg",
+    "sessions": [
+      {
+        "id": 1053998,
+        "name": "Event Driven Architecture & Event Streaming Workshop"
+      },
+      {
+        "id": 1036827,
+        "name": "Java's Asynchronous Ecosystem"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "dhinojosa@evolutionnext.com",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/dhevolutionnext/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/dhinojosa.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7f7eb959-dfdc-4d7f-a6a0-bd64b2710282",
+    "firstName": "David",
+    "lastName": "Parry",
+    "fullName": "David Parry",
+    "bio": "David Parry is an accomplished Director of Architecture with over 20 years of experience in Software Development. It all began in 1996 when he discovered the fascinating world of programming, with a particular focus on Java applets.\r\nThroughout his illustrious career, David Parry has been involved in various noteworthy projects. He has successfully built and implemented content management systems for a wide range of clients, including the esteemed Johny Walker and its renowned keepwalking.com. Additionally, as a consultant at a Big 4 firm, David played a pivotal role in solving critical issues for numerous customers, demonstrating his expertise in handling complex and high-traffic web platforms.\r\nNever one to shy away from innovation, David Parry has expanded his skills to work on cutting-edge technologies such as mobile and embedded Android TV systems. Leveraging his expertise, he has delivered top-notch streaming services to customers, ensuring they have an exceptional viewing experience.\r\nCurrently, David holds the position of Developer Advocate and Consultant overseeing strategic planning and execution of architectural designs for customers. With a deep understanding of software development principles and extensive experience in Java programming, he excels at providing valuable insights and guidance to his team.\r\nHaving witnessed the evolution of Java development from its early days to its current state, David Parry's wealth of experience and strategic perspective, combined with his consulting work at a Big 4 firm, make him an invaluable asset in any project or organization he is a part of.",
+    "tagLine": "Unlocking Innovation Through Expertise: David Parry, Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/4d60-400o400o1-srRzDUNZtga7vW3JsduYRj.png",
+    "sessions": [
+      {
+        "id": 1025674,
+        "name": "Inside MCP: Live Protocol Messages, Real-Time Flows, and Smarter Agents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Qodo.ai",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@daviddryparry",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/david-parry-47b4a44/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "392dc143-1066-41ca-9c07-8b53515a86d0",
+    "firstName": "Douglas",
+    "lastName": "Hawkins",
+    "fullName": "Douglas Hawkins",
+    "bio": "Doug has been working in the Java ecosystem for the past 20 years.  First as a Java developer, then a JVM engineer, and now Java performance tooling at Datadog.",
+    "tagLine": "APM Java Engineer",
+    "profilePicture": "https://sessionize.com/image/1995-400o400o1-T7PeUCmx59Qxj6NX86XXCC.jpg",
+    "sessions": [
+      {
+        "id": 1036715,
+        "name": "Just-in-Time Compilation Isn't Magic"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Datadog",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dougqh",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/dougqh/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7d4fa35a-43fd-4bed-bc8b-e88b417152a5",
+    "firstName": "Emily",
+    "lastName": "Harden",
+    "fullName": "Emily Harden",
+    "bio": "Emily Harden is a knowledgeable consultant, skillful speaker, and community builder dedicated to fostering growth and impact. As the Founder and Owner of Harden Consulting, she provides tailored strategic guidance to nonprofits and small businesses, helping them unlock their full potential in areas like fundraising, organizational development, and community engagement. Emily draws on her deep roots in the tech ecosystem, where she previously served as Techlahoma's Executive Director, to connect challenges with creative solutions. \r\n\r\nWhen she’s not working, you can probably find her playing board games, trying out new video games, or off on an adventure with her husband and their two dogs.",
+    "tagLine": "Communications & Engagement Strategist 📣 | Leveraging Insights to Drive Impact 🚀 | Passionate About Community & Growth 🌱",
+    "profilePicture": "https://sessionize.com/image/3d4f-400o400o1-hC3aqmLri4nZsE5XW7ZqBs.jpg",
+    "sessions": [
+      {
+        "id": 1035363,
+        "name": "The Accidental Leader: How to Succeed When You Weren’t Planning to Lead"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Harden Consulting, LLC",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/emily-harden/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f6c77911-6612-4b72-9832-63409826e785",
+    "firstName": "Erin",
+    "lastName": "Schnabel",
+    "fullName": "Erin Schnabel",
+    "bio": "Erin Schnabel (@ebullientworks) is a Distinguished Engineer and maker of things at Red Hat. She is a Java Champion, with over 25 years under her belt as a developer, technical leader, architect and advocate, and she strongly prefers being up to her elbows in code. Erin learns (and teaches) by coding ridiculous things, like \"Monster Combat\" (https://github.com/ebullient/monster-combat), an application that makes monsters fight each other to explore application metrics; and “Game On! Text Adventure” (https://gameontext.org) for exploring cloud native development.",
+    "tagLine": "Distinguished Engineer, Maker of Things",
+    "profilePicture": "https://sessionize.com/image/90b4-400o400o1-S95Uj3n1PmqQz5PprpDvXn.jpg",
+    "sessions": [
+      {
+        "id": 1036671,
+        "name": "Supercharge Your Applications with Java, Graphs, and a Touch of AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ebullientworks",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/erinschnabel/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/ebullient.dev",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a56899b4-eae5-40ac-b71a-5ef5be0945a0",
+    "firstName": "Frank",
+    "lastName": "Greco",
+    "fullName": "Frank Greco",
+    "bio": "Frank is a senior technology consultant and enterprise architect working on cloud and AI/ML tools for developers. He is a Java Champion, Chairman of the NYJavaSIG (first JUG ever), and runs the International Machine Learning for the Enterprise conference in Europe. Co-author of JSR 381 Visual Recognition for Java API standard and strong advocate for Java and Machine Learning. Member of the NullPointers. #STEAMnotSTEM",
+    "tagLine": "NYJavaSIG Chairman",
+    "profilePicture": "https://sessionize.com/image/d1f3-400o400o1-KUEe6GnWn47QnDFaFpJp1R.jpg",
+    "sessions": [
+      {
+        "id": 1028847,
+        "name": "AI for Busy Java Developers"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "NYJavaSIG",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@frankgreco",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/frankdgreco/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@frankgreco.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "56225543-85a5-428d-9ab7-3556a051296d",
+    "firstName": "Gant",
+    "lastName": "Laborde",
+    "fullName": "Gant Laborde",
+    "bio": "Gant Laborde is a New Orleans native, born and raised.  He grew up with hurricanes (not the drink), rich New Orleans culture, and as a free tour guide for all his out-of-state friends.  Over the years he’s seen his city experience corruption, flooding,  heartbreak, and most importantly, revived-determination.  “New Orleans doesn’t know how to quit,” Gant says, “that’s why I love it.” Gant firmly believes conflict abets passion, a fire always moves fastest uphill.\r\n \r\n\r\nAs CIO for the popular company Infinite Red, Gant works remotely from his home and uses his self-managed autonomy to explore a variety of leadership arts.  Besides managing the all-remote team from around the world, Gant has become a published author, adjunct professor, volunteer mentor, and a speaker at conferences worldwide.\r\n \r\n\r\nEach day, Gant refines what motivation and leadership mean as he strives to bridge the gap the theory and the concrete.  He voraciously consumes self-help books and online lectures, which he incorporates into his everyday processes.  Focus on personal enthusiasm and motivation to lead projects, workshops, and teams are the bedrock of success.  He refines these skills as often as possible at his local Toastmasters clubs, where he serves as Division Director.",
+    "tagLine": "CIO and Advocate of Education with Infinite Red",
+    "profilePicture": "https://sessionize.com/image/1f72-400o400o1-MTa8kEwhuD2WfwVBQ7JTPF.jpg",
+    "sessions": [
+      {
+        "id": 1021472,
+        "name": "Hacking AI - How to Survive the AI Uprising"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Infinite Red",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@GantLaborde",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/gant-laborde/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/gantlaborde.com",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+    "firstName": "Glenn",
+    "lastName": "Renfro",
+    "fullName": "Glenn Renfro",
+    "bio": "As a VMware engineer, Glenn Renfro is a core committer for Spring Cloud Task, Spring Batch, and Spring Cloud Data Flow and a Java Champion.  He has 15 years of experience in designing, building, and delivering enterprise-level applications in Java and 21 years total of software development experience. ",
+    "tagLine": "Spring Developer at VMware by Broadcom",
+    "profilePicture": "https://sessionize.com/image/2155-400o400o1-ntrGaApYgEN8wGjz9iHhw9.JPG",
+    "sessions": [
+      {
+        "id": 1032726,
+        "name": "Thriving in an Evolving Software Industry"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@cppwfs",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "@cppwfs",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@cppwfs",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "92822169-dd05-414d-b7f5-65ce48889f80",
+    "firstName": "Hazel",
+    "lastName": "Bohon",
+    "fullName": "Hazel Bohon",
+    "bio": "Hazel is a software engineer and mom. When she's not debugging code, you can find her down at the lake fishing with her kids.",
+    "tagLine": "Software Engineer @ Particular",
+    "profilePicture": "https://sessionize.com/image/c422-400o400o1-wsEzpNvjhWCZTDzwEbywC2.jpg",
+    "sessions": [
+      {
+        "id": 1034477,
+        "name": "Microservices for Pragmatists"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Particular Software",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/hazel-bohon/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@oldbooksmell.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5c84d73d-1b13-4383-a7ec-e7ce3151794e",
+    "firstName": "James",
+    "lastName": "Ward",
+    "fullName": "James Ward",
+    "bio": "Professional software developer since 1997, with much of that time spent helping developers build software that doesn't suck. A Typed Pure Functional Programming zealot who often compromises on his ideals to just get stuff done. Currently a Developer Advocate for AWS.",
+    "tagLine": "Developer Advocate @ AWS",
+    "profilePicture": "https://sessionize.com/image/ded2-400o400o1-3d-1b13-4383-a7ec-e7ce3151794e.dc841fd0-dfb3-44cb-8c0b-542fb0968a02.jpg",
+    "sessions": [
+      {
+        "id": 1034679,
+        "name": "Building AI Agents with Spring & MCP"
+      },
+      {
+        "id": 1034680,
+        "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "AWS",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@JamesWard",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/jamesward",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "jamesward.com",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "eb8e3906-8c75-4876-9fe1-0aca5db8ef40",
+    "firstName": "Jamie",
+    "lastName": "Coleman",
+    "fullName": "Jamie Coleman",
+    "bio": "Jamie is a Senior Developer Advocate for Loqate formally at IBM & Sonatype, based in the UK. He has had the privilege to have spoken all around the world at developer conferences and is an organiser of London’s biggest developer community, the London Java Community. \r\n\r\nPassionate about discovering ways to help reduce developers carbon footprint, he is also a subject matter expert in containerised solutions and build technologies. He fell in love with coding at university and has gone on to talk at many conferences about using languages like Java with microservices and related technologies such as AI and software security. He has worked on a wide variety of projects such as modernising IBMs mainframe testing infrastructure, creating, and automating the creation of Docker images for IBM’s products and contributing to a DevOps pipeline offering.",
+    "tagLine": "Loqate",
+    "profilePicture": "https://sessionize.com/image/e239-400o400o1-4gzsDGg9reRtwUhf93HDzb.jpg",
+    "sessions": [
+      {
+        "id": 1000623,
+        "name": "Black Friday Brilliance: Managing a Billion Transactions with Tech, Tactics, and Teamwork"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "GBG Loqate",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@Jamie_Lee_C",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jamie-coleman/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e8154769-ac25-4c42-890f-6ccd70e2ec79",
+    "firstName": "Jennifer",
+    "lastName": "Reif",
+    "fullName": "Jennifer Reif",
+    "bio": "Jennifer Reif is a Developer Relations Engineer at Neo4j, speaker, and blogger with an MS in CMIS. An avid developer and problem-solver, she has worked with many businesses and projects to organize and make sense of widespread data assets and leverage them for maximum business value. She has expertise in a variety of commercial and open source tools, and she enjoys learning new technologies, sometimes on a daily basis! Her passion is finding ways to organize chaos and deliver software more effectively.",
+    "tagLine": "Neo4j Developer Relations Engineer",
+    "profilePicture": "https://sessionize.com/image/cbe1-400o400o1-VkYvUgYc3aKCRcuyMhdxci.jpg",
+    "sessions": [
+      {
+        "id": 1036671,
+        "name": "Supercharge Your Applications with Java, Graphs, and a Touch of AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Neo4j",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@JMHReif",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jmhreif/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "56115ae3-406f-47af-818c-20354acc07b2",
+    "firstName": "Jeremy",
+    "lastName": "Meiss",
+    "fullName": "Jeremy Meiss",
+    "bio": "Jeremy is an international speaker and is currently the Director of DevRel at OneStream Software, previously at CircleCI, Solace, Auth0, and XDA. With almost 30 years in Tech, covering just about every functional area, including support, system and database administration, application and web development, project management, program management, and systems analysis, Jeremy is active in the DevRel and DevOps communities, a co-creator of DevOpsPartyGames.com, and organizer for DevOpsDays Kansas City. A lover of all things coffee, community, open source, and tech, he’s also house-broken, and (generally) plays well with others.",
+    "tagLine": "Developer Experience & Community Leader",
+    "profilePicture": "https://sessionize.com/image/1f95-400o400o1-SMXXHoVnzy6h19Y4Cu54Ec.png",
+    "sessions": [
+      {
+        "id": 1021378,
+        "name": "Developer Experience != Developer Productivity"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "OneStream Software",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/jeremymeiss",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@jerdog.dev",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e893c469-3ca9-4ca5-90bf-df2f92b97380",
+    "firstName": "John",
+    "lastName": "Ceccarelli",
+    "fullName": "John Ceccarelli",
+    "bio": "John Ceccarelli has been been in the Java space for 25 years, from leading the engineering team behind NetBeans at Sun Microsystems to leading product management for Azul's high-performance Platform Prime JDK. He loves making complex technologies more accessible, whether it was EJB 2.0 back in the day to today's cutting edge JVM tuning technologies.",
+    "tagLine": "VP of Product Management",
+    "profilePicture": "https://sessionize.com/image/c57b-400o400o1-nGMwjPCSmAyURZvRWEEQBZ.jpg",
+    "sessions": [
+      {
+        "id": 1000618,
+        "name": "Java Performance: Beyond Simple Request Latencies"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@Jceccarelli1",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/john-ceccarelli-95b7041/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c5adff32-ef90-48f3-b1ef-14fcd2d9132c",
+    "firstName": "John",
+    "lastName": "Coyne",
+    "fullName": "John Coyne",
+    "bio": "John is a Distinguished Engineer of Application Engineering at Discover (a division of Capital One) with over 21 years of experience developing Java applications.  His current interests include Observability, CI/CD automation, Kubernetes, and good API design. Outside of work, John enjoys spending time with his wife and two boys, running, biking, and enjoying live music.",
+    "tagLine": "Distinguished Engineer, Application Engineering",
+    "profilePicture": "https://sessionize.com/image/e5aa-400o400o1-7Je1hUVDQ6X5m4Labn2WW3.jpg",
+    "sessions": [
+      {
+        "id": 1034721,
+        "name": "Autoscaling Spring Boot apps in Kubernetes with KEDA"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Capital One",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/j0hnc0yne/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8f517aca-8293-4e1f-9360-0ce676531421",
+    "firstName": "Jonatan",
+    "lastName": "Ivanov",
+    "fullName": "Jonatan Ivanov",
+    "bio": "Jonatan Ivanov is an enthusiastic Software Engineer, member of the Spring Engineering Team, maintainer of Micrometer, one of the leaders of the Seattle Java User Group, speaker, author, Java Champion.\r\nHe has hands-on experience in developing and shipping innovative, production-ready software for industry-leader companies. He likes Distributed Systems, Production, Open Source, Math, Linux, Cloud environments; he is passionate about the Java Ecosystem and the Java Community.\r\nHe is an Open Source contributor, writes a \"develotters\"-focused blog (https://develotters.com), sometimes can be found on Twitter(@jonatan_ivanov) and in the Seattle area.",
+    "tagLine": "Software Engineer - Spring Engineering Team @ Broadcom",
+    "profilePicture": "https://sessionize.com/image/284b-400o400o1-Da96SuT4sERdHAtmZdgtmV.jpg",
+    "sessions": [
+      {
+        "id": 1036581,
+        "name": "I Can See Clearly Now: Observability of JVM & Spring Boot 2-3-4 apps"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jonatan_ivanov",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jonatan-ivanov/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "jonatan-ivanov.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5ac5be17-28ae-4cb6-866d-ade45f097700",
+    "firstName": "Jonathan",
+    "lastName": "Ellis",
+    "fullName": "Jonathan Ellis",
+    "bio": "Founder of Brokk (https://brokk.ai). Previously: author of JVector, co-founder of DataStax, founding project chair of Apache Cassandra.",
+    "tagLine": "Founder of Brokk",
+    "profilePicture": "https://sessionize.com/image/6f59-400o400o1-XMHxphvzCK4WQs8YT6y7Em.jpg",
+    "sessions": [
+      {
+        "id": 1040888,
+        "name": "Brokk: an AI-Native Code Platform for Java, in Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Brokk, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@spyced",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jbellis/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "344ffe15-6288-4b67-b9ed-6c23777e4417",
+    "firstName": "Jonathan",
+    "lastName": "Vogel",
+    "fullName": "Jonathan Vogel",
+    "bio": "Jonathan has been working as a DevOps specialist solutions architect at Amazon Web Services for over a year and has previously practiced professional software development for over a decade. He is passionate about enabling builders. Jonathan lives in the Triangle area of North Carolina and enjoys climbing rocks, birding and music.",
+    "tagLine": "Solutions Architect. AWS",
+    "profilePicture": "https://sessionize.com/image/9622-400o400o1-35dSSy1YYwHaK5TLN8kwEP.jpg",
+    "sessions": [
+      {
+        "id": 1032003,
+        "name": "10 Tools & Tips to Upgrade Your Legacy Code with GenAI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Amazon Web Services",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jonathan-vogel-sw/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "83676887-034f-4f9d-8884-976faf8beadf",
+    "firstName": "Jonathon",
+    "lastName": "Graf",
+    "fullName": "Jonathon Graf",
+    "bio": "Jon Graf helps people solve problems! Over the last nine years as a Software Consultant he has focused on helping organizations get unstuck. Whether the problem is transitioning your organization to the cloud, building high functioning teams, updating legacy systems, or building training programs for new technologies; he has done it. He has a bias towards action, and wants to bring others along for the ride.",
+    "tagLine": "Lean TECHniques, Managing Consultant",
+    "profilePicture": "https://sessionize.com/image/425d-400o400o1-a97MDAdMU8mF3eUApJvYkt.png",
+    "sessions": [
+      {
+        "id": 996212,
+        "name": "Building Engineers or Teaching Technicians?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Lean Techniques",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "na",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/jon-graf-05725a6",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "edcc0378-0d8c-49d6-a068-4507930deae5",
+    "firstName": "José Rafael",
+    "lastName": "Almonte Cabrera",
+    "fullName": "José Rafael Almonte Cabrera",
+    "bio": "I am a Telematics & Software Engineer and Data Science graduate with 4 years of experience building solutions in FinTech and E-learning platforms. My work is driven by responsibility, teamwork, and continuous learning, and I am passionate about advancing in Software Engineering, AI/ML, Data Science, Sports Analytics, and Finance.\r\n\r\nOutside of work, I enjoy traveling and exploring new cultures, following NBA, MLB, NFL, and European soccer, playing padel, experimenting with new recipes, reading, and practicing piano.",
+    "tagLine": "Data Science Master 📊 | Telematics & Software Engineer 👨‍💻 | Java ☕",
+    "profilePicture": "https://sessionize.com/image/516c-400o400o1-862MkPjPRKpUZCn4TFPLY.jpg",
+    "sessions": [
+      {
+        "id": 1013263,
+        "name": "OK, But What About Predictive AI?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "FranklinCovey",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jrac/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+    "firstName": "Josh",
+    "lastName": "Long",
+    "fullName": "Josh Long",
+    "bio": "Josh (@starbuxman) has been the first Spring Developer Advocate since 2010. Josh is a Java Champion, author of 7 books (including \"Reactive Spring\") and numerous best-selling video training (including \"Building Microservices with Spring Boot Livelessons\" with Spring Boot co-founder Phil Webb), and an open-source contributor (Spring Boot, Spring Integration, Axon, Spring Cloud, Activiti, Vaadin, etc), a Youtuber (Coffee + Software with Josh Long as well as my Spring Tips series ), and a podcaster (\"A Bootiful Podcast\").",
+    "tagLine": "Spring Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/a9e2-400o400o1-E6pCEr3ATM1nUGjubLTFsh.png",
+    "sessions": [
+      {
+        "id": 1023613,
+        "name": "Bootiful Spring Security"
+      },
+      {
+        "id": 1034679,
+        "name": "Building AI Agents with Spring & MCP"
+      },
+      {
+        "id": 1034680,
+        "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "the Spring team at Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "starbuxman",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/joshlong",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "starbuxman.joshlong.com",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4e96d3ba-6d70-45ae-950d-65298b95ed1b",
+    "firstName": "Karthik",
+    "lastName": "Govardhanan",
+    "fullName": "Karthik Govardhanan",
+    "bio": "Karthik Govardhanan is a Senior Engineering Manager at CVS Health, leading AI-driven search and SEO innovations for one of the world’s largest retail and pharmacy platforms. With over 14 years of experience spanning CVS, Macy’s, Capgemini, and The Home Depot, he specializes in search relevance, personalization, and conversational commerce. Karthik’s expertise includes large language models, retrieval-augmented generation, semantic search, and scalable e-commerce architectures. He holds a Bachelor’s in Electronics and Communication Engineering and an MBA from Boston University.",
+    "tagLine": "CVS Health Inc, Sr Engineering Manager",
+    "profilePicture": "https://sessionize.com/image/846b-400o400o1-fKkPdteVTLyxQFcUPnRR87.png",
+    "sessions": [
+      {
+        "id": 999796,
+        "name": "Conversational AI Semantic Search for E-commerce using Elasticsearch + RAG"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "CVS Health Inc",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@kartigk",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/karthikgovardhanan",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ecda0d84-be59-41c6-8983-b58cd5b3f93c",
+    "firstName": "Kenneth",
+    "lastName": "Kousen",
+    "fullName": "Kenneth Kousen",
+    "bio": "Ken Kousen is the author of the Pragmatic Programmers books \"Mockito Made Clear\" and \"Help Your Boss Help You\", the O'Reilly books \"Kotlin Cookbook\", \"Modern Java Recipes\", and \"Gradle Recipes for Android\", and the Manning book \"Making Java Groovy\". He is a regular speaker on the No Fluff, Just Stuff conference tour, and has spoken at conferences all over the world. He is a Java Champion, a JavaOne Rock Star, and a Devnexus Rock Star. Currently he a Professor of the Practice of Computer Science and Associate Director for STEM Initiatives at the Entrepreneurship Center at Trinity College in Hartford, CT.\r\n\r\nIn addition to various industry certifications, he has BS degrees in both Mathematics and Mechanical Engineering from M.I.T., an MA and Ph.D. in Aerospace Engineering from Princeton, and an MS in Computer Science from R.P.I.",
+    "tagLine": "President, Kousen IT, Inc.",
+    "profilePicture": "https://sessionize.com/image/1a54-400o400o1-sdhb4Lx6mEZwTMN8avfq4X.png",
+    "sessions": [
+      {
+        "id": 1036379,
+        "name": "A Data-Oriented Programming Approach to REST APIs"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Kousen IT, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@kenkousen",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/kenkousen/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/kousenit.com",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ec42564c-c50a-4ec4-87a9-aa3e7197376d",
+    "firstName": "Ko",
+    "lastName": "Turk",
+    "fullName": "Ko Turk",
+    "bio": "Ko Turk is a Software Architect, Java Engineer, and Community Lead with more than 15+ years of experience in development, architecture, speaking, and mentoring.\r\n\r\n🦊 Voxxed Days Amsterdam conference organiser\r\n👥 JUGLeader @CodeLabJUG\r\n🫶🏻 JFall Programme Committee Member, DevoxxBE Community reviewer\r\n\r\n🧑‍💻 Working @CodeLab, assignment @Rabobank. \r\n\r\n🎤 Conference speaker, speaks about everything around Java (ok and Typescript 😄)\r\n\r\n✍🏻 Loves to blog, and writing articles for the Dutch Java Magazine.\r\n\r\n➡️ Website: http://koturk.nl/",
+    "tagLine": "CodeLab, Software Architect",
+    "profilePicture": "https://sessionize.com/image/a7b3-400o400o1-EupDehSbyCtxrWHgadQRhp.jpg",
+    "sessions": [
+      {
+        "id": 1036592,
+        "name": "Maven's hidden secrets to speed up your build"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "CodeLab",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@KoTurk77",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ko-turk-b271b929/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "koturk.nl",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "992db8b5-7d10-4c3b-96a0-6c595220e0e5",
+    "firstName": "Laurie",
+    "lastName": "Lay",
+    "fullName": "Laurie Lay",
+    "bio": "Laurie is a senior software engineer at Ippon Technologies, where she specializes in front-end development and software solutions that drive both user engagement and business success. With a master's degree in cognitive psychology, Laurie brings a unique perspective to software engineering, combining her understanding of human behavior with cutting-edge technology to create intuitive, user-friendly, and developer approved software applications.\r\n\r\nHer diverse career path spans a variety of fields, including professorship, owning a restaurant, motorcycle mechanics, and software engineering, each of which has contributed to her well-rounded skill set and innovative approach to problem-solving. This eclectic experience allows her to bridge the gap between technical complexity and real-world application, ensuring that the software she develops is both practical and accessible.\r\n\r\nIn the software development world, Laurie is particularly passionate about the impact of emerging technologies and their potential to accelerate development cycles and improve productivity. She is an advocate for learning, both for herself and others, and enjoys helping her colleagues discover their own learning paths and growth opportunities.  She is dedicated to mentoring and fostering a collaborative, inclusive learning environment within her teams. She believes in the power of shared knowledge and the importance of cultivating a growth mindset in any field, from software development to personal development. Outside of her technical role, Laurie is known for organizing internal workshops, knowledge-sharing sessions, and supporting new talent as they navigate their careers in tech.\r\n\r\nWhen she's not coding or mentoring, Laurie enjoys time spent outdoors, taking hikes with her dog in the mountains or at the ocean, and generally running around anywhere without a leash—metaphorically and literally. Her adventurous spirit is matched only by her dedication to continuous learning and improvement, both personally and professionally.",
+    "tagLine": "Software Engineer at Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image/9598-400o400o1-Pa2zNctGWoCw4isfLST8do.jpg",
+    "sessions": [
+      {
+        "id": 1030588,
+        "name": "10 Things I Hate About AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/laurie-lay/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "320f51a6-bb41-4fc1-95df-f0287771b484",
+    "firstName": "Leigh",
+    "lastName": "Griffin",
+    "fullName": "Leigh Griffin",
+    "bio": "Leigh has worked across multiple roles in the software lifecycle from researcher, to developer, to process expert and finally people management. He has an academic interest in emerging technologies with over 350 US Patents to his name in the fields of Cloud, Quantum, AI and many more disciplines. He leads Red Hat's R&D Funding to pursue new projects and emerging disciplines that can shape the companies future strategy",
+    "tagLine": "Head of OCTO R&D Funding",
+    "profilePicture": "https://sessionize.com/image/8240-400o400o1-N7qvm1rNZ9uqo1DKAxKrdx.jpg",
+    "sessions": [
+      {
+        "id": 995054,
+        "name": "Lean Software Development"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@leighgriffin",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/leigh-griffin-phd-pcc-4b584145/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "05be364d-a57f-4e08-978d-8043d43db097",
+    "firstName": "Mark",
+    "lastName": "Heckler",
+    "fullName": "Mark Heckler",
+    "bio": "Mark Heckler, MBA is the Senior Director of Field Engineering at Moderne. \r\nHe has worked with key players in numerous industries and organizations to develop, deliver, and maintain critical capabilities securely, on time, and on budget. Mark is an open source contributor, author of Spring Boot: Up and Running (https://bit.ly/springbootbook), and a licensed, instrument-rated pilot.",
+    "tagLine": "Senior Director of Field Engineering at Moderne",
+    "profilePicture": "https://sessionize.com/image/f0e0-400o400o1-ZBMq2SYxmeNzmE6h56Kxs.png",
+    "sessions": [
+      {
+        "id": 1036658,
+        "name": "Migration Engineering with OpenRewrite: The Recipe for Success"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Moderne",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mkheck",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/markheckler",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/mkheck.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
+    "firstName": "Markus",
+    "lastName": "Eisele",
+    "fullName": "Markus Eisele",
+    "bio": "Markus is a Java Champion, former Java EE Expert Group member, founder of German JavaLand, reputed speaker at Java conferences around the world, and a very well known figure in the Enterprise Java world. ",
+    "tagLine": "Cloud Native and AI in a hybrid world. Loves Java and programming.",
+    "profilePicture": "https://sessionize.com/image/b2d5-400o400o1-77TSCPm4qLJ9CED6R2kDEU.jpg",
+    "sessions": [
+      {
+        "id": 1025529,
+        "name": "Building Trustworthy and Reliable LLM Applications"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM Research",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@myfear ",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/markuseisele",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@myfear.com",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f465d18e-ff85-47b9-9997-f00a602ac48d",
+    "firstName": "Markus",
+    "lastName": "Kett",
+    "fullName": "Markus Kett",
+    "bio": "Markus and his teams have been working on IDE tools for Java and database development, as well as various open-source projects for 20 years. Markus is CEO and co-founder of MicroStream, the company behind the Eclipse open-source projects EclipseStore, Eclipse Serializer, and RapidClipse IDE. He is also the editor-in-chief for the free JAVAPRO magazine in Germany and the founder and co-organizer of the Java community conference series JCON. He is an independent editor for several magazines, and a speaker at numerous international developer conferences, user groups, and meetups.    ",
+    "tagLine": "CEO at MicroStream, Editor in Chief at JAVAPRO Magazine ",
+    "profilePicture": "https://sessionize.com/image/14d7-400o400o1-DggQ3tBF7YuYAqikwQXtsh.jpg",
+    "sessions": [
+      {
+        "id": 1040433,
+        "name": "Caching Unleashed: Revolutionizing Java Performance"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "MicroStream  ",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "markuskett",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/markuskett",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
+    "firstName": "Medha",
+    "lastName": "Chakraborty",
+    "fullName": "Medha Chakraborty",
+    "bio": "An engineer at heart and a leader by practice, I bring 17 years of experience in building robust enterprise solutions. As an Application Development Leader at BlackRock, I focus on designing and delivering scalable systems that drive real business impact. Java has always been my strongest language, and I’m equally passionate about exploring new and emerging technologies, especially the world of AI.\r\n\r\nBeyond my role, I nurture my passion for community building by leading the Java SIG at Atlanta BlackRock, where I connect developers, ideas, and innovation. Prior to BlackRock, I worked as a consultant with GAP, Pearson, JP Morgan, and SiriusXM, and I began my career as a full-stack developer, giving me a holistic view across the technology stack.\r\n\r\nI believe technology is as much about people as it is about code. As a mother, wife, and lifelong learner, I draw inspiration from music, travel, and dance, blending creativity into everything I do.",
+    "tagLine": "Engineering Leader | Java & AI Explorer @BlackRock",
+    "profilePicture": "https://sessionize.com/image/4080-400o400o1-7H3LvRWZKQTKt85eofACpc.jpg",
+    "sessions": [
+      {
+        "id": 1033934,
+        "name": "From Context Windows to Context Graphs: The Next Generation of AI Systems"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BlackRock",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@medhac6",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/medha6",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+    "firstName": "Nathaniel",
+    "lastName": "Schutta",
+    "fullName": "Nathaniel Schutta",
+    "bio": "Nathaniel T. Schutta is a software architect and Java Champion focused on cloud computing, developer happiness and building usable applications. A proponent of polyglot programming, Nate has written multiple books, appeared in countless videos and many podcasts. He’s also a seasoned speaker who regularly presents at worldwide conferences, meetups, universities, and user groups. In addition to his day job, Nate is an adjunct professor at the University of Minnesota, where he teaches students to embrace (and evaluate) technical change. Driven to rid the world of bad presentations, he coauthored the book Presentation Patterns with Neal Ford and Matthew McCullough, and he also published Thinking Architecturally and Responsible Microservices available from O’Reilly. His latest book, Fundamentals of Software Engineering, is currently available in early release.",
+    "tagLine": "Architect as a Service",
+    "profilePicture": "https://sessionize.com/image/d74a-400o400o1-EWgm8mCUBHVZkKHRmw7ycB.jpg",
+    "sessions": [
+      {
+        "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI"
+      },
+      {
+        "id": 1032726,
+        "name": "Thriving in an Evolving Software Industry"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Thoughtworks",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ntschutta",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/nate-schutta/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@nts.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5ecff6ff-7704-433e-a38f-a057d05eacec",
+    "firstName": "Olena",
+    "lastName": "Kutsenko",
+    "fullName": "Olena Kutsenko",
+    "bio": "Olena is a Staff Developer Advocate at Confluent and a recognized expert in data streaming and analytics. With two decades of experience in software engineering, she has built mission-critical applications, led high-performing teams, and driven large-scale technology adoption at industry leaders like Nokia, HERE Technologies, AWS, and Aiven.\r\n\r\nA passionate advocate for real-time data processing and AI-driven applications, Olena empowers developers and organizations to use the power of streaming data. She is an AWS Community Builder, a dedicated mentor, and a volunteer instructor at a nonprofit tech school, helping to shape the next generation of engineers.\r\n\r\nAs an international speaker and thought leader, Olena regularly presents at top global conferences, sharing deep technical insights and hands-on expertise. Whether through her talks, workshops, or content, she is committed to making complex technologies accessible and inspiring innovation in the developer community.",
+    "tagLine": "Staff Developer Advocate at Confluent",
+    "profilePicture": "https://sessionize.com/image/926f-400o400o1-QJxA1DujA7NtvobmMfB4M1.jpg",
+    "sessions": [
+      {
+        "id": 1002682,
+        "name": "Deep dive into data streaming security"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Confluent",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@OlenaKutsenko",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/olenakutsenko/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/olenakutsenko.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c77a2591-3a95-4285-ab0e-c06aae180730",
+    "firstName": "Pasha",
+    "lastName": "Finkelshteyn",
+    "fullName": "Pasha Finkelshteyn",
+    "bio": "Years of experience in software engineering and the team's leading roles combined with his passion for Java made Pasha know all the hidden details in this IT niche. As a Developer Advocate for @Bellsoft, he educates the public on the latest software tools built by BellSoft and helps to create and test instruments for developers. He writes in Kotlin, speaks at conferences, composes a new articles, or maintains his pet projects.",
+    "tagLine": "Developer Advocate, BellSoft",
+    "profilePicture": "https://sessionize.com/image/1c41-400o400o1-YpEZkvAnYbV1h9XVjxMMjD.jpg",
+    "sessions": [
+      {
+        "id": 1003030,
+        "name": "The Ultimate Showdown of Database Migration Tools"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BellSoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@asm0di0",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "http://linkedin.com/in/asm0dey",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@asm0dey.site",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bd435afb-3853-43c0-8dee-cbcda16f7e91",
+    "firstName": "Phil",
+    "lastName": "Webb",
+    "fullName": "Phil Webb",
+    "bio": "Phil Webb is the co-creator of the Spring Boot open source project and has been serving as the project lead since its inception in 2013. Phil is employed by VMware where he is fortunate enough to be able to work full-time on open source software.",
+    "tagLine": "Spring Boot Project Lead",
+    "profilePicture": "https://sessionize.com/image/bc8c-400o400o1-Tid3jieZo8BFp5eM1aK5D8.jpg",
+    "sessions": [
+      {
+        "id": 1038286,
+        "name": "What's new in Spring Boot 4.0 & what's arriving 4.1"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/phillipwebb/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@phillip_webb",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d017112e-f5b1-4594-aee9-cdac1403e0f1",
+    "firstName": "Raju",
+    "lastName": "Gandhi",
+    "fullName": "Raju Gandhi",
+    "bio": "Raju Gandhi has been writing software for over two decades. Along the way he's been a software architect, consultant, author, teacher, and regularly invited speaker at conferences around the world. As both a software developer and a teacher, he believes in keeping things simple, preferring to understand and explain the “why” as opposed to the “how.” Raju blogs at looselytyped.com and lives in Columbus, Ohio, US, along with his wonderful wife, Michelle, their sons, Mason and Micah, daughter, Delphine, and three furry family members, Buddy, Princess Zara,  and Lulu. You can find his contact information at rajugandhi.com. He’s always looking to make new friends.",
+    "tagLine": "Lifelong learner, software developer and architect, book author and public speaker",
+    "profilePicture": "https://sessionize.com/image/0f93-400o400o1-4yAqixiDbFjWpb4GRZc1m2.jpeg",
+    "sessions": [
+      {
+        "id": 1036735,
+        "name": "Git features you aren’t using"
+      },
+      {
+        "id": 1036736,
+        "name": "Modular Monoliths: A happy middle"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "DefMacro Software LLC",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@looselytyped",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.rajugandhi.com",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e27104ba-18b0-43f5-98a7-c7da70111302",
+    "firstName": "Raphael",
+    "lastName": "De Lio",
+    "fullName": "Raphael De Lio",
+    "bio": "Raphael De Lio is a passionate software engineer who loves to think about solutions and ways to improve anything he touches. With over seven years of experience across multiple roles, industries, and countries, he brings a rich perspective to solving technical challenges and connecting with developer communities.\r\n\r\nBorn in Brazil, Raphael lived in Portugal for six years before moving to the Netherlands in 2022. His main role was a Software Engineer, with expertise in Java, Kotlin, and scalable systems. He also served as the organizer and host of the Dutch Kotlin User Group, building a community for Kotlin enthusiasts in Amsterdam.\r\n\r\nCurrently, he serves as a Developer Advocate at Redis, where he combines his love for coding with his enthusiasm for empowering others through education, advocacy, and community engagement.",
+    "tagLine": "Software Engineer (Developer Advocacy) @ Redis",
+    "profilePicture": "https://sessionize.com/image/4528-400o400o1-ZSnMRcshSepagBBHS4yZ4.jpg",
+    "sessions": [
+      {
+        "id": 1021461,
+        "name": "The Evolution of Memory in Humans and AI Agents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Redis",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@raphaeldelio",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://linkedin.com/in/raphaeldelio",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "raphaeldelio.dev",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "727026b3-6a06-41d7-803d-cc6df0a8802c",
+    "firstName": "Rob",
+    "lastName": "Winch",
+    "fullName": "Rob Winch",
+    "bio": "Rob Winch is employed by Broadcom as the Spring Security project lead. In the past he has worked in the health care industry, bioinformatics research, high performance computing, and as a web consultant. When he is not sitting in front of a computer he enjoys cycling with friends.",
+    "tagLine": "Spring Security Project Lead",
+    "profilePicture": "https://sessionize.com/image/3092-400o400o1-wzmEdCxXnuWPKiGDtquY27.jpg",
+    "sessions": [
+      {
+        "id": 1023613,
+        "name": "Bootiful Spring Security"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@rob_winch",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/rwinch/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "rwinch.github.io",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "32cb0f88-b1ad-44c2-8860-86a5ac46c59a",
+    "firstName": "Rohit",
+    "lastName": "Bhardwaj",
+    "fullName": "Rohit Bhardwaj",
+    "bio": "Rohit Bhardwaj is the Director of Architecture at Salesforce, where he specializes in architecting multi-tenant, cloud-native solutions within resilient microservices and service-oriented architectures using the AWS stack. With a passion for solving complex problems, he has led transformational programs that reduce costs and improve efficiencies. Rohit has a rich background in designing scalable cloud microservice architectures with Spring Boot and Netflix OSS on AWS and Google Cloud. As a Security Ninja, he proactively addresses application security vulnerabilities through ethical hacking and threat modeling. Rohit has been involved in building Lambda architecture solutions using Apache Spark and Cassandra for real-time analytics projects. He holds an MBA in Corporate Entrepreneurship from Babson College and a Master's in Computer Science from Boston University and Harvard University. A frequent speaker at conferences like Oreilly, No Fluff Just Stuff and GIDS, Rohit enjoys sharing his expertise in cloud architecture, microservices, and AI.",
+    "tagLine": "Director of Architecture, CTO, Salesforce",
+    "profilePicture": "https://sessionize.com/image/22e3-400o400o1-Y9DATxkJE8fWD1XBuFSRCP.jpg",
+    "sessions": [
+      {
+        "id": 1035067,
+        "name": "Agentic, Assistive & Predictive AI Patterns"
+      },
+      {
+        "id": 1035064,
+        "name": "Architecting Microservices for Agentic AI Integration"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Salesforce",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "rbhardwaj1",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/rohit-bhardwaj-cloud/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e02322d4-d2f8-420f-8f04-6cd8af9d88ed",
+    "firstName": "Sam",
+    "lastName": "Dengler",
+    "fullName": "Sam Dengler",
+    "bio": "Sam",
+    "tagLine": "Principal Engineer",
+    "profilePicture": "https://sessionize.com/image/f90a-400o400o1-Lz7q7uYqiJu4Jec8N5yQC6.jpg",
+    "sessions": [
+      {
+        "id": 1036625,
+        "name": "Durable Execution: Building Apps That Refuse to Die"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JPMorgan Chase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/samdengler/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bb1bbae2-90d9-4ad9-838e-c3ec2cdb0859",
+    "firstName": "Sandeep",
+    "lastName": "Adinarayana",
+    "fullName": "Sandeep Adinarayana",
+    "bio": "Sandeep Adi is a Senior Director of Engineering at ADP, where he has the privilege of leading the engineering teams behind the HR and Payroll technology roadmap for WorkforceNow, ADP's flagship HCM platform serving millions of users globally. With over 20 years of software industry experience, Sandeep continues to explore how the principles that create championship sports teams (collaboration, trust, and shared accountability) might serve as behavioral foundations for transforming engineering teams.\r\n\r\nAt ADP, Sandeep works alongside talented developers to advance innersourcing initiatives and founded the ADP Software Crafters meetup to foster shared learning across the organization. His approach to engineering leadership is deeply influenced by his lifelong passion for cricket, where he has observed how small behavioral changes in team dynamics can create meaningful performance improvements. He is constantly learning how to apply these insights to help software teams achieve sustainable results together.\r\n\r\nThrough both successes and failures in team building, Sandeep has discovered that the most impactful leadership often comes from asking better questions rather than having all the answers. When not building software or supporting teams, Sandeep can be found pursuing his love of Carnatic flute music, a practice that keeps him grounded in the discipline of continuous learning.",
+    "tagLine": "Sr. Director of Engineering at ADP",
+    "profilePicture": "https://sessionize.com/image/8321-400o400o1-f3rtCdjqYuAzLLA1RWCPwK.jpg",
+    "sessions": [
+      {
+        "id": 1034114,
+        "name": "Beyond Code: Behavioral Architecture (Small Changes, Big Wins)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ADP Inc",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/sandeepadi/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9ff22df8-d3ce-4eb3-8e2a-204f0de8bc5b",
+    "firstName": "Sibasis",
+    "lastName": "Padhi",
+    "fullName": "Sibasis Padhi",
+    "bio": "Sibasis Padhi is a Staff Software Engineer at Walmart Global Tech with over 18 years of experience and a Global expert in Agentic AI - microservices architecture, cloud performance optimization, and financial systems. He specializes in building high-volume FinTech transaction platforms and introducing Agentic AI into enterprise Java ecosystems for self-optimization and resilience. Sibasis has spoken at the IEEE Cloud Summit 2025, SSCET 2025, and multiple professional events and is a published author. He also serves as a mentor and judge for international technology competitions, sharing his expertise in scalable and secure cloud solutions.",
+    "tagLine": "Staff Software Engineer, Walmart Global Tech | Agentic AI Microservices & Cloud Performance Optimization Expert",
+    "profilePicture": "https://sessionize.com/image/e4ba-400o400o1-pvEmkE5M9AuHBXRtR8FDm4.jpg",
+    "sessions": [
+      {
+        "id": 1035470,
+        "name": "Agentic AI for Java Microservices: Cloud Performance Optimization at FinTech Scale"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Walmart Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "https://x.com/sibaspadhi",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/sibasis-padhi",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "709043d1-5754-4459-a8d5-6dd2f5619874",
+    "firstName": "Simon",
+    "lastName": "Ritter",
+    "fullName": "Simon Ritter",
+    "bio": "Simon Ritter is the Deputy CTO of Azul Systems.  Simon has been in the IT business since 1984 and holds a Bachelor of Science degree in Physics from Brunel University in the U.K. \r\n\r\nSimon joined Sun Microsystems in 1996 and started working with Java technology from JDK 1.0; he has spent time working in both Java development and consultancy.  Having moved to Oracle as part of the Sun acquisition, he managed the Java Evangelism team for the core Java platform, Java for client applications and embedded Java.  Now at Azul, he continues to help people understand Java as well as Azul’s JVM technologies and products.  Simon has twice been awarded Java Rockstar status at JavaOne and is a Java Champion.  He currently represents Azul on the JCP Executive Committee and on the Java SE Expert Group (JSR 379, 383 and 384).",
+    "tagLine": "Deputy CTO, talking Java around the world",
+    "profilePicture": "https://sessionize.com/image/dd6c-400o400o1-LswjbcsNzih8ifmTU4MgBq.jpg",
+    "sessions": [
+      {
+        "id": 1000618,
+        "name": "Java Performance: Beyond Simple Request Latencies"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@speakjava",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/siritter/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/speakjava.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+    "firstName": "Spencer",
+    "lastName": "Gibb",
+    "fullName": "Spencer Gibb",
+    "bio": "Spencer Gibb is a Software Engineer at Broadcom where he is the co-founder and lead of the Spring Cloud Core projects.\r\n\r\nHis interests include distributed systems, JVM languages, web services frameworks, message-driven architectures and making software development simpler.\r\n\r\nHe has industry experience in early e-commerce platforms, government and non-profit organizations, and business intelligence startups.  He has extensive java experience and experience in other languages such as scala and python.",
+    "tagLine": "Co-founder and Lead of Spring Cloud at Broadcom",
+    "profilePicture": "https://sessionize.com/image/9b91-400o400o1-pzM8FH2X7HPVR3dL1oD2Z9.jpg",
+    "sessions": [
+      {
+        "id": 1014291,
+        "name": "API Versioning in Spring"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Spring Cloud",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@spencerbgibb",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/spencergibb/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "spencer.gibb.us",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "977e5150-2d39-4089-bd48-76c2adc27332",
+    "firstName": "Srijani",
+    "lastName": "Dey",
+    "fullName": "Srijani Dey",
+    "bio": "As a Senior Director, in the 'Strategic Program Transformation' function of Aladdin Data, I am responsible for the delivery of Studio programs, collaborate and connect the dots across multi-disciplinary teams and help focus on value realization.\r\n\r\n'Strategic Program Transformation' function at BlackRock, is accountable to deliver complex, cross-functional, multi-year, Aladdin-wide strategic initiative, aligned to firm's goals and priorities and commercial client outcomes.",
+    "tagLine": "Agentic AI : Autonomy with deterministic workflows",
+    "profilePicture": "https://sessionize.com/image/8a7a-400o400o1-H5aJEDFQMJhvArkBZvBzUu.png",
+    "sessions": [
+      {
+        "id": 1033934,
+        "name": "From Context Windows to Context Graphs: The Next Generation of AI Systems"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Blackrock",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/srijanidey/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0793b99f-1282-4674-9d21-f88e30c8232e",
+    "firstName": "Stephen",
+    "lastName": "Chin",
+    "fullName": "Stephen Chin",
+    "bio": "Stephen Chin is VP of Developer Relations at Neo4j, conference chair of the LF AI & Data Foundation, and author of numerous titles including the upcoming GraphRAG: The Definitive Guide for O'Reilly. He has given keynotes and main stage talks at numerous conferences around the world including AI Engineer Summit, AI DevSummit, Devoxx, DevNexus, JNation, JavaOne, Shift, Joker, swampUP, and GIDS. Stephen is an avid motorcyclist who has done evangelism tours in Europe, Japan, and Brazil, interviewing developers in their natural habitat. When he is not traveling, he enjoys teaching kids how to do AI, embedded, and robot programming together with his daughters.",
+    "tagLine": "VP of Developer Relations",
+    "profilePicture": "https://sessionize.com/image/67c7-400o400o1-94UgqvdxnaQUpj38o9TkBX.jpg",
+    "sessions": [
+      {
+        "id": 1045377,
+        "name": "Context Engineering: Connecting the Dots with Graphs"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Neo4j",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@steveonjava",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/steveonjava",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/steveonjava.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6900ec45-78da-4b8c-b0d5-f894bb330399",
+    "firstName": "Ted M.",
+    "lastName": "Young",
+    "fullName": "Ted M. Young",
+    "bio": "Java technical coach, trainer, and learning designer.",
+    "tagLine": "Principal Technical Coach",
+    "profilePicture": "https://sessionize.com/image/5afa-400o400o1-H7K8EGvAxLqsftiTcxwF8M.jpg",
+    "sessions": [
+      {
+        "id": 1036743,
+        "name": "Clear up Messy Code with Refactoring Maneuvers in IntelliJ IDEA"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JitterTed Productions",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@jitterted",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/tedmyoung",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/ted.dev",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "2efcbdfc-545b-48b5-aed0-14a924071cc4",
+    "firstName": "Tim",
+    "lastName": "te Beek",
+    "fullName": "Tim te Beek",
+    "bio": "Tim te Beek is a staff software engineer at Moderne, which automates software refactoring at scale. He has extensive experience contributing to and presenting on Open Source software within the Java ecosystem. Previously he worked as a consultant specializing in migration engineering and developer productivity.",
+    "tagLine": "Staff software engineer at Moderne",
+    "profilePicture": "https://sessionize.com/image/d908-400o400o1-BrAqtB6MULT4YRCqUc1pab.jpg",
+    "sessions": [
+      {
+        "id": 1036658,
+        "name": "Migration Engineering with OpenRewrite: The Recipe for Success"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Moderne",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@timtebeek",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/timtebeek/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/timtebeek.github.io",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0320da48-1f02-4e73-b523-a83fdd8a14be",
+    "firstName": "Varsha",
+    "lastName": "Venkatesh",
+    "fullName": "Varsha Venkatesh",
+    "bio": "MS in CS @ RIT ; prev. 1 year at Tesla; Current 1+ year at Apple",
+    "tagLine": "Supply Chain Software @ Apple",
+    "profilePicture": "https://sessionize.com/image/6e89-400o400o1-37JV4zVW5Jq5VoEH9qaarm.jpg",
+    "sessions": [
+      {
+        "id": 997270,
+        "name": "GenAI for Supply Chain at Apple using RAG"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Apple",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "--",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/varsha--venkatesh/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "b576bdc5-c994-40f5-b1dd-e0f9f7999fa9",
+    "firstName": "Venkat",
+    "lastName": "Subramaniam",
+    "fullName": "Venkat Subramaniam",
+    "bio": "Dr. Venkat Subramaniam is an award-winning author, founder of Agile Developer, Inc., and an instructional professor at the University of Houston.\r\n\r\nHe has trained and mentored thousands of software developers in the US, Canada, Europe, and Asia, and is a regularly-invited speaker at several international conferences. Venkat helps his clients effectively apply and succeed with sustainable agile practices on their software projects.\r\n\r\nVenkat is a (co)author of multiple technical books, including the 2007 Jolt Productivity award winning book Practices of an Agile Developer. You can find a list of his books at agiledeveloper.com. You can reach him by email at venkats@agiledeveloper.com or on twitter at @venkat_s.",
+    "tagLine": "Agile Developer, Inc.",
+    "profilePicture": "https://sessionize.com/image/2458-400o400o1-c5-c994-40f5-b1dd-e0f9f7999fa9.7ec0ab6e-811f-440b-be84-ec01c03f63e6.jpg",
+    "sessions": [
+      {
+        "id": 1053995,
+        "name": "Cruising Along with Java: From Java 9 to 25"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Agile Developer, Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@venkat_s",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/vsubramaniam",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/venkats.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9548c494-2cab-45b9-af37-398f9b6d1f9d",
+    "firstName": "Vinicius",
+    "lastName": "Senger",
+    "fullName": "Vinicius Senger",
+    "bio": "Vinicius Senger is a developer, inventor, and technical speaker working for AWS in California in the Global Specialist Team as a Senior Developer Advocate for Java. He started developing software at just 8 years old and never stopped accumulating 30 years of work in the IT area. Founder of Globalcode and The Developers Conference, Vinicius was considered top 20 influencer in IoT development, Java Champion winning two Duke's Choice Award in California for innovation projects in automation, robotics, boats, houses, helmets and many others. Since 2017 at AWS, he has been working with Java, IoT, Serverless, Machine Learning, Artificial Intelligence and traveling around the world promoting open-source technologies and AWS services.",
+    "tagLine": "Sr Developer Advocate for Java",
+    "profilePicture": "https://sessionize.com/image/bc45-400o400o1-rpfe49GpmfNW4gW4Yt9neS.png",
+    "sessions": [
+      {
+        "id": 1032003,
+        "name": "10 Tools & Tips to Upgrade Your Legacy Code with GenAI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "AWS",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@siliconvini",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/viniciussenger/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8908ee3e-c72a-4125-b71d-98e39ce27c0b",
+    "firstName": "Zoe",
+    "lastName": "Steinkamp",
+    "fullName": "Zoe Steinkamp",
+    "bio": "I’m Zoe Steinkamp, a Developer Advocate at ClickHouse, with a strong foundation in front-end software engineering. My mission is to empower developers by enhancing their experience with ClickHouse’s high-performance database and real-time analytics capabilities. I also have a growing interest in data science. In my spare time, I love to travel and tend to my garden. Let’s connect on LinkedIn—I’m eager to exchange insights and knowledge at both virtual and in-person events!",
+    "tagLine": "Senior Developer Advocate at ClickHouse",
+    "profilePicture": "https://sessionize.com/image/e7c7-400o400o1-sVbPFvPSySG9etgQpsnSEZ.jpg",
+    "sessions": [
+      {
+        "id": 1035736,
+        "name": "Unbundling of the Cloud Data Warehouse: Open Source Databases and Data Lakes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "ClickHouse",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/zoe-steinkamp/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  }
+]

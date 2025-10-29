@@ -1,18 +1,27 @@
 ---
 layout: default
 ---
-{% assign events = site.events | where: "track", page.track | sort: "name" %}
+{% assign events = site.events | where_exp: "item", "page.tracks contains item.track" | sort: "name" %}
 <div class="featured-header">
-<h1>{{page.track | capitalize }}</h1>
+{% for t in page.tracks %}  
+<h1>{{t | capitalize }}</h1>
+{% endfor %}
 </div>
 
 {% for session in events %}
 <div class="workshop-promo-row">
-  <h2><a href="/presentations/{{session.slug}}">{{session.title}}</a></h2>
+  <h2 class="text-indigo-600 font-bold hover:text-indigo-800 text-center"><a href="/events/{{session.slug}}">{{session.title}}</a></h2>
   {% for speaker in session.speakers %}
       {% include workshop_speaker.html data = speaker %}
   {% endfor %}
 </div>
 {% endfor %}
 
-<a href="/presentations" class="btn btn-square btn-square btn-speakers center-block">SEE ALL SESSIONS</a>
+<div class="track-links my-8 text-center flex flex-wrap justify-center gap-4">
+  {% assign all_tracks = "ai,java,dev-practices" | split: "," %}
+  {% for track in all_tracks %}
+    {% unless page.path contains track %}
+      <a href="/events/{{ track }}" class="track-link p-2">{{ track | capitalize }}</a>
+    {% endunless %}
+  {% endfor %}
+</div>

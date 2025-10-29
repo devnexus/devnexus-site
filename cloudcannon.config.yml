@@ -1,14 +1,15 @@
 _schema: _schema
 source: /
 paths:
-  uploads: /assets/images
-  static: ''
+  uploads: /w"assets/images
+  static: ''"
 collections_config:
   posts:
     path: _posts
     name: Posts
     icon: event_available
     disable_url: false
+    description: ''
     description: ''
     preview:
       text:
@@ -56,13 +57,20 @@ collections_config:
             dam_static:
           mime_type:
           accepts_mime_types:
+            - image/svg+xml
+            - image/png
+            - image/jpeg
+            - image/svg+xml
+            - image/png
+            - image/jpeg
           empty_type:
           resize_style:
           width: 1600
           height: 1200
           expandable:
           allowed_sources:
-          prevent_resize_existing_files: true
+          prevent_resize_existing_files:
+          prevent_resize_existing_files:
           sizes:
         cascade: true
     add_options:

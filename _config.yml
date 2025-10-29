@@ -5,16 +5,15 @@ title: Devnexus 2026
 dates: March 4-6, 2026 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
 email: info@ajug.org
-description: The longest-running and Largest Java Ecosystem Conference in the USA.
-active-header: navigation-post-show.html
-cfp-is-open: true
+description: The longest-running and Largest Java Ecosystem Conference in the World.
+cfp-is-open: false
 registration:
   text:   Opening August 2025
   status: not-enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2026
-feedback: show
+feedback: not-show
 uploads_dir: "/uploads"
 links:
    stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
@@ -40,17 +39,17 @@ pagination:
   sort_reverse: true  
 collections:
   speakers:
-    title: Speakers 2025
+    title: Speakers 2026
     output: true
-    permalink: archive/devnexus2025/:collection/:slug
+    permalink: :collection/:slug
   events:
-     title: Presentations 2025
+     title: Presentations 2026
      output: true
-     permalink: archive/devnexus2025/presentations/:slug/
+     permalink: :collection/:slug/
   event-instructions:
-     title: Workshop Prep 2025
+     title: Workshop Prep 2026
      output: true
-     permalink: archive/devnexus2025/presentations/:path/instructions
+     permalink: :path/instructions
   tracks:
     title: Tracks
     output: false

@@ -4,48 +4,28 @@ layout: info
 {% assign trackCategory = page.categories | where: "name", "Track"| first %}
 {% assign track= trackCategory.CategoryItems[0].name %}
 
-<section id="speaker" class="bg-light-gray details container"
-	style="margin-top: 2em; text-align: left; padding-bottom: 0">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1">
-			<div class="speaker-member row "
-				style="padding:25px;
-				background: linear-gradient(-90deg, #6c7070, #6c7070) repeat-y; background-size: 10px 10px;
-				background-color: #282828;">
-				<h4>{{page.title}}</h4>
-					<div>
-						<strong style="color: white">Track:</strong>
-						<span>{{ page.track }}</span>
-					</div>
-			</div>
-	</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 ">
-			<div class="presentation-header">
-				Abstract
-				<span class="pull-right presentation-header">
-				{% if page.recording %}
-					<a href="{{ page.recording }}">Recording</a>
-				{% endif %}
-				{% if page.slides %}
-					&nbsp;|&nbsp;<a href="{{ page.slides }}">Slides</a>
-				{% endif %}
-				{% if page.instructions == true %}
-					<a href="/sessions/{{page.slug}}/instructions">Setup Instructions</a>
-				{% endif %}
-				</span>
-			</div>
-			<div class="biography-body">
-				{{ page.description | newline_to_br }}
-			</div>
-		</div>
-	</div>
+<main class="mt-32 mx-4 lg:mx-auto lg:max-w-4xl">
+  <h1 class="text-3xl font-bold text-gray-900 mb-4 text-center">{{ page.title }}</h1>
+  <p class="text-lg text-gray-700 leading-relaxed">{{ page.description }}</p>
+</main>
+<aside class="mx-4 lg:mx-auto lg:max-w-4xl my-8">
+	{% for speaker in page.speakers %}
+		{% assign speaker_data = site.data.speakers | where: "id", speaker.id | first %}
 
-    {% for speaker in page.speakers %}
-	    {% include speaker_bio.html speaker=speaker.id %}
-    {% endfor %}
-	{% if site.feedback == 'show' %}
+			<div class="flex flex-col lg:flex-row items-center lg:items-start p-6 bg-white rounded-lg shadow-md">
+				<div class="w-36 h-36 overflow-hidden mb-4 lg:mb-0 lg:mr-8 mx-auto lg:mx-0">
+					<img src="{{ speaker_data.profilePicture }}" alt="Photo of {{ speaker_data.fullName }}" class="object-cover w-full h-full">
+				</div>
+				
+				<div class="flex-grow text-center lg:text-left lg:w-2/3">
+					<h3 class="text-2xl font-bold text-gray-900 mb-1">{{ speaker_data.fullName }}</h3>
+					<p class="text-base text-gray-500 leading-relaxed">{{ speaker_data.bio }}</p>
+				</div>
+			</div>
+	{% endfor %}
+</aside>
+{% if site.feedback == 'show' %}
+<section id="ratings">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 ">
 			<div class="feedback-header">
@@ -72,5 +52,5 @@ layout: info
 			</div>
 		</div>
 	</div>
-    {% endif %}
-</section>
+	</section>
+{% endif %}
