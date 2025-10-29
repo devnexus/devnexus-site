@@ -43,7 +43,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Workshop
 slug: cruising-along-with-java-from-java-9-to-25
 

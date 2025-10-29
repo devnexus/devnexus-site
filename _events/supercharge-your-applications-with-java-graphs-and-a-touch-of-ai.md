@@ -33,7 +33,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 slug: supercharge-your-applications-with-java-graphs-and-a-touch-of-ai
 

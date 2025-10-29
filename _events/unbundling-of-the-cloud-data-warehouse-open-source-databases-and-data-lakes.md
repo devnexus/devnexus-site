@@ -34,7 +34,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 slug: unbundling-of-the-cloud-data-warehouse-open-source-databases-and-data-lakes
 

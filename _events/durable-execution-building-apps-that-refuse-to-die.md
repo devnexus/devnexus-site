@@ -29,7 +29,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 slug: durable-execution-building-apps-that-refuse-to-die
 

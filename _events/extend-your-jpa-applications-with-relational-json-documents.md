@@ -33,7 +33,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 slug: extend-your-jpa-applications-with-relational-json-documents
 

@@ -42,7 +42,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 slug: beyond-code-behavioral-architecture-small-changes-big-wins
 

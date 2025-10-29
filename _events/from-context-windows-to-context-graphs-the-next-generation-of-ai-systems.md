@@ -49,7 +49,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Gen AI
 slug: from-context-windows-to-context-graphs-the-next-generation-of-ai-systems
 

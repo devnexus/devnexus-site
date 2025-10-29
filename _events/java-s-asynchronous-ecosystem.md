@@ -38,7 +38,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 slug: java-s-asynchronous-ecosystem
 

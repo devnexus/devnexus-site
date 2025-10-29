@@ -28,7 +28,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 slug: what-s-new-in-spring-boot-4-0-what-s-arriving-4-1
 
