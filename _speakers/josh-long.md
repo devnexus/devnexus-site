@@ -46,6 +46,12 @@ questionAnswers:
   answer: starbuxman.joshlong.com
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/rbaoh~4ovh1oF16YYDmPryLkCMVm.png~spring_company_logo.png
+  sort: 25
+  answerExtra: spring_company_logo.png
 categories: []
 slug: josh-long
 

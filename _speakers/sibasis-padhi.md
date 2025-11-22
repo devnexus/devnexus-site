@@ -45,6 +45,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iwcaipge~9tWxE99HHG7bXHE64ZfWH3.jpg~tu1ce7gt11tljey9pq-8xj5qosxv40ra_0az4fe14vo.jpg
+  sort: 25
+  answerExtra: tU1CE7gt11tLJEY9Pq-8xJ5qOsXv40ra_0AZ4fE14vo.jpg
 categories: []
 slug: sibasis-padhi
 

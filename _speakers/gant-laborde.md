@@ -51,6 +51,12 @@ questionAnswers:
   answer: https://bsky.app/profile/gantlaborde.com
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/flalbes~apudvXQHaGgW5qhS1Kuz8v.jpg~irvertical.jpg
+  sort: 25
+  answerExtra: irVertical.jpg
 categories: []
 slug: gant-laborde
 

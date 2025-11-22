@@ -38,6 +38,12 @@ questionAnswers:
   answer: "@brunoborges.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ccacfeywa~MFjfVcS3nA5aqKxQTgf7Y9.png~microsoft_logo_2012.svg.png
+  sort: 25
+  answerExtra: Microsoft_logo_(2012).svg.png
 categories: []
 slug: bruno-borges
 

@@ -41,6 +41,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/imdayhe~RReYAfr26DHVus8rRCyKcQ.png~blackrock-logo.png
+  sort: 25
+  answerExtra: BlackRock-logo.png
 categories: []
 slug: srijani-dey
 

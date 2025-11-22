@@ -43,6 +43,12 @@ questionAnswers:
   answer: "@brianvermeer.nl"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ijmajdev~V8KB6wK8HX8Cy3snoFwTGJ.jpg~snyk_logo.jpg
+  sort: 25
+  answerExtra: Snyk_Logo.jpg
 categories: []
 slug: brian-vermeer
 

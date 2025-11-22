@@ -20,9 +20,9 @@ isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 0bbdbd49-49d5-4418-9e3f-5df6968288ae
-  name: Brayan Munoz V.
+  name: Brayan Muñoz V.
 - id: edcc0378-0d8c-49d6-a068-4507930deae5
-  name: José Rafael Almonte Cabrera
+  name: José R. Almonte C.
 categories:
 - id: 107979
   name: Track

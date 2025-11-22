@@ -46,6 +46,12 @@ questionAnswers:
   answer: https://bsky.app/profile/speakjava.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ijyaicce~pMKpfRX13439xnqxZUPZoV.png~azul_systems_logo.png
+  sort: 25
+  answerExtra: Azul_systems_logo.png
 categories: []
 slug: simon-ritter
 

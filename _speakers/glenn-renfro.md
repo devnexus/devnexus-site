@@ -39,6 +39,12 @@ questionAnswers:
   answer: "@cppwfs"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iobhamle~3oKqd1R25SVLRh2qBVz6wz.png~vmware-by-broadcom.svg.png
+  sort: 25
+  answerExtra: Vmware-by-broadcom.svg.png
 categories: []
 slug: glenn-renfro
 

@@ -32,7 +32,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 slug: the-accidental-leader-how-to-succeed-when-you-weren-t-planning-to-lead
 

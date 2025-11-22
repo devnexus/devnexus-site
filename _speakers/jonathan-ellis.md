@@ -37,6 +37,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/vpaqzen~WLWDksxUDenAuYTh9jFj8Y.png~brokk-embed.png
+  sort: 25
+  answerExtra: brokk-embed.png
 categories: []
 slug: jonathan-ellis
 

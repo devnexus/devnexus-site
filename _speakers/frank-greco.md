@@ -40,6 +40,12 @@ questionAnswers:
   answer: "@frankgreco.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ibxazkey~QmwFNSeBywLPmHT1cyCi1F.webp~event-cover-7822.webp
+  sort: 25
+  answerExtra: event-cover-7822.webp
 categories: []
 slug: frank-greco
 

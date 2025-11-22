@@ -42,6 +42,12 @@ questionAnswers:
   answer: "@billykorando.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ifsaopye~hkBa1hkN7kv7RiyUDQ8pM7.jpg~oracle-logo.jpg
+  sort: 25
+  answerExtra: Oracle-Logo.jpg
 categories: []
 slug: billy-korando
 

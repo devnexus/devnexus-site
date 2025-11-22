@@ -11,6 +11,9 @@ bio: "Mark Heckler, MBA is the Senior Director of Field Engineering at Moderne. 
 tagLine: Senior Director of Field Engineering at Moderne
 profilePicture: https://sessionize.com/image/f0e0-400o400o1-ZBMq2SYxmeNzmE6h56Kxs.png
 sessions:
+- id: 1025968
+  name: 'Make Mechanical Advantage YOUR Advantage: How to modernize & futureproof
+    your code with OpenRewrite'
 - id: 1036658
   name: 'Migration Engineering with OpenRewrite: The Recipe for Success'
 isTopSpeaker: false
@@ -40,6 +43,12 @@ questionAnswers:
   answer: https://bsky.app/profile/mkheck.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ifbaxfef~XugUsgR9nexmj4sHxuozGy.svg~moderne-poster-logo.svg
+  sort: 25
+  answerExtra: moderne-poster-logo.svg
 categories: []
 slug: mark-heckler
 

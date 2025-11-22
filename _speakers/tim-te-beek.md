@@ -39,6 +39,12 @@ questionAnswers:
   answer: https://bsky.app/profile/timtebeek.github.io
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/dfaypem~PUvW6JMvXjP9LMophkEATr.svg~moderne-poster-logo.svg
+  sort: 25
+  answerExtra: moderne-poster-logo.svg
 categories: []
 slug: tim-te-beek
 

@@ -39,6 +39,12 @@ questionAnswers:
   answer: rwinch.github.io
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/rraskeu~WENmMZzDorNSkphnSzH6EP.png~broadcom_logo_red-black_no-tag-2.png
+  sort: 25
+  answerExtra: Broadcom_Logo_Red-Black_no-tag-2.png
 categories: []
 slug: rob-winch
 

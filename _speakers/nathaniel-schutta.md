@@ -19,6 +19,8 @@ profilePicture: https://sessionize.com/image/d74a-400o400o1-EWgm8mCUBHVZkKHRmw7y
 sessions:
 - id: 1032716
   name: Fundamentals of Software Engineering In the age of AI
+- id: 1032731
+  name: Fundamentals of Software Engineering In the age of AI
 - id: 1032726
   name: Thriving in an Evolving Software Industry
 isTopSpeaker: false
@@ -48,6 +50,12 @@ questionAnswers:
   answer: "@nts.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/covjal~XNg3LvpGRmMtRzv7bfB3JY.png~thoughtworks_flamingo_wave.png
+  sort: 25
+  answerExtra: thoughtworks_flamingo_wave.png
 categories: []
 slug: nathaniel-schutta
 

@@ -41,6 +41,12 @@ questionAnswers:
   answer: "@asm0dey.site"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ukwalze~G6d59E2jT4FFp6u9Q7AuAm.jpg~bellsoft_logo.jpg
+  sort: 25
+  answerExtra: BellSoft_Logo.jpg
 categories: []
 slug: pasha-finkelshteyn
 

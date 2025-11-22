@@ -44,6 +44,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ibvasfet~XUPXJu3BH6Ksss6SrpAF5f.jpg~oracle-logo.jpg
+  sort: 25
+  answerExtra: Oracle-Logo.jpg
 categories: []
 slug: anders-swanson
 

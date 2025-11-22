@@ -43,6 +43,12 @@ questionAnswers:
   answer: "@jerdog.dev"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ihmagjey~JXPQwenqxbERZAFB34o7qt.png~c39b75a4c3fada6ac8c271bda19e9f939bf3d6f0-3840x562.png
+  sort: 25
+  answerExtra: c39b75a4c3fada6ac8c271bda19e9f939bf3d6f0-3840x562.png
 categories: []
 slug: jeremy-meiss
 

@@ -38,6 +38,12 @@ questionAnswers:
   answer: "@myfear.com"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/islandez~YVJP4z4ihBHDFjVrzPPJan.jpg~960x0.jpg
+  sort: 25
+  answerExtra: 960x0.jpg
 categories: []
 slug: markus-eisele
 

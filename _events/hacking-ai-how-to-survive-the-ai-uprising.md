@@ -28,7 +28,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI In Practice
 slug: hacking-ai-how-to-survive-the-ai-uprising
 

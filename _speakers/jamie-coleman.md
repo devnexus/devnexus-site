@@ -47,6 +47,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/isjagdei~4tJUUp4qBcU3uKMbva1weu.png~loqate-800x800-1-1-768x432.png
+  sort: 25
+  answerExtra: Loqate-800x800-1-1-768x432.png
 categories: []
 slug: jamie-coleman
 

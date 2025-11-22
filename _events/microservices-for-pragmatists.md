@@ -35,7 +35,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Architecture
 slug: microservices-for-pragmatists
 

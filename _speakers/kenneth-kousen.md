@@ -19,6 +19,8 @@ profilePicture: https://sessionize.com/image/1a54-400o400o1-sdhb4Lx6mEZwTMN8avfq
 sessions:
 - id: 1036379
   name: A Data-Oriented Programming Approach to REST APIs
+- id: 1036388
+  name: 'When One Agent Isn’t Enough: Experiments with Multi-Agent AI'
 isTopSpeaker: false
 links: []
 questionAnswers:
@@ -46,6 +48,12 @@ questionAnswers:
   answer: https://bsky.app/profile/kousenit.com
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/lhanmec~h5iyGFgb3K9tV4pXnDkmSu.jpeg~kousenit_logo_watermark.jpeg
+  sort: 25
+  answerExtra: KousenIT_Logo_watermark.jpeg
 categories: []
 slug: kenneth-kousen
 

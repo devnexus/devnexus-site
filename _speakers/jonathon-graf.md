@@ -41,6 +41,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/impatnei~SxApMkbPHFKH37XRTXpTWG.png~8d4f070c-e176-4ce3-a55b-a11db9909241.png
+  sort: 25
+  answerExtra: 8d4f070c-e176-4ce3-a55b-a11db9909241.png
 categories: []
 slug: jonathon-graf
 

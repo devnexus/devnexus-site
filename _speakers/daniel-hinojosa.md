@@ -45,6 +45,12 @@ questionAnswers:
   answer: https://bsky.app/profile/dhinojosa.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ufzagle~RiFJBwNCHv1sCHrNbepqbe.png~title.png
+  sort: 25
+  answerExtra: title.png
 categories: []
 slug: daniel-hinojosa
 

@@ -36,6 +36,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ihsautqe~QKRPU4srGkBieiAyXL7cue.png~automatic_data_processing_logo.svg.png
+  sort: 25
+  answerExtra: Automatic_Data_Processing_(logo).svg.png
 categories: []
 slug: christopher-curtin
 

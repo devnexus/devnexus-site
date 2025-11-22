@@ -1,8 +1,8 @@
 ---
 id: edcc0378-0d8c-49d6-a068-4507930deae5
-firstName: José Rafael
-lastName: Almonte Cabrera
-fullName: José Rafael Almonte Cabrera
+firstName: José R.
+lastName: Almonte C.
+fullName: José R. Almonte C.
 bio: "I am a Telematics & Software Engineer and Data Science graduate with 4 years
   of experience building solutions in FinTech and E-learning platforms. My work is
   driven by responsibility, teamwork, and continuous learning, and I am passionate
@@ -43,7 +43,13 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/toypad~EMhy53mLoSafi9m6BugF4F.svg~fc_logo.svg
+  sort: 25
+  answerExtra: FC_logo.svg
 categories: []
-slug: josé-rafael-almonte-cabrera
+slug: josé-r-almonte-c
 
 ---

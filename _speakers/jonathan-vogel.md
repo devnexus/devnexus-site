@@ -40,6 +40,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iovhajpe~nYZ3A66BqUrPa7eDAMHvNy.png~amazon_web_services_logo.svg.png
+  sort: 25
+  answerExtra: Amazon_Web_Services_Logo.svg.png
 categories: []
 slug: jonathan-vogel
 

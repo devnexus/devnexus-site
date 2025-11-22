@@ -47,6 +47,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/izkarcer~atKtjasq3jAeVaypL3mYti.jpg~att.jpg",
+        "sort": 25,
+        "answerExtra": "att.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+    "firstName": "Alex",
+    "lastName": "Riviere",
+    "fullName": "Alex Riviere",
+    "bio": "Alex Riviere is a Senior Front End Developer for Hygiena and a Co-Organizer for the Atlanta Vue.js Meetup.",
+    "tagLine": "Co-Organizer for Atlanta Vue.js Meetup",
+    "profilePicture": "https://sessionize.com/image/2a67-400o400o1-Gvb6U4BXbHxWHRApqyTe58.jpg",
+    "sessions": [
+      {
+        "id": 1022174,
+        "name": "How to run a 1 on 1 for Everyone (Not Just Managers!)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Hygiena",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/fimion/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/dangitalex.wtf",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/mnawtez~7iP2wGMX218j1TY589LgbB.png~hygiena_logo_cyan.png",
+        "sort": 25,
+        "answerExtra": "hygiena_logo_cyan.png"
       }
     ],
     "categories": []
@@ -99,6 +167,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/xvaczer~CEX2c1XjBCu3gpCk5Afmx.png~ibm_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "IBM_logo.svg.png"
       }
     ],
     "categories": []
@@ -151,6 +227,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ibvasfet~XUPXJu3BH6Ksss6SrpAF5f.jpg~oracle-logo.jpg",
+        "sort": 25,
+        "answerExtra": "Oracle-Logo.jpg"
       }
     ],
     "categories": []
@@ -203,6 +287,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/fkagve~S8TKLG1pY6SsuPNfwLkZpd.png~donnelley_financial_solutions_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Donnelley_Financial_Solutions_logo.svg.png"
       }
     ],
     "categories": []
@@ -216,6 +308,10 @@
     "tagLine": "Developer Advocate, JetBrains",
     "profilePicture": "https://sessionize.com/image/706d-400o400o1-DetNfUC6HLw7aZZrgSVsoK.jpg",
     "sessions": [
+      {
+        "id": 1003174,
+        "name": "Debugging with IntelliJ IDEA"
+      },
       {
         "id": 1003030,
         "name": "The Ultimate Showdown of Database Migration Tools"
@@ -255,6 +351,74 @@
         "answer": "antonarhipov.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ikladsei~ash8J8SYmR2StGjCWem8tU.png~jetbrains_company_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "JetBrains_company_logo.svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4c3fdc08-0216-46a1-a36f-a1b6abe6315f",
+    "firstName": "Barry",
+    "lastName": "Burd",
+    "fullName": "Barry Burd",
+    "bio": "Barry Burd is a Mathematics and Computer Science Professor at Drew University in Madison, New Jersey, US. He's the author of several books, including \"Java For Dummies\", \"Quantum Computing Algorithms\", and with Michael McCarthy, \"Concise Guide to the Internet of Things\". In 2020, he was named a Java Champion.",
+    "tagLine": "Professor at Drew University",
+    "profilePicture": "https://sessionize.com/image/653c-400o400o1-BuZokXgB6nXrJiEr2dSfQX.jpg",
+    "sessions": [
+      {
+        "id": 1035017,
+        "name": "Code Your Way to Quantum-Safe Development by Solving Tomorrow’s Encryption Crisis"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Drew University",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@allmycode",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/barry-burd/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "barryburd.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/cbaymenka~BdXzwR4BpBZ13rFUC6ZyoB.png~images.png",
+        "sort": 25,
+        "answerExtra": "images.png"
       }
     ],
     "categories": []
@@ -307,6 +471,74 @@
         "answer": "@jbaru.ch",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/humnat~KQXo6zT93a1BbrgYckqDGp.png~tuxcare.png",
+        "sort": 25,
+        "answerExtra": "TuxCare.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+    "firstName": "Bazlur",
+    "lastName": "Rahman",
+    "fullName": "Bazlur Rahman",
+    "bio": "A N M Bazlur Rahman is a Software Engineer with over a decade of specialized experience in Java and related technologies. His expertise has been formally recognized through the prestigious title of Java Champion. Beyond his professional commitments, Mr. Rahman is deeply involved in community outreach and education. He is the founder and current moderator of the Java User Group in Bangladesh, where he has organized educational meetups and conferences since 2013.\r\n\r\nIn the past two years, Mr. Rahman has been an active speaker at various international conferences and Java user groups. His talks have often focused on specialized topics such as concurrency and virtual threads. In addition to his community work, Mr. Rahman also serves as an editor for Java Queue at InfoQ and Foojay.io, both of which are leading platforms for technology content. Notably, he has authored five books on the Java programming language in Bengali, three of which have become best sellers in Bangladesh. \r\n\r\nHe is currently writing a new book with O'Reilly titled \"Modern Concurrency in Java\". \r\nhttps://learning.oreilly.com/library/view/modern-concurrency-in/9781098165406/\r\n\r\n",
+    "tagLine": "Java Champion 🏆 Empowering Developers through Speaking 🗣️ Writing ✍️ Mentoring 🤝 & Community Building 🌍 Published Author 📖 Contributing Editor at InfoQ and Foojay.IO",
+    "profilePicture": "https://sessionize.com/image/0687-400o400o1-PCRYuFMHgcQ6w6Sgab3W6h.jpg",
+    "sessions": [
+      {
+        "id": 1031652,
+        "name": "Securing AI in Java: Guardrails, Ethical LLMs, and Compliance Tools"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Hammerspace ",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bazlur_rahman",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/bazlur/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/bazlur.ca",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/yzaktew~L5mXRQRpL5DDBZREjXvAFP.png~hammerspace-logo-black.png",
+        "sort": 25,
+        "answerExtra": "hammerspace-logo-black.png"
       }
     ],
     "categories": []
@@ -359,6 +591,14 @@
         "answer": "@billykorando.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ifsaopye~hkBa1hkN7kv7RiyUDQ8pM7.jpg~oracle-logo.jpg",
+        "sort": 25,
+        "answerExtra": "Oracle-Logo.jpg"
       }
     ],
     "categories": []
@@ -366,8 +606,8 @@
   {
     "id": "0bbdbd49-49d5-4418-9e3f-5df6968288ae",
     "firstName": "Brayan",
-    "lastName": "Munoz V.",
-    "fullName": "Brayan Munoz V.",
+    "lastName": "Muñoz V.",
+    "fullName": "Brayan Muñoz V.",
     "bio": "Brayan Muñoz V., an Oracle Ace Associate, is a Java SDE, Data Scientist, and Professor with an MSc in Data Science (UCJC) and a Telematics Engineer degree (PUCMM). He brings six years of software development experience, which includes three years in AI and data science projects, in monolithic and microservices architectures. He currently serves as a Professor and thesis advisor at PUCMM's School of Computing and Telecommunications. Brayan is a Board Member of the Dominican Republic Java User Group (@JavaDominicano) and a winner of the JCP Program Awards Java in Education category with the group, frequently speaking on Java and AI/ML topics. He is also an open-source enthusiast.",
     "tagLine": "MSc Data Science 📈👨🏽‍💻| @java dev ☕️ ❤️ | Professor 👨‍🏫 | Oracle Ace Associate ",
     "profilePicture": "https://sessionize.com/image/97e8-400o400o1-7WVJC3StyaKduCsJ2sc3m8.jpg",
@@ -411,6 +651,138 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/dbalte~U9de5kNtC3UiQvrcrzizYa.png~8772767.png",
+        "sort": 25,
+        "answerExtra": "8772767.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+    "firstName": "Brian",
+    "lastName": "Benz",
+    "fullName": "Brian Benz",
+    "bio": "Brian is a Java Champion and a Cloud Advocate at Microsoft, helping developers get the most out of Azure. Before Joining Microsoft, he was a program manager, evangelist, solution architect, consultant, developer, and author at IBM, Deloitte, and other companies. Find him on Twitter @bbenz. A current list of Brian's talks can be found at https://aka.ms/brianspeaking",
+    "tagLine": "Brian is a Java Champion and a Cloud Advocate at Microsoft, helping developers get the most out of Azure. ",
+    "profilePicture": "https://sessionize.com/image/03e2-400o400o1-G3KTFNR3VHXWysDqVGrHN8.jpg",
+    "sessions": [
+      {
+        "id": 1036361,
+        "name": "AI Agents for Java Devs: From Demo to Deployment"
+      },
+      {
+        "id": 1036365,
+        "name": "The Responsible Java Developer: Trustworthy GenAI in Practice"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bbenz",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/brianbenz/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/bbenz.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ibdapweq~QwcZQDvyEGvPFxEWU16den.png~microsoft_logo_2012.svg.png",
+        "sort": 25,
+        "answerExtra": "Microsoft_logo_(2012).svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4deee821-d54c-4f81-a909-07a61689e41e",
+    "firstName": "Brian",
+    "lastName": "Sam-Bodden",
+    "fullName": "Brian Sam-Bodden",
+    "bio": "Brian Sam-Bodden is a Principal Applied AI Engineer at Redis as well as an author, instructor, speaker, developer advocate, and open-source contributor and Java Champion who has spent over thirty years crafting software systems. He holds dual bachelor’s degrees from Ohio Wesleyan University in computer science and physics and a Master's in Data Science from Harvard University. Brian is a frequent speaker at user groups and conferences nationally and abroad and is the author of “Beginning POJOs: Spring, Hibernate, JBoss and Tapestry”, co-author of the “Enterprise Java Development on a Budget: Leveraging Java Open Source Technologies” and a contributor to O'Reilly's “97 Things Every Project Manager Should Know”.",
+    "tagLine": "Principal Applied AI Engineer at Redis",
+    "profilePicture": "https://sessionize.com/image/9452-400o400o1-3xo1ijcb24zbsH4K3LyQ3Q.jpg",
+    "sessions": [
+      {
+        "id": 1021342,
+        "name": "Design Patterns for Multi-Agent Systems"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Redis",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bsbodden",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/sambodden/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@bsbodden.bsky.social‬",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iiccagte~G1SbtzQcEkH4zrnkmKCwoi.png~images-6.png",
+        "sort": 25,
+        "answerExtra": "images-6.png"
       }
     ],
     "categories": []
@@ -463,6 +835,14 @@
         "answer": "@brianvermeer.nl",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ijmajdev~V8KB6wK8HX8Cy3snoFwTGJ.jpg~snyk_logo.jpg",
+        "sort": 25,
+        "answerExtra": "Snyk_Logo.jpg"
       }
     ],
     "categories": []
@@ -515,6 +895,198 @@
         "answer": "@brunoborges.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ccacfeywa~MFjfVcS3nA5aqKxQTgf7Y9.png~microsoft_logo_2012.svg.png",
+        "sort": 25,
+        "answerExtra": "Microsoft_logo_(2012).svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
+    "firstName": "Bruno",
+    "lastName": "Souza",
+    "fullName": "Bruno Souza",
+    "bio": "Since 1995, Bruno helps Java developers design amazing careers and work on cool projects with great people! Java Evangelist and a Java Champion, Bruno is the founder and President of SouJava, the Brazilian Java Users Society. He also represents the group on the JCP Executive Committee. Bruno discusses Java and the Developer Career in the https://code4.life/ project.",
+    "tagLine": "helping developers design amazing careers",
+    "profilePicture": "https://sessionize.com/image/f5ea-400o400o1-7PDkcAx4GvdyyQxXxcu1NL.jpg",
+    "sessions": [
+      {
+        "id": 1036790,
+        "name": "Developer Career Masterplan: 15 steps to grow beyond senior developer"
+      },
+      {
+        "id": 1036786,
+        "name": "The Mentorship Hub"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "SouJava",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@brjavaman",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/brjavaman/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iplaifre~RHnbqLRx5Kt6QvULuDkQvW.jpg~soujava_logo.jpg",
+        "sort": 25,
+        "answerExtra": "SouJava_logo.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+    "firstName": "Chris",
+    "lastName": "Bono",
+    "fullName": "Chris Bono",
+    "bio": "Focused on Spring Data, Spring gRPC,  and Spring for Apache Pulsar",
+    "tagLine": "SWE - Spring Team at Broadcom",
+    "profilePicture": "https://sessionize.com/image/5bbb-400o400o1-USrWLcnB3rjyqdCGsyzT4V.jpg",
+    "sessions": [
+      {
+        "id": 1038048,
+        "name": "Spring Data 4: Data Access Revisited"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@chris_onobc",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/bonochris/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/imoxuk~JdLXYzkAtYsArsmBLXNTGv.png~broadcom_logo_red-black_no-tag.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0494255d-10a1-4ec1-8c00-b0881c434931",
+    "firstName": "Chris",
+    "lastName": "Corriere",
+    "fullName": "Chris Corriere",
+    "bio": "Chris Corriere has been working with data, phones, networks and writing software for over 20 years. His background in mathematics and engineering has allowed him to adapt to new and industry specific technologies and provided many unique consulting opportunities. As a devOps practitioner Chris is committed to culture, automation, learning, sharing, and having a good time while getting work done. ",
+    "tagLine": "sociotechnological Mathematician @ Large ",
+    "profilePicture": "https://sessionize.com/image/ee17-400o400o1-LRWVQKyySXocPjUQ8ufbm9.jpg",
+    "sessions": [
+      {
+        "id": 1036661,
+        "name": "Sociotechnical Platform Engineering"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ecology Computing",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ecology_chris",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/chris-corriere/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@ecology-chris.com",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/pouqya~BdAdB66rRQkmunnEzbZQNX.jpg~ecologo.jpg",
+        "sort": 25,
+        "answerExtra": "ecologo.jpg"
       }
     ],
     "categories": []
@@ -567,6 +1139,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ihsautqe~QKRPU4srGkBieiAyXL7cue.png~automatic_data_processing_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Automatic_Data_Processing_(logo).svg.png"
       }
     ],
     "categories": []
@@ -619,6 +1199,14 @@
         "answer": "@pseudocody.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ciknarte~V1gDWnqNMLN5yPYUkjGecx.webp~exe_logo_ippon.png.webp",
+        "sort": 25,
+        "answerExtra": "EXE_LOGO_IPPON.png.webp"
       }
     ],
     "categories": []
@@ -634,6 +1222,10 @@
     "sessions": [
       {
         "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI"
+      },
+      {
+        "id": 1032731,
         "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
@@ -675,6 +1267,14 @@
         "answer": "https://bsky.app/profile/danvega.dev",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ilvahgex~PH3MNqVrJafrVLKNj9Wy6W.png~broadcom_logo_red-black_no-tag.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
       }
     ],
     "categories": []
@@ -731,6 +1331,74 @@
         "answer": "https://bsky.app/profile/dhinojosa.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ufzagle~RiFJBwNCHv1sCHrNbepqbe.png~title.png",
+        "sort": 25,
+        "answerExtra": "title.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+    "firstName": "Daniel",
+    "lastName": "Oh",
+    "fullName": "Daniel Oh",
+    "bio": "Daniel Oh is a Java Champion and Senior Principal Developer Advocate at IBM, where he leads efforts to advance cloud-native innovation through open-source technologies. Renowned for his ability to bridge technical and collaborative gaps, he empowers developers and organizations to build transformative solutions—from AI-driven applications and serverless architectures to resilient microservices. As a CNCF Ambassador and TAG DevEx co-chair, Daniel actively shapes the cloud-native ecosystem, fostering partnerships between enterprise developers, AI engineers, and platform engineering teams to accelerate hybrid cloud adoption. His technical leadership extends beyond code contributions, as he mentors communities and champions strategies that enable businesses to thrive in evolving digital landscapes. A dynamic storyteller and educator, Daniel captivates global audiences through keynote speeches, workshops, and interactive sessions, where he demystifies emerging technologies and inspires the tech community to embrace the future of open-source innovation.",
+    "tagLine": "Senior Principal Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/b038-400o400o1-9L1vAjSfBPi1Z5kvqNYFUv.png",
+    "sessions": [
+      {
+        "id": 1032513,
+        "name": "The wrong reasons to build an MCP server"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@danieloh30",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/daniel-oh-083818112/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/danieloh30.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/fvajuw~n7eokYJzdJ7T5icZF1bDDG.png~ibm_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "IBM_logo.svg.png"
       }
     ],
     "categories": []
@@ -783,6 +1451,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/inxafhel~YLx1wY4dqnHmh4pNLdNmzj.jpg~blog-qodo-e1740137796961.jpg",
+        "sort": 25,
+        "answerExtra": "blog-qodo-e1740137796961.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7322a2c2-cb56-498f-9988-0b68e746a3a6",
+    "firstName": "David",
+    "lastName": "Vlijmincx",
+    "fullName": "David Vlijmincx",
+    "bio": "I’m a software developer at JPoint who loves to use and find new techniques and pragmatically apply them. ",
+    "tagLine": "Developer @ JPoint",
+    "profilePicture": "https://sessionize.com/image/d888-400o400o1-PWUjyzUQzYbibfvEQ3317S.jpg",
+    "sessions": [
+      {
+        "id": 1013980,
+        "name": "Zero to C-speed with only Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JPoint",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/david-vlijmincx/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "davidvlijmincx.com",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/tlazbeg~XV39wq8XArPrzai8yNiis8.png~images-10.png",
+        "sort": 25,
+        "answerExtra": "images-10.png"
       }
     ],
     "categories": []
@@ -835,6 +1571,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iksaylev~p5z1bj6MUEoviGB427gVB9.webp~1611308816-datadog-horizontal-rgb.webp",
+        "sort": 25,
+        "answerExtra": "1611308816-datadog-horizontal-rgb.webp"
       }
     ],
     "categories": []
@@ -887,6 +1631,134 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/kqagkep~9wm2QhuujNuPsYRT4ZYEKc.webp~full-color-logo-hc.png.webp",
+        "sort": 25,
+        "answerExtra": "Full Color Logo HC.png.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+    "firstName": "Emily",
+    "lastName": "Jiang",
+    "fullName": "Emily Jiang",
+    "bio": "Emily Jiang is a Java Champion. She is Liberty Cloud Native Architect and Chief Advocate, Senior Technical Staff Member (STSM) in IBM, based at Hursley Lab in the UK. Emily is a MicroProfile guru and has been working on MicroProfile since 2016 and leads a number of specifications including MicroProfile Config and Fault Tolerance. She interacts with most of the other MicroProfile specifications. She is also active in Jakarta EE specifications. She is a co-lead in Jakarta Config and also a Jakarta Context and Dependency Injection  (CDI) committer. At IBM, she leads the effort of implementing all of MicroProfile specifications on Open Liberty.\r\n\r\nShe is passionate about MicroProfile and Jakarta EE. She regularly speaks at conferences, such as QCon, Code One, DevNexus, JAX London, Voxxed, Devoxx, EclipseCon, GeeCon, JFokus, etc. \r\n\r\nConnect with Emily on Twitter @emilyfhjiang LinkedIn (https://www.linkedin.com/in/emilyfhjiang).\r\n\r\n",
+    "tagLine": "IBM, Cloud Native Architect and Chief Advocate",
+    "profilePicture": "https://sessionize.com/image/7c56-400o400o1-hWCZcoNy5PD5GRRmQtXJCb.jpg",
+    "sessions": [
+      {
+        "id": 1030889,
+        "name": "From Legacy to Cloud-Native: Effective and Scalable Java Modernization with Automation"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@emilyfhjiang",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/emilyfhjiang/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@emilyjiang.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ikiuoj~h1cjyEP5J4Yq3aNSrXQ9uE.png~ibm_logor_pos_blue60_rgb.png",
+        "sort": 25,
+        "answerExtra": "IBM_logo®_pos_blue60_RGB.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1481959b-d7fa-4068-9d84-035dd2844c6d",
+    "firstName": "Emmanuel",
+    "lastName": "Guzmán",
+    "fullName": "Emmanuel Guzmán",
+    "bio": "Software engineer with over 9 years of experience in Oracle technologies and software development. I began my career in infrastructure and middleware, specializing in high-availability environments, virtualization, security (SSL), and application servers. Since 2020, I have fully focused on software development, working with Java and Oracle APEX. In addition, I am co-founder of the Costa Rica Java User Group and creator of the blog oracle-max.com, where I share knowledge with the community. My passion for continuous learning led me to become part of the Oracle ACE program as an Oracle ACE Pro, and I am always eager to explore new technologies, especially in the field of AI",
+    "tagLine": "Senior Java Software Engineer - Clicklease ",
+    "profilePicture": "https://sessionize.com/image/e73d-400o400o1-n83tYe9C4FWsfob5RPpKZ9.jpg",
+    "sessions": [
+      {
+        "id": 1020638,
+        "name": "Breaking the Monolith Mindset: Hexagonal Architecture vs Traditional Layers in Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Clicklease",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@emmagr77",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/emmagr77",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@emmax77.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/cipcauh~4Sw6MqiZwLdTeYXqCsVJRB.png~blue_gray_clicklease_logo-01.png",
+        "sort": 25,
+        "answerExtra": "Blue_Gray_Clicklease_Logo-01.png"
       }
     ],
     "categories": []
@@ -939,6 +1811,14 @@
         "answer": "https://bsky.app/profile/ebullient.dev",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iriryac~XDNnJG1nMSH3nBN542Dvcj.png~ibm_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "IBM_logo.svg.png"
       }
     ],
     "categories": []
@@ -991,6 +1871,14 @@
         "answer": "@frankgreco.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ibxazkey~QmwFNSeBywLPmHT1cyCi1F.webp~event-cover-7822.webp",
+        "sort": 25,
+        "answerExtra": "event-cover-7822.webp"
       }
     ],
     "categories": []
@@ -1043,6 +1931,74 @@
         "answer": "https://bsky.app/profile/gantlaborde.com",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/flalbes~apudvXQHaGgW5qhS1Kuz8v.jpg~irvertical.jpg",
+        "sort": 25,
+        "answerExtra": "irVertical.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "71f3abf1-03cf-458b-b385-e10fd110e89a",
+    "firstName": "Gerrit",
+    "lastName": "Grunwald",
+    "fullName": "Gerrit Grunwald",
+    "bio": "Gerrit Grunwald is a software engineer that loves coding for around 40 years already. He is a true believer in open source and he is an active member of the Java community, where he founded and leads the Java User Group Münster (Germany), he is a JavaOne rockstar and a Java Champion. He is a speaker at conferences and user groups internationally and writes for several magazines.",
+    "tagLine": "Senior Developer Advocate at Azul Systems",
+    "profilePicture": "https://sessionize.com/image/f7ac-400o400o1-DZYSvNYq2n8gn4Qzy9FnQs.png",
+    "sessions": [
+      {
+        "id": 993327,
+        "name": "Scotty I need Warp Speed - Ways to improve JVM startup"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Azul",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@hansolo_",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/gerritgrunwald",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@hansolo.eu",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/idlanir~fzqnRg1Vbqk6XtLxEG61ps.png~azul_systems_logo.png",
+        "sort": 25,
+        "answerExtra": "Azul_systems_logo.png"
       }
     ],
     "categories": []
@@ -1095,6 +2051,14 @@
         "answer": "@cppwfs",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iobhamle~3oKqd1R25SVLRh2qBVz6wz.png~vmware-by-broadcom.svg.png",
+        "sort": 25,
+        "answerExtra": "Vmware-by-broadcom.svg.png"
       }
     ],
     "categories": []
@@ -1147,6 +2111,74 @@
         "answer": "@oldbooksmell.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ilyaron~Rhe3M3cqYjHSuztFYesAba.png~logo-twitter-card.png",
+        "sort": 25,
+        "answerExtra": "logo-twitter-card.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "cdc2288a-56cf-40ec-bc39-ca5d9fb59b27",
+    "firstName": "Ivar",
+    "lastName": "Grimstad",
+    "fullName": "Ivar Grimstad",
+    "bio": "Ivar Grimstad is the Jakarta EE Developer Advocate at Eclipse Foundation. He is a Norwegian Java Champion and JUG Leader based in Sweden.\r\n\r\nBesides advocating for the Jakarta EE technologies, Ivar contributes to the Jakarta EE specifications and is the PMC Lead for Eclipse Enterprise for Java (EE4J). He is also one of the specification leads for Jakarta MVC and represents Eclipse Foundation on the JCP Executive Committee.\r\n\r\nIvar is also involved in various other open-source projects and communities. He is a frequent speaker at International developer conferences.",
+    "tagLine": "Jakarta EE Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/414d-400o400o1-WcHPNYUEbreoQ1qPwR8iUC.jpg",
+    "sessions": [
+      {
+        "id": 1035581,
+        "name": "What Every Spring Developer Should Know About Jakarta EE"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Eclipse Foundation",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ivargrimstad",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ivargrimstad/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/theguywiththeduketattoo.com",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iuqzawse~HooX43q1cWQc8u8aZ9nGVE.png~images-12.png",
+        "sort": 25,
+        "answerExtra": "images-12.png"
       }
     ],
     "categories": []
@@ -1203,6 +2235,14 @@
         "answer": "jamesward.com",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/sgapteg~GiXtWSu4hknPmmKWwJQ8nS.png~amazon_web_services_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Amazon_Web_Services_Logo.svg.png"
       }
     ],
     "categories": []
@@ -1255,6 +2295,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/isjagdei~4tJUUp4qBcU3uKMbva1weu.png~loqate-800x800-1-1-768x432.png",
+        "sort": 25,
+        "answerExtra": "Loqate-800x800-1-1-768x432.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6631e69f-25c4-47db-9fb2-08576a460048",
+    "firstName": "Jeanne",
+    "lastName": "Boyarsky",
+    "fullName": "Jeanne Boyarsky",
+    "bio": "Jeanne Boyarsky is a Java Champion from New York City and has been a Java developer for more than 23 years. She has co-authored Wiley's Oracle Java 8/11/17/21 certification books in addition to \"Real World Java\". Jeanne volunteers at CodeRanch and mentors the programmers on a high school robotics team in her free time. She has spoken at numerous conferences including Dev Nexus, QCon, KCDC, and JavaOne.",
+    "tagLine": "Author of Java cert books and \"Real World Java\"",
+    "profilePicture": "https://sessionize.com/image/bf56-400o400o1-SooYWHFYACd1vVQ8JjorMm.jpg",
+    "sessions": [
+      {
+        "id": 1029715,
+        "name": "JUnit 6 + exploring the testing ecosystem"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "CodeRanch",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "jeanneboyarsky",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/jeanne-boyarsky",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/jeanneboyarsky.bsky.social/post/3lhopop7ydy26",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/inbarjev~fTGbvFxpiLEXHQoaCB9P4c.png~coderanch-header.png",
+        "sort": 25,
+        "answerExtra": "coderanch-header.png"
       }
     ],
     "categories": []
@@ -1268,6 +2376,10 @@
     "tagLine": "Neo4j Developer Relations Engineer",
     "profilePicture": "https://sessionize.com/image/cbe1-400o400o1-VkYvUgYc3aKCRcuyMhdxci.jpg",
     "sessions": [
+      {
+        "id": 1033711,
+        "name": "Agents, Tools, and MCP, oh my! Next-level AI concepts for developers"
+      },
       {
         "id": 1036671,
         "name": "Supercharge Your Applications with Java, Graphs, and a Touch of AI"
@@ -1307,6 +2419,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/cxawqek~4dravzbLpvR5YtqeW8488z.png~neo4j-logo2024color.png",
+        "sort": 25,
+        "answerExtra": "Neo4j-logo2024color.png"
       }
     ],
     "categories": []
@@ -1359,6 +2479,74 @@
         "answer": "@jerdog.dev",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ihmagjey~JXPQwenqxbERZAFB34o7qt.png~c39b75a4c3fada6ac8c271bda19e9f939bf3d6f0-3840x562.png",
+        "sort": 25,
+        "answerExtra": "c39b75a4c3fada6ac8c271bda19e9f939bf3d6f0-3840x562.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5401e39c-9ad5-4153-873d-105997c32441",
+    "firstName": "Joe",
+    "lastName": "Grandja",
+    "fullName": "Joe Grandja",
+    "bio": "Joe Grandja is a core committer on the Spring Security team. He has been leading the efforts in building the OAuth2 and OpenID Connect support in Spring Security.\r\n\r\nWith over 25 years of industry experience, in the Toronto, Canada area, he has designed, built, and delivered enterprise grade banking applications and platforms in the Personal and Commercial and Brokerage and Investing divisions. He has worked closely with the InfoSec teams within banks to ensure security and regulatory compliance.",
+    "tagLine": "Spring Security Engineer @ Broadcom",
+    "profilePicture": "https://sessionize.com/image/4978-400o400o1-UVarSBXepjGoxh5BTEbFTe.jpg",
+    "sessions": [
+      {
+        "id": 1035030,
+        "name": "Implementing MCP Authorization using Spring Security OAuth 2.1 capabilities"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@joe_grandja",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://ca.linkedin.com/in/joegrandja",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/rmamov~7EwR7PctUzLsfq4dkMnNcv.png~broadcom_logo_red-black_no-tag.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
       }
     ],
     "categories": []
@@ -1411,6 +2599,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/gfapdes~TKiC3f5RQwK4SsPSVZ6FdP.png~azul_systems_logo.png",
+        "sort": 25,
+        "answerExtra": "Azul_systems_logo.png"
       }
     ],
     "categories": []
@@ -1463,6 +2659,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iqjahgen~U6ocQfjLXCEtR5NpAVVBtB.png~capital_one_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Capital_One_logo.svg.png"
       }
     ],
     "categories": []
@@ -1515,6 +2719,14 @@
         "answer": "jonatan-ivanov.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/imyadlex~WKFQoyXXpgBfFDDoYZe6Nq.png~broadcom_logo_red-black_no-tag.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
       }
     ],
     "categories": []
@@ -1567,6 +2779,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/vpaqzen~WLWDksxUDenAuYTh9jFj8Y.png~brokk-embed.png",
+        "sort": 25,
+        "answerExtra": "brokk-embed.png"
       }
     ],
     "categories": []
@@ -1619,6 +2839,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iovhajpe~nYZ3A66BqUrPa7eDAMHvNy.png~amazon_web_services_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Amazon_Web_Services_Logo.svg.png"
       }
     ],
     "categories": []
@@ -1671,15 +2899,83 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/impatnei~SxApMkbPHFKH37XRTXpTWG.png~8d4f070c-e176-4ce3-a55b-a11db9909241.png",
+        "sort": 25,
+        "answerExtra": "8d4f070c-e176-4ce3-a55b-a11db9909241.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "14c0c531-8f58-4be9-a878-c38517d03afe",
+    "firstName": "Jorge",
+    "lastName": "Cajas",
+    "fullName": "Jorge Cajas",
+    "bio": "Java developer since 2011, Speaker since 2012\r\nGuate-JUG Co-leader and JConf Guatemala organizer\r\nOracle Duke Choice Award winner in 2016 with Guate-JUG\r\n",
+    "tagLine": "Manager @ MangoChango",
+    "profilePicture": "https://sessionize.com/image/bbc4-400o400o1-Wsva8hGVPTdXE2mTwSNr1u.jpg",
+    "sessions": [
+      {
+        "id": 1020638,
+        "name": "Breaking the Monolith Mindset: Hexagonal Architecture vs Traditional Layers in Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "MangoChango",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@cajasmota",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/cajasmota/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ivjaspec~V3m6b22mZF8jj5qP6XtPwB.png~mangochango_logo-9cd988785f4f2421992543f04280495e.png",
+        "sort": 25,
+        "answerExtra": "mangochango_logo-9cd988785f4f2421992543f04280495e.png"
       }
     ],
     "categories": []
   },
   {
     "id": "edcc0378-0d8c-49d6-a068-4507930deae5",
-    "firstName": "José Rafael",
-    "lastName": "Almonte Cabrera",
-    "fullName": "José Rafael Almonte Cabrera",
+    "firstName": "José R.",
+    "lastName": "Almonte C.",
+    "fullName": "José R. Almonte C.",
     "bio": "I am a Telematics & Software Engineer and Data Science graduate with 4 years of experience building solutions in FinTech and E-learning platforms. My work is driven by responsibility, teamwork, and continuous learning, and I am passionate about advancing in Software Engineering, AI/ML, Data Science, Sports Analytics, and Finance.\r\n\r\nOutside of work, I enjoy traveling and exploring new cultures, following NBA, MLB, NFL, and European soccer, playing padel, experimenting with new recipes, reading, and practicing piano.",
     "tagLine": "Data Science Master 📊 | Telematics & Software Engineer 👨‍💻 | Java ☕",
     "profilePicture": "https://sessionize.com/image/516c-400o400o1-862MkPjPRKpUZCn4TFPLY.jpg",
@@ -1723,6 +3019,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/toypad~EMhy53mLoSafi9m6BugF4F.svg~fc_logo.svg",
+        "sort": 25,
+        "answerExtra": "FC_logo.svg"
       }
     ],
     "categories": []
@@ -1783,6 +3087,14 @@
         "answer": "starbuxman.joshlong.com",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/rbaoh~4ovh1oF16YYDmPryLkCMVm.png~spring_company_logo.png",
+        "sort": 25,
+        "answerExtra": "spring_company_logo.png"
       }
     ],
     "categories": []
@@ -1835,6 +3147,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ibzaghex~SvUDyS1uryQ5t8Kz5jUg8f.png~cvs_health_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "CVS_Health_logo.svg.png"
       }
     ],
     "categories": []
@@ -1851,6 +3171,10 @@
       {
         "id": 1036379,
         "name": "A Data-Oriented Programming Approach to REST APIs"
+      },
+      {
+        "id": 1036388,
+        "name": "When One Agent Isn’t Enough: Experiments with Multi-Agent AI"
       }
     ],
     "isTopSpeaker": false,
@@ -1887,6 +3211,14 @@
         "answer": "https://bsky.app/profile/kousenit.com",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/lhanmec~h5iyGFgb3K9tV4pXnDkmSu.jpeg~kousenit_logo_watermark.jpeg",
+        "sort": 25,
+        "answerExtra": "KousenIT_Logo_watermark.jpeg"
       }
     ],
     "categories": []
@@ -1939,6 +3271,14 @@
         "answer": "koturk.nl",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iokyabwe~hkiUMRCS9TrFwPW2Y5nBvc.jpg~image03.jpg",
+        "sort": 25,
+        "answerExtra": "image03.jpg"
       }
     ],
     "categories": []
@@ -1991,6 +3331,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ypamzez~RmxSLqL7zQR32S9Nochwic.webp~exe_logo_ippon.png-2.webp",
+        "sort": 25,
+        "answerExtra": "EXE_LOGO_IPPON.png-2.webp"
       }
     ],
     "categories": []
@@ -2043,6 +3391,134 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/vvaupde~aPtNkR7Q4CC4a8ctNChQeC.webp~red_hat-logo.wine_.png.webp",
+        "sort": 25,
+        "answerExtra": "Red_Hat-Logo.wine_.png.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "116696fd-322f-4722-9708-d6aa2bf4baf0",
+    "firstName": "Luiz",
+    "lastName": "Real",
+    "fullName": "Luiz Real",
+    "bio": "Luiz Real is a Software Engineer with 20+ years of experience. Passionate about Java, AI, and emerging technologies, he’s a SouJava São Paulo JUG leader and co-host of The Out of the Box Developer podcast. Beyond his technical leadership, Luiz dedicates part of his career to teaching and mentoring, connecting academic concepts with real-world practices.  He is a frequent speaker at conferences, meetups, and technology events, and is currently working on his first book about Software Engineering with Java and AI.",
+    "tagLine": "Lead Software Engineer | DevRel | SouJava JUG Leader | Speaker | Educator | Mentor",
+    "profilePicture": "https://sessionize.com/image/cd62-400o400o1-RHf2FzZdEi3U8J6yd7cxSy.jpg",
+    "sessions": [
+      {
+        "id": 1036786,
+        "name": "The Mentorship Hub"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Fundunesp",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@lgsreal",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/lgsreal/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/irramob~nsThaWkFPqVtJZRFxGxNPG.png~images-13.png",
+        "sort": 25,
+        "answerExtra": "images-13.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4722b0b1-c4cc-493e-a88b-700f2df23395",
+    "firstName": "Malavika",
+    "lastName": "Balamurali",
+    "fullName": "Malavika Balamurali",
+    "bio": "Malavika Balamurali is a longtime Java fan who has been working with it since Java 8 released. She is a Junior at Kennesaw State University pursuing a Bachelor's in Computer Science with a focus in Data Science. She's also a member of SWE, GWC and NCWIT and likes working with Java in all of its glory. Even Applets, which she makes fun of on a daily basis. She also presented a lightning talk at AJUG about SpringAI and LangChain4j.",
+    "tagLine": "Computer Science Student at Kennesaw State University",
+    "profilePicture": "https://sessionize.com/image/d810-400o400o1-wWuGpJDcymMgjhuZhZkdbY.jpg",
+    "sessions": [
+      {
+        "id": 1051390,
+        "name": "Choose your fighter: Spring AI vs LangChain4j"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "N/A",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/malavikabalamurali/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []
@@ -2056,6 +3532,10 @@
     "tagLine": "Senior Director of Field Engineering at Moderne",
     "profilePicture": "https://sessionize.com/image/f0e0-400o400o1-ZBMq2SYxmeNzmE6h56Kxs.png",
     "sessions": [
+      {
+        "id": 1025968,
+        "name": "Make Mechanical Advantage YOUR Advantage: How to modernize & futureproof your code with OpenRewrite"
+      },
       {
         "id": 1036658,
         "name": "Migration Engineering with OpenRewrite: The Recipe for Success"
@@ -2095,6 +3575,74 @@
         "answer": "https://bsky.app/profile/mkheck.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ifbaxfef~XugUsgR9nexmj4sHxuozGy.svg~moderne-poster-logo.svg",
+        "sort": 25,
+        "answerExtra": "moderne-poster-logo.svg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "247ec778-0f81-4b84-b25d-48893a6302ad",
+    "firstName": "Mark",
+    "lastName": "Pollack",
+    "fullName": "Mark Pollack",
+    "bio": "Dr. Mark Pollack has been involved with the Spring framework since 2003, contributing core JMS functionality. He is currently leading the Spring AI project, which provides enterprise-ready abstractions for AI integration in Java applications.\r\n\r\nHis Spring journey includes founding and leading several  projects: Spring Cloud Data Flow, Spring XD, Spring Data, Spring Shell, Spring AMQP, and Spring.NET. Before his work with Spring, Mark was a post-doctoral researcher at Brookhaven National Laboratory, where he developed systems for storing and analyzing petabyte-scale datasets in high-energy nuclear physics.",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/9c44-400o400o1-JkUjAophFTPQYbkWiEjVcM.jpg",
+    "sessions": [
+      {
+        "id": 1036781,
+        "name": "Beyond SWE-bench: Enterprise Java AI Agents and Real-World Development Benchmarks"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@markpollack",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/marklpollack",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/fxatkez~WcigjspuPG4chbCtyux9yH.png~broadcom_logo_red-black_no-tag-2.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag-2.png"
       }
     ],
     "categories": []
@@ -2147,6 +3695,14 @@
         "answer": "@myfear.com",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/islandez~YVJP4z4ihBHDFjVrzPPJan.jpg~960x0.jpg",
+        "sort": 25,
+        "answerExtra": "960x0.jpg"
       }
     ],
     "categories": []
@@ -2199,6 +3755,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ihbalpey~HcAmwEYFJcrqPkKwDwCmLW.jpg~csm_og_image_ba1fa2948c.jpg",
+        "sort": 25,
+        "answerExtra": "csm_og_image_ba1fa2948c.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "0dfc57f1-27ac-4ab6-aab9-fd66359c0e32",
+    "firstName": "Martin",
+    "lastName": "Rojas",
+    "fullName": "Martin Rojas",
+    "bio": "I'm a UI Architect with over a decade of experience crafting intuitive user interfaces for enterprise, retail, and consumer applications. I specialize in building dynamic and adaptable experiences with React (SPAs), Next.js (SSR), Nuxt.js, and React Native. My passion lies in leveraging modern front-end technologies to deliver exceptional user experiences.",
+    "tagLine": "UI Architect / AI at PlayOn Sports",
+    "profilePicture": "https://sessionize.com/image/064d-400o400o1-akoem6rKza6bJjXbpRf5ze.jpg",
+    "sessions": [
+      {
+        "id": 1026691,
+        "name": "Stop Fighting Your AI: Engineering Prompts That Actually Work"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "PlayOn Sports",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@martinrojas",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/martinrojas/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@martinrojas.dev‬",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ddazlel~BGvucn1uLAtnDwTGff14nv.jpg~playon_sports_rgb_logo.jpg",
+        "sort": 25,
+        "answerExtra": "PlayOn_Sports_RGB_Logo.jpg"
       }
     ],
     "categories": []
@@ -2251,6 +3875,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ibhawved~KwqT2rNrkmCCnh5AB8SjYT.png~blackrock-logo.png",
+        "sort": 25,
+        "answerExtra": "BlackRock-logo.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+    "firstName": "Mo",
+    "lastName": "Haghighi",
+    "fullName": "Mo Haghighi",
+    "bio": "Dr Mo Haghighi is distinguished engineer/Senior director for Cloud Platform and Infrastructure at Discover Financial Services. His current focus is hybrid and multi-cloud strategy, application modernisation and automating application/workload migration across public and private clouds. Previously, he held various leadership positions as a program director at IBM, where he led Developer Ecosystem and Cloud Engineering teams in 27 countries across Europe, Middle East and Africa. Prior to IBM, he was a research scientist at Intel and a Java developer at Sun Microsystems/Oracle. Mo obtained a PhD in computer science, and his primary areas of expertise are distributed and edge computing, cloud native, IoT and AI, with several publications and patents in those areas. Mo is a regular keynote/speaker at major developer conferences including DevOpsCon, Java/Code One, Codemotion, DevRelCon, O’Reilly, The Next Web, DevNexus, IEEE/ACM, ODSC, AiWorld, CloudConf and Pycon.",
+    "tagLine": "Distinguished Engineer",
+    "profilePicture": "https://sessionize.com/image/847b-400o400o1-c2-96d9-4b4a-b2c8-99dd2efb77a7.821c48d1-543c-4922-b5b1-f9e6b8dbb291.JPEG",
+    "sessions": [
+      {
+        "id": 1061355,
+        "name": "From Microservices to Agent-Services: Architectural Patterns for Autonomous System Boundaries"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Discover/Capital One",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@mohaghighi",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/mohaghighi/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ilnapig~SH4xtj4i9GAWnXYW49Q6R5.jpg~capital-one-discover.jpg",
+        "sort": 25,
+        "answerExtra": "capital-one-discover.jpg"
       }
     ],
     "categories": []
@@ -2266,6 +3958,10 @@
     "sessions": [
       {
         "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI"
+      },
+      {
+        "id": 1032731,
         "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
@@ -2307,6 +4003,74 @@
         "answer": "@nts.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/covjal~XNg3LvpGRmMtRzv7bfB3JY.png~thoughtworks_flamingo_wave.png",
+        "sort": 25,
+        "answerExtra": "thoughtworks_flamingo_wave.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c44e8f12-cb2f-4ddb-8dbd-f397f4cb7380",
+    "firstName": "Niranjan",
+    "lastName": "Prithviraj",
+    "fullName": "Niranjan Prithviraj",
+    "bio": "Niranjan Prithviraj is a veteran engineering leader with over 20 years of experience driving zero-to-one initiatives and scaling infrastructure in high-growth fintech and technology companies. He has led transformative platform and developer productivity programs at Coinbase, Ripple, and Yahoo—delivering innovations in blockchain systems, payments, and large-scale engineering tooling. Niranjan specializes in technical leadership that bridges strategy and execution, enabling lasting adoption of new tools and practices across complex organizations. He is a named inventor on multiple U.S. patents, a published IEEE author, and a two-time national hackathon champion.",
+    "tagLine": "DevX at Coinbase",
+    "profilePicture": "https://sessionize.com/image/86d9-400o400o1-XcwXKmiPAEaxwJUwxmGPuU.jpg",
+    "sessions": [
+      {
+        "id": 998074,
+        "name": "Engineering the Shift: How Technical Leaders Drive Enduring Change"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Coinbase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "nbprithv",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/niranjanprithviraj/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/tvabvex~vDQ3MUEWvw9wMH4byuhw3.jpg~coinbase-480x3201.5x-1.jpg",
+        "sort": 25,
+        "answerExtra": "Coinbase-480x320@1.5x-1.jpg"
       }
     ],
     "categories": []
@@ -2359,6 +4123,14 @@
         "answer": "https://bsky.app/profile/olenakutsenko.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iuzpaqwe~BtpatQwnbWgsSh4mXVFBj2.png~04911491e8dbc8e9ea1d021926d798f7.png",
+        "sort": 25,
+        "answerExtra": "04911491e8dbc8e9ea1d021926d798f7.png"
       }
     ],
     "categories": []
@@ -2411,6 +4183,14 @@
         "answer": "@asm0dey.site",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ukwalze~G6d59E2jT4FFp6u9Q7AuAm.jpg~bellsoft_logo.jpg",
+        "sort": 25,
+        "answerExtra": "BellSoft_Logo.jpg"
       }
     ],
     "categories": []
@@ -2463,6 +4243,74 @@
         "answer": "@phillip_webb",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ikrassep~91pQz17dFWKEHBfqMwQ6M5.png~broadcom_logo_red-black_no-tag.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "e185e999-164e-44d0-8d6e-100680df41af",
+    "firstName": "Prasanth",
+    "lastName": "Pari",
+    "fullName": "Prasanth Pari",
+    "bio": "Prasanth Pari is a Principal Infrastructure Engineer at Discover Financial Services",
+    "tagLine": "Principal Engineer",
+    "profilePicture": "https://sessionize.com/image/c458-400o400o1-hewYC4qgPmLYngVonX7NG9.jpg",
+    "sessions": [
+      {
+        "id": 1061355,
+        "name": "From Microservices to Agent-Services: Architectural Patterns for Autonomous System Boundaries"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Capital One",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "www.linkedin.com/in/pariprasanthk",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ickaqbeh~LYJUA18FsBY8ZhPo6qsNPd.png~capital_one_logo.svg-2.png",
+        "sort": 25,
+        "answerExtra": "Capital_One_logo.svg-2.png"
       }
     ],
     "categories": []
@@ -2519,6 +4367,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []
@@ -2571,6 +4427,134 @@
         "answer": "raphaeldelio.dev",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ifrahuu~79K36JBFGrU9trLMibHFbH.png~redis-1-768x512.png",
+        "sort": 25,
+        "answerExtra": "redis-1-768x512.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "efa9033f-8483-4e1b-8df5-4352e638e3fc",
+    "firstName": "Renette",
+    "lastName": "Ros",
+    "fullName": "Renette Ros",
+    "bio": "Renette is a technical lead at Entelect with degrees in BIS Multimedia and BSc (Hons) Computer Science from the University of Pretoria. She specializes in backend Java and Kotlin development, with extensive experience in Spring Boot projects. Renette is passionate about resilience engineering—ensuring production systems stay up even in challenging situations—and is dedicated to elevating the women around her and within her teams. She thrives on sharing knowledge, mentoring others, and fostering growth within her teams. When she's not engineering solutions, Renette enjoys diving into fantasy novels and exploring board games.",
+    "tagLine": "Technical Lead @ Entelect",
+    "profilePicture": "https://sessionize.com/image/c790-400o400o1-4cT6stje4Xvrcb4bESnpnH.jpg",
+    "sessions": [
+      {
+        "id": 1032519,
+        "name": "The Self-Cleaning Castle: How Garbage Collection Works in Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Entelect Software",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/renetteros/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/gubjav~w3sFxfDQMhQrDD6Drfxt8F.jpeg~images.jpeg",
+        "sort": 25,
+        "answerExtra": "images.jpeg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d61662a9-ef28-4bb3-b526-b3b1ea1c0c39",
+    "firstName": "Ricardo Henrique",
+    "lastName": "Silva de Mello",
+    "fullName": "Ricardo Henrique Silva de Mello",
+    "bio": "Ricardo Mello is a Senior Developer Advocate at MongoDB with over 14 years of software development experience. He specializes in Java, Spring, and Kotlin, helping developers and organizations build modern, scalable applications. Ricardo is active in the Java community, creating technical content, articles, and talks on architecture, data modeling, and database integration",
+    "tagLine": "Senior developer advocate, MongoDB",
+    "profilePicture": "https://sessionize.com/image/44a3-400o400o1-9RtKwigdYYVcNP7doCF28D.png",
+    "sessions": [
+      {
+        "id": 1031394,
+        "name": "Real-Time Fraud Detection in Java with Kafka, Streams & Vector Similarity"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "MongoDB",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ricardohsmello",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ricardohsmello/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/cizhazhe~Va8httKcGBoSpWXRSU8sHF.png~mongodb_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "MongoDB_Logo.svg.png"
       }
     ],
     "categories": []
@@ -2623,6 +4607,14 @@
         "answer": "rwinch.github.io",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/rraskeu~WENmMZzDorNSkphnSzH6EP.png~broadcom_logo_red-black_no-tag-2.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag-2.png"
       }
     ],
     "categories": []
@@ -2679,6 +4671,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ilxardez~GPAdXj9UWbtmBdnNGjwjxa.jpg~salesforce-logo.jpg",
+        "sort": 25,
+        "answerExtra": "Salesforce-logo.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ad998165-d26a-4c98-8aac-ee60a16c638a",
+    "firstName": "Rustam",
+    "lastName": "Mehmandarov",
+    "fullName": "Rustam Mehmandarov",
+    "bio": "Experienced Software Engineer | Architect | Keynote & Public Speaker | Java Champion | Google Developer Expert for Cloud | Docker Captain | Oracle ACE Pro | Community Leader | Mentor | Ex-leader of JavaZone and Norwegian JUG – javaBin.",
+    "tagLine": "Passionate computer scientist",
+    "profilePicture": "https://sessionize.com/image/6d5f-400o400o1-MNaCxecVqnMfd83bU2T42r.jpg",
+    "sessions": [
+      {
+        "id": 996886,
+        "name": "Java Cloud Optimization: Serverless, Native, and CRaC – Unleash Peak Performance"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "SpareBank 1 Utvikling",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@RMehmandarov",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/mehmandarov/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@rustam.no",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ryaohbe~P3Rt5K9i1pTV9mA6Whq9Zg.png~060122122445_55745_c8323f791bee5d9fc44e49607dfbc46a9bc97791132303c60543c2c647709bcb9d70f356ee0bf6d16148.png",
+        "sort": 25,
+        "answerExtra": "060122122445_55745_c8323f791bee5d9fc44e49607dfbc46a9bc97791132303c60543c2c647709bcb9d70f356ee0bf6d16148.png"
       }
     ],
     "categories": []
@@ -2731,6 +4791,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/xqakyed~KSQfyVuTcshPzk81CdCQYT.jpg~jpmorgan-chase-logo-svg-desktop.jpg",
+        "sort": 25,
+        "answerExtra": "JPMorgan-Chase-Logo-SVG-desktop.jpg"
       }
     ],
     "categories": []
@@ -2783,6 +4851,138 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/inofol~USWYsxqfsatQ1jRDhdY25a.webp~adp1.webp",
+        "sort": 25,
+        "answerExtra": "ADP1.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "fbaded2d-4b97-4019-919b-2848b2c236ff",
+    "firstName": "Sean",
+    "lastName": "McNealy",
+    "fullName": "Sean McNealy",
+    "bio": "Sean McNealy has been a software developer for 18 years in the Atlanta area at several companies, including Internet Security Systems, Secureworks, and NCR. Sometimes generalist, sometimes specializing in reporting and event driven architectures. Sean has worked on software security products, business software, and briefly on autonomous vehicles, all using Java in some way.",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/8698-400o400o1-HxMuiD7PLcPZg8w5qLuuUx.jpg",
+    "sessions": [
+      {
+        "id": 1051385,
+        "name": "Isolation Isn't All Bad, For Your Database"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "N/A",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/seanmcnealy",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
+    "firstName": "Shaaf",
+    "lastName": "Syed",
+    "fullName": "Shaaf Syed",
+    "bio": "Shaaf Syed is a seasoned Java developer, AI enthusiast, and advocate in the developer community. With deep expertise in Quarkus, Jakarta EE, and modern cloud-native Java, he has helped drive innovation in AI-powered applications, particularly focusing on Retrieval-Augmented Generation (RAG), vector databases, and knowledge graph integrations. Shaaf regularly speaks at major conferences and meetups, sharing practical insights on Java, AI, and application modernization. Passionate about open source and developer education, he mentors and writes technical content.",
+    "tagLine": "Developer Advocate",
+    "profilePicture": "https://sessionize.com/image/1e65-400o400o1-B4isPLcvMQY6XYXbyGqVeZ.jpg",
+    "sessions": [
+      {
+        "id": 1031652,
+        "name": "Securing AI in Java: Guardrails, Ethical LLMs, and Compliance Tools"
+      },
+      {
+        "id": 1032513,
+        "name": "The wrong reasons to build an MCP server"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat Inc.",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "shaaf_dev",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "in/shaaf",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "shaaf.dev",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/idkawrey~SiodRDccLNXmkW91JsCgrn.png~red_hat_logo_2019.svg.png",
+        "sort": 25,
+        "answerExtra": "Red_Hat_Logo_2019.svg.png"
       }
     ],
     "categories": []
@@ -2834,6 +5034,74 @@
         "questionType": "Short_Text",
         "answer": null,
         "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iwcaipge~9tWxE99HHG7bXHE64ZfWH3.jpg~tu1ce7gt11tljey9pq-8xj5qosxv40ra_0az4fe14vo.jpg",
+        "sort": 25,
+        "answerExtra": "tU1CE7gt11tLJEY9Pq-8xJ5qOsXv40ra_0AZ4fE14vo.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "af46b3f5-47a7-4f80-a0f0-e16fef9493e6",
+    "firstName": "Simon",
+    "lastName": "Maple",
+    "fullName": "Simon Maple",
+    "bio": "Simon Maple is the Founding Developer Advocate at Tessl and former VP of Developer Relations at Snyk, ZeroTurnaround, and IBM; a Java Champion since 2014, JavaOne Rockstar speaker, Duke's Choice award winner, Virtual JUG founder, and London Java Community co-leader.",
+    "tagLine": "Head of Developer Relations, Tessl",
+    "profilePicture": "https://sessionize.com/image/ab60-400o400o1-sfQMpz31mgGqvvNt4C3Rz3.png",
+    "sessions": [
+      {
+        "id": 1072253,
+        "name": "Spec Driven Development Why your prompt chaos won’t scale"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Tessl",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@sjmaple",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/simonmaple/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
         "answerExtra": null
       }
     ],
@@ -2887,6 +5155,14 @@
         "answer": "https://bsky.app/profile/speakjava.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ijyaicce~pMKpfRX13439xnqxZUPZoV.png~azul_systems_logo.png",
+        "sort": 25,
+        "answerExtra": "Azul_systems_logo.png"
       }
     ],
     "categories": []
@@ -2939,6 +5215,14 @@
         "answer": "spencer.gibb.us",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ubursa~LtaBiUQYpFCMCpCXmVExPL.png~broadcom_logo_red-black_no-tag-2.png",
+        "sort": 25,
+        "answerExtra": "Broadcom_Logo_Red-Black_no-tag-2.png"
       }
     ],
     "categories": []
@@ -2991,6 +5275,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/imdayhe~RReYAfr26DHVus8rRCyKcQ.png~blackrock-logo.png",
+        "sort": 25,
+        "answerExtra": "BlackRock-logo.png"
       }
     ],
     "categories": []
@@ -3043,6 +5335,74 @@
         "answer": "https://bsky.app/profile/steveonjava.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iibranfe~wxiCHuiNRukQUyLhiDrL5x.png~neo4j-logo2024color.png",
+        "sort": 25,
+        "answerExtra": "Neo4j-logo2024color.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "8995d1a0-e8c3-4afe-8da1-4a10b1b109da",
+    "firstName": "Sujith",
+    "lastName": "Paul",
+    "fullName": "Sujith Paul",
+    "bio": "Sujith Paul is a Lead Consultant at Terazo, responsible for the architecture, design and delivery of software solutions on client engagements. His previous experiences include working on cloud migrations, enterprise application modernizations and agile transformations.\r\nHe prefers to use Java, Spring, Go, AWS, Docker and Terraform in his projects. He is passionate about XP, software craftsmanship and mentoring.\r\nAway from the computer, Sujith enjoys live music, craft beer and being out in the nature on a walk or a bike.",
+    "tagLine": "Lead Consultant - Terazo",
+    "profilePicture": "https://sessionize.com/image/2c63-400o400o1-9VoMMuQon3HTzUsQ1yfTd7.jpg",
+    "sessions": [
+      {
+        "id": 1036766,
+        "name": "Delivering Value through Software: A Practical Guide for Tech Leads"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Terazo",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/sujithpaul",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/pxaxkeh~4n5ykviT3TRG6LSd7sQ7jL.jpeg~images-2.jpeg",
+        "sort": 25,
+        "answerExtra": "images-2.jpeg"
       }
     ],
     "categories": []
@@ -3095,6 +5455,134 @@
         "answer": "https://bsky.app/profile/ted.dev",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/wlagteh~D4cmZFWLCENaG4cXGqvCpX.webp~isla_500x500.77845026_8o86wj9t.jpg.webp",
+        "sort": 25,
+        "answerExtra": "isla_500x500.77845026_8o86wj9t.jpg.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
+    "firstName": "Theo",
+    "lastName": "Lebrun",
+    "fullName": "Theo Lebrun",
+    "bio": "Theo Lebrun is a seasoned Data Engineer and Technology Consultant based in New York City, with extensive experience in cloud computing, databases, and software development. He has a strong command of tools and technologies such as AWS, Kafka, Databricks, and Python, enabling him to assist numerous clients in optimizing their data pipelines to meet and exceed their objectives.\r\n\r\nTheo's technical expertise are matched by his passion for sharing his knowledge with others. He has authored multiple blog posts while also being an active speaker at various conferences and meetups. Some of his recent presentations include technical topics such as creating AI-powered chatbots, implementing agent workflows, and leveraging cloud-based AI APIs.",
+    "tagLine": "Senior Data Engineer at Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image/cec3-400o400o1-Gc63A4WVQD19gjjNtyyRdT.jpeg",
+    "sessions": [
+      {
+        "id": 1000700,
+        "name": "From Monolith to AI Agent: Modernizing Java Systems with MCP"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ippon Technologies",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "falydoor",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/lebruntheo/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/soinza~nvRdQijQyZB6tq5H4nGQ3H.webp~exe_logo_ippon.png-2.webp",
+        "sort": 25,
+        "answerExtra": "EXE_LOGO_IPPON.png-2.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
+    "firstName": "Tim",
+    "lastName": "Kelly",
+    "fullName": "Tim Kelly",
+    "bio": "As an Associate Developer Advocate at MongoDB, I specialize in leveraging my Java expertise to build scalable applications, with a particular focus on integrating MongoDB. My role involves not only developing solutions but also sharing insights with the developer community through various platforms. Passionate about continuous learning and innovation, I aim to demystify complex technologies and empower developers with practical knowledge.",
+    "tagLine": "Associate Software Developer Advocate, MongoDB",
+    "profilePicture": "https://sessionize.com/image/2d68-400o400o1-KdEPTBP5uaofZhR9K9hQuv.jpg",
+    "sessions": [
+      {
+        "id": 1031394,
+        "name": "Real-Time Fraud Detection in Java with Kafka, Streams & Vector Similarity"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "MongoDB",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/timothee-kelly/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ihuvuv~VAjtW9L2x8Zn13f1SAxugk.png~mongodb_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "MongoDB_Logo.svg.png"
       }
     ],
     "categories": []
@@ -3147,6 +5635,14 @@
         "answer": "https://bsky.app/profile/timtebeek.github.io",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/dfaypem~PUvW6JMvXjP9LMophkEATr.svg~moderne-poster-logo.svg",
+        "sort": 25,
+        "answerExtra": "moderne-poster-logo.svg"
       }
     ],
     "categories": []
@@ -3199,6 +5695,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/itfanber~stE7oMGZmp4bXes6d5J69t.png~apple-logo.png",
+        "sort": 25,
+        "answerExtra": "Apple-Logo.png"
       }
     ],
     "categories": []
@@ -3215,6 +5719,10 @@
       {
         "id": 1053995,
         "name": "Cruising Along with Java: From Java 9 to 25"
+      },
+      {
+        "id": 1071791,
+        "name": "Modern Architectures for Software Development Leaders"
       }
     ],
     "isTopSpeaker": false,
@@ -3251,6 +5759,74 @@
         "answer": "https://bsky.app/profile/venkats.bsky.social",
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/imrarme~VvRUV5YtnzBB7Bb34WBDiY.jpg~agiledeveloperlogo.oonyjvwh.jpg",
+        "sort": 25,
+        "answerExtra": "agiledeveloperlogo.ooNYjVWh.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
+    "firstName": "Viktor",
+    "lastName": "Gamov",
+    "fullName": "Viktor Gamov",
+    "bio": "Viktor Gamov is a Principal Developer Advocate at Confluent, founded by the original creators of Apache Kafka®. With a rich background in implementing and advocating for distributed systems and cloud-native architectures, Viktor excels in open-source technologies. He is passionate about assisting architects, developers, and operators in crafting systems that are not only low in latency and scalable but also highly available.\r\nAs a Java Champion and an esteemed speaker, Viktor is known for his insightful presentations at top industry events like JavaOne, Devoxx, Kafka Summit, and QCon. His expertise spans distributed systems, real-time data streaming, JVM, and DevOps.\r\nViktor has co-authored \"Enterprise Web Development\" from O'Reilly and \"Apache Kafka® in Action\" from Manning. \r\nFollow Viktor on X—@gamussa to stay updated with his latest thoughts on technology, his gym and food adventures, and insights into open-source and developer advocacy.",
+    "tagLine": "Principal Developer Advocate, Confluent",
+    "profilePicture": "https://sessionize.com/image/a33e-400o400o1-4tarbgjGLvhbrmqBfujkT8.jpg",
+    "sessions": [
+      {
+        "id": 1015148,
+        "name": "The Missing Protocol: How MCP Bridges LLMs and Data Streams"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Confluent ",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@gamussa",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/vikgamov",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "gamussa.dev",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/cjatjez~HvuMvrUABzyaWR7CLTgok8.png~04911491e8dbc8e9ea1d021926d798f7-2.png",
+        "sort": 25,
+        "answerExtra": "04911491e8dbc8e9ea1d021926d798f7-2.png"
       }
     ],
     "categories": []
@@ -3303,6 +5879,74 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/icxaphep~MKZcD1xM8YP2MoNckKvqZ8.png~amazon_web_services_logo-kl.png",
+        "sort": 25,
+        "answerExtra": "Amazon_Web_Services_Logo-kl.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "360ed316-07f1-469b-9092-3d4a600dab4f",
+    "firstName": "Yee-Kang",
+    "lastName": "Chang",
+    "fullName": "Yee-Kang Chang",
+    "bio": "Yee-Kang (YK) Chang is the lead developer advocate for IBM's application platform and the developer experience architect for Open Liberty. He contributes to various open source projects like Eclipse Language Servers for MicroProfile & Jakarta EE and Open Liberty and is keen on how we can make life easier for developers.",
+    "tagLine": "Developer, Developer Advocate, Architect, IBMer",
+    "profilePicture": "https://sessionize.com/image/9010-400o400o1-JnD3F6ZBNjAre845ULMuQ5.jpg",
+    "sessions": [
+      {
+        "id": 1036203,
+        "name": "Zero Migration Java: Stay Current Without Breaking Your App"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "IBM",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://ca.linkedin.com/in/ykchang",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/jtaodje~PSeXeH4ZFKtW6ZWyRhrsLN.png~ibm_logo.svg.png",
+        "sort": 25,
+        "answerExtra": "IBM_logo.svg.png"
       }
     ],
     "categories": []
@@ -3355,6 +5999,14 @@
         "answer": null,
         "sort": 23,
         "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iyqalpek~BaVqFY5uSNKfVZLZPKZZp3.png~clickhouse-architecture.png",
+        "sort": 25,
+        "answerExtra": "clickhouse-architecture.png"
       }
     ],
     "categories": []

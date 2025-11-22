@@ -47,6 +47,12 @@ questionAnswers:
   answer: https://bsky.app/profile/olenakutsenko.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iuzpaqwe~BtpatQwnbWgsSh4mXVFBj2.png~04911491e8dbc8e9ea1d021926d798f7.png
+  sort: 25
+  answerExtra: '04911491e8dbc8e9ea1d021926d798f7.png'
 categories: []
 slug: olena-kutsenko
 

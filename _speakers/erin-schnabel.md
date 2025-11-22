@@ -42,6 +42,12 @@ questionAnswers:
   answer: https://bsky.app/profile/ebullient.dev
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iriryac~XDNnJG1nMSH3nBN542Dvcj.png~ibm_logo.svg.png
+  sort: 25
+  answerExtra: IBM_logo.svg.png
 categories: []
 slug: erin-schnabel
 

@@ -1,18 +1,32 @@
 
 {% assign key = include.data %}
 {% assign details = site.speakers | where: "fullName", key.name | first %}
-{% assign speaker_img = details.profilePicture | "/uploads/anonymous-avatar.jpeg" %}
+{% assign speaker_img = details.profilePicture | default: "/uploads/anonymous-avatar.jpeg" %}
+{% assign company_logo = details.questionAnswers | where: "question", "Company Logo" | first %}
+{% if company_logo %}
+  {% assign company_logo_url = company_logo.answer %}
+{% endif %}
+{% assign company_name = details.questionAnswers | where: "question", "Company" | first %}
+{% if company_name %}
+  {% assign company_alt = company_name.answer %}
+{% endif %}
+
 <div class="speaker">
   
  <div class="row">
   <div class="col-sm-2" >
     <a href="/speakers/{{ details.slug }}">
       <img class="img-responsive" src="{{speaker_img}}" alt="{{ details.fullName }}" />
+        {% if company_logo_url and company_logo_url != "" %}
+        <div class="company-logo mt-4">
+          <img class="img-responsive" src="{{ company_logo_url }}" alt="{{ company_alt | escape }}" />
+        </div>
+      {% endif %}
     </a>
   </div> 
    <div class="col-sm-10">
      <h3 class="mb-8">{{ details.fullName | escape }}</h3>
-     <p>{{ details.bio | escape | truncatewords: 35 }}</p>
+     <p>{{ details.bio | escape | truncatewords: 100 }}</p>
    </div> 
   </div> 
 </div>

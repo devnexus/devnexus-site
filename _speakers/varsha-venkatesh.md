@@ -36,6 +36,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/itfanber~stE7oMGZmp4bXes6d5J69t.png~apple-logo.png
+  sort: 25
+  answerExtra: Apple-Logo.png
 categories: []
 slug: varsha-venkatesh
 

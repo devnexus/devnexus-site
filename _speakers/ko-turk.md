@@ -42,6 +42,12 @@ questionAnswers:
   answer: koturk.nl
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iokyabwe~hkiUMRCS9TrFwPW2Y5nBvc.jpg~image03.jpg
+  sort: 25
+  answerExtra: image03.jpg
 categories: []
 slug: ko-turk
 

@@ -37,6 +37,12 @@ questionAnswers:
   answer: "@oldbooksmell.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ilyaron~Rhe3M3cqYjHSuztFYesAba.png~logo-twitter-card.png
+  sort: 25
+  answerExtra: logo-twitter-card.png
 categories: []
 slug: hazel-bohon
 

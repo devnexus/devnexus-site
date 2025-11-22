@@ -42,7 +42,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI In Practice
 slug: ai-for-busy-java-developers
 

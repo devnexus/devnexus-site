@@ -38,6 +38,12 @@ questionAnswers:
   answer: "@phillip_webb"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ikrassep~91pQz17dFWKEHBfqMwQ6M5.png~broadcom_logo_red-black_no-tag.png
+  sort: 25
+  answerExtra: Broadcom_Logo_Red-Black_no-tag.png
 categories: []
 slug: phil-webb
 

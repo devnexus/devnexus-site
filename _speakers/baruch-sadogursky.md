@@ -46,6 +46,12 @@ questionAnswers:
   answer: "@jbaru.ch"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/humnat~KQXo6zT93a1BbrgYckqDGp.png~tuxcare.png
+  sort: 25
+  answerExtra: TuxCare.png
 categories: []
 slug: baruch-sadogursky
 

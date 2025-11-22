@@ -40,6 +40,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iqjahgen~U6ocQfjLXCEtR5NpAVVBtB.png~capital_one_logo.svg.png
+  sort: 25
+  answerExtra: Capital_One_logo.svg.png
 categories: []
 slug: john-coyne
 

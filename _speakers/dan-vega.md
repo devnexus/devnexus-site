@@ -15,6 +15,8 @@ profilePicture: https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2
 sessions:
 - id: 1032716
   name: Fundamentals of Software Engineering In the age of AI
+- id: 1032731
+  name: Fundamentals of Software Engineering In the age of AI
 - id: 1034698
   name: 'Integrating LLMs in Java: A Practical Guide to Model Context Protocol'
 isTopSpeaker: false
@@ -44,6 +46,12 @@ questionAnswers:
   answer: https://bsky.app/profile/danvega.dev
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ilvahgex~PH3MNqVrJafrVLKNj9Wy6W.png~broadcom_logo_red-black_no-tag.png
+  sort: 25
+  answerExtra: Broadcom_Logo_Red-Black_no-tag.png
 categories: []
 slug: dan-vega
 

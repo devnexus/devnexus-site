@@ -41,6 +41,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/vvaupde~aPtNkR7Q4CC4a8ctNChQeC.webp~red_hat-logo.wine_.png.webp
+  sort: 25
+  answerExtra: Red_Hat-Logo.wine_.png.webp
 categories: []
 slug: leigh-griffin
 

@@ -43,6 +43,12 @@ questionAnswers:
   answer: https://bsky.app/profile/steveonjava.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iibranfe~wxiCHuiNRukQUyLhiDrL5x.png~neo4j-logo2024color.png
+  sort: 25
+  answerExtra: Neo4j-logo2024color.png
 categories: []
 slug: stephen-chin
 

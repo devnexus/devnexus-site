@@ -42,6 +42,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ihbalpey~HcAmwEYFJcrqPkKwDwCmLW.jpg~csm_og_image_ba1fa2948c.jpg
+  sort: 25
+  answerExtra: csm_og_image_ba1fa2948c.jpg
 categories: []
 slug: markus-kett
 

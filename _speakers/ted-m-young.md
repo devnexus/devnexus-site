@@ -36,6 +36,12 @@ questionAnswers:
   answer: https://bsky.app/profile/ted.dev
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/wlagteh~D4cmZFWLCENaG4cXGqvCpX.webp~isla_500x500.77845026_8o86wj9t.jpg.webp
+  sort: 25
+  answerExtra: isla_500x500.77845026_8o86wj9t.jpg.webp
 categories: []
 slug: ted-m-young
 

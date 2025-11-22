@@ -40,6 +40,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/izkarcer~atKtjasq3jAeVaypL3mYti.jpg~att.jpg
+  sort: 25
+  answerExtra: att.jpg
 categories: []
 slug: aaron-mcclennen
 

@@ -17,6 +17,8 @@ profilePicture: https://sessionize.com/image/2458-400o400o1-c5-c994-40f5-b1dd-e0
 sessions:
 - id: 1053995
   name: 'Cruising Along with Java: From Java 9 to 25'
+- id: 1071791
+  name: Modern Architectures for Software Development Leaders
 isTopSpeaker: false
 links: []
 questionAnswers:
@@ -44,6 +46,12 @@ questionAnswers:
   answer: https://bsky.app/profile/venkats.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/imrarme~VvRUV5YtnzBB7Bb34WBDiY.jpg~agiledeveloperlogo.oonyjvwh.jpg
+  sort: 25
+  answerExtra: agiledeveloperlogo.ooNYjVWh.jpg
 categories: []
 slug: venkat-subramaniam
 

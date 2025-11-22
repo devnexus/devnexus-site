@@ -41,6 +41,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iyqalpek~BaVqFY5uSNKfVZLZPKZZp3.png~clickhouse-architecture.png
+  sort: 25
+  answerExtra: clickhouse-architecture.png
 categories: []
 slug: zoe-steinkamp
 

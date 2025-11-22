@@ -45,6 +45,12 @@ questionAnswers:
   answer: raphaeldelio.dev
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ifrahuu~79K36JBFGrU9trLMibHFbH.png~redis-1-768x512.png
+  sort: 25
+  answerExtra: redis-1-768x512.png
 categories: []
 slug: raphael-de-lio
 

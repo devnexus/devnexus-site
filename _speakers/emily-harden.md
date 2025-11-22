@@ -45,6 +45,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/kqagkep~9wm2QhuujNuPsYRT4ZYEKc.webp~full-color-logo-hc.png.webp
+  sort: 25
+  answerExtra: Full Color Logo HC.png.webp
 categories: []
 slug: emily-harden
 

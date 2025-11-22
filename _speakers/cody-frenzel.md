@@ -39,6 +39,12 @@ questionAnswers:
   answer: "@pseudocody.bsky.social"
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ciknarte~V1gDWnqNMLN5yPYUkjGecx.webp~exe_logo_ippon.png.webp
+  sort: 25
+  answerExtra: EXE_LOGO_IPPON.png.webp
 categories: []
 slug: cody-frenzel
 

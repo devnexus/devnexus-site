@@ -50,6 +50,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ilxardez~GPAdXj9UWbtmBdnNGjwjxa.jpg~salesforce-logo.jpg
+  sort: 25
+  answerExtra: Salesforce-logo.jpg
 categories: []
 slug: rohit-bhardwaj
 

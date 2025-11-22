@@ -47,6 +47,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ibhawved~KwqT2rNrkmCCnh5AB8SjYT.png~blackrock-logo.png
+  sort: 25
+  answerExtra: BlackRock-logo.png
 categories: []
 slug: medha-chakraborty
 

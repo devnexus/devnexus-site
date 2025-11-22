@@ -193,6 +193,78 @@
       },
       {
         "questionAnswers": [],
+        "id": "1033711",
+        "title": "Agents, Tools, and MCP, oh my! Next-level AI concepts for developers",
+        "description": "AI is evolving fast, and so are the ways developers can integrate it into tech systems. A flurry of new approaches and tools surfaces every week, and it's hard to know where to focus.\r\nIn this session, we will pull back the curtain on the next wave of AI development with agents, tool integrations, and Model Context Protocol (MCP). We will break down what AI agents are, how they interact with tools and APIs, and why context is critical for building smarter, more reliable applications. Next, we will look at MCP and how it standardizes communication between AI models and external systems.\r\nAlong the way, we will touch on related concepts and step through code and demos, giving you a complete roadmap to level up your AI skills. You won't need a yellow brick road to follow along, but you will discover some magical new tricks to level up your AI skills!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e8154769-ac25-4c42-890f-6ccd70e2ec79",
+            "name": "Jennifer Reif"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389056,
+                "name": "Gen AI"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036361",
+        "title": "AI Agents for Java Devs: From Demo to Deployment",
+        "description": "AI agents go beyond simple prompts — they reason, plan, and act. In this session, you’ll learn how to build AI-powered agents in Java using open source frameworks like LangChain4j. We’ll walk through real-world examples — from DevOps automation to customer support triage — showing what works in production and what pitfalls to avoid. You’ll leave with a practical understanding of agent orchestration patterns, evaluation methods, and deployment strategies for enterprise use cases.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+            "name": "Brian Benz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389057,
+                "name": "AI Engineering"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1028847",
         "title": "AI for Busy Java Developers",
         "description": "Yep, we know you're knee-deep in production Java deployments and don’t exactly have time to learn about AI.  But your manager and the senior executives in your company are mentioning “AI” seemingly at every meeting.  And you’re watching unsettling YouTube posts about how GenAI will take your job or that 90% of all AI projects fail.  Pretty scary, right?\r\n\r\nIn this session, I will fast-track you through AI/ML focused on Java developers who need to get the job done without the need to drill down into data science and complicated math. \r\nThis presentation is designed for junior and intermediate Java developers who need to understand how non-deterministic tools can be effectively utilized throughout the software development process. You will gain a practical introduction to AI and Machine Learning with a focus on the Java ecosystem, featuring hands-on coding using LangChain4j, ChatGPT, Claude, Gemini, and other APIs. \r\n\r\nThis session will cover how neural networks and large language models (LLMs) process information, how to craft effective prompts and manage context, and how to use embeddings and vector databases to support Retrieval Augmented Generation (RAG) for helpful responses. We will explore reusable prompt templates, the building blocks of chatbot architectures, and provide a brief introduction to agents, all while learning how to integrate GenAI in an ethical and responsible manner and manage potential risks. \r\n\r\nBy the end of this presentation, you should understand the very essence of AI/ML, so that you will understand what AI is and how to use it for successful deployments properly.  \r\n",
@@ -225,7 +297,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -409,6 +481,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1036781",
+        "title": "Beyond SWE-bench: Enterprise Java AI Agents and Real-World Development Benchmarks",
+        "description": "AI coding agents have matured to the point that they need to be seriously considered for enterprise Java development and general SDLC tasks. CLI Tools like Claude Code, Google’s Gemini CLI, Amazon Q Developer, and OpenAI’s assistants are examples from leading large AI labs, but there are also smaller startups and open-source options. These agentic coding tools can reason about architecture, grok large code bases, and hold great promise to help developers ship software faster. They are often used in a “human in the loop” style, but they can also be instructed to execute autonomously until they determine the goal has been completed.\r\n\r\nThis talk introduces Spring AI Agents.  It provides a lightweight but powerful portable abstraction: the AgentClient. It acts as a consistent interface for invoking autonomous CLI-based agents. This allows developers to use the agentic tools they already have while providing flexibility to avoid locking into one single provider.   It also introduces Spring AI Bench, a benchmark suite for evaluating agents on goal-directed enterprise-workflows.  It evaluates how effectively different agents have completed their goals and can be considered the test harness that runs any agent via Spring AI Agents.\r\n\r\nThese autonomous tools represent a significant opportunity to offload routine, but complex, development tasks, allowing developers to focus on higher-level architecture decisions, creative problem-solving, and strategic technical leadership. May the best agent win!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "247ec778-0f81-4b84-b25d-48893a6302ad",
+            "name": "Mark Pollack"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389038,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1000623",
         "title": "Black Friday Brilliance: Managing a Billion Transactions with Tech, Tactics, and Teamwork",
         "description": "The Black Friday and Cyber Monday period is one of the busiest times in the retail calendar, both in stores and online, and our customers rely on our infrastructure to support their businesses at this crucial time. Over this period in 2023 we processed over 1 billion requests to our APIs, and we managed this with greater than 99.99% availability! We've seen our request volume increase over 100x in the last 10 years, and managing this requires the right technologies, careful planning, and a great team of people.\r\n\r\nWith insightful commentary from a cross-section of our brilliant Dev team, I’ll talk you through how we scale our infrastructure on different Clouds, the technologies and processes that are put in place and problems we have had to overcome in the past. I’ll also give some insights into how the team works together over this busy period to keep everything running smoothly.\r\n",
@@ -481,7 +589,47 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1020638",
+        "title": "Breaking the Monolith Mindset: Hexagonal Architecture vs Traditional Layers in Java",
+        "description": "Traditional layered architectures (controllers, services, repositories) have been the default choice for many Java applications. While simple to start with, they often lead to tightly coupled code, difficult testing, and limited flexibility as systems grow. Hexagonal Architecture (a.k.a. Ports and Adapters) offers an alternative—one that places business logic at the center and decouples it from external concerns.\r\n\r\nWhat you’ll learn:\r\n\r\n🔹Key differences between traditional layered architecture and hexagonal architecture\r\n🔹Why hexagonal promotes cleaner boundaries and domain-driven design\r\n🔹Practical benefits: easier testing, maintainability, and adaptability to change\r\n🔹Common pitfalls when migrating from layered to hexagonal\r\n🔹Real-world scenarios where hexagonal shines (and when traditional still works)\r\n🔹Hands-on Java examples to illustrate both approaches\r\n\r\nBy the end, you’ll understand how to evaluate when to stick with a layered approach and when adopting hexagonal can future-proof your Java applications.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1481959b-d7fa-4068-9d84-035dd2844c6d",
+            "name": "Emmanuel Guzmán"
+          },
+          {
+            "id": "14c0c531-8f58-4be9-a878-c38517d03afe",
+            "name": "Jorge Cajas"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389034,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -673,6 +821,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1051390",
+        "title": "Choose your fighter: Spring AI vs LangChain4j",
+        "description": "As AI capabilities continue to integrate into modern enterprise applications, developers are seeking robust frameworks to streamline the interaction between large language models and Java-based systems. This talk offers some juxtaposition of Langchain4j and Spring AI, two emerging frameworks designed to simplify LLM integration in Java applications. We explore their core architectures, design philosophies, ease of use, extensibility, and integration with external services such as OpenAI, Azure AI, and vector stores. By highlighting key differences, we aim to provide practical insights into selecting the right tool for specific use cases. Whether you are building conversational agents, semantic search systems, or AI-driven automation, this session will help clarify which framework best aligns with your technical needs and development workflow.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4722b0b1-c4cc-493e-a88b-700f2df23395",
+            "name": "Malavika Balamurali"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389056,
+                "name": "Gen AI"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1036743",
         "title": "Clear up Messy Code with Refactoring Maneuvers in IntelliJ IDEA",
         "description": "IntelliJ IDEA is an amazingly powerful development tool, providing automatic refactorings such as Extract Method, Introduce Parameter, and many more. But are you taking advantage of its full power? Do you stick with the Extract and Rename refactorings, because you're not sure how to use the more complicated ones?\r\n\r\nIn this session, you'll see how and when to use the many refactorings available to you. You'll learn about higher-level Refactoring Maneuvers, such as Cohere Method and Expose Details, and how they combine and sequence IntelliJ IDEA's automated refactorings to make your code more understandable and testable.\r\n\r\nThis session will cover:\r\n* Extract Method\r\n* Introduce Parameter\r\n* Move (Instance/Static) Method\r\n* Make Static\r\n* Inline Method\r\n* Introduce Constant\r\n* Extract Delegate (and Enum)\r\n* Introduce Field\r\n\r\nAlong the way you'll learn about a wealth of keyboard shortcuts to save your brain from having to think hard.",
@@ -694,6 +878,42 @@
               {
                 "id": 389040,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1035017",
+        "title": "Code Your Way to Quantum-Safe Development by Solving Tomorrow’s Encryption Crisis",
+        "description": "As quantum computers threaten to break traditional encryption, major banks like Shinhan Bank and DBS are already testing quantum key distribution (QKD) networks. Meanwhile, Singapore has deployed the world’s first national quantum-safe network, and China operates a 2,000-kilometer quantum communication backbone. Meanwhile, Java JEPs 496 and 497 implement quantum-resistant cryptographic algorithms.\r\n\r\nIn this session, you’ll discover the fascinating world of quantum key distribution through Java code examples that demystify this cutting-edge security technology. You’ll explore the core principles behind QKD with Java simulations that demonstrate how quantum mechanics enables theoretically unbreakable communication.\r\n\r\nThis session shows how companies like Toshiba and ID Quantique are leveraging quantum theory to create real-world applications. You’ll leave this session with valuable insights into why this technology matters for the future of secure software development.\r\n\r\nWhether you’re curious about quantum computing’s impact on cybersecurity or want to understand the next generation of cryptographic protocols, this talk provides the practical foundation you need to engage with quantum-safe technologies as they move from research labs to production systems.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4c3fdc08-0216-46a1-a36f-a1b6abe6315f",
+            "name": "Barry Burd"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389041,
+                "name": "Security"
               }
             ],
             "sort": 0
@@ -817,6 +1037,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1003174",
+        "title": "Debugging with IntelliJ IDEA",
+        "description": "Historically, debuggers are used to help locate and fix bugs. Nowadays, the debugger in IntelliJ IDEA can help you do much more than that. Let's see how the debugger helps make the development process more productive. I demo various features for debugging Java applications, including not-so-standard ones, like:\r\n\r\n* Lambda breakpoints\r\n* Stream chain tracing\r\n* Dropping the frame\r\n* Emulated method breakpoint\r\n* Evaluate and log\r\n* Non-suspending breakpoints \r\n* Custom data renderers and more\r\n\r\n100% live coding session",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f58eda10-92dc-41a0-ac4a-b1a9f2bd7e97",
+            "name": "Anton Arhipov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389040,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1002682",
         "title": "Deep dive into data streaming security",
         "description": "Data streaming is powering everything from fraud detection and real-time analytics to patient monitoring and order fulfillment. But as the role of streaming grows, so does the risk - because many streaming platforms, like Apache Kafka, aren't secure by default.\r\n\r\nIn this talk, we’ll take a practical look at data streaming security through the lens of Kafka, one of the most widely adopted streaming platforms in the world. We'll walk through what can go wrong - like Gamooga's public Kafka broker leaking 17GB of customer data in two hours, or GonnaOrder exposing years of real-time delivery info to the internet - and what it takes to do it right.\r\n\r\nWe'll cover the key pillars of securing a streaming system: encryption in transit and at rest, access control, monitoring, and key management. Along the way, we’ll look at the trade-offs like disk encryption vs. end-to-end encryption, what is behind field-level and envelope encryption, and the realities of using customer-managed keys in regulated industries.\r\n\r\nWe'll also explore how streaming security has evolved, how real vulnerabilities (like CVE-2019-12399) highlight the need for patching and monitoring, and what successful multi-layered security looks like in production - from financial institutions to healthcare platforms.\r\n\r\nIf you're building, running, or scaling streaming systems, this talk will help you see the security blind spots and give you concrete steps to protect the data flowing through your pipelines.",
@@ -850,6 +1106,114 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036766",
+        "title": "Delivering Value through Software: A Practical Guide for Tech Leads",
+        "description": " As a tech lead, you will be faced with shifting requirements, tight timelines and unexpected complexities while bridging the gap between business goals and engineering realities. But your primary concern should be keeping your team motivated and performing at a high level without drifting into burnout.\r\n\r\nFortunately, there already are many established software development patterns and practices designed to help teams develop quality products efficiently. Additionally new tools are constantly hitting the market, each promising faster and cheaper delivery. How do you find the strategies that work for your team?\r\n\r\nIn this talk, Sujith will share lessons from years of experience in software delivery both as a creator and a consumer of business value. He will walk through a practical rubric he uses to choose the appropriate processes, practices, and tools for specific situations. You will learn how to apply this approach yourself - so you can build a framework that empowers your team and drives lasting stakeholder satisfaction.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8995d1a0-e8c3-4afe-8da1-4a10b1b109da",
+            "name": "Sujith Paul"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389050,
+                "name": "Tech Leadership"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1021342",
+        "title": "Design Patterns for Multi-Agent Systems",
+        "description": "Teams building AI beyond a single prompt now choose among different orchestration styles: mixture-of-experts (MoE) inside one model, multi-agent collaboration among specialized agents, and workflow/graph execution (e.g., task graphs with persistent state). This talk compares these approaches through concrete patterns—routing, planner-critic loops, reflection, shared memory, and tool use—and weighs the pros and cons. We’ll walk through a single task across all three styles. Attendees leave with a decision framework they can apply immediately to production systems.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4deee821-d54c-4f81-a909-07a61689e41e",
+            "name": "Brian Sam-Bodden"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389057,
+                "name": "AI Engineering"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036790",
+        "title": "Developer Career Masterplan: 15 steps to grow beyond senior developer",
+        "description": "What if you could devise a clear plan for your developer career, to reach senior levels and beyond? What if this plan could be built with the guidance and inspiration of some of the top players in the industry? \r\n\r\nSearch no more. The Developer Career Masterplan is a 15-step process to design your own masterplan. This is the exact plan used by Java Champions, Open Source developers, Developer Advocates, Distinguished Engineers, Community Managers and more to achieve success in their careers.\r\n\r\nJoin us in this interactive presentation, where those same experts will help you work on your own plan. It is a unique opportunity to come away with clarity about your future and actionable steps to build the career you want.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
+            "name": "Bruno Souza"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389040,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -922,6 +1286,42 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "998074",
+        "title": "Engineering the Shift: How Technical Leaders Drive Enduring Change",
+        "description": "Rolling out a new tool or practice in a large engineering organization is easy, getting people to actually use it long-term is the real challenge. In this 55-minute session, I’ll draw on two decades of experience leading zero-to-one initiatives at Coinbase, Ripple, and Yahoo to share the leadership styles, influence strategies, and measurement frameworks that turn forced adoption into sustained adoption. We’ll explore: the problem space and resistance patterns you’ll face, the techniques for aligning stakeholders without slowing execution, and the metrics that prove not just uptake, but enduring efficacy. Attendees will leave with a blueprint for leading change at scale, balancing persuasion with accountability, and ensuring that adoption sticks well beyond the launch announcement.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c44e8f12-cb2f-4ddb-8dbd-f397f4cb7380",
+            "name": "Niranjan Prithviraj"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389050,
+                "name": "Tech Leadership"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -1037,6 +1437,118 @@
       },
       {
         "questionAnswers": [],
+        "id": "1030889",
+        "title": "From Legacy to Cloud-Native: Effective and Scalable Java Modernization with Automation",
+        "description": "Unlock the performance and cost savings of modern Java without the massive manual effort. Many companies are hindered by the overwhelming complexity of modernization due to the variety of legacy enterprise Java applications they still need to maintain.\r\nDiscover how modern approaches provide powerful automated solutions. In this talk, we'll deconstruct a real-life success story: modernizing a legacy monolith to a modern runtime and Java 21. Learn how to automatically transform your codebase, mitigate the risks of manual error, and accelerate your path to the cloud. See practical steps you can use to breathe new life into your applications and free your teams to build for the future. If time permits, AI may make an appearance too!.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "fd61aaae-755a-4c22-9e72-ab751cbe2b63",
+            "name": "Emily Jiang"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389034,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1061355",
+        "title": "From Microservices to Agent-Services: Architectural Patterns for Autonomous System Boundaries",
+        "description": "The rise of Agentic AI is introducing a paradigm shift in the microservices architecture: services are becoming autonomous agents that can redefine their own boundaries, merge capabilities with other services, or split responsibilities based on learned optimization patterns. That is why microservices are no longer passive components but autonomous actors with their own architectural opinions and the ability to act on them.\r\nIn addition, traditional architectural patterns break when services become goal-seeking agents. Unexpected coupling emerges, contracts drift autonomously, data consistency becomes unpredictable, and governance blind spots multiply. Therefore, we need new patterns that let agents optimize while preserving system correctness.\r\n\r\nThis session tackles the fundamental challenge every architect will face in 2026: How do you maintain architectural integrity, ensure system reliability, and validate correctness when your services are autonomous actors that can redesign themselves?\r\n\r\nIn this session you will learn a taxonomy of agent-driven boundary changes with concrete examples, architectural patterns that preserve integrity while enabling autonomous evolution and testing methodologies specifically designed for non-deterministic and self-modifying systems. \r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "21924ec2-96d9-4b4a-b2c8-99dd2efb77a7",
+            "name": "Mo Haghighi"
+          },
+          {
+            "id": "e185e999-164e-44d0-8d6e-100680df41af",
+            "name": "Prasanth Pari"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389411,
+                "name": "AI In Practice"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1000700",
+        "title": "From Monolith to AI Agent: Modernizing Java Systems with MCP",
+        "description": "Many Java systems power critical enterprise workflows but struggle to integrate with modern AI capabilities without expensive rewrites. The Model Context Protocol offers a new integration path by letting your existing Java services talk to LLMs as first-class citizens.\r\n\r\nThis talk walks you through refactoring a legacy Java application into an AI-enabled agent using MCP. We’ll cover practical patterns for exposing services, handling tool calls, and streaming results plus strategies for controlling and auditing AI actions in production. You’ll see how MCP lets Java stay relevant in the fast-moving AI ecosystem without sacrificing stability.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "10246aaa-5ac0-4a8c-b0f5-0c4d69e54ca1",
+            "name": "Theo Lebrun"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389056,
+                "name": "Gen AI"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1032716",
         "title": "Fundamentals of Software Engineering In the age of AI",
         "description": "Agentic coding assistants and editor based AI chat interfaces are altering the development workflow leading some to proclaim the end of software engineering. Is it time to explore other careers? Not so fast, the rumors of our demise are greatly exaggerated! While these tools can boost productivity, to be used effectively, developers still need to master the fundamentals of the software craft. Modern software development demands more than just coding proficiency—it requires navigating an increasingly AI-augmented landscape. This intensive workshop bridges the critical gap between what early-career developers learn in formal education and what they need to thrive in professional environments where human expertise and artificial intelligence increasingly collaborate. Based on our book \"Fundamentals of Software Engineering,\" we guide participants through a comprehensive journey from programmer to well-rounded software engineer equipped to leverage AI tools effectively while maintaining engineering fundamentals.\r\n\r\nParticipants will develop both technical capabilities and professional skills that remain relevant regardless of changing languages, frameworks, and AI capabilities. Through a balanced mix of conceptual teaching, collaborative discussions, and hands-on exercises with both traditional and AI-assisted approaches, attendees will work on realistic scenarios that reinforce practical application of these fundamental principles while developing discernment about when and how to integrate AI tools into their workflow.",
@@ -1062,6 +1574,46 @@
               {
                 "id": 389970,
                 "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1032731",
+        "title": "Fundamentals of Software Engineering In the age of AI",
+        "description": "Agentic coding assistants and editor based AI chat interfaces are altering the development workflow leading some to proclaim the end of software engineering. Is it time to explore other careers? Not so fast, the rumors of our demise are greatly exaggerated! While these tools can boost productivity, to be used effectively, developers still need to master the fundamentals of the software craft. Modern software development demands more than just coding proficiency—it requires navigating an increasingly AI-augmented landscape.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+            "name": "Nathaniel Schutta"
+          },
+          {
+            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+            "name": "Dan Vega"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389057,
+                "name": "AI Engineering"
               }
             ],
             "sort": 0
@@ -1181,7 +1733,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1210,6 +1762,42 @@
               {
                 "id": 389970,
                 "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1022174",
+        "title": "How to run a 1 on 1 for Everyone (Not Just Managers!)",
+        "description": "Many of us have to go to 1 on 1 meetings on the regular, and they can be such a waste of time. Maybe there is no agenda. Maybe no one is taking notes. Or maybe your boss just keeps putting it off. These meetings can be frustrating and turn into a giant venting session with no real useful outcomes. \r\n\r\nBut that's not how it has to be. \r\n\r\nLet's talk through how you can run an effective, useful 1 on 1 meeting, even if you aren't in charge! We'll cover:\r\n\r\n- The purpose of a 1 on 1 meeting: Communication, Feedback, and Goals\r\n- How to structure the meeting and your notes\r\n- Things you can (and should) ask as a manager, an employee, or as a colleague.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
+            "name": "Alex Riviere"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389050,
+                "name": "Tech Leadership"
               }
             ],
             "sort": 0
@@ -1258,6 +1846,42 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1035030",
+        "title": "Implementing MCP Authorization using Spring Security OAuth 2.1 capabilities",
+        "description": "The Model Context Protocol (MCP) specification defines authorization capabilities for HTTP-based transports based on established specifications using the OAuth 2.1 Authorization Framework (IETF Draft) and extension specifications, specifically, OAuth 2.0 Authorization Server Metadata (RFC 8414), OAuth 2.0 Protected Resource Metadata (RFC 9728) and OAuth 2.0 Dynamic Client Registration Protocol (RFC 7591).\r\n\r\nThis talk will step through the Authorization Flow detailed in the MCP specification and will demonstrate how to configure and customize Spring Security OAuth 2.1 capabilities to implement authorization server discovery, dynamic client registration, obtaining an access token and making a request to a MCP protected resource.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "5401e39c-9ad5-4153-873d-105997c32441",
+            "name": "Joe Grandja"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389041,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1369,6 +1993,78 @@
       },
       {
         "questionAnswers": [],
+        "id": "1051385",
+        "title": "Isolation Isn't All Bad, For Your Database",
+        "description": "Let's review a fundamental of our databases: Isolation levels. Choosing transaction settings is something we've all done a few times then can forget about them until next time. Going back over the basics, tradeoffs of concurrency and integrity, keeps understanding sharp and minimizes time searching for the answer next time starting something new. A refresher for the experienced dev who likes to talk about the details or maybe even an eye opening introduction to the unfamiliar.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "fbaded2d-4b97-4019-919b-2848b2c236ff",
+            "name": "Sean McNealy"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389034,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "996886",
+        "title": "Java Cloud Optimization: Serverless, Native, and CRaC – Unleash Peak Performance",
+        "description": "Java in the cloud can be fast... really fast. This talk dives into the three key strategies for optimizing Java applications for peak performance in cloud environments: serverless architectures, GraalVM Native Image compilation, and Checkpoint/Restore in Containers (CRaC). We'll explore how to leverage these technologies to reduce startup time, minimize resource consumption, and maximize throughput for your Java workloads. Learn how to choose the right approach for your application and unlock the full potential of Java in the cloud. Expect practical examples using the latest Java and Jakarta EE specifications.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ad998165-d26a-4c98-8aac-ee60a16c638a",
+            "name": "Rustam Mehmandarov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389034,
+                "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1000618",
         "title": "Java Performance: Beyond Simple Request Latencies",
         "description": "When someone says \"Java performance,\" most Java devs hear \"request latency\" and a large part of them say \"I'm already meeting my SLAs\" or \"my app isn't latency-sensitive.\" But Java performance has many more dimensions than that, and they matter for all kinds of Java apps—from ultra-low-latency FX trading platforms to long-running data ingestion jobs running at 2 AM on a Saturday.\r\n\r\nIn this session, we'll go beyond the basics to look at the full Java performance picture: median latencies, latency outliers, freezes, pauses, server max carrying capacity, how your app behaves when it first starts up, carbon footprint, and more. We'll check out the full landscape of tools at your disposal, from the newest JEPs in OpenJDK to GraalVM and Azul Platform Prime, and develop strategies to optimize whatever matters most to your team.",
@@ -1420,6 +2116,42 @@
           {
             "id": "6f19875d-369e-4b4f-a1f7-2d93725ab36d",
             "name": "Daniel Hinojosa"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389037,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1029715",
+        "title": "JUnit 6 + exploring the testing ecosystem",
+        "description": "We'll start out by looking at what is new in JUnit 6. However, there's more to testing than just JUnit so you’ll also learn how to use other libraries like Hamcrest, AssertJ, JUnit Pioneer, Selenium. You’ll also see a comparison of the most common mocking libraries. After some tips for using your IDE to help you with testing, you’ll learn about some common testing patterns.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6631e69f-25c4-47db-9fb2-08576a460048",
+            "name": "Jeanne Boyarsky"
           }
         ],
         "categories": [
@@ -1517,6 +2249,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1025968",
+        "title": "Make Mechanical Advantage YOUR Advantage: How to modernize & futureproof your code with OpenRewrite",
+        "description": "So-called simple solutions are usually the most elegant. Experts make difficult tasks look easy. The smartest people make complex concepts easily understood.\r\n\r\nThese are truisms. And while supposed exceptions can be offered, they are actually validation, e.g. brute-force \"kludges\" aren't simple in the context of lifecycle, and the _smartest_ people understand the problem, the solution, AND the audience.\r\n\r\nOur toolbelts now include AI, which is wonderful addition. But most problems are not wholly AI-shaped or are better addressed - more quickly and/or at lower cost - using one of the many other tools available. Or by combining one of more of them.\r\n\r\nMechanical Advantage refers to the use of one or more \"simple machines\" to create a force multiplier and accomplish great feats with little effort. Consider these basic physical items we see but often overlook:\r\n\r\n- Lever and fulcrum\r\n- Wheel and axle\r\n- Pulley\r\n- Inclined plane\r\n- Wedge\r\n- Screw\r\n\r\nEach of these tools enables outsized results from small efforts. Combining them amplifies outputs while further reducing inputs! But mechanical advantage doesn't apply only to the physical world. Software equivalents usually center on things such as:\r\n\r\n- Patterns\r\n- Idempotency\r\n- Repeatability\r\n- Consistency\r\n\r\nBy applying one of more of these concepts to software, quality can dramatically improve and scarce resources can be freed for more valuable efforts.\r\n\r\nEngineering teams face an ever-growing mound of outdated code and unfolding security vulnerabilities that can slow your organization's momentum...or stop it in its tracks.\r\n\r\nCome to this session to learn how to put Mechanical Advantage to work for maximum payoff with minimum effort.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "05be364d-a57f-4e08-978d-8043d43db097",
+            "name": "Mark Heckler"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389038,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1036592",
         "title": "Maven's hidden secrets to speed up your build",
         "description": "Most developers use Maven daily but only scratch the surface of its capabilities. This talk uncovers powerful, lesser-known features that can dramatically improve build performance. Learn how to optimize dependency management, leverage caching and parallel execution, and use profiles strategically. We’ll also explore best practices for handling large multi-module projects, including incremental builds and smart recompilation. Walk away with practical tips to make your Maven builds faster, cleaner, and more reliable.",
@@ -1549,7 +2317,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1585,7 +2353,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1614,6 +2382,42 @@
               {
                 "id": 389970,
                 "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1071791",
+        "title": "Modern Architectures for Software Development Leaders",
+        "description": "Should we build Microservices, SOA, Monoliths, Modular Monoliths, Event Driven Architecture, and the list goes on. We hear so much from the developers and, at times it feels like they want to build them all.\r\n\r\nAs a leader, your focus is not on building stuff but delivering value to your business and customers. From that point of view, it is highly critical to understand why we should choose a particular architecture and when to facilitate your team to build one or more of a particular architecture.\r\n\r\nThis session will get directly to those questions, and help you to develop a clear understanding of why and when to use one architectural pattern over another and when to intermix them.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "b576bdc5-c994-40f5-b1dd-e0f9f7999fa9",
+            "name": "Venkat Subramaniam"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389050,
+                "name": "Tech Leadership"
               }
             ],
             "sort": 0
@@ -1675,11 +2479,11 @@
         "speakers": [
           {
             "id": "0bbdbd49-49d5-4418-9e3f-5df6968288ae",
-            "name": "Brayan Munoz V."
+            "name": "Brayan Muñoz V."
           },
           {
             "id": "edcc0378-0d8c-49d6-a068-4507930deae5",
-            "name": "José Rafael Almonte Cabrera"
+            "name": "José R. Almonte C."
           }
         ],
         "categories": [
@@ -1777,6 +2581,46 @@
       },
       {
         "questionAnswers": [],
+        "id": "1031394",
+        "title": "Real-Time Fraud Detection in Java with Kafka, Streams & Vector Similarity",
+        "description": "Ship a fraud detector without training a custom model. We’ll build a Java streaming pipeline that scores card transactions in near-real time using Kafka, Spring, behavior embeddings, and rule guardrails. You’ll see how to set thresholds, manage drift, and keep p95 latency low, focusing on explainability and operations rather than black-box ML.\r\n\r\nOutline:\r\n- Problem & constraints\r\n- Architecture: Kafka → Spring services → vector similarity\r\n- Feature/embedding design & thresholds\r\n- Rules, explanations, and alerting\r\n- Drift, replay, and observability\r\n- Demo + Q&A",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
+            "name": "Tim Kelly"
+          },
+          {
+            "id": "d61662a9-ef28-4bb3-b526-b3b1ea1c0c39",
+            "name": "Ricardo Henrique Silva de Mello"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389411,
+                "name": "AI In Practice"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1031556",
         "title": "Refactoring RN",
         "description": "Github copilot came out in 2021 and Open Rewrite joined Commonhaus in 2024. In this age of AI and other powerful tools why should a developer take the time to learn manual refactoring? Or even plan and execute their own novel refactorings? \r\n\r\nThis talk will delve into these questions with humor and the introduction of a novel refactoring. The new refactoring allows the developer to change the return type of a method without breaking the code even when the method is used many places.\r\n\r\nThe audience for this session are software developers and the people that interface with them (product owners, scrum masters, development managers) who need to know the value of this important and often neglected technical practice.\r\n \r\nAt the end of the session, the attendee will be able to identify hidden patterns in their code bases, plan a refactor effort on legacy codebases, write their own refactorings, and know when to use AI or other tools to perform the refactoring.\r\n",
@@ -1798,6 +2642,226 @@
               {
                 "id": 389040,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "993327",
+        "title": "Scotty I need Warp Speed - Ways to improve JVM startup",
+        "description": "When running Java in the cloud, the JVM startup time can become a limitation. Especially when you look at spinning up new instances of an app as response to changes in load, the warmup time can be a problem. A couple of years ago you only had CDS that could help you with the startup but meanwhile there are a couple of solutions that can help you to let you JVM start super fast. These days we have CRaC, Native Image, Leyden, InstantOn, Ready Now, JITServer and Cloud Native Compiler, which are all solutions that help to reduce the startup time of a JVM. Each of those is not a Silver Bullet, so you have to choose the right solution for your problem.\r\nThis session will give you a short overview of the different solutions to increase your JVM startup performance and will try to give you some hints on how to choose the right solution for your application.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "71f3abf1-03cf-458b-b385-e10fd110e89a",
+            "name": "Gerrit Grunwald"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389037,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1031652",
+        "title": "Securing AI in Java: Guardrails, Ethical LLMs, and Compliance Tools",
+        "description": "As large language models (LLMs) are integrated into enterprise systems, Java teams face emerging risks, including prompt injection, bias, and data governance failures, which can quickly erode user trust and stall production rollouts. Focusing on real threats identified in today’s OWASP LLM risk landscape, this session delivers hands-on approaches for Java developers to harden their AI-powered applications.\r\n\r\nThe talk details defence-in-depth strategies: automated bias screening, prompt sanitization techniques, and compliant logging workflows, all implemented using LangChain4j and Jakarta EE for scalable, modular LLM orchestration. \r\n\r\nYou will walk away with concrete, ready-to-apply patterns and code-level practices to build secure, ethical, and regulation-ready LLM apps in modern Java environments.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+            "name": "Bazlur Rahman"
+          },
+          {
+            "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
+            "name": "Shaaf Syed"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389041,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036661",
+        "title": "Sociotechnical Platform Engineering",
+        "description": "devOps practices help reduce friction to production for technologists. Once an application has user traffic, user experience should become a priority, but at what cost?\r\n\r\nThis talk will connect human centered devOps & SRE practices across compute, data, and AI value streams to illustrate how platforms balance developer experience against production stability over time and how process dependencies factor into overall platform success.\r\n\r\nthis talk will Explore:\r\n* How pipelines are value streams\r\n* A general-purpose value stream map for platforms\r\n* Value Stream Maps (VSMs) for Compute, Data, & AI\r\n* Dependency (wardley) maps for platform processes\r\n* Aligning SLIs, SLOs, & SLAs across our platform VSMs\r\n* Establishing Error Budgets\r\n* Chaos Engineering & Complexity Science\r\n\r\n*updated & extended with new social practices for 2026*",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0494255d-10a1-4ec1-8c00-b0881c434931",
+            "name": "Chris Corriere"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389040,
+                "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1072253",
+        "title": "Spec Driven Development Why your prompt chaos won’t scale",
+        "description": "AI coding has come a long way, but relying on vibes, prompts, and prototypes quickly hits a wall. What starts as productive soon becomes unmanageable: fragile hacks, copy-pasted prompts, and inconsistent outputs that resist collaboration and refactoring.\r\n\r\nThis session introduces Spec Driven Development, a practical, scalable approach where AI coding is guided by human-readable specifications that capture intent, structure, and rules. You’ll see how moving beyond freestyle prompting enables better reuse, stronger tests-as-guardrails, and smoother transitions when frameworks or requirements change.\r\n\r\nWe’ll walk through real-world examples showing how specs can help keep code and AI aligned, even during ongoing iteration and team collaboration. \r\n\r\nIf you’ve ever felt like Copilot was helping you fly in circles, this talk offers a way to move forward, with direction.\r\n",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "af46b3f5-47a7-4f80-a0f0-e16fef9493e6",
+            "name": "Simon Maple"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389411,
+                "name": "AI In Practice"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1038048",
+        "title": "Spring Data 4: Data Access Revisited",
+        "description": "The Spring Data team is preparing a new generation of the Data framework for 2025 and beyond. Spring Data 4 will ship with Jakarta EE 11 and Kotlin 2 baseline upgrades, introducing major new themes of which AOT Repositories, JSpecify annotations, Vector store support, and a major Spring Data JPA revision are only a selection. This talk will give an outlook on what is to come and will focus on key design decisions and roadmap considerations.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "974e24f5-044f-4552-a362-fdefd445dabc",
+            "name": "Chris Bono"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389038,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1026691",
+        "title": "Stop Fighting Your AI: Engineering Prompts That Actually Work",
+        "description": "Your prompts suck. Your AI outputs prove it.\r\n\r\nMost developers treat prompt engineering like magic - throw words at the AI and hope for the best. But getting consistent, production-quality results from AI requires actual engineering principles, not creative writing.\r\nThis session reveals the systematic approach to prompt engineering that produces reliable results: using AI itself to debug your prompts, building constraint systems that prevent garbage outputs, and creating prompt architectures that scale across your entire development workflow.\r\nYou'll master:\r\n- Why \"be creative\" prompts fail (and the structural patterns that don't)\r\n- How to reverse-engineer successful prompts using AI feedback loops\r\n- Constraint engineering that eliminates 90% of useless AI outputs\r\n- The prompt versioning and testing strategies that actually work in production\r\n\r\nPerfect for: Developers integrating AI into workflows, technical writers automating documentation, and anyone tired of playing prompt lottery with inconsistent results.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "0dfc57f1-27ac-4ab6-aab9-fd66359c0e32",
+            "name": "Martin Rojas"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389057,
+                "name": "AI Engineering"
               }
             ],
             "sort": 0
@@ -1885,7 +2949,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1961,6 +3025,154 @@
       },
       {
         "questionAnswers": [],
+        "id": "1036786",
+        "title": "The Mentorship Hub",
+        "description": "Want to do a next step in your career? Grow beyond senior, contribute to an open source project, write a book or take a leadership position? Maybe become a Tech Evangelist, launch your own company or become an independent consultant? \r\n\r\nThe Mentorship Hub is the perfect place for you to meet with experts that have achieved those and other results, and will mentor you on how to go from your current situation, to achieving your career dreams.\r\n\r\nThe Mentoring Hub is an area where speakers, Java Champions, open source developers and other luminaries from the community are available to mentor small groups of professionals in specific topics. It is a great place for you to ask your questions and have personalized help to advance your career goals.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
+            "name": "Bruno Souza"
+          },
+          {
+            "id": "116696fd-322f-4722-9708-d6aa2bf4baf0",
+            "name": "Luiz Real"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389049,
+                "name": "Keynote"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1015148",
+        "title": "The Missing Protocol: How MCP Bridges LLMs and Data Streams",
+        "description": "Nobody's talking about this: MCP isn't just another way to build chatbots. It's the bridge we've been missing between AI reasoning and real-time data systems.\r\nTeams build AI applications that work great in demos but fall apart with production data. Your agents analyze historical reports but can't tell what's happening in your Kafka streams. They're blind to schema changes and disconnected from events that matter to your business.\r\nInstead of treating streaming platforms like black boxes, you expose them directly to your agents via MCP protocol. Suddenly, your AI doesn't just read about data—it lives inside your data flows.\r\nLearn what becomes possible when you stop thinking about AI as an external service and start treating it as part of your streaming architecture. We'll build systems where agents subscribe to real-time events, reason about evolving schemas, and make decisions that ripple through your data platform.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4f858987-1a60-4da8-a4a2-045824a496c7",
+            "name": "Viktor Gamov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389057,
+                "name": "AI Engineering"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036365",
+        "title": "The Responsible Java Developer: Trustworthy GenAI in Practice",
+        "description": "Enterprises can’t afford “move fast and break things” with AI. This session equips Java developers with practical patterns for responsible AI adoption. We’ll cover safe prompt design, output validation, logging for audits, and data protection strategies — all using open source GenAI tooling. Through code examples and case studies, you’ll see how to add AI features without introducing security, cost, or compliance risks. Build smarter apps — and build them safely.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "f412fe67-9886-458b-ab9d-8e7f578bd742",
+            "name": "Brian Benz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389041,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1032519",
+        "title": "The Self-Cleaning Castle: How Garbage Collection Works in Java",
+        "description": "Garbage collection is one of the most valuable—but often invisible—features of modern programming languages. Like living in a self-cleaning castle, it takes care of the mess so we can focus on other things. But while it feels automatic, there’s a lot happening behind the scenes.\r\n\r\nIn this talk, we’ll explore the fundamentals of garbage collection through the lens of life in a castle with my cat: what it cleans up, how it works, and why it sometimes causes trouble. We’ll walk through some core techniques, their trade-offs, and the optimizations that make them more efficient. From there, we’ll dive into modern Java garbage collectors looking at how they build on these principles to meet today’s performance demands.\r\n\r\nBy the end, you’ll have a clear understanding of how garbage collection works, why it matters, and how overlooking it can cause problems when we least expect it",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "efa9033f-8483-4e1b-8df5-4352e638e3fc",
+            "name": "Renette Ros"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389037,
+                "name": "Core Java"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1003030",
         "title": "The Ultimate Showdown of Database Migration Tools",
         "description": "When it comes to database migration in the Spring ecosystem, two heavyweights dominate: Liquibase and Flyway. While both tools bring unique strengths to the table, only one can claim victory in this exciting technical showdown. \r\n\r\n* Which languages support migrations, and how do the costs compare?\r\n* What features do the rollbacks offer?\r\n* What versioning schemes and strategies do they utilize?\r\n* How do their runtimes operate?\r\n\r\nNo stone left unturned! Which migration tool will reign supreme in your Spring project? Join us to learn the differences between tools and cast your vote to make the ultimate decision!",
@@ -1986,6 +3198,46 @@
               {
                 "id": 389040,
                 "name": "Practices and other tech"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1032513",
+        "title": "The wrong reasons to build an MCP server",
+        "description": "We’ve built multiple MCP servers—enough to know where they shine, and where they hurt. MCP is powerful: it standardizes how LLMs connect with tools, prompts, and resources. But here’s the hard truth: not every use case deserves an MCP server. Sometimes it’s just overhead, slowing you down when a plain SDK or direct API call would have worked better.\r\n\r\nIn this workshop, we’ll share lessons learned from real MCP builds: the wins, the painful over-engineering, and the “wish we hadn’t done that” moments. You’ll see common anti-patterns like wrapping trivial APIs, using MCP as a database proxy, or introducing it in environments where latency and lifecycle management become a nightmare.\r\n\r\nMost importantly, we’ll give you a practical checklist to decide when MCP is worth it—and when it’s simply the wrong tool. You’ll walk away with clear guidance, battle-tested stories, and the confidence to avoid the mistakes we made.\r\n\r\nContents of the workshop: \r\nPart 1: The API Trap\r\nPart 2: The Right-Sized Use Case\r\nPart 3: Choose your game: Chatbot, MCP, Agent\r\nPart 4: Decision Framework in Action\r\n\r\nLearning Benefits and Takeaways: \r\n- Not every integration needs an MCP server—sometimes it’s just overhead.\r\n- Learn to spot common anti-patterns (wrapping trivial APIs, database proxies, FOMO-driven builds).\r\n- A decision checklist to evaluate MCP vs. simpler options.\r\n- Understand when MCP adds real value: interoperability, tool ecosystems, complex workflows.\r\n- Lessons learned from real-world MCP implementations—what worked, what didn’t.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
+            "name": "Shaaf Syed"
+          },
+          {
+            "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
+            "name": "Daniel Oh"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389411,
+                "name": "AI In Practice"
               }
             ],
             "sort": 0
@@ -2113,6 +3365,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1035581",
+        "title": "What Every Spring Developer Should Know About Jakarta EE",
+        "description": "Even if Java was originally meant for clients, it soon turned out that it was a great fit for the server side as well. \r\nJ2EE came along and conquered this segment. Enterprise Java still powers the world with Spring as the dominant player.\r\n\r\nSo, what about Jakarta EE then? Most of the industry were affected in some way or the other by the namespace change from `javax.*` to `jakarta.*` in Jakarta EE 9, so there clearly are a lot of dependencies on the various Jakarta EE specifications.\r\n\r\nSpring is no exception. The framework builds on a surprisingly large set of Jakarta EE APIs and implementations. This means that it is a great advantage for a Spring developer to be aware of what is going on with the development of Jakarta EE.\r\n\r\nCome to this session to learn about the planned changes to the technologies that Spring depends on. There will be demos, and even some AI involved.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "cdc2288a-56cf-40ec-bc39-ca5d9fb59b27",
+            "name": "Ivar Grimstad"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389038,
+                "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1038286",
         "title": "What's new in Spring Boot 4.0 & what's arriving 4.1",
         "description": "Spring Boot 4.0 arrived November 2025 and Spring Boot 4.1 will be here this May. There are a host of new changes to discuss and in this talk we'll cover all the updates, why they happened and how they might impact you. We'll demo new features, including REST API versioning and Interface Clients (where you can quickly convert a Java interface into a fully-fledged HTTP client). Finally we'll look at what we're planning to deliver in 2026.",
@@ -2134,6 +3422,114 @@
               {
                 "id": 389038,
                 "name": "Frameworks"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036388",
+        "title": "When One Agent Isn’t Enough: Experiments with Multi-Agent AI",
+        "description": "LLM agents are powerful, but no single one can cover every real-world task. This session shows what happens when you orchestrate multiple agents instead of relying on just one. We’ll explore four concrete experiments: running multiple agents in parallel with LangChain4j and Spring AI; manually coordinating Gemini CLI, Codex CLI, and Claude Code on the same code base; wrapping Gemini in an MCP server so it can be invoked by other tools; and creating a Claude Code sub-agent that delegates to Gemini while conserving context window tokens. You’ll see where orchestration pays off, where it gets messy, and what it suggests about the future of applied multi-agent AI.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "ecda0d84-be59-41c6-8983-b58cd5b3f93c",
+            "name": "Kenneth Kousen"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389411,
+                "name": "AI In Practice"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036203",
+        "title": "Zero Migration Java: Stay Current Without Breaking Your App",
+        "description": "Keeping enterprise Java applications secure and up-to-date is critical but traditional runtime upgrades often come with painful migrations, broken dependencies, and retesting cycles. What if you could upgrade your runtime without touching your code?​\r\nIn this session, we’ll explore the concept of zero migration — a runtime model that allows Java applications to stay current with the latest patches and features without requiring code or configuration changes. You’ll learn how this approach works in practice, why it’s a game-changer for regulated and mission-critical workloads, and how it fits into modern CI/CD and GitOps workflows. We’ll walk through real-world examples using modern runtimes like Liberty, and show how zero migration helps teams move faster, stay secure, and reduce technical debt.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "360ed316-07f1-469b-9092-3d4a600dab4f",
+            "name": "Yee-Kang Chang"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389041,
+                "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1013980",
+        "title": "Zero to C-speed with only Java",
+        "description": "Modern Java can match C's performance. Using Project Panama I built libraries that run 86% faster than standard Java APIs. I'll show you how to use the Foreign Function & Memory API to write ultra fast Java. Join me to learn how to make Java run at native speeds.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7322a2c2-cb56-498f-9988-0b68e746a3a6",
+            "name": "David Vlijmincx"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389037,
+                "name": "Core Java"
               }
             ],
             "sort": 0

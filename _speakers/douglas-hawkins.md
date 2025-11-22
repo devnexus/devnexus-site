@@ -37,6 +37,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/iksaylev~p5z1bj6MUEoviGB427gVB9.webp~1611308816-datadog-horizontal-rgb.webp
+  sort: 25
+  answerExtra: 1611308816-datadog-horizontal-rgb.webp
 categories: []
 slug: douglas-hawkins
 

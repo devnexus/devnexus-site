@@ -55,6 +55,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/inxafhel~YLx1wY4dqnHmh4pNLdNmzj.jpg~blog-qodo-e1740137796961.jpg
+  sort: 25
+  answerExtra: blog-qodo-e1740137796961.jpg
 categories: []
 slug: david-parry
 

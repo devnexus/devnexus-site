@@ -33,7 +33,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Security
 slug: bootiful-spring-security
 

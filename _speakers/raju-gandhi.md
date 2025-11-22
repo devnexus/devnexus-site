@@ -47,6 +47,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer:
+  sort: 25
+  answerExtra:
 categories: []
 slug: raju-gandhi
 

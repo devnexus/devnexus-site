@@ -49,6 +49,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/fkagve~S8TKLG1pY6SsuPNfwLkZpd.png~donnelley_financial_solutions_logo.svg.png
+  sort: 25
+  answerExtra: Donnelley_Financial_Solutions_logo.svg.png
 categories: []
 slug: anitha-dakamarri
 

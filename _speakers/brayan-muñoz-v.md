@@ -1,8 +1,8 @@
 ---
 id: 0bbdbd49-49d5-4418-9e3f-5df6968288ae
 firstName: Brayan
-lastName: Munoz V.
-fullName: Brayan Munoz V.
+lastName: Muñoz V.
+fullName: Brayan Muñoz V.
 bio: Brayan Muñoz V., an Oracle Ace Associate, is a Java SDE, Data Scientist, and
   Professor with an MSc in Data Science (UCJC) and a Telematics Engineer degree (PUCMM).
   He brings six years of software development experience, which includes three years
@@ -45,7 +45,13 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/dbalte~U9de5kNtC3UiQvrcrzizYa.png~8772767.png
+  sort: 25
+  answerExtra: 8772767.png
 categories: []
-slug: brayan-munoz-v
+slug: brayan-muñoz-v
 
 ---

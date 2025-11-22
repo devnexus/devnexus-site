@@ -43,6 +43,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/xvaczer~CEX2c1XjBCu3gpCk5Afmx.png~ibm_logo.svg.png
+  sort: 25
+  answerExtra: IBM_logo.svg.png
 categories: []
 slug: alex-soto
 

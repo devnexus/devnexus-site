@@ -60,6 +60,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ypamzez~RmxSLqL7zQR32S9Nochwic.webp~exe_logo_ippon.png-2.webp
+  sort: 25
+  answerExtra: EXE_LOGO_IPPON.png-2.webp
 categories: []
 slug: laurie-lay
 

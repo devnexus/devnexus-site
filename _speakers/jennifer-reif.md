@@ -13,6 +13,8 @@ bio: Jennifer Reif is a Developer Relations Engineer at Neo4j, speaker, and blog
 tagLine: Neo4j Developer Relations Engineer
 profilePicture: https://sessionize.com/image/cbe1-400o400o1-VkYvUgYc3aKCRcuyMhdxci.jpg
 sessions:
+- id: 1033711
+  name: Agents, Tools, and MCP, oh my! Next-level AI concepts for developers
 - id: 1036671
   name: Supercharge Your Applications with Java, Graphs, and a Touch of AI
 isTopSpeaker: false
@@ -42,6 +44,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/cxawqek~4dravzbLpvR5YtqeW8488z.png~neo4j-logo2024color.png
+  sort: 25
+  answerExtra: Neo4j-logo2024color.png
 categories: []
 slug: jennifer-reif
 

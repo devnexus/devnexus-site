@@ -40,6 +40,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/gfapdes~TKiC3f5RQwK4SsPSVZ6FdP.png~azul_systems_logo.png
+  sort: 25
+  answerExtra: Azul_systems_logo.png
 categories: []
 slug: john-ceccarelli
 

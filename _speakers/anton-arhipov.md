@@ -13,6 +13,8 @@ bio: Anton is a Developer Advocate at JetBrains, working with Kotlin, IntelliJ I
 tagLine: Developer Advocate, JetBrains
 profilePicture: https://sessionize.com/image/706d-400o400o1-DetNfUC6HLw7aZZrgSVsoK.jpg
 sessions:
+- id: 1003174
+  name: Debugging with IntelliJ IDEA
 - id: 1003030
   name: The Ultimate Showdown of Database Migration Tools
 isTopSpeaker: false
@@ -42,6 +44,12 @@ questionAnswers:
   answer: antonarhipov.bsky.social
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/ikladsei~ash8J8SYmR2StGjCWem8tU.png~jetbrains_company_logo.svg.png
+  sort: 25
+  answerExtra: JetBrains_company_logo.svg.png
 categories: []
 slug: anton-arhipov
 

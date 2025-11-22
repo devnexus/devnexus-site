@@ -41,6 +41,12 @@ questionAnswers:
   answer: jamesward.com
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/sgapteg~GiXtWSu4hknPmmKWwJQ8nS.png~amazon_web_services_logo.svg.png
+  sort: 25
+  answerExtra: Amazon_Web_Services_Logo.svg.png
 categories: []
 slug: james-ward
 

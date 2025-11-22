@@ -29,7 +29,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Practices and other tech
 slug: maven-s-hidden-secrets-to-speed-up-your-build
 

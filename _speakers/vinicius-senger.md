@@ -44,6 +44,12 @@ questionAnswers:
   answer:
   sort: 23
   answerExtra:
+- id: 113528
+  question: Company Logo
+  questionType: File_upload
+  answer: https://sessionize.com/download/icxaphep~MKZcD1xM8YP2MoNckKvqZ8.png~amazon_web_services_logo-kl.png
+  sort: 25
+  answerExtra: Amazon_Web_Services_Logo-kl.png
 categories: []
 slug: vinicius-senger
 
