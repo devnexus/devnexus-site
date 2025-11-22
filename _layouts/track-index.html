@@ -18,7 +18,7 @@ layout: default
 {% endfor %}
 
 <div class="track-links my-8 text-center flex flex-wrap justify-center gap-4">
-  {% assign all_tracks = "ai,java,dev-practices" | split: "," %}
+  {% assign all_tracks = "workshops,ai,java,dev-practices" | split: "," %}
   {% for track in all_tracks %}
     {% unless page.path contains track %}
       <a href="/events/{{ track }}" class="track-link p-2">{{ track | capitalize }}</a>
