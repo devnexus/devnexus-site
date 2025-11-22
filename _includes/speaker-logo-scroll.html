@@ -1,0 +1,13 @@
+<div class="speaker-logos-scroll">
+    <div class="scroll-content">
+        {% for speaker in site.data.speakers %}
+            {% if speaker.questionAnswers %}
+                {% assign qa = speaker.questionAnswers %}
+                    {% assign logo = qa | where: "question", "Company Logo" | first %}
+                    {% if logo && logo.answer %}
+                        <img src="{{ logo.answer }}" class="company-logo">
+                    {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

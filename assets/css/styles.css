@@ -4,3 +4,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.speaker-logos-scroll {
+    display: flex;
+    overflow: hidden;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+}
+
+.company-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
