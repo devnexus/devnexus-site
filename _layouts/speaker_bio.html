@@ -16,7 +16,12 @@ layout: default
 			{% if page.profilePicture %}
 				<img src="{{page.profilePicture}}" class="w-32 h-32 md:w-48 md:h-48 object-cover border-2 border-white" alt="{{page.fullName}}">
 			{% endif %}
-			<h1 class="text-3xl font-bold">{{ page.fullName }}</h1>
+			<div>
+				<h1 class="text-3xl font-bold mb-2">{{ page.fullName }}</h1>
+				{% if company_logo_url %}
+					<img src="{{company_logo_url}}" class="h-16 md:h-24 object-cover" alt="{{company_alt | default: 'Company logo'}}">
+				{% endif %}
+			</div>
 		</div>
 	</div>
 </header>
@@ -39,11 +44,6 @@ layout: default
 						</div>
 						{% endfor %}	
 					</div>
-				</div>
-				{% endif %}
-				{% if company_logo_url %}
-				<div class="flex justify-center">
-					<img src="{{company_logo_url}}" class="w-full object-contain" alt="{{company_alt | default: 'Company logo'}}">
 				</div>
 				{% endif %}
 			</div>
