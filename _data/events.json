@@ -121,6 +121,46 @@
       },
       {
         "questionAnswers": [],
+        "id": "1048951",
+        "title": "Advancing with Java",
+        "description": "In large enterprises, Java developers do much more than write code. They’re also responsible for meeting company-wide standards—fixing vulnerabilities, upgrading frameworks and Java versions, and ensuring quality metrics like code coverage, technical debt, and security are in check.\r\n\r\nThese tasks, while critical, often compete with feature development and can slow teams down. The good news is that a growing set of developer-friendly tools—both open-source and commercial—can help. From static code analyzers to automated testing, framework migration, and vulnerability detection tools, developers now have powerful allies to handle routine, compliance-heavy tasks efficiently.\r\n\r\nThis talk explores a set of practical tools that integrate well into Java development workflows, helping teams ship better code faster while meeting organizational requirements. You’ll leave with actionable insights on boosting productivity, improving software quality, and making compliance a seamless part of the development process.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
+            "name": "Rodrigo Graciano"
+          },
+          {
+            "id": "ab1b8b69-f449-4df9-b391-243a391b9d01",
+            "name": "Chandra Guntur"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1035470",
         "title": "Agentic AI for Java Microservices: Cloud Performance Optimization at FinTech Scale",
         "description": "Modern enterprise Java systems handle millions of financial transactions every day. Yet scaling them reliably and cost-effectively in the cloud is a constant challenge. This session introduces Agentic AI for Java microservices, an approach that integrates autonomous agents directly into your architecture to achieve self-optimization, predictive scaling, and real-time performance tuning. Drawing on my experience in FinTech and cloud-native systems, I will share architecture patterns, code examples, and lessons learned from building high-volume transaction platforms. Attendees will learn how to evolve from traditional auto-scaling to AI-driven self-optimization and leave with a practical roadmap for implementing these techniques in their own Java applications.",
@@ -301,6 +341,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1035575",
+        "title": "AI for Entrepreneurs: Turning Bold Ideas into Global Ventures",
+        "description": "Entrepreneurship is evolving with the rise of AI, and nowhere is this more evident than in the burgeoning tech communities of Africa and other underrepresented groups. In this session, we will explore how AI is not just a tool for connection but a catalyst for entrepreneurial success. Learn how AI-powered platforms help streamline administrative tasks, provide data-driven insights, and enable African tech entrepreneurs to focus on creative and strategic growth. Through inspiring case studies, we will highlight how startups are leveraging AI to disrupt traditional business models, tap into global markets, and create sustainable ventures. This discussion will provide practical guidance and inspiration for those looking to harness AI in their entrepreneurial journey.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "23a46a39-2f6d-4ee3-8ea9-62fd2edcc466",
+            "name": "Ernesto Spruyt"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1014291",
         "title": "API Versioning in Spring",
         "description": "Spring Framework 7 introduces a powerful API versioning feature to tackle the complexities of evolving HTTP APIs while ensuring backward compatibility. This talk will dive into the new Spring tools and annotations, such as the @ApiVersion annotation and enhanced RequestMapping capabilities. We will discuss multiple different versioning implementations, including: URI parameters, headers, and query parameters. Attendees will discover how to implement API versioning in Spring Boot applications. We will also see how the API versioning feature is used in Interface Clients, Spring Cloud Gateway and Spring Cloud Load Balancer.",
@@ -420,6 +496,10 @@
           {
             "id": "1708bdeb-e8d9-4628-a147-e9878198c900",
             "name": "Baruch Sadogursky"
+          },
+          {
+            "id": "028622d6-1ee5-413e-8378-e4bfefc1e9fd",
+            "name": "Leonid Igolnik"
           }
         ],
         "categories": [
@@ -578,6 +658,46 @@
               {
                 "id": 389041,
                 "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "994927",
+        "title": "BoxLang vs the World : From zero to stable in 20 months",
+        "description": "We’re not Big Tech. We’re builders. In under two years, we went from zero to a stable, next‑generation dynamic JVM language — created by developers, for developers. And we did it by embracing the era we live in: the age of AI. From design to implementation, we leveraged AI tooling and techniques to move faster, think broader, and deliver sooner.\r\n\r\nCode changes. So should your language skills. One day, you’re building for the web. The next, for APIs, tablets, or serverless. The future is multi‑runtime. BoxLang is ready.\r\n\r\nDynamic. Modular. Productive. It’s expressive and functional, yet 100% Java‑compatible. It integrates anywhere, from legacy stacks to modern frameworks, with an instant Java ecosystem at your fingertips. Even a multi‑parser design lets you bring legacy code into a modern runtime without compromise.\r\n\r\nFrom a 6 MB OS binary to running on CommandBox, Jakarta EE, AWS Lambda, Microsoft Functions, IoT, and more — BoxLang adapts to every runtime you throw at it.\r\n\r\nThis is the story of how we built a language from scratch with strict goals: speed, flexibility, and developer‑first design — proving that in the age of AI, a small, passionate team can deliver significant innovations.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "01ad1e48-e43b-4af2-b3f3-e65232d55ff1",
+            "name": "Luis Majano"
+          },
+          {
+            "id": "f8f5d593-f9eb-42e1-996f-ba69785112a9",
+            "name": "Brad Wood"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
               }
             ],
             "sort": 0
@@ -1549,46 +1669,6 @@
       },
       {
         "questionAnswers": [],
-        "id": "1032716",
-        "title": "Fundamentals of Software Engineering In the age of AI",
-        "description": "Agentic coding assistants and editor based AI chat interfaces are altering the development workflow leading some to proclaim the end of software engineering. Is it time to explore other careers? Not so fast, the rumors of our demise are greatly exaggerated! While these tools can boost productivity, to be used effectively, developers still need to master the fundamentals of the software craft. Modern software development demands more than just coding proficiency—it requires navigating an increasingly AI-augmented landscape. This intensive workshop bridges the critical gap between what early-career developers learn in formal education and what they need to thrive in professional environments where human expertise and artificial intelligence increasingly collaborate. Based on our book \"Fundamentals of Software Engineering,\" we guide participants through a comprehensive journey from programmer to well-rounded software engineer equipped to leverage AI tools effectively while maintaining engineering fundamentals.\r\n\r\nParticipants will develop both technical capabilities and professional skills that remain relevant regardless of changing languages, frameworks, and AI capabilities. Through a balanced mix of conceptual teaching, collaborative discussions, and hands-on exercises with both traditional and AI-assisted approaches, attendees will work on realistic scenarios that reinforce practical application of these fundamental principles while developing discernment about when and how to integrate AI tools into their workflow.",
-        "startsAt": null,
-        "endsAt": null,
-        "isServiceSession": false,
-        "isPlenumSession": false,
-        "speakers": [
-          {
-            "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-            "name": "Nathaniel Schutta"
-          },
-          {
-            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
-            "name": "Dan Vega"
-          }
-        ],
-        "categories": [
-          {
-            "id": 107979,
-            "name": "Track",
-            "categoryItems": [
-              {
-                "id": 389970,
-                "name": "Workshop"
-              }
-            ],
-            "sort": 0
-          }
-        ],
-        "roomId": null,
-        "room": null,
-        "liveUrl": null,
-        "recordingUrl": null,
-        "status": "Accepted",
-        "isInformed": true,
-        "isConfirmed": true
-      },
-      {
-        "questionAnswers": [],
         "id": "1032731",
         "title": "Fundamentals of Software Engineering In the age of AI",
         "description": "Agentic coding assistants and editor based AI chat interfaces are altering the development workflow leading some to proclaim the end of software engineering. Is it time to explore other careers? Not so fast, the rumors of our demise are greatly exaggerated! While these tools can boost productivity, to be used effectively, developers still need to master the fundamentals of the software craft. Modern software development demands more than just coding proficiency—it requires navigating an increasingly AI-augmented landscape.",
@@ -1614,6 +1694,46 @@
               {
                 "id": 389057,
                 "name": "AI Engineering"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1032716",
+        "title": "Fundamentals of Software Engineering In the age of AI Workshop",
+        "description": "Agentic coding assistants and editor based AI chat interfaces are altering the development workflow leading some to proclaim the end of software engineering. Is it time to explore other careers? Not so fast, the rumors of our demise are greatly exaggerated! While these tools can boost productivity, to be used effectively, developers still need to master the fundamentals of the software craft. Modern software development demands more than just coding proficiency—it requires navigating an increasingly AI-augmented landscape. This intensive workshop bridges the critical gap between what early-career developers learn in formal education and what they need to thrive in professional environments where human expertise and artificial intelligence increasingly collaborate. Based on our book \"Fundamentals of Software Engineering,\" we guide participants through a comprehensive journey from programmer to well-rounded software engineer equipped to leverage AI tools effectively while maintaining engineering fundamentals.\r\n\r\nParticipants will develop both technical capabilities and professional skills that remain relevant regardless of changing languages, frameworks, and AI capabilities. Through a balanced mix of conceptual teaching, collaborative discussions, and hands-on exercises with both traditional and AI-assisted approaches, attendees will work on realistic scenarios that reinforce practical application of these fundamental principles while developing discernment about when and how to integrate AI tools into their workflow.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+            "name": "Nathaniel Schutta"
+          },
+          {
+            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+            "name": "Dan Vega"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 389970,
+                "name": "Workshop"
               }
             ],
             "sort": 0
@@ -1701,6 +1821,46 @@
       },
       {
         "questionAnswers": [],
+        "id": "1036839",
+        "title": "Grow Beyond Senior Through Java Contributions: JUGs, the JCP and OpenJDK",
+        "description": "The Java Ecosystem is full of opportunity for developers to grow beyond the senior level, and reach the top technical positions in technology market.\r\n\r\nIn this interactive question driven talk, we will explore the three pillars of the Java Ecosystem: the Java User Groups, the Java Community Process and the OpenJDK open source project.\r\n\r\nCombined, those initiatives provide all that you need to build your reputation, acquire the most important Java tech skills  and become a recognized leader in your space.\r\n\r\nThis session will show you exactly how.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1595afca-83d0-4893-afa1-a6b8d832aee5",
+            "name": "Bruno Souza"
+          },
+          {
+            "id": "fe0154d0-e93e-46f6-8779-7233875f8b33",
+            "name": "Heather VanCura"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1021472",
         "title": "Hacking AI - How to Survive the AI Uprising",
         "description": "While AI can recognize faces under masks, track purchases, and watch you sleep, there's still hope when the Great Robot Revolution kicks off!  \r\n\r\nHacking software was cool in the 90s, but hacking data against AI will be cool tomorrow. We'll discuss some of the mechanics for data bias, image perturbation, and jailbreaking that are emerging as their own mechanics against machines. \r\n\r\nNo prior AI knowledge is needed for this talk, everyone will follow along and learn!",
@@ -1762,6 +1922,78 @@
               {
                 "id": 389970,
                 "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "995311",
+        "title": "How I AI: Building Custom GPTs to Supercharge Everyday Work",
+        "description": "AI isn’t just for coding—it’s a force multiplier for every role. In this talk, I’ll show how I use AI daily to automate work, analyze complex projects, and tailor content—without being a traditional developer.\r\n\r\nFrom writing automation scripts in Google Apps Script and Excel, to analyzing R&D projects for tax credit eligibility, to summarizing dense articles into concise insights, AI has become my on-demand assistant.\r\n\r\nI’ll also share how I built custom GPTs that review my presentations based on audience personas, identifying gaps in tone, content, and clarity—turning a standard deck into a laser-focused message.\r\n\r\nThis session is for anyone who wants to move past the AI hype and see concrete, repeatable workflows. You’ll leave with ideas, prompts, and frameworks you can apply tomorrow.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "9ec5cc50-ea02-42fb-abce-ff175de6c82f",
+            "name": "Daneez Zamangil"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1032785",
+        "title": "How I automated my life with MCP Servers",
+        "description": "Being a developer these days means you’re not only writing code, but also a Linux admin, a DevOps engineer, you name it! Thankfully, the Model Context Protocol (MCP) has made it significantly easier for me to ask my natural language questions, such as “What’s consuming the most memory in our dev cluster right now?”, and quickly receive a response. Hint: It was Prometheus!\r\n\r\nWhat you’ll learn in this session is a straightforward way to build your own local “AI Agent” using open source technologies to interact with various API’s and tools. We’ll take a look at the most common MCP Servers that developers are using today, think Git, Databases, Dev Tools, and more. Plus, we’ll have some fun, and chain multiple tools together to automate your daily standup!",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "78cedbd4-1408-4625-ab2e-44559814885b",
+            "name": "Cedric Clyburn"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
               }
             ],
             "sort": 0
@@ -2917,6 +3149,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1036675",
+        "title": "Taming Technical Debt in Java: A Survival Guide for Legacy Systems",
+        "description": "How do you recognize bad code? What do you do once you realize it's bad? What if your boss won't give you permission to rewrite it? Don't rewrite your resume just yet! There are tools and techniques that can make working with legacy systems fun! Scott has been doing this for decades and will show you how to make the job of overcoming technical debt much easier.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c6d00669-9c07-47fa-88b8-365dbbd10cca",
+            "name": "Scott Wierschem"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1035363",
         "title": "The Accidental Leader: How to Succeed When You Weren’t Planning to Lead",
         "description": "One day, you’re just doing your job—writing code, managing projects, or contributing to a team—and the next, you’re in charge. Whether it’s by necessity, opportunity, or pure accident, many tech professionals find themselves in leadership roles without formal training or preparation. So, what now?\r\n\r\nThis talk is for those who never set out to be leaders but suddenly find themselves responsible for teams, projects, or communities. We’ll explore the essential skills that make accidental leaders successful, from navigating imposter syndrome to managing up, down, and across. Through real-world stories, practical strategies, and lessons learned the hard way, you’ll gain the confidence and tools to lead effectively—without losing yourself in the process.",
@@ -2938,6 +3206,78 @@
               {
                 "id": 389050,
                 "name": "Tech Leadership"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036802",
+        "title": "The Developer Skill Tree: Growing Beyond the Code",
+        "description": "Being great at coding gets you in the room, but soft skills determine how far you grow once you’re there. In fast-paced, collaborative environments, developers are expected to write excellent code and navigate communication, feedback, conflict, and change. But we rarely get formal training on how to do that well.\r\n\r\nIn this talk, we’ll explore the most underrated branches of the developer skill tree, empathy, communication, and adaptability, and how strengthening them can level up your impact, your team dynamics, and your career. You’ll walk away with practical strategies for having better 1:1s, asking smarter questions, staying flexible when requirements shift, and building a reputation as someone who makes teams better, not just codebases.\r\n\r\nWhether you're mentoring, contributing to open source, or navigating your next role, this talk will give you the tools to grow in the places your IDE can’t see.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6c0612d5-65af-4eb3-bce6-194618dd7b08",
+            "name": "Bree Hall"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1036149",
+        "title": "The Engineer's Guide to Socialization",
+        "description": "DB Associations as Networking Patterns: A Developer's Guide to Professional Connections\"\r\n\r\nThis  talk reimagines professional networking through the familiar lens of database associations, making relationship-building more approachable for developers. By mapping associations to networking scenarios, we'll transform technical knowledge into effective social strategies.\r\n\r\nTalk Overview\r\nWe'll explore how common Rails/ db associations parallel networking patterns:\r\n- `belongs_to`: Building one-on-one mentor/mentee relationships\r\n- `has_many: through`: Leveraging existing connections for introductions\r\n- `has_and_belongs_to_many`: Engaging with tech communities and groups\r\n\r\nKey Takeaways:\r\n1. A technical framework for understanding networking dynamics\r\n2. Practical strategies tailored for introverted developers\r\n3. Implementation techniques for each \"association type\"\r\n4. Tools to measure networking effectiveness\r\n5. Actionable steps for immediate application\r\n\r\nThis session bridges the gap between technical expertise and professional relationship building. You'll gain:\r\n- Structured approaches to networking that align with developer thinking\r\n- Concrete examples of successful networking patterns\r\n- Implementation strategies for various career stages\r\n- Methods to convert technical knowledge into social capital\r\n\r\nTarget Audience:\r\n- Developers of all levels seeking to grow their professional network\r\n- Engineering leaders aiming to strengthen team connections\r\n- Community organizers building tech communities\r\n\r\nWhether you're starting your career or leading a team, this talk provides a systematic approach to networking that feels natural to technical minds. You'll leave with practical tools to build and maintain professional relationships using familiar patterns from your daily work.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "a6ee49ed-a85d-43bd-8677-bced09824b2c",
+            "name": "Nerando Johnson"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
               }
             ],
             "sort": 0
@@ -3350,6 +3690,42 @@
               {
                 "id": 389034,
                 "name": "Architecture"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1026830",
+        "title": "Unlocking Engineering Productivity with IDE-Based Coding Agents",
+        "description": "Explore how coding agents, seamlessly integrated into your IDE, empower engineers to automate complex workflows and drive innovation at an unprecedented pace. This session will showcase practical use cases, including automated testing, effortless JDK upgrades, and terminal integration, emphasizing how these capabilities are natively supported within the development environment rather than relying on external tools.\r\nWe will delve into the lifecycle of a workflow, beginning with the expert who initiates the process. You'll learn how experts iterate to refine these workflows and determine whether they evolve into fully autonomous systems or remain human-driven. Additionally, we will discuss how sharing common workflows within teams and across organizations facilitates knowledge transfer, allowing domain experts to share their insights and scale themselves. This collaborative approach enables non-experts to perform expert-level tasks, fostering a culture of shared learning and innovation.\r\nDiscover how IDE-based automation helps maintain zero technical debt, streamlines repetitive tasks, and places powerful innovation directly in the hands of developers. Step into the future of enterprise Java productivity, where agentic workflows become an integral part of your daily coding experience.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7d4dc3fa-24c1-4ccb-bfe7-0bca27497c7e",
+            "name": "Josh Kurz"
+          }
+        ],
+        "categories": [
+          {
+            "id": 107979,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 406025,
+                "name": "Tools & Misc"
               }
             ],
             "sort": 0

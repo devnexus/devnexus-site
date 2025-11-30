@@ -1,19 +1,7 @@
 <div class="speaker-logos-scroll">
     <div class="scroll-content">
-        {% assign company_logos = "" | split: "" %}
-        {% for speaker in site.data.speakers %}
-            {% if speaker.questionAnswers %}
-            {% assign logo = speaker.questionAnswers | where: "question", "Company Logo" | first %}
-            {% if logo and logo.answer and logo.answer != "" %}
-                {% assign company_logos = company_logos | push: logo.answer %}
-            {% endif %}
-            {% endif %}
+        {% for logo in site.data.logos %}
+            <img src="{{ logo[1] }}" class="company-logo">
         {% endfor %}
-        {% if company_logos.size > 0 %}
-            {% assign uniq_logos = company_logos | uniq %}     
-            {% for logo_url in uniq_logos %}
-            <img src="{{ logo_url }}" class="company-logo">
-            {% endfor %}
-        {% endif %}
     </div>
 </div>

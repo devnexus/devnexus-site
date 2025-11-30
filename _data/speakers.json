@@ -604,6 +604,66 @@
     "categories": []
   },
   {
+    "id": "f8f5d593-f9eb-42e1-996f-ba69785112a9",
+    "firstName": "Brad",
+    "lastName": "Wood",
+    "fullName": "Brad Wood",
+    "bio": "Brad grew up in southern Missouri and after high school majored in Computer Science with a music minor at MidAmerica Nazarene University (Olathe, KS). Today he lives in Kansas City with his wife and three girls. Brad enjoys all sorts of international food and the great outdoors.\r\nHe enjoys configuring and performance tuning high-availability Windows and Linux ColdFusion environments as well as SQL Server.  Brad is the ColdBox Platform developer advocate at Ortus Solutions, lead developer of the CommandBox CLI, and Senior Architect of BoxLang. ",
+    "tagLine": "Senior Software Architect, lead developer of CommandBox CLI and BoxLang",
+    "profilePicture": "https://sessionize.com/image/6c24-400o400o1-9d816a8b-fda6-4a5d-ac1e-2321f4705bd4.jpg",
+    "sessions": [
+      {
+        "id": 994927,
+        "name": "BoxLang vs the World : From zero to stable in 20 months"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ortus",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bdw429s",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/brad-wood-92043335",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ykavqez~QGoQvvjPnBWycsVJDM9SpV.png~images-2.png",
+        "sort": 25,
+        "answerExtra": "images-2.png"
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "0bbdbd49-49d5-4418-9e3f-5df6968288ae",
     "firstName": "Brayan",
     "lastName": "Muñoz V.",
@@ -659,6 +719,66 @@
         "answer": "https://sessionize.com/download/dbalte~U9de5kNtC3UiQvrcrzizYa.png~8772767.png",
         "sort": 25,
         "answerExtra": "8772767.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "6c0612d5-65af-4eb3-bce6-194618dd7b08",
+    "firstName": "Bree",
+    "lastName": "Hall",
+    "fullName": "Bree Hall",
+    "bio": "Bree is a frontend Software Engineer turned Developer Advocate at HubSpot. She has a passion for coding and making technology more accessible to everyone. Bree creates technical content to help developers create and build autonomously. When she isn't working for the Developer Advocacy team at HubSpot, you can find her playing video games, baking, or traveling to magical destinations.",
+    "tagLine": "Developer Advocate & Technical Content Creator",
+    "profilePicture": "https://sessionize.com/image/df57-400o400o1-TmtwtBovRibSkP7Qj4xCZ5.png",
+    "sessions": [
+      {
+        "id": 1036802,
+        "name": "The Developer Skill Tree: Growing Beyond the Code"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Atlassian",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@bytesofbree",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/briannahall0/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/scaiple~D9nsMvZe7MVy2RAENuCbHb.png~atlassian-logo.svg.png",
+        "sort": 25,
+        "answerExtra": "Atlassian-logo.svg.png"
       }
     ],
     "categories": []
@@ -921,6 +1041,10 @@
         "name": "Developer Career Masterplan: 15 steps to grow beyond senior developer"
       },
       {
+        "id": 1036839,
+        "name": "Grow Beyond Senior Through Java Contributions: JUGs, the JCP and OpenJDK"
+      },
+      {
         "id": 1036786,
         "name": "The Mentorship Hub"
       }
@@ -967,6 +1091,126 @@
         "answer": "https://sessionize.com/download/iplaifre~RHnbqLRx5Kt6QvULuDkQvW.jpg~soujava_logo.jpg",
         "sort": 25,
         "answerExtra": "SouJava_logo.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "78cedbd4-1408-4625-ab2e-44559814885b",
+    "firstName": "Cedric",
+    "lastName": "Clyburn",
+    "fullName": "Cedric Clyburn",
+    "bio": "Cedric Clyburn (@cedricclyburn), Senior Developer Advocate at Red Hat, is an enthusiastic software technologist with a background in Kubernetes, DevOps, and container tools. He has experience speaking and organizing conferences including DevNexus, WeAreDevelopers, The Linux Foundation, KCD NYC, and more. Cedric loves all things open-source, and works to make developer's lives easier! Based out of New York.",
+    "tagLine": "Senior Developer Advocate, Red Hat",
+    "profilePicture": "https://sessionize.com/image/95ea-400o400o1-X8XB85DAjKcsEL18XP5Vf.png",
+    "sessions": [
+      {
+        "id": 1032785,
+        "name": "How I automated my life with MCP Servers"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Red Hat",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@cedricclyburn",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/cedricclyburn",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@cedricclyburn.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/irislaq~nsEvpWGLQdYiCFLQwkmWav.png~red_hat_logo_2019.svg.png",
+        "sort": 25,
+        "answerExtra": "Red_Hat_Logo_2019.svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "ab1b8b69-f449-4df9-b391-243a391b9d01",
+    "firstName": "Chandra",
+    "lastName": "Guntur",
+    "fullName": "Chandra Guntur",
+    "bio": "Chandra is a technologist in the financial services industry since 2003 and is programming with Java since 1998.\r\n\r\nChandra was selected as a 2019 Java Champion. He is a Java User Group (JUG) Leader, and helps run one of the largest Java user groups, NYJavaSIG and a founder-leader at the Garden State JUG.\r\n\r\nChandra conducts code workshops and Code Katas on core Java features. He is a frequent speaker at Java user groups, and technology conferences including Oracle CodeOne, Oracle Code NY, QCon New York, Devnexus, DawsCon and GIDS India.\r\n\r\nhttps://github.com/c-guntur/current-abstracts/blob/master/AboutChandraGuntur.adoc\r\n",
+    "tagLine": "Sr. Principal Engineer, Java Champion, JUG Leader",
+    "profilePicture": "https://sessionize.com/image/9c8e-400o400o1-D4674eAuPNWvtthbVLUFgr.jpg",
+    "sessions": [
+      {
+        "id": 1048951,
+        "name": "Advancing with Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JPMorganChase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@CGuntur",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/cguntur/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/dqakdex~DEztqM9ZJRcLDd2LRtNVCQ.png~images-8.png",
+        "sort": 25,
+        "answerExtra": "images-8.png"
       }
     ],
     "categories": []
@@ -1221,12 +1465,12 @@
     "profilePicture": "https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2Tm.png",
     "sessions": [
       {
-        "id": 1032716,
+        "id": 1032731,
         "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
-        "id": 1032731,
-        "name": "Fundamentals of Software Engineering In the age of AI"
+        "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI Workshop"
       },
       {
         "id": 1034698,
@@ -1275,6 +1519,66 @@
         "answer": "https://sessionize.com/download/ilvahgex~PH3MNqVrJafrVLKNj9Wy6W.png~broadcom_logo_red-black_no-tag.png",
         "sort": 25,
         "answerExtra": "Broadcom_Logo_Red-Black_no-tag.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "9ec5cc50-ea02-42fb-abce-ff175de6c82f",
+    "firstName": "Daneez",
+    "lastName": "Zamangil",
+    "fullName": "Daneez Zamangil",
+    "bio": "Engineering Manager\r\n\r\nAn empathetic and inclusive leader with a focus on cultivating a healthy team culture of inclusion and equity by transparent, honest communication and sharing information\r\nExtensive background in software quality assurance for over 10+ years, with expertise in functional, non-functional, smoke, regression, and ad-hoc testing\r\nEffectively leading the Asian Business Employee Resource Group (BERG) at Mailchimp\r\nInstructor at QA boot camps and workshops\r\n\r\nAREAS OF EXPERTISE\r\n\r\nStrong written and verbal communication skills, with technical and non-technical teams\r\nProviding analytical troubleshooting and research driven solutions\r\nSQL queries\r\nHTML/CSS\r\nExperienced in software development and collaboration tools like Jira, Confluence, Jenkins and Git\r\nBasic Automation Tests in Ruby\r\n\r\nPROFESSIONAL EXPERIENCE\r\nEngineering Manager, Exploratory testing\t Feb 2022 - July 2022\r\nMural, San Francisco, CA\r\nSetup a specialized exploratory testing team of 9 direct reports based in Argentina, Brazil, Spain and USA.\r\nEstablishing an internal process within the team for session based testing and dashboards to track quality metrics..\r\nFostering an environment of inclusivity & team collaboration where questions are welcome, and success is celebrated.\r\nEstablished and built trust by exercising empathy which was geared to move away from task oriented leadership.\r\nWorking with developers to make difficult-to-test features more testable; coaching the Quality Engineering and development teams on testing strategies and technologies; like  exploratory testing and advocating for users throughout the development of the product.\r\nTraining the Quality engineering team in accessibility to help them incorporate those use cases in their everyday testing.\r\nProviding hands-on leadership for a growing Quality Engineering team, coaching manual testers and quality engineers to help them advance in their careers.\r\nCreating a promotion process to help move direct reports to the next level in their careers.\r\nEngineering Manager, QA\t May 2021 - Feb 2022\r\nIntuit/Mailchimp, Atlanta, GA\r\nManaging a team of 7 direct reports, helping them juggle multiple projects and manage their time on short- and long-term projects.\r\nSupporting direct reports’ long-term career development, helping them build their skills in software testing.\r\nFostering an environment of cross-team collaboration where questions are welcome, and success is celebrated.\r\nAdvocating for QA’s early involvement in development projects and helping make early involvement successful.\r\nWorking to reﬁne and evangelize Mailchimp’s QA practices and processes.\r\nOrganizing team communications and projects.\r\nHelping to drive the interviewing and hiring of a diverse QA team.\r\n\r\nSr. QA Analyst\tSeptember 2017 – May 2021\r\nMailchimp, Atlanta, GA\r\nMentored and trained new hires for QA and engineering processes in general\r\nCollaborated with team members on projects and set up processes for release management\r\nInterviewed candidates for QA and mobile developer positions to help in the hiring process\r\nWorked in cross-functional teams to help setup Agile processes to help each team member\r\nEncouraged developers/team members to work towards their personal goals\r\n\r\nSr. Quality Assurance Engineer (remote)\tJanuary 2015 – July 2017 MDLIVE, Inc, Sunrise, FL & Redwood City, CA - MDLIVE is a telehealth provider focused on digital delivery of high-quality, convenient, and cost-efficient medical care\r\n\r\nProvided comprehensive assessment of product quality to help improve the product\r\nCollaborated with Product Owners to create user stories for new product features\r\nDeveloped automated tests for web app for weekly regression testing\r\nRan SQL Queries in SQLPro to extract and manipulate data for testing to get faster results\r\nHelped develop WebRTC API which increased the usage of our video platform\r\nExecuted and reported on weekly regression test suite through Jenkins to help prepare for weekly release\r\nTook ownership of products and drove end-to-end testing across multiple teams\r\nTested the mobile apps in IOS and Android to make sure that they matched the changes in the web\r\nTranslated business specifications into test plans, tests cases and provided QA plans on task execution and estimates\r\nProvided on-site training to quality assurance team\r\nWorked single handedly on projects that brought the company revenue over a million dollars and increased the sales\r\n\r\nBusiness Analyst / Quality Assurance Specialist\tOctober 2004 – January 2015\r\nAFS Technologies, Becton Schantz Division, Duluth, GA - AFS Technologies provides software and services purpose-built for consumer goods companies efficiencies in trade spend, supply chain & warehouse\r\n\r\nAssisted “Food Industry” clients with problem solving and training for software and hardware, consistent with Order Entry, Sales Tracking and Management applications\r\nTested IOS app to ensure the order management system was able to place orders correctly\r\nManaged a developer and his time\r\nWrote technical documents for the releases to train clients on new features\r\nEDUCATION\r\n\r\nGeorgia Perimeter College, Atlanta, GA\r\nAssociates of Arts, 2002\r\nG.P.A.: 3.6 (4.0 Scale). Dean’s list for 3 consecutive semesters\r\n\r\nInformatics Computer School, Pakistan\r\nDiploma in Computer Science, 1998\r\n\r\nLicenses & Certifications\r\n\r\nImproving your listening skills – Emory Continuing education\r\nManaging employee performance - Emory Continuing education\r\nBuilding teams – building culture - Emory Continuing education\r\nManaging diverse behavioral styles - Emory Continuing education\r\nCoaching effectively - Emory Continuing education\r\nDelegating effectively - Emory Continuing education\r\nCommunicating about Culturally Sensitive Issues \r\nMotivating and Engaging Employees\r\nCoaching Skills for Leaders and Managers    \r\nInclusive Leadership\r\nPrioritizing Effectively as a Leader    \r\nCertified Scrum Product Owner\r\nSoftware Product Management Specialization: Agile Planning for Software Products Software Processes and Agile Practices\r\nLinkedIn Profile\r\nhttps://www.linkedin.com/in/daneez-owais-99210738/ \r\n",
+    "tagLine": "Engineering Manager and Eng Ops at CallRail",
+    "profilePicture": "https://sessionize.com/image/c7f6-400o400o1-Rf2EESdvHaLyQws1irce9p.png",
+    "sessions": [
+      {
+        "id": 995311,
+        "name": "How I AI: Building Custom GPTs to Supercharge Everyday Work"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Callrail",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@daneezo",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/daneez-zamangil-99210738/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/shajzex~VfkrPYmzG2fJ4VwFSVLqiT.png~images-9.png",
+        "sort": 25,
+        "answerExtra": "images-9.png"
       }
     ],
     "categories": []
@@ -1824,6 +2128,66 @@
     "categories": []
   },
   {
+    "id": "23a46a39-2f6d-4ee3-8ea9-62fd2edcc466",
+    "firstName": "Ernesto",
+    "lastName": "Spruyt",
+    "fullName": "Ernesto Spruyt",
+    "bio": "Ernesto - Entrepreneur, CEO, and Advocate for Global Tech Talent.\r\nHe is the driving force behind Tunga, a platform connecting African tech talent with forward-thinking companies worldwide. With a keen interest in psychology, culture, and what motivates people, Ernesto’s journey spans Europe’s corporate environments to Africa’s tech landscapes.",
+    "tagLine": "CEO of TUNGA",
+    "profilePicture": "https://sessionize.com/image/8ed0-400o400o1-RJgNHeMjZytTehssYgfvCo.jpg",
+    "sessions": [
+      {
+        "id": 1035575,
+        "name": "AI for Entrepreneurs: Turning Bold Ideas into Global Ventures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Netherlands",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ernestospruyt/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/isjaodbe~3S7qevdh8nnZBw679X1wgN.png~images-11.png",
+        "sort": 25,
+        "answerExtra": "images-11.png"
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "a56899b4-eae5-40ac-b71a-5ef5be0945a0",
     "firstName": "Frank",
     "lastName": "Greco",
@@ -2119,6 +2483,66 @@
         "answer": "https://sessionize.com/download/ilyaron~Rhe3M3cqYjHSuztFYesAba.png~logo-twitter-card.png",
         "sort": 25,
         "answerExtra": "logo-twitter-card.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "fe0154d0-e93e-46f6-8779-7233875f8b33",
+    "firstName": "Heather",
+    "lastName": "VanCura",
+    "fullName": "Heather VanCura",
+    "bio": "Heather leads the Java Community standardization efforts at Oracle, and is a leader of the global community driven adoption and user group programs. She is Chairperson of the Java Community Process (JCP) program.  In this role she drives the efforts to transform the JCP program and broaden participation and diversity in the community. She is passionate about Java, women in technology and developer communities, serving as an International speaker and community organizer of developer hack days around the world. Heather enjoys speaking at conferences, such as OSCON, FOSDEM, Devoxx, Wonder Women Tech, and the JavaOne Conferences. She resides in the San Francisco Bay Area, California USA and enjoys trying new sports and fitness activities in her free time.\r\n",
+    "tagLine": "Chairperson of the JCP",
+    "profilePicture": "https://sessionize.com/image/79d6-400o400o1-51b1be09-e47e-435a-ac4b-04702ba6a5a4.jpg",
+    "sessions": [
+      {
+        "id": 1036839,
+        "name": "Grow Beyond Senior Through Java Contributions: JUGs, the JCP and OpenJDK"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JCP",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@heathervc",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/heather-vancura-400395/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/kwajles~Qhg6pMaYEwsHB1gKc9oZiH.jpg~oracle-logo.jpg",
+        "sort": 25,
+        "answerExtra": "Oracle-Logo.jpg"
       }
     ],
     "categories": []
@@ -3032,6 +3456,66 @@
     "categories": []
   },
   {
+    "id": "7d4dc3fa-24c1-4ccb-bfe7-0bca27497c7e",
+    "firstName": "Josh",
+    "lastName": "Kurz",
+    "fullName": "Josh Kurz",
+    "bio": "Josh Kurz leads AI engineering initiatives at JPMorgan Chase, focusing on agentic automation and developer productivity. He specializes in integrating AI workflows into enterprise environments, enabling teams to innovate rapidly and efficiently. Josh is passionate about empowering engineers with practical tools for modern software development.",
+    "tagLine": "JPMorganChase, Executive Director - Software Engineering",
+    "profilePicture": "https://sessionize.com/image/b566-400o400o1-QKEYCxKSF1Ah2B5Lp2ErnJ.png",
+    "sessions": [
+      {
+        "id": 1026830,
+        "name": "Unlocking Engineering Productivity with IDE-Based Coding Agents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "JPMorganChase",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/joshkurz",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ytaqgev~BuLLzdqx1ue2oC6FjKmX5t.jpg~jpmorgan-chase-logo-svg-preview.jpg",
+        "sort": 25,
+        "answerExtra": "JPMorgan-Chase-Logo-SVG-preview.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
     "firstName": "Josh",
     "lastName": "Long",
@@ -3399,6 +3883,126 @@
         "answer": "https://sessionize.com/download/vvaupde~aPtNkR7Q4CC4a8ctNChQeC.webp~red_hat-logo.wine_.png.webp",
         "sort": 25,
         "answerExtra": "Red_Hat-Logo.wine_.png.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "028622d6-1ee5-413e-8378-e4bfefc1e9fd",
+    "firstName": "Leonid",
+    "lastName": "Igolnik",
+    "fullName": "Leonid Igolnik",
+    "bio": "Leonid is a technologist blending product development, product management, and product operations at scale. In his last role as a Vice President of Engineering with CA Technologies, he was responsible for product development of SaaS applications for the Enterprise Security space. He has spent his entire professional career building online applications, starting at one of the earliest internet service providers in Israel. Leonid first started building large-scale Java applications in 2002 while working at the 2nd-largest domain registrar at the time, Tucows/OpenSRS, where he led the platform team. Subsequently, he held several technology leadership roles with companies in Canada and the US. Most recently, Leonid has been responsible for engineering teams at Taleo (acquired by Oracle), building applications that help millions of people find jobs, which have propelled the company to one of the four largest SaaS companies in the world.",
+    "tagLine": "CTO",
+    "profilePicture": "https://sessionize.com/image/55b3-400o400o1-UqK3ZFSCNFo24P71sqPBmF.jpg",
+    "sessions": [
+      {
+        "id": 998343,
+        "name": "Back to the Future of Software: How to Survive the AI Apocalypse with Tests, Prompts, and Specs"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/ouxfat~NPAH1o9SWGYJmkjEH21SRX.png~clari.png",
+        "sort": 25,
+        "answerExtra": "clari.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "01ad1e48-e43b-4af2-b3f3-e65232d55ff1",
+    "firstName": "Luis",
+    "lastName": "Majano",
+    "fullName": "Luis Majano",
+    "bio": "Luis Majano is a Computer Engineer, published author, founder, and CEO of Ortus Solutions, Corp (www.ortussolutions.com), a consulting firm specializing in open-source tooling, web development, architecture, and professional open-source.\r\n\r\nHe has been designing and working with software architecture and technologies since the year 2000.  He has a passion for learning and mentoring developers so they can succeed with sustainable software practices and the usage and development of open-source software.\r\n\r\nHe created the BoxLang JVM Language, ColdBox HMVC, ContentBox Modular CMS, TestBox BDD, CommandBox CLI, and over 200 open-source projects.  He speaks regularly at several international conferences, and you can read his blog at www.luismajano.com.\r\n",
+    "tagLine": "Christian, Husband, Father, Engineer, Author - CEO of Ortus Solutions, creator of ColdBox HMVC, TestBox, CommandBox, ContentBox CMS & many more POSS projects.",
+    "profilePicture": "https://sessionize.com/image/24ae-400o400o1-LptZDwHW6Tsk8XXEfnqP3Y.jpg",
+    "sessions": [
+      {
+        "id": 994927,
+        "name": "BoxLang vs the World : From zero to stable in 20 months"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Ortus Solutions",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "lmajano",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/lmajano/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/lmajano.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iuttagxe~h4R5UmhVv6f5s1NSwFBN6U.png~logotipo-ortus-hd.png",
+        "sort": 25,
+        "answerExtra": "Logotipo-Ortus-HD.png"
       }
     ],
     "categories": []
@@ -3957,12 +4561,12 @@
     "profilePicture": "https://sessionize.com/image/d74a-400o400o1-EWgm8mCUBHVZkKHRmw7ycB.jpg",
     "sessions": [
       {
-        "id": 1032716,
+        "id": 1032731,
         "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
-        "id": 1032731,
-        "name": "Fundamentals of Software Engineering In the age of AI"
+        "id": 1032716,
+        "name": "Fundamentals of Software Engineering In the age of AI Workshop"
       },
       {
         "id": 1032726,
@@ -4011,6 +4615,66 @@
         "answer": "https://sessionize.com/download/covjal~XNg3LvpGRmMtRzv7bfB3JY.png~thoughtworks_flamingo_wave.png",
         "sort": 25,
         "answerExtra": "thoughtworks_flamingo_wave.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a6ee49ed-a85d-43bd-8677-bced09824b2c",
+    "firstName": "Nerando",
+    "lastName": "Johnson",
+    "fullName": "Nerando Johnson",
+    "bio": "Current Atlanta freeCodeCamp Organizer | Software Developer ",
+    "tagLine": "Software Developer | Technology Consultant | Technology Community Organizer",
+    "profilePicture": "https://sessionize.com/image/34ee-400o400o1-pDxt42PBrTZmZj1dUV22uG.jpg",
+    "sessions": [
+      {
+        "id": 1036149,
+        "name": "The Engineer's Guide to Socialization"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Hygiena",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@nerajno",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/nerando-johnson/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "https://bsky.app/profile/nerajno.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/iwnaswen~RDw7C3Qpuk2JrKv4z8J518.png~hygiena_logo_cyan-2.png",
+        "sort": 25,
+        "answerExtra": "hygiena_logo_cyan-2.png"
       }
     ],
     "categories": []
@@ -4620,6 +5284,66 @@
     "categories": []
   },
   {
+    "id": "8983937d-7fc9-4cb4-bdcf-ce009d874531",
+    "firstName": "Rodrigo",
+    "lastName": "Graciano",
+    "fullName": "Rodrigo Graciano",
+    "bio": "Rodrigo Graciano is a Java Champion with over 15 years of software development experience and a Director at BNY. He is also a senior member and a leader in the NYJavaSIG, the Java User Group from NY. He is a frequent speaker at JUGs and conferences such as Devnexus, JavaOne, KCDC, and TDC Brazil.",
+    "tagLine": "Java Champion, NYJavaSIG Leader and Engineering Director",
+    "profilePicture": "https://sessionize.com/image/486c-400o400o1-VYFRcNXCwDPN7R59Gf2poe.jpg",
+    "sessions": [
+      {
+        "id": 1048951,
+        "name": "Advancing with Java"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "BNY",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@rodrigograciano",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/rodrigograciano/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/idwaqgeh~VEFzgRuJyFBKdrF2hv48dm.jpg~bnym-logo-350x350.jpg",
+        "sort": 25,
+        "answerExtra": "bnym-logo-350x350.jpg"
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "32cb0f88-b1ad-44c2-8860-86a5ac46c59a",
     "firstName": "Rohit",
     "lastName": "Bhardwaj",
@@ -4859,6 +5583,66 @@
         "answer": "https://sessionize.com/download/inofol~USWYsxqfsatQ1jRDhdY25a.webp~adp1.webp",
         "sort": 25,
         "answerExtra": "ADP1.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c6d00669-9c07-47fa-88b8-365dbbd10cca",
+    "firstName": "Scott",
+    "lastName": "Wierschem",
+    "fullName": "Scott Wierschem",
+    "bio": "Scott helps mid-level Java developers master fundamental technical and soft skills so they can lead themselves and their developer teams.",
+    "tagLine": "Keep Calm and Refactor",
+    "profilePicture": "https://sessionize.com/image/98b4-400o400o1-LyZyHkkcddwifbp1Mboz6j.jpg",
+    "sessions": [
+      {
+        "id": 1036675,
+        "name": "Taming Technical Debt in Java: A Survival Guide for Legacy Systems"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Keep Calm and Refactor",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@scott_wierschem",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/scott-wierschem/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@scottwierschem.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/klatpej~hNe1fPjMf1aP1nrLGhD5fx.png~keepcalmandrefactor-282x300.png",
+        "sort": 25,
+        "answerExtra": "KeepCalmAndRefactor-282x300.png"
       }
     ],
     "categories": []
