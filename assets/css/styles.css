@@ -27,23 +27,23 @@
 
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(10%);
     }
     100% {
-        transform: translateX(-400%);
+        transform: translateX(-50%);
     }
 }
 @media (max-width: 600px) {
     /* **REDEFINE THE KEYFRAMES** only for this viewport size */
     @keyframes scroll {
         0% {
-            transform: translateX(0);
+            transform: translateX(10%);
         }
         100% {
             /* Since 100% of the viewport is much smaller in pixels here, 
                you must use a much larger negative value (e.g., -700% or more) 
                to push the entire content block off-screen. */
-            transform: translateX(-700%); 
+            transform: translateX(-590%); 
         }
     }
 }
