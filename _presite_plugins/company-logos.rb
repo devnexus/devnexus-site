@@ -61,17 +61,18 @@ class CompanyLogos
           image_url = qa['answer']
         end
         if qa['question'] == 'Company' && qa['answer']  
-          company_name = qa['answer']
+          company_name = qa['answer'].strip.gsub(/^'|'$/, '')
         end
       end
-      
-      # Only process first occurrence of each company
-      if company_name && image_url && !company_logos.key?(company_name)
+  
+      if company_name && image_url 
         # base64_data = fetch_and_encode_image(image_url)
         # company_logos[company_name] = base64_data if base64_data
         company_logos[company_name] = image_url 
       end
     end
+
+    company_logos = company_logos.sort_by { |company_name, _| company_name.downcase }.to_h
     
     # Ensure _data directory exists
     FileUtils.mkdir_p(File.dirname(@output_file_path))
