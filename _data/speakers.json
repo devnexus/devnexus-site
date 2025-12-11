@@ -2372,7 +2372,7 @@
     "firstName": "Glenn",
     "lastName": "Renfro",
     "fullName": "Glenn Renfro",
-    "bio": "As a VMware engineer, Glenn Renfro is a core committer for Spring Cloud Task, Spring Batch, and Spring Cloud Data Flow and a Java Champion.  He has 15 years of experience in designing, building, and delivering enterprise-level applications in Java and 21 years total of software development experience. ",
+    "bio": "As a Broadcom engineer, Glenn Renfro is a core committer for Spring Cloud Task, Spring Batch, and Spring Cloud Data Flow and a Java Champion.  He has 15 years of experience in designing, building, and delivering enterprise-level applications in Java and 21 years total of software development experience. ",
     "tagLine": "Spring Developer at VMware by Broadcom",
     "profilePicture": "https://sessionize.com/image/2155-400o400o1-ntrGaApYgEN8wGjz9iHhw9.JPG",
     "sessions": [
@@ -5165,9 +5165,9 @@
   },
   {
     "id": "d61662a9-ef28-4bb3-b526-b3b1ea1c0c39",
-    "firstName": "Ricardo Henrique",
-    "lastName": "Silva de Mello",
-    "fullName": "Ricardo Henrique Silva de Mello",
+    "firstName": "Ricardo",
+    "lastName": "Mello",
+    "fullName": "Ricardo Mello",
     "bio": "Ricardo Mello is a Senior Developer Advocate at MongoDB with over 14 years of software development experience. He specializes in Java, Spring, and Kotlin, helping developers and organizations build modern, scalable applications. Ricardo is active in the Java community, creating technical content, articles, and talks on architecture, data modeling, and database integration",
     "tagLine": "Senior developer advocate, MongoDB",
     "profilePicture": "https://sessionize.com/image/44a3-400o400o1-9RtKwigdYYVcNP7doCF28D.png",
@@ -5824,7 +5824,7 @@
         "id": 113528,
         "question": "Company Logo",
         "questionType": "File_upload",
-        "answer": "https://sessionize.com/download/iwcaipge~9tWxE99HHG7bXHE64ZfWH3.jpg~tu1ce7gt11tljey9pq-8xj5qosxv40ra_0az4fe14vo.jpg",
+        "answer": "https://sessionize.com/download/wsaidxe~afMhERMPjfKuMWnd2kgTS9.jpg~tu1ce7gt11tljey9pq-8xj5qosxv40ra_0az4fe14vo.jpg",
         "sort": 25,
         "answerExtra": "tU1CE7gt11tLJEY9Pq-8xJ5qOsXv40ra_0AZ4fE14vo.jpg"
       }

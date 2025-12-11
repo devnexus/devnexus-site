@@ -30,7 +30,7 @@
         transform: translateX(10%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 @media (max-width: 600px) {
@@ -43,7 +43,7 @@
             /* Since 100% of the viewport is much smaller in pixels here, 
                you must use a much larger negative value (e.g., -700% or more) 
                to push the entire content block off-screen. */
-            transform: translateX(-590%); 
+            transform: translateX(-720%); 
         }
     }
 }
