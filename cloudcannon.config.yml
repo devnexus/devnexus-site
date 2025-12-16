@@ -14,7 +14,7 @@ uploads:
       quality: 80   
 collections_config:
   scrolling_logos:
-    path: '_data/logos'
+    path: _logos
     name: Scrolling Logos
     description: speaker company logos displayed in a scrolling format
     format: yml
