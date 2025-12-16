@@ -1,7 +1,7 @@
 <div class="speaker-logos-scroll">
     <div class="scroll-content">
-        {% for logo in site.data.logos %}
-            <img src="{{ logo[1] }}" class="company-logo">
+        {% for logo in site.logos %}
+            <img src="{{ logo.image }}" alt="{{ logo.company }}" class="company-logo">
         {% endfor %}
     </div>
 </div>

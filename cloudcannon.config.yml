@@ -1,9 +1,31 @@
 _schema: _schema
 source: /
 paths:
-  uploads: /w"assets/images
+  uploads: /assets/images
   static: ''
+uploads:
+  scroll_logos:
+    directory: 'assets/images/scroll_logos'
+    filename: ':slug'
+    image_constraints:
+      width: 300
+      height: 300
+      fit: 'contain'
+      quality: 80   
 collections_config:
+  scrolling_logos:
+    path: '_data/logos'
+    name: Scrolling Logos
+    description: speaker company logos displayed in a scrolling format
+    format: yml
+    _inputs:
+      company_name:
+        type: text
+        comment: The name of the client or brand.
+      image:
+        type: image
+        comment: Upload the logo image here.
+        upload_path: 'scroll_logos'
   posts:
     path: _posts
     name: Posts
@@ -148,6 +170,7 @@ collection_groups:
       - posts
   - heading: Admin
     collections:
+      - scrolling_logos
       - data
       - organizers
       - track-details

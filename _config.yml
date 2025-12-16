@@ -50,6 +50,8 @@ collections:
      title: Workshop Prep 2026
      output: true
      permalink: :path/instructions
+  logos:
+     output: false   
   tracks:
     title: Tracks
     output: false

@@ -6,44 +6,33 @@
 @tailwind utilities;
 
 .speaker-logos-scroll {
-    display: flex;
+    width: 100%;
     overflow: hidden;
-    gap: 2rem;
     padding: 1rem 0;
 }
 
 .scroll-content {
     display: flex;
     gap: 2rem;
-    animation: scroll 30s linear infinite alternate;
+    width: max-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    animation: scroll 60s linear infinite alternate;
 }
 
 .company-logo {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
+    height: auto;
+    width: 150px;
+    object-fit: cover;
     flex-shrink: 0;
+    filter: grayscale(100%);
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(10%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
-    }
-}
-@media (max-width: 600px) {
-    /* **REDEFINE THE KEYFRAMES** only for this viewport size */
-    @keyframes scroll {
-        0% {
-            transform: translateX(10%);
-        }
-        100% {
-            /* Since 100% of the viewport is much smaller in pixels here, 
-               you must use a much larger negative value (e.g., -700% or more) 
-               to push the entire content block off-screen. */
-            transform: translateX(-720%); 
-        }
+        transform: translateX(calc(-100% + 100vw));
     }
 }
