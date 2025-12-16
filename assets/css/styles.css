@@ -8,7 +8,6 @@
 .speaker-logos-scroll {
     width: 100%;
     overflow: hidden;
-    padding: 1rem 0;
 }
 
 .scroll-content {
@@ -18,11 +17,12 @@
     padding-left: 2rem;
     padding-right: 2rem;
     animation: scroll 60s linear infinite alternate;
+    background-color: white;
 }
 
 .company-logo {
     height: auto;
-    width: 150px;
+    width: 100px;
     object-fit: cover;
     flex-shrink: 0;
     filter: grayscale(100%);

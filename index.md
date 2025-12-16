@@ -7,8 +7,8 @@ branding:
 <div>
 {% include 2026-home-hero.html %}
 
-    {% include video-cta.html %}
-    {% include speaker-logo-scroll.html %}     
+    {% include video-cta.html %}   
+    {% include speaker-logo-scroll.html %}  
     <!-- Two Column Section: Track Details and Latest Posts -->
       <section class="max-w-7xl mx-auto w-full bg-white rounded-xl shadow-lg overflow-hidden md:flex">
         <!-- Left Column - Track Details -->
