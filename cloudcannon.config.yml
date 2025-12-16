@@ -5,7 +5,7 @@ paths:
   static: ''
 uploads:
   scroll_logos:
-    directory: 'assets/images/scroll_logos'
+    directory: '/assets/images/scroll_logos'
     filename: ':slug'
     image_constraints:
       width: 300
@@ -19,7 +19,7 @@ collections_config:
     description: speaker company logos displayed in a scrolling format
     format: yml
     _inputs:
-      company_name:
+      company:
         type: text
         comment: The name of the client or brand.
       image:
