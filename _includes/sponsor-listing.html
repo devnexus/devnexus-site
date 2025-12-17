@@ -6,7 +6,7 @@
             <h4 class="text-lg md:text-4xl text-center bg-gray-200 py-4">{{level.name | capitalize }} Sponsors</h4>
                 <div class="my-4 flex flex-wrap justify-center items-center gap-8">
                 {% for item in level.items %}
-                <a href="{{item.home_path_url}}"><img class="w-48 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
+                <a href="{{item.home_path_url}}"><img class="w-68 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
                 {% endfor %}
                 </div>
             {% endif %}
