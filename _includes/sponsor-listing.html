@@ -4,7 +4,11 @@
             {% assign level = sponsors_by_level | where: "name", level_name | first %}
             {% if level and level.items.size > 0 %}
             <h4 class="text-lg md:text-4xl text-center bg-gray-200 py-6">{{level.name | capitalize }} Sponsors</h4>
+                {% if level.items.size > 4 %}
+                <div class="my-6 grid grid-cols-1 md:grid-cols-4 gap-12 place-items-center">
+                {% else %}
                 <div class="my-6 flex flex-wrap justify-center items-center gap-12">
+                {% endif %}
                 {% for item in level.items %}
                 <a href="{{item.home_path_url}}"><img class="w-48 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
                 {% endfor %}
