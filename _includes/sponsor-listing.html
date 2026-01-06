@@ -10,7 +10,7 @@
                 <div class="my-6 flex flex-wrap justify-center items-center gap-12">
                 {% endif %}
                 {% for item in level.items %}
-                <a href="{{item.home_path_url}}"><img class="w-48 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
+                <a href="{{item.home_page}}"><img class="w-48 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
                 {% endfor %}
                 </div>
             {% endif %}
