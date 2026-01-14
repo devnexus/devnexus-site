@@ -34,7 +34,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://sessionize.com/api/v2/csk3n1qx/view/GridSmart'
+              url = 'https://sessionize.com/api/v2/juzvwep9/view/GridSmart'
               if (options['file'])
                 write_data_json("schedule", read_data(options['file']) )
               else
