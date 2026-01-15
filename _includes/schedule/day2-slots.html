@@ -2,8 +2,8 @@
 ---
 {% assign day2 = site.data.schedule[2] %}
 {% assign day2_times = day2.timeSlots %}
-<div class="day-content day2" id="day2">
- <h2 style="padding: 20px 15px;">Friday Mar 6 - Day 2</h2>
+<section class="day-content day2" id="day2">
+ <h2 class="text-2xl font-bold px-4 py-5 bg-gray-100 border-b-2 border-gray-300 text-center">Friday Mar 6 - Day 2</h2>
     {% for slot in day2_times %}
   {% assign rooms = slot.rooms 
   | where_exp: "item", "item.session.isServiceSession != true" 
@@ -25,4 +25,4 @@
     </div>
   {% endif %}
     {% endfor %}
-</div>
+</section>
