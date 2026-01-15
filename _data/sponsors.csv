@@ -1,6 +1,7 @@
 name,sponsorlevel,logo_image,home_page
 Advance Tech Placement,,/uploads/atp-01.png,https://advancedtechplacement.com/
 AICamp,community,/assets/images/aicamp.png,https://www.aicamp.ai/
+akamas,silver,/assets/images/akamas.png,https://bit.ly/4qt8DmW
 Akeyless,,/uploads/akeyless-2.png,https://www.akeyless.io/
 Amsterdam,,/uploads/amsterdam.png,http://amsterdamjug.com/
 Apryse,,/uploads/apryse-01.png,https://apryse.com/?utm_medium=event&utm_source=event&utm_campaign=DevNexus2024&utm_content=event+cta+button
@@ -12,7 +13,7 @@ Azul,gold,/uploads/azul-3.png,https://www.azul.com/
 BellSoft,,/uploads/bellsoft-1.png,https://bell-sw.com/
 charlotte,,/uploads/charlotte-01.png,https://cltjug.org/
 CHARLOTTE JUG,,/uploads/charlotte-01-1.png,https://cltjug.org/
-Chainguard,,/uploads/chainguard-01.png,https://www.chainguard.dev/
+Chainguard,gold,/uploads/chainguard-01.png,https://www.chainguard.dev/
 CJUG,,/uploads/cjug-001.jpeg,https://cjug.org/
 CircleCI,,/uploads/circleci-2.png,https://circleci.com/
 CloudBees,,/uploads/cloudbees-01.png,https://www.cloudbees.com/
@@ -93,7 +94,7 @@ SEAJUG,,/seajug.png,https://www.seajug.org/
 Snyk,,/uploads/snyk-01.png,https://snyk.io/
 SonarSource,,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
 SonarSource,,/uploads/sonar-1.png,https://www.sonarsource.com/?utm_source=devnexus&utm_medium=event&utm_campaign=java&utm_content=devnexus_ss
-Sonatype,cafe,/uploads/sonatype-1.png,https://www.sonatype.com/
+Sonatype,,/uploads/sonatype-1.png,https://www.sonatype.com/
 soujava,,/uploads/soujava-01.png,https://soujava.org.br/
 Speedscale,silver,/assets/images/speedscale.png,https://speedscale.com/events/devnexus/
 Suse,,/uploads/suse-01.png,https://www.suse.com/
