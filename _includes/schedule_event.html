@@ -13,18 +13,14 @@
    {% assign track = "other" %}   
    {% assign color = "foyer" %}
 {% endif %}
-<div class="row schedule-row {{track | slugify}}">
-		<div class="col-xs-12 {{color}}">
-				<a href="/presentations/{{preso.title | slugify }}">{{preso.title | escape}}</a>
-				<br/>
-				<span class="small">
+<div class="flex flex-col justify-between border-2 border-black p-4 pb-6 min-h-[120px]">
+				<a href="/presentations/{{preso.title | slugify }}" class="text-black font-bold text-lg hover:text-gray-700">{{preso.title | escape}}</a>
+				<div class="font-bold text-lg text-gray-700">
 				{% for speaker in preso.speakers %}
-					 <a href="/speakers/{{speaker.name | slugify }}">{{ speaker.name }}</a>
+					 <a href="/speakers/{{speaker.name | slugify }}" class="text-gray-600 hover:text-black">{{ speaker.name }}</a>{% unless forloop.last %} & {% endunless %}
 				{% endfor %}
-			 </span>
-			<br/>
-			<span class="small pull-right">
-				{{ preso.room }} | {{roomno}}
-			</span>
-	  </div>
+				</div>
+			<div class="float-right self-end text-sm text-gray-500">
+				{{ preso.room }}
+			</div>
 </div>
