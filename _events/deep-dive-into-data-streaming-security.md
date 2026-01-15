@@ -21,8 +21,8 @@ description: "Data streaming is powering everything from fraud detection and rea
   running, or scaling streaming systems, this talk will help you see the security
   blind spots and give you concrete steps to protect the data flowing through your
   pipelines."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

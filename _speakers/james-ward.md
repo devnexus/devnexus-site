@@ -10,10 +10,10 @@ bio: Professional software developer since 1997, with much of that time spent he
 tagLine: Developer Advocate @ AWS
 profilePicture: https://sessionize.com/image/ded2-400o400o1-3d-1b13-4383-a7ec-e7ce3151794e.dc841fd0-dfb3-44cb-8c0b-542fb0968a02.jpg
 sessions:
-- id: 1034679
-  name: Building AI Agents with Spring & MCP
 - id: 1034680
   name: 'Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock'
+- id: 1034679
+  name: Building AI Agents with Spring & MCP
 isTopSpeaker: false
 links: []
 questionAnswers:

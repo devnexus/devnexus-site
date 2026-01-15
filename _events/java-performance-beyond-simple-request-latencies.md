@@ -13,8 +13,8 @@ description: "When someone says \"Java performance,\" most Java devs hear \"requ
   check out the full landscape of tools at your disposal, from the newest JEPs in
   OpenJDK to GraalVM and Azul Platform Prime, and develop strategies to optimize whatever
   matters most to your team."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

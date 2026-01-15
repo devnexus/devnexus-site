@@ -13,8 +13,8 @@ description: "Object Relational-Mapping (ORM) frameworks like Hibernate bridge o
   understand:\r\n- Common ORM challenges and pitfalls\r\n- How to map relational tables
   to JSON documents for flexible data access\r\n- Writing practical demos that integrate
   this approach with Spring Boot and your database"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

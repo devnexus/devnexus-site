@@ -9,8 +9,8 @@ description: Most developers use Maven daily but only scratch the surface of its
   practices for handling large multi-module projects, including incremental builds
   and smart recompilation. Walk away with practical tips to make your Maven builds
   faster, cleaner, and more reliable.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

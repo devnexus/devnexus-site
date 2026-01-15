@@ -10,8 +10,8 @@ description: "When a Java application runs in production, we often lose visibili
   JVM during execution. \r\n\r\nI'll demonstrate how I wrote JLib Inspector to scan
   and analyze loaded JARs at runtime, as well as how to use similar feature in OpenTelemetry.
   And what else we can get from the JVM in production."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

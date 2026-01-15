@@ -10,8 +10,8 @@ description: 'Java in the cloud can be fast... really fast. This talk dives into
   workloads. Learn how to choose the right approach for your application and unlock
   the full potential of Java in the cloud. Expect practical examples using the latest
   Java and Jakarta EE specifications.'
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

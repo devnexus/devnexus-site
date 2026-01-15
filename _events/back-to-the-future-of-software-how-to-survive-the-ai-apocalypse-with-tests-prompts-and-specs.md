@@ -13,13 +13,15 @@ description: "Great Scott! The robots are coming for your job—and this time, t
   Bad puns\r\n- Good tests\r\n- Wild demos\r\n\r\nThe machines may be fast. But with
   structure, constraint, and a little time travel, you’ll still be the one writing
   the future."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: 1708bdeb-e8d9-4628-a147-e9878198c900
   name: Baruch Sadogursky
+- id: '028622d6-1ee5-413e-8378-e4bfefc1e9fd'
+  name: Leonid Igolnik
 categories:
 - id: 107979
   name: Track
@@ -27,8 +29,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

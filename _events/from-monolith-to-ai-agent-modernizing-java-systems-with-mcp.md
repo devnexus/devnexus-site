@@ -11,8 +11,8 @@ description: "Many Java systems power critical enterprise workflows but struggle
   strategies for controlling and auditing AI actions in production. You’ll see how
   MCP lets Java stay relevant in the fast-moving AI ecosystem without sacrificing
   stability."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

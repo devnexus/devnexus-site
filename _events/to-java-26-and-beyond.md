@@ -11,8 +11,8 @@ description: "Java 25 has been released, but the Java release train coninues chu
   support, and more!\r\n\r\nThe Java platform is evolivng quickly to keep pace with
   the current needs of users, be sure to attend this presentation if you want to keep
   up!"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -12,8 +12,8 @@ description: "Building Java apps feels smooth. You move fast, code freely, and s
   we will explore the common traps developers fall into. You will walk away with practical
   techniques to spot these risks early and keep your code secure in the cloud-native
   world."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

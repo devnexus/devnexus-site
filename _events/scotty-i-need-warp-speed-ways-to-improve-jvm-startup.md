@@ -13,8 +13,8 @@ description: "When running Java in the cloud, the JVM startup time can become a 
   session will give you a short overview of the different solutions to increase your
   JVM startup performance and will try to give you some hints on how to choose the
   right solution for your application."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

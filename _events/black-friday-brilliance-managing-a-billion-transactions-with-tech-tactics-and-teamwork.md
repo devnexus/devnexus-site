@@ -14,8 +14,8 @@ description: "The Black Friday and Cyber Monday period is one of the busiest tim
   on different Clouds, the technologies and processes that are put in place and problems
   we have had to overcome in the past. I’ll also give some insights into how the team
   works together over this busy period to keep everything running smoothly.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -14,8 +14,8 @@ description: "While the tech world is buzzing about generative AI and large lang
   work, from model training to serving. Whether you're new to AI or looking to balance
   your GenAI hype with some grounded, production-ready solutions, this session will
   reconnect you with the part of AI that’s still doing the heavy lifting."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -9,8 +9,8 @@ description: Agentic coding assistants and editor based AI chat interfaces are a
   still need to master the fundamentals of the software craft. Modern software development
   demands more than just coding proficiency—it requires navigating an increasingly
   AI-augmented landscape.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -13,8 +13,8 @@ description: "Garbage collection is one of the most valuable—but often invisib
   looking at how they build on these principles to meet today’s performance demands.\r\n\r\nBy
   the end, you’ll have a clear understanding of how garbage collection works, why
   it matters, and how overlooking it can cause problems when we least expect it"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,13 +27,13 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Core Java
 slug: the-self-cleaning-castle-how-garbage-collection-works-in-java
 

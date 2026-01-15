@@ -12,8 +12,8 @@ description: "What if you could devise a clear plan for your developer career, t
   experts will help you work on your own plan. It is a unique opportunity to come
   away with clarity about your future and actionable steps to build the career you
   want."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,13 +26,13 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Practices and other tech
 slug: developer-career-masterplan-15-steps-to-grow-beyond-senior-developer
 

@@ -16,8 +16,8 @@ description: "Traditional layered architectures (controllers, services, reposito
   traditional still works)\r\n\U0001F539Hands-on Java examples to illustrate both
   approaches\r\n\r\nBy the end, you’ll understand how to evaluate when to stick with
   a layered approach and when adopting hexagonal can future-proof your Java applications."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

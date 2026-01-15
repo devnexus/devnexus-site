@@ -3,7 +3,7 @@ id: 25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6
 firstName: Glenn
 lastName: Renfro
 fullName: Glenn Renfro
-bio: 'As a VMware engineer, Glenn Renfro is a core committer for Spring Cloud Task,
+bio: 'As a Broadcom engineer, Glenn Renfro is a core committer for Spring Cloud Task,
   Spring Batch, and Spring Cloud Data Flow and a Java Champion.  He has 15 years of
   experience in designing, building, and delivering enterprise-level applications
   in Java and 21 years total of software development experience. '

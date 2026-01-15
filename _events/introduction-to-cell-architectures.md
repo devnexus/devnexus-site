@@ -11,8 +11,8 @@ description: "Modern Microservice and modulith architectures are based on the pr
   availability, scalability, isolation and cost management. \r\nIn this presentation
   we will talk about the Cell architecture pattern, the benefits, downsides and ways
   to change your thinking about your application architecture as it grows."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

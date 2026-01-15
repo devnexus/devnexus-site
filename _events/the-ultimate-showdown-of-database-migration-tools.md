@@ -10,8 +10,8 @@ description: "When it comes to database migration in the Spring ecosystem, two h
   How do their runtimes operate?\r\n\r\nNo stone left unturned! Which migration tool
   will reign supreme in your Spring project? Join us to learn the differences between
   tools and cast your vote to make the ultimate decision!"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

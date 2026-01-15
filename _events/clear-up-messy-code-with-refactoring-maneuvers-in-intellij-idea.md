@@ -14,8 +14,8 @@ description: "IntelliJ IDEA is an amazingly powerful development tool, providing
   Method\r\n* Make Static\r\n* Inline Method\r\n* Introduce Constant\r\n* Extract
   Delegate (and Enum)\r\n* Introduce Field\r\n\r\nAlong the way you'll learn about
   a wealth of keyboard shortcuts to save your brain from having to think hard."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

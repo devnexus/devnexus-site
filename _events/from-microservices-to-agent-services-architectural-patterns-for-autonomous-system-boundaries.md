@@ -19,8 +19,8 @@ description: "The rise of Agentic AI is introducing a paradigm shift in the micr
   examples, architectural patterns that preserve integrity while enabling autonomous
   evolution and testing methodologies specifically designed for non-deterministic
   and self-modifying systems. \r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

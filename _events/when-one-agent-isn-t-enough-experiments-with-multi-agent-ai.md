@@ -11,8 +11,8 @@ description: 'LLM agents are powerful, but no single one can cover every real-wo
   that delegates to Gemini while conserving context window tokens. You’ll see where
   orchestration pays off, where it gets messy, and what it suggests about the future
   of applied multi-agent AI.'
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

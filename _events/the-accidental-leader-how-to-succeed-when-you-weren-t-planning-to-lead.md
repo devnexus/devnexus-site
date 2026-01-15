@@ -12,8 +12,8 @@ description: "One day, you’re just doing your job—writing code, managing pro
   down, and across. Through real-world stories, practical strategies, and lessons
   learned the hard way, you’ll gain the confidence and tools to lead effectively—without
   losing yourself in the process."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

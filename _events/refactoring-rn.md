@@ -14,8 +14,8 @@ description: "Github copilot came out in 2021 and Open Rewrite joined Commonhaus
   end of the session, the attendee will be able to identify hidden patterns in their
   code bases, plan a refactor effort on legacy codebases, write their own refactorings,
   and know when to use AI or other tools to perform the refactoring.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

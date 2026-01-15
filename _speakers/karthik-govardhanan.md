@@ -3,13 +3,11 @@ id: 4e96d3ba-6d70-45ae-950d-65298b95ed1b
 firstName: Karthik
 lastName: Govardhanan
 fullName: Karthik Govardhanan
-bio: Karthik Govardhanan is a Senior Engineering Manager at CVS Health, leading AI-driven
-  search and SEO innovations for one of the world’s largest retail and pharmacy platforms.
-  With over 14 years of experience spanning CVS, Macy’s, Capgemini, and The Home Depot,
-  he specializes in search relevance, personalization, and conversational commerce.
-  Karthik’s expertise includes large language models, retrieval-augmented generation,
-  semantic search, and scalable e-commerce architectures. He holds a Bachelor’s in
-  Electronics and Communication Engineering and an MBA from Boston University.
+bio: Karthik Govardhanan is affiliated with Boston University and has spent over 14
+  years building and scaling AI-powered search and discovery systems across large-scale
+  retail and e-commerce platforms. His work spans search relevance, personalization,
+  SEO, and conversational commerce, with a strong focus on applying large language
+  models, retrieval-augmented generation, and semantic search in production environments.
 tagLine: CVS Health Inc, Sr Engineering Manager
 profilePicture: https://sessionize.com/image/846b-400o400o1-fKkPdteVTLyxQFcUPnRR87.png
 sessions:

@@ -11,8 +11,8 @@ description: "\"Security is hard!\" is what the person who does not attend this 
   authentication and authorization, one-time tokens, passkeys, OAuth (including the
   amazing Spring Authorization Server), method security, and general tips on how to
   simplify standing up and validating such projects with Testcontainers and Testjars.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

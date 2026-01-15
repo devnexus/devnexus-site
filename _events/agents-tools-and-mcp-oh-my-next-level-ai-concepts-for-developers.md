@@ -13,8 +13,8 @@ description: "AI is evolving fast, and so are the ways developers can integrate 
   through code and demos, giving you a complete roadmap to level up your AI skills.
   You won't need a yellow brick road to follow along, but you will discover some magical
   new tricks to level up your AI skills!"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

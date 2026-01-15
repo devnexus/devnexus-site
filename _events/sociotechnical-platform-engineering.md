@@ -13,8 +13,8 @@ description: "devOps practices help reduce friction to production for technologi
   processes\r\n* Aligning SLIs, SLOs, & SLAs across our platform VSMs\r\n* Establishing
   Error Budgets\r\n* Chaos Engineering & Complexity Science\r\n\r\n*updated & extended
   with new social practices for 2026*"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

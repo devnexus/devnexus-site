@@ -11,10 +11,12 @@ bio: Since 1995, Bruno helps Java developers design amazing careers and work on 
 tagLine: helping developers design amazing careers
 profilePicture: https://sessionize.com/image/f5ea-400o400o1-7PDkcAx4GvdyyQxXxcu1NL.jpg
 sessions:
+- id: 1036786
+  name: The Mentorship Hub (all day at open-source cafe!)
 - id: 1036790
   name: 'Developer Career Masterplan: 15 steps to grow beyond senior developer'
-- id: 1036786
-  name: The Mentorship Hub
+- id: 1036839
+  name: 'Grow Beyond Senior Through Java Contributions: JUGs, the JCP and OpenJDK'
 isTopSpeaker: false
 links: []
 questionAnswers:

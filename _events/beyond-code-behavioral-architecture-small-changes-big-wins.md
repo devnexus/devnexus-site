@@ -22,8 +22,8 @@ description: "Engineering teams invest heavily in technical architecture while n
   solutions.\r\n\r\nWe will review practical implementation guide covering behavioral
   expectations definition, trust-building systems, feedback architecture, and learning
   culture development through systematic habit formation rather than cultural mandates."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -17,8 +17,8 @@ description: "Monoliths get a bad rep. Experienced software developers have seen
   how our modules can communicate with one another without violating modularity. \r\n\r\nBy
   the end of this session you'll walk away with a greater appreciation for the monolith,
   and see how you can leverage this within your system architecture. "
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

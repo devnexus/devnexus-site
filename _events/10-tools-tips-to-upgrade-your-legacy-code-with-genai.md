@@ -7,8 +7,8 @@ description: Programming languages like Java have been in the market for almost 
   and upgrades. In this talk, we'll explore how genAI can revolutionize the process
   of upgrading legacy code. You'll learn about 10 essential tools and tips to efficiently
   refactor, modernize, and enhance your existing Java codebase.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

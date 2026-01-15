@@ -43,9 +43,9 @@ questionAnswers:
 - id: 113528
   question: Company Logo
   questionType: File_upload
-  answer: https://sessionize.com/download/ibxazkey~QmwFNSeBywLPmHT1cyCi1F.webp~event-cover-7822.webp
+  answer: https://sessionize.com/download/inralpex~KUZkpYV2KjMHd2idmVXo8c.png~nyjavasig-logo4-clean-transparent.png
   sort: 25
-  answerExtra: event-cover-7822.webp
+  answerExtra: NYJavaSIG-logo4-clean-transparent.png
 categories: []
 slug: frank-greco
 

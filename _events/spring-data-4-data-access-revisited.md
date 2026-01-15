@@ -8,8 +8,8 @@ description: The Spring Data team is preparing a new generation of the Data fram
   Vector store support, and a major Spring Data JPA revision are only a selection.
   This talk will give an outlook on what is to come and will focus on key design decisions
   and roadmap considerations.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -22,8 +22,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

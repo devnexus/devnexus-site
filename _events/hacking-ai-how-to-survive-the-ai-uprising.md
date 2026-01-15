@@ -8,8 +8,8 @@ description: "While AI can recognize faces under masks, track purchases, and wat
   We'll discuss some of the mechanics for data bias, image perturbation, and jailbreaking
   that are emerging as their own mechanics against machines. \r\n\r\nNo prior AI knowledge
   is needed for this talk, everyone will follow along and learn!"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -19,17 +19,17 @@ categories:
 - id: 107979
   name: Track
   categoryItems:
-  - id: 389411
-    name: AI In Practice
+  - id: 406025
+    name: Tools & Misc
   sort: 0
-roomId:
-room:
+roomId: 70253
+room: 'Tools and Techniques '
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
 isConfirmed: true
-track: AI In Practice
+track: Tools & Misc
 slug: hacking-ai-how-to-survive-the-ai-uprising
 
 ---

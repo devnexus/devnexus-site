@@ -13,10 +13,10 @@ bio: Anton is a Developer Advocate at JetBrains, working with Kotlin, IntelliJ I
 tagLine: Developer Advocate, JetBrains
 profilePicture: https://sessionize.com/image/706d-400o400o1-DetNfUC6HLw7aZZrgSVsoK.jpg
 sessions:
-- id: 1003174
-  name: Debugging with IntelliJ IDEA
 - id: 1003030
   name: The Ultimate Showdown of Database Migration Tools
+- id: 1003174
+  name: Debugging with IntelliJ IDEA
 isTopSpeaker: false
 links: []
 questionAnswers:

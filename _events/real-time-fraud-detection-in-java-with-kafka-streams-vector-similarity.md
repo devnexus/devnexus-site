@@ -10,15 +10,15 @@ description: "Ship a fraud detector without training a custom model. We’ll bui
   Kafka → Spring services → vector similarity\r\n- Feature/embedding design & thresholds\r\n-
   Rules, explanations, and alerting\r\n- Drift, replay, and observability\r\n- Demo
   + Q&A"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
 - id: d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6
   name: Tim Kelly
 - id: d61662a9-ef28-4bb3-b526-b3b1ea1c0c39
-  name: Ricardo Henrique Silva de Mello
+  name: Ricardo Mello
 categories:
 - id: 107979
   name: Track
@@ -26,8 +26,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

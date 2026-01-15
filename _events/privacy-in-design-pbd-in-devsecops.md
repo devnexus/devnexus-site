@@ -14,8 +14,8 @@ description: "Privacy by Design (PbD) in DevSecOps is a proactive approach that 
   from the very beginning, rather than being an afterthought. It shifts the responsibility
   for data protection away from users and onto the organizations collecting, storing,
   and sharing the data.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

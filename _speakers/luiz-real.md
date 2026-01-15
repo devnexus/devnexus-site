@@ -15,7 +15,7 @@ tagLine: Lead Software Engineer | DevRel | SouJava JUG Leader | Speaker | Educat
 profilePicture: https://sessionize.com/image/cd62-400o400o1-RHf2FzZdEi3U8J6yd7cxSy.jpg
 sessions:
 - id: 1036786
-  name: The Mentorship Hub
+  name: The Mentorship Hub (all day at open-source cafe!)
 isTopSpeaker: false
 links: []
 questionAnswers:

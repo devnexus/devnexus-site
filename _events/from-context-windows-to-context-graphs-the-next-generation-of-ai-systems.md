@@ -27,8 +27,8 @@ description: "Abstract\r\nLarge Language Models (LLMs) have captured everyone’
   → RAG → CAG → context graphs—and why this evolution is not just a technical leap,
   but a strategic one, enabling reliable, scalable, and ROI-driven Generative + Agentic
   AI systems."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -43,8 +43,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

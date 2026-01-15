@@ -14,8 +14,8 @@ description: "In this session we'll take a tour of some features that you might 
   the end of this session, you will walk away with a slew of new tools in your arsenal,
   and a new perspective on how this can help you and your colleagues get the most
   out of Git."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

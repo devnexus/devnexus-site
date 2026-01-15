@@ -11,8 +11,8 @@ description: "Brokk is a new tool written with Java Swing for supervising code-w
   optimizations like dependency decompilation to avoid hallucinations.\r\n\r\nWe'll
   also take a brief look at the JVM tech powering Brokk, including Eclipse JDT (the
   static analysis engine) and Jlama (pure Java LLM inference).\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

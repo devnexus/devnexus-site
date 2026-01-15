@@ -12,8 +12,8 @@ description: "Unlock the performance and cost savings of modern Java without the
   the risks of manual error, and accelerate your path to the cloud. See practical
   steps you can use to breathe new life into your applications and free your teams
   to build for the future. If time permits, AI may make an appearance too!."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

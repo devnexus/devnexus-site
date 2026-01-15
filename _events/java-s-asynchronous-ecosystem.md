@@ -18,8 +18,8 @@ description: "Java has accumulated a diverse toolbox for concurrency and asynchr
   reactive programming?\r\n* What do developers mean by “hidden stack traces,” and
   how do they impact debugging and profiling?\r\n* Where should you invest today,
   and what patterns should you abandon permanently?"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

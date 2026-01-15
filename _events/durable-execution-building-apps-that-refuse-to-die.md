@@ -9,8 +9,8 @@ description: Building distributed applications is hard, with challenges like ret
   this session, you’ll see practical code examples and a live demo of how durable
   execution simplifies microservice orchestration and long-running operations, making
   resilient apps accessible to every developer.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -13,12 +13,12 @@ bio: Josh (@starbuxman) has been the first Spring Developer Advocate since 2010.
 tagLine: Spring Developer Advocate
 profilePicture: https://sessionize.com/image/a9e2-400o400o1-E6pCEr3ATM1nUGjubLTFsh.png
 sessions:
+- id: 1034680
+  name: 'Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock'
 - id: 1023613
   name: Bootiful Spring Security
 - id: 1034679
   name: Building AI Agents with Spring & MCP
-- id: 1034680
-  name: 'Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock'
 isTopSpeaker: false
 links: []
 questionAnswers:

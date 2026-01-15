@@ -15,8 +15,8 @@ description: " As a tech lead, you will be faced with shifting requirements, tig
   processes, practices, and tools for specific situations. You will learn how to apply
   this approach yourself - so you can build a framework that empowers your team and
   drives lasting stakeholder satisfaction."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

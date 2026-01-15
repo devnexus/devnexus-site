@@ -14,8 +14,8 @@ description: The art of writing software is often cocooned in an overarching pro
   simplicity and the concept of value being added. This is a practice that software
   engineers simply have not been exposed to both in terms of how we write our code
   and how we protect our code equally.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

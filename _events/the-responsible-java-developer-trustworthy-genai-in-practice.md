@@ -8,8 +8,8 @@ description: Enterprises can’t afford “move fast and break things” with AI
   strategies — all using open source GenAI tooling. Through code examples and case
   studies, you’ll see how to add AI features without introducing security, cost, or
   compliance risks. Build smarter apps — and build them safely.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -22,8 +22,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -1,8 +1,8 @@
 ---
 id: d61662a9-ef28-4bb3-b526-b3b1ea1c0c39
-firstName: Ricardo Henrique
-lastName: Silva de Mello
-fullName: Ricardo Henrique Silva de Mello
+firstName: Ricardo
+lastName: Mello
+fullName: Ricardo Mello
 bio: Ricardo Mello is a Senior Developer Advocate at MongoDB with over 14 years of
   software development experience. He specializes in Java, Spring, and Kotlin, helping
   developers and organizations build modern, scalable applications. Ricardo is active
@@ -47,6 +47,6 @@ questionAnswers:
   sort: 25
   answerExtra: MongoDB_Logo.svg.png
 categories: []
-slug: ricardo-henrique-silva-de-mello
+slug: ricardo-mello
 
 ---

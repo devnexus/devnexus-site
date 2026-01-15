@@ -9,8 +9,8 @@ description: "Fortunately for most Java developers the just-in-time compiler jus
   intrinsics, basic blocks, static single assignment, and inlining. By learning these
   key concepts, you’ll learn to save time not trying to optimize the things that the
   compiler can already do for you and to focus on the things that matter most."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

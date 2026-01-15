@@ -20,8 +20,8 @@ description: "As Large Language Models (LLMs) revolutionize application developm
   Whether you're new to AI integration or looking to standardize your approach across
   the enterprise, you'll gain actionable insights to immediately improve your AI development
   workflow."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

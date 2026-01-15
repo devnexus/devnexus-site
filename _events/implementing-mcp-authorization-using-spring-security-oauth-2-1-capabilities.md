@@ -12,8 +12,8 @@ description: "The Model Context Protocol (MCP) specification defines authorizati
   Security OAuth 2.1 capabilities to implement authorization server discovery, dynamic
   client registration, obtaining an access token and making a request to a MCP protected
   resource."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -36,13 +36,11 @@ description: "How adaptable is your technology stack to changes in business requ
   tools in Jupyter for visualizing large scale directed graphs\r\n* Where to integrate
   Migration Engineering into the SDLC (15 minutes)\r\n* Open recipe development lab
   (1.5 hours)\r\n* Demo: Using AI to jumpstart recipe writing"
-startsAt:
-endsAt:
+startsAt: '2026-03-04T09:00:00'
+endsAt: '2026-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
-- id: 05be364d-a57f-4e08-978d-8043d43db097
-  name: Mark Heckler
 - id: 2efcbdfc-545b-48b5-aed0-14a924071cc4
   name: Tim te Beek
 categories:
@@ -52,8 +50,8 @@ categories:
   - id: 389970
     name: Workshop
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

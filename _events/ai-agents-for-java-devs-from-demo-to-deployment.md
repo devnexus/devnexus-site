@@ -8,8 +8,8 @@ description: AI agents go beyond simple prompts — they reason, plan, and act. 
   to customer support triage — showing what works in production and what pitfalls
   to avoid. You’ll leave with a practical understanding of agent orchestration patterns,
   evaluation methods, and deployment strategies for enterprise use cases.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -22,8 +22,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

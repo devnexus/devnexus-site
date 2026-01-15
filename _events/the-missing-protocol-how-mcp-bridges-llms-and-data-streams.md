@@ -14,8 +14,8 @@ description: "Nobody's talking about this: MCP isn't just another way to build c
   part of your streaming architecture. We'll build systems where agents subscribe
   to real-time events, reason about evolving schemas, and make decisions that ripple
   through your data platform."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -15,8 +15,8 @@ description: "Your prompts suck. Your AI outputs prove it.\r\n\r\nMost developer
   versioning and testing strategies that actually work in production\r\n\r\nPerfect
   for: Developers integrating AI into workflows, technical writers automating documentation,
   and anyone tired of playing prompt lottery with inconsistent results."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

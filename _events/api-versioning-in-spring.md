@@ -10,8 +10,8 @@ description: 'Spring Framework 7 introduces a powerful API versioning feature to
   Attendees will discover how to implement API versioning in Spring Boot applications.
   We will also see how the API versioning feature is used in Interface Clients, Spring
   Cloud Gateway and Spring Cloud Load Balancer.'
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

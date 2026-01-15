@@ -59,7 +59,7 @@ title: Devnexus 2026 Schedule
 {% assign day2 = site.data.schedule[2] %}
 {% assign day2_times = day2.timeSlots | sort: "slotStart" %}
 <section class="day-content day2" id="day2">
-  <h2 class="text-2xl font-bold px-4 py-5 bg-zinc-900 text-black border-b-4 border-white text-center">Friday Mar 5 - Day 2</h2>
+  <h2 class="text-2xl font-bold px-4 py-5 bg-zinc-900 text-black border-b-4 border-white text-center">Friday Mar 6 - Day 2</h2>
   {% for slot in day2_times %}
   {% assign rooms = slot.rooms | sort: "name" %}
     <div class="timeline-slot mb-5" data-time="{{ slot.slotStart }}" data-day="day2">

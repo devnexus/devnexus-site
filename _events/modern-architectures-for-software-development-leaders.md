@@ -11,8 +11,8 @@ description: "Should we build Microservices, SOA, Monoliths, Modular Monoliths, 
   architecture.\r\n\r\nThis session will get directly to those questions, and help
   you to develop a clear understanding of why and when to use one architectural pattern
   over another and when to intermix them."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

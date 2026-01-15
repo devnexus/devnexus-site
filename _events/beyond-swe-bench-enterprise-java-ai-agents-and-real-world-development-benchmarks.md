@@ -21,8 +21,8 @@ description: "AI coding agents have matured to the point that they need to be se
   development tasks, allowing developers to focus on higher-level architecture decisions,
   creative problem-solving, and strategic technical leadership. May the best agent
   win!"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -35,8 +35,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

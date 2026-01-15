@@ -9,8 +9,8 @@ description: 'Teams building AI beyond a single prompt now choose among differen
   loops, reflection, shared memory, and tool use—and weighs the pros and cons. We’ll
   walk through a single task across all three styles. Attendees leave with a decision
   framework they can apply immediately to production systems.'
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

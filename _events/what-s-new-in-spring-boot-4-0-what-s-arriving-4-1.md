@@ -8,8 +8,8 @@ description: Spring Boot 4.0 arrived November 2025 and Spring Boot 4.1 will be h
   features, including REST API versioning and Interface Clients (where you can quickly
   convert a Java interface into a fully-fledged HTTP client). Finally we'll look at
   what we're planning to deliver in 2026.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -22,8 +22,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

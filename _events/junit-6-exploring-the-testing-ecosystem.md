@@ -7,8 +7,8 @@ description: We'll start out by looking at what is new in JUnit 6. However, ther
   like Hamcrest, AssertJ, JUnit Pioneer, Selenium. You’ll also see a comparison of
   the most common mocking libraries. After some tips for using your IDE to help you
   with testing, you’ll learn about some common testing patterns.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -21,8 +21,8 @@ categories:
   - id: 389037
     name: Core Java
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

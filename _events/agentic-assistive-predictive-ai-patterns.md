@@ -47,8 +47,8 @@ description: "Building AI isn’t about plugging into an API — it’s about pa
   / Agentic).\r\n\r\nA governance checklist for privacy, bias, and auditability.\r\n\r\nA
   multi-agent orchestration playbook (including MCP).\r\n\r\nA business mapping toolkit
   (JTBD → AI → ROI)."
-startsAt:
-endsAt:
+startsAt: '2026-03-04T09:00:00'
+endsAt: '2026-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -61,8 +61,8 @@ categories:
   - id: 389970
     name: Workshop
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

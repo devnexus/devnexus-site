@@ -23,8 +23,8 @@ description: "Java has been evolving at a fast but steady pace, with six months 
   is applied in your enterprise\r\n\r\nWorkshop Who Should Attend:\r\n*Programmers\r\n*Team
   leads\r\n*Hands-on Architects\r\n*Technical Managers\r\nwho are involved in applications
   developed with Java"
-startsAt:
-endsAt:
+startsAt: '2026-03-04T09:00:00'
+endsAt: '2026-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
   - id: 389970
     name: Workshop
   sort: 0
-roomId:
-room:
+roomId: 70248
+room: 'Core Java '
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -10,8 +10,8 @@ description: 'AI is here, but is it working for you? The name of the game is to 
   us, AWS developer advocate James Ward and his trusty sidekick and Spring developer
   advocate Josh Long, and we’ll look at how to build MCP-enabled, RAG-ready, vibe-free,
   agentic systems and services in no time at all.'
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

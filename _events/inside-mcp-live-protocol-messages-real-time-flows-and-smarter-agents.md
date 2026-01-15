@@ -14,8 +14,8 @@ description: "You’ve heard the buzz — now roll up your sleeves and build wit
   boost your productivity.\r\n\r\nBring your curiosity — and your laptop — because
   you’ll walk away with practical code, a working prototype, and the confidence to
   build and extend your own MCP-powered tools and Agents."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

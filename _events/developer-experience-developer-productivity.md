@@ -12,8 +12,8 @@ description: "With everything changing in tech at a frenetic pace, the emphasis 
   the practitioner's perspective. At the end we will set a path towards integrating
   top-down metrics with bottom-up feedback, ensuring an approach to developer experience
   that fosters innovation and satisfaction."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

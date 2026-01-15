@@ -16,8 +16,8 @@ description: "Are you running applications in production? Are they behaving like
   500 error. Whether you are a seasoned observability wizard or still wondering what
   a \"span\" is, this talk will give you practical tools. Bring your questions and
   logs, we've got dashboards and emotional support."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,13 +30,13 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Frameworks
 slug: i-can-see-clearly-now-observability-of-jvm-spring-boot-2-3-4-apps
 

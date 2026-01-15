@@ -14,8 +14,8 @@ description: "In the era of proprietary cloud data warehouses like Snowflake, Bi
   traditional warehouses with composable and open architectures, organizations can
   build systems optimized for their specific real-time analytics and data processing
   needs."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

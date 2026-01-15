@@ -9,8 +9,8 @@ description: "Historically, debuggers are used to help locate and fix bugs. Nowa
   Lambda breakpoints\r\n* Stream chain tracing\r\n* Dropping the frame\r\n* Emulated
   method breakpoint\r\n* Evaluate and log\r\n* Non-suspending breakpoints \r\n* Custom
   data renderers and more\r\n\r\n100% live coding session"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -23,8 +23,8 @@ categories:
   - id: 389040
     name: Practices and other tech
   sort: 0
-roomId:
-room:
+roomId: 70251
+room: Practices
 liveUrl:
 recordingUrl:
 status: Accepted

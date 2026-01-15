@@ -13,8 +13,8 @@ description: "Even if Java was originally meant for clients, it soon turned out 
   advantage for a Spring developer to be aware of what is going on with the development
   of Jakarta EE.\r\n\r\nCome to this session to learn about the planned changes to
   the technologies that Spring depends on. There will be demos, and even some AI involved."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

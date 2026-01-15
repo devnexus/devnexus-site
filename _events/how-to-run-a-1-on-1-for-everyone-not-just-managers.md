@@ -11,8 +11,8 @@ description: "Many of us have to go to 1 on 1 meetings on the regular, and they 
   of a 1 on 1 meeting: Communication, Feedback, and Goals\r\n- How to structure the
   meeting and your notes\r\n- Things you can (and should) ask as a manager, an employee,
   or as a colleague."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

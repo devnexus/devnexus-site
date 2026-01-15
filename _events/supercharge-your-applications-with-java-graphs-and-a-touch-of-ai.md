@@ -11,8 +11,8 @@ description: We all want to use GenAI to give ourselves superpowers, right? Itâ€
   design considerations, common challenges, and developer-friendly features that simplify
   building smarter apps. From concepts to coding, join us to learn how to take your
   Java applications to the next level.
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

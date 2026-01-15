@@ -14,8 +14,8 @@ description: "AI systems need more than intelligence; they need context. Without
   pipelines that align AI with real-world knowledge and user intent, and why context
   engineering is becoming a central part of building trustworthy and impactful AI
   systems."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,13 +28,13 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI Engineering
 slug: context-engineering-connecting-the-dots-with-graphs
 

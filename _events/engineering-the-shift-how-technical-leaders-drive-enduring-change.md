@@ -12,8 +12,8 @@ description: 'Rolling out a new tool or practice in a large engineering organiza
   just uptake, but enduring efficacy. Attendees will leave with a blueprint for leading
   change at scale, balancing persuasion with accountability, and ensuring that adoption
   sticks well beyond the launch announcement.'
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,13 +26,13 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 slug: engineering-the-shift-how-technical-leaders-drive-enduring-change
 

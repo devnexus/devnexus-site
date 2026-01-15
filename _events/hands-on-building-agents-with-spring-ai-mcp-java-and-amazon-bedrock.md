@@ -8,8 +8,8 @@ description: In this hands-on workshop you will learn how to build & deploy prod
   with basic prompting then expand with chat memory, RAG, and integration through
   MCP. In the end we will have a multi-agent system where agents interact with other
   agents to accomplish high-level tasks.
-startsAt:
-endsAt:
+startsAt: '2026-03-04T09:00:00'
+endsAt: '2026-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -24,8 +24,8 @@ categories:
   - id: 389970
     name: Workshop
   sort: 0
-roomId:
-room:
+roomId: 70250
+room: Production Ready Spring
 liveUrl:
 recordingUrl:
 status: Accepted

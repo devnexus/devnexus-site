@@ -309,12 +309,12 @@
     "profilePicture": "https://sessionize.com/image/706d-400o400o1-DetNfUC6HLw7aZZrgSVsoK.jpg",
     "sessions": [
       {
-        "id": 1003174,
-        "name": "Debugging with IntelliJ IDEA"
-      },
-      {
         "id": 1003030,
         "name": "The Ultimate Showdown of Database Migration Tools"
+      },
+      {
+        "id": 1003174,
+        "name": "Debugging with IntelliJ IDEA"
       }
     ],
     "isTopSpeaker": false,
@@ -359,6 +359,66 @@
         "answer": "https://sessionize.com/download/ikladsei~ash8J8SYmR2StGjCWem8tU.png~jetbrains_company_logo.svg.png",
         "sort": 25,
         "answerExtra": "JetBrains_company_logo.svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "60b28186-57fc-4f6a-be15-f5862c8fb225",
+    "firstName": "Ayun",
+    "lastName": "Gupta",
+    "fullName": "Ayun Gupta",
+    "bio": "Ayan Gupta is a Cloud Advocate at Microsoft and a Forbes 30 Under 30 honoree. He helps people and teams adopt practical AI‑powered development workflows using GitHub Copilot, Azure, and open‑source tools. Before Microsoft, he co‑founded technology ventures focused on expanding access to wellness and education. Outside of work, he enjoys woodworking and community volunteering.",
+    "tagLine": "Cloud Advocate Microsoft",
+    "profilePicture": "https://sessionize.com/image/d835-400o400o1-PQoqwEEbYMQH3ZCzpbgKKH.jpg",
+    "sessions": [
+      {
+        "id": 1036363,
+        "name": "Modernize your apps in days with AI Agents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Microsoft",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": "https://sessionize.com/download/fyaibwe~LSK76MLAvVC44GECnXBpr5.png~microsoft.png",
+        "sort": 25,
+        "answerExtra": "microsoft.png"
       }
     ],
     "categories": []
@@ -793,12 +853,16 @@
     "profilePicture": "https://sessionize.com/image/03e2-400o400o1-G3KTFNR3VHXWysDqVGrHN8.jpg",
     "sessions": [
       {
-        "id": 1036361,
-        "name": "AI Agents for Java Devs: From Demo to Deployment"
+        "id": 1036363,
+        "name": "Modernize your apps in days with AI Agents"
       },
       {
         "id": 1036365,
         "name": "The Responsible Java Developer: Trustworthy GenAI in Practice"
+      },
+      {
+        "id": 1036361,
+        "name": "AI Agents for Java Devs: From Demo to Deployment"
       }
     ],
     "isTopSpeaker": false,
@@ -1037,16 +1101,16 @@
     "profilePicture": "https://sessionize.com/image/f5ea-400o400o1-7PDkcAx4GvdyyQxXxcu1NL.jpg",
     "sessions": [
       {
+        "id": 1036786,
+        "name": "The Mentorship Hub (all day at open-source cafe!)"
+      },
+      {
         "id": 1036790,
         "name": "Developer Career Masterplan: 15 steps to grow beyond senior developer"
       },
       {
         "id": 1036839,
         "name": "Grow Beyond Senior Through Java Contributions: JUGs, the JCP and OpenJDK"
-      },
-      {
-        "id": 1036786,
-        "name": "The Mentorship Hub"
       }
     ],
     "isTopSpeaker": false,
@@ -1465,12 +1529,12 @@
     "profilePicture": "https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2Tm.png",
     "sessions": [
       {
-        "id": 1032731,
-        "name": "Fundamentals of Software Engineering In the age of AI"
-      },
-      {
         "id": 1032716,
         "name": "Fundamentals of Software Engineering In the age of AI Workshop"
+      },
+      {
+        "id": 1032731,
+        "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
         "id": 1034698,
@@ -2128,66 +2192,6 @@
     "categories": []
   },
   {
-    "id": "23a46a39-2f6d-4ee3-8ea9-62fd2edcc466",
-    "firstName": "Ernesto",
-    "lastName": "Spruyt",
-    "fullName": "Ernesto Spruyt",
-    "bio": "Ernesto - Entrepreneur, CEO, and Advocate for Global Tech Talent.\r\nHe is the driving force behind Tunga, a platform connecting African tech talent with forward-thinking companies worldwide. With a keen interest in psychology, culture, and what motivates people, Ernesto’s journey spans Europe’s corporate environments to Africa’s tech landscapes.",
-    "tagLine": "CEO of TUNGA",
-    "profilePicture": "https://sessionize.com/image/8ed0-400o400o1-RJgNHeMjZytTehssYgfvCo.jpg",
-    "sessions": [
-      {
-        "id": 1035575,
-        "name": "AI for Entrepreneurs: Turning Bold Ideas into Global Ventures"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 107974,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Netherlands",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 107978,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": null,
-        "sort": 21,
-        "answerExtra": null
-      },
-      {
-        "id": 107981,
-        "question": "LinkedIn URL",
-        "questionType": "Short_Text",
-        "answer": "https://www.linkedin.com/in/ernestospruyt/",
-        "sort": 22,
-        "answerExtra": null
-      },
-      {
-        "id": 107982,
-        "question": "Bluesky handle",
-        "questionType": "Short_Text",
-        "answer": null,
-        "sort": 23,
-        "answerExtra": null
-      },
-      {
-        "id": 113528,
-        "question": "Company Logo",
-        "questionType": "File_upload",
-        "answer": "https://sessionize.com/download/isjaodbe~3S7qevdh8nnZBw679X1wgN.png~images-11.png",
-        "sort": 25,
-        "answerExtra": "images-11.png"
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "a56899b4-eae5-40ac-b71a-5ef5be0945a0",
     "firstName": "Frank",
     "lastName": "Greco",
@@ -2240,9 +2244,69 @@
         "id": 113528,
         "question": "Company Logo",
         "questionType": "File_upload",
-        "answer": "https://sessionize.com/download/ibxazkey~QmwFNSeBywLPmHT1cyCi1F.webp~event-cover-7822.webp",
+        "answer": "https://sessionize.com/download/inralpex~KUZkpYV2KjMHd2idmVXo8c.png~nyjavasig-logo4-clean-transparent.png",
         "sort": 25,
-        "answerExtra": "event-cover-7822.webp"
+        "answerExtra": "NYJavaSIG-logo4-clean-transparent.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "4d4ac30a-3cf4-4c64-99d4-8261e8e966ad",
+    "firstName": "Freddy",
+    "lastName": "Guime",
+    "fullName": "Freddy Guime",
+    "bio": "Freddy is a Principal Developer at Expedia. Always dealing with performance and usability he is always curious on how to make the overabundance of data useful for travelers, traders and consumers. Having worked with different technologies before has allowed him to come with solutions to rendering bottleneck problems. A Usability Guru, Freddy understands and bridges the concepts of high-throughput with usability within software.\r\n\r\nHe is also the author and maintainer of the javapubhouse.com, a podcast dedicated to tutorial topics in Java that covers everything from the use of the keyword volatile to the definition of beautiful code, also of javaoffheap.com, a java news podcast.\r\n\r\n",
+    "tagLine": "Principal Engineer - Expedia Group",
+    "profilePicture": "https://sessionize.com/image/3269-400o400o1-XAA9LPnEmriVQG43chdhxC.jpg",
+    "sessions": [
+      {
+        "id": 1039415,
+        "name": "The OffHeap Podcast. Devnexus Edition (Now with AI Agents"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Self",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/fguime/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@fguime.bsky.social",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []
@@ -2617,12 +2681,12 @@
     "profilePicture": "https://sessionize.com/image/ded2-400o400o1-3d-1b13-4383-a7ec-e7ce3151794e.dc841fd0-dfb3-44cb-8c0b-542fb0968a02.jpg",
     "sessions": [
       {
-        "id": 1034679,
-        "name": "Building AI Agents with Spring & MCP"
-      },
-      {
         "id": 1034680,
         "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
+      },
+      {
+        "id": 1034679,
+        "name": "Building AI Agents with Spring & MCP"
       }
     ],
     "isTopSpeaker": false,
@@ -3525,16 +3589,16 @@
     "profilePicture": "https://sessionize.com/image/a9e2-400o400o1-E6pCEr3ATM1nUGjubLTFsh.png",
     "sessions": [
       {
+        "id": 1034680,
+        "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
+      },
+      {
         "id": 1023613,
         "name": "Bootiful Spring Security"
       },
       {
         "id": 1034679,
         "name": "Building AI Agents with Spring & MCP"
-      },
-      {
-        "id": 1034680,
-        "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
       }
     ],
     "isTopSpeaker": false,
@@ -3588,7 +3652,7 @@
     "firstName": "Karthik",
     "lastName": "Govardhanan",
     "fullName": "Karthik Govardhanan",
-    "bio": "Karthik Govardhanan is a Senior Engineering Manager at CVS Health, leading AI-driven search and SEO innovations for one of the world’s largest retail and pharmacy platforms. With over 14 years of experience spanning CVS, Macy’s, Capgemini, and The Home Depot, he specializes in search relevance, personalization, and conversational commerce. Karthik’s expertise includes large language models, retrieval-augmented generation, semantic search, and scalable e-commerce architectures. He holds a Bachelor’s in Electronics and Communication Engineering and an MBA from Boston University.",
+    "bio": "Karthik Govardhanan is affiliated with Boston University and has spent over 14 years building and scaling AI-powered search and discovery systems across large-scale retail and e-commerce platforms. His work spans search relevance, personalization, SEO, and conversational commerce, with a strong focus on applying large language models, retrieval-augmented generation, and semantic search in production environments.",
     "tagLine": "CVS Health Inc, Sr Engineering Manager",
     "profilePicture": "https://sessionize.com/image/846b-400o400o1-fKkPdteVTLyxQFcUPnRR87.png",
     "sessions": [
@@ -4018,7 +4082,7 @@
     "sessions": [
       {
         "id": 1036786,
-        "name": "The Mentorship Hub"
+        "name": "The Mentorship Hub (all day at open-source cafe!)"
       }
     ],
     "isTopSpeaker": false,
@@ -4123,70 +4187,6 @@
         "answer": null,
         "sort": 25,
         "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
-    "id": "05be364d-a57f-4e08-978d-8043d43db097",
-    "firstName": "Mark",
-    "lastName": "Heckler",
-    "fullName": "Mark Heckler",
-    "bio": "Mark Heckler, MBA is the Senior Director of Field Engineering at Moderne. \r\nHe has worked with key players in numerous industries and organizations to develop, deliver, and maintain critical capabilities securely, on time, and on budget. Mark is an open source contributor, author of Spring Boot: Up and Running (https://bit.ly/springbootbook), and a licensed, instrument-rated pilot.",
-    "tagLine": "Senior Director of Field Engineering at Moderne",
-    "profilePicture": "https://sessionize.com/image/f0e0-400o400o1-ZBMq2SYxmeNzmE6h56Kxs.png",
-    "sessions": [
-      {
-        "id": 1025968,
-        "name": "Make Mechanical Advantage YOUR Advantage: How to modernize & futureproof your code with OpenRewrite"
-      },
-      {
-        "id": 1036658,
-        "name": "Migration Engineering with OpenRewrite: The Recipe for Success"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [],
-    "questionAnswers": [
-      {
-        "id": 107974,
-        "question": "Company",
-        "questionType": "Short_Text",
-        "answer": "Moderne",
-        "sort": 17,
-        "answerExtra": null
-      },
-      {
-        "id": 107978,
-        "question": "Twitter handle with @ ex: @prpatel",
-        "questionType": "Short_Text",
-        "answer": "@mkheck",
-        "sort": 21,
-        "answerExtra": null
-      },
-      {
-        "id": 107981,
-        "question": "LinkedIn URL",
-        "questionType": "Short_Text",
-        "answer": "https://www.linkedin.com/in/markheckler",
-        "sort": 22,
-        "answerExtra": null
-      },
-      {
-        "id": 107982,
-        "question": "Bluesky handle",
-        "questionType": "Short_Text",
-        "answer": "https://bsky.app/profile/mkheck.bsky.social",
-        "sort": 23,
-        "answerExtra": null
-      },
-      {
-        "id": 113528,
-        "question": "Company Logo",
-        "questionType": "File_upload",
-        "answer": "https://sessionize.com/download/ifbaxfef~XugUsgR9nexmj4sHxuozGy.svg~moderne-poster-logo.svg",
-        "sort": 25,
-        "answerExtra": "moderne-poster-logo.svg"
       }
     ],
     "categories": []
@@ -4561,12 +4561,12 @@
     "profilePicture": "https://sessionize.com/image/d74a-400o400o1-EWgm8mCUBHVZkKHRmw7ycB.jpg",
     "sessions": [
       {
-        "id": 1032731,
-        "name": "Fundamentals of Software Engineering In the age of AI"
-      },
-      {
         "id": 1032716,
         "name": "Fundamentals of Software Engineering In the age of AI Workshop"
+      },
+      {
+        "id": 1032731,
+        "name": "Fundamentals of Software Engineering In the age of AI"
       },
       {
         "id": 1032726,
@@ -5279,6 +5279,70 @@
         "answer": "https://sessionize.com/download/rraskeu~WENmMZzDorNSkphnSzH6EP.png~broadcom_logo_red-black_no-tag-2.png",
         "sort": 25,
         "answerExtra": "Broadcom_Logo_Red-Black_no-tag-2.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7d983480-a141-4710-bbf5-4b90c23c9b9b",
+    "firstName": "Rod",
+    "lastName": "Johnson",
+    "fullName": "Rod Johnson",
+    "bio": "Rod is a developer, author, investor and entrepreneur. He has authored several best-selling books on Java EE. He is the creator of the Spring Framework and was cofounder and CEO of SpringSource. He has served on the board of Elastic, Neo Technologies, Apollo, Lightbend and several other successful companies. He is presently developing a structured RAG system using Spring and Kotlin.",
+    "tagLine": "Coder, creator, investor",
+    "profilePicture": "https://sessionize.com/image/4850-400o400o1-h2bQUDzWH84zquEJJoTVdz.jpg",
+    "sessions": [
+      {
+        "id": 1118310,
+        "name": "Its Up To Java Developers to Fix Enterprise AI"
+      },
+      {
+        "id": 1118320,
+        "name": "Hands-on Embabel"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Embabel",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@springrod",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/johnsonroda/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []

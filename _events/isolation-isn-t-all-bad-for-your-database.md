@@ -8,8 +8,8 @@ description: 'Let''s review a fundamental of our databases: Isolation levels. Ch
   keeps understanding sharp and minimizes time searching for the answer next time
   starting something new. A refresher for the experienced dev who likes to talk about
   the details or maybe even an eye opening introduction to the unfamiliar.'
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -22,8 +22,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

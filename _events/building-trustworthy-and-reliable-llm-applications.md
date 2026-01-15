@@ -15,8 +15,8 @@ description: "We are entering the next wave of LLM understanding, so we want to 
   the importance of vigilant permissions, and continuous monitoring to safeguard user
   and organizational data. This talk is ideal for developers, security practitioners,
   and anyone responsible for deploying LLMs into real-world applications.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -31,8 +31,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

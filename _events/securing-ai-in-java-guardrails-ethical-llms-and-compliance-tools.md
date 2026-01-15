@@ -12,8 +12,8 @@ description: "As large language models (LLMs) are integrated into enterprise sys
   Jakarta EE for scalable, modular LLM orchestration. \r\n\r\nYou will walk away with
   concrete, ready-to-apply patterns and code-level practices to build secure, ethical,
   and regulation-ready LLM apps in modern Java environments."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T14:50:00'
+endsAt: '2026-03-05T15:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

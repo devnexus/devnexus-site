@@ -11,8 +11,8 @@ description: We’ve built a modular, hybrid search architecture that combines E
   This shows that blending lexical accuracy with semantic richness is the key to next-generation,
   real-time search—and we’re already looking at scaling it for multimodal queries
   and personalized results
-startsAt:
-endsAt:
+startsAt: '2026-03-06T13:20:00'
+endsAt: '2026-03-06T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -25,8 +25,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

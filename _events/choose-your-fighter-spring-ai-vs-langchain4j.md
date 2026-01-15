@@ -13,8 +13,8 @@ description: As AI capabilities continue to integrate into modern enterprise app
   conversational agents, semantic search systems, or AI-driven automation, this session
   will help clarify which framework best aligns with your technical needs and development
   workflow.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

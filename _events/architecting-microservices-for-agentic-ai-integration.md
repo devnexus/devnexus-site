@@ -33,8 +33,8 @@ description: "Agents don’t just “call APIs”—they plan, retry, chain, and
   service boundaries task-focused for agent workflows.\r\nSeparate and monitor agent
   vs human traffic.\r\nBuild lifecycle discipline: versioning, deprecation, multi-version
   gateways."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -47,8 +47,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

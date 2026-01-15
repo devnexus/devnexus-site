@@ -23,8 +23,8 @@ description: "Event-driven architecture (EDA) is a design principle in which the
   get a tactical understanding of how to roll out your systems. This workshop is also
   visual, with plenty of diagrams and animations to reinforce your learning experience.\r\n\r\nWorkshop
   Who Should Attend:\r\nArchitects, Developers, Data Engineers"
-startsAt:
-endsAt:
+startsAt: '2026-03-04T09:00:00'
+endsAt: '2026-03-04T17:05:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +37,8 @@ categories:
   - id: 389970
     name: Workshop
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

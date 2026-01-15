@@ -13,8 +13,8 @@ description: "Are slow database queries and performance bottlenecks in your Java
   innovative solutions that can help you optimize your Java applications. Don't miss
   this opportunity to learn how caching can take your Java development to the next
   level."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T11:20:00'
+endsAt: '2026-03-05T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

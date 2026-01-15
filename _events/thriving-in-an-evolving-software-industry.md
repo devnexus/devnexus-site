@@ -16,8 +16,8 @@ description: "Over the last year we have seen significant changes in the develop
   Join us as we uncover the diverse opportunities as well as practical steps to successfully
   pivot and thrive in a dynamic, ever-evolving industry. Technology changes constantly,
   your career can’t afford to be a static thing."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -32,8 +32,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

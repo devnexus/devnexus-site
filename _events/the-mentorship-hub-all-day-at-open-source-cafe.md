@@ -1,7 +1,7 @@
 ---
 questionAnswers: []
 id: '1036786'
-title: The Mentorship Hub
+title: The Mentorship Hub (all day at open-source cafe!)
 description: "Want to do a next step in your career? Grow beyond senior, contribute
   to an open source project, write a book or take a leadership position? Maybe become
   a Tech Evangelist, launch your own company or become an independent consultant?
@@ -12,8 +12,8 @@ description: "Want to do a next step in your career? Grow beyond senior, contrib
   from the community are available to mentor small groups of professionals in specific
   topics. It is a great place for you to ask your questions and have personalized
   help to advance your career goals."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,14 +28,14 @@ categories:
   - id: 389049
     name: Keynote
   sort: 0
-roomId:
-room:
+roomId: 70256
+room: Keynote
 liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Keynote
-slug: the-mentorship-hub
+slug: the-mentorship-hub-all-day-at-open-source-cafe
 
 ---

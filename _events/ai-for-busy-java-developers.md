@@ -22,8 +22,8 @@ description: "Yep, we know you're knee-deep in production Java deployments and d
   manner and manage potential risks. \r\n\r\nBy the end of this presentation, you
   should understand the very essence of AI/ML, so that you will understand what AI
   is and how to use it for successful deployments properly.  \r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -36,8 +36,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

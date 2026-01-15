@@ -18,7 +18,7 @@ tagLine: Architect as a Service
 profilePicture: https://sessionize.com/image/d74a-400o400o1-EWgm8mCUBHVZkKHRmw7ycB.jpg
 sessions:
 - id: 1032716
-  name: Fundamentals of Software Engineering In the age of AI
+  name: Fundamentals of Software Engineering In the age of AI Workshop
 - id: 1032731
   name: Fundamentals of Software Engineering In the age of AI
 - id: 1032726

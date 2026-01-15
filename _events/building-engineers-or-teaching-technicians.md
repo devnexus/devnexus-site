@@ -12,8 +12,8 @@ description: "Organizations often focus on building software \"technicians\" ins
   capable of solving complex, evolving problems. \r\n\r\nShifting the focus to developing
   engineers who solve their own problems, select appropriate tools, and create tailored
   design patterns will drive innovation and adaptability, accelerating progress."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389050
     name: Tech Leadership
   sort: 0
-roomId:
-room:
+roomId: 70257
+room: Tech Leadership
 liveUrl:
 recordingUrl:
 status: Accepted

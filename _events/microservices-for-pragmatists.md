@@ -15,8 +15,8 @@ description: "Microservices architecture is often perceived as a pattern primari
   objectives:\r\n\r\n* Benefits of microservices for small/medium scale deployments\r\n*
   Trade-offs associated with microservices\r\n* How to pragmatically apply microservice
   design principles for your projects"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T15:40:00'
+endsAt: '2026-03-06T16:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -29,8 +29,8 @@ categories:
   - id: 389034
     name: Architecture
   sort: 0
-roomId:
-room:
+roomId: 70245
+room: Architecture
 liveUrl:
 recordingUrl:
 status: Accepted

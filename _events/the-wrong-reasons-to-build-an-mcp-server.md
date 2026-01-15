@@ -6,23 +6,14 @@ description: "We’ve built multiple MCP servers—enough to know where they shi
   where they hurt. MCP is powerful: it standardizes how LLMs connect with tools, prompts,
   and resources. But here’s the hard truth: not every use case deserves an MCP server.
   Sometimes it’s just overhead, slowing you down when a plain SDK or direct API call
-  would have worked better.\r\n\r\nIn this workshop, we’ll share lessons learned from
+  would have worked better.\r\n\r\nIn this session, we’ll share lessons learned from
   real MCP builds: the wins, the painful over-engineering, and the “wish we hadn’t
-  done that” moments. You’ll see common anti-patterns like wrapping trivial APIs,
-  using MCP as a database proxy, or introducing it in environments where latency and
-  lifecycle management become a nightmare.\r\n\r\nMost importantly, we’ll give you
-  a practical checklist to decide when MCP is worth it—and when it’s simply the wrong
-  tool. You’ll walk away with clear guidance, battle-tested stories, and the confidence
-  to avoid the mistakes we made.\r\n\r\nContents of the workshop: \r\nPart 1: The
-  API Trap\r\nPart 2: The Right-Sized Use Case\r\nPart 3: Choose your game: Chatbot,
-  MCP, Agent\r\nPart 4: Decision Framework in Action\r\n\r\nLearning Benefits and
-  Takeaways: \r\n- Not every integration needs an MCP server—sometimes it’s just overhead.\r\n-
-  Learn to spot common anti-patterns (wrapping trivial APIs, database proxies, FOMO-driven
-  builds).\r\n- A decision checklist to evaluate MCP vs. simpler options.\r\n- Understand
-  when MCP adds real value: interoperability, tool ecosystems, complex workflows.\r\n-
-  Lessons learned from real-world MCP implementations—what worked, what didn’t."
-startsAt:
-endsAt:
+  done that” moments. Most importantly, we’ll give you a practical checklist to decide
+  when MCP is worth it—and when it’s simply the wrong tool. You’ll walk away with
+  clear guidance, battle-tested stories, and the confidence to avoid the mistakes
+  we made."
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -37,8 +28,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

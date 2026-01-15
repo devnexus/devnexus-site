@@ -14,8 +14,8 @@ description: "Memory shapes how we think, learn, and create. Humans have built m
   implemented in AI agents, what challenges arise, and what trade-offs we need to
   consider. The goal is to give you both inspiration from human history and concrete
   tools for building better agents with memory."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -28,8 +28,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -13,8 +13,8 @@ description: Modern enterprise Java systems handle millions of financial transac
   learn how to evolve from traditional auto-scaling to AI-driven self-optimization
   and leave with a practical roadmap for implementing these techniques in their own
   Java applications.
-startsAt:
-endsAt:
+startsAt: '2026-03-06T14:40:00'
+endsAt: '2026-03-06T15:40:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389057
     name: AI Engineering
   sort: 0
-roomId:
-room:
+roomId: 70258
+room: AI Engineering
 liveUrl:
 recordingUrl:
 status: Accepted

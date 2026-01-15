@@ -12,8 +12,8 @@ description: "Keeping enterprise Java applications secure and up-to-date is crit
   workloads, and how it fits into modern CI/CD and GitOps workflows. We’ll walk through
   real-world examples using modern runtimes like Liberty, and show how zero migration
   helps teams move faster, stay secure, and reduce technical debt."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T10:00:00'
+endsAt: '2026-03-05T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

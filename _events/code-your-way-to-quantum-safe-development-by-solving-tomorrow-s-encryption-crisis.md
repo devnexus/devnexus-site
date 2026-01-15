@@ -19,8 +19,8 @@ description: "As quantum computers threaten to break traditional encryption, maj
   the next generation of cryptographic protocols, this talk provides the practical
   foundation you need to engage with quantum-safe technologies as they move from research
   labs to production systems.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-05T15:50:00'
+endsAt: '2026-03-05T16:50:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -33,8 +33,8 @@ categories:
   - id: 389041
     name: Security
   sort: 0
-roomId:
-room:
+roomId: 70252
+room: Security
 liveUrl:
 recordingUrl:
 status: Accepted

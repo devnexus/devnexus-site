@@ -12,10 +12,12 @@ tagLine: 'Brian is a Java Champion and a Cloud Advocate at Microsoft, helping de
   get the most out of Azure. '
 profilePicture: https://sessionize.com/image/03e2-400o400o1-G3KTFNR3VHXWysDqVGrHN8.jpg
 sessions:
-- id: 1036361
-  name: 'AI Agents for Java Devs: From Demo to Deployment'
+- id: 1036363
+  name: Modernize your apps in days with AI Agents
 - id: 1036365
   name: 'The Responsible Java Developer: Trustworthy GenAI in Practice'
+- id: 1036361
+  name: 'AI Agents for Java Devs: From Demo to Deployment'
 isTopSpeaker: false
 links: []
 questionAnswers:

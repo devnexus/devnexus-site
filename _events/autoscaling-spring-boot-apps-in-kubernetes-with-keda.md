@@ -12,8 +12,8 @@ description: 'The Horizonal Pod Autoscaler (HPA) in Kubernetes has limited funct
   learn how you can put all of these together to use KEDA with out of the box Spring
   metrics or even with your own custom metrics to drive the autoscaling of your application
   in Kubernetes. '
-startsAt:
-endsAt:
+startsAt: '2026-03-06T11:20:00'
+endsAt: '2026-03-06T12:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -26,8 +26,8 @@ categories:
   - id: 389038
     name: Frameworks
   sort: 0
-roomId:
-room:
+roomId: 70249
+room: 'Frameworks  '
 liveUrl:
 recordingUrl:
 status: Accepted

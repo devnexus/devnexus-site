@@ -18,8 +18,8 @@ description: "Everyone's talking about AI creating 10x engineers. Meanwhile, you
   to make sense of it all, or an engineering manager caught between executive enthusiasm
   and developer eye-rolls, come ready for validation, practical strategies, and maybe
   a few laughs about our collective journey into the AI-powered future."
-startsAt:
-endsAt:
+startsAt: '2026-03-05T13:20:00'
+endsAt: '2026-03-05T14:20:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -34,8 +34,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

@@ -13,8 +13,8 @@ description: "AI coding has come a long way, but relying on vibes, prompts, and 
   showing how specs can help keep code and AI aligned, even during ongoing iteration
   and team collaboration. \r\n\r\nIf you’ve ever felt like Copilot was helping you
   fly in circles, this talk offers a way to move forward, with direction.\r\n"
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -27,8 +27,8 @@ categories:
   - id: 389411
     name: AI In Practice
   sort: 0
-roomId:
-room:
+roomId: 70246
+room: AI in Practice
 liveUrl:
 recordingUrl:
 status: Accepted

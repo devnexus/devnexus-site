@@ -16,8 +16,8 @@ description: "I led the end-to-end design and implementation of a Generative AI 
   project introduces a novel way to automate judgment-based compliance tasks — a space
   typically untouched by AI at scale. It is also designed to evolve into an intelligent
   audit expert, a rare implementation of self-improving GenAI in regulatory environments."
-startsAt:
-endsAt:
+startsAt: '2026-03-06T10:00:00'
+endsAt: '2026-03-06T11:00:00'
 isServiceSession: false
 isPlenumSession: false
 speakers:
@@ -30,8 +30,8 @@ categories:
   - id: 389056
     name: Gen AI
   sort: 0
-roomId:
-room:
+roomId: 70247
+room: Gen AI
 liveUrl:
 recordingUrl:
 status: Accepted

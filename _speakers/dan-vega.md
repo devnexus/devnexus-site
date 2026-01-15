@@ -14,7 +14,7 @@ tagLine: Spring Developer Advocate
 profilePicture: https://sessionize.com/image/974a-400o400o1-GmuZ6aH716X8nyhBewy2Tm.png
 sessions:
 - id: 1032716
-  name: Fundamentals of Software Engineering In the age of AI
+  name: Fundamentals of Software Engineering In the age of AI Workshop
 - id: 1032731
   name: Fundamentals of Software Engineering In the age of AI
 - id: 1034698
