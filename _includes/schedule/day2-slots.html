@@ -1,0 +1,28 @@
+---
+---
+{% assign day2 = site.data.schedule[2] %}
+{% assign day2_times = day2.timeSlots %}
+<div class="day-content day2" id="day2">
+ <h2 style="padding: 20px 15px;">Friday Mar 6 - Day 2</h2>
+    {% for slot in day2_times %}
+  {% assign rooms = slot.rooms 
+  | where_exp: "item", "item.session.isServiceSession != true" 
+  | where_exp: "item", "page.tracks contains item.name" 
+  | sort: "name" 
+  %}
+ {% if rooms.size > 0 %}
+    <div class="timeline-slot mb-5" data-time="{{ slot.slotStart }}" data-day="mar04">
+        <div class="time-header bg-black text-white px-4 py-2.5 font-bold rounded-t-md">
+            <span>{{ slot.slotStart }}</span>
+        </div>
+        <div class="border border-gray-300 border-t-0 rounded-b-md p-4">
+            {% for e in rooms %} 
+                <div class="session-card mb-4">
+                    {% include schedule_event.html details=e.session %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+  {% endif %}
+    {% endfor %}
+</div>

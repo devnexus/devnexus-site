@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="container mt-32 mb-32">
+  <header>
+    <nav class="w-full mb-6">
+      <div class="flex items-center justify-center gap-1 bg-white shadow-lg">
+      <a href="/schedule/workshops" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition border-r border-gray-300 last:border-r-0">Workshops</a>
+      <a href="/schedule/ai" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition border-r border-gray-300 last:border-r-0">AI</a>
+      <a href="/schedule/java" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition border-r border-gray-300 last:border-r-0">JAVA</a>
+      <a href="/schedule/dev-practices" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition">Dev Practices</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="schedule-container">
+    {{ content }}
+  </main>
+</div>
