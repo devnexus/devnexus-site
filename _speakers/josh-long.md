@@ -15,10 +15,14 @@ profilePicture: https://sessionize.com/image/a9e2-400o400o1-E6pCEr3ATM1nUGjubLTF
 sessions:
 - id: 1034680
   name: 'Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock'
+- id: 1089164
+  name: Life after dad joke apps - building "enterprise grade" AI frameworks for Java
 - id: 1023613
   name: Bootiful Spring Security
 - id: 1034679
   name: Building AI Agents with Spring & MCP
+- id: 1089152
+  name: " Building AI Agents with Spring AI and Tanzu Platform"
 isTopSpeaker: false
 links: []
 questionAnswers:

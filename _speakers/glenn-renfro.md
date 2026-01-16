@@ -12,6 +12,10 @@ profilePicture: https://sessionize.com/image/2155-400o400o1-ntrGaApYgEN8wGjz9iHh
 sessions:
 - id: 1032726
   name: Thriving in an Evolving Software Industry
+- id: 1089166
+  name: 'Patterns for Platform Engineering: Standardizing Java Delivery'
+- id: 1089165
+  name: 'Staying Current: A Journey in Software Maintenance'
 isTopSpeaker: false
 links: []
 questionAnswers:

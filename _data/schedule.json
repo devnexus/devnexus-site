@@ -329,12 +329,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                "name": "Nathaniel Schutta"
-              },
-              {
                 "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
                 "name": "Dan Vega"
+              },
+              {
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
               }
             ],
             "categories": [
@@ -706,12 +706,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                  "name": "Nathaniel Schutta"
-                },
-                {
                   "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
                   "name": "Dan Vega"
+                },
+                {
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
                 }
               ],
               "categories": [
@@ -1186,12 +1186,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                "name": "Nathaniel Schutta"
-              },
-              {
                 "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
                 "name": "Glenn Renfro"
+              },
+              {
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
               }
             ],
             "categories": [
@@ -1576,12 +1576,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
-                "name": "Cody Frenzel"
-              },
-              {
                 "id": "992db8b5-7d10-4c3b-96a0-6c595220e0e5",
                 "name": "Laurie Lay"
+              },
+              {
+                "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
+                "name": "Cody Frenzel"
               }
             ],
             "categories": [
@@ -1771,12 +1771,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "9548c494-2cab-45b9-af37-398f9b6d1f9d",
-                "name": "Vinicius Senger"
-              },
-              {
                 "id": "344ffe15-6288-4b67-b9ed-6c23777e4417",
                 "name": "Jonathan Vogel"
+              },
+              {
+                "id": "9548c494-2cab-45b9-af37-398f9b6d1f9d",
+                "name": "Vinicius Senger"
               }
             ],
             "categories": [
@@ -2062,12 +2062,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                "name": "Nathaniel Schutta"
-              },
-              {
                 "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
                 "name": "Dan Vega"
+              },
+              {
+                "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                "name": "Nathaniel Schutta"
               }
             ],
             "categories": [
@@ -3130,12 +3130,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
-                "name": "Alex Soto"
-              },
-              {
                 "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
                 "name": "Markus Eisele"
+              },
+              {
+                "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
+                "name": "Alex Soto"
               }
             ],
             "categories": [
@@ -3180,12 +3180,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
-                "name": "Bazlur Rahman"
-              },
-              {
                 "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
                 "name": "Shaaf Syed"
+              },
+              {
+                "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+                "name": "Bazlur Rahman"
               }
             ],
             "categories": [
@@ -3497,6 +3497,259 @@
             ],
             "roomId": 70253,
             "room": "Tools and Techniques ",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 70250,
+        "name": "Production Ready Spring",
+        "sessions": [
+          {
+            "id": "1089164",
+            "title": "Life after dad joke apps - building \"enterprise grade\" AI frameworks for Java",
+            "description": "How do we move beyond the first round of AI PoCs and build reliable, useful AI features for our existing apps? In\r\nthis panel, we'll move past the basics to tackle the hard parts of using AI in real-world applications, things like\r\ndynamic planning vs. static workflows, automated goal verification, and building maintainable, testable AI actions.\r\nAfter you've seen all the knee-slapping dad-joke demos, join this discussion to learn what's practical today for\r\nbuilding and managing AI workflows in Java. We'll also look at what to expect in the next year when it comes to\r\nJava AI frameworks that support \"enterprise grade\" requirements.",
+            "startsAt": "2026-03-05T10:00:00",
+            "endsAt": "2026-03-05T11:00:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+                "name": "Josh Long"
+              },
+              {
+                "id": "e6eb2872-7efa-410b-9d02-32fd04dd75c0",
+                "name": "Adib Saikali"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1089162",
+            "title": "Modern API Versioning and Enterprise-Ready AI enablement with Spring Cloud Gateway",
+            "description": "Spring Cloud Gateway now adds first-class support for API versioning to help teams evolve services safely and\r\npredictably. The addition of API versioning support to Spring Cloud Gateway allows for enhanced version\r\nnegotiation, enhanced route matching, better backwards compatibility and improved deprecation workflows. By\r\ngenerating, standards-compliant OpenAPI specifications from domain-centric models and action-oriented API\r\nendpoint designs, we’ll discuss how shifting toward action-based definitions produces clearer intent, improves\r\ncross-team API discoverability, and enables richer tooling support, including compatibility with Model Context\r\nProtocol–based client tools. By aligning gateway-defined routes and versioning metadata with well-structured\r\nOpenAPI documents, teams can automate client generation, enforce consistency, and improve their use with AI\r\nenabled intelligent applications and tools. Thus providing a stable base that lets teams advance their applications\r\ninto new opportunities. In this session, we’ll walk through practical patterns for header-based, URI-based, and\r\nmedia-type versioning, and show how these strategies integrate seamlessly with the new Spring Boot 4\r\napplication model. Attendees will leave with clear guidance on designing developer-friendly, scalable API\r\nversioning strategies that align with modern microservice and edge-service architectures.",
+            "startsAt": "2026-03-05T11:20:00",
+            "endsAt": "2026-03-05T12:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+                "name": "Spencer Gibb"
+              },
+              {
+                "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                "name": "Chris Sterling"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1089150",
+            "title": "The Modern Spring Workflow: Enterprise-Ready Delivery and AI-Boosted Coding with Tanzu",
+            "description": "Getting Spring applications to production—and keeping them there—requires more than great code. Security,\r\ncompliance, upgrades, and performance all shape the path from idea to enterprise-ready delivery. This session\r\nshows how VMware Tanzu streamlines that entire workflow. See how Application Advisor automates Spring Boot\r\nupgrades while integrating cleanly with AI coding assistants, how the Tanzu GenAI Service provides safe, selfservice access to approved LLMs, and how Tanzu Spring Extensions enforce consistent guardrails across\r\nteams. Finally, learn how the Tanzu Java Buildpack optimizes every Spring app for faster startup and lower\r\nmemory use. If you want to deliver modern Spring applications with more speed, confidence, and operational\r\nreadiness, this session provides the blueprint.",
+            "startsAt": "2026-03-05T13:20:00",
+            "endsAt": "2026-03-05T14:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                "name": "Chris Sterling"
+              },
+              {
+                "id": "bd909527-212e-4863-b8f0-fd947aff7fa3",
+                "name": "Cora Iberkleid"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1089152",
+            "title": " Building AI Agents with Spring AI and Tanzu Platform",
+            "description": "We’re in the era of AI—an era of unbridled possibility and potential - and yet, according to a recent MIT study,\r\n95% of enterprise AI efforts fail! We want to change that! We believe the JVM with Spring AI is an ideal place to\r\nbuild robust, focused, integrated AI solutions with and that - to truly succeed in a fast-changing world - you’ll need\r\noperational maturity. Join us, and we'll show how Spring AI and Tanzu Platform give you the flexibility and\r\nmaturity to compete and succeed!",
+            "startsAt": "2026-03-05T14:50:00",
+            "endsAt": "2026-03-05T15:50:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+                "name": "Josh Long"
+              },
+              {
+                "id": "e6eb2872-7efa-410b-9d02-32fd04dd75c0",
+                "name": "Adib Saikali"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1089159",
+            "title": "Enabling High-Throughput, Low-Latency Inference for Your AI Applications",
+            "description": "AI inference uses trained models—from small regressions to large language models—to make predictions on\r\nnew data. While modern models excel at reasoning and orchestration, calling them for every prediction can be\r\nslow and costly. In practice, many Spring applications use lightweight models for scoring, forecasting, or anomaly\r\ndetection—tasks where responses must be fast and local. In this session, you’ll learn how to combine Spring AI\r\nagents with local inference tools to get the best of both worlds. Using the ONNX (Open Neural Network\r\nExchange) standard, you can export models from Python and run them wherever your applications live—directly\r\nwithin your caching or data layer for immediate, in-context predictions. In this talk, we’ll look at an example using\r\nGemFire, showing how Spring developers can execute these models seamlessly in Java while keeping latency\r\nlow and throughput high. A Spring AI agent can then invoke these embedded models as tools, delegating simple\r\ndecisions locally and reserving specialized calls for complex reasoning. The result: intelligent, data-driven\r\napplications that deliver real-time predictions at the speed of cache.",
+            "startsAt": "2026-03-05T15:50:00",
+            "endsAt": "2026-03-05T16:50:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "bd909527-212e-4863-b8f0-fd947aff7fa3",
+                "name": "Cora Iberkleid"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
             "liveUrl": null,
             "recordingUrl": null,
             "status": "Accepted",
@@ -4131,6 +4384,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089164",
+              "title": "Life after dad joke apps - building \"enterprise grade\" AI frameworks for Java",
+              "description": "How do we move beyond the first round of AI PoCs and build reliable, useful AI features for our existing apps? In\r\nthis panel, we'll move past the basics to tackle the hard parts of using AI in real-world applications, things like\r\ndynamic planning vs. static workflows, automated goal verification, and building maintainable, testable AI actions.\r\nAfter you've seen all the knee-slapping dad-joke demos, join this discussion to learn what's practical today for\r\nbuilding and managing AI workflows in Java. We'll also look at what to expect in the next year when it comes to\r\nJava AI frameworks that support \"enterprise grade\" requirements.",
+              "startsAt": "2026-03-05T10:00:00",
+              "endsAt": "2026-03-05T11:00:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+                  "name": "Josh Long"
+                },
+                {
+                  "id": "e6eb2872-7efa-410b-9d02-32fd04dd75c0",
+                  "name": "Adib Saikali"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -4335,12 +4643,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "9548c494-2cab-45b9-af37-398f9b6d1f9d",
-                  "name": "Vinicius Senger"
-                },
-                {
                   "id": "344ffe15-6288-4b67-b9ed-6c23777e4417",
                   "name": "Jonathan Vogel"
+                },
+                {
+                  "id": "9548c494-2cab-45b9-af37-398f9b6d1f9d",
+                  "name": "Vinicius Senger"
                 }
               ],
               "categories": [
@@ -4686,6 +4994,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089162",
+              "title": "Modern API Versioning and Enterprise-Ready AI enablement with Spring Cloud Gateway",
+              "description": "Spring Cloud Gateway now adds first-class support for API versioning to help teams evolve services safely and\r\npredictably. The addition of API versioning support to Spring Cloud Gateway allows for enhanced version\r\nnegotiation, enhanced route matching, better backwards compatibility and improved deprecation workflows. By\r\ngenerating, standards-compliant OpenAPI specifications from domain-centric models and action-oriented API\r\nendpoint designs, we’ll discuss how shifting toward action-based definitions produces clearer intent, improves\r\ncross-team API discoverability, and enables richer tooling support, including compatibility with Model Context\r\nProtocol–based client tools. By aligning gateway-defined routes and versioning metadata with well-structured\r\nOpenAPI documents, teams can automate client generation, enforce consistency, and improve their use with AI\r\nenabled intelligent applications and tools. Thus providing a stable base that lets teams advance their applications\r\ninto new opportunities. In this session, we’ll walk through practical patterns for header-based, URI-based, and\r\nmedia-type versioning, and show how these strategies integrate seamlessly with the new Spring Boot 4\r\napplication model. Attendees will leave with clear guidance on designing developer-friendly, scalable API\r\nversioning strategies that align with modern microservice and edge-service architectures.",
+              "startsAt": "2026-03-05T11:20:00",
+              "endsAt": "2026-03-05T12:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "bdcf9fac-1a10-416b-9dc9-be50b718e9af",
+                  "name": "Spencer Gibb"
+                },
+                {
+                  "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                  "name": "Chris Sterling"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -4835,12 +5198,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
-                  "name": "Cody Frenzel"
-                },
-                {
                   "id": "992db8b5-7d10-4c3b-96a0-6c595220e0e5",
                   "name": "Laurie Lay"
+                },
+                {
+                  "id": "3c467866-b387-417c-acc3-0d06a2d64f3f",
+                  "name": "Cody Frenzel"
                 }
               ],
               "categories": [
@@ -4945,12 +5308,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                  "name": "Nathaniel Schutta"
-                },
-                {
                   "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
                   "name": "Dan Vega"
+                },
+                {
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
                 }
               ],
               "categories": [
@@ -5161,12 +5524,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
-                  "name": "Alex Soto"
-                },
-                {
                   "id": "b4ec38ee-2a62-40f0-85ab-2b4811d2f380",
                   "name": "Markus Eisele"
+                },
+                {
+                  "id": "dedbce11-34e0-466e-a5cb-ea585688d106",
+                  "name": "Alex Soto"
                 }
               ],
               "categories": [
@@ -5253,6 +5616,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089150",
+              "title": "The Modern Spring Workflow: Enterprise-Ready Delivery and AI-Boosted Coding with Tanzu",
+              "description": "Getting Spring applications to production—and keeping them there—requires more than great code. Security,\r\ncompliance, upgrades, and performance all shape the path from idea to enterprise-ready delivery. This session\r\nshows how VMware Tanzu streamlines that entire workflow. See how Application Advisor automates Spring Boot\r\nupgrades while integrating cleanly with AI coding assistants, how the Tanzu GenAI Service provides safe, selfservice access to approved LLMs, and how Tanzu Spring Extensions enforce consistent guardrails across\r\nteams. Finally, learn how the Tanzu Java Buildpack optimizes every Spring app for faster startup and lower\r\nmemory use. If you want to deliver modern Spring applications with more speed, confidence, and operational\r\nreadiness, this session provides the blueprint.",
+              "startsAt": "2026-03-05T13:20:00",
+              "endsAt": "2026-03-05T14:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                  "name": "Chris Sterling"
+                },
+                {
+                  "id": "bd909527-212e-4863-b8f0-fd947aff7fa3",
+                  "name": "Cora Iberkleid"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -5708,12 +6126,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
-                  "name": "Bazlur Rahman"
-                },
-                {
                   "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
                   "name": "Shaaf Syed"
+                },
+                {
+                  "id": "79e95ec4-23ec-48ec-9046-98d3e1776283",
+                  "name": "Bazlur Rahman"
                 }
               ],
               "categories": [
@@ -5800,6 +6218,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089152",
+              "title": " Building AI Agents with Spring AI and Tanzu Platform",
+              "description": "We’re in the era of AI—an era of unbridled possibility and potential - and yet, according to a recent MIT study,\r\n95% of enterprise AI efforts fail! We want to change that! We believe the JVM with Spring AI is an ideal place to\r\nbuild robust, focused, integrated AI solutions with and that - to truly succeed in a fast-changing world - you’ll need\r\noperational maturity. Join us, and we'll show how Spring AI and Tanzu Platform give you the flexibility and\r\nmaturity to compete and succeed!",
+              "startsAt": "2026-03-05T14:50:00",
+              "endsAt": "2026-03-05T15:50:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "f2617bc2-d35e-4fd7-9cea-02060f3e1608",
+                  "name": "Josh Long"
+                },
+                {
+                  "id": "e6eb2872-7efa-410b-9d02-32fd04dd75c0",
+                  "name": "Adib Saikali"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -5819,12 +6292,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
-                  "name": "Nathaniel Schutta"
-                },
-                {
                   "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
                   "name": "Glenn Renfro"
+                },
+                {
+                  "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+                  "name": "Nathaniel Schutta"
                 }
               ],
               "categories": [
@@ -6323,6 +6796,57 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089159",
+              "title": "Enabling High-Throughput, Low-Latency Inference for Your AI Applications",
+              "description": "AI inference uses trained models—from small regressions to large language models—to make predictions on\r\nnew data. While modern models excel at reasoning and orchestration, calling them for every prediction can be\r\nslow and costly. In practice, many Spring applications use lightweight models for scoring, forecasting, or anomaly\r\ndetection—tasks where responses must be fast and local. In this session, you’ll learn how to combine Spring AI\r\nagents with local inference tools to get the best of both worlds. Using the ONNX (Open Neural Network\r\nExchange) standard, you can export models from Python and run them wherever your applications live—directly\r\nwithin your caching or data layer for immediate, in-context predictions. In this talk, we’ll look at an example using\r\nGemFire, showing how Spring developers can execute these models seamlessly in Java while keeping latency\r\nlow and throughput high. A Spring AI agent can then invoke these embedded models as tools, delegating simple\r\ndecisions locally and reserving specialized calls for complex reasoning. The result: intelligent, data-driven\r\napplications that deliver real-time predictions at the speed of cache.",
+              "startsAt": "2026-03-05T15:50:00",
+              "endsAt": "2026-03-05T16:50:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "bd909527-212e-4863-b8f0-fd947aff7fa3",
+                  "name": "Cora Iberkleid"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -6978,12 +7502,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
-                "name": "Shaaf Syed"
-              },
-              {
                 "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
                 "name": "Daniel Oh"
+              },
+              {
+                "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
+                "name": "Shaaf Syed"
               }
             ],
             "categories": [
@@ -7124,12 +7648,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
-                "name": "Tim Kelly"
-              },
-              {
                 "id": "d61662a9-ef28-4bb3-b526-b3b1ea1c0c39",
                 "name": "Ricardo Mello"
+              },
+              {
+                "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
+                "name": "Tim Kelly"
               }
             ],
             "categories": [
@@ -7273,12 +7797,12 @@
             "isPlenumSession": false,
             "speakers": [
               {
-                "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
-                "name": "Medha Chakraborty"
-              },
-              {
                 "id": "977e5150-2d39-4089-bd48-76c2adc27332",
                 "name": "Srijani Dey"
+              },
+              {
+                "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
+                "name": "Medha Chakraborty"
               }
             ],
             "categories": [
@@ -8839,6 +9363,251 @@
           }
         ],
         "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 70250,
+        "name": "Production Ready Spring",
+        "sessions": [
+          {
+            "id": "1089155",
+            "title": "Spring Cloud Supercharged for Production-Ready Apps",
+            "description": "Spring Cloud's open-source components are incredibly powerful—they provide robust foundations for service\r\ndiscovery, configuration management, API routing, and data pipelines right out of the box. Many developers have\r\nbeen relying on these open source projects for years to build cloud native applications that hundreds of millions\r\nof people use every day. As with any open source project, using Spring Cloud in production often requires extra\r\neffort to conform to additional standards around security, resiliency, and management capabilities. In some cases\r\nit makes sense to build the necessary capabilities yourself, but what if there is a done-for-you solution that takes\r\nthe open source Spring Cloud components and allows you to bring them to production out of the box. Enter the\r\nSpring Cloud offerings from VMware Tanzu Platform. With API Gateway, Tanzu Data Flow, and Application\r\nServices on Tanzu Platform, you get all the power of open source Spring Cloud with production-ready\r\ncapabilities like integrated OAuth2/JWT security, advanced rate limiting, visual pipeline editors, and managed\r\nservice instances—ready to go for all your production use cases. This code-centric session will explore both the\r\nopen source and commercial Spring Cloud offerings through real-world scenarios, so no matter which route you\r\nchoose, you will have all the knowledge you need to build secure, scalable applications faster.",
+            "startsAt": "2026-03-06T10:00:00",
+            "endsAt": "2026-03-06T11:00:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "45616863-e285-47ef-b60f-1f0abf63e1f0",
+                "name": "Ryan Baxter"
+              },
+              {
+                "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                "name": "Chris Sterling"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1089151",
+            "title": "Refactoring the ROI of Software: Continuous Mondernization with Tanzu Platform",
+            "description": "Most production systems today are quietly running on unpatched, aging software, and businesses bet their\r\nreputation on it every single day. This session reframes that reality. I’ll share stories from the frontlines of helping\r\norganizations worldwide adopt continuous migration as a core engineering practice. We will walk through what\r\nsoftware looked like before continuous migration, the friction teams faced, and the key lessons learned in\r\nbuilding systems that stay maintainable without heroics or rewrite fantasies.You will see how continuous\r\nmigration with Application Advisor changes the ROI equation by enabling teams to refactor with confidence,\r\neliminate latent security risk, and future-proof their applications. We will highlight real teams that have turned\r\nmaintenance into a competitive advantage instead of a tax. To execute this shift at enterprise scale,\r\norganizations need more than tooling. They need visibility and strategy. We will look at how Tanzu Platform\r\nprovides full-stack insights into your app estate, surfaces legacy-stack risk, and gives teams a clear path to\r\nmodernize with platform-provided automation. The result is operational efficiency, application resiliency, and a\r\nmaterially stronger security posture.",
+            "startsAt": "2026-03-06T11:20:00",
+            "endsAt": "2026-03-06T12:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+                "name": "DaShaun Carter"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "1089166",
+            "title": "Patterns for Platform Engineering: Standardizing Java Delivery",
+            "description": "In banking, the friction between developer velocity and regulatory compliance can stall modernization efforts.\r\nThis session outlines three architectural strategies that use platform engineering to reconcile these forces. It will\r\nlook at how to enforce application standards to ensure predictability, how to utilize standardized build\r\nmechanisms to automate governance and security auditing, and how to design applications that can withstand\r\nthe scale needed for daily banking activity. You'll get an idea of how to implement these strategies to reduce\r\ntechnical debt and ensure operational readiness in high-stakes environments",
+            "startsAt": "2026-03-06T13:20:00",
+            "endsAt": "2026-03-06T14:20:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+                "name": "Glenn Renfro"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "1089165",
+            "title": "Staying Current: A Journey in Software Maintenance",
+            "description": "Keeping software patched and secure is a non-negotiable in today's fast-paced world, but what does that truly entail for organizations striving to stay on the leading edge? Join us for a candid conversation with Afsana, who has committed to improving the software developer experience and keeping applications on the latest and greatest. We will explore the journey, the dedicated efforts invested, and the unexpected challenges encountered along the way. The session will provide a rare glimpse into the realities of maintaining modern software, offering valuable lessons on what works, what doesn't, and what it truly takes to stay current.",
+            "startsAt": "2026-03-06T14:40:00",
+            "endsAt": "2026-03-06T15:40:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+                "name": "Glenn Renfro"
+              },
+              {
+                "id": "c1f04e88-83b6-43b3-b26e-167d167ae058",
+                "name": "Afsana Rahman"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "1089163",
+            "title": "Stop getting \"shift left'ed\" on",
+            "description": "Are you tired of being \"shift left'ed on\"? You're probably buried, starting with having to build containers for your\r\napps, a job developers shouldn't be doing. It's a delicate mess of copy-pasta that puts you on the hook for\r\neverything. When a CVE drops, you're forced to stop coding, root around in that brittle file, and trigger a complete\r\nrebuild (and hopefully tests!) just to apply a simple patch. All that toil is why we say \"friends don't let friends build\r\ncontainers.\" This talk shows you how to stop getting buried in shift left and instead shift down container building\r\nto where it belongs: the platform. Cloud Native Buildpacks are the way to do it. We'll show you how they take the\r\ntoil of container management off your hands so you can stop building containers and get back to building\r\napplications.",
+            "startsAt": "2026-03-06T15:40:00",
+            "endsAt": "2026-03-06T16:40:00",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+                "name": "DaShaun Carter"
+              }
+            ],
+            "categories": [
+              {
+                "id": 107979,
+                "name": "Track",
+                "categoryItems": [
+                  {
+                    "id": 425204,
+                    "name": "Production Ready Spring"
+                  }
+                ],
+                "sort": 0
+              },
+              {
+                "id": 107980,
+                "name": "Session Format",
+                "categoryItems": [
+                  {
+                    "id": 389051,
+                    "name": "session"
+                  }
+                ],
+                "sort": 1
+              }
+            ],
+            "roomId": 70250,
+            "room": "Production Ready Spring",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          }
+        ],
+        "hasOnlyPlenumSessions": false
       }
     ],
     "timeSlots": [
@@ -9390,6 +10159,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089155",
+              "title": "Spring Cloud Supercharged for Production-Ready Apps",
+              "description": "Spring Cloud's open-source components are incredibly powerful—they provide robust foundations for service\r\ndiscovery, configuration management, API routing, and data pipelines right out of the box. Many developers have\r\nbeen relying on these open source projects for years to build cloud native applications that hundreds of millions\r\nof people use every day. As with any open source project, using Spring Cloud in production often requires extra\r\neffort to conform to additional standards around security, resiliency, and management capabilities. In some cases\r\nit makes sense to build the necessary capabilities yourself, but what if there is a done-for-you solution that takes\r\nthe open source Spring Cloud components and allows you to bring them to production out of the box. Enter the\r\nSpring Cloud offerings from VMware Tanzu Platform. With API Gateway, Tanzu Data Flow, and Application\r\nServices on Tanzu Platform, you get all the power of open source Spring Cloud with production-ready\r\ncapabilities like integrated OAuth2/JWT security, advanced rate limiting, visual pipeline editors, and managed\r\nservice instances—ready to go for all your production use cases. This code-centric session will explore both the\r\nopen source and commercial Spring Cloud offerings through real-world scenarios, so no matter which route you\r\nchoose, you will have all the knowledge you need to build secure, scalable applications faster.",
+              "startsAt": "2026-03-06T10:00:00",
+              "endsAt": "2026-03-06T11:00:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "45616863-e285-47ef-b60f-1f0abf63e1f0",
+                  "name": "Ryan Baxter"
+                },
+                {
+                  "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+                  "name": "Chris Sterling"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 11
           }
         ]
       },
@@ -9543,12 +10367,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
-                  "name": "Shaaf Syed"
-                },
-                {
                   "id": "4b82436a-947c-45bb-9d5d-3b94c02c8faa",
                   "name": "Daniel Oh"
+                },
+                {
+                  "id": "4e0f1b70-c9ff-4351-b21e-eee43fdd44df",
+                  "name": "Shaaf Syed"
                 }
               ],
               "categories": [
@@ -9941,6 +10765,57 @@
               "isConfirmed": false
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089151",
+              "title": "Refactoring the ROI of Software: Continuous Mondernization with Tanzu Platform",
+              "description": "Most production systems today are quietly running on unpatched, aging software, and businesses bet their\r\nreputation on it every single day. This session reframes that reality. I’ll share stories from the frontlines of helping\r\norganizations worldwide adopt continuous migration as a core engineering practice. We will walk through what\r\nsoftware looked like before continuous migration, the friction teams faced, and the key lessons learned in\r\nbuilding systems that stay maintainable without heroics or rewrite fantasies.You will see how continuous\r\nmigration with Application Advisor changes the ROI equation by enabling teams to refactor with confidence,\r\neliminate latent security risk, and future-proof their applications. We will highlight real teams that have turned\r\nmaintenance into a competitive advantage instead of a tax. To execute this shift at enterprise scale,\r\norganizations need more than tooling. They need visibility and strategy. We will look at how Tanzu Platform\r\nprovides full-stack insights into your app estate, surfaces legacy-stack risk, and gives teams a clear path to\r\nmodernize with platform-provided automation. The result is operational efficiency, application resiliency, and a\r\nmaterially stronger security posture.",
+              "startsAt": "2026-03-06T11:20:00",
+              "endsAt": "2026-03-06T12:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+                  "name": "DaShaun Carter"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 11
           }
         ]
       },
@@ -10141,12 +11016,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
-                  "name": "Medha Chakraborty"
-                },
-                {
                   "id": "977e5150-2d39-4089-bd48-76c2adc27332",
                   "name": "Srijani Dey"
+                },
+                {
+                  "id": "f7d03f66-8402-4926-ba4c-aade6a3f7817",
+                  "name": "Medha Chakraborty"
                 }
               ],
               "categories": [
@@ -10492,6 +11367,57 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089166",
+              "title": "Patterns for Platform Engineering: Standardizing Java Delivery",
+              "description": "In banking, the friction between developer velocity and regulatory compliance can stall modernization efforts.\r\nThis session outlines three architectural strategies that use platform engineering to reconcile these forces. It will\r\nlook at how to enforce application standards to ensure predictability, how to utilize standardized build\r\nmechanisms to automate governance and security auditing, and how to design applications that can withstand\r\nthe scale needed for daily banking activity. You'll get an idea of how to implement these strategies to reduce\r\ntechnical debt and ensure operational readiness in high-stakes environments",
+              "startsAt": "2026-03-06T13:20:00",
+              "endsAt": "2026-03-06T14:20:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+                  "name": "Glenn Renfro"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 11
           }
         ]
       },
@@ -11043,6 +11969,61 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089165",
+              "title": "Staying Current: A Journey in Software Maintenance",
+              "description": "Keeping software patched and secure is a non-negotiable in today's fast-paced world, but what does that truly entail for organizations striving to stay on the leading edge? Join us for a candid conversation with Afsana, who has committed to improving the software developer experience and keeping applications on the latest and greatest. We will explore the journey, the dedicated efforts invested, and the unexpected challenges encountered along the way. The session will provide a rare glimpse into the realities of maintaining modern software, offering valuable lessons on what works, what doesn't, and what it truly takes to stay current.",
+              "startsAt": "2026-03-06T14:40:00",
+              "endsAt": "2026-03-06T15:40:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "25b4a764-0ab3-4a6b-b7b6-8e5f5d46dfc6",
+                  "name": "Glenn Renfro"
+                },
+                {
+                  "id": "c1f04e88-83b6-43b3-b26e-167d167ae058",
+                  "name": "Afsana Rahman"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 11
           }
         ]
       },
@@ -11164,12 +12145,12 @@
               "isPlenumSession": false,
               "speakers": [
                 {
-                  "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
-                  "name": "Tim Kelly"
-                },
-                {
                   "id": "d61662a9-ef28-4bb3-b526-b3b1ea1c0c39",
                   "name": "Ricardo Mello"
+                },
+                {
+                  "id": "d1b8a295-be60-4e1f-b30e-4e58bbf1c9b6",
+                  "name": "Tim Kelly"
                 }
               ],
               "categories": [
@@ -11483,6 +12464,57 @@
               "isConfirmed": true
             },
             "index": 10
+          },
+          {
+            "id": 70250,
+            "name": "Production Ready Spring",
+            "session": {
+              "id": "1089163",
+              "title": "Stop getting \"shift left'ed\" on",
+              "description": "Are you tired of being \"shift left'ed on\"? You're probably buried, starting with having to build containers for your\r\napps, a job developers shouldn't be doing. It's a delicate mess of copy-pasta that puts you on the hook for\r\neverything. When a CVE drops, you're forced to stop coding, root around in that brittle file, and trigger a complete\r\nrebuild (and hopefully tests!) just to apply a simple patch. All that toil is why we say \"friends don't let friends build\r\ncontainers.\" This talk shows you how to stop getting buried in shift left and instead shift down container building\r\nto where it belongs: the platform. Cloud Native Buildpacks are the way to do it. We'll show you how they take the\r\ntoil of container management off your hands so you can stop building containers and get back to building\r\napplications.",
+              "startsAt": "2026-03-06T15:40:00",
+              "endsAt": "2026-03-06T16:40:00",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+                  "name": "DaShaun Carter"
+                }
+              ],
+              "categories": [
+                {
+                  "id": 107979,
+                  "name": "Track",
+                  "categoryItems": [
+                    {
+                      "id": 425204,
+                      "name": "Production Ready Spring"
+                    }
+                  ],
+                  "sort": 0
+                },
+                {
+                  "id": 107980,
+                  "name": "Session Format",
+                  "categoryItems": [
+                    {
+                      "id": 389051,
+                      "name": "session"
+                    }
+                  ],
+                  "sort": 1
+                }
+              ],
+              "roomId": 70250,
+              "room": "Production Ready Spring",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 11
           }
         ]
       },

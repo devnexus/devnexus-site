@@ -60,6 +60,130 @@
     "categories": []
   },
   {
+    "id": "e6eb2872-7efa-410b-9d02-32fd04dd75c0",
+    "firstName": "Adib",
+    "lastName": "Saikali",
+    "fullName": "Adib Saikali",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1089164,
+        "name": "Life after dad joke apps - building \"enterprise grade\" AI frameworks for Java"
+      },
+      {
+        "id": 1089152,
+        "name": " Building AI Agents with Spring AI and Tanzu Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c1f04e88-83b6-43b3-b26e-167d167ae058",
+    "firstName": "Afsana",
+    "lastName": "Rahman",
+    "fullName": "Afsana Rahman",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 1089165,
+        "name": "Staying Current: A Journey in Software Maintenance"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "5c386803-b673-4259-a6ce-d85e1fd0a016",
     "firstName": "Alex",
     "lastName": "Riviere",
@@ -1400,6 +1524,74 @@
     "categories": []
   },
   {
+    "id": "f3057735-437e-4d1d-aee8-8dd83803ee46",
+    "firstName": "Chris",
+    "lastName": "Sterling",
+    "fullName": "Chris Sterling",
+    "bio": "Chris Sterling is a Sr. Technical Product Manager focused on Tanzu Spring offerings at Broadcom. He began using Spring Framework in its early days during his 30 years in the software industry. Chris published the book \"Managing Software Debt: Building for Inevitable Change\" in 2010.",
+    "tagLine": "Sr. Technical Producf Manager, Tanzu @ Broadcom",
+    "profilePicture": "https://sessionize.com/image/705f-400o400o1-sgDLja6wtuZz22wuzviiKv.jpg",
+    "sessions": [
+      {
+        "id": 1089162,
+        "name": "Modern API Versioning and Enterprise-Ready AI enablement with Spring Cloud Gateway"
+      },
+      {
+        "id": 1089150,
+        "name": "The Modern Spring Workflow: Enterprise-Ready Delivery and AI-Boosted Coding with Tanzu"
+      },
+      {
+        "id": 1089155,
+        "name": "Spring Cloud Supercharged for Production-Ready Apps"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "csterwa",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/chrissterling",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "csterwa",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "db3f7afe-0214-49a6-853e-e40ea87a6b5a",
     "firstName": "Christopher",
     "lastName": "Curtin",
@@ -1515,6 +1707,70 @@
         "answer": "https://sessionize.com/download/ciknarte~V1gDWnqNMLN5yPYUkjGecx.webp~exe_logo_ippon.png.webp",
         "sort": 25,
         "answerExtra": "EXE_LOGO_IPPON.png.webp"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bd909527-212e-4863-b8f0-fd947aff7fa3",
+    "firstName": "Cora",
+    "lastName": "Iberkleid",
+    "fullName": "Cora Iberkleid",
+    "bio": "Cora Iberkleid is a Developer Advocate for Modern Applications at Tanzu by Broadcom, specializing in cloud-native applications, DevSecOps, Spring, and Kubernetes. With prior experience in Solutions Engineering at Pivotal and VMware, as well as Professional Services at Sun Microsystems and Oracle, she brings a wealth of expertise in helping clients design and implement enterprise solutions. Cora's approach is characterized by empathy and a deep understanding of complex organizational challenges, which she incorporates into her work to better assist developers and enterprises in navigating modern practices and technologies.",
+    "tagLine": "Developer Advocate at Tanzu by Broadcom ",
+    "profilePicture": "https://sessionize.com/image/3744-400o400o1-G6o7qCfGU9Voe523hazx58.jpg",
+    "sessions": [
+      {
+        "id": 1089150,
+        "name": "The Modern Spring Workflow: Enterprise-Ready Delivery and AI-Boosted Coding with Tanzu"
+      },
+      {
+        "id": 1089159,
+        "name": "Enabling High-Throughput, Low-Latency Inference for Your AI Applications"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@ciberkleid",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ciberkleid",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []
@@ -1767,6 +2023,70 @@
         "answer": "https://sessionize.com/download/fvajuw~n7eokYJzdJ7T5icZF1bDDG.png~ibm_logo.svg.png",
         "sort": 25,
         "answerExtra": "IBM_logo.svg.png"
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+    "firstName": "DaShaun",
+    "lastName": "Carter",
+    "fullName": "DaShaun Carter",
+    "bio": "DaShaun is a husband, father of four, volunteer, struggling athlete, former professional cheerleader, Raspberry Pi enthusiast, and Spring Developer Advocate at Broadcom. Deliberately practicing to build, run, and manage, better software, faster.",
+    "tagLine": "Spring Developer Advocate, Broadcom",
+    "profilePicture": "https://sessionize.com/image/d244-400o400o1-BvDf1x1yDTviz1mo3h9aUH.png",
+    "sessions": [
+      {
+        "id": 1089151,
+        "name": "Refactoring the ROI of Software: Continuous Mondernization with Tanzu Platform"
+      },
+      {
+        "id": 1089163,
+        "name": "Stop getting \"shift left'ed\" on"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "@dashaun",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/dashaun/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": "@dashaun.com",
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
       }
     ],
     "categories": []
@@ -2443,6 +2763,14 @@
       {
         "id": 1032726,
         "name": "Thriving in an Evolving Software Industry"
+      },
+      {
+        "id": 1089166,
+        "name": "Patterns for Platform Engineering: Standardizing Java Delivery"
+      },
+      {
+        "id": 1089165,
+        "name": "Staying Current: A Journey in Software Maintenance"
       }
     ],
     "isTopSpeaker": false,
@@ -3593,12 +3921,20 @@
         "name": "Hands-On: Building Agents with Spring AI, MCP, Java, and Amazon Bedrock"
       },
       {
+        "id": 1089164,
+        "name": "Life after dad joke apps - building \"enterprise grade\" AI frameworks for Java"
+      },
+      {
         "id": 1023613,
         "name": "Bootiful Spring Security"
       },
       {
         "id": 1034679,
         "name": "Building AI Agents with Spring & MCP"
+      },
+      {
+        "id": 1089152,
+        "name": " Building AI Agents with Spring AI and Tanzu Platform"
       }
     ],
     "isTopSpeaker": false,
@@ -5532,6 +5868,66 @@
     "categories": []
   },
   {
+    "id": "45616863-e285-47ef-b60f-1f0abf63e1f0",
+    "firstName": "Ryan",
+    "lastName": "Baxter",
+    "fullName": "Ryan Baxter",
+    "bio": "Exploring new languages, frameworks, and technologies, and then sharing what he’s learned, has always come naturally to Ryan. Even when it wasn't his day job, Ryan has always been driven by his passion, spending his time and energy educating his friends, colleagues, or anyone else that would listen. Currently, Ryan is working as a software engineer as part of the Spring Cloud team.  Ryan has a passion for sharing what he learns via social media, including Twitter and his blog (http://ryanjbaxter.com), as well as in person at conferences.  When he’s not coding, Ryan likes spending time with his daughter, ice fishing, running obstacle course races, and watching the Red Sox.",
+    "tagLine": "Broadcom Inc, Spring Cloud Engineer",
+    "profilePicture": "https://sessionize.com/image/41ba-400o400o1-aqATb4ZbGepE8wAx8Wt88u.jpg",
+    "sessions": [
+      {
+        "id": 1089155,
+        "name": "Spring Cloud Supercharged for Production-Ready Apps"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 107974,
+        "question": "Company",
+        "questionType": "Short_Text",
+        "answer": "Broadcom Inc",
+        "sort": 17,
+        "answerExtra": null
+      },
+      {
+        "id": 107978,
+        "question": "Twitter handle with @ ex: @prpatel",
+        "questionType": "Short_Text",
+        "answer": "ryanjbaxter",
+        "sort": 21,
+        "answerExtra": null
+      },
+      {
+        "id": 107981,
+        "question": "LinkedIn URL",
+        "questionType": "Short_Text",
+        "answer": "https://www.linkedin.com/in/ryanjbaxter/",
+        "sort": 22,
+        "answerExtra": null
+      },
+      {
+        "id": 107982,
+        "question": "Bluesky handle",
+        "questionType": "Short_Text",
+        "answer": null,
+        "sort": 23,
+        "answerExtra": null
+      },
+      {
+        "id": 113528,
+        "question": "Company Logo",
+        "questionType": "File_upload",
+        "answer": null,
+        "sort": 25,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
     "id": "e02322d4-d2f8-420f-8f04-6cd8af9d88ed",
     "firstName": "Sam",
     "lastName": "Dengler",
@@ -6024,6 +6420,10 @@
     "tagLine": "Co-founder and Lead of Spring Cloud at Broadcom",
     "profilePicture": "https://sessionize.com/image/9b91-400o400o1-pzM8FH2X7HPVR3dL1oD2Z9.jpg",
     "sessions": [
+      {
+        "id": 1089162,
+        "name": "Modern API Versioning and Enterprise-Ready AI enablement with Spring Cloud Gateway"
+      },
       {
         "id": 1014291,
         "name": "API Versioning in Spring"

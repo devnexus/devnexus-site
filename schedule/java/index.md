@@ -6,6 +6,8 @@ tracks:
  - Core Java
  - "Frameworks  "
  - Frameworks
+ - Production Ready Spring
+ - "Production Ready Spring"
 ---
 {% include schedule/day1-slots.html %}
 
