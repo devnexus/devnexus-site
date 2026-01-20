@@ -16,14 +16,14 @@ branding:
 feedback: not-show
 uploads_dir: "/uploads"
 links:
-   stay-informed: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+   stay-informed: https://app.encharge.io/public/view-form/b23d35eb-8ea5-4d79-b8c5-e33de09e7836
    hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
    cfp: https://sessionize.com/devnexus-2025/
    register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
    signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
    announcements: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
    recordings: https://www.youtube.com/@devnexus-conference/videos
-   reg_maillist: https://mailchi.mp/4481d4c86d3b/devnexus-site-signup
+   reg_maillist: https://app.encharge.io/public/view-form/b23d35eb-8ea5-4d79-b8c5-e33de09e7836
 twitter_card:
   default_image: https://devnexus.com/assets/img/twittercard.png
   type: summary
