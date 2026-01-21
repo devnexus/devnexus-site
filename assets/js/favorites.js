@@ -58,7 +58,7 @@ function initializeFavorites() {
         if (filterText && filterBtn) {
             filterText.textContent = 'Show All Events';
             filterBtn.classList.add('bg-red-500', 'text-white');
-            filterBtn.classList.remove('bg-white');
+            filterBtn.classList.remove('bg-white', 'text-black');
             applyFavoritesFilter();
         }
     }
@@ -75,12 +75,12 @@ function toggleFavoritesFilter() {
     if (filterActive) {
         filterText.textContent = 'Show All Events';
         filterBtn.classList.add('bg-red-500', 'text-white');
-        filterBtn.classList.remove('bg-white');
+        filterBtn.classList.remove('bg-white', 'text-black');
         applyFavoritesFilter();
     } else {
         filterText.textContent = 'Show Favorites Only';
         filterBtn.classList.remove('bg-red-500', 'text-white');
-        filterBtn.classList.add('bg-white');
+        filterBtn.classList.add('bg-white', 'text-black');
         showAllEvents();
     }
 }
