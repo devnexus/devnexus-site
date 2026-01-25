@@ -14,14 +14,14 @@ function toggleFavorite(eventId) {
         const index = favorites.indexOf(eventId);
         favorites.splice(index, 1);
         icon.setAttribute('fill', 'none');
-        icon.classList.remove('text-red-500');
+        icon.classList.remove('text-black');
         icon.classList.add('text-gray-400');
     } else {
         // Add to favorites
         favorites.push(eventId);
         icon.setAttribute('fill', 'currentColor');
         icon.classList.remove('text-gray-400');
-        icon.classList.add('text-red-500');
+        icon.classList.add('text-black');
     }
     
     localStorage.setItem('devnexus-favorites', JSON.stringify(favorites));
@@ -44,7 +44,7 @@ function initializeFavorites() {
         if (icon) {
             icon.setAttribute('fill', 'currentColor');
             icon.classList.remove('text-gray-400');
-            icon.classList.add('text-red-500');
+            icon.classList.add('text-black');
         }
     });
     
@@ -57,7 +57,7 @@ function initializeFavorites() {
         
         if (filterText && filterBtn) {
             filterText.textContent = 'Show All Events';
-            filterBtn.classList.add('bg-red-500', 'text-white');
+            filterBtn.classList.add('bg-black', 'text-white');
             filterBtn.classList.remove('bg-white', 'text-black');
             applyFavoritesFilter();
         }
@@ -74,12 +74,12 @@ function toggleFavoritesFilter() {
     
     if (filterActive) {
         filterText.textContent = 'Show All Events';
-        filterBtn.classList.add('bg-red-500', 'text-white');
+        filterBtn.classList.add('bg-black', 'text-white');
         filterBtn.classList.remove('bg-white', 'text-black');
         applyFavoritesFilter();
     } else {
         filterText.textContent = 'Show Favorites Only';
-        filterBtn.classList.remove('bg-red-500', 'text-white');
+        filterBtn.classList.remove('bg-black', 'text-white');
         filterBtn.classList.add('bg-white', 'text-black');
         showAllEvents();
     }

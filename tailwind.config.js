@@ -12,5 +12,12 @@ module.exports = {
     "./*.{html,md}",
     "./_organizers/*.html"
   ],
+  safelist: [
+    'bg-white',
+    'bg-black',
+    'text-white',
+    'text-black',
+    'text-gray-400'
+  ],
   // ...
 };
