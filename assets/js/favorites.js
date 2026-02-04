@@ -14,14 +14,12 @@ function toggleFavorite(eventId) {
         const index = favorites.indexOf(eventId);
         favorites.splice(index, 1);
         icon.setAttribute('fill', 'none');
-        icon.classList.remove('text-black');
-        icon.classList.add('text-gray-400');
+        icon.classList.remove('active');
     } else {
         // Add to favorites
         favorites.push(eventId);
         icon.setAttribute('fill', 'currentColor');
-        icon.classList.remove('text-gray-400');
-        icon.classList.add('text-black');
+        icon.classList.add('active');
     }
     
     localStorage.setItem('devnexus-favorites', JSON.stringify(favorites));
@@ -43,8 +41,7 @@ function initializeFavorites() {
         const icon = document.getElementById('fav-' + eventId);
         if (icon) {
             icon.setAttribute('fill', 'currentColor');
-            icon.classList.remove('text-gray-400');
-            icon.classList.add('text-black');
+            icon.classList.add('active');
         }
     });
     
@@ -56,9 +53,8 @@ function initializeFavorites() {
         const filterBtn = document.getElementById('favorites-filter-btn');
         
         if (filterText && filterBtn) {
-            filterText.textContent = 'Show All Events';
-            filterBtn.classList.add('bg-black', 'text-white');
-            filterBtn.classList.remove('bg-white', 'text-black');
+            filterText.textContent = 'My Sessions';
+            filterBtn.classList.add('active');
             applyFavoritesFilter();
         }
     }
@@ -73,14 +69,12 @@ function toggleFavoritesFilter() {
     localStorage.setItem(getFilterStateKey(), filterActive.toString());
     
     if (filterActive) {
-        filterText.textContent = 'Show All Events';
-        filterBtn.classList.add('bg-black', 'text-white');
-        filterBtn.classList.remove('bg-white', 'text-black');
+        filterText.textContent = 'My Sessions';
+        filterBtn.classList.add('active');
         applyFavoritesFilter();
     } else {
-        filterText.textContent = 'Show Favorites Only';
-        filterBtn.classList.remove('bg-black', 'text-white');
-        filterBtn.classList.add('bg-white', 'text-black');
+        filterText.textContent = 'All Events';
+        filterBtn.classList.remove('active');
         showAllEvents();
     }
 }

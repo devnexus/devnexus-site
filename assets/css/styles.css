@@ -36,3 +36,24 @@
         transform: translateX(calc(-100% + 100vw));
     }
 }
+
+
+.fav-icon.active {
+    @apply text-black;
+}
+
+.fav-icon:hover {
+    @apply text-gray-400;
+}
+
+#favorites-filter-btn.active {
+    @apply bg-black text-white;
+}
+
+#favorites-filter-btn:hover {
+    @apply bg-gray-500 text-white;
+}
+
+#favorites-filter-btn {
+    @apply bg-white text-black;
+}
