@@ -1,5 +1,5 @@
 name,sponsorlevel,logo_image,home_page
-Advance Tech Placement,,/uploads/atp-01.png,https://advancedtechplacement.com/
+Advance Tech Placement,gold,/uploads/atp-01.png,https://advancedtechplacement.com/
 AICamp,community,/assets/images/aicamp.png,https://www.aicamp.ai/
 akamas,silver,/assets/images/akamas.png,https://bit.ly/4qt8DmW
 Akeyless,,/uploads/akeyless-2.png,https://www.akeyless.io/
@@ -21,6 +21,7 @@ Cockroach Labs,platinum,/uploads/cockroach-1.png,https://www.cockroachlabs.com/
 Codelogic,cafe,/assets/images/codelogic.png,https://codelogic.com/
 CodeSee,,/uploads/codesee-1.png,https://www.codesee.io/
 CodiumAI,,/uploads/codiumai-01.png,https://codium.ai
+Commonhaus,silver,/assets/images/commonhaus.png,https://www.commonhaus.org/
 Couchbase,,/uploads/couchb-001.png,https://www.couchbase.com/
 DataDog,gold,/uploads/datadog-2.png,https://www.datadoghq.com/
 DevIT Jobs,community,/assets/images/devitjobs.png,https://devitjobs.com/
