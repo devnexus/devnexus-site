@@ -10,8 +10,8 @@ bio: Tim te Beek is a staff software engineer at Moderne, which automates softwa
 tagLine: Staff software engineer at Moderne
 profilePicture: https://sessionize.com/image/d908-400o400o1-BrAqtB6MULT4YRCqUc1pab.jpg
 sessions:
-- id: 1036658
-  name: 'Migration Engineering with OpenRewrite: The Recipe for Success'
+- id: 1036666
+  name: Better Assertions with AssertJ
 isTopSpeaker: false
 links: []
 questionAnswers:

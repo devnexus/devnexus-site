@@ -17,10 +17,10 @@ bio: "Ken Kousen is the author of the Pragmatic Programmers books \"Mockito Made
 tagLine: President, Kousen IT, Inc.
 profilePicture: https://sessionize.com/image/1a54-400o400o1-sdhb4Lx6mEZwTMN8avfq4X.png
 sessions:
-- id: 1036379
-  name: A Data-Oriented Programming Approach to REST APIs
 - id: 1036388
   name: 'When One Agent Isn’t Enough: Experiments with Multi-Agent AI'
+- id: 1036379
+  name: A Data-Oriented Programming Approach to REST APIs
 isTopSpeaker: false
 links: []
 questionAnswers:

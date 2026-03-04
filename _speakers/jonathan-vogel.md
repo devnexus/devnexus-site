@@ -12,7 +12,7 @@ tagLine: Solutions Architect. AWS
 profilePicture: https://sessionize.com/image/9622-400o400o1-35dSSy1YYwHaK5TLN8kwEP.jpg
 sessions:
 - id: 1032003
-  name: 10 Tools & Tips to Upgrade Your Legacy Code with GenAI
+  name: 10 Tools & Tips to Upgrade Your Java code with AI
 isTopSpeaker: false
 links: []
 questionAnswers:

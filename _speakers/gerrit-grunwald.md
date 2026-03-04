@@ -13,6 +13,8 @@ profilePicture: https://sessionize.com/image/f7ac-400o400o1-DZYSvNYq2n8gn4Qzy9Fn
 sessions:
 - id: 993327
   name: Scotty I need Warp Speed - Ways to improve JVM startup
+- id: 1174136
+  name: Trash Talk - Exploring the memory management in the JVM
 isTopSpeaker: false
 links: []
 questionAnswers:

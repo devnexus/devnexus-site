@@ -11,6 +11,9 @@ profilePicture: https://sessionize.com/image/d244-400o400o1-BvDf1x1yDTviz1mo3h9a
 sessions:
 - id: 1089151
   name: 'Refactoring the ROI of Software: Continuous Mondernization with Tanzu Platform'
+- id: 1089166
+  name: 'The Golden Path Starts at Home: Engineering Developer Experience from Laptop
+    to Production'
 - id: 1089163
   name: Stop getting "shift left'ed" on
 isTopSpeaker: false

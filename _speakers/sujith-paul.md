@@ -3,14 +3,14 @@ id: 8995d1a0-e8c3-4afe-8da1-4a10b1b109da
 firstName: Sujith
 lastName: Paul
 fullName: Sujith Paul
-bio: "Sujith Paul is a Lead Consultant at Terazo, responsible for the architecture,
-  design and delivery of software solutions on client engagements. His previous experiences
-  include working on cloud migrations, enterprise application modernizations and agile
-  transformations.\r\nHe prefers to use Java, Spring, Go, AWS, Docker and Terraform
-  in his projects. He is passionate about XP, software craftsmanship and mentoring.\r\nAway
-  from the computer, Sujith enjoys live music, craft beer and being out in the nature
-  on a walk or a bike."
-tagLine: Lead Consultant - Terazo
+bio: "Sujith Paul is a Principal Software Engineer at Richmond National, responsible
+  for the architecture, design and delivery of internal software applications. His
+  previous experiences include working on cloud migrations, enterprise application
+  modernization and agile transformations.\r\nHe prefers to use Java, Groovy, Spring,
+  Go, AWS, Docker and Terraform in his projects. He is passionate about XP, software
+  craftsmanship and mentoring.\r\nAway from the computer, Sujith enjoys live music,
+  craft beer and being out in the nature on a walk or a bike."
+tagLine: Principal Software Engineer at Richmond National
 profilePicture: https://sessionize.com/image/2c63-400o400o1-9VoMMuQon3HTzUsQ1yfTd7.jpg
 sessions:
 - id: 1036766
@@ -21,7 +21,7 @@ questionAnswers:
 - id: 107974
   question: Company
   questionType: Short_Text
-  answer: Terazo
+  answer: Richmond National
   sort: 17
   answerExtra:
 - id: 107978

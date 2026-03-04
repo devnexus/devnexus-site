@@ -43,9 +43,9 @@ questionAnswers:
 - id: 113528
   question: Company Logo
   questionType: File_upload
-  answer: https://sessionize.com/download/ibzaghex~SvUDyS1uryQ5t8Kz5jUg8f.png~cvs_health_logo.svg.png
+  answer: https://sessionize.com/download/incakyev~hYNtqTcV68LPPLjitUxK9w.png~images.png
   sort: 25
-  answerExtra: CVS_Health_logo.svg.png
+  answerExtra: images.png
 categories: []
 slug: karthik-govardhanan
 

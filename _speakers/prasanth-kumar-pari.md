@@ -1,8 +1,8 @@
 ---
 id: e185e999-164e-44d0-8d6e-100680df41af
-firstName: Prasanth
+firstName: Prasanth kumar
 lastName: Pari
-fullName: Prasanth Pari
+fullName: Prasanth kumar Pari
 bio: Prasanth Pari is a Principal Infrastructure Engineer at Discover Financial Services
 tagLine: Principal Engineer
 profilePicture: https://sessionize.com/image/c458-400o400o1-hewYC4qgPmLYngVonX7NG9.jpg
@@ -44,6 +44,6 @@ questionAnswers:
   sort: 25
   answerExtra: Capital_One_logo.svg-2.png
 categories: []
-slug: prasanth-pari
+slug: prasanth-kumar-pari
 
 ---

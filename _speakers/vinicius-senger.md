@@ -16,7 +16,7 @@ tagLine: Sr Developer Advocate for Java
 profilePicture: https://sessionize.com/image/bc45-400o400o1-rpfe49GpmfNW4gW4Yt9neS.png
 sessions:
 - id: 1032003
-  name: 10 Tools & Tips to Upgrade Your Legacy Code with GenAI
+  name: 10 Tools & Tips to Upgrade Your Java code with AI
 isTopSpeaker: false
 links: []
 questionAnswers:

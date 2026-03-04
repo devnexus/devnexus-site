@@ -1,8 +1,8 @@
 ---
 id: 60b28186-57fc-4f6a-be15-f5862c8fb225
-firstName: Ayun
+firstName: Ayan
 lastName: Gupta
-fullName: Ayun Gupta
+fullName: Ayan Gupta
 bio: Ayan Gupta is a Cloud Advocate at Microsoft and a Forbes 30 Under 30 honoree.
   He helps people and teams adopt practical AI‑powered development workflows using
   GitHub Copilot, Azure, and open‑source tools. Before Microsoft, he co‑founded technology
@@ -47,6 +47,6 @@ questionAnswers:
   sort: 25
   answerExtra: microsoft.png
 categories: []
-slug: ayun-gupta
+slug: ayan-gupta
 
 ---

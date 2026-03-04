@@ -15,7 +15,7 @@ tagLine: VP of Developer Relations
 profilePicture: https://sessionize.com/image/67c7-400o400o1-94UgqvdxnaQUpj38o9TkBX.jpg
 sessions:
 - id: 1045377
-  name: 'Context Engineering: Connecting the Dots with Graphs'
+  name: Connecting the Dots with Context Graphs
 isTopSpeaker: false
 links: []
 questionAnswers:

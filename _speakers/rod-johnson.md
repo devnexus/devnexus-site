@@ -13,6 +13,8 @@ profilePicture: https://sessionize.com/image/4850-400o400o1-h2bQUDzWH84zquEJJoTV
 sessions:
 - id: 1118310
   name: Its Up To Java Developers to Fix Enterprise AI
+- id: 1089164
+  name: Life after dad joke apps - building "enterprise grade" AI frameworks for Java
 - id: 1118320
   name: Hands-on Embabel
 isTopSpeaker: false
