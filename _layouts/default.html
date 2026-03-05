@@ -155,7 +155,7 @@ const config= {
       $("#submit").addClass("disabled");
       $("#submit").off("click");
       $("#submit").text("Sending...")
-      return db.collection("feedback2025").doc(title.replace('"', '').replace("/", '')).set({
+      return db.collection("feedback2026").doc(title.replace('"', '').replace("/", '')).set({
         feedback: firebase.firestore.FieldValue.arrayUnion({
           id: generateUUID(),
           comment: comment,
