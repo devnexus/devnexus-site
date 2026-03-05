@@ -127,15 +127,16 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script>
-const config= {
-  apiKey: "AIzaSyCZAoJfVeGGOy_DYXcEP6RTUztPi6a51_I",
-  authDomain: "devnexus2023.firebaseapp.com",
-  projectId: "devnexus2023",
-  storageBucket: "devnexus2023.firebasestorage.app",
-  messagingSenderId: "988355557157",
-  appId: "1:988355557157:web:6726254ef5f4f2b65e8ccc",
-  measurementId: "G-GTTR8RRD3W"
+const config = {
+  apiKey: "AIzaSyAiYtGvSawAM1GDBo7sxxhmlslsBJffQ_g",
+  authDomain: "devnexus2026.firebaseapp.com",
+  projectId: "devnexus2026",
+  storageBucket: "devnexus2026.firebasestorage.app",
+  messagingSenderId: "62051486972",
+  appId: "1:62051486972:web:66ecdb714cb38fdcb49b79",
+  measurementId: "G-T63YCNQB3Y"
 };
+
 
 
   const app = firebase.initializeApp(config);
@@ -155,7 +156,7 @@ const config= {
       $("#submit").addClass("disabled");
       $("#submit").off("click");
       $("#submit").text("Sending...")
-      return db.collection("feedback2026").doc(title.replace('"', '').replace("/", '')).set({
+      return db.collection("feedback").doc(title.replace('"', '').replace("/", '')).set({
         feedback: firebase.firestore.FieldValue.arrayUnion({
           id: generateUUID(),
           comment: comment,
