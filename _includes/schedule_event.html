@@ -27,7 +27,11 @@
 				</div>
 			<div class="float-right self-end text-sm text-gray-500">
 				{% if preso.isServiceSession != true %}
-				  {{ preso.room }} ( {{ roomno }} ) 
+				   {% if preso.title contains "Mentorship Hub" %}
+				      Community Hub
+				   {% else %}
+				      {{ preso.room }} ( {{ roomno }} ) 
+				   {% endif %}	  
 				{% endif %}
 			</div>
 
