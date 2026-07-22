@@ -68,8 +68,9 @@ booking-url:
       <p>
           We would like to extend a special group rate to Devnexus attendees 
       </p>
-    {% if site.links.hotelblock != blank and site.links.hotelblock | strip != "" %}
-    <a class="btn hero-btn-register" href="{{site.links.hotelblock}}">SPACE IS LIMITED. BOOK NOW</a>
+        {% assign hotel_block = site.links.hotelblock | default: "" | strip %}
+        {% if hotel_block != "" %}
+        <a class="btn hero-btn-register" href="{{ hotel_block }}">SPACE IS LIMITED. BOOK NOW</a>
     {% else %}
     <a class="btn hero-btn-register" href="{{site.links.announcements}}">Get Notified</a>
     {% endif %}  
