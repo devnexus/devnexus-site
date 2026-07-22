@@ -1,23 +1,23 @@
 ---
 safe: true
 exclude: ['_presite_plugins', 'README.md', '_move_to_arhcive.html']
-title: Devnexus 2026
-dates: March 4-6, 2026 · Georgia World Congress Center  ·  Atlanta, GA
+title: Devnexus 2027
+dates: April 5-7, 2027 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
 email: info@ajug.org
 description: The longest-running and largest Java, AI, and Dev Tools Conference in the USA.
 cfp-is-open: false
 registration:
-  text:   Opening August 2025
+  text:   Opening August 2026
   status: not-enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
-  alt: Devnexus 2026
+  alt: Devnexus 2027
 feedback: show
 uploads_dir: "/uploads"
 links:
    stay-informed: https://app.encharge.io/public/view-form/b23d35eb-8ea5-4d79-b8c5-e33de09e7836
-   hotel-block: https://www.marriott.com/event-reservations/reservation-link.mi?id=1718115256571&key=GRP&app=resvlink
+   hotel-block:   
    cfp: https://sessionize.com/devnexus-2025/
    register: https://reg.connectevents.io/ConnectEvents/devnexus2026/
    signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
@@ -41,15 +41,15 @@ collections:
   speakers:
     title: Speakers 2026
     output: true
-    permalink: :collection/:slug
+    permalink: archive/devnexus2026/:collection/:slug
   events:
      title: Presentations 2026
      output: true
-     permalink: :collection/:slug/
+     permalink: archive/devnexus2026/:collection/:slug/
   event-instructions:
      title: Workshop Prep 2026
      output: true
-     permalink: :path/instructions
+     permalink: archive/devnexus2026/presentations/:path/instructions
   logos:
      output: false   
   tracks:

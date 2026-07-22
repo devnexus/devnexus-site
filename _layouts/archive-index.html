@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container mt-32 mb-32">
+  <header>
+    <nav class="w-full mb-6">
+      <div class="flex items-center justify-center gap-1 bg-white shadow-lg">
+      <a href="/archive/{{page.year}}/presentations" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition border-r border-gray-300 last:border-r-0">Presentations</a>
+      <a href="/archive/{{page.year}}/speakers" class="flex-1 text-center px-6 py-3 text-black font-semibold hover:bg-gray-100 transition border-r border-gray-300 last:border-r-0">Speakers</a>
+    </nav>
+  </header>
+
+  <main id="archive-list">
+    {% assign archive_root = '/archive/' | append: page.year | append: '/' | append: page.collection | append: '/' %}
+    {% assign archive_items = site[page.collection] | sort: "title" %}
+
+    {% for item in archive_items %}
+      <article class="mb-3 border-b border-gray-200 pb-3">
+        <a href="{{ item.url }}" class="text-lg font-semibold text-black hover:underline">{{ item.title | default: item.name | default: item.slug }}</a>
+      </article>
+    {% endfor %}
+  </main>
+</div>

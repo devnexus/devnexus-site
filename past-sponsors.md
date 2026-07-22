@@ -5,17 +5,24 @@ layout: default
 {% include buttons/become-a-sponsor.html %}
 </div>
 
-<main class="row">
-
-{% for sponsorLevel in site.data.lastyearlevels%}
-{% assign sponsorsInLevel = site.data.lastyearsponsors | where:'sponsorlevel', sponsorLevel.category %}
-{% assign total = sponsorsInLevel | size %}
-{% unless total == 0 %}
-{% include sponsor-thumb.html sponsors=sponsorsInLevel level-name=sponsorLevel.title level-tag=sponsorLevel.category %}
-{% endunless %}
+{% assign levels_order = "unobtanium,diamond,platinum,devlounge,cafe,gold,silver,bronze,opensource,startup,community" | split: "," %}
+{% assign sponsors_by_level = site.data.lastyearsponsors | group_by: "sponsorlevel" %}
+{% for level_name in levels_order %}
+{% assign level = sponsors_by_level | where: "name", level_name | first %}
+{% if level and level.items.size > 0 %}
+{% assign displayName = site.data.lastyearlevels | where: "category", level_name | first %}
+<h4 class="text-lg md:text-4xl text-center bg-gray-200 py-6">{{ displayName.title }}</h4>
+{% if level.items.size > 4 %}
+<div class="my-6 grid grid-cols-1 md:grid-cols-4 gap-12 place-items-center">
+{% else %}
+<div class="my-6 flex flex-wrap justify-center items-center gap-12">
+{% endif %}
+{% for item in level.items %}
+<a href="{{item.home_page}}"><img class="w-48 h-48 object-contain" src="{{item.logo_image}}" alt="{{item.name}}" title="{{item.name}}"></a>
 {% endfor %}
-</main>
-
-<div class="mt-4 mb-16">
+</div>
+{% endif %}
+{% endfor %}
+<div class="mt-24 mb-4">
 {% include buttons/become-a-sponsor.html %}
 </div>
