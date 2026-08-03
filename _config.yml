@@ -39,17 +39,13 @@ pagination:
   sort_reverse: true  
 collections:
   speakers:
-    title: Speakers 2026
+    title: Speakers 2027
     output: true
-    permalink: archive/devnexus2026/:collection/:slug
+    permalink: :collection/:slug/
   events:
-     title: Presentations 2026
+     title: Presentations 2027
      output: true
-     permalink: archive/devnexus2026/:collection/:slug/
-  event-instructions:
-     title: Workshop Prep 2026
-     output: true
-     permalink: archive/devnexus2026/presentations/:path/instructions
+     permalink: :collection/:slug/
   logos:
      output: false   
   tracks:
