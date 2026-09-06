@@ -6,10 +6,10 @@ dates: April 5-7, 2027 · Georgia World Congress Center  ·  Atlanta, GA
 timezone: UTC
 email: info@ajug.org
 description: The longest-running and largest Java, AI, and Dev Tools Conference in the USA.
-cfp-is-open: false
+cfp-is-open: true
 registration:
   text:   Opening August 2026
-  status: not-enabled
+  status: enabled
 branding:
   img: /assets/img/dev-nexus-logo-large.png
   alt: Devnexus 2027
@@ -18,8 +18,8 @@ uploads_dir: "/uploads"
 links:
    stay-informed: https://app.encharge.io/public/view-form/b23d35eb-8ea5-4d79-b8c5-e33de09e7836
    hotelblock:   
-   cfp: https://sessionize.com/devnexus-2025/
-   register:
+   cfp: https://sessionize.com/devnexus-2027/
+   register:https://reg.connectevents.io/ConnectEvents/devnexus2027/
    signIn: https://reg.connectevents./ConnectEvents/devnexus2026/
    announcements: https://app.encharge.io/public/view-form/b23d35eb-8ea5-4d79-b8c5-e33de09e7836
    recordings: https://www.youtube.com/@devnexus-conference/videos
