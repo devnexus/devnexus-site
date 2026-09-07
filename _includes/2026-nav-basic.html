@@ -13,19 +13,21 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">              
                 <ul class="nav navbar-nav navbar-left">
                     {% if site.cfp-is-open %}
-                    <li class="nav-link"><a href="/posts/the-cfp-for-devnexus-2026-is-open">CALL FOR PAPERS</a></li>
+                  <li class="nav-link"><a href="{{site.links.cfp}}" target="_blank">CALL FOR PAPERS</a></li>
                     {% endif %}
                     <li class="nav-link"><a href="{{site.links.announcements}}">GET INFO</a></li>
                      <li class="nav-link"><a href="/posts">NEWS</a></li>
                 </ul>
+                {% unless site.registration.show %}
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-link"><a href="/past-conferences">PAST CONFERENCES</a></li>
                 </ul>
-            {% comment %} 
+                {% endunless %}
+               {% if site.registration.show %} 
                 <div class="navbar-right mb-4">
                     {% include buttons/register.html %}
                 </div>
-            {% endcomment %}
+            {% endif %}
             </div>
     </nav>
 
