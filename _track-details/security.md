@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Security & Dev Tools
+title: Developer Tools
 theme: practices
 ---
-The Security track focuses on safeguarding applications, data, and infrastructure in an increasingly complex threat landscape. Sessions cover secure coding practices, threat modeling, vulnerability management, identity and access control, and the latest in application and cloud security. Designed for developers and architects alike, this track provides practical strategies to build and maintain secure systems from the ground up.
+The Developer Tools track explores the tools and techniques that make everyday engineering more effective. Sessions cover development environments, build systems, testing frameworks, debugging, profiling, and automation. From improving local workflows to simplifying work across large codebases, this track gives developers practical ways to reduce friction, get faster feedback, and spend more time solving meaningful problems.

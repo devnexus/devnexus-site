@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: AI Generative
+title: Frontier AI & Emerging Technology
 theme: ai
 ---
-The Generative AI track explores the cutting edge of artificial intelligence, with sessions focused on large language models, prompt engineering, multimodal AI, and real-world applications of generative technologies. Learn how developers and organizations are using GenAI to build smarter tools, automate workflows, and reshape user experiences across industries.
+The Frontier AI & Emerging Technology track looks ahead at the ideas and capabilities that could shape the next generation of software. Sessions explore emerging model architectures, reasoning systems, on-device AI, robotics, and new forms of human-computer interaction. Designed for developers and technical leaders, this track examines what is becoming possible, what remains experimental, and which developments deserve closer attention.

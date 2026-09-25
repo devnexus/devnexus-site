@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Core Java
-theme: java
+title: System Design
+theme: practices
 ---
-The Core Java track centers on the fundamentals and advancements of the Java language and platform. Sessions cover topics like modern language features, performance tuning, the JVM, concurrency, and best practices for writing clean, efficient, and maintainable Java code. Ideal for developers who want to deepen their expertise and stay sharp with the core of the Java ecosystem.
+The System Design track explores the architecture of modern software systems. Sessions cover distributed systems, event-driven design, microservices, cloud-native architectures, and the integration of AI capabilities into existing platforms. Designed for developers and architects, this track examines the practical trade-offs behind building systems that balance scalability, resilience, performance, and maintainability.

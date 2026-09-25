@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: AI Engineering & Infra
+title: AI-Assisted Software Development
 theme: ai
 ---
-The AI Engineering track dives into the practical side of building, deploying, and scaling AI systems. Sessions cover topics like model training, MLOps, data pipelines, infrastructure, and performance optimization. Designed for engineers and architects, this track focuses on the tools, frameworks, and best practices needed to turn AI research into reliable, production-ready solutions,
+The AI-Assisted Software Development track explores how developers use AI throughout the software development lifecycle. Sessions cover coding assistants, agentic development workflows, testing, debugging, code review, and documentation. Designed for practitioners, this track focuses on getting useful results from AI tools, evaluating their output, and maintaining code quality while keeping developers in control of the software they deliver.

@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Architecture
-theme: practices
+title: Production AI Engineering
+theme: ai
 ---
-The Architecture track delves into the design and evolution of robust, scalable systems. Sessions explore software architecture patterns, distributed systems, event-driven design, microservices, and cloud-native approaches. Ideal for senior developers and architects, this track offers insights into making thoughtful, future-proof decisions that balance complexity, performance, and maintainability.
+The Production AI Engineering track examines what it takes to operate AI applications and agents reliably at scale. Sessions cover evaluation, observability, deployment, model and prompt lifecycle management, data pipelines, and inference optimization. Designed for engineers responsible for production systems, this track explores how to manage quality, latency, cost, and changing model behavior long after the first successful demo.

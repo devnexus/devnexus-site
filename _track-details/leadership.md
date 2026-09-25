@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Leadership
+title: Production Engineering & SRE
 theme: practices
 ---
-The Leadership track is designed for engineering managers, team leads, and technical decision-makers looking to grow their impact. Sessions cover topics like team building, developer productivity, tech strategy, career growth, and fostering inclusive, high-performing engineering cultures. Learn from experienced leaders about what it takes to guide teams and drive innovation in today’s fast-paced tech landscape.
+The Production Engineering & SRE track explores the practices and platforms that keep modern applications running reliably. Sessions cover DevOps, continuous delivery, infrastructure as code, containers, observability, incident response, and site reliability engineering. Designed for developers, platform engineers, and operations teams, this track focuses on improving delivery, reducing operational toil, and building resilient production environments.
