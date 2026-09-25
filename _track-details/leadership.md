@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Production Engineering & SRE
+title: Soft Skills in an AI Era
 theme: practices
 ---
-The Production Engineering & SRE track explores the practices and platforms that keep modern applications running reliably. Sessions cover DevOps, continuous delivery, infrastructure as code, containers, observability, incident response, and site reliability engineering. Designed for developers, platform engineers, and operations teams, this track focuses on improving delivery, reducing operational toil, and building resilient production environments.
+The Soft Skills in an AI Era track focuses on the human capabilities that matter as AI changes how we work. Sessions explore communication, collaboration, critical thinking, adaptability, mentorship, and career development. Designed for technology professionals at every level, this track offers practical ways to build trust, navigate uncertainty, and strengthen the relationships and judgment that support effective teams.
