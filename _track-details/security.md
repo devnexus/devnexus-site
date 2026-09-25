@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Developer Tools
+title: Tech Leadership
 theme: practices
 ---
-The Developer Tools track explores the tools and techniques that make everyday engineering more effective. Sessions cover development environments, build systems, testing frameworks, debugging, profiling, and automation. From improving local workflows to simplifying work across large codebases, this track gives developers practical ways to reduce friction, get faster feedback, and spend more time solving meaningful problems.
+The Tech Leadership track is designed for engineering managers, technical leads, and decision-makers guiding teams through a changing technology landscape. Sessions explore engineering strategy, team development, AI adoption, developer productivity, and organizational change. Learn how experienced leaders evaluate new approaches, build effective engineering cultures, and connect technical decisions to meaningful business outcomes.
