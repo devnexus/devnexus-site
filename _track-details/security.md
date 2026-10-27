@@ -1,7 +1,7 @@
 ---
 _schema: default
 layout: card
-title: Tech Leadership
+title: Security
 theme: practices
 ---
-The Tech Leadership track is designed for engineering managers, technical leads, and decision-makers guiding teams through a changing technology landscape. Sessions explore engineering strategy, team development, AI adoption, developer productivity, and organizational change. Learn how experienced leaders evaluate new approaches, build effective engineering cultures, and connect technical decisions to meaningful business outcomes.
+The Security track focuses on protecting applications, data, and infrastructure as software systems and AI capabilities evolve. Sessions cover secure coding, threat modeling, software supply chain security, identity and access management, and threats specific to AI applications and agents. Developers and architects will gain practical approaches to identifying vulnerabilities, reducing risk, and building security into the systems they design and operate.

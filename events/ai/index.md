@@ -1,7 +1,10 @@
 ---
 layout: track-index
 tracks:
- - Gen AI
- - AI Engineering
- - AI In Practice
+ - Building AI-Native Applications
+ - Production AI Engineering
+ - Frontier AI & Emerging Technoglogy
+ - AI-Assisted Software Development
+ - AI and LLM Fundamentals
+ - AI Developer Tools
 ---

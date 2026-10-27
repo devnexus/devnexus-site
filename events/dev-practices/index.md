@@ -1,9 +1,10 @@
 ---
 layout: track-index
 tracks:
- - Architecture
- - Tech Leadership
+ - Developer Tools
+ - Production Engineering & SRE
  - Security
- - Practices and other tech
- - Tools & Misc
+ - System Design
+ - Soft Skills in an AI Era
+ - Tech Leadership
 ---

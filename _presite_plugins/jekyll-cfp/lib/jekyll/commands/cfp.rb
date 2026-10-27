@@ -14,7 +14,7 @@ module Jekyll
             end
           end
           pcmd.command(:events) do |e|
-            url = "https://sessionize.com/api/v2/juzvwep9/view/Sessions"
+            url = "https://sessionize.com/api/v2/y0994sy2/view/Sessions"
             e.description "process promo_events.json"
             e.action do |args, options|
                edata = (options['file']) ? read_data(options['file']) : fetch_data(url)
@@ -23,7 +23,7 @@ module Jekyll
             end
           end
           pcmd.command(:speakers) do |e|
-            url = "https://sessionize.com/api/v2/juzvwep9/view/Speakers"
+            url = "https://sessionize.com/api/v2/y0994sy2/view/Speakers"
             e.description "download sessionize speaker details"
             e.action do |args, options|
                edata = (options['file']) ? read_data(options['file']) : fetch_data(url)
@@ -34,7 +34,7 @@ module Jekyll
           pcmd.command(:schedule) do |s|
             s.description "process full_schedule.json"
             s.action do |args, options|
-              url = 'https://sessionize.com/api/v2/juzvwep9/view/GridSmart'
+              url = 'https://sessionize.com/api/v2/y0994sy2/view/GridSmart'
               if (options['file'])
                 write_data_json("schedule", read_data(options['file']) )
               else
