@@ -1,6 +1,7 @@
-{% assign track_keys  = page.tracks | map: "key" | sort %}
-{% assign alltracks = page.tracks | sort: "key" %}
-{% assign times = page.timeslots | sort: "key" %}
+{% assign empty_array = "" | split: "," %}
+{% assign track_keys  = page.tracks | default: empty_array | map: "key" | sort %}
+{% assign alltracks = page.tracks | default: empty_array | sort: "key" %}
+{% assign times = page.timeslots | default: empty_array | sort: "key" %}
 {% assign timefilters = times | map: "key" %}
 <script>
 
@@ -168,4 +169,3 @@ function resetFilters() {
     <div class="row">
        <input class="form-control no-print" id="scheduleSearch" type="text" placeholder="Search..">
     </div>
-

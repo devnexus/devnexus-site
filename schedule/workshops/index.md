@@ -5,11 +5,12 @@ tracks:
  - Workshop
 --- 
 {% assign workshopDay = site.data.schedule[0] %}
-{% assign workshop_sessions = workshopDay.timeSlots | sort: "slotStart" %}
+{% assign empty_array = "" | split: "," %}
+{% assign workshop_sessions = workshopDay.timeSlots | default: empty_array | sort: "slotStart" %}
 <div class="day-content mar04" id="mar04">
   <h2 class="text-2xl font-bold px-4 py-5 bg-gray-100 border-b-2 border-gray-300 text-center">Wednesday Mar 4 - Workshops 9.00 am - 5.00 pm</h2>
   {% for slot in workshop_sessions %}
-  {% assign events = slot.rooms 
+  {% assign events = slot.rooms | default: empty_array
   | where_exp: "item", "item.session.isServiceSession != true" 
   | sort: "name" 
   %}
@@ -30,4 +31,3 @@ tracks:
   {% endfor %}
 
 </div>
-
