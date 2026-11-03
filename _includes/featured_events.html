@@ -1,0 +1,34 @@
+{% assign eligible_speakers = site.speakers | where_exp: "speaker", "speaker.sessions.size > 0" %}
+{% assign featured_speakers = eligible_speakers | sample: 4 %}
+{% if featured_speakers.size > 0 %}
+<section class="mx-auto w-full max-w-screen-2xl py-8" aria-label="Featured speakers">
+	<div class="grid grid-cols-1 gap-6 px-4 pb-4 sm:grid-cols-2 xl:grid-cols-4">
+		{% for speaker in featured_speakers %}
+			{% assign first_session = speaker.sessions | first %}
+			{% assign company_answer = speaker.questionAnswers | where: "question", "Company" | first %}
+			<article class="min-w-0 overflow-hidden rounded-xl bg-white p-6 shadow-md">
+				<div class="mb-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
+					{% if speaker.profilePicture %}
+						<img
+							class="h-24 w-24 flex-none rounded-full object-cover"
+							src="{{ speaker.profilePicture }}"
+							alt="{{ speaker.fullName | escape }}"
+							loading="lazy"
+						>
+					{% endif %}
+					<div class="min-w-0">
+						<p class="font-semibold text-gray-900">{{ speaker.fullName | escape }}</p>
+						{% if company_answer.answer != blank %}
+							<p class="mt-1 text-sm text-gray-600">{{ company_answer.answer | escape }}</p>
+						{% endif %}
+					</div>
+				</div>
+				<h2 class="break-words text-lg font-bold leading-snug text-gray-900 md:text-xl">{{ first_session.name | escape }}</h2>
+			</article>
+		{% endfor %}
+	</div>
+	<div class="mt-4 flex justify-center">
+		<a class="inline-flex items-center rounded-lg bg-black px-6 py-3 font-semibold text-white no-underline transition hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ '/events/' | relative_url }}">Explore All Sessions</a>
+	</div>
+</section>
+{% endif %}
