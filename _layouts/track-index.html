@@ -4,7 +4,7 @@ layout: default
 {% assign events = site.events | where_exp: "item", "page.tracks contains item.track" | sort: "name" %}
 <div class="featured-header">
 {% for t in page.tracks %}  
-<h1>{{t | capitalize }}</h1>
+<h1 class="text-2xl sm:text-3xl md:text-4xl">{{t | capitalize }}</h1>
 {% endfor %}
 </div>
 
