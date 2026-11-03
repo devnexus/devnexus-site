@@ -33,7 +33,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Building AI-Native Applications
 slug: mcp-killed-the-handshake-what-stateless-really-means-for-agents
 

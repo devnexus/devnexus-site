@@ -48,7 +48,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI Developer Tools
 slug: robocoders-judgement-day-from-side-projects-to-software-factories
 

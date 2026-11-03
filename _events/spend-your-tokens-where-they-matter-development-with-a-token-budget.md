@@ -30,7 +30,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI and LLM Fundamentals
 slug: spend-your-tokens-where-they-matter-development-with-a-token-budget
 

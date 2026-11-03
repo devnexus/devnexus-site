@@ -30,7 +30,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Tech Leadership
 slug: generation-got-cheap-your-review-budget-didn-t
 

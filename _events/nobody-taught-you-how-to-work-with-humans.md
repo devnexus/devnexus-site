@@ -40,7 +40,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Soft Skills in an AI Era
 slug: nobody-taught-you-how-to-work-with-humans
 

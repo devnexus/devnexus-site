@@ -34,7 +34,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Security
 slug: toxic-flows-in-mcp-servers-and-skills-what-your-agent-blindly-trusts
 

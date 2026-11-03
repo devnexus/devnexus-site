@@ -30,7 +30,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Building AI-Native Applications
 slug: engineering-patterns-for-building-ai-native-applications
 

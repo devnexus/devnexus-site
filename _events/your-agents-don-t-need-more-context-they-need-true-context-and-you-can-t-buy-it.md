@@ -31,7 +31,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Production AI Engineering
 slug: your-agents-don-t-need-more-context-they-need-true-context-and-you-can-t-buy-it
 
