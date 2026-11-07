@@ -11,7 +11,7 @@
 				{% assign featured_session = first_session %}
 			{% endunless %}
 			{% assign company_answer = speaker.questionAnswers | where: "question", "Company" | first %}
-			<article class="min-w-0 overflow-hidden rounded-xl bg-white p-6 shadow-md">
+			<article class="flex h-full min-w-0 flex-col overflow-hidden rounded-xl bg-white p-6 shadow-md">
 				<div class="mb-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
 					{% if speaker.profilePicture %}
 						<img
@@ -29,6 +29,7 @@
 					</div>
 				</div>
 				<h2 class="break-words text-lg font-bold leading-snug text-gray-900 md:text-xl">{{ featured_session.name | escape }}</h2>
+				<a class="mt-auto inline-flex self-end rounded pt-3 text-sm font-semibold text-gray-700 underline underline-offset-2 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ featured_session.name | slugify | prepend: '/events/' | relative_url }}">Show</a>
 			</article>
 		{% endfor %}
 	</div>
