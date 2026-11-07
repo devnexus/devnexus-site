@@ -9,7 +9,7 @@ branding:
 
     {% include video-cta.html %}   
     {% include speaker-logo-scroll.html %} 
-    {% include featured_events.html %} 
+    {% include featured_events.html speakers=site.data.featured_speakers.speaker_names sample_size=site.data.featured_speakers.sample_size talk_title=site.data.featured_speakers.talk_title %}
     <!-- Two Column Section: Track Details and Latest Posts -->
       <section class="max-w-7xl mx-auto w-full bg-white rounded-xl shadow-lg overflow-hidden md:flex">
         <!-- Left Column - Track Details -->

@@ -26,6 +26,13 @@ collections_config:
         type: image
         comment: Upload the logo image here.
         upload_path: 'scroll_logos'
+  speakers:
+    path: _speakers
+    name: Speakers
+    disable_url: true
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
   posts:
     path: _posts
     name: Posts
@@ -160,6 +167,15 @@ collections_config:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
+    _inputs:
+      speaker_names:
+        type: multiselect
+        options:
+          values: collections.speakers[*].fullName
+      sample_size:
+        type: number
+      talk_title:
+        type: text
   cta:
     - path: _includes/buttons
       name: CTA Buttons
@@ -172,6 +188,7 @@ collection_groups:
     collections:
       - scrolling_logos
       - data
+      - featured_speakers
       - organizers
       - track-details
       - cta

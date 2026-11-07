@@ -1,10 +1,15 @@
-{% assign eligible_speakers = site.speakers | where_exp: "speaker", "speaker.sessions.size > 0" %}
-{% assign featured_speakers = eligible_speakers | sample: 8 %}
+{% assign configured_speakers = site.speakers | where_exp: "speaker", "include.speakers contains speaker.fullName" %}
+{% assign eligible_speakers = configured_speakers | where_exp: "speaker", "speaker.sessions.size > 0" %}
+{% assign featured_speakers = eligible_speakers | sample: include.sample_size %}
 {% if featured_speakers.size > 0 %}
 <section class="mx-auto w-full max-w-screen-2xl py-8" aria-label="Featured speakers">
 	<div class="grid grid-cols-1 gap-6 px-4 pb-4 sm:grid-cols-2 xl:grid-cols-4">
 		{% for speaker in featured_speakers %}
 			{% assign first_session = speaker.sessions | first %}
+			{% assign featured_session = speaker.sessions | where: "name", include.talk_title | first %}
+			{% unless featured_session %}
+				{% assign featured_session = first_session %}
+			{% endunless %}
 			{% assign company_answer = speaker.questionAnswers | where: "question", "Company" | first %}
 			<article class="min-w-0 overflow-hidden rounded-xl bg-white p-6 shadow-md">
 				<div class="mb-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -23,7 +28,7 @@
 						{% endif %}
 					</div>
 				</div>
-				<h2 class="break-words text-lg font-bold leading-snug text-gray-900 md:text-xl">{{ first_session.name | escape }}</h2>
+				<h2 class="break-words text-lg font-bold leading-snug text-gray-900 md:text-xl">{{ featured_session.name | escape }}</h2>
 			</article>
 		{% endfor %}
 	</div>
