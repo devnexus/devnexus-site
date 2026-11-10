@@ -2,7 +2,7 @@
 {% assign eligible_speakers = configured_speakers | where_exp: "speaker", "speaker.sessions.size > 0" %}
 {% assign featured_speakers = eligible_speakers | sample: include.sample_size %}
 {% if featured_speakers.size > 0 %}
-<section class="mx-auto w-full max-w-screen-2xl py-8" aria-label="Featured speakers">
+<section id="featured" class="scroll-mt-24 mx-auto w-full max-w-screen-2xl py-8" aria-label="Featured speakers">
 	<div class="grid grid-cols-1 gap-6 px-4 pb-4 sm:grid-cols-2 xl:grid-cols-4">
 		{% for speaker in featured_speakers %}
 			{% assign first_session = speaker.sessions | first %}
