@@ -41,6 +41,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1386697",
+        "title": "A Software Factory Build Report: What Worked, What Broke, What I'd Do Again",
+        "description": "Software factories aren't a research demo. At Tessl we run one that merges over 1,000 PRs a week, as well as maintenance agents that raise their own issues on the factory itself, and creates changes that merge without us ever knowing they exist.\r\n\r\nIn this session I'll present a full, honest account of the building an autonomous issue-to-PR factory for an open-source learning platform which we built for our users on our site. I'll show why a factory is never built in one go, but rather an iterative system that earns maturity layer by layer, and I'll give you a concrete path to grow that maturity safely rather than trusting too much too soon. I'll share the decisions that paid off (versioned review lenses, deterministic gates), and the ones that cost us. I'll show where autonomy earned trust and where a human still has to step in, and how the developer's job quietly shifted from writing code to architecting changes the pipeline can execute via issues. The goal is to give you a realistic build plan, with potholes marked, so you can follow the same route with fewer scars.\r\n\r\nThese learnings are drawn both from building an open source factory fit for production and from Tessl's own dark factory that is used at scale. You'll leave with a real build plan, the potholes marked, and enough to go build your own.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "af46b3f5-47a7-4f80-a0f0-e16fef9493e6",
+            "name": "Simon Maple"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507386,
+                "name": "Building AI-Native Applications"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1328276",
         "title": "Agentic Coding, Intentional Design",
         "description": "AI coding agents are exceptionally good at producing working code.  Give a coding agent a feature request and a Quarkus project, and it will produce a working Java app.  However, working code doesn’t necessarily follow good design, and agents often produce code that ignores architectural boundaries and scatters business logic across an application’s layers.\r\n\r\nDomain-Driven Design exists to manage complexity through explicit models and a shared language, isolating business logic and clearly implementing business rules.  DDD also provides critical structure and constraints for AI-generated code.  In this session, we explore how AI coding assistants can implement good design, allowing developers and architects to focus on the modeling decisions and business rules that define the system.\r\n\r\nWe’re going to build the same feature twice: once with only the requirements and once with repository Skills tailored for DDD and the Quarkus ecosystem.  We will dive into how bounded contexts, business rules, and separation of concerns can be encoded into persistent agentic guidance so that our architecture survives multiple conversations.\r\n\r\nAttendees will leave with practical techniques for turning architecture into persistent agent guidance, structuring Skills for Java and Quarkus applications, and evaluating whether AI-generated code preserves the architecture they intended.\r\n",
@@ -73,7 +109,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -110,6 +146,42 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1341059",
+        "title": "AI Security Engineer Foundations",
+        "description": "### 1. OWASP Top 10 for Agentic Applications\r\n\r\nGain a practical understanding of the key security risks introduced by agentic AI applications. This module explains how risk changes when AI systems can reason, plan, use tools, access memory, interact with other agents, and take actions across business workflows.\r\n\r\nBy the end of this module you'll be able to:\r\n\r\n- Explain the OWASP Top 10 for Agentic Applications vs. the Web and LLM versions\r\n- Describe how agentic AI changes security models through goals, tools, memory, identity, permissions, and orchestration\r\n- Define ten agentic risks, including Agent Goal Hijacking, Tool Misuse, Identity and Privilege Abuse, and Agentic Supply Chain Vulnerabilities\r\n- Map risks to controls: least privilege, scoped identities, tool allowlisting, approval gates, memory isolation, and audit logging\r\n- Assess an agent's boundaries — its capabilities, authority, data access, callable tools, and logging/approval requirements\r\n\r\n### 2. Addressing Shadow AI\r\n\r\nStep into the shoes of the AI Security Engineer to navigate the unexpected things that surface when you look under the hood of your AI posture. This module operates at the intersection of platform security, ML engineering, and threat intelligence.\r\n\r\nBy the end of this module you'll be able to:\r\n\r\n- Define Shadow AI vs. Shadow IT, and cite current prevalence and cost data\r\n- Recognize what makes Shadow AI harder to govern than traditional shadow IT\r\n- Identify common Shadow AI risk scenarios inside an enterprise\r\n- Define an AI Bill of Materials (AIBOM) and its governance functions\r\n- Compare an AIBOM against an SBOM across scope, behavior, risk classes, and update cadence\r\n- Generate an AIBOM using the Snyk CLI and inspect it in the Evo platform\r\n\r\n### 3. AI Governance & Policy as Code\r\n\r\nThis module tackles why most corporate AI policies exist only on paper. It opens by diagnosing the common failure patterns, unenforced wiki policies, review boards too slow to keep up with development, and outright bans that just push AI use underground, before making the case that governance only works when it's built directly into the software pipeline rather than handled through traditional vendor-style approval processes.\r\n\r\nFrom there, the module walks through the practical mechanics of doing this well: identifying the four trust boundaries inside an AI system (data ingestion, external data sources, context construction, and downstream actions) that any real policy needs to address; turning plain-language governance rules into automated checks that run in continuous integration; and stress-testing those rules against ambiguous, real-world edge cases where reasonable teams disagree. It also covers designing a fast, visible exception process so legitimate exceptions don't quietly undermine the policy, and closes with what auditors and regulators actually expect to see, an inventory, a risk assessment, and an enforcement log, tying this back to frameworks like NIST's AI RMF, the EU AI Act, and Gartner's AI TRiSM.\r\n\r\nBy the end, a learner should come away understanding how to convert an AI governance intent into an enforceable, auditable control rather than a static document, and how to spot the gaps and blind spots that make most current AI policies unenforceable in practice.\r\n\r\n### 4. Securing Agents & MCP\r\n\r\n*How SKILL.md Introduced Malware.*\r\n\r\nA two-part session covering \"ToxicSkills\" research on supply-chain threats targeting agent ecosystems, plus active exploitation techniques against Model Context Protocol (MCP) deployments — credential exfiltration via malicious tool descriptions, and arbitrary code execution via insecure servers.\r\n\r\nBy the end of this module you'll be able to:\r\n\r\n- Explain the Model Context Protocol, why it exists, and its server security fundamentals\r\n- Articulate why MCP security is urgent in 2026: SDK download scale, agentic IDE adoption, and MCP's placement in a developer's most privileged context\r\n- Define tool poisoning and the impact of hidden instructions\r\n- Distinguish malicious MCP servers from vulnerable server code\r\n- Run MCP-Scan against a local configuration and interpret its findings\r\n- Run Snyk Code against MCP server source and interpret command-injection and path-traversal findings\r\n\r\n### 5. Securing Vibe Coding\r\n\r\nIn this module, we break down the security implications of vibe coding and share actionable strategies to secure AI-generated code at scale — including Snyk Studio's approach to securing the AI-powered SDLC from code to deployment.\r\n\r\nBy the end of this module you'll be able to:\r\n\r\n- Define vibe coding and explain how it changes the development process\r\n- Describe the \"Lobster Ecosystem\" — agentic AI tools, agent skill registries, and automation frameworks — and its supply-chain attack surface, including agent skill poisoning and slopsquatting\r\n- Apply a five-layer Secure-by-Design Playbook to vibe-coded projects\r\n- Identify common AI-generated code vulnerability patterns: disabled row-level security, hardcoded secrets, missing authentication, and client-side security logic\r\n- Map vulnerabilities to the OWASP Top 10 for LLM Applications\r\n- Distinguish vibe coding from vibe *hacking*\r\n\r\n### 6. AI Pen Testing\r\n\r\nGain a practical understanding of how to test AI-powered and agentic applications for security weaknesses. This module explains how AI penetration testing goes beyond traditional web and API testing by examining prompts, model behavior, context handling, tool access, memory, permissions, and downstream actions.\r\n\r\nBy the end of this module you'll be able to:\r\n\r\n- Explain how AI penetration testing differs from traditional application, API, and infrastructure testing\r\n- Identify AI-specific attack surfaces: prompts, system instructions, RAG pipelines, embeddings, tools, agents, memory, and MCP-connected services\r\n- Test for common weaknesses: prompt injection, sensitive information disclosure, system prompt leakage, excessive agency, and unsafe output handling\r\n- Build safe, repeatable test cases without harmful or production-impacting techniques\r\n- Map findings to remediation: input/output validation, tool allowlisting, scoped tokens, human approval gates, and audit logging\r\n- Combine AI-specific testing with standard API, authentication, authorization, and dependency testing",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "e5aad250-139d-4a16-9c6e-d3534bbe1fc6",
+            "name": "Micah Silverman"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],
@@ -185,6 +257,78 @@
       },
       {
         "questionAnswers": [],
+        "id": "1335626",
+        "title": "Beyond the App: A Software Engineer’s Guide to How Data Engineering Really Works",
+        "description": "Your application writes data somewhere — then what?\r\n\r\nFor many software engineers, data engineering is a vague but important layer of the stack: pipelines run, dashboards refresh, reports appear, and somehow the company keeps making decisions. This talk is a practical introduction to what data engineers actually do, how their systems differ from traditional application development, and why building reliable data platforms requires a different set of instincts than building services or APIs.\r\n\r\nWe’ll look at the core pieces of the job — ingestion, transformation, orchestration, modeling, and data quality — through the perspective of someone with a software background. Along the way, I’ll show where software engineering habits help, where they break down, and how to think more clearly about systems whose purpose is not just to serve requests, but to move and shape data over time.\r\n\r\nIf you’ve ever wondered what happens after the database write, this talk will give you a grounded mental model of the field and a clearer sense of why data engineering is harder — and more interesting — than it first appears.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "aed30d4b-dc48-4ba3-ba33-3f673a73927e",
+            "name": "Nathan Loding"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507380,
+                "name": "Developer Tools"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1335627",
+        "title": "Beyond the Prompt: Data Engineering for AI-Powered Applications",
+        "description": "Building AI features is easy to demo and hard to operate. The real challenge usually isn’t the prompt — it’s the data.\r\n\r\nThis hands-on workshop is for software engineers who are building AI-powered applications and discovering that model calls are only the visible tip of the stack. Behind every useful AI feature is a data engineering problem: getting the right data, preparing it for downstream use, keeping it fresh, retrieving it reliably, and knowing when the system is quietly going off the rails.\r\n\r\nWe’ll walk through the core data patterns behind modern AI applications, including ingestion, transformation, chunking, enrichment, retrieval, evaluation, and observability. Along the way, we’ll look at the failure modes that show up after the demo works: stale context, weak retrieval, bad metadata, silent data quality issues, and pipelines that no longer match the shape of the application.\r\n\r\nThe goal is to give software engineers a practical mental model for the data layer of AI systems — and a clearer understanding of how DataOps practices like testing, versioning, monitoring, and traceability help turn AI features into production systems.\r\n\r\nBy the end of the workshop, attendees will have a grounded framework for thinking about AI systems as data systems, and a better sense of how to design, debug, and operate them in the real world.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "aed30d4b-dc48-4ba3-ba33-3f673a73927e",
+            "name": "Nathan Loding"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1327453",
         "title": "Bootiful Security",
         "description": "It's not real until it's secure, and there's no better framework with which to secure your applications than Spring Security. Join me and we'll look at how Spring Security works, how to integrate it into your applications, and where you can scale out to secure your systems and services.\r\n",
@@ -246,6 +390,42 @@
               {
                 "id": 507383,
                 "name": "Security"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1386696",
+        "title": "Build your own software factory with context",
+        "description": "Coding agents made writing code cheap, yet everything around the code still lands on people: turning tickets into changes, reviewing them, keeping the repo healthy. A software factory hands that work to agents. What makes it trustworthy is context: the rules and skills that tell each agent how your team works.\r\n\r\nIn this hands-on workshop you'll set up a factory on a GitHub repo from your own coding agent. You'll label an issue and watch it become a pull request, teach the factory one of your team's rules, and add a loop that keeps the repo healthy. You'll leave with a factory you can point at your own repo the same week.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "af46b3f5-47a7-4f80-a0f0-e16fef9493e6",
+            "name": "Simon Maple"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
               }
             ],
             "sort": 0
@@ -333,6 +513,42 @@
       },
       {
         "questionAnswers": [],
+        "id": "1344604",
+        "title": "Designing Institutional Memory for AI Assistants",
+        "description": "Most enterprise AI assistants retrieve documents well, but retrieval isn't memory. When one assistant serves many people across an organization, it has to retain what teams learn, control who can see it, reconcile conflicting facts, and retire what's stale.\r\n\r\nWhat makes this different from traditional system design is that the core decisions aren't deterministic. A large language model decides what's worth remembering, what kind of knowledge it is, whether a new statement updates or contradicts an existing one, and how important it is. Embeddings decide which memories are semantically related. These components are powerful but probabilistic, so the architecture has to be built around the fact that they will sometimes be wrong.\r\n\r\nThis session designs an AI-driven institutional memory system from the ground up:\r\n\r\nLLM-driven write path: an extraction stage where the model turns raw interactions into explicit operations (add, update, invalidate, or no-op), grounded in the existing memories in the same scope rather than judged in isolation.\r\n\r\nSemantic conflict detection: using embeddings to find related memories across teams, and letting the model classify whether they agree, refine, or contradict each other.\r\n\r\nAccess model: visibility enforced at the storage layer, outside the model, so a hallucination or prompt injection can't leak one team's memory to another.\r\n\r\nConfidence-aware human review: routing low-confidence judgments, cross-team conflicts, and promotions to shared knowledge through a human approval step instead of trusting a threshold.\r\n\r\nRead path: retrieval ranked by semantic relevance, model-assigned importance, and recency decay, with every access logged.\r\n\r\nEvaluating the AI itself: why unit tests can't verify model judgment, and how scenario-based evaluation catches regressions when prompts or models change.\r\n\r\nFor each component, we'll cover the trade-offs, including which decisions to delegate to the model and which must stay deterministic. Examples come from Noscium, an open-source framework I'm building. It's early-stage, so the focus is the architecture and design reasoning, not a finished product.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "788d1e05-48a6-4efc-9ef2-3ed8ac7a6551",
+            "name": "Ragesh Raveendran Pillai"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507381,
+                "name": "System Design"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
         "id": "1333023",
         "title": "DevOps Never Finished, And AI Is Exposing the Wall We Never Actually Tore Down",
         "description": "In 2009, DevOps promised to tear down the wall between developers and operations. Sixteen years later, DORA's own research says only 19% of teams ever actually got there, and by 2025 the industry had to quietly retire its old scorecard because it had become measurement theater instead of a real signal.\r\n\r\nThen AI showed up, and instead of closing the gap, it made the fragmentation worse. Teams are now losing close to a full workday per person, per week, wrangling AI tools that don't talk to the rest of the pipeline, and half of all enterprise AI agents are running in complete isolation from everything else.\r\n\r\nThis talk traces DevOps from its two-person origin story in an empty conference room to its current, mostly-ceremonial state, then makes the case for AI-Native Engineering (AINE) as the shift that actually finishes the job: rebuilding developer workflows, extending SDLC understanding past the dev team, and giving AI a system to amplify instead of a mess to accelerate.",
@@ -384,6 +600,10 @@
           {
             "id": "23d00872-893d-47d0-ac16-4cc83625d9f2",
             "name": "Soby Chacko"
+          },
+          {
+            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+            "name": "Dan Vega"
           }
         ],
         "categories": [
@@ -456,6 +676,42 @@
           {
             "id": "a4305a38-d462-482b-9e4a-536eb74ec63c",
             "name": "Kevin Dubois"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507382,
+                "name": "Production AI Engineering"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1379794",
+        "title": "Following the Trail of a Rogue AI Agent with OpenTelemetry",
+        "description": "When an AI agent does something wrong in production, you can’t reproduce it, yet someone will ask you to explain exactly what happened.\r\n\r\nThe good news is that collecting telemetry has gotten easier. Spring AI, Strands Agents, Pydantic AI, and other frameworks now emit OpenTelemetry’s GenAI semantic conventions. The catch is that those conventions are still in development and framework defaults differ, so having the data is not the same as being able to trust it. To test that, we’ll play detective in a live demo with Java and Python agents. An agent has deleted rows from a database, and we’ll investigate using traces alone. Whether you build agents or have to answer for them, you’ll leave knowing how far your traces can take you. ",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "554ed558-1260-40bf-a2d8-b5859504dd97",
+            "name": "Julia Furst Morgado"
           }
         ],
         "categories": [
@@ -557,6 +813,46 @@
       },
       {
         "questionAnswers": [],
+        "id": "1344507",
+        "title": "Hands on Spring AI",
+        "description": "If you've never used Spring AI, this workshop is for you.\r\n\r\nWe'll spend the day working through the features of Spring AI, one at a time. For each one, you'll learn what it does and when to reach for it. Then you'll write a small demo of it yourself. This is very hands-on. You'll be coding for most of the day.\r\n\r\nWe start with what you need to get going:\r\n\r\nSetting up a project and talking to a model with ChatClient\r\nSwitching between OpenAI, Anthropic, and a local model\r\nPrompts, prompt templates, and chat memory\r\nStructured output that turns responses into Java records\r\nThen we move into the features real apps are built on:\r\n\r\nAdvisors, and how they shape every request and response\r\nTool calling, so the model can call your Java code\r\nRetrieval augmented generation (RAG) with your own documents\r\nMCP, from building servers to connecting clients\r\nAgents that plan and act on their own\r\nBy the end of the day, you'll have a folder full of working demos, a clear picture of how the parts of Spring AI fit together, and everything you need to build your first AI app on your own.\r\n\r\nYou should be comfortable with Java and Spring Boot. You don't need any AI experience.\r\n\r\nSetup: Java 21 or later, an IDE, and Docker. Setup instructions go out before the workshop.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "c2745a9d-1b7d-4cc3-a620-46afb9337f6d",
+            "name": "Dan Vega"
+          },
+          {
+            "id": "8f517aca-8293-4e1f-9360-0ce676531421",
+            "name": "Jonatan Ivanov"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
         "id": "1338617",
         "title": "How to Build Auditable Memory Using Context Graphs",
         "description": "Your AI agent just denied someone's loan application. Or it approved a $100K credit line increase. Or it rejected a prior authorization for medical treatment. Now you’re in court. And someone asks you to explain its decision. What are you going to say?  \r\n\r\nIn production, AI agents are making real decisions that impact real people's lives, and when those decisions get challenged by customers, compliance teams, auditors, or courts, you need answers.\r\n\r\nThis session will teach the best techniques to build AI agents that will pass an audit, using context graphs. Instead of black-box reasoning, you get complete decision traceability showing what information the agent considered, which factors influenced its choice, what alternatives it evaluated, and exactly how it reached its conclusion. I'll demo an AI agent evaluating a credit line increase request, then we'll trace the complete reasoning chain from input to output. We aren’t building this agent to simply explain itself (or hallucinate when explaining itself) after the fact. We are building it to capture decision-making as queryable graph structures, and get working code for building agents that can actually justify their decisions. So the next time anyone asks why your agent made that decision, you'll have a real answer.",
@@ -590,6 +886,42 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": false
+      },
+      {
+        "questionAnswers": [],
+        "id": "1347312",
+        "title": "Java Is Fast. Your Code Might Not Be.",
+        "description": "One method in my Java app was using 71% of CPU, and nothing in code review caught it. Fixing it revealed the next hidden problem, and the next. After a few rounds with Java Flight Recorder and JDK Mission Control, the same app on the same JDK went from 1,198ms to 239ms and from over 1GB of heap to 139MB. In this session, we'll dig into Java performance live, trace hotspots back to your code and common Java performance anti-patterns. For Java developers who want a profiling workflow they can use Monday.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "6009d87f-ab61-4a0e-8632-1c68d752e00f",
+            "name": "Jonathan Vogel"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507387,
+                "name": "Java & the JVM Ecosystem"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -722,6 +1054,42 @@
               {
                 "id": 507381,
                 "name": "System Design"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1331493",
+        "title": "No Handshake, No Session: Build a Stateless MCP Server in Java",
+        "description": "The Model Context Protocol just forgot how to start a conversation. Revision 2026-07-28 deleted the initialize handshake. There is no session, no ping, nothing to resume. Every request now carries its own protocol version and capabilities in _meta, and if the server needs something, it asks inside the reply.\r\n\r\nIn this instructor-led workshop you will build a Java MCP server from scratch, over raw STDIO, with no SDK and no framework. Chapter by chapter you will implement the transport, JSON-RPC, server/discover, tools, resources, and prompts, then the pieces that only make sense once memory is gone: Multi Round-Trip Requests (ask by answering), MCP Apps (a tool that returns a UI), and Tasks (call now, fetch later).\r\n\r\nYou will leave with a working server you can point at Cursor, Claude Code, or Windsurf, and a wire-level understanding of the protocol that SDKs hide.\r\n\r\nAudience: Java developers comfortable with JSON who want to see how agents actually talk to tools.\r\nPrerequisites: JDK 21+, Gradle, and a laptop that can run MCP Inspector.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "7f7eb959-dfdc-4d7f-a6a0-bd64b2710282",
+            "name": "David Parry"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
               }
             ],
             "sort": 0
@@ -1037,7 +1405,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -1366,6 +1734,42 @@
         "status": "Accepted",
         "isInformed": true,
         "isConfirmed": true
+      },
+      {
+        "questionAnswers": [],
+        "id": "1344452",
+        "title": "Thinking Architecturally",
+        "description": "Rich Hickey once said programmers know the benefits of everything and the trade offs of nothing...an approach that can lead a project down a path of frustrated developers and unhappy customers. As architects though, we must consider the trade offs of every new library, language, pattern or approach and quickly make decisions often with incomplete information. How should we think about the inevitable technology choices we have to make on a project? How do we balance competing agendas? How do we keep our team happy and excited without chasing every new thing that someone finds on the inner webs?\r\n\r\nAs architects it is our responsibility to effectively guide our teams on the technology journey. In this talk I will outline the importance of trade offs, how we can analyze new technologies and how we can effectively capture the inevitable architectural decisions we will make. I will also explore the value of fitness functions as a way of ensuring the decisions we make are actually reflected in the code base.",
+        "startsAt": null,
+        "endsAt": null,
+        "isServiceSession": false,
+        "isPlenumSession": false,
+        "speakers": [
+          {
+            "id": "1f3fa71c-0021-4d6e-af47-0013ecbaeb33",
+            "name": "Nathaniel Schutta"
+          }
+        ],
+        "categories": [
+          {
+            "id": 139840,
+            "name": "Track",
+            "categoryItems": [
+              {
+                "id": 507372,
+                "name": "Workshop"
+              }
+            ],
+            "sort": 0
+          }
+        ],
+        "roomId": null,
+        "room": null,
+        "liveUrl": null,
+        "recordingUrl": null,
+        "status": "Accepted",
+        "isInformed": true,
+        "isConfirmed": false
       },
       {
         "questionAnswers": [],

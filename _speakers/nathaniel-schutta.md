@@ -22,6 +22,8 @@ sessions:
   name: Pouring AI Sauce on Your Architecture
 - id: 1344453
   name: 'The Human API: DevOps for the Soul'
+- id: 1344452
+  name: Thinking Architecturally
 isTopSpeaker: false
 links: []
 questionAnswers:

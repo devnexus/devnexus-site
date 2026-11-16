@@ -32,6 +32,8 @@ isPlenumSession: false
 speakers:
 - id: 23d00872-893d-47d0-ac16-4cc83625d9f2
   name: Soby Chacko
+- id: c2745a9d-1b7d-4cc3-a620-46afb9337f6d
+  name: Dan Vega
 categories:
 - id: 139840
   name: Track
