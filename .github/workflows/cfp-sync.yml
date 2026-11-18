@@ -1,0 +1,50 @@
+name: CFP sync
+
+# Pulls speakers and sessions from Sessionize via `jekyll cfp` and commits
+# any changes to _speakers, _events and _data so CloudCannon picks them up.
+on:
+  # Fired by .cloudcannon/prebuild on every CloudCannon build
+  repository_dispatch:
+    types: [cfp-sync]
+  # Periodic refresh (UTC)
+  schedule:
+    - cron: "17 * * * *"
+  # "Run workflow" button in the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two syncs at once; a queued one replaces any older queued one.
+concurrency:
+  group: cfp-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Pull CFP data
+        run: |
+          bundle exec jekyll cfp speakers
+          bundle exec jekyll cfp events
+
+      - name: Commit changes
+        run: |
+          git add -A _speakers _events _data/speakers.json _data/events.json
+          if git diff --cached --quiet; then
+            echo "No CFP changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "update from cfp"
+          git pull --rebase
+          git push
