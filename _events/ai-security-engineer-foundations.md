@@ -99,7 +99,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Workshop
 slug: ai-security-engineer-foundations
 

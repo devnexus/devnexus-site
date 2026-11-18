@@ -181,7 +181,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],
@@ -276,8 +276,8 @@
             "name": "Track",
             "categoryItems": [
               {
-                "id": 507380,
-                "name": "Developer Tools"
+                "id": 507381,
+                "name": "System Design"
               }
             ],
             "sort": 0
@@ -2144,7 +2144,12 @@
         "endsAt": null,
         "isServiceSession": false,
         "isPlenumSession": false,
-        "speakers": [],
+        "speakers": [
+          {
+            "id": "e87c804d-b551-4614-8891-007f421a683f",
+            "name": "Pratik Patel"
+          }
+        ],
         "categories": [
           {
             "id": 139840,
@@ -2164,7 +2169,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       }
     ],
     "isDefault": false
