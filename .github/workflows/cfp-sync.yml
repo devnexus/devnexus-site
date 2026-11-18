@@ -3,18 +3,11 @@ name: CFP sync
 # Pulls speakers and sessions from Sessionize via `jekyll cfp` and commits
 # any changes to _speakers, _events and _data so CloudCannon picks them up.
 on:
-  # Fired by .cloudcannon/prebuild on every CloudCannon build
-  repository_dispatch:
-    types: [cfp-sync]
   # Periodic refresh (UTC)
   schedule:
     - cron: "17 * * * *"
   # "Run workflow" button in the Actions tab
   workflow_dispatch:
-  # TEMPORARY: lets the workflow run from this branch for testing.
-  # Remove before merging to master.
-  push:
-    branches: [actions-update]
 
 permissions:
   contents: write
