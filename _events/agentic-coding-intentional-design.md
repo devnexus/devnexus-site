@@ -39,7 +39,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: Production AI Engineering
 slug: agentic-coding-intentional-design
 

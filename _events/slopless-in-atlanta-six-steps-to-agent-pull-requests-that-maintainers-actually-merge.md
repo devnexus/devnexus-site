@@ -45,7 +45,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI Developer Tools
 slug: slopless-in-atlanta-six-steps-to-agent-pull-requests-that-maintainers-actually-merge
 

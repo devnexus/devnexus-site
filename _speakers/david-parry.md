@@ -14,6 +14,8 @@ profilePicture: https://cdn.sessionize.com/image/db5d-400o400o1-76mc1Ks5dNnkxffx
 sessions:
 - id: 1331494
   name: 'MCP Killed the Handshake: What Stateless Really Means for Agents'
+- id: 1331493
+  name: 'No Handshake, No Session: Build a Stateless MCP Server in Java'
 isTopSpeaker: false
 links: []
 questionAnswers:

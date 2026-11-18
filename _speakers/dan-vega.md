@@ -13,8 +13,12 @@ bio: Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been develo
 tagLine: Spring Developer Advocate
 profilePicture: https://cdn.sessionize.com/image/da3a-400o400o1-TQS96ycLL1mMD7ck9Wk5Mp.jpg
 sessions:
+- id: 1349647
+  name: Durable, composable and scalable agents with Spring AI 3.0
 - id: 1344499
   name: Fundamentals of Software Engineering in the Age of AI
+- id: 1344507
+  name: Hands on Spring AI
 isTopSpeaker: false
 links: []
 questionAnswers:

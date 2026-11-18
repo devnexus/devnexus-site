@@ -17,7 +17,9 @@ startsAt:
 endsAt:
 isServiceSession: false
 isPlenumSession: false
-speakers: []
+speakers:
+- id: e87c804d-b551-4614-8891-007f421a683f
+  name: Pratik Patel
 categories:
 - id: 139840
   name: Track
@@ -31,7 +33,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI and LLM Fundamentals
 slug: your-gpu-your-model-running-open-weight-ai
 
