@@ -3,9 +3,6 @@ name: CFP sync
 # Pulls speakers and sessions from Sessionize via `jekyll cfp` and commits
 # any changes to _speakers, _events and _data so CloudCannon picks them up.
 on:
-  # Fired by .cloudcannon/prebuild on every CloudCannon build
-  repository_dispatch:
-    types: [cfp-sync]
   # Periodic refresh (UTC)
   schedule:
     - cron: "17 * * * *"
