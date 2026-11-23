@@ -25,6 +25,8 @@ isPlenumSession: false
 speakers:
 - id: 9f4c5484-3a97-4a43-9410-05b2007f83bb
   name: Wes Widner
+- id: b7251459-9d2b-4c26-8d7f-731331e17347
+  name: James Widner
 categories:
 - id: 139840
   name: Track
