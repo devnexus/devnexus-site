@@ -1029,7 +1029,7 @@
         "recordingUrl": null,
         "status": "Accepted",
         "isInformed": true,
-        "isConfirmed": false
+        "isConfirmed": true
       },
       {
         "questionAnswers": [],

@@ -37,7 +37,7 @@ liveUrl:
 recordingUrl:
 status: Accepted
 isInformed: true
-isConfirmed: false
+isConfirmed: true
 track: AI Developer Tools
 slug: microservices-in-the-genai-era
 
